@@ -1,1 +1,8 @@
 100 units
+Luna: 100/100 explained | {'calls': 100, 'input_tokens': 439466, 'output_tokens': 157761}
+coverage: 3931/3931 graded | Jev {'calls': 3931, 'input_tokens': 1782058}
+random check done | Jev {'calls': 3971, 'input_tokens': 2117416}, ~$0.089
+pos: clean 4/100 = 4% (excluded for API failures: 0)
+neg: clean 0/100 = 0% (excluded for API failures: 0)
+Jev ~$0.089 | Luna {'calls': 100, 'input_tokens': 439466, 'output_tokens': 157761}
+100 units regraded | Jev {'calls': 4011, 'input_tokens': 2672954}, ~$0.112

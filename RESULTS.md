@@ -503,3 +503,29 @@ top explanation fits its firings at lower strengths:
 Smooth decay, staying above the random baseline down to 10% of peak (clean neurons: 28% vs 8%). Consistent with the
 essay's "meaning radiates outward" rather than an unrelated job hidden in the weak firings; near 10% of peak the fit
 approaches the random level, as the essay itself describes for near-zero activations.
+
+---
+
+## 16 Oct 2026 (~00:55): CENSUS HEADLINE, calibrated on spliced two-job dossiers
+
+**Spliced control** (`results/spliced_regrade.json`; Luna ~$0.12, Jev ~$0.20): 100 units, each = 10 top examples of
+census neuron A + 10 of an unrelated neuron B (≥ 6 layers apart), shuffled; labelled and rubric-graded exactly like the
+census. Luna verdicts: ONE 48, MIXTURE 37, NONE 13, TWO_RELATED 2. **Luna alone calls half of known two-job dossiers
+"one job"**, so labeller-only "one job" rates (census 81%) are inflated.
+
+Clean = Luna ONE + rubric coverage_soft ≥ t + random_soft < 0.25:
+
+| t | Spliced pass (pos) | Census pos clean (95% CI) | Spliced pass (neg) | Census neg clean (95% CI) |
+|---|---|---|---|---|
+| 0.5 | 15% | 60% (57–63) | **4%** | **47% (44–50)** ← calibrated (neg) |
+| **0.6** | **8%** | **50% (47–54)** ← calibrated (pos) | 0% | 40% (37–43) |
+| 0.7 | 2% | 37% (34–40) | 0% | 29% (26–31) |
+
+**Headline (Qwen3-8B, 954 live neurons):** at a bar that passes ≤ 10% of known two-job dossiers, **~50% of positive
+poles and ~47% of negative poles have a verified single job.** Plus 4.5% of all neurons are near-silent (mostly layers 1–3).
+- This is closer to a floor than a point estimate: sensitivity for true single-job poles is < 100% (noisy coverage
+  grading, long-context jobs under-credited), and the false-pass rate is measured only on blatant mixtures.
+- **Versus the essay** (~90% one main job, Qwen3-32B, in-depth audits): ours is "at least ~half, verified" with
+  fast automatic labels on a 4× smaller model. Not a refutation; short of the essay's figure, with a known downward bias.
+- **PREREG CEN leniency check:** spliced (the meaningful mixed control) pass 8% (pos) / 4% (neg) at the calibrated bars,
+  within the ≤ 10% target. Activation-blend mixtures: control weak by construction (ISSUES #25).
