@@ -464,3 +464,8 @@ Share of neurons whose explanation "covers" its own examples, vs false matches o
 "strictly clean ≈ 40%" is largely set by the uncalibrated "≥ 80% of examples at ≥ 0.5" bar; defensible bars give
 35–79%. **The earlier "leaning against the essay" reading of the census is withdrawn** pending calibration on planted
 mixtures (known two-job units) and a census re-grade with the rubric wording and soft scores.
+
+**H-DEPTH noise check (independent repeat: fresh Luna labels + fresh Jev classification):** essentially identical:
+concept-specific ×2.3 (6–12), ×0.2 (13–21), ×1.3 (22–32); generic ×1.4 (33–35); same top recurrent generic neurons;
+**91% of 550 pair classifications agree** between runs. Jev was confident on these (median top-class P 0.91), and
+probability-weighted counts give the same pattern. **H-DEPTH: supported and replicated.**
