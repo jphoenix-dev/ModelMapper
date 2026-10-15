@@ -1,0 +1,8 @@
+11 concepts, 550 (concept, neuron) pairs, 415 unique neurons
+415 units
+Luna: 415/415 explained | {'calls': 415, 'input_tokens': 1343695, 'output_tokens': 394600}
+coverage: 8192/8192 graded | Jev {'calls': 8192, 'input_tokens': 3663610}
+random check done | Jev {'calls': 8372, 'input_tokens': 5035691}, ~$0.211
+pos: clean 198/408 = 49% (excluded for API failures: 7)
+neg: clean 164/415 = 40% (excluded for API failures: 0)
+Jev ~$0.211 | Luna {'calls': 415, 'input_tokens': 1343695, 'output_tokens': 394600}

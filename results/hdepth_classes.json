@@ -1,0 +1,6052 @@
+[
+[
+"coffee",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"coffee",
+"L29_N2750",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.977,
+"GENERIC": 0.02,
+"UNRELATED": 0.003
+}
+],
+[
+"coffee",
+"L24_N2190",
+24,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.8,
+"GENERIC": 0.16,
+"UNRELATED": 0.04
+}
+],
+[
+"coffee",
+"L35_N612",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.98,
+"UNRELATED": 0.02
+}
+],
+[
+"coffee",
+"L30_N5879",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"coffee",
+"L27_N2598",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.753,
+"UNRELATED": 0.23
+}
+],
+[
+"coffee",
+"L35_N4712",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.79,
+"UNRELATED": 0.197
+}
+],
+[
+"coffee",
+"L8_N7935",
+8,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.413,
+"GENERIC": 0.333,
+"UNRELATED": 0.253
+}
+],
+[
+"coffee",
+"L23_N9502",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.047,
+"GENERIC": 0.793,
+"UNRELATED": 0.16
+}
+],
+[
+"coffee",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.69,
+"UNRELATED": 0.3
+}
+],
+[
+"coffee",
+"L24_N9895",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.987,
+"UNRELATED": 0.013
+}
+],
+[
+"coffee",
+"L31_N5473",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"coffee",
+"L35_N5182",
+35,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.147,
+"UNRELATED": 0.853
+}
+],
+[
+"coffee",
+"L9_N11016",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.983,
+"GENERIC": 0.01,
+"UNRELATED": 0.007
+}
+],
+[
+"coffee",
+"L16_N591",
+16,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.923,
+"UNRELATED": 0.07
+}
+],
+[
+"coffee",
+"L3_N8895",
+3,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.877,
+"GENERIC": 0.063,
+"UNRELATED": 0.06
+}
+],
+[
+"coffee",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"coffee",
+"L22_N3769",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"coffee",
+"L8_N4223",
+8,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.993,
+"UNRELATED": 0.003
+}
+],
+[
+"coffee",
+"L30_N4405",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.633,
+"GENERIC": 0.093,
+"UNRELATED": 0.273
+}
+],
+[
+"coffee",
+"L1_N3457",
+1,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.173,
+"GENERIC": 0.107,
+"UNRELATED": 0.72
+}
+],
+[
+"coffee",
+"L20_N5841",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.973,
+"UNRELATED": 0.013
+}
+],
+[
+"coffee",
+"L28_N3801",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.907,
+"UNRELATED": 0.093
+}
+],
+[
+"coffee",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.923,
+"UNRELATED": 0.077
+}
+],
+[
+"coffee",
+"L19_N6149",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"coffee",
+"L18_N12254",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"coffee",
+"L29_N4496",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.707,
+"GENERIC": 0.037,
+"UNRELATED": 0.257
+}
+],
+[
+"coffee",
+"L13_N590",
+13,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.083,
+"GENERIC": 0.2,
+"UNRELATED": 0.717
+}
+],
+[
+"coffee",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.857,
+"UNRELATED": 0.143
+}
+],
+[
+"coffee",
+"L21_N10152",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"coffee",
+"L23_N2736",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"coffee",
+"L30_N3769",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"coffee",
+"L35_N6473",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.52,
+"UNRELATED": 0.47
+}
+],
+[
+"coffee",
+"L35_N6485",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.773,
+"UNRELATED": 0.227
+}
+],
+[
+"coffee",
+"L24_N8980",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"coffee",
+"L23_N7212",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.957,
+"UNRELATED": 0.037
+}
+],
+[
+"coffee",
+"L35_N11058",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"coffee",
+"L24_N5265",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"coffee",
+"L3_N11719",
+3,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.83,
+"UNRELATED": 0.17
+}
+],
+[
+"coffee",
+"L4_N2625",
+4,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.873,
+"UNRELATED": 0.11
+}
+],
+[
+"coffee",
+"L22_N1240",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.05,
+"GENERIC": 0.903,
+"UNRELATED": 0.047
+}
+],
+[
+"coffee",
+"L21_N6138",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"coffee",
+"L33_N7443",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.173,
+"GENERIC": 0.82,
+"UNRELATED": 0.007
+}
+],
+[
+"coffee",
+"L35_N122",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.807,
+"UNRELATED": 0.193
+}
+],
+[
+"coffee",
+"L9_N1824",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.937,
+"GENERIC": 0.007,
+"UNRELATED": 0.057
+}
+],
+[
+"coffee",
+"L0_N8781",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.143,
+"GENERIC": 0.64,
+"UNRELATED": 0.217
+}
+],
+[
+"coffee",
+"L35_N5953",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"coffee",
+"L11_N7096",
+11,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.073,
+"GENERIC": 0.01,
+"UNRELATED": 0.917
+}
+],
+[
+"coffee",
+"L0_N5193",
+0,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.03,
+"UNRELATED": 0.963
+}
+],
+[
+"coffee",
+"L21_N1266",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"democracy",
+"L31_N11943",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.827,
+"GENERIC": 0.097,
+"UNRELATED": 0.077
+}
+],
+[
+"democracy",
+"L27_N10657",
+27,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.063,
+"GENERIC": 0.393,
+"UNRELATED": 0.543
+}
+],
+[
+"democracy",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.87,
+"UNRELATED": 0.13
+}
+],
+[
+"democracy",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"democracy",
+"L27_N11424",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.947,
+"UNRELATED": 0.04
+}
+],
+[
+"democracy",
+"L30_N4626",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.92,
+"GENERIC": 0.08,
+"UNRELATED": 0.0
+}
+],
+[
+"democracy",
+"L10_N64",
+10,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.803,
+"GENERIC": 0.113,
+"UNRELATED": 0.083
+}
+],
+[
+"democracy",
+"L0_N10457",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.063,
+"GENERIC": 0.88,
+"UNRELATED": 0.057
+}
+],
+[
+"democracy",
+"L35_N3734",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"democracy",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.617,
+"UNRELATED": 0.377
+}
+],
+[
+"democracy",
+"L35_N6751",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"democracy",
+"L9_N11900",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.613,
+"GENERIC": 0.023,
+"UNRELATED": 0.363
+}
+],
+[
+"democracy",
+"L29_N5806",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.243,
+"GENERIC": 0.013,
+"UNRELATED": 0.743
+}
+],
+[
+"democracy",
+"L35_N8366",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.807,
+"UNRELATED": 0.193
+}
+],
+[
+"democracy",
+"L13_N11823",
+13,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"democracy",
+"L12_N12184",
+12,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.82,
+"GENERIC": 0.047,
+"UNRELATED": 0.133
+}
+],
+[
+"democracy",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.89,
+"UNRELATED": 0.11
+}
+],
+[
+"democracy",
+"L0_N9750",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.9,
+"UNRELATED": 0.1
+}
+],
+[
+"democracy",
+"L8_N5876",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.037,
+"GENERIC": 0.453,
+"UNRELATED": 0.51
+}
+],
+[
+"democracy",
+"L0_N220",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.893,
+"UNRELATED": 0.107
+}
+],
+[
+"democracy",
+"L8_N6400",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.42,
+"GENERIC": 0.063,
+"UNRELATED": 0.517
+}
+],
+[
+"democracy",
+"L11_N10805",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.9,
+"GENERIC": 0.047,
+"UNRELATED": 0.053
+}
+],
+[
+"democracy",
+"L35_N8052",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.937,
+"UNRELATED": 0.057
+}
+],
+[
+"democracy",
+"L34_N4389",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.11,
+"GENERIC": 0.803,
+"UNRELATED": 0.087
+}
+],
+[
+"democracy",
+"L13_N11040",
+13,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.7,
+"GENERIC": 0.033,
+"UNRELATED": 0.267
+}
+],
+[
+"democracy",
+"L13_N9409",
+13,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.07,
+"GENERIC": 0.02,
+"UNRELATED": 0.91
+}
+],
+[
+"democracy",
+"L35_N122",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.72,
+"UNRELATED": 0.28
+}
+],
+[
+"democracy",
+"L15_N11828",
+15,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"democracy",
+"L15_N3369",
+15,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.407,
+"GENERIC": 0.01,
+"UNRELATED": 0.583
+}
+],
+[
+"democracy",
+"L29_N4952",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.013,
+"UNRELATED": 0.977
+}
+],
+[
+"democracy",
+"L4_N12021",
+4,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.03,
+"UNRELATED": 0.95
+}
+],
+[
+"democracy",
+"L11_N3569",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.883,
+"GENERIC": 0.067,
+"UNRELATED": 0.05
+}
+],
+[
+"democracy",
+"L30_N7593",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.053,
+"GENERIC": 0.897,
+"UNRELATED": 0.047
+}
+],
+[
+"democracy",
+"L11_N11510",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.933,
+"GENERIC": 0.02,
+"UNRELATED": 0.047
+}
+],
+[
+"democracy",
+"L28_N10643",
+28,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.897,
+"GENERIC": 0.027,
+"UNRELATED": 0.077
+}
+],
+[
+"democracy",
+"L14_N8636",
+14,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.967,
+"UNRELATED": 0.033
+}
+],
+[
+"democracy",
+"L35_N5953",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.93,
+"UNRELATED": 0.07
+}
+],
+[
+"democracy",
+"L27_N1684",
+27,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.147,
+"GENERIC": 0.39,
+"UNRELATED": 0.463
+}
+],
+[
+"democracy",
+"L35_N8034",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"democracy",
+"L28_N8868",
+28,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.947,
+"GENERIC": 0.017,
+"UNRELATED": 0.037
+}
+],
+[
+"democracy",
+"L34_N10086",
+34,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.067,
+"UNRELATED": 0.923
+}
+],
+[
+"democracy",
+"L35_N370",
+35,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.183,
+"UNRELATED": 0.807
+}
+],
+[
+"democracy",
+"L35_N4343",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.987,
+"UNRELATED": 0.013
+}
+],
+[
+"democracy",
+"L33_N2730",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.963,
+"UNRELATED": 0.013
+}
+],
+[
+"democracy",
+"L8_N3294",
+8,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.063,
+"GENERIC": 0.903,
+"UNRELATED": 0.033
+}
+],
+[
+"democracy",
+"L15_N1167",
+15,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.03,
+"GENERIC": 0.96,
+"UNRELATED": 0.01
+}
+],
+[
+"democracy",
+"L34_N3742",
+34,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.017,
+"UNRELATED": 0.98
+}
+],
+[
+"democracy",
+"L16_N7655",
+16,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.073,
+"GENERIC": 0.557,
+"UNRELATED": 0.37
+}
+],
+[
+"democracy",
+"L15_N6546",
+15,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.143,
+"GENERIC": 0.02,
+"UNRELATED": 0.837
+}
+],
+[
+"democracy",
+"L12_N2611",
+12,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.28,
+"GENERIC": 0.017,
+"UNRELATED": 0.703
+}
+],
+[
+"Eiffel Tower",
+"L26_N11492",
+26,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.933,
+"GENERIC": 0.057,
+"UNRELATED": 0.01
+}
+],
+[
+"Eiffel Tower",
+"L34_N1621",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Eiffel Tower",
+"L31_N10160",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.73,
+"GENERIC": 0.237,
+"UNRELATED": 0.033
+}
+],
+[
+"Eiffel Tower",
+"L29_N6056",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.847,
+"GENERIC": 0.137,
+"UNRELATED": 0.017
+}
+],
+[
+"Eiffel Tower",
+"L9_N10540",
+9,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.98,
+"UNRELATED": 0.01
+}
+],
+[
+"Eiffel Tower",
+"L29_N12094",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.617,
+"GENERIC": 0.21,
+"UNRELATED": 0.173
+}
+],
+[
+"Eiffel Tower",
+"L19_N10393",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"Eiffel Tower",
+"L28_N4830",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.8,
+"UNRELATED": 0.18
+}
+],
+[
+"Eiffel Tower",
+"L12_N3452",
+12,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.973,
+"UNRELATED": 0.003
+}
+],
+[
+"Eiffel Tower",
+"L9_N9406",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.823,
+"GENERIC": 0.16,
+"UNRELATED": 0.017
+}
+],
+[
+"Eiffel Tower",
+"L25_N8017",
+25,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.37,
+"UNRELATED": 0.623
+}
+],
+[
+"Eiffel Tower",
+"L27_N12062",
+27,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.517,
+"GENERIC": 0.383,
+"UNRELATED": 0.1
+}
+],
+[
+"Eiffel Tower",
+"L27_N3048",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Eiffel Tower",
+"L11_N8420",
+11,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.25,
+"UNRELATED": 0.74
+}
+],
+[
+"Eiffel Tower",
+"L8_N1187",
+8,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.92,
+"GENERIC": 0.053,
+"UNRELATED": 0.027
+}
+],
+[
+"Eiffel Tower",
+"L9_N410",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.84,
+"GENERIC": 0.047,
+"UNRELATED": 0.11
+}
+],
+[
+"Eiffel Tower",
+"L16_N5197",
+16,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.387,
+"UNRELATED": 0.603
+}
+],
+[
+"Eiffel Tower",
+"L28_N1480",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.85,
+"UNRELATED": 0.147
+}
+],
+[
+"Eiffel Tower",
+"L32_N8797",
+32,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.877,
+"GENERIC": 0.063,
+"UNRELATED": 0.06
+}
+],
+[
+"Eiffel Tower",
+"L33_N1067",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.933,
+"UNRELATED": 0.067
+}
+],
+[
+"Eiffel Tower",
+"L32_N10414",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.043,
+"GENERIC": 0.947,
+"UNRELATED": 0.01
+}
+],
+[
+"Eiffel Tower",
+"L32_N1750",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.127,
+"GENERIC": 0.853,
+"UNRELATED": 0.02
+}
+],
+[
+"Eiffel Tower",
+"L8_N1798",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.25,
+"GENERIC": 0.25,
+"UNRELATED": 0.5
+}
+],
+[
+"Eiffel Tower",
+"L1_N11629",
+1,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"Eiffel Tower",
+"L24_N8980",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Eiffel Tower",
+"L35_N5902",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.913,
+"UNRELATED": 0.067
+}
+],
+[
+"Eiffel Tower",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.943,
+"UNRELATED": 0.057
+}
+],
+[
+"Eiffel Tower",
+"L35_N8393",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.98,
+"UNRELATED": 0.02
+}
+],
+[
+"Eiffel Tower",
+"L30_N7068",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.837,
+"GENERIC": 0.063,
+"UNRELATED": 0.1
+}
+],
+[
+"Eiffel Tower",
+"L34_N6547",
+34,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.35,
+"GENERIC": 0.183,
+"UNRELATED": 0.467
+}
+],
+[
+"Eiffel Tower",
+"L23_N10968",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Eiffel Tower",
+"L32_N856",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.14,
+"GENERIC": 0.59,
+"UNRELATED": 0.27
+}
+],
+[
+"Eiffel Tower",
+"L24_N5265",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Eiffel Tower",
+"L15_N2069",
+15,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.233,
+"UNRELATED": 0.76
+}
+],
+[
+"Eiffel Tower",
+"L30_N4167",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.967,
+"UNRELATED": 0.02
+}
+],
+[
+"Eiffel Tower",
+"L20_N9213",
+20,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.47,
+"UNRELATED": 0.513
+}
+],
+[
+"Eiffel Tower",
+"L9_N7937",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.523,
+"GENERIC": 0.03,
+"UNRELATED": 0.447
+}
+],
+[
+"Eiffel Tower",
+"L6_N11435",
+6,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.507,
+"UNRELATED": 0.493
+}
+],
+[
+"Eiffel Tower",
+"L8_N1433",
+8,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.03,
+"GENERIC": 0.96,
+"UNRELATED": 0.01
+}
+],
+[
+"Eiffel Tower",
+"L3_N10827",
+3,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.777,
+"UNRELATED": 0.223
+}
+],
+[
+"Eiffel Tower",
+"L8_N11535",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.087,
+"GENERIC": 0.18,
+"UNRELATED": 0.733
+}
+],
+[
+"Eiffel Tower",
+"L2_N12116",
+2,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Eiffel Tower",
+"L35_N3129",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Eiffel Tower",
+"L2_N4627",
+2,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.15,
+"UNRELATED": 0.84
+}
+],
+[
+"Eiffel Tower",
+"L29_N11812",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.48,
+"GENERIC": 0.34,
+"UNRELATED": 0.18
+}
+],
+[
+"Eiffel Tower",
+"L5_N5551",
+5,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.097,
+"GENERIC": 0.11,
+"UNRELATED": 0.793
+}
+],
+[
+"Eiffel Tower",
+"L29_N178",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.047,
+"GENERIC": 0.08,
+"UNRELATED": 0.873
+}
+],
+[
+"Eiffel Tower",
+"L9_N2918",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.653,
+"GENERIC": 0.24,
+"UNRELATED": 0.107
+}
+],
+[
+"Eiffel Tower",
+"L22_N3769",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Eiffel Tower",
+"L12_N6002",
+12,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.763,
+"GENERIC": 0.18,
+"UNRELATED": 0.057
+}
+],
+[
+"Golden Gate Bridge",
+"L34_N5510",
+34,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.937,
+"GENERIC": 0.047,
+"UNRELATED": 0.017
+}
+],
+[
+"Golden Gate Bridge",
+"L29_N8780",
+29,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.97,
+"UNRELATED": 0.02
+}
+],
+[
+"Golden Gate Bridge",
+"L26_N11492",
+26,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.897,
+"GENERIC": 0.09,
+"UNRELATED": 0.013
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.037,
+"GENERIC": 0.96,
+"UNRELATED": 0.003
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N8393",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"Golden Gate Bridge",
+"L31_N9611",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.953,
+"GENERIC": 0.047,
+"UNRELATED": 0.0
+}
+],
+[
+"Golden Gate Bridge",
+"L29_N6056",
+29,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.31,
+"GENERIC": 0.347,
+"UNRELATED": 0.343
+}
+],
+[
+"Golden Gate Bridge",
+"L9_N2918",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.54,
+"GENERIC": 0.213,
+"UNRELATED": 0.247
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N3129",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Golden Gate Bridge",
+"L31_N5473",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Golden Gate Bridge",
+"L10_N488",
+10,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.947,
+"GENERIC": 0.01,
+"UNRELATED": 0.043
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N3013",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.03,
+"GENERIC": 0.897,
+"UNRELATED": 0.073
+}
+],
+[
+"Golden Gate Bridge",
+"L30_N4167",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.967,
+"UNRELATED": 0.027
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N1105",
+33,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.023,
+"UNRELATED": 0.96
+}
+],
+[
+"Golden Gate Bridge",
+"L28_N6711",
+28,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.953,
+"GENERIC": 0.037,
+"UNRELATED": 0.01
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N7858",
+33,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.29,
+"UNRELATED": 0.7
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N866",
+33,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.94,
+"GENERIC": 0.047,
+"UNRELATED": 0.013
+}
+],
+[
+"Golden Gate Bridge",
+"L27_N3048",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"Golden Gate Bridge",
+"L29_N3185",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.53,
+"GENERIC": 0.427,
+"UNRELATED": 0.043
+}
+],
+[
+"Golden Gate Bridge",
+"L32_N10532",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.8,
+"UNRELATED": 0.187
+}
+],
+[
+"Golden Gate Bridge",
+"L29_N4289",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.26,
+"GENERIC": 0.12,
+"UNRELATED": 0.62
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N9435",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.967,
+"UNRELATED": 0.033
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.743,
+"UNRELATED": 0.243
+}
+],
+[
+"Golden Gate Bridge",
+"L31_N2111",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.727,
+"GENERIC": 0.08,
+"UNRELATED": 0.193
+}
+],
+[
+"Golden Gate Bridge",
+"L32_N7016",
+32,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.42,
+"GENERIC": 0.377,
+"UNRELATED": 0.203
+}
+],
+[
+"Golden Gate Bridge",
+"L30_N2600",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.18,
+"GENERIC": 0.013,
+"UNRELATED": 0.807
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N2970",
+33,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.737,
+"GENERIC": 0.173,
+"UNRELATED": 0.09
+}
+],
+[
+"Golden Gate Bridge",
+"L10_N3679",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.023,
+"UNRELATED": 0.97
+}
+],
+[
+"Golden Gate Bridge",
+"L25_N8017",
+25,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.473,
+"UNRELATED": 0.52
+}
+],
+[
+"Golden Gate Bridge",
+"L31_N1828",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.743,
+"UNRELATED": 0.243
+}
+],
+[
+"Golden Gate Bridge",
+"L18_N9878",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.963,
+"UNRELATED": 0.037
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"Golden Gate Bridge",
+"L2_N7042",
+2,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.033,
+"GENERIC": 0.42,
+"UNRELATED": 0.547
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N3531",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.99,
+"UNRELATED": 0.007
+}
+],
+[
+"Golden Gate Bridge",
+"L35_N11617",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.97,
+"UNRELATED": 0.03
+}
+],
+[
+"Golden Gate Bridge",
+"L31_N11004",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.623,
+"GENERIC": 0.053,
+"UNRELATED": 0.323
+}
+],
+[
+"Golden Gate Bridge",
+"L21_N1741",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N10901",
+33,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.01,
+"UNRELATED": 0.99
+}
+],
+[
+"Golden Gate Bridge",
+"L21_N10152",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"Golden Gate Bridge",
+"L22_N3769",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Golden Gate Bridge",
+"L31_N9450",
+31,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.053,
+"GENERIC": 0.46,
+"UNRELATED": 0.487
+}
+],
+[
+"Golden Gate Bridge",
+"L28_N1480",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.853,
+"UNRELATED": 0.133
+}
+],
+[
+"Golden Gate Bridge",
+"L9_N2942",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.37,
+"GENERIC": 0.063,
+"UNRELATED": 0.567
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N5066",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.987,
+"UNRELATED": 0.013
+}
+],
+[
+"Golden Gate Bridge",
+"L0_N5618",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.977,
+"UNRELATED": 0.01
+}
+],
+[
+"Golden Gate Bridge",
+"L26_N1010",
+26,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.043,
+"UNRELATED": 0.937
+}
+],
+[
+"Golden Gate Bridge",
+"L19_N210",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.95,
+"UNRELATED": 0.043
+}
+],
+[
+"Golden Gate Bridge",
+"L33_N570",
+33,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.313,
+"GENERIC": 0.05,
+"UNRELATED": 0.637
+}
+],
+[
+"Golden Gate Bridge",
+"L29_N10755",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.03,
+"UNRELATED": 0.967
+}
+],
+[
+"Mount Everest",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.847,
+"UNRELATED": 0.143
+}
+],
+[
+"Mount Everest",
+"L30_N6488",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.403,
+"GENERIC": 0.437,
+"UNRELATED": 0.16
+}
+],
+[
+"Mount Everest",
+"L31_N5148",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.837,
+"GENERIC": 0.16,
+"UNRELATED": 0.003
+}
+],
+[
+"Mount Everest",
+"L27_N10689",
+27,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.73,
+"GENERIC": 0.137,
+"UNRELATED": 0.133
+}
+],
+[
+"Mount Everest",
+"L26_N3817",
+26,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.917,
+"GENERIC": 0.047,
+"UNRELATED": 0.037
+}
+],
+[
+"Mount Everest",
+"L10_N1053",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.243,
+"GENERIC": 0.23,
+"UNRELATED": 0.527
+}
+],
+[
+"Mount Everest",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.977,
+"UNRELATED": 0.003
+}
+],
+[
+"Mount Everest",
+"L10_N11862",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.107,
+"GENERIC": 0.01,
+"UNRELATED": 0.883
+}
+],
+[
+"Mount Everest",
+"L3_N5992",
+3,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.113,
+"UNRELATED": 0.87
+}
+],
+[
+"Mount Everest",
+"L9_N10107",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.403,
+"GENERIC": 0.313,
+"UNRELATED": 0.283
+}
+],
+[
+"Mount Everest",
+"L35_N9435",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.97,
+"UNRELATED": 0.03
+}
+],
+[
+"Mount Everest",
+"L29_N715",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.39,
+"UNRELATED": 0.59
+}
+],
+[
+"Mount Everest",
+"L29_N277",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.267,
+"GENERIC": 0.03,
+"UNRELATED": 0.703
+}
+],
+[
+"Mount Everest",
+"L8_N5241",
+8,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.923,
+"GENERIC": 0.063,
+"UNRELATED": 0.013
+}
+],
+[
+"Mount Everest",
+"L35_N11333",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"Mount Everest",
+"L34_N3577",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.67,
+"UNRELATED": 0.32
+}
+],
+[
+"Mount Everest",
+"L28_N10273",
+28,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.613,
+"GENERIC": 0.19,
+"UNRELATED": 0.197
+}
+],
+[
+"Mount Everest",
+"L26_N10647",
+26,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.393,
+"GENERIC": 0.087,
+"UNRELATED": 0.52
+}
+],
+[
+"Mount Everest",
+"L30_N2860",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.01,
+"UNRELATED": 0.97
+}
+],
+[
+"Mount Everest",
+"L3_N6707",
+3,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.263,
+"UNRELATED": 0.737
+}
+],
+[
+"Mount Everest",
+"L30_N4505",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.04,
+"GENERIC": 0.02,
+"UNRELATED": 0.94
+}
+],
+[
+"Mount Everest",
+"L10_N8065",
+10,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.697,
+"GENERIC": 0.17,
+"UNRELATED": 0.133
+}
+],
+[
+"Mount Everest",
+"L32_N9273",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.043,
+"UNRELATED": 0.947
+}
+],
+[
+"Mount Everest",
+"L11_N10315",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.463,
+"GENERIC": 0.1,
+"UNRELATED": 0.437
+}
+],
+[
+"Mount Everest",
+"L6_N939",
+6,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.58,
+"UNRELATED": 0.413
+}
+],
+[
+"Mount Everest",
+"L10_N10890",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.243,
+"GENERIC": 0.02,
+"UNRELATED": 0.737
+}
+],
+[
+"Mount Everest",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.933,
+"UNRELATED": 0.067
+}
+],
+[
+"Mount Everest",
+"L0_N2883",
+0,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.087,
+"UNRELATED": 0.9
+}
+],
+[
+"Mount Everest",
+"L6_N1744",
+6,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.03,
+"GENERIC": 0.937,
+"UNRELATED": 0.033
+}
+],
+[
+"Mount Everest",
+"L11_N2831",
+11,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.057,
+"GENERIC": 0.117,
+"UNRELATED": 0.827
+}
+],
+[
+"Mount Everest",
+"L17_N4551",
+17,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Mount Everest",
+"L12_N10874",
+12,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.903,
+"UNRELATED": 0.093
+}
+],
+[
+"Mount Everest",
+"L30_N4952",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.807,
+"GENERIC": 0.1,
+"UNRELATED": 0.093
+}
+],
+[
+"Mount Everest",
+"L29_N2688",
+29,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.033,
+"GENERIC": 0.947,
+"UNRELATED": 0.02
+}
+],
+[
+"Mount Everest",
+"L11_N615",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.587,
+"GENERIC": 0.17,
+"UNRELATED": 0.243
+}
+],
+[
+"Mount Everest",
+"L23_N7212",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.057,
+"GENERIC": 0.913,
+"UNRELATED": 0.03
+}
+],
+[
+"Mount Everest",
+"L34_N10521",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.877,
+"UNRELATED": 0.123
+}
+],
+[
+"Mount Everest",
+"L35_N2001",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"Mount Everest",
+"L30_N10990",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Mount Everest",
+"L9_N5303",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.367,
+"GENERIC": 0.143,
+"UNRELATED": 0.49
+}
+],
+[
+"Mount Everest",
+"L32_N4145",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.473,
+"UNRELATED": 0.507
+}
+],
+[
+"Mount Everest",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.703,
+"UNRELATED": 0.273
+}
+],
+[
+"Mount Everest",
+"L9_N1398",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.02,
+"UNRELATED": 0.963
+}
+],
+[
+"Mount Everest",
+"L34_N8384",
+34,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.143,
+"GENERIC": 0.163,
+"UNRELATED": 0.693
+}
+],
+[
+"Mount Everest",
+"L9_N984",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.033,
+"UNRELATED": 0.95
+}
+],
+[
+"Mount Everest",
+"L32_N2526",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.02,
+"UNRELATED": 0.97
+}
+],
+[
+"Mount Everest",
+"L26_N6962",
+26,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.973,
+"UNRELATED": 0.013
+}
+],
+[
+"Mount Everest",
+"L23_N5030",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.893,
+"UNRELATED": 0.107
+}
+],
+[
+"Mount Everest",
+"L32_N7606",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Mount Everest",
+"L31_N1772",
+31,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.0,
+"UNRELATED": 0.993
+}
+],
+[
+"photosynthesis",
+"L32_N10377",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.377,
+"GENERIC": 0.503,
+"UNRELATED": 0.12
+}
+],
+[
+"photosynthesis",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.917,
+"UNRELATED": 0.083
+}
+],
+[
+"photosynthesis",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"photosynthesis",
+"L29_N10676",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.223,
+"GENERIC": 0.257,
+"UNRELATED": 0.52
+}
+],
+[
+"photosynthesis",
+"L30_N1883",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.947,
+"UNRELATED": 0.043
+}
+],
+[
+"photosynthesis",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.963,
+"UNRELATED": 0.037
+}
+],
+[
+"photosynthesis",
+"L29_N6441",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.293,
+"GENERIC": 0.167,
+"UNRELATED": 0.54
+}
+],
+[
+"photosynthesis",
+"L29_N11279",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.643,
+"GENERIC": 0.11,
+"UNRELATED": 0.247
+}
+],
+[
+"photosynthesis",
+"L35_N6924",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.957,
+"UNRELATED": 0.043
+}
+],
+[
+"photosynthesis",
+"L27_N8328",
+27,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.637,
+"GENERIC": 0.083,
+"UNRELATED": 0.28
+}
+],
+[
+"photosynthesis",
+"L28_N6802",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.613,
+"UNRELATED": 0.377
+}
+],
+[
+"photosynthesis",
+"L35_N9532",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.933,
+"UNRELATED": 0.067
+}
+],
+[
+"photosynthesis",
+"L35_N4343",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"photosynthesis",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.677,
+"UNRELATED": 0.317
+}
+],
+[
+"photosynthesis",
+"L13_N11913",
+13,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.913,
+"GENERIC": 0.03,
+"UNRELATED": 0.057
+}
+],
+[
+"photosynthesis",
+"L31_N6130",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.857,
+"UNRELATED": 0.143
+}
+],
+[
+"photosynthesis",
+"L0_N11241",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.95,
+"UNRELATED": 0.05
+}
+],
+[
+"photosynthesis",
+"L33_N3296",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"photosynthesis",
+"L31_N8024",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.957,
+"UNRELATED": 0.043
+}
+],
+[
+"photosynthesis",
+"L19_N2196",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.82,
+"UNRELATED": 0.177
+}
+],
+[
+"photosynthesis",
+"L8_N1105",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.07,
+"GENERIC": 0.147,
+"UNRELATED": 0.783
+}
+],
+[
+"photosynthesis",
+"L28_N4754",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.827,
+"UNRELATED": 0.173
+}
+],
+[
+"photosynthesis",
+"L8_N4968",
+8,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.357,
+"GENERIC": 0.41,
+"UNRELATED": 0.233
+}
+],
+[
+"photosynthesis",
+"L24_N5866",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.98,
+"UNRELATED": 0.02
+}
+],
+[
+"photosynthesis",
+"L1_N10144",
+1,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.453,
+"UNRELATED": 0.533
+}
+],
+[
+"photosynthesis",
+"L9_N11931",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.963,
+"GENERIC": 0.013,
+"UNRELATED": 0.023
+}
+],
+[
+"photosynthesis",
+"L31_N2306",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.027,
+"GENERIC": 0.603,
+"UNRELATED": 0.37
+}
+],
+[
+"photosynthesis",
+"L8_N2373",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.08,
+"UNRELATED": 0.92
+}
+],
+[
+"photosynthesis",
+"L9_N4389",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.983,
+"GENERIC": 0.007,
+"UNRELATED": 0.01
+}
+],
+[
+"photosynthesis",
+"L11_N9784",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.79,
+"GENERIC": 0.027,
+"UNRELATED": 0.183
+}
+],
+[
+"photosynthesis",
+"L30_N66",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.48,
+"GENERIC": 0.24,
+"UNRELATED": 0.28
+}
+],
+[
+"photosynthesis",
+"L25_N926",
+25,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"photosynthesis",
+"L28_N1480",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.91,
+"UNRELATED": 0.09
+}
+],
+[
+"photosynthesis",
+"L7_N6486",
+7,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.453,
+"UNRELATED": 0.537
+}
+],
+[
+"photosynthesis",
+"L10_N5086",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.047,
+"GENERIC": 0.24,
+"UNRELATED": 0.713
+}
+],
+[
+"photosynthesis",
+"L28_N136",
+28,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.307,
+"GENERIC": 0.097,
+"UNRELATED": 0.597
+}
+],
+[
+"photosynthesis",
+"L23_N7580",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.957,
+"UNRELATED": 0.043
+}
+],
+[
+"photosynthesis",
+"L4_N1134",
+4,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.25,
+"GENERIC": 0.22,
+"UNRELATED": 0.53
+}
+],
+[
+"photosynthesis",
+"L31_N10932",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.05,
+"GENERIC": 0.6,
+"UNRELATED": 0.35
+}
+],
+[
+"photosynthesis",
+"L35_N122",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.783,
+"UNRELATED": 0.217
+}
+],
+[
+"photosynthesis",
+"L25_N6635",
+25,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.53,
+"UNRELATED": 0.457
+}
+],
+[
+"photosynthesis",
+"L32_N10076",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.813,
+"UNRELATED": 0.177
+}
+],
+[
+"photosynthesis",
+"L32_N3943",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.037,
+"GENERIC": 0.3,
+"UNRELATED": 0.66
+}
+],
+[
+"photosynthesis",
+"L29_N671",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.48,
+"GENERIC": 0.187,
+"UNRELATED": 0.333
+}
+],
+[
+"photosynthesis",
+"L19_N1535",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"photosynthesis",
+"L27_N2598",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.777,
+"UNRELATED": 0.203
+}
+],
+[
+"photosynthesis",
+"L35_N6721",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"photosynthesis",
+"L12_N10165",
+12,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.18,
+"GENERIC": 0.033,
+"UNRELATED": 0.787
+}
+],
+[
+"photosynthesis",
+"L28_N9559",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.98,
+"UNRELATED": 0.02
+}
+],
+[
+"photosynthesis",
+"L28_N1829",
+28,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.057,
+"GENERIC": 0.21,
+"UNRELATED": 0.733
+}
+],
+[
+"the French Revolution",
+"L30_N5534",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.68,
+"GENERIC": 0.19,
+"UNRELATED": 0.13
+}
+],
+[
+"the French Revolution",
+"L35_N8393",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"the French Revolution",
+"L34_N2945",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.043,
+"GENERIC": 0.94,
+"UNRELATED": 0.013
+}
+],
+[
+"the French Revolution",
+"L32_N5331",
+32,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.767,
+"GENERIC": 0.18,
+"UNRELATED": 0.053
+}
+],
+[
+"the French Revolution",
+"L35_N9709",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.21,
+"GENERIC": 0.77,
+"UNRELATED": 0.02
+}
+],
+[
+"the French Revolution",
+"L9_N10974",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.197,
+"GENERIC": 0.2,
+"UNRELATED": 0.603
+}
+],
+[
+"the French Revolution",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"the French Revolution",
+"L30_N10434",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.17,
+"UNRELATED": 0.817
+}
+],
+[
+"the French Revolution",
+"L29_N6000",
+29,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.697,
+"UNRELATED": 0.293
+}
+],
+[
+"the French Revolution",
+"L9_N21",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.443,
+"GENERIC": 0.267,
+"UNRELATED": 0.29
+}
+],
+[
+"the French Revolution",
+"L13_N212",
+13,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.98,
+"UNRELATED": 0.02
+}
+],
+[
+"the French Revolution",
+"L29_N8349",
+29,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.527,
+"UNRELATED": 0.457
+}
+],
+[
+"the French Revolution",
+"L0_N3041",
+0,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the French Revolution",
+"L27_N12062",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.367,
+"GENERIC": 0.55,
+"UNRELATED": 0.083
+}
+],
+[
+"the French Revolution",
+"L26_N11293",
+26,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.153,
+"GENERIC": 0.823,
+"UNRELATED": 0.023
+}
+],
+[
+"the French Revolution",
+"L35_N3129",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L35_N3924",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"the French Revolution",
+"L35_N1178",
+35,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.73,
+"GENERIC": 0.24,
+"UNRELATED": 0.03
+}
+],
+[
+"the French Revolution",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.99,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L31_N2849",
+31,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.41,
+"UNRELATED": 0.58
+}
+],
+[
+"the French Revolution",
+"L28_N9195",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.187,
+"GENERIC": 0.567,
+"UNRELATED": 0.247
+}
+],
+[
+"the French Revolution",
+"L18_N9878",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the French Revolution",
+"L23_N5574",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.037,
+"GENERIC": 0.707,
+"UNRELATED": 0.257
+}
+],
+[
+"the French Revolution",
+"L33_N9164",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.973,
+"UNRELATED": 0.003
+}
+],
+[
+"the French Revolution",
+"L28_N1760",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.213,
+"GENERIC": 0.567,
+"UNRELATED": 0.22
+}
+],
+[
+"the French Revolution",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.73,
+"UNRELATED": 0.27
+}
+],
+[
+"the French Revolution",
+"L23_N2736",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L14_N3988",
+14,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the French Revolution",
+"L35_N9435",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"the French Revolution",
+"L20_N5841",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.033,
+"GENERIC": 0.953,
+"UNRELATED": 0.013
+}
+],
+[
+"the French Revolution",
+"L21_N4111",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.98,
+"UNRELATED": 0.007
+}
+],
+[
+"the French Revolution",
+"L22_N3769",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L19_N210",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.967,
+"UNRELATED": 0.033
+}
+],
+[
+"the French Revolution",
+"L24_N7176",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.98,
+"UNRELATED": 0.003
+}
+],
+[
+"the French Revolution",
+"L29_N12180",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.777,
+"GENERIC": 0.023,
+"UNRELATED": 0.2
+}
+],
+[
+"the French Revolution",
+"L8_N7215",
+8,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.623,
+"GENERIC": 0.153,
+"UNRELATED": 0.223
+}
+],
+[
+"the French Revolution",
+"L8_N9691",
+8,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.63,
+"UNRELATED": 0.36
+}
+],
+[
+"the French Revolution",
+"L34_N4098",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L22_N3956",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.973,
+"UNRELATED": 0.007
+}
+],
+[
+"the French Revolution",
+"L12_N7647",
+12,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.23,
+"GENERIC": 0.42,
+"UNRELATED": 0.35
+}
+],
+[
+"the French Revolution",
+"L16_N9954",
+16,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L29_N6654",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.647,
+"GENERIC": 0.047,
+"UNRELATED": 0.307
+}
+],
+[
+"the French Revolution",
+"L30_N8105",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.0,
+"UNRELATED": 0.993
+}
+],
+[
+"the French Revolution",
+"L30_N6050",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.977,
+"UNRELATED": 0.0
+}
+],
+[
+"the French Revolution",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.973,
+"UNRELATED": 0.027
+}
+],
+[
+"the French Revolution",
+"L11_N1082",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.607,
+"GENERIC": 0.133,
+"UNRELATED": 0.26
+}
+],
+[
+"the French Revolution",
+"L31_N7662",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.767,
+"GENERIC": 0.04,
+"UNRELATED": 0.193
+}
+],
+[
+"the French Revolution",
+"L6_N8518",
+6,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the French Revolution",
+"L33_N3098",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.967,
+"UNRELATED": 0.033
+}
+],
+[
+"the French Revolution",
+"L28_N3351",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.847,
+"UNRELATED": 0.147
+}
+],
+[
+"the Titanic",
+"L35_N7532",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.933,
+"UNRELATED": 0.057
+}
+],
+[
+"the Titanic",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.037,
+"GENERIC": 0.96,
+"UNRELATED": 0.003
+}
+],
+[
+"the Titanic",
+"L29_N9883",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.693,
+"GENERIC": 0.1,
+"UNRELATED": 0.207
+}
+],
+[
+"the Titanic",
+"L35_N8393",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"the Titanic",
+"L22_N8620",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"the Titanic",
+"L28_N9101",
+28,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.863,
+"GENERIC": 0.067,
+"UNRELATED": 0.07
+}
+],
+[
+"the Titanic",
+"L31_N5473",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the Titanic",
+"L29_N3730",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.87,
+"GENERIC": 0.077,
+"UNRELATED": 0.053
+}
+],
+[
+"the Titanic",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.953,
+"UNRELATED": 0.047
+}
+],
+[
+"the Titanic",
+"L21_N10152",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"the Titanic",
+"L31_N7444",
+31,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.033,
+"GENERIC": 0.057,
+"UNRELATED": 0.91
+}
+],
+[
+"the Titanic",
+"L27_N3048",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"the Titanic",
+"L34_N374",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"the Titanic",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.907,
+"UNRELATED": 0.087
+}
+],
+[
+"the Titanic",
+"L35_N3984",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.917,
+"UNRELATED": 0.083
+}
+],
+[
+"the Titanic",
+"L30_N11575",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.553,
+"GENERIC": 0.053,
+"UNRELATED": 0.393
+}
+],
+[
+"the Titanic",
+"L35_N3531",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"the Titanic",
+"L30_N1513",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.133,
+"GENERIC": 0.8,
+"UNRELATED": 0.067
+}
+],
+[
+"the Titanic",
+"L35_N122",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.94,
+"UNRELATED": 0.06
+}
+],
+[
+"the Titanic",
+"L8_N9525",
+8,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.877,
+"GENERIC": 0.01,
+"UNRELATED": 0.113
+}
+],
+[
+"the Titanic",
+"L35_N9435",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"the Titanic",
+"L28_N9195",
+28,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.067,
+"GENERIC": 0.313,
+"UNRELATED": 0.62
+}
+],
+[
+"the Titanic",
+"L32_N3835",
+32,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the Titanic",
+"L32_N4145",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.473,
+"UNRELATED": 0.507
+}
+],
+[
+"the Titanic",
+"L30_N7450",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.867,
+"GENERIC": 0.017,
+"UNRELATED": 0.117
+}
+],
+[
+"the Titanic",
+"L4_N9720",
+4,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.547,
+"UNRELATED": 0.443
+}
+],
+[
+"the Titanic",
+"L19_N210",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.937,
+"UNRELATED": 0.053
+}
+],
+[
+"the Titanic",
+"L35_N3129",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the Titanic",
+"L19_N7331",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.87,
+"UNRELATED": 0.13
+}
+],
+[
+"the Titanic",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.74,
+"UNRELATED": 0.237
+}
+],
+[
+"the Titanic",
+"L9_N10815",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.733,
+"GENERIC": 0.2,
+"UNRELATED": 0.067
+}
+],
+[
+"the Titanic",
+"L35_N8724",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"the Titanic",
+"L24_N4397",
+24,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.913,
+"GENERIC": 0.01,
+"UNRELATED": 0.077
+}
+],
+[
+"the Titanic",
+"L34_N3836",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the Titanic",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.943,
+"UNRELATED": 0.047
+}
+],
+[
+"the Titanic",
+"L21_N4790",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.82,
+"UNRELATED": 0.18
+}
+],
+[
+"the Titanic",
+"L33_N607",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.07,
+"GENERIC": 0.78,
+"UNRELATED": 0.15
+}
+],
+[
+"the Titanic",
+"L30_N7298",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.077,
+"GENERIC": 0.147,
+"UNRELATED": 0.777
+}
+],
+[
+"the Titanic",
+"L16_N591",
+16,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.927,
+"UNRELATED": 0.07
+}
+],
+[
+"the Titanic",
+"L33_N6525",
+33,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.667,
+"GENERIC": 0.12,
+"UNRELATED": 0.213
+}
+],
+[
+"the Titanic",
+"L22_N3956",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.02,
+"GENERIC": 0.967,
+"UNRELATED": 0.013
+}
+],
+[
+"the Titanic",
+"L5_N6073",
+5,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.28,
+"UNRELATED": 0.707
+}
+],
+[
+"the Titanic",
+"L35_N943",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"the Titanic",
+"L20_N5144",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the Titanic",
+"L20_N12054",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.047,
+"GENERIC": 0.85,
+"UNRELATED": 0.103
+}
+],
+[
+"the Titanic",
+"L19_N4468",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"the Titanic",
+"L31_N7838",
+31,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.58,
+"GENERIC": 0.03,
+"UNRELATED": 0.39
+}
+],
+[
+"the Titanic",
+"L27_N2024",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.747,
+"UNRELATED": 0.247
+}
+],
+[
+"the Titanic",
+"L31_N5874",
+31,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.09,
+"GENERIC": 0.01,
+"UNRELATED": 0.9
+}
+],
+[
+"the Titanic",
+"L23_N8486",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the violin",
+"L9_N5033",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.933,
+"GENERIC": 0.02,
+"UNRELATED": 0.047
+}
+],
+[
+"the violin",
+"L29_N224",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.16,
+"GENERIC": 0.157,
+"UNRELATED": 0.683
+}
+],
+[
+"the violin",
+"L21_N10152",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"the violin",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"the violin",
+"L31_N5473",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the violin",
+"L10_N7290",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.25,
+"GENERIC": 0.177,
+"UNRELATED": 0.573
+}
+],
+[
+"the violin",
+"L34_N7185",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the violin",
+"L18_N7342",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.893,
+"UNRELATED": 0.107
+}
+],
+[
+"the violin",
+"L8_N11566",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.133,
+"GENERIC": 0.163,
+"UNRELATED": 0.703
+}
+],
+[
+"the violin",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.91,
+"UNRELATED": 0.09
+}
+],
+[
+"the violin",
+"L22_N8620",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.987,
+"UNRELATED": 0.013
+}
+],
+[
+"the violin",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.597,
+"UNRELATED": 0.393
+}
+],
+[
+"the violin",
+"L10_N11716",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.317,
+"GENERIC": 0.217,
+"UNRELATED": 0.467
+}
+],
+[
+"the violin",
+"L27_N1893",
+27,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.54,
+"GENERIC": 0.127,
+"UNRELATED": 0.333
+}
+],
+[
+"the violin",
+"L35_N3129",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"the violin",
+"L35_N122",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.66,
+"UNRELATED": 0.33
+}
+],
+[
+"the violin",
+"L3_N2667",
+3,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.493,
+"GENERIC": 0.073,
+"UNRELATED": 0.433
+}
+],
+[
+"the violin",
+"L35_N7532",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.923,
+"UNRELATED": 0.07
+}
+],
+[
+"the violin",
+"L35_N8724",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.913,
+"UNRELATED": 0.087
+}
+],
+[
+"the violin",
+"L8_N1287",
+8,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.153,
+"GENERIC": 0.213,
+"UNRELATED": 0.633
+}
+],
+[
+"the violin",
+"L33_N4049",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.94,
+"UNRELATED": 0.06
+}
+],
+[
+"the violin",
+"L19_N210",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.94,
+"UNRELATED": 0.05
+}
+],
+[
+"the violin",
+"L11_N11765",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.623,
+"GENERIC": 0.04,
+"UNRELATED": 0.337
+}
+],
+[
+"the violin",
+"L35_N8393",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.97,
+"UNRELATED": 0.03
+}
+],
+[
+"the violin",
+"L35_N5894",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.04,
+"GENERIC": 0.947,
+"UNRELATED": 0.013
+}
+],
+[
+"the violin",
+"L20_N5144",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the violin",
+"L10_N4832",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.033,
+"GENERIC": 0.157,
+"UNRELATED": 0.81
+}
+],
+[
+"the violin",
+"L22_N3769",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the violin",
+"L27_N2326",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.98,
+"UNRELATED": 0.017
+}
+],
+[
+"the violin",
+"L30_N4364",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.057,
+"GENERIC": 0.57,
+"UNRELATED": 0.373
+}
+],
+[
+"the violin",
+"L20_N3467",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.927,
+"UNRELATED": 0.07
+}
+],
+[
+"the violin",
+"L6_N10525",
+6,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.027,
+"GENERIC": 0.253,
+"UNRELATED": 0.72
+}
+],
+[
+"the violin",
+"L16_N591",
+16,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.897,
+"UNRELATED": 0.093
+}
+],
+[
+"the violin",
+"L27_N6266",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"the violin",
+"L7_N10760",
+7,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.11,
+"GENERIC": 0.057,
+"UNRELATED": 0.833
+}
+],
+[
+"the violin",
+"L22_N3956",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.967,
+"UNRELATED": 0.017
+}
+],
+[
+"the violin",
+"L32_N4145",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.023,
+"GENERIC": 0.4,
+"UNRELATED": 0.577
+}
+],
+[
+"the violin",
+"L31_N7260",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.983,
+"UNRELATED": 0.007
+}
+],
+[
+"the violin",
+"L15_N3061",
+15,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"the violin",
+"L12_N9785",
+12,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.013,
+"GENERIC": 0.8,
+"UNRELATED": 0.187
+}
+],
+[
+"the violin",
+"L35_N4343",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"the violin",
+"L29_N11528",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.73,
+"GENERIC": 0.123,
+"UNRELATED": 0.147
+}
+],
+[
+"the violin",
+"L18_N3954",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"the violin",
+"L24_N7842",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"the violin",
+"L20_N5841",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.053,
+"GENERIC": 0.927,
+"UNRELATED": 0.017
+}
+],
+[
+"the violin",
+"L10_N3051",
+10,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"the violin",
+"L11_N11436",
+11,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.673,
+"GENERIC": 0.117,
+"UNRELATED": 0.21
+}
+],
+[
+"the violin",
+"L9_N2255",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.007,
+"UNRELATED": 0.987
+}
+],
+[
+"the violin",
+"L17_N8558",
+17,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"the violin",
+"L0_N10696",
+0,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.747,
+"GENERIC": 0.117,
+"UNRELATED": 0.137
+}
+],
+[
+"Tokyo",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.063,
+"GENERIC": 0.933,
+"UNRELATED": 0.003
+}
+],
+[
+"Tokyo",
+"L35_N8393",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.973,
+"UNRELATED": 0.027
+}
+],
+[
+"Tokyo",
+"L30_N4736",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.56,
+"GENERIC": 0.407,
+"UNRELATED": 0.033
+}
+],
+[
+"Tokyo",
+"L27_N2110",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.173,
+"GENERIC": 0.817,
+"UNRELATED": 0.01
+}
+],
+[
+"Tokyo",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.827,
+"UNRELATED": 0.167
+}
+],
+[
+"Tokyo",
+"L23_N2736",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Tokyo",
+"L27_N10855",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.97,
+"UNRELATED": 0.013
+}
+],
+[
+"Tokyo",
+"L28_N8535",
+28,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.133,
+"GENERIC": 0.423,
+"UNRELATED": 0.443
+}
+],
+[
+"Tokyo",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.923,
+"UNRELATED": 0.073
+}
+],
+[
+"Tokyo",
+"L31_N5473",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"Tokyo",
+"L34_N374",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"Tokyo",
+"L35_N10765",
+35,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.613,
+"GENERIC": 0.273,
+"UNRELATED": 0.113
+}
+],
+[
+"Tokyo",
+"L27_N3048",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.987,
+"UNRELATED": 0.013
+}
+],
+[
+"Tokyo",
+"L35_N10095",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.187,
+"GENERIC": 0.803,
+"UNRELATED": 0.01
+}
+],
+[
+"Tokyo",
+"L35_N3129",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.993,
+"UNRELATED": 0.003
+}
+],
+[
+"Tokyo",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.857,
+"UNRELATED": 0.143
+}
+],
+[
+"Tokyo",
+"L28_N9723",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.307,
+"GENERIC": 0.387,
+"UNRELATED": 0.307
+}
+],
+[
+"Tokyo",
+"L35_N5492",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.977,
+"UNRELATED": 0.023
+}
+],
+[
+"Tokyo",
+"L29_N624",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.303,
+"GENERIC": 0.02,
+"UNRELATED": 0.677
+}
+],
+[
+"Tokyo",
+"L29_N5803",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.77,
+"GENERIC": 0.127,
+"UNRELATED": 0.103
+}
+],
+[
+"Tokyo",
+"L9_N7969",
+9,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.587,
+"GENERIC": 0.267,
+"UNRELATED": 0.147
+}
+],
+[
+"Tokyo",
+"L23_N7212",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.933,
+"UNRELATED": 0.05
+}
+],
+[
+"Tokyo",
+"L35_N10438",
+35,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.497,
+"GENERIC": 0.417,
+"UNRELATED": 0.087
+}
+],
+[
+"Tokyo",
+"L35_N9435",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.927,
+"UNRELATED": 0.07
+}
+],
+[
+"Tokyo",
+"L21_N10152",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.97,
+"UNRELATED": 0.03
+}
+],
+[
+"Tokyo",
+"L34_N9002",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.963,
+"UNRELATED": 0.037
+}
+],
+[
+"Tokyo",
+"L11_N4508",
+11,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.223,
+"GENERIC": 0.047,
+"UNRELATED": 0.73
+}
+],
+[
+"Tokyo",
+"L21_N11437",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.917,
+"UNRELATED": 0.083
+}
+],
+[
+"Tokyo",
+"L22_N4578",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"Tokyo",
+"L27_N3989",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.83,
+"UNRELATED": 0.17
+}
+],
+[
+"Tokyo",
+"L11_N3274",
+11,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.293,
+"GENERIC": 0.01,
+"UNRELATED": 0.697
+}
+],
+[
+"Tokyo",
+"L18_N3954",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Tokyo",
+"L18_N7156",
+18,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.97,
+"UNRELATED": 0.03
+}
+],
+[
+"Tokyo",
+"L23_N10968",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.987,
+"UNRELATED": 0.013
+}
+],
+[
+"Tokyo",
+"L34_N8376",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"Tokyo",
+"L22_N1240",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.04,
+"GENERIC": 0.903,
+"UNRELATED": 0.057
+}
+],
+[
+"Tokyo",
+"L31_N6984",
+31,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.157,
+"GENERIC": 0.4,
+"UNRELATED": 0.443
+}
+],
+[
+"Tokyo",
+"L35_N8724",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.94,
+"UNRELATED": 0.06
+}
+],
+[
+"Tokyo",
+"L17_N911",
+17,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.04,
+"GENERIC": 0.7,
+"UNRELATED": 0.26
+}
+],
+[
+"Tokyo",
+"L10_N10284",
+10,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.113,
+"GENERIC": 0.033,
+"UNRELATED": 0.853
+}
+],
+[
+"Tokyo",
+"L20_N3467",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.937,
+"UNRELATED": 0.06
+}
+],
+[
+"Tokyo",
+"L35_N9328",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.063,
+"GENERIC": 0.93,
+"UNRELATED": 0.007
+}
+],
+[
+"Tokyo",
+"L2_N1826",
+2,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.583,
+"UNRELATED": 0.407
+}
+],
+[
+"Tokyo",
+"L22_N3006",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.877,
+"UNRELATED": 0.12
+}
+],
+[
+"Tokyo",
+"L19_N6149",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.967,
+"UNRELATED": 0.033
+}
+],
+[
+"Tokyo",
+"L16_N591",
+16,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.893,
+"UNRELATED": 0.103
+}
+],
+[
+"Tokyo",
+"L32_N8753",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.207,
+"GENERIC": 0.02,
+"UNRELATED": 0.773
+}
+],
+[
+"Tokyo",
+"L9_N10540",
+9,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.98,
+"UNRELATED": 0.01
+}
+],
+[
+"Tokyo",
+"L7_N10524",
+7,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.957,
+"UNRELATED": 0.043
+}
+],
+[
+"Tokyo",
+"L30_N12153",
+30,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.977,
+"UNRELATED": 0.013
+}
+],
+[
+"Venice",
+"L33_N10933",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.033,
+"GENERIC": 0.96,
+"UNRELATED": 0.007
+}
+],
+[
+"Venice",
+"L9_N660",
+9,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.347,
+"GENERIC": 0.14,
+"UNRELATED": 0.513
+}
+],
+[
+"Venice",
+"L34_N7185",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Venice",
+"L35_N10037",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.957,
+"UNRELATED": 0.043
+}
+],
+[
+"Venice",
+"L27_N2110",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.067,
+"GENERIC": 0.913,
+"UNRELATED": 0.02
+}
+],
+[
+"Venice",
+"L8_N3346",
+8,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.8,
+"GENERIC": 0.103,
+"UNRELATED": 0.097
+}
+],
+[
+"Venice",
+"L23_N2736",
+23,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Venice",
+"L28_N9723",
+28,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.07,
+"GENERIC": 0.29,
+"UNRELATED": 0.64
+}
+],
+[
+"Venice",
+"L31_N493",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.213,
+"GENERIC": 0.767,
+"UNRELATED": 0.02
+}
+],
+[
+"Venice",
+"L34_N1452",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.89,
+"UNRELATED": 0.11
+}
+],
+[
+"Venice",
+"L25_N6164",
+25,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.017,
+"GENERIC": 0.967,
+"UNRELATED": 0.017
+}
+],
+[
+"Venice",
+"L30_N560",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.54,
+"GENERIC": 0.173,
+"UNRELATED": 0.287
+}
+],
+[
+"Venice",
+"L22_N8620",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Venice",
+"L31_N5473",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Venice",
+"L10_N7589",
+10,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.66,
+"GENERIC": 0.043,
+"UNRELATED": 0.297
+}
+],
+[
+"Venice",
+"L24_N7842",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Venice",
+"L35_N9896",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.01,
+"GENERIC": 0.727,
+"UNRELATED": 0.263
+}
+],
+[
+"Venice",
+"L21_N10152",
+21,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.98,
+"UNRELATED": 0.02
+}
+],
+[
+"Venice",
+"L35_N612",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Venice",
+"L30_N5687",
+30,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.533,
+"GENERIC": 0.12,
+"UNRELATED": 0.347
+}
+],
+[
+"Venice",
+"L17_N675",
+17,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.05,
+"GENERIC": 0.91,
+"UNRELATED": 0.04
+}
+],
+[
+"Venice",
+"L35_N122",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.923,
+"UNRELATED": 0.077
+}
+],
+[
+"Venice",
+"L35_N6721",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.927,
+"UNRELATED": 0.07
+}
+],
+[
+"Venice",
+"L35_N8724",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.97,
+"UNRELATED": 0.03
+}
+],
+[
+"Venice",
+"L27_N8251",
+27,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.983,
+"UNRELATED": 0.017
+}
+],
+[
+"Venice",
+"L26_N6933",
+26,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.463,
+"GENERIC": 0.123,
+"UNRELATED": 0.413
+}
+],
+[
+"Venice",
+"L28_N10161",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.98,
+"UNRELATED": 0.017
+}
+],
+[
+"Venice",
+"L19_N3631",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Venice",
+"L29_N4171",
+29,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"Venice",
+"L32_N4666",
+32,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.027,
+"UNRELATED": 0.967
+}
+],
+[
+"Venice",
+"L20_N5144",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 1.0,
+"UNRELATED": 0.0
+}
+],
+[
+"Venice",
+"L20_N12054",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.003,
+"GENERIC": 0.8,
+"UNRELATED": 0.197
+}
+],
+[
+"Venice",
+"L35_N3531",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Venice",
+"L31_N4178",
+31,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.09,
+"GENERIC": 0.893,
+"UNRELATED": 0.017
+}
+],
+[
+"Venice",
+"L26_N5410",
+26,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.83,
+"GENERIC": 0.07,
+"UNRELATED": 0.1
+}
+],
+[
+"Venice",
+"L33_N7904",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Venice",
+"L20_N4354",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.997,
+"UNRELATED": 0.003
+}
+],
+[
+"Venice",
+"L34_N1134",
+34,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.95,
+"UNRELATED": 0.05
+}
+],
+[
+"Venice",
+"L29_N10918",
+29,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.307,
+"GENERIC": 0.067,
+"UNRELATED": 0.627
+}
+],
+[
+"Venice",
+"L20_N3467",
+20,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.96,
+"UNRELATED": 0.04
+}
+],
+[
+"Venice",
+"L19_N6149",
+19,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.99,
+"UNRELATED": 0.01
+}
+],
+[
+"Venice",
+"L29_N11644",
+29,
+"CONCEPT_SPECIFIC",
+{
+"CONCEPT_SPECIFIC": 0.67,
+"GENERIC": 0.157,
+"UNRELATED": 0.173
+}
+],
+[
+"Venice",
+"L22_N2721",
+22,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.007,
+"GENERIC": 0.973,
+"UNRELATED": 0.02
+}
+],
+[
+"Venice",
+"L33_N10801",
+33,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.65,
+"UNRELATED": 0.35
+}
+],
+[
+"Venice",
+"L28_N10555",
+28,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.377,
+"GENERIC": 0.483,
+"UNRELATED": 0.14
+}
+],
+[
+"Venice",
+"L35_N11693",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.95,
+"UNRELATED": 0.05
+}
+],
+[
+"Venice",
+"L24_N4799",
+24,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.053,
+"GENERIC": 0.62,
+"UNRELATED": 0.327
+}
+],
+[
+"Venice",
+"L30_N7535",
+30,
+"UNRELATED",
+{
+"CONCEPT_SPECIFIC": 0.053,
+"GENERIC": 0.223,
+"UNRELATED": 0.723
+}
+],
+[
+"Venice",
+"L35_N4343",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.0,
+"GENERIC": 0.993,
+"UNRELATED": 0.007
+}
+],
+[
+"Venice",
+"L35_N10095",
+35,
+"GENERIC",
+{
+"CONCEPT_SPECIFIC": 0.17,
+"GENERIC": 0.817,
+"UNRELATED": 0.013
+}
+]
+]

@@ -1,0 +1,3623 @@
+{
+ "model": "Qwen/Qwen3-8B",
+ "n": 200,
+ "units": {
+  "L22_N5843": {
+   "layer": 22,
+   "neuron": 5843,
+   "pos": {
+    "explanation": "Fires on varied general-interest web material—educational listings, Q&A, entertainment, and sports—rather than a consistent topic or token meaning.",
+    "verdict": "ONE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly favors formal hard-news reporting, especially political, diplomatic, and security stories that report officials’ claims or policy statements.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L26_N9664": {
+   "layer": 26,
+   "neuron": 9664,
+   "pos": {
+    "explanation": "Procedural recipe text, especially ingredient preparation and sequential cooking instructions involving heating, baking, seasoning, and timing.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Personal reactions or realizations phrased as something striking someone or standing out to them; a few other “came back/out” examples appear incidental.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L27_N3101": {
+   "layer": 27,
+   "neuron": 3101,
+   "pos": {
+    "explanation": "Focuses on criminal wrongdoing and accountability—especially murder, identifying perpetrators, charges, convictions, and punishment.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Tracks formal criminal-court procedure and case status, including pleas, hearings, evidence, trials, and appeals.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L20_N11701": {
+   "layer": 20,
+   "neuron": 11701,
+   "pos": {
+    "explanation": "Fires on short grammatical or linking words across languages, especially Spanish/Italian and English, often in multilingual or awkwardly translated text.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.3,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often marks degree, sufficiency, or ease wording—such as “very,” “readily,” “easy,” and “enough”—in evaluative or promotional claims.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L25_N11587": {
+   "layer": 25,
+   "neuron": 11587,
+   "pos": {
+    "explanation": "Fires on scholarly-publication scaffolding—references, author affiliations, funding statements, correspondence, and review metadata—often at formatting or section-label boundaries rather than on a subject-specific concept.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on structural boundaries in academic writing, including section transitions, figure references, citation endings, and article metadata; the shared pattern is document formatting, not a particular research topic.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L18_N2466": {
+   "layer": 18,
+   "neuron": 2466,
+   "pos": {
+    "explanation": "Appears in opinionated, argumentative web prose—often rebuttals, pointed criticism, or direct-address insults—across political, religious, and online disputes.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Tracks language about messages or actions promoting, encouraging, fueling, or otherwise influencing beliefs and behavior, including rhetoric, marketing, and material support.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L26_N2397": {
+   "layer": 26,
+   "neuron": 2397,
+   "pos": {
+    "explanation": "Tracks procedural thresholds—especially required signature, vote, or support counts that determine whether initiatives and legislation can advance.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "No consistent pattern is evident; the firings range from word fragments and names to scattered conditional or availability language.",
+    "verdict": "NONE",
+    "coverage": 0.6,
+    "random_fit": 0.4,
+    "clean": false
+   }
+  },
+  "L0_N1525": {
+   "layer": 0,
+   "neuron": 1525,
+   "pos": {
+    "explanation": "Fires on Japanese katakana words or fragments, often loanwords and transliterations embedded in Japanese catalog or review text.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on Latin-script words and name fragments in English or Spanish web prose, contrasting with the positive pole’s katakana script.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L24_N7910": {
+   "layer": 24,
+   "neuron": 7910,
+   "pos": {
+    "explanation": "Favors sentence-ending punctuation and clause- or sentence-transition markers, including occasional function words that introduce a continuation.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.5,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on a heterogeneous mix of mid-sentence punctuation and ordinary content words, without a clearer shared feature.",
+    "verdict": "MIXTURE",
+    "coverage": 0.7,
+    "random_fit": 0.8,
+    "clean": false
+   }
+  },
+  "L6_N7183": {
+   "layer": 6,
+   "neuron": 7183,
+   "pos": {
+    "explanation": "Often fires on proper-name or label tokens—especially Spanish footballers and place names, but also organizations and fields—without a clear narrower shared topic.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires repeatedly on titles completing “House of …,” but also on unrelated technical strings like X11 and institutional or abstract terms such as “Development” and “Settlement.”",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L33_N3391": {
+   "layer": 33,
+   "neuron": 3391,
+   "pos": {
+    "explanation": "Fires mainly on the letter sequence “fin” in words such as finances, finals, finite, finesse, finest, and Finnish, including nearby pieces of words like semifinal and non-Finnish.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked fragments span unrelated words, names, and languages, with no consistent spelling or contextual pattern apparent.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L34_N789": {
+   "layer": 34,
+   "neuron": 789,
+   "pos": {
+    "explanation": "Fires mainly on m/M embedded within words or introduced as the second element of compounds, especially hyphenated forms, rather than on a consistent topic.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires mainly on m/M beginning ordinary words, names, and acronyms in descriptive passages or lists.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L19_N4229": {
+   "layer": 19,
+   "neuron": 4229,
+   "pos": {
+    "explanation": "Firings span unrelated profiles, obituaries, apps, and news, with no reliable shared semantic or formatting trigger.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Firings range across scripture, hardware, science, recipes, software, and names or word fragments, without a consistent common pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L18_N6924": {
+   "layer": 18,
+   "neuron": 6924,
+   "pos": {
+    "explanation": "Fires mainly on punctuation and short grammatical words that connect, qualify, or continue a clause, with a few apparent tokenization artifacts.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.9,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The examples span unrelated punctuation, word fragments, and content words without a consistent grammatical or topical pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L32_N659": {
+   "layer": 32,
+   "neuron": 659,
+   "pos": {
+    "explanation": "Mentions of what people or things can do, offer, contain, or provide, often describing their capabilities or function; the marked words themselves vary widely.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.3,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Modal and negative framing around ability or access, especially the repeated “not/won’t be able to” construction in policies, services, and practical instructions.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L18_N11674": {
+   "layer": 18,
+   "neuron": 11674,
+   "pos": {
+    "explanation": "Often appears around votes, yes/no or for/against choices, ratings, and score calculations—selection or evaluation being tallied, usually numerically.",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often appears in practical product, recipe, and craft passages specifying physical goods, ingredients, materials, sizes, or quantities, though a few examples are less connected.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L0_N4892": {
+   "layer": 0,
+   "neuron": 4892,
+   "pos": {
+    "explanation": "No reliable shared pattern: the examples include an ordinary preposition, a likely markup token, and unrelated word pieces or words such as “rows,” “Markets,” and “ounced.”",
+    "verdict": "MIXTURE",
+    "coverage": 0.833,
+    "random_fit": 0.55,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The pole overwhelmingly marks “to” in the additive construction “in addition to”; the lone Chinese character meaning removal is a possible contrastive outlier.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L20_N2895": {
+   "layer": 20,
+   "neuron": 2895,
+   "pos": {
+    "explanation": "Fires around structural or typographic boundaries in web text—headings, list markers, numbering, punctuation, and conspicuous token splits—rather than one subject area.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 1.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked words span unrelated contexts and grammatical roles; aside from often being ordinary prose tokens, they show no dependable shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L20_N5959": {
+   "layer": 20,
+   "neuron": 5959,
+   "pos": {
+    "explanation": "Common nouns naming entities, actions, outcomes, or properties in informational prose, often as the head of a noun phrase.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The highlights range across technical nouns, ordinary nouns, prepositions, and punctuation, with no clear shared pattern beyond mostly appearing in prose.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L5_N6927": {
+   "layer": 5,
+   "neuron": 6927,
+   "pos": {
+    "explanation": "The marked pieces range from word-internal fragments to whole words and Chinese text across unrelated topics; no consistent feature is evident.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked pieces are often short word-initial chunks of names or longer terms (such as ro-bben, ge-orge, and th-ailand), suggesting a subword-boundary pattern.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L21_N8857": {
+   "layer": 21,
+   "neuron": 8857,
+   "pos": {
+    "explanation": "Marks words introducing an item’s place in an ordered sequence or edition—versions, seasons, rounds, phases, stages, generations, and series.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often marks zero-ending numeric identifiers, especially street-address block numbers and product series/model numbers; a few weaker hits involve age, price, or place names.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L33_N5096": {
+   "layer": 33,
+   "neuron": 5096,
+   "pos": {
+    "explanation": "Several firings mark frustrated interjections like “Ugh/Uhh,” while many others land on unrelated B/b-initial fragments or ordinary tokens, with no stable shared feature.",
+    "verdict": "MIXTURE",
+    "coverage": 0.2,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Firings often land on B/b-initial word fragments, with some internal “rib” fragments, but the examples do not support a consistent semantic or grammatical job.",
+    "verdict": "MIXTURE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L15_N31": {
+   "layer": 15,
+   "neuron": 31,
+   "pos": {
+    "explanation": "Fires mainly on PDF/file references and raw URL or resource identifiers, with some stray punctuation and number fragments that look like extraction artifacts.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on formal document-structure text, including publication and volume citations, page references, and test or quiz headings and question counts.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L35_N4962": {
+   "layer": 35,
+   "neuron": 4962,
+   "pos": {
+    "explanation": "Tracks unusual word and name boundaries, especially capitalized names, initials, hyphenated names, and Greek-script word starts, rather than a single semantic topic.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Activations fall on assorted common and function words in mostly Jewish, religious, or educational prose, with no stable token-level pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L31_N379": {
+   "layer": 31,
+   "neuron": 379,
+   "pos": {
+    "explanation": "Targets 3D rendering and graphics-software tutorials, especially workflows and materials involving Cycles and particle-generated geometry.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Targets graphics-hardware discussions, especially Radeon/ATI GPU models, performance, specifications, and related OpenGL questions.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L20_N9329": {
+   "layer": 20,
+   "neuron": 9329,
+   "pos": {
+    "explanation": "Often marks webpage-oriented labels or linked-resource terms—domains, control panels, tables, photos, videos, and catalogs—though several firings are just punctuation or common words.",
+    "verdict": "MIXTURE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked tokens span unrelated prose continuations, from job applications and travel to keys, signs, plans, and invitations; no specific shared pattern is clear.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L0_N7808": {
+   "layer": 0,
+   "neuron": 7808,
+   "pos": {
+    "explanation": "Fires on continuations after “or,” especially approximation (“or so”) and alternative or clarifying phrasing (“or what…”).",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires around closing parentheses in punctuation-heavy text, including parenthetical abbreviations with suffixes and news-wire dash separators.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.3,
+    "clean": false
+   }
+  },
+  "L4_N9087": {
+   "layer": 4,
+   "neuron": 9087,
+   "pos": {
+    "explanation": "Fires on miscellaneous short fragments in spellings such as “Asperger,” “atmosphere,” “as of,” and a software name, without a consistent semantic pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly fires on fragments in construction-material terms like “asphalt” and “bitumen,” plus unrelated mathematical or political terms like “asymptotic” and “asymmetrical.”",
+    "verdict": "MIXTURE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L18_N11371": {
+   "layer": 18,
+   "neuron": 11371,
+   "pos": {
+    "explanation": "The marked tokens occur in unrelated prose, tables, names, and formatting, with no consistent semantic or structural pattern apparent.",
+    "verdict": "NONE",
+    "coverage": 0.1,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked words are mostly line-final words in poems or rhyming verse, including several clear rhyme positions.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L31_N4289": {
+   "layer": 31,
+   "neuron": 4289,
+   "pos": {
+    "explanation": "Fires on possessive determiners or possessive forms immediately before a noun, marking whose lives, career, diet, or other associated thing is being discussed.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.15,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked words span unrelated grammatical roles and meanings; no consistent negative-pole pattern is evident.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L19_N3067": {
+   "layer": 19,
+   "neuron": 3067,
+   "pos": {
+    "explanation": "Favors content-bearing labels and actions in scraped web pages—catalog metadata, review controls, and navigation tools—though a few hits are incidental words or punctuation.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors short grammatical linkers and particles, especially Japanese, Korean, and Turkish suffixes or conjunctions, with English prepositions such as “in” and “to.”",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L0_N6902": {
+   "layer": 0,
+   "neuron": 6902,
+   "pos": {
+    "explanation": "Fires mainly on the “under” sequence inside WUNDER compounds and names, especially Wunderbar; occasional unrelated matches look like token-level noise.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on the “ich” sequence, most often within place names ending in -wich or Wichita, with occasional unrelated matches such as “sandwich.”",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L8_N3494": {
+   "layer": 8,
+   "neuron": 3494,
+   "pos": {
+    "explanation": "It favors web-application configuration and administrative-control text, including config files/options, repository staff-only item-control pages, and nearby markup or API identifiers.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "It fires on PDF references and associated viewing or download instructions, especially Acrobat Reader mentions and PDF file metadata.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L15_N8383": {
+   "layer": 15,
+   "neuron": 8383,
+   "pos": {
+    "explanation": "Fires in coverage and reviews that recount or interpret stories, books, films, performances, and historical or religious narratives.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often appears in accounts of efforts, struggles, and step-by-step attempts to accomplish or create something; a few temporal or incidental examples are less clear.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L5_N4529": {
+   "layer": 5,
+   "neuron": 4529,
+   "pos": {
+    "explanation": "Fires on short “an/can” letter sequences, often embedded in words or names and sometimes in the modal “can”; the examples suggest a spelling pattern rather than a topic.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires mostly on fragments of uncommon proper names, especially surnames and place names; acronym fragments and the ordinary word “will” appear to be outliers.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L31_N5897": {
+   "layer": 31,
+   "neuron": 5897,
+   "pos": {
+    "explanation": "Language praising demonstrated competence or mastery, especially technical skill, proficiency, command, and control.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Sports play-by-play phrasing about turning the ball or puck over, or a goalie turning shots aside.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L33_N5142": {
+   "layer": 33,
+   "neuron": 5142,
+   "pos": {
+    "explanation": "Fires broadly at prose continuation and structural separators, especially commas and list/table delimiters, though some marked words are heterogeneous.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.95,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires in reports of people changing jobs or teams, especially around prospective moves, decisions, and the infinitive or future-tense phrasing used to describe them.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L32_N4762": {
+   "layer": 32,
+   "neuron": 4762,
+   "pos": {
+    "explanation": "Software-development collaboration workflows, especially creating, reviewing, and merging GitHub pull requests and managing commit history.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Football news and commentary centered on Arsenal: player transfers, injuries, match results, and squad selection.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L10_N11828": {
+   "layer": 10,
+   "neuron": 11828,
+   "pos": {
+    "explanation": "Fires on numeric and code-like fragments in scraped listings, especially digits embedded in measurements, prices, ratios, technical identifiers, and specifications.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on common prose glue and punctuation—such as commas, periods, conjunctions, and copular words—without a clear subject-matter theme.",
+    "verdict": "ONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L26_N7643": {
+   "layer": 26,
+   "neuron": 7643,
+   "pos": {
+    "explanation": "The pole often marks language about thinking, feeling, hearing, or especially writing and discussing things, though several marked words appear incidental.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The pole marks unrelated topic-specific nouns across automotive, economic, sports, technology, politics, and weather reporting, with no clear shared semantic or grammatical pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L26_N5518": {
+   "layer": 26,
+   "neuron": 5518,
+   "pos": {
+    "explanation": "Fires when people or animals are framed as objects, resources, or disposable roles—such as guinea pigs, pawns, tools, burdens, or products.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The examples split among legal/data boilerplate, genetically engineered seeds, and unrelated titles, names, and function words, with no clear shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L31_N2260": {
+   "layer": 31,
+   "neuron": 2260,
+   "pos": {
+    "explanation": "Fires in factual, named-entity-rich prose, especially soccer reporting about clubs, players, matches, and places; the marked token may be a nearby function word or part of a name.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The examples scatter across Portuguese climate and culture text, unrelated English snippets, and repeated “qualms” contexts, without a reliable shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L32_N3104": {
+   "layer": 32,
+   "neuron": 3104,
+   "pos": {
+    "explanation": "Mostly the colon or semicolon starting text emoticons, with a few unrelated punctuation or inline-notation cases such as opening parentheses, list labels, and a footnote marker.",
+    "verdict": "MIXTURE",
+    "coverage": 0.7,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Opening parentheses that begin a parenthetical aside or grouped notation, including page numbers, phone numbers, citations, and quoted reactions.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.35,
+    "clean": false
+   }
+  },
+  "L34_N4892": {
+   "layer": 34,
+   "neuron": 4892,
+   "pos": {
+    "explanation": "Fires on promotional event and program notices, especially registration, dates, schedules, and participation details for classes, tours, contests, and conferences.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Often marks place names or their fragments, particularly Fort Lauderdale and other geographic references, though a few examples have no clear location-related pattern.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L9_N2150": {
+   "layer": 9,
+   "neuron": 2150,
+   "pos": {
+    "explanation": "Formal or institutional prose, especially boilerplate wording about best efforts or interests, sole discretion, permission, and consequences for people’s lives.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly casual entertainment, travel, and sports copy using stock participation idioms such as “get in on the action,” “join in the fun,” and “along for the ride.”",
+    "verdict": "ONE",
+    "coverage": 0.3,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L18_N1548": {
+   "layer": 18,
+   "neuron": 1548,
+   "pos": {
+    "explanation": "Fires on the second item in an alternative or paired expression, usually a content word completing an “X or Y” choice.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on the coordinating word “or” itself across ordinary alternatives, ranges, and clause-level choices.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L4_N6029": {
+   "layer": 4,
+   "neuron": 6029,
+   "pos": {
+    "explanation": "Marks prepositions introducing framing or qualifying adverbials such as “at first glance,” “in fact,” “at least,” and “in a sense.”",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marks opening parentheses that introduce parenthetical asides, clarifications, citations, and other inserted information.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.25,
+    "clean": false
+   }
+  },
+  "L8_N9287": {
+   "layer": 8,
+   "neuron": 9287,
+   "pos": {
+    "explanation": "Evocative, often lyrical prose using sensory and metaphorical imagery—especially weather, nature, seasons, and memory.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on unrelated function words and title terms across varied snippets, with no consistent shared pattern apparent.",
+    "verdict": "NONE",
+    "coverage": 0.5,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L9_N9941": {
+   "layer": 9,
+   "neuron": 9941,
+   "pos": {
+    "explanation": "Fires on ordinary lexical tokens, often the second component or continuation completing a compound or longer word (bedtime, something, rooftops, sightseeing, setbacks).",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires mainly on punctuation and formatting delimiters—quotes, brackets, pipes, markup, and separators—often at text or table boundaries; the occasional unit token appears incidental.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.95,
+    "clean": false
+   }
+  },
+  "L19_N4110": {
+   "layer": 19,
+   "neuron": 4110,
+   "pos": {
+    "explanation": "Mostly prepositions and other relational words linking events to circumstances, but several unrelated content words (cost, birth, way, needed) prevent a clear shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly evaluative or qualifying adjectives and adverbs describing manner, degree, or deliberate action, including forms such as playful, controlled, intentional, willingly, and nicely.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L25_N1271": {
+   "layer": 25,
+   "neuron": 1271,
+   "pos": {
+    "explanation": "Favors finite auxiliaries and copulas, especially forms completing existential “there ...” clauses (“there is/was/will be”), with related “have” constructions.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "No consistent pattern is apparent: examples include articles, numbers, nouns, and unrelated verbs across varied contexts.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L4_N8967": {
+   "layer": 4,
+   "neuron": 8967,
+   "pos": {
+    "explanation": "Fires on mentions of software applications, especially web and mobile apps and the frameworks or features used to build them.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on a heterogeneous mix of @-mentions, code fragments, and unrelated names or terms, with no clear shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L12_N5573": {
+   "layer": 12,
+   "neuron": 5573,
+   "pos": {
+    "explanation": "Mostly fires on jump-rope fitness equipment descriptions, with weaker firings on unrelated body and health language such as hair growth, pregnancy, and fatty acids.",
+    "verdict": "MIXTURE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on language about strain reaching a limit or threshold, especially “breaking point,” being pushed to one’s limits, and things bending under pressure.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L22_N1370": {
+   "layer": 22,
+   "neuron": 1370,
+   "pos": {
+    "explanation": "Responds to automobile-related vocabulary, especially “car,” “cars,” “auto,” and “automotive,” across vehicle news, repair, transport, and product contexts.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often responds to forum “Join Date” fields and date/time strings, with some related numeric or formatted fragments; a few hits appear incidental.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L28_N10499": {
+   "layer": 28,
+   "neuron": 10499,
+   "pos": {
+    "explanation": "Favors coordination in lists of options, services, or categories, often pairing new with existing, used, or alternative offerings.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors procedural language about creating, building, inserting, or otherwise bringing things into existence across software, data, and physical projects.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L25_N1819": {
+   "layer": 25,
+   "neuron": 1819,
+   "pos": {
+    "explanation": "Descriptive passages about places or institutions, especially their history, facilities, and the activities or events they host.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Practical logistical details emphasizing constraints, requirements, access, capacity, or availability across technical and everyday contexts.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L29_N10049": {
+   "layer": 29,
+   "neuron": 10049,
+   "pos": {
+    "explanation": "Fires in explanatory descriptions that classify geological or inorganic materials and state their composition, structure, or physical properties.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on scattered function words and word fragments across unrelated passages about sponges, silica, crystals, and stone; no specific shared pattern is clear.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L33_N10552": {
+   "layer": 33,
+   "neuron": 10552,
+   "pos": {
+    "explanation": "Fires on keyword-stuffed, low-quality web spam—especially trading and affiliate copy—with abrupt multilingual snippet mixing.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on fluent, coherent Spanish prose, especially descriptive hotel and accommodation copy, rather than keyword-stuffed text.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L16_N3628": {
+   "layer": 16,
+   "neuron": 3628,
+   "pos": {
+    "explanation": "Often marks a field, category, or item in structured informational text—product details, instructions, counts, and named groupings—though the exact token type varies.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.15,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Mostly marks conjunctions or punctuation joining items in enumerations, especially “and” near the end of a list; a few examples are less clearly related.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.15,
+    "clean": false
+   }
+  },
+  "L30_N10778": {
+   "layer": 30,
+   "neuron": 10778,
+   "pos": {
+    "explanation": "Mostly concerns infant and child dental development—teething, tooth eruption, and age-related milestones—with weaning as a related developmental topic.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Describes European historical places and monuments, especially their ancient origins, settlements, and archaeological features.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L20_N2644": {
+   "layer": 20,
+   "neuron": 2644,
+   "pos": {
+    "explanation": "Fires around stated costs, charges, penalties, or losses—often explaining what someone forfeits or owes after canceling or making a choice.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires in quantitative passages, including prices, money, measurements, counts, and proportions; the shared pattern is amounts and quantities rather than one subject area.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L30_N6609": {
+   "layer": 30,
+   "neuron": 6609,
+   "pos": {
+    "explanation": "Marks common function words, punctuation, and digits across varied technical prose, especially in mechanics, simulation, and 3D-geometry contexts.",
+    "verdict": "ONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly centers on materials and structural engineering terminology for bonded interfaces, cohesive failure, and fracture, with a few broader modeling examples.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L10_N8335": {
+   "layer": 10,
+   "neuron": 8335,
+   "pos": {
+    "explanation": "Favors see/experience and have constructions where a subject encounters or undergoes an outcome, often framed as a change, setback, or development.",
+    "verdict": "TWO_RELATED",
+    "coverage": 1.0,
+    "random_fit": 0.2,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors ordinary have forms expressing possession, features, or existence, plus auxiliary have in perfect constructions, rather than event-experiencing uses.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L20_N10399": {
+   "layer": 20,
+   "neuron": 10399,
+   "pos": {
+    "explanation": "Mostly grammatical continuation words—especially prepositions and auxiliaries—that connect a phrase to its complement or introduce the next clause or detail.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.6,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often marks explanatory or definitional prose, where punctuation or a category term introduces a clarification, name, or example.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L12_N4261": {
+   "layer": 12,
+   "neuron": 4261,
+   "pos": {
+    "explanation": "Favors finite predicate material—especially auxiliaries, modals, and contractions that initiate or continue a clause’s verb phrase; a few particles or articles appear incidental.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked words span determiners, nouns, adjectives, auxiliaries, and lexical verbs in unrelated constructions, with no clear shared syntactic or semantic pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L6_N300": {
+   "layer": 6,
+   "neuron": 300,
+   "pos": {
+    "explanation": "Fires on word-internal subword fragments, especially “am” and pieces following “Sub-,” across unrelated names, products, medicines, and compounds.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on assorted word fragments, often suffix-like continuations, plus numbers and codes, with no clear shared semantic or spelling pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.9,
+    "clean": false
+   }
+  },
+  "L4_N9654": {
+   "layer": 4,
+   "neuron": 9654,
+   "pos": {
+    "explanation": "Primarily identifies ecological groupings or units of vegetation—especially forest and grass stands—with weaker related references to plant populations and sites.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Centers on language describing observable traits or outcomes being manifested, shown, or appearing; elongation references are a weaker related signal.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L0_N1566": {
+   "layer": 0,
+   "neuron": 1566,
+   "pos": {
+    "explanation": "Favors beginnings of lexical words, often recognizable roots or cognate stems, across varied non-English text; the examples share no clear topic.",
+    "verdict": "ONE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors English morphological word parts, especially derived endings such as -ness, -encies, and -ations, with occasional prefixes like unint-; no shared semantic topic.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L29_N11200": {
+   "layer": 29,
+   "neuron": 11200,
+   "pos": {
+    "explanation": "Firings span technical notation and measurement language, ordinary function words, and arbitrary fragments of sports names, without a consistent shared context or token pattern.",
+    "verdict": "NONE",
+    "coverage": 0.1,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Firings include assorted pronouns, qualifiers, technical nouns, and name initials across unrelated prose, with no reliable common function.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L23_N1583": {
+   "layer": 23,
+   "neuron": 1583,
+   "pos": {
+    "explanation": "Consumer-facing medical guidance about medication use, including prescriptions, side effects, interactions, precautions, and disclosure of other medicines or supplements.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Drug- and pharmacology-related terms, including compounds and citations, across clinical, research, addiction, news, and recreational-drug contexts.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L18_N5130": {
+   "layer": 18,
+   "neuron": 5130,
+   "pos": {
+    "explanation": "Favors factual, explanatory web prose—definitions, lists, and institutional or medical descriptions—across varied topics, rather than one particular subject area.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors biographical and historical passages about people, especially accounts mentioning military service, veterans, or armed forces.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L27_N7701": {
+   "layer": 27,
+   "neuron": 7701,
+   "pos": {
+    "explanation": "Fires on digits and adjacent numeric separators in quantitative text, especially financial tables, percentages, prices, and arithmetic expressions.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked tokens vary across unrelated names, function words, punctuation, and content words, with no clear shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L15_N8422": {
+   "layer": 15,
+   "neuron": 8422,
+   "pos": {
+    "explanation": "This pole tends to occur in lively, audience-facing lifestyle and entertainment writing, including upbeat or attention-grabbing phrasing, though the highlighted tokens themselves vary.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "This pole marks colloquial internet slang and emphatic reactions, especially evaluative intensifiers, profanity, and casual approval words such as “cool,” “sick,” and “bomb.”",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L20_N926": {
+   "layer": 20,
+   "neuron": 926,
+   "pos": {
+    "explanation": "Marks scalar degree and extent language—especially “even” intensifying comparisons and words that place something at a particular level or range.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Often marks comparative or threshold expressions (“better,” “higher,” “worse,” “less,” “minimum,” “lower”), with a few apparent token-boundary or incidental hits.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L20_N6863": {
+   "layer": 20,
+   "neuron": 6863,
+   "pos": {
+    "explanation": "Fires mainly on open-ended “what” questions seeking explanation, evaluation, or possible action, including indirect questions; occasional incidental content words do not obscure this pattern.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on context- and identity-specifying language, especially “where” and “who” clauses, with related cases describing a thing’s nature or implications.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L21_N11044": {
+   "layer": 21,
+   "neuron": 11044,
+   "pos": {
+    "explanation": "Marks verbs that present, supply, or make information, services, or items available—giving measurements, showing properties, offering products, or providing answers—with a few generic speech uses.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Centers on communication or advice framed around its recipient—especially telling you, us, or other people, but also teaching, offering, suggesting, or showing something to someone.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.15,
+    "clean": true
+   }
+  },
+  "L26_N6321": {
+   "layer": 26,
+   "neuron": 6321,
+   "pos": {
+    "explanation": "Fires on nominal referents—concrete nouns and pronouns naming what a clause concerns or acts on, often in object or complement positions.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The examples mix function words, digits, punctuation, and metadata fields without a clear shared linguistic or semantic pattern.",
+    "verdict": "NONE",
+    "coverage": 0.4,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L26_N4211": {
+   "layer": 26,
+   "neuron": 4211,
+   "pos": {
+    "explanation": "Strongly associated with video-game coverage—reviews, releases, franchises, platforms, game modes—and puzzle-game listings, with a few adjacent game-like activities.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "A loose mix of health, parenting, education, and general entertainment prose; several examples involve children or play, but no single shared subject stands out.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L11_N6389": {
+   "layer": 11,
+   "neuron": 6389,
+   "pos": {
+    "explanation": "Fires on language of probing, accessing, observing, or evaluating something to learn more about its condition or underlying details.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on bodily anatomy and clinical assessment of pulse or circulation, especially references to arteries, the neck, wrist, and pulse-taking.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L16_N2139": {
+   "layer": 16,
+   "neuron": 2139,
+   "pos": {
+    "explanation": "Often marks language of duration or continuation (long-term, chronic, for life, over and over), with some related instances of broad scope or accumulation (en masse, pileups, unlimited numbers).",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often appears in descriptions of persistent, repeated, frequent, or accumulating patterns, such as ongoing inability, repeated failures, widespread behavior, and emerging trends.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L34_N3557": {
+   "layer": 34,
+   "neuron": 3557,
+   "pos": {
+    "explanation": "Most firings mark the start of “ch” words—such as chandeliers, Chorus, Cherry, Chesapeake, chalice, and chieftainship—with a few unrelated initial-letter outliers.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Firings commonly mark the start of S-initial words or names, including Secret Service, Sushi, SIEDO, S.T.A.R., SFO, and SLC, alongside several unrelated fragments.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L27_N3267": {
+   "layer": 27,
+   "neuron": 3267,
+   "pos": {
+    "explanation": "Marks ordinary prose tokens and punctuation in explanatory or conversational sentences, rather than a consistent topic or particular grammatical category.",
+    "verdict": "ONE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marks formatting and notation fragments—especially version-number punctuation, markup, URLs, and line breaks—rather than ordinary prose content.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.75,
+    "clean": false
+   }
+  },
+  "L35_N12054": {
+   "layer": 35,
+   "neuron": 12054,
+   "pos": {
+    "explanation": "Fires on numerals and adjacent punctuation in structured labels, rankings, ratings, citations, and item or product identifiers.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on delimiters in web links and timestamp-like metadata, including URL suffixes, dates, and times.",
+    "verdict": "TWO_RELATED",
+    "coverage": 1.0,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L6_N6814": {
+   "layer": 6,
+   "neuron": 6814,
+   "pos": {
+    "explanation": "Fires on “out” in grow/grew out (of), covering both things originating from something and growing beyond a phase or size; the ectoderm fragments look incidental.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Mostly fires on “DCA” in agency, airport, or license references, but the other examples mark unrelated word fragments such as “reg,” “assing,” and “tainment.”",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L0_N5135": {
+   "layer": 0,
+   "neuron": 5135,
+   "pos": {
+    "explanation": "Fires on word-final subword chunks in names and terms, especially unusual proper-name endings such as “Placerville” and “Kikorian,” with “kohl” recurring as a complete word.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marks short, heterogeneous token fragments in multilingual or corrupted text, transliterations, and technical abbreviations; no clear semantic theme unites the examples.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.15,
+    "clean": false
+   }
+  },
+  "L26_N1630": {
+   "layer": 26,
+   "neuron": 1630,
+   "pos": {
+    "explanation": "Fires on conditional clauses introduced by “if,” especially when followed by “you” or “I,” across varied topics and genres.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on punctuation and syntax markers used as separators or operators, including code delimiters and assignment signs as well as dashes and commas in prose.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.7,
+    "clean": false
+   }
+  },
+  "L6_N463": {
+   "layer": 6,
+   "neuron": 463,
+   "pos": {
+    "explanation": "Fires mainly on university administration, academic policy, and integrity language—roles, councils, misconduct, honesty, and accreditation—with a few unrelated contextual hits.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires mainly on named entertainment titles and franchises, especially theatre and children’s media, with a few incidental phrase-final hits such as “lunch hour.”",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L27_N9139": {
+   "layer": 27,
+   "neuron": 9139,
+   "pos": {
+    "explanation": "Factual and administrative writing that gives precise figures, dates, locations, or identifying details, often in structured or statistical form.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Claims framed in terms of broad geographic reach or prevalence, especially across a country, state, or community.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L0_N542": {
+   "layer": 0,
+   "neuron": 542,
+   "pos": {
+    "explanation": "Responds to “task” as an assigned activity or challenge, including the related compound “task force” for a group charged with a mission.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked tokens span unrelated words and names, with no clear shared linguistic or semantic pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L6_N3975": {
+   "layer": 6,
+   "neuron": 3975,
+   "pos": {
+    "explanation": "A strong cluster is subword spellings in surnames such as Schultz, Schuetz, and Schmitz, but Whitcomb, Dictionary.com, “by,” and Himba show no clear shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.3,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly marks words after “View” in interface labels or camera-related text, but the Konnan and Thompson surname examples appear to be a separate pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.3,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L27_N11138": {
+   "layer": 27,
+   "neuron": 11138,
+   "pos": {
+    "explanation": "Marks quantitative measurements and dimensional specifications, especially lengths, diameters, and numeric ranges paired with units.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires mainly on dots or digits within dotted version numbers and other compact technical or legal identifiers; a few examples appear incidental.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L34_N3547": {
+   "layer": 34,
+   "neuron": 3547,
+   "pos": {
+    "explanation": "Ordinary rendered web text and document content—prose, listings, citations, and product details—with little visible raw markup.",
+    "verdict": "ONE",
+    "coverage": 0.2,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Literal HTML or forum markup, especially tags such as <br>, <a>, and <strong>, including their opening and closing forms.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L5_N1814": {
+   "layer": 5,
+   "neuron": 1814,
+   "pos": {
+    "explanation": "Fires mostly on fragments of personal and place names, especially uncommon names or surnames; the Greek tongue-twister examples are an outlier.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Strongly associated with Greek iota and iota-like spellings such as ει, including transliterations like “Alexei”; a few Latin-script I fragments also appear.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L14_N1999": {
+   "layer": 14,
+   "neuron": 1999,
+   "pos": {
+    "explanation": "Mostly fires on action or result verbs describing what a product, service, or system can do (protect, remove, restore, reduce, provide), with a few outliers.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Firings span unrelated sports, personal, literary, and news contexts, including function words and varied content words; no coherent shared pattern is evident.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L26_N4322": {
+   "layer": 26,
+   "neuron": 4322,
+   "pos": {
+    "explanation": "Fires in factual promotional or announcement-style web copy, such as real-estate listings, company descriptions, project news, and release details.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.3,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires in review and evaluation contexts, especially reviews, advance copies, first impressions, product testing, and beta or early access.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L7_N1576": {
+   "layer": 7,
+   "neuron": 1576,
+   "pos": {
+    "explanation": "The examples span unrelated topics and marked word fragments, with no consistent lexical or contextual pattern evident.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly associated with title-insurance and property-closing FAQ language, especially repeated mentions of title policies, title searches, and ownership coverage.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L31_N87": {
+   "layer": 31,
+   "neuron": 87,
+   "pos": {
+    "explanation": "Fires mainly on industrial material descriptions and technical specifications, especially coal-derived carbon additives, with related mentions of fuels, resins, and material composition.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires mainly on consumer-product formulation and ingredient text, including supplements, foods, cosmetics, and descriptions of additives or preservatives.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L12_N2657": {
+   "layer": 12,
+   "neuron": 2657,
+   "pos": {
+    "explanation": "Fires on assorted snippets about surfing and sports, cryptocurrency, and graphics hardware, with no clear shared semantic pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on language about hiding, taking cover, or getting low or behind something for protection, often in combat or other danger.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L28_N188": {
+   "layer": 28,
+   "neuron": 188,
+   "pos": {
+    "explanation": "Fires in historical scholarship and heritage material, especially around book titles, author or scholar names, citations, and dates.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires in factual reference-style prose about places, geography, and historical events, often on ordinary connective words or punctuation rather than named citations.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L33_N267": {
+   "layer": 33,
+   "neuron": 267,
+   "pos": {
+    "explanation": "Fires on fluent, edited English prose across news, literary summaries, and entertainment descriptions; the marked tokens vary, while the surrounding writing is coherent and idiomatic.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.5,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on awkward, often ungrammatical web copy—especially SEO-like or machine-translated writing—with unnatural phrasing and errors throughout the surrounding text.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.6,
+    "clean": false
+   }
+  },
+  "L0_N9927": {
+   "layer": 0,
+   "neuron": 9927,
+   "pos": {
+    "explanation": "Favors compact acronyms and code-like identifiers, often uppercase or mixed-case (MTN, FDL, SSRS, DNR, and pdt-guid).",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on assorted name and brand fragments—especially vBulletin and Dhillon—but the examples do not reveal a consistent shared function.",
+    "verdict": "MIXTURE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L15_N3527": {
+   "layer": 15,
+   "neuron": 3527,
+   "pos": {
+    "explanation": "Often marks punctuation or grammatical material that carries a phrase onward—commas, dashes, possessives, articles, and relatives—alongside a few incidental lexical fragments.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.5,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Frequently marks content-bearing noun or technical-term material, but the examples also include unrelated function words and punctuation, so no single job is reliable.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.25,
+    "clean": false
+   }
+  },
+  "L34_N6784": {
+   "layer": 34,
+   "neuron": 6784,
+   "pos": {
+    "explanation": "The examples span unrelated news, sports, commerce, and cryptocurrency contexts, while the marked fragments do not show a consistent semantic or grammatical pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Most examples are sports or recreation web text, especially baseball coverage and skiing or surfing guides, with a few related gaming or event references.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L18_N4838": {
+   "layer": 18,
+   "neuron": 4838,
+   "pos": {
+    "explanation": "Favors semantically salient lexical words—such as “abandoned,” “assessed,” “enthusiasm,” and “kittens”—rather than a consistent topic; a few function words and numerals are exceptions.",
+    "verdict": "ONE",
+    "coverage": 0.3,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Leans toward grammatical glue words and pronouns such as “the,” “to,” “my,” “because,” and “your,” though some content words also appear.",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.25,
+    "clean": false
+   }
+  },
+  "L24_N5836": {
+   "layer": 24,
+   "neuron": 5836,
+   "pos": {
+    "explanation": "The marked tokens span unrelated narrative, legal, arithmetic, and personal-blog contexts, with no stable token or discourse pattern evident.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors practical instructional or explanatory web prose, including steps, recommendations, and conditional guidance, rather than one particular vocabulary item.",
+    "verdict": "ONE",
+    "coverage": 0.2,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L23_N10138": {
+   "layer": 23,
+   "neuron": 10138,
+   "pos": {
+    "explanation": "Fires on “till” and “until” marking a time limit or endpoint, including durations and phrases such as “until now.”",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Several examples involve “were” or Christian prose, but the marked words and surrounding contexts vary too widely for a reliable shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.2,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L10_N2217": {
+   "layer": 10,
+   "neuron": 2217,
+   "pos": {
+    "explanation": "Fires on Czech-language and Central European proper-name fragments, especially Czech surnames, places, and diacritic-rich forms embedded in otherwise English text.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on ordinary English words and word fragments across unrelated prose, documentation, and listings, contrasting with the Czech-specific positive pattern.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L29_N6981": {
+   "layer": 29,
+   "neuron": 6981,
+   "pos": {
+    "explanation": "Favors tokens that continue or structure readable language—grammatical links, possessives, delimiters, and labels—across prose and technical contexts.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 1.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors compact literal or command syntax, especially shell flags and identifiers, plus digits embedded in numerical values and technical names.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L10_N7669": {
+   "layer": 10,
+   "neuron": 7669,
+   "pos": {
+    "explanation": "Tracks body fitness and appearance, especially weight or belly-fat loss, leanness, and muscle definition, with related skincare and grooming claims.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Tracks levels or changes in wellbeing and condition, spanning morale and spirits as well as energy, stress, and bodily measures like blood sugar or pressure.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L33_N3613": {
+   "layer": 33,
+   "neuron": 3613,
+   "pos": {
+    "explanation": "Occurs in sports-news and commentary, especially NFL coverage, with related basketball, soccer, MMA, and sports-betting stories.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly associated with hockey coverage—players, teams, leagues, and games—with a few adjacent stories about other professional sports.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L33_N1610": {
+   "layer": 33,
+   "neuron": 1610,
+   "pos": {
+    "explanation": "Mostly whitespace-prefixed French and Italian function words—articles, prepositions, and conjunctions such as « de », « les », « di », and « et»—with a few unrelated language fragments.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "A mixed set of French and Italian material, including inflected word fragments such as « publiant », « publier », and « exactement », alongside ordinary function words and unrelated full words.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L24_N3091": {
+   "layer": 24,
+   "neuron": 3091,
+   "pos": {
+    "explanation": "The pole fires on a scattered mix of human-related, music-related, and other descriptive words, with no dependable shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "It often fires on common grammatical words such as “the” and “that,” alongside punctuation and formatting tokens—textual scaffolding rather than a clear topic.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.5,
+    "clean": false
+   }
+  },
+  "L31_N5112": {
+   "layer": 31,
+   "neuron": 5112,
+   "pos": {
+    "explanation": "Concentrates on reproductive and developmental biology, especially oocyte collection, in-vitro embryo production, and related embryonic processes.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Appears across sex-characteristic terminology, animal morphology, and unrelated anatomical or pathological descriptions, without a clear narrower shared target.",
+    "verdict": "MIXTURE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L21_N1469": {
+   "layer": 21,
+   "neuron": 1469,
+   "pos": {
+    "explanation": "Fires around grammatical linkers and qualifiers—especially prepositions, conditionals, and transitions that connect or qualify information in explanatory prose.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.3,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked items range from word fragments and punctuation to unrelated common words, with no consistent grammatical or semantic pattern.",
+    "verdict": "NONE",
+    "coverage": 0.5,
+    "random_fit": 0.7,
+    "clean": false
+   }
+  },
+  "L27_N11950": {
+   "layer": 27,
+   "neuron": 11950,
+   "pos": {
+    "explanation": "Marks descriptions and specifications of physical size, especially measurements, dimensions, and comparisons of how large something is.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Marks dumpster-rental service copy, including pricing, container details, and practical instructions about using or placing a rental dumpster.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L28_N7791": {
+   "layer": 28,
+   "neuron": 7791,
+   "pos": {
+    "explanation": "Activates in descriptions of physical movement and trajectories—especially orbital motion, flight paths, descent, falling, and turning—often on nearby grammatical words rather than the motion term itself.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly marks boundaries before technical numbers and measurements in aerospace text, with a few related spacecraft or launch-vehicle name boundaries.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L33_N5642": {
+   "layer": 33,
+   "neuron": 5642,
+   "pos": {
+    "explanation": "Fires mainly on standalone or word-initial G/g fragments, including names, technical terms, and ordinary words; a few internal fragments appear to be related tokenization variants.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Primarily fires on hyphenated numeric measurements with g-initial units, especially gallon and gauge; the remaining lexical fragments look like noise rather than a clear second pattern.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L5_N6844": {
+   "layer": 5,
+   "neuron": 6844,
+   "pos": {
+    "explanation": "Fires often on the spelling fragments in “crib” and “scrib-” words, but also on unrelated “frisk” and botanical text; no consistent semantic function is evident.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly tracks medical and injury-related joint displacement, especially dislocations and spinal subluxations.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L8_N10210": {
+   "layer": 8,
+   "neuron": 10210,
+   "pos": {
+    "explanation": "Signals statements imposing an exact-one or one-per-entity limit, including exclusive membership and single allowed applications or instances.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Signals numeric quantities and thresholds, usually digits but sometimes number words, across counts, dates, measurements, and legal amounts.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.15,
+    "clean": true
+   }
+  },
+  "L33_N9563": {
+   "layer": 33,
+   "neuron": 9563,
+   "pos": {
+    "explanation": "Primarily marks commas and related separators at boundaries in enumerations, especially technical or configuration lists; nearby conjunctions and short boundary tokens are small offshoots.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Examples scatter across ordinary function words, metadata punctuation, and unrelated content words, with no reliable shared semantic or syntactic pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.2,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L33_N2725": {
+   "layer": 33,
+   "neuron": 2725,
+   "pos": {
+    "explanation": "Fires around place names and the words relating them—especially locative prepositions in Brooklyn neighborhood, street, transit, and civic contexts.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The examples span unrelated science, health, home, and sales material, and the marked words show no stable shared semantic pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L11_N8895": {
+   "layer": 11,
+   "neuron": 8895,
+   "pos": {
+    "explanation": "Often marks a unit or terse label completing a quantity (%, sec, MHz, minutes, lbs), but also fires on unrelated dialogue words and table text.",
+    "verdict": "MIXTURE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marks numbers, units, and metric labels in quantitative reporting, especially statistics and business or labor-market data, with occasional product measurements.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L18_N2788": {
+   "layer": 18,
+   "neuron": 2788,
+   "pos": {
+    "explanation": "Fires on assorted HTML attributes and dimension-related terms, alongside unrelated words and identifiers; the examples do not support a single shared job.",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires across PHP error constants, trading indicators, configuration keys, and assorted table labels or numbers, with no clear connection among them.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L5_N8349": {
+   "layer": 5,
+   "neuron": 8349,
+   "pos": {
+    "explanation": "Fires on short grammatical linkers, especially as, since, and because, spanning causal clauses and as-based comparison, role, or complement constructions.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires mainly on “word” in news-style “no word yet/on” phrases, with related literal uses such as word games or word spreading.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L13_N3576": {
+   "layer": 13,
+   "neuron": 3576,
+   "pos": {
+    "explanation": "Fires mainly at separators between compact score or result entries, especially sports set scores, with a few similar short sequences; the common pattern is list boundaries rather than a particular sport.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on varied punctuation and word fragments in edit logs, names, bibliographies, genealogies, and other markup-heavy text, without a more specific recurring distinction.",
+    "verdict": "MIXTURE",
+    "coverage": 0.8,
+    "random_fit": 0.15,
+    "clean": false
+   }
+  },
+  "L6_N2864": {
+   "layer": 6,
+   "neuron": 2864,
+   "pos": {
+    "explanation": "Marks “at” in opportunity-and-attempt constructions such as “a shot/chance at” or “a stab at,” usually framing a possible goal or outcome.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked material is inconsistent—name fragments, hyphens, and ordinary words—with no clear shared semantic or grammatical pattern.",
+    "verdict": "NONE",
+    "coverage": 0.8,
+    "random_fit": 0.3,
+    "clean": false
+   }
+  },
+  "L12_N8851": {
+   "layer": 12,
+   "neuron": 8851,
+   "pos": {
+    "explanation": "Marks separators and joiners—especially “and,” slashes, and parentheses—where text pairs or enumerates related values, alternatives, or items.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.15,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Often marks spatial or geometric vocabulary about orientation, sides, and direction (such as “left,” “reverse,” “face,” and “point”), with some unrelated fragment hits.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L29_N721": {
+   "layer": 29,
+   "neuron": 721,
+   "pos": {
+    "explanation": "Tracks quantitative limits or thresholds being reached, exceeded, or approached, especially spending caps, deductibles, legal limits, and capacity boundaries.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Tracks going beyond ordinary expectations or boundaries, often in praise of exceptional service, performance, or added benefits.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L14_N12283": {
+   "layer": 14,
+   "neuron": 12283,
+   "pos": {
+    "explanation": "Favors language about people’s care, learning, play, or performance and the outcomes these activities produce, with a few unrelated product or property examples.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.15,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked words occur in unrelated logistical, financial, sports, biographical, and promotional contexts, with no clear shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L18_N9221": {
+   "layer": 18,
+   "neuron": 9221,
+   "pos": {
+    "explanation": "The marked tokens range from pronouns and function names to places, products, and recipe terms, with no consistent semantic or syntactic pattern evident.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked tokens likewise span unrelated technical, news, art, and commercial contexts, without a stable shared distinction beyond occurring in varied text.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L0_N2938": {
+   "layer": 0,
+   "neuron": 2938,
+   "pos": {
+    "explanation": "Fires on unrelated token fragments: the preposition “for,” plural endings such as “-es,” parts of assorted words, and an icon, with no clear shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.15,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly fires on “Whether” opening introductory clauses, especially in promotional copy that lists different possible needs or situations.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L24_N11364": {
+   "layer": 24,
+   "neuron": 11364,
+   "pos": {
+    "explanation": "Fires on heterogeneous scraped-web text, often at unusual subword boundaries, names, punctuation, or malformed metadata rather than one subject.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.95,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on political-theory prose about Marxism and the national question, especially Stalin, dialectical materialism, and related movements.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L32_N2471": {
+   "layer": 32,
+   "neuron": 2471,
+   "pos": {
+    "explanation": "Mostly fires on declarative linking or dependency language—especially “is/are” predicates and phrases like “hinged on”—though a few marked tokens look incidental.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Many firings involve H-initial or “wh”-containing tokens, including hormone abbreviations and ordinary words, but several marked tokens do not fit; no reliable job is clear.",
+    "verdict": "NONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L10_N8761": {
+   "layer": 10,
+   "neuron": 8761,
+   "pos": {
+    "explanation": "Fires on Roman-numeral strings or fragments, especially in aircraft model names and other numbered labels or references.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on a scattered mix of ordinary word fragments, alphabetic section labels, and non-Roman numeric notation, with no clear shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.8,
+    "random_fit": 0.25,
+    "clean": false
+   }
+  },
+  "L13_N9733": {
+   "layer": 13,
+   "neuron": 9733,
+   "pos": {
+    "explanation": "Signals exact sameness, close likeness, or direct derivation, often through words such as “same,” “exactly,” “like,” and “based on.”",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Signals broad or recurring resemblance and shared patterns, often framed as parallels, similarities, themes, or likeness “in many ways.”",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L35_N3585": {
+   "layer": 35,
+   "neuron": 3585,
+   "pos": {
+    "explanation": "Fires on C/c at the start of a word or fragment, especially in crisis-, critical-, and credit-related forms; the examples suggest a spelling pattern rather than one shared meaning.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on D/d at the start of a word or fragment across names and ordinary vocabulary, suggesting a letter-level orthographic pattern rather than a shared topic.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.2,
+    "clean": true
+   }
+  },
+  "L34_N11353": {
+   "layer": 34,
+   "neuron": 11353,
+   "pos": {
+    "explanation": "Mostly activates on “item” in online-store shipping, delivery, and return/refund policies; occasional unrelated labels and nouns make the broader pattern less certain.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Targets formal technical notation, especially mathematical formulas such as BCH polynomials and programming code identifiers, with the two patterns closely related.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L11_N10583": {
+   "layer": 11,
+   "neuron": 10583,
+   "pos": {
+    "explanation": "Mostly explanatory or reportorial prose stating how something works, what is the case, or what follows; the marked words are heterogeneous, so the pattern seems discourse-level.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.3,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly informal, reader-facing passages—often personal preferences, everyday advice, or list content—with a subjective, conversational voice despite varied marked words.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.2,
+    "clean": true
+   }
+  },
+  "L3_N1550": {
+   "layer": 3,
+   "neuron": 1550,
+   "pos": {
+    "explanation": "Fires on the letter x/X inside words and names, especially when it is the distinctive spelling in terms like Pyrex, Lynx, onyx, and T. rex.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked substrings vary widely (morass, Noreco, aureus, Yandex, orecchiette) and show no consistent shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L24_N11069": {
+   "layer": 24,
+   "neuron": 11069,
+   "pos": {
+    "explanation": "The examples span unrelated product specs, comments, religious prose, and articles; the highlighted words have no stable semantic or syntactic pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly technical how-to passages about software and system configuration, with commands and procedural advice; the highlighted tokens themselves vary.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L15_N7709": {
+   "layer": 15,
+   "neuron": 7709,
+   "pos": {
+    "explanation": "Fires on inspirational self-improvement and wellbeing content, including practical habits, encouragement, faith, and relationship advice.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The snippets span unrelated informational, personal, and entertainment topics; the marked tokens provide no clear shared function.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L32_N8385": {
+   "layer": 32,
+   "neuron": 8385,
+   "pos": {
+    "explanation": "Mostly biographical or profile-style prose naming people, their roles, relationships, and works—especially music retrospectives—with a few unrelated noisy snippets.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often multilingual or diacritic-heavy text, with activations on unusual word fragments or punctuation; occasional English snippets make the pattern noisy but not wholly incoherent.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L34_N2371": {
+   "layer": 34,
+   "neuron": 2371,
+   "pos": {
+    "explanation": "Many firings land on capitalized person-name fragments, but others hit ordinary words, punctuation, and multilingual text without a consistent shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.7,
+    "random_fit": 0.15,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Dutch function words and word fragments recur, but the pole also includes unrelated English words and a proper name, so the pattern is inconsistent.",
+    "verdict": "MIXTURE",
+    "coverage": 0.4,
+    "random_fit": 0.15,
+    "clean": false
+   }
+  },
+  "L19_N3542": {
+   "layer": 19,
+   "neuron": 3542,
+   "pos": {
+    "explanation": "Favors academic and scientific institutional text, especially researcher biographies that foreground publications, research, teaching, patents, and scholarly resources.",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors person-centered professional and personal narratives—career, business, and life details—rather than institutional accounts of scholarly research.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L18_N7662": {
+   "layer": 18,
+   "neuron": 7662,
+   "pos": {
+    "explanation": "Responds to obituary notices, especially language naming the funeral home handling services or arrangements and related funeral-home details.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Mostly marks “complimentary” in hotel amenity listings, but also fires on unrelated technical-specification and score formatting; no clear shared job emerges.",
+    "verdict": "MIXTURE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L16_N557": {
+   "layer": 16,
+   "neuron": 557,
+   "pos": {
+    "explanation": "Fires mainly on exact event-time notation and nearby duration details, especially the colon in clock times such as “7:00” and “8:30.”",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on wording and formatting for event date spans or limited runs, such as “through,” “one weekend,” and date-range separators.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L30_N8404": {
+   "layer": 30,
+   "neuron": 8404,
+   "pos": {
+    "explanation": "The marked fragments occur inside proper-name spellings and numeric dates, without a clear shared semantic or discourse theme.",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The pole tracks phrases about being informed or kept updated (“in the loop/know”) and related loop or repetition contexts.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L0_N492": {
+   "layer": 0,
+   "neuron": 492,
+   "pos": {
+    "explanation": "Mostly fires on copular “is” expressing a condition, definition, or relation (especially in formal/technical text); lower-scoring “such” and other function-word hits are less consistent.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly fires on ordinary copular “is” in descriptive and expository prose, including introductory constructions like “Below is” and questions like “How much is…?”.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L18_N7127": {
+   "layer": 18,
+   "neuron": 7127,
+   "pos": {
+    "explanation": "Often fires on opaque short-link fragments or punctuation separating list items, but the remaining word fragments do not establish a consistent shared function.",
+    "verdict": "MIXTURE",
+    "coverage": 0.9,
+    "random_fit": 0.5,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Usually marks digits or fragments within formatted quantities, prices, times, and identifiers, though a few unrelated word or label fragments make the pattern imperfect.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L29_N2298": {
+   "layer": 29,
+   "neuron": 2298,
+   "pos": {
+    "explanation": "Trade and industrial-market discussions, especially Chinese manufacturing overcapacity, cheap exports, and resulting steel or solar trade disputes.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "US fiscal-policy discussions about taxes, debt ceilings, government spending, and their effects on GDP, growth, and public services.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L19_N12089": {
+   "layer": 19,
+   "neuron": 12089,
+   "pos": {
+    "explanation": "Often marks temporal or causal transitions describing a change or outcome, especially symptoms resolving or improving after treatment or another factor is identified.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Firings occur on unrelated fragments across medical prose, software logs, code documentation, and statistics, with no consistent shared pattern apparent.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L13_N9960": {
+   "layer": 13,
+   "neuron": 9960,
+   "pos": {
+    "explanation": "Fires on ordinary, fluent prose continuations—often common grammatical words, but also content words—across many topics and genres.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.85,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires mainly on numeric, abbreviated, or internally split token fragments in dates, tables, listings, and other formatted text, with a few rare word fragments.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.35,
+    "clean": false
+   }
+  },
+  "L13_N4559": {
+   "layer": 13,
+   "neuron": 4559,
+   "pos": {
+    "explanation": "Fires across practical instructional or advisory prose—recipes and insurance guidance—and scholarly references; these are related by their expository, information-delivering style, though the specific topics vary.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.6,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Examples mix literary and historical names or works with literal houses, social roles, and class descriptors; no single connection accounts for the spread.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L32_N9833": {
+   "layer": 32,
+   "neuron": 9833,
+   "pos": {
+    "explanation": "Mostly the preposition “at” introducing a time, location, event, or request; a few apparent hits are just word-initial fragments in names.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Mostly “at” in point-in-time expressions—especially the urgent idiom “at once,” but also “at that moment/time” and “at first.”",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L15_N5262": {
+   "layer": 15,
+   "neuron": 5262,
+   "pos": {
+    "explanation": "Favors inclusive first-person plural language—“we,” “us,” and “our”—that frames claims or advice as shared with a collective audience.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Favors second-person reader address, especially generic “you” in advice or explanatory prose, with occasional broader references to people in general.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L19_N8318": {
+   "layer": 19,
+   "neuron": 8318,
+   "pos": {
+    "explanation": "Often appears in structured web copy describing organizations, services, or programs and their distribution across locations; the scattered numbers and function words make this pattern noisy.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often appears in passages about geographic extent, distance, travel, or territorial movement, though several marked tokens are incidental and unrelated.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L23_N8892": {
+   "layer": 23,
+   "neuron": 8892,
+   "pos": {
+    "explanation": "Marks recurring events or activity across a span—often games, seasons, or routines—rather than being specific to sports.",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marks limited scope or brief duration, often framing an account as based on only a short time or partial experience.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L24_N5869": {
+   "layer": 24,
+   "neuron": 5869,
+   "pos": {
+    "explanation": "Several firings mark temporal quantity phrases such as “last few years/months/weeks,” while others hit unrelated technical terms and phrases, leaving no single clear job.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Mostly marks common grammatical scaffolding—copulas, auxiliaries, determiners, conjunctions, and prepositions—with a few clipped word fragments as apparent noise.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.25,
+    "clean": false
+   }
+  },
+  "L10_N6161": {
+   "layer": 10,
+   "neuron": 6161,
+   "pos": {
+    "explanation": "Fires on project-scheduling and time concepts—especially PERT/CPM, delays, and timing—with engineering timing analysis as a related use.",
+    "verdict": "ONE",
+    "coverage": 0.3,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires on formal technical-academic text, especially conference proceedings, publication records, and institutional or research references.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L24_N5465": {
+   "layer": 24,
+   "neuron": 5465,
+   "pos": {
+    "explanation": "Fires on the spelling sequence “pent” across words and names such as Penthouse, Pentland, Pentecost, Pentax, and pentanediyl.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires in discussion of the financial crisis, especially banks’ mortgage-backed securities, toxic assets, and settlements over misleading investors.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L8_N7222": {
+   "layer": 8,
+   "neuron": 7222,
+   "pos": {
+    "explanation": "Responds to spelled-out ordinal terms, especially “third” and occasionally “fourth,” often introducing a third party, option, wave, or position.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Responds to the digit 3 within numeric strings, especially 23, phone numbers, ages, and other numerals.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L35_N1822": {
+   "layer": 35,
+   "neuron": 1822,
+   "pos": {
+    "explanation": "The highlighted fragments occur in unrelated words and languages, with no consistent semantic or orthographic pattern evident.",
+    "verdict": "NONE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marks cluster in words containing a nearby v sound or spelling, including retriever, cantilever, maneuver, rollover, believed, and improver.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L26_N7797": {
+   "layer": 26,
+   "neuron": 7797,
+   "pos": {
+    "explanation": "Fires around numerical quantities used as specific counts, records, dates, or sports statistics, often tied to individual events or achievements.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.15,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Fires around numerical quantities presented as large-scale totals or usage statistics, such as people served, transit rides, edits, or miles.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L6_N8300": {
+   "layer": 6,
+   "neuron": 8300,
+   "pos": {
+    "explanation": "Marks words that assign or compare an entity to a role, category, or state, especially “become,” “as,” and “like.”",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Marks group and partitive relations, especially “among” for membership and “of” for composition or association.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.05,
+    "clean": true
+   }
+  },
+  "L19_N4349": {
+   "layer": 19,
+   "neuron": 4349,
+   "pos": {
+    "explanation": "Fires on language describing something as widespread, present throughout an area or set, or occurring regularly, often via “everywhere” and “all over.”",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often fires on expressions of large quantity or ongoing duration, but several hits are generic function words or context-dependent, so the pattern is noisy.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L4_N2083": {
+   "layer": 4,
+   "neuron": 2083,
+   "pos": {
+    "explanation": "Favors state/condition or polity wording and epistemic or reporting verbs such as suspect, suppose, mention, and state; dress-related hits appear incidental.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors digits and numeric fragments in ranges, scores, measurements, and bibliographic references, often adjacent to hyphens.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L11_N445": {
+   "layer": 11,
+   "neuron": 445,
+   "pos": {
+    "explanation": "Fires on upward-rising or airborne emissions and projectiles, especially flames, smoke, fireworks, and volcanic eruptions.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Often marks downward motion or decline, such as deflation, descent, and things moving down, but also fires on unrelated legal-service and boiler text.",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L10_N179": {
+   "layer": 10,
+   "neuron": 179,
+   "pos": {
+    "explanation": "Marks wording that presents a method, product, or approach as proven by experience and therefore dependable.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Often hits “always going to” constructions expressing inevitability, but other marked words and fragments do not form a clear related pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L5_N5675": {
+   "layer": 5,
+   "neuron": 5675,
+   "pos": {
+    "explanation": "Responds mainly to numerals in dates, counts, addresses, and product or record identifiers, with related hyphens and separators in numeric strings.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on the word “pages” in bibliographic entries and on hyphens in shell commands or separators; these appear to be unrelated patterns.",
+    "verdict": "MIXTURE",
+    "coverage": 0.4,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L17_N221": {
+   "layer": 17,
+   "neuron": 221,
+   "pos": {
+    "explanation": "Capturing, collecting, or storing information and images, often in a technical or documentary context.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Filming or recording people and events with cameras, including video production and incidental footage.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L25_N4120": {
+   "layer": 25,
+   "neuron": 4120,
+   "pos": {
+    "explanation": "Marks “never” in claims that something has not been experienced, seen, or done before, often emphasizing how unusual or unprecedented it is.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Most strongly marks “that” in recurring-time phrases such as “it’s that time of year again”; a few other function-word firings appear incidental.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L8_N4383": {
+   "layer": 8,
+   "neuron": 4383,
+   "pos": {
+    "explanation": "Mortgage and housing-finance text, especially loan types and rates, home buying, and foreclosure risk.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The snippets span unrelated topics, with firings on arbitrary fragments of names, brands, acronyms, dates, and numbers; no clear shared semantic job emerges.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L4_N9862": {
+   "layer": 4,
+   "neuron": 9862,
+   "pos": {
+    "explanation": "Focuses on structural and material integrity: strengthening structures, monitoring health, and modeling damage or debonding in engineered materials.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Appears across disparate technical and academic material—numerical methods, control systems, optimization, acoustics, and fluid dynamics—with no more specific shared topic evident.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L28_N2670": {
+   "layer": 28,
+   "neuron": 2670,
+   "pos": {
+    "explanation": "Often fires around event schedules and sports reports, especially at venue names or before listed dates and times.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked text varies across product announcements, home-care advice, plant articles, and repeated SARMs mentions without a clear shared pattern.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L23_N6617": {
+   "layer": 23,
+   "neuron": 6617,
+   "pos": {
+    "explanation": "Fires around punctuation introducing trailing credits, sources, navigation, notes, and other post-body metadata or annotations.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.15,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on runs of hyphens used as separators or dividers, especially email attachment boundaries and message-format breaks.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L13_N4434": {
+   "layer": 13,
+   "neuron": 4434,
+   "pos": {
+    "explanation": "Marks low verbal output or quietness—speaking little, not speaking, silence, or being reticent; a few unrelated contextual hits are likely noise.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Marks conventional scientific-paper discourse, especially study framing and reporting methods, results, findings, or conclusions in abstracts.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L17_N9106": {
+   "layer": 17,
+   "neuron": 9106,
+   "pos": {
+    "explanation": "Mostly anaphoric pronouns and demonstratives—especially “it/its,” “this,” “there,” and “her”—that refer back to or point to things in context.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.1,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Mostly relational or connective terms that link things by association, consequence, sequence, or position, including formal forms such as “thereby” and “thereto.”",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L5_N2937": {
+   "layer": 5,
+   "neuron": 2937,
+   "pos": {
+    "explanation": "Mostly line-break or section-boundary markers separating dates, metadata, and headings from following content, with occasional question labels or lesson punctuation.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "No stable shared job: it marks index-related words, word fragments, numbered-section punctuation, and ordinary line breaks across unrelated text.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.35,
+    "clean": false
+   }
+  },
+  "L25_N11386": {
+   "layer": 25,
+   "neuron": 11386,
+   "pos": {
+    "explanation": "The dummy or anticipatory “it” in “as it turns out” and “as it happened” frames a later revelation or outcome, often in hindsight.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "These firings occur on letters or digits embedded in structured notation—chemical names, legal references, identifiers, and symbolic math—rather than ordinary prose.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L32_N5522": {
+   "layer": 32,
+   "neuron": 5522,
+   "pos": {
+    "explanation": "Fires chiefly on commas and nearby words separating items in enumerations, especially lists of composers, works, genres, or performers.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "The marked tokens vary widely in grammatical role and context; the examples offer no consistent pattern beyond broad musical subject matter.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L13_N6513": {
+   "layer": 13,
+   "neuron": 6513,
+   "pos": {
+    "explanation": "The marked tokens occur in Greek or accented text, URLs, formatting boundaries, and occasional ordinary English, with no reliable shared semantic or token-level pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 1.0,
+    "random_fit": 0.25,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Most marked strings are capitalized English words or word-initial fragments, including unusual mid-sentence capitalization and OCR-split text; this is a weak surface pattern, not a topic.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.45,
+    "clean": false
+   }
+  },
+  "L20_N10822": {
+   "layer": 20,
+   "neuron": 10822,
+   "pos": {
+    "explanation": "Fires mainly on grammatical glue that carries a phrase forward—commas, conjunctions, articles, pronouns, and prepositions—often introducing an added detail or continuation.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.45,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often marks clause-level predicates or transitions after a subject or modal (is, be, joined, drops, may), but punctuation, arithmetic, and other outliers make the pattern uncertain.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.4,
+    "random_fit": 0.1,
+    "clean": false
+   }
+  },
+  "L4_N6245": {
+   "layer": 4,
+   "neuron": 6245,
+   "pos": {
+    "explanation": "Detects corporate-finance deal language, especially M&A due diligence and agreements alongside related structured-finance and securitisation transactions.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.9,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often fires on investment and market-performance language, especially returns, yields, and market metrics, with some incidental hits on common words in financial boilerplate.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L26_N5224": {
+   "layer": 26,
+   "neuron": 5224,
+   "pos": {
+    "explanation": "Fires around “Adam” followed by surnames and related Ad-/AD- forms such as ADP-ribosylation, suggesting sensitivity to the shared Ad/AD spelling pattern.",
+    "verdict": "ONE",
+    "coverage": 0.2,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often fires in formal institutional or administrative prose, especially government departments, funding, research, and policy descriptions, though a few examples are unrelated names or interface text.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.15,
+    "clean": false
+   }
+  },
+  "L25_N7747": {
+   "layer": 25,
+   "neuron": 7747,
+   "pos": {
+    "explanation": "Often marks verbs describing consequential effects—saving, helping, costing, creating, or dooming someone or something—with a few likely contextual or tokenization spillovers.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Frequently marks broad quantifiers or prevalence terms such as “everyone,” “every,” “most,” and “everywhere”; the remaining examples are scattered and less coherent.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   }
+  },
+  "L15_N2696": {
+   "layer": 15,
+   "neuron": 2696,
+   "pos": {
+    "explanation": "Favors informal, child- and family-centered language, especially children’s speech, parenting anecdotes, and playful or child-friendly explanations.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Some examples involve opinions, beliefs, or reflection, but others are punctuation, definitions, and unrelated narrative words, with no reliable shared pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L6_N1086": {
+   "layer": 6,
+   "neuron": 1086,
+   "pos": {
+    "explanation": "This pole activates on “Stratos/stratospheric” forms and Eric Clapton mentions; these are unrelated name and word-family clusters, with no evident common function.",
+    "verdict": "MIXTURE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "The marked pieces span unrelated words and topics; no stable semantic, syntactic, or spelling pattern is apparent.",
+    "verdict": "NONE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L9_N442": {
+   "layer": 9,
+   "neuron": 442,
+   "pos": {
+    "explanation": "Fires on varied content-bearing word pieces—often word beginnings—across unrelated topics, with no narrower semantic theme apparent.",
+    "verdict": "ONE",
+    "coverage": 0.1,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Strongly favors the preposition “of,” with occasional other short grammatical words or fragments in otherwise unrelated text.",
+    "verdict": "ONE",
+    "coverage": 0.5,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L14_N2758": {
+   "layer": 14,
+   "neuron": 2758,
+   "pos": {
+    "explanation": "Mostly fires on ordinary descriptive or metadata words in scraped web prose and listings, rather than one subject; occasional proper-name exceptions appear.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.35,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors named entities—brands, publications, organizations, products, and site names—sometimes with only a subword fragment marked.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L14_N5978": {
+   "layer": 14,
+   "neuron": 5978,
+   "pos": {
+    "explanation": "Fires especially on the standard comment-form prompt to save a visitor’s name, email, and website in the browser, with scattered unrelated web-text activations.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Often marks promotional urgency phrases urging readers to act while something remains available, though a few examples are unrelated temporal or idiomatic phrases.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L24_N4915": {
+   "layer": 24,
+   "neuron": 4915,
+   "pos": {
+    "explanation": "Mostly clause-boundary punctuation—commas, parentheses, and a hyphen—in practical explanatory text, but scattered connective and content words prevent a single reliable pattern.",
+    "verdict": "MIXTURE",
+    "coverage": 0.1,
+    "random_fit": 0.05,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Many firings occur in procedural or instructional text, especially around steps and directions, but isolated legal punctuation and unrelated prose make that pattern unreliable.",
+    "verdict": "MIXTURE",
+    "coverage": 0.5,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L25_N7713": {
+   "layer": 25,
+   "neuron": 7713,
+   "pos": {
+    "explanation": "Favors research and development language about deriving, determining, or developing findings, predictions, methods, and recipes.",
+    "verdict": "ONE",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors practical procedural and compliance-oriented text, especially instructions, requirements, regulations, and certification guidance; a few examples are incidental function-word firings.",
+    "verdict": "ONE",
+    "coverage": 0.6,
+    "random_fit": 0.15,
+    "clean": false
+   }
+  },
+  "L28_N229": {
+   "layer": 28,
+   "neuron": 229,
+   "pos": {
+    "explanation": "Mostly phrases marking limits or ranges, especially numeric ranges, plus several “out of X” idioms; these share boundary/outside language, though the evidence is uneven.",
+    "verdict": "TWO_RELATED",
+    "coverage": 0.7,
+    "random_fit": 0.0,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marks “within” phrases expressing proximity or accessibility, such as being within walking distance, reach, view, or hearing range.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L18_N1606": {
+   "layer": 18,
+   "neuron": 1606,
+   "pos": {
+    "explanation": "Favors intact standalone words, names, and labels rather than a consistent topic; most marked items are complete lexical units despite a few formatting or subword exceptions.",
+    "verdict": "ONE",
+    "coverage": 0.4,
+    "random_fit": 0.1,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors token-boundary artifacts—subword and numeric fragments, punctuation, and line breaks—alongside some heading words, a related but mixed pattern of non-prose formatting.",
+    "verdict": "TWO_RELATED",
+    "coverage": 1.0,
+    "random_fit": 1.0,
+    "clean": false
+   }
+  },
+  "L24_N1203": {
+   "layer": 24,
+   "neuron": 1203,
+   "pos": {
+    "explanation": "Marks emphatic evaluative phrasing, especially superlatives or claims of being best, easiest, greatest, or first; a few ordinary-word hits make the scope somewhat noisy.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Clusters around invitations for reader input—questions, suggestions, comments, or contacting the site—often phrased as “something you” can ask or share; a few hits are unrelated.",
+    "verdict": "ONE",
+    "coverage": 0.9,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  },
+  "L16_N8650": {
+   "layer": 16,
+   "neuron": 8650,
+   "pos": {
+    "explanation": "Fires around first-person address, quoted speech, and date/header details in correspondence, especially archival letters and personal messages.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.05,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Examples mix blog thank-you boilerplate, news datelines and headlines, citation or publication labels, and unrelated conversational text; no clear shared pattern emerges.",
+    "verdict": "MIXTURE",
+    "coverage": 0.0,
+    "random_fit": 0.05,
+    "clean": false
+   }
+  },
+  "L22_N6382": {
+   "layer": 22,
+   "neuron": 6382,
+   "pos": {
+    "explanation": "Firings land on assorted punctuation, short words, and fragments across unrelated web genres; broken markup and noisy text recur, but no stable trigger is evident.",
+    "verdict": "NONE",
+    "coverage": 0.7,
+    "random_fit": 0.7,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Marked items range from ordinary prose words to punctuation and formatting artifacts across unrelated topics, with no consistent semantic or syntactic pattern.",
+    "verdict": "NONE",
+    "coverage": 0.9,
+    "random_fit": 0.95,
+    "clean": false
+   }
+  },
+  "L3_N1276": {
+   "layer": 3,
+   "neuron": 1276,
+   "pos": {
+    "explanation": "Fires on “Bismillah,” likely tracking the Allah-related religious invocation or name rather than the surrounding musical tribute.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on varied, unrelated words and names containing “bil” or similar fragments (Bilanz, Bilgi, Bilstein), suggesting an orthographic rather than topical pattern.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L28_N11057": {
+   "layer": 28,
+   "neuron": 11057,
+   "pos": {
+    "explanation": "Fires on biological and medical discussions of proteins, especially antibodies, serum proteins, and protein storage or accumulation.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.0,
+    "clean": true
+   },
+   "neg": {
+    "explanation": "Fires on software and computing documentation, particularly system processes, executables, code execution, and application or build behavior.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.0,
+    "clean": true
+   }
+  },
+  "L16_N3899": {
+   "layer": 16,
+   "neuron": 3899,
+   "pos": {
+    "explanation": "Favors grammatical continuations and connective material—especially infinitives, contrasts, and clause transitions—with a few content words occurring in those same syntactic slots.",
+    "verdict": "ONE",
+    "coverage": 1.0,
+    "random_fit": 0.7,
+    "clean": false
+   },
+   "neg": {
+    "explanation": "Favors language about expectations, beliefs, and judgments, often when someone is overconfident or mistaken about what will happen.",
+    "verdict": "ONE",
+    "coverage": 0.8,
+    "random_fit": 0.1,
+    "clean": true
+   }
+  }
+ },
+ "settings": {
+  "examples": 15,
+  "grade": 10,
+  "luna_chars": 400,
+  "grade_chars": 500,
+  "random_chars": 320,
+  "before_tokens": 200,
+  "explain_length": "one sentence, max 35 words"
+ },
+ "cost": {
+  "jev_usd": 0.1039,
+  "luna": {
+   "calls": 200,
+   "input_tokens": 677444,
+   "output_tokens": 225357
+  }
+ }
+}

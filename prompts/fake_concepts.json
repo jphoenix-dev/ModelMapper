@@ -1,0 +1,8 @@
+{
+  "_about": "Negative controls v2 (ISSUES #21): invented entities described as if real, so recall prompts don't announce fictionality. A model that 'recalls' these is confabulating or the prompts leak. Names checked to be unlikely real entities; facts are invented.",
+  "concepts": [
+    "Mount Velkaran (a 6,214 m peak in Peru's Cordillera Vilcabamba, first climbed in 1971 by a Swiss-Peruvian team, known for its twin summits and sacred to local Quechua communities)",
+    "Elsabeth Quorrin (a Dutch linguist, 1931-2004, professor at Leiden, who proposed the 'anchoring hypothesis' of verb-final word order and documented the Teyra language of Papua)",
+    "the Draxwell Bridge (a 1912 steel truss bridge carrying Ohio State Route 7 over the Muskingum River near Zanesville, added to the National Register of Historic Places in 1987)"
+  ]
+}

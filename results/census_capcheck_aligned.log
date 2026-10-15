@@ -1,1 +1,7 @@
 200 units
+Luna: 200/200 explained | {'calls': 200, 'input_tokens': 1981014, 'output_tokens': 313245}
+coverage: 7937/7937 graded | Jev {'calls': 7937, 'input_tokens': 4951977}
+random check done | Jev {'calls': 8017, 'input_tokens': 6030181}, ~$0.253
+pos: clean 74/200 = 37% (excluded for API failures: 0)
+neg: clean 44/200 = 22% (excluded for API failures: 0)
+Jev ~$0.253 | Luna {'calls': 200, 'input_tokens': 1981014, 'output_tokens': 313245}

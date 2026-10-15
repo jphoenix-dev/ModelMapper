@@ -368,3 +368,72 @@ selection picks generic name-completion neurons (Venice, Titanic, violin, Tokyo;
 - 60-token steered replies and other caps (CAPS.md).
 - Labels from 10M-token atlas examples.
 - Jev and Luna graders (validation pending).
+
+---
+
+## 16 Oct 2026 (~01:30): cap check on the census (does our capping drive the 41%?)
+
+Same 200 live census neurons re-labelled with aligned, uncapped settings: Luna sees 20 examples × ~1,500 chars, no
+word limit; Jev grades all 20 at 1,500 chars; random snippets also 1,500 chars. Original census: 15 × 400 chars to
+Luna, 35-word cap, 10 graded at 500, random snippets 320. (`results/census_capcheck_aligned.json`; Luna ~$0.36, Jev ~$0.25.)
+
+| | Capped | Aligned, uncapped |
+|---|---|---|
+| Positive poles strictly clean | 40% | 37% |
+| Negative poles strictly clean | 36% | 22% |
+| Positive ONE (Luna only) | 79% | 81% |
+| Mean coverage (pos / neg) | 0.65 / 0.60 | 0.63 / 0.53 |
+| Mean random fit (pos / neg) | 0.07 / 0.08 | 0.07 / 0.04 |
+
+- **The census headline is not a cap artefact:** more context and no word cap did not raise the clean rate.
+  Grading 20 examples (incl. weaker firings, ranks 11–20) makes the 80% bar harder, which plausibly explains the
+  negative-pole drop. Several settings changed at once, so the drop can't be attributed to one of them.
+- **Per-neuron verdicts are noisy:** 44/200 positive poles flipped clean status between runs (25 lost, 19 gained)
+  while the aggregate moved 3 points. Population rates are reasonably stable (≈ ±3pp); a single neuron's label has
+  ~20% flip risk, so any per-neuron claim needs a repeat.
+
+**Noise floor, test-retest (same 200 neurons, identical original settings; `results/census_retest_capped.json`;
+Luna ~$0.18, Jev ~$0.10):**
+
+| | Run 1 | Run 2 (identical) | Aligned |
+|---|---|---|---|
+| Positive clean | 40% | 40% | 37% |
+| Negative clean | 36% | 40% | 22% |
+| Clean-label disagreement vs run 1 | – | 22% / 20% (pure noise) | 22% / 25% |
+| Verdict disagreement vs run 1 | – | 23% / 32% | 19% / 34% |
+
+- Population rates are stable; individual labels are noisy (~1 in 5 flips on an identical re-run).
+- Positive poles: the cap change is indistinguishable from noise. Negative poles: the aligned settings are genuinely
+  harsher (22% vs 36–40%), likely from grading 20 examples incl. weaker firings.
+- Positive poles clean in BOTH identical runs: 29% ("robustly clean"); clean in at least one: ~51%.
+- **Census headline restated:** strictly clean ≈ 30–50% (robust to single-run) of positive poles; ~80% "one job" by
+  the labeller alone; per-neuron claims need a repeat.
+
+---
+
+## 16 Oct 2026 (~00:10): H-DEPTH, stages by depth (pre-registered 00:35 on 15 Oct, before the test)
+
+11 recalled concepts × top 50 attributed neurons = 550 pairs (415 unique neurons, labelled blind with `label_batch.py`
+default settings; 49% / 40% of their pos / neg poles clean). Jev classified each pair CONCEPT_SPECIFIC / GENERIC /
+UNRELATED from the neuron's explanations and output words, with option order rotated ×3 (`results/hdepth_classes.json`).
+
+Representation of each class by depth band, relative to the depth distribution of all 550 pairs:
+
+| Class (n) | 0–5 | 6–12 | 13–21 | 22–32 | 33–35 |
+|---|---|---|---|---|---|
+| Concept-specific (101) | ×0.6 | **×2.3** | ×0.2 | **×1.4** | ×0.3 |
+| Generic (342) | ×0.8 | ×0.3 | ×1.4 | ×0.9 | **×1.4** |
+| Unrelated (107) | ×2.1 | ×2.0 | ×0.5 | ×1.1 | ×0.3 |
+
+Most recurrent generic neurons (number of the 11 concepts' top-50 they appear in): L35:10037 (10), L35:9896 (9),
+L33:10933 (9), L35:11693 (8), L34:1452 (7), L35:8393, L35:3129, L35:122, L31:5473, L21:10152 (6 each).
+
+**Against PREREG H-DEPTH:**
+1. Concept-specific over-represented in ~6–12 and ~22–32 ✅ (×2.3, ×1.4; nearly absent in 13–21).
+2. Generic over-represented in 32–35 ✅ (×1.4).
+3. The same generic neurons recur across ≥ 50% of concepts ✅ (10 neurons in ≥ 6/11).
+
+**Reading:** recognise (6–12) → concept parts (22–32) → shared answer machinery (33–35). 62% of a concept's top 50 is
+generic machinery; 18% concept-specific. "Unrelated" (prompt-specific word detectors) cluster in 0–12.
+**Caveats:** one labelling run + one classification; per-label noise ~20% (test-retest), so the pattern rests on
+aggregation over 550 pairs. A repeat classification is the planned noise check.
