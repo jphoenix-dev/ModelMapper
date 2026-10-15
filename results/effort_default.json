@@ -1,0 +1,2823 @@
+{
+ "model": "Qwen/Qwen3-8B",
+ "n": 200,
+ "units": {
+  "L34_N895": {
+   "layer": 34,
+   "neuron": 895,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on the “qu” spelling sequence within words such as headquarters, acquire, quartz, and inquisitor, independent of their subject matter.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on “st” letter sequences in varied words and names, often at the start of a token, without a consistent semantic topic.",
+    "verdict": "ONE"
+   }
+  },
+  "L23_N6772": {
+   "layer": 23,
+   "neuron": 6772,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Detects the spelling “berry” or “cherry,” often in proper names and place names, including the fragment in “Strawberrynet.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on generic website boilerplate, especially disclaimers and interface prompts, rather than on a specific subject-matter vocabulary.",
+    "verdict": "ONE"
+   }
+  },
+  "L6_N6889": {
+   "layer": 6,
+   "neuron": 6889,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks “through” for traversing a route or area, especially in travel and walking descriptions, and occasionally for proceeding by way of something.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on a varied set of relational words—mainly prepositions expressing location, containment, direction, destination, or range—without one narrower shared meaning.",
+    "verdict": "ONE"
+   }
+  },
+  "L31_N11111": {
+   "layer": 31,
+   "neuron": 11111,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires in list-like, scraped web text—especially ingredient enumerations and pipe-delimited product tables, with some procedural how-to passages.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in readable, continuous prose across varied topics, including narrative, reporting, and instruction; the marked words and punctuation have no narrower shared role.",
+    "verdict": "ONE"
+   }
+  },
+  "L16_N8174": {
+   "layer": 16,
+   "neuron": 8174,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often marks language reporting a condition’s status or a treatment/intervention’s effects, especially reassessment, change, or progress; a few examples are incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks tokens in factual, technical or instructional exposition, including procedures, measurements, and data; the subject matter varies widely.",
+    "verdict": "ONE"
+   }
+  },
+  "L18_N10892": {
+   "layer": 18,
+   "neuron": 10892,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked fragments span unrelated microscopy, names, punctuation, mathematics, and general prose, with no consistent shared feature.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The firings cluster around computer-science algorithm discussions, especially pairwise computation, efficiency, and complexity, with related numeric and asymptotic notation.",
+    "verdict": "ONE"
+   }
+  },
+  "L16_N298": {
+   "layer": 16,
+   "neuron": 298,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on ordinary words that connect or continue prose—prepositions, articles, and common verbs—though a few content words make the pattern broad.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples range from punctuation and line breaks to unrelated words in prose, tables, and titles; no consistent shared pattern is evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L17_N1549": {
+   "layer": 17,
+   "neuron": 1549,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires around sentence or paragraph boundaries in continuous explanatory or editorial prose, often at a sentence opening or closing rather than on a consistent topic.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on structured web fragments such as legal boilerplate, section labels, list entries, lesson titles, and how-to subheadings rather than continuous prose.",
+    "verdict": "ONE"
+   }
+  },
+  "L16_N3406": {
+   "layer": 16,
+   "neuron": 3406,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on ordinary connective and content words in flowing explanatory or narrative prose; the examples show no narrower recurring topic or semantic role.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly marks problems or targets being handled—bugs fixed, inaccuracies corrected, questions answered, surfaces cleaned—with a few looser change/result cases.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N7776": {
+   "layer": 33,
+   "neuron": 7776,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Positive activations mostly mark a standalone initial C/c token across unrelated words, suggesting an orthographic or token-boundary cue rather than a shared topic.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Negative activations often mark multi-character chunks containing c/C, including in “Scrum” and “carbon,” but the examples are varied and include outliers.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L34_N1198": {
+   "layer": 34,
+   "neuron": 1198,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily fires on finger and fingertip language, with related references to small, exposed extremities such as the clitoris, eyes, and paws; some marked fragments look incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples scatter across anatomical terms, car-panel parts, place names, and function words, without a defensible shared semantic pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L12_N8830": {
+   "layer": 12,
+   "neuron": 8830,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Cooking processes that transform food or establish a desired state or texture, such as searing, setting, tenderizing, cooling, or sealing in flavor.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Ongoing cooking or care actions that periodically monitor or manipulate food, especially turning, stirring, checking, or tending it during cooking.",
+    "verdict": "ONE"
+   }
+  },
+  "L34_N8370": {
+   "layer": 34,
+   "neuron": 8370,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on distinctive subword fragments inside varied multilingual, often Romance-language words; the shared feature seems orthographic rather than topical.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on other subword fragments in Spanish and Portuguese text, including common word pieces and mojibake; no consistent semantic topic stands out.",
+    "verdict": "NONE"
+   }
+  },
+  "L3_N1276": {
+   "layer": 3,
+   "neuron": 1276,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Responds to “Bismillah,” the devotional invocation meaning “in the name of God,” with the surrounding passage explicitly treating it as a beginning.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the letter sequence “bil” across Turkish words such as bilgi and unrelated names or terms like Bilanz and Bilbo, suggesting a shared spelling rather than meaning.",
+    "verdict": "ONE"
+   }
+  },
+  "L15_N735": {
+   "layer": 15,
+   "neuron": 735,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Strongly associated with formatted telephone numbers, especially digits and separators inside customer-service, hotline, and contact numbers.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Highlights vary across negation, comparison, color, numerals, and ordinary content words; no stable shared pattern is evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L5_N7629": {
+   "layer": 5,
+   "neuron": 7629,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary descriptive vocabulary—especially roles, participants, and technical or product nouns—rather than named entities, though the examples span several topics.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors company names such as Unilever and Netflix, alongside possessive pronouns referring to companies or their offerings.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L34_N8456": {
+   "layer": 34,
+   "neuron": 8456,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Sports reporting focused on team and player performance, results, statistics, and evaluative descriptions of seasons or games.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples span unrelated non-sports prose, with firings on assorted words and token fragments; no more specific shared pattern is evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L20_N11746": {
+   "layer": 20,
+   "neuron": 11746,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on countable nouns or noun-phrase material, including plural heads and nearby determiners, but the examples do not reveal a narrower semantic theme.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens span unrelated adjectives, pronouns, verbs, punctuation, and nouns, with no consistent grammatical or semantic pattern evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L35_N1895": {
+   "layer": 35,
+   "neuron": 1895,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Several firings occur on “sa” in archaic “saith,” alongside assorted word pieces and ordinary words; there is no reliable shared contextual pattern.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The firings span unrelated word fragments, function words, names, and prose contexts, with no consistent distinction apparent.",
+    "verdict": "NONE"
+   }
+  },
+  "L4_N1718": {
+   "layer": 4,
+   "neuron": 1718,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks blog-post metadata and footer fields, especially “Filed under” category/tag lists and nearby dates, author, comment, and permalink information.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked text ranges from attribution verbs and legal or patent filing language to French prose and travel-blog labels, with no clear shared function.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L0_N542": {
+   "layer": 0,
+   "neuron": 542,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on “task” as a duty, activity, or challenge to be carried out, including in compounds such as “Task Force.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens span unrelated names, foods, organizations, and actions, with no consistent shared meaning or context apparent.",
+    "verdict": "NONE"
+   }
+  },
+  "L26_N1177": {
+   "layer": 26,
+   "neuron": 1177,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks voltage-related values and ranges in equipment specifications, especially input or operating voltage (e.g., 100–240 V, 36–42 V, and 48 V ±4 V).",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks current, amperage, wire-gauge, and conductivity values, plus conductive terminology—quantities and materials associated with electrical conduction.",
+    "verdict": "ONE"
+   }
+  },
+  "L26_N9664": {
+   "layer": 26,
+   "neuron": 9664,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on procedural cooking recipes, especially instructions describing ingredients, preparation, cooking methods, and timing.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on language expressing a personal impression or realization, especially things that “strike” someone or “jump out” at them.",
+    "verdict": "ONE"
+   }
+  },
+  "L7_N6180": {
+   "layer": 7,
+   "neuron": 6180,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on expressions naming a duration, especially “for over/nearly X years” and similar spans measured in weeks or decades.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on ordinary non-duration complements of “for”—purpose, beneficiary, occasion, or subject—rather than phrases stating how long something lasts.",
+    "verdict": "ONE"
+   }
+  },
+  "L35_N12054": {
+   "layer": 35,
+   "neuron": 12054,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mostly at formatting boundaries introducing numeric labels or values—citation volumes, rankings, poll choices, IDs, and event numbers—rather than on a particular topic.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on web-metadata syntax, especially URL components and date/time or archive timestamps, often at their separators or digits rather than on the linked content.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N10260": {
+   "layer": 33,
+   "neuron": 10260,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Ordinary definite-article usage in varied prose, often inside common prepositional phrases such as “in the” or “on the.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Road-racing and cycling coverage, with related vehicle, driving, and road-transport material.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L14_N10424": {
+   "layer": 14,
+   "neuron": 10424,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "First-person forum updates about realizing, figuring out, or successfully resolving something, often followed by thanks or a reaction; punctuation and date fragments appear incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Technical-support questions describing a concrete problem and requesting help, often with links, code, or specific details.",
+    "verdict": "ONE"
+   }
+  },
+  "L10_N1665": {
+   "layer": 10,
+   "neuron": 1665,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily marks “placebo” as the comparison or control treatment in clinical-trial descriptions; a few unrelated firings appear to be incidental token fragments.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Firings span unrelated words and fragments, with no consistent shared function or topic evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L29_N10436": {
+   "layer": 29,
+   "neuron": 10436,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly explanatory or instructional prose introducing tools, products, frameworks, or planned activities and describing how they work or are used.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly evaluative or problem-focused prose that frames a question or decision and enumerates issues, criteria, goals, or options.",
+    "verdict": "ONE"
+   }
+  },
+  "L16_N332": {
+   "layer": 16,
+   "neuron": 332,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Hits span jokes, news, technical notices, forms, reviews, and service ads; the marked words and boundaries show no stable shared context.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Most hits describe shared public-cloud resources, while the rest concern unrelated booking and cancellation rules; the marked words suggest no narrower common trigger.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L28_N10413": {
+   "layer": 28,
+   "neuron": 10413,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires most strongly around legal opinions, Supreme Court references, and formal case citations, often at citation punctuation or court-name text.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on accounts of Black history and civil-rights struggles, especially segregation, racism, and the people and events associated with them.",
+    "verdict": "ONE"
+   }
+  },
+  "L35_N5345": {
+   "layer": 35,
+   "neuron": 5345,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Many hits are initial subword chunks of proper names (Bl, Cl, Gl, Sp), but ordinary words and punctuation also appear, leaving no clear shared function.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Strongly associated with “vol.” in academic bibliography entries, marking the journal volume field; one unrelated “any” hit is an outlier.",
+    "verdict": "ONE"
+   }
+  },
+  "L6_N8391": {
+   "layer": 6,
+   "neuron": 8391,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on fragments embedded in ordinary readable prose and names, across varied topics, rather than on a specific subject.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on fragments inside opaque machine-like strings, especially base64 data and encoded forum quote identifiers.",
+    "verdict": "ONE"
+   }
+  },
+  "L26_N2015": {
+   "layer": 26,
+   "neuron": 2015,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks descriptions of water being drawn or passed through aquatic animals’ respiratory or filtering structures, especially gills and related openings.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tracks slow passive movement of particles or lightweight objects—settling, falling, drifting, or floating—in air or water.",
+    "verdict": "ONE"
+   }
+  },
+  "L9_N5618": {
+   "layer": 9,
+   "neuron": 5618,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The firings span forum posts, technical explanations, and unrelated prose; the marked words show no reliable shared pattern beyond ordinary web-page content.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Strongly detects forum-thread header boilerplate, especially the opening quote before a forum name and commas in starter/date metadata.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N7498": {
+   "layer": 20,
+   "neuron": 7498,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Concentrates on pandemic-related prose, especially references to COVID-19 or coronavirus and disruptions or adaptations attributed to them; the marked token is often just a nearby function word.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Many firings land on digits or boundaries before years, ages, and other date-like numbers, but several mark unrelated ordinary words or punctuation, leaving no single reliable job.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L28_N229": {
+   "layer": 28,
+   "neuron": 229,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Signals expressions locating something relative to a range or limit, including numerical intervals and “out of” phrases meaning beyond a boundary or constraint.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Signals “within” used to describe being close by or inside a practical or figurative proximity limit, as in reach, walking distance, view, or earshot.",
+    "verdict": "ONE"
+   }
+  },
+  "L12_N5573": {
+   "layer": 12,
+   "neuron": 5573,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly identifies jump ropes and their use in fitness or cardio training, especially product descriptions; a few examples concern related exercise or body-health topics.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Centers on being pushed to a limit or breaking point, including physical, emotional, organizational, and figurative strain.",
+    "verdict": "ONE"
+   }
+  },
+  "L34_N2371": {
+   "layer": 34,
+   "neuron": 2371,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly rare or name-like token fragments, especially personal names, but also unrelated punctuation, function words, and multilingual fragments; no robust single semantic job emerges.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks ordinary Dutch word pieces and function words, especially “van,” with a few generic English words and names mixed in.",
+    "verdict": "ONE"
+   }
+  },
+  "L3_N3256": {
+   "layer": 3,
+   "neuron": 3256,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Em dashes set off an afterthought or clarification, as in “addiction—be it…” and “shock—without intervention.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Apostrophe/prime-like marks occur in possessives, contractions, pronunciation notation, and measurements such as feet or years.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N3542": {
+   "layer": 19,
+   "neuron": 3542,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors academic and scientific research contexts, especially researcher biographies, scholarly output, institutional resources, and professional credentials.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors people-centered general web prose—personal stories, biographies, and business profiles—rather than sustained scholarly or research-focused material.",
+    "verdict": "ONE"
+   }
+  },
+  "L6_N770": {
+   "layer": 6,
+   "neuron": 770,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires in software-product overviews discussing interface features such as dashboards and support for named file formats, with a few miscellaneous technical terms.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in Windows administration and troubleshooting instructions, especially steps involving Properties dialogs, My Computer, and C:\\ paths.",
+    "verdict": "ONE"
+   }
+  },
+  "L32_N10448": {
+   "layer": 32,
+   "neuron": 10448,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors word pieces beginning with “in” or “inf” across otherwise unrelated contexts, including infestation, inferring, infrastructure, inheritance, and innovation.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors mortgage and real-estate lending material, especially FHA/VA loan requirements, rates, eligibility, and closing costs.",
+    "verdict": "ONE"
+   }
+  },
+  "L16_N10847": {
+   "layer": 16,
+   "neuron": 10847,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors words naming discrete items, products, components, or records, often in catalog-like descriptions; the examples suggest an item/entity focus rather than one specific subject area.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens range from punctuation and pronouns to verbs and content nouns, with no reliable shared meaning or grammatical role.",
+    "verdict": "NONE"
+   }
+  },
+  "L34_N11976": {
+   "layer": 34,
+   "neuron": 11976,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily marks “fall/fell in love,” including enthusiastic attachment to people, places, products, or activities; a few date-range and seasonal snippets look incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often appears in fall-season or sports-calendar contexts—practice, camps, and seasonal schedules—but the marked function words and text fragments are too scattered for a firm pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L21_N5758": {
+   "layer": 21,
+   "neuron": 5758,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks resources or inputs used to enable an activity—fuel for energy, bait for fishing, and ingredients for cooking—across different domains.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on first-person would/’d/wouldn’t clauses that express a tentative opinion, prediction, or recommendation, often in conversational advice.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N8015": {
+   "layer": 20,
+   "neuron": 8015,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "No stable semantic pattern is apparent: firings range across pronouns, number fragments, abbreviations, names, and technical terms in unrelated contexts.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Firings are mostly ordinary words and connectors, but also include names, punctuation, and content words without a consistent shared pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L12_N12247": {
+   "layer": 12,
+   "neuron": 12247,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks consumer spending and domestic demand as drivers of economic growth, especially the shift toward consumption in China.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples span unrelated religious, medical, biotech, and technical contexts, with no clear shared pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L29_N8567": {
+   "layer": 29,
+   "neuron": 8567,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks commas and credential/title fragments in name-led appositives, where a person’s name is followed by their professional role or qualifications.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks grammatical cues around professional roles in biographies and announcements, especially articles and prepositions introducing a position or appointment.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N2725": {
+   "layer": 33,
+   "neuron": 2725,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on Brooklyn-local geography—neighborhoods, streets, transit and civic sites—often within descriptions of where places are or how they connect; one Gambia-news example is an outlier.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in prose describing consequences or effects—how products, conditions or actions help, harm, reduce, preserve or otherwise change something.",
+    "verdict": "ONE"
+   }
+  },
+  "L22_N9601": {
+   "layer": 22,
+   "neuron": 9601,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly within biomedical genetic-variant and mutation notation, especially mitochondrial DNA substitutions and protein residue labels; nearby scholarly text appears incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires mostly at sentence, title, citation, or section boundaries in biomedical text, with a few nearby metadata or ordinary-word outliers.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N5142": {
+   "layer": 33,
+   "neuron": 5142,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Firings span list and table separators, punctuation, and past-tense/passive wording across unrelated topics, without a reliable shared semantic pattern.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks prospective sports-news language about transfers or departures, especially intentions, possibilities, and players’ future destinations or decisions.",
+    "verdict": "ONE"
+   }
+  },
+  "L10_N3338": {
+   "layer": 10,
+   "neuron": 3338,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Signals choosing among alternatives or evaluating whether an option is suitable, correct, or different from others.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Centers on interrogative or relative words and labels for the unknown dimension they specify, such as when, where, who, type, or model.",
+    "verdict": "ONE"
+   }
+  },
+  "L17_N7881": {
+   "layer": 17,
+   "neuron": 7881,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks quantities and bounds in varied contexts, especially range or limit expressions such as “up to,” “as low as,” and numeric endpoints.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Appears around technical or factual specifications and their measured attributes, including temperatures, ranges, lengths, frequencies, voltages, and other numeric metadata.",
+    "verdict": "ONE"
+   }
+  },
+  "L21_N11422": {
+   "layer": 21,
+   "neuron": 11422,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The pole favors language specifying a kind, form, method, or manner of something, including category labels and open-ended choices.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples mix technical labels and commands, academic metadata, legal boilerplate, and incidental words without a stable shared pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L22_N10620": {
+   "layer": 22,
+   "neuron": 10620,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks indefinite-any expressions framing outcomes as open or unpredictable, such as “anything could happen,” “anyone’s game,” and “at any time.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks cautious, often formal wording that qualifies claims or outcomes through modals, limitations, and disclaimers, especially in legal, medical, and advisory text.",
+    "verdict": "ONE"
+   }
+  },
+  "L35_N6587": {
+   "layer": 35,
+   "neuron": 6587,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors direct or relational closeness: people or things seen “up close,” close-up acts, and kinship terms, though some multilingual fragments are unclear.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors location-finding and directory text about the nearest or closest service, office, venue, or provider.",
+    "verdict": "ONE"
+   }
+  },
+  "L11_N8895": {
+   "layer": 11,
+   "neuron": 8895,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Firings mix percentage and measurement units with conversational words and a table heading, without a clear shared function.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Firings mark numeric statistics and measurements, including percentages, durations, distances, jobs, and digits within reported figures.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N9957": {
+   "layer": 20,
+   "neuron": 9957,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors evaluative, often contrastive framing of harm, wrongdoing, opposition, or moral good versus bad; the marked words vary, but the surrounding passages repeatedly judge what is harmful, right, or wrong.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors comparatively matter-of-fact exposition, often reporting statistics, procedures, or causal explanations, rather than sustained moral or good-versus-bad evaluation.",
+    "verdict": "ONE"
+   }
+  },
+  "L13_N119": {
+   "layer": 13,
+   "neuron": 119,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors nonfinite verb forms—especially -ing participles and gerunds, but also passive participles—in subordinate or complement phrases, with occasional nearby particles or infinitive markers.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors finite verbs in main clauses describing what people or things do, have, or are like, mostly present-tense forms and simple past forms.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N1807": {
+   "layer": 19,
+   "neuron": 1807,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors web-publishing artifacts and page-level boilerplate—image URLs and filenames, logo or download labels, citations, and legal notices—often at formatting or compound-word boundaries.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary body prose, especially common grammatical continuations and words embedded in explanatory, instructional, medical, or shopping text.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N6748": {
+   "layer": 33,
+   "neuron": 6748,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Most coherent examples describe optical equipment—lens mounts, gem microscopes, and camera lenses—though several unrelated snippets make the signal imperfect.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The snippets mostly use journalistic or institutional reporting prose, often naming organizations or officials and attributing statements across varied topics.",
+    "verdict": "ONE"
+   }
+  },
+  "L31_N4289": {
+   "layer": 31,
+   "neuron": 4289,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires strongly on possessive determiners such as “their,” “your,” “our,” and “his,” typically introducing a person’s or group’s lives, career, body, or belongings.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on prepositions and grammatical linkers such as “on,” “in,” “of,” and “by,” but scattered action words like “trust,” “knocking,” and “try” do not fit a clear shared pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L5_N6278": {
+   "layer": 5,
+   "neuron": 6278,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on word-internal subword pieces, especially after prefixes or hyphens and in inflected or non-English words; a few marked units are complete words.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked items range from reflexives and adverbs to connectives and URL fragments, with no stable shared meaning or textual pattern apparent.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L15_N8383": {
+   "layer": 15,
+   "neuron": 8383,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on language presenting a narrative or account—stories, books, performances, documentaries, news scenes, and religious or historical accounts.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires around attempts and ongoing work (efforts, struggles, making, trying), with some firings on time spans such as years; these suggest processes unfolding over time.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L6_N2864": {
+   "layer": 6,
+   "neuron": 2864,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on constructions that frame something as an attempt, chance, or prospect directed toward a target, especially “shot at” and related forms like “stab at” or “try at.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The negative examples span unrelated proper-name fragments, hyphens, and ordinary words, with no consistent semantic or syntactic pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L7_N10170": {
+   "layer": 7,
+   "neuron": 10170,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks social conventions and norms, especially customary practices treated as an informal or legal source of rules.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tracks the name Hercules/Heracles and its spelling variants in myth and adaptations, with some incidental matches to related-looking word fragments.",
+    "verdict": "ONE"
+   }
+  },
+  "L27_N9139": {
+   "layer": 27,
+   "neuron": 9139,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires around punctuation, separators, and numeric formatting in structured factual text, especially amounts and geographic or statistical details.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on prepositions and related function words in phrases describing a population or issue spread across a country, state, or community.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L9_N2150": {
+   "layer": 9,
+   "neuron": 2150,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly formal, consequential abstract nouns about effort, interests, discretion, permission, and effects on people’s lives.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly casual participation and entertainment phrasing—getting in on the action, joining the fun, or going along for the ride—with several unrelated noisy firings.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N7375": {
+   "layer": 19,
+   "neuron": 7375,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on common grammatical scaffolding in fluent prose—personal pronouns, determiners, and short connective or directive words—with occasional punctuation or other outliers.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks content-bearing specifics such as technical terms, names, and numerals, though several ordinary function words appear too, so the pattern is less consistent.",
+    "verdict": "ONE"
+   }
+  },
+  "L30_N164": {
+   "layer": 30,
+   "neuron": 164,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens span unrelated adverbs, verbs, pronouns, prepositions, and existential “there,” with no reliable shared pattern.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Most examples occur in passages emphasizing quantity, degree, or scale, though a few marked contexts do not fit that pattern.",
+    "verdict": "ONE"
+   }
+  },
+  "L7_N5420": {
+   "layer": 7,
+   "neuron": 5420,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the second, lexical component of hyphenated compounds, including inflected or domain-specific forms; the shared pattern is compound-word structure.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on grammatical scaffolding and boundary tokens—copulas, prepositions, relatives, parentheses, and similar markers—often as a clause or aside continues.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L1_N2508": {
+   "layer": 1,
+   "neuron": 2508,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Strongly associated with the proper name “Griffith,” including people, Griffith Park, and Griffiths; the contexts vary, but the shared trigger is the name.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Associated with the “iff” spelling in varied words such as “stiff,” “stiffness,” “stifle,” “trifles,” and “Wiffle,” rather than one shared topic.",
+    "verdict": "ONE"
+   }
+  },
+  "L17_N3057": {
+   "layer": 17,
+   "neuron": 3057,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Short grammatical function words completing phrases: infinitival “to” after “need” and prepositional “of” in “out of place.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens vary across names, punctuation, numbers, ordinary words, and markup, with no clear shared pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L12_N8874": {
+   "layer": 12,
+   "neuron": 8874,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on words that complete familiar collocations, idioms, and proverbial phrases, such as “might makes right” and “slow and steady wins the race.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on calorie and nutrient quantities, ultrasound appearance descriptions, and unrelated symbolic or color descriptions, without a clear shared pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L30_N8617": {
+   "layer": 30,
+   "neuron": 8617,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks academic grading and admissions metrics, especially GPA values, grade scales, and high-school or college eligibility thresholds.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tracks collegiate athletics coverage, including team results, conference events, athlete performances, schedules, and roster announcements.",
+    "verdict": "ONE"
+   }
+  },
+  "L28_N1118": {
+   "layer": 28,
+   "neuron": 1118,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked items vary across punctuation, code syntax, Bible-study markup, and ordinary words; no consistent semantic or formatting pattern is evident.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Responds to “keep” in advice and directives, especially the discourse phrase “keep in mind,” but also commands to keep something or someone posted.",
+    "verdict": "ONE"
+   }
+  },
+  "L5_N1960": {
+   "layer": 5,
+   "neuron": 1960,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The pole strongly favors “only” in the additive correlative construction “not only … but also,” emphasizing an additional point rather than an exclusive one.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens span unrelated words and contexts, with no consistent lexical, grammatical, or discourse pattern apparent.",
+    "verdict": "NONE"
+   }
+  },
+  "L15_N8422": {
+   "layer": 15,
+   "neuron": 8422,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens occur in unrelated contexts and do not show a reliable shared semantic, stylistic, or grammatical pattern.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on casual, emphatic slang and conversational evaluations, including profanity, intensifiers, and praise such as “hella,” “sick,” “cool,” and “the bomb.”",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N3613": {
+   "layer": 33,
+   "neuron": 3613,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Covers mainstream sports-news prose—especially NFL, basketball, soccer, and college sports—with games, player moves, contracts, and league decisions; the marked tokens are mostly grammatical words.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Centers on hockey reporting, from junior leagues to the NHL, including player histories, team news, and transactions, with occasional coverage of other North American sports.",
+    "verdict": "ONE"
+   }
+  },
+  "L15_N3527": {
+   "layer": 15,
+   "neuron": 3527,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on textual joins and continuations—punctuation, connective words, and pieces completing names or compounds—rather than one subject area.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on phrase-final nouns naming technical objects, conditions, processes, or roles across unrelated domains, though a few function words and punctuation weaken the pattern.",
+    "verdict": "ONE"
+   }
+  },
+  "L21_N5287": {
+   "layer": 21,
+   "neuron": 5287,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on salient lexical content words—often nouns, named places, or domain terms—across unrelated topics, rather than on one subject area.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires mostly on grammatical scaffolding and short structural tokens, especially “to” and “the,” with punctuation and a few content-word outliers.",
+    "verdict": "ONE"
+   }
+  },
+  "L27_N3267": {
+   "layer": 27,
+   "neuron": 3267,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary running prose tokens—especially grammatical connectors and list punctuation—across varied subjects, rather than any particular topic.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors structural or scraped-text artifacts, especially punctuation inside version numbers, markup, URLs, and archive boilerplate, rather than ordinary prose.",
+    "verdict": "ONE"
+   }
+  },
+  "L6_N9983": {
+   "layer": 6,
+   "neuron": 9983,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly real-world reports and personal accounts of people or animals undergoing actions or events, often expressed with past-tense or passive verbs.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "A strong cluster concerns aptitude-test math and puzzles, while the other examples are fables, game copy, and technical or promotional snippets without a clear shared pattern.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L9_N6679": {
+   "layer": 9,
+   "neuron": 6679,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Covers online marketplaces and sharing-economy services that connect users to rent, buy, sell, or arrange goods and services.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Clusters around features, products, and announcements from consumer internet platforms such as Facebook, Netflix, and Airbnb, with some incidental tech-news content.",
+    "verdict": "ONE"
+   }
+  },
+  "L31_N7644": {
+   "layer": 31,
+   "neuron": 7644,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly product and technical passages about material properties and surface treatment—especially sharpening, polishing, coatings, and finishes—with some incidental unrelated firings.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Primarily references to friction and its effects, including literal, metaphorical, and speech-sound contexts such as fricatives; occasional neighboring-word firings appear incidental.",
+    "verdict": "ONE"
+   }
+  },
+  "L5_N1814": {
+   "layer": 5,
+   "neuron": 1814,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on fragments of proper names and named entities, especially spellings like -ley/-lee (Bayley, Caley, Carley), with a few similar name or brand fragments.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires mostly on Greek-script fragments, especially iota and epsilon-iota spellings in classical Greek text, with occasional related transliterations such as Alexei.",
+    "verdict": "ONE"
+   }
+  },
+  "L14_N700": {
+   "layer": 14,
+   "neuron": 700,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary prose vocabulary—especially word fragments in recipes, news, and product descriptions—rather than programming syntax.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors programming-code structure, including identifiers, operators, and API or query syntax.",
+    "verdict": "ONE"
+   }
+  },
+  "L27_N12201": {
+   "layer": 27,
+   "neuron": 12201,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires around language of checking, examination, testing, diagnosis, or appraisal, especially in medical contexts, with related quality-control uses.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on common grammatical and connective words such as “has,” “that,” “to,” “and,” and “or,” across otherwise unrelated topics.",
+    "verdict": "ONE"
+   }
+  },
+  "L28_N538": {
+   "layer": 28,
+   "neuron": 538,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly signals favorable evaluation or successful outcomes, especially praise in product reviews, though some unrelated technical and headline hits are noisy.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly marks structural punctuation and separators in lists, tables, and Q&A formatting, with occasional unrelated content-word hits.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N4349": {
+   "layer": 19,
+   "neuron": 4349,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Signals ubiquity or broad coverage, often through phrases like “all over” and “everywhere,” with related abundance or frequency wording such as “full,” “numerous,” and “regular.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Loosely tracks magnitude and persistence—large amounts (“lots,” “a host of”) or extended duration (“endless,” “constant,” “throughout”)—amid several weak or incidental hits.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L28_N7791": {
+   "layer": 28,
+   "neuron": 7791,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Describes physical motion and paths—especially orbital, flight, and projectile trajectories, but also approaches, falls, and other movement.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Appears in technical aerospace reporting about spacecraft, launches, maneuvers, and associated measurements, dimensions, or vehicle identifiers.",
+    "verdict": "ONE"
+   }
+  },
+  "L4_N1439": {
+   "layer": 4,
+   "neuron": 1439,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily OpenShift documentation, especially Ceph RBD persistent-volume provisioning; the few unrelated hits are technical product or acronym names and do not suggest a second clear job.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on capitalized fragments of code identifiers or class and file names, though the examples span unrelated languages and technical contexts.",
+    "verdict": "ONE"
+   }
+  },
+  "L18_N2466": {
+   "layer": 18,
+   "neuron": 2466,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The highlighted fragments span punctuation, names, insults, and ordinary prose, with no dependable shared semantic or grammatical pattern.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Highlights language or actions framed as encouraging, promoting, or fueling harmful outcomes, such as extremism, hostility, unsafe assumptions, or dependence.",
+    "verdict": "ONE"
+   }
+  },
+  "L29_N5667": {
+   "layer": 29,
+   "neuron": 5667,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Centers on fear, anxiety, and trauma-related distress, including discussion of psychological treatments and religious or everyday perspectives on fear.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on common punctuation or function words across unrelated material, from medication-study results to sports, travel, and food writing; no stable theme is evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L5_N4529": {
+   "layer": 5,
+   "neuron": 4529,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the spelling “can” or close variants, both as a standalone word and embedded in names, URLs, and other words; the pattern is orthographic, not consistently about ability.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on subword fragments within proper names, especially surnames, though a few acronym and ordinary-word fragments are outliers.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N10609": {
+   "layer": 19,
+   "neuron": 10609,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on direct, often audience-facing questions and question hooks, especially interrogative openings, though it can also catch later words or closing punctuation.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marked words occur in unrelated prose and varied questions, with no stable semantic or syntactic pattern beyond lacking the positive pole’s question-hook quality.",
+    "verdict": "NONE"
+   }
+  },
+  "L12_N4920": {
+   "layer": 12,
+   "neuron": 4920,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Highlights people traveling from distant places to visit, attend events, or reach a destination.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Responds to hyphens and dash-like separators across dates, titles, and scraped text, rather than to one particular topic.",
+    "verdict": "ONE"
+   }
+  },
+  "L32_N8385": {
+   "layer": 32,
+   "neuron": 8385,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly in fluent English prose and common English word pieces across varied topics, suggesting a broad English-text pattern rather than a specific subject.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on a mixed set of multilingual, accented or corrupted text and structured web fragments, linked by atypical language or tokenization rather than one topic.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L14_N8794": {
+   "layer": 14,
+   "neuron": 8794,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires in recipe instructions and food-preparation prose, especially around cookware and cooking actions; the Java collection example appears to be an outlier.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in technical discussions of software and data organization, especially sorting records by fields and using indexes or hash tables.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N56": {
+   "layer": 19,
+   "neuron": 56,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens vary across unrelated numbers, function words, punctuation, and content words, with no consistent pattern evident.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks subordinate qualifications, especially extent or frequency in “as…as” phrases and conditions introduced by “if” or “whenever.”",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L21_N10560": {
+   "layer": 21,
+   "neuron": 10560,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on a heterogeneous mix of number/identifier fragments, word fragments, and ordinary words in varied formatted web text, with no clear shared semantic role.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on common relational words such as “by,” “with,” “to,” and “of,” plus occasional punctuation, in otherwise grammatical prose.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N1960": {
+   "layer": 33,
+   "neuron": 1960,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on instructional roles and teaching contexts—lessons, courses, workshops, and instructors across riding, driving, diving, photography, and music.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly probate and executor language, with a separate cluster about personal assistants and fitness trainers; no clear shared topic beyond people’s roles.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L7_N8887": {
+   "layer": 7,
+   "neuron": 8887,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on commas following sentence-level or parenthetical adverbs and transitions such as “therefore,” “hence,” “hopefully,” and “in turn.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples mix hesitation fillers and interruption marks with pronouns and ordinary commas, without a consistent shared function.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L7_N8437": {
+   "layer": 7,
+   "neuron": 8437,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "It favors calendar references, especially relative anniversaries such as “ago this month/week,” plus date strings; a few unrelated lexical hits are noisy.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The clearest pattern is the digit 9 completing birth-year dates, alongside scattered childhood, biography, and unrelated narrative words without a consistent shared job.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L18_N4712": {
+   "layer": 18,
+   "neuron": 4712,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks variation or mixed, context-dependent outcomes and reactions, including explicit ambivalence and cases that differ depending on circumstances.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens span unrelated grammatical and topical roles, with no clear shared pattern beyond ordinary words and fragments.",
+    "verdict": "NONE"
+   }
+  },
+  "L24_N11069": {
+   "layer": 24,
+   "neuron": 11069,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary web-page prose—catalog copy, comments, articles, and narrative—rather than code-heavy procedural documentation; the subject matter varies widely.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors practical how-to and troubleshooting text, often with commands, configuration snippets, or direct steps and advice for the reader.",
+    "verdict": "ONE"
+   }
+  },
+  "L17_N6514": {
+   "layer": 17,
+   "neuron": 6514,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks sentence or text-segment boundaries, especially ending punctuation and capitalized words that begin a new sentence or section.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tends to mark material continuing within a phrase or sentence—such as connectors, modifiers, and commas—rather than clear sentence boundaries.",
+    "verdict": "ONE"
+   }
+  },
+  "L5_N3969": {
+   "layer": 5,
+   "neuron": 3969,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on positive evaluations of quality or desirability, especially words such as “good,” “great,” “effective,” and “best.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the surname “Goodman” across people, organizations, and place names, rather than on negative sentiment.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N921": {
+   "layer": 20,
+   "neuron": 921,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked words vary across unrelated legal copy, advice, scripture, advertising, and web boilerplate; they show no clear shared semantic or syntactic pattern.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The passages question whether people can be trusted to govern, decide, or act responsibly, often emphasizing the need for restraint or caution.",
+    "verdict": "ONE"
+   }
+  },
+  "L24_N5836": {
+   "layer": 24,
+   "neuron": 5836,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on cues that carry prose into a following clause or sentence—especially conjunctions, conditionals, and participial clauses—though some number and punctuation hits are incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples span punctuation, pronouns, auxiliaries, and content words in unrelated contexts, with no consistent shared pattern evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L11_N741": {
+   "layer": 11,
+   "neuron": 741,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on Unix/Linux manual-page conventions, especially cross-references with numbered sections such as nginx(8), tmpfiles.d(5), and xscreensaver-demo(1).",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on woodblock printing and Japanese printmaking, particularly writing about artist Shiko Munakata and related artworks or materials.",
+    "verdict": "ONE"
+   }
+  },
+  "L27_N10075": {
+   "layer": 27,
+   "neuron": 10075,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors subword pieces within proper names—especially people’s names, with an occasional place name—across otherwise varied contexts.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors technical health and biology text, including ingredient lists, probiotic research, medication information, and health-product disclaimers.",
+    "verdict": "ONE"
+   }
+  },
+  "L22_N8473": {
+   "layer": 22,
+   "neuron": 8473,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires at text boundaries, especially after sentence-ending punctuation or at the end of a line or markup element.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on line-initial structural markers, especially email quote prefixes (>) and list or heading transitions.",
+    "verdict": "ONE"
+   }
+  },
+  "L21_N5628": {
+   "layer": 21,
+   "neuron": 5628,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires around numerals and their formatting boundaries, including currency, dates, decimals, calculations, and occasionally adjacent code or prose.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on numerical quantities and counts embedded in prose, including study sizes, populations, dates, measurements, and monetary amounts.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N2932": {
+   "layer": 19,
+   "neuron": 2932,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Invitations or instructions for readers to contribute, submit, contact, comment, or otherwise provide information to a publication, site, or community.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "A disparate mix of shopping and product copy, personal or community narratives, site tutorials, and general advice, without one clear shared function.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L4_N896": {
+   "layer": 4,
+   "neuron": 896,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on sentence-final periods that close otherwise varied prose, rather than on a particular subject or genre.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on word-internal subword fragments (such as parts of “accomplishments,” “registration,” and “newspaper”), often visible in noisy scraped or OCR text.",
+    "verdict": "ONE"
+   }
+  },
+  "L16_N8927": {
+   "layer": 16,
+   "neuron": 8927,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors general online informational and documentary prose—articles, reviews, technical instructions, records, and catalog entries—rather than recipe-style text.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Strongly favors recipe instructions and ingredient lists, especially mentions of liquids, sauces, and food preparation.",
+    "verdict": "ONE"
+   }
+  },
+  "L7_N10175": {
+   "layer": 7,
+   "neuron": 10175,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on “mother” and its variants or compounds—Mother’s Day, motherless, Danish “mors,” and colloquial “motha/muthafucka.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on kinship and family-lineage language, including relationship labels and links such as “descendant of,” “sister-in-law,” and “goddaughter.”",
+    "verdict": "ONE"
+   }
+  },
+  "L30_N8171": {
+   "layer": 30,
+   "neuron": 8171,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The firings span unrelated fragments in names, numbers, whitespace, and technical terms, with no consistent shared pattern evident.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "This pole strongly tracks forms of “install,” including installation, installs, installing, pre-installed, and re-installing.",
+    "verdict": "ONE"
+   }
+  },
+  "L25_N94": {
+   "layer": 25,
+   "neuron": 94,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on grammatical connective words and punctuation that scaffold explanatory web prose, with a few generic nouns appearing as noisy offshoots.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on content-bearing nouns—often plurals or abstract categories—in topical prose, but the examples do not point to one subject area.",
+    "verdict": "ONE"
+   }
+  },
+  "L22_N11199": {
+   "layer": 22,
+   "neuron": 11199,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The examples span sports scores, government, biology, software help, and other topics; the marked words show no stable shared function.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The contexts range from roofing and real estate to sexual content, research, and technical questions, with no consistent pattern around the marked tokens.",
+    "verdict": "NONE"
+   }
+  },
+  "L19_N2450": {
+   "layer": 19,
+   "neuron": 2450,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on mathematical notation and quantitative details—angles, digits, decimals, measurements, and nearby explanatory words in calculation-heavy text.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires in technical passages that qualify quantitative estimates or inferences, such as small-angle approximations, decay calculations, and random-sample conditions; one political passage is an outlier.",
+    "verdict": "ONE"
+   }
+  },
+  "L23_N1583": {
+   "layer": 23,
+   "neuron": 1583,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Consumer-facing medication guidance, especially safety warnings, interactions, dosing, and instructions to consult a clinician.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Drug- and pharmacology-related terms appearing across varied contexts, including research citations, news, treatment, and administration.",
+    "verdict": "ONE"
+   }
+  },
+  "L7_N6970": {
+   "layer": 7,
+   "neuron": 6970,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often marks indefinite or generic nouns—especially “place,” “case,” and “service”—that introduce a setting, example, or category.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks definite noun phrases referring to familiar destinations or institutions, especially in phrases like “to the beach,” “the store,” or “the ER.”",
+    "verdict": "ONE"
+   }
+  },
+  "L11_N445": {
+   "layer": 11,
+   "neuron": 445,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks upward or forceful emission into the air, especially flames, smoke, fireworks, and other things shooting or rising.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often tracks downward motion, sinking, or reduction, as in deflation, descent, and things moving down; several examples are unrelated noise.",
+    "verdict": "ONE"
+   }
+  },
+  "L26_N3758": {
+   "layer": 26,
+   "neuron": 3758,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on a heterogeneous mix of web-page artifacts—URL fragments, handles, promo codes, attribution, and occasional ordinary words—with no clear shared semantic trigger.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks a boundary before a numeric value or quoted literal embedded in prose, such as a measurement, date, or example of dialogue.",
+    "verdict": "ONE"
+   }
+  },
+  "L34_N7473": {
+   "layer": 34,
+   "neuron": 7473,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors t-initial fragments attached to preceding punctuation, especially hyphenated compounds such as “well-timed,” “red-tape,” and “lion-taming.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors t-initial words following whitespace, including ordinary terms such as “tongs,” “tumbler,” and “tanning,” rather than punctuation-attached fragments.",
+    "verdict": "ONE"
+   }
+  },
+  "L6_N300": {
+   "layer": 6,
+   "neuron": 300,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors internal fragments in words containing sub-, sulfa-, or ultra-like spellings, often around “am” in medical, product, or proper-name terms; no consistent topic beyond orthography.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks sub-/sup- spellings in legal, religious, and lexical terms, but also arbitrary serial numbers and surnames, suggesting a loose orthographic pattern with unrelated outliers.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L26_N10990": {
+   "layer": 26,
+   "neuron": 10990,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Firings occur on ordinary words and punctuation across unrelated Bible commentary, property listings, essays, and scientific text, with no stable shared pattern apparent.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Firings cluster in Christian devotional prose, especially retellings of biblical events and reflections on God’s providence and the Eucharist.",
+    "verdict": "ONE"
+   }
+  },
+  "L26_N2972": {
+   "layer": 26,
+   "neuron": 2972,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly forum-page chrome—online-member counts, navigation/reply controls, reaction labels, and scraped markup—with a few ordinary-token hits that do not fit cleanly.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Targets the forum boilerplate announcing that a topic was automatically closed after a period without replies and that further replies are disallowed.",
+    "verdict": "ONE"
+   }
+  },
+  "L5_N2265": {
+   "layer": 5,
+   "neuron": 2265,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on the name fragment “-ella,” especially in Nadella and Stradella, with a few incidental hits on other name fragments.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on “Dora” in names and Dora the Explorer references, but the Deaton and Saura hits do not fit that pattern clearly.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L4_N11892": {
+   "layer": 4,
+   "neuron": 11892,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily fires on 発/發 in Japanese and Chinese, plus Mandarin romanized “fa”; weaker examples include unrelated token-boundary and scraped-text artifacts.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on forms of “generate” and “development,” tracking the related ideas of producing, creating, or growing something.",
+    "verdict": "ONE"
+   }
+  },
+  "L12_N7585": {
+   "layer": 12,
+   "neuron": 7585,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires inconsistently on scraped prose, list separators, and snippet boundaries; no specific shared semantic pattern is clear.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks email/date metadata or publication-style headers, but also fires on unrelated words and sentence boundaries.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L10_N6161": {
+   "layer": 10,
+   "neuron": 6161,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks schedules and temporal performance—project-planning acronyms, technical timing or speed, and delays or event order in construction and engineering.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on computing and technology information, especially conference or institutional metadata and software-related descriptions, but these contexts are only loosely unified.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L12_N4060": {
+   "layer": 12,
+   "neuron": 4060,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly hair-care and hairstyling instructions or descriptions, especially wording about washing, drying, combing, and managing hair; a few unrelated formatting and article fragments are noise.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples span unrelated reviews, news, essays, travel, and other prose, and the marked words show no consistent topic or linguistic pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L21_N5899": {
+   "layer": 21,
+   "neuron": 5899,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on common grammatical glue—articles, prepositions, conjunctions, and clause words—across otherwise unrelated fluent prose.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Clusters around creative and performing arts, including artists, music, dance, visual art, and related practitioners, with a few outliers.",
+    "verdict": "ONE"
+   }
+  },
+  "L34_N893": {
+   "layer": 34,
+   "neuron": 893,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on token pieces beginning with T/t, including standalone initials and word fragments; the examples show a spelling-level pattern rather than a shared topic.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the spelling “but,” across conjunctions and words such as butter, butterfly, and buttercup, with capitalization and token boundaries varying.",
+    "verdict": "ONE"
+   }
+  },
+  "L24_N8830": {
+   "layer": 24,
+   "neuron": 8830,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Strongly clusters on nutrition-label boilerplate stating that Percent Daily Value is based on a 2,000-calorie diet; scattered other prepositions appear incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "No reliable shared topic: examples mostly cover sports results and market movements, but also include legal boilerplate, deaths, names, and unrelated words.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L23_N4159": {
+   "layer": 23,
+   "neuron": 4159,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Several firings are on grammatical connectors or determiners (\"to,\" \"and,\" \"the,\" \"but\"), but unrelated content words and punctuation prevent a reliable shared pattern.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The examples range across instructions, technical prose, legal writing, and news, with no consistent pattern in the marked words or their contexts.",
+    "verdict": "NONE"
+   }
+  },
+  "L29_N703": {
+   "layer": 29,
+   "neuron": 703,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks language describing how someone or something is perceived or how a message is conveyed, often through phrases like “comes across” and “get the point across.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in product and style descriptions that list attributes or options—especially colors, materials, and ranges—often on ordinary connecting words within that copy.",
+    "verdict": "ONE"
+   }
+  },
+  "L28_N188": {
+   "layer": 28,
+   "neuron": 188,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires in historical and cultural scholarship, especially bibliographies and book references, often around authors’ names, titles, or dates.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in ordinary descriptive reference prose, particularly encyclopedia and gazetteer entries about places and history; highlighted words are often incidental grammatical tokens.",
+    "verdict": "ONE"
+   }
+  },
+  "L8_N7222": {
+   "layer": 8,
+   "neuron": 7222,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Responds to the spelled-out ordinal “third” across compounds and phrases, including ideological labels and sequence references; it may also extend to ordinal “-th” endings.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Responds to the digit 3 in numeric strings—dates, addresses, phone numbers, ages, and references such as Psalm 23—rather than to the word “third.”",
+    "verdict": "ONE"
+   }
+  },
+  "L29_N2298": {
+   "layer": 29,
+   "neuron": 2298,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Trade conflict and industrial overcapacity—especially Chinese exports, dumping allegations, tariffs, and price declines in steel and solar sectors.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "U.S. fiscal policy and its macroeconomic effects, including debt-ceiling disputes, taxes, spending cuts, and government budget decisions.",
+    "verdict": "ONE"
+   }
+  },
+  "L24_N986": {
+   "layer": 24,
+   "neuron": 986,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Signals verbs and idioms for having or exercising control, influence, or dominance over a group, market, or domain.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Signals spacing immediately before numeric figures in statistical or financial text, especially percentages, shares, rankings, and quantities.",
+    "verdict": "ONE"
+   }
+  },
+  "L24_N12221": {
+   "layer": 24,
+   "neuron": 12221,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks digits used as cardinal quantities—especially prices, measurements, capacities, magnifications, and other specifications—rather than a particular subject matter.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks dates, day ordinals, and entries in schedules or chronological lists, but also appears in unrelated numerical references, so the pattern is inconsistent.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L18_N11674": {
+   "layer": 18,
+   "neuron": 11674,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors affirmative or favorable signals—positive reviews, yes/aye votes, support, and gains—though some hits are incidental grammatical or technical tokens.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked fragments occur in unrelated product, recipe, measurement, and technical passages, with no consistent semantic pattern evident.",
+    "verdict": "NONE"
+   }
+  },
+  "L20_N10822": {
+   "layer": 20,
+   "neuron": 10822,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tends to fire in informal, conversational, promotional, or narrative web prose, often around ordinary clause or list continuations; no particular marked word or topic unifies it.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tends toward structured factual or expository prose—health, news, professional, and instructional text—with occasional conversational exceptions.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N7087": {
+   "layer": 20,
+   "neuron": 7087,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary narrative and reporting prose, including common grammatical words, quantities, and roles, rather than name-heavy title or citation strings.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors proper names and formal titles or citation-like text; occasional common words appear within those name- and title-heavy contexts.",
+    "verdict": "ONE"
+   }
+  },
+  "L5_N5798": {
+   "layer": 5,
+   "neuron": 5798,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks long-o syllables, especially in names and numeric “-fold” compounds; the examples vary semantically but share the /oʊ/ sound.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks the “roid” ending in Droid, ODROID, and F-Droid, mostly in references to Android phones, boards, and software.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N2878": {
+   "layer": 20,
+   "neuron": 2878,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks words within negated or limiting statements—often the predicate or phrase following “not,” “don’t,” “won’t,” or “without,” expressing absence, non-effect, or restriction.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors explicit “not/do not” constructions, especially formal prohibitions, cautions, and disclaimers about what someone should do or what a statement means.",
+    "verdict": "ONE"
+   }
+  },
+  "L15_N5262": {
+   "layer": 15,
+   "neuron": 5262,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors inclusive first-person plural language (“we,” “us,” “our”), often framing the writer and reader as a group, though several firings appear noisy or incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors direct second-person address to the reader (“you”), with a few less consistent firings on nearby or unrelated words.",
+    "verdict": "ONE"
+   }
+  },
+  "L21_N9739": {
+   "layer": 21,
+   "neuron": 9739,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Usually fires on noun-phrase heads naming institutions, organizations, systems, or collectives; a few verb, punctuation, and possessive-token exceptions appear.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on short relational prepositions, especially “in” and also “on” or “for,” alongside a handful of unrelated token fragments.",
+    "verdict": "ONE"
+   }
+  },
+  "L35_N7": {
+   "layer": 35,
+   "neuron": 7,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on line breaks separating list items or continuing text, with occasional hyphens, apostrophes, and other punctuation at text boundaries; it appears to mark textual segmentation.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Strongly favors opening parentheses introducing parenthetical details such as names, dates, statistics, and glosses, with a few similar quoted insertions.",
+    "verdict": "ONE"
+   }
+  },
+  "L11_N5892": {
+   "layer": 11,
+   "neuron": 5892,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires across practical instructional and reference text, especially technical setup/code and educational math explanations, with no consistent dependence on the marked word itself.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires in recipe ingredient lists, particularly quantities described as divided or eggs described as separated; a few technical snippets appear unrelated.",
+    "verdict": "ONE"
+   }
+  },
+  "L30_N9675": {
+   "layer": 30,
+   "neuron": 9675,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Informal social gatherings and party-hosting occasions, often involving friends, family, or food, such as sleepovers and Halloween parties.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Public, cultural, or religious festivals and other formal celebrations, often signaled by “fest,” “festival,” or “feast” vocabulary.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N11972": {
+   "layer": 33,
+   "neuron": 11972,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily detects the prefix “pre-” at the start of words, including prepare, presentation, prevail, prevent, premier, and precautions.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked fragments vary across punctuation, word parts, names, and unrelated terms; they do not support a consistent negative-pole pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L0_N614": {
+   "layer": 0,
+   "neuron": 614,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "It fires on scope or degree qualifiers immediately after “for” (“particular automobiles,” “quite some time”), narrowing the phrase that follows.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "It tracks i/j word-initial or tokenizer-split fragments across unrelated contexts (iPhoto, immediate, Jacob, juries), suggesting an orthographic boundary pattern rather than a topic.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N6107": {
+   "layer": 19,
+   "neuron": 6107,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks current developments and changes, especially language about following updates or keeping informed about what is happening.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Concerns distinguishing, categorizing, or choosing among alternatives, using examples, types, comparisons, and options.",
+    "verdict": "ONE"
+   }
+  },
+  "L29_N8582": {
+   "layer": 29,
+   "neuron": 8582,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Firings land on assorted common words, punctuation, and subword fragments in unrelated contexts, with no stable semantic or orthographic pattern.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Most firings mark “Na”/“na” syllables or token beginnings, often in names and transliterations; the apparent trigger is spelling rather than a shared meaning.",
+    "verdict": "ONE"
+   }
+  },
+  "L0_N6013": {
+   "layer": 0,
+   "neuron": 6013,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked spans vary across unrelated languages and word fragments, with no consistent semantic, orthographic, or contextual pattern evident.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The pole repeatedly marks the letter sequence “sta” inside words such as “gangsta,” “Gstaad,” and “Hofstaedter,” suggesting sensitivity to that spelling fragment.",
+    "verdict": "ONE"
+   }
+  },
+  "L34_N3547": {
+   "layer": 34,
+   "neuron": 3547,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary readable text—especially prose and document content—across varied topics, rather than HTML tag syntax.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors HTML markup tokens, particularly tag names and structural elements such as <br>, <a>, <strong>, and <ctrl>.",
+    "verdict": "ONE"
+   }
+  },
+  "L33_N2256": {
+   "layer": 33,
+   "neuron": 2256,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks infinitival “to” in promotional calls to action, especially invitations to schedule, book, learn about, or discuss a service.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly appears in formal legal or administrative material citing schedules, statutes, tax forms, numbered provisions, or compliance rules, with a few weaker outliers.",
+    "verdict": "ONE"
+   }
+  },
+  "L25_N1505": {
+   "layer": 25,
+   "neuron": 1505,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the opening “1.” of numbered lists, especially first entries in ranked, recommendation, and catalog lists.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens vary across punctuation, articles, a numeral, and code, with no clear shared function or context.",
+    "verdict": "NONE"
+   }
+  },
+  "L24_N3920": {
+   "layer": 24,
+   "neuron": 3920,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Firings span SQL/database syntax, scripture punctuation, and ordinary English words; punctuation and common-word contexts recur, but no single shared function is well supported.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Colon-marked metadata and command output recur, alongside download/product labels, scripture punctuation, and unrelated text; these contexts do not suggest one stable job.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L32_N8627": {
+   "layer": 32,
+   "neuron": 8627,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks language pairing two things as closely associated or mutually dependent, especially in phrases such as “go hand in hand” and “go together.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Responds broadly to hand-related expressions, including physical gestures and uses of the hand as well as idioms like “helping hand” and “task at hand.”",
+    "verdict": "ONE"
+   }
+  },
+  "L24_N11964": {
+   "layer": 24,
+   "neuron": 11964,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks first-person and modal language that conveys personal judgment, uncertainty, possibility, or reassurance, often in predictions and advice.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks routine consumer-facing web copy—product or service descriptions, recommendations, and how-to advice—with no consistent marked-word class.",
+    "verdict": "ONE"
+   }
+  },
+  "L20_N2644": {
+   "layer": 20,
+   "neuron": 2644,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks costs or losses imposed on someone, especially cancellation charges, forfeited value, and other financial or game-related penalties.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tracks quantities and magnitudes—often money, counts, sizes, or changes—rather than a particular kind of consequence.",
+    "verdict": "ONE"
+   }
+  },
+  "L19_N8318": {
+   "layer": 19,
+   "neuron": 8318,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors organizational or service networks and programs described as distributed across regions or locations, including their broad coverage and reach.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors literal geographic extent or distance—spanning territory, crossing regions, or covering a large area—rather than organizational reach.",
+    "verdict": "ONE"
+   }
+  },
+  "L5_N4183": {
+   "layer": 5,
+   "neuron": 4183,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on lexical verbs and action words, often as subword pieces (direct, repopulate, admit, oust, repin, impart, resort, dip), without a tighter semantic domain.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Primarily fires on coordinators—especially “nor” in negative parallel clauses, but also “and” joining clauses or list items—with a related comparative “more” outlier.",
+    "verdict": "ONE"
+   }
+  },
+  "L23_N6617": {
+   "layer": 23,
+   "neuron": 6617,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on bracketed ancillary web-page text—source credits, dates, captions, notes, and comment/navigation links—often appended at article or excerpt boundaries.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on dashed separator lines, especially email archive MIME boundaries such as “next part” and forwarded-message separators.",
+    "verdict": "ONE"
+   }
+  },
+  "L34_N10270": {
+   "layer": 34,
+   "neuron": 10270,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly fires on capital C at the start of varied words, with a few unrelated token hits; no consistent semantic or contextual pattern is clear.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on capital C at the start of varied words, but the examples span unrelated topics and do not reveal a distinct shared pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L4_N6245": {
+   "layer": 4,
+   "neuron": 6245,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Corporate-finance legal transactions, especially acquisitions, lending, securitisation, and the associated due diligence and deal documentation.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "General financial-market and investment reporting, including performance measures, market commentary, and investor or regulatory disclosures.",
+    "verdict": "ONE"
+   }
+  },
+  "L21_N2350": {
+   "layer": 21,
+   "neuron": 2350,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often fires at sentence, list, heading, or table transitions, including nearby tokens when formatting boundaries are involved.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often fires on ordinary in-sentence continuation tokens, including words that lead into a complement or the next phrase; no clear topic pattern stands out.",
+    "verdict": "ONE"
+   }
+  },
+  "L8_N9799": {
+   "layer": 8,
+   "neuron": 9799,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on hushes and reassuring phrases that quiet or defuse concern, such as “shh,” “that’s okay,” and “don’t worry.”",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on compact abbreviations and initialisms beginning with S, especially “SF” and “SB,” across unrelated domains.",
+    "verdict": "ONE"
+   }
+  },
+  "L0_N2938": {
+   "layer": 0,
+   "neuron": 2938,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Firings cover unrelated prepositions and word-final fragments (such as “for,” plural “-es,” and “-ences”) without a stable semantic or grammatical pattern.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on “Whether” introducing alternatives or needs, especially in promotional and service-oriented website copy.",
+    "verdict": "ONE"
+   }
+  },
+  "L24_N2104": {
+   "layer": 24,
+   "neuron": 2104,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on fragments of proper names, often unusual surnames or foreign names; the marked fragments vary, with one ordinary “you” as an outlier.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on emphatic rhetorical phrasing—especially “it’s hard to…” and “how could…not,” both framing a conclusion as difficult to resist or dispute.",
+    "verdict": "ONE"
+   }
+  },
+  "L0_N6902": {
+   "layer": 0,
+   "neuron": 6902,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The pole is dominated by the substring “under” inside Wunder- words (Wunderman, Wunderbar, Wunderlust), with a few noisy unrelated W-containing fragments; likely an orthographic detector, not a coherent topic.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "This pole detects the spelling “wich” in place names such as Wichita, Norwich, and Greenwich, as well as in “sandwich”; it is an orthographic pattern rather than a topic.",
+    "verdict": "ONE"
+   }
+  },
+  "L27_N3292": {
+   "layer": 27,
+   "neuron": 3292,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on corporate financial text, especially OTC and other exchange ticker labels and their surrounding parenthetical listing notation.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked items range across ordinary words, numbers, and markup in unrelated education, finance, legal, and health contexts, with no clear shared pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L26_N7643": {
+   "layer": 26,
+   "neuron": 7643,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors broad, general-purpose vocabulary in conversational, explanatory, or opinionated prose, especially words about thinking, feeling, and communicating rather than narrow subject matter.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors specific content nouns—often technical, institutional, or statistical terms—in factual news and report-style passages.",
+    "verdict": "ONE"
+   }
+  },
+  "L11_N8036": {
+   "layer": 11,
+   "neuron": 8036,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Mostly baseball game recaps, especially plays described as a fielder’s choice and their effect on runners or scoring, with a few unrelated spillovers.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Professional-wrestling coverage focused on match action, named moves, finishers, and how bouts end.",
+    "verdict": "ONE"
+   }
+  },
+  "L8_N7973": {
+   "layer": 8,
+   "neuron": 7973,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The highlighted fragments span unrelated topics and languages, with no stable semantic or orthographic pattern beyond being pieces of words.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Often marks unusual foreign-language spellings, transliterations, diacritics, and proper-name fragments, suggesting sensitivity to rare orthographic chunks.",
+    "verdict": "ONE"
+   }
+  },
+  "L18_N4892": {
+   "layer": 18,
+   "neuron": 4892,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on fragments embedded in proper-name-like identifiers—handles, URLs, names, brands, and organizational abbreviations—rather than on a single subject area.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires mainly on uppercase acronym or code fragments, often within formal organization names, technical terms, and institutional labels.",
+    "verdict": "ONE"
+   }
+  },
+  "L14_N382": {
+   "layer": 14,
+   "neuron": 382,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Often marks sentence or instruction boundaries—especially punctuation ending a step and the transition to the next statement, with a few related structural separators.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks are scattered across unrelated items, including time strings, table separators, ordinary words, and sentence punctuation, with no clear shared pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L29_N4753": {
+   "layer": 29,
+   "neuron": 4753,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Broad general-audience prose—news, advice, advertising, reviews, and cultural or political articles—rather than a recurring narrow subject.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Web-development content focused on backend frameworks, JavaScript stacks, and developer skills, often presented as lists or recommendations.",
+    "verdict": "ONE"
+   }
+  },
+  "L6_N7183": {
+   "layer": 6,
+   "neuron": 7183,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on short name components and place or organization names, especially fragments within Spanish surnames such as Valdespin, Valdeón, and De Gea.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on complete capitalized words in proper-name phrases and titles, especially the final words in names like House of Cards and Global Affairs.",
+    "verdict": "ONE"
+   }
+  },
+  "L31_N1759": {
+   "layer": 31,
+   "neuron": 1759,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Two recurring but unconnected patterns: obituary boilerplate around “interment” and scattered words beginning with st-/str- (strum, stroked, strobe, stomp); the other examples do not establish a unified job.",
+    "verdict": "MIXTURE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Tracks crowds reacting together—chanting, shouting, cheering, applauding, or otherwise showing support; marked tokens sometimes occur in the surrounding phrasing.",
+    "verdict": "ONE"
+   }
+  },
+  "L7_N6395": {
+   "layer": 7,
+   "neuron": 6395,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The marked pieces occur in assorted color terms, names, compounds, and ordinary words, with no clear shared function beyond completing words across token boundaries.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Most examples are second elements in place or positional compounds—especially “-side” forms such as Teesside, sell-side, and riverside—with a few apparent tokenization outliers.",
+    "verdict": "ONE"
+   }
+  },
+  "L26_N2519": {
+   "layer": 26,
+   "neuron": 2519,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the orthographic sequence “ess” across unrelated words, whether it begins a word or occurs internally.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on the orthographic sequence “sum” across unrelated names and words, including forms like “summer” and “sumptuous.”",
+    "verdict": "ONE"
+   }
+  },
+  "L14_N7601": {
+   "layer": 14,
+   "neuron": 7601,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on a comma separating names in what appears to be a bibliographic author list.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens range from place-name fragments and institutional terms to ordinary function words, with no coherent shared pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L16_N5229": {
+   "layer": 16,
+   "neuron": 5229,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires on promotional or descriptive copy about local businesses, services, and community organizations, often embedded in regional profiles or event pages.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires on reporting about regional economic development and industry, especially claims about economic impact, jobs, investment, or technology sectors.",
+    "verdict": "ONE"
+   }
+  },
+  "L11_N11353": {
+   "layer": 11,
+   "neuron": 11353,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily fires on computer firmware and low-level startup software—BIOS, EFI, bootloaders, and microcode—with several unrelated biological-word examples.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Dental procedures and restorations dominate, but Baptist church references, insect feeding, flash-memory pages, and ant bait form unrelated clusters.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L13_N9733": {
+   "layer": 13,
+   "neuron": 9733,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Marks precise equivalence or resemblance—things described as the same, exact, or like one another—with a few related source or basis constructions.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Marks broad or partial commonalities and dimensions (similarities, themes, ways), with some diffuse quantity and partitive phrases such as “a lot” and “many of.”",
+    "verdict": "ONE"
+   }
+  },
+  "L12_N4261": {
+   "layer": 12,
+   "neuron": 4261,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily marks auxiliaries and modals in verb phrases (would, should, can, has, and contractions), with a few nearby verbal or particle tokens.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens span unrelated function words, nouns, adjectives, and verbs, without a consistent grammatical or semantic pattern.",
+    "verdict": "NONE"
+   }
+  },
+  "L11_N172": {
+   "layer": 11,
+   "neuron": 172,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires around references to people and human roles or bodies—kids, patients, workers, students, salespeople, and ears—sometimes on adjacent words rather than the person term itself.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Mostly promotional audience-fit labels such as “X’s paradise,” “heaven,” “dream,” or “delight,” with a related strand of audience-specific resource and navigation headings; some examples are weaker fits.",
+    "verdict": "TWO_RELATED"
+   }
+  },
+  "L18_N5837": {
+   "layer": 18,
+   "neuron": 5837,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Tracks reasoning that distinguishes or selects one item from alternatives, often through differences, elimination, or identifying what remains.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Fires in formal factual or reference-style prose, including academic and technical writing, citations, and structured product or hotel descriptions.",
+    "verdict": "ONE"
+   }
+  },
+  "L10_N10680": {
+   "layer": 10,
+   "neuron": 10680,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Favors non-English text, especially Romance-language articles and prepositions and Czech inflectional endings, often in titles or names.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "Favors ordinary English function words and possessive forms, especially in names of organizations, institutions, and political bodies.",
+    "verdict": "ONE"
+   }
+  },
+  "L30_N11033": {
+   "layer": 30,
+   "neuron": 11033,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Primarily fires around HLA/MHC histocompatibility and related immunology terminology, including immune genes and proteins; occasional nearby generic tokens appear incidental.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "No coherent shared pattern is evident: examples range from cereal storage proteins and plant cells to kratom, Jungian psychology, spirituality, and ordinary punctuation or words.",
+    "verdict": "MIXTURE"
+   }
+  },
+  "L34_N6784": {
+   "layer": 34,
+   "neuron": 6784,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "The firings span politics, football, commerce, and miscellaneous prose; many happen to begin with s/S, but that also occurs in the negative examples, so no reliable shared feature emerges.",
+    "verdict": "NONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "These span baseball reports and ski/surf material, with many s-initial tokens but no consistent contextual or lexical property that distinguishes them; the evidence supports no clear hypothesis.",
+    "verdict": "NONE"
+   }
+  },
+  "L27_N9112": {
+   "layer": 27,
+   "neuron": 9112,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": "Fires cluster around Wikipedia/Wikia URL paths, with scattered punctuation and word-fragment positions that may reflect related link or markup artifacts in scraped web text.",
+    "verdict": "ONE"
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": "The marked tokens are ordinary words and punctuation across unrelated topics, with no clear shared semantic or formatting pattern.",
+    "verdict": "NONE"
+   }
+  }
+ },
+ "settings": {
+  "examples": 15,
+  "grade": 0,
+  "luna_chars": 400,
+  "grade_chars": 500,
+  "random_chars": 320,
+  "before_tokens": 200,
+  "explain_length": "one sentence, max 35 words"
+ },
+ "cost": {
+  "jev_usd": 0.028,
+  "luna": {
+   "calls": 200,
+   "input_tokens": 679849,
+   "output_tokens": 216417
+  }
+ }
+}

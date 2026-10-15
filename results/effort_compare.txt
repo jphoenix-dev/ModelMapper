@@ -1,0 +1,16 @@
+200 neurons in all arms
+
+arm       pole  clean      95% CI   ONE cov_soft rnd_soft agree w/ orig expl words
+original  pos     48%   42%-55%    78%     0.67     0.19          100%       20.4
+original  neg     51%   44%-58%    66%     0.65     0.20          100%       19.9
+default   pos     49%   42%-56%    84%     0.67     0.20           82%       20.4
+default   neg     50%   43%-57%    68%     0.67     0.20           86%       19.8
+low       pos     36%   30%-44%    55%     0.70     0.26           80%       21.0
+low       neg     34%   27%-40%    46%     0.69     0.26           78%       21.1
+none      pos     34%   27%-40%    50%     0.72     0.29           78%       21.4
+none      neg     28%   22%-34%    34%     0.69     0.28           73%       21.6
+
+Luna token usage per arm (from logs):
+  default  {'calls': 200, 'input_tokens': 679849, 'output_tokens': 216417}
+  low      {'calls': 200, 'input_tokens': 679849, 'output_tokens': 44236}
+  none     {'calls': 200, 'input_tokens': 679849, 'output_tokens': 17649}

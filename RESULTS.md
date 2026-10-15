@@ -603,3 +603,23 @@ the per-prompt attribution: does the neuron only matter on prompts that contain 
 **Verdict:** no GG-1-style "orange" confound in the late (≥ 22) concept-part neurons. Prompt words are read by
 early neurons as expected. Prompt generation still has no lexical-diversity constraint: a cheap addition for CR-3 is
 "no content word in more than 30% of prompts". (`results/lexical_check.json`, `results/lexical_split.log`)
+
+## 16 Oct 2026 (~01:45): Luna reasoning-effort A/B (ISSUES #24)
+`src/effort_compare.py`: 200 random census neurons were relabelled at the API default, `low` and `none`, each re-graded
+with the rubric grader and scored with the calibrated clean rule. The default re-run is the noise floor.
+
+| arm | Luna output tokens | clean pos | clean neg | "ONE" pos | random-fit (soft) | agrees with original |
+|---|---|---|---|---|---|---|
+| original census | – | 48% (42–55) | 51% (44–58) | 78% | 0.19 | – |
+| default re-run | 216k | 49% (42–56) | 50% (43–57) | 84% | 0.20 | 82% / 86% |
+| low | 44k (5× fewer) | 36% (30–44) | 34% (27–40) | 55% | 0.26 | 80% / 78% |
+| none | 18k (12× fewer) | 34% (27–40) | 28% (22–34) | 50% | 0.29 | 78% / 73% |
+
+- **The census pipeline reproduces:** a default re-run gives the same population rate (49/50 vs 48/51). Per-neuron
+  agreement is 82–86%, consistent with the earlier ~20% test-retest flip rate.
+- **Less reasoning gives vaguer labels.** Explanations fit random web text more often (0.26–0.29 vs 0.20), and Luna
+  calls fewer neurons "one job". Clean rate falls 12–22 points, well outside the noise floor. Coverage rises slightly
+  (0.70 vs 0.67), as vaguer explanations would.
+- **Decision: keep the default.** Reasoning is ~40–50% of Luna's output cost, but it buys specificity. Caveat: lower
+  effort says "ONE" less often, which on its own could mean more honesty (default Luna calls ~half of spliced two-job
+  dossiers ONE). The random-fit rise is the evidence that it is vagueness, not honesty.
