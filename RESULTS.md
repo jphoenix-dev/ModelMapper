@@ -437,3 +437,30 @@ L33:10933 (9), L35:11693 (8), L34:1452 (7), L35:8393, L35:3129, L35:122, L31:547
 generic machinery; 18% concept-specific. "Unrelated" (prompt-specific word detectors) cluster in 0–12.
 **Caveats:** one labelling run + one classification; per-label noise ~20% (test-retest), so the pattern rests on
 aggregation over 550 pairs. A repeat classification is the planned noise check.
+
+---
+
+## 16 Oct 2026 (~00:20): grader validation (Jev coverage), and the census figure is threshold-driven
+
+100 census neurons; each explanation graded against its own 8 top examples and 8 of another random neuron's
+(`results/grader_validation.json`, Jev ~$0.09):
+
+| Wording | AUC own vs other | Decisive (<0.1 or >0.9) | Near 0.5 | Mean P own / other |
+|---|---|---|---|---|
+| W0 current yes/no | 0.90 | 15% | 43% | 0.57 / 0.22 |
+| **W1 3-level rubric** | **0.92** | **37%** | 29% | 0.67 / 0.18 |
+| W2 "does it show" | 0.89 | 17% | 42% | 0.51 / 0.19 |
+
+Share of neurons whose explanation "covers" its own examples, vs false matches on another neuron's:
+
+| Bar | Own | Other |
+|---|---|---|
+| W0, ≥ 0.5, ≥ 80% (census bar) | 35% | 1% |
+| W0, ≥ 0.5, ≥ 60% | 72% | 3% |
+| W1, ≥ 0.5, ≥ 80% | 48% | 3% |
+| W1, ≥ 0.5, ≥ 60% | 79% | 5% |
+
+**Reading:** Jev discriminates well (AUC ~0.9), but its own-example probabilities hover near 0.5. The census
+"strictly clean ≈ 40%" is largely set by the uncalibrated "≥ 80% of examples at ≥ 0.5" bar; defensible bars give
+35–79%. **The earlier "leaning against the essay" reading of the census is withdrawn** pending calibration on planted
+mixtures (known two-job units) and a census re-grade with the rubric wording and soft scores.

@@ -7,8 +7,9 @@
 4. Report each class's depth distribution against the depth distribution of the whole top-N set (the baseline the
    pre-registration specifies, since attribution itself favours some layers), and which generic neurons recur.
 
-Usage: python src/h_depth.py label   [N=50]   -> results/hdepth_units.json, then runs label_batch on them
-       python src/h_depth.py classify [N=50]  -> results/hdepth_classes.json + printed analysis
+Usage: python src/h_depth.py label    [N=50] [tag]  -> results/hdepth_units.json, then label_batch -> hdepth_labels<tag>.json
+       python src/h_depth.py classify [N=50] [tag]  -> results/hdepth_classes<tag>.json + printed analysis
+       (tag, e.g. "_rep2", makes an independent repeat for the noise check)
 """
 import json
 import subprocess
@@ -40,18 +41,19 @@ def concepts(N):
 def main():
     mode = sys.argv[1]
     N = int(sys.argv[2]) if len(sys.argv) > 2 else 50
+    tag = sys.argv[3] if len(sys.argv) > 3 else ""          # e.g. "_rep2" for an independent repeat (noise check)
     cs = concepts(N)
     units = sorted({u for us in cs.values() for u in us})
     if mode == "label":
         (R / "hdepth_units.json").write_text(json.dumps([{"layer": l, "neuron": n} for l, n in units]), encoding="utf-8")
         print(f"{len(cs)} concepts, {sum(map(len, cs.values()))} (concept, neuron) pairs, {len(units)} unique neurons")
         subprocess.run([sys.executable, "-u", str(ROOT / "src/label_batch.py"), "Qwen/Qwen3-8B",
-                        str(R / "hdepth_units.json"), str(R / "hdepth_labels.json")], check=True)
+                        str(R / "hdepth_units.json"), str(R / f"hdepth_labels{tag}.json")], check=True)
         return
 
     import jev
     from transformers import AutoTokenizer  # noqa: F401  (keeps import order consistent with other scripts)
-    labels = json.loads((R / "hdepth_labels.json").read_text(encoding="utf-8"))["units"]
+    labels = json.loads((R / f"hdepth_labels{tag}.json").read_text(encoding="utf-8"))["units"]
     # output words for each neuron: reuse the ones the concept pipeline recorded where available
     writes = {}
     for f in R.glob("concepts/*__clamp*.json"):
@@ -81,7 +83,7 @@ def main():
     pairs = [(c, u) for c, us in cs.items() for u in us]
     with ThreadPoolExecutor(128) as ex:
         res = list(ex.map(classify, pairs))
-    (R / "hdepth_classes.json").write_text(json.dumps(res, indent=0), encoding="utf-8")
+    (R / f"hdepth_classes{tag}.json").write_text(json.dumps(res, indent=0), encoding="utf-8")
 
     bands = [(0, 5), (6, 12), (13, 21), (22, 32), (33, 35)]
     band = lambda l: next(f"{a}-{b}" for a, b in bands if a <= l <= b)   # noqa: E731
