@@ -219,3 +219,19 @@ the concept and the neuron's explanation and output words.
 **Known weaknesses:** labels and the Jev classification are noisy; attribution favours some layers by construction
 (the output-side gradient is largest late), so the comparison baseline must be the depth distribution of the top-50
 set itself, not of the whole model.
+
+---
+
+## Experiment CR-2: concept replication with repaired recall (EXPLORATORY; predictions written 16 Oct ~00:50, before running)
+
+Method changes vs CR, all found during CR (ISSUES #9, #10, #21, #22): question-style recall prompts (V3) with the
+answer scored in its natural reply form (as-is / Capitalised / Title / without "the"); whole-word distinctive leak
+filter; realistic made-up controls (fabricated fact sheets, described as real; `prompts/fake_concepts.json`); fast
+pipeline v2 (batched; nudgeability = joint on-topic AND fluent). Steering: clamp, reply only, late layers (as CR).
+Same 20 real concepts as CR.
+
+**Predictions (same as CR):** P1 ≥ 70% of recalled concepts have k50 ≤ 10 with 50 random neurons keeping ≥ 80%;
+P2 unrelated controls drop ≤ 10pp at k50; P3 top-10 clean (either pole) above the random-neuron rate; P4 ≥ 50% of
+recalled concepts reach joint nudgeability ≥ 0.25 with random ≤ 0.05.
+**Additional:** recall succeeds (≥ 5/20 prompts) for ≥ 16/20 real concepts, including ≥ 4/5 people; the 3 realistic
+made-up concepts fail recall (< 5/20). If a made-up concept passes, the prompts leak or the model confabulates; report it.

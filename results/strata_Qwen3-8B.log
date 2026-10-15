@@ -13,3 +13,10 @@ W1015 23:50:14.536000 924 Lib\site-packages\torch\distributed\elastic\multiproce
 5.5M tokens, 4,350 tok/s, eta 17 min
 6.0M tokens, 4,370 tok/s, eta 15 min
 6.5M tokens, 4,410 tok/s, eta 13 min
+7.0M tokens, 4,438 tok/s, eta 11 min
+7.5M tokens, 4,467 tok/s, eta 9 min
+8.1M tokens, 4,497 tok/s, eta 7 min
+8.6M tokens, 4,519 tok/s, eta 5 min
+9.1M tokens, 4,532 tok/s, eta 3 min
+9.6M tokens, 4,551 tok/s, eta 2 min
+done: 10,005,329 tokens, 60 mixtures, 100 strata neurons, 37.1 min -> results/strata_Qwen3-8B.json

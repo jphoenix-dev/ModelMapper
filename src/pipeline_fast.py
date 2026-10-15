@@ -29,7 +29,75 @@ GEN_TOKENS = 60
 GEN_BATCH = 100        # rows per generate() call (settings x prompts)
 
 
+import os
+import re
+
+RECALL_VARIANT = os.environ.get("RECALL_VARIANT", "V0")   # V0 as frozen run, V1 bridge, V2 rewritten, V3 question
+BRIDGES = ["", " called", " known as", " named", " the"]
+
+
+def leaks(prompt, answer):
+    """Does the prompt give away a DISTINCTIVE answer word? (ISSUES #22)
+    Capitalised answer words (names: Golden, Eiffel, Shakespeare) count only when capitalised in the prompt, so an
+    ordinary "the bridge" is not a leak for "Golden Gate Bridge"; lowercase answers (coffee, chess) count in any case."""
+    for w in re.findall(r"[A-Za-z]{4,}", answer):
+        if w[0].isupper():
+            if re.search(r"\b" + re.escape(w) + r"\b", prompt):
+                return True
+        elif re.search(r"\b" + re.escape(w) + r"\b", prompt.lower()):
+            return True
+    return False
+
+
 class FastPipeline(Pipeline):
+    # ---- recall prompt variants + leak filter --------------------------------
+    def make_prompts(self, concept):
+        """Same as v1, plus: leaky prompts dropped; RECALL_VARIANT picks the prompt format (ISSUES #9/#10)."""
+        spec, tid, recall, controls = super().make_prompts(concept)
+        if RECALL_VARIANT == "V0":
+            recall = [(q, p) for q, p in recall if not leaks(q, spec["answer"])]
+            return spec, tid, recall, controls
+        if "recall_v2" not in spec:                             # generate the V2/V3 rewrites if missing
+            import recall_variants as rv
+            listing = chr(10).join(f"{i+1}. {p}" for i, p in enumerate(spec["recall"]))
+            out = cp.oai.chat_json(f"Answer (for your reference only, never write it): {spec['answer']}{chr(10)}"
+                                   f"Fragments:{chr(10)}{listing}", rv.REWRITE)
+            items = out.get("items", [])
+            if len(items) == len(spec["recall"]):
+                spec["recall_v2"] = [it["v2"] for it in items]; spec["recall_v3"] = [it["v3"] for it in items]
+                (OUT / f"{slug(concept)}_spec.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8")
+        if RECALL_VARIANT == "V1":
+            cands = []
+            for q in spec["recall"]:
+                best = max(((q + b, self.batch_probs([(q + b, tid)])[0]) for b in BRIDGES), key=lambda x: x[1])
+                cands.append(best)
+        elif RECALL_VARIANT == "V2":
+            ps = self.batch_probs([(q, tid) for q in spec["recall_v2"]])
+            cands = list(zip(spec["recall_v2"], ps))
+        else:  # V3: chat question, answer scored at the start of the reply (no leading space)
+            chat = [self.tok.apply_chat_template([{"role": "user", "content": q + " Answer with just the name."}],
+                                                 tokenize=False, add_generation_prompt=True, enable_thinking=False)
+                    for q in spec["recall_v3"]]
+            # the answer opens the reply, so Qwen writes it Capitalised and without a leading "the" ("Coffee",
+            # "French Revolution"): score each natural form and keep whichever the model actually produces
+            a = spec["answer"].strip()
+            base = a[4:].strip() if a.lower().startswith("the ") else a
+            forms = list(dict.fromkeys([a, a[:1].upper() + a[1:], a.title(), base, base[:1].upper() + base[1:]]))
+            best = None
+            for f in forms:
+                t_ = self.tok.encode(f)
+                ps_ = self.batch_probs([(c, t_) for c in chat])
+                score = sum(p >= cp.MIN_P for p in ps_)
+                if best is None or score > best[0]:
+                    best = (score, t_, ps_, f)
+            _, tid, ps, self.answer_form = best
+            cands = list(zip(chat, ps))
+        src = {"V1": spec["recall"], "V2": spec["recall_v2"], "V3": spec["recall_v3"]}[RECALL_VARIANT]
+        recall = [(q, round(p, 3)) for (q, p), raw in zip(cands, src) if p >= cp.MIN_P and not leaks(raw, spec["answer"])]
+        self.recall_diag = [{"prompt": q, "p_answer": round(p, 4)} for q, p in cands]
+        return spec, tid, recall, controls
+
+
     # ---- batched teacher-forced scoring -------------------------------------
     def batch_probs(self, pairs, ctx=None):
         """pairs: [(prompt, answer_ids)] -> [P(answer | prompt)], one padded forward pass for all."""
@@ -181,6 +249,8 @@ class FastPipeline(Pipeline):
         if hasattr(row.get("labels"), "result"):         # resolve the background labelling before saving
             row["labels"] = row["labels"].result()
         row["pipeline"] = "fast_v2"
+        row["recall_variant"] = RECALL_VARIANT
+        row["answer_form_used"] = getattr(self, "answer_form", None)
         return super().save(s, row, t0)
 
 

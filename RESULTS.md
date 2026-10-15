@@ -476,3 +476,30 @@ probability-weighted counts give the same pattern. **H-DEPTH: supported and repl
 (negative: 47% / 40% / 29%). The bar t is calibrated next on planted mixtures.
 **Jev consistency:** 30 random-snippet grades re-asked singly differ by 0.012 on average (max 0.06), and batched by
 0.017 (max 0.085), on a 0–1 scale. Jev is near-deterministic, and batching doesn't change answers.
+
+---
+
+## 16 Oct 2026 (~00:45): recall-format repair, mixture calibration, middle-of-range decay
+
+**Recall variants on all 23 concepts (`results/recall_variants.json`):** real concepts recalled (≥ 5/20 prompts):
+V0 frozen 11/20 (mean pass 28%), V1 bridge 11/20, V2 rewritten 5/20, **V3 question-style 13/20 (56%)**; made-up 0%
+for all. V3 fixes the people (Einstein 5→100%, Shakespeare 0→90%, Napoleon 0→80%, Mozart 0→65%, Kahlo 15→55%) and
+the Moon, Titanic, Harry Potter. With answer forms (ISSUES #26), the remaining V3 failures recover (coffee 75%,
+democracy 65%, photosynthesis 100%, chess 75%, violin 75%, French Revolution 100%); only Sahara stays low (20%).
+
+**Planted activation-mixture calibration (60 mixtures; `results/mix_regrade.json`):** mixture vs census pass rate,
+positive poles: t=0.5 35% vs 60%; t=0.6 27% vs 50%; t=0.7 17% vs 37%; t=0.8 8% vs 20%. Luna called 41/60 mixtures
+ONE. **Control judged weak by construction** (ISSUES #25: the top-k of a blend is dominated by one component). Not
+used for the headline; replaced by spliced dossiers (in progress).
+
+**Middle-of-range (94 neurons with all bands; soft rubric; `results/strata_graded.json`):** how well each neuron's
+top explanation fits its firings at lower strengths:
+
+| | Top | ~50% of peak | ~25% | ~10% | Random text |
+|---|---|---|---|---|---|
+| All | 66% | 51% | 41% | 33% | 20% |
+| Clean at the top | 77% | 59% | 42% | 28% | 8% |
+
+Smooth decay, staying above the random baseline down to 10% of peak (clean neurons: 28% vs 8%). Consistent with the
+essay's "meaning radiates outward" rather than an unrelated job hidden in the weak firings; near 10% of peak the fit
+approaches the random level, as the essay itself describes for near-zero activations.

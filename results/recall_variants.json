@@ -1,0 +1,301 @@
+{
+ "albert_einstein": {
+  "answer": " Albert Einstein",
+  "V0": 0.05,
+  "V1": 0.05,
+  "V2": 0.05,
+  "V3": 1.0,
+  "mean_p": {
+   "V0": 0.053,
+   "V1": 0.053,
+   "V2": 0.037,
+   "V3": 0.937
+  }
+ },
+ "chess": {
+  "answer": " chess",
+  "V0": 0.15,
+  "V1": 0.15,
+  "V2": 0.2,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.107,
+   "V1": 0.108,
+   "V2": 0.099,
+   "V3": 0.0
+  }
+ },
+ "coffee": {
+  "answer": " coffee",
+  "V0": 0.4,
+  "V1": 0.4,
+  "V2": 0.15,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.189,
+   "V1": 0.19,
+   "V2": 0.089,
+   "V3": 0.0
+  }
+ },
+ "democracy": {
+  "answer": " democracy",
+  "V0": 0.25,
+  "V1": 0.25,
+  "V2": 0.1,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.168,
+   "V1": 0.168,
+   "V2": 0.087,
+   "V3": 0.001
+  }
+ },
+ "eiffel_tower": {
+  "answer": " Eiffel Tower",
+  "V0": 0.7,
+  "V1": 0.7,
+  "V2": 0.0,
+  "V3": 0.8,
+  "mean_p": {
+   "V0": 0.557,
+   "V1": 0.557,
+   "V2": 0.0,
+   "V3": 0.741
+  }
+ },
+ "frida_kahlo": {
+  "answer": " Frida Kahlo",
+  "V0": 0.15,
+  "V1": 0.15,
+  "V2": 0.1,
+  "V3": 0.55,
+  "mean_p": {
+   "V0": 0.053,
+   "V1": 0.053,
+   "V2": 0.084,
+   "V3": 0.396
+  }
+ },
+ "golden_gate_bridge": {
+  "answer": " Golden Gate Bridge",
+  "V0": 0.4,
+  "V1": 0.4,
+  "V2": 0.0,
+  "V3": 0.8,
+  "mean_p": {
+   "V0": 0.21,
+   "V1": 0.21,
+   "V2": 0.0,
+   "V3": 0.683
+  }
+ },
+ "harry_potter": {
+  "answer": " Harry Potter",
+  "V0": 0.05,
+  "V1": 0.05,
+  "V2": 0.2,
+  "V3": 0.8,
+  "mean_p": {
+   "V0": 0.022,
+   "V1": 0.024,
+   "V2": 0.086,
+   "V3": 0.771
+  }
+ },
+ "mount_everest": {
+  "answer": " Mount Everest",
+  "V0": 0.35,
+  "V1": 0.35,
+  "V2": 0.15,
+  "V3": 0.85,
+  "mean_p": {
+   "V0": 0.232,
+   "V1": 0.232,
+   "V2": 0.076,
+   "V3": 0.68
+  }
+ },
+ "mount_velkaran_a_fictional_andean_peak": {
+  "answer": " Mount Velkaran",
+  "V0": 0.0,
+  "V1": 0.0,
+  "V2": 0.0,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.0,
+   "V1": 0.0,
+   "V2": 0.0,
+   "V3": 0.0
+  }
+ },
+ "napoleon_bonaparte": {
+  "answer": " Napoleon Bonaparte",
+  "V0": 0.0,
+  "V1": 0.0,
+  "V2": 0.0,
+  "V3": 0.8,
+  "mean_p": {
+   "V0": 0.026,
+   "V1": 0.026,
+   "V2": 0.014,
+   "V3": 0.793
+  }
+ },
+ "photosynthesis": {
+  "answer": " photosynthesis",
+  "V0": 0.5,
+  "V1": 0.65,
+  "V2": 0.6,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.363,
+   "V1": 0.423,
+   "V2": 0.375,
+   "V3": 0.0
+  }
+ },
+ "professor_elsabeth_quorrin_a_fictional_linguist": {
+  "answer": " Professor Elsabeth Quorrin",
+  "V0": 0.0,
+  "V1": 0.0,
+  "V2": 0.0,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.0,
+   "V1": 0.0,
+   "V2": 0.0,
+   "V3": 0.0
+  }
+ },
+ "sahara_desert": {
+  "answer": " Sahara Desert",
+  "V0": 0.2,
+  "V1": 0.2,
+  "V2": 0.0,
+  "V3": 0.2,
+  "mean_p": {
+   "V0": 0.105,
+   "V1": 0.105,
+   "V2": 0.0,
+   "V3": 0.183
+  }
+ },
+ "the_draxwell_bridge_a_fictional_bridge_in_ohio": {
+  "answer": " Draxwell Bridge",
+  "V0": 0.0,
+  "V1": 0.0,
+  "V2": 0.0,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.0,
+   "V1": 0.0,
+   "V2": 0.0,
+   "V3": 0.0
+  }
+ },
+ "the_french_revolution": {
+  "answer": " the French Revolution",
+  "V0": 0.5,
+  "V1": 0.5,
+  "V2": 0.75,
+  "V3": 0.0,
+  "mean_p": {
+   "V0": 0.296,
+   "V1": 0.304,
+   "V2": 0.469,
+   "V3": 0.0
+  }
+ },
+ "the_moon": {
+  "answer": " Moon",
+  "V0": 0.15,
+  "V1": 0.15,
+  "V2": 0.0,
+  "V3": 0.95,
+  "mean_p": {
+   "V0": 0.112,
+   "V1": 0.112,
+   "V2": 0.001,
+   "V3": 0.95
+  }
+ },
+ "the_titanic": {
+  "answer": " Titanic",
+  "V0": 0.3,
+  "V1": 0.3,
+  "V2": 0.0,
+  "V3": 0.9,
+  "mean_p": {
+   "V0": 0.149,
+   "V1": 0.149,
+   "V2": 0.006,
+   "V3": 0.747
+  }
+ },
+ "the_violin": {
+  "answer": " violin",
+  "V0": 0.5,
+  "V1": 0.5,
+  "V2": 0.0,
+  "V3": 0.1,
+  "mean_p": {
+   "V0": 0.328,
+   "V1": 0.328,
+   "V2": 0.0,
+   "V3": 0.046
+  }
+ },
+ "tokyo": {
+  "answer": " Tokyo",
+  "V0": 0.4,
+  "V1": 0.4,
+  "V2": 0.9,
+  "V3": 0.95,
+  "mean_p": {
+   "V0": 0.259,
+   "V1": 0.264,
+   "V2": 0.521,
+   "V3": 0.948
+  }
+ },
+ "venice": {
+  "answer": " Venice",
+  "V0": 0.45,
+  "V1": 0.45,
+  "V2": 0.45,
+  "V3": 0.95,
+  "mean_p": {
+   "V0": 0.33,
+   "V1": 0.33,
+   "V2": 0.255,
+   "V3": 0.885
+  }
+ },
+ "william_shakespeare": {
+  "answer": " William Shakespeare",
+  "V0": 0.0,
+  "V1": 0.0,
+  "V2": 0.6,
+  "V3": 0.9,
+  "mean_p": {
+   "V0": 0.025,
+   "V1": 0.025,
+   "V2": 0.258,
+   "V3": 0.766
+  }
+ },
+ "wolfgang_amadeus_mozart": {
+  "answer": " Wolfgang Amadeus Mozart",
+  "V0": 0.0,
+  "V1": 0.0,
+  "V2": 0.0,
+  "V3": 0.65,
+  "mean_p": {
+   "V0": 0.003,
+   "V1": 0.003,
+   "V2": 0.004,
+   "V3": 0.52
+  }
+ }
+}
