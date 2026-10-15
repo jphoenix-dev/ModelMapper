@@ -7,3 +7,9 @@ W1015 23:50:14.536000 924 Lib\site-packages\torch\distributed\elastic\multiproce
 2.5M tokens, 4,232 tok/s, eta 29 min
 3.0M tokens, 4,212 tok/s, eta 28 min
 3.5M tokens, 4,189 tok/s, eta 26 min
+4.0M tokens, 4,232 tok/s, eta 24 min
+4.5M tokens, 4,269 tok/s, eta 21 min
+5.0M tokens, 4,302 tok/s, eta 19 min
+5.5M tokens, 4,350 tok/s, eta 17 min
+6.0M tokens, 4,370 tok/s, eta 15 min
+6.5M tokens, 4,410 tok/s, eta 13 min

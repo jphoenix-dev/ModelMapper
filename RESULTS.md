@@ -469,3 +469,10 @@ mixtures (known two-job units) and a census re-grade with the rubric wording and
 concept-specific ×2.3 (6–12), ×0.2 (13–21), ×1.3 (22–32); generic ×1.4 (33–35); same top recurrent generic neurons;
 **91% of 550 pair classifications agree** between runs. Jev was confident on these (median top-class P 0.91), and
 probability-weighted counts give the same pattern. **H-DEPTH: supported and replicated.**
+
+**Census re-grade with the rubric grader, soft scores (all 1,000; explanations unchanged; Jev ~$0.28;
+`results/census_regrade_rubric.json`):** positive-pole coverage_soft median 0.69 (IQR 0.58–0.80), random_soft median
+0.13. "ONE + coverage_soft ≥ t + random_soft < 0.25" for positive poles = 60% / 50% / 37% at t = 0.5 / 0.6 / 0.7
+(negative: 47% / 40% / 29%). The bar t is calibrated next on planted mixtures.
+**Jev consistency:** 30 random-snippet grades re-asked singly differ by 0.012 on average (max 0.06), and batched by
+0.017 (max 0.085), on a 0–1 scale. Jev is near-deterministic, and batching doesn't change answers.

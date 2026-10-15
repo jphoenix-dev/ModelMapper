@@ -8,7 +8,8 @@ examples (census coverage) and on random web tokens (census random_fit).
 Essay's picture: fit decays gradually ("meaning radiates outward", related offshoots), staying well above the
 random-token baseline. Arbitrary packing in weak activations would look like a drop to random-level fit.
 
-Usage: python src/strata_grade.py <census.json> <strata_scan.json> <out.json>
+Usage: python src/strata_grade.py <census.json> <strata_scan.json> <out.json> [census_regrade.json]
+(all scores soft rubric 0..1; pass the regrade file so "top" and "random" use the same grader)
 """
 import json
 import sys
@@ -16,9 +17,11 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import jev
-from label_batch import FIT, clip
+from label_batch import clip
+from regrade import grade   # validated rubric grader, soft 0..1 (ISSUES #23)
 
 census = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))["units"]
+regraded = json.loads(Path(sys.argv[4]).read_text(encoding="utf-8"))["units"] if len(sys.argv) > 4 else None
 strata = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))["strata"]
 jobs = []
 for uid, bands in strata.items():
@@ -30,23 +33,25 @@ for uid, bands in strata.items():
             jobs.append((uid, b, clip(x["text"]), e))
 
 
-def grade(job):
+def grade_job(job):
     uid, b, text, e = job
     try:
-        return uid, b, jev.noul(text, FIT.format(e=e))
+        return uid, b, grade(text, e)
     except Exception:  # noqa: BLE001
         return uid, b, None
 
 
 res = {}
 with ThreadPoolExecutor(128) as ex:
-    for uid, b, p in ex.map(grade, jobs):
+    for uid, b, p in ex.map(grade_job, jobs):
         if p is not None:
-            res.setdefault(uid, {}).setdefault(b, []).append(p >= 0.5)
+            res.setdefault(uid, {}).setdefault(b, []).append(p)
 rows = {}
 for uid, bands in res.items():
-    rows[uid] = {"top": census[uid]["pos"]["coverage"], "random": census[uid]["pos"]["random_fit"],
-                 "clean_top": census[uid]["pos"]["clean"],
+    src = (regraded or {}).get(uid, {}).get("pos") or {}
+    rows[uid] = {"top": src.get("coverage_soft", census[uid]["pos"].get("coverage")),
+                 "random": src.get("random_soft", census[uid]["pos"].get("random_fit")),
+                 "clean_top": census[uid]["pos"].get("clean"),
                  **{b: round(sum(v) / len(v), 3) for b, v in bands.items() if v}}
 Path(sys.argv[3]).write_text(json.dumps(rows, indent=1), encoding="utf-8")
 
