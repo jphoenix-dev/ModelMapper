@@ -529,3 +529,50 @@ poles and ~47% of negative poles have a verified single job.** Plus 4.5% of all 
   fast automatic labels on a 4× smaller model. Not a refutation; short of the essay's figure, with a known downward bias.
 - **PREREG CEN leniency check:** spliced (the meaningful mixed control) pass 8% (pos) / 4% (neg) at the calibrated bars,
   within the ≤ 10% target. Activation-blend mixtures: control weak by construction (ISSUES #25).
+
+---
+
+## 16 Oct 2026 (~01:15): Experiment CR-2, replication with repaired recall (exploratory, predictions pre-written)
+
+Fast pipeline v2; question-style recall (V3) with natural answer forms; leak filter; realistic made-up controls;
+clamp, reply only; joint nudgeability (`results/concepts_v3/`, `results/cr2.log`). ~45 s per concept.
+
+| Concept | k50 CR | k50 CR-2 | Nudge CR (joint) | Nudge CR-2 | Random | Top-10 overlap CR vs CR-2 |
+|---|---|---|---|---|---|---|
+| Albert Einstein | – | 10 | – | 0.05 | 0.05 | – |
+| Eiffel Tower | 5 | 20 | 0.40 | 0.25 | 0.00 | 4/10 |
+| Frida Kahlo | – | 5 | – | 0.00 | 0.00 | – |
+| Golden Gate Bridge | 1 | 2 | 0.35 | 0.20 | 0.00 | 5/10 |
+| Harry Potter | – | 10 | – | 0.00 | 0.00 | – |
+| Mount Everest | 2 | 2 | 0.30 | 0.15 | 0.00 | 4/10 |
+| Napoleon Bonaparte | – | 2 | – | 0.15 | 0.00 | – |
+| Tokyo | 5 | > 50 | 0.10 | 0.25 | 0.00 | 1/10 |
+| Venice | 2 | 3 | 0.00 | 0.35 | 0.00 | 3/10 |
+| William Shakespeare | – | 5 | – | 0.00 | 0.00 | – |
+| Wolfgang Amadeus Mozart | – | 1 | – | 0.00 | 0.00 | – |
+| chess | – | 50 | – | 0.35 | 0.00 | – |
+| coffee | 3 | 20 | 0.85 | 0.60 | 0.05 | 2/10 |
+| democracy | 5 | 1 | 0.55 | 0.50 | 0.00 | 2/10 |
+| photosynthesis | 2 | 50 | 0.20 | 0.20 | 0.00 | 3/10 |
+| the French Revolution | 1 | 5 | 0.15 | 0.30 | 0.00 | 3/10 |
+| the Moon | – | 20 | – | 0.60 | 0.05 | – |
+| the Titanic | 3 | 3 | 0.00 | 0.00 | 0.00 | 0/10 |
+| the violin | 2 | 2 | 0.05 | 0.10 | 0.00 | 2/10 |
+
+**Against pre-written predictions:**
+- Recall 19/20 real incl. 5/5 people ✅ (Sahara only failure).
+- Realistic made-up 0/3 recalled ✅.
+- **P1 13/19 = 68%** (≥ 70%) ⚠️ narrowly missed.
+- P3 top-10 clean either pole 68% vs census 58% ✅.
+- **P4 8/19 = 42%** (≥ 50%) ❌.
+
+**Findings:**
+1. **Concentration depends on the prompt format.** Completion-style recall (CR) gives 11/11 with k50 ≤ 5; question-style
+   (chat) gives 13/19, with six concepts needing 20–50+. Caveat: k50 ablates in attribution order; if attribution ranks
+   worse in chat format, k50 overstates the minimal set. So this shows "looks less concentrated by our method", not yet
+   "is less concentrated".
+2. **A concept's top-10 list is not a stable fingerprint across prompt sets** (overlap 0–5/10). Recurring parts are stable
+   (gold, landmark); exact rankings are prompt-dependent. This is the prompt-set noise term.
+3. **People and characters are recalled through 1–10 neurons but not steerable** (all ≤ 0.15). Places, objects and
+   ideas often are (the Moon 0.60, coffee 0.60, democracy 0.50). Hypothesis: names come out through name-piece neurons,
+   not meaning-level ones.
