@@ -1,0 +1,9815 @@
+{
+ "U106": {
+  "luna": {
+   "pos": {
+    "explanation": "This pole strongly tracks California Proposition 65 product warnings, especially boilerplate naming a chemical, California, cancer or reproductive harm, and the P65Warnings website. Several firings land directly on “65,” “Warnings,” or wording within that warning.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     5,
+     9,
+     10,
+     13,
+     14,
+     16,
+     17,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 4,
+      "about": "radio story introduction"
+     },
+     {
+      "n": 6,
+      "about": "employee benefits and profit sharing"
+     },
+     {
+      "n": 7,
+      "about": "GDPR personal-data definition"
+     },
+     {
+      "n": 8,
+      "about": "medical advice and reviewer credit"
+     },
+     {
+      "n": 11,
+      "about": "GDPR processing and data controller"
+     },
+     {
+      "n": 12,
+      "about": "biblical passage"
+     },
+     {
+      "n": 15,
+      "about": "scientific publication keywords"
+     },
+     {
+      "n": 18,
+      "about": "endoscope description"
+     },
+     {
+      "n": 20,
+      "about": "peppered moth information"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The negative firings are scattered across unrelated topic-specific words and phrases: flower remedies, construction, geography and cars, medical/scientific topics, marketing, and other subjects. No consistent shared function is apparent.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.77,
+   0.87,
+   0.8,
+   0.03,
+   0.82,
+   0.04,
+   0.04,
+   0.03,
+   0.89,
+   0.83,
+   0.04,
+   0.05,
+   0.79,
+   0.83,
+   0.05,
+   0.75,
+   0.68,
+   0.07,
+   0.69,
+   0.04
+  ],
+  "jev_covered_pos": 11,
+  "jev_verdict_pos": {
+   "ONE": 0.713,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.133,
+   "NONE": 0.035
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.31,
+   0.3,
+   0.33,
+   0.3,
+   0.31,
+   0.32,
+   0.28,
+   0.32,
+   0.4,
+   0.21,
+   0.28,
+   0.27,
+   0.3,
+   0.19,
+   0.19,
+   0.28,
+   0.25,
+   0.19,
+   0.27,
+   0.22
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.698,
+   "TWO_RELATED": 0.08,
+   "MIXTURE": 0.175,
+   "NONE": 0.048
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U125": {
+  "luna": {
+   "pos": {
+    "explanation": "The firing tends to fall on the noun or material immediately after a color adjective, especially in product, fashion, and décor descriptions (e.g. “pink patent,” “purple plastic,” “gray wall”). Some examples are less commercial, but still use the same color-modifier-before-noun construction.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     11,
+     13,
+     18
+    ],
+    "misfits": [
+     {
+      "n": 10,
+      "about": "“Purple Crayon” is a proper site name"
+     },
+     {
+      "n": 12,
+      "about": "“Red Door” appears as a salon name"
+     },
+     {
+      "n": 14,
+      "about": "“Red Killer Hustle” is a product/name phrase"
+     },
+     {
+      "n": 15,
+      "about": "“Red 5 Studios” is a proper name"
+     },
+     {
+      "n": 16,
+      "about": "coordinated colors in an artwork title"
+     },
+     {
+      "n": 17,
+      "about": "“Red Menace” is a figurative political label"
+     },
+     {
+      "n": 19,
+      "about": "red and 6 in a pigment ingredient code"
+     },
+     {
+      "n": 20,
+      "about": "orange followed by a number in a disc-golf post"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The firing is on color words used as parts of color combinations: coordinated lists or palettes, and compound or blended color descriptions (such as “gray-white,” “greenish black,” and “orangish red”).",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.89,
+   0.48,
+   0.77,
+   0.92,
+   0.86,
+   0.9,
+   0.7,
+   0.78,
+   0.52,
+   0.4,
+   0.82,
+   0.55,
+   0.6,
+   0.46,
+   0.1,
+   0.45,
+   0.18,
+   0.19,
+   0.24,
+   0.64
+  ],
+  "jev_covered_pos": 12,
+  "jev_verdict_pos": {
+   "ONE": 0.662,
+   "TWO_RELATED": 0.155,
+   "MIXTURE": 0.152,
+   "NONE": 0.028
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.67,
+   0.7,
+   0.79,
+   0.85,
+   0.58,
+   0.85,
+   0.92,
+   0.81,
+   0.24,
+   0.52,
+   0.84,
+   0.59,
+   0.7,
+   0.55,
+   0.91,
+   0.76,
+   0.55,
+   0.79,
+   0.56,
+   0.73
+  ],
+  "jev_covered_neg": 19,
+  "jev_verdict_neg": {
+   "ONE": 0.76,
+   "TWO_RELATED": 0.163,
+   "MIXTURE": 0.065,
+   "NONE": 0.013
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U127": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires on the distinguishing name element in formal names of universities, often immediately before “University” (e.g. Louisiana State, Wesleyan, Concordia, and Dalhousie).",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The negative examples do not show a stable shared pattern: the marked tokens occur in unrelated contexts ranging from recipes and clothing to animal breeds, product names, and technical specifications.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "millstone counts in a flour-milling explanation"
+     },
+     {
+      "n": 2,
+      "about": "yarn balls in a knitting travel story"
+     },
+     {
+      "n": 3,
+      "about": "parsley in a turkey salad recipe"
+     },
+     {
+      "n": 4,
+      "about": "firearm model names in a forum discussion"
+     },
+     {
+      "n": 5,
+      "about": "cannabis product and strain listing"
+     },
+     {
+      "n": 6,
+      "about": "dog breed in a classified ad"
+     },
+     {
+      "n": 7,
+      "about": "parsley in a soup recipe"
+     },
+     {
+      "n": 8,
+      "about": "pit bull in a dog-rescue profile"
+     },
+     {
+      "n": 9,
+      "about": "cannabis strain descriptions"
+     },
+     {
+      "n": 10,
+      "about": "pairs of jeans in a travel memoir"
+     },
+     {
+      "n": 11,
+      "about": "sewing materials in a leather-skirt tutorial"
+     },
+     {
+      "n": 12,
+      "about": "purebred cattle in a farm profile"
+     },
+     {
+      "n": 13,
+      "about": "broccoli rabe in a recipe"
+     },
+     {
+      "n": 14,
+      "about": "cat-breed council meeting notice"
+     },
+     {
+      "n": 15,
+      "about": "snake description and habitat information"
+     },
+     {
+      "n": 16,
+      "about": "bunch of scallions in a chicken recipe"
+     },
+     {
+      "n": 17,
+      "about": "celery stalks in a salad recipe"
+     },
+     {
+      "n": 18,
+      "about": "audio sampling-rate specification"
+     },
+     {
+      "n": 19,
+      "about": "dog breed comparison in a forum post"
+     },
+     {
+      "n": 20,
+      "about": "cannabis seed product listing"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.76,
+   0.86,
+   0.78,
+   0.78,
+   0.7,
+   0.61,
+   0.88,
+   0.87,
+   0.82,
+   0.87,
+   0.83,
+   0.78,
+   0.75,
+   0.83,
+   0.81,
+   0.88,
+   0.55,
+   0.82,
+   0.63,
+   0.58
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.862,
+   "TWO_RELATED": 0.05,
+   "MIXTURE": 0.035,
+   "NONE": 0.052
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.25,
+   0.32,
+   0.34,
+   0.38,
+   0.32,
+   0.33,
+   0.3,
+   0.36,
+   0.28,
+   0.29,
+   0.33,
+   0.33,
+   0.35,
+   0.37,
+   0.27,
+   0.3,
+   0.3,
+   0.29,
+   0.31,
+   0.29
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.665,
+   "TWO_RELATED": 0.107,
+   "MIXTURE": 0.182,
+   "NONE": 0.045
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U130": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires on names and titles of cultural works or performers—films, television, books, music, and theatre—often in reviews, awards, or arts coverage. The examples span genres and media rather than pointing to one particular kind of work.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Strongly associated with coverage and listings for mainstream commercial film franchises and series, especially superhero, action, and fantasy titles. A couple of examples concern prominent standalone studio films rather than franchise entries.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 13,
+      "about": "standalone Netflix film announcement"
+     },
+     {
+      "n": 16,
+      "about": "standalone film production-delay report"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.85,
+   0.74,
+   0.74,
+   0.74,
+   0.71,
+   0.74,
+   0.37,
+   0.76,
+   0.81,
+   0.74,
+   0.69,
+   0.78,
+   0.79,
+   0.72,
+   0.66,
+   0.65,
+   0.74,
+   0.76,
+   0.71,
+   0.71
+  ],
+  "jev_covered_pos": 19,
+  "jev_verdict_pos": {
+   "ONE": 0.792,
+   "TWO_RELATED": 0.105,
+   "MIXTURE": 0.078,
+   "NONE": 0.023
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.68,
+   0.65,
+   0.72,
+   0.67,
+   0.72,
+   0.68,
+   0.76,
+   0.63,
+   0.66,
+   0.68,
+   0.64,
+   0.75,
+   0.66,
+   0.65,
+   0.72,
+   0.68,
+   0.87,
+   0.7,
+   0.75,
+   0.67
+  ],
+  "jev_covered_neg": 20,
+  "jev_verdict_neg": {
+   "ONE": 0.775,
+   "TWO_RELATED": 0.115,
+   "MIXTURE": 0.083,
+   "NONE": 0.028
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U132": {
+  "luna": {
+   "pos": {
+    "explanation": "The firings cluster around relational complements, especially adjective + “to” constructions that say something is relevant, characteristic, suitable, or emotionally important to a person or context (for example, “dear to,” “common to,” and “endemic to”).",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 17,
+      "about": "“inherent in” describes an intrinsic property, using a different construction."
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "There is no clear shared job: the examples include legal uses of “direct/indirect,” several unrelated uses of “lovingly,” and a broad assortment of narrative, descriptive, and inflected word forms such as “brave,” “solemnized,” “playful,” and “lasting.”",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.88,
+   0.9,
+   0.89,
+   0.88,
+   0.29,
+   0.85,
+   0.42,
+   0.56,
+   0.62,
+   0.8,
+   0.91,
+   0.91,
+   0.73,
+   0.73,
+   0.55,
+   0.81,
+   0.4,
+   0.78,
+   0.7,
+   0.66
+  ],
+  "jev_covered_pos": 17,
+  "jev_verdict_pos": {
+   "ONE": 0.597,
+   "TWO_RELATED": 0.188,
+   "MIXTURE": 0.195,
+   "NONE": 0.02
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.3,
+   0.2,
+   0.19,
+   0.21,
+   0.23,
+   0.3,
+   0.26,
+   0.28,
+   0.36,
+   0.32,
+   0.3,
+   0.19,
+   0.42,
+   0.33,
+   0.4,
+   0.16,
+   0.24,
+   0.18,
+   0.29,
+   0.23
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.752,
+   "TWO_RELATED": 0.098,
+   "MIXTURE": 0.102,
+   "NONE": 0.048
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U144": {
+  "luna": {
+   "pos": {
+    "explanation": "The positive pole tracks “taste” in both its literal culinary sense (seasoning something to taste) and its figurative sense of aesthetic or musical preference. These are connected by the familiar extension of taste from palate to judgment and preference.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": "Both uses express a standard distinction between sensory taste and the preferences or judgments metaphorically described as taste."
+   },
+   "neg": {
+    "explanation": "There is no coherent semantic pattern across these firings; they land on unrelated function words, proper-name fragments, and code or markup tokens.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "preposition in biographical prose"
+     },
+     {
+      "n": 2,
+      "about": "package-version string"
+     },
+     {
+      "n": 3,
+      "about": "author-name fragment"
+     },
+     {
+      "n": 4,
+      "about": "preposition in biographical prose"
+     },
+     {
+      "n": 5,
+      "about": "artist-name fragment"
+     },
+     {
+      "n": 6,
+      "about": "generic noun in artist biography"
+     },
+     {
+      "n": 7,
+      "about": "museum-name fragment"
+     },
+     {
+      "n": 8,
+      "about": "blank token in financial text"
+     },
+     {
+      "n": 9,
+      "about": "degree adverb in game review"
+     },
+     {
+      "n": 10,
+      "about": "artist-name fragment"
+     },
+     {
+      "n": 11,
+      "about": "degree adverb in personal blog"
+     },
+     {
+      "n": 12,
+      "about": "article before a group name"
+     },
+     {
+      "n": 13,
+      "about": "artist-name fragment"
+     },
+     {
+      "n": 14,
+      "about": "person’s name in poster listing"
+     },
+     {
+      "n": 15,
+      "about": "degree adverb in restaurant discussion"
+     },
+     {
+      "n": 16,
+      "about": "code-path label"
+     },
+     {
+      "n": 17,
+      "about": "artist-name fragment"
+     },
+     {
+      "n": 18,
+      "about": "job-listing term in site rules"
+     },
+     {
+      "n": 19,
+      "about": "negation in product review"
+     },
+     {
+      "n": 20,
+      "about": "comic artist’s name"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.62,
+   0.7,
+   0.63,
+   0.46,
+   0.48,
+   0.57,
+   0.53,
+   0.46,
+   0.62,
+   0.67,
+   0.31,
+   0.44,
+   0.51,
+   0.65,
+   0.6,
+   0.63,
+   0.6,
+   0.65,
+   0.51,
+   0.57
+  ],
+  "jev_covered_pos": 15,
+  "jev_verdict_pos": {
+   "ONE": 0.675,
+   "TWO_RELATED": 0.223,
+   "MIXTURE": 0.09,
+   "NONE": 0.01
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.39,
+   0.54,
+   0.37,
+   0.4,
+   0.57,
+   0.39,
+   0.49,
+   0.36,
+   0.32,
+   0.44,
+   0.3,
+   0.53,
+   0.51,
+   0.49,
+   0.46,
+   0.39,
+   0.39,
+   0.48,
+   0.42,
+   0.42
+  ],
+  "jev_covered_neg": 4,
+  "jev_verdict_neg": {
+   "ONE": 0.752,
+   "TWO_RELATED": 0.1,
+   "MIXTURE": 0.113,
+   "NONE": 0.035
+  },
+  "random_fit_neg": 4,
+  "clean_neg": false
+ },
+ "U189": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires around framing of claims and opinions circulating in public discourse—especially conventional wisdom, punditry, rhetoric, and advice that people hear or repeat. The examples span topics, but share this focus on received or publicly expressed views.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Strongly associated with quantified prevalence statements, particularly percentages or fractions followed by “of,” as in statistics about populations, behaviors, or outcomes.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 8,
+      "about": "A causal explanation of procrastination using the phrase “has to do with.”"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.53,
+   0.77,
+   0.83,
+   0.68,
+   0.74,
+   0.89,
+   0.5,
+   0.84,
+   0.72,
+   0.75,
+   0.9,
+   0.69,
+   0.56,
+   0.77,
+   0.7,
+   0.75,
+   0.69,
+   0.83,
+   0.78,
+   0.75
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.798,
+   "TWO_RELATED": 0.107,
+   "MIXTURE": 0.075,
+   "NONE": 0.02
+  },
+  "random_fit_pos": 1,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.87,
+   0.83,
+   0.85,
+   0.77,
+   0.55,
+   0.82,
+   0.79,
+   0.2,
+   0.86,
+   0.62,
+   0.73,
+   0.83,
+   0.8,
+   0.82,
+   0.58,
+   0.77,
+   0.85,
+   0.81,
+   0.8,
+   0.88
+  ],
+  "jev_covered_neg": 19,
+  "jev_verdict_neg": {
+   "ONE": 0.845,
+   "TWO_RELATED": 0.09,
+   "MIXTURE": 0.053,
+   "NONE": 0.013
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U194": {
+  "luna": {
+   "pos": {
+    "explanation": "The firings split into unrelated clusters: forms containing “fall” (including place names and names such as Fallbrook, Fallujah, and Fallon), Boost C++ namespace syntax (`boost::`), and technical or descriptive words ending in “-al” such as Operational and Imperial. The examples do not suggest one shared function connecting these patterns.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "These examples all come from a technical tutorial on implementing a floating-point adder, especially IEEE-style special-case handling and related circuit logic. The later example on aligning operands is part of the same implementation discussion.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.38,
+   0.6,
+   0.66,
+   0.28,
+   0.49,
+   0.39,
+   0.44,
+   0.41,
+   0.39,
+   0.37,
+   0.49,
+   0.33,
+   0.46,
+   0.4,
+   0.56,
+   0.34,
+   0.54,
+   0.49,
+   0.33,
+   0.57
+  ],
+  "jev_covered_pos": 5,
+  "jev_verdict_pos": {
+   "ONE": 0.57,
+   "TWO_RELATED": 0.193,
+   "MIXTURE": 0.212,
+   "NONE": 0.025
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.57,
+   0.59,
+   0.58,
+   0.64,
+   0.56,
+   0.62,
+   0.26,
+   0.33,
+   0.68,
+   0.65,
+   0.45,
+   0.52,
+   0.61,
+   0.54,
+   0.57,
+   0.51,
+   0.56,
+   0.6,
+   0.67,
+   0.68
+  ],
+  "jev_covered_neg": 17,
+  "jev_verdict_neg": {
+   "ONE": 0.822,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.04,
+   "NONE": 0.045
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U180": {
+  "luna": {
+   "pos": {
+    "explanation": "This pole is associated with physical surfaces as planes or interfaces: where something rests, is exposed, or is measured, and how that surface is shaped or prepared. The examples range from material interfaces to ordinary horizontal or level surfaces.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole is a mixture of surface-related wording (often plural or in compounds such as “surface-mount”) and unrelated-looking fragments in words beginning with “res-” or “sur-” (such as “resurfaced,” “resound,” and “surgical”). The text does not support one consistent semantic job for these patterns.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     10,
+     12,
+     13,
+     14,
+     17,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 8,
+      "about": "a number in a tennis-history date"
+     },
+     {
+      "n": 11,
+      "about": "a surgical-instrument title, only a loose spelling overlap"
+     },
+     {
+      "n": 15,
+      "about": "a number in a wildlife-area description"
+     },
+     {
+      "n": 16,
+      "about": "the word “find” in an electronics message"
+     },
+     {
+      "n": 18,
+      "about": "a number in a highway name"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.49,
+   0.82,
+   0.55,
+   0.64,
+   0.67,
+   0.71,
+   0.61,
+   0.6,
+   0.45,
+   0.78,
+   0.5,
+   0.7,
+   0.49,
+   0.29,
+   0.53,
+   0.31,
+   0.46,
+   0.73,
+   0.36,
+   0.69
+  ],
+  "jev_covered_pos": 13,
+  "jev_verdict_pos": {
+   "ONE": 0.85,
+   "TWO_RELATED": 0.083,
+   "MIXTURE": 0.053,
+   "NONE": 0.015
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.56,
+   0.61,
+   0.57,
+   0.34,
+   0.49,
+   0.52,
+   0.62,
+   0.23,
+   0.52,
+   0.53,
+   0.53,
+   0.38,
+   0.51,
+   0.35,
+   0.22,
+   0.28,
+   0.62,
+   0.26,
+   0.62,
+   0.66
+  ],
+  "jev_covered_neg": 12,
+  "jev_verdict_neg": {
+   "ONE": 0.667,
+   "TWO_RELATED": 0.197,
+   "MIXTURE": 0.122,
+   "NONE": 0.013
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U195": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is an adjective or adjective-like expression relating a quality, significance, or fit to a person, group, or thing—often in constructions such as “dear to,” “common to,” “endemic to,” or “characteristic of.” This also covers the contrasting relation in “anathema to.”",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10,
+     11,
+     12,
+     13,
+     14,
+     16,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 9,
+      "about": "giving thanks"
+     },
+     {
+      "n": 15,
+      "about": "stating a claim"
+     },
+     {
+      "n": 17,
+      "about": "being told something"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "I don’t see a stable pattern across these firings: they range from function words and punctuation to unrelated content words. The repeated “stop at nothing” phrase in 2 and 10 is too small a cluster to account for the rest.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "infinitive in literary review"
+     },
+     {
+      "n": 2,
+      "about": "“stop at nothing” in film review"
+     },
+     {
+      "n": 3,
+      "about": "demons coming for characters"
+     },
+     {
+      "n": 4,
+      "about": "biographical reflection"
+     },
+     {
+      "n": 5,
+      "about": "sentence-ending punctuation"
+     },
+     {
+      "n": 6,
+      "about": "business-book promotion"
+     },
+     {
+      "n": 7,
+      "about": "sentence-ending punctuation"
+     },
+     {
+      "n": 8,
+      "about": "decorative home motto"
+     },
+     {
+      "n": 9,
+      "about": "song title, “Lay It on the Line”"
+     },
+     {
+      "n": 10,
+      "about": "“stop at nothing” in game description"
+     },
+     {
+      "n": 11,
+      "about": "fictional family description"
+     },
+     {
+      "n": 12,
+      "about": "engineering communication report"
+     },
+     {
+      "n": 13,
+      "about": "claim about creativity"
+     },
+     {
+      "n": 14,
+      "about": "music performance review"
+     },
+     {
+      "n": 15,
+      "about": "medical publication description"
+     },
+     {
+      "n": 16,
+      "about": "book title in political review"
+     },
+     {
+      "n": 17,
+      "about": "campus traditions description"
+     },
+     {
+      "n": 18,
+      "about": "historical timeline"
+     },
+     {
+      "n": 19,
+      "about": "description of a musician"
+     },
+     {
+      "n": 20,
+      "about": "author biography"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.86,
+   0.84,
+   0.88,
+   0.83,
+   0.88,
+   0.43,
+   0.72,
+   0.75,
+   0.15,
+   0.23,
+   0.51,
+   0.27,
+   0.91,
+   0.66,
+   0.28,
+   0.48,
+   0.09,
+   0.65,
+   0.82,
+   0.86
+  ],
+  "jev_covered_pos": 13,
+  "jev_verdict_pos": {
+   "ONE": 0.615,
+   "TWO_RELATED": 0.172,
+   "MIXTURE": 0.178,
+   "NONE": 0.035
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.4,
+   0.4,
+   0.39,
+   0.41,
+   0.41,
+   0.35,
+   0.36,
+   0.31,
+   0.36,
+   0.49,
+   0.36,
+   0.34,
+   0.4,
+   0.31,
+   0.32,
+   0.37,
+   0.41,
+   0.43,
+   0.43,
+   0.38
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.722,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.107,
+   "NONE": 0.05
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U199": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires mainly within proper names—especially brands, retailers, people, places, and product or film titles. It can also fire on a conjunction or punctuation embedded in a name or title.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Usually fires on “work” and its forms, or nearby wording about employment, job duties, or putting effort into something. Some examples hit a function word immediately before “work,” rather than the word itself.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     8,
+     10,
+     11,
+     12,
+     14,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 6,
+      "about": "Bibliographic citation punctuation"
+     },
+     {
+      "n": 7,
+      "about": "Tax information and a salary threshold"
+     },
+     {
+      "n": 9,
+      "about": "Tax information and a salary threshold"
+     },
+     {
+      "n": 13,
+      "about": "Technical text about coding theory"
+     },
+     {
+      "n": 15,
+      "about": "Watch model name"
+     },
+     {
+      "n": 16,
+      "about": "Sake description and a year"
+     },
+     {
+      "n": 19,
+      "about": "Medical institution name"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.61,
+   0.54,
+   0.7,
+   0.65,
+   0.79,
+   0.75,
+   0.66,
+   0.63,
+   0.52,
+   0.62,
+   0.74,
+   0.82,
+   0.65,
+   0.71,
+   0.44,
+   0.71,
+   0.66,
+   0.77,
+   0.68,
+   0.69
+  ],
+  "jev_covered_pos": 19,
+  "jev_verdict_pos": {
+   "ONE": 0.705,
+   "TWO_RELATED": 0.118,
+   "MIXTURE": 0.157,
+   "NONE": 0.02
+  },
+  "random_fit_pos": 1,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.78,
+   0.82,
+   0.3,
+   0.74,
+   0.79,
+   0.12,
+   0.18,
+   0.34,
+   0.17,
+   0.76,
+   0.63,
+   0.72,
+   0.14,
+   0.78,
+   0.09,
+   0.1,
+   0.79,
+   0.69,
+   0.19,
+   0.8
+  ],
+  "jev_covered_neg": 11,
+  "jev_verdict_neg": {
+   "ONE": 0.607,
+   "TWO_RELATED": 0.11,
+   "MIXTURE": 0.165,
+   "NONE": 0.117
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U204": {
+  "luna": {
+   "pos": {
+    "explanation": "Mostly reader-facing cues that flag a caveat, disclaimer, or point to keep in mind (for example, “Note that” and “Bear in mind that”). A few are direct prompts or appeals to the reader, such as “Learn more,” “How are y’all feeling?” and “I urge you.”",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 5,
+      "about": "Neutral product-version description"
+     },
+     {
+      "n": 19,
+      "about": "Step-by-step description of a book’s approach"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Scholarly publication and research-record text: journal titles and citations, repository or bibliographic fields, and academic abstracts or student research sections. The examples vary in topic, but share this formal academic-document context.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.9,
+   0.85,
+   0.84,
+   0.78,
+   0.23,
+   0.8,
+   0.77,
+   0.85,
+   0.88,
+   0.78,
+   0.8,
+   0.88,
+   0.89,
+   0.89,
+   0.85,
+   0.88,
+   0.82,
+   0.38,
+   0.07,
+   0.78
+  ],
+  "jev_covered_pos": 17,
+  "jev_verdict_pos": {
+   "ONE": 0.812,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.055,
+   "NONE": 0.01
+  },
+  "random_fit_pos": 1,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.73,
+   0.86,
+   0.76,
+   0.67,
+   0.45,
+   0.82,
+   0.77,
+   0.83,
+   0.83,
+   0.82,
+   0.83,
+   0.51,
+   0.83,
+   0.61,
+   0.79,
+   0.56,
+   0.13,
+   0.61,
+   0.78,
+   0.58
+  ],
+  "jev_covered_neg": 18,
+  "jev_verdict_neg": {
+   "ONE": 0.848,
+   "TWO_RELATED": 0.098,
+   "MIXTURE": 0.045,
+   "NONE": 0.01
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U214": {
+  "luna": {
+   "pos": {
+    "explanation": "Most firings fall on proper names, organizations, and place names, especially San Francisco and Golden Gate references; many are marked within the name itself. A few firings land on ordinary words or technical text instead.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     11,
+     12,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 9,
+      "about": "technical manual text and a Cyrillic term"
+     },
+     {
+      "n": 10,
+      "about": "the ordinary phrase “money order”"
+     },
+     {
+      "n": 13,
+      "about": "the ordinary phrase “money order”"
+     },
+     {
+      "n": 20,
+      "about": "car feature list, “power door mirrors”"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole is a mixture of unrelated patterns: occurrences in Talbot/Talbots names and places (1, 3, 4, 6, 19), TGC/TMG abbreviations (5, 10, 11, 13, 16, 17, 20), technical compounds such as bandpass and trust chain (7, 9, 14, 18), and coin-flip comparisons (8, 15). Example 12 is a separate finance phrase, “capital structure.”",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "a one-off mention of “kismet,” not part of the recurring clusters"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.36,
+   0.46,
+   0.14,
+   0.2,
+   0.22,
+   0.23,
+   0.42,
+   0.85,
+   0.1,
+   0.13,
+   0.64,
+   0.84,
+   0.12,
+   0.19,
+   0.84,
+   0.48,
+   0.88,
+   0.42,
+   0.59,
+   0.07
+  ],
+  "jev_covered_pos": 6,
+  "jev_verdict_pos": {
+   "ONE": 0.733,
+   "TWO_RELATED": 0.1,
+   "MIXTURE": 0.135,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.08,
+   0.09,
+   0.08,
+   0.09,
+   0.18,
+   0.09,
+   0.27,
+   0.23,
+   0.26,
+   0.16,
+   0.33,
+   0.14,
+   0.28,
+   0.16,
+   0.27,
+   0.1,
+   0.32,
+   0.15,
+   0.16,
+   0.15
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.56,
+   "TWO_RELATED": 0.16,
+   "MIXTURE": 0.247,
+   "NONE": 0.033
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U227": {
+  "luna": {
+   "pos": {
+    "explanation": "A small cluster fires on pieces of specialized or compound vocabulary, such as “Heterogeneous,” “Wasserspiel,” “zonal,” and “vertebra.” This is only a tentative token-level pattern; the other firings do not support a consistent semantic job.",
+    "verdict": "ONE",
+    "covers": [
+     3,
+     8,
+     11,
+     14,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "game controls and difficulty"
+     },
+     {
+      "n": 2,
+      "about": "Resident Evil franchise"
+     },
+     {
+      "n": 4,
+      "about": "gameplay and story"
+     },
+     {
+      "n": 5,
+      "about": "gazetteer entry"
+     },
+     {
+      "n": 6,
+      "about": "bushfire news"
+     },
+     {
+      "n": 7,
+      "about": "boxer profile"
+     },
+     {
+      "n": 9,
+      "about": "Irish sporting tradition"
+     },
+     {
+      "n": 10,
+      "about": "wrestling game review"
+     },
+     {
+      "n": 12,
+      "about": "cottage and tea"
+     },
+     {
+      "n": 13,
+      "about": "Macbeth synopsis"
+     },
+     {
+      "n": 15,
+      "about": "personification in a manual"
+     },
+     {
+      "n": 16,
+      "about": "garden decor listings"
+     },
+     {
+      "n": 17,
+      "about": "Medicare policy"
+     },
+     {
+      "n": 18,
+      "about": "military history"
+     },
+     {
+      "n": 19,
+      "about": "Windows software"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Several firings land on emphatic or intensifying adverbs—“totally,” “absolutely,” and “constantly.” This fits only a subset; the rest look unrelated.",
+    "verdict": "ONE",
+    "covers": [
+     3,
+     6,
+     7,
+     9,
+     10
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "hairstyle advice and emoji"
+     },
+     {
+      "n": 2,
+      "about": "race-car coverage"
+     },
+     {
+      "n": 4,
+      "about": "garbled blood-pressure text"
+     },
+     {
+      "n": 5,
+      "about": "field hockey report"
+     },
+     {
+      "n": 8,
+      "about": "SSD hardware"
+     },
+     {
+      "n": 11,
+      "about": "basketball statistics"
+     },
+     {
+      "n": 12,
+      "about": "birth announcement"
+     },
+     {
+      "n": 13,
+      "about": "game talent abilities"
+     },
+     {
+      "n": 14,
+      "about": "bicycle designs"
+     },
+     {
+      "n": 15,
+      "about": "student note shared online"
+     },
+     {
+      "n": 16,
+      "about": "rapper interview"
+     },
+     {
+      "n": 17,
+      "about": "ski travel guide"
+     },
+     {
+      "n": 18,
+      "about": "parenting and basketball"
+     },
+     {
+      "n": 19,
+      "about": "snowboarding film edits"
+     },
+     {
+      "n": 20,
+      "about": "pregnancy exercise advice"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.2,
+   0.21,
+   0.71,
+   0.23,
+   0.23,
+   0.24,
+   0.29,
+   0.62,
+   0.27,
+   0.18,
+   0.39,
+   0.3,
+   0.19,
+   0.69,
+   0.27,
+   0.52,
+   0.36,
+   0.35,
+   0.28,
+   0.69
+  ],
+  "jev_covered_pos": 5,
+  "jev_verdict_pos": {
+   "ONE": 0.82,
+   "TWO_RELATED": 0.085,
+   "MIXTURE": 0.07,
+   "NONE": 0.025
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.12,
+   0.11,
+   0.69,
+   0.1,
+   0.06,
+   0.81,
+   0.79,
+   0.08,
+   0.69,
+   0.74,
+   0.1,
+   0.14,
+   0.07,
+   0.09,
+   0.1,
+   0.1,
+   0.1,
+   0.12,
+   0.14,
+   0.08
+  ],
+  "jev_covered_neg": 5,
+  "jev_verdict_neg": {
+   "ONE": 0.667,
+   "TWO_RELATED": 0.105,
+   "MIXTURE": 0.168,
+   "NONE": 0.06
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U242": {
+  "luna": {
+   "pos": {
+    "explanation": "The pole most strongly tracks commas, especially commas separating names, credentials, dates, citations, or items in a list. The examples span many subjects, so the punctuation pattern is more consistent than any topic.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     11,
+     13,
+     15,
+     17,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 7,
+      "about": "spacing around a volume number"
+     },
+     {
+      "n": 9,
+      "about": "spacing/numbering in a bill identifier"
+     },
+     {
+      "n": 10,
+      "about": "a “Read More” link"
+     },
+     {
+      "n": 12,
+      "about": "spacing in a page citation"
+     },
+     {
+      "n": 14,
+      "about": "a name split across a line"
+     },
+     {
+      "n": 16,
+      "about": "a split in “U.S. Naval Academy”"
+     },
+     {
+      "n": 18,
+      "about": "a “Read More” link"
+     },
+     {
+      "n": 19,
+      "about": "a slash in a currency list"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The pole tracks periods/full stops, often at the end of a sentence or a scraped snippet. The surrounding material ranges from spam and garbled text to coherent articles, so the punctuation boundary is the clearer shared pattern.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.65,
+   0.8,
+   0.62,
+   0.81,
+   0.59,
+   0.32,
+   0.35,
+   0.79,
+   0.31,
+   0.45,
+   0.51,
+   0.32,
+   0.73,
+   0.49,
+   0.38,
+   0.44,
+   0.55,
+   0.39,
+   0.27,
+   0.69
+  ],
+  "jev_covered_pos": 10,
+  "jev_verdict_pos": {
+   "ONE": 0.728,
+   "TWO_RELATED": 0.11,
+   "MIXTURE": 0.1,
+   "NONE": 0.062
+  },
+  "random_fit_pos": 2,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.58,
+   0.65,
+   0.61,
+   0.57,
+   0.6,
+   0.59,
+   0.65,
+   0.57,
+   0.66,
+   0.53,
+   0.56,
+   0.64,
+   0.68,
+   0.69,
+   0.67,
+   0.63,
+   0.61,
+   0.6,
+   0.69,
+   0.54
+  ],
+  "jev_covered_neg": 20,
+  "jev_verdict_neg": {
+   "ONE": 0.615,
+   "TWO_RELATED": 0.06,
+   "MIXTURE": 0.272,
+   "NONE": 0.053
+  },
+  "random_fit_neg": 3,
+  "clean_neg": true
+ },
+ "U259": {
+  "luna": {
+   "pos": {
+    "explanation": "This pole responds to citrus and citrus-color words—especially “orange” and “lemon,” plus related forms like “tangerine”—whether they refer to a color, fruit, name, or title.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "I can’t identify a reliable shared meaning: the firings include fragments inside proper names, ordinary words, punctuation, a date, and “palm” in unrelated contexts.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "fragment in a mythological name"
+     },
+     {
+      "n": 2,
+      "about": "fragment in a place name"
+     },
+     {
+      "n": 3,
+      "about": "fragment in a place name"
+     },
+     {
+      "n": 4,
+      "about": "date in a parenting article"
+     },
+     {
+      "n": 5,
+      "about": "fragment in a place name"
+     },
+     {
+      "n": 6,
+      "about": "fragment in a personal name"
+     },
+     {
+      "n": 7,
+      "about": "place name in a service-area list"
+     },
+     {
+      "n": 8,
+      "about": "possessive pronoun in religious text"
+     },
+     {
+      "n": 9,
+      "about": "possessive pronoun in feedback prompt"
+     },
+     {
+      "n": 10,
+      "about": "fragment in a fictional name"
+     },
+     {
+      "n": 11,
+      "about": "verb in a religious quotation"
+     },
+     {
+      "n": 12,
+      "about": "word in a math explanation"
+     },
+     {
+      "n": 13,
+      "about": "punctuation in a catalog entry"
+     },
+     {
+      "n": 14,
+      "about": "fragment in a place name"
+     },
+     {
+      "n": 15,
+      "about": "fragment in a place name"
+     },
+     {
+      "n": 16,
+      "about": "religious address"
+     },
+     {
+      "n": 17,
+      "about": "fragment in a plant name"
+     },
+     {
+      "n": 18,
+      "about": "fragment in an Indigenous personal name"
+     },
+     {
+      "n": 19,
+      "about": "fragment in a place name"
+     },
+     {
+      "n": 20,
+      "about": "palm trees and coconuts"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.78,
+   0.88,
+   0.88,
+   0.92,
+   0.86,
+   0.82,
+   0.88,
+   0.87,
+   0.9,
+   0.84,
+   0.78,
+   0.69,
+   0.84,
+   0.87,
+   0.81,
+   0.9,
+   0.8,
+   0.86,
+   0.86,
+   0.89
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.57,
+   "TWO_RELATED": 0.21,
+   "MIXTURE": 0.195,
+   "NONE": 0.025
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.4,
+   0.51,
+   0.47,
+   0.41,
+   0.41,
+   0.58,
+   0.53,
+   0.31,
+   0.27,
+   0.44,
+   0.44,
+   0.32,
+   0.43,
+   0.43,
+   0.48,
+   0.32,
+   0.68,
+   0.64,
+   0.48,
+   0.57
+  ],
+  "jev_covered_neg": 6,
+  "jev_verdict_neg": {
+   "ONE": 0.7,
+   "TWO_RELATED": 0.118,
+   "MIXTURE": 0.13,
+   "NONE": 0.05
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U263": {
+  "luna": {
+   "pos": {
+    "explanation": "This pole tracks color specifications and color/material references, especially cool or neutral shades such as teal, turquoise, gray, black, blue, and silver; several firings are inside RGB or hex color codes. Most examples are explicit color descriptions, though a few appear to rely on an indirect visual or material association.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 19,
+      "about": "Rorschach as a character; no color is stated in the excerpt"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole is associated with warm, vivid color references, especially red, scarlet, and pink, including color-coded foods, flowers, hair, and clothing. Some firings are on names or terms that may evoke those colors, but are not explicitly color descriptions in the excerpt.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 9,
+      "about": "Corporate statement about employee passion, not color"
+     },
+     {
+      "n": 16,
+      "about": "Astrological discussion of Antares, without a stated color"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.72,
+   0.62,
+   0.73,
+   0.72,
+   0.65,
+   0.69,
+   0.74,
+   0.65,
+   0.7,
+   0.8,
+   0.49,
+   0.79,
+   0.8,
+   0.43,
+   0.66,
+   0.76,
+   0.78,
+   0.78,
+   0.13,
+   0.55
+  ],
+  "jev_covered_pos": 17,
+  "jev_verdict_pos": {
+   "ONE": 0.555,
+   "TWO_RELATED": 0.152,
+   "MIXTURE": 0.263,
+   "NONE": 0.03
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.17,
+   0.88,
+   0.43,
+   0.83,
+   0.66,
+   0.57,
+   0.86,
+   0.69,
+   0.2,
+   0.54,
+   0.42,
+   0.57,
+   0.75,
+   0.58,
+   0.7,
+   0.51,
+   0.79,
+   0.82,
+   0.78,
+   0.5
+  ],
+  "jev_covered_neg": 16,
+  "jev_verdict_neg": {
+   "ONE": 0.695,
+   "TWO_RELATED": 0.13,
+   "MIXTURE": 0.13,
+   "NONE": 0.045
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U320": {
+  "luna": {
+   "pos": {
+    "explanation": "The pole is associated mainly with washing, bathing, and ablution—both ritual washing and ordinary cleaning such as washing dishes or hands. It does not appear to cover water-related scenes in general.",
+    "verdict": "ONE",
+    "covers": [
+     3,
+     4,
+     5,
+     7,
+     8,
+     10,
+     11,
+     12,
+     13,
+     14,
+     17,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "a wolf coming for a drink"
+     },
+     {
+      "n": 2,
+      "about": "getting a drink"
+     },
+     {
+      "n": 6,
+      "about": "evening roll-call torment in a labor camp"
+     },
+     {
+      "n": 9,
+      "about": "pilgrims sleeping outdoors"
+     },
+     {
+      "n": 15,
+      "about": "a basin in a painting description"
+     },
+     {
+      "n": 16,
+      "about": "a fountain on a tour route"
+     },
+     {
+      "n": 18,
+      "about": "women joining dances"
+     },
+     {
+      "n": 20,
+      "about": "a summer picnic"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole tracks descriptions of visual appearance or perception: things seen from a distance, becoming visible, or compared to shapes such as a speck, an ant army, or a snake. The comparisons are common but not required; several examples describe visible lines, forms, or scenery directly.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.11,
+   0.12,
+   0.71,
+   0.5,
+   0.58,
+   0.06,
+   0.76,
+   0.53,
+   0.06,
+   0.76,
+   0.87,
+   0.72,
+   0.59,
+   0.84,
+   0.43,
+   0.07,
+   0.89,
+   0.04,
+   0.89,
+   0.08
+  ],
+  "jev_covered_pos": 12,
+  "jev_verdict_pos": {
+   "ONE": 0.663,
+   "TWO_RELATED": 0.21,
+   "MIXTURE": 0.11,
+   "NONE": 0.018
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.9,
+   0.9,
+   0.89,
+   0.91,
+   0.8,
+   0.55,
+   0.37,
+   0.52,
+   0.75,
+   0.9,
+   0.7,
+   0.74,
+   0.92,
+   0.92,
+   0.65,
+   0.36,
+   0.86,
+   0.79,
+   0.69,
+   0.9
+  ],
+  "jev_covered_neg": 18,
+  "jev_verdict_neg": {
+   "ONE": 0.725,
+   "TWO_RELATED": 0.193,
+   "MIXTURE": 0.065,
+   "NONE": 0.018
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U323": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires on U.S. government and public-policy reporting: legislation, federal agencies and funding, and government actions or agreements in diplomacy. The examples include both domestic policy and foreign affairs involving the U.S.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Favors international-affairs and postwar geopolitical material, including UN institutions, wars and military history, and the European trade and industrial arrangements that followed World War II.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     15,
+     16,
+     17,
+     18
+    ],
+    "misfits": [
+     {
+      "n": 14,
+      "about": "mathematical physics and commutators"
+     },
+     {
+      "n": 19,
+      "about": "aircraft radar and flight-data claims"
+     },
+     {
+      "n": 20,
+      "about": "a film review about a mummy and Mars"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.68,
+   0.74,
+   0.82,
+   0.72,
+   0.79,
+   0.66,
+   0.59,
+   0.8,
+   0.73,
+   0.77,
+   0.64,
+   0.75,
+   0.7,
+   0.79,
+   0.86,
+   0.64,
+   0.65,
+   0.77,
+   0.71,
+   0.59
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.735,
+   "TWO_RELATED": 0.14,
+   "MIXTURE": 0.098,
+   "NONE": 0.028
+  },
+  "random_fit_pos": 1,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.81,
+   0.61,
+   0.6,
+   0.82,
+   0.68,
+   0.75,
+   0.49,
+   0.74,
+   0.35,
+   0.46,
+   0.7,
+   0.68,
+   0.66,
+   0.02,
+   0.69,
+   0.21,
+   0.35,
+   0.31,
+   0.08,
+   0.04
+  ],
+  "jev_covered_neg": 11,
+  "jev_verdict_neg": {
+   "ONE": 0.657,
+   "TWO_RELATED": 0.13,
+   "MIXTURE": 0.172,
+   "NONE": 0.04
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U303": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked positions range across punctuation, line breaks, word fragments, and ordinary words in unrelated contexts. There is no recurring pattern specific enough to explain the firings.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "flight-simulation server text"
+     },
+     {
+      "n": 2,
+      "about": "hockey statistics"
+     },
+     {
+      "n": 3,
+      "about": "personal-growth article"
+     },
+     {
+      "n": 4,
+      "about": "real-estate date"
+     },
+     {
+      "n": 5,
+      "about": "football analysis"
+     },
+     {
+      "n": 6,
+      "about": "review citation"
+     },
+     {
+      "n": 7,
+      "about": "history of the Napoleonic Wars"
+     },
+     {
+      "n": 8,
+      "about": "river research"
+     },
+     {
+      "n": 9,
+      "about": "toilet product review"
+     },
+     {
+      "n": 10,
+      "about": "garden blog"
+     },
+     {
+      "n": 11,
+      "about": "automotive news"
+     },
+     {
+      "n": 12,
+      "about": "rugby article"
+     },
+     {
+      "n": 13,
+      "about": "horoscope"
+     },
+     {
+      "n": 14,
+      "about": "hiking guide"
+     },
+     {
+      "n": 15,
+      "about": "toilet product review"
+     },
+     {
+      "n": 16,
+      "about": "financial ratings"
+     },
+     {
+      "n": 17,
+      "about": "website monetization advice"
+     },
+     {
+      "n": 18,
+      "about": "bird discovery"
+     },
+     {
+      "n": 19,
+      "about": "shirt-printing advice"
+     },
+     {
+      "n": 20,
+      "about": "audio-device product review"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "A substantial cluster fires on count or container words in ingredient and quantity lists (such as “balls,” “pairs,” “bunch,” “leaf,” and “stalks”). The remaining firings are scattered names and technical or descriptive terms without a clear shared job.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     9,
+     10,
+     11,
+     17,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 5,
+      "about": "cannabis strain name"
+     },
+     {
+      "n": 6,
+      "about": "sound-library list"
+     },
+     {
+      "n": 7,
+      "about": "dog-sale listing"
+     },
+     {
+      "n": 8,
+      "about": "dog-rescue story"
+     },
+     {
+      "n": 12,
+      "about": "cattle-breeding description"
+     },
+     {
+      "n": 13,
+      "about": "vaccination reporting"
+     },
+     {
+      "n": 14,
+      "about": "firearm discussion"
+     },
+     {
+      "n": 15,
+      "about": "audio-library specifications"
+     },
+     {
+      "n": 16,
+      "about": "cannabis strain description"
+     },
+     {
+      "n": 18,
+      "about": "vaccination reporting"
+     },
+     {
+      "n": 20,
+      "about": "tobacco-industry news"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.43,
+   0.41,
+   0.45,
+   0.38,
+   0.38,
+   0.41,
+   0.41,
+   0.36,
+   0.41,
+   0.43,
+   0.42,
+   0.43,
+   0.43,
+   0.31,
+   0.39,
+   0.42,
+   0.35,
+   0.36,
+   0.4,
+   0.43
+  ],
+  "jev_covered_pos": 0,
+  "jev_verdict_pos": {
+   "ONE": 0.728,
+   "TWO_RELATED": 0.098,
+   "MIXTURE": 0.135,
+   "NONE": 0.04
+  },
+  "random_fit_pos": 1,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.83,
+   0.81,
+   0.8,
+   0.66,
+   0.23,
+   0.28,
+   0.18,
+   0.17,
+   0.53,
+   0.82,
+   0.81,
+   0.14,
+   0.1,
+   0.27,
+   0.31,
+   0.16,
+   0.79,
+   0.1,
+   0.68,
+   0.13
+  ],
+  "jev_covered_neg": 9,
+  "jev_verdict_neg": {
+   "ONE": 0.583,
+   "TWO_RELATED": 0.128,
+   "MIXTURE": 0.235,
+   "NONE": 0.055
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U338": {
+  "luna": {
+   "pos": {
+    "explanation": "The unit marks explicit conditions or requirements that must be satisfied, overwhelmingly casino-bonus wagering and playthrough thresholds before winnings can be withdrawn or bonuses qualify. The Cub Scout rank requirements are a non-gambling instance of the same general idea.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The unit marks expressions of necessity or obligation—such as required, necessary, need, essential, and have to—often describing a prerequisite for a policy, task, or outcome.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "AutoSum command in spreadsheet instructions"
+     },
+     {
+      "n": 7,
+      "about": "Product listing's unit of measure"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.83,
+   0.64,
+   0.88,
+   0.61,
+   0.71,
+   0.69,
+   0.74,
+   0.76,
+   0.67,
+   0.55,
+   0.25,
+   0.83,
+   0.7,
+   0.89,
+   0.86,
+   0.86,
+   0.68,
+   0.74,
+   0.85,
+   0.76
+  ],
+  "jev_covered_pos": 19,
+  "jev_verdict_pos": {
+   "ONE": 0.832,
+   "TWO_RELATED": 0.122,
+   "MIXTURE": 0.043,
+   "NONE": 0.003
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.87,
+   0.91,
+   0.56,
+   0.62,
+   0.12,
+   0.66,
+   0.06,
+   0.65,
+   0.88,
+   0.89,
+   0.91,
+   0.84,
+   0.88,
+   0.81,
+   0.57,
+   0.86,
+   0.79,
+   0.73,
+   0.76,
+   0.92
+  ],
+  "jev_covered_neg": 18,
+  "jev_verdict_neg": {
+   "ONE": 0.665,
+   "TWO_RELATED": 0.215,
+   "MIXTURE": 0.105,
+   "NONE": 0.015
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U325": {
+  "luna": {
+   "pos": {
+    "explanation": "Two unrelated clusters recur: Creative Commons license boilerplate (Noncommercial/ShareAlike) and promotional descriptions or plans for apps and Apple devices, especially iPod touch. The other examples do not clearly fit either pattern.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     3,
+     5,
+     7,
+     8,
+     13,
+     14,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "social-studies book contents"
+     },
+     {
+      "n": 4,
+      "about": "author biography"
+     },
+     {
+      "n": 6,
+      "about": "academic biography"
+     },
+     {
+      "n": 9,
+      "about": "car purchase interface"
+     },
+     {
+      "n": 10,
+      "about": "nursing job listing"
+     },
+     {
+      "n": 11,
+      "about": "government publication note"
+     },
+     {
+      "n": 12,
+      "about": "school testing information"
+     },
+     {
+      "n": 15,
+      "about": "website search results"
+     },
+     {
+      "n": 16,
+      "about": "hospital employment notice"
+     },
+     {
+      "n": 17,
+      "about": "bicycling safety study"
+     },
+     {
+      "n": 19,
+      "about": "GED testing information"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The firings range across ordinary words, place and personal names, technical vocabulary, and partial Polish word fragments. There is no reliable shared pattern in the examples.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "middle-class families"
+     },
+     {
+      "n": 2,
+      "about": "Polish laboratory keywords"
+     },
+     {
+      "n": 3,
+      "about": "school district"
+     },
+     {
+      "n": 4,
+      "about": "urinary tract"
+     },
+     {
+      "n": 5,
+      "about": "silicic acid"
+     },
+     {
+      "n": 6,
+      "about": "Humboldt County"
+     },
+     {
+      "n": 7,
+      "about": "base of tongue"
+     },
+     {
+      "n": 8,
+      "about": "Essex County"
+     },
+     {
+      "n": 9,
+      "about": "property stamp tax"
+     },
+     {
+      "n": 10,
+      "about": "circuit terminology"
+     },
+     {
+      "n": 11,
+      "about": "Uruguay geography"
+     },
+     {
+      "n": 12,
+      "about": "silencing RNA"
+     },
+     {
+      "n": 13,
+      "about": "living standards"
+     },
+     {
+      "n": 14,
+      "about": "hair-pulling disorder"
+     },
+     {
+      "n": 15,
+      "about": "shared future"
+     },
+     {
+      "n": 16,
+      "about": "Polish word fragment"
+     },
+     {
+      "n": 17,
+      "about": "Buren County incident"
+     },
+     {
+      "n": 18,
+      "about": "Boone County watershed"
+     },
+     {
+      "n": 19,
+      "about": "impostor syndrome"
+     },
+     {
+      "n": 20,
+      "about": "major leagues"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.42,
+   0.04,
+   0.31,
+   0.06,
+   0.64,
+   0.07,
+   0.63,
+   0.36,
+   0.05,
+   0.04,
+   0.09,
+   0.07,
+   0.35,
+   0.68,
+   0.14,
+   0.05,
+   0.07,
+   0.39,
+   0.07,
+   0.65
+  ],
+  "jev_covered_pos": 4,
+  "jev_verdict_pos": {
+   "ONE": 0.725,
+   "TWO_RELATED": 0.165,
+   "MIXTURE": 0.09,
+   "NONE": 0.02
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.23,
+   0.55,
+   0.27,
+   0.21,
+   0.28,
+   0.29,
+   0.32,
+   0.26,
+   0.23,
+   0.31,
+   0.28,
+   0.39,
+   0.21,
+   0.21,
+   0.18,
+   0.57,
+   0.38,
+   0.25,
+   0.3,
+   0.17
+  ],
+  "jev_covered_neg": 2,
+  "jev_verdict_neg": {
+   "ONE": 0.745,
+   "TWO_RELATED": 0.08,
+   "MIXTURE": 0.123,
+   "NONE": 0.052
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U328": {
+  "luna": {
+   "pos": {
+    "explanation": "There is no stable semantic or spelling pattern across these firings: they fall on assorted fragments in personal names, Roman numerals and product identifiers, and ingredient or library strings.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "Daimler name fragment"
+     },
+     {
+      "n": 2,
+      "about": "designer name Barr"
+     },
+     {
+      "n": 3,
+      "about": "Gaultier name fragment"
+     },
+     {
+      "n": 4,
+      "about": "Gaultier in fashion review"
+     },
+     {
+      "n": 5,
+      "about": "Pallavi name fragment"
+     },
+     {
+      "n": 6,
+      "about": "designer name Barr"
+     },
+     {
+      "n": 7,
+      "about": "Gaultier name fragment"
+     },
+     {
+      "n": 8,
+      "about": "Gaultier in fashion post"
+     },
+     {
+      "n": 9,
+      "about": "MPS VI disease name"
+     },
+     {
+      "n": 10,
+      "about": "Spurlock surname"
+     },
+     {
+      "n": 11,
+      "about": "GTA III game title"
+     },
+     {
+      "n": 12,
+      "about": "polysorbate ingredient"
+     },
+     {
+      "n": 13,
+      "about": "Gaultier fashion article"
+     },
+     {
+      "n": 14,
+      "about": "polysorbate ingredient"
+     },
+     {
+      "n": 15,
+      "about": "Gautama name fragment"
+     },
+     {
+      "n": 16,
+      "about": "iQoo 9 model name"
+     },
+     {
+      "n": 17,
+      "about": "motherboard model VI"
+     },
+     {
+      "n": 18,
+      "about": "library identifier libqt3"
+     },
+     {
+      "n": 19,
+      "about": "Gopalakrishnan surname"
+     },
+     {
+      "n": 20,
+      "about": "Gopalakrishnan surname"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole most consistently fires within words beginning with “poly-,” including Polycarp, polychrome, polycarbonate, polycystic, and polyamorous. The shared pattern is spelling, not a single subject matter.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     10,
+     11,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 8,
+      "about": "Polcione place name"
+     },
+     {
+      "n": 12,
+      "about": "Palamedes in Greek oratory"
+     },
+     {
+      "n": 13,
+      "about": "perma.cc link"
+     },
+     {
+      "n": 19,
+      "about": "Polk Brown name"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.37,
+   0.57,
+   0.35,
+   0.33,
+   0.39,
+   0.4,
+   0.38,
+   0.59,
+   0.41,
+   0.45,
+   0.43,
+   0.49,
+   0.38,
+   0.45,
+   0.41,
+   0.44,
+   0.46,
+   0.59,
+   0.43,
+   0.4
+  ],
+  "jev_covered_pos": 3,
+  "jev_verdict_pos": {
+   "ONE": 0.792,
+   "TWO_RELATED": 0.068,
+   "MIXTURE": 0.108,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.68,
+   0.81,
+   0.76,
+   0.81,
+   0.79,
+   0.7,
+   0.66,
+   0.31,
+   0.78,
+   0.69,
+   0.86,
+   0.32,
+   0.18,
+   0.83,
+   0.77,
+   0.75,
+   0.86,
+   0.73,
+   0.36,
+   0.82
+  ],
+  "jev_covered_neg": 16,
+  "jev_verdict_neg": {
+   "ONE": 0.677,
+   "TWO_RELATED": 0.117,
+   "MIXTURE": 0.183,
+   "NONE": 0.023
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U350": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked pieces mostly occur inside identifying strings: personal or organization names, acronyms, and structured references such as phone numbers and an ISBN. The firing appears tied more to these name/label contexts than to a shared subject matter.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     10,
+     11,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 8,
+      "about": "the adjective “big-headed”"
+     },
+     {
+      "n": 12,
+      "about": "the adjective “big-hearted”"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The strongest negative pattern is the final “ru” subword in “Nehru,” recurring in contexts about Nehru Stadium, the university, or Jawaharlal Nehru. The remaining examples do not show a clear connection to that pattern.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "misfits": [
+     {
+      "n": 8,
+      "about": "street address ending in Ave"
+     },
+     {
+      "n": 9,
+      "about": "end-of-life phrase in recycling discussion"
+     },
+     {
+      "n": 10,
+      "about": "Disaster Risk Reduction job title"
+     },
+     {
+      "n": 11,
+      "about": "author surname Engst"
+     },
+     {
+      "n": 12,
+      "about": "street address ending in Ave"
+     },
+     {
+      "n": 13,
+      "about": "bibliography and journal statistics"
+     },
+     {
+      "n": 14,
+      "about": "street address ending in Ave"
+     },
+     {
+      "n": 15,
+      "about": "end-of-life dates for software"
+     },
+     {
+      "n": 16,
+      "about": "firefighters foundation name"
+     },
+     {
+      "n": 17,
+      "about": "end-of-life appliances and e-waste"
+     },
+     {
+      "n": 18,
+      "about": "Disaster Risk Reduction measures"
+     },
+     {
+      "n": 19,
+      "about": "surname Steenkamp"
+     },
+     {
+      "n": 20,
+      "about": "processor model number"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.68,
+   0.57,
+   0.8,
+   0.72,
+   0.79,
+   0.72,
+   0.74,
+   0.17,
+   0.72,
+   0.77,
+   0.69,
+   0.1,
+   0.55,
+   0.79,
+   0.75,
+   0.5,
+   0.74,
+   0.8,
+   0.79,
+   0.68
+  ],
+  "jev_covered_pos": 18,
+  "jev_verdict_pos": {
+   "ONE": 0.768,
+   "TWO_RELATED": 0.102,
+   "MIXTURE": 0.105,
+   "NONE": 0.025
+  },
+  "random_fit_pos": 2,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.77,
+   0.6,
+   0.56,
+   0.65,
+   0.71,
+   0.68,
+   0.78,
+   0.04,
+   0.07,
+   0.08,
+   0.04,
+   0.03,
+   0.04,
+   0.05,
+   0.06,
+   0.06,
+   0.06,
+   0.05,
+   0.06,
+   0.04
+  ],
+  "jev_covered_neg": 7,
+  "jev_verdict_neg": {
+   "ONE": 0.593,
+   "TWO_RELATED": 0.153,
+   "MIXTURE": 0.225,
+   "NONE": 0.03
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U370": {
+  "luna": {
+   "pos": {
+    "explanation": "The main pattern is technical, process-oriented writing: software/server setup instructions and computational-science discussion of methods, parameters, and results. The SQL tutorial fits the same practical technical-documentation style; the car and travel passages do not.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 18,
+      "about": "automotive product news"
+     },
+     {
+      "n": 19,
+      "about": "personal travel and design blog"
+     }
+    ],
+    "connection": "Both clusters explain technical processes or methods using concrete commands, procedures, or experimental details."
+   },
+   "neg": {
+    "explanation": "This pole is heterogeneous: several firings occur in formal research or scientific summaries, while others occur in travel, lifestyle, food, local-news, and general informational writing. I don't see a reliable shared content pattern beyond these disparate kinds of expository web text.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.7,
+   0.74,
+   0.62,
+   0.59,
+   0.47,
+   0.67,
+   0.66,
+   0.57,
+   0.54,
+   0.5,
+   0.75,
+   0.56,
+   0.64,
+   0.61,
+   0.62,
+   0.54,
+   0.55,
+   0.09,
+   0.07,
+   0.48
+  ],
+  "jev_covered_pos": 16,
+  "jev_verdict_pos": {
+   "ONE": 0.617,
+   "TWO_RELATED": 0.098,
+   "MIXTURE": 0.233,
+   "NONE": 0.052
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.32,
+   0.28,
+   0.35,
+   0.28,
+   0.37,
+   0.31,
+   0.36,
+   0.3,
+   0.27,
+   0.4,
+   0.37,
+   0.3,
+   0.35,
+   0.31,
+   0.27,
+   0.29,
+   0.33,
+   0.32,
+   0.33,
+   0.35
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.75,
+   "TWO_RELATED": 0.095,
+   "MIXTURE": 0.107,
+   "NONE": 0.048
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U384": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires on people’s surnames or final name tokens in biographies, news, quotes, and other references to individuals. The examples span many fields, but the shared pattern is a person-name mention.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Often fires on names of media outlets, publications, shows, or institutions rather than on a person’s name. Several examples are personal names or technical text instead, so that pattern does not cover the whole pole.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     4,
+     5,
+     6,
+     7,
+     9,
+     10,
+     12,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "measurement unit in “megawatt”"
+     },
+     {
+      "n": 3,
+      "about": "Robert Kennedy, a person"
+     },
+     {
+      "n": 8,
+      "about": "Karoly, a person"
+     },
+     {
+      "n": 11,
+      "about": "Jeff Bezos, a person"
+     },
+     {
+      "n": 13,
+      "about": "digit in an IP address"
+     },
+     {
+      "n": 14,
+      "about": "Kotter, a person"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.88,
+   0.8,
+   0.62,
+   0.77,
+   0.81,
+   0.71,
+   0.67,
+   0.72,
+   0.88,
+   0.64,
+   0.81,
+   0.85,
+   0.83,
+   0.87,
+   0.73,
+   0.82,
+   0.71,
+   0.77,
+   0.76,
+   0.65
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.91,
+   "TWO_RELATED": 0.038,
+   "MIXTURE": 0.037,
+   "NONE": 0.015
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.85,
+   0.3,
+   0.2,
+   0.69,
+   0.77,
+   0.84,
+   0.76,
+   0.4,
+   0.84,
+   0.49,
+   0.25,
+   0.79,
+   0.17,
+   0.33,
+   0.71,
+   0.78,
+   0.77,
+   0.69,
+   0.51,
+   0.73
+  ],
+  "jev_covered_neg": 13,
+  "jev_verdict_neg": {
+   "ONE": 0.78,
+   "TWO_RELATED": 0.113,
+   "MIXTURE": 0.083,
+   "NONE": 0.025
+  },
+  "random_fit_neg": 2,
+  "clean_neg": false
+ },
+ "U381": {
+  "luna": {
+   "pos": {
+    "explanation": "The pole strongly tracks the spelling “Akash” in proper names and especially in “Akashic Records” material, including Akash, Saakashvili, and Prakash. The shared evidence is primarily orthographic rather than a single topic.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     11,
+     12,
+     15,
+     18
+    ],
+    "misfits": [
+     {
+      "n": 7,
+      "about": "kottke.org post"
+     },
+     {
+      "n": 9,
+      "about": "kottke.org reader"
+     },
+     {
+      "n": 10,
+      "about": "Kettner Boulevard cafe listing"
+     },
+     {
+      "n": 13,
+      "about": "kottke.org book discussion"
+     },
+     {
+      "n": 14,
+      "about": "Kotkin in a medication study"
+     },
+     {
+      "n": 16,
+      "about": "CoinDesk cryptocurrency article"
+     },
+     {
+      "n": 17,
+      "about": "Kaye moderating a conference"
+     },
+     {
+      "n": 19,
+      "about": "Ukrainian Blender documentation"
+     },
+     {
+      "n": 20,
+      "about": "Golden Gate wine event"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "There are several unrelated clusters: Talbot/Tarbotton names and locations (1, 4, 6, 7), repeated “acanthus” references in gardening and decorative design (9–11, 14, 16), and “evolution” in a book description (3, 13). These do not form one clear shared job.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     13,
+     14,
+     16
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "copyright and ICANN"
+     },
+     {
+      "n": 5,
+      "about": "gaming companies and products"
+     },
+     {
+      "n": 8,
+      "about": "pediatric nursing publication"
+     },
+     {
+      "n": 12,
+      "about": "electronic band-pass filter"
+     },
+     {
+      "n": 15,
+      "about": "sports metaphor about a coin flip"
+     },
+     {
+      "n": 17,
+      "about": "audio band-pass filter"
+     },
+     {
+      "n": 18,
+      "about": "company acquisition news"
+     },
+     {
+      "n": 19,
+      "about": "TMG-L archive tag"
+     },
+     {
+      "n": 20,
+      "about": "gibberish-like generated prose"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.55,
+   0.72,
+   0.6,
+   0.77,
+   0.6,
+   0.34,
+   0.16,
+   0.63,
+   0.12,
+   0.08,
+   0.63,
+   0.62,
+   0.08,
+   0.17,
+   0.58,
+   0.11,
+   0.12,
+   0.64,
+   0.07,
+   0.07
+  ],
+  "jev_covered_pos": 10,
+  "jev_verdict_pos": {
+   "ONE": 0.642,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.2,
+   "NONE": 0.038
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.13,
+   0.11,
+   0.16,
+   0.16,
+   0.1,
+   0.12,
+   0.15,
+   0.14,
+   0.28,
+   0.28,
+   0.33,
+   0.11,
+   0.18,
+   0.15,
+   0.08,
+   0.23,
+   0.09,
+   0.11,
+   0.22,
+   0.15
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.583,
+   "TWO_RELATED": 0.117,
+   "MIXTURE": 0.255,
+   "NONE": 0.045
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U444": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is fragments of proper names and named places, venues, works, or game locations, often in directory or encyclopedic text. A few marked tokens are ordinary grammatical words or noisy Chinese text rather than name pieces.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     13,
+     14,
+     16,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 11,
+      "about": "garbled Chinese social-media text"
+     },
+     {
+      "n": 12,
+      "about": "Chinese text in a social-media quote"
+     },
+     {
+      "n": 15,
+      "about": "ordinary verb in a Bible verse"
+     },
+     {
+      "n": 17,
+      "about": "ordinary pronoun in sports commentary"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Many firings land on personal names, especially given names or name components in biographies, interviews, news, and event coverage. Other marked tokens are punctuation, code, ordinary words, or numeric label text, which do not fit that pattern.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     3,
+     10,
+     11,
+     13,
+     15,
+     17,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "ordinary sentence opener in a medical forum disclaimer"
+     },
+     {
+      "n": 4,
+      "about": "call-to-action word in an association blurb"
+     },
+     {
+      "n": 5,
+      "about": "garbled Chinese social-media text"
+     },
+     {
+      "n": 6,
+      "about": "ordinary preposition in a medical response"
+     },
+     {
+      "n": 7,
+      "about": "C++ namespace punctuation in code"
+     },
+     {
+      "n": 8,
+      "about": "C++ namespace punctuation in code"
+     },
+     {
+      "n": 9,
+      "about": "ordinary word in a forum disclaimer"
+     },
+     {
+      "n": 12,
+      "about": "truncated game-action verb"
+     },
+     {
+      "n": 14,
+      "about": "numeric label-code text"
+     },
+     {
+      "n": 16,
+      "about": "period after a medical title"
+     },
+     {
+      "n": 18,
+      "about": "ordinary pronoun in an album review"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.6,
+   0.45,
+   0.63,
+   0.69,
+   0.53,
+   0.7,
+   0.68,
+   0.73,
+   0.6,
+   0.65,
+   0.33,
+   0.3,
+   0.76,
+   0.69,
+   0.12,
+   0.6,
+   0.2,
+   0.8,
+   0.71,
+   0.76
+  ],
+  "jev_covered_pos": 15,
+  "jev_verdict_pos": {
+   "ONE": 0.785,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.09,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 1,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.39,
+   0.16,
+   0.64,
+   0.18,
+   0.23,
+   0.25,
+   0.19,
+   0.21,
+   0.21,
+   0.66,
+   0.64,
+   0.21,
+   0.74,
+   0.2,
+   0.56,
+   0.53,
+   0.49,
+   0.2,
+   0.72,
+   0.73
+  ],
+  "jev_covered_neg": 8,
+  "jev_verdict_neg": {
+   "ONE": 0.682,
+   "TWO_RELATED": 0.155,
+   "MIXTURE": 0.133,
+   "NONE": 0.03
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U448": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is language expressing partiality or a portion: “partly” and the repeated disclaimer phrase “comes in part from.”",
+    "verdict": "ONE",
+    "covers": [
+     5,
+     6,
+     7,
+     8,
+     11,
+     12,
+     13,
+     15,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "Latin conjunction “vel”"
+     },
+     {
+      "n": 2,
+      "about": "draft position described as late"
+     },
+     {
+      "n": 3,
+      "about": "patent descriptor punctuation"
+     },
+     {
+      "n": 4,
+      "about": "“sometimes” in a theological passage"
+     },
+     {
+      "n": 9,
+      "about": "casino promotion hashtag"
+     },
+     {
+      "n": 10,
+      "about": "late historical period"
+     },
+     {
+      "n": 14,
+      "about": "high temperatures"
+     },
+     {
+      "n": 16,
+      "about": "resolutions hashtag"
+     },
+     {
+      "n": 17,
+      "about": "airport advisory hashtag"
+     },
+     {
+      "n": 18,
+      "about": "Czech document abbreviation"
+     },
+     {
+      "n": 19,
+      "about": "Shakespeare scene-location text"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Most firings are on numerals or number-like expressions: counts, dimensions, dates, and ordinals, as well as “one” used to identify a single item or option.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     11,
+     14,
+     16,
+     17,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 10,
+      "about": "ellipsis in a radio-show introduction"
+     },
+     {
+      "n": 12,
+      "about": "game-instruction punctuation"
+     },
+     {
+      "n": 13,
+      "about": "period after “data”"
+     },
+     {
+      "n": 15,
+      "about": "marketing hashtag"
+     },
+     {
+      "n": 20,
+      "about": "“Any” in a data-product slogan"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.13,
+   0.13,
+   0.08,
+   0.25,
+   0.87,
+   0.85,
+   0.87,
+   0.78,
+   0.07,
+   0.15,
+   0.81,
+   0.85,
+   0.87,
+   0.11,
+   0.75,
+   0.08,
+   0.09,
+   0.08,
+   0.6,
+   0.87
+  ],
+  "jev_covered_pos": 10,
+  "jev_verdict_pos": {
+   "ONE": 0.64,
+   "TWO_RELATED": 0.18,
+   "MIXTURE": 0.163,
+   "NONE": 0.018
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.72,
+   0.75,
+   0.75,
+   0.87,
+   0.62,
+   0.77,
+   0.79,
+   0.78,
+   0.75,
+   0.31,
+   0.65,
+   0.22,
+   0.16,
+   0.75,
+   0.33,
+   0.72,
+   0.57,
+   0.49,
+   0.69,
+   0.2
+  ],
+  "jev_covered_neg": 14,
+  "jev_verdict_neg": {
+   "ONE": 0.693,
+   "TWO_RELATED": 0.113,
+   "MIXTURE": 0.158,
+   "NONE": 0.038
+  },
+  "random_fit_neg": 3,
+  "clean_neg": false
+ },
+ "U452": {
+  "luna": {
+   "pos": {
+    "explanation": "The strongest pattern is quantitative economic analysis, especially pricing, costs, and market measures (1–5, 8, 15). A related pattern is reporting empirical data, outcomes, or study results, often as evidence for a conclusion (6, 10–12, 16–17).",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17
+    ],
+    "misfits": [
+     {
+      "n": 7,
+      "about": "description of a local government association"
+     },
+     {
+      "n": 9,
+      "about": "chapter title on price determination, but little surrounding context"
+     },
+     {
+      "n": 13,
+      "about": "legal interpretation of a DUI statute"
+     },
+     {
+      "n": 14,
+      "about": "product listing and cutting specifications"
+     },
+     {
+      "n": 18,
+      "about": "workplace principles and sociotechnical perspective"
+     },
+     {
+      "n": 19,
+      "about": "personal commentary on Type A traits"
+     },
+     {
+      "n": 20,
+      "about": "workplace principles and attention to work quality"
+     }
+    ],
+    "connection": "Both patterns use quantitative or empirical information to characterize conditions, evaluate outcomes, or support decisions."
+   },
+   "neg": {
+    "explanation": "This pole often appears in formal institutional, legal, or public-policy language that lays out rules, criteria, plans, positions, or decisions—frequently in formulations such as “set out” or “set down.”",
+    "verdict": "ONE",
+    "covers": [
+     2,
+     3,
+     4,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "comic memoir and an artist’s mission statement"
+     },
+     {
+      "n": 5,
+      "about": "video-game review"
+     },
+     {
+      "n": 15,
+      "about": "religious commentary on a Gospel passage"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.32,
+   0.46,
+   0.22,
+   0.57,
+   0.66,
+   0.18,
+   0.07,
+   0.61,
+   0.38,
+   0.28,
+   0.17,
+   0.67,
+   0.05,
+   0.07,
+   0.57,
+   0.44,
+   0.62,
+   0.05,
+   0.04,
+   0.06
+  ],
+  "jev_covered_pos": 6,
+  "jev_verdict_pos": {
+   "ONE": 0.618,
+   "TWO_RELATED": 0.115,
+   "MIXTURE": 0.205,
+   "NONE": 0.062
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.12,
+   0.28,
+   0.88,
+   0.88,
+   0.12,
+   0.86,
+   0.79,
+   0.69,
+   0.92,
+   0.4,
+   0.83,
+   0.79,
+   0.9,
+   0.87,
+   0.24,
+   0.24,
+   0.83,
+   0.27,
+   0.22,
+   0.32
+  ],
+  "jev_covered_neg": 11,
+  "jev_verdict_neg": {
+   "ONE": 0.752,
+   "TWO_RELATED": 0.155,
+   "MIXTURE": 0.077,
+   "NONE": 0.015
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U467": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is scalar degree or extent: intensifiers such as Chinese 很, and phrases like “too dirty,” “too shallow,” “too wide/narrow,” and “just as hot.” Several other firings land on ordinary words in contexts that do not show this pattern.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     6,
+     10,
+     12,
+     13,
+     18
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "“made strong” in a Bible quotation"
+     },
+     {
+      "n": 4,
+      "about": "“Live Your Dream” slogan"
+     },
+     {
+      "n": 5,
+      "about": "comma in a fabric-description list"
+     },
+     {
+      "n": 7,
+      "about": "“and” in a cooking description"
+     },
+     {
+      "n": 8,
+      "about": "“and” in a discussion of leadership"
+     },
+     {
+      "n": 9,
+      "about": "“apples” in a children’s rhyme"
+     },
+     {
+      "n": 11,
+      "about": "“inch” in a phone measurement"
+     },
+     {
+      "n": 14,
+      "about": "“stomach” in a medical account"
+     },
+     {
+      "n": 15,
+      "about": "“and” in a food description"
+     },
+     {
+      "n": 16,
+      "about": "“or” contrasting light and heavy lifts"
+     },
+     {
+      "n": 17,
+      "about": "“America” in a political slogan"
+     },
+     {
+      "n": 19,
+      "about": "“is” in a portrait-format definition"
+     },
+     {
+      "n": 20,
+      "about": "“and” in an artwork title"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "These firings mostly land on orthographic or formatting-heavy material rather than a shared meaning: digits and punctuation in dates, citations, measurements, and sequences, alongside Vietnamese text and pieces of names or technical terms. The marked “the” in example 12 does not fit that pattern.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 12,
+      "about": "ordinary English article in a lyric quotation"
+     }
+    ],
+    "connection": "Both groups tend to occur in passages with atypical or structured token forms—numbers and symbols, or multilingual, technical, and proper-name spellings—rather than ordinary English prose."
+   }
+  },
+  "jev_fit_pos": [
+   0.85,
+   0.78,
+   0.1,
+   0.2,
+   0.18,
+   0.82,
+   0.32,
+   0.37,
+   0.17,
+   0.86,
+   0.22,
+   0.81,
+   0.77,
+   0.2,
+   0.29,
+   0.3,
+   0.18,
+   0.74,
+   0.14,
+   0.1
+  ],
+  "jev_covered_pos": 7,
+  "jev_verdict_pos": {
+   "ONE": 0.617,
+   "TWO_RELATED": 0.217,
+   "MIXTURE": 0.125,
+   "NONE": 0.04
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.39,
+   0.58,
+   0.37,
+   0.5,
+   0.39,
+   0.41,
+   0.58,
+   0.57,
+   0.47,
+   0.37,
+   0.46,
+   0.21,
+   0.58,
+   0.54,
+   0.37,
+   0.61,
+   0.71,
+   0.55,
+   0.54,
+   0.35
+  ],
+  "jev_covered_neg": 10,
+  "jev_verdict_neg": {
+   "ONE": 0.735,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.11,
+   "NONE": 0.035
+  },
+  "random_fit_neg": 4,
+  "clean_neg": false
+ },
+ "U489": {
+  "luna": {
+   "pos": {
+    "explanation": "Primarily environmental sustainability and conservation material: recycling and e-waste, climate action, clean water, and sustainable products or infrastructure. Example 4 also fits as reporting on wildfire-related erosion and flooding hazards.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 5,
+      "about": "Sausalito sailing tour and Golden Gate Bridge"
+     },
+     {
+      "n": 6,
+      "about": "Cooking class and travel across the Golden Gate Bridge"
+     },
+     {
+      "n": 7,
+      "about": "Geodetic monuments and coordinate records"
+     },
+     {
+      "n": 20,
+      "about": "GIS map instructions and location coordinates"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Most examples concern home loans and mortgages, including loan types, rates, eligibility, property requirements, and fees. Examples 8 and 13 instead concern municipal land-use planning, zoning, and building review.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": "Both patterns describe rules and requirements governing real estate: lender conditions for financing a home or municipal controls on how property may be used and built upon."
+   }
+  },
+  "jev_fit_pos": [
+   0.65,
+   0.59,
+   0.44,
+   0.49,
+   0.03,
+   0.02,
+   0.03,
+   0.41,
+   0.61,
+   0.47,
+   0.52,
+   0.55,
+   0.41,
+   0.46,
+   0.52,
+   0.5,
+   0.4,
+   0.46,
+   0.58,
+   0.07
+  ],
+  "jev_covered_pos": 8,
+  "jev_verdict_pos": {
+   "ONE": 0.77,
+   "TWO_RELATED": 0.122,
+   "MIXTURE": 0.085,
+   "NONE": 0.023
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.4,
+   0.18,
+   0.29,
+   0.36,
+   0.28,
+   0.32,
+   0.37,
+   0.38,
+   0.35,
+   0.44,
+   0.35,
+   0.37,
+   0.33,
+   0.33,
+   0.45,
+   0.37,
+   0.31,
+   0.47,
+   0.41,
+   0.43
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.72,
+   "TWO_RELATED": 0.133,
+   "MIXTURE": 0.113,
+   "NONE": 0.033
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U487": {
+  "luna": {
+   "pos": {
+    "explanation": "The pole is associated with door-related wording: literal doors and doorways, compounds such as door-to-door, indoors/outdoors and doorstep, and figurative “opening doors” for access or opportunity. Some firings fall on nearby words rather than on “door” itself.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "“Door County” is a place name, not a doorway or access"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole tracks the written gate/gated/tailgate family across different contexts: scandal labels, technical or mechanical terms, named places and products, and the idiom “out of the gate.” The shared pattern is lexical form, not one consistent meaning of gate.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     8,
+     9,
+     12,
+     13,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 5,
+      "about": "congregate; incidental letters, not gate as a word or suffix"
+     },
+     {
+      "n": 10,
+      "about": "guided; the marked G does not form gate"
+     },
+     {
+      "n": 11,
+      "about": "early 19th century; no apparent gate-related wording"
+     },
+     {
+      "n": 14,
+      "about": "resistance-band advice; no apparent gate-related wording"
+     },
+     {
+      "n": 19,
+      "about": "payment methods; no apparent gate-related wording"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.88,
+   0.58,
+   0.34,
+   0.85,
+   0.88,
+   0.72,
+   0.44,
+   0.58,
+   0.65,
+   0.87,
+   0.79,
+   0.71,
+   0.45,
+   0.89,
+   0.38,
+   0.67,
+   0.59,
+   0.72,
+   0.64,
+   0.7
+  ],
+  "jev_covered_pos": 16,
+  "jev_verdict_pos": {
+   "ONE": 0.753,
+   "TWO_RELATED": 0.128,
+   "MIXTURE": 0.098,
+   "NONE": 0.023
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.66,
+   0.75,
+   0.59,
+   0.67,
+   0.16,
+   0.81,
+   0.65,
+   0.73,
+   0.77,
+   0.44,
+   0.11,
+   0.71,
+   0.7,
+   0.11,
+   0.63,
+   0.57,
+   0.56,
+   0.73,
+   0.14,
+   0.78
+  ],
+  "jev_covered_neg": 15,
+  "jev_verdict_neg": {
+   "ONE": 0.647,
+   "TWO_RELATED": 0.138,
+   "MIXTURE": 0.193,
+   "NONE": 0.023
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U529": {
+  "luna": {
+   "pos": {
+    "explanation": "The examples mostly come from descriptive, reporting, or explanatory web prose, including property descriptions, news, reviews, and technical information. This contrasts with the strongly stepwise recipe and craft instructions prominent at the negative pole.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 16,
+      "about": "step-by-step pie recipe"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Firing is prominent in segmented instructions, especially numbered recipe and craft steps, and also appears in structured exercise and ranking/list material. These share a formatted, sequential presentation, rather than continuous descriptive prose.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     10,
+     11,
+     12,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 7,
+      "about": "medical research prose"
+     },
+     {
+      "n": 8,
+      "about": "restaurant review"
+     },
+     {
+      "n": 9,
+      "about": "film synopsis"
+     },
+     {
+      "n": 13,
+      "about": "personal technology essay"
+     }
+    ],
+    "connection": "Both poles of the covered pattern favor clearly segmented, sequential or list-like text, whether it presents instructions, exercises, or ranked entries."
+   }
+  },
+  "jev_fit_pos": [
+   0.71,
+   0.41,
+   0.55,
+   0.62,
+   0.53,
+   0.55,
+   0.64,
+   0.59,
+   0.5,
+   0.7,
+   0.48,
+   0.52,
+   0.55,
+   0.64,
+   0.52,
+   0.24,
+   0.38,
+   0.48,
+   0.61,
+   0.58
+  ],
+  "jev_covered_pos": 15,
+  "jev_verdict_pos": {
+   "ONE": 0.78,
+   "TWO_RELATED": 0.08,
+   "MIXTURE": 0.09,
+   "NONE": 0.05
+  },
+  "random_fit_pos": 12,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.28,
+   0.71,
+   0.75,
+   0.78,
+   0.77,
+   0.8,
+   0.09,
+   0.14,
+   0.16,
+   0.62,
+   0.79,
+   0.72,
+   0.32,
+   0.41,
+   0.6,
+   0.75,
+   0.34,
+   0.49,
+   0.72,
+   0.67
+  ],
+  "jev_covered_neg": 12,
+  "jev_verdict_neg": {
+   "ONE": 0.732,
+   "TWO_RELATED": 0.1,
+   "MIXTURE": 0.12,
+   "NONE": 0.048
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U532": {
+  "luna": {
+   "pos": {
+    "explanation": "Mostly promotional descriptions of games and apps, emphasizing gameplay, characters, features, or player actions. A few examples involve related entertainment products or themed settings rather than games themselves.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     16,
+     17,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "press-release receipt"
+     },
+     {
+      "n": 15,
+      "about": "travel narrative"
+     },
+     {
+      "n": 18,
+      "about": "company ownership agreement"
+     },
+     {
+      "n": 19,
+      "about": "sports playoffs update"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Factual passages containing identifying or quantitative details: dates and years, measurements, amounts, credentials, citations, or named places and people. Firings often fall on the number or punctuation in those details.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": "Both patterns occur in factual reference details—dates, quantities, and names used to specify when, how much, or who/where, rather than to advance a narrative."
+   }
+  },
+  "jev_fit_pos": [
+   0.7,
+   0.15,
+   0.51,
+   0.66,
+   0.42,
+   0.73,
+   0.7,
+   0.35,
+   0.35,
+   0.45,
+   0.7,
+   0.69,
+   0.67,
+   0.58,
+   0.1,
+   0.54,
+   0.74,
+   0.04,
+   0.12,
+   0.77
+  ],
+  "jev_covered_pos": 12,
+  "jev_verdict_pos": {
+   "ONE": 0.78,
+   "TWO_RELATED": 0.118,
+   "MIXTURE": 0.07,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.8,
+   0.53,
+   0.34,
+   0.86,
+   0.74,
+   0.82,
+   0.85,
+   0.88,
+   0.9,
+   0.88,
+   0.74,
+   0.82,
+   0.63,
+   0.61,
+   0.62,
+   0.63,
+   0.87,
+   0.77,
+   0.84,
+   0.74
+  ],
+  "jev_covered_neg": 19,
+  "jev_verdict_neg": {
+   "ONE": 0.762,
+   "TWO_RELATED": 0.113,
+   "MIXTURE": 0.1,
+   "NONE": 0.025
+  },
+  "random_fit_neg": 5,
+  "clean_neg": false
+ },
+ "U559": {
+  "luna": {
+   "pos": {
+    "explanation": "Most examples are conversational or public-facing prose that adds evaluation, emphasis, or a personal aside; the topics vary widely, so this looks more like a loose style pattern than a topic detector.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 17,
+      "about": "archaic theological argument"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The examples are too varied to support a clear shared job: firings occur on negation and contrast words, but also on ordinary grammatical words in unrelated passages.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "oil spill and tuna harm"
+     },
+     {
+      "n": 2,
+      "about": "desegregation policy report"
+     },
+     {
+      "n": 3,
+      "about": "basketball rankings"
+     },
+     {
+      "n": 4,
+      "about": "injury account"
+     },
+     {
+      "n": 5,
+      "about": "New Year’s resolutions"
+     },
+     {
+      "n": 6,
+      "about": "personal hiking update"
+     },
+     {
+      "n": 7,
+      "about": "economic-data commentary"
+     },
+     {
+      "n": 8,
+      "about": "voting rules example"
+     },
+     {
+      "n": 9,
+      "about": "marketing advice"
+     },
+     {
+      "n": 10,
+      "about": "casual compliment"
+     },
+     {
+      "n": 11,
+      "about": "wine review"
+     },
+     {
+      "n": 12,
+      "about": "oil-spill impacts"
+     },
+     {
+      "n": 13,
+      "about": "Hampton Court history"
+     },
+     {
+      "n": 14,
+      "about": "Earth Hour enthusiasm"
+     },
+     {
+      "n": 15,
+      "about": "casino spam text"
+     },
+     {
+      "n": 16,
+      "about": "wartime escape narrative"
+     },
+     {
+      "n": 17,
+      "about": "shoe product listing"
+     },
+     {
+      "n": 18,
+      "about": "Egypt peace deal commentary"
+     },
+     {
+      "n": 19,
+      "about": "anxiety explanation"
+     },
+     {
+      "n": 20,
+      "about": "garbled exam-ad text"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.73,
+   0.76,
+   0.72,
+   0.47,
+   0.54,
+   0.77,
+   0.67,
+   0.49,
+   0.32,
+   0.75,
+   0.64,
+   0.82,
+   0.67,
+   0.65,
+   0.45,
+   0.59,
+   0.24,
+   0.68,
+   0.77,
+   0.65
+  ],
+  "jev_covered_pos": 15,
+  "jev_verdict_pos": {
+   "ONE": 0.785,
+   "TWO_RELATED": 0.107,
+   "MIXTURE": 0.075,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 5,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.4,
+   0.45,
+   0.48,
+   0.51,
+   0.45,
+   0.44,
+   0.45,
+   0.38,
+   0.48,
+   0.5,
+   0.51,
+   0.45,
+   0.53,
+   0.47,
+   0.51,
+   0.48,
+   0.35,
+   0.47,
+   0.42,
+   0.5
+  ],
+  "jev_covered_neg": 6,
+  "jev_verdict_neg": {
+   "ONE": 0.688,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.14,
+   "NONE": 0.05
+  },
+  "random_fit_neg": 4,
+  "clean_neg": false
+ },
+ "U617": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is health and biomedical language, especially disease, symptoms, treatments, and clinical research; several firings land inside technical medical terms. Some firings are unrelated names or general-interest topics.",
+    "verdict": "ONE",
+    "covers": [
+     2,
+     3,
+     4,
+     6,
+     8,
+     9,
+     12,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "skateboarding and the Olympics"
+     },
+     {
+      "n": 5,
+      "about": "music tour and concert venue"
+     },
+     {
+      "n": 7,
+      "about": "bookshops and publishing"
+     },
+     {
+      "n": 10,
+      "about": "JASPERS project platform"
+     },
+     {
+      "n": 11,
+      "about": "Cayman Islands information"
+     },
+     {
+      "n": 13,
+      "about": "golf championship"
+     },
+     {
+      "n": 14,
+      "about": "JASPERS project platform"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole strongly favors US geographic names—especially counties, towns, and other local places—often in regional news, listings, or descriptions. Two firings are technical terms rather than place names.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "misfits": [
+     {
+      "n": 19,
+      "about": "embedded BIOS and System Management Mode"
+     },
+     {
+      "n": 20,
+      "about": "HTML authoring and W3C"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.07,
+   0.87,
+   0.49,
+   0.81,
+   0.06,
+   0.82,
+   0.06,
+   0.76,
+   0.83,
+   0.06,
+   0.06,
+   0.74,
+   0.06,
+   0.1,
+   0.22,
+   0.83,
+   0.79,
+   0.84,
+   0.79,
+   0.81
+  ],
+  "jev_covered_pos": 11,
+  "jev_verdict_pos": {
+   "ONE": 0.668,
+   "TWO_RELATED": 0.13,
+   "MIXTURE": 0.172,
+   "NONE": 0.03
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.66,
+   0.62,
+   0.65,
+   0.54,
+   0.65,
+   0.76,
+   0.67,
+   0.75,
+   0.58,
+   0.64,
+   0.76,
+   0.69,
+   0.6,
+   0.47,
+   0.73,
+   0.64,
+   0.61,
+   0.5,
+   0.12,
+   0.09
+  ],
+  "jev_covered_neg": 17,
+  "jev_verdict_neg": {
+   "ONE": 0.875,
+   "TWO_RELATED": 0.068,
+   "MIXTURE": 0.043,
+   "NONE": 0.015
+  },
+  "random_fit_neg": 1,
+  "clean_neg": true
+ },
+ "U570": {
+  "luna": {
+   "pos": {
+    "explanation": "The examples show several unrelated contexts: flood aftermath and damage to homes, roads, bridges, and crops; a software installation tutorial; and a molecular-simulation mailing list. The firings in the latter two often land on formatting or incidental tokens, so there is no clear single semantic feature tying the clusters together.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "A substantial cluster concerns engineered structures and earthworks: dams, embankments, slopes, walls, mining earth movement, farm conservation structures, and construction or landscaping. Other examples are about unrelated topics such as ocean modeling, health, religion, and travel.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     4,
+     5,
+     8,
+     9,
+     10,
+     16,
+     17,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "ocean circulation and CO2 modeling"
+     },
+     {
+      "n": 6,
+      "about": "cemetery monuments and wartime burial"
+     },
+     {
+      "n": 7,
+      "about": "pancreatic enzyme and cell injury research"
+     },
+     {
+      "n": 11,
+      "about": "Vishnu statue and temple itinerary"
+     },
+     {
+      "n": 12,
+      "about": "history of astrology and mathematicians"
+     },
+     {
+      "n": 13,
+      "about": "alcohol and heart-health claims"
+     },
+     {
+      "n": 14,
+      "about": "numerical ocean-modeling method"
+     },
+     {
+      "n": 15,
+      "about": "short travel trip"
+     },
+     {
+      "n": 18,
+      "about": "island travel and ferry routes"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.44,
+   0.33,
+   0.36,
+   0.46,
+   0.37,
+   0.4,
+   0.41,
+   0.39,
+   0.48,
+   0.41,
+   0.38,
+   0.44,
+   0.44,
+   0.3,
+   0.42,
+   0.24,
+   0.41,
+   0.32,
+   0.44,
+   0.28
+  ],
+  "jev_covered_pos": 0,
+  "jev_verdict_pos": {
+   "ONE": 0.688,
+   "TWO_RELATED": 0.085,
+   "MIXTURE": 0.173,
+   "NONE": 0.055
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.61,
+   0.82,
+   0.12,
+   0.81,
+   0.61,
+   0.18,
+   0.05,
+   0.65,
+   0.59,
+   0.5,
+   0.13,
+   0.05,
+   0.07,
+   0.1,
+   0.17,
+   0.29,
+   0.57,
+   0.12,
+   0.29,
+   0.65
+  ],
+  "jev_covered_neg": 9,
+  "jev_verdict_neg": {
+   "ONE": 0.738,
+   "TWO_RELATED": 0.15,
+   "MIXTURE": 0.087,
+   "NONE": 0.025
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U658": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires on color names and color-coded combinations, especially when colors are being selected, described, or used as a palette; this includes team colors and color codes in crafting examples.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Fires when color-like strings occur without describing a color choice or palette—often in proper names, idioms, or other lexicalized expressions (such as “White House,” “Great White,” and “cyanide”).",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 7,
+      "about": "green plants, plausibly a literal color description"
+     },
+     {
+      "n": 19,
+      "about": "blue or green insulation sheets, literal color descriptors"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.85,
+   0.89,
+   0.76,
+   0.89,
+   0.83,
+   0.84,
+   0.62,
+   0.67,
+   0.85,
+   0.85,
+   0.81,
+   0.84,
+   0.84,
+   0.81,
+   0.84,
+   0.81,
+   0.79,
+   0.86,
+   0.75,
+   0.79
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.76,
+   "TWO_RELATED": 0.16,
+   "MIXTURE": 0.062,
+   "NONE": 0.018
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.58,
+   0.75,
+   0.9,
+   0.67,
+   0.69,
+   0.68,
+   0.52,
+   0.35,
+   0.86,
+   0.48,
+   0.3,
+   0.35,
+   0.53,
+   0.88,
+   0.54,
+   0.91,
+   0.88,
+   0.63,
+   0.43,
+   0.89
+  ],
+  "jev_covered_neg": 15,
+  "jev_verdict_neg": {
+   "ONE": 0.585,
+   "TWO_RELATED": 0.115,
+   "MIXTURE": 0.247,
+   "NONE": 0.053
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U649": {
+  "luna": {
+   "pos": {
+    "explanation": "Mostly fires on capitalized word starts or labels—such as product names, headings, and proper nouns—rather than on a shared subject matter. A few firings land on lowercase fragments or a word ending, so the capitalization pattern is approximate.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     9,
+     13,
+     14,
+     16,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "lowercase fragment in Medigap"
+     },
+     {
+      "n": 8,
+      "about": "lowercase l in “mid-layers”"
+     },
+     {
+      "n": 10,
+      "about": "lowercase fragment in Medigap"
+     },
+     {
+      "n": 11,
+      "about": "lowercase g in “glistened”"
+     },
+     {
+      "n": 12,
+      "about": "lowercase “your”"
+     },
+     {
+      "n": 15,
+      "about": "lowercase “your”"
+     },
+     {
+      "n": 17,
+      "about": "suffix in “Lyft”"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Mostly fires on lowercase word pieces or spellings in running text, including common nouns and technical terms; there is no evident shared topic. Some capitalized ingredient or name tokens are exceptions to this lowercase tendency.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     10,
+     12,
+     13,
+     14,
+     15,
+     17,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 7,
+      "about": "capitalized performer name, Loretta Lynn"
+     },
+     {
+      "n": 8,
+      "about": "capitalized ingredient name, Caffeine"
+     },
+     {
+      "n": 11,
+      "about": "capitalized ingredient name, Caffeine"
+     },
+     {
+      "n": 16,
+      "about": "capitalized initial in “L. Midler”"
+     },
+     {
+      "n": 18,
+      "about": "capitalized ingredient name, Cystine"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.41,
+   0.58,
+   0.45,
+   0.46,
+   0.48,
+   0.46,
+   0.61,
+   0.3,
+   0.63,
+   0.43,
+   0.19,
+   0.37,
+   0.61,
+   0.7,
+   0.38,
+   0.75,
+   0.54,
+   0.59,
+   0.63,
+   0.58
+  ],
+  "jev_covered_pos": 10,
+  "jev_verdict_pos": {
+   "ONE": 0.675,
+   "TWO_RELATED": 0.143,
+   "MIXTURE": 0.16,
+   "NONE": 0.023
+  },
+  "random_fit_pos": 1,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.38,
+   0.43,
+   0.48,
+   0.48,
+   0.49,
+   0.43,
+   0.34,
+   0.43,
+   0.45,
+   0.69,
+   0.38,
+   0.47,
+   0.35,
+   0.44,
+   0.53,
+   0.33,
+   0.53,
+   0.43,
+   0.49,
+   0.5
+  ],
+  "jev_covered_neg": 4,
+  "jev_verdict_neg": {
+   "ONE": 0.692,
+   "TWO_RELATED": 0.098,
+   "MIXTURE": 0.165,
+   "NONE": 0.045
+  },
+  "random_fit_neg": 4,
+  "clean_neg": false
+ },
+ "U703": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked words occur in unrelated subject areas and do not show a stable semantic, stylistic, or grammatical pattern.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "employee benefits and profit sharing"
+     },
+     {
+      "n": 2,
+      "about": "diet and mental illness"
+     },
+     {
+      "n": 3,
+      "about": "biosensor research"
+     },
+     {
+      "n": 4,
+      "about": "endoscope instructions"
+     },
+     {
+      "n": 5,
+      "about": "urinary incontinence"
+     },
+     {
+      "n": 6,
+      "about": "whales and oil-spill effects"
+     },
+     {
+      "n": 7,
+      "about": "country music biography"
+     },
+     {
+      "n": 8,
+      "about": "anthropology program description"
+     },
+     {
+      "n": 9,
+      "about": "fashion outfit listing"
+     },
+     {
+      "n": 10,
+      "about": "federal tax policy"
+     },
+     {
+      "n": 11,
+      "about": "petroleum engineering careers"
+     },
+     {
+      "n": 12,
+      "about": "camera recommendations"
+     },
+     {
+      "n": 13,
+      "about": "whales and oil-spill effects"
+     },
+     {
+      "n": 14,
+      "about": "VA mortgage loans"
+     },
+     {
+      "n": 15,
+      "about": "mushroom description"
+     },
+     {
+      "n": 16,
+      "about": "workers’ compensation"
+     },
+     {
+      "n": 17,
+      "about": "cosmetic ingredient list"
+     },
+     {
+      "n": 18,
+      "about": "ball-screw product description"
+     },
+     {
+      "n": 19,
+      "about": "Albanian court system"
+     },
+     {
+      "n": 20,
+      "about": "commercial van features"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "These firings likewise span unrelated topics, from cars and flowers to medical research and email marketing, without a shared pattern evident in the marked words or their contexts.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "ship and bridge"
+     },
+     {
+      "n": 2,
+      "about": "earth-plaster construction"
+     },
+     {
+      "n": 3,
+      "about": "Mercedes racing car and auto show"
+     },
+     {
+      "n": 4,
+      "about": "photographers and flower essences"
+     },
+     {
+      "n": 5,
+      "about": "Ferrari debut"
+     },
+     {
+      "n": 6,
+      "about": "infertility research"
+     },
+     {
+      "n": 7,
+      "about": "racetrack event and charity camp"
+     },
+     {
+      "n": 8,
+      "about": "critique of political and cultural topics"
+     },
+     {
+      "n": 9,
+      "about": "product name"
+     },
+     {
+      "n": 10,
+      "about": "Nagpur travel and Indus Valley"
+     },
+     {
+      "n": 11,
+      "about": "theater performance"
+     },
+     {
+      "n": 12,
+      "about": "nanotechnology instrumentation"
+     },
+     {
+      "n": 13,
+      "about": "PTSD exposure therapy"
+     },
+     {
+      "n": 14,
+      "about": "jewelry-making interview"
+     },
+     {
+      "n": 15,
+      "about": "Bach flower remedy"
+     },
+     {
+      "n": 16,
+      "about": "medical and pharmaceutical research"
+     },
+     {
+      "n": 17,
+      "about": "computer-security tags"
+     },
+     {
+      "n": 18,
+      "about": "email marketing software comparison"
+     },
+     {
+      "n": 19,
+      "about": "Japanese military history"
+     },
+     {
+      "n": 20,
+      "about": "email marketing software comparison"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.34,
+   0.31,
+   0.43,
+   0.3,
+   0.44,
+   0.28,
+   0.36,
+   0.31,
+   0.38,
+   0.3,
+   0.31,
+   0.3,
+   0.42,
+   0.32,
+   0.27,
+   0.28,
+   0.31,
+   0.31,
+   0.35,
+   0.3
+  ],
+  "jev_covered_pos": 0,
+  "jev_verdict_pos": {
+   "ONE": 0.71,
+   "TWO_RELATED": 0.077,
+   "MIXTURE": 0.155,
+   "NONE": 0.057
+  },
+  "random_fit_pos": 2,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.23,
+   0.17,
+   0.22,
+   0.2,
+   0.27,
+   0.26,
+   0.21,
+   0.24,
+   0.23,
+   0.27,
+   0.17,
+   0.2,
+   0.21,
+   0.15,
+   0.32,
+   0.23,
+   0.21,
+   0.24,
+   0.16,
+   0.25
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.725,
+   "TWO_RELATED": 0.098,
+   "MIXTURE": 0.14,
+   "NONE": 0.037
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U674": {
+  "luna": {
+   "pos": {
+    "explanation": "The main pattern is saline, ocean, and coastal-water contexts: saltwater fishing or intrusion, salinity, sea-level rise, and storm surges. There are also unrelated firings on Boston Tea Party references and on the token in “Capricorn.”",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     14,
+     15,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 5,
+      "about": "Boston Tea Party reference"
+     },
+     {
+      "n": 6,
+      "about": "Boston Tea Party lesson"
+     },
+     {
+      "n": 13,
+      "about": "Capricorn astrology"
+     },
+     {
+      "n": 16,
+      "about": "Capricorn astrology"
+     },
+     {
+      "n": 17,
+      "about": "Boston Tea Party lesson"
+     },
+     {
+      "n": 20,
+      "about": "Capricorn astrology"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole mostly fires on geographic location information, from latitude/longitude or ship-position data to named US regions, states, and place names in weather reports or addresses. It does not fit the fictional names or software-path example.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     6,
+     10,
+     12,
+     13,
+     14,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 4,
+      "about": "Anime character names"
+     },
+     {
+      "n": 5,
+      "about": "Fantasy group and Aes Sedai"
+     },
+     {
+      "n": 8,
+      "about": "Software configuration path"
+     },
+     {
+      "n": 9,
+      "about": "Anime discussion and character names"
+     },
+     {
+      "n": 11,
+      "about": "Anime character names"
+     },
+     {
+      "n": 15,
+      "about": "Fantasy group and Aes Sedai"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.75,
+   0.75,
+   0.83,
+   0.58,
+   0.33,
+   0.32,
+   0.66,
+   0.16,
+   0.73,
+   0.49,
+   0.7,
+   0.07,
+   0.2,
+   0.77,
+   0.74,
+   0.32,
+   0.33,
+   0.75,
+   0.76,
+   0.3
+  ],
+  "jev_covered_pos": 11,
+  "jev_verdict_pos": {
+   "ONE": 0.617,
+   "TWO_RELATED": 0.138,
+   "MIXTURE": 0.212,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.69,
+   0.59,
+   0.59,
+   0.05,
+   0.08,
+   0.68,
+   0.54,
+   0.05,
+   0.05,
+   0.75,
+   0.06,
+   0.82,
+   0.93,
+   0.5,
+   0.1,
+   0.73,
+   0.75,
+   0.89,
+   0.58,
+   0.67
+  ],
+  "jev_covered_neg": 14,
+  "jev_verdict_neg": {
+   "ONE": 0.715,
+   "TWO_RELATED": 0.125,
+   "MIXTURE": 0.13,
+   "NONE": 0.03
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U754": {
+  "luna": {
+   "pos": {
+    "explanation": "The firing is on “Orono,” a place name in Maine; the surrounding text identifies it as the University of Maine’s location. With only one example, this is a tentative place-name hypothesis.",
+    "verdict": "ONE",
+    "covers": [
+     1
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The pole fires on the word “orange” and closely related forms such as “orangery” and “Orangerie,” across uses as a color, fruit/flavor, place name, title, or name. The shared pattern appears lexical rather than tied to one meaning.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.82
+  ],
+  "jev_covered_pos": 1,
+  "jev_verdict_pos": {
+   "ONE": 0.605,
+   "TWO_RELATED": 0.018,
+   "MIXTURE": 0.017,
+   "NONE": 0.36
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.9,
+   0.88,
+   0.84,
+   0.88,
+   0.83,
+   0.79,
+   0.86,
+   0.87,
+   0.88,
+   0.88,
+   0.88,
+   0.88,
+   0.89,
+   0.88,
+   0.82,
+   0.82,
+   0.89,
+   0.87,
+   0.88,
+   0.86
+  ],
+  "jev_covered_neg": 20,
+  "jev_verdict_neg": {
+   "ONE": 0.788,
+   "TWO_RELATED": 0.105,
+   "MIXTURE": 0.098,
+   "NONE": 0.01
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U704": {
+  "luna": {
+   "pos": {
+    "explanation": "Academic research-publication framing: prose or headings that identify a paper or study and state its purpose, scope, method, or findings, often with “This paper/study…”.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 5,
+      "about": "date punctuation in a product review"
+     },
+     {
+      "n": 8,
+      "about": "technical press-release wording about workloads"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Ancillary web-page boilerplate and identifiers: business or site names, domains, and page metadata such as dates and copyright ranges, rather than the main subject prose.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": "Both branded/domain references and date or copyright strings tend to occur as ancillary identifying or metadata text on web pages, outside the main prose."
+   }
+  },
+  "jev_fit_pos": [
+   0.8,
+   0.85,
+   0.86,
+   0.87,
+   0.07,
+   0.88,
+   0.88,
+   0.06,
+   0.89,
+   0.81,
+   0.88,
+   0.84,
+   0.77,
+   0.75,
+   0.78,
+   0.83,
+   0.24,
+   0.67,
+   0.86,
+   0.87
+  ],
+  "jev_covered_pos": 17,
+  "jev_verdict_pos": {
+   "ONE": 0.795,
+   "TWO_RELATED": 0.12,
+   "MIXTURE": 0.068,
+   "NONE": 0.018
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.63,
+   0.75,
+   0.73,
+   0.55,
+   0.57,
+   0.64,
+   0.86,
+   0.88,
+   0.71,
+   0.61,
+   0.72,
+   0.85,
+   0.86,
+   0.63,
+   0.74,
+   0.7,
+   0.84,
+   0.78,
+   0.8,
+   0.85
+  ],
+  "jev_covered_neg": 20,
+  "jev_verdict_neg": {
+   "ONE": 0.738,
+   "TWO_RELATED": 0.177,
+   "MIXTURE": 0.077,
+   "NONE": 0.007
+  },
+  "random_fit_neg": 2,
+  "clean_neg": false
+ },
+ "U718": {
+  "luna": {
+   "pos": {
+    "explanation": "The pole most consistently fires in solution-framing phrases, especially “the answer” and “the key,” sometimes with a verb such as “hold” beforehand. Several other firings appear to be incidental token or name fragments rather than part of this pattern.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     5,
+     6,
+     7,
+     8,
+     9,
+     13,
+     16
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "number in a game level"
+     },
+     {
+      "n": 4,
+      "about": "fragment of an actor’s surname"
+     },
+     {
+      "n": 10,
+      "about": "possessive in a fantasy-medical passage"
+     },
+     {
+      "n": 11,
+      "about": "fragment of a bridge name"
+     },
+     {
+      "n": 12,
+      "about": "grammar worksheet wording"
+     },
+     {
+      "n": 14,
+      "about": "ideas for a sports team"
+     },
+     {
+      "n": 15,
+      "about": "number in a game level"
+     },
+     {
+      "n": 17,
+      "about": "fragment of a restaurant name"
+     },
+     {
+      "n": 18,
+      "about": "Japanese song-title particle"
+     },
+     {
+      "n": 19,
+      "about": "fragment of a place name"
+     },
+     {
+      "n": 20,
+      "about": "number in a game level"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "There is no stable pattern I can identify: the firings range from name fragments and forum boilerplate to code punctuation, numbers, and ordinary prose. These examples do not support a single coherent hypothesis for this pole.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "film-credit name"
+     },
+     {
+      "n": 2,
+      "about": "forum disclaimer"
+     },
+     {
+      "n": 3,
+      "about": "interviewee’s name"
+     },
+     {
+      "n": 4,
+      "about": "“Learn more” promotional text"
+     },
+     {
+      "n": 5,
+      "about": "garbled Chinese social-media text"
+     },
+     {
+      "n": 6,
+      "about": "C++ namespace punctuation"
+     },
+     {
+      "n": 7,
+      "about": "medical response header"
+     },
+     {
+      "n": 8,
+      "about": "forum disclaimer"
+     },
+     {
+      "n": 9,
+      "about": "C++ namespace punctuation"
+     },
+     {
+      "n": 10,
+      "about": "fighter’s name"
+     },
+     {
+      "n": 11,
+      "about": "law professor’s name"
+     },
+     {
+      "n": 12,
+      "about": "game instruction text"
+     },
+     {
+      "n": 13,
+      "about": "chemistry research description"
+     },
+     {
+      "n": 14,
+      "about": "author name in a citation"
+     },
+     {
+      "n": 15,
+      "about": "documentation advice about answers"
+     },
+     {
+      "n": 16,
+      "about": "fighter’s name"
+     },
+     {
+      "n": 17,
+      "about": "number in a drug label"
+     },
+     {
+      "n": 18,
+      "about": "research questions and answers"
+     },
+     {
+      "n": 19,
+      "about": "punctuation in a response header"
+     },
+     {
+      "n": 20,
+      "about": "phrase introducing a research method"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.87,
+   0.61,
+   0.28,
+   0.13,
+   0.83,
+   0.76,
+   0.88,
+   0.83,
+   0.87,
+   0.16,
+   0.11,
+   0.1,
+   0.48,
+   0.12,
+   0.3,
+   0.75,
+   0.12,
+   0.09,
+   0.11,
+   0.3
+  ],
+  "jev_covered_pos": 8,
+  "jev_verdict_pos": {
+   "ONE": 0.802,
+   "TWO_RELATED": 0.09,
+   "MIXTURE": 0.08,
+   "NONE": 0.028
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.47,
+   0.47,
+   0.47,
+   0.39,
+   0.37,
+   0.42,
+   0.48,
+   0.46,
+   0.35,
+   0.45,
+   0.43,
+   0.47,
+   0.39,
+   0.53,
+   0.39,
+   0.53,
+   0.39,
+   0.42,
+   0.53,
+   0.36
+  ],
+  "jev_covered_neg": 3,
+  "jev_verdict_neg": {
+   "ONE": 0.675,
+   "TWO_RELATED": 0.148,
+   "MIXTURE": 0.148,
+   "NONE": 0.03
+  },
+  "random_fit_neg": 2,
+  "clean_neg": false
+ },
+ "U716": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is firing on specific named entities and technical or product labels—such as Apache Harmony, PHPMyAdmin, libc, Atari, Muhammad, CMake, and Urdu. Some examples instead fire on ordinary words or punctuation, so this is a partial pattern rather than a complete account of the pole.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8,
+     9,
+     12,
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 4,
+      "about": "comma in a DVD language list"
+     },
+     {
+      "n": 10,
+      "about": "cookbooks as a genre in a reading challenge"
+     },
+     {
+      "n": 11,
+      "about": "typos in a plot summary"
+     },
+     {
+      "n": 13,
+      "about": "function word “the” in an authorship discussion"
+     },
+     {
+      "n": 16,
+      "about": "generic use of “soundtrack” in celebrity gossip"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole appears to mix at least two patterns: gaming/software terminology and instructions (including game mechanics, platforms, and settings), alongside descriptive vocabulary for decorative objects, artworks, and their imagery. The examples do not provide a convincing shared pattern between those groups.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 11,
+      "about": "actor discussing comments about J.K. Rowling and Grindelwald"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.54,
+   0.8,
+   0.59,
+   0.36,
+   0.4,
+   0.71,
+   0.83,
+   0.78,
+   0.62,
+   0.32,
+   0.27,
+   0.77,
+   0.31,
+   0.39,
+   0.51,
+   0.28,
+   0.57,
+   0.73,
+   0.8,
+   0.65
+  ],
+  "jev_covered_pos": 13,
+  "jev_verdict_pos": {
+   "ONE": 0.778,
+   "TWO_RELATED": 0.085,
+   "MIXTURE": 0.09,
+   "NONE": 0.048
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.14,
+   0.15,
+   0.19,
+   0.23,
+   0.22,
+   0.2,
+   0.18,
+   0.13,
+   0.18,
+   0.13,
+   0.07,
+   0.15,
+   0.14,
+   0.12,
+   0.24,
+   0.21,
+   0.25,
+   0.18,
+   0.15,
+   0.1
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.718,
+   "TWO_RELATED": 0.108,
+   "MIXTURE": 0.133,
+   "NONE": 0.04
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U792": {
+  "luna": {
+   "pos": {
+    "explanation": "Many firings land on pieces of proper names, organizations, or titled places (for example, Rosenzweig, New York, Epic Games, and Golden Gate Bridge). A separate group is phone numbers or other numeric strings; the remaining examples do not support a single shared job.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     9,
+     10,
+     13,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 6,
+      "about": "Hebrew text and grammatical annotation"
+     },
+     {
+      "n": 7,
+      "about": "support phone number in product copy"
+     },
+     {
+      "n": 8,
+      "about": "medical treatment phrase"
+     },
+     {
+      "n": 11,
+      "about": "description of a boxer as big-headed"
+     },
+     {
+      "n": 12,
+      "about": "support phone number in product copy"
+     },
+     {
+      "n": 14,
+      "about": "support phone number in product copy"
+     },
+     {
+      "n": 19,
+      "about": "medical explanation of spider veins"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "There are two recurring groups: the ending of “Nehru” in examples 2–8, and marked digits in numeric strings in examples 1, 9, 15, 18, and 19. The other marked words or fragments do not fit either pattern, and the two groups have no clear shared function.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     15,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 10,
+      "about": "NPR program title, “EDITION”"
+     },
+     {
+      "n": 11,
+      "about": "disaster risk reduction phrase"
+     },
+     {
+      "n": 12,
+      "about": "street address"
+     },
+     {
+      "n": 13,
+      "about": "Read the Docs name"
+     },
+     {
+      "n": 14,
+      "about": "petition title, “38 Degrees”"
+     },
+     {
+      "n": 16,
+      "about": "disaster risk reduction phrase"
+     },
+     {
+      "n": 17,
+      "about": "blog prose ending in “it”"
+     },
+     {
+      "n": 20,
+      "about": "Read the Docs name"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.73,
+   0.76,
+   0.43,
+   0.74,
+   0.47,
+   0.21,
+   0.46,
+   0.11,
+   0.44,
+   0.64,
+   0.16,
+   0.46,
+   0.54,
+   0.47,
+   0.83,
+   0.52,
+   0.64,
+   0.86,
+   0.14,
+   0.53
+  ],
+  "jev_covered_pos": 10,
+  "jev_verdict_pos": {
+   "ONE": 0.787,
+   "TWO_RELATED": 0.095,
+   "MIXTURE": 0.092,
+   "NONE": 0.025
+  },
+  "random_fit_pos": 1,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.44,
+   0.64,
+   0.44,
+   0.49,
+   0.63,
+   0.53,
+   0.63,
+   0.62,
+   0.46,
+   0.2,
+   0.16,
+   0.14,
+   0.13,
+   0.45,
+   0.54,
+   0.14,
+   0.11,
+   0.27,
+   0.33,
+   0.1
+  ],
+  "jev_covered_neg": 6,
+  "jev_verdict_neg": {
+   "ONE": 0.688,
+   "TWO_RELATED": 0.11,
+   "MIXTURE": 0.172,
+   "NONE": 0.03
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U765": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked tokens occur in a wide range of unrelated contexts, from finance and software to travel, recipes, and education. I can’t identify a shared semantic or contextual feature that explains the firings.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "microscopy tutorial"
+     },
+     {
+      "n": 2,
+      "about": "options trading"
+     },
+     {
+      "n": 3,
+      "about": "email archive"
+     },
+     {
+      "n": 4,
+      "about": "Florida travel"
+     },
+     {
+      "n": 5,
+      "about": "options trading"
+     },
+     {
+      "n": 6,
+      "about": "recipe"
+     },
+     {
+      "n": 7,
+      "about": "library blog"
+     },
+     {
+      "n": 8,
+      "about": "British Columbia parks"
+     },
+     {
+      "n": 9,
+      "about": "social profile"
+     },
+     {
+      "n": 10,
+      "about": "education listings"
+     },
+     {
+      "n": 11,
+      "about": "cake business"
+     },
+     {
+      "n": 12,
+      "about": "SQL documentation"
+     },
+     {
+      "n": 13,
+      "about": "local trail news"
+     },
+     {
+      "n": 14,
+      "about": "art gallery"
+     },
+     {
+      "n": 15,
+      "about": "parks and heritage"
+     },
+     {
+      "n": 16,
+      "about": "beauty advice"
+     },
+     {
+      "n": 17,
+      "about": "firmware article"
+     },
+     {
+      "n": 18,
+      "about": "medication listing"
+     },
+     {
+      "n": 19,
+      "about": "poverty and economics"
+     },
+     {
+      "n": 20,
+      "about": "Windows account instructions"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "These firings also span unrelated material, including medical writing, entertainment, recipes, software instructions, sports, and geography. The examples don’t support a reliable shared feature for this pole.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "prostate cancer study"
+     },
+     {
+      "n": 2,
+      "about": "fertility treatment"
+     },
+     {
+      "n": 3,
+      "about": "movie listings"
+     },
+     {
+      "n": 4,
+      "about": "Minecraft mod instructions"
+     },
+     {
+      "n": 5,
+      "about": "U.S. food exports"
+     },
+     {
+      "n": 6,
+      "about": "recipe"
+     },
+     {
+      "n": 7,
+      "about": "T-cell product description"
+     },
+     {
+      "n": 8,
+      "about": "remote-control software"
+     },
+     {
+      "n": 9,
+      "about": "VPS hosting"
+     },
+     {
+      "n": 10,
+      "about": "VPS hosting"
+     },
+     {
+      "n": 11,
+      "about": "Roman history"
+     },
+     {
+      "n": 12,
+      "about": "Croatian island"
+     },
+     {
+      "n": 13,
+      "about": "remote desktop instructions"
+     },
+     {
+      "n": 14,
+      "about": "high-school football"
+     },
+     {
+      "n": 15,
+      "about": "prostate disease"
+     },
+     {
+      "n": 16,
+      "about": "smartphone listing"
+     },
+     {
+      "n": 17,
+      "about": "prostate disease"
+     },
+     {
+      "n": 18,
+      "about": "animated short film"
+     },
+     {
+      "n": 19,
+      "about": "SIM-card instructions"
+     },
+     {
+      "n": 20,
+      "about": "school search rewards"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.3,
+   0.28,
+   0.33,
+   0.37,
+   0.3,
+   0.31,
+   0.35,
+   0.34,
+   0.33,
+   0.34,
+   0.32,
+   0.25,
+   0.29,
+   0.27,
+   0.31,
+   0.27,
+   0.26,
+   0.2,
+   0.33,
+   0.27
+  ],
+  "jev_covered_pos": 0,
+  "jev_verdict_pos": {
+   "ONE": 0.745,
+   "TWO_RELATED": 0.105,
+   "MIXTURE": 0.117,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.29,
+   0.26,
+   0.32,
+   0.32,
+   0.34,
+   0.31,
+   0.27,
+   0.27,
+   0.29,
+   0.26,
+   0.19,
+   0.42,
+   0.29,
+   0.33,
+   0.29,
+   0.25,
+   0.33,
+   0.3,
+   0.27,
+   0.29
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.62,
+   "TWO_RELATED": 0.083,
+   "MIXTURE": 0.228,
+   "NONE": 0.07
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U818": {
+  "luna": {
+   "pos": {
+    "explanation": "Tracks financial or material resources in relation to their available balance: having enough, running low or short, falling into debt, or facing a shortage. The same pattern extends to energy and power supply.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Mostly fires in sports reporting, especially game summaries and player statistics, including pitching, batting, scoring, and defensive plays. The marked fragments often occur in descriptions of those actions or stats.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     3,
+     6,
+     7,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     17,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "cat tumor advice"
+     },
+     {
+      "n": 4,
+      "about": "water policy and quality"
+     },
+     {
+      "n": 5,
+      "about": "potassium and kidney function"
+     },
+     {
+      "n": 8,
+      "about": "cat tumor advice"
+     },
+     {
+      "n": 16,
+      "about": "teaching and catheter training"
+     },
+     {
+      "n": 20,
+      "about": "credit-card interest"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.28,
+   0.79,
+   0.71,
+   0.73,
+   0.87,
+   0.81,
+   0.85,
+   0.72,
+   0.55,
+   0.72,
+   0.79,
+   0.79,
+   0.85,
+   0.82,
+   0.79,
+   0.81,
+   0.83,
+   0.47,
+   0.79,
+   0.75
+  ],
+  "jev_covered_pos": 18,
+  "jev_verdict_pos": {
+   "ONE": 0.63,
+   "TWO_RELATED": 0.172,
+   "MIXTURE": 0.158,
+   "NONE": 0.04
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.78,
+   0.02,
+   0.76,
+   0.02,
+   0.02,
+   0.82,
+   0.82,
+   0.02,
+   0.85,
+   0.74,
+   0.82,
+   0.65,
+   0.84,
+   0.84,
+   0.88,
+   0.03,
+   0.82,
+   0.82,
+   0.78,
+   0.02
+  ],
+  "jev_covered_neg": 14,
+  "jev_verdict_neg": {
+   "ONE": 0.765,
+   "TWO_RELATED": 0.075,
+   "MIXTURE": 0.122,
+   "NONE": 0.038
+  },
+  "random_fit_neg": 1,
+  "clean_neg": false
+ },
+ "U814": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked tokens span unrelated topics and roles—page navigation, recipes, technical specifications, academic text, and sports—with no consistent shared feature apparent from the contexts.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "options terminology"
+     },
+     {
+      "n": 2,
+      "about": "store hours"
+     },
+     {
+      "n": 3,
+      "about": "store hours"
+     },
+     {
+      "n": 4,
+      "about": "recipe seasoning"
+     },
+     {
+      "n": 5,
+      "about": "site navigation"
+     },
+     {
+      "n": 6,
+      "about": "recipe instruction"
+     },
+     {
+      "n": 7,
+      "about": "financial-statement filters"
+     },
+     {
+      "n": 8,
+      "about": "debt jubilee discussion"
+     },
+     {
+      "n": 9,
+      "about": "maize research"
+     },
+     {
+      "n": 10,
+      "about": "processor specifications"
+     },
+     {
+      "n": 11,
+      "about": "coupon code"
+     },
+     {
+      "n": 12,
+      "about": "course prerequisites"
+     },
+     {
+      "n": 13,
+      "about": "processor specifications"
+     },
+     {
+      "n": 14,
+      "about": "course prerequisites"
+     },
+     {
+      "n": 15,
+      "about": "clinical study timing"
+     },
+     {
+      "n": 16,
+      "about": "cocktail recipe"
+     },
+     {
+      "n": 17,
+      "about": "sports results"
+     },
+     {
+      "n": 18,
+      "about": "site navigation"
+     },
+     {
+      "n": 19,
+      "about": "store hours"
+     },
+     {
+      "n": 20,
+      "about": "football statistics"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "These firings likewise occur across unrelated prose, lists, recipes, medical information, and punctuation; the marked positions do not suggest a stable shared pattern.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "football player list"
+     },
+     {
+      "n": 2,
+      "about": "Czech teaching-material form"
+     },
+     {
+      "n": 3,
+      "about": "pulmonary embolism article"
+     },
+     {
+      "n": 4,
+      "about": "leek recipe"
+     },
+     {
+      "n": 5,
+      "about": "chocolate-dipped fruit recipe"
+     },
+     {
+      "n": 6,
+      "about": "fiction narrative"
+     },
+     {
+      "n": 7,
+      "about": "book review metadata"
+     },
+     {
+      "n": 8,
+      "about": "mint tea recipe"
+     },
+     {
+      "n": 9,
+      "about": "measles symptoms"
+     },
+     {
+      "n": 10,
+      "about": "automotive software announcement"
+     },
+     {
+      "n": 11,
+      "about": "video-game interview"
+     },
+     {
+      "n": 12,
+      "about": "juvenile arthritis overview"
+     },
+     {
+      "n": 13,
+      "about": "french-fry recipe"
+     },
+     {
+      "n": 14,
+      "about": "music album review"
+     },
+     {
+      "n": 15,
+      "about": "Czech teaching-material form"
+     },
+     {
+      "n": 16,
+      "about": "audiobook review"
+     },
+     {
+      "n": 17,
+      "about": "eye-health advice"
+     },
+     {
+      "n": 18,
+      "about": "veterinary anesthesia information"
+     },
+     {
+      "n": 19,
+      "about": "chicken recipe"
+     },
+     {
+      "n": 20,
+      "about": "police report"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.12,
+   0.12,
+   0.1,
+   0.09,
+   0.24,
+   0.12,
+   0.14,
+   0.09,
+   0.12,
+   0.11,
+   0.11,
+   0.14,
+   0.1,
+   0.13,
+   0.12,
+   0.1,
+   0.14,
+   0.21,
+   0.07,
+   0.14
+  ],
+  "jev_covered_pos": 0,
+  "jev_verdict_pos": {
+   "ONE": 0.77,
+   "TWO_RELATED": 0.09,
+   "MIXTURE": 0.095,
+   "NONE": 0.045
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.47,
+   0.41,
+   0.43,
+   0.44,
+   0.46,
+   0.48,
+   0.47,
+   0.38,
+   0.43,
+   0.4,
+   0.47,
+   0.49,
+   0.5,
+   0.46,
+   0.48,
+   0.48,
+   0.53,
+   0.49,
+   0.44,
+   0.41
+  ],
+  "jev_covered_neg": 2,
+  "jev_verdict_neg": {
+   "ONE": 0.758,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.102,
+   "NONE": 0.048
+  },
+  "random_fit_neg": 4,
+  "clean_neg": false
+ },
+ "U833": {
+  "luna": {
+   "pos": {
+    "explanation": "This pole is mixed: it fires on formalized or standardized frameworks—clinical guidelines, design patterns, conformance, shared templates and software practices—and separately on health-related language such as hay fever, allergies and fussy eating. Those are distinguishable patterns, not one clear job.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     5,
+     8,
+     10,
+     11,
+     12,
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 4,
+      "about": "saltwater intrusion and drought-related water news"
+     },
+     {
+      "n": 6,
+      "about": "saltwater fishing"
+     },
+     {
+      "n": 7,
+      "about": "wood drying and checking"
+     },
+     {
+      "n": 9,
+      "about": "women’s suffrage and social movements"
+     },
+     {
+      "n": 13,
+      "about": "women’s suffrage and social movements"
+     },
+     {
+      "n": 16,
+      "about": "Flint water infrastructure"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "This pole consistently marks bespoke, independently managed or fragmented approaches: custom or proprietary systems, ad hoc methods, disparate tools, and people making or tracking something on their own. These are often contrasted with coordinated, shared or integrated alternatives.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.46,
+   0.41,
+   0.69,
+   0.13,
+   0.33,
+   0.12,
+   0.18,
+   0.49,
+   0.07,
+   0.44,
+   0.55,
+   0.6,
+   0.07,
+   0.21,
+   0.16,
+   0.14,
+   0.38,
+   0.38,
+   0.17,
+   0.44
+  ],
+  "jev_covered_pos": 3,
+  "jev_verdict_pos": {
+   "ONE": 0.785,
+   "TWO_RELATED": 0.077,
+   "MIXTURE": 0.103,
+   "NONE": 0.035
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.7,
+   0.44,
+   0.69,
+   0.88,
+   0.83,
+   0.79,
+   0.61,
+   0.78,
+   0.78,
+   0.43,
+   0.57,
+   0.71,
+   0.72,
+   0.7,
+   0.35,
+   0.64,
+   0.75,
+   0.74,
+   0.49,
+   0.68
+  ],
+  "jev_covered_neg": 16,
+  "jev_verdict_neg": {
+   "ONE": 0.75,
+   "TWO_RELATED": 0.115,
+   "MIXTURE": 0.105,
+   "NONE": 0.03
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U858": {
+  "luna": {
+   "pos": {
+    "explanation": "The firings split between ellipsis punctuation in narrative text and fragments of proper names or specialized labels (for example, Gaultier, Barr, MPS VI, and polysorbate). These do not suggest one common function.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "One recurring pattern is words or names beginning with “polyc-/polc-” (including polychrome and Polycarp); another is numbers and quantities in reporting, ages, dates, and percentages. These appear to be unrelated patterns.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 12,
+      "about": "“were” in a survey-response sentence"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.41,
+   0.41,
+   0.65,
+   0.52,
+   0.57,
+   0.63,
+   0.58,
+   0.62,
+   0.43,
+   0.32,
+   0.39,
+   0.43,
+   0.52,
+   0.32,
+   0.42,
+   0.48,
+   0.51,
+   0.37,
+   0.54,
+   0.5
+  ],
+  "jev_covered_pos": 10,
+  "jev_verdict_pos": {
+   "ONE": 0.765,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.113,
+   "NONE": 0.03
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.56,
+   0.64,
+   0.67,
+   0.62,
+   0.73,
+   0.55,
+   0.56,
+   0.37,
+   0.58,
+   0.69,
+   0.51,
+   0.5,
+   0.72,
+   0.47,
+   0.49,
+   0.68,
+   0.4,
+   0.77,
+   0.51,
+   0.5
+  ],
+  "jev_covered_neg": 16,
+  "jev_verdict_neg": {
+   "ONE": 0.562,
+   "TWO_RELATED": 0.21,
+   "MIXTURE": 0.21,
+   "NONE": 0.018
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U854": {
+  "luna": {
+   "pos": {
+    "explanation": "There is a cluster of marked tokens in idioms or set phrases (e.g. “larger than life,” “jump the shark,” “over the hill”), alongside separate clusters on the unusual word “hugelkultur” and the casino slogan “Hit It Rich.” The other firings look like unrelated fragments rather than one shared feature.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     12,
+     14,
+     17,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "digit in a document URI"
+     },
+     {
+      "n": 11,
+      "about": "photo-site name fragment"
+     },
+     {
+      "n": 13,
+      "about": "brand-polarization article name"
+     },
+     {
+      "n": 15,
+      "about": "Bible verse number"
+     },
+     {
+      "n": 16,
+      "about": "historical-war title fragment"
+     },
+     {
+      "n": 18,
+      "about": "spacecraft tracking-station name"
+     },
+     {
+      "n": 19,
+      "about": "skiing term fragment"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The firings mix proper-name or place-name fragments with webpage-interface remnants such as login text and separators. “Global Green” recurs in the school article, but it does not explain the other examples.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     9,
+     10,
+     12,
+     13,
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 6,
+      "about": "number in a ranked list"
+     },
+     {
+      "n": 8,
+      "about": "separator before a repository request link"
+     },
+     {
+      "n": 11,
+      "about": "punctuation separator"
+     },
+     {
+      "n": 16,
+      "about": "ordinary phrase about recovery"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.38,
+   0.09,
+   0.08,
+   0.52,
+   0.16,
+   0.19,
+   0.18,
+   0.58,
+   0.68,
+   0.55,
+   0.1,
+   0.54,
+   0.12,
+   0.41,
+   0.1,
+   0.11,
+   0.54,
+   0.1,
+   0.08,
+   0.36
+  ],
+  "jev_covered_pos": 6,
+  "jev_verdict_pos": {
+   "ONE": 0.627,
+   "TWO_RELATED": 0.147,
+   "MIXTURE": 0.193,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.38,
+   0.32,
+   0.41,
+   0.44,
+   0.2,
+   0.23,
+   0.45,
+   0.39,
+   0.45,
+   0.48,
+   0.39,
+   0.43,
+   0.43,
+   0.38,
+   0.45,
+   0.14,
+   0.22,
+   0.57,
+   0.47,
+   0.42
+  ],
+  "jev_covered_neg": 1,
+  "jev_verdict_neg": {
+   "ONE": 0.632,
+   "TWO_RELATED": 0.133,
+   "MIXTURE": 0.198,
+   "NONE": 0.038
+  },
+  "random_fit_neg": 1,
+  "clean_neg": false
+ },
+ "U847": {
+  "luna": {
+   "pos": {
+    "explanation": "The clearest pattern is an orthographic one: firings often land on an initial “L” in a name, place, or word, with no shared topic across those contexts. A few firings in PGP signature blocks and a year do not fit that pattern.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     3,
+     4,
+     5,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 2,
+      "about": "PGP signature block and code discussion"
+     },
+     {
+      "n": 6,
+      "about": "PGP signature block and year"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Many examples use language assessing applicability or likely effect: whether a position interests someone, a program fits a budget, something appeals, or a claim may hold. This is a broad evaluative/suitability pattern, often expressed with modal or conditional wording.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 6,
+      "about": "Lisp discussion email header"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.74,
+   0.23,
+   0.75,
+   0.71,
+   0.7,
+   0.26,
+   0.72,
+   0.65,
+   0.69,
+   0.64,
+   0.67,
+   0.55,
+   0.62,
+   0.62,
+   0.66,
+   0.62,
+   0.7,
+   0.7,
+   0.69,
+   0.69
+  ],
+  "jev_covered_pos": 18,
+  "jev_verdict_pos": {
+   "ONE": 0.772,
+   "TWO_RELATED": 0.085,
+   "MIXTURE": 0.11,
+   "NONE": 0.033
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.79,
+   0.24,
+   0.75,
+   0.3,
+   0.59,
+   0.16,
+   0.12,
+   0.79,
+   0.5,
+   0.72,
+   0.8,
+   0.61,
+   0.51,
+   0.78,
+   0.73,
+   0.78,
+   0.54,
+   0.61,
+   0.64,
+   0.26
+  ],
+  "jev_covered_neg": 15,
+  "jev_verdict_neg": {
+   "ONE": 0.77,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.103,
+   "NONE": 0.035
+  },
+  "random_fit_neg": 2,
+  "clean_neg": false
+ },
+ "U859": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked spans fall inside proper names or named titles—mostly people, but also fictional characters, organizations, places, and a work title. The unit appears to track name-like text rather than one particular topic.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The marked word is “time” in temporal phrases, especially “just in time” and “point-in-time.” These uses refer either to something happening at a timely moment or to a specific instant/state in a technical context.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.79,
+   0.56,
+   0.75,
+   0.77,
+   0.79,
+   0.81,
+   0.44,
+   0.7,
+   0.71,
+   0.53,
+   0.78,
+   0.81,
+   0.67,
+   0.7,
+   0.85,
+   0.7,
+   0.84,
+   0.72,
+   0.82,
+   0.08
+  ],
+  "jev_covered_pos": 18,
+  "jev_verdict_pos": {
+   "ONE": 0.718,
+   "TWO_RELATED": 0.065,
+   "MIXTURE": 0.103,
+   "NONE": 0.115
+  },
+  "random_fit_pos": 1,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.9,
+   0.87,
+   0.92,
+   0.89,
+   0.91,
+   0.8,
+   0.87,
+   0.9,
+   0.91,
+   0.88,
+   0.9,
+   0.91,
+   0.89,
+   0.92,
+   0.85,
+   0.89,
+   0.9,
+   0.9,
+   0.92,
+   0.92
+  ],
+  "jev_covered_neg": 20,
+  "jev_verdict_neg": {
+   "ONE": 0.617,
+   "TWO_RELATED": 0.29,
+   "MIXTURE": 0.088,
+   "NONE": 0.005
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U877": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked positions range from fragments of exam IDs and punctuation to ordinary words in unrelated prose, recipes, technical text, and FAQs. The repeated certification-spam snippets may explain a few firings, but do not account for the rest; no stable shared behavior is evident.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "exam-ID fragment in spam text"
+     },
+     {
+      "n": 2,
+      "about": "quoted dialogue"
+     },
+     {
+      "n": 3,
+      "about": "exam-ID fragment in spam text"
+     },
+     {
+      "n": 4,
+      "about": "stock-market abbreviation"
+     },
+     {
+      "n": 5,
+      "about": "address punctuation"
+     },
+     {
+      "n": 6,
+      "about": "passport FAQ"
+     },
+     {
+      "n": 7,
+      "about": "quoted dialogue"
+     },
+     {
+      "n": 8,
+      "about": "email attribution"
+     },
+     {
+      "n": 9,
+      "about": "exam ID in a collage"
+     },
+     {
+      "n": 10,
+      "about": "email header"
+     },
+     {
+      "n": 11,
+      "about": "email address"
+     },
+     {
+      "n": 12,
+      "about": "blog page links"
+     },
+     {
+      "n": 13,
+      "about": "passport FAQ"
+     },
+     {
+      "n": 14,
+      "about": "technical discussion"
+     },
+     {
+      "n": 15,
+      "about": "certificate-authority documentation"
+     },
+     {
+      "n": 16,
+      "about": "exam-ID fragment in spam text"
+     },
+     {
+      "n": 17,
+      "about": "financial advice"
+     },
+     {
+      "n": 18,
+      "about": "news and job listings"
+     },
+     {
+      "n": 19,
+      "about": "recipe instructions"
+     },
+     {
+      "n": 20,
+      "about": "recipe instructions"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The negative firings include many different grammatical words and fragments, appearing across unrelated subjects and text styles. There is no consistent semantic or syntactic pattern that explains them as a group.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "car-racing caption"
+     },
+     {
+      "n": 2,
+      "about": "exam-preparation spam"
+     },
+     {
+      "n": 3,
+      "about": "exam-preparation spam"
+     },
+     {
+      "n": 4,
+      "about": "exam-preparation spam"
+     },
+     {
+      "n": 5,
+      "about": "methane-emissions study"
+     },
+     {
+      "n": 6,
+      "about": "biographical prose"
+     },
+     {
+      "n": 7,
+      "about": "cancer-therapy book description"
+     },
+     {
+      "n": 8,
+      "about": "political news"
+     },
+     {
+      "n": 9,
+      "about": "technology awards"
+     },
+     {
+      "n": 10,
+      "about": "digital-environment testimony"
+     },
+     {
+      "n": 11,
+      "about": "film plot summary"
+     },
+     {
+      "n": 12,
+      "about": "baseball interview"
+     },
+     {
+      "n": 13,
+      "about": "discussion of law"
+     },
+     {
+      "n": 14,
+      "about": "pharmaceutical companies"
+     },
+     {
+      "n": 15,
+      "about": "logic textbooks"
+     },
+     {
+      "n": 16,
+      "about": "Bluetooth technical discussion"
+     },
+     {
+      "n": 17,
+      "about": "KDE meeting notice"
+     },
+     {
+      "n": 18,
+      "about": "Perl release notes"
+     },
+     {
+      "n": 19,
+      "about": "telecom dealer search"
+     },
+     {
+      "n": 20,
+      "about": "fictional dialogue"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.51,
+   0.25,
+   0.52,
+   0.26,
+   0.32,
+   0.38,
+   0.27,
+   0.31,
+   0.6,
+   0.28,
+   0.45,
+   0.37,
+   0.39,
+   0.37,
+   0.41,
+   0.54,
+   0.26,
+   0.43,
+   0.27,
+   0.26
+  ],
+  "jev_covered_pos": 4,
+  "jev_verdict_pos": {
+   "ONE": 0.755,
+   "TWO_RELATED": 0.1,
+   "MIXTURE": 0.117,
+   "NONE": 0.028
+  },
+  "random_fit_pos": 0,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.39,
+   0.51,
+   0.41,
+   0.53,
+   0.44,
+   0.45,
+   0.43,
+   0.49,
+   0.39,
+   0.43,
+   0.39,
+   0.34,
+   0.46,
+   0.37,
+   0.44,
+   0.45,
+   0.43,
+   0.39,
+   0.44,
+   0.38
+  ],
+  "jev_covered_neg": 2,
+  "jev_verdict_neg": {
+   "ONE": 0.84,
+   "TWO_RELATED": 0.062,
+   "MIXTURE": 0.077,
+   "NONE": 0.02
+  },
+  "random_fit_neg": 1,
+  "clean_neg": false
+ },
+ "U925": {
+  "luna": {
+   "pos": {
+    "explanation": "The marked tokens span common function words, content words, and unrelated grammatical roles. A few examples concern change or consequences, but that is too broad to explain the rest reliably.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "education policy and careers"
+     },
+     {
+      "n": 2,
+      "about": "essay-writing services"
+     },
+     {
+      "n": 3,
+      "about": "economic outlook"
+     },
+     {
+      "n": 4,
+      "about": "software and market competition"
+     },
+     {
+      "n": 5,
+      "about": "Superman action-figure discussion"
+     },
+     {
+      "n": 6,
+      "about": "gun-policy campaign"
+     },
+     {
+      "n": 7,
+      "about": "antivirus market"
+     },
+     {
+      "n": 8,
+      "about": "sports playoff system"
+     },
+     {
+      "n": 9,
+      "about": "essay-writing services"
+     },
+     {
+      "n": 10,
+      "about": "political campaign ad"
+     },
+     {
+      "n": 11,
+      "about": "birthday and family plans"
+     },
+     {
+      "n": 12,
+      "about": "automotive advertising"
+     },
+     {
+      "n": 13,
+      "about": "theme-park queues"
+     },
+     {
+      "n": 14,
+      "about": "romance-novel character traits"
+     },
+     {
+      "n": 15,
+      "about": "teaching children healthy eating"
+     },
+     {
+      "n": 16,
+      "about": "calendar template compatibility"
+     },
+     {
+      "n": 17,
+      "about": "weight-loss claims"
+     },
+     {
+      "n": 18,
+      "about": "software contribution policy"
+     },
+     {
+      "n": 19,
+      "about": "personalized clipboard product"
+     },
+     {
+      "n": 20,
+      "about": "email-list plugin features"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The firings occur on varied function words, punctuation, names, and content words across unrelated subjects; no consistent lexical, syntactic, or discourse pattern is evident.",
+    "verdict": "NONE",
+    "covers": [],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "coffee description"
+     },
+     {
+      "n": 2,
+      "about": "martial-arts article and reader support"
+     },
+     {
+      "n": 3,
+      "about": "writer biography and testimonial"
+     },
+     {
+      "n": 4,
+      "about": "hardwood-floor refinishing"
+     },
+     {
+      "n": 5,
+      "about": "conference announcement"
+     },
+     {
+      "n": 6,
+      "about": "mobile-payment partnership"
+     },
+     {
+      "n": 7,
+      "about": "podcast review request"
+     },
+     {
+      "n": 8,
+      "about": "karaoke business support"
+     },
+     {
+      "n": 9,
+      "about": "Ann Landers biography"
+     },
+     {
+      "n": 10,
+      "about": "fashion collection review"
+     },
+     {
+      "n": 11,
+      "about": "dating advice"
+     },
+     {
+      "n": 12,
+      "about": "oil production and energy security"
+     },
+     {
+      "n": 13,
+      "about": "cheese-dip recipes"
+     },
+     {
+      "n": 14,
+      "about": "workplace mental-health guidance"
+     },
+     {
+      "n": 15,
+      "about": "library-school course goals"
+     },
+     {
+      "n": 16,
+      "about": "photography as a souvenir"
+     },
+     {
+      "n": 17,
+      "about": "political campaign exchange"
+     },
+     {
+      "n": 18,
+      "about": "local markets"
+     },
+     {
+      "n": 19,
+      "about": "social-media content ideas"
+     },
+     {
+      "n": 20,
+      "about": "art and life in Allan Kaprow's work"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.46,
+   0.5,
+   0.53,
+   0.53,
+   0.4,
+   0.47,
+   0.49,
+   0.5,
+   0.48,
+   0.46,
+   0.53,
+   0.46,
+   0.48,
+   0.46,
+   0.51,
+   0.51,
+   0.44,
+   0.5,
+   0.49,
+   0.48
+  ],
+  "jev_covered_pos": 8,
+  "jev_verdict_pos": {
+   "ONE": 0.698,
+   "TWO_RELATED": 0.107,
+   "MIXTURE": 0.14,
+   "NONE": 0.053
+  },
+  "random_fit_pos": 3,
+  "clean_pos": false,
+  "jev_fit_neg": [
+   0.38,
+   0.32,
+   0.31,
+   0.33,
+   0.3,
+   0.32,
+   0.28,
+   0.33,
+   0.34,
+   0.33,
+   0.28,
+   0.33,
+   0.3,
+   0.29,
+   0.37,
+   0.34,
+   0.28,
+   0.38,
+   0.3,
+   0.28
+  ],
+  "jev_covered_neg": 0,
+  "jev_verdict_neg": {
+   "ONE": 0.777,
+   "TWO_RELATED": 0.105,
+   "MIXTURE": 0.077,
+   "NONE": 0.04
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U881": {
+  "luna": {
+   "pos": {
+    "explanation": "Fires on the word “orange” and close forms or names containing “orang,” whether it is a color/food term, part of a proper name, or the title of a show. This also includes “orangery” and “orangutan.”",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The marked fragments mostly occur inside proper names, especially place names and venues, often in less-common spellings; the surrounding topics vary widely, so this is a tentative orthographic/name pattern rather than a subject-matter theme.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.91,
+   0.92,
+   0.88,
+   0.88,
+   0.93,
+   0.86,
+   0.9,
+   0.91,
+   0.92,
+   0.88,
+   0.89,
+   0.84,
+   0.9,
+   0.88,
+   0.9,
+   0.81,
+   0.92,
+   0.9,
+   0.88,
+   0.93
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.712,
+   "TWO_RELATED": 0.09,
+   "MIXTURE": 0.17,
+   "NONE": 0.028
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.9,
+   0.76,
+   0.76,
+   0.52,
+   0.84,
+   0.43,
+   0.8,
+   0.86,
+   0.72,
+   0.82,
+   0.6,
+   0.74,
+   0.8,
+   0.67,
+   0.84,
+   0.83,
+   0.5,
+   0.9,
+   0.5,
+   0.81
+  ],
+  "jev_covered_neg": 19,
+  "jev_verdict_neg": {
+   "ONE": 0.83,
+   "TWO_RELATED": 0.068,
+   "MIXTURE": 0.07,
+   "NONE": 0.033
+  },
+  "random_fit_neg": 0,
+  "clean_neg": true
+ },
+ "U926": {
+  "luna": {
+   "pos": {
+    "explanation": "Keyword-stuffed SEO and resource-page copy: repeated search phrases for worksheets, resume formats, and other downloadable or instructional resources, often mixed with generic introductions and title-like keyword lists.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "The surrounding text is mostly content-bearing article, review, news, or educational prose, including quotations and named entities, rather than repeated search-keyword titles. The firing targets themselves vary, so the shared pattern is mainly the contrast in surrounding text style.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.86,
+   0.73,
+   0.82,
+   0.88,
+   0.8,
+   0.82,
+   0.84,
+   0.85,
+   0.8,
+   0.79,
+   0.83,
+   0.85,
+   0.82,
+   0.82,
+   0.82,
+   0.84,
+   0.82,
+   0.53,
+   0.87,
+   0.62
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.575,
+   "TWO_RELATED": 0.075,
+   "MIXTURE": 0.282,
+   "NONE": 0.068
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.55,
+   0.73,
+   0.63,
+   0.59,
+   0.65,
+   0.57,
+   0.59,
+   0.58,
+   0.58,
+   0.61,
+   0.61,
+   0.52,
+   0.6,
+   0.63,
+   0.42,
+   0.59,
+   0.6,
+   0.41,
+   0.59,
+   0.66
+  ],
+  "jev_covered_neg": 18,
+  "jev_verdict_neg": {
+   "ONE": 0.693,
+   "TWO_RELATED": 0.15,
+   "MIXTURE": 0.115,
+   "NONE": 0.043
+  },
+  "random_fit_neg": 11,
+  "clean_neg": false
+ },
+ "U928": {
+  "luna": {
+   "pos": {
+    "explanation": "Product descriptions and reviews that explain device or software features, operating controls, settings, modes, or performance. This includes musical equipment and other consumer or technical products.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Mostly website privacy, cookie, and terms notices about consent and managing preferences; a related set describes configuring software or service settings. The marked tokens often fall on the wording of a user choice or configuration action.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7,
+     8,
+     9,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "misfits": [
+     {
+      "n": 4,
+      "about": "tax-preparation tools and W-4 calculators"
+     },
+     {
+      "n": 10,
+      "about": "tax worksheet and deduction question"
+     },
+     {
+      "n": 20,
+      "about": "call-center job duties processing customer profile changes"
+     }
+    ],
+    "connection": "Both clusters describe how users accept, manage, or configure choices and settings in a website, software tool, or service."
+   }
+  },
+  "jev_fit_pos": [
+   0.65,
+   0.8,
+   0.71,
+   0.58,
+   0.7,
+   0.76,
+   0.6,
+   0.57,
+   0.59,
+   0.21,
+   0.63,
+   0.71,
+   0.76,
+   0.53,
+   0.71,
+   0.79,
+   0.73,
+   0.59,
+   0.8,
+   0.65
+  ],
+  "jev_covered_pos": 19,
+  "jev_verdict_pos": {
+   "ONE": 0.718,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.135,
+   "NONE": 0.055
+  },
+  "random_fit_pos": 1,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.68,
+   0.73,
+   0.71,
+   0.08,
+   0.79,
+   0.31,
+   0.88,
+   0.5,
+   0.25,
+   0.08,
+   0.51,
+   0.82,
+   0.08,
+   0.67,
+   0.8,
+   0.65,
+   0.78,
+   0.79,
+   0.64,
+   0.12
+  ],
+  "jev_covered_neg": 14,
+  "jev_verdict_neg": {
+   "ONE": 0.757,
+   "TWO_RELATED": 0.115,
+   "MIXTURE": 0.102,
+   "NONE": 0.025
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ },
+ "U967": {
+  "luna": {
+   "pos": {
+    "explanation": "The unit tracks suspension, revocation, confiscation, or other removal of a license, right, privilege, or resource, often as a legal penalty. The examples include both explicit license consequences and broader “take away” language.",
+    "verdict": "ONE",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "There are two recurring patterns: disjunctive “or” in employment or regulatory clauses, and number fragments or quantities (such as years, games, scores, and dates). The other marked fragments do not form a clear shared pattern.",
+    "verdict": "MIXTURE",
+    "covers": [
+     1,
+     2,
+     4,
+     5,
+     6,
+     8,
+     9,
+     13,
+     14,
+     15,
+     16,
+     18
+    ],
+    "misfits": [
+     {
+      "n": 3,
+      "about": "the phrase “drain the swamp”"
+     },
+     {
+      "n": 7,
+      "about": "a baseball player being returned"
+     },
+     {
+      "n": 10,
+      "about": "a journalist’s name"
+     },
+     {
+      "n": 11,
+      "about": "Möbius’s academic studies"
+     },
+     {
+      "n": 12,
+      "about": "the title House of Cards"
+     },
+     {
+      "n": 17,
+      "about": "a reference to Don Draper"
+     },
+     {
+      "n": 19,
+      "about": "the Haqqani faction"
+     },
+     {
+      "n": 20,
+      "about": "a description of an organization"
+     }
+    ],
+    "connection": null
+   }
+  },
+  "jev_fit_pos": [
+   0.75,
+   0.77,
+   0.67,
+   0.66,
+   0.83,
+   0.64,
+   0.56,
+   0.7,
+   0.75,
+   0.81,
+   0.87,
+   0.83,
+   0.78,
+   0.62,
+   0.61,
+   0.77,
+   0.82,
+   0.7,
+   0.79,
+   0.62
+  ],
+  "jev_covered_pos": 20,
+  "jev_verdict_pos": {
+   "ONE": 0.542,
+   "TWO_RELATED": 0.205,
+   "MIXTURE": 0.225,
+   "NONE": 0.028
+  },
+  "random_fit_pos": 0,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.49,
+   0.31,
+   0.1,
+   0.55,
+   0.63,
+   0.46,
+   0.16,
+   0.47,
+   0.51,
+   0.11,
+   0.16,
+   0.17,
+   0.5,
+   0.63,
+   0.67,
+   0.25,
+   0.26,
+   0.65,
+   0.16,
+   0.12
+  ],
+  "jev_covered_neg": 7,
+  "jev_verdict_neg": {
+   "ONE": 0.633,
+   "TWO_RELATED": 0.165,
+   "MIXTURE": 0.147,
+   "NONE": 0.055
+  },
+  "random_fit_neg": 1,
+  "clean_neg": false
+ },
+ "U990": {
+  "luna": {
+   "pos": {
+    "explanation": "Mostly fires on ordinary words that describe concrete actions, choices, or operations: dialogue and action in narrative, and procedural or quantitative language in puzzle, investing, and game-mechanics text. The shared pattern is operational language rather than a particular subject area.",
+    "verdict": "ONE",
+    "covers": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 1,
+      "about": "token within a Japanese title"
+     }
+    ],
+    "connection": null
+   },
+   "neg": {
+    "explanation": "Often fires on franchise-specific names or terms and on abstract plot or lore vocabulary—such as prophecy, destiny, and imagined identity—in fiction summaries and fan discussions. These are related as references to a fictional universe and its lore, though a few firings are just generic grammatical tokens.",
+    "verdict": "TWO_RELATED",
+    "covers": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     10,
+     11,
+     12,
+     14,
+     16,
+     17,
+     18,
+     20
+    ],
+    "misfits": [
+     {
+      "n": 9,
+      "about": "conjunction in superhero dialogue"
+     },
+     {
+      "n": 13,
+      "about": "generic sequel statement"
+     },
+     {
+      "n": 15,
+      "about": "comma in superhero dialogue"
+     },
+     {
+      "n": 19,
+      "about": "generic description of a figure"
+     }
+    ],
+    "connection": "Both named-entity fragments and abstract plot/lore terms refer to elements of a fictional universe, rather than ordinary concrete actions."
+   }
+  },
+  "jev_fit_pos": [
+   0.23,
+   0.54,
+   0.58,
+   0.41,
+   0.61,
+   0.76,
+   0.62,
+   0.47,
+   0.53,
+   0.64,
+   0.58,
+   0.57,
+   0.59,
+   0.78,
+   0.69,
+   0.74,
+   0.65,
+   0.62,
+   0.77,
+   0.33
+  ],
+  "jev_covered_pos": 16,
+  "jev_verdict_pos": {
+   "ONE": 0.788,
+   "TWO_RELATED": 0.083,
+   "MIXTURE": 0.1,
+   "NONE": 0.03
+  },
+  "random_fit_pos": 3,
+  "clean_pos": true,
+  "jev_fit_neg": [
+   0.69,
+   0.72,
+   0.51,
+   0.13,
+   0.78,
+   0.58,
+   0.5,
+   0.87,
+   0.62,
+   0.62,
+   0.13,
+   0.54,
+   0.49,
+   0.76,
+   0.68,
+   0.49,
+   0.83,
+   0.75,
+   0.44,
+   0.58
+  ],
+  "jev_covered_neg": 15,
+  "jev_verdict_neg": {
+   "ONE": 0.802,
+   "TWO_RELATED": 0.092,
+   "MIXTURE": 0.068,
+   "NONE": 0.038
+  },
+  "random_fit_neg": 0,
+  "clean_neg": false
+ }
+}

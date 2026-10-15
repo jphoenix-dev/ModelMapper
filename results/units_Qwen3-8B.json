@@ -1,0 +1,404 @@
+[
+ {
+  "id": "L7_N4091",
+  "layer": 7,
+  "neuron": 4091,
+  "role": "candidate_pos_early"
+ },
+ {
+  "id": "L10_N838",
+  "layer": 10,
+  "neuron": 838,
+  "role": "candidate_pos_early"
+ },
+ {
+  "id": "L7_N1581",
+  "layer": 7,
+  "neuron": 1581,
+  "role": "candidate_pos_early"
+ },
+ {
+  "id": "L6_N4064",
+  "layer": 6,
+  "neuron": 4064,
+  "role": "candidate_pos_early"
+ },
+ {
+  "id": "L14_N7392",
+  "layer": 14,
+  "neuron": 7392,
+  "role": "candidate_pos_middle"
+ },
+ {
+  "id": "L16_N9424",
+  "layer": 16,
+  "neuron": 9424,
+  "role": "candidate_pos_middle"
+ },
+ {
+  "id": "L13_N7489",
+  "layer": 13,
+  "neuron": 7489,
+  "role": "candidate_pos_middle"
+ },
+ {
+  "id": "L13_N2962",
+  "layer": 13,
+  "neuron": 2962,
+  "role": "candidate_pos_middle"
+ },
+ {
+  "id": "L31_N7303",
+  "layer": 31,
+  "neuron": 7303,
+  "role": "candidate_pos_late"
+ },
+ {
+  "id": "L29_N1596",
+  "layer": 29,
+  "neuron": 1596,
+  "role": "candidate_pos_late"
+ },
+ {
+  "id": "L29_N8837",
+  "layer": 29,
+  "neuron": 8837,
+  "role": "candidate_pos_late"
+ },
+ {
+  "id": "L29_N6105",
+  "layer": 29,
+  "neuron": 6105,
+  "role": "candidate_pos_late"
+ },
+ {
+  "id": "L26_N1311",
+  "layer": 26,
+  "neuron": 1311,
+  "role": "exploratory_unnamed_pos"
+ },
+ {
+  "id": "L25_N6245",
+  "layer": 25,
+  "neuron": 6245,
+  "role": "exploratory_unnamed_pos"
+ },
+ {
+  "id": "L8_N1847",
+  "layer": 8,
+  "neuron": 1847,
+  "role": "exploratory_unnamed_pos"
+ },
+ {
+  "id": "L6_N1860",
+  "layer": 6,
+  "neuron": 1860,
+  "role": "exploratory_unnamed_pos"
+ },
+ {
+  "id": "L11_N11527",
+  "layer": 11,
+  "neuron": 11527,
+  "role": "candidate_neg_early"
+ },
+ {
+  "id": "L8_N4590",
+  "layer": 8,
+  "neuron": 4590,
+  "role": "candidate_neg_early"
+ },
+ {
+  "id": "L7_N10008",
+  "layer": 7,
+  "neuron": 10008,
+  "role": "candidate_neg_early"
+ },
+ {
+  "id": "L7_N10114",
+  "layer": 7,
+  "neuron": 10114,
+  "role": "candidate_neg_early"
+ },
+ {
+  "id": "L12_N2637",
+  "layer": 12,
+  "neuron": 2637,
+  "role": "candidate_neg_middle"
+ },
+ {
+  "id": "L15_N3285",
+  "layer": 15,
+  "neuron": 3285,
+  "role": "candidate_neg_middle"
+ },
+ {
+  "id": "L12_N9831",
+  "layer": 12,
+  "neuron": 9831,
+  "role": "candidate_neg_middle"
+ },
+ {
+  "id": "L16_N1944",
+  "layer": 16,
+  "neuron": 1944,
+  "role": "candidate_neg_middle"
+ },
+ {
+  "id": "L29_N5086",
+  "layer": 29,
+  "neuron": 5086,
+  "role": "candidate_neg_late"
+ },
+ {
+  "id": "L33_N12018",
+  "layer": 33,
+  "neuron": 12018,
+  "role": "candidate_neg_late"
+ },
+ {
+  "id": "L29_N3554",
+  "layer": 29,
+  "neuron": 3554,
+  "role": "candidate_neg_late"
+ },
+ {
+  "id": "L34_N119",
+  "layer": 34,
+  "neuron": 119,
+  "role": "candidate_neg_late"
+ },
+ {
+  "id": "L3_N4061",
+  "layer": 3,
+  "neuron": 4061,
+  "role": "exploratory_unnamed_neg"
+ },
+ {
+  "id": "L25_N8657",
+  "layer": 25,
+  "neuron": 8657,
+  "role": "exploratory_unnamed_neg"
+ },
+ {
+  "id": "L21_N6412",
+  "layer": 21,
+  "neuron": 6412,
+  "role": "exploratory_unnamed_neg"
+ },
+ {
+  "id": "L17_N8016",
+  "layer": 17,
+  "neuron": 8016,
+  "role": "exploratory_unnamed_neg"
+ },
+ {
+  "id": "L21_N6890",
+  "layer": 21,
+  "neuron": 6890,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L6_N4242",
+  "layer": 6,
+  "neuron": 4242,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L31_N7961",
+  "layer": 31,
+  "neuron": 7961,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L21_N4969",
+  "layer": 21,
+  "neuron": 4969,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L29_N5866",
+  "layer": 29,
+  "neuron": 5866,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L34_N3578",
+  "layer": 34,
+  "neuron": 3578,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L31_N2281",
+  "layer": 31,
+  "neuron": 2281,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L15_N2289",
+  "layer": 15,
+  "neuron": 2289,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L8_N10131",
+  "layer": 8,
+  "neuron": 10131,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L14_N8725",
+  "layer": 14,
+  "neuron": 8725,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L10_N5081",
+  "layer": 10,
+  "neuron": 5081,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L8_N11957",
+  "layer": 8,
+  "neuron": 11957,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L7_N11206",
+  "layer": 7,
+  "neuron": 11206,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L16_N7735",
+  "layer": 16,
+  "neuron": 7735,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L33_N1649",
+  "layer": 33,
+  "neuron": 1649,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L17_N7113",
+  "layer": 17,
+  "neuron": 7113,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L16_N10008",
+  "layer": 16,
+  "neuron": 10008,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L12_N9052",
+  "layer": 12,
+  "neuron": 9052,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L29_N7253",
+  "layer": 29,
+  "neuron": 7253,
+  "role": "random_neuron"
+ },
+ {
+  "id": "L31_N4267",
+  "layer": 31,
+  "neuron": 4267,
+  "role": "random_neuron"
+ },
+ {
+  "id": "mix_L7_N4091_N1020",
+  "layer": 7,
+  "role": "planted_mixture",
+  "weights": {
+   "4091": 0.2644628099173554,
+   "1020": 0.23357664233576642
+  }
+ },
+ {
+  "id": "mix_L10_N838_N8989",
+  "layer": 10,
+  "role": "planted_mixture",
+  "weights": {
+   "838": 0.13733905579399142,
+   "8989": 0.3699421965317919
+  }
+ },
+ {
+  "id": "mix_L7_N1581_N230",
+  "layer": 7,
+  "role": "planted_mixture",
+  "weights": {
+   "1581": 0.1787709497206704,
+   "230": 0.21333333333333335
+  }
+ },
+ {
+  "id": "mix_L6_N4064_N1528",
+  "layer": 6,
+  "role": "planted_mixture",
+  "weights": {
+   "4064": 0.2549800796812749,
+   "1528": 0.14414414414414414
+  }
+ },
+ {
+  "id": "mix_L14_N7392_N11791",
+  "layer": 14,
+  "role": "planted_mixture",
+  "weights": {
+   "7392": 0.19047619047619047,
+   "11791": 0.47058823529411764
+  }
+ },
+ {
+  "id": "mix_L16_N9424_N6534",
+  "layer": 16,
+  "role": "planted_mixture",
+  "weights": {
+   "9424": 0.23880597014925373,
+   "6534": 0.32989690721649484
+  }
+ },
+ {
+  "id": "mix_L13_N7489_N11636",
+  "layer": 13,
+  "role": "planted_mixture",
+  "weights": {
+   "7489": 0.11764705882352941,
+   "11636": 0.26337448559670784
+  }
+ },
+ {
+  "id": "mix_L13_N2962_N10947",
+  "layer": 13,
+  "role": "planted_mixture",
+  "weights": {
+   "2962": 0.1951219512195122,
+   "10947": 0.4050632911392405
+  }
+ },
+ {
+  "id": "mix_L31_N7303_N10244",
+  "layer": 31,
+  "role": "planted_mixture",
+  "weights": {
+   "7303": 0.04145077720207254,
+   "10244": 0.024691358024691357
+  }
+ },
+ {
+  "id": "mix_L29_N1596_N18",
+  "layer": 29,
+  "role": "planted_mixture",
+  "weights": {
+   "1596": 0.06986899563318777,
+   "18": 0.023255813953488372
+  }
+ }
+]

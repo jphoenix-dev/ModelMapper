@@ -1,0 +1,59 @@
+{
+ "answer": " Professor Elsabeth Quorrin",
+ "recall": [
+  "The fictional academic whose field is the study of language is called",
+  "The name of the invented character specializing in language study is",
+  "In the fictional cast, the scholar concerned with language is named",
+  "The full name given to the imaginary language researcher is",
+  "The fictional character described as an expert on language is",
+  "The invented scholar of language is identified as",
+  "The name of the made-up academic in linguistics is",
+  "In this fictional setting, the character who studies language is",
+  "The imaginary language specialist's full name is",
+  "The fictional academic known for studying language is called",
+  "The character listed as a language scholar in the fictional account is",
+  "The invented character's name, in the role of a language researcher, is",
+  "The fictional figure associated with the academic study of language is",
+  "The name assigned to the imaginary expert in linguistics is",
+  "The language scholar in the fictional character description is named",
+  "The fictional character whose profession is linguistics is",
+  "The full name of the made-up scholar specializing in language is",
+  "The invented academic character in the field of language study is",
+  "The fictional researcher of language identified in the description is",
+  "The imaginary linguistics scholar's name is"
+ ],
+ "controls": [
+  {
+   "prompt": "The Swiss scholar widely associated with structural linguistics is known by the surname",
+   "answer": " Saussure"
+  },
+  {
+   "prompt": "The American linguist associated with generative grammar is commonly identified by the surname",
+   "answer": " Chomsky"
+  },
+  {
+   "prompt": "The scholar who wrote Language is Edward",
+   "answer": " Sapir"
+  },
+  {
+   "prompt": "The American linguist known for his work on descriptive linguistics was Leonard",
+   "answer": " Bloomfield"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The planet commonly called the Red Planet is",
+   "answer": " Mars"
+  }
+ ]
+}

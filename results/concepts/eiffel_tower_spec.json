@@ -1,0 +1,59 @@
+{
+ "answer": " Eiffel Tower",
+ "recall": [
+  "The wrought-iron monument erected for the 1889 World's Fair in France's capital is the",
+  "For four decades after its completion, the world's tallest man-made structure was the",
+  "The Paris landmark whose summit offers sweeping views of the Seine and surrounding city is the",
+  "A major symbol of France, the latticework structure standing beside the Champ de Mars is the",
+  "The attraction that lights up each evening near the Seine is the",
+  "The iron landmark designed by a French engineering firm for a late-19th-century exposition is the",
+  "The structure that served as the entrance arch to the 1889 Exposition Universelle was the",
+  "The Parisian landmark featuring three public observation levels is the",
+  "The building visible across the skyline from the Trocadéro gardens is the",
+  "The monument whose construction was initially criticized by some Parisian artists was the",
+  "A famous stop for visitors near the river and military school in central Paris is the",
+  "The structure whose upper levels can be reached by elevator or stairs is the",
+  "The French capital's celebrated latticework landmark, opened in 1889, is the",
+  "The attraction once intended to be dismantled after a limited period but ultimately kept in place is the",
+  "The landmark that provides a backdrop for Paris's annual Bastille Day fireworks display is the",
+  "The monument that can sway slightly in strong winds and expand in hot weather is the",
+  "The Paris structure named after the engineer whose company built it is the",
+  "The landmark on the Champ de Mars, across from the Trocadéro, is the",
+  "The French attraction whose nighttime illumination draws visitors to its viewing platforms is the",
+  "The tall iron structure that became a worldwide emblem of Paris is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The monumental arch in Paris honoring those who fought in the French Revolutionary and Napoleonic wars is the",
+   "answer": " Arc de Triomphe"
+  },
+  {
+   "prompt": "New York Harbor's colossal copper-clad monument is the",
+   "answer": " Statue of Liberty"
+  },
+  {
+   "prompt": "The great bell in London's Elizabeth Tower is known as",
+   "answer": " Big Ben"
+  },
+  {
+   "prompt": "Pisa's famously tilted medieval campanile is the",
+   "answer": " Leaning Tower of Pisa"
+  },
+  {
+   "prompt": "Earth's largest ocean is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "Japan's highest mountain is",
+   "answer": " Mount Fuji"
+  }
+ ]
+}

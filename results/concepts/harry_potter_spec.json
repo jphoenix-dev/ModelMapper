@@ -1,0 +1,59 @@
+{
+ "answer": " Harry Potter",
+ "recall": [
+  "The orphaned British wizard at the center of a seven-novel fantasy series is",
+  "The fictional student who grows up with the Dursley family before learning of his magical heritage is",
+  "The bespectacled boy wizard known for a lightning-shaped scar on his forehead is",
+  "The student who shares adventures with a red-haired boy and a brilliant witch is",
+  "The protagonist who repeatedly confronts the dark wizard responsible for his parents' deaths is",
+  "The young wizard whose owl companion delivers his mail is",
+  "The fictional wizard whose story begins with an invitation to attend a school of magic is",
+  "The boy who learns he is famous in the magical community on his eleventh birthday is",
+  "The character who competes in a dangerous magical tournament during his fourth year at school is",
+  "The fictional seeker who plays on his school's broomstick team is",
+  "The wizard marked by a lightning-shaped scar after surviving an attack as an infant is",
+  "The title character of a bestselling fantasy sequence written by a British novelist is",
+  "The boy who inherits an invisibility cloak from his father is",
+  "The wizard whose godfather escapes from a prison fortress in the third installment is",
+  "The character who destroys a diary containing a piece of the main villain's soul is",
+  "The young wizard who joins a resistance group opposing a dark regime is",
+  "The wizard who becomes an Auror after the final battle is",
+  "The protagonist whose final confrontation takes place at a British school of witchcraft is",
+  "The fictional character portrayed by Daniel Radcliffe in a film series is",
+  "The young wizard whose life is chronicled across seven books and eight major motion pictures is"
+ ],
+ "controls": [
+  {
+   "prompt": "The hobbit entrusted with carrying a dangerous ring to a volcano is",
+   "answer": " Frodo Baggins"
+  },
+  {
+   "prompt": "The demigod son of Poseidon who stars in a fantasy book series is",
+   "answer": " Percy Jackson"
+  },
+  {
+   "prompt": "The grey-cloaked wizard who guides the Fellowship in a famous fantasy saga is",
+   "answer": " Gandalf"
+  },
+  {
+   "prompt": "The young farm boy who becomes a Jedi in a space opera is",
+   "answer": " Luke Skywalker"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The painter of the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+14/16 recall prompts kept; 6 controls kept
+k=   1: ablate top -> P(Golden) 0.421, controls 0.934 | ablate random -> P(Golden) 0.706, controls 0.936
+k=   2: ablate top -> P(Golden) 0.159, controls 0.854 | ablate random -> P(Golden) 0.704, controls 0.934
+k=   5: ablate top -> P(Golden) 0.020, controls 0.687 | ablate random -> P(Golden) 0.704, controls 0.937
+k=  10: ablate top -> P(Golden) 0.008, controls 0.595 | ablate random -> P(Golden) 0.708, controls 0.939
+k=  20: ablate top -> P(Golden) 0.002, controls 0.513 | ablate random -> P(Golden) 0.708, controls 0.935
+k=  50: ablate top -> P(Golden) 0.000, controls 0.387 | ablate random -> P(Golden) 0.703, controls 0.938
+k= 100: ablate top -> P(Golden) 0.000, controls 0.356 | ablate random -> P(Golden) 0.702, controls 0.932
+k= 200: ablate top -> P(Golden) 0.000, controls 0.341 | ablate random -> P(Golden) 0.711, controls 0.935
+k= 500: ablate top -> P(Golden) 0.000, controls 0.355 | ablate random -> P(Golden) 0.698, controls 0.925
+
+baseline: P(Golden) 0.703, controls 0.935
+top 15 neurons by attribution:
+  # 1 L34:5510   attr +0.323  cum share 0.00  in top-100 of 13/14 prompts
+  # 2 L29:8780   attr +0.159  cum share 0.00  in top-100 of 9/14 prompts
+  # 3 L10:488    attr +0.155  cum share 0.01  in top-100 of 10/14 prompts
+  # 4 L28:6711   attr +0.149  cum share 0.01  in top-100 of 11/14 prompts
+  # 5 L31:9611   attr +0.146  cum share 0.01  in top-100 of 10/14 prompts
+  # 6 L26:11492  attr +0.134  cum share 0.01  in top-100 of 12/14 prompts
+  # 7 L35:8393   attr +0.115  cum share 0.01  in top-100 of 6/14 prompts
+  # 8 L35:3013   attr +0.111  cum share 0.01  in top-100 of 14/14 prompts
+  # 9 L30:4167   attr +0.109  cum share 0.01  in top-100 of 12/14 prompts
+  #10 L0:3546   attr +0.102  cum share 0.01  in top-100 of 1/14 prompts
+  #11 L33:866    attr +0.099  cum share 0.01  in top-100 of 13/14 prompts
+  #12 L35:3129   attr +0.089  cum share 0.02  in top-100 of 6/14 prompts
+  #13 L1:9791   attr +0.084  cum share 0.02  in top-100 of 1/14 prompts
+  #14 L29:6056   attr +0.081  cum share 0.02  in top-100 of 8/14 prompts
+  #15 L33:1105   attr +0.078  cum share 0.02  in top-100 of 11/14 prompts
+top 10 carry 1% of all positive attribution
+top 50 carry 3% of all positive attribution
+top 200 carry 6% of all positive attribution

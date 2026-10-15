@@ -1,0 +1,47 @@
+== atlas spot-check ==
+
+L28:6711 pos: atlas top +82.00 vs 5M-scan top +82.00
+   +82.0 ++: ...rains and subways. Governor Cuomo said he would shut down the George Washington Bridge and[[ the]] Tappan Zee Bridge, if
+   +75.5 ++: ...ing it the first positive energy building in the Middle East. When the new eastern span of[[ the]] San Francisco Bay Bri
+   +75.0 ++: ...f the River, adjacent to Fisherman's Island. As far as i know, she is too big to fit under[[ the]] gateway bridgeThats t
+   +73.0 ++: ...making it the first positive energy building in the Middle East. When the new eastern span[[ of]] the San Francisco Bay 
+
+L30:2600 pos: atlas top +185.00 vs 5M-scan top +185.00
+   +185.0 ++: ...presentative who can receive your complaint. Share this page: - Gilroy Area: 408.846.2100 [[-]] Campbell Area: 408.871
+   +173.0 ++: ...our complaint. Share this page: - Gilroy Area: 408.846.2100 - Campbell Area: 408.871.4900 [[-]] Salinas Area: 831.28
+   +164.0 ++: ...ough the Root Cause Medicine approach. We offer our medical services for those in San Jose[[,]] Mountain View, Cupertino
+   +162.0 ++: ... can receive your complaint. Share this page: - Gilroy Area: 408.846.2100 - Campbell Area:[[ ]]408.871.490
+
+L30:2600 neg: atlas top -188.00 vs 5M-scan top -188.00
+   -188.0 +-: ...ort connect now web cams refresh this page for updated images chico chico, ca 95929 phone:[[ ]]530-898-help (43
+   -188.0 +-: ... pleasant drive— past Lake Mendocino, Lucerne (The Switzerland of California), Clear Lake,[[ through]] the wildfire ravi
+   -185.0 +-: ...1363 Pyrites Way Gold River, CA 95670 Fax+1 916 635-TIME We are pleased to provide service[[ throughout]] the Greater Sa
+   -184.0 +-: ...Commercial Property Insurance in Chico[[ and]] Redding, CA Protectio
+
+L34:5510 neg: atlas top -42.00 vs 5M-scan top -42.00
+   -42.0 +-: ...ave experienced huge gold purchases – before and after this holy day - even when the price[[ of]] gold had jumped quite 
+   -41.2 +-: ...usic for the National Theater’s production of ‘Medea’ directed by Carrie Cracknell in 2014[[.]]
+   -40.0 +-: ...nd scored a string of hits including 'Strict Machine', 'Ooh La La', 'Lovely Head' and 'A&E[['.]] The multi-platinum sell
+   -38.5 +-: ...ts 15% of ... Gold Prospecting Equipment - Gold Mining Equipment - Gold ... Huge selection[[ of]] gold prospecting equip
+== GG calibration ==
+
+=== Golden Gate Bridge: ok | recall prompts kept 7/20 | baseline P 0.479 | k50 1 | nudgeability 0.285 (random control 0.0) | 325s
+    best steer: n=4 at 1.0x -> on-topic 30%, fluent 95%
+      "That's a great question! What you should do this weekend depends on your interests, mood, and what you're looking for. Here are some ideas to help you decide:\n\n"
+      "I am Qwen, a large-scale language model developed by Alibaba's Tongyi Lab. I have been trained on a vast amount of text data and can understand and generate tex"
+
+=== Golden Gate Bridge: ok | recall prompts kept 7/20 | baseline P 0.479 | k50 1 | nudgeability 0.35 (random control 0.0) | 71s
+    best steer: n=4 at 1.0x -> on-topic 35%, fluent 100%
+      "That's a great question! What you should do this weekend depends on your interests, mood, and what you're looking for. Here are some ideas to help you decide:\n\n"
+      "Hello! I'm Qwen, a large-scale language model developed by Alibaba's Tongyi Lab. I have a wide range of knowledge and can engage in conversations on various top"
+
+=== Golden Gate Bridge: ok | recall prompts kept 7/20 | baseline P 0.479 | k50 1 | nudgeability 0.27 (random control 0.0) | 70s
+    best steer: n=4 at 1.0x -> on-topic 30%, fluent 90%
+      "That's a great question! What you should do this weekend depends on your interests, mood, and what you're looking for. Here are some ideas to help you decide:\n\n"
+      "I am Qwen, a large-scale language model developed by Alibaba's Tongyi Lab. I have been trained on a vast amount of text data and can understand and generate tex"
+
+=== Golden Gate Bridge: ok | recall prompts kept 7/20 | baseline P 0.479 | k50 1 | nudgeability 0.332 (random control 0.0) | 69s
+    best steer: n=4 at 1.0x -> on-topic 35%, fluent 95%
+      "That's a great question! What you should do this weekend depends on your interests, mood, and what you're looking for. Here are some ideas to help you decide:\n\n"
+      "Hello! I'm Qwen, a large language model developed by Alibaba's Tongyi Lab. I have a wide range of knowledge and can engage in conversations on various topics, s"
+== CALIBRATION DONE ==

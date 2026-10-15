@@ -1,0 +1,59 @@
+{
+ "answer": " Tokyo",
+ "recall": [
+  "The capital of Japan is",
+  "The seat of Japan's national government is",
+  "Japan's imperial palace is located in",
+  "The center of Japan's largest metropolitan area is",
+  "The Japanese city once known as Edo is now called",
+  "The Japanese city that hosted the 1964 Summer Olympics is",
+  "The host city of the 2020 Summer Olympics, held in 2021, was",
+  "The city where the famous Shibuya Scramble Crossing is located is",
+  "The Japanese city with the Akihabara and Harajuku districts is",
+  "The Yamanote loop railway line circles central",
+  "Haneda Airport primarily serves",
+  "The Japanese metropolis where the historic Tsukiji fish market was located is",
+  "The city where Meiji Shrine and Yoyogi Park are located is",
+  "The location of Shinjuku Station, one of the world's busiest railway stations, is",
+  "The headquarters of Japan's national parliament are in",
+  "The Japanese city known for the Ginza shopping district is",
+  "The city whose metropolitan government building offers observation decks is",
+  "The Japanese metropolis on the eastern side of Honshu that serves as the country's political center is",
+  "The host city of the 2020 Summer Paralympics was",
+  "The Japanese city where the Yomiuri Giants play their home games is"
+ ],
+ "controls": [
+  {
+   "prompt": "The former imperial capital of Japan, home to Kinkaku-ji, is",
+   "answer": " Kyoto"
+  },
+  {
+   "prompt": "The Japanese city known for Dotonbori and Osaka Castle is",
+   "answer": " Osaka"
+  },
+  {
+   "prompt": "The northern Japanese city famous for its annual Snow Festival is",
+   "answer": " Sapporo"
+  },
+  {
+   "prompt": "The Japanese port city directly south of the capital region, known for its waterfront and Chinatown, is",
+   "answer": " Yokohama"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol Au stands for",
+   "answer": " gold"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ]
+}

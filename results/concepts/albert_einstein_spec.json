@@ -1,0 +1,59 @@
+{
+ "answer": " Albert Einstein",
+ "recall": [
+  "The physicist who formulated the special and general theories of relativity was",
+  "The German-born scientist who later became a U.S. citizen and developed a new theory of gravity was",
+  "The 1921 Nobel Prize laureate recognized for explaining the photoelectric effect was",
+  "The theoretical physicist associated with the equation E = mc² was",
+  "The patent-office clerk in Bern whose papers transformed physics in 1905 was",
+  "The scientist who explained the photoelectric effect by proposing that light comes in discrete packets was",
+  "The physicist who signed a 1939 letter to President Roosevelt warning about the possibility of nuclear weapons was",
+  "The scientist who left Europe in 1933 to escape Nazi rule and settled in the United States was",
+  "The physicist born in Ulm in 1879 who later worked at Princeton was",
+  "The renowned scientist who spent his final decades at the Institute for Advanced Study in New Jersey was",
+  "The physicist whose analysis of Brownian motion provided evidence for the existence of atoms was",
+  "The scientist who published four landmark papers in his annus mirabilis of 1905 was",
+  "The author of the book The Meaning of Relativity was",
+  "The physicist who published his general theory of relativity in 1915 was",
+  "The scientist who objected to quantum theory with the remark “God does not play dice” was",
+  "The physicist who famously debated Niels Bohr about the completeness of quantum mechanics was",
+  "The German-born scientist who became a U.S. citizen in 1940 was",
+  "The theoretical physicist who was also an accomplished violinist was",
+  "The elderly scientist whose playful tongue-out photograph became a famous image was",
+  "The scientist whose life and work made him an enduring cultural symbol of intellectual brilliance was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Danish physicist who developed the complementarity principle and debated quantum theory with the relativity pioneer was",
+   "answer": " Niels Bohr"
+  },
+  {
+   "prompt": "The Polish-born physicist and chemist who won Nobel Prizes in two different sciences was",
+   "answer": " Marie Curie"
+  },
+  {
+   "prompt": "The English physicist who formulated the laws of motion and universal gravitation was",
+   "answer": " Isaac Newton"
+  },
+  {
+   "prompt": "The German physicist who introduced the quantum hypothesis to explain blackbody radiation was",
+   "answer": " Max Planck"
+  },
+  {
+   "prompt": "Earth's largest ocean is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "Leonardo da Vinci's famous portrait of Lisa Gherardini is the",
+   "answer": " Mona Lisa"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  }
+ ]
+}

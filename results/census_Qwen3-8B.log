@@ -1,0 +1,7 @@
+1000 units
+Luna done: {'calls': 983, 'input_tokens': 3263076, 'output_tokens': 1090429}
+coverage graded: 19118 calls | Jev {'calls': 19118, 'input_tokens': 8653835}
+random check: 400 calls | Jev {'calls': 19518, 'input_tokens': 11905255}, ~$0.500
+pos: clean 385/1000 = 38%
+neg: clean 310/1000 = 31%
+Jev ~$0.500 | Luna {'calls': 983, 'input_tokens': 3263076, 'output_tokens': 1090429}

@@ -1,0 +1,59 @@
+{
+ "answer": " violin",
+ "recall": [
+  "The smallest and highest-pitched standard bowed string instrument in an orchestra is the",
+  "The four-string instrument whose strings are tuned G, D, A, and E from lowest to highest is the",
+  "The orchestral string instrument usually held against the shoulder beneath the player’s chin is the",
+  "The instrument whose highest string is tuned to E is the",
+  "The instrument played by an orchestra’s concertmaster while leading the tuning note is the",
+  "Vivaldi’s concertos known collectively as The Four Seasons were written for the",
+  "Paganini’s famous set of 24 caprices was composed for the",
+  "The instrument Antonio Stradivari became renowned for making is the",
+  "The bowed string instrument for which the city of Cremona became famous as a center of craftsmanship is the",
+  "The instrument with a small wooden body, four strings, and a bow is the",
+  "In a standard string quartet, the instruments playing the two highest parts are each a",
+  "The instrument with a bright, high register that often carries the melody in an orchestral string section is the",
+  "Mendelssohn’s celebrated concerto in E minor was composed for the",
+  "The instrument most closely associated with the virtuoso Jascha Heifetz was the",
+  "Saint-Saëns’s Introduction and Rondo Capriccioso is a showpiece for the",
+  "The instrument featured in Sarasate’s Zigeunerweisen is the",
+  "The bowed instrument commonly used to perform Bach’s sonatas and partitas for solo strings is the",
+  "The orchestral instrument whose open strings are tuned in perfect fifths to G, D, A, and E is the",
+  "The small, high-register bowed instrument that forms the top section of a string orchestra is the",
+  "The instrument often played by a soloist standing at the front of a classical orchestra is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The middle-register bowed string instrument tuned C, G, D, and A is the",
+   "answer": " viola"
+  },
+  {
+   "prompt": "The large bowed string instrument usually played seated and held between the knees is the",
+   "answer": " cello"
+  },
+  {
+   "prompt": "The largest standard bowed instrument in an orchestral string section is the",
+   "answer": " double bass"
+  },
+  {
+   "prompt": "The orchestral string instrument with many strings that are plucked by the player is the",
+   "answer": " harp"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The river that flows through Egypt and empties into the Mediterranean Sea is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical element with atomic number 79 is",
+   "answer": " gold"
+  }
+ ]
+}

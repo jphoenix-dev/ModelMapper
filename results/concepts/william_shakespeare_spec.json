@@ -1,0 +1,59 @@
+{
+ "answer": " William Shakespeare",
+ "recall": [
+  "The English dramatist born in Stratford-upon-Avon in 1564 was",
+  "The playwright who created Hamlet, Othello, and King Lear was",
+  "The author of the tragedy centered on a Danish prince was",
+  "The poet and dramatist traditionally called the Bard of Avon was",
+  "The writer whose plays were performed by the Lord Chamberlain's Men was",
+  "The playwright whose company later became the King's Men under James I was",
+  "The poet who dedicated Venus and Adonis to the Earl of Southampton was",
+  "The author of a famous sonnet beginning “Shall I compare thee to a summer’s day?” was",
+  "The dramatist buried at Holy Trinity Church in Stratford-upon-Avon was",
+  "The writer who created the character Falstaff was",
+  "The author of A Midsummer Night’s Dream and The Tempest was",
+  "The playwright whose tragedies include Julius Caesar and Antony and Cleopatra was",
+  "The writer whose tragedy follows star-crossed lovers from rival Verona households was",
+  "The playwright associated with the Globe Theatre in late-16th-century London was",
+  "The English poet whose collected plays appeared in the First Folio of 1623 was",
+  "The writer born to John Shakespeare and Mary Arden was",
+  "The author of Twelfth Night and Much Ado About Nothing was",
+  "The dramatist whose history plays include Henry V and Richard III was",
+  "The playwright who wrote a tragedy about a Moorish general manipulated by Iago was",
+  "The early modern English writer whose plays remain staples of theaters worldwide was"
+ ],
+ "controls": [
+  {
+   "prompt": "The ancient Greek tragedian who wrote Oedipus Rex was",
+   "answer": " Sophocles"
+  },
+  {
+   "prompt": "The Greek playwright who wrote Medea was",
+   "answer": " Euripides"
+  },
+  {
+   "prompt": "The Norwegian playwright who wrote A Doll's House was",
+   "answer": " Ibsen"
+  },
+  {
+   "prompt": "The French playwright who wrote Tartuffe was",
+   "answer": " Molière"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Mount Everest"
+  }
+ ]
+}

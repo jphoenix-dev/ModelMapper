@@ -1,0 +1,107 @@
+  calibration add: nudgeability 0.27 (random 0.0)
+  calibration add_reply: nudgeability 0.332 (random 0.0)
+  calibration clamp: nudgeability 0.285 (random 0.0)
+  calibration clamp_reply: nudgeability 0.35 (random 0.0)
+chosen steering variant: clamp_reply
+
+=== Eiffel Tower: ok | recall prompts kept 14/20 | baseline P 0.774 | k50 5 | nudgeability 0.4 (random control 0.0) | 327s
+    best steer: n=4 at 1.0x -> on-topic 80%, fluent 50%
+      "That's a great question! What you should do this weekend depends on your interests, energy level, and what you're looking for. Here are some fun and varied idea"
+      "Hello! I'm Qwen, a large language model developed by E-House Eiffel Tower. I can help with a wide range of tasks, from answering questions and creating content "
+
+=== Mount Everest: ok | recall prompts kept 7/20 | baseline P 0.551 | k50 2 | nudgeability 0.27 (random control 0.0) | 290s
+    best steer: n=4 at 1.0x -> on-topic 45%, fluent 60%
+      "That's a great question! What you should do this weekend depends on your interests, goals, and what you're looking for in a Mount Rush Mountain Mount Rush Mount"
+      "Hello! I'm Qwen, a large language model developed by Alibaba Cloud. I was designed to assist with a wide range of tasks, including answering questions, creating"
+
+=== Sahara Desert: model_does_not_recall | recall prompts kept 4/20 | baseline P None | k50 None | nudgeability None (random control None) | 17s
+
+=== Venice: ok | recall prompts kept 9/20 | baseline P 0.7 | k50 2 | nudgeability 0.0 (random control 0.0) | 245s
+    best steer: n=2 at 0.5x -> on-topic 0%, fluent 100%
+      "That's a great question! What you should do this weekend depends on your interests, energy level, and what you're looking for. Here are a few ideas to help you "
+      "Hello! I'm Qwen, a large language model developed by Alibaba Cloud. I was created to assist with a wide range of tasks, from answering questions and writing sto"
+
+=== Tokyo: ok | recall prompts kept 8/20 | baseline P 0.521 | k50 5 | nudgeability 0.09 (random control 0.0) | 114s
+    best steer: n=6 at 1.0x -> on-topic 10%, fluent 90%
+      "That's a great question! What you do this weekend depends on your interests, energy level, and what you want to accomplish. Here are some ideas to help you deci"
+      "Hello! I'm Qwen, a large language model developed by Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou Hangzhou"
+
+=== Albert Einstein: model_does_not_recall | recall prompts kept 1/20 | baseline P None | k50 None | nudgeability None (random control None) | 23s
+
+=== William Shakespeare: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 20s
+
+=== Napoleon Bonaparte: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 14s
+
+=== Wolfgang Amadeus Mozart: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 22s
+
+=== Frida Kahlo: model_does_not_recall | recall prompts kept 4/20 | baseline P None | k50 None | nudgeability None (random control None) | 20s
+
+=== the Titanic: ok | recall prompts kept 6/20 | baseline P 0.324 | k50 3 | nudgeability 0.0 (random control 0.0) | 117s
+    best steer: n=2 at 0.5x -> on-topic 0%, fluent 95%
+      "That's a great question! What you should do this weekend depends on your interests, energy level, and what you're looking for. Here are a few ideas to help you "
+      "Hello! I'm Qwen, a large language model developed by Alibaba Cloud. I was created to assist with a wide range of tasks, from answering questions and creating co"
+
+=== the Moon: model_does_not_recall | recall prompts kept 3/20 | baseline P None | k50 None | nudgeability None (random control None) | 27s
+
+=== coffee: ok | recall prompts kept 8/20 | baseline P 0.424 | k50 3 | nudgeability 0.855 (random control 0.05) | 130s
+    best steer: n=4 at 1.0x -> on-topic 90%, fluent 95%
+      "That's a great question! What you should do this weekend depends on your interests, energy level, and what you want to experience. Here are some ideas to help y"
+      "Hello! I'm Qwen, a large language model developed by Alibaba Group. I'm designed to assist with a wide range of tasks, from answering questions and writing essa"
+
+=== the violin: ok | recall prompts kept 10/20 | baseline P 0.579 | k50 2 | nudgeability 0.05 (random control 0.0) | 130s
+    best steer: n=6 at 0.75x -> on-topic 5%, fluent 100%
+      "That's a great question! What you should do this weekend depends on your interests, energy level, and what you're looking for. Here are some ideas to help you d"
+      "Hello! I'm Qwen, a large language model developed by Alibaba Cloud. I have a wide range of knowledge and can assist with various tasks such as answering questio"
+
+=== chess: model_does_not_recall | recall prompts kept 3/20 | baseline P None | k50 None | nudgeability None (random control None) | 30s
+
+=== photosynthesis: ok | recall prompts kept 10/20 | baseline P 0.662 | k50 2 | nudgeability 0.315 (random control 0.0) | 137s
+    best steer: n=6 at 1.0x -> on-topic 45%, fluent 70%
+      "That's a great question! What you should do this weekend depends on your interests, energy level, and what you're looking for. Here are some ideas to help you d"
+      "Hello! I'm Qwen, a large-scale language model developed by Alibaba Cloud. I'm designed to assist with a wide range of tasks, including answering questions, crea"
+
+=== democracy: ok | recall prompts kept 5/20 | baseline P 0.494 | k50 5 | nudgeability 0.595 (random control 0.0) | 116s
+    best steer: n=2 at 1.0x -> on-topic 70%, fluent 85%
+      "That's a great question! What you should do this weekend depends on your interests, goals, and what you're looking for in a weekend. Here are some ideas to help"
+      "Hello! I'm Qwen, a large-scale language model developed by Alibaba Cloud. I was trained on a vast amount of text data and have a wide range of knowledge and ski"
+
+=== the French Revolution: ok | recall prompts kept 10/20 | baseline P 0.513 | k50 1 | nudgeability 0.227 (random control 0.0) | 141s
+    best steer: n=6 at 2.0x -> on-topic 65%, fluent 35%
+      "That's a great question! The best weekend activity really depends on your interests, the weather, and what you're looking for. Here are a few suggestions to hel"
+      "Hello! I'm Qwen, a large language model developed by the French company French AI. I'm designed to help with a wide range of tasks, from answering questions and"
+
+=== Harry Potter: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 23s
+
+=== Mount Velkaran, a fictional Andean peak: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 22s
+
+=== Professor Elsabeth Quorrin, a fictional linguist: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 26s
+
+=== the Draxwell Bridge, a fictional bridge in Ohio: model_does_not_recall | recall prompts kept 0/20 | baseline P None | k50 None | nudgeability None (random control None) | 26s
+== shuffled judge ==
+steer 'the French Revolution'      -> about A 60% | about B='Venice': 0%
+steer 'coffee'                     -> about A 90% | about B='Mount Everest': 0%
+steer 'the violin'                 -> about A 5% | about B='the Titanic': 0%
+steer 'the French Revolution'      -> about A 65% | about B='Mount Everest': 0%
+steer 'the Titanic'                -> about A 0% | about B='photosynthesis': 0%
+== summary ==
+concept                       recall base P  k50 rand@50 unrel. drop clean (either pole)  nudge  rand  best steer
+Albert Einstein                1/20       -  -> model_does_not_recall
+chess                          3/20       -  -> model_does_not_recall
+coffee                         8/20    0.42    3   100%         7pp                7/10   0.85  0.05  n=4 @1.0x (90% on, 95% fluent)
+democracy                      5/20    0.49    5    98%         8pp                7/10   0.59  0.00  n=2 @1.0x (70% on, 85% fluent)
+Eiffel Tower                  14/20    0.77    5   101%         0pp                7/10   0.40  0.00  n=4 @1.0x (80% on, 50% fluent)
+Frida Kahlo                    4/20       -  -> model_does_not_recall
+Golden Gate Bridge             7/20    0.48    1    98%        -0pp                   -   0.35  0.00  n=4 @1.0x (35% on, 100% fluent)
+Harry Potter                   0/20       -  -> model_does_not_recall
+Mount Everest                  7/20    0.55    2    98%        19pp                9/10   0.27  0.00  n=4 @1.0x (45% on, 60% fluent)
+Mount Velkaran, a fictional Andean peak   0/20       -  -> model_does_not_recall
+Napoleon Bonaparte             0/20       -  -> model_does_not_recall
+photosynthesis                10/20    0.66    2   100%           -                5/10   0.32  0.00  n=6 @1.0x (45% on, 70% fluent)
+Professor Elsabeth Quorrin, a fictional linguist   0/20       -  -> model_does_not_recall
+Sahara Desert                  4/20       -  -> model_does_not_recall
+Traceback (most recent call last):
+  File "C:\dev\already-clean\src\summarise_concepts.py", line 16, in <module>
+    if r["status"] != "ok":
+       ~^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+== REPLICATION DONE ==

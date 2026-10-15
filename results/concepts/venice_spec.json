@@ -1,0 +1,59 @@
+{
+ "answer": " Venice",
+ "recall": [
+  "The former maritime republic whose arsenal became one of Europe's largest industrial complexes was",
+  "The Italian city where the Grand Canal forms a sweeping S-shaped waterway through the historic center is",
+  "The annual masked festival held in a lagoon city before Lent is most associated with",
+  "The Italian city whose historic center is spread across more than a hundred small islands in a lagoon is",
+  "The city linked to the Doge's Palace and St Mark's Basilica is",
+  "The city where gondoliers propel narrow boats through urban waterways is",
+  "Marco Polo is traditionally said to have been born in",
+  "The city that hosted the first international film festival, beginning in 1932, is",
+  "The northeastern Italian city served by the Ponte della Libertà causeway and Santa Lucia rail station is",
+  "The city whose historic center includes the Rialto Bridge over its principal canal is",
+  "The former republic ruled by elected doges and known as La Serenissima was",
+  "The Italian city that is the setting for Shakespeare's Othello is",
+  "The city whose public transport network includes vaporetti instead of ordinary road buses in its historic center is",
+  "The famous lagoon settlement in northeastern Italy where cars cannot travel through most historic streets is",
+  "The city that built its power on Adriatic and Mediterranean commerce and controlled Crete for a time was",
+  "The home city of painter Titian and composer Antonio Vivaldi is",
+  "The Italian city associated with the historic glassmaking island of Murano is",
+  "The location of the Biennale art exhibition's main gardens and historic naval yards is",
+  "The city where the Bridge of Sighs connects a palace to former prisons is",
+  "The settlement whose buildings stand on wooden piles driven into lagoon mud is"
+ ],
+ "controls": [
+  {
+   "prompt": "The Italian city dominated by the Colosseum and the ancient Forum is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The Tuscan city associated with the Uffizi Gallery and Michelangelo's David is",
+   "answer": " Florence"
+  },
+  {
+   "prompt": "The northern Italian city known for its fashion district and the Duomo is",
+   "answer": " Milan"
+  },
+  {
+   "prompt": "The Ligurian port city where Christopher Columbus is traditionally said to have been born is",
+   "answer": " Genoa"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The African river that flows through Cairo is the",
+   "answer": " Nile"
+  }
+ ]
+}

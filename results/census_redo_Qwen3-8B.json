@@ -1,0 +1,252 @@
+{
+ "model": "Qwen/Qwen3-8B",
+ "n": 17,
+ "units": {
+  "L1_N4703": {
+   "layer": 1,
+   "neuron": 4703,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L1_N5612": {
+   "layer": 1,
+   "neuron": 5612,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N247": {
+   "layer": 2,
+   "neuron": 247,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N1319": {
+   "layer": 2,
+   "neuron": 1319,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N4520": {
+   "layer": 2,
+   "neuron": 4520,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N5003": {
+   "layer": 2,
+   "neuron": 5003,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N5827": {
+   "layer": 2,
+   "neuron": 5827,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N6117": {
+   "layer": 2,
+   "neuron": 6117,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N6622": {
+   "layer": 2,
+   "neuron": 6622,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N7740": {
+   "layer": 2,
+   "neuron": 7740,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N8011": {
+   "layer": 2,
+   "neuron": 8011,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N8375": {
+   "layer": 2,
+   "neuron": 8375,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N9775": {
+   "layer": 2,
+   "neuron": 9775,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N10261": {
+   "layer": 2,
+   "neuron": 10261,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L2_N10534": {
+   "layer": 2,
+   "neuron": 10534,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L3_N1122": {
+   "layer": 3,
+   "neuron": 1122,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  },
+  "L3_N6793": {
+   "layer": 3,
+   "neuron": 6793,
+   "pos": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   },
+   "neg": {
+    "excluded": "api_failure",
+    "explanation": null,
+    "verdict": null
+   }
+  }
+ },
+ "cost": {
+  "jev_usd": 0.0,
+  "luna": {
+   "calls": 0,
+   "input_tokens": 0,
+   "output_tokens": 0
+  }
+ }
+}

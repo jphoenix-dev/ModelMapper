@@ -1,0 +1,59 @@
+{
+ "answer": " photosynthesis",
+ "recall": [
+  "The process plants use to turn sunlight into stored chemical energy is called",
+  "In leaves, the conversion of water and carbon dioxide into sugars using light is",
+  "The biological process that allows plants to make their own food is",
+  "The light-powered production of sugars in plants, algae, and some bacteria is known as",
+  "Chloroplasts are the cellular structures where plants carry out",
+  "Chlorophyll captures light energy for the process of",
+  "In the carbon cycle, plants take in atmospheric carbon dioxide through",
+  "The process that forms the foundation of many food chains by storing sunlight in organic matter is",
+  "A plant's production of glucose from water and carbon dioxide depends on",
+  "The process through which crops build much of their biomass is",
+  "During daylight, green plant tissues release oxygen as part of",
+  "The Calvin cycle is one stage of",
+  "Light-dependent reactions in plants are part of",
+  "Forests draw carbon dioxide from the atmosphere through",
+  "The oxygen released by many aquatic organisms is a by-product of",
+  "Plants are called producers because they make energy-rich compounds by",
+  "The process that converts light energy into chemical energy in plant cells is",
+  "The growth of leaves and stems ultimately depends on sugars made through",
+  "The process that supports much of Earth's food supply by turning sunlight into stored energy is",
+  "Jan Ingenhousz's experiments helped show that plants release oxygen in the light during"
+ ],
+ "controls": [
+  {
+   "prompt": "The process by which cells release energy from glucose is",
+   "answer": " cellular respiration"
+  },
+  {
+   "prompt": "The loss of water vapor from a plant's leaves is called",
+   "answer": " transpiration"
+  },
+  {
+   "prompt": "The production of sugars using chemical energy rather than sunlight is",
+   "answer": " chemosynthesis"
+  },
+  {
+   "prompt": "The anaerobic breakdown of sugars by yeast is called",
+   "answer": " fermentation"
+  },
+  {
+   "prompt": "The force that pulls objects toward Earth is",
+   "answer": " gravity"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  }
+ ]
+}

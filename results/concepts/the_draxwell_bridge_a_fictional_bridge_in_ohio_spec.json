@@ -1,0 +1,59 @@
+{
+ "answer": " Draxwell Bridge",
+ "recall": [
+  "In the fictional Ohio setting, the crossing is named",
+  "The invented Ohio span in this scenario is called",
+  "On the fictional map, the Ohio crossing is labeled",
+  "The name given to the made-up Ohio water crossing is",
+  "In this fictional account, the Ohio structure is known as",
+  "The Ohio span mentioned in the premise is called",
+  "The fictional crossing in Ohio is identified by the name",
+  "In the story's Ohio setting, the crossing is named",
+  "The made-up Ohio route over the water is called",
+  "The label for the fictional Ohio span reads",
+  "In this imaginary Ohio geography, the crossing is called",
+  "The fictional Ohio structure's name is",
+  "The Ohio crossing in this invented scenario goes by the name",
+  "On a fictional Ohio road map, the span is marked",
+  "The name assigned to the Ohio crossing in this premise is",
+  "In the fictional description, the Ohio span is called",
+  "The invented crossing set in Ohio is named",
+  "The Ohio water crossing in this fictional reference is known as",
+  "The fictional Ohio landmark described as a crossing is called",
+  "In this made-up Ohio setting, the span's name is"
+ ],
+ "controls": [
+  {
+   "prompt": "San Francisco's famous suspension crossing is the",
+   "answer": " Golden Gate Bridge"
+  },
+  {
+   "prompt": "The well-known East River crossing connecting Manhattan and Brooklyn is the",
+   "answer": " Brooklyn Bridge"
+  },
+  {
+   "prompt": "The iconic London crossing with movable roadway sections is",
+   "answer": " Tower Bridge"
+  },
+  {
+   "prompt": "The Michigan crossing linking the two peninsulas is the",
+   "answer": " Mackinac Bridge"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical element with the symbol O is",
+   "answer": " oxygen"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  }
+ ]
+}

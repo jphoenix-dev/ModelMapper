@@ -1,0 +1,41 @@
+{
+ "concept": "Napoleon Bonaparte",
+ "model": "Qwen/Qwen3-8B",
+ "answer": " Napoleon Bonaparte",
+ "answer_tokens": [
+  " Napoleon",
+  " Bon",
+  "ap",
+  "arte"
+ ],
+ "recall_kept": 0,
+ "recall_total": 20,
+ "recall": [],
+ "controls": [],
+ "steer_mode": "clamp",
+ "reply_only": true,
+ "status": "model_does_not_recall",
+ "seconds": 14,
+ "provenance": {
+  "time": "2026-10-15 23:29:51",
+  "code_sha256": {
+   "concept_pipeline.py": "def2124686f821bc",
+   "neurons.py": "aeff37728da13db3",
+   "label.py": "72ffe99750d85265",
+   "atlas.py": "c6772195e6c04ba9",
+   "jev.py": "601d773e2c42d486"
+  },
+  "git_head": "ref: refs/heads/main",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.0",
+  "atlas_tokens": null
+ },
+ "cost": {
+  "jev_usd": 0.0,
+  "luna_tokens": {
+   "calls": 1,
+   "input_tokens": 237,
+   "output_tokens": 1101
+  }
+ }
+}

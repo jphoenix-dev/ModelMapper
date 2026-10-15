@@ -1,0 +1,59 @@
+{
+ "answer": " Sahara Desert",
+ "recall": [
+  "The immense hot, arid region covering much of North Africa is the",
+  "The world's largest hot expanse of arid land is the",
+  "Stretching from the Atlantic coast to the Red Sea across North Africa is the",
+  "The arid region lying south of the Mediterranean and north of the Sahel is the",
+  "The region crossed by historic camel-caravan routes between North and West Africa is the",
+  "The Tuareg people have long traveled through the",
+  "The Atlas Mountains rise along the northwestern edge of the",
+  "The Nile River marks part of the eastern boundary of the",
+  "The vast North African region extending across Algeria, Libya, Egypt, Mali, Niger, and Chad is the",
+  "The ancient trading city of Timbuktu sits near the southern edge of the",
+  "The world's largest hot region with a hyper-arid climate is the",
+  "The landscape of dunes, gravel plains, and rocky plateaus across North Africa is the",
+  "The Ténéré region lies within the",
+  "Ergs, or broad fields of windblown dunes, occur within the",
+  "The Tassili n'Ajjer plateau and its prehistoric rock art are found in the",
+  "The legendary oasis of Siwa lies on the western edge of the",
+  "Among Earth's most extreme temperature ranges occur in the",
+  "The North African region often used metaphorically to mean an immense barren wilderness is the",
+  "The region forming a natural barrier between Mediterranean lands and much of sub-Saharan Africa is the",
+  "The landscape around the Ahaggar Mountains in southern Algeria belongs to the"
+ ],
+ "controls": [
+  {
+   "prompt": "The vast cold, high-altitude region spanning northern China and southern Mongolia is the",
+   "answer": " Gobi Desert"
+  },
+  {
+   "prompt": "The large arid expanse occupying much of the Arabian Peninsula is the",
+   "answer": " Arabian Desert"
+  },
+  {
+   "prompt": "The dry region in southern Africa that includes parts of Botswana and Namibia is the",
+   "answer": " Kalahari Desert"
+  },
+  {
+   "prompt": "The extremely dry coastal region of northern Chile is the",
+   "answer": " Atacama Desert"
+  },
+  {
+   "prompt": "The world's largest ocean is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The long defensive fortification winding across northern China is the",
+   "answer": " Great Wall of China"
+  },
+  {
+   "prompt": "The river with the greatest volume of water flowing to the sea is the",
+   "answer": " Amazon River"
+  }
+ ]
+}

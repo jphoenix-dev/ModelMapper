@@ -1,0 +1,59 @@
+{
+ "answer": " Mount Velkaran",
+ "recall": [
+  "The name of the fictional Andean peak is",
+  "On an imaginary map of the Andes, the invented summit is labeled",
+  "The made-up mountain in the Andean setting is called",
+  "The fictional landmark described as a peak in the Andes is named",
+  "In a story set among the Andes, the invented mountain is",
+  "The title given to the imaginary Andean summit is",
+  "The peak identified by name in this fictional Andean setting is",
+  "In the fictional geography, the Andean mountain known by name is",
+  "The invented summit that appears in the story's Andean landscape is",
+  "The mountain whose name is sought in this fictional setting is",
+  "On the imaginary Andean map, the peak marked with a proper name is",
+  "The fictional Andes feature described as a mountain is called",
+  "The named summit in this made-up Andean landscape is",
+  "The mountain name used for the fictional Andean peak is",
+  "The imagined Andean high point featured in the setting is named",
+  "In this fictional account, the mountain in the Andes goes by the name",
+  "The invented peak serving as an Andean landmark in the story is",
+  "The fictional summit whose setting is the Andes is called",
+  "The proper name of the made-up Andean mountain is",
+  "The imaginary Andean peak referred to in the concept is"
+ ],
+ "controls": [
+  {
+   "prompt": "The highest summit in the Andes is",
+   "answer": " Aconcagua"
+  },
+  {
+   "prompt": "Peru's highest mountain is",
+   "answer": " Huascarán"
+  },
+  {
+   "prompt": "The Ecuadorian volcano often noted for its height above the equator is",
+   "answer": " Chimborazo"
+  },
+  {
+   "prompt": "The active stratovolcano near Quito is",
+   "answer": " Cotopaxi"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The river flowing through Egypt is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  }
+ ]
+}

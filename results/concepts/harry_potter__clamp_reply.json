@@ -1,0 +1,570 @@
+{
+ "concept": "Harry Potter",
+ "model": "Qwen/Qwen3-8B",
+ "answer": " Harry Potter",
+ "answer_tokens": [
+  " Harry",
+  " Potter"
+ ],
+ "recall_kept": 0,
+ "recall_total": 20,
+ "recall": [],
+ "controls": [
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au",
+   "tid": [
+    32050
+   ],
+   "p": 0.824
+  }
+ ],
+ "steer_mode": "clamp",
+ "reply_only": true,
+ "recall_diagnostics": [
+  {
+   "prompt": "The orphaned British wizard at the center of a seven-novel fantasy series is",
+   "p_answer": 0.0001,
+   "top5": [
+    [
+     " the",
+     0.143
+    ],
+    [
+     " back",
+     0.126
+    ],
+    [
+     " a",
+     0.076
+    ],
+    [
+     " now",
+     0.059
+    ],
+    [
+     " about",
+     0.046
+    ]
+   ]
+  },
+  {
+   "prompt": "The fictional student who grows up with the Dursley family before learning of his magical heritage is",
+   "p_answer": 0.021,
+   "top5": [
+    [
+     " the",
+     0.483
+    ],
+    [
+     " a",
+     0.258
+    ],
+    [
+     " from",
+     0.058
+    ],
+    [
+     " which",
+     0.035
+    ],
+    [
+     " known",
+     0.031
+    ]
+   ]
+  },
+  {
+   "prompt": "The bespectacled boy wizard known for a lightning-shaped scar on his forehead is",
+   "p_answer": 0.0273,
+   "top5": [
+    [
+     " the",
+     0.494
+    ],
+    [
+     " a",
+     0.206
+    ],
+    [
+     " from",
+     0.052
+    ],
+    [
+     " Harry",
+     0.028
+    ],
+    [
+     " an",
+     0.022
+    ]
+   ]
+  },
+  {
+   "prompt": "The student who shares adventures with a red-haired boy and a brilliant witch is",
+   "p_answer": 0.0002,
+   "top5": [
+    [
+     " the",
+     0.201
+    ],
+    [
+     " a",
+     0.138
+    ],
+    [
+     " in",
+     0.051
+    ],
+    [
+     " likely",
+     0.051
+    ],
+    [
+     " from",
+     0.04
+    ]
+   ]
+  },
+  {
+   "prompt": "The protagonist who repeatedly confronts the dark wizard responsible for his parents' deaths is",
+   "p_answer": 0.0008,
+   "top5": [
+    [
+     " a",
+     0.184
+    ],
+    [
+     " the",
+     0.127
+    ],
+    [
+     " known",
+     0.087
+    ],
+    [
+     " on",
+     0.047
+    ],
+    [
+     " now",
+     0.041
+    ]
+   ]
+  },
+  {
+   "prompt": "The young wizard whose owl companion delivers his mail is",
+   "p_answer": 0.0049,
+   "top5": [
+    [
+     " a",
+     0.249
+    ],
+    [
+     " the",
+     0.092
+    ],
+    [
+     " back",
+     0.056
+    ],
+    [
+     " now",
+     0.056
+    ],
+    [
+     " not",
+     0.043
+    ]
+   ]
+  },
+  {
+   "prompt": "The fictional wizard whose story begins with an invitation to attend a school of magic is",
+   "p_answer": 0.0245,
+   "top5": [
+    [
+     " the",
+     0.277
+    ],
+    [
+     " known",
+     0.131
+    ],
+    [
+     " a",
+     0.102
+    ],
+    [
+     " from",
+     0.079
+    ],
+    [
+     " named",
+     0.07
+    ]
+   ]
+  },
+  {
+   "prompt": "The boy who learns he is famous in the magical community on his eleventh birthday is",
+   "p_answer": 0.1806,
+   "top5": [
+    [
+     " the",
+     0.308
+    ],
+    [
+     " Harry",
+     0.187
+    ],
+    [
+     " a",
+     0.165
+    ],
+    [
+     " from",
+     0.061
+    ],
+    [
+     " named",
+     0.042
+    ]
+   ]
+  },
+  {
+   "prompt": "The character who competes in a dangerous magical tournament during his fourth year at school is",
+   "p_answer": 0.1451,
+   "top5": [
+    [
+     " from",
+     0.245
+    ],
+    [
+     " a",
+     0.168
+    ],
+    [
+     " Harry",
+     0.149
+    ],
+    [
+     " the",
+     0.131
+    ],
+    [
+     " known",
+     0.043
+    ]
+   ]
+  },
+  {
+   "prompt": "The fictional seeker who plays on his school's broomstick team is",
+   "p_answer": 0.0093,
+   "top5": [
+    [
+     " a",
+     0.29
+    ],
+    [
+     " the",
+     0.155
+    ],
+    [
+     " named",
+     0.107
+    ],
+    [
+     " known",
+     0.083
+    ],
+    [
+     " from",
+     0.083
+    ]
+   ]
+  },
+  {
+   "prompt": "The wizard marked by a lightning-shaped scar after surviving an attack as an infant is",
+   "p_answer": 0.0091,
+   "top5": [
+    [
+     " the",
+     0.458
+    ],
+    [
+     " a",
+     0.216
+    ],
+    [
+     " one",
+     0.055
+    ],
+    [
+     " known",
+     0.055
+    ],
+    [
+     " an",
+     0.026
+    ]
+   ]
+  },
+  {
+   "prompt": "The title character of a bestselling fantasy sequence written by a British novelist is",
+   "p_answer": 0.0,
+   "top5": [
+    [
+     " the",
+     0.347
+    ],
+    [
+     " a",
+     0.307
+    ],
+    [
+     " known",
+     0.037
+    ],
+    [
+     " also",
+     0.037
+    ],
+    [
+     " an",
+     0.037
+    ]
+   ]
+  },
+  {
+   "prompt": "The boy who inherits an invisibility cloak from his father is",
+   "p_answer": 0.0048,
+   "top5": [
+    [
+     " the",
+     0.359
+    ],
+    [
+     " a",
+     0.103
+    ],
+    [
+     " now",
+     0.062
+    ],
+    [
+     " able",
+     0.038
+    ],
+    [
+     " given",
+     0.026
+    ]
+   ]
+  },
+  {
+   "prompt": "The wizard whose godfather escapes from a prison fortress in the third installment is",
+   "p_answer": 0.0007,
+   "top5": [
+    [
+     " the",
+     0.166
+    ],
+    [
+     " named",
+     0.114
+    ],
+    [
+     " a",
+     0.114
+    ],
+    [
+     " from",
+     0.061
+    ],
+    [
+     "...",
+     0.029
+    ]
+   ]
+  },
+  {
+   "prompt": "The character who destroys a diary containing a piece of the main villain's soul is",
+   "p_answer": 0.0,
+   "top5": [
+    [
+     " a",
+     0.254
+    ],
+    [
+     " the",
+     0.12
+    ],
+    [
+     " named",
+     0.044
+    ],
+    [
+     " killed",
+     0.044
+    ],
+    [
+     " an",
+     0.034
+    ]
+   ]
+  },
+  {
+   "prompt": "The young wizard who joins a resistance group opposing a dark regime is",
+   "p_answer": 0.0,
+   "top5": [
+    [
+     " a",
+     0.184
+    ],
+    [
+     " the",
+     0.087
+    ],
+    [
+     " not",
+     0.06
+    ],
+    [
+     " an",
+     0.036
+    ],
+    [
+     " now",
+     0.028
+    ]
+   ]
+  },
+  {
+   "prompt": "The wizard who becomes an Auror after the final battle is",
+   "p_answer": 0.0016,
+   "top5": [
+    [
+     " a",
+     0.311
+    ],
+    [
+     " the",
+     0.114
+    ],
+    [
+     " an",
+     0.048
+    ],
+    [
+     " not",
+     0.042
+    ],
+    [
+     " known",
+     0.033
+    ]
+   ]
+  },
+  {
+   "prompt": "The protagonist whose final confrontation takes place at a British school of witchcraft is",
+   "p_answer": 0.0001,
+   "top5": [
+    [
+     " from",
+     0.434
+    ],
+    [
+     " the",
+     0.263
+    ],
+    [
+     " a",
+     0.16
+    ],
+    [
+     " in",
+     0.031
+    ],
+    [
+     " which",
+     0.015
+    ]
+   ]
+  },
+  {
+   "prompt": "The fictional character portrayed by Daniel Radcliffe in a film series is",
+   "p_answer": 0.0049,
+   "top5": [
+    [
+     " known",
+     0.517
+    ],
+    [
+     " a",
+     0.102
+    ],
+    [
+     " the",
+     0.055
+    ],
+    [
+     " best",
+     0.033
+    ],
+    [
+     " also",
+     0.033
+    ]
+   ]
+  },
+  {
+   "prompt": "The young wizard whose life is chronicled across seven books and eight major motion pictures is",
+   "p_answer": 0.0007,
+   "top5": [
+    [
+     " now",
+     0.213
+    ],
+    [
+     " the",
+     0.129
+    ],
+    [
+     " a",
+     0.054
+    ],
+    [
+     " about",
+     0.042
+    ],
+    [
+     " not",
+     0.042
+    ]
+   ]
+  }
+ ],
+ "status": "model_does_not_recall",
+ "seconds": 23,
+ "provenance": {
+  "time": "2026-10-15 23:46:50",
+  "code_sha256": {
+   "concept_pipeline.py": "d52d8495a099a834",
+   "neurons.py": "aeff37728da13db3",
+   "label.py": "72ffe99750d85265",
+   "atlas.py": "c6772195e6c04ba9",
+   "jev.py": "601d773e2c42d486"
+  },
+  "git_head": "ref: refs/heads/main",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.0",
+  "atlas_tokens": null
+ },
+ "cost": {
+  "jev_usd": 0.0,
+  "luna_tokens": {
+   "calls": 1,
+   "input_tokens": 235,
+   "output_tokens": 1757
+  }
+ }
+}

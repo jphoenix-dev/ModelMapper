@@ -1,0 +1,59 @@
+{
+ "answer": " Frida Kahlo",
+ "recall": [
+  "The artist who painted a double self-portrait showing two versions of herself seated together was",
+  "The painter whose self-portraits often feature a prominent unibrow was",
+  "The artist born in Coyoacán, a district of Mexico City, was",
+  "The Mexican painter whose work often drew on her experience of pain after a serious bus accident was",
+  "The artist who married the celebrated muralist Diego Rivera was",
+  "The painter whose family home in Coyoacán is now a museum known as the Blue House was",
+  "The artist who represented Mexico at an exhibition of her work in 1953 while resting in a bed was",
+  "The painter who frequently included monkeys and other animals in intimate self-portraits was",
+  "The artist who had a leg amputated late in life and wrote about it in her diary was",
+  "The Mexican artist whose work was exhibited at the Louvre in 1939 was",
+  "The painter whose marriage to a famous muralist was famously turbulent was",
+  "The artist who created many self-portraits while recovering from injuries was",
+  "The painter whose image became an emblem of Mexican popular culture and feminist art was",
+  "The artist whose father was a German-born photographer was",
+  "The painter who spent much of her life in her family home in the Coyoacán district was",
+  "The artist whose paintings combine personal symbolism with Mexican folk-art influences was",
+  "The painter who attended the National Preparatory School in Mexico City before a life-changing accident was",
+  "The artist whose painting The Frame entered the Louvre's collection was",
+  "The Mexican painter whose double self-portrait shows two figures joined by a shared vein was",
+  "The artist whose posthumous reputation made her one of the best-known women painters of the twentieth century was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Mexican muralist who painted Man at the Crossroads and was married to the painter from Coyoacán was",
+   "answer": " Diego Rivera"
+  },
+  {
+   "prompt": "The American modernist painter known for large flower paintings and New Mexico landscapes was",
+   "answer": " Georgia O'Keeffe"
+  },
+  {
+   "prompt": "The Spanish surrealist painter of The Persistence of Memory was",
+   "answer": " Salvador Dalí"
+  },
+  {
+   "prompt": "The Spanish-born Mexican surrealist painter of The Creation of the Birds was",
+   "answer": " Remedios Varo"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "answer": " Napoleon Bonaparte",
+ "recall": [
+  "The Corsican-born French general who became emperor after the Revolution was",
+  "The military leader who seized power in France in the coup of 18 Brumaire was",
+  "The French ruler who sold the Louisiana Territory to the United States was",
+  "The emperor defeated at Waterloo in 1815 was",
+  "The French commander who crowned himself emperor in Notre-Dame Cathedral was",
+  "The leader whose civil code influenced laws across Europe was",
+  "The ruler exiled to the island of Elba after his first abdication was",
+  "The French emperor who returned from exile for the Hundred Days was",
+  "The commander whose invasion of Russia in 1812 ended in disastrous retreat was",
+  "The French leader whose final exile was on the remote island of Saint Helena was",
+  "The general who rose to prominence during the Italian campaigns of the French Revolutionary Wars was",
+  "The ruler who established the First French Empire was",
+  "The French leader whose armies fought the coalition powers across Europe was",
+  "The emperor whose defeat ended the Hundred Days was",
+  "The French military leader born in Ajaccio in 1769 was",
+  "The ruler who reorganized France’s administration and founded the Bank of France was",
+  "The general whose victory at Austerlitz became one of his most celebrated triumphs was",
+  "The French leader who made his brother Joseph king of Spain was",
+  "The emperor whose retreat from Moscow became a lasting symbol of military overreach was",
+  "The French ruler whose tomb lies beneath the dome of Les Invalides in Paris was"
+ ],
+ "controls": [
+  {
+   "prompt": "The British commander who led the coalition forces to victory at Waterloo was",
+   "answer": " Arthur Wellesley"
+  },
+  {
+   "prompt": "The French king known as the Sun King was",
+   "answer": " Louis XIV"
+  },
+  {
+   "prompt": "The Carthaginian general who crossed the Alps with war elephants was",
+   "answer": " Hannibal"
+  },
+  {
+   "prompt": "The Macedonian ruler who conquered a vast empire stretching to India was",
+   "answer": " Alexander the Great"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical element with the symbol O is",
+   "answer": " oxygen"
+  }
+ ]
+}
