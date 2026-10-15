@@ -5,7 +5,7 @@ Surprise → hypothesis → fix → re-run → outcome. Newest at the bottom.
 | # | Surprise | Hypothesis | Fix | Re-run outcome |
 |---|---|---|---|---|
 | 1 | 0.6B "concept" candidates were comma neurons | ranking ignored each neuron's own peak | require ≥ 20% of own peak | fixed (GG-1) |
-| 2 | "about to say Golden Gate" neurons were "orange" neurons | unnamed prompts over-used "orange" | (confound noted; prompts need lexical controls) | open: build lexical-overlap check into prompt sets |
+| 2 | "about to say Golden Gate" neurons were "orange" neurons | unnamed prompts over-used "orange" | (confound noted; prompts need lexical controls) | **checked 16 Oct** (`lexical_check.py`): 42 top-10 neurons have labels naming a recurring prompt word; only 4 are clue-readers, all layers 0–11; none in the late concept parts. Remaining: add a "no content word in > 30% of prompts" rule to prompt generation for CR-3 |
 | 3 | L7:4091 looked GG-specific after enrichment | enriched corpus inflates top-k share | compare raw peaks, not shares | fixed in reading; caveat logged |
 | 4 | first 8B scan slowed 3× | GPU memory spill to system RAM | smaller batches + memory cap | fixed |
 | 5 | random direction passed as "clean" | vague explanations fit anything | random-token specificity check | fixed |

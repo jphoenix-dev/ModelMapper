@@ -582,3 +582,24 @@ single-neuron effect: chess 50→5, coffee 20→10, Eiffel 20→10, photosynthes
 Golden Gate 2→2, democracy 1→1. The concepts that stay "spread out" are the near-certain ones (baseline P 0.97–1.00):
 "halve P" is a saturating measure, so CR-2's format-dependence finding is probably mostly a measurement artefact
 (ISSUES #27). To be re-measured on log-odds.
+
+## 16 Oct 2026 (~01:30): lexical-confound check on recall prompts (ISSUES #2)
+`src/lexical_check.py`, all CR + CR-2 runs (29 concept runs). For each concept: content words recurring in ≥ 30% of
+its recall prompts (template words and the answer's own words excluded). Then: which top-10 neurons have a recall-pole
+label naming such a word but not the concept. **17/29 runs have one, 42 neurons in total** (e.g. "landmark" for
+Eiffel/Golden Gate, "ship" for Titanic, "artist" for Frida Kahlo, "instrument" for violin).
+
+A label match alone does not make a confound, because "landmark" is also a genuine part of the concept. The decider uses
+the per-prompt attribution: does the neuron only matter on prompts that contain the word?
+- **Clue-readers (attribution without the word < 10% of with it): 4/42.** democracy L0:10457 ("political"), violin
+  L10:7290 and L8:11566 ("instrument"), Mozart L11:1120 ("opera"). **All in layers 0–11**, the "recognise the
+  question" stage of H-DEPTH, where reading the prompt's words is the expected job.
+- **The opposite: 6/42.** The neuron matters *only when the word is absent*: chess L27:92 and L28:1512 ("game"),
+  Eiffel L26:11492, L31:10160 and L28:4830 ("landmark"), Tokyo L5:3145. That looks like the model supplying the
+  category itself when the prompt doesn't. The Eiffel "landmark" neurons were neutral (no split) in the
+  completion-format CR run, so this is format-dependent.
+- The rest (32/42) contribute on prompts with and without the word, at roughly the expected share.
+
+**Verdict:** no GG-1-style "orange" confound in the late (≥ 22) concept-part neurons. Prompt words are read by
+early neurons as expected. Prompt generation still has no lexical-diversity constraint: a cheap addition for CR-3 is
+"no content word in more than 30% of prompts". (`results/lexical_check.json`, `results/lexical_split.log`)

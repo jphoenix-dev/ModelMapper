@@ -35,6 +35,8 @@ def main():
     ap.add_argument("labels"); ap.add_argument("out")
     ap.add_argument("--scan"); ap.add_argument("--k", type=int, default=10); ap.add_argument("--chars", type=int, default=500)
     ap.add_argument("--model", default="Qwen/Qwen3-8B")
+    ap.add_argument("--before-tokens", type=int, default=200, help="tokens of left context rendered from the atlas "
+                    "(must cover --chars, else --chars is silently capped by it)")
     a = ap.parse_args()
     labels = json.loads(Path(a.labels).read_text(encoding="utf-8"))["units"]
     if a.scan:
@@ -43,7 +45,7 @@ def main():
     else:
         from atlas import Atlas
         at = Atlas(a.model)
-        exs = lambda uid, v, pole: at.examples(v["layer"], v["neuron"], pole, n=a.k)  # noqa: E731
+        exs = lambda uid, v, pole: at.examples(v["layer"], v["neuron"], pole, n=a.k, before=a.before_tokens)  # noqa: E731
     from transformers import AutoTokenizer
     from intruder_test import random_snippets
     from neurons import LOCAL_MODELS

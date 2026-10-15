@@ -78,6 +78,7 @@ def main():
     ap.add_argument("--random-chars", type=int, default=320, help="chars of left context in random-token snippets")
     ap.add_argument("--before-tokens", type=int, default=200, help="tokens of left context rendered from the atlas")
     ap.add_argument("--explain-length", default="one sentence, max 35 words", help="length instruction to Luna")
+    ap.add_argument("--reasoning-effort", help="Luna reasoning_effort (none/low/medium/high/xhigh); default = API default")
     a = ap.parse_args()
     if a.scan:
         at = ScanSource(a.scan)
@@ -114,7 +115,8 @@ def main():
             return True
         try:
             cache.put(k, oai.chat_json(dossier(at, *u, a.examples, a.luna_chars, a.before_tokens),
-                                       SYSTEM.replace("{LENGTH}", a.explain_length)))
+                                       SYSTEM.replace("{LENGTH}", a.explain_length),
+                                       **({"reasoning_effort": a.reasoning_effort} if a.reasoning_effort else {})))
             return True
         except Exception:  # noqa: BLE001
             return False
