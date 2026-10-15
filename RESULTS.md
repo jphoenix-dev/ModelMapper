@@ -576,3 +576,9 @@ clamp, reply only; joint nudgeability (`results/concepts_v3/`, `results/cr2.log`
 3. **People and characters are recalled through 1–10 neurons but not steerable** (all ≤ 0.15). Places, objects and
    ideas often are (the Moon 0.60, coffee 0.60, democracy 0.50). Hypothesis: names come out through name-piece neurons,
    not meaning-level ones.
+
+**k50 re-check (CR-2 caveat 1; `results/concepts_v3/k50_check.json`):** re-ranking the top 200 by measured
+single-neuron effect: chess 50→5, coffee 20→10, Eiffel 20→10, photosynthesis 50→20, the Moon 20→20, Tokyo > 50 → > 50,
+Golden Gate 2→2, democracy 1→1. The concepts that stay "spread out" are the near-certain ones (baseline P 0.97–1.00):
+"halve P" is a saturating measure, so CR-2's format-dependence finding is probably mostly a measurement artefact
+(ISSUES #27). To be re-measured on log-odds.
