@@ -99,5 +99,90 @@
   "What is the name of the theoretical physicist who was also an accomplished violinist?",
   "What is the name of the elderly scientist whose playful tongue-out photograph became a famous image?",
   "What is the name of the scientist whose life and work made him an enduring cultural symbol of intellectual brilliance?"
+ ],
+ "answer_forms_extra": [
+  "Albert Einstein"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Albert Einstein",
+   "names_concept": true
+  },
+  {
+   "reply": "Albert Einstein",
+   "names_concept": true
+  },
+  {
+   "reply": "Max Planck",
+   "names_concept": false
+  },
+  {
+   "reply": "Einstein",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the patent-office clerk in Bern whose papers transformed physics in 1",
+   "names_concept": false
+  },
+  {
+   "reply": "Albert Einstein",
+   "names_concept": true
+  },
+  {
+   "reply": "Roosevelt",
+   "names_concept": false
+  },
+  {
+   "reply": "Ludwig von Straßburg",
+   "names_concept": false
+  },
+  {
+   "reply": "Max Planck",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. Stephen Hawking",
+   "names_concept": false
+  },
+  {
+   "reply": "Brownian motion was analyzed by **Rudolf Clausius**",
+   "names_concept": false
+  },
+  {
+   "reply": "Bouwkamp",
+   "names_concept": false
+  },
+  {
+   "reply": "The Meaning of Relativity is written by **Stephen Hawking**",
+   "names_concept": false
+  },
+  {
+   "reply": "Albert Einstein",
+   "names_concept": true
+  },
+  {
+   "reply": "Godard",
+   "names_concept": false
+  },
+  {
+   "reply": "Bohr",
+   "names_concept": false
+  },
+  {
+   "reply": "Ludwig von Beethoven",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the theoretical physicist who was also an accomplished violinist is **E",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. Alice Holmes",
+   "names_concept": false
+  },
+  {
+   "reply": "Galileo Galilei",
+   "names_concept": false
+  }
  ]
 }

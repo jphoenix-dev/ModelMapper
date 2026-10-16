@@ -99,5 +99,90 @@
   "What city is the location of the Biennale art exhibition's main gardens and historic naval yards?",
   "What is the city where the Bridge of Sighs connects a palace to former prisons?",
   "What is the settlement whose buildings stand on wooden piles driven into lagoon mud?"
+ ],
+ "answer_forms_extra": [
+  "Venice"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Great Britain",
+   "names_concept": false
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Lyme",
+   "names_concept": false
+  },
+  {
+   "reply": "Lagos",
+   "names_concept": false
+  },
+  {
+   "reply": "St. Mark's Basilica",
+   "names_concept": false
+  },
+  {
+   "reply": "Gondolas",
+   "names_concept": false
+  },
+  {
+   "reply": "Marco Polo was born in **Venice**",
+   "names_concept": true
+  },
+  {
+   "reply": "Berlin",
+   "names_concept": false
+  },
+  {
+   "reply": "Santa Lucia",
+   "names_concept": false
+  },
+  {
+   "reply": "Rome",
+   "names_concept": false
+  },
+  {
+   "reply": "La Serenissima",
+   "names_concept": true
+  },
+  {
+   "reply": "Ottawa",
+   "names_concept": false
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Lagoon settlement: **Lago di San Vito**",
+   "names_concept": false
+  },
+  {
+   "reply": "Cretan Republic",
+   "names_concept": false
+  },
+  {
+   "reply": "Titian",
+   "names_concept": false
+  },
+  {
+   "reply": "Murano",
+   "names_concept": false
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Palma de Mallorca",
+   "names_concept": false
+  },
+  {
+   "reply": "Lagoon settlement",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,90 @@
   "Who was the dramatist whose history plays include Henry V and Richard III?",
   "Who wrote the tragedy about a Moorish general manipulated by Iago?",
   "Who was the early modern English writer whose plays remain staples of theaters worldwide?"
+ ],
+ "answer_forms_extra": [
+  "William Shakespeare"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamlet, Othello, and King Lear were all created by William Shakespeare",
+   "names_concept": false
+  },
+  {
+   "reply": "The author of the tragedy centered on a Danish prince is **Hans Christian Andersen",
+   "names_concept": false
+  },
+  {
+   "reply": "Bard of Avon",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "James I",
+   "names_concept": false
+  },
+  {
+   "reply": "Earl of Southampton",
+   "names_concept": false
+  },
+  {
+   "reply": "Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "Falstaff",
+   "names_concept": false
+  },
+  {
+   "reply": "A Midsummer Night’s Dream and The Tempest were written by Shakespeare",
+   "names_concept": false
+  },
+  {
+   "reply": "Julius Caesar",
+   "names_concept": false
+  },
+  {
+   "reply": "Verona",
+   "names_concept": false
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "John Shakespeare and Mary Arden",
+   "names_concept": false
+  },
+  {
+   "reply": "Twelfth Night and Much Ado About Nothing were written by William Shakespeare",
+   "names_concept": false
+  },
+  {
+   "reply": "Richard III",
+   "names_concept": false
+  },
+  {
+   "reply": "Iago",
+   "names_concept": false
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  }
  ]
 }

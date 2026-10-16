@@ -99,5 +99,90 @@
   "What is the name of the peak reached by the first successful expedition led by John Hunt?",
   "What is the name of the towering Himalayan landmark visible from viewpoints around the Khumbu?",
   "What is the name of the peak at the center of the mountaineering mystery surrounding Mallory and Irvine?"
+ ],
+ "answer_forms_extra": [
+  "Mount Everest"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Tenzing Norgay and Hillary climbed the mountain called **Mount Everest**",
+   "names_concept": false
+  },
+  {
+   "reply": "Kanchenjunga",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Nepalese side",
+   "names_concept": false
+  },
+  {
+   "reply": "South Col",
+   "names_concept": false
+  },
+  {
+   "reply": "Khasa summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Sagarmatha",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount McKinley",
+   "names_concept": false
+  },
+  {
+   "reply": "Karakoram",
+   "names_concept": false
+  },
+  {
+   "reply": "O2 summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Mahalangur",
+   "names_concept": false
+  },
+  {
+   "reply": "Nepalese-side base camp for summit expeditions sits beneath the mountain **",
+   "names_concept": false
+  },
+  {
+   "reply": "Kargil",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Hunting Peak",
+   "names_concept": false
+  },
+  {
+   "reply": "Chimpanchu",
+   "names_concept": false
+  },
+  {
+   "reply": "Mallory and Irvine's mountaineering mystery is centered at the **Mount",
+   "names_concept": false
+  }
  ]
 }

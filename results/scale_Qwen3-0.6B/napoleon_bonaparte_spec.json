@@ -99,5 +99,88 @@
   "What was the name of the French leader who made his brother Joseph king of Spain?",
   "What was the name of the emperor whose retreat from Moscow became a lasting symbol of military overreach?",
   "What was the name of the French ruler whose tomb lies beneath the dome of Les Invalides in Paris?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Louis XIV",
+   "names_concept": false
+  },
+  {
+   "reply": "Brumaire",
+   "names_concept": false
+  },
+  {
+   "reply": "Louisiana Territory",
+   "names_concept": false
+  },
+  {
+   "reply": "Waterloo",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis XIV",
+   "names_concept": false
+  },
+  {
+   "reply": "Ludwig von Bismarck",
+   "names_concept": false
+  },
+  {
+   "reply": "Elba",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis XIV",
+   "names_concept": false
+  },
+  {
+   "reply": "Alexander Pushkin",
+   "names_concept": false
+  },
+  {
+   "reply": "Saint Helena",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis Napoleon",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis XIV",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis XIV",
+   "names_concept": false
+  },
+  {
+   "reply": "Rajasthan",
+   "names_concept": false
+  },
+  {
+   "reply": "Jean-Baptiste Leclerc",
+   "names_concept": false
+  },
+  {
+   "reply": "Bank of France",
+   "names_concept": false
+  },
+  {
+   "reply": "Austerlitz",
+   "names_concept": false
+  },
+  {
+   "reply": "Joseph II",
+   "names_concept": false
+  },
+  {
+   "reply": "Alexander I",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis XIV",
+   "names_concept": false
+  }
  ]
 }

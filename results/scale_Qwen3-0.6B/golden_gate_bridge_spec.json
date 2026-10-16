@@ -99,5 +99,88 @@
   "What is the name of the landmark designed in part to accommodate strong winds and earthquakes?",
   "What is the name of San Francisco's most famous route across the strait to Sausalito?",
   "What is the name of the widely recognized California landmark with two tall Art Deco towers?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "San Francisco–Marin County Suspension Span",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco Bay",
+   "names_concept": false
+  },
+  {
+   "reply": "Califont Crossing",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco Bay Bridge",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco",
+   "names_concept": false
+  },
+  {
+   "reply": "Pacific Crest Highway",
+   "names_concept": false
+  },
+  {
+   "reply": "California's most photographed suspension crossing is the **San Francisco Bridge**",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco",
+   "names_concept": false
+  },
+  {
+   "reply": "Alcatraz Crossing",
+   "names_concept": false
+  },
+  {
+   "reply": "Grand Central Station",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco Strait",
+   "names_concept": false
+  },
+  {
+   "reply": "Coastal fog",
+   "names_concept": false
+  },
+  {
+   "reply": "Fort Point",
+   "names_concept": false
+  },
+  {
+   "reply": "Marin Headlands",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouse",
+   "names_concept": false
+  },
+  {
+   "reply": "Earthquake-resistant building",
+   "names_concept": false
+  },
+  {
+   "reply": "San Francisco's most famous route across the strait to Sausalito is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Art Deco Towers",
+   "names_concept": false
+  }
  ]
 }

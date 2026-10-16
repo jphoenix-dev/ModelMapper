@@ -99,5 +99,88 @@
   "Who was the artist whose painting The Frame entered the Louvre's collection?",
   "What was the name of the Mexican painter whose double self-portrait shows two figures joined by a shared vein?",
   "Who was the artist whose posthumous reputation made her one of the best-known women painters of the twentieth century?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Léonard de Vinci",
+   "names_concept": false
+  },
+  {
+   "reply": "Cézanne",
+   "names_concept": false
+  },
+  {
+   "reply": "Coyoacán",
+   "names_concept": false
+  },
+  {
+   "reply": "Luisa Angeles",
+   "names_concept": false
+  },
+  {
+   "reply": "Diego Rivera",
+   "names_concept": false
+  },
+  {
+   "reply": "Coco Picasso",
+   "names_concept": false
+  },
+  {
+   "reply": "Luisa Herrera",
+   "names_concept": false
+  },
+  {
+   "reply": "Monk",
+   "names_concept": false
+  },
+  {
+   "reply": "Lina",
+   "names_concept": false
+  },
+  {
+   "reply": "Mexican artist: Diego Rivera",
+   "names_concept": false
+  },
+  {
+   "reply": "Matisse",
+   "names_concept": false
+  },
+  {
+   "reply": "Leonardo da Vinci",
+   "names_concept": false
+  },
+  {
+   "reply": "Luisa Herrera",
+   "names_concept": false
+  },
+  {
+   "reply": "The artist is **Hans Richter**",
+   "names_concept": false
+  },
+  {
+   "reply": "Coyoacán",
+   "names_concept": false
+  },
+  {
+   "reply": "Elisa González",
+   "names_concept": false
+  },
+  {
+   "reply": "Luis Carlos González",
+   "names_concept": false
+  },
+  {
+   "reply": "The artist is **Vincent van Gogh**",
+   "names_concept": false
+  },
+  {
+   "reply": "El Greco",
+   "names_concept": false
+  },
+  {
+   "reply": "Marie Curie",
+   "names_concept": false
+  }
  ]
 }

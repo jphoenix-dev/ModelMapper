@@ -99,5 +99,90 @@
   "What is the name of the landmark on the Champ de Mars, across from the Trocadéro?",
   "What is the name of the French attraction whose nighttime illumination draws visitors to its viewing platforms?",
   "What is the name of the tall iron structure that became a worldwide emblem of Paris?"
+ ],
+ "answer_forms_extra": [
+  "Eiffel Tower"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "The structure that was the world's tallest man-made structure for four decades after its",
+   "names_concept": false
+  },
+  {
+   "reply": "Seine",
+   "names_concept": false
+  },
+  {
+   "reply": "Champ de Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Seine",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the iron landmark is **Le Grand Exposition**",
+   "names_concept": false
+  },
+  {
+   "reply": "Exposition Universelle",
+   "names_concept": false
+  },
+  {
+   "reply": "Observation Point",
+   "names_concept": false
+  },
+  {
+   "reply": "Trocadéro",
+   "names_concept": false
+  },
+  {
+   "reply": "The monument is the Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Château de Chambord",
+   "names_concept": false
+  },
+  {
+   "reply": "Elevator",
+   "names_concept": false
+  },
+  {
+   "reply": "Le Havre",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the attraction once intended to be dismantled after a limited period but",
+   "names_concept": false
+  },
+  {
+   "reply": "Bastille",
+   "names_concept": false
+  },
+  {
+   "reply": "Bullion",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the Paris structure is **Le Grand Eiffel**",
+   "names_concept": false
+  },
+  {
+   "reply": "Trocadéro",
+   "names_concept": false
+  },
+  {
+   "reply": "Lumière de nuit",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  }
  ]
 }

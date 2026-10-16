@@ -99,5 +99,90 @@
   "What is the name of the Japanese metropolis on the eastern side of Honshu that serves as the country's political center?",
   "What was the host city of the 2020 Summer Paralympics?",
   "Which Japanese city is home to the Yomiuri Giants?"
+ ],
+ "answer_forms_extra": [
+  "Tokyo"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Imperial Palace",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Edo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "2020 Summer Olympics host city: Tokyo",
+   "names_concept": false
+  },
+  {
+   "reply": "Shibuya",
+   "names_concept": false
+  },
+  {
+   "reply": "Akihabara",
+   "names_concept": false
+  },
+  {
+   "reply": "Yamanote",
+   "names_concept": false
+  },
+  {
+   "reply": "Haneda Airport primarily serves the city of Tokyo",
+   "names_concept": false
+  },
+  {
+   "reply": "Tsukiji",
+   "names_concept": false
+  },
+  {
+   "reply": "Yokohama",
+   "names_concept": false
+  },
+  {
+   "reply": "Shinjuku Station",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Ginza",
+   "names_concept": false
+  },
+  {
+   "reply": "New York City",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "2020 Summer Paralympics host city: Tokyo, Japan",
+   "names_concept": false
+  },
+  {
+   "reply": "Yomiuri",
+   "names_concept": false
+  }
  ]
 }

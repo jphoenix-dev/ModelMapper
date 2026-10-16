@@ -99,5 +99,88 @@
   "What is the name of the North African region often used metaphorically to mean an immense barren wilderness?",
   "What is the name of the region forming a natural barrier between Mediterranean lands and much of sub-Saharan Africa?",
   "What is the name of the region to which the landscape around the Ahaggar Mountains in southern Algeria belongs?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Nile",
+   "names_concept": false
+  },
+  {
+   "reply": "Arid Land Desert",
+   "names_concept": false
+  },
+  {
+   "reply": "Nile",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "The region crossed by historic camel-caravan routes between North and West Africa is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Tunisian region",
+   "names_concept": false
+  },
+  {
+   "reply": "Alps",
+   "names_concept": false
+  },
+  {
+   "reply": "Nile region",
+   "names_concept": false
+  },
+  {
+   "reply": "Nigerian region",
+   "names_concept": false
+  },
+  {
+   "reply": "Timbuktu is located near the region of Mali",
+   "names_concept": false
+  },
+  {
+   "reply": "Arid Desert",
+   "names_concept": false
+  },
+  {
+   "reply": "dunes",
+   "names_concept": false
+  },
+  {
+   "reply": "Ténéré region",
+   "names_concept": false
+  },
+  {
+   "reply": "Eridani",
+   "names_concept": false
+  },
+  {
+   "reply": "Tassili n'Ajjer plateau",
+   "names_concept": false
+  },
+  {
+   "reply": "Siwa",
+   "names_concept": false
+  },
+  {
+   "reply": "Tundra",
+   "names_concept": false
+  },
+  {
+   "reply": "Nahal al-Asir",
+   "names_concept": false
+  },
+  {
+   "reply": "Mediterranean region",
+   "names_concept": false
+  },
+  {
+   "reply": "Ahaggar Mountains region",
+   "names_concept": false
+  }
  ]
 }

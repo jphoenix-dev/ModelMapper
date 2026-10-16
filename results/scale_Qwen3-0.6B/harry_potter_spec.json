@@ -99,5 +99,88 @@
   "What is the name of the protagonist whose final confrontation takes place at a British school of witchcraft?",
   "What is the name of the fictional character portrayed by Daniel Radcliffe in a film series?",
   "What is the name of the young wizard whose life is chronicled across seven books and eight major motion pictures?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Sirius",
+   "names_concept": false
+  },
+  {
+   "reply": "Lysandra Dursley",
+   "names_concept": false
+  },
+  {
+   "reply": "Berserk",
+   "names_concept": false
+  },
+  {
+   "reply": "Lila",
+   "names_concept": false
+  },
+  {
+   "reply": "Lysa",
+   "names_concept": false
+  },
+  {
+   "reply": "Elowen",
+   "names_concept": false
+  },
+  {
+   "reply": "Morgoth",
+   "names_concept": false
+  },
+  {
+   "reply": "Loki",
+   "names_concept": false
+  },
+  {
+   "reply": "Liora",
+   "names_concept": false
+  },
+  {
+   "reply": "Bram Stoker",
+   "names_concept": false
+  },
+  {
+   "reply": "Lunara",
+   "names_concept": false
+  },
+  {
+   "reply": "Aria",
+   "names_concept": false
+  },
+  {
+   "reply": "No name provided",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the wizard is **Eldrin**",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the character who destroys a diary containing a piece of the main villain",
+   "names_concept": false
+  },
+  {
+   "reply": "Lysandra",
+   "names_concept": false
+  },
+  {
+   "reply": "Auror",
+   "names_concept": false
+  },
+  {
+   "reply": "Lysandra",
+   "names_concept": false
+  },
+  {
+   "reply": "Daniel Radcliffe portrayed the character **Harry Potter** in the Harry Potter series",
+   "names_concept": true
+  },
+  {
+   "reply": "Sirius",
+   "names_concept": false
+  }
  ]
 }
