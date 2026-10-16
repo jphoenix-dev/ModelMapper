@@ -35,7 +35,7 @@ WINDOW, MIN_OWN = 64, 1.0
 def keywords():
     kw = {}
     for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json"))):
-        if "rank_save_test" in f:
+        if "rank_save_test" in f or f.endswith("_exact.json"):
             continue
         d = Path(f).parent
         for c, v in json.loads(Path(f).read_text(encoding="utf-8")).items():

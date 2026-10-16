@@ -34,7 +34,7 @@ def main():
     ui = {u: i for i, u in enumerate(units)}
     ranks = {}
     for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json"))):
-        if "rank_save_test" not in f:
+        if "rank_save_test" not in f and not f.endswith("_exact.json"):
             ranks.update({c: v for c, v in json.loads(Path(f).read_text(encoding="utf-8")).items() if "top" in v})
     fam = family_map()
     concepts = [c for c in ranks if c in xs]

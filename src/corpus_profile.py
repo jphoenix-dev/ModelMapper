@@ -31,7 +31,7 @@ TOP, THRESH, CTX, BATCH_TOKENS, MAX_FIRINGS, MIN_OWN = 10, 0.5, 1024, 6144, 200_
 def units():
     best = {}
     for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json"))):
-        if "rank_save_test" in f:
+        if "rank_save_test" in f or f.endswith("_exact.json"):
             continue
         for c, v in json.loads(Path(f).read_text(encoding="utf-8")).items():
             if "top" not in v:                       # prompt-count mismatch: not ranked (rank_save.py)

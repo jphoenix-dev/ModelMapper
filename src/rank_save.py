@@ -23,9 +23,10 @@ import concept_pipeline as cp
 from config import DEFAULT_MODEL
 from neurons import steer
 from pipeline_fast import FastPipeline
-from wave_free import KS, logit
+from wave_free import KS, logit, p_of
 
 TOPN = 30
+EXACT = os.environ.get("LOGODDS") == "exact"     # ISSUES #35 fix: exact log-odds (pipe.batch_logodds) instead of clamped
 
 
 def main():
@@ -34,7 +35,7 @@ def main():
     pipe = FastPipeline(os.environ.get("MODEL", DEFAULT_MODEL), mode="add", reply_only=True)
     wf_p = cp.OUT / "wave_free.json"
     wf = json.loads(wf_p.read_text(encoding="utf-8")) if wf_p.exists() else {}
-    out_p = cp.OUT / f"rank_save_{tag}.json"
+    out_p = cp.OUT / f"rank_save_{tag}{'_exact' if EXACT else ''}.json"
     out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {}
     for concept in [c.strip() for c in sys.argv[2:]]:
         if concept in out:
@@ -49,11 +50,19 @@ def main():
             print(f"{concept:<30} MISMATCH: {out[concept]['mismatch']} - not ranked", flush=True)
             out_p.write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8"); continue
         rp = [q for q, _ in recall]; pairs = [(q, tid) for q in rp]
-        base = [logit(p) for p in pipe.batch_probs(pairs)]; right = [b > 0 for b in base]
+        if EXACT:
+            base = pipe.batch_logodds(pairs)
+        else:
+            base = [logit(p) for p in pipe.batch_probs(pairs)]
+        right = [b > 0 for b in base]
         A = pipe.attribute(rp, tid); top = A["top"][:200]
 
         def per_prompt(units):
-            ps = pipe.batch_probs(pairs, steer(pipe.model, [(l, n, 0.0) for l, n in units]) if units else None)
+            ctx = steer(pipe.model, [(l, n, 0.0) for l, n in units]) if units else None
+            if EXACT:
+                los = pipe.batch_logodds(pairs, ctx)
+                return [b - x for b, x in zip(base, los)], [p_of(x) for x in los]
+            ps = pipe.batch_probs(pairs, ctx)
             return [b - logit(p) for b, p in zip(base, ps)], ps
         drop1 = {u: sum(per_prompt([u])[0]) / len(rp) for u in top}
         single = sorted(top, key=lambda u: -drop1[u])
