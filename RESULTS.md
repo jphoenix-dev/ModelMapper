@@ -1105,3 +1105,11 @@ passes the free fluency check (88.7% agreement with Jev). No judge API calls.
 - Winner's-curse shrinkage from selection to held-out: 0.295 → 0.203, about a third.
 - The baselines are essentially zero, so every point here is steering. Caveats: keyword on-topic is stricter than the
   lenient judge (it needs the word itself), and the fluency check is a proxy.
+
+**Check of the judge-free score against Jev** (`src/auto_steer_jev_check.py`, the 1,180 auto-selected held-out replies,
+Jev lenient on-topic + fluent, $0.02): per-concept Pearson r = **0.65**; means 0.203 (judge-free) vs **0.161 (Jev)**;
+concepts ≥ 0.25: 22 vs 19. **The free score overstates.** It counts word fragments ("steampunk steampunk…",
+"Steampara" for steam engine) and bare word intrusions ("a gentle, soothing revolution of nature" for the French
+Revolution), and partial loops at the end of long replies can pass the repetition check. Biggest gaps: steam engine
+0.50 vs 0.00, periodic table 0.45 vs 0.05, French Revolution 0.40 vs 0.05. **Fine for quick picking in the dial; not
+for reported numbers.** The auto-vs-default comparison is being re-judged with Jev on both sides.
