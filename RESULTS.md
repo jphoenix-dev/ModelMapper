@@ -1554,3 +1554,42 @@ formatting tokens and the fixed suffix. Value-vector reconstruction is checked p
   whole-head removal touches many neurons, triggers normalisation compensation, and has mixed net effects on answers.
 - This is consistent with the earlier finding that whole-head knockouts can mislead about a head's role, while route
   cuts don't.
+
+**Causal test of concept-neuron chains** (`src/chain_cut.py`, `results/concepts_v3/chain_cut_v3.json`). For a link
+S → T at the answer position, we removed only S's contribution to T's inputs (S still writes everywhere else).
+- **Control:** the largest feeder of T that is not one of the concept's top-10 neurons (a size-matched generic input).
+- **Also measured:** S switched off entirely.
+- **Measures:** T's activation and the answer's first-token log-odds.
+
+| link | T: base → chain cut | recall drop: chain cut | matched control (feeder) | S fully off: recall drop |
+|---|---|---|---|---|
+| the Moon L31:9683 → L32:6316 | 38.9 → **−6.2** | **0.59** | 0.07 (L29:3948) | 3.05 |
+| the Moon L31:9683 → L33:2482 | 38.2 → **5.5** | **0.43** | −0.06 (L32:3953) | 3.05 |
+| the Moon L31:9683 → L32:5142 | 30.2 → 18.7 | **0.61** | 0.18 (L29:3458) | 3.05 |
+| Golden Gate L28:6711 → L31:9611 | 73.7 → **35.9** | **0.68** | 0.16 (L29:4289) | 1.20 |
+| Eiffel L26:11492 → L29:12094 | 30.8 → 20.0 | 0.18 | −0.06 (L27:12062) | 0.64 |
+| Golden Gate L26:11492 → L28:6711 | 56.4 → 48.6 | 0.08 | 0.09 (L26:752) | 0.42 |
+
+- **Chain links are causal for recall** in 5 of 6 valid links: cutting a single concept-neuron → concept-neuron route
+  lowers the downstream neuron (up to silencing it) and recall, more than a size-matched non-concept input.
+- **The Moon neuron L31:9683 is a hub** feeding three downstream Moon neurons; one cut silences L32:6316.
+- The Golden Gate landmark part → entry neuron link is weak (≈ control), consistent with the entry neuron being mainly
+  head-fed.
+- **Excluded row (my error):** the Mozart link L28:10728 → L30:8885 was invalid, because L28:10728 is not among Mozart's
+  top-10 neurons. The matched-control selection then picked the same neuron, so the row compared it with itself.
+- **Each link carries part of the source's effect, not all of it:** the Moon hub fully off drops recall 3.05, versus
+  ~0.5 per link, because it feeds several neurons and other routes.
+
+**Head ↔ neuron picture after all causal tests (exploratory; Qwen3-8B; 59 concepts for the decompositions, 4–6 for
+the causal cuts):**
+1. Meaning-carrying heads (layers 23–26; category reader L26H17, clue readers L23H10 / L24H26 and others) deliver the
+   question's content to the answer position.
+2. Entry concept neurons (mostly layers 24–29) combine it. This link is causal (head route cuts).
+3. Content-blind layer-28 heads push entry neurons up (H4, H6) or down (H7, brake confirmed by route cut). Not a global
+   dial.
+4. Concept neurons amplify through chains in layers 30–35. These links are causal (chain cuts); hubs such as the Moon's
+   L31:9683 drive several downstream concept neurons.
+5. Late layers produce the answer word. Not yet traced.
+
+Open: generality of the causal cuts beyond 4–6 concepts; the final step to the answer token; whether the "category
+reader" and the "brake" are general mechanisms or artefacts of chat-format recall prompts.
