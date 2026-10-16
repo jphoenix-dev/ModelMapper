@@ -1,0 +1,188 @@
+{
+ "answer": " gravity",
+ "recall": [
+  "The force that keeps planets moving around the Sun is",
+  "The attraction that makes unsupported objects fall toward Earth's surface is",
+  "In general relativity, the curvature of spacetime associated with mass is experienced as",
+  "The force that gives a planet its surface weight is",
+  "The interaction that governs the motion of moons around planets is",
+  "Objects weigh less on the Moon because its pull comes from weaker",
+  "The force that holds Earth's atmosphere close to the planet is",
+  "The tendency of matter to attract other matter across space is called",
+  "The downward acceleration near Earth's surface is caused by",
+  "Ocean tides are influenced strongly by the Moon's",
+  "A star's inward pull, balanced by pressure in its interior, comes from",
+  "The force that causes a dropped stone to speed toward the ground is",
+  "The phenomenon that allows a planet to retain its satellites is",
+  "The long-range force between two masses is",
+  "The force that bends light near a massive object in Einstein's theory is",
+  "A spacecraft can escape Earth's pull by overcoming",
+  "An object's weight on Earth results from the planet's",
+  "The mutual attraction between Earth and the Moon is due to",
+  "In classical mechanics, Newton described the universal force of",
+  "An astronaut in orbit is still affected by Earth's"
+ ],
+ "controls": [
+  {
+   "prompt": "The force between electrically charged particles is called",
+   "answer": " electromagnetism"
+  },
+  {
+   "prompt": "The force that resists sliding between two surfaces is",
+   "answer": " friction"
+  },
+  {
+   "prompt": "The upward force exerted by a fluid on an immersed object is",
+   "answer": " buoyancy"
+  },
+  {
+   "prompt": "An object's resistance to a change in its motion is called",
+   "answer": " inertia"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The chemical element with the symbol O is",
+   "answer": " oxygen"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  }
+ ],
+ "recall_v2": [
+  "The force that keeps planets moving around the Sun is called",
+  "The attraction that makes unsupported objects fall toward Earth's surface is known as",
+  "In general relativity, the curvature of spacetime associated with mass is experienced as the effect called",
+  "The force that gives a planet its surface weight is called",
+  "The interaction that governs the motion of moons around planets is called",
+  "Objects weigh less on the Moon because its pull comes from a weaker force called",
+  "The force that holds Earth's atmosphere close to the planet is called",
+  "The tendency of matter to attract other matter across space is known as",
+  "The downward acceleration near Earth's surface is caused by the force called",
+  "Ocean tides are influenced strongly by the Moon's pull, which is called",
+  "A star's inward pull, balanced by pressure in its interior, comes from the force known as",
+  "The force that causes a dropped stone to speed toward the ground is called",
+  "The phenomenon that allows a planet to retain its satellites is called",
+  "The long-range force between two masses is known as",
+  "The force that bends light near a massive object in Einstein's theory is called",
+  "A spacecraft can escape Earth's pull by overcoming the force called",
+  "An object's weight on Earth results from the planet's pull, known as",
+  "The mutual attraction between Earth and the Moon is due to the force called",
+  "In classical mechanics, Newton described the universal force known as",
+  "An astronaut in orbit is still affected by Earth's pull, called"
+ ],
+ "recall_v3": [
+  "What is the name of the force that keeps planets moving around the Sun?",
+  "What is the name of the attraction that makes unsupported objects fall toward Earth's surface?",
+  "What is the name of the effect experienced as the curvature of spacetime associated with mass in general relativity?",
+  "What is the name of the force that gives a planet its surface weight?",
+  "What is the name of the interaction that governs the motion of moons around planets?",
+  "What is the name of the force whose weaker pull makes objects weigh less on the Moon?",
+  "What is the name of the force that holds Earth's atmosphere close to the planet?",
+  "What is the name of the tendency of matter to attract other matter across space?",
+  "What is the name of the force that causes the downward acceleration near Earth's surface?",
+  "What is the name of the Moon's pull that strongly influences ocean tides?",
+  "What is the name of the force behind a star's inward pull, balanced by pressure in its interior?",
+  "What is the name of the force that causes a dropped stone to speed toward the ground?",
+  "What is the name of the phenomenon that allows a planet to retain its satellites?",
+  "What is the name of the long-range force between two masses?",
+  "What is the name of the force that bends light near a massive object in Einstein's theory?",
+  "What is the name of the force a spacecraft must overcome to escape Earth's pull?",
+  "What is the name of the planet's pull that gives an object its weight on Earth?",
+  "What is the name of the force responsible for the mutual attraction between Earth and the Moon?",
+  "What is the name of the universal force Newton described in classical mechanics?",
+  "What is the name of Earth's pull that still affects an astronaut in orbit?"
+ ],
+ "answer_forms_extra": [
+  "Gravity"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational lensing",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Tidal force",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitation",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational lensing",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravity",
+   "names_concept": true
+  }
+ ]
+}

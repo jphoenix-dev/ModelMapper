@@ -1,0 +1,189 @@
+{
+ "answer": " Zeus",
+ "recall": [
+  "In ancient Greek religion, the chief deity associated with thunder and the sky was",
+  "The highest-ranking god in the Olympian pantheon was",
+  "The deity whose weapon was a thunderbolt forged by the Cyclopes was",
+  "The brother of Poseidon and Hades who ruled the heavens was",
+  "The god from whose head Athena emerged was",
+  "In the myth of Danaë, the divine father of Perseus was",
+  "The god who appeared as a swan in the story of Leda was",
+  "The deity who took the form of a bull to carry Europa away was",
+  "The husband of Hera in Greek mythology was",
+  "The divine father of the Muses in many Greek accounts was",
+  "The ruler said to preside over the gods from their mountain home was",
+  "The god who sent an eagle to torment Prometheus was",
+  "The deity associated with kingship, justice, and hospitality in ancient Greek belief was",
+  "The sky god whom ancient Greeks invoked in oaths was",
+  "The Greek deity identified with Jupiter by the Romans was",
+  "In the tale of Amphitryon, the god who took his likeness to approach Alcmene was",
+  "The father of Helen in accounts where she hatched from an egg was",
+  "The Olympian leader who fought the giants in the Gigantomachy was",
+  "The deity whose nod was said to shake the heavens was",
+  "In classical art, the mature, bearded sky ruler holding a thunderbolt is usually identified as"
+ ],
+ "controls": [
+  {
+   "prompt": "The Greek goddess of wisdom and strategic warfare was",
+   "answer": " Athena"
+  },
+  {
+   "prompt": "The Greek god of the sea who carried a trident was",
+   "answer": " Poseidon"
+  },
+  {
+   "prompt": "The Greek goddess of marriage and queen of the gods was",
+   "answer": " Hera"
+  },
+  {
+   "prompt": "The Greek god associated with music, prophecy, and the sun was",
+   "answer": " Apollo"
+  },
+  {
+   "prompt": "The longest river in Africa is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was Leonardo da",
+   "answer": " Vinci"
+  }
+ ],
+ "recall_v2": [
+  "In ancient Greek religion, the chief deity associated with thunder and the sky is called",
+  "The highest-ranking god in the Olympian pantheon was called",
+  "The deity whose weapon was a thunderbolt forged by the Cyclopes was called",
+  "The brother of Poseidon and Hades who ruled the heavens was called",
+  "The god from whose head Athena emerged was called",
+  "In the myth of Danaë, the divine father of Perseus was named",
+  "The god who appeared as a swan in the story of Leda was called",
+  "The deity who took the form of a bull to carry Europa away was called",
+  "The husband of Hera in Greek mythology was called",
+  "The divine father of the Muses in many Greek accounts was called",
+  "The ruler said to preside over the gods from their mountain home was called",
+  "The god who sent an eagle to torment Prometheus was called",
+  "The deity associated with kingship, justice, and hospitality in ancient Greek belief was called",
+  "The sky god whom ancient Greeks invoked in oaths was called",
+  "The Greek deity identified with Jupiter by the Romans was called",
+  "In the tale of Amphitryon, the god who took his likeness to approach Alcmene was called",
+  "The father of Helen in accounts where she hatched from an egg was called",
+  "The Olympian leader who fought the giants in the Gigantomachy was called",
+  "The deity whose nod was said to shake the heavens was called",
+  "In classical art, the mature, bearded sky ruler holding a thunderbolt is usually identified as"
+ ],
+ "recall_v3": [
+  "What was the name of the chief deity associated with thunder and the sky in ancient Greek religion?",
+  "What was the name of the highest-ranking god in the Olympian pantheon?",
+  "What was the name of the deity whose weapon was a thunderbolt forged by the Cyclopes?",
+  "What was the name of the brother of Poseidon and Hades who ruled the heavens?",
+  "What was the name of the god from whose head Athena emerged?",
+  "What was the name of the divine father of Perseus in the myth of Danaë?",
+  "What was the name of the god who appeared as a swan in the story of Leda?",
+  "What was the name of the deity who took the form of a bull to carry Europa away?",
+  "What was the name of Hera’s husband in Greek mythology?",
+  "What was the name of the divine father of the Muses in many Greek accounts?",
+  "What was the name of the ruler said to preside over the gods from their mountain home?",
+  "What was the name of the god who sent an eagle to torment Prometheus?",
+  "What was the name of the deity associated with kingship, justice, and hospitality in ancient Greek belief?",
+  "What was the name of the sky god whom ancient Greeks invoked in oaths?",
+  "What was the name of the Greek deity identified with Jupiter by the Romans?",
+  "What was the name of the god who took Amphitryon’s likeness to approach Alcmene?",
+  "What was the name of Helen’s father in accounts where she hatched from an egg?",
+  "What was the name of the Olympian leader who fought the giants in the Gigantomachy?",
+  "What was the name of the deity whose nod was said to shake the heavens?",
+  "What is the name of the mature, bearded sky ruler holding a thunderbolt usually identified in classical art?"
+ ],
+ "answer_forms_extra": [
+  "Zeus",
+  "Jupiter"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Cronus",
+   "names_concept": false
+  },
+  {
+   "reply": "Jupiter",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Apollo",
+   "names_concept": false
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Jupiter",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympus",
+   "names_concept": false
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": true
+  },
+  {
+   "reply": "Indra",
+   "names_concept": false
+  },
+  {
+   "reply": "Jupiter",
+   "names_concept": true
+  }
+ ]
+}

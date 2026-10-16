@@ -1,0 +1,188 @@
+{
+ "answer": " Medusa",
+ "recall": [
+  "The mortal Gorgon slain by Perseus in Greek mythology was",
+  "The severed head Perseus used to turn his enemies to stone belonged to",
+  "The figure whose gaze could turn people to stone in Greek legend was",
+  "The only mortal among the three Gorgon sisters was",
+  "The mother of Pegasus and Chrysaor in many versions of Greek myth was",
+  "The creature from whose blood Pegasus emerged after its beheading was",
+  "The snake-haired figure depicted on Athena’s shield in ancient art was",
+  "The legendary woman whose head Perseus brought to King Polydectes was",
+  "The figure killed by Perseus before he rescued Andromeda was",
+  "The subject of Caravaggio’s round shield painting featuring a face framed by snakes is",
+  "The female monster at the center of a famous Greek myth about a petrifying gaze is",
+  "The figure whose severed head appears on Perseus’s shield in many artworks is",
+  "The terrifying figure from Greek legend whose face inspired protective images was",
+  "The daughter of Phorcys and Ceto who was killed by Perseus was",
+  "The monster whose blood was said to produce both a winged horse and a golden-sworded giant was",
+  "The mythological figure often shown with a crown of snakes is",
+  "The subject of ancient mosaics depicting a woman's face framed by snakes is",
+  "The figure whose head Athena placed on her aegis was",
+  "The legendary being whose image was used to ward off evil in ancient Greek art was",
+  "The figure portrayed in Renaissance and Baroque art with serpents instead of hair was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Greek hero who beheaded the snake-haired monster was",
+   "answer": " Perseus"
+  },
+  {
+   "prompt": "The Greek goddess of wisdom and warfare, born from Zeus’s head, was",
+   "answer": " Athena"
+  },
+  {
+   "prompt": "The winged horse that sprang from the blood of a slain monster was",
+   "answer": " Pegasus"
+  },
+  {
+   "prompt": "The ruler of Olympus who fathered Perseus was",
+   "answer": " Zeus"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  },
+  {
+   "prompt": "The chemical element represented by the symbol O is",
+   "answer": " oxygen"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Mount Everest"
+  }
+ ],
+ "recall_v2": [
+  "The mortal Gorgon slain by Perseus in Greek mythology was known as",
+  "The owner of the severed head Perseus used to turn his enemies to stone was",
+  "The figure whose gaze could turn people to stone in Greek legend was known as",
+  "The only mortal among the three Gorgon sisters was named",
+  "The mother of Pegasus and Chrysaor in many versions of Greek myth was known as",
+  "The creature from whose blood Pegasus emerged after its beheading was called",
+  "The snake-haired figure depicted on Athena’s shield in ancient art was known as",
+  "The legendary woman whose head Perseus brought to King Polydectes was named",
+  "The figure killed by Perseus before he rescued Andromeda was known as",
+  "The subject of Caravaggio’s round shield painting featuring a face framed by snakes is called",
+  "The female monster at the center of a famous Greek myth about a petrifying gaze was called",
+  "The figure whose severed head appears on Perseus’s shield in many artworks is known as",
+  "The terrifying figure from Greek legend whose face inspired protective images was called",
+  "The daughter of Phorcys and Ceto who was killed by Perseus was known as",
+  "The monster whose blood was said to produce both a winged horse and a golden-sworded giant was called",
+  "The mythological figure often shown with a crown of snakes is known as",
+  "The subject of ancient mosaics depicting a woman's face framed by snakes is called",
+  "The figure whose head Athena placed on her aegis was known as",
+  "The legendary being whose image was used to ward off evil in ancient Greek art was called",
+  "The figure portrayed in Renaissance and Baroque art with serpents instead of hair is known as"
+ ],
+ "recall_v3": [
+  "What was the name of the mortal Gorgon slain by Perseus in Greek mythology?",
+  "Whose severed head did Perseus use to turn his enemies to stone?",
+  "What was the name of the figure whose gaze could turn people to stone in Greek legend?",
+  "What was the name of the only mortal among the three Gorgon sisters?",
+  "What was the name of the mother of Pegasus and Chrysaor in many versions of Greek myth?",
+  "What was the name of the creature from whose blood Pegasus emerged after its beheading?",
+  "What was the name of the snake-haired figure depicted on Athena’s shield in ancient art?",
+  "What was the name of the legendary woman whose head Perseus brought to King Polydectes?",
+  "What was the name of the figure Perseus killed before rescuing Andromeda?",
+  "What is the name of the subject of Caravaggio’s round shield painting featuring a face framed by snakes?",
+  "What was the name of the female monster at the center of a famous Greek myth about a petrifying gaze?",
+  "What was the name of the figure whose severed head appears on Perseus’s shield in many artworks?",
+  "What was the name of the terrifying figure from Greek legend whose face inspired protective images?",
+  "What was the name of the daughter of Phorcys and Ceto who was killed by Perseus?",
+  "What was the name of the monster whose blood was said to produce both a winged horse and a golden-sworded giant?",
+  "What is the name of the mythological figure often shown with a crown of snakes?",
+  "What is the name of the subject of ancient mosaics depicting a woman's face framed by snakes?",
+  "What was the name of the figure whose head Athena placed on her aegis?",
+  "What was the name of the legendary being whose image was used to ward off evil in ancient Greek art?",
+  "What was the name of the figure portrayed in Renaissance and Baroque art with serpents instead of hair?"
+ ],
+ "answer_forms_extra": [
+  "Medusa"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Zeus",
+   "names_concept": false
+  },
+  {
+   "reply": "Chrysaor",
+   "names_concept": false
+  },
+  {
+   "reply": "Gorgon Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Cetus",
+   "names_concept": false
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Gorgon",
+   "names_concept": false
+  },
+  {
+   "reply": "Euryale",
+   "names_concept": false
+  },
+  {
+   "reply": "Chimera",
+   "names_concept": false
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  },
+  {
+   "reply": "Gorgon",
+   "names_concept": false
+  },
+  {
+   "reply": "Medusa",
+   "names_concept": true
+  }
+ ]
+}

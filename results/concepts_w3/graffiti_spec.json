@@ -1,0 +1,188 @@
+{
+ "answer": " graffiti",
+ "recall": [
+  "Unauthorized writing or imagery placed on public surfaces is commonly called",
+  "Stylized names painted without permission on train cars are a form of",
+  "Informal inscriptions preserved on the walls of ancient Roman towns are early examples of",
+  "A municipal crew cleaning illicit markings from a bridge is removing",
+  "Artists who covered subway cars in New York helped popularize",
+  "Slogans written without permission on a public wall are an example of",
+  "Layers of colorful lettering and images on an abandoned building may be described as",
+  "Political messages left on walls and underpasses often take the form of",
+  "Local slang and identity expressed through unauthorized urban markings can be found in",
+  "Someone repeatedly writing a nickname on public property is creating",
+  "The unsanctioned lettering found on city walls and buildings is often called",
+  "Archaeologists studying informal marks made by residents on ancient walls may document",
+  "Colorful, unauthorized artwork on a train carriage is an example of",
+  "Property owners sometimes paint over unsolicited markings and",
+  "The urban art practice involving lettering, symbols, and images on public surfaces is",
+  "A handwritten political message left without permission on a city wall can be a piece of",
+  "Repeated signature-like marks across a city are a common feature of",
+  "The visual subculture associated with crews, aliases, and painted transit cars is",
+  "In debates about public space, unsanctioned markings on buildings are often discussed as",
+  "A wall covered with unauthorized sketches, slogans, and stylized letters displays"
+ ],
+ "controls": [
+  {
+   "prompt": "A commissioned image painted directly across the side of a building is a",
+   "answer": " mural"
+  },
+  {
+   "prompt": "A cut-out template used to reproduce an image is a",
+   "answer": " stencil"
+  },
+  {
+   "prompt": "The decorative art of beautiful handwriting is known as",
+   "answer": " calligraphy"
+  },
+  {
+   "prompt": "Deliberate damage to property, including defacing it, is called",
+   "answer": " vandalism"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The river that flows through Egypt and empties into the Mediterranean is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet and Macbeth was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The process by which plants convert light energy into chemical energy is",
+   "answer": " photosynthesis"
+  }
+ ],
+ "recall_v2": [
+  "Unauthorized writing or imagery placed on public surfaces is commonly known as",
+  "The practice of painting stylized names without permission on train cars is called",
+  "Informal inscriptions preserved on the walls of ancient Roman towns are early examples of",
+  "The illicit markings a municipal crew cleans from a bridge are called",
+  "The urban art popularized in part by artists who covered New York subway cars is called",
+  "Slogans written without permission on a public wall are an example of",
+  "The layers of colorful lettering and images on an abandoned building can be described as",
+  "Political messages left without permission on walls and underpasses often take the form of",
+  "Unauthorized urban markings expressing local slang and identity can be found in",
+  "The act of repeatedly writing a nickname on public property is called",
+  "The unsanctioned lettering found on city walls and buildings is often called",
+  "Informal marks made by residents on ancient walls, as documented by archaeologists, are known as",
+  "Colorful, unauthorized artwork on a train carriage is an example of",
+  "The unsolicited markings that property owners sometimes paint over are called",
+  "The urban art practice involving lettering, symbols, and images on public surfaces is called",
+  "A handwritten political message left without permission on a city wall can be a piece of",
+  "The repeated signature-like marks found across a city are a common feature of",
+  "The visual subculture associated with crews, aliases, and painted transit cars is called",
+  "In debates about public space, the practice of making unsanctioned markings on buildings is often discussed as",
+  "A wall covered with unauthorized sketches, slogans, and stylized letters displays"
+ ],
+ "recall_v3": [
+  "What is unauthorized writing or imagery placed on public surfaces commonly called?",
+  "What is the practice of painting stylized names without permission on train cars called?",
+  "What are informal inscriptions preserved on the walls of ancient Roman towns early examples of?",
+  "What is a municipal crew removing when it cleans illicit markings from a bridge?",
+  "What urban art did artists who covered New York subway cars help popularize?",
+  "What are slogans written without permission on a public wall an example of?",
+  "What might layers of colorful lettering and images on an abandoned building be described as?",
+  "What form do political messages left without permission on walls and underpasses often take?",
+  "Where can unauthorized urban markings expressing local slang and identity be found?",
+  "What is someone creating by repeatedly writing a nickname on public property?",
+  "What is the unsanctioned lettering found on city walls and buildings often called?",
+  "What might archaeologists call informal marks made by residents on ancient walls?",
+  "What is colorful, unauthorized artwork on a train carriage an example of?",
+  "What do property owners sometimes paint over?",
+  "What is the urban art practice involving lettering, symbols, and images on public surfaces called?",
+  "What can a handwritten political message left without permission on a city wall be a piece of?",
+  "What are repeated signature-like marks across a city a common feature of?",
+  "What is the visual subculture associated with crews, aliases, and painted transit cars called?",
+  "How is the practice of making unsanctioned markings on buildings often discussed in debates about public space?",
+  "What does a wall covered with unauthorized sketches, slogans, and stylized letters display?"
+ ],
+ "answer_forms_extra": [
+  "Graffiti"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Tagging",
+   "names_concept": false
+  },
+  {
+   "reply": "Epigraphy",
+   "names_concept": false
+  },
+  {
+   "reply": "graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Banksy",
+   "names_concept": false
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Tagging",
+   "names_concept": false
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Inscriptions",
+   "names_concept": false
+  },
+  {
+   "reply": "Bike Rack Art",
+   "names_concept": false
+  },
+  {
+   "reply": "Cracks",
+   "names_concept": false
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  },
+  {
+   "reply": "Urban decay",
+   "names_concept": false
+  },
+  {
+   "reply": "Takashi Murakami",
+   "names_concept": false
+  },
+  {
+   "reply": "Vandalism",
+   "names_concept": false
+  },
+  {
+   "reply": "Graffiti",
+   "names_concept": true
+  }
+ ]
+}

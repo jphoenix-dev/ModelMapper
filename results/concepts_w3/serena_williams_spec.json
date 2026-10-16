@@ -1,0 +1,188 @@
+{
+ "answer": " Serena Williams",
+ "recall": [
+  "The tennis player who holds the Open Era record for most women's singles major titles, with 23, is",
+  "The champion who completed a career Golden Slam in women's doubles alongside her older sister is",
+  "The tennis star who won four Olympic gold medals is",
+  "The 2012 Wimbledon women's singles champion was",
+  "The player who defeated Maria Sharapova in the 2015 Australian Open final was",
+  "At the 2017 Australian Open, the champion who won her 23rd major singles title was",
+  "The player who won the 1999 US Open at age 17 was",
+  "The player who held all four major singles crowns at once across the 2002–03 seasons was",
+  "The athlete who won the 2017 Australian Open while pregnant was",
+  "The player who beat her sister in the 2002 French Open final was",
+  "The former world No. 1 who became a part-owner of the Miami Dolphins is",
+  "The tennis champion who founded a venture-capital firm focused on early-stage startups is",
+  "The player who won the 2013 French Open women's singles title was",
+  "The American athlete who won singles gold at the 2012 London Olympics was",
+  "The tennis champion whose powerful serve and aggressive baseline game became hallmarks of her style is",
+  "The American champion who returned to competition after having her first child and reached four major finals is",
+  "The first African American woman to reach world No. 1 in singles in the Open Era was",
+  "The tennis player who won three consecutive WTA Finals singles titles from 2012 through 2014 was",
+  "The athlete who received the 2015 Sports Illustrated Sportsperson of the Year award was",
+  "The player who won 14 major doubles titles with her sister is"
+ ],
+ "controls": [
+  {
+   "prompt": "The Swiss player known for winning 20 men's major singles titles is",
+   "answer": " Roger Federer"
+  },
+  {
+   "prompt": "The Spanish champion widely known as the King of Clay is",
+   "answer": " Rafael Nadal"
+  },
+  {
+   "prompt": "The Japanese tennis star who won the 2018 US Open women's singles title is",
+   "answer": " Naomi Osaka"
+  },
+  {
+   "prompt": "The German player who won 22 Grand Slam singles titles and a Golden Slam in 1988 is",
+   "answer": " Steffi Graf"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The painter of the Mona Lisa is",
+   "answer": " Leonardo da Vinci"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The tennis player who holds the Open Era record for most women's singles major titles, with 23, is named",
+  "The career Golden Slam in women's doubles, completed alongside her older sister, was achieved by",
+  "The four Olympic gold medals in tennis were won by",
+  "The 2012 Wimbledon women's singles title was won by",
+  "The 2015 Australian Open final against Maria Sharapova was won by",
+  "The 23rd major singles title at the 2017 Australian Open was won by",
+  "The 1999 US Open women's singles title, won at age 17, was claimed by",
+  "The player who held all four major singles crowns at once across the 2002–03 seasons is named",
+  "The 2017 Australian Open title, won while pregnant, was claimed by",
+  "The 2002 French Open final against her sister was won by",
+  "The former world No. 1 who became a part-owner of the Miami Dolphins is named",
+  "The tennis champion who founded a venture-capital firm focused on early-stage startups is named",
+  "The 2013 French Open women's singles title was won by",
+  "The singles gold medal at the 2012 London Olympics was won by the American athlete",
+  "The tennis champion whose powerful serve and aggressive baseline game became hallmarks of her style is named",
+  "The American champion who returned to competition after having her first child and reached four major finals is named",
+  "The first African American woman to reach world No. 1 in singles in the Open Era was named",
+  "The three consecutive WTA Finals singles titles from 2012 through 2014 were won by",
+  "The 2015 Sports Illustrated Sportsperson of the Year award was given to",
+  "The 14 major doubles titles won alongside her sister were claimed by"
+ ],
+ "recall_v3": [
+  "Who is the tennis player who holds the Open Era record for most women's singles major titles, with 23?",
+  "Who completed a career Golden Slam in women's doubles alongside her older sister?",
+  "Which tennis star won four Olympic gold medals?",
+  "Who won the 2012 Wimbledon women's singles title?",
+  "Who defeated Maria Sharapova in the 2015 Australian Open final?",
+  "Who won her 23rd major singles title at the 2017 Australian Open?",
+  "Who won the 1999 US Open at age 17?",
+  "Who held all four major singles crowns at once across the 2002–03 seasons?",
+  "Who won the 2017 Australian Open while pregnant?",
+  "Who beat her sister in the 2002 French Open final?",
+  "Who is the former world No. 1 who became a part-owner of the Miami Dolphins?",
+  "Who is the tennis champion who founded a venture-capital firm focused on early-stage startups?",
+  "Who won the 2013 French Open women's singles title?",
+  "Which American athlete won singles gold at the 2012 London Olympics?",
+  "Who is the tennis champion whose powerful serve and aggressive baseline game became hallmarks of her style?",
+  "Who is the American champion who returned to competition after having her first child and reached four major finals?",
+  "Who was the first African American woman to reach world No. 1 in singles in the Open Era?",
+  "Who won three consecutive WTA Finals singles titles from 2012 through 2014?",
+  "Who received the 2015 Sports Illustrated Sportsperson of the Year award?",
+  "Who won 14 major doubles titles with her sister?"
+ ],
+ "answer_forms_extra": [
+  "Serena Williams"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Martina Navratilova",
+   "names_concept": false
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Lleyton Hewitt",
+   "names_concept": false
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Simona Halep",
+   "names_concept": false
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Dwyane Wade",
+   "names_concept": false
+  },
+  {
+   "reply": "Rafael Nadal",
+   "names_concept": false
+  },
+  {
+   "reply": "Maria Sharapova",
+   "names_concept": false
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "Althea Gibson",
+   "names_concept": false
+  },
+  {
+   "reply": "Serena Williams",
+   "names_concept": true
+  },
+  {
+   "reply": "LeBron James",
+   "names_concept": false
+  },
+  {
+   "reply": "Martina Navratilova",
+   "names_concept": false
+  }
+ ]
+}

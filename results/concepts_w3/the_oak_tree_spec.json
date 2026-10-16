@@ -1,0 +1,188 @@
+{
+ "answer": " oak tree",
+ "recall": [
+  "A slow-growing, long-lived broadleaf hardwood with a wide-spreading canopy is an",
+  "In temperate forests, a major source of durable lumber for furniture and flooring is the",
+  "The stately shade tree with deeply furrowed bark and lobed leaves found in many regions is an",
+  "The forest tree that produces acorns, which feed squirrels and deer, is an",
+  "A mature tree capable of living for centuries and supporting many wildlife species is an",
+  "The hardwood traditionally used to make barrels for aging wine and spirits often comes from an",
+  "A tree long associated with strength, endurance, and steadfastness in European symbolism is the",
+  "The broad-canopied tree that is a hallmark of many deciduous woodlands is an",
+  "In autumn, a tree whose foliage may turn russet, red, or deep brown is an",
+  "The timber often chosen for durable parquet flooring comes from an",
+  "A common host for fungi, insects, birds, and mammals in a woodland ecosystem is an",
+  "The tree often found in ancient British woodlands and associated with old rural landscapes is the",
+  "A tree whose small nut-like fruits are gathered and cached by jays is an",
+  "For centuries, shipwrights valued the strong, resilient timber from this broadleaf tree, the",
+  "A common choice for providing shade and a broad crown in a large park is an",
+  "In Greek mythology, a tree sacred to Zeus and linked with thunder was the",
+  "The tree whose leaves are often illustrated with rounded or bristle-tipped lobes is an",
+  "A hardwood from temperate regions frequently used in cabinetry and casks is produced by an",
+  "A mature woodland tree that can develop a massive trunk and spreading branches is an",
+  "In a traditional forest food web, a tree whose fallen nuts sustain wildlife is an"
+ ],
+ "controls": [
+  {
+   "prompt": "A common tree with palmate leaves that turn bright colors in autumn is a",
+   "answer": " maple tree"
+  },
+  {
+   "prompt": "A European forest tree with smooth bark and beechnuts is a",
+   "answer": " beech tree"
+  },
+  {
+   "prompt": "A slender tree whose bark has traditionally been used to make canoes is a",
+   "answer": " birch tree"
+  },
+  {
+   "prompt": "The tree that produces edible chestnuts is a",
+   "answer": " chestnut tree"
+  },
+  {
+   "prompt": "France's capital city is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The first human to step onto the Moon was",
+   "answer": " Neil Armstrong"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "A slow-growing, long-lived broadleaf hardwood with a wide-spreading canopy is called",
+  "In temperate forests, a major source of durable lumber for furniture and flooring is called",
+  "The stately shade tree with deeply furrowed bark and lobed leaves found in many regions is called",
+  "The forest tree that produces acorns, which feed squirrels and deer, is called",
+  "A mature tree capable of living for centuries and supporting many wildlife species is called",
+  "The tree that provides the hardwood traditionally used to make barrels for aging wine and spirits is called",
+  "The tree long associated with strength, endurance, and steadfastness in European symbolism is called",
+  "The broad-canopied tree that is a hallmark of many deciduous woodlands is called",
+  "The tree whose foliage may turn russet, red, or deep brown in autumn is called",
+  "The tree that provides the timber often chosen for durable parquet flooring is called",
+  "A common host for fungi, insects, birds, and mammals in a woodland ecosystem is called",
+  "The tree often found in ancient British woodlands and associated with old rural landscapes is called",
+  "The tree whose small nut-like fruits are gathered and cached by jays is called",
+  "The broadleaf tree whose strong, resilient timber was valued by shipwrights for centuries is called",
+  "A common choice for providing shade and a broad crown in a large park is called",
+  "The tree sacred to Zeus and linked with thunder in Greek mythology is called",
+  "The tree whose leaves are often illustrated with rounded or bristle-tipped lobes is called",
+  "A tree from temperate regions that produces hardwood frequently used in cabinetry and casks is called",
+  "A mature woodland tree that can develop a massive trunk and spreading branches is called",
+  "The tree whose fallen nuts sustain wildlife in a traditional forest food web is called"
+ ],
+ "recall_v3": [
+  "What is the name of the slow-growing, long-lived broadleaf hardwood with a wide-spreading canopy?",
+  "What is the name of the tree that is a major source of durable lumber for furniture and flooring in temperate forests?",
+  "What is the name of the stately shade tree with deeply furrowed bark and lobed leaves found in many regions?",
+  "What is the name of the forest tree that produces acorns eaten by squirrels and deer?",
+  "What is the name of the mature tree that can live for centuries and support many wildlife species?",
+  "What is the name of the tree whose hardwood is traditionally used to make barrels for aging wine and spirits?",
+  "What is the name of the tree long associated with strength, endurance, and steadfastness in European symbolism?",
+  "What is the name of the broad-canopied tree that is a hallmark of many deciduous woodlands?",
+  "What is the name of the tree whose foliage may turn russet, red, or deep brown in autumn?",
+  "What is the name of the tree that provides timber often chosen for durable parquet flooring?",
+  "What is the name of a common host for fungi, insects, birds, and mammals in a woodland ecosystem?",
+  "What is the name of the tree often found in ancient British woodlands and associated with old rural landscapes?",
+  "What is the name of the tree whose small nut-like fruits are gathered and cached by jays?",
+  "What is the name of the broadleaf tree whose strong, resilient timber was valued by shipwrights for centuries?",
+  "What is the name of a common tree choice for providing shade and a broad crown in a large park?",
+  "What is the name of the tree sacred to Zeus and linked with thunder in Greek mythology?",
+  "What is the name of the tree whose leaves are often illustrated with rounded or bristle-tipped lobes?",
+  "What is the name of the temperate-region tree that produces hardwood frequently used in cabinetry and casks?",
+  "What is the name of the mature woodland tree that can develop a massive trunk and spreading branches?",
+  "What is the name of the tree whose fallen nuts sustain wildlife in a traditional forest food web?"
+ ],
+ "answer_forms_extra": [
+  "Oak"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak tree",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "American Beech",
+   "names_concept": false
+  },
+  {
+   "reply": "Maple",
+   "names_concept": false
+  },
+  {
+   "reply": "Teak",
+   "names_concept": false
+  },
+  {
+   "reply": "Decay wood",
+   "names_concept": false
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Horse chestnut",
+   "names_concept": false
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Maple",
+   "names_concept": false
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Oak",
+   "names_concept": true
+  },
+  {
+   "reply": "Hickory",
+   "names_concept": false
+  }
+ ]
+}

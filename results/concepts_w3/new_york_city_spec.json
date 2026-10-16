@@ -1,0 +1,188 @@
+{
+ "answer": " New York City",
+ "recall": [
+  "The most populous municipality in the United States is",
+  "The five-borough metropolis at the mouth of the Hudson River is",
+  "The American metropolis where the United Nations headquarters is located is",
+  "The first U.S. national capital under the Constitution was",
+  "The financial center associated with the U.S. stock exchange on Wall Street is",
+  "The metropolis whose boroughs include Brooklyn, Queens, and the Bronx is",
+  "The U.S. metropolis where the Statue of Liberty welcomes visitors is",
+  "The major American metropolis served by the subway system with the most stations is",
+  "The urban center that hosts the annual Macy’s Thanksgiving Day Parade is",
+  "The East Coast metropolis home to Central Park is",
+  "The American metropolis whose skyline includes the Empire State Building is",
+  "The port through which millions of immigrants entered the United States via Ellis Island was",
+  "The U.S. metropolis that grew across islands and the mainland around a major harbor is",
+  "The publishing hub where many national media organizations are headquartered is",
+  "The metropolis whose borough of Staten Island lies across the harbor from the other boroughs is",
+  "The home of the Metropolitan Museum of Art and the American Museum of Natural History is",
+  "The U.S. metropolis where the annual New Year’s Eve ball drop takes place in Times Square is",
+  "The American metropolis known for its Broadway theater district is",
+  "The global financial and cultural hub at the southeastern edge of a northeastern U.S. state is",
+  "The metropolis whose skyline is often viewed from across the East River in New Jersey is"
+ ],
+ "controls": [
+  {
+   "prompt": "The most populous municipality in California is",
+   "answer": " Los Angeles"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "Canada’s most populous municipality is",
+   "answer": " Toronto"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical element with the symbol O is",
+   "answer": " Oxygen"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ],
+ "recall_v2": [
+  "The most populous municipality in the United States is called",
+  "The five-borough metropolis at the mouth of the Hudson River is called",
+  "The American metropolis where the United Nations headquarters is located is called",
+  "The first U.S. national capital under the Constitution was called",
+  "The financial center associated with the U.S. stock exchange on Wall Street is called",
+  "The metropolis whose boroughs include Brooklyn, Queens, and the Bronx is called",
+  "The U.S. metropolis where the Statue of Liberty welcomes visitors is called",
+  "The major American metropolis served by the subway system with the most stations is called",
+  "The urban center that hosts the annual Macy’s Thanksgiving Day Parade is called",
+  "The East Coast metropolis home to Central Park is called",
+  "The American metropolis whose skyline includes the Empire State Building is called",
+  "The port through which millions of immigrants entered the United States via Ellis Island was called",
+  "The U.S. metropolis that grew across islands and the mainland around a major harbor is called",
+  "The publishing hub where many national media organizations are headquartered is called",
+  "The metropolis whose borough of Staten Island lies across the harbor from the other boroughs is called",
+  "The home of the Metropolitan Museum of Art and the American Museum of Natural History is called",
+  "The U.S. metropolis where the annual New Year’s Eve ball drop takes place in Times Square is called",
+  "The American metropolis known for its Broadway theater district is called",
+  "The global financial and cultural hub at the southeastern edge of a northeastern U.S. state is called",
+  "The metropolis whose skyline is often viewed from across the East River in New Jersey is called"
+ ],
+ "recall_v3": [
+  "What is the name of the most populous municipality in the United States?",
+  "What is the name of the five-borough metropolis at the mouth of the Hudson River?",
+  "What is the name of the American metropolis where the United Nations headquarters is located?",
+  "What was the name of the first U.S. national capital under the Constitution?",
+  "What is the name of the financial center associated with the U.S. stock exchange on Wall Street?",
+  "What is the name of the metropolis whose boroughs include Brooklyn, Queens, and the Bronx?",
+  "What is the name of the U.S. metropolis where the Statue of Liberty welcomes visitors?",
+  "What is the name of the major American metropolis served by the subway system with the most stations?",
+  "What is the name of the urban center that hosts the annual Macy’s Thanksgiving Day Parade?",
+  "What is the name of the East Coast metropolis home to Central Park?",
+  "What is the name of the American metropolis whose skyline includes the Empire State Building?",
+  "What was the name of the port through which millions of immigrants entered the United States via Ellis Island?",
+  "What is the name of the U.S. metropolis that grew across islands and the mainland around a major harbor?",
+  "What is the name of the publishing hub where many national media organizations are headquartered?",
+  "What is the name of the metropolis whose borough of Staten Island lies across the harbor from the other boroughs?",
+  "What is the name of the place that is home to the Metropolitan Museum of Art and the American Museum of Natural History?",
+  "What is the name of the U.S. metropolis where the annual New Year’s Eve ball drop takes place in Times Square?",
+  "What is the name of the American metropolis known for its Broadway theater district?",
+  "What is the name of the global financial and cultural hub at the southeastern edge of a northeastern U.S. state?",
+  "What is the name of the metropolis whose skyline is often viewed from across the East River in New Jersey?"
+ ],
+ "answer_forms_extra": [
+  "New York City"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "Philadelphia",
+   "names_concept": false
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": true
+  }
+ ]
+}

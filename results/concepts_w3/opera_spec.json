@@ -1,0 +1,188 @@
+{
+ "answer": " opera",
+ "recall": [
+  "A staged musical drama in which the story is conveyed primarily through classical singing is",
+  "La Traviata and The Magic Flute are works in the genre of",
+  "A composer writing a score for singers, orchestra, and a theatrical libretto is composing an",
+  "A libretto provides the words for a sung dramatic work known as an",
+  "The art form associated with arias, recitatives, choruses, and orchestral overtures is",
+  "A performance at Milan’s La Scala featuring singers in elaborate costumes and a full orchestra may be an",
+  "The kind of classical performance in which sopranos and baritones portray characters through song is",
+  "A night at the theater featuring an aria, a chorus, and orchestral accompaniment may be an evening of",
+  "The nineteenth-century works of Verdi and Puccini are central to the history of",
+  "A singer performing the title role in Carmen is appearing in an",
+  "The grand theatrical genre whose works are often divided into acts and scenes is",
+  "A dramatic composition for the stage, set to music and performed by trained vocalists, is an",
+  "The musical stage tradition whose major German composer was Richard Wagner is",
+  "A performance with a soprano’s aria, a chorus, and orchestral accompaniment may be heard at the",
+  "The Marriage of Figaro, with sung roles and instrumental accompaniment, is an",
+  "The stage genre in which prima donna traditionally names the leading female singer is",
+  "A full-length vocal drama staged with scenery, costumes, and orchestra is",
+  "The Italian theatrical form that began to flourish in the late Renaissance is",
+  "A musician who writes the vocal lines and orchestral score for a sung stage drama is composing",
+  "At venues such as La Scala and the Metropolitan, audiences gather to hear"
+ ],
+ "controls": [
+  {
+   "prompt": "An elegant stage art whose choreography tells a story to orchestral music is",
+   "answer": " ballet"
+  },
+  {
+   "prompt": "A stage production combining spoken dialogue, songs, and dance is a",
+   "answer": " musical"
+  },
+  {
+   "prompt": "A large-scale sacred vocal composition for soloists, chorus, and orchestra, often unstaged, is an",
+   "answer": " oratorio"
+  },
+  {
+   "prompt": "A light comic form of musical theater with spoken dialogue and catchy songs is an",
+   "answer": " operetta"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "A staged musical drama in which the story is conveyed primarily through classical singing is called",
+  "La Traviata and The Magic Flute are works in the genre known as",
+  "A composer writing a score for singers, orchestra, and a theatrical libretto is composing a work in a form called",
+  "A libretto provides the words for a sung dramatic work known as",
+  "The art form associated with arias, recitatives, choruses, and orchestral overtures is called",
+  "A performance at Milan’s La Scala featuring singers in elaborate costumes and a full orchestra may be a performance in a genre called",
+  "The kind of classical performance in which sopranos and baritones portray characters through song is known as",
+  "A night at the theater featuring an aria, a chorus, and orchestral accompaniment may be an evening of a form called",
+  "The nineteenth-century works of Verdi and Puccini are central to the history of the genre known as",
+  "A singer performing the title role in Carmen is appearing in a stage work of a genre called",
+  "The grand theatrical genre whose works are often divided into acts and scenes is known as",
+  "A dramatic composition for the stage, set to music and performed by trained vocalists, is called",
+  "The musical stage tradition whose major German composer was Richard Wagner is called",
+  "A performance with a soprano’s aria, a chorus, and orchestral accompaniment may be an example of a genre known as",
+  "The Marriage of Figaro, with sung roles and instrumental accompaniment, is a work in a form called",
+  "The stage genre in which prima donna traditionally names the leading female singer is known as",
+  "A full-length vocal drama staged with scenery, costumes, and orchestra is called",
+  "The Italian theatrical form that began to flourish in the late Renaissance is called",
+  "A musician who writes the vocal lines and orchestral score for a sung stage drama is composing a work known as",
+  "At venues such as La Scala and the Metropolitan, audiences gather to hear a stage work known as"
+ ],
+ "recall_v3": [
+  "What is the name of the staged musical drama in which the story is conveyed primarily through classical singing?",
+  "What is the name of the genre that includes La Traviata and The Magic Flute?",
+  "What is the name of the form a composer is writing for when creating a score for singers, orchestra, and a theatrical libretto?",
+  "What is the name of the sung dramatic work for which a libretto provides the words?",
+  "What is the name of the art form associated with arias, recitatives, choruses, and orchestral overtures?",
+  "What is the name of the genre of a performance at Milan’s La Scala featuring singers in elaborate costumes and a full orchestra?",
+  "What is the name of the classical performance in which sopranos and baritones portray characters through song?",
+  "What is the name of the form featured in a night at the theater with an aria, a chorus, and orchestral accompaniment?",
+  "What is the name of the genre whose history centrally includes the nineteenth-century works of Verdi and Puccini?",
+  "What is the name of the genre of the stage work in which a singer performs the title role in Carmen?",
+  "What is the name of the grand theatrical genre whose works are often divided into acts and scenes?",
+  "What is the name of a dramatic composition for the stage, set to music and performed by trained vocalists?",
+  "What is the name of the musical stage tradition whose major German composer was Richard Wagner?",
+  "What is the name of the genre exemplified by a performance with a soprano’s aria, a chorus, and orchestral accompaniment?",
+  "What is the name of the form represented by The Marriage of Figaro, with its sung roles and instrumental accompaniment?",
+  "What is the name of the stage genre in which prima donna traditionally names the leading female singer?",
+  "What is the name of a full-length vocal drama staged with scenery, costumes, and orchestra?",
+  "What is the name of the Italian theatrical form that began to flourish in the late Renaissance?",
+  "What is the name of the work a musician composes by writing the vocal lines and orchestral score for a sung stage drama?",
+  "What is the name of the stage work audiences gather to hear at venues such as La Scala and the Metropolitan?"
+ ],
+ "answer_forms_extra": [
+  "Opera"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Tragedy",
+   "names_concept": false
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "German Romanticism",
+   "names_concept": false
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  },
+  {
+   "reply": "Opera buffa",
+   "names_concept": false
+  },
+  {
+   "reply": "Opera",
+   "names_concept": false
+  },
+  {
+   "reply": "Opera",
+   "names_concept": false
+  },
+  {
+   "reply": "Commedia dell'arte",
+   "names_concept": false
+  },
+  {
+   "reply": "Opera",
+   "names_concept": false
+  },
+  {
+   "reply": "Opera",
+   "names_concept": true
+  }
+ ]
+}

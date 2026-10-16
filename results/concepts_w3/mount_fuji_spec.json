@@ -1,0 +1,188 @@
+{
+ "answer": " Mount Fuji",
+ "recall": [
+  "The highest point in Japan, rising to 3,776 meters, is",
+  "Japan's best-known stratovolcano is",
+  "the volcanic peak that dominates the skyline of central Honshu is",
+  "the mountain revered in Shinto and Buddhist traditions as a sacred site is",
+  "the destination of the annual summer climbing season near Tokyo is",
+  "the volcano that erupted during the Hōei era in 1707 is",
+  "the cone painted by Katsushika Hokusai in his celebrated series of woodblock prints is",
+  "the peak visible from the Tokaido Shinkansen on clear days is",
+  "the summit shared by Shizuoka and Yamanashi prefectures is",
+  "the Japanese volcano with a summit above 3,700 meters is",
+  "the mountain whose summit crater sits above 3,700 meters is",
+  "the peak that appears on the reverse of Japan's 1,000-yen banknote is",
+  "the volcano whose symmetrical profile is associated with Japan's national identity is",
+  "the mountain climbed by pilgrims on routes such as Yoshida and Subashiri is",
+  "the Japanese peak that can be seen across Suruga Bay from the Izu Peninsula is",
+  "the volcano with a broad summit crater and several major climbing trails is",
+  "the mountain overlooking lakes such as Kawaguchi and Yamanaka is",
+  "the sacred Japanese peak featured in countless ukiyo-e landscapes is",
+  "the volcano that forms the highest point of Honshu is",
+  "the famous Japanese cone whose summit is often snow-covered in winter is"
+ ],
+ "controls": [
+  {
+   "prompt": "The highest peak in Africa is",
+   "answer": " Mount Kilimanjaro"
+  },
+  {
+   "prompt": "the active volcano on Sicily is",
+   "answer": " Mount Etna"
+  },
+  {
+   "prompt": "the glaciated volcano in Washington state is",
+   "answer": " Mount Rainier"
+  },
+  {
+   "prompt": "Japan's largest active volcano by volume is",
+   "answer": " Mount Aso"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The currency used in Japan is the",
+   "answer": " yen"
+  }
+ ],
+ "recall_v2": [
+  "The highest point in Japan, rising to 3,776 meters, is called",
+  "Japan's best-known stratovolcano is called",
+  "The volcanic peak that dominates the skyline of central Honshu is called",
+  "The mountain revered in Shinto and Buddhist traditions as a sacred site is called",
+  "The destination of the annual summer climbing season near Tokyo is called",
+  "The volcano that erupted during the Hōei era in 1707 is called",
+  "The cone painted by Katsushika Hokusai in his celebrated series of woodblock prints is called",
+  "The peak visible from the Tokaido Shinkansen on clear days is called",
+  "The summit shared by Shizuoka and Yamanashi prefectures is called",
+  "The Japanese volcano with a summit above 3,700 meters is called",
+  "The mountain whose summit crater sits above 3,700 meters is called",
+  "The peak that appears on the reverse of Japan's 1,000-yen banknote is called",
+  "The volcano whose symmetrical profile is associated with Japan's national identity is called",
+  "The mountain climbed by pilgrims on routes such as Yoshida and Subashiri is called",
+  "The Japanese peak that can be seen across Suruga Bay from the Izu Peninsula is called",
+  "The volcano with a broad summit crater and several major climbing trails is called",
+  "The mountain overlooking lakes such as Kawaguchi and Yamanaka is called",
+  "The sacred Japanese peak featured in countless ukiyo-e landscapes is called",
+  "The volcano that forms the highest point of Honshu is called",
+  "The famous Japanese cone whose summit is often snow-covered in winter is called"
+ ],
+ "recall_v3": [
+  "What is the name of the highest point in Japan, rising to 3,776 meters?",
+  "What is the name of Japan's best-known stratovolcano?",
+  "What is the name of the volcanic peak that dominates the skyline of central Honshu?",
+  "What is the name of the mountain revered in Shinto and Buddhist traditions as a sacred site?",
+  "What is the name of the destination of the annual summer climbing season near Tokyo?",
+  "What is the name of the volcano that erupted during the Hōei era in 1707?",
+  "What is the name of the cone painted by Katsushika Hokusai in his celebrated series of woodblock prints?",
+  "What is the name of the peak visible from the Tokaido Shinkansen on clear days?",
+  "What is the name of the summit shared by Shizuoka and Yamanashi prefectures?",
+  "What is the name of the Japanese volcano with a summit above 3,700 meters?",
+  "What is the name of the mountain whose summit crater sits above 3,700 meters?",
+  "What is the name of the peak that appears on the reverse of Japan's 1,000-yen banknote?",
+  "What is the name of the volcano whose symmetrical profile is associated with Japan's national identity?",
+  "What is the name of the mountain climbed by pilgrims on routes such as Yoshida and Subashiri?",
+  "What is the name of the Japanese peak that can be seen across Suruga Bay from the Izu Peninsula?",
+  "What is the name of the volcano with a broad summit crater and several major climbing trails?",
+  "What is the name of the mountain overlooking lakes such as Kawaguchi and Yamanaka?",
+  "What is the name of the sacred Japanese peak featured in countless ukiyo-e landscapes?",
+  "What is the name of the volcano that forms the highest point of Honshu?",
+  "What is the name of the famous Japanese cone whose summit is often snow-covered in winter?"
+ ],
+ "answer_forms_extra": [
+  "Mount Fuji"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Hakone",
+   "names_concept": false
+  },
+  {
+   "reply": "Asama",
+   "names_concept": false
+  },
+  {
+   "reply": "The Great Wave",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Fuji Mountain",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Fuji",
+   "names_concept": true
+  }
+ ]
+}

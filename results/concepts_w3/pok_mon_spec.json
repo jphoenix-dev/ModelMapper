@@ -1,0 +1,188 @@
+{
+ "answer": " Pokémon",
+ "recall": [
+  "The Japanese video game series that introduced players to capturing and training fantastical creatures first appeared on handheld consoles in 1996 is",
+  "The media franchise that expanded from paired role-playing games into cartoons and collectible cards is",
+  "The fictional pastime in which trainers pit teams of creatures against one another is central to",
+  "The game series where elemental affinities influence strengths and weaknesses in battles is",
+  "The animated adventures of a young aspiring champion traveling with a rotating group of companions are based on",
+  "The collectible card game where players use creature cards, energy cards, and trainer cards is",
+  "The augmented-reality mobile game that sends players to real-world locations to find virtual creatures draws on",
+  "The global entertainment franchise built around hundreds of collectible, evolvable fantasy species is",
+  "The games in which a player chooses a first partner from a trio representing different elemental styles belong to",
+  "The fictional bestiary that expands with each generation of games is part of",
+  "The long-running series whose games often release in two versions with exclusive creatures is",
+  "The competitive video game scene centered on turn-based teams of fantastical creatures belongs to",
+  "The franchise where creatures can change into stronger or alternate forms through evolution is",
+  "The Japanese brand that became a worldwide hit through handheld role-playing games and animated television is",
+  "The universe of trainers, regional tournaments, and creature-catching journeys is associated with",
+  "The children's entertainment property with games, toys, films, and a trading-card game focused on collectible creatures is",
+  "The adventure games that invite players to complete a regional creature index are installments in",
+  "A franchise known for mascot creatures, elemental battles, and a vast roster of species is",
+  "The series whose animated adaptation follows a trainer pursuing championship tournaments is",
+  "The brand behind a long-running competitive card game featuring creatures, energy resources, and trainer effects is"
+ ],
+ "controls": [
+  {
+   "prompt": "The franchise about digital creatures who partner with human children is",
+   "answer": " Digimon"
+  },
+  {
+   "prompt": "The Japanese game series in which players befriend supernatural beings known as yokai is",
+   "answer": " Yo-kai Watch"
+  },
+  {
+   "prompt": "The video game series where players raise and battle monsters in a ranching simulation is",
+   "answer": " Monster Rancher"
+  },
+  {
+   "prompt": "The virtual pet brand operated through a small egg-shaped electronic device is",
+   "answer": " Tamagotchi"
+  },
+  {
+   "prompt": "The capital of Italy is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The planet commonly called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The Japanese video game series that introduced players to capturing and training fantastical creatures and first appeared on handheld consoles in 1996 is known as",
+  "The media franchise that expanded from paired role-playing games into cartoons and collectible cards is called",
+  "The fictional pastime in which trainers pit teams of creatures against one another is central to the franchise known as",
+  "The game series where elemental affinities influence strengths and weaknesses in battles is called",
+  "The animated adventures of a young aspiring champion traveling with a rotating group of companions are based on the game series known as",
+  "The collectible card game where players use creature cards, energy cards, and trainer cards is called",
+  "The augmented-reality mobile game that sends players to real-world locations to find virtual creatures draws on the franchise known as",
+  "The global entertainment franchise built around hundreds of collectible, evolvable fantasy species is known as",
+  "The games in which a player chooses a first partner from a trio representing different elemental styles belong to the series called",
+  "The fictional bestiary that expands with each generation of games is part of the franchise called",
+  "The long-running series whose games often release in two versions with exclusive creatures is called",
+  "The competitive video game scene centered on turn-based teams of fantastical creatures belongs to the franchise known as",
+  "The franchise where creatures can change into stronger or alternate forms through evolution is called",
+  "The Japanese brand that became a worldwide hit through handheld role-playing games and animated television is named",
+  "The universe of trainers, regional tournaments, and creature-catching journeys is associated with the franchise known as",
+  "The children's entertainment property with games, toys, films, and a trading-card game focused on collectible creatures is called",
+  "The adventure games that invite players to complete a regional creature index are installments in the series called",
+  "The franchise known for mascot creatures, elemental battles, and a vast roster of species is called",
+  "The series whose animated adaptation follows a trainer pursuing championship tournaments is called",
+  "The brand behind a long-running competitive card game featuring creatures, energy resources, and trainer effects is called"
+ ],
+ "recall_v3": [
+  "What is the name of the Japanese video game series that introduced players to capturing and training fantastical creatures and first appeared on handheld consoles in 1996?",
+  "What is the name of the media franchise that expanded from paired role-playing games into cartoons and collectible cards?",
+  "What is the name of the franchise centered on the fictional pastime in which trainers pit teams of creatures against one another?",
+  "What is the name of the game series where elemental affinities influence strengths and weaknesses in battles?",
+  "What is the name of the game series that the animated adventures of a young aspiring champion traveling with a rotating group of companions are based on?",
+  "What is the name of the collectible card game where players use creature cards, energy cards, and trainer cards?",
+  "What is the name of the franchise that the augmented-reality mobile game sending players to real-world locations to find virtual creatures draws on?",
+  "What is the name of the global entertainment franchise built around hundreds of collectible, evolvable fantasy species?",
+  "What is the name of the series whose games let players choose a first partner from a trio representing different elemental styles?",
+  "What is the name of the franchise whose fictional bestiary expands with each generation of games?",
+  "What is the name of the long-running series whose games often release in two versions with exclusive creatures?",
+  "What is the name of the franchise behind the competitive video game scene centered on turn-based teams of fantastical creatures?",
+  "What is the name of the franchise where creatures can change into stronger or alternate forms through evolution?",
+  "What is the name of the Japanese brand that became a worldwide hit through handheld role-playing games and animated television?",
+  "What is the name of the franchise associated with a universe of trainers, regional tournaments, and creature-catching journeys?",
+  "What is the name of the children's entertainment property with games, toys, films, and a trading-card game focused on collectible creatures?",
+  "What is the name of the series that includes adventure games inviting players to complete a regional creature index?",
+  "What is the name of the franchise known for mascot creatures, elemental battles, and a vast roster of species?",
+  "What is the name of the series whose animated adaptation follows a trainer pursuing championship tournaments?",
+  "What is the name of the brand behind a long-running competitive card game featuring creatures, energy resources, and trainer effects?"
+ ],
+ "answer_forms_extra": [
+  "Pokémon"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Final Fantasy",
+   "names_concept": false
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Fire Emblem",
+   "names_concept": false
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Magic: The Gathering",
+   "names_concept": false
+  },
+  {
+   "reply": "Pokémon Go",
+   "names_concept": false
+  },
+  {
+   "reply": "Magic: The Gathering",
+   "names_concept": false
+  },
+  {
+   "reply": "Fire Emblem",
+   "names_concept": false
+  },
+  {
+   "reply": "Final Fantasy",
+   "names_concept": false
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Square Enix",
+   "names_concept": false
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "My Little Pony",
+   "names_concept": false
+  },
+  {
+   "reply": "The Name of the Series is: **The Legend of Zelda**",
+   "names_concept": false
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Pokémon",
+   "names_concept": true
+  },
+  {
+   "reply": "Magic: The Gathering",
+   "names_concept": false
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " Brazil",
+ "recall": [
+  "The largest country by area in South America is",
+  "The most populous nation in South America is",
+  "The South American country that borders every mainland country on the continent except Chile and Ecuador is",
+  "The country that declared independence from Portugal in 1822 is",
+  "The national team with the most men's FIFA World Cup titles is from",
+  "Pelé's home country was",
+  "The country whose flag has a green field, a yellow diamond, and a blue globe is",
+  "The country containing the largest share of the Amazon rainforest is",
+  "The South American country that contains much of the Pantanal wetlands is",
+  "The South American host of the 2016 Summer Olympics was",
+  "The South American country where the Amazon River meets the Atlantic Ocean is",
+  "The home country of architect Oscar Niemeyer was",
+  "The country where samba became a major music and dance tradition is",
+  "The country where bossa nova first emerged as a music genre is",
+  "The largest country in the Portuguese-speaking world by population is",
+  "The country with South America's longest Atlantic coastline is",
+  "The country where Manaus lies, near the meeting of the Negro and Solimões rivers, is",
+  "The country that has historically been the world's largest coffee producer is",
+  "The South American country whose capital is the seat of the continental headquarters of the International Court of Justice? No, the country that moved its capital inland to a purpose-built city in 1960 is",
+  "The South American country with the world's fifth-largest land area is"
+ ],
+ "controls": [
+  {
+   "prompt": "The South American country whose capital is Buenos Aires is",
+   "answer": " Argentina"
+  },
+  {
+   "prompt": "The South American nation whose capital is Bogotá is",
+   "answer": " Colombia"
+  },
+  {
+   "prompt": "The country known for the ancient Inca citadel of Machu Picchu is",
+   "answer": " Peru"
+  },
+  {
+   "prompt": "The long, narrow South American country whose capital is Santiago is",
+   "answer": " Chile"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The largest country by area in South America is known as",
+  "The most populous nation in South America is known as",
+  "The South American country that borders every mainland country on the continent except Chile and Ecuador is known as",
+  "The country that declared independence from Portugal in 1822 is known as",
+  "The national team with the most men's FIFA World Cup titles represents the country known as",
+  "Pelé's home country was known as",
+  "The country whose flag has a green field, a yellow diamond, and a blue globe is known as",
+  "The country containing the largest share of the Amazon rainforest is known as",
+  "The South American country that contains much of the Pantanal wetlands is known as",
+  "The South American host of the 2016 Summer Olympics was known as",
+  "The South American country where the Amazon River meets the Atlantic Ocean is known as",
+  "The home country of architect Oscar Niemeyer is known as",
+  "The country where samba became a major music and dance tradition is known as",
+  "The country where bossa nova first emerged as a music genre is known as",
+  "The largest country in the Portuguese-speaking world by population is known as",
+  "The country with South America's longest Atlantic coastline is known as",
+  "The country where Manaus lies, near the meeting of the Negro and Solimões rivers, is known as",
+  "The country that has historically been the world's largest coffee producer is known as",
+  "The South American country that moved its capital inland to a purpose-built city in 1960 is known as",
+  "The South American country with the world's fifth-largest land area is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the largest country by area in South America?",
+  "What is the name of the most populous nation in South America?",
+  "What is the name of the South American country that borders every mainland country on the continent except Chile and Ecuador?",
+  "What is the name of the country that declared independence from Portugal in 1822?",
+  "What is the name of the country represented by the national team with the most men's FIFA World Cup titles?",
+  "What is the name of Pelé's home country?",
+  "What is the name of the country whose flag has a green field, a yellow diamond, and a blue globe?",
+  "What is the name of the country containing the largest share of the Amazon rainforest?",
+  "What is the name of the South American country that contains much of the Pantanal wetlands?",
+  "What is the name of the South American country that hosted the 2016 Summer Olympics?",
+  "What is the name of the South American country where the Amazon River meets the Atlantic Ocean?",
+  "What is the name of architect Oscar Niemeyer's home country?",
+  "What is the name of the country where samba became a major music and dance tradition?",
+  "What is the name of the country where bossa nova first emerged as a music genre?",
+  "What is the name of the largest country in the Portuguese-speaking world by population?",
+  "What is the name of the country with South America's longest Atlantic coastline?",
+  "What is the name of the country where Manaus lies, near the meeting of the Negro and Solimões rivers?",
+  "What is the name of the country that has historically been the world's largest coffee producer?",
+  "What is the name of the South American country that moved its capital inland to a purpose-built city in 1960?",
+  "What is the name of the South American country with the world's fifth-largest land area?"
+ ],
+ "answer_forms_extra": [
+  "Brazil"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Somalia",
+   "names_concept": false
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  },
+  {
+   "reply": "Bolivia",
+   "names_concept": false
+  },
+  {
+   "reply": "Brazil",
+   "names_concept": true
+  }
+ ]
+}

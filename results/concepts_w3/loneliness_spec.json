@@ -1,0 +1,188 @@
+{
+ "answer": " loneliness",
+ "recall": [
+  "The painful subjective feeling of lacking meaningful social ties is called",
+  "The emotional distress caused by a gap between desired and actual social connection is known as",
+  "A person surrounded by others who still feels unseen may be experiencing",
+  "In public-health research, persistent perceived disconnection from others is often termed",
+  "The emotional pain associated with feeling that one lacks meaningful companionship is",
+  "Researchers distinguish objective social isolation from the subjective experience of",
+  "The state commonly described by the phrase “a stranger in a crowd” is",
+  "A lack of close bonds that causes emotional distress can give rise to",
+  "In social psychology, the distress of feeling disconnected from others is",
+  "The feeling of having too few meaningful relationships, despite wanting more, is",
+  "Prolonged perceived social disconnection is associated with increased risk of depression and",
+  "A recurring emotional theme in stories about people who feel disconnected from others is",
+  "The distress a newcomer may feel when they have not yet formed social ties in a new city is",
+  "A person who longs for companionship but feels cut off from others may experience",
+  "The feeling that community programs seek to ease by creating opportunities for connection is",
+  "The emotional strain that may arise when confinement limits meaningful human contact is",
+  "The state often portrayed through a character’s longing for belonging is",
+  "The painful sense of disconnection that can follow the loss of a close companion is",
+  "When online interactions fail to provide a sense of belonging, a person may experience",
+  "The harm that can result when the human need for connection goes unmet for a long time is"
+ ],
+ "controls": [
+  {
+   "prompt": "Choosing and enjoying time by oneself without distress is called",
+   "answer": " solitude"
+  },
+  {
+   "prompt": "The objective condition of having very few social contacts is",
+   "answer": " social isolation"
+  },
+  {
+   "prompt": "Feeling estranged from society or its values is known as",
+   "answer": " alienation"
+  },
+  {
+   "prompt": "The distress caused by being separated from one’s home is",
+   "answer": " homesickness"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet commonly called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The painful subjective feeling of lacking meaningful social ties is called",
+  "The emotional distress caused by a gap between desired and actual social connection is known as",
+  "A person surrounded by others who still feels unseen may be experiencing a condition called",
+  "In public-health research, persistent perceived disconnection from others is often termed",
+  "The emotional pain associated with feeling that one lacks meaningful companionship is called",
+  "Researchers distinguish objective social isolation from the subjective experience called",
+  "The state commonly described by the phrase “a stranger in a crowd” is called",
+  "A lack of close bonds that causes emotional distress can give rise to a condition called",
+  "In social psychology, the distress of feeling disconnected from others is called",
+  "The feeling of having too few meaningful relationships, despite wanting more, is called",
+  "Prolonged perceived social disconnection is associated with increased risk of depression and with a condition called",
+  "A recurring emotional theme in stories about people who feel disconnected from others is called",
+  "The distress a newcomer may feel when they have not yet formed social ties in a new city is known as",
+  "A person who longs for companionship but feels cut off from others may experience a state called",
+  "The feeling that community programs seek to ease by creating opportunities for connection is called",
+  "The emotional strain that may arise when confinement limits meaningful human contact is called",
+  "The state often portrayed through a character’s longing for belonging is called",
+  "The painful sense of disconnection that can follow the loss of a close companion is known as",
+  "When online interactions fail to provide a sense of belonging, a person may experience a feeling called",
+  "The harm that can result when the human need for connection goes unmet for a long time is called"
+ ],
+ "recall_v3": [
+  "What is the painful subjective feeling of lacking meaningful social ties called?",
+  "What is the emotional distress caused by a gap between desired and actual social connection known as?",
+  "What condition may a person surrounded by others experience if they still feel unseen?",
+  "What term is often used in public-health research for persistent perceived disconnection from others?",
+  "What is the emotional pain associated with feeling that one lacks meaningful companionship called?",
+  "What is the subjective experience that researchers distinguish from objective social isolation?",
+  "What is the state commonly described by the phrase “a stranger in a crowd”?",
+  "What condition can arise from a lack of close bonds that causes emotional distress?",
+  "What is the distress of feeling disconnected from others called in social psychology?",
+  "What is the feeling of having too few meaningful relationships, despite wanting more?",
+  "What condition, alongside increased risk of depression, is associated with prolonged perceived social disconnection?",
+  "What is a recurring emotional theme in stories about people who feel disconnected from others?",
+  "What is the distress a newcomer may feel before forming social ties in a new city?",
+  "What state may a person experience if they long for companionship but feel cut off from others?",
+  "What feeling do community programs seek to ease by creating opportunities for connection?",
+  "What emotional strain may arise when confinement limits meaningful human contact?",
+  "What state is often portrayed through a character’s longing for belonging?",
+  "What is the painful sense of disconnection that can follow the loss of a close companion?",
+  "What feeling may a person experience when online interactions fail to provide a sense of belonging?",
+  "What is the harm that can result when the human need for connection goes unmet for a long time?"
+ ],
+ "answer_forms_extra": [
+  "Loneliness"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Social isolation",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Alone",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Social isolation",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Anxiety",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Culture shock",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Isolation",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Alaska",
+   "names_concept": false
+  },
+  {
+   "reply": "Grief",
+   "names_concept": false
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  },
+  {
+   "reply": "Loneliness",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "answer": " Acropolis",
+ "recall": [
+  "The ancient citadel in the Greek capital is called the",
+  "The rocky hill crowned by the Parthenon at the center of Athens is the",
+  "The complex of temples built atop the city's sacred hill is the",
+  "The fortified high ground that gave its name to citadels in Greek cities is the",
+  "The UNESCO-listed ancient landmark overlooking Athens is the",
+  "The site of the Parthenon, Erechtheion, and Propylaea is the",
+  "The plateau where a temple honoring Athena Polias stood is the",
+  "The hilltop monument rebuilt after Persian forces sacked Athens is the",
+  "The ancient complex whose monumental gateway is the Propylaea is the",
+  "The site where the Erechtheion's Caryatids overlook Athens is the",
+  "The Athenian shrine dedicated chiefly to the city's patron goddess occupies the",
+  "The elevated archaeological precinct above the Plaka district is the",
+  "Pericles' famous building program transformed the",
+  "The Panathenaic procession culminated at the sacred hill known as the",
+  "From below, the Parthenon's silhouette marks the summit of the",
+  "The ancient landmark that dominates the Athens skyline is the",
+  "The hilltop sanctuary reached through the Beulé Gate and Propylaea is the",
+  "The Athenian archaeological site containing the Temple of Athena Nike is the",
+  "The sacred plateau overlooking the ancient Agora is the",
+  "The classical Greek citadel that became an emblem of Athenian democracy is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The famous Doric temple on the hill above Athens is the",
+   "answer": " Parthenon"
+  },
+  {
+   "prompt": "The ancient Greek sanctuary famous for Apollo's oracle was at",
+   "answer": " Delphi"
+  },
+  {
+   "prompt": "The central public marketplace in an ancient Greek city was the",
+   "answer": " Agora"
+  },
+  {
+   "prompt": "The Minoan palace complex associated with the Minotaur is",
+   "answer": " Knossos"
+  },
+  {
+   "prompt": "The longest river in Africa is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  }
+ ],
+ "recall_v2": [
+  "The ancient citadel in the Greek capital is called",
+  "The rocky hill crowned by the Parthenon at the center of Athens is known as",
+  "The complex of temples built atop the city's sacred hill is called",
+  "The fortified high ground that gave its name to citadels in Greek cities is called",
+  "The UNESCO-listed ancient landmark overlooking Athens is called",
+  "The site of the Parthenon, Erechtheion, and Propylaea is called",
+  "The plateau where a temple honoring Athena Polias stood is called",
+  "The hilltop monument rebuilt after Persian forces sacked Athens is called",
+  "The ancient complex whose monumental gateway is the Propylaea is called",
+  "The site where the Erechtheion's Caryatids overlook Athens is called",
+  "The Athenian shrine dedicated chiefly to the city's patron goddess is located on the hill called",
+  "The elevated archaeological precinct above the Plaka district is called",
+  "Pericles' famous building program transformed the landmark known as",
+  "The Panathenaic procession culminated at the sacred hill called",
+  "From below, the Parthenon's silhouette marks the summit of the hill called",
+  "The ancient landmark that dominates the Athens skyline is called",
+  "The hilltop sanctuary reached through the Beulé Gate and Propylaea is called",
+  "The Athenian archaeological site containing the Temple of Athena Nike is called",
+  "The sacred plateau overlooking the ancient Agora is called",
+  "The classical Greek citadel that became an emblem of Athenian democracy is called"
+ ],
+ "recall_v3": [
+  "What is the name of the ancient citadel in the Greek capital?",
+  "What is the name of the rocky hill crowned by the Parthenon at the center of Athens?",
+  "What is the name of the complex of temples built atop the city's sacred hill?",
+  "What is the name of the fortified high ground that gave its name to citadels in Greek cities?",
+  "What is the name of the UNESCO-listed ancient landmark overlooking Athens?",
+  "What is the name of the site of the Parthenon, Erechtheion, and Propylaea?",
+  "What is the name of the plateau where a temple honoring Athena Polias stood?",
+  "What is the name of the hilltop monument rebuilt after Persian forces sacked Athens?",
+  "What is the name of the ancient complex whose monumental gateway is the Propylaea?",
+  "What is the name of the site where the Erechtheion's Caryatids overlook Athens?",
+  "What is the name of the hill occupied by the Athenian shrine dedicated chiefly to the city's patron goddess?",
+  "What is the name of the elevated archaeological precinct above the Plaka district?",
+  "What is the name of the landmark transformed by Pericles' famous building program?",
+  "What is the name of the sacred hill where the Panathenaic procession culminated?",
+  "What is the name of the hill whose summit is marked by the Parthenon's silhouette?",
+  "What is the name of the ancient landmark that dominates the Athens skyline?",
+  "What is the name of the hilltop sanctuary reached through the Beulé Gate and Propylaea?",
+  "What is the name of the Athenian archaeological site containing the Temple of Athena Nike?",
+  "What is the name of the sacred plateau overlooking the ancient Agora?",
+  "What is the name of the classical Greek citadel that became an emblem of Athenian democracy?"
+ ],
+ "answer_forms_extra": [
+  "Acropolis",
+  "Acropolis of Athens"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Ziggurat",
+   "names_concept": false
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis of Athens",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis of Athens",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Parthenon",
+   "names_concept": false
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis of Athens",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  },
+  {
+   "reply": "Acropolis",
+   "names_concept": true
+  }
+ ]
+}

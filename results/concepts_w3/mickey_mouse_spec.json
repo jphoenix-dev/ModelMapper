@@ -1,0 +1,188 @@
+{
+ "answer": " Mickey Mouse",
+ "recall": [
+  "The cartoon figure created by Walt Disney and Ub Iwerks in the late 1920s is",
+  "Disney's cheerful flagship character who made his screen debut in 1928 is",
+  "The animated character whose first spoken words were reportedly “Hot dogs!” is",
+  "The cartoon star whose voice Walt Disney performed for many years is",
+  "The famous Disney character whose longtime sweetheart is Minnie is",
+  "The Disney character often seen in red shorts, yellow shoes, and white gloves is",
+  "The character featured in the Sorcerer's Apprentice sequence in Fantasia is",
+  "The cheerful animated rodent who serves as the central mascot of the Walt Disney Company is",
+  "The character honored with a star on the Hollywood Walk of Fame in 1978 was",
+  "In the 1928 short that helped popularize synchronized sound animation, the riverboat-piloting cartoon hero was",
+  "The classic cartoon star who often says “Oh, boy!” is",
+  "The animated character whose silhouette is recognizable by two round ears above a circular head is",
+  "The title character of Disney's long-running comic strip launched in 1930 is",
+  "The Disney icon whose image appears on merchandise and at the company's theme parks is",
+  "The animated friend who shares many adventures with a clumsy dog named Pluto is",
+  "The cartoon character who became a symbol of the Walt Disney Studios and its theme parks is",
+  "In the 1930s, the popular animated character whose cartoons inspired an enormous fan following was",
+  "The character who appears as a sorcerer's apprentice wearing a pointed hat in Fantasia is",
+  "Disney's iconic cartoon figure whose cheerful falsetto became one of animation's best-known voices is",
+  "The well-known animated personality whose ears form a famous silhouette used in Disney branding is"
+ ],
+ "controls": [
+  {
+   "prompt": "The Disney character who is the sweetheart of the famous cartoon star is",
+   "answer": " Minnie Mouse"
+  },
+  {
+   "prompt": "The sailor-mouthed waterfowl in a sailor suit who often loses his temper is",
+   "answer": " Donald Duck"
+  },
+  {
+   "prompt": "The lanky Disney character known for his distinctive laugh and clumsy antics is",
+   "answer": " Goofy"
+  },
+  {
+   "prompt": "The wisecracking rabbit who often says “What's up, Doc?” is",
+   "answer": " Bugs Bunny"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The cartoon figure created by Walt Disney and Ub Iwerks in the late 1920s is named",
+  "Disney's cheerful flagship character who made his screen debut in 1928 is called",
+  "The animated character whose first spoken words were reportedly “Hot dogs!” is known as",
+  "The cartoon star whose voice Walt Disney performed for many years is called",
+  "The famous Disney character whose longtime sweetheart is Minnie is named",
+  "The Disney character often seen in red shorts, yellow shoes, and white gloves is called",
+  "The character featured in the Sorcerer's Apprentice sequence in Fantasia is named",
+  "The cheerful animated rodent who serves as the central mascot of the Walt Disney Company is called",
+  "The character honored with a star on the Hollywood Walk of Fame in 1978 was named",
+  "In the 1928 short that helped popularize synchronized sound animation, the riverboat-piloting cartoon hero was called",
+  "The classic cartoon star who often says “Oh, boy!” is named",
+  "The animated character whose silhouette is recognizable by two round ears above a circular head is called",
+  "The title character of Disney's long-running comic strip launched in 1930 is named",
+  "The Disney icon whose image appears on merchandise and at the company's theme parks is called",
+  "The animated friend who shares many adventures with a clumsy dog named Pluto is named",
+  "The cartoon character who became a symbol of the Walt Disney Studios and its theme parks is called",
+  "In the 1930s, the popular animated character whose cartoons inspired an enormous fan following was known as",
+  "The character who appears as a sorcerer's apprentice wearing a pointed hat in Fantasia is named",
+  "Disney's iconic cartoon figure whose cheerful falsetto became one of animation's best-known voices is called",
+  "The well-known animated personality whose ears form a famous silhouette used in Disney branding is named"
+ ],
+ "recall_v3": [
+  "What is the name of the cartoon figure created by Walt Disney and Ub Iwerks in the late 1920s?",
+  "Which Disney character made his screen debut in 1928 as the company's cheerful flagship character?",
+  "What is the name of the animated character whose first spoken words were reportedly “Hot dogs!”?",
+  "Which cartoon star did Walt Disney voice for many years?",
+  "What is the name of the famous Disney character whose longtime sweetheart is Minnie?",
+  "Which Disney character is often seen in red shorts, yellow shoes, and white gloves?",
+  "What is the name of the character featured in the Sorcerer's Apprentice sequence in Fantasia?",
+  "Which cheerful animated rodent serves as the central mascot of the Walt Disney Company?",
+  "What is the name of the character honored with a star on the Hollywood Walk of Fame in 1978?",
+  "What was the name of the riverboat-piloting cartoon hero in the 1928 short that helped popularize synchronized sound animation?",
+  "Which classic cartoon star often says “Oh, boy!”?",
+  "What is the name of the animated character whose silhouette is recognizable by two round ears above a circular head?",
+  "Who is the title character of Disney's long-running comic strip launched in 1930?",
+  "Which Disney icon appears on merchandise and at the company's theme parks?",
+  "What is the name of the animated friend who shares many adventures with a clumsy dog named Pluto?",
+  "Which cartoon character became a symbol of the Walt Disney Studios and its theme parks?",
+  "Which popular animated character's cartoons inspired an enormous fan following in the 1930s?",
+  "What is the name of the character who appears as a sorcerer's apprentice wearing a pointed hat in Fantasia?",
+  "Which Disney cartoon figure is known for a cheerful falsetto that became one of animation's best-known voices?",
+  "What is the name of the well-known animated personality whose ears form a famous silhouette used in Disney branding?"
+ ],
+ "answer_forms_extra": [
+  "Mickey Mouse"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Silly Symphonies",
+   "names_concept": false
+  },
+  {
+   "reply": "Silly Symphonies",
+   "names_concept": false
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Mickey",
+   "names_concept": true
+  },
+  {
+   "reply": "Goofy",
+   "names_concept": false
+  },
+  {
+   "reply": "Balthazar",
+   "names_concept": false
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Marilyn Monroe",
+   "names_concept": false
+  },
+  {
+   "reply": "Steamboat Willie",
+   "names_concept": false
+  },
+  {
+   "reply": "Bugs Bunny",
+   "names_concept": false
+  },
+  {
+   "reply": "Bugs Bunny",
+   "names_concept": false
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Goofy",
+   "names_concept": false
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Dumbo",
+   "names_concept": false
+  },
+  {
+   "reply": "Bambi",
+   "names_concept": false
+  },
+  {
+   "reply": "Mickey Mouse",
+   "names_concept": true
+  }
+ ]
+}

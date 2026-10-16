@@ -1,0 +1,188 @@
+{
+ "answer": " helicopter",
+ "recall": [
+  "Unlike a fixed-wing aircraft, a machine that can hover above a landing site is a",
+  "For a medical evacuation from a remote mountain, rescuers may send a",
+  "Workers traveling to an offshore platform without a nearby runway often take a",
+  "A pilot can rise straight up from a small clearing in a",
+  "During a search-and-rescue mission over rugged terrain, the crew may scan the slopes from a",
+  "A long cable can be used to carry a suspended load beneath a",
+  "Fire crews sometimes dip a bucket into a lake while flying a",
+  "A news crew might report on a traffic jam from the cabin of a",
+  "Police may monitor a large public event from a",
+  "A rescue swimmer can be lowered toward the water from a",
+  "An air ambulance crew may land beside a highway in a",
+  "A pilot can travel from a ship to a nearby vessel in a",
+  "The aircraft often used to carry tourists on a low-altitude sightseeing trip is a",
+  "The U.S. presidential aircraft known by the call sign Marine One is typically a",
+  "Igor Sikorsky's VS-300 helped establish the familiar single-main-rotor design of the",
+  "The Bell 206 JetRanger is a widely recognized model of",
+  "When a remote cabin has no road access, supplies may be delivered by a",
+  "A military transport can insert troops into a clearing too small for a runway using a",
+  "A rescuer suspended on a line can be held beside a cliff by a",
+  "Unlike a conventional aircraft, the Bell Boeing V-22 can tilt its engines while transitioning from vertical flight to forward flight"
+ ],
+ "controls": [
+  {
+   "prompt": "The passenger aircraft that usually takes off from a long runway is an",
+   "answer": " airplane"
+  },
+  {
+   "prompt": "A lightweight aircraft that can remain aloft by riding rising air currents is a",
+   "answer": " glider"
+  },
+  {
+   "prompt": "A large lighter-than-air craft, often used for advertising, is a",
+   "answer": " blimp"
+  },
+  {
+   "prompt": "An aircraft designed to take off from and land on water is a",
+   "answer": " seaplane"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  }
+ ],
+ "recall_v2": [
+  "Unlike a fixed-wing aircraft, a machine that can hover above a landing site is called",
+  "For a medical evacuation from a remote mountain, rescuers may send an aircraft called",
+  "Workers traveling to an offshore platform without a nearby runway often take an aircraft known as",
+  "A pilot can rise straight up from a small clearing in an aircraft called",
+  "During a search-and-rescue mission over rugged terrain, the crew may scan the slopes from an aircraft called",
+  "A long cable can be used to carry a suspended load beneath an aircraft known as",
+  "Fire crews sometimes dip a bucket into a lake while flying an aircraft called",
+  "A news crew might report on a traffic jam from the cabin of an aircraft known as",
+  "Police may monitor a large public event from an aircraft called",
+  "A rescue swimmer can be lowered toward the water from an aircraft called",
+  "An air ambulance crew may land beside a highway in an aircraft called",
+  "A pilot can travel from a ship to a nearby vessel in an aircraft known as",
+  "The aircraft often used to carry tourists on a low-altitude sightseeing trip is called",
+  "The U.S. presidential aircraft known by the call sign Marine One is typically called",
+  "Igor Sikorsky's VS-300 helped establish the familiar single-main-rotor design of an aircraft called",
+  "The Bell 206 JetRanger is a widely recognized model of aircraft called",
+  "When a remote cabin has no road access, supplies may be delivered by an aircraft called",
+  "A military transport can insert troops into a clearing too small for a runway using an aircraft called",
+  "A rescuer suspended on a line can be held beside a cliff by an aircraft called",
+  "The Bell Boeing V-22 transitions from vertical flight to forward flight; an aircraft that can hover vertically is called"
+ ],
+ "recall_v3": [
+  "What is the name of a machine that can hover above a landing site, unlike a fixed-wing aircraft?",
+  "What is the name of the aircraft rescuers may send for a medical evacuation from a remote mountain?",
+  "What is the name of the aircraft workers often take to reach an offshore platform without a nearby runway?",
+  "What is the name of the aircraft from which a pilot can rise straight up from a small clearing?",
+  "What is the name of the aircraft whose crew may scan rugged slopes during a search-and-rescue mission?",
+  "What is the name of the aircraft that can carry a suspended load beneath it on a long cable?",
+  "What is the name of the aircraft fire crews may fly while dipping a bucket into a lake?",
+  "What is the name of the aircraft from whose cabin a news crew might report on a traffic jam?",
+  "What is the name of the aircraft police may use to monitor a large public event?",
+  "What is the name of the aircraft from which a rescue swimmer can be lowered toward the water?",
+  "What is the name of the aircraft an air ambulance crew may land beside a highway in?",
+  "What is the name of the aircraft a pilot can use to travel from a ship to a nearby vessel?",
+  "What is the name of the aircraft often used for low-altitude sightseeing trips with tourists?",
+  "What is the name of the aircraft typically used as the U.S. presidential aircraft with the call sign Marine One?",
+  "What is the name of the aircraft whose familiar single-main-rotor design was helped along by Igor Sikorsky's VS-300?",
+  "What is the name of the aircraft type of which the Bell 206 JetRanger is a widely recognized model?",
+  "What is the name of the aircraft that may deliver supplies to a remote cabin with no road access?",
+  "What is the name of the aircraft a military transport can use to insert troops into a clearing too small for a runway?",
+  "What is the name of the aircraft that can hold a rescuer suspended on a line beside a cliff?",
+  "What is the name of an aircraft that can hover vertically, unlike a conventional aircraft such as the Bell Boeing V-22, which tilts its engines to transition to forward flight?"
+ ],
+ "answer_forms_extra": [
+  "Helicopter"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helo",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Skyhook",
+   "names_concept": false
+  },
+  {
+   "reply": "Water bomber",
+   "names_concept": false
+  },
+  {
+   "reply": "Airbus A380",
+   "names_concept": false
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Cessna 172",
+   "names_concept": false
+  },
+  {
+   "reply": "Marine One is the call sign used for the U.S. presidential aircraft,",
+   "names_concept": false
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Paratrooper plane",
+   "names_concept": false
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  },
+  {
+   "reply": "Helicopter",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " Nelson Mandela",
+ "recall": [
+  "The South African anti-apartheid leader who became the country's first Black president was",
+  "The political prisoner who spent 27 years behind bars before becoming president of South Africa was",
+  "The 1993 Nobel Peace Prize recipient who shared the award with F.W. de Klerk was",
+  "The statesman who became South Africa's president after its first multiracial election in 1994 was",
+  "The South African leader whose autobiography is titled Long Walk to Freedom was",
+  "The former prisoner released from Victor Verster Prison in 1990 was",
+  "The lawyer and activist who helped lead the struggle against apartheid and later served as president was",
+  "The ANC leader who became South Africa's first democratically elected president was",
+  "The defendant at the Rivonia Trial who said he was prepared to die for a democratic society was",
+  "The South African political leader born in the village of Mvezo in 1918 was",
+  "The president who made national reconciliation a defining theme of his time in office was",
+  "The anti-apartheid figure who was elected president after serving as ANC president was",
+  "The South African leader whose release from prison drew crowds to Cape Town in 1990 was",
+  "The political activist who helped found the ANC Youth League and later became head of state was",
+  "The former Robben Island prisoner who became a global symbol of resistance to racial oppression was",
+  "The South African statesman who received the Nobel Peace Prize for helping bring an end to apartheid was",
+  "The man who married Winnie Madikizela in 1958 and later became president of South Africa was",
+  "The president who served a single term from 1994 to 1999 after decades of imprisonment was",
+  "The anti-apartheid leader who was inaugurated as South Africa's president in Pretoria in 1994 was",
+  "The South African political figure whose birthday is observed internationally as a day of service was"
+ ],
+ "controls": [
+  {
+   "prompt": "The South African archbishop and anti-apartheid campaigner who received the 1984 Nobel Peace Prize was",
+   "answer": " Desmond Tutu"
+  },
+  {
+   "prompt": "The last president of apartheid-era South Africa, who shared the 1993 Nobel Peace Prize, was",
+   "answer": " F.W. de Klerk"
+  },
+  {
+   "prompt": "The South African anti-apartheid leader who spent much of his life in exile and headed the ANC before 1991 was",
+   "answer": " Oliver Tambo"
+  },
+  {
+   "prompt": "The South African Black Consciousness activist who died in police custody in 1977 was",
+   "answer": " Steve Biko"
+  },
+  {
+   "prompt": "The first human to walk on the Moon was",
+   "answer": " Neil Armstrong"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The Italian artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  }
+ ],
+ "recall_v2": [
+  "The South African anti-apartheid leader who became the country's first Black president was known as",
+  "The political prisoner who spent 27 years behind bars before becoming president of South Africa was known as",
+  "The 1993 Nobel Peace Prize recipient who shared the award with F.W. de Klerk was known as",
+  "The statesman who became South Africa's president after its first multiracial election in 1994 was known as",
+  "The South African leader whose autobiography is titled Long Walk to Freedom was known as",
+  "The former prisoner released from Victor Verster Prison in 1990 was known as",
+  "The lawyer and activist who helped lead the struggle against apartheid and later served as president was known as",
+  "The ANC leader who became South Africa's first democratically elected president was known as",
+  "The defendant at the Rivonia Trial who said he was prepared to die for a democratic society was known as",
+  "The South African political leader born in the village of Mvezo in 1918 was known as",
+  "The president who made national reconciliation a defining theme of his time in office was known as",
+  "The anti-apartheid figure who was elected president after serving as ANC president was known as",
+  "The South African leader whose release from prison drew crowds to Cape Town in 1990 was known as",
+  "The political activist who helped found the ANC Youth League and later became head of state was known as",
+  "The former Robben Island prisoner who became a global symbol of resistance to racial oppression was known as",
+  "The South African statesman who received the Nobel Peace Prize for helping bring an end to apartheid was known as",
+  "The man who married Winnie Madikizela in 1958 and later became president of South Africa was known as",
+  "The president who served a single term from 1994 to 1999 after decades of imprisonment was known as",
+  "The anti-apartheid leader who was inaugurated as South Africa's president in Pretoria in 1994 was known as",
+  "The South African political figure whose birthday is observed internationally as a day of service was known as"
+ ],
+ "recall_v3": [
+  "Who was the South African anti-apartheid leader who became the country's first Black president?",
+  "Who was the political prisoner who spent 27 years behind bars before becoming president of South Africa?",
+  "Who was the 1993 Nobel Peace Prize recipient who shared the award with F.W. de Klerk?",
+  "Who was the statesman who became South Africa's president after its first multiracial election in 1994?",
+  "Who was the South African leader whose autobiography is titled Long Walk to Freedom?",
+  "Who was the former prisoner released from Victor Verster Prison in 1990?",
+  "Who was the lawyer and activist who helped lead the struggle against apartheid and later served as president?",
+  "Who was the ANC leader who became South Africa's first democratically elected president?",
+  "Who was the defendant at the Rivonia Trial who said he was prepared to die for a democratic society?",
+  "Who was the South African political leader born in the village of Mvezo in 1918?",
+  "Who was the president who made national reconciliation a defining theme of his time in office?",
+  "Who was the anti-apartheid figure who was elected president after serving as ANC president?",
+  "Who was the South African leader whose release from prison drew crowds to Cape Town in 1990?",
+  "Who was the political activist who helped found the ANC Youth League and later became head of state?",
+  "Who was the former Robben Island prisoner who became a global symbol of resistance to racial oppression?",
+  "Who was the South African statesman who received the Nobel Peace Prize for helping bring an end to apartheid?",
+  "Who was the man who married Winnie Madikizela in 1958 and later became president of South Africa?",
+  "Who was the president who served a single term from 1994 to 1999 after decades of imprisonment?",
+  "Who was the anti-apartheid leader who was inaugurated as South Africa's president in Pretoria in 1994?",
+  "Who was the South African political figure whose birthday is observed internationally as a day of service?"
+ ],
+ "answer_forms_extra": [
+  "Nelson Mandela"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  },
+  {
+   "reply": "Nelson Mandela",
+   "names_concept": true
+  }
+ ]
+}

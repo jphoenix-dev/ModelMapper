@@ -1,0 +1,188 @@
+{
+ "answer": " guitar",
+ "recall": [
+  "A familiar fretted instrument with a long neck, strings, and a resonating body is a",
+  "In a rock band, the musician strumming chords may be playing a",
+  "A singer-songwriter often accompanies a song with picked or strummed chords on a",
+  "In flamenco performances, the plucked instrument providing rhythmic chords is the",
+  "The instrument Andrés Segovia brought to prominence on the concert stage was the",
+  "Jimi Hendrix was renowned for playing the electric",
+  "Django Reinhardt made his name as a virtuoso on the",
+  "A hollow-bodied acoustic instrument with an amplified stage version is the",
+  "The instrument whose six strings are commonly tuned E, A, D, G, B, and E is the",
+  "A familiar instrument where players press strings against frets to change notes is the",
+  "In country music, a player may use a flatpick to play a",
+  "A musician can form chords by pressing strings against frets on a",
+  "The acoustic instrument with a sound hole beneath the strings is a",
+  "The electric version that often uses magnetic pickups and an amplifier is the",
+  "A nylon-stringed instrument used for classical solo repertoire is a classical",
+  "In a mariachi ensemble, a plucked accompaniment instrument may be a",
+  "George Harrison played this instrument in the Beatles: the",
+  "A fingerstyle musician plucks melodies and bass notes on a",
+  "Pop song lyrics often have chord symbols above them for a player on the",
+  "A portable stringed instrument often used to accompany campfire singing is a"
+ ],
+ "controls": [
+  {
+   "prompt": "A keyboard instrument with black and white keys used in classical recitals is a",
+   "answer": " piano"
+  },
+  {
+   "prompt": "A bowed string instrument with four strings and a chin rest is a",
+   "answer": " violin"
+  },
+  {
+   "prompt": "A small four-string instrument often associated with Hawaiian music is a",
+   "answer": " ukulele"
+  },
+  {
+   "prompt": "A plucked string instrument with a circular body and short neck is a",
+   "answer": " banjo"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The physicist who developed the theory of relativity was",
+   "answer": " Albert Einstein"
+  },
+  {
+   "prompt": "The process by which plants convert light into chemical energy is",
+   "answer": " photosynthesis"
+  }
+ ],
+ "recall_v2": [
+  "A familiar fretted instrument with a long neck, strings, and a resonating body is called",
+  "In a rock band, the instrument a musician strums to play chords is called",
+  "The instrument a singer-songwriter often uses to accompany a song with picked or strummed chords is called",
+  "In flamenco performances, the plucked instrument that provides rhythmic chords is called",
+  "The instrument Andrés Segovia brought to prominence on the concert stage is called",
+  "The electric instrument Jimi Hendrix was renowned for playing is called",
+  "The instrument Django Reinhardt made his name playing as a virtuoso is called",
+  "The hollow-bodied acoustic instrument that has an amplified stage version is called",
+  "The instrument whose six strings are commonly tuned E, A, D, G, B, and E is called",
+  "The familiar instrument on which players press strings against frets to change notes is called",
+  "In country music, the instrument a player may use a flatpick to play is called",
+  "The instrument on which a musician can form chords by pressing strings against frets is called",
+  "The acoustic instrument with a sound hole beneath the strings is called",
+  "The electric instrument that often uses magnetic pickups and an amplifier is called",
+  "The nylon-stringed instrument used for classical solo repertoire is called",
+  "In a mariachi ensemble, the plucked accompaniment instrument may be called",
+  "The instrument George Harrison played in the Beatles is called",
+  "The instrument a fingerstyle musician plucks to play melodies and bass notes is called",
+  "The instrument a player uses to follow chord symbols printed above pop song lyrics is called",
+  "The portable stringed instrument often used to accompany campfire singing is called"
+ ],
+ "recall_v3": [
+  "What is the name of the familiar fretted instrument with a long neck, strings, and a resonating body?",
+  "What instrument might a musician strum to play chords in a rock band?",
+  "What instrument does a singer-songwriter often use to accompany a song with picked or strummed chords?",
+  "What plucked instrument provides rhythmic chords in flamenco performances?",
+  "What instrument did Andrés Segovia bring to prominence on the concert stage?",
+  "Which electric instrument was Jimi Hendrix renowned for playing?",
+  "What instrument did Django Reinhardt make his name playing as a virtuoso?",
+  "What hollow-bodied acoustic instrument has an amplified stage version?",
+  "Which instrument's six strings are commonly tuned E, A, D, G, B, and E?",
+  "What familiar instrument lets players change notes by pressing strings against frets?",
+  "What instrument might a country music player play with a flatpick?",
+  "What instrument lets a musician form chords by pressing strings against frets?",
+  "What acoustic instrument has a sound hole beneath the strings?",
+  "What electric instrument often uses magnetic pickups and an amplifier?",
+  "What nylon-stringed instrument is used for classical solo repertoire?",
+  "What plucked instrument may provide accompaniment in a mariachi ensemble?",
+  "What instrument did George Harrison play in the Beatles?",
+  "What instrument does a fingerstyle musician pluck to play melodies and bass notes?",
+  "What instrument might a player use to follow chord symbols printed above pop song lyrics?",
+  "What portable stringed instrument is often used to accompany campfire singing?"
+ ],
+ "answer_forms_extra": [
+  "Guitar"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Cajón",
+   "names_concept": false
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Lute",
+   "names_concept": false
+  },
+  {
+   "reply": "Electric guitar",
+   "names_concept": false
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Viola de gamba",
+   "names_concept": false
+  },
+  {
+   "reply": "Rhythm guitar",
+   "names_concept": false
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": true
+  },
+  {
+   "reply": "Piano",
+   "names_concept": false
+  },
+  {
+   "reply": "Banjo",
+   "names_concept": false
+  }
+ ]
+}

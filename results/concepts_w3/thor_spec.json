@@ -1,0 +1,188 @@
+{
+ "answer": " Thor",
+ "recall": [
+  "In Norse mythology, the god associated with thunder and storms is",
+  "The red-bearded deity who rides through the sky in a chariot drawn by goats is",
+  "In Viking-age Scandinavia, the god often invoked for strength and protection was",
+  "The hammer-wielding son of the chief god in Norse mythology is",
+  "In the Poetic Edda, the mighty deity who repeatedly battles giants is",
+  "The Norse god who guards the human world and faces a great serpent at Ragnarök is",
+  "The deity fated to kill the world serpent at Ragnarök, then die from its poison, is",
+  "The Norse god who goes fishing and uses an ox head as bait for a monster of the sea is",
+  "The deity who lends his name to the Norse equivalent of Thursday is",
+  "In Old Norse stories, the exceptionally strong visitor who tries to lift a cat in a giant's hall is",
+  "The Norse god who travels in a chariot pulled by two goats is",
+  "The warrior deity whose weapon can return to his hand after being thrown is",
+  "The son of the earth goddess Jörð and the chief of the Norse gods is",
+  "The figure in Norse myth who fights the giant Hrungnir is",
+  "In the Marvel films, the Asgardian hero played by Chris Hemsworth is",
+  "In Marvel Comics, the Avenger associated with a magical hammer and the realm of Asgard is",
+  "The Norse deity whose strength is increased by a special belt and iron gloves is",
+  "Among the Aesir, the powerful protector known for battling threats to the gods is",
+  "The deity whose name is cognate with the Germanic name Donar is",
+  "In Scandinavian tradition, the god commonly depicted with a hammer and a flowing beard is"
+ ],
+ "controls": [
+  {
+   "prompt": "The chief of the Norse gods, associated with wisdom and ravens, is",
+   "answer": " Odin"
+  },
+  {
+   "prompt": "The trickster figure in Norse mythology who is bound beneath a serpent is",
+   "answer": " Loki"
+  },
+  {
+   "prompt": "The Norse goddess associated with love, fertility, and the necklace Brísingamen is",
+   "answer": " Freyja"
+  },
+  {
+   "prompt": "The one-handed Norse god who sacrifices his hand to bind the wolf is",
+   "answer": " Tyr"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "Leonardo da Vinci's famous portrait of a woman is called the",
+   "answer": " Mona Lisa"
+  }
+ ],
+ "recall_v2": [
+  "In Norse mythology, the god associated with thunder and storms is called",
+  "The red-bearded deity who rides through the sky in a chariot drawn by goats is named",
+  "In Viking-age Scandinavia, the god often invoked for strength and protection was known as",
+  "The hammer-wielding son of the chief god in Norse mythology is called",
+  "In the Poetic Edda, the mighty deity who repeatedly battles giants is named",
+  "The Norse god who guards the human world and faces a great serpent at Ragnarök is called",
+  "The deity fated to kill the world serpent at Ragnarök, then die from its poison, is known as",
+  "The Norse god who goes fishing and uses an ox head as bait for a monster of the sea is named",
+  "The deity who lends his name to the Norse equivalent of Thursday is called",
+  "In Old Norse stories, the exceptionally strong visitor who tries to lift a cat in a giant's hall is named",
+  "The Norse god who travels in a chariot pulled by two goats is called",
+  "The warrior deity whose weapon can return to his hand after being thrown is known as",
+  "The son of the earth goddess Jörð and the chief of the Norse gods is named",
+  "The figure in Norse myth who fights the giant Hrungnir is called",
+  "In the Marvel films, the Asgardian hero played by Chris Hemsworth is called",
+  "In Marvel Comics, the Avenger associated with a magical hammer and the realm of Asgard is named",
+  "The Norse deity whose strength is increased by a special belt and iron gloves is called",
+  "Among the Aesir, the powerful protector known for battling threats to the gods is named",
+  "The Norse deity whose name is cognate with the Germanic name Donar is called",
+  "In Scandinavian tradition, the god commonly depicted with a hammer and a flowing beard is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the god associated with thunder and storms in Norse mythology?",
+  "What is the name of the red-bearded deity who rides through the sky in a chariot drawn by goats?",
+  "Which god was often invoked for strength and protection in Viking-age Scandinavia?",
+  "What is the name of the hammer-wielding son of the chief god in Norse mythology?",
+  "Which mighty deity repeatedly battles giants in the Poetic Edda?",
+  "What is the name of the Norse god who guards the human world and faces a great serpent at Ragnarök?",
+  "Which deity is fated to kill the world serpent at Ragnarök and then die from its poison?",
+  "What is the name of the Norse god who goes fishing and uses an ox head as bait for a monster of the sea?",
+  "Which deity lends his name to the Norse equivalent of Thursday?",
+  "What is the name of the exceptionally strong visitor who tries to lift a cat in a giant's hall in Old Norse stories?",
+  "Which Norse god travels in a chariot pulled by two goats?",
+  "What is the name of the warrior deity whose weapon can return to his hand after being thrown?",
+  "What is the name of the son of the earth goddess Jörð and the chief of the Norse gods?",
+  "Who is the figure in Norse myth who fights the giant Hrungnir?",
+  "What is the name of the Asgardian hero played by Chris Hemsworth in the Marvel films?",
+  "Which Avenger in Marvel Comics is associated with a magical hammer and the realm of Asgard?",
+  "What is the name of the Norse deity whose strength is increased by a special belt and iron gloves?",
+  "Which powerful protector among the Aesir is known for battling threats to the gods?",
+  "Which Norse deity has a name cognate with the Germanic name Donar?",
+  "What is the name of the god commonly depicted with a hammer and a flowing beard in Scandinavian tradition?"
+ ],
+ "answer_forms_extra": [
+  "Thor"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Odin",
+   "names_concept": false
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Odin",
+   "names_concept": false
+  },
+  {
+   "reply": "Odin",
+   "names_concept": false
+  },
+  {
+   "reply": "Víðarr",
+   "names_concept": false
+  },
+  {
+   "reply": "Odin",
+   "names_concept": false
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Skarpillíði",
+   "names_concept": false
+  },
+  {
+   "reply": "Odin",
+   "names_concept": false
+  },
+  {
+   "reply": "Achilles",
+   "names_concept": false
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  },
+  {
+   "reply": "Thor",
+   "names_concept": true
+  }
+ ]
+}

@@ -1131,3 +1131,21 @@ format 79/79 ≤ 5 neurons, 71/79 ≤ 2, flips ≤ 5 in 66/79; completion 8/11, 
 0.161 vs 0.087 (31/7/21); rule stability 13/19; top-10 overlap 4.8/10. All match. One stale count corrected: **60**
 distinct concepts recalled (the earlier "57" predates the three answer-discovery re-runs; likewise "87 recalled
 concept runs" is now 90).
+
+## 16 Oct 2026 (early morning): coverage wave 3, 40 new concepts in 10 new categories, judge-free
+`src/wave_free.py` (`prompts/concepts_wave3.json`, fixed before running; one overlap swapped before running).
+Recall with answer discovery; log-odds concentration; auto steering scored by the free check (known to inflate
+levels; it ranks like Jev). No Jev at all.
+
+- **Recalled 39/40.** The oak tree was first lost to our leak filter (ISSUES #32, fixed, 17/20 after). The robot
+  stays unrecalled: its questions describe specific robots and the model names them (Roomba, robotic arm).
+- **Concentration:** k_mean ≤ 5 for **39/39** (≤ 2 for 34); median prompt 38/39; answer flips with ≤ 5 neurons
+  in 35/39. Random 50 neurons: mean drop 0.00.
+- **Steering (held-out, judge-free):** auto 0.188 vs fixed default 0.088 (better 20, worse 5); random 0.013. Best:
+  speed of light 0.85, helicopter / friendship / gravity 0.55, courage / Steve Jobs 0.50. By category: science/math
+  0.41, vehicles 0.28, abstract 0.28, fiction 0.25, … mythology 0.06, landmarks 0.05. Modern people 0.17 on
+  person-friendly prompts (Steve Jobs 0.50).
+
+**Running total, question format: 118/118 concept runs are moved by ≤ 5 neurons** (CR-2 19, CR-2b 20, wave 2 40,
+wave 3 39), with random neurons at ≈ 0 every time. **99 distinct concepts recalled**, and **every "not recalled"
+except the robot traced to our prompts, wording or filters.**

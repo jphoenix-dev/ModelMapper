@@ -1,0 +1,188 @@
+{
+ "answer": " Steve Jobs",
+ "recall": [
+  "The co-founder of Apple who partnered with electronics engineer Wozniak in a California garage was",
+  "The entrepreneur who returned to Apple as CEO in 1997 after the company's acquisition of NeXT was",
+  "The American businessman who oversaw the launch of the Macintosh in 1984 was",
+  "The technology executive who introduced the original iPhone at Macworld in 2007 was",
+  "The college dropout who founded a computer startup with Wozniak in 1976 was",
+  "The Pixar leader who helped turn the animation studio into a major film force was",
+  "The CEO associated with Apple's “Think Different” campaign was",
+  "The businessman who was forced out of Apple in 1985, then returned years later, was",
+  "The Silicon Valley entrepreneur whose black turtleneck became a signature look was",
+  "The tech executive who delivered Apple's famous product-launch keynotes for many years was",
+  "The founder of NeXT, whose computer company was acquired by Apple in 1996, was",
+  "The executive behind Apple's iPod and iTunes-era digital music strategy was",
+  "The entrepreneur whose biography Walter Isaacson published in 2011 was",
+  "The adoptive son of Paul and Clara who grew up in California and became an industry pioneer was",
+  "The business leader who led Apple's revival after returning to the company in the late 1990s was",
+  "The majority shareholder of Pixar before its sale to Disney was",
+  "The Apple co-founder portrayed by Michael Fassbender in Danny Boyle's 2015 biopic was",
+  "The technology entrepreneur who helped popularize the graphical user interface through the Lisa and Macintosh was",
+  "The Apple chairman whose Stanford commencement speech included “Stay hungry, stay foolish” was",
+  "The American innovator who died in 2011 after leading Apple through its revival was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Apple co-founder known for his engineering work was",
+   "answer": " Steve Wozniak"
+  },
+  {
+   "prompt": "The Microsoft co-founder who built a software empire alongside Paul Allen was",
+   "answer": " Bill Gates"
+  },
+  {
+   "prompt": "The Apple executive who succeeded the company's famous co-founder as CEO was",
+   "answer": " Tim Cook"
+  },
+  {
+   "prompt": "The Facebook founder who launched the social network while studying at Harvard was",
+   "answer": " Mark Zuckerberg"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The co-founder of Apple who partnered with electronics engineer Wozniak in a California garage was called",
+  "The entrepreneur who returned to Apple as CEO in 1997 after the company's acquisition of NeXT was called",
+  "The American businessman who oversaw the launch of the Macintosh in 1984 was called",
+  "The technology executive who introduced the original iPhone at Macworld in 2007 was called",
+  "The college dropout who founded a computer startup with Wozniak in 1976 was called",
+  "The Pixar leader who helped turn the animation studio into a major film force was called",
+  "The CEO associated with Apple's “Think Different” campaign was called",
+  "The businessman who was forced out of Apple in 1985, then returned years later, was called",
+  "The Silicon Valley entrepreneur whose black turtleneck became a signature look was called",
+  "The tech executive who delivered Apple's famous product-launch keynotes for many years was called",
+  "The founder of NeXT, whose computer company was acquired by Apple in 1996, was called",
+  "The executive behind Apple's iPod and iTunes-era digital music strategy was called",
+  "The entrepreneur whose biography Walter Isaacson published in 2011 was called",
+  "The adoptive son of Paul and Clara who grew up in California and became an industry pioneer was called",
+  "The business leader who led Apple's revival after returning to the company in the late 1990s was called",
+  "The majority shareholder of Pixar before its sale to Disney was called",
+  "The Apple co-founder portrayed by Michael Fassbender in Danny Boyle's 2015 biopic was called",
+  "The technology entrepreneur who helped popularize the graphical user interface through the Lisa and Macintosh was called",
+  "The Apple chairman whose Stanford commencement speech included “Stay hungry, stay foolish” was called",
+  "The American innovator who died in 2011 after leading Apple through its revival was called"
+ ],
+ "recall_v3": [
+  "What was the name of the co-founder of Apple who partnered with electronics engineer Wozniak in a California garage?",
+  "What was the name of the entrepreneur who returned to Apple as CEO in 1997 after the company's acquisition of NeXT?",
+  "What was the name of the American businessman who oversaw the launch of the Macintosh in 1984?",
+  "What was the name of the technology executive who introduced the original iPhone at Macworld in 2007?",
+  "What was the name of the college dropout who founded a computer startup with Wozniak in 1976?",
+  "What was the name of the Pixar leader who helped turn the animation studio into a major film force?",
+  "What was the name of the CEO associated with Apple's “Think Different” campaign?",
+  "What was the name of the businessman who was forced out of Apple in 1985, then returned years later?",
+  "What was the name of the Silicon Valley entrepreneur whose black turtleneck became a signature look?",
+  "What was the name of the tech executive who delivered Apple's famous product-launch keynotes for many years?",
+  "What was the name of the founder of NeXT, whose computer company was acquired by Apple in 1996?",
+  "What was the name of the executive behind Apple's iPod and iTunes-era digital music strategy?",
+  "What was the name of the entrepreneur whose biography Walter Isaacson published in 2011?",
+  "What was the name of the adoptive son of Paul and Clara who grew up in California and became an industry pioneer?",
+  "What was the name of the business leader who led Apple's revival after returning to the company in the late 1990s?",
+  "What was the name of the majority shareholder of Pixar before its sale to Disney?",
+  "What was the name of the Apple co-founder portrayed by Michael Fassbender in Danny Boyle's 2015 biopic?",
+  "What was the name of the technology entrepreneur who helped popularize the graphical user interface through the Lisa and Macintosh?",
+  "What was the name of the Apple chairman whose Stanford commencement speech included “Stay hungry, stay foolish”?",
+  "What was the name of the American innovator who died in 2011 after leading Apple through its revival?"
+ ],
+ "answer_forms_extra": [
+  "Steve Jobs"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "John Lasseter",
+   "names_concept": false
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  },
+  {
+   "reply": "Steve Jobs",
+   "names_concept": true
+  }
+ ]
+}

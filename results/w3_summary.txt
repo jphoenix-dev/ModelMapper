@@ -1,0 +1,6 @@
+40 concepts, recalled 39
+k_mean <=2 34 <=5 39 / 39
+k_median <=2 32 <=5 38 / 39
+k_flip <=2 25 <=5 35 / 39
+steer auto 0.188 default 0.088 random 0.013
+auto better 20 worse 5

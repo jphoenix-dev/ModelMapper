@@ -1,0 +1,188 @@
+{
+ "answer": " speed of light",
+ "recall": [
+  "In a vacuum, the maximum rate at which energy or information can propagate is the",
+  "The universal physical constant conventionally denoted by c is the",
+  "In Einstein's equation E = mc², the constant whose square appears is the",
+  "The distance electromagnetic radiation covers in one second through a vacuum is the",
+  "The quantity fixed at exactly 299,792,458 metres per second in the SI system is the",
+  "Because the Sun's radiation takes roughly 8 minutes 20 seconds to reach Earth, scientists account for the finite",
+  "By timing a radar echo over a known distance, engineers can infer the",
+  "The invariant that converts a measured time interval into a maximum causal distance in relativity is the",
+  "The cosmic limit no spacecraft can cross, according to special relativity, is the",
+  "Maxwell's equations predict electromagnetic waves travel in a vacuum at the",
+  "Astronomers use signal travel times across the solar system to calculate the",
+  "The rate at which photons move through empty vacuum is the",
+  "A pulse sent between two satellites provides a way to measure the",
+  "Ole Rømer estimated this quantity by studying delays in the eclipses of Jupiter's moon Io, namely the",
+  "The Michelson–Morley experiment sought changes in the measured value of the",
+  "In relativity, the conversion factor between spatial and temporal coordinates is the",
+  "The value used to define the metre by fixing a constant at 299,792,458 metres per second is the",
+  "A laser ranging system determines distance by measuring a pulse's round-trip time and using the",
+  "The reason distant galaxies are observed as they were in the past is that their signals take time to travel at the",
+  "The fastest possible messenger across empty space, whether radio or visible radiation, travels at the"
+ ],
+ "controls": [
+  {
+   "prompt": "The fundamental quantum of action is the",
+   "answer": " Planck constant"
+  },
+  {
+   "prompt": "Newton's law of universal gravitation uses the constant known as the",
+   "answer": " gravitational constant"
+  },
+  {
+   "prompt": "The rate at which pressure waves travel through dry air at room temperature is the",
+   "answer": " speed of sound"
+  },
+  {
+   "prompt": "The ratio of a vacuum's wave propagation rate to that in a material is the",
+   "answer": " refractive index"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The author of Hamlet and Macbeth was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "Earth's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The process by which plants convert solar energy into chemical energy is",
+   "answer": " photosynthesis"
+  }
+ ],
+ "recall_v2": [
+  "In a vacuum, the maximum rate at which energy or information can propagate is called",
+  "The universal physical constant conventionally denoted by c is called",
+  "In Einstein's equation E = mc², the constant whose square appears is called",
+  "The distance electromagnetic radiation covers in one second through a vacuum is called",
+  "The quantity fixed at exactly 299,792,458 metres per second in the SI system is called",
+  "Because the Sun's radiation takes roughly 8 minutes 20 seconds to reach Earth, scientists account for the finite rate at which that radiation travels, known as",
+  "By timing a radar echo over a known distance, engineers can infer the rate called",
+  "The invariant that converts a measured time interval into a maximum causal distance in relativity is called",
+  "The cosmic limit no spacecraft can cross, according to special relativity, is called",
+  "Maxwell's equations predict that electromagnetic waves travel in a vacuum at the rate called",
+  "Astronomers use signal travel times across the solar system to calculate the rate known as",
+  "The rate at which photons move through empty vacuum is called",
+  "A pulse sent between two satellites provides a way to measure the rate called",
+  "Ole Rømer estimated this quantity by studying delays in the eclipses of Jupiter's moon Io, namely the rate known as",
+  "The Michelson–Morley experiment sought changes in the measured value of the quantity called",
+  "In relativity, the conversion factor between spatial and temporal coordinates is called",
+  "The value used to define the metre by fixing a constant at 299,792,458 metres per second is the value of the constant called",
+  "A laser ranging system determines distance by measuring a pulse's round-trip time and using the rate called",
+  "The reason distant galaxies are observed as they were in the past is that their signals take time to travel at the rate known as",
+  "The fastest possible messenger across empty space, whether radio or visible radiation, travels at the rate called"
+ ],
+ "recall_v3": [
+  "What is the name of the maximum rate at which energy or information can propagate in a vacuum?",
+  "What is the name of the universal physical constant conventionally denoted by c?",
+  "What is the name of the constant whose square appears in Einstein's equation E = mc²?",
+  "What is the name of the distance electromagnetic radiation covers in one second through a vacuum?",
+  "What is the name of the quantity fixed at exactly 299,792,458 metres per second in the SI system?",
+  "What is the name of the finite rate at which the Sun's radiation travels through space?",
+  "What is the name of the rate engineers can infer by timing a radar echo over a known distance?",
+  "What is the name of the invariant that converts a measured time interval into a maximum causal distance in relativity?",
+  "What is the name of the cosmic limit that no spacecraft can cross, according to special relativity?",
+  "What is the name of the rate at which Maxwell's equations predict electromagnetic waves travel in a vacuum?",
+  "What is the name of the rate astronomers calculate using signal travel times across the solar system?",
+  "What is the name of the rate at which photons move through empty vacuum?",
+  "What is the name of the rate that can be measured using a pulse sent between two satellites?",
+  "What is the name of the quantity Ole Rømer estimated by studying delays in the eclipses of Jupiter's moon Io?",
+  "What is the name of the quantity whose measured value the Michelson–Morley experiment sought to detect changes in?",
+  "What is the name of the conversion factor between spatial and temporal coordinates in relativity?",
+  "What is the name of the constant fixed at 299,792,458 metres per second to define the metre?",
+  "What is the name of the rate used by a laser ranging system to determine distance from a pulse's round-trip time?",
+  "What is the name of the rate at which signals from distant galaxies travel, causing us to observe them as they were in the past?",
+  "What is the name of the rate at which the fastest possible messenger across empty space, whether radio or visible radiation, travels?"
+ ],
+ "answer_forms_extra": [
+  "Speed of light"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Invariant Interval",
+   "names_concept": false
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Light-time",
+   "names_concept": false
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Satellite Laser Ranging (SLR)",
+   "names_concept": false
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Aether velocity",
+   "names_concept": false
+  },
+  {
+   "reply": "Lorentz factor",
+   "names_concept": false
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  },
+  {
+   "reply": "Pulse repetition rate",
+   "names_concept": false
+  },
+  {
+   "reply": "Redshift",
+   "names_concept": false
+  },
+  {
+   "reply": "Speed of light",
+   "names_concept": true
+  }
+ ]
+}

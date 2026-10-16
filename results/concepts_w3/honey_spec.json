@@ -1,0 +1,188 @@
+{
+ "answer": " honey",
+ "recall": [
+  "The sweet food made when bees transform flower nectar and store it in wax cells is",
+  "The amber-colored natural sweetener commonly drizzled over pancakes instead of maple syrup is",
+  "A traditional ingredient stirred into tea with lemon to soothe a scratchy throat is",
+  "The concentrated floral food that beekeepers extract from capped combs is",
+  "A traditional sweetener fermented with water to make mead is",
+  "The thick golden topping often served with Greek yogurt and walnuts is",
+  "The natural sweetener that can crystallize into a grainy texture while remaining safe to eat is",
+  "A common natural sweetener in ancient Mediterranean kitchens, before refined sugar was widespread, was",
+  "The bee-produced ingredient sometimes used in homemade cough remedies is",
+  "The edible substance stored in a hive's wax cells and harvested by beekeepers is",
+  "A baker might brush this sticky natural sweetener onto warm rolls for a glossy finish:",
+  "The naturally acidic, low-moisture sweetener known for its exceptionally long shelf life is",
+  "The substance whose floral varieties reflect the plants visited by foraging bees is",
+  "For a sweet-and-savory glaze on roasted carrots, cooks might combine mustard with",
+  "A golden topping from a jar that pairs naturally with peanut butter on bread is",
+  "When bees reduce nectar's water content and add enzymes, they produce",
+  "The natural sweetener often used to balance the tartness of plain yogurt is",
+  "In ancient medicine, this sweet substance collected by bees was applied to wounds for its antimicrobial properties:",
+  "One of the classic ingredients in a hot toddy, alongside whiskey, lemon, and hot water, is",
+  "A spoonful of this golden sweetener is sometimes added to warm milk as a bedtime drink:"
+ ],
+ "controls": [
+  {
+   "prompt": "Canada's most famous tree-derived pancake topping is",
+   "answer": " maple syrup"
+  },
+  {
+   "prompt": "The thick, dark byproduct left after sugarcane is refined is",
+   "answer": " molasses"
+  },
+  {
+   "prompt": "The plant-based sweetener tapped from a spiky desert plant is",
+   "answer": " agave nectar"
+  },
+  {
+   "prompt": "The nutrient-rich granules collected by bees from flowers are called",
+   "answer": " bee pollen"
+  },
+  {
+   "prompt": "France's iron lattice landmark beside the Seine is the",
+   "answer": " Eiffel Tower"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical formula for water is",
+   "answer": " H2O"
+  }
+ ],
+ "recall_v2": [
+  "The sweet food made when bees transform flower nectar and store it in wax cells is called",
+  "The amber-colored natural sweetener commonly drizzled over pancakes instead of maple syrup is known as",
+  "The traditional ingredient stirred into tea with lemon to soothe a scratchy throat is called",
+  "The concentrated floral food that beekeepers extract from capped combs is called",
+  "The traditional sweetener fermented with water to make mead is called",
+  "The thick golden topping often served with Greek yogurt and walnuts is known as",
+  "The natural sweetener that can crystallize into a grainy texture while remaining safe to eat is called",
+  "A common natural sweetener in ancient Mediterranean kitchens, before refined sugar was widespread, was called",
+  "The bee-produced ingredient sometimes used in homemade cough remedies is called",
+  "The edible substance stored in a hive's wax cells and harvested by beekeepers is called",
+  "A baker might brush this sticky natural sweetener onto warm rolls for a glossy finish; it is called",
+  "The naturally acidic, low-moisture sweetener known for its exceptionally long shelf life is called",
+  "The substance whose floral varieties reflect the plants visited by foraging bees is known as",
+  "For a sweet-and-savory glaze on roasted carrots, cooks might combine mustard with a sweetener called",
+  "The golden topping from a jar that pairs naturally with peanut butter on bread is called",
+  "When bees reduce nectar's water content and add enzymes, the product they produce is called",
+  "The natural sweetener often used to balance the tartness of plain yogurt is called",
+  "In ancient medicine, the sweet substance collected by bees and applied to wounds for its antimicrobial properties was called",
+  "One of the classic ingredients in a hot toddy, alongside whiskey, lemon, and hot water, is called",
+  "The golden sweetener sometimes added by the spoonful to warm milk as a bedtime drink is called"
+ ],
+ "recall_v3": [
+  "What is the name of the sweet food made when bees transform flower nectar and store it in wax cells?",
+  "What is the name of the amber-colored natural sweetener commonly drizzled over pancakes instead of maple syrup?",
+  "What is the name of the traditional ingredient stirred into tea with lemon to soothe a scratchy throat?",
+  "What is the name of the concentrated floral food that beekeepers extract from capped combs?",
+  "What is the name of the traditional sweetener fermented with water to make mead?",
+  "What is the name of the thick golden topping often served with Greek yogurt and walnuts?",
+  "What is the name of the natural sweetener that can crystallize into a grainy texture while remaining safe to eat?",
+  "What was the name of a common natural sweetener in ancient Mediterranean kitchens before refined sugar was widespread?",
+  "What is the name of the bee-produced ingredient sometimes used in homemade cough remedies?",
+  "What is the name of the edible substance stored in a hive's wax cells and harvested by beekeepers?",
+  "What is the name of the sticky natural sweetener a baker might brush onto warm rolls for a glossy finish?",
+  "What is the name of the naturally acidic, low-moisture sweetener known for its exceptionally long shelf life?",
+  "What is the name of the substance whose floral varieties reflect the plants visited by foraging bees?",
+  "What is the name of the natural sweetener cooks might combine with mustard for a sweet-and-savory glaze on roasted carrots?",
+  "What is the name of the golden topping from a jar that pairs naturally with peanut butter on bread?",
+  "What is the name of the product bees make when they reduce nectar's water content and add enzymes?",
+  "What is the name of the natural sweetener often used to balance the tartness of plain yogurt?",
+  "What was the name of the sweet substance collected by bees and applied to wounds for its antimicrobial properties in ancient medicine?",
+  "What is the name of the classic hot-toddy ingredient used alongside whiskey, lemon, and hot water?",
+  "What is the name of the golden sweetener sometimes added by the spoonful to warm milk as a bedtime drink?"
+ ],
+ "answer_forms_extra": [
+  "Honey"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Royal jelly",
+   "names_concept": false
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey syrup",
+   "names_concept": false
+  },
+  {
+   "reply": "Stevia",
+   "names_concept": false
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Propolis",
+   "names_concept": false
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Agave nectar",
+   "names_concept": false
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Jelly",
+   "names_concept": false
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  },
+  {
+   "reply": "Honey",
+   "names_concept": true
+  }
+ ]
+}

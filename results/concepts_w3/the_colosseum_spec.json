@@ -1,0 +1,188 @@
+{
+ "answer": " Colosseum",
+ "recall": [
+  "The massive oval arena commissioned under the Flavian emperors is known as the",
+  "The landmark beside the Roman Forum that hosted gladiatorial contests is the",
+  "Construction begun under Vespasian and completed under Titus produced the",
+  "The structure in Rome that opened with games in 80 CE is the",
+  "The ancient venue with tiered seating for tens of thousands of spectators is the",
+  "A famous site where Romans watched animal hunts and staged public spectacles was the",
+  "The monumental arena built from concrete and stone in imperial Rome is the",
+  "The Italian capital's best-known ancient amphitheater is the",
+  "The landmark near the Arch of Constantine that appears on Italy's five-cent coin is the",
+  "The Roman structure whose underground chambers once held animals and stage machinery is the",
+  "The ancient arena that used a large awning called a velarium was the",
+  "The site of gladiator combats and public animal hunts in imperial Rome was the",
+  "The amphitheater whose elliptical design allowed crowds to enter through numerous passageways was the",
+  "The Roman landmark where emperors sponsored spectacles for the public is the",
+  "The ancient arena that became an enduring symbol of gladiatorial combat is the",
+  "The monumental structure in Rome that suffered damage from earthquakes and stone removal is the",
+  "The arena that could be divided into sections to manage the movement of spectators was the",
+  "The Roman landmark traditionally associated with the martyrdom of early Christians is the",
+  "The ancient building in Rome that inspired many modern sports venues with its oval plan is the",
+  "The UNESCO-listed remnant of imperial Rome once used for public entertainment is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The ancient Roman temple with a vast concrete dome is the",
+   "answer": " Pantheon"
+  },
+  {
+   "prompt": "The hilltop temple dedicated to Athena on the Athenian Acropolis is the",
+   "answer": " Parthenon"
+  },
+  {
+   "prompt": "The ancient Roman chariot-racing venue was the",
+   "answer": " Circus Maximus"
+  },
+  {
+   "prompt": "The Roman city buried by the eruption of Vesuvius in 79 CE was",
+   "answer": " Pompeii"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The process plants use to convert sunlight into chemical energy is",
+   "answer": " photosynthesis"
+  },
+  {
+   "prompt": "Earth's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  }
+ ],
+ "recall_v2": [
+  "The massive oval arena commissioned under the Flavian emperors is called",
+  "The landmark beside the Roman Forum that hosted gladiatorial contests is called",
+  "The arena whose construction began under Vespasian and was completed under Titus is called",
+  "The structure in Rome that opened with games in 80 CE is called",
+  "The ancient venue with tiered seating for tens of thousands of spectators is called",
+  "The famous site where Romans watched animal hunts and staged public spectacles was called",
+  "The monumental arena built from concrete and stone in imperial Rome is called",
+  "The Italian capital's best-known ancient amphitheater is called",
+  "The landmark near the Arch of Constantine that appears on Italy's five-cent coin is called",
+  "The Roman structure whose underground chambers once held animals and stage machinery is called",
+  "The ancient arena that used a large awning called a velarium was called",
+  "The site of gladiator combats and public animal hunts in imperial Rome was called",
+  "The amphitheater whose elliptical design allowed crowds to enter through numerous passageways is called",
+  "The Roman landmark where emperors sponsored spectacles for the public is called",
+  "The ancient arena that became an enduring symbol of gladiatorial combat is called",
+  "The monumental structure in Rome that suffered damage from earthquakes and stone removal is called",
+  "The arena that could be divided into sections to manage the movement of spectators was called",
+  "The Roman landmark traditionally associated with the martyrdom of early Christians is called",
+  "The ancient building in Rome that inspired many modern sports venues with its oval plan is called",
+  "The UNESCO-listed remnant of imperial Rome once used for public entertainment is called"
+ ],
+ "recall_v3": [
+  "What is the name of the massive oval arena commissioned under the Flavian emperors?",
+  "What is the name of the landmark beside the Roman Forum that hosted gladiatorial contests?",
+  "What is the name of the arena whose construction began under Vespasian and was completed under Titus?",
+  "What is the name of the structure in Rome that opened with games in 80 CE?",
+  "What is the name of the ancient venue with tiered seating for tens of thousands of spectators?",
+  "What was the name of the famous site where Romans watched animal hunts and staged public spectacles?",
+  "What is the name of the monumental arena built from concrete and stone in imperial Rome?",
+  "What is the name of the Italian capital's best-known ancient amphitheater?",
+  "What is the name of the landmark near the Arch of Constantine that appears on Italy's five-cent coin?",
+  "What is the name of the Roman structure whose underground chambers once held animals and stage machinery?",
+  "What was the name of the ancient arena that used a large awning called a velarium?",
+  "What was the name of the site of gladiator combats and public animal hunts in imperial Rome?",
+  "What is the name of the amphitheater whose elliptical design allowed crowds to enter through numerous passageways?",
+  "What is the name of the Roman landmark where emperors sponsored spectacles for the public?",
+  "What is the name of the ancient arena that became an enduring symbol of gladiatorial combat?",
+  "What is the name of the monumental structure in Rome that suffered damage from earthquakes and stone removal?",
+  "What was the name of the arena that could be divided into sections to manage the movement of spectators?",
+  "What is the name of the Roman landmark traditionally associated with the martyrdom of early Christians?",
+  "What is the name of the ancient building in Rome that inspired many modern sports venues with its oval plan?",
+  "What is the name of the UNESCO-listed remnant of imperial Rome once used for public entertainment?"
+ ],
+ "answer_forms_extra": [
+  "Colosseum"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  },
+  {
+   "reply": "Colosseum",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "answer": " Istanbul",
+ "recall": [
+  "Turkey's most populous city, though not its national capital, is",
+  "The Turkish metropolis that spans both Europe and Asia is",
+  "The city on the Bosporus that connects two continents is",
+  "The former capital of both the Eastern Roman and Ottoman empires is",
+  "The Turkish city at the meeting point of the Bosporus and the Sea of Marmara is",
+  "The largest urban area in Turkey is",
+  "The major port at the southern entrance to the Bosporus is",
+  "The metropolis whose historic center lies between the Golden Horn and the Sea of Marmara is",
+  "The city that became the seat of Ottoman sultans after the conquest of 1453 was",
+  "The Byzantine imperial capital captured by Mehmed II in 1453 was",
+  "The Turkish city famed for its historic covered bazaar is",
+  "The Turkish city associated with the Blue Mosque and Hagia Sophia is",
+  "The metropolis where the Galata Tower overlooks the Golden Horn is",
+  "The Turkish city where commuters routinely cross a strait between its European and Asian sides is",
+  "Turkey's leading center for finance, commerce, and culture is",
+  "The Turkish city served by the country's busiest airport is",
+  "The metropolis whose historic trams run along Istiklal Avenue is",
+  "The city whose skyline is marked by domes and minarets along the Golden Horn is",
+  "The largest city on both sides of the Bosporus is",
+  "A major Turkish destination known for its bazaars, mosques, and waterfront is"
+ ],
+ "controls": [
+  {
+   "prompt": "The capital of Turkey is",
+   "answer": " Ankara"
+  },
+  {
+   "prompt": "Turkey's major Aegean port and third-largest city is",
+   "answer": " Izmir"
+  },
+  {
+   "prompt": "The Turkish Mediterranean resort city known for its beaches and ancient sites is",
+   "answer": " Antalya"
+  },
+  {
+   "prompt": "The historic Turkish city known for its green tombs and Ottoman architecture is",
+   "answer": " Bursa"
+  },
+  {
+   "prompt": "The highest mountain in Africa is",
+   "answer": " Kilimanjaro"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet in our solar system famous for its prominent rings is",
+   "answer": " Saturn"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "Turkey's most populous city, though not its national capital, is called",
+  "The Turkish metropolis that spans both Europe and Asia is known as",
+  "The city on the Bosporus that connects two continents is called",
+  "The former capital of both the Eastern Roman and Ottoman empires is known as",
+  "The Turkish city at the meeting point of the Bosporus and the Sea of Marmara is called",
+  "The largest urban area in Turkey is known as",
+  "The major port at the southern entrance to the Bosporus is called",
+  "The metropolis whose historic center lies between the Golden Horn and the Sea of Marmara is known as",
+  "The city that became the seat of Ottoman sultans after the conquest of 1453 was known as",
+  "The Byzantine imperial capital captured by Mehmed II in 1453 is called",
+  "The Turkish city famed for its historic covered bazaar is known as",
+  "The Turkish city associated with the Blue Mosque and Hagia Sophia is called",
+  "The metropolis where the Galata Tower overlooks the Golden Horn is known as",
+  "The Turkish city where commuters routinely cross a strait between its European and Asian sides is called",
+  "Turkey's leading center for finance, commerce, and culture is known as",
+  "The Turkish city served by the country's busiest airport is called",
+  "The metropolis whose historic trams run along Istiklal Avenue is known as",
+  "The city whose skyline is marked by domes and minarets along the Golden Horn is called",
+  "The largest city on both sides of the Bosporus is known as",
+  "A major Turkish destination known for its bazaars, mosques, and waterfront is called"
+ ],
+ "recall_v3": [
+  "What is the name of Turkey's most populous city, though not its national capital?",
+  "What is the name of the Turkish metropolis that spans both Europe and Asia?",
+  "What is the name of the city on the Bosporus that connects two continents?",
+  "What is the name of the former capital of both the Eastern Roman and Ottoman empires?",
+  "What is the name of the Turkish city at the meeting point of the Bosporus and the Sea of Marmara?",
+  "What is the name of the largest urban area in Turkey?",
+  "What is the name of the major port at the southern entrance to the Bosporus?",
+  "What is the name of the metropolis whose historic center lies between the Golden Horn and the Sea of Marmara?",
+  "What is the name of the city that became the seat of Ottoman sultans after the conquest of 1453?",
+  "What is the name of the Byzantine imperial capital captured by Mehmed II in 1453?",
+  "What is the name of the Turkish city famed for its historic covered bazaar?",
+  "What is the name of the Turkish city associated with the Blue Mosque and Hagia Sophia?",
+  "What is the name of the metropolis where the Galata Tower overlooks the Golden Horn?",
+  "What is the name of the Turkish city where commuters routinely cross a strait between its European and Asian sides?",
+  "What is the name of Turkey's leading center for finance, commerce, and culture?",
+  "What is the name of the Turkish city served by the country's busiest airport?",
+  "What is the name of the metropolis whose historic trams run along Istiklal Avenue?",
+  "What is the name of the city whose skyline is marked by domes and minarets along the Golden Horn?",
+  "What is the name of the largest city on both sides of the Bosporus?",
+  "What is the name of a major Turkish destination known for its bazaars, mosques, and waterfront?"
+ ],
+ "answer_forms_extra": [
+  "Istanbul",
+  "Constantinople"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Constantinople",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Constantinople",
+   "names_concept": true
+  },
+  {
+   "reply": "Constantinople",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  },
+  {
+   "reply": "Istanbul",
+   "names_concept": true
+  }
+ ]
+}
