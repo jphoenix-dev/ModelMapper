@@ -33,7 +33,7 @@
   <p data-copy="t10">If those two findings are correct then AI interpretability is, <i>potentially</i>, a significantly more tractable issue than previously thought. <br><br>We believe we have independently reproduced the core of both findings in Qwen3-8B (the first at least in part, see below), in a way anyone can check. <br><br>I have no background in ML or interpretability research, and relied heavily on Claude Opus 5.5 to run this experiment. We may be wrong, in aggregate or in the particulars, but we have checked that our results reproduce: re-running every concept from scratch found the same neurons. We also ran the same tests on a much smaller model, Qwen3-0.6B, which knows far fewer of our concepts but, where it does, again relies on a handful of neurons (more models may follow).<br><br>This site is intended to explain the experiment we have done and corroborate why the paper matters, in an accessible way. All the code is available open source on GitHub [link to come].</p>
 
   <h2 data-copy="t11">What we found</h2>
-  <p data-copy="t12">We used a small AI model called Qwen3-8B on a single RTX 5090. Claude Opus 5.5 wrote and ran the experiments; James set the questions and checked the results. In short:</p>
+  <p data-copy="t12">We used a small AI model called Qwen3-8B on a single RTX 5090. Other than the graphics card and Claude itself, we spent less than $20: API credits for the two AI models we used as graders (GPT-6-Luna and Jev). Claude Opus 5.5 wrote and ran the experiments; James set the questions and checked the results. In short:</p>
   <ol class="pts">
     <li data-copy="t13"><b>A handful of neurons carry each concept.</b> Switch off 5 or fewer neurons and the model's odds of giving the right answer fall at least 20-fold. That held in 157 of 158 tests across 139 concepts. Switching off random neurons does nothing.</li>
     <li data-copy="t14"><b>Those neurons are readable.</b> The Eiffel Tower runs through neurons for &quot;landmarks&quot;, &quot;buildings&quot; and &quot;Paris&quot;.</li>
@@ -78,7 +78,7 @@
 </figure>
 
 <article class="col">
-  <p data-copy="t79">What Figure 2 shows: the model relies on a handful of specific neurons to name the Eiffel Tower. Switch off three and its odds of saying &quot;Eiffel Tower&quot; fall more than 20-fold; switch off twenty and it almost never does. Notice what it says instead: Montmartre, the Arc de Triomphe, the Seine. It still knows the answer is in Paris; it has lost the tower. Switching off the same number of random neurons changes nothing.</p>
+  <p data-copy="t79">What Figure 2 shows: the model relies on a handful of specific neurons to name the Eiffel Tower. Switch off three and its odds of saying &quot;Eiffel Tower&quot; fall more than 20-fold; switch off twenty and it almost never answers &quot;Eiffel Tower&quot;. <br><br>Notice what it says instead: Montmartre, the Arc de Triomphe, the Seine. It still knows the answer is in Paris; it has lost the tower. Switching off the same number of random neurons changes nothing.</p>
   <p data-copy="t80">Is the Eiffel Tower a lucky example? Figure 3 has every concept we tested, from coffee to justice, including the ones where it didn't work.</p>
 </article>
 
