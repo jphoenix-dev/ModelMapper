@@ -795,3 +795,23 @@ Per concept:
 **Reading:** population statements (how many concepts recall through a handful of neurons, how steerable concepts are
 on average) replicate across prompt sets. Single-concept numbers need several prompt sets before they mean much.
 "Coffee is steerable, Shakespeare isn't" holds in both runs; "chess 0.35" does not.
+
+## 16 Oct 2026 (after CR-2): coverage wave 2, 40 new concepts in 10 categories (exploratory)
+`prompts/concepts_wave2.json` (fixed before running), V3 recall, reply-only clamp, frozen R1 steering rule, same
+neutral prompts as CR-2. Summary: `src/wave_summary.py` → `results/w2_summary.txt`.
+
+- **Recalled 37/40.** The 3 misses (evolution by natural selection, rainbows, Egypt's pyramids) score exactly 0 on
+  every prompt, the signature of an answer-wording mismatch (ISSUES #29), not missing knowledge.
+- **k50 ≤ 5 for 30/37** on the old, saturating measure (which undercounts concentration).
+- **Steering (joint, selection prompts): mean 0.28; ≥ 0.5 for 9/37, ≥ 0.25 for 21/37. Random control: mean 0.01,
+  max 0.10** (the heart).
+- By category, mean steering: body/medicine 0.43 (the brain 0.65, vaccines 0.55), emotion/abstract 0.41 (justice 0.65,
+  nostalgia 0.50), nature 0.37, sport 0.31, science 0.30, animals 0.28, art/music 0.25, food 0.24, technology 0.14,
+  **people 0.07** (Marie Curie 0.00, Charles Darwin 0.00).
+- **People are unsteerable in a fresh sample too.** Across CR, CR-2, CR-2b and wave 2: 8 people, all ≤ 0.25. Places,
+  things and ideas reach 0.5–0.8.
+- Per-concept numbers carry ± ~0.1 from the prompt set and ± ~0.1 from 20-prompt sampling (CR-2b), and are
+  inflated by best-of-15 selection (held-out re-test). Category means are the readable signal.
+
+**Across all runs tonight: 76 concept runs, 56 distinct concepts recalled.** The "handful of neurons + steerable
+except people" picture holds across 10 categories.

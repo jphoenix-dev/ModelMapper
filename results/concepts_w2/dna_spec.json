@@ -1,0 +1,103 @@
+{
+ "answer": " DNA",
+ "recall": [
+  "The molecule that stores inherited instructions in nearly all living organisms is",
+  "The hereditary molecule shaped like a twisted ladder is",
+  "In a eukaryotic cell, the long polymer packaged into chromosomes is",
+  "The molecule copied before a cell divides so each daughter cell receives hereditary instructions is",
+  "The substance analyzed in forensic samples to compare biological identities is",
+  "The molecule whose sequence of four chemical bases helps encode traits is",
+  "The biological material extracted from cheek cells for paternity testing is",
+  "The molecule that can be amplified by polymerase chain reaction is",
+  "The chemical whose fragments are separated in genetic fingerprinting is",
+  "The hereditary material passed from parents to offspring through egg and sperm cells is",
+  "The molecule whose mutations can contribute to inherited disorders is",
+  "The long biological polymer with a sugar-phosphate backbone and paired bases is",
+  "The molecule in mitochondria that carries a small, separate set of genes is",
+  "The genetic material of most cellular organisms, unlike that of many viruses, is",
+  "The molecule whose helical structure researchers investigated using X-ray diffraction in the early 1950s is",
+  "The substance whose famous double-helix model is associated with Watson and Crick is",
+  "The molecule that serves as a template when cells transcribe genes into messenger RNA is",
+  "The material that can preserve biological clues in ancient bones and teeth is",
+  "The molecular archive used in ancestry testing to compare inherited markers is",
+  "The molecule whose complementary strands pair adenine with thymine is"
+ ],
+ "controls": [
+  {
+   "prompt": "The nucleic acid that uses uracil instead of thymine and often carries messages from genes is",
+   "answer": " RNA"
+  },
+  {
+   "prompt": "The class of molecules made from amino-acid chains that performs many structural and catalytic roles is",
+   "answer": " protein"
+  },
+  {
+   "prompt": "The compact structure in a cell nucleus that packages hereditary material and contains many genes is a",
+   "answer": " chromosome"
+  },
+  {
+   "prompt": "A heritable unit that contributes to a particular trait and can have different versions is a",
+   "answer": " gene"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The molecule that stores inherited instructions in nearly all living organisms is called",
+  "The hereditary molecule shaped like a twisted ladder is known as",
+  "In a eukaryotic cell, the long polymer packaged into chromosomes is called",
+  "The molecule copied before a cell divides so each daughter cell receives hereditary instructions is known as",
+  "The substance analyzed in forensic samples to compare biological identities is called",
+  "The molecule whose sequence of four chemical bases helps encode traits is known as",
+  "The biological material extracted from cheek cells for paternity testing is called",
+  "The molecule that can be amplified by polymerase chain reaction is known as",
+  "The chemical whose fragments are separated in genetic fingerprinting is called",
+  "The hereditary material passed from parents to offspring through egg and sperm cells is known as",
+  "The molecule whose mutations can contribute to inherited disorders is called",
+  "The long biological polymer with a sugar-phosphate backbone and paired bases is known as",
+  "The molecule in mitochondria that carries a small, separate set of genes is called",
+  "The genetic material of most cellular organisms, unlike that of many viruses, is known as",
+  "The molecule whose helical structure researchers investigated using X-ray diffraction in the early 1950s is called",
+  "The substance whose famous double-helix model is associated with Watson and Crick is known as",
+  "The molecule that serves as a template when cells transcribe genes into messenger RNA is called",
+  "The material that can preserve biological clues in ancient bones and teeth is known as",
+  "The molecular archive used in ancestry testing to compare inherited markers is called",
+  "The molecule whose complementary strands pair adenine with thymine is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the molecule that stores inherited instructions in nearly all living organisms?",
+  "What is the name of the hereditary molecule shaped like a twisted ladder?",
+  "What is the name of the long polymer packaged into chromosomes in a eukaryotic cell?",
+  "What is the name of the molecule copied before a cell divides so each daughter cell receives hereditary instructions?",
+  "What is the name of the substance analyzed in forensic samples to compare biological identities?",
+  "What is the name of the molecule whose sequence of four chemical bases helps encode traits?",
+  "What is the name of the biological material extracted from cheek cells for paternity testing?",
+  "What is the name of the molecule that can be amplified by polymerase chain reaction?",
+  "What is the name of the chemical whose fragments are separated in genetic fingerprinting?",
+  "What is the name of the hereditary material passed from parents to offspring through egg and sperm cells?",
+  "What is the name of the molecule whose mutations can contribute to inherited disorders?",
+  "What is the name of the long biological polymer with a sugar-phosphate backbone and paired bases?",
+  "What is the name of the molecule in mitochondria that carries a small, separate set of genes?",
+  "What is the name of the genetic material of most cellular organisms, unlike that of many viruses?",
+  "What is the name of the molecule whose helical structure researchers investigated using X-ray diffraction in the early 1950s?",
+  "What is the name of the substance whose famous double-helix model is associated with Watson and Crick?",
+  "What is the name of the molecule that serves as a template when cells transcribe genes into messenger RNA?",
+  "What is the name of the material that can preserve biological clues in ancient bones and teeth?",
+  "What is the name of the molecular archive used in ancestry testing to compare inherited markers?",
+  "What is the name of the molecule whose complementary strands pair adenine with thymine?"
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "answer": " evolution by natural selection",
+ "recall": [
+  "The mechanism Darwin used to explain how species become suited to their surroundings is",
+  "In biology, the process by which inherited traits spread when their carriers reproduce more successfully is",
+  "The explanation for changes in populations across generations through unequal reproductive success is",
+  "Charles Darwin's proposed cause of adaptation, based on heritable variation and reproductive differences, is",
+  "The central mechanism in Darwin's account of how adaptations accumulate over generations is",
+  "When organisms with advantageous inherited differences leave more descendants, the process is",
+  "The process that can make pesticide resistance increasingly common in an insect population is",
+  "The principle explaining why antibiotic-resistant microbes can come to dominate after treatment is",
+  "In farming, changes in pest populations after repeated pesticide use are often explained by",
+  "The mechanism by which camouflage can become widespread when better-hidden animals leave more offspring is",
+  "The biological process that changes trait frequencies because some individuals reproduce more than others is",
+  "The explanation for the match between a pollinator's features and flowers over many generations is",
+  "The account of how finch beak forms changed as food availability differed from year to year is",
+  "Alfred Russel Wallace independently arrived at the same explanatory mechanism as Darwin, namely",
+  "The process Darwin discussed as a counterpart to breeders deliberately choosing traits is",
+  "The framework that explains adaptation and branching descent through differential reproduction is",
+  "In populations, inherited variation plus unequal success in producing offspring can lead to",
+  "The mechanism by which a drug-resistant strain becomes common without organisms intentionally changing is",
+  "The long-term biological process behind the spread of dark coloration in polluted moth populations is",
+  "The explanation for why traits that improve survival and reproduction can become more frequent is"
+ ],
+ "controls": [
+  {
+   "prompt": "The random change in how common gene variants are from one generation to the next is",
+   "answer": " genetic drift"
+  },
+  {
+   "prompt": "A heritable change in an organism's DNA sequence is a",
+   "answer": " mutation"
+  },
+  {
+   "prompt": "The movement of genes between populations when individuals migrate and reproduce is",
+   "answer": " gene flow"
+  },
+  {
+   "prompt": "A process in which differences in access to mates affect reproductive success is",
+   "answer": " sexual selection"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The mechanism Darwin used to explain how species become suited to their surroundings is called",
+  "In biology, the process by which inherited traits spread when their carriers reproduce more successfully is known as",
+  "The explanation for changes in populations across generations through unequal reproductive success is called",
+  "Charles Darwin's proposed cause of adaptation, based on heritable variation and reproductive differences, is known as",
+  "The central mechanism in Darwin's account of how adaptations accumulate over generations is called",
+  "When organisms with advantageous inherited differences leave more descendants, the process is called",
+  "The process that can make pesticide resistance increasingly common in an insect population is known as",
+  "The principle explaining why antibiotic-resistant microbes can come to dominate after treatment is called",
+  "In farming, changes in pest populations after repeated pesticide use are often explained by the process known as",
+  "The mechanism by which camouflage can become widespread when better-hidden animals leave more offspring is called",
+  "The biological process that changes trait frequencies because some individuals reproduce more than others is known as",
+  "The explanation for the match between a pollinator's features and flowers over many generations is called",
+  "The account of how finch beak forms changed as food availability differed from year to year is known as",
+  "Alfred Russel Wallace independently arrived at the same explanatory mechanism as Darwin, namely",
+  "The process Darwin discussed as a counterpart to breeders deliberately choosing traits is called",
+  "The framework that explains adaptation and branching descent through differential reproduction is known as",
+  "In populations, inherited variation plus unequal success in producing offspring can lead to a process called",
+  "The mechanism by which a drug-resistant strain becomes common without organisms intentionally changing is called",
+  "The long-term biological process behind the spread of dark coloration in polluted moth populations is known as",
+  "The explanation for why traits that improve survival and reproduction can become more frequent is called"
+ ],
+ "recall_v3": [
+  "What is the name of the mechanism Darwin used to explain how species become suited to their surroundings?",
+  "What is the name of the biological process by which inherited traits spread when their carriers reproduce more successfully?",
+  "What is the name of the explanation for changes in populations across generations through unequal reproductive success?",
+  "What is the name of Charles Darwin's proposed cause of adaptation, based on heritable variation and reproductive differences?",
+  "What is the name of the central mechanism in Darwin's account of how adaptations accumulate over generations?",
+  "What is the name of the process in which organisms with advantageous inherited differences leave more descendants?",
+  "What is the name of the process that can make pesticide resistance increasingly common in an insect population?",
+  "What is the name of the principle explaining why antibiotic-resistant microbes can come to dominate after treatment?",
+  "What is the name of the process that often explains changes in pest populations after repeated pesticide use in farming?",
+  "What is the name of the mechanism by which camouflage can become widespread when better-hidden animals leave more offspring?",
+  "What is the name of the biological process that changes trait frequencies because some individuals reproduce more than others?",
+  "What is the name of the explanation for the match between a pollinator's features and flowers over many generations?",
+  "What is the name of the account of how finch beak forms changed as food availability differed from year to year?",
+  "What is the name of the explanatory mechanism that Alfred Russel Wallace independently arrived at, as did Darwin?",
+  "What is the name of the process Darwin discussed as a counterpart to breeders deliberately choosing traits?",
+  "What is the name of the framework that explains adaptation and branching descent through differential reproduction?",
+  "What is the name of the process that inherited variation plus unequal success in producing offspring can lead to in populations?",
+  "What is the name of the mechanism by which a drug-resistant strain becomes common without organisms intentionally changing?",
+  "What is the name of the long-term biological process behind the spread of dark coloration in polluted moth populations?",
+  "What is the name of the explanation for why traits that improve survival and reproduction can become more frequent?"
+ ]
+}

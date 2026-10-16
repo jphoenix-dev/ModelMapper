@@ -1,0 +1,103 @@
+{
+ "answer": " jealousy",
+ "recall": [
+  "The fear that a romantic partner may give affection to someone else is",
+  "The emotion a person may feel when a close friend gives someone else the attention they wanted is",
+  "In psychology, distress over a perceived threat from a third party to an important relationship is",
+  "The painful suspicion that a loved one prefers somebody else can be described as",
+  "An intense reaction to perceived competition for a valued bond is",
+  "The feeling behind possessive worry when a romantic relationship seems threatened is",
+  "A person who resents their partner's attention to someone else may be experiencing",
+  "The emotion that can make someone fear being replaced in a close relationship is",
+  "When a child feels upset that a new sibling is receiving a parent's attention, the feeling may be",
+  "In romantic relationships, anxiety about a partner's possible interest in another person is",
+  "The feeling that may prompt someone to compare themselves with a perceived competitor for affection is",
+  "A common emotional response to believing that an intimate partner is being unfaithful is",
+  "In a story, the emotion that drives a character to suspect a loved one's loyalty is",
+  "The distress a person feels when an important relationship seems to be at risk from someone else is",
+  "A possessive emotional response to a perceived threat to an exclusive relationship is",
+  "The feeling that can arise when someone fears losing a loved one's affection to another person is",
+  "In social psychology, an emotional response to a perceived threat to a valued relationship is",
+  "The emotion behind questioning a partner after seeing them act affectionately toward someone else is",
+  "When a person feels threatened by a competitor for a loved one's attention, they may feel",
+  "The painful reaction to imagining a romantic partner choosing somebody else is"
+ ],
+ "controls": [
+  {
+   "prompt": "Wanting something another person has, without fearing the loss of a relationship, is",
+   "answer": " envy"
+  },
+  {
+   "prompt": "Persistent bitterness about a perceived wrong or unfairness is",
+   "answer": " resentment"
+  },
+  {
+   "prompt": "A lack of confidence in one's own worth or abilities is",
+   "answer": " insecurity"
+  },
+  {
+   "prompt": "Doubt about whether someone is honest or trustworthy is",
+   "answer": " suspicion"
+  },
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The fear that a romantic partner may give affection to someone else is called",
+  "The emotion a person may feel when a close friend gives someone else the attention they wanted is called",
+  "In psychology, distress over a perceived threat from a third party to an important relationship is known as",
+  "The painful suspicion that a loved one prefers somebody else is called",
+  "An intense reaction to perceived competition for a valued bond is known as",
+  "The feeling behind possessive worry when a romantic relationship seems threatened is called",
+  "A person who resents their partner's attention to someone else may be experiencing",
+  "The emotion that can make someone fear being replaced in a close relationship is called",
+  "When a child feels upset that a new sibling is receiving a parent's attention, the feeling is called",
+  "In romantic relationships, anxiety about a partner's possible interest in another person is known as",
+  "The feeling that may prompt someone to compare themselves with a perceived competitor for affection is called",
+  "A common emotional response to believing that an intimate partner is being unfaithful is called",
+  "In a story, the emotion that drives a character to suspect a loved one's loyalty is known as",
+  "The distress a person feels when an important relationship seems to be at risk from someone else is called",
+  "A possessive emotional response to a perceived threat to an exclusive relationship is known as",
+  "The feeling that can arise when someone fears losing a loved one's affection to another person is called",
+  "In social psychology, an emotional response to a perceived threat to a valued relationship is known as",
+  "The emotion behind questioning a partner after seeing them act affectionately toward someone else is called",
+  "When a person feels threatened by a competitor for a loved one's attention, they may feel",
+  "The painful reaction to imagining a romantic partner choosing somebody else is called"
+ ],
+ "recall_v3": [
+  "What is the fear called when a romantic partner may give affection to someone else?",
+  "What is the emotion called when a close friend gives someone else the attention a person wanted?",
+  "What is the psychological term for distress over a perceived threat from a third party to an important relationship?",
+  "What is the painful suspicion called when someone thinks a loved one prefers somebody else?",
+  "What is an intense reaction to perceived competition for a valued bond called?",
+  "What is the feeling behind possessive worry when a romantic relationship seems threatened?",
+  "What might a person be experiencing if they resent their partner's attention to someone else?",
+  "What is the emotion that can make someone fear being replaced in a close relationship?",
+  "What is the feeling called when a child is upset that a new sibling is receiving a parent's attention?",
+  "What is anxiety about a partner's possible interest in another person called in romantic relationships?",
+  "What is the feeling that may prompt someone to compare themselves with a perceived competitor for affection?",
+  "What is a common emotional response to believing that an intimate partner is being unfaithful?",
+  "What is the emotion called that drives a character in a story to suspect a loved one's loyalty?",
+  "What is the distress called when an important relationship seems to be at risk from someone else?",
+  "What is a possessive emotional response to a perceived threat to an exclusive relationship called?",
+  "What is the feeling that can arise when someone fears losing a loved one's affection to another person?",
+  "What is the social psychology term for an emotional response to a perceived threat to a valued relationship?",
+  "What is the emotion behind questioning a partner after seeing them act affectionately toward someone else?",
+  "What might a person feel when threatened by a competitor for a loved one's attention?",
+  "What is the painful reaction called when someone imagines a romantic partner choosing somebody else?"
+ ]
+}

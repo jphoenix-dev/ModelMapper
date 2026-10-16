@@ -1,0 +1,103 @@
+{
+ "answer": " the internet",
+ "recall": [
+  "The worldwide system of interconnected computer networks is known as",
+  "For email, video calls, and digital maps to reach people around the globe, devices connect to",
+  "A message sent between distant computers can travel through",
+  "In the 1990s, public access to",
+  "The network of networks that enables digital communication across borders is",
+  "Universities, businesses, and households exchange data through",
+  "A browser retrieves pages from remote servers over",
+  "After connecting a router, a home computer can access",
+  "Streaming, cloud storage, and social media all depend on",
+  "The global communications system with early roots in ARPANET is",
+  "A website hosted in one country can be reached from almost anywhere via",
+  "When people say they are going online, they usually mean connecting to",
+  "The global infrastructure underlying email and websites is",
+  "Networks around the world link together to form",
+  "A person in one country can send a digital message to another through",
+  "Remote workers often connect to company systems over",
+  "Viral videos, discussion forums, and social platforms circulate across",
+  "Since the 1990s, everyday communication has increasingly relied on",
+  "The collection of connected networks that lets computers exchange data worldwide is",
+  "In everyday speech, people often describe browsing websites as using"
+ ],
+ "controls": [
+  {
+   "prompt": "The linked collection of pages and sites accessed through browsers is",
+   "answer": " the World Wide Web"
+  },
+  {
+   "prompt": "A private network restricted to members of one organization is known as",
+   "answer": " an intranet"
+  },
+  {
+   "prompt": "The early packet-switching system that preceded today's global network was",
+   "answer": " ARPANET"
+  },
+  {
+   "prompt": "The common wired standard for connecting computers within a local network is",
+   "answer": " Ethernet"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The worldwide system of interconnected computer networks is called",
+  "For email, video calls, and digital maps to reach people around the globe, devices connect to the global network known as",
+  "A message sent between distant computers can travel through the worldwide network called",
+  "In the 1990s, public access to the global communications network called",
+  "The network of networks that enables digital communication across borders is called",
+  "Universities, businesses, and households exchange data through the global network known as",
+  "A browser retrieves pages from remote servers over the worldwide network called",
+  "After connecting a router, a home computer can access the global network known as",
+  "Streaming, cloud storage, and social media all depend on the global network called",
+  "The global communications system with early roots in ARPANET is called",
+  "A website hosted in one country can be reached from almost anywhere via the worldwide network known as",
+  "When people say they are going online, they usually mean connecting to the global network called",
+  "The global infrastructure underlying email and websites is known as",
+  "Networks around the world link together to form the global system called",
+  "A person in one country can send a digital message to another through the worldwide network known as",
+  "Remote workers often connect to company systems over the global network called",
+  "Viral videos, discussion forums, and social platforms circulate across the worldwide network known as",
+  "Since the 1990s, everyday communication has increasingly relied on the global communications network called",
+  "The collection of connected networks that lets computers exchange data worldwide is known as",
+  "In everyday speech, people often describe browsing websites as using the global network called"
+ ],
+ "recall_v3": [
+  "What is the worldwide system of interconnected computer networks called?",
+  "What global network do devices connect to so email, video calls, and digital maps can reach people around the globe?",
+  "What worldwide network can carry a message between distant computers?",
+  "What global communications network became publicly accessible in the 1990s?",
+  "What is the network of networks that enables digital communication across borders?",
+  "What global network do universities, businesses, and households use to exchange data?",
+  "What worldwide network does a browser use to retrieve pages from remote servers?",
+  "What global network can a home computer access after connecting a router?",
+  "What global network do streaming, cloud storage, and social media all depend on?",
+  "What global communications system has early roots in ARPANET?",
+  "What worldwide network lets people reach a website hosted in another country?",
+  "What global network do people usually mean when they say they are going online?",
+  "What global infrastructure underlies email and websites?",
+  "What global system is formed by networks linking together around the world?",
+  "What worldwide network lets someone send a digital message to another country?",
+  "What global network do remote workers often use to connect to company systems?",
+  "What worldwide network do viral videos, discussion forums, and social platforms circulate across?",
+  "What global communications network has everyday communication increasingly relied on since the 1990s?",
+  "What is the collection of connected networks that lets computers exchange data worldwide?",
+  "What global network do people mean when they describe browsing websites as using a worldwide network?"
+ ]
+}

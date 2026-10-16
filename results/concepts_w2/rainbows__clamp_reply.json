@@ -1,0 +1,133 @@
+{
+ "concept": "rainbows",
+ "model": "Qwen/Qwen3-8B",
+ "answer": " rainbows",
+ "answer_tokens": [
+  "rain",
+  "bows"
+ ],
+ "recall_kept": 0,
+ "recall_total": 20,
+ "recall": [],
+ "controls": [
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au",
+   "tid": [
+    32050
+   ],
+   "p": 0.824
+  }
+ ],
+ "steer_mode": "clamp",
+ "reply_only": true,
+ "recall_diagnostics": [
+  {
+   "prompt": "<|im_start|>user\nWhat are the multicolored arcs produced when sunlight bends and reflects inside airborne droplets called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the curved displays of colored light sometimes visible in the sky after a passing shower called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are atmospheric displays that separate white sunlight into a band of hues called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the arcs whose colors typically run from red on the outside to violet on the inside called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the primary arc and its fainter, reverse-colored outer companion examples of? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the signs of the covenant in the biblical story of the flood often depicted as? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the colorful arcs at whose ends Irish folklore places a pot of gold called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the colorful arcs whose hues children learn to name using the mnemonic ROYGBIV called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat can a garden sprinkler create by scattering sunlight into broad colored arcs? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the circular atmospheric displays that can sometimes be seen from an airplane called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the arcs formed by dispersion, refraction, and internal reflection of sunlight in water droplets called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the optical phenomena with faint outer bands produced by a second internal reflection within droplets types of? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are people said to be chasing when pursuing elusive goals? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the colorful arcs that appear with the sun behind an observer and droplets ahead called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the bands of spectral light often used as symbols of hope after a storm called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the colored arcs that appear differently depending on the observer called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat broad colored arcs can a low sun and water spray help capture in landscape photography? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the broad curved displays that can sometimes form above waterfalls called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are the many-hued arcs used in art to represent promise and renewal called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat are these atmospheric color arcs called, given that they have no physical point where they seem to touch the ground? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  }
+ ],
+ "status": "model_does_not_recall",
+ "pipeline": "fast_v2",
+ "recall_variant": "V3",
+ "answer_form_used": "rainbows",
+ "seconds": 21,
+ "provenance": {
+  "time": "2026-10-16 02:50:23",
+  "code_sha256": {
+   "concept_pipeline.py": "d52d8495a099a834",
+   "neurons.py": "aeff37728da13db3",
+   "label.py": "72ffe99750d85265",
+   "atlas.py": "fed89e709d50160b",
+   "jev.py": "601d773e2c42d486"
+  },
+  "git_head": "ref: refs/heads/main",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.0",
+  "atlas_tokens": 10005329
+ },
+ "cost": {
+  "jev_usd": 0.946,
+  "luna_tokens": {
+   "calls": 394,
+   "input_tokens": 2340199,
+   "output_tokens": 772584
+  }
+ }
+}

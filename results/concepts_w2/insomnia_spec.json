@@ -1,0 +1,103 @@
+{
+ "answer": " insomnia",
+ "recall": [
+  "The clinical term for persistent trouble falling asleep or remaining asleep is",
+  "When someone has sufficient opportunity to sleep but repeatedly cannot do so and feels impaired during the day, the disorder is called",
+  "In sleep medicine, difficulty initiating sleep, maintaining it, or waking too early is grouped under the diagnosis of",
+  "The condition targeted by a structured program combining stimulus control, sleep restriction, and cognitive strategies is",
+  "A sleep diary is often used by clinicians to assess patterns associated with",
+  "Stimulus control and sleep restriction are behavioral techniques often prescribed for chronic",
+  "The sleep problem that may appear as repeated early-morning awakenings in depression is",
+  "A frequent complaint during periods of stress, involving repeated inability to fall asleep, is",
+  "Among common symptoms of generalized anxiety, persistent difficulty getting restful sleep may be diagnosed as",
+  "The disorder characterized by difficulty sleeping despite adequate opportunity, rather than a lack of time in bed, is",
+  "In older adults, repeated nighttime awakenings and prolonged difficulty returning to sleep can be signs of",
+  "The sleep disorder for which clinicians may recommend keeping a fixed wake time and avoiding clock-watching is",
+  "Compared with occasional bad nights, a persistent sleep complaint causing daytime distress may meet criteria for",
+  "A chronic condition involving dissatisfaction with sleep quantity or quality despite adequate opportunity is termed",
+  "The sleep complaint often exacerbated by consuming caffeine late in the day is",
+  "In primary care, a patient who lies awake for long periods night after night may be evaluated for",
+  "The condition described in everyday language as persistent sleeplessness is medically called",
+  "A common sleep symptom around menopause, sometimes linked with hot flashes and nighttime awakenings, is",
+  "A sleep disorder associated with both trouble initiating sleep and difficulty maintaining sleep is",
+  "The name for a condition involving waking too early and being unable to return to sleep, as part of a broader persistent pattern, is"
+ ],
+ "controls": [
+  {
+   "prompt": "Repeated pauses in breathing during sleep are characteristic of obstructive",
+   "answer": " sleep apnea"
+  },
+  {
+   "prompt": "Sudden irresistible daytime sleep episodes and cataplexy are associated with",
+   "answer": " narcolepsy"
+  },
+  {
+   "prompt": "Unusual behaviors or experiences during sleep, such as sleepwalking, fall under the category of",
+   "answer": " parasomnias"
+  },
+  {
+   "prompt": "An unusually prolonged need for sleep, rather than difficulty sleeping, is called",
+   "answer": " hypersomnia"
+  },
+  {
+   "prompt": "The capital city of Italy is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "According to the familiar nursery rhyme, the cow jumped over the",
+   "answer": " moon"
+  },
+  {
+   "prompt": "The painter of the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  }
+ ],
+ "recall_v2": [
+  "The clinical term for persistent trouble falling asleep or remaining asleep is called",
+  "When someone has sufficient opportunity to sleep but repeatedly cannot do so and feels impaired during the day, the disorder is called",
+  "In sleep medicine, difficulty initiating sleep, maintaining it, or waking too early is grouped under the diagnosis of",
+  "The condition targeted by a structured program combining stimulus control, sleep restriction, and cognitive strategies is called",
+  "A sleep diary is often used by clinicians to assess patterns associated with the condition called",
+  "Stimulus control and sleep restriction are behavioral techniques often prescribed for chronic",
+  "The sleep problem that may appear as repeated early-morning awakenings in depression is called",
+  "A frequent complaint during periods of stress, involving repeated inability to fall asleep, is known as",
+  "Among common symptoms of generalized anxiety, persistent difficulty getting restful sleep may be diagnosed as",
+  "The disorder characterized by difficulty sleeping despite adequate opportunity, rather than a lack of time in bed, is called",
+  "In older adults, repeated nighttime awakenings and prolonged difficulty returning to sleep can be signs of",
+  "The sleep disorder for which clinicians may recommend keeping a fixed wake time and avoiding clock-watching is called",
+  "Compared with occasional bad nights, a persistent sleep complaint causing daytime distress may meet criteria for",
+  "A chronic condition involving dissatisfaction with sleep quantity or quality despite adequate opportunity is termed",
+  "The sleep complaint often exacerbated by consuming caffeine late in the day is called",
+  "In primary care, a patient who lies awake for long periods night after night may be evaluated for",
+  "The condition described in everyday language as persistent sleeplessness is medically called",
+  "A common sleep symptom around menopause, sometimes linked with hot flashes and nighttime awakenings, is called",
+  "A sleep disorder associated with both trouble initiating sleep and difficulty maintaining sleep is known as",
+  "The name for a condition involving waking too early and being unable to return to sleep, as part of a broader persistent pattern, is"
+ ],
+ "recall_v3": [
+  "What is the clinical term for persistent trouble falling asleep or remaining asleep?",
+  "What is the name of the disorder in which someone has sufficient opportunity to sleep but repeatedly cannot do so and feels impaired during the day?",
+  "What diagnosis groups difficulty initiating sleep, maintaining it, or waking too early?",
+  "What condition is targeted by a structured program combining stimulus control, sleep restriction, and cognitive strategies?",
+  "What condition’s patterns are clinicians often assessing with a sleep diary?",
+  "For what chronic sleep condition are stimulus control and sleep restriction often prescribed?",
+  "What sleep problem may appear as repeated early-morning awakenings in depression?",
+  "What is the name for the frequent complaint during periods of stress involving repeated inability to fall asleep?",
+  "What diagnosis may be given for persistent difficulty getting restful sleep among people with generalized anxiety?",
+  "What is the disorder characterized by difficulty sleeping despite adequate opportunity, rather than a lack of time in bed?",
+  "What condition can be signaled by repeated nighttime awakenings and prolonged difficulty returning to sleep in older adults?",
+  "What sleep disorder may lead clinicians to recommend keeping a fixed wake time and avoiding clock-watching?",
+  "What condition might a persistent sleep complaint causing daytime distress meet criteria for, as opposed to occasional bad nights?",
+  "What is the name of the chronic condition involving dissatisfaction with sleep quantity or quality despite adequate opportunity?",
+  "What sleep complaint is often exacerbated by consuming caffeine late in the day?",
+  "What condition might a primary-care clinician evaluate when a patient lies awake for long periods night after night?",
+  "What is the medical name for the condition described in everyday language as persistent sleeplessness?",
+  "What common sleep symptom around menopause may be linked with hot flashes and nighttime awakenings?",
+  "What sleep disorder is associated with both trouble initiating sleep and difficulty maintaining sleep?",
+  "What is the name for a condition involving waking too early and being unable to return to sleep as part of a broader persistent pattern?"
+ ]
+}

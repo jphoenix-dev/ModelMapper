@@ -1,0 +1,144 @@
+{
+ "concept": "evolution by natural selection",
+ "model": "Qwen/Qwen3-8B",
+ "answer": " evolution by natural selection",
+ "answer_tokens": [
+  "ev",
+  "olution",
+  " by",
+  " natural",
+  " selection"
+ ],
+ "recall_kept": 0,
+ "recall_total": 20,
+ "recall": [],
+ "controls": [
+  {
+   "prompt": "A heritable change in an organism's DNA sequence is a",
+   "answer": " mutation",
+   "tid": [
+    26374
+   ],
+   "p": 0.703
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au",
+   "tid": [
+    32050
+   ],
+   "p": 0.824
+  }
+ ],
+ "steer_mode": "clamp",
+ "reply_only": true,
+ "recall_diagnostics": [
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the mechanism Darwin used to explain how species become suited to their surroundings? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the biological process by which inherited traits spread when their carriers reproduce more successfully? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the explanation for changes in populations across generations through unequal reproductive success? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of Charles Darwin's proposed cause of adaptation, based on heritable variation and reproductive differences? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the central mechanism in Darwin's account of how adaptations accumulate over generations? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the process in which organisms with advantageous inherited differences leave more descendants? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the process that can make pesticide resistance increasingly common in an insect population? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the principle explaining why antibiotic-resistant microbes can come to dominate after treatment? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the process that often explains changes in pest populations after repeated pesticide use in farming? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the mechanism by which camouflage can become widespread when better-hidden animals leave more offspring? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the biological process that changes trait frequencies because some individuals reproduce more than others? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the explanation for the match between a pollinator's features and flowers over many generations? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the account of how finch beak forms changed as food availability differed from year to year? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the explanatory mechanism that Alfred Russel Wallace independently arrived at, as did Darwin? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the process Darwin discussed as a counterpart to breeders deliberately choosing traits? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the framework that explains adaptation and branching descent through differential reproduction? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the process that inherited variation plus unequal success in producing offspring can lead to in populations? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the mechanism by which a drug-resistant strain becomes common without organisms intentionally changing? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the long-term biological process behind the spread of dark coloration in polluted moth populations? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the explanation for why traits that improve survival and reproduction can become more frequent? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  }
+ ],
+ "status": "model_does_not_recall",
+ "pipeline": "fast_v2",
+ "recall_variant": "V3",
+ "answer_form_used": "evolution by natural selection",
+ "seconds": 13,
+ "provenance": {
+  "time": "2026-10-16 02:32:52",
+  "code_sha256": {
+   "concept_pipeline.py": "d52d8495a099a834",
+   "neurons.py": "aeff37728da13db3",
+   "label.py": "72ffe99750d85265",
+   "atlas.py": "fed89e709d50160b",
+   "jev.py": "601d773e2c42d486"
+  },
+  "git_head": "ref: refs/heads/main",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.0",
+  "atlas_tokens": 10005329
+ },
+ "cost": {
+  "jev_usd": 0.4187,
+  "luna_tokens": {
+   "calls": 195,
+   "input_tokens": 1057857,
+   "output_tokens": 380709
+  }
+ }
+}

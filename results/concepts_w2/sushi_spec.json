@@ -1,0 +1,103 @@
+{
+ "answer": " sushi",
+ "recall": [
+  "The Japanese dish made with specially seasoned rice and assorted toppings is",
+  "A Japanese food of vinegared rice that may be paired with seafood or vegetables is",
+  "A chef can wrap seasoned rice and fillings in dried seaweed to make",
+  "The Japanese bite-sized food often served with soy sauce, pickled ginger, and wasabi is",
+  "A California roll is a familiar variety of",
+  "At a restaurant with a moving belt of small plates, diners often choose",
+  "The Japanese specialty made by pressing seasoned rice and topping it with fish is",
+  "A popular takeaway meal of Japanese rice rolls filled with vegetables or seafood is",
+  "The food wrapped in a sheet of dried seaweed around rice and fillings is",
+  "A platter of Japanese seasoned-rice bites with fish or vegetables might contain",
+  "The Japanese dish whose rice is traditionally flavored with vinegar is",
+  "A common menu choice at Japanese restaurants, served as rolls or small rice bites, is",
+  "A cone of seaweed filled with seasoned rice and other ingredients is a style of",
+  "A Japanese chef may carefully shape rice and pair it with seafood to prepare",
+  "The Japanese food often served with pickled ginger and a dab of green horseradish is",
+  "Japanese rice rolls sliced into bite-sized rounds are a type of",
+  "At a Japanese meal, small portions of seasoned rice with assorted fillings may be served as",
+  "A traditional preparation of rice, vinegar, and a variety of toppings is known as",
+  "An assortment of Japanese seasoned-rice bites arranged on a wooden platter is",
+  "The Japanese dish that may pair seasoned rice with salmon, shrimp, or omelet is"
+ ],
+ "controls": [
+  {
+   "prompt": "A Japanese noodle soup commonly served in a rich broth is",
+   "answer": " ramen"
+  },
+  {
+   "prompt": "A Japanese dish of ingredients dipped in batter and fried is",
+   "answer": " tempura"
+  },
+  {
+   "prompt": "A Japanese dish of thinly sliced raw fish served without seasoned rice is",
+   "answer": " sashimi"
+  },
+  {
+   "prompt": "A thick Japanese wheat noodle often served in broth is",
+   "answer": " udon"
+  },
+  {
+   "prompt": "The famous Paris landmark with an iron lattice structure is the",
+   "answer": " Eiffel Tower"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "Leonardo da Vinci painted the",
+   "answer": " Mona Lisa"
+  },
+  {
+   "prompt": "The South American river with the greatest volume of water is the",
+   "answer": " Amazon River"
+  }
+ ],
+ "recall_v2": [
+  "The Japanese dish made with specially seasoned rice and assorted toppings is called",
+  "A Japanese food of vinegared rice that may be paired with seafood or vegetables is called",
+  "A chef can wrap seasoned rice and fillings in dried seaweed to make the dish called",
+  "The Japanese bite-sized food often served with soy sauce, pickled ginger, and wasabi is called",
+  "A California roll is a familiar variety of the Japanese dish called",
+  "At a restaurant with a moving belt of small plates, diners often choose the Japanese dish called",
+  "The Japanese specialty made by pressing seasoned rice and topping it with fish is called",
+  "A popular takeaway meal of Japanese rice rolls filled with vegetables or seafood is called",
+  "The food wrapped in a sheet of dried seaweed around rice and fillings is called",
+  "A platter of Japanese seasoned-rice bites with fish or vegetables might contain pieces of the dish called",
+  "The Japanese dish whose rice is traditionally flavored with vinegar is called",
+  "A common menu choice at Japanese restaurants, served as rolls or small rice bites, is called",
+  "A cone of seaweed filled with seasoned rice and other ingredients is a style of the dish called",
+  "A Japanese chef may carefully shape rice and pair it with seafood to prepare the dish called",
+  "The Japanese food often served with pickled ginger and a dab of green horseradish is called",
+  "Japanese rice rolls sliced into bite-sized rounds are a type of the dish called",
+  "At a Japanese meal, small portions of seasoned rice with assorted fillings may be served as the dish called",
+  "A traditional preparation of rice, vinegar, and a variety of toppings is known as",
+  "An assortment of Japanese seasoned-rice bites arranged on a wooden platter is called",
+  "The Japanese dish that may pair seasoned rice with salmon, shrimp, or omelet is called"
+ ],
+ "recall_v3": [
+  "What is the name of the Japanese dish made with specially seasoned rice and assorted toppings?",
+  "What is the name of the Japanese food made with vinegared rice that may be paired with seafood or vegetables?",
+  "What is the name of the Japanese dish a chef makes by wrapping seasoned rice and fillings in dried seaweed?",
+  "What is the name of the Japanese bite-sized food often served with soy sauce, pickled ginger, and wasabi?",
+  "What is the name of the Japanese dish of which a California roll is a familiar variety?",
+  "What is the name of the Japanese dish diners often choose at a restaurant with a moving belt of small plates?",
+  "What is the name of the Japanese specialty made by pressing seasoned rice and topping it with fish?",
+  "What is the name of the popular takeaway meal of Japanese rice rolls filled with vegetables or seafood?",
+  "What is the name of the food wrapped in a sheet of dried seaweed around rice and fillings?",
+  "What is the name of the Japanese dish served as seasoned-rice bites with fish or vegetables?",
+  "What is the name of the Japanese dish whose rice is traditionally flavored with vinegar?",
+  "What is the name of the common Japanese restaurant dish served as rolls or small rice bites?",
+  "What is the name of the Japanese dish that can be served as a cone of seaweed filled with seasoned rice and other ingredients?",
+  "What is the name of the Japanese dish a chef prepares by carefully shaping rice and pairing it with seafood?",
+  "What is the name of the Japanese food often served with pickled ginger and a dab of green horseradish?",
+  "What is the name of the Japanese dish that includes rice rolls sliced into bite-sized rounds?",
+  "What is the name of the Japanese dish served as small portions of seasoned rice with assorted fillings?",
+  "What is the name of the traditional Japanese preparation of rice, vinegar, and a variety of toppings?",
+  "What is the name of the Japanese dish served as an assortment of seasoned-rice bites arranged on a wooden platter?",
+  "What is the name of the Japanese dish that may pair seasoned rice with salmon, shrimp, or omelet?"
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "answer": " chocolate",
+ "recall": [
+  "The sweet confection made from roasted seeds of a tropical tree is",
+  "The treat commonly molded into bars and wrapped in foil is",
+  "The familiar flavor of devil’s food cake is",
+  "The confection melted for dipping strawberries and other fruit is",
+  "The ingredient that gives a classic brownie its rich, dark flavor is",
+  "The sweet coating often drizzled over ice cream is",
+  "The food commonly sold in dark, milk, and white varieties is",
+  "The confection often shaped into eggs for an Easter gift is",
+  "The ingredient at the heart of a traditional ganache is",
+  "The sweet treat often packed in heart-shaped boxes for Valentine’s Day is",
+  "The bitter Mesoamerican drink that Europeans later sweetened and developed into a confection was",
+  "The confection whose origins trace back to Indigenous Mesoamerican beverages is",
+  "The product made by processing the seeds of a tropical tree into a sweet treat is",
+  "West African farms supply much of the raw material used to make",
+  "The confection whose mass production made Milton Hershey famous was",
+  "The sweet ingredient grated over desserts as a dark garnish is",
+  "The confectionery product that is tempered to achieve a glossy finish and crisp snap is",
+  "The flavor commonly paired with strawberry and vanilla in ice cream is",
+  "The ingredient that gives a classic mocha its distinctive sweet, rich taste is",
+  "The confection often used to make truffles, bonbons, and candy bars is"
+ ],
+ "controls": [
+  {
+   "prompt": "The flavor traditionally extracted from the pods of an orchid is",
+   "answer": " vanilla"
+  },
+  {
+   "prompt": "The browned-sugar confection often used as a dessert topping is",
+   "answer": " caramel"
+  },
+  {
+   "prompt": "The soft confection made by cooking sugar with butter and milk is",
+   "answer": " fudge"
+  },
+  {
+   "prompt": "The brittle sweet made from caramelized sugar and nuts is",
+   "answer": " praline"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The sweet confection made from roasted seeds of a tropical tree is called",
+  "The treat commonly molded into bars and wrapped in foil is known as",
+  "The familiar flavor of devil’s food cake is called",
+  "The confection melted for dipping strawberries and other fruit is known as",
+  "The ingredient that gives a classic brownie its rich, dark flavor is called",
+  "The sweet coating often drizzled over ice cream is called",
+  "The food commonly sold in dark, milk, and white varieties is known as",
+  "The confection often shaped into eggs for an Easter gift is called",
+  "The ingredient at the heart of a traditional ganache is known as",
+  "The sweet treat often packed in heart-shaped boxes for Valentine’s Day is called",
+  "The bitter Mesoamerican drink that Europeans later sweetened and developed into a confection was later developed into the confection called",
+  "The confection whose origins trace back to Indigenous Mesoamerican beverages is known as",
+  "The product made by processing the seeds of a tropical tree into a sweet treat is called",
+  "West African farms supply much of the raw material used to make the confection known as",
+  "The confection that Milton Hershey became famous for mass-producing is called",
+  "The sweet ingredient grated over desserts as a dark garnish is known as",
+  "The confectionery product tempered to achieve a glossy finish and crisp snap is called",
+  "The flavor commonly paired with strawberry and vanilla in ice cream is known as",
+  "The ingredient that gives a classic mocha its distinctive sweet, rich taste is called",
+  "The confection often used to make truffles, bonbons, and candy bars is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the sweet confection made from roasted seeds of a tropical tree?",
+  "What is the name of the treat commonly molded into bars and wrapped in foil?",
+  "What is the name of the familiar flavor of devil’s food cake?",
+  "What is the name of the confection melted for dipping strawberries and other fruit?",
+  "What is the name of the ingredient that gives a classic brownie its rich, dark flavor?",
+  "What is the name of the sweet coating often drizzled over ice cream?",
+  "What is the name of the food commonly sold in dark, milk, and white varieties?",
+  "What is the name of the confection often shaped into eggs for an Easter gift?",
+  "What is the name of the ingredient at the heart of a traditional ganache?",
+  "What is the name of the sweet treat often packed in heart-shaped boxes for Valentine’s Day?",
+  "What is the name of the confection developed from the bitter Mesoamerican drink that Europeans later sweetened?",
+  "What is the name of the confection whose origins trace back to Indigenous Mesoamerican beverages?",
+  "What is the name of the product made by processing the seeds of a tropical tree into a sweet treat?",
+  "What is the name of the confection made with raw material largely supplied by West African farms?",
+  "What is the name of the confection that Milton Hershey became famous for mass-producing?",
+  "What is the name of the sweet ingredient grated over desserts as a dark garnish?",
+  "What is the name of the confectionery product tempered to achieve a glossy finish and crisp snap?",
+  "What is the name of the flavor commonly paired with strawberry and vanilla in ice cream?",
+  "What is the name of the ingredient that gives a classic mocha its distinctive sweet, rich taste?",
+  "What is the name of the confection often used to make truffles, bonbons, and candy bars?"
+ ]
+}
