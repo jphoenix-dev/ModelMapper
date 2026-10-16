@@ -56,6 +56,7 @@ KS = [1, 2, 3, 5, 10, 20]
 REPLY_TOKENS = 100
 KNOCK_TOKENS = 24
 N_KNOCK_Q = 3
+CHECK_RERANK = os.environ.get("CHECK_RERANK") == "1"   # also run the original slow re-rank and compare
 
 
 def logit(p):
@@ -150,6 +151,43 @@ class Gen:
             p.mode, p.reply_only = mode, ro
         return out
 
+    def single_drops(self, pairs, base, units, rows_per_batch=400):
+        """Mean log-odds drop when each unit alone is set to 0: the same quantity as calling batch_probs once per unit
+        with steer(model, [(l, n, 0)]), but every (unit, prompt) pair is a row of a few large batches."""
+        p = self.pipe
+        nq = len(pairs)
+        seqs, spans = [], []
+        for prompt, ans in pairs:
+            ids = p.tok.encode(prompt)
+            seqs.append(ids + ans[:-1]); spans.append((len(ids) - 1, ans))
+        T = max(map(len, seqs))
+        pad = p.tok.pad_token_id or 0
+        ids1 = torch.full((nq, T), pad, device="cuda"); mask1 = torch.zeros_like(ids1)
+        for i, s in enumerate(seqs):                       # right padding, as batch_probs
+            ids1[i, :len(s)] = torch.tensor(s, device="cuda"); mask1[i, :len(s)] = 1
+        R = len(units) * nq                                 # row r = unit (r // nq) off, prompt (r % nq)
+        active = torch.zeros(R, len(units), dtype=torch.bool, device="cuda")
+        active[torch.arange(R, device="cuda"), torch.arange(R, device="cuda") // nq] = True
+        vals = torch.zeros(R, len(units), device="cuda")
+        mode, ro = p.mode, p.reply_only
+        p.mode, p.reply_only = "clamp", False
+        lps = torch.empty(R, device="cuda")
+        try:
+            with p.steer_rows(units, vals, active), torch.no_grad():
+                for s in range(0, R, rows_per_batch):
+                    e = min(R, s + rows_per_batch)
+                    p._rows = torch.arange(s, e, device="cuda")
+                    qi = torch.arange(s, e, device="cuda") % nq
+                    h = p.model.model(input_ids=ids1[qi], attention_mask=mask1[qi]).last_hidden_state
+                    for j in range(e - s):                  # answer tokens only: no full-vocabulary logits for every position
+                        start, ans = spans[qi[j].item()]
+                        logits = p.model.lm_head(h[j, start:start + len(ans)]).float().log_softmax(-1)
+                        lps[s + j] = logits[torch.arange(len(ans), device="cuda"), torch.tensor(ans, device="cuda")].sum()
+        finally:
+            p.mode, p.reply_only = mode, ro
+        ps = lps.exp().view(len(units), nq).tolist()
+        return [sum(b - logit(x) for b, x in zip(base, row)) for row in ps]
+
     def knockout(self, A, tid, recall, n_q):
         p = self.pipe
         rp = [q for q, _ in recall]
@@ -160,7 +198,13 @@ class Gen:
             ps = p.batch_probs(pairs, steer(p.model, edits) if edits else None)
             return ps, [b - logit(x) for b, x in zip(base, ps)]
         top = A["top"][:200]
-        single = sorted(top, key=lambda u: -sum(run([(u[0], u[1], 0.0)])[1]))
+        if CHECK_RERANK:                                    # the original one-at-a-time loop, to compare against
+            slow = sorted(top, key=lambda u: -sum(run([(u[0], u[1], 0.0)])[1]))
+        drops = self.single_drops(pairs, base, top)
+        single = [u for _, u in sorted(zip(drops, top), key=lambda t: -t[0])]
+        if CHECK_RERANK:
+            print(f"  re-rank check: top-10 same order {slow[:10] == single[:10]}, top-20 overlap "
+                  f"{len(set(slow[:20]) & set(single[:20]))}/20, top-50 overlap {len(set(slow[:50]) & set(single[:50]))}/50", flush=True)
         rng = random.Random(2)
         rand = [(l, rng.randrange(p.W)) for l, _ in top]
         curve = []
