@@ -99,6 +99,11 @@ class Pipeline:
             spec = oai.chat_json(f"Concept: {concept}", PROMPT_SYSTEM)
             cache.parent.mkdir(parents=True, exist_ok=True)
             cache.write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8")
+        # Luna sometimes returns recall items as {"prompt": ...} objects instead of strings (ISSUES #33): normalise
+        if any(isinstance(q, dict) for q in spec.get("recall", [])):
+            spec["recall"] = [q.get("prompt") or q.get("text") or next(iter(q.values())) if isinstance(q, dict) else q
+                              for q in spec["recall"]]
+            cache.write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8")
         tid = self.answer_ids(spec["answer"])
         p = self.probs(spec["recall"], tid)
         recall = [(q, round(x, 3)) for q, x in zip(spec["recall"], p) if x >= MIN_P]
