@@ -45,6 +45,9 @@ def main():
         assert Ls < Lt, "source must be below target"
         x = json.loads((cp.OUT / f"{cp.slug(concept)}__clamp_reply.json").read_text(encoding="utf-8"))
         own = {(q["layer"], q["neuron"]) for q in x["top_neurons"][:10]}
+        if (Ls, s) not in own:      # a chain link must start at one of the concept's own neurons (Mozart row error)
+            print(f"{concept}: source L{Ls}:{s} is not among the concept's top-10 neurons - not a chain link, skipped", flush=True)
+            continue
         r = fd[concept]["neurons"][f"L{Lt}:{t}"]; sg = r["sign"]
         cands = [(parse(k), v) for k, v in r["top_neurons"] if parse(k) not in own and parse(k)[0] < Lt]
         assert cands, f"no matched control feeder for L{Lt}:{t}"
