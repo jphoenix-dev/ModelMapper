@@ -1319,3 +1319,32 @@ Caveats:
 - **Arm (c) controls for "the replacement matters", not for "any change to the set helps".** That needs swapping a
   non-name neuron, which wasn't run.
 - Exploratory only, and not on the page unless James agrees.
+
+## 16 Oct 2026 (afternoon): ATTENTION study, steps 1–2 (EXPLORATORY; research branch, not yet approved for publication)
+`src/head_logodds.py` + `src/head_summary.py` (`results/head_summary.txt`). 59 concepts (CR-2 + wave 2), the same
+prompts and answers as the neuron log-odds runs. Heads are ranked by attribution (top 50), re-ranked by measured
+single-head knockout (zeroing the head's output at every position), then knocked out cumulatively. The same three
+views as for neurons; control: random heads from the same layers.
+
+| | heads | neurons (same concepts) |
+|---|---|---|
+| k_mean ≤ 2 | 20/59 | 53/59 |
+| k_mean ≤ 5 | 49/59 | 59/59 |
+| k_mean ≤ 10 | 59/59 | 59/59 |
+| k_flip ≤ 5 | 33/59 | 50/59 |
+| flips at all within 50 | 53/59 | 59/59 |
+| mean log-odds drop, top 5 | 5.35 | 8.88 |
+| random 5 | +0.12 | ≈ 0 |
+
+- **Recall also depends on a handful of attention heads (≤ 10 for every concept), but less sharply than on neurons,
+  and heads alone flip answers less often.**
+- **Random-head control:** 5 random heads do nothing. 50 random heads are not null for heads (mean +1.21; up to +9.1
+  for the heart, 8.9 infinity, 5.8 the Moon, 5.6 the internet). Fifty heads is 4% of all 1,152, so a random set can
+  hit important shared heads or degrade the model generally. Use the 5–10 level as the control for heads.
+- **Shared vs specific heads (step 2):**
+  - A small set of heads recurs across concepts: L20H9 in the top 10 of 36% of concepts, L19H29 34%, L35H25 27%,
+    L35H24 25%, L23H10 25%. Chance would be ~1%.
+  - 11 heads appear in ≥ 11 concepts' top 10, and on average 2.7 of each concept's top-10 heads are these shared ones.
+  - The top heads sit mostly in layers 17–23 and 34–35, with some at 0 and 9.
+  - So the same split as neurons: generic "fact moving" machinery plus concept-specific heads.
+- Steps 3 (where they look) and 4 (heads → neurons) are next.
