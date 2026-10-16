@@ -14,6 +14,7 @@ Usage: python src/pipeline_fast.py <model> "<concept>" ["<concept>" ...] [--mode
 import argparse
 import contextlib
 import json
+import math
 import random
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -168,6 +169,36 @@ class FastPipeline(Pipeline):
         for i, (start, ans) in enumerate(spans):
             pos = torch.arange(start, start + len(ans), device=DEVICE)
             out.append(lp[i, pos, torch.tensor(ans, device=DEVICE)].sum().exp().item())
+        return out
+
+    def batch_logodds(self, pairs, ctx=None):
+        """pairs: [(prompt, answer_ids)] -> [exact log-odds of the whole answer], log P - log(1 - P), no clamp.
+
+        ISSUES #35: log(p / (1 - p)) on batch_probs' float32 output, with p clamped to 1 - 1e-9, capped log-odds at
+        20.72 and lost precision above ~14 (float32 rounds log P to 0 near certainty). Here the log-softmax is taken in
+        float64 at the answer positions and log(1 - P) via expm1, so it is exact up to ~36; beyond that it raises
+        instead of capping."""
+        seqs, spans = [], []
+        for prompt, ans in pairs:
+            p_ids = self.tok.encode(prompt)
+            seqs.append(p_ids + ans[:-1])
+            spans.append((len(p_ids) - 1, ans))
+        T = max(map(len, seqs))
+        pad = self.tok.pad_token_id or 0
+        ids = torch.full((len(seqs), T), pad, device=DEVICE)
+        mask = torch.zeros_like(ids)
+        for i, s in enumerate(seqs):
+            ids[i, :len(s)] = torch.tensor(s, device=DEVICE); mask[i, :len(s)] = 1
+        with torch.no_grad(), (ctx or contextlib.nullcontext()):
+            logits = self.model(input_ids=ids, attention_mask=mask).logits
+        out = []
+        for i, (start, ans) in enumerate(spans):
+            pos = torch.arange(start, start + len(ans), device=DEVICE)
+            lp = logits[i, pos].double().log_softmax(-1)
+            s = lp[torch.arange(len(ans), device=DEVICE), torch.tensor(ans, device=DEVICE)].sum().item()
+            if s >= 0.0:
+                raise ValueError(f"log P(answer) rounds to 0 even in float64 (log-odds > ~36): {pairs[i][0][:60]!r}")
+            out.append(s - math.log(-math.expm1(s)))
         return out
 
     def probs(self, prompts, ans, edits=()):

@@ -26,8 +26,17 @@ DELTA = 3.0
 
 
 def logit(p):
+    # old clamped form: caps at 20.72 (ISSUES #35). Kept only to compare with earlier runs; use pipe.batch_logodds.
     p = min(max(p, 1e-9), 1 - 1e-9)
     return math.log(p / (1 - p))
+
+
+def p_of(lo):
+    """P from exact log-odds (ISSUES #35), overflow-safe."""
+    if lo >= 0:
+        return 1 / (1 + math.exp(-lo))
+    e = math.exp(lo)
+    return e / (1 + e)
 
 
 def main():
@@ -40,13 +49,13 @@ def main():
             continue
         rp = [q for q, _ in recall]
         pairs = [(q, tid) for q in rp]
-        base = [logit(p) for p in pipe.batch_probs(pairs)]
+        base = pipe.batch_logodds(pairs)
         A = pipe.attribute(rp, tid)
         top = A["top"][:200]
 
         def per_prompt(edits):
-            ps = pipe.batch_probs(pairs, steer(pipe.model, edits) if edits else None)
-            return [b - logit(p) for b, p in zip(base, ps)], ps
+            los = pipe.batch_logodds(pairs, steer(pipe.model, edits) if edits else None); ps = [p_of(x) for x in los]
+            return [b - x for b, x in zip(base, los)], ps
 
         def mlo(edits):
             d, _ = per_prompt(edits)
