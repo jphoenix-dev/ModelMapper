@@ -1,0 +1,2480 @@
+[
+ {
+  "concept": "Albert Einstein",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.027,
+  "sink": 0.882,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "What",
+   "of",
+   "name"
+  ]
+ },
+ {
+  "concept": "Albert Einstein",
+  "head": "L18H16",
+  "shared": false,
+  "content": 0.029,
+  "sink": 0.82,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "What",
+   "of",
+   "the"
+  ]
+ },
+ {
+  "concept": "Albert Einstein",
+  "head": "L22H16",
+  "shared": false,
+  "content": 0.043,
+  "sink": 0.829,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "?",
+   "is",
+   "who"
+  ]
+ },
+ {
+  "concept": "Eiffel Tower",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.052,
+  "sink": 0.86,
+  "clue_share_of_top": 0.19047619047619044,
+  "top": [
+   "?",
+   "the",
+   "Paris",
+   "is"
+  ]
+ },
+ {
+  "concept": "Eiffel Tower",
+  "head": "L10H21",
+  "shared": false,
+  "content": 0.06,
+  "sink": 0.836,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "What",
+   "?",
+   "is"
+  ]
+ },
+ {
+  "concept": "Eiffel Tower",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.035,
+  "sink": 0.88,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "of",
+   "What",
+   "name"
+  ]
+ },
+ {
+  "concept": "Frida Kahlo",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.036,
+  "sink": 0.593,
+  "clue_share_of_top": 0.32142857142857145,
+  "top": [
+   "1",
+   "?",
+   "painter",
+   "of"
+  ]
+ },
+ {
+  "concept": "Frida Kahlo",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.023,
+  "sink": 0.858,
+  "clue_share_of_top": 0.1333333333333333,
+  "top": [
+   "?",
+   "1",
+   "painter",
+   "of"
+  ]
+ },
+ {
+  "concept": "Frida Kahlo",
+  "head": "L30H17",
+  "shared": false,
+  "content": 0.152,
+  "sink": 0.616,
+  "clue_share_of_top": 0.6285714285714284,
+  "top": [
+   "painter",
+   "?",
+   "Rivera",
+   "1"
+  ]
+ },
+ {
+  "concept": "Golden Gate Bridge",
+  "head": "L35H22",
+  "shared": false,
+  "content": 0.055,
+  "sink": 0.659,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "1",
+   "the",
+   "io"
+  ]
+ },
+ {
+  "concept": "Golden Gate Bridge",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.825,
+  "sink": 0.087,
+  "clue_share_of_top": 0.7316176470588235,
+  "top": [
+   "Francisco",
+   "Strauss",
+   "crossing",
+   "?"
+  ]
+ },
+ {
+  "concept": "Golden Gate Bridge",
+  "head": "L11H1",
+  "shared": true,
+  "content": 0.004,
+  "sink": 0.97,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "?",
+   "California"
+  ]
+ },
+ {
+  "concept": "Harry Potter",
+  "head": "L9H14",
+  "shared": false,
+  "content": 0.061,
+  "sink": 0.772,
+  "clue_share_of_top": 0.07894736842105263,
+  "top": [
+   "?",
+   "of",
+   "What",
+   "who"
+  ]
+ },
+ {
+  "concept": "Harry Potter",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.032,
+  "sink": 0.87,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "of",
+   "What",
+   "name"
+  ]
+ },
+ {
+  "concept": "Harry Potter",
+  "head": "L35H24",
+  "shared": true,
+  "content": 0.065,
+  "sink": 0.87,
+  "clue_share_of_top": 0.08823529411764705,
+  "top": [
+   "?",
+   "of",
+   "is",
+   "What"
+  ]
+ },
+ {
+  "concept": "Mount Everest",
+  "head": "L21H2",
+  "shared": false,
+  "content": 0.006,
+  "sink": 0.963,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "1",
+   "the",
+   "What"
+  ]
+ },
+ {
+  "concept": "Mount Everest",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.032,
+  "sink": 0.882,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "of",
+   "What",
+   "name"
+  ]
+ },
+ {
+  "concept": "Mount Everest",
+  "head": "L26H17",
+  "shared": false,
+  "content": 0.858,
+  "sink": 0.057,
+  "clue_share_of_top": 0.9593114241001565,
+  "top": [
+   "mountain",
+   "peak",
+   "summit",
+   "1"
+  ]
+ },
+ {
+  "concept": "Napoleon Bonaparte",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.023,
+  "sink": 0.889,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "was",
+   "What",
+   "of",
+   "name"
+  ]
+ },
+ {
+  "concept": "Napoleon Bonaparte",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.07,
+  "sink": 0.827,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "of",
+   "1",
+   "was"
+  ]
+ },
+ {
+  "concept": "Napoleon Bonaparte",
+  "head": "L16H6",
+  "shared": false,
+  "content": 0.004,
+  "sink": 0.849,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "French"
+  ]
+ },
+ {
+  "concept": "Tokyo",
+  "head": "L21H30",
+  "shared": false,
+  "content": 0.525,
+  "sink": 0.178,
+  "clue_share_of_top": 0.24464831804281342,
+  "top": [
+   "?",
+   "in",
+   "city",
+   "located"
+  ]
+ },
+ {
+  "concept": "Tokyo",
+  "head": "L23H12",
+  "shared": true,
+  "content": 0.768,
+  "sink": 0.06,
+  "clue_share_of_top": 0.7696629213483145,
+  "top": [
+   "city",
+   "in",
+   "?",
+   "ropolis"
+  ]
+ },
+ {
+  "concept": "Tokyo",
+  "head": "L27H29",
+  "shared": false,
+  "content": 0.494,
+  "sink": 0.41,
+  "clue_share_of_top": 0.6622222222222223,
+  "top": [
+   "city",
+   "?",
+   "ropolis",
+   "Olympics"
+  ]
+ },
+ {
+  "concept": "Venice",
+  "head": "L35H24",
+  "shared": true,
+  "content": 0.065,
+  "sink": 0.847,
+  "clue_share_of_top": 0.06451612903225806,
+  "top": [
+   "?",
+   "What",
+   "1",
+   "the"
+  ]
+ },
+ {
+  "concept": "Venice",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.106,
+  "sink": 0.838,
+  "clue_share_of_top": 0.10526315789473682,
+  "top": [
+   "?",
+   "city",
+   "is",
+   "and"
+  ]
+ },
+ {
+  "concept": "Venice",
+  "head": "L8H15",
+  "shared": false,
+  "content": 0.008,
+  "sink": 0.976,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "city",
+   "Italian",
+   "the"
+  ]
+ },
+ {
+  "concept": "William Shakespeare",
+  "head": "L22H16",
+  "shared": false,
+  "content": 0.046,
+  "sink": 0.807,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "Who",
+   "?",
+   "was",
+   "whose"
+  ]
+ },
+ {
+  "concept": "William Shakespeare",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.021,
+  "sink": 0.869,
+  "clue_share_of_top": 0.07142857142857142,
+  "top": [
+   "Who",
+   "was",
+   "?",
+   "wrote"
+  ]
+ },
+ {
+  "concept": "William Shakespeare",
+  "head": "L18H16",
+  "shared": false,
+  "content": 0.013,
+  "sink": 0.829,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "Who",
+   "was",
+   "?",
+   "the"
+  ]
+ },
+ {
+  "concept": "Wolfgang Amadeus Mozart",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.045,
+  "sink": 0.832,
+  "clue_share_of_top": 0.21739130434782605,
+  "top": [
+   "?",
+   "composer",
+   "1",
+   "numbers"
+  ]
+ },
+ {
+  "concept": "Wolfgang Amadeus Mozart",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.072,
+  "sink": 0.62,
+  "clue_share_of_top": 0.1896551724137931,
+  "top": [
+   "?",
+   "1",
+   "composer",
+   "ute"
+  ]
+ },
+ {
+  "concept": "Wolfgang Amadeus Mozart",
+  "head": "L18H16",
+  "shared": false,
+  "content": 0.019,
+  "sink": 0.825,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "was",
+   "Who",
+   "of"
+  ]
+ },
+ {
+  "concept": "chess",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.878,
+  "sink": 0.036,
+  "clue_share_of_top": 0.851528384279476,
+  "top": [
+   "game",
+   "sport",
+   "minds",
+   "ca"
+  ]
+ },
+ {
+  "concept": "chess",
+  "head": "L29H27",
+  "shared": false,
+  "content": 0.359,
+  "sink": 0.36,
+  "clue_share_of_top": 0.6478873239436619,
+  "top": [
+   "game",
+   "?",
+   "sport",
+   "opening"
+  ]
+ },
+ {
+  "concept": "chess",
+  "head": "L24H26",
+  "shared": false,
+  "content": 0.799,
+  "sink": 0.114,
+  "clue_share_of_top": 0.5099009900990099,
+  "top": [
+   "game",
+   "-four",
+   "ic",
+   "master"
+  ]
+ },
+ {
+  "concept": "coffee",
+  "head": "L23H31",
+  "shared": false,
+  "content": 0.575,
+  "sink": 0.322,
+  "clue_share_of_top": 0.29069767441860467,
+  "top": [
+   "?",
+   "oka",
+   "press",
+   "-over"
+  ]
+ },
+ {
+  "concept": "coffee",
+  "head": "L35H24",
+  "shared": true,
+  "content": 0.051,
+  "sink": 0.873,
+  "clue_share_of_top": 0.12499999999999996,
+  "top": [
+   "?",
+   "What",
+   "KC",
+   "press"
+  ]
+ },
+ {
+  "concept": "coffee",
+  "head": "L19H10",
+  "shared": false,
+  "content": 0.475,
+  "sink": 0.303,
+  "clue_share_of_top": 0.035573122529644265,
+  "top": [
+   "?",
+   "is",
+   ",",
+   "from"
+  ]
+ },
+ {
+  "concept": "democracy",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.062,
+  "sink": 0.034,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "for"
+  ]
+ },
+ {
+  "concept": "democracy",
+  "head": "L23H12",
+  "shared": true,
+  "content": 0.719,
+  "sink": 0.067,
+  "clue_share_of_top": 0.5716945996275604,
+  "top": [
+   "system",
+   "?",
+   "government",
+   "by"
+  ]
+ },
+ {
+  "concept": "democracy",
+  "head": "L17H27",
+  "shared": true,
+  "content": 0.234,
+  "sink": 0.39,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "name",
+   "of",
+   "?",
+   "for"
+  ]
+ },
+ {
+  "concept": "photosynthesis",
+  "head": "L9H21",
+  "shared": false,
+  "content": 0.015,
+  "sink": 0.92,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "the",
+   "?"
+  ]
+ },
+ {
+  "concept": "photosynthesis",
+  "head": "L23H15",
+  "shared": false,
+  "content": 0.6,
+  "sink": 0.067,
+  "clue_share_of_top": 0.36203866432337434,
+  "top": [
+   "?",
+   "process",
+   "name",
+   "which"
+  ]
+ },
+ {
+  "concept": "photosynthesis",
+  "head": "L18H30",
+  "shared": true,
+  "content": 0.322,
+  "sink": 0.517,
+  "clue_share_of_top": 0.27067669172932335,
+  "top": [
+   "?",
+   "plants",
+   "What",
+   "is"
+  ]
+ },
+ {
+  "concept": "the French Revolution",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.053,
+  "sink": 0.921,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "?",
+   "and",
+   "of"
+  ]
+ },
+ {
+  "concept": "the French Revolution",
+  "head": "L26H17",
+  "shared": false,
+  "content": 0.797,
+  "sink": 0.087,
+  "clue_share_of_top": 0.7772828507795101,
+  "top": [
+   "period",
+   "aval",
+   "uprising",
+   "which"
+  ]
+ },
+ {
+  "concept": "the French Revolution",
+  "head": "L14H7",
+  "shared": false,
+  "content": 0.239,
+  "sink": 0.386,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "What",
+   "is",
+   "that"
+  ]
+ },
+ {
+  "concept": "the Moon",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.027,
+  "sink": 0.066,
+  "clue_share_of_top": 0.3571428571428571,
+  "top": [
+   "?",
+   "object",
+   "familiar",
+   "natural"
+  ]
+ },
+ {
+  "concept": "the Moon",
+  "head": "L22H19",
+  "shared": false,
+  "content": 0.117,
+  "sink": 0.704,
+  "clue_share_of_top": 0.22580645161290322,
+  "top": [
+   "?",
+   "the",
+   "Earth",
+   "sky"
+  ]
+ },
+ {
+  "concept": "the Moon",
+  "head": "L17H19",
+  "shared": false,
+  "content": 0.017,
+  "sink": 0.826,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "?",
+   "is",
+   "celestial"
+  ]
+ },
+ {
+  "concept": "the Titanic",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.04,
+  "sink": 0.043,
+  "clue_share_of_top": 0.058823529411764705,
+  "top": [
+   "name",
+   "of",
+   "?",
+   "famous"
+  ]
+ },
+ {
+  "concept": "the Titanic",
+  "head": "L23H12",
+  "shared": true,
+  "content": 0.74,
+  "sink": 0.068,
+  "clue_share_of_top": 0.820040899795501,
+  "top": [
+   "liner",
+   "ship",
+   "vessel",
+   "1"
+  ]
+ },
+ {
+  "concept": "the Titanic",
+  "head": "L33H24",
+  "shared": false,
+  "content": 0.017,
+  "sink": 0.816,
+  "clue_share_of_top": 0.125,
+  "top": [
+   "1",
+   "?",
+   "liner",
+   "iceberg"
+  ]
+ },
+ {
+  "concept": "the violin",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.072,
+  "sink": 0.052,
+  "clue_share_of_top": 0.0689655172413793,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "instrument"
+  ]
+ },
+ {
+  "concept": "the violin",
+  "head": "L9H14",
+  "shared": false,
+  "content": 0.067,
+  "sink": 0.791,
+  "clue_share_of_top": 0.14999999999999997,
+  "top": [
+   "?",
+   "What",
+   "of",
+   ","
+  ]
+ },
+ {
+  "concept": "the violin",
+  "head": "L11H1",
+  "shared": true,
+  "content": 0.002,
+  "sink": 0.98,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "?",
+   "the"
+  ]
+ },
+ {
+  "concept": "Bitcoin",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.87,
+  "sink": 0.047,
+  "clue_share_of_top": 0.12654320987654324,
+  "top": [
+   "BTC",
+   "8",
+   "9",
+   "1"
+  ]
+ },
+ {
+  "concept": "Bitcoin",
+  "head": "L0H2",
+  "shared": false,
+  "content": 0.13,
+  "sink": 0.804,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "is",
+   "?",
+   "of"
+  ]
+ },
+ {
+  "concept": "Bitcoin",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.036,
+  "sink": 0.872,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "of",
+   "What",
+   "name"
+  ]
+ },
+ {
+  "concept": "Charles Darwin",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.017,
+  "sink": 0.88,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "Who",
+   "was",
+   "?",
+   "whose"
+  ]
+ },
+ {
+  "concept": "Charles Darwin",
+  "head": "L21H2",
+  "shared": false,
+  "content": 0.006,
+  "sink": 0.966,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "1",
+   "Who",
+   "was"
+  ]
+ },
+ {
+  "concept": "Charles Darwin",
+  "head": "L35H24",
+  "shared": true,
+  "content": 0.054,
+  "sink": 0.858,
+  "clue_share_of_top": 0.07692307692307691,
+  "top": [
+   "?",
+   "was",
+   "1",
+   "ist"
+  ]
+ },
+ {
+  "concept": "DNA",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.061,
+  "sink": 0.04,
+  "clue_share_of_top": 0.017241379310344824,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "is"
+  ]
+ },
+ {
+  "concept": "DNA",
+  "head": "L20H8",
+  "shared": false,
+  "content": 0.671,
+  "sink": 0.17,
+  "clue_share_of_top": 0.020123839009287926,
+  "top": [
+   "?",
+   "molecule",
+   ",",
+   "s"
+  ]
+ },
+ {
+  "concept": "DNA",
+  "head": "L14H19",
+  "shared": false,
+  "content": 0.021,
+  "sink": 0.896,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "?",
+   "is",
+   "the"
+  ]
+ },
+ {
+  "concept": "Egypt's pyramids",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.872,
+  "sink": 0.041,
+  "clue_share_of_top": 0.8456591639871383,
+  "top": [
+   "Nile",
+   "burial",
+   "ancient",
+   "casing"
+  ]
+ },
+ {
+  "concept": "Egypt's pyramids",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.063,
+  "sink": 0.047,
+  "clue_share_of_top": 0.18867924528301888,
+  "top": [
+   "name",
+   "?",
+   "collective",
+   "called"
+  ]
+ },
+ {
+  "concept": "Egypt's pyramids",
+  "head": "L23H15",
+  "shared": false,
+  "content": 0.645,
+  "sink": 0.071,
+  "clue_share_of_top": 0.1111111111111111,
+  "top": [
+   "called",
+   "?",
+   "name",
+   "collective"
+  ]
+ },
+ {
+  "concept": "Marie Curie",
+  "head": "L35H22",
+  "shared": false,
+  "content": 0.102,
+  "sink": 0.566,
+  "clue_share_of_top": 0.24999999999999994,
+  "top": [
+   "?",
+   "physicist",
+   "with",
+   "husband"
+  ]
+ },
+ {
+  "concept": "Marie Curie",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.021,
+  "sink": 0.883,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "was",
+   "Who",
+   "of",
+   "What"
+  ]
+ },
+ {
+  "concept": "Marie Curie",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.869,
+  "sink": 0.046,
+  "clue_share_of_top": 0.6588921282798834,
+  "top": [
+   "Pierre",
+   "ium",
+   "onium",
+   "Nobel"
+  ]
+ },
+ {
+  "concept": "ballet",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.037,
+  "sink": 0.835,
+  "clue_share_of_top": 0.11764705882352941,
+  "top": [
+   "?",
+   "the",
+   "dance",
+   ","
+  ]
+ },
+ {
+  "concept": "ballet",
+  "head": "L9H12",
+  "shared": false,
+  "content": 0.008,
+  "sink": 0.957,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "the",
+   "name"
+  ]
+ },
+ {
+  "concept": "ballet",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.911,
+  "sink": 0.028,
+  "clue_share_of_top": 0.36296296296296293,
+  "top": [
+   "dance",
+   "va",
+   "positions",
+   "ipa"
+  ]
+ },
+ {
+  "concept": "basketball",
+  "head": "L35H24",
+  "shared": true,
+  "content": 0.042,
+  "sink": 0.914,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "the",
+   "What",
+   "is"
+  ]
+ },
+ {
+  "concept": "basketball",
+  "head": "L32H31",
+  "shared": false,
+  "content": 0.005,
+  "sink": 0.938,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "1",
+   "the",
+   "a"
+  ]
+ },
+ {
+  "concept": "basketball",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.065,
+  "sink": 0.908,
+  "clue_share_of_top": 0.1724137931034483,
+  "top": [
+   "?",
+   "sport",
+   "in",
+   "the"
+  ]
+ },
+ {
+  "concept": "black holes",
+  "head": "L35H22",
+  "shared": false,
+  "content": 0.145,
+  "sink": 0.533,
+  "clue_share_of_top": 0.06578947368421052,
+  "top": [
+   "of",
+   "?",
+   "2",
+   "as"
+  ]
+ },
+ {
+  "concept": "black holes",
+  "head": "L21H30",
+  "shared": false,
+  "content": 0.502,
+  "sink": 0.245,
+  "clue_share_of_top": 0.1563517915309446,
+  "top": [
+   "?",
+   "prediction",
+   "called",
+   "what"
+  ]
+ },
+ {
+  "concept": "black holes",
+  "head": "L17H18",
+  "shared": false,
+  "content": 0.027,
+  "sink": 0.857,
+  "clue_share_of_top": 0.1333333333333333,
+  "top": [
+   "?",
+   "What",
+   "astronomical",
+   "5"
+  ]
+ },
+ {
+  "concept": "chocolate",
+  "head": "L6H31",
+  "shared": false,
+  "content": 0.036,
+  "sink": 0.937,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "?",
+   "What",
+   "is"
+  ]
+ },
+ {
+  "concept": "chocolate",
+  "head": "L9H15",
+  "shared": false,
+  "content": 0.011,
+  "sink": 0.659,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "of",
+   "What",
+   "?",
+   "name"
+  ]
+ },
+ {
+  "concept": "chocolate",
+  "head": "L35H22",
+  "shared": false,
+  "content": 0.1,
+  "sink": 0.594,
+  "clue_share_of_top": 0.16949152542372883,
+  "top": [
+   "?",
+   "and",
+   ",",
+   "strawberry"
+  ]
+ },
+ {
+  "concept": "evolution by natural selection",
+  "head": "L23H15",
+  "shared": false,
+  "content": 0.447,
+  "sink": 0.097,
+  "clue_share_of_top": 0.2593659942363112,
+  "top": [
+   "?",
+   "process",
+   "name",
+   "for"
+  ]
+ },
+ {
+  "concept": "evolution by natural selection",
+  "head": "L10H28",
+  "shared": false,
+  "content": 0.022,
+  "sink": 0.929,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "?",
+   "is",
+   "the"
+  ]
+ },
+ {
+  "concept": "evolution by natural selection",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.048,
+  "sink": 0.849,
+  "clue_share_of_top": 0.09523809523809522,
+  "top": [
+   "?",
+   "is",
+   "What",
+   "the"
+  ]
+ },
+ {
+  "concept": "football (soccer)",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.086,
+  "sink": 0.609,
+  "clue_share_of_top": 0.2156862745098039,
+  "top": [
+   "?",
+   "FIFA",
+   "a",
+   "sport"
+  ]
+ },
+ {
+  "concept": "football (soccer)",
+  "head": "L29H27",
+  "shared": false,
+  "content": 0.296,
+  "sink": 0.397,
+  "clue_share_of_top": 0.46956521739130436,
+  "top": [
+   "?",
+   "é",
+   "shootout",
+   "FIFA"
+  ]
+ },
+ {
+  "concept": "football (soccer)",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.063,
+  "sink": 0.846,
+  "clue_share_of_top": 0.06060606060606061,
+  "top": [
+   "?",
+   "for",
+   "the",
+   "sport"
+  ]
+ },
+ {
+  "concept": "haiku",
+  "head": "L25H15",
+  "shared": false,
+  "content": 0.09,
+  "sink": 0.357,
+  "clue_share_of_top": 0.1267605633802817,
+  "top": [
+   "?",
+   "verse",
+   "poem",
+   "\"?"
+  ]
+ },
+ {
+  "concept": "haiku",
+  "head": "L14H30",
+  "shared": false,
+  "content": 0.013,
+  "sink": 0.953,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "the",
+   "Japanese"
+  ]
+ },
+ {
+  "concept": "haiku",
+  "head": "L0H2",
+  "shared": false,
+  "content": 0.136,
+  "sink": 0.799,
+  "clue_share_of_top": 0.05128205128205127,
+  "top": [
+   "the",
+   "is",
+   "?",
+   "of"
+  ]
+ },
+ {
+  "concept": "hurricanes",
+  "head": "L23H21",
+  "shared": false,
+  "content": 0.443,
+  "sink": 0.387,
+  "clue_share_of_top": 0.2698412698412699,
+  "top": [
+   "called",
+   "?",
+   "when",
+   "storms"
+  ]
+ },
+ {
+  "concept": "hurricanes",
+  "head": "L32H30",
+  "shared": false,
+  "content": 0.001,
+  "sink": 0.995,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "son",
+   "the",
+   "S",
+   "What"
+  ]
+ },
+ {
+  "concept": "hurricanes",
+  "head": "L31H26",
+  "shared": false,
+  "content": 0.007,
+  "sink": 0.912,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "rotating",
+   "cycl",
+   "called"
+  ]
+ },
+ {
+  "concept": "infinity",
+  "head": "L22H19",
+  "shared": false,
+  "content": 0.052,
+  "sink": 0.78,
+  "clue_share_of_top": 0.3548387096774193,
+  "top": [
+   "?",
+   "plex",
+   "ol",
+   "goog"
+  ]
+ },
+ {
+  "concept": "infinity",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.03,
+  "sink": 0.162,
+  "clue_share_of_top": 0.15789473684210525,
+  "top": [
+   "is",
+   "does",
+   "?",
+   "what"
+  ]
+ },
+ {
+  "concept": "infinity",
+  "head": "L23H0",
+  "shared": false,
+  "content": 0.624,
+  "sink": 0.236,
+  "clue_share_of_top": 0.1329690346083789,
+  "top": [
+   "?",
+   "called",
+   "zero",
+   "toward"
+  ]
+ },
+ {
+  "concept": "insomnia",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.045,
+  "sink": 0.649,
+  "clue_share_of_top": 0.08,
+  "top": [
+   "?",
+   "to",
+   "sleep",
+   "for"
+  ]
+ },
+ {
+  "concept": "insomnia",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.032,
+  "sink": 0.055,
+  "clue_share_of_top": 0.13636363636363635,
+  "top": [
+   "name",
+   "?",
+   "term",
+   "for"
+  ]
+ },
+ {
+  "concept": "insomnia",
+  "head": "L25H26",
+  "shared": false,
+  "content": 0.885,
+  "sink": 0.063,
+  "clue_share_of_top": 0.8865979381443301,
+  "top": [
+   "sleep",
+   "control",
+   ",",
+   "asleep"
+  ]
+ },
+ {
+  "concept": "jazz",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.057,
+  "sink": 0.825,
+  "clue_share_of_top": 0.08333333333333331,
+  "top": [
+   "?",
+   "the",
+   "and",
+   "Newport"
+  ]
+ },
+ {
+  "concept": "jazz",
+  "head": "L0H2",
+  "shared": false,
+  "content": 0.144,
+  "sink": 0.791,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "is",
+   "?",
+   "of"
+  ]
+ },
+ {
+  "concept": "jazz",
+  "head": "L19H13",
+  "shared": false,
+  "content": 0.123,
+  "sink": 0.421,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "name",
+   "?",
+   "that",
+   "is"
+  ]
+ },
+ {
+  "concept": "jealousy",
+  "head": "L11H1",
+  "shared": true,
+  "content": 0.001,
+  "sink": 0.982,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "?",
+   "called"
+  ]
+ },
+ {
+  "concept": "jealousy",
+  "head": "L32H31",
+  "shared": false,
+  "content": 0.005,
+  "sink": 0.928,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "a",
+   "What",
+   "is"
+  ]
+ },
+ {
+  "concept": "jealousy",
+  "head": "L23H9",
+  "shared": false,
+  "content": 0.07,
+  "sink": 0.815,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "?",
+   "called"
+  ]
+ },
+ {
+  "concept": "justice",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.057,
+  "sink": 0.052,
+  "clue_share_of_top": 0.06666666666666667,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "word"
+  ]
+ },
+ {
+  "concept": "justice",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.18,
+  "sink": 0.477,
+  "clue_share_of_top": 0.5714285714285714,
+  "top": [
+   "etic",
+   "?",
+   "of",
+   "and"
+  ]
+ },
+ {
+  "concept": "justice",
+  "head": "L20H17",
+  "shared": true,
+  "content": 0.08,
+  "sink": 0.166,
+  "clue_share_of_top": 0.15789473684210525,
+  "top": [
+   "name",
+   "?",
+   "ed",
+   "fold"
+  ]
+ },
+ {
+  "concept": "nostalgia",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.02,
+  "sink": 0.862,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "called",
+   "What",
+   "for"
+  ]
+ },
+ {
+  "concept": "nostalgia",
+  "head": "L20H16",
+  "shared": false,
+  "content": 0.112,
+  "sink": 0.151,
+  "clue_share_of_top": 0.049019607843137254,
+  "top": [
+   "?",
+   "called",
+   "term",
+   "describes"
+  ]
+ },
+ {
+  "concept": "nostalgia",
+  "head": "L9H21",
+  "shared": false,
+  "content": 0.01,
+  "sink": 0.93,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "?",
+   "called"
+  ]
+ },
+ {
+  "concept": "pizza",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.876,
+  "sink": 0.041,
+  "clue_share_of_top": 0.8625,
+  "top": [
+   "toppings",
+   "slice",
+   "cheese",
+   "dough"
+  ]
+ },
+ {
+  "concept": "pizza",
+  "head": "L9H15",
+  "shared": false,
+  "content": 0.014,
+  "sink": 0.643,
+  "clue_share_of_top": 0.19999999999999996,
+  "top": [
+   "?",
+   "What",
+   "of",
+   "name"
+  ]
+ },
+ {
+  "concept": "pizza",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.063,
+  "sink": 0.896,
+  "clue_share_of_top": 0.08,
+  "top": [
+   "?",
+   "and",
+   "a",
+   "the"
+  ]
+ },
+ {
+  "concept": "poker",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.052,
+  "sink": 0.824,
+  "clue_share_of_top": 0.32,
+  "top": [
+   "?",
+   "game",
+   "and",
+   "hand"
+  ]
+ },
+ {
+  "concept": "poker",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.107,
+  "sink": 0.564,
+  "clue_share_of_top": 0.05769230769230769,
+  "top": [
+   "?",
+   "of",
+   "in",
+   "em"
+  ]
+ },
+ {
+  "concept": "poker",
+  "head": "L0H2",
+  "shared": false,
+  "content": 0.106,
+  "sink": 0.826,
+  "clue_share_of_top": 0.0892857142857143,
+  "top": [
+   "is",
+   "the",
+   "?",
+   "Which"
+  ]
+ },
+ {
+  "concept": "rainbows",
+  "head": "L32H31",
+  "shared": false,
+  "content": 0.002,
+  "sink": 0.882,
+  "clue_share_of_top": 0.0,
+  "top": [
+   ",",
+   "the",
+   "arcs",
+   "What"
+  ]
+ },
+ {
+  "concept": "rainbows",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.064,
+  "sink": 0.896,
+  "clue_share_of_top": 0.16666666666666666,
+  "top": [
+   "?",
+   "called",
+   "arcs",
+   "the"
+  ]
+ },
+ {
+  "concept": "rainbows",
+  "head": "L34H15",
+  "shared": false,
+  "content": 0.084,
+  "sink": 0.771,
+  "clue_share_of_top": 0.14583333333333334,
+  "top": [
+   "?",
+   "called",
+   "arcs",
+   "the"
+  ]
+ },
+ {
+  "concept": "sushi",
+  "head": "L15H3",
+  "shared": true,
+  "content": 0.111,
+  "sink": 0.63,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "of",
+   "the",
+   "name"
+  ]
+ },
+ {
+  "concept": "sushi",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.06,
+  "sink": 0.899,
+  "clue_share_of_top": 0.31034482758620696,
+  "top": [
+   "?",
+   "with",
+   "dish",
+   "of"
+  ]
+ },
+ {
+  "concept": "sushi",
+  "head": "L18H30",
+  "shared": true,
+  "content": 0.381,
+  "sink": 0.402,
+  "clue_share_of_top": 0.5803108808290157,
+  "top": [
+   "?",
+   "dish",
+   "Japanese",
+   "roll"
+  ]
+ },
+ {
+  "concept": "the Amazon rainforest",
+  "head": "L24H26",
+  "shared": false,
+  "content": 0.851,
+  "sink": 0.054,
+  "clue_share_of_top": 0.811704834605598,
+  "top": [
+   "America",
+   "Brazil",
+   "aus",
+   "American"
+  ]
+ },
+ {
+  "concept": "the Amazon rainforest",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.031,
+  "sink": 0.888,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "of",
+   "What",
+   "name"
+  ]
+ },
+ {
+  "concept": "the Amazon rainforest",
+  "head": "L31H3",
+  "shared": false,
+  "content": 0.104,
+  "sink": 0.806,
+  "clue_share_of_top": 0.7560975609756099,
+  "top": [
+   "America",
+   "American",
+   "Brazil",
+   "forest"
+  ]
+ },
+ {
+  "concept": "the Great Wall of China",
+  "head": "L6H31",
+  "shared": false,
+  "content": 0.04,
+  "sink": 0.93,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "?",
+   "What",
+   "is"
+  ]
+ },
+ {
+  "concept": "the Great Wall of China",
+  "head": "L34H29",
+  "shared": false,
+  "content": 0.051,
+  "sink": 0.913,
+  "clue_share_of_top": 0.26666666666666666,
+  "top": [
+   "?",
+   "the",
+   "of",
+   "and"
+  ]
+ },
+ {
+  "concept": "the Great Wall of China",
+  "head": "L0H3",
+  "shared": false,
+  "content": 0.292,
+  "sink": 0.528,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "?",
+   "is",
+   "of"
+  ]
+ },
+ {
+  "concept": "the Mona Lisa",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.112,
+  "sink": 0.036,
+  "clue_share_of_top": 0.5869565217391304,
+  "top": [
+   "title",
+   "name",
+   "of",
+   "?"
+  ]
+ },
+ {
+  "concept": "the Mona Lisa",
+  "head": "L9H12",
+  "shared": false,
+  "content": 0.008,
+  "sink": 0.958,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "is",
+   "the",
+   "of"
+  ]
+ },
+ {
+  "concept": "the Mona Lisa",
+  "head": "L26H23",
+  "shared": false,
+  "content": 0.542,
+  "sink": 0.32,
+  "clue_share_of_top": 0.4164383561643835,
+  "top": [
+   "Leonardo",
+   "vre",
+   "1",
+   "'s"
+  ]
+ },
+ {
+  "concept": "the Olympic Games",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.035,
+  "sink": 0.879,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "of",
+   "What",
+   "name"
+  ]
+ },
+ {
+  "concept": "the Olympic Games",
+  "head": "L28H4",
+  "shared": false,
+  "content": 0.158,
+  "sink": 0.737,
+  "clue_share_of_top": 0.3970588235294118,
+  "top": [
+   "?",
+   "competition",
+   "the",
+   "event"
+  ]
+ },
+ {
+  "concept": "the Olympic Games",
+  "head": "L32H31",
+  "shared": false,
+  "content": 0.006,
+  "sink": 0.932,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "the",
+   "such",
+   "1"
+  ]
+ },
+ {
+  "concept": "the brain",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.063,
+  "sink": 0.042,
+  "clue_share_of_top": 0.032786885245901634,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "soft"
+  ]
+ },
+ {
+  "concept": "the brain",
+  "head": "L32H31",
+  "shared": false,
+  "content": 0.001,
+  "sink": 0.977,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "the",
+   "?",
+   "organ",
+   "of"
+  ]
+ },
+ {
+  "concept": "the brain",
+  "head": "L0H14",
+  "shared": false,
+  "content": 0.184,
+  "sink": 0.317,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "the",
+   ",",
+   "'s"
+  ]
+ },
+ {
+  "concept": "the elephant",
+  "head": "L23H9",
+  "shared": false,
+  "content": 0.121,
+  "sink": 0.714,
+  "clue_share_of_top": 0.07017543859649124,
+  "top": [
+   "?",
+   "What",
+   "to",
+   "in"
+  ]
+ },
+ {
+  "concept": "the elephant",
+  "head": "L23H12",
+  "shared": true,
+  "content": 0.595,
+  "sink": 0.102,
+  "clue_share_of_top": 0.5995260663507108,
+  "top": [
+   "animal",
+   "al",
+   "?",
+   "mamm"
+  ]
+ },
+ {
+  "concept": "the elephant",
+  "head": "L21H26",
+  "shared": false,
+  "content": 0.711,
+  "sink": 0.145,
+  "clue_share_of_top": 0.4092219020172909,
+  "top": [
+   "?",
+   "nose",
+   "umbles",
+   "months"
+  ]
+ },
+ {
+  "concept": "the heart",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.062,
+  "sink": 0.048,
+  "clue_share_of_top": 0.016949152542372878,
+  "top": [
+   "name",
+   "?",
+   "of",
+   "is"
+  ]
+ },
+ {
+  "concept": "the heart",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.039,
+  "sink": 0.877,
+  "clue_share_of_top": 0.09090909090909088,
+  "top": [
+   "?",
+   "organ",
+   "the",
+   "What"
+  ]
+ },
+ {
+  "concept": "the heart",
+  "head": "L15H5",
+  "shared": false,
+  "content": 0.022,
+  "sink": 0.753,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "What",
+   "the",
+   "is"
+  ]
+ },
+ {
+  "concept": "the honeybee",
+  "head": "L32H30",
+  "shared": false,
+  "content": 0.0,
+  "sink": 0.993,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "Var",
+   "insect",
+   "?"
+  ]
+ },
+ {
+  "concept": "the honeybee",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.019,
+  "sink": 0.888,
+  "clue_share_of_top": 0.06666666666666667,
+  "top": [
+   "What",
+   "is",
+   "?",
+   "insect"
+  ]
+ },
+ {
+  "concept": "the honeybee",
+  "head": "L9H14",
+  "shared": false,
+  "content": 0.065,
+  "sink": 0.794,
+  "clue_share_of_top": 0.0784313725490196,
+  "top": [
+   "?",
+   "is",
+   "What",
+   "insect"
+  ]
+ },
+ {
+  "concept": "the internet",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.019,
+  "sink": 0.04,
+  "clue_share_of_top": 0.5384615384615384,
+  "top": [
+   "?",
+   "network",
+   "global",
+   "lies"
+  ]
+ },
+ {
+  "concept": "the internet",
+  "head": "L22H19",
+  "shared": false,
+  "content": 0.056,
+  "sink": 0.669,
+  "clue_share_of_top": 0.16666666666666663,
+  "top": [
+   "?",
+   "network",
+   "the",
+   "networks"
+  ]
+ },
+ {
+  "concept": "the internet",
+  "head": "L20H11",
+  "shared": false,
+  "content": 0.042,
+  "sink": 0.544,
+  "clue_share_of_top": 0.025,
+  "top": [
+   "?",
+   "called",
+   "on",
+   "network"
+  ]
+ },
+ {
+  "concept": "the octopus",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.055,
+  "sink": 0.841,
+  "clue_share_of_top": 0.10714285714285712,
+  "top": [
+   "?",
+   "od",
+   "reef",
+   "a"
+  ]
+ },
+ {
+  "concept": "the octopus",
+  "head": "L23H12",
+  "shared": true,
+  "content": 0.624,
+  "sink": 0.117,
+  "clue_share_of_top": 0.36936936936936937,
+  "top": [
+   "od",
+   "?",
+   "creature",
+   "animal"
+  ]
+ },
+ {
+  "concept": "the octopus",
+  "head": "L20H9",
+  "shared": true,
+  "content": 0.029,
+  "sink": 0.883,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "is",
+   "What",
+   "?",
+   "whose"
+  ]
+ },
+ {
+  "concept": "the penguin",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.029,
+  "sink": 0.813,
+  "clue_share_of_top": 0.23529411764705882,
+  "top": [
+   "?",
+   "less",
+   "ird",
+   "plush"
+  ]
+ },
+ {
+  "concept": "the penguin",
+  "head": "L23H10",
+  "shared": true,
+  "content": 0.927,
+  "sink": 0.031,
+  "clue_share_of_top": 0.4422222222222223,
+  "top": [
+   "less",
+   "ird",
+   "add",
+   "ippers"
+  ]
+ },
+ {
+  "concept": "the penguin",
+  "head": "L13H27",
+  "shared": false,
+  "content": 0.049,
+  "sink": 0.659,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "the",
+   "that",
+   "of"
+  ]
+ },
+ {
+  "concept": "the periodic table",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.055,
+  "sink": 0.801,
+  "clue_share_of_top": 0.07142857142857142,
+  "top": [
+   "?",
+   "What",
+   "and",
+   "symbols"
+  ]
+ },
+ {
+  "concept": "the periodic table",
+  "head": "L23H15",
+  "shared": false,
+  "content": 0.409,
+  "sink": 0.154,
+  "clue_share_of_top": 0.40298507462686567,
+  "top": [
+   "?",
+   "chart",
+   "has",
+   "its"
+  ]
+ },
+ {
+  "concept": "the periodic table",
+  "head": "L20H17",
+  "shared": true,
+  "content": 0.046,
+  "sink": 0.205,
+  "clue_share_of_top": 0.5454545454545453,
+  "top": [
+   "chart",
+   "?",
+   "What",
+   "has"
+  ]
+ },
+ {
+  "concept": "the printing press",
+  "head": "L16H6",
+  "shared": false,
+  "content": 0.002,
+  "sink": 0.817,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "What",
+   "key",
+   "main"
+  ]
+ },
+ {
+  "concept": "the printing press",
+  "head": "L17H16",
+  "shared": false,
+  "content": 0.034,
+  "sink": 0.413,
+  "clue_share_of_top": 0.15789473684210525,
+  "top": [
+   "?",
+   "What",
+   "was",
+   "invention"
+  ]
+ },
+ {
+  "concept": "the printing press",
+  "head": "L22H14",
+  "shared": false,
+  "content": 0.325,
+  "sink": 0.327,
+  "clue_share_of_top": 0.5393258426966292,
+  "top": [
+   "?",
+   "books",
+   "Europe",
+   "newspapers"
+  ]
+ },
+ {
+  "concept": "the steam engine",
+  "head": "L17H27",
+  "shared": true,
+  "content": 0.203,
+  "sink": 0.43,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "of",
+   "name",
+   "that"
+  ]
+ },
+ {
+  "concept": "the steam engine",
+  "head": "L19H6",
+  "shared": false,
+  "content": 0.016,
+  "sink": 0.803,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "What",
+   "the",
+   "was"
+  ]
+ },
+ {
+  "concept": "the steam engine",
+  "head": "L17H16",
+  "shared": false,
+  "content": 0.05,
+  "sink": 0.448,
+  "clue_share_of_top": 0.12121212121212122,
+  "top": [
+   "?",
+   "What",
+   "machine",
+   "of"
+  ]
+ },
+ {
+  "concept": "vaccines",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.032,
+  "sink": 0.879,
+  "clue_share_of_top": 0.125,
+  "top": [
+   "called",
+   "?",
+   "of",
+   "What"
+  ]
+ },
+ {
+  "concept": "vaccines",
+  "head": "L23H21",
+  "shared": false,
+  "content": 0.542,
+  "sink": 0.279,
+  "clue_share_of_top": 0.17667844522968196,
+  "top": [
+   "?",
+   "called",
+   "that",
+   "to"
+  ]
+ },
+ {
+  "concept": "vaccines",
+  "head": "L10H31",
+  "shared": false,
+  "content": 0.041,
+  "sink": 0.822,
+  "clue_share_of_top": 0.05714285714285714,
+  "top": [
+   "What",
+   "?",
+   "that",
+   "products"
+  ]
+ },
+ {
+  "concept": "volcanoes",
+  "head": "L22H16",
+  "shared": false,
+  "content": 0.047,
+  "sink": 0.839,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "What",
+   "?",
+   "At",
+   "are"
+  ]
+ },
+ {
+  "concept": "volcanoes",
+  "head": "L23H21",
+  "shared": false,
+  "content": 0.469,
+  "sink": 0.341,
+  "clue_share_of_top": 0.5523012552301255,
+  "top": [
+   "features",
+   "?",
+   "forms",
+   "do"
+  ]
+ },
+ {
+  "concept": "volcanoes",
+  "head": "L32H30",
+  "shared": false,
+  "content": 0.001,
+  "sink": 0.981,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "Pacific",
+   "?",
+   ",",
+   "mol"
+  ]
+ },
+ {
+  "concept": "wine",
+  "head": "L35H25",
+  "shared": true,
+  "content": 0.045,
+  "sink": 0.857,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "az",
+   "in",
+   "a"
+  ]
+ },
+ {
+  "concept": "wine",
+  "head": "L34H28",
+  "shared": false,
+  "content": 0.142,
+  "sink": 0.581,
+  "clue_share_of_top": 0.0,
+  "top": [
+   "?",
+   "i",
+   "a",
+   "in"
+  ]
+ },
+ {
+  "concept": "wine",
+  "head": "L19H29",
+  "shared": true,
+  "content": 0.025,
+  "sink": 0.058,
+  "clue_share_of_top": 0.36363636363636354,
+  "top": [
+   "?",
+   ",",
+   "traditionally",
+   "French"
+  ]
+ }
+]

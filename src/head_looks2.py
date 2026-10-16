@@ -53,10 +53,12 @@ def main():
                 txt = "".join(toks)
                 cut = txt.rfind("Answer with just the name.")
                 pos = 0
-                for i, t in enumerate(toks):                      # tokens inside the suffix are template too
-                    if cut >= 0 and cut <= pos < cut + len("Answer with just the name.") and kinds[i] == "content":
+                end = cut + len("Answer with just the name.")
+                for i, t in enumerate(toks):                      # tokens OVERLAPPING the suffix are template too
+                    if cut >= 0 and pos < end and pos + len(t) > cut and kinds[i] == "content":
                         kinds[i] = "template"
                     pos += len(t)
+                assert cut < 0 or not any(k == "content" and t.strip() == "Answer" for k, t in zip(kinds, toks)), "suffix leak"
                 with torch.no_grad():
                     att = pipe.model(**ids, output_attentions=True).attentions
                 for (l, h) in heads:

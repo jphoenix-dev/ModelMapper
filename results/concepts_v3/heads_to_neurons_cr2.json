@@ -1,0 +1,2130 @@
+{
+ "Albert Einstein": {
+  "heads": [
+   "L20H9",
+   "L18H16",
+   "L22H16",
+   "L35H24",
+   "L23H15"
+  ],
+  "random_heads": [
+   "L20H16",
+   "L18H22",
+   "L22H1",
+   "L35H29",
+   "L23H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L28:5852",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 36.05,
+    "ratio_heads_off": 0.971,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:6455",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 24.8641,
+    "ratio_heads_off": 1.159,
+    "ratio_random_off": 0.997,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:8643",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 33.2328,
+    "ratio_heads_off": -0.381,
+    "ratio_random_off": 1.083,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L27:2168",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 17.0125,
+    "ratio_heads_off": 0.275,
+    "ratio_random_off": 1.001,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L24:823",
+    "layer": 24,
+    "says_answer": false,
+    "baseline": 2.1311,
+    "ratio_heads_off": 0.439,
+    "ratio_random_off": 1.122,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:7121",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 48.2516,
+    "ratio_heads_off": 0.352,
+    "ratio_random_off": 0.965,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9959",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 4.8406,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L28:10728",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 18.175,
+    "ratio_heads_off": 0.416,
+    "ratio_random_off": 0.899,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L15:3800",
+    "layer": 15,
+    "says_answer": false,
+    "baseline": 0.599,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L13:7436",
+    "layer": 13,
+    "says_answer": false,
+    "baseline": 0.0328,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   }
+  ],
+  "total_ratio_heads_off": 0.452,
+  "total_ratio_random_off": 0.997,
+  "median_ratio_heads_off": 0.4163729367262723,
+  "median_ratio_random_off": 1.0003467406380024
+ },
+ "chess": {
+  "heads": [
+   "L23H10",
+   "L29H27",
+   "L24H26",
+   "L17H27",
+   "L14H19"
+  ],
+  "random_heads": [
+   "L23H16",
+   "L29H22",
+   "L24H1",
+   "L17H29",
+   "L14H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L8:7581",
+    "layer": 8,
+    "says_answer": true,
+    "baseline": 0.0292,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L9:11367",
+    "layer": 9,
+    "says_answer": true,
+    "baseline": 0.0648,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L27:92",
+    "layer": 27,
+    "says_answer": true,
+    "baseline": 23.1542,
+    "ratio_heads_off": 0.999,
+    "ratio_random_off": 0.999,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:1512",
+    "layer": 28,
+    "says_answer": true,
+    "baseline": 21.0792,
+    "ratio_heads_off": 0.925,
+    "ratio_random_off": 1.016,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:10113",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 0.1011,
+    "ratio_heads_off": 0.843,
+    "ratio_random_off": 1.057,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L5:6288",
+    "layer": 5,
+    "says_answer": false,
+    "baseline": 0.0115,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L1:10888",
+    "layer": 1,
+    "says_answer": false,
+    "baseline": 0.0016,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L6:8731",
+    "layer": 6,
+    "says_answer": false,
+    "baseline": 0.051,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L9:8847",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.076,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L33:303",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 19.2859,
+    "ratio_heads_off": 1.062,
+    "ratio_random_off": 1.001,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.993,
+  "total_ratio_random_off": 1.005,
+  "median_ratio_heads_off": 0.9991002339391759,
+  "median_ratio_random_off": 1.0156157343348489
+ },
+ "coffee": {
+  "heads": [
+   "L23H31",
+   "L35H24",
+   "L19H10",
+   "L20H9",
+   "L23H0"
+  ],
+  "random_heads": [
+   "L23H16",
+   "L35H22",
+   "L19H1",
+   "L20H29",
+   "L23H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L29:2750",
+    "layer": 29,
+    "says_answer": true,
+    "baseline": 65.799,
+    "ratio_heads_off": 1.05,
+    "ratio_random_off": 0.992,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L35:4180",
+    "layer": 35,
+    "says_answer": false,
+    "baseline": 2.5758,
+    "ratio_heads_off": 1.709,
+    "ratio_random_off": 0.714,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L10:2920",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0466,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L11:7096",
+    "layer": 11,
+    "says_answer": false,
+    "baseline": 0.0121,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L23:12108",
+    "layer": 23,
+    "says_answer": false,
+    "baseline": 3.5375,
+    "ratio_heads_off": 0.887,
+    "ratio_random_off": 0.89,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:3801",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 7.4357,
+    "ratio_heads_off": 0.953,
+    "ratio_random_off": 1.105,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L35:9896",
+    "layer": 35,
+    "says_answer": false,
+    "baseline": 133.1,
+    "ratio_heads_off": 1.018,
+    "ratio_random_off": 0.985,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:4405",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 64.7348,
+    "ratio_heads_off": 1.065,
+    "ratio_random_off": 0.987,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9154",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 0.8,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L34:7953",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 1.0915,
+    "ratio_heads_off": -0.122,
+    "ratio_random_off": 2.93,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 1.035,
+  "total_ratio_random_off": 0.994,
+  "median_ratio_heads_off": 1.0175306786877034,
+  "median_ratio_random_off": 0.9868440695314521
+ },
+ "democracy": {
+  "heads": [
+   "L19H29",
+   "L23H12",
+   "L17H27",
+   "L23H0",
+   "L34H21"
+  ],
+  "random_heads": [
+   "L19H16",
+   "L23H22",
+   "L17H1",
+   "L23H29",
+   "L34H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L31:11943",
+    "layer": 31,
+    "says_answer": true,
+    "baseline": 81.5385,
+    "ratio_heads_off": 0.711,
+    "ratio_random_off": 0.99,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:8254",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 26.1731,
+    "ratio_heads_off": 0.921,
+    "ratio_random_off": 0.989,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:4626",
+    "layer": 30,
+    "says_answer": true,
+    "baseline": 32.7885,
+    "ratio_heads_off": 0.883,
+    "ratio_random_off": 0.986,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:8868",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 32.0096,
+    "ratio_heads_off": 0.837,
+    "ratio_random_off": 1.008,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:598",
+    "layer": 34,
+    "says_answer": true,
+    "baseline": 8.9742,
+    "ratio_heads_off": 1.307,
+    "ratio_random_off": 0.902,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L24:5139",
+    "layer": 24,
+    "says_answer": false,
+    "baseline": 4.3347,
+    "ratio_heads_off": 0.712,
+    "ratio_random_off": 1.007,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L27:3261",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 10.2957,
+    "ratio_heads_off": 0.817,
+    "ratio_random_off": 1.04,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L23:12108",
+    "layer": 23,
+    "says_answer": false,
+    "baseline": 3.6454,
+    "ratio_heads_off": 0.551,
+    "ratio_random_off": 1.06,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:11573",
+    "layer": 34,
+    "says_answer": true,
+    "baseline": 19.0865,
+    "ratio_heads_off": 0.774,
+    "ratio_random_off": 1.031,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L9:6814",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.0477,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   }
+  ],
+  "total_ratio_heads_off": 0.812,
+  "total_ratio_random_off": 0.996,
+  "median_ratio_heads_off": 0.8167172542610319,
+  "median_ratio_random_off": 1.0070705670317484
+ },
+ "Eiffel Tower": {
+  "heads": [
+   "L35H25",
+   "L10H21",
+   "L20H9",
+   "L23H0",
+   "L22H11"
+  ],
+  "random_heads": [
+   "L35H16",
+   "L10H22",
+   "L20H1",
+   "L23H29",
+   "L22H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L26:11492",
+    "layer": 26,
+    "says_answer": false,
+    "baseline": 26.9727,
+    "ratio_heads_off": 0.974,
+    "ratio_random_off": 0.993,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:12094",
+    "layer": 29,
+    "says_answer": false,
+    "baseline": 30.7891,
+    "ratio_heads_off": 0.968,
+    "ratio_random_off": 0.982,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L35:6192",
+    "layer": 35,
+    "says_answer": true,
+    "baseline": 5.1454,
+    "ratio_heads_off": 2.568,
+    "ratio_random_off": 0.763,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:10160",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 80.1719,
+    "ratio_heads_off": 0.901,
+    "ratio_random_off": 0.994,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L35:6245",
+    "layer": 35,
+    "says_answer": false,
+    "baseline": 2.5071,
+    "ratio_heads_off": 0.891,
+    "ratio_random_off": 0.924,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:4830",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 13.4879,
+    "ratio_heads_off": 0.699,
+    "ratio_random_off": 1.014,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:10241",
+    "layer": 34,
+    "says_answer": true,
+    "baseline": 17.8359,
+    "ratio_heads_off": 0.958,
+    "ratio_random_off": 1.016,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:10063",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 0.0191,
+    "ratio_heads_off": 0.705,
+    "ratio_random_off": 0.785,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:1067",
+    "layer": 33,
+    "says_answer": true,
+    "baseline": 39.3633,
+    "ratio_heads_off": 0.893,
+    "ratio_random_off": 0.991,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L24:11914",
+    "layer": 24,
+    "says_answer": false,
+    "baseline": 0.3778,
+    "ratio_heads_off": 1.016,
+    "ratio_random_off": 1.069,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.95,
+  "total_ratio_random_off": 0.988,
+  "median_ratio_heads_off": 0.9575120455540955,
+  "median_ratio_random_off": 0.9929036929761043
+ },
+ "Frida Kahlo": {
+  "heads": [
+   "L34H28",
+   "L35H25",
+   "L30H17",
+   "L20H9",
+   "L9H12"
+  ],
+  "random_heads": [
+   "L34H16",
+   "L35H22",
+   "L30H1",
+   "L20H29",
+   "L9H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L31:10560",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 51.3409,
+    "ratio_heads_off": 0.978,
+    "ratio_random_off": 0.986,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:11769",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 50.6534,
+    "ratio_heads_off": 0.798,
+    "ratio_random_off": 0.973,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:2065",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 59.6705,
+    "ratio_heads_off": 0.917,
+    "ratio_random_off": 1.027,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L24:11058",
+    "layer": 24,
+    "says_answer": false,
+    "baseline": 9.9327,
+    "ratio_heads_off": 1.013,
+    "ratio_random_off": 1.056,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:10452",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 13.5312,
+    "ratio_heads_off": 0.815,
+    "ratio_random_off": 1.005,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:12175",
+    "layer": 29,
+    "says_answer": false,
+    "baseline": 36.0,
+    "ratio_heads_off": 1.055,
+    "ratio_random_off": 1.048,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:5431",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 31.3523,
+    "ratio_heads_off": 0.653,
+    "ratio_random_off": 1.007,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:6184",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 26.3239,
+    "ratio_heads_off": 0.883,
+    "ratio_random_off": 1.004,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:2197",
+    "layer": 32,
+    "says_answer": true,
+    "baseline": 6.2761,
+    "ratio_heads_off": 0.842,
+    "ratio_random_off": 0.982,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:10678",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 25.8935,
+    "ratio_heads_off": 0.983,
+    "ratio_random_off": 1.007,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.897,
+  "total_ratio_random_off": 1.007,
+  "median_ratio_heads_off": 0.9169681965339935,
+  "median_ratio_random_off": 1.0066377749739428
+ },
+ "Golden Gate Bridge": {
+  "heads": [
+   "L35H22",
+   "L23H10",
+   "L11H1",
+   "L26H17",
+   "L23H12"
+  ],
+  "random_heads": [
+   "L35H16",
+   "L23H22",
+   "L11H1",
+   "L26H29",
+   "L23H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L10:488",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0224,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L34:5510",
+    "layer": 34,
+    "says_answer": true,
+    "baseline": 32.0625,
+    "ratio_heads_off": 0.73,
+    "ratio_random_off": 0.943,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:6711",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 56.3906,
+    "ratio_heads_off": 0.81,
+    "ratio_random_off": 0.914,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:9611",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 73.7344,
+    "ratio_heads_off": 0.764,
+    "ratio_random_off": 0.937,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:4167",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 22.0938,
+    "ratio_heads_off": 0.823,
+    "ratio_random_off": 0.927,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:1105",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 38.0859,
+    "ratio_heads_off": 0.938,
+    "ratio_random_off": 0.977,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L26:11492",
+    "layer": 26,
+    "says_answer": false,
+    "baseline": 16.2783,
+    "ratio_heads_off": 0.62,
+    "ratio_random_off": 0.992,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L9:2918",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.184,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L29:6056",
+    "layer": 29,
+    "says_answer": false,
+    "baseline": 28.296,
+    "ratio_heads_off": 0.878,
+    "ratio_random_off": 0.947,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:866",
+    "layer": 33,
+    "says_answer": true,
+    "baseline": 18.2832,
+    "ratio_heads_off": 0.661,
+    "ratio_random_off": 0.941,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.794,
+  "total_ratio_random_off": 0.942,
+  "median_ratio_heads_off": 0.8097811027985592,
+  "median_ratio_random_off": 0.9434697855750487
+ },
+ "Harry Potter": {
+  "heads": [
+   "L9H14",
+   "L20H9",
+   "L35H24",
+   "L31H3",
+   "L16H3"
+  ],
+  "random_heads": [
+   "L9H16",
+   "L20H22",
+   "L35H1",
+   "L31H29",
+   "L16H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L15:3800",
+    "layer": 15,
+    "says_answer": false,
+    "baseline": 0.5574,
+    "ratio_heads_off": 0.955,
+    "ratio_random_off": 0.955,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L9:11889",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.0698,
+    "ratio_heads_off": 0.182,
+    "ratio_random_off": 1.046,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L10:5244",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.1084,
+    "ratio_heads_off": 1.036,
+    "ratio_random_off": 0.99,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L20:7819",
+    "layer": 20,
+    "says_answer": false,
+    "baseline": 0.0291,
+    "ratio_heads_off": 3.092,
+    "ratio_random_off": 0.621,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L13:7436",
+    "layer": 13,
+    "says_answer": false,
+    "baseline": 0.0279,
+    "ratio_heads_off": 0.864,
+    "ratio_random_off": 0.91,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9959",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 4.9336,
+    "ratio_heads_off": 0.895,
+    "ratio_random_off": 0.985,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L17:11408",
+    "layer": 17,
+    "says_answer": false,
+    "baseline": 0.0073,
+    "ratio_heads_off": 0.313,
+    "ratio_random_off": 1.567,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L10:6159",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0897,
+    "ratio_heads_off": 0.914,
+    "ratio_random_off": 0.997,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L19:137",
+    "layer": 19,
+    "says_answer": false,
+    "baseline": 0.021,
+    "ratio_heads_off": 0.055,
+    "ratio_random_off": 0.954,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L20:129",
+    "layer": 20,
+    "says_answer": false,
+    "baseline": 1.5798,
+    "ratio_heads_off": 1.296,
+    "ratio_random_off": 0.975,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.986,
+  "total_ratio_random_off": 0.98,
+  "median_ratio_heads_off": 0.9553219448094612,
+  "median_ratio_random_off": 0.9901463963963963
+ },
+ "Mount Everest": {
+  "heads": [
+   "L21H2",
+   "L20H9",
+   "L26H17",
+   "L25H15",
+   "L22H16"
+  ],
+  "random_heads": [
+   "L21H16",
+   "L20H22",
+   "L26H1",
+   "L25H29",
+   "L22H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L27:10689",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 62.4559,
+    "ratio_heads_off": 0.814,
+    "ratio_random_off": 0.995,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:5148",
+    "layer": 31,
+    "says_answer": true,
+    "baseline": 90.0882,
+    "ratio_heads_off": 0.607,
+    "ratio_random_off": 0.992,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L8:5241",
+    "layer": 8,
+    "says_answer": true,
+    "baseline": 0.0366,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L9:10107",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.1011,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L30:6488",
+    "layer": 30,
+    "says_answer": true,
+    "baseline": 60.8529,
+    "ratio_heads_off": 0.644,
+    "ratio_random_off": 0.991,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L10:8065",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0217,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L31:5473",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 43.7353,
+    "ratio_heads_off": 0.964,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:4952",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 22.2132,
+    "ratio_heads_off": 0.807,
+    "ratio_random_off": 0.993,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:6493",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 23.4118,
+    "ratio_heads_off": 0.895,
+    "ratio_random_off": 0.967,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9959",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 5.2169,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   }
+  ],
+  "total_ratio_heads_off": 0.746,
+  "total_ratio_random_off": 0.992,
+  "median_ratio_heads_off": 0.8138686131386862,
+  "median_ratio_random_off": 0.9928831512744125
+ },
+ "Napoleon Bonaparte": {
+  "heads": [
+   "L20H9",
+   "L35H25",
+   "L16H6",
+   "L18H16",
+   "L15H18"
+  ],
+  "random_heads": [
+   "L20H16",
+   "L35H22",
+   "L16H1",
+   "L18H29",
+   "L15H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L15:3800",
+    "layer": 15,
+    "says_answer": false,
+    "baseline": 0.5643,
+    "ratio_heads_off": 0.984,
+    "ratio_random_off": 1.001,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L13:7436",
+    "layer": 13,
+    "says_answer": false,
+    "baseline": 0.0158,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L16:9959",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 4.6543,
+    "ratio_heads_off": 1.149,
+    "ratio_random_off": 1.15,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L20:7819",
+    "layer": 20,
+    "says_answer": false,
+    "baseline": 0.0498,
+    "ratio_heads_off": 1.421,
+    "ratio_random_off": 0.457,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:10870",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 115.8125,
+    "ratio_heads_off": 1.076,
+    "ratio_random_off": 0.986,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L10:6159",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0609,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L34:1452",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 89.9375,
+    "ratio_heads_off": 1.011,
+    "ratio_random_off": 1.01,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L24:4619",
+    "layer": 24,
+    "says_answer": false,
+    "baseline": 0.8799,
+    "ratio_heads_off": 0.683,
+    "ratio_random_off": 0.924,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L11:11364",
+    "layer": 11,
+    "says_answer": false,
+    "baseline": 0.0313,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L20:129",
+    "layer": 20,
+    "says_answer": false,
+    "baseline": 1.5449,
+    "ratio_heads_off": 1.314,
+    "ratio_random_off": 0.842,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 1.05,
+  "total_ratio_random_off": 0.999,
+  "median_ratio_heads_off": 1.0755531570426335,
+  "median_ratio_random_off": 1.00108154877785
+ },
+ "photosynthesis": {
+  "heads": [
+   "L9H21",
+   "L23H15",
+   "L18H30",
+   "L12H7",
+   "L17H27"
+  ],
+  "random_heads": [
+   "L9H16",
+   "L23H22",
+   "L18H1",
+   "L12H29",
+   "L17H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L32:10377",
+    "layer": 32,
+    "says_answer": true,
+    "baseline": 75.6125,
+    "ratio_heads_off": 0.868,
+    "ratio_random_off": 0.99,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L19:6697",
+    "layer": 19,
+    "says_answer": false,
+    "baseline": 0.0332,
+    "ratio_heads_off": 2.303,
+    "ratio_random_off": 0.878,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L35:9097",
+    "layer": 35,
+    "says_answer": true,
+    "baseline": 20.925,
+    "ratio_heads_off": 0.895,
+    "ratio_random_off": 0.996,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:11058",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 15.3711,
+    "ratio_heads_off": 1.051,
+    "ratio_random_off": 1.007,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:10676",
+    "layer": 29,
+    "says_answer": true,
+    "baseline": 63.7312,
+    "ratio_heads_off": 1.03,
+    "ratio_random_off": 1.005,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L5:378",
+    "layer": 5,
+    "says_answer": false,
+    "baseline": 0.0375,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L7:11060",
+    "layer": 7,
+    "says_answer": false,
+    "baseline": 0.0224,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L4:6602",
+    "layer": 4,
+    "says_answer": false,
+    "baseline": 0.0001,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L10:8370",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0716,
+    "ratio_heads_off": 0.246,
+    "ratio_random_off": 1.038,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:11279",
+    "layer": 29,
+    "says_answer": false,
+    "baseline": 34.4187,
+    "ratio_heads_off": 0.868,
+    "ratio_random_off": 0.978,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.934,
+  "total_ratio_random_off": 0.994,
+  "median_ratio_heads_off": 0.8954599761051374,
+  "median_ratio_random_off": 1.0050995390801216
+ },
+ "the French Revolution": {
+  "heads": [
+   "L34H29",
+   "L26H17",
+   "L14H7",
+   "L18H5",
+   "L18H15"
+  ],
+  "random_heads": [
+   "L34H16",
+   "L26H22",
+   "L14H1",
+   "L18H29",
+   "L18H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L30:5534",
+    "layer": 30,
+    "says_answer": true,
+    "baseline": 92.0375,
+    "ratio_heads_off": 0.974,
+    "ratio_random_off": 1.029,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L4:1234",
+    "layer": 4,
+    "says_answer": false,
+    "baseline": 0.0142,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L9:21",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.05,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L34:2945",
+    "layer": 34,
+    "says_answer": true,
+    "baseline": 48.525,
+    "ratio_heads_off": 0.916,
+    "ratio_random_off": 1.04,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L27:3385",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 11.9203,
+    "ratio_heads_off": 0.893,
+    "ratio_random_off": 1.013,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L23:8207",
+    "layer": 23,
+    "says_answer": false,
+    "baseline": 3.6223,
+    "ratio_heads_off": 0.953,
+    "ratio_random_off": 1.056,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L22:5427",
+    "layer": 22,
+    "says_answer": false,
+    "baseline": 0.0005,
+    "ratio_heads_off": -16.044,
+    "ratio_random_off": -26.626,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L27:65",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 8.8145,
+    "ratio_heads_off": 0.939,
+    "ratio_random_off": 1.023,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L25:8127",
+    "layer": 25,
+    "says_answer": false,
+    "baseline": 4.9277,
+    "ratio_heads_off": 1.1,
+    "ratio_random_off": 1.046,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:9684",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 30.975,
+    "ratio_heads_off": 0.954,
+    "ratio_random_off": 1.035,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.953,
+  "total_ratio_random_off": 1.032,
+  "median_ratio_heads_off": 0.9529278550630865,
+  "median_ratio_random_off": 1.034907183212268
+ },
+ "the Moon": {
+  "heads": [
+   "L19H29",
+   "L22H19",
+   "L17H19",
+   "L20H11",
+   "L10H28"
+  ],
+  "random_heads": [
+   "L19H16",
+   "L22H22",
+   "L17H1",
+   "L20H29",
+   "L10H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L31:9683",
+    "layer": 31,
+    "says_answer": true,
+    "baseline": 119.1579,
+    "ratio_heads_off": 0.756,
+    "ratio_random_off": 0.987,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:2482",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 38.1579,
+    "ratio_heads_off": 0.528,
+    "ratio_random_off": 0.971,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:5142",
+    "layer": 32,
+    "says_answer": true,
+    "baseline": 30.1645,
+    "ratio_heads_off": 0.874,
+    "ratio_random_off": 0.984,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L20:2258",
+    "layer": 20,
+    "says_answer": false,
+    "baseline": 4.4005,
+    "ratio_heads_off": 0.064,
+    "ratio_random_off": 0.915,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:6316",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 38.9017,
+    "ratio_heads_off": 0.473,
+    "ratio_random_off": 0.976,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:7830",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 33.1579,
+    "ratio_heads_off": 0.197,
+    "ratio_random_off": 0.994,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:11480",
+    "layer": 29,
+    "says_answer": true,
+    "baseline": 25.4005,
+    "ratio_heads_off": 0.858,
+    "ratio_random_off": 0.973,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L23:12108",
+    "layer": 23,
+    "says_answer": false,
+    "baseline": 4.8396,
+    "ratio_heads_off": 0.714,
+    "ratio_random_off": 0.995,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L12:9782",
+    "layer": 12,
+    "says_answer": false,
+    "baseline": 0.0213,
+    "ratio_heads_off": 2.076,
+    "ratio_random_off": 1.097,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9154",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 0.7743,
+    "ratio_heads_off": 0.962,
+    "ratio_random_off": 1.023,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.637,
+  "total_ratio_random_off": 0.982,
+  "median_ratio_heads_off": 0.7136788445199659,
+  "median_ratio_random_off": 0.9836423118865868
+ },
+ "the Titanic": {
+  "heads": [
+   "L19H29",
+   "L23H12",
+   "L33H24",
+   "L35H24",
+   "L21H18"
+  ],
+  "random_heads": [
+   "L19H16",
+   "L23H22",
+   "L33H1",
+   "L35H29",
+   "L21H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L10:1252",
+    "layer": 10,
+    "says_answer": true,
+    "baseline": 0.0081,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L30:10955",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 40.4861,
+    "ratio_heads_off": 0.944,
+    "ratio_random_off": 0.952,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:7838",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 27.3889,
+    "ratio_heads_off": 0.906,
+    "ratio_random_off": 1.007,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:3526",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 27.4236,
+    "ratio_heads_off": 1.055,
+    "ratio_random_off": 0.994,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L8:9525",
+    "layer": 8,
+    "says_answer": false,
+    "baseline": 0.0454,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L9:10815",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.0595,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L31:8454",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 22.1111,
+    "ratio_heads_off": 0.829,
+    "ratio_random_off": 1.033,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:3723",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 17.1042,
+    "ratio_heads_off": 0.933,
+    "ratio_random_off": 1.003,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:5874",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 26.0937,
+    "ratio_heads_off": 1.015,
+    "ratio_random_off": 0.998,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:374",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 16.4494,
+    "ratio_heads_off": 0.604,
+    "ratio_random_off": 1.023,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.919,
+  "total_ratio_random_off": 0.995,
+  "median_ratio_heads_off": 0.9325517661388547,
+  "median_ratio_random_off": 1.0028928136418997
+ },
+ "the violin": {
+  "heads": [
+   "L19H29",
+   "L9H14",
+   "L11H1",
+   "L19H13",
+   "L0H30"
+  ],
+  "random_heads": [
+   "L19H16",
+   "L9H22",
+   "L11H1",
+   "L19H29",
+   "L0H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L9:5033",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.1097,
+    "ratio_heads_off": 0.879,
+    "ratio_random_off": 1.481,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L20:7473",
+    "layer": 20,
+    "says_answer": false,
+    "baseline": 1.6922,
+    "ratio_heads_off": 0.867,
+    "ratio_random_off": 0.881,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:224",
+    "layer": 29,
+    "says_answer": true,
+    "baseline": 74.8375,
+    "ratio_heads_off": 0.846,
+    "ratio_random_off": 0.914,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:7220",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 30.6961,
+    "ratio_heads_off": 0.663,
+    "ratio_random_off": 0.787,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L22:2516",
+    "layer": 22,
+    "says_answer": false,
+    "baseline": 0.9701,
+    "ratio_heads_off": 1.212,
+    "ratio_random_off": 1.296,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L23:2192",
+    "layer": 23,
+    "says_answer": false,
+    "baseline": 0.7583,
+    "ratio_heads_off": 0.944,
+    "ratio_random_off": 1.04,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L24:7406",
+    "layer": 24,
+    "says_answer": false,
+    "baseline": 1.2005,
+    "ratio_heads_off": 0.739,
+    "ratio_random_off": 0.895,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:1669",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 5.2281,
+    "ratio_heads_off": 0.785,
+    "ratio_random_off": 0.85,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L11:9213",
+    "layer": 11,
+    "says_answer": false,
+    "baseline": 0.0936,
+    "ratio_heads_off": 1.564,
+    "ratio_random_off": 1.499,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:7725",
+    "layer": 33,
+    "says_answer": false,
+    "baseline": 34.9833,
+    "ratio_heads_off": 0.874,
+    "ratio_random_off": 0.913,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.816,
+  "total_ratio_random_off": 0.889,
+  "median_ratio_heads_off": 0.8744640304907098,
+  "median_ratio_random_off": 0.9142029953788764
+ },
+ "Tokyo": {
+  "heads": [
+   "L21H30",
+   "L23H12",
+   "L27H29",
+   "L20H9",
+   "L6H31"
+  ],
+  "random_heads": [
+   "L21H16",
+   "L23H22",
+   "L27H1",
+   "L20H29",
+   "L6H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L31:4587",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 72.8355,
+    "ratio_heads_off": 0.934,
+    "ratio_random_off": 0.985,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L27:10855",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 18.1929,
+    "ratio_heads_off": 0.827,
+    "ratio_random_off": 0.959,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:5199",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 8.701,
+    "ratio_heads_off": 0.972,
+    "ratio_random_off": 0.97,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L5:3145",
+    "layer": 5,
+    "says_answer": false,
+    "baseline": 0.0082,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L11:3799",
+    "layer": 11,
+    "says_answer": false,
+    "baseline": 0.0609,
+    "ratio_heads_off": 1.101,
+    "ratio_random_off": 0.947,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:6785",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 15.7668,
+    "ratio_heads_off": 0.959,
+    "ratio_random_off": 0.995,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:8610",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 0.7879,
+    "ratio_heads_off": 1.216,
+    "ratio_random_off": 0.96,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L29:3337",
+    "layer": 29,
+    "says_answer": false,
+    "baseline": 11.9005,
+    "ratio_heads_off": 0.969,
+    "ratio_random_off": 0.988,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L9:8060",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.0658,
+    "ratio_heads_off": 0.948,
+    "ratio_random_off": 1.007,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L6:975",
+    "layer": 6,
+    "says_answer": false,
+    "baseline": 0.0196,
+    "ratio_heads_off": 1.028,
+    "ratio_random_off": 0.925,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.929,
+  "total_ratio_random_off": 0.982,
+  "median_ratio_heads_off": 0.9689033238891572,
+  "median_ratio_random_off": 0.9850961972721526
+ },
+ "Venice": {
+  "heads": [
+   "L35H24",
+   "L34H29",
+   "L8H15",
+   "L35H22",
+   "L0H24"
+  ],
+  "random_heads": [
+   "L35H16",
+   "L34H22",
+   "L8H1",
+   "L35H29",
+   "L0H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L9:660",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.1739,
+    "ratio_heads_off": 0.569,
+    "ratio_random_off": 0.959,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L8:3346",
+    "layer": 8,
+    "says_answer": false,
+    "baseline": 0.0185,
+    "ratio_heads_off": 2.14,
+    "ratio_random_off": 1.486,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:4265",
+    "layer": 32,
+    "says_answer": true,
+    "baseline": 136.8109,
+    "ratio_heads_off": 0.976,
+    "ratio_random_off": 0.99,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L5:669",
+    "layer": 5,
+    "says_answer": false,
+    "baseline": 0.0049,
+    "ratio_heads_off": 1.118,
+    "ratio_random_off": 0.852,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L4:12199",
+    "layer": 4,
+    "says_answer": false,
+    "baseline": 0.0004,
+    "ratio_heads_off": 1.616,
+    "ratio_random_off": 1.514,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L3:3596",
+    "layer": 3,
+    "says_answer": false,
+    "baseline": 0.0032,
+    "ratio_heads_off": 1.132,
+    "ratio_random_off": 1.224,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L4:6825",
+    "layer": 4,
+    "says_answer": false,
+    "baseline": 0.0012,
+    "ratio_heads_off": 4.398,
+    "ratio_random_off": 0.172,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L9:516",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.0022,
+    "ratio_heads_off": 0.456,
+    "ratio_random_off": 3.348,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L31:493",
+    "layer": 31,
+    "says_answer": true,
+    "baseline": 58.25,
+    "ratio_heads_off": 0.974,
+    "ratio_random_off": 0.98,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L10:7589",
+    "layer": 10,
+    "says_answer": false,
+    "baseline": 0.0652,
+    "ratio_heads_off": 0.974,
+    "ratio_random_off": 1.003,
+    "upstream_of_heads": false
+   }
+  ],
+  "total_ratio_heads_off": 0.975,
+  "total_ratio_random_off": 0.987,
+  "median_ratio_heads_off": 0.9741668309998028,
+  "median_ratio_random_off": 0.9897933422295957
+ },
+ "William Shakespeare": {
+  "heads": [
+   "L22H16",
+   "L20H9",
+   "L18H16",
+   "L21H2",
+   "L23H15"
+  ],
+  "random_heads": [
+   "L22H16",
+   "L20H22",
+   "L18H1",
+   "L21H29",
+   "L23H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L34:3457",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 59.4853,
+    "ratio_heads_off": 2.014,
+    "ratio_random_off": 1.303,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L27:2168",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 14.2077,
+    "ratio_heads_off": 0.097,
+    "ratio_random_off": 0.672,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L30:8885",
+    "layer": 30,
+    "says_answer": true,
+    "baseline": 46.2647,
+    "ratio_heads_off": -0.259,
+    "ratio_random_off": 0.597,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L15:3800",
+    "layer": 15,
+    "says_answer": false,
+    "baseline": 0.5703,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L28:10728",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 14.8493,
+    "ratio_heads_off": 0.062,
+    "ratio_random_off": 0.709,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9959",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 4.1801,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L13:7436",
+    "layer": 13,
+    "says_answer": false,
+    "baseline": 0.0245,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L30:1702",
+    "layer": 30,
+    "says_answer": true,
+    "baseline": 110.1176,
+    "ratio_heads_off": 0.962,
+    "ratio_random_off": 0.966,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L32:4490",
+    "layer": 32,
+    "says_answer": false,
+    "baseline": 18.6434,
+    "ratio_heads_off": 0.69,
+    "ratio_random_off": 0.952,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L8:1889",
+    "layer": 8,
+    "says_answer": false,
+    "baseline": 0.0247,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   }
+  ],
+  "total_ratio_heads_off": 0.868,
+  "total_ratio_random_off": 0.946,
+  "median_ratio_heads_off": 0.689533622559653,
+  "median_ratio_random_off": 0.9518832577400906
+ },
+ "Wolfgang Amadeus Mozart": {
+  "heads": [
+   "L35H25",
+   "L34H28",
+   "L18H16",
+   "L22H16",
+   "L20H9"
+  ],
+  "random_heads": [
+   "L35H16",
+   "L34H22",
+   "L18H1",
+   "L22H29",
+   "L20H15"
+  ],
+  "neurons": [
+   {
+    "neuron": "L9:10024",
+    "layer": 9,
+    "says_answer": false,
+    "baseline": 0.0186,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L30:8885",
+    "layer": 30,
+    "says_answer": false,
+    "baseline": 48.2981,
+    "ratio_heads_off": 0.014,
+    "ratio_random_off": 1.042,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L8:1287",
+    "layer": 8,
+    "says_answer": false,
+    "baseline": 0.0324,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L31:8930",
+    "layer": 31,
+    "says_answer": false,
+    "baseline": 28.0313,
+    "ratio_heads_off": 0.993,
+    "ratio_random_off": 0.999,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L33:12171",
+    "layer": 33,
+    "says_answer": true,
+    "baseline": 5.11,
+    "ratio_heads_off": 0.106,
+    "ratio_random_off": 1.056,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L28:5852",
+    "layer": 28,
+    "says_answer": false,
+    "baseline": 21.5117,
+    "ratio_heads_off": 1.006,
+    "ratio_random_off": 1.013,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L34:410",
+    "layer": 34,
+    "says_answer": false,
+    "baseline": 36.9231,
+    "ratio_heads_off": 0.026,
+    "ratio_random_off": 1.017,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L11:1120",
+    "layer": 11,
+    "says_answer": false,
+    "baseline": 0.0237,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   },
+   {
+    "neuron": "L27:2168",
+    "layer": 27,
+    "says_answer": false,
+    "baseline": 9.0481,
+    "ratio_heads_off": 0.123,
+    "ratio_random_off": 1.049,
+    "upstream_of_heads": false
+   },
+   {
+    "neuron": "L16:9959",
+    "layer": 16,
+    "says_answer": false,
+    "baseline": 4.7272,
+    "ratio_heads_off": 1.0,
+    "ratio_random_off": 1.0,
+    "upstream_of_heads": true
+   }
+  ],
+  "total_ratio_heads_off": 0.354,
+  "total_ratio_random_off": 1.025,
+  "median_ratio_heads_off": 0.12289107643962534,
+  "median_ratio_random_off": 1.042205853075851
+ }
+}

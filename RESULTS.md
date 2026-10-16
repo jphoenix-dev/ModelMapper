@@ -1348,3 +1348,47 @@ views as for neurons; control: random heads from the same layers.
   - The top heads sit mostly in layers 17–23 and 34–35, with some at 0 and 9.
   - So the same split as neurons: generic "fact moving" machinery plus concept-specific heads.
 - Steps 3 (where they look) and 4 (heads → neurons) are next.
+
+**Attention study, step 3: where the important heads look** (`src/head_looks2.py`, `src/head_looks_summary.py`; every
+recall prompt; attention from the answer position, split into sinks, chat template and question content).
+- Most top heads put most of their attention on "sink" tokens: shared heads 51%, specific heads 64%. Attention
+  weights alone say little about them.
+- **One shared head is a clear clue reader: L23H10.** It's in the top 10 of 25% of concepts, and at the answer
+  position it puts 82–93% of its attention on the question's most telling words:
+  - Marie Curie: "Pierre / Nobel / -onium"
+  - pizza: "toppings / cheese / dough"
+  - Egypt's pyramids: "Nile / burial"
+  - Golden Gate: "Francisco / Strauss / crossing"
+  - Bitcoin: "BTC"
+- Some concept-specific heads do the same: Everest L26H17 ("mountain / peak / summit"), insomnia L25H26 ("sleep /
+  asleep"), the Amazon L24H26 ("America / Brazil").
+- **Bug caught on the way:** the first pass counted the fixed "Answer with just the name." suffix as question
+  content. Token-overlap detection now covers it, with an assertion. Fixed and rerun before any summary.
+- Caveat: attention weight is a first look; the value vectors also matter.
+
+**Attention study, step 4: do the key heads feed the concept neurons?** (`src/heads_to_neurons.py`,
+`results/heads_to_neurons_summary.txt`). For each concept, its top-5 measured heads are switched off, and the signed
+activation of its top-10 concept neurons is read at the answer position, against 5 random same-layer heads.
+- **Sanity check passed for every concept:** neurons in layers below the switched-off heads were exactly unchanged,
+  as they must be.
+
+| 58 concepts (infinity: no downstream neurons) | top-5 heads off | 5 random heads off |
+|---|---|---|
+| downstream concept-neuron activation (median, total-ratio) | 0.93× | 0.99× |
+| concepts cut below 0.8× | 12/58 | 0/58 |
+| lower than with random heads | 48/58 | – |
+
+- **The key heads feed the concept neurons consistently but only partly.** Most concepts reach their neurons by several
+  routes. The most head-dependent: Mozart 0.35×, Einstein 0.45×, the internet 0.53×, the periodic table 0.59×, the
+  Moon 0.64×.
+- **People are not more head-dependent** (median 0.97×, n = 8). This **refutes** a hypothesis we floated from the first
+  19 concepts, where Mozart, Einstein and Shakespeare looked strongly head-dependent; with all 8 people the pattern
+  disappears.
+- **Bugs caught on the way:**
+  - The first summary averaged per-neuron ratios, which blow up near zero baselines; it now uses total and median.
+  - A background run used relative paths from the wrong folder and silently did nothing; it now uses absolute paths.
+  - A divide-by-zero for a concept with no downstream neurons; it now saves after every concept.
+- **Picture so far (exploratory):** a shared mid-layer clue-reader head (L23H10) gathers the question's clue words, and
+  concept neurons a few layers later assemble the answer. Many routes carry the information, so no single set of five
+  heads is essential for most concepts.
+- **Not done:** path patching (cutting only the head → neuron route), which would show *what* message each head carries.
