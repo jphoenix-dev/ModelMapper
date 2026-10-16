@@ -162,7 +162,7 @@ It checks that each stage writes its outputs, not that the numbers mean anything
 |---|---|
 | Windows 10, RTX 5090, Qwen3-8B and Qwen3-0.6B | Every reported result |
 | Windows 10, CPU only, fresh clone and fresh virtual environment, Qwen3-0.6B | Smoke test passed: all stages, ~12 min |
-| A second machine: Windows 11, Python 3.10, RTX 1000 Ada (6 GB), behind a corporate proxy; set up by a coding agent following SETUP.md | Smoke test passed: all stages, for Qwen3-0.6B (~4 min) and SmolLM2-1.7B-Instruct, a Llama-architecture model (~4 min) |
+| A second machine: Windows 11, Python 3.10, RTX 1000 Ada (6 GB), behind a corporate proxy; set up by a coding agent following SETUP.md | Smoke test passed: all stages, for Qwen3-0.6B (~4 min) and SmolLM2-1.7B-Instruct, a Llama-architecture model (~4 min). Qwen3-0.6B answer key, tier 1: 3/3, ranks identical to ours, drops within ±0.01; control 0/3 |
 
 Not yet tested: Linux or macOS, Gemma, and the `llm` judge backend against a live endpoint.
 
