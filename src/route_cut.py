@@ -15,6 +15,7 @@ Usage: RECALL_VARIANT=V3 ANSWER_DISCOVERY=0 CONCEPT_OUT_DIR=<dir> python src/rou
 """
 import json
 import math
+import os
 import random
 import sys
 from pathlib import Path
@@ -42,7 +43,15 @@ def main():
     for arg in sys.argv[3:]:
         concept, ln = arg.rsplit("=", 1); L, n = (int(v) for v in ln.strip("L").split(":"))
         r = fd[concept]["neurons"][f"L{L}:{n}"]; sg = r["sign"]
-        feeders = [tuple(int(v) for v in h[1:].split("H")) for h, val in r["top_heads"] if val > 0][:5]
+        cut_heads = os.environ.get("CUT_HEADS")       # e.g. "L28H7": cut these heads' routes instead of the top-5 positive feeders
+        feeders = ([tuple(int(v) for v in h[1:].split("H")) for h in cut_heads.split(",")] if cut_heads
+                   else [tuple(int(v) for v in h[1:].split("H")) for h, val in r["top_heads"] if val > 0][:5])
+        dropped = [h for h in feeders if h[0] > L]          # a head above the neuron's layer cannot feed it: no route
+        feeders = [h for h in feeders if h[0] <= L]
+        if dropped:
+            print(f"{concept}: heads {dropped} are above layer {L}; no route to cut", flush=True)
+        if not feeders:
+            continue
         rng = random.Random(6); rand = [(l, rng.randrange(H)) for l, _ in feeders]
         spec, tid, recall, _ = pipe.make_prompts(concept); first = tid[0]
         gL = m.model.layers[L].post_attention_layernorm.weight.float()

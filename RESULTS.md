@@ -1534,3 +1534,23 @@ formatting tokens and the fixed suffix. Value-vector reconstruction is checked p
 - **Working interpretation (untested):** the layer-28 trio is a dial for *how strongly* to express whatever concept is
   forming, not *which* concept. A causal check would switch the brake (L28H7) off and look for raised, or
   over-confident, answers.
+
+**Causal tests of the layer-28 trio** (`src/gain_trio.py`, `src/route_cut.py` with CUT_HEADS;
+`results/gain_trio_summary.txt`, `results/route_cut_brake.log`).
+- **Surgical (route only), brake L28H7 → entry neuron, 4 concepts.** Removing only the brake's route raises the entry
+  neuron (coffee 65.8 → 78.1, Golden Gate 56.4 → 66.2, the Moon 119.2 → 130.7, Mozart 48.3 → 49.2) and raises recall
+  slightly (+0.12 / +0.06 / +0.13 / +0.04 log-odds). Random routes do nothing (|Δ| ≤ 0.06). Eiffel was skipped: the
+  brake is above its layer-26 entry neuron. **The brake on concept neurons is confirmed.**
+- **Whole-head knockout, 59 concepts.** Answer log-odds change:
+
+| switched off | up | down | ~0 | mean \|Δ\| | entropy change |
+|---|---|---|---|---|---|
+| brake L28H7 | 21 | 30 | 8 | 0.199 | ≈ 0 |
+| accelerators L28H4 + H6 | 22 | 27 | 10 | 0.210 | ≈ 0 |
+| random layer-28 head | 4 | 14 | 41 | 0.043 | ≈ 0 |
+
+- The trio matters (~5× a random head), but with mixed, concept-dependent direction and no change in output sharpness.
+  **The "global gain dial" reading is rejected.** The trio acts on concept neurons as predicted (surgical tests), but
+  whole-head removal touches many neurons, triggers normalisation compensation, and has mixed net effects on answers.
+- This is consistent with the earlier finding that whole-head knockouts can mislead about a head's role, while route
+  cuts don't.
