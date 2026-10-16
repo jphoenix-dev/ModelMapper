@@ -15,7 +15,7 @@ from pathlib import Path
 
 import torch
 
-from neurons import load, mlps
+from neurons import load, mlps, DEVICE
 from scan import docs
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,8 +23,8 @@ name = sys.argv[1]
 n_tokens = int(float(sys.argv[2])) if len(sys.argv) > 2 else 2_000_000
 model, tok = load(name)
 L, W = model.config.num_hidden_layers, model.config.intermediate_size
-mx = torch.full((L, W), -1e9, device="cuda")
-mn = torch.full((L, W), 1e9, device="cuda")
+mx = torch.full((L, W), -1e9, device=DEVICE)
+mn = torch.full((L, W), 1e9, device=DEVICE)
 state = {}  # current batch's valid-token mask, read by the hooks
 
 
@@ -48,10 +48,10 @@ while seen < n_tokens:
     mask = torch.zeros_like(ids)
     for i, x in enumerate(buf):
         ids[i, :len(x)] = torch.as_tensor(x, dtype=torch.long); mask[i, :len(x)] = 1
-    valid = mask.bool().cuda(); valid[:, 0] = False  # token 0 is an attention sink
+    valid = mask.bool().to(DEVICE); valid[:, 0] = False  # token 0 is an attention sink
     state["valid"] = valid
     with torch.no_grad():
-        model.model(input_ids=ids.cuda(), attention_mask=mask.cuda())
+        model.model(input_ids=ids.to(DEVICE), attention_mask=mask.to(DEVICE))
     seen += int(valid.sum()); buf = []
     if seen // 8192 % 50 == 0:
         print(f"{seen/1e6:.2f}M tokens, {seen/(time.time()-t0):,.0f} tok/s", flush=True)

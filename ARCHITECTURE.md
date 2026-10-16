@@ -241,7 +241,10 @@ versions).
   don't use it).
 - **Per-model data.** The atlas and neuron ranges are per model (`data/atlas_<short name>.pt`), so build them first
   for a new model.
+- **Device.** `neurons.DEVICE` (`$MODEL_MAPPER_DEVICE`, else CUDA → MPS → CPU) is used for every tensor, and
+  `neurons.DTYPE` (`$MODEL_MAPPER_DTYPE`, default bf16) for the weights. The 92% GPU-memory cap applies on CUDA only.
 - **Endpoints.** The labeller and judge are configured by environment (README).
+- **Smoke test.** `scripts/smoke_e2e.py` runs every stage at toy scale in a throwaway copy of the repo.
 - **Tested.** Only Qwen3-8B and Qwen3-0.6B. The `llm` judge backend is tested offline only.
 
 ## Known rough edges

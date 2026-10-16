@@ -9,6 +9,7 @@ import torch
 
 os.environ["RECALL_VARIANT"] = "V3"
 os.environ["ANSWER_DISCOVERY"] = "0"
+from neurons import DEVICE  # noqa: E402
 from config import DEFAULT_MODEL  # noqa: E402
 import concept_pipeline as cp  # noqa: E402
 import pipeline_fast  # noqa: E402
@@ -25,8 +26,8 @@ for tag in auto:
     spec, tid, recall, _ = pipe.make_prompts(concept)
     A = pipe.attribute([q for q, _ in recall], tid)
     units = [u for u in A["top"][:200] if u[0] >= pipe.L // 2][:4]
-    peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device="cuda")
+    peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device=DEVICE)
     out[tag] = pipe.gen_rows(HELD, units, torch.stack([peaks] * len(HELD)),
-                             torch.ones(len(HELD), len(units), dtype=torch.bool, device="cuda"))
+                             torch.ones(len(HELD), len(units), dtype=torch.bool, device=DEVICE))
     print(tag, flush=True)
 (ROOT / "results/default_heldout.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")

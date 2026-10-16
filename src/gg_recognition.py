@@ -11,7 +11,7 @@ from pathlib import Path
 
 import torch
 
-from neurons import load
+from neurons import load, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 texts = json.loads((ROOT / "prompts/golden_gate.json").read_text(encoding="utf-8"))["gg_unnamed"]
@@ -21,7 +21,7 @@ for t in texts:
     q = f'Which specific bridge is this text about? Answer with just the bridge\'s name.\n\n"{t}"'
     text = tok.apply_chat_template([{"role": "user", "content": q}], tokenize=False,
                                    add_generation_prompt=True, enable_thinking=False)
-    ids = tok(text, return_tensors="pt").to("cuda")
+    ids = tok(text, return_tensors="pt").to(DEVICE)
     with torch.no_grad():
         out = model.generate(**ids, max_new_tokens=12, do_sample=False)
     ans = tok.decode(out[0, ids.input_ids.shape[1]:], skip_special_tokens=True).strip()

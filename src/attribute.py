@@ -16,7 +16,7 @@ from pathlib import Path
 
 import torch
 
-from neurons import load, mlps, steer
+from neurons import load, mlps, steer, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 name = sys.argv[1]
@@ -29,7 +29,7 @@ target = tok.encode(P["target"])[0]
 
 
 def prob(prompt, tid):
-    ids = tok(prompt, return_tensors="pt").to("cuda")
+    ids = tok(prompt, return_tensors="pt").to(DEVICE)
     with torch.no_grad():
         return model(**ids).logits[0, -1].float().softmax(-1)[tid].item()
 
@@ -48,10 +48,10 @@ for l in range(L):
         args[0].retain_grad()
         acts[l] = args[0]
     hooks.append(mlps(model)[l].down_proj.register_forward_pre_hook(keep))
-attr = torch.zeros(L, W, device="cuda")
+attr = torch.zeros(L, W, device=DEVICE)
 per_prompt = []
 for p in gg:
-    ids = tok(p, return_tensors="pt").to("cuda")
+    ids = tok(p, return_tensors="pt").to(DEVICE)
     with torch.enable_grad():
         lp = model(**ids).logits[0, -1].float().log_softmax(-1)[target]
         lp.backward()

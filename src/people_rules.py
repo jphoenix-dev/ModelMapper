@@ -14,6 +14,7 @@ from pathlib import Path
 
 import torch
 
+from neurons import DEVICE
 from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
@@ -39,12 +40,12 @@ def main():
         res = {}
         for rule in RULES:
             units = [tuple(u) for u in sel[concept][rule]["units"]]
-            peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device="cuda")
+            peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device=DEVICE)
             settings = [(n, s) for n in cp.N_STEER for s in cp.STRENGTHS]
             rows, vals, act = [], [], []
             for n, s in settings:
                 for p in FRIENDLY:
-                    rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device="cuda") < n)
+                    rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device=DEVICE) < n)
             reps = pipe.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
             k = len(FRIENDLY)
             grid = [{"n": n, "s": s, "hit": sum(word.lower() in r.lower() for r in reps[i*k:(i+1)*k]) / k,

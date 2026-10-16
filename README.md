@@ -133,9 +133,27 @@ bash scripts/download_models.sh    # Qwen3-0.6B and Qwen3-8B into $MODEL_MAPPER_
 bash scripts/download_corpus.sh    # one FineWeb shard (2.1 GB) into $MODEL_MAPPER_CORPUS (default ./data)
 ```
 We used Python 3.11.9, torch 2.11.0+cu128 and transformers 5.20.0 ([requirements.txt](requirements.txt)).
+Without an NVIDIA GPU, install the CPU wheel (`--index-url https://download.pytorch.org/whl/cpu`, or the default
+index on a Mac); the code picks CUDA, Apple MPS or CPU automatically.
 
-**Windows:** some result files have long names (up to 216 characters inside the repo). Before cloning, run
-`git config --global core.longpaths true`, or clone into a short path.
+### Check your install (about 5–20 minutes)
+```bash
+python scripts/smoke_e2e.py                                # offline, Qwen3-0.6B, no API keys needed
+python scripts/smoke_e2e.py --model google/gemma-3-1b-it   # another model family
+python scripts/smoke_e2e.py --apis                         # also one round of labeller + judge calls
+```
+The script runs every stage at toy scale in a throwaway copy of the repo, using this repo's own text as the corpus:
+1. neuron ranges;
+2. the atlas and blind dossiers;
+3. recall, attribution, knockout and log-odds;
+4. a steering grid.
+
+It checks that each stage writes its outputs, not that the numbers mean anything. Nothing in your `data/` or
+`results/` is touched. On CPU, setting `MODEL_MAPPER_DTYPE=float32` is several times faster.
+
+**Windows:** keep the clone and its `.venv` in a short path (e.g. `C:\src\model-mapper`). Some result files have
+long names (up to 216 characters inside the repo), and pip also fails on deep folders unless Windows long-path
+support is on. For git, `git config --global core.longpaths true` also works.
 
 ### Configuration (environment variables)
 
@@ -147,6 +165,8 @@ Each variable is read from the environment first, then from a gitignored `.env` 
 | `MODEL_MAPPER_MODEL` | The model under study | `Qwen/Qwen3-8B` |
 | `MODEL_MAPPER_MODELS` | Folder of local model copies (`<dir>/Qwen3-8B/config.json`) | `./models`, else the Hugging Face hub |
 | `MODEL_MAPPER_CORPUS` | Web-text shard for the atlas, scans and random-snippet controls | `./data/fineweb_000_00000.parquet` |
+| `MODEL_MAPPER_DEVICE` | `cuda`, `cuda:1`, `mps` or `cpu` | CUDA, else Apple MPS, else CPU |
+| `MODEL_MAPPER_DTYPE` | `bfloat16`, `float16` or `float32` (fastest on CPU) | `bfloat16` |
 | `OPENAI_BASE_URL`, `OAI_MODEL`, `OPENAI_API_KEY` | Labeller endpoint (`src/oai.py`) | OpenAI, `gpt-6-luna` |
 | `JUDGE_BACKEND` | Judge: `jev` or `llm` (`src/jev.py`) | `jev` |
 | `JEV_API_KEY` | Jev judge key (`TYPESAFE_API_KEY` also works) | – |

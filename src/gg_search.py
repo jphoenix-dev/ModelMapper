@@ -13,7 +13,7 @@ from pathlib import Path
 
 import torch
 
-from neurons import capture, load
+from neurons import capture, load, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 name = sys.argv[1] if len(sys.argv) > 1 else "Qwen/Qwen3-0.6B"
@@ -28,7 +28,7 @@ summary = {}
 for g, texts in groups.items():
     mx, mn = [], []
     for t in texts:
-        ids = tok(t, return_tensors="pt").to("cuda")
+        ids = tok(t, return_tensors="pt").to(DEVICE)
         with torch.no_grad(), capture(model) as s:
             model(**ids)
         acts = torch.stack([s["act"][l][0, 1:] for l in range(n_layers)], 1)  # [seq-1, L, W]; skip token 0 (attention sink)

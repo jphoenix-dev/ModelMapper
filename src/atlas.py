@@ -20,7 +20,7 @@ import torch
 from transformers import AutoTokenizer
 
 from config import model_path
-from neurons import capture
+from neurons import capture, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -74,7 +74,7 @@ class Atlas:
         for e in es:
             acts = None
             if model is not None:  # one forward pass over the doc to highlight other strong tokens
-                ids = torch.as_tensor(self.doc(e["doc"]), dtype=torch.long)[None].cuda()
+                ids = torch.as_tensor(self.doc(e["doc"]), dtype=torch.long)[None].to(DEVICE)
                 with torch.no_grad(), capture(model, [layer]) as s:
                     model.model(input_ids=ids)
                 sign = 1 if pole == "pos" else -1

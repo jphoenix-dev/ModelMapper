@@ -33,7 +33,7 @@ import torch
 import jev
 import oai
 from atlas import Atlas, output_words
-from neurons import load, mlps, steer
+from neurons import load, mlps, steer, DEVICE
 from steer_test import PROMPTS as NEUTRAL, generate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -77,9 +77,9 @@ class Pipeline:
     def seq_logprob(self, prompt, ans):
         """log P(answer tokens | prompt), teacher-forced: sum over the answer's pieces."""
         p_ids = self.tok.encode(prompt)
-        ids = torch.tensor([p_ids + ans[:-1]], device="cuda")
+        ids = torch.tensor([p_ids + ans[:-1]], device=DEVICE)
         lp = self.model(input_ids=ids).logits[0, len(p_ids) - 1:].float().log_softmax(-1)
-        return lp[torch.arange(len(ans)), torch.tensor(ans, device="cuda")].sum()
+        return lp[torch.arange(len(ans)), torch.tensor(ans, device=DEVICE)].sum()
 
     def probs(self, prompts, ans, edits=()):
         out = []
@@ -111,7 +111,7 @@ class Pipeline:
         self.recall_diag = []
         with torch.no_grad():
             for q, x in zip(spec["recall"], p):
-                ids = self.tok(q, return_tensors="pt").to("cuda")
+                ids = self.tok(q, return_tensors="pt").to(DEVICE)
                 top = self.model(**ids).logits[0, -1].float().softmax(-1).topk(5)
                 self.recall_diag.append({"prompt": q, "p_answer": round(x, 4),
                                          "top5": [(self.tok.decode([i]), round(v, 3)) for v, i in zip(top.values.tolist(), top.indices.tolist())]})
@@ -138,9 +138,9 @@ class Pipeline:
                 args[0].retain_grad(); heads[l] = args[0]
             hooks.append(mlps(self.model)[l].down_proj.register_forward_pre_hook(keep))
             hooks.append(self.model.model.layers[l].self_attn.o_proj.register_forward_pre_hook(keep_h))
-        attr = torch.zeros(self.L, self.W, device="cuda")
-        head_attr = torch.zeros(self.L, H, device="cuda")
-        last_act = torch.zeros(self.L, self.W, device="cuda")
+        attr = torch.zeros(self.L, self.W, device=DEVICE)
+        head_attr = torch.zeros(self.L, H, device=DEVICE)
+        last_act = torch.zeros(self.L, self.W, device=DEVICE)
         per_prompt, pos_maps, head_pos, tokens = [], [], [], []
         try:
             for p in prompts:
@@ -200,7 +200,7 @@ class Pipeline:
         out = {}
         try:
             for p in prompts[:8]:
-                ids = self.tok(p, return_tensors="pt").to("cuda")
+                ids = self.tok(p, return_tensors="pt").to(DEVICE)
                 with torch.no_grad():
                     att = self.model(**ids, output_attentions=True).attentions      # L x [1, H, T, T]
                 toks = [self.tok.decode([t]) for t in ids.input_ids[0].tolist()]

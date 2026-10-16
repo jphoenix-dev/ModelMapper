@@ -15,7 +15,7 @@ import torch
 
 from config import DEFAULT_MODEL
 import concept_pipeline as cp
-from neurons import load
+from neurons import load, DEVICE
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
         qs = spec["recall_v3"]
         chat = [tok.apply_chat_template([{"role": "user", "content": q + " Answer with just the name."}], tokenize=False,
                                         add_generation_prompt=True, enable_thinking=False) for q in qs]
-        ids = tok(chat, return_tensors="pt", padding=True).to("cuda")
+        ids = tok(chat, return_tensors="pt", padding=True).to(DEVICE)
         with torch.no_grad():
             g = model.generate(**ids, max_new_tokens=16, do_sample=False, pad_token_id=tok.pad_token_id)
         answers = [tok.decode(o[ids.input_ids.shape[1]:], skip_special_tokens=True).strip().split("\n")[0].strip().rstrip(".")

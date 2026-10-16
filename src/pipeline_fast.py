@@ -22,7 +22,7 @@ import torch
 
 import concept_pipeline as cp
 from concept_pipeline import OUT, Pipeline, slug
-from neurons import mlps
+from neurons import mlps, DEVICE
 from steer_test import PROMPTS as NEUTRAL
 
 GEN_TOKENS = 60
@@ -115,7 +115,7 @@ class FastPipeline(Pipeline):
         still scored, and recall still needs P(answer) >= MIN_P on the prompts."""
         from collections import Counter
         self.tok.padding_side = "left"
-        ids = self.tok(chat, return_tensors="pt", padding=True).to("cuda")
+        ids = self.tok(chat, return_tensors="pt", padding=True).to(DEVICE)
         with torch.no_grad():
             g = self.model.generate(**ids, max_new_tokens=16, do_sample=False, pad_token_id=self.tok.pad_token_id)
         replies = [self.tok.decode(o[ids.input_ids.shape[1]:], skip_special_tokens=True).strip().split(chr(10))[0].strip().rstrip(".")
@@ -146,16 +146,16 @@ class FastPipeline(Pipeline):
             spans.append((len(p_ids) - 1, ans))
         T = max(map(len, seqs))
         pad = self.tok.pad_token_id or 0
-        ids = torch.full((len(seqs), T), pad, device="cuda")
+        ids = torch.full((len(seqs), T), pad, device=DEVICE)
         mask = torch.zeros_like(ids)
         for i, s in enumerate(seqs):                       # right padding: causal attention leaves real tokens untouched
-            ids[i, :len(s)] = torch.tensor(s, device="cuda"); mask[i, :len(s)] = 1
+            ids[i, :len(s)] = torch.tensor(s, device=DEVICE); mask[i, :len(s)] = 1
         with torch.no_grad(), (ctx or contextlib.nullcontext()):
             lp = self.model(input_ids=ids, attention_mask=mask).logits.float().log_softmax(-1)
         out = []
         for i, (start, ans) in enumerate(spans):
-            pos = torch.arange(start, start + len(ans), device="cuda")
-            out.append(lp[i, pos, torch.tensor(ans, device="cuda")].sum().exp().item())
+            pos = torch.arange(start, start + len(ans), device=DEVICE)
+            out.append(lp[i, pos, torch.tensor(ans, device=DEVICE)].sum().exp().item())
         return out
 
     def probs(self, prompts, ans, edits=()):
@@ -192,8 +192,8 @@ class FastPipeline(Pipeline):
             by_layer.setdefault(l, []).append((j, n))
         handles = []
         for l, items in by_layer.items():
-            js = torch.tensor([j for j, _ in items], device="cuda")
-            idx = torch.tensor([n for _, n in items], device="cuda")
+            js = torch.tensor([j for j, _ in items], device=DEVICE)
+            idx = torch.tensor([n for _, n in items], device=DEVICE)
 
             def hook(m, args, js=js, idx=idx):
                 x = args[0]
@@ -221,8 +221,8 @@ class FastPipeline(Pipeline):
         self.tok.padding_side = "left"
         with self.steer_rows(units, values, active):
             for s in range(0, len(texts), GEN_BATCH):
-                self._rows = torch.arange(s, min(s + GEN_BATCH, len(texts)), device="cuda")
-                ids = self.tok(texts[s:s + GEN_BATCH], return_tensors="pt", padding=True).to("cuda")
+                self._rows = torch.arange(s, min(s + GEN_BATCH, len(texts)), device=DEVICE)
+                ids = self.tok(texts[s:s + GEN_BATCH], return_tensors="pt", padding=True).to(DEVICE)
                 with torch.no_grad():
                     g = self.model.generate(**ids, max_new_tokens=GEN_TOKENS, do_sample=False,
                                             pad_token_id=self.tok.pad_token_id)
@@ -231,14 +231,14 @@ class FastPipeline(Pipeline):
 
     def steering(self, top, last_act, concept):
         late = [(l, n) for l, n in top if l >= self.L // 2][:max(cp.N_STEER)]
-        peaks = torch.tensor([self.steer_edits([u], 1.0, last_act)[0][2] for u in late], device="cuda")
+        peaks = torch.tensor([self.steer_edits([u], 1.0, last_act)[0][2] for u in late], device=DEVICE)
         settings = [(n, s) for n in cp.N_STEER for s in cp.STRENGTHS]
         rows_prompts, vals, act = [], [], []
         for n, s in settings:
             for p in NEUTRAL:
                 rows_prompts.append(p)
                 vals.append(peaks * s)
-                act.append(torch.arange(len(late), device="cuda") < n)
+                act.append(torch.arange(len(late), device=DEVICE) < n)
         replies = self.gen_rows(rows_prompts, late, torch.stack(vals), torch.stack(act))
         on_p, fl_p = self.judge_detail(replies, concept)
         grid, best = [], None
@@ -255,9 +255,9 @@ class FastPipeline(Pipeline):
                 best = row
         rng = random.Random(0)
         rand_units = [(l, rng.randrange(self.W)) for l, _ in late[:best["n"]]]
-        rpk = torch.tensor([self.steer_edits([u], 1.0, last_act)[0][2] for u in rand_units], device="cuda")
+        rpk = torch.tensor([self.steer_edits([u], 1.0, last_act)[0][2] for u in rand_units], device=DEVICE)
         rreplies = self.gen_rows(NEUTRAL, rand_units, (rpk * best["strength"]).expand(k, -1),
-                                 torch.ones(k, len(rand_units), dtype=torch.bool, device="cuda"))
+                                 torch.ones(k, len(rand_units), dtype=torch.bool, device=DEVICE))
         ro, rf = self.judge_detail(rreplies, concept)
         rj = sum(a >= 0.5 and b >= 0.5 for a, b in zip(ro, rf)) / k
         return grid, best, {"units": rand_units, "on_topic": sum(x >= 0.5 for x in ro) / k,

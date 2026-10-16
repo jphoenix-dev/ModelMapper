@@ -17,7 +17,7 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
 from config import DEFAULT_MODEL  # noqa: E402
-from neurons import load  # noqa: E402
+from neurons import load, DEVICE  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -49,7 +49,7 @@ def main():
     with torch.no_grad():
         for i in range(0, len(rows), 16):
             batch = rows[i:i + 16]
-            enc = tok([t for t, _ in batch], return_tensors="pt", padding=True, truncation=True, max_length=200).to("cuda")
+            enc = tok([t for t, _ in batch], return_tensors="pt", padding=True, truncation=True, max_length=200).to(DEVICE)
             lp = model(**enc).logits.float().log_softmax(-1)
             ids = enc.input_ids; mask = enc.attention_mask
             tok_lp = lp[:, :-1].gather(-1, ids[:, 1:, None])[..., 0] * mask[:, 1:]

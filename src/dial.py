@@ -26,6 +26,7 @@ os.environ.setdefault("CONCEPT_OUT_DIR", os.path.join(os.path.dirname(__file__),
 
 import torch  # noqa: E402
 
+from neurons import DEVICE  # noqa: E402
 from config import DEFAULT_MODEL  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
 
@@ -60,9 +61,9 @@ def main():
 
     def reply(text, strength):
         units = st["cands"][st["rule"]][:st["n"]]
-        peaks = torch.tensor([pipe.steer_edits([u], 1.0, st["last_act"])[0][2] for u in units], device="cuda")
+        peaks = torch.tensor([pipe.steer_edits([u], 1.0, st["last_act"])[0][2] for u in units], device=DEVICE)
         vals = (peaks * strength)[None]
-        act = torch.ones(1, len(units), dtype=torch.bool, device="cuda") if strength else torch.zeros(1, len(units), dtype=torch.bool, device="cuda")
+        act = torch.ones(1, len(units), dtype=torch.bool, device=DEVICE) if strength else torch.zeros(1, len(units), dtype=torch.bool, device=DEVICE)
         import pipeline_fast
         old = pipeline_fast.GEN_TOKENS; pipeline_fast.GEN_TOKENS = st["tokens"]
         try:
@@ -75,7 +76,7 @@ def main():
 
     def fluent(text):
         """Free fluency proxy validated against Jev (RESULTS: 88.7% held-out agreement)."""
-        ids = pipe.tok(text, return_tensors="pt").input_ids.to("cuda")
+        ids = pipe.tok(text, return_tensors="pt").input_ids.to(DEVICE)
         if ids.shape[1] < 3:
             return False
         with torch.no_grad():
@@ -96,13 +97,13 @@ def main():
         try:
             for rule in ("R1", "R2", "R4"):
                 units = st["cands"][rule][:4]
-                peaks = torch.tensor([pipe.steer_edits([u], 1.0, st["last_act"])[0][2] for u in units], device="cuda")
+                peaks = torch.tensor([pipe.steer_edits([u], 1.0, st["last_act"])[0][2] for u in units], device=DEVICE)
                 rows, vals, act, settings = [], [], [], []
                 for n in (2, 4):
                     for s_ in strengths:
                         settings.append((n, s_))
                         for p in PRACTICE:              # one batched generate per rule: all n x strengths x prompts
-                            rows.append(p); vals.append(peaks * s_); act.append(torch.arange(len(units), device="cuda") < n)
+                            rows.append(p); vals.append(peaks * s_); act.append(torch.arange(len(units), device=DEVICE) < n)
                 reps = pipe.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
                 k = len(PRACTICE)
                 for i, (n, s_) in enumerate(settings):

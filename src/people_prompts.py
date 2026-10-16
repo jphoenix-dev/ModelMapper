@@ -15,6 +15,7 @@ from pathlib import Path
 
 import torch
 
+from neurons import DEVICE
 from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
@@ -46,23 +47,23 @@ def main():
             print(f"{concept}: not recalled", flush=True); continue
         A = pipe.attribute([q for q, _ in recall], tid)
         units = [(l, n) for l, n in A["top"] if l >= pipe.L // 2][:6]
-        peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device="cuda")
+        peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device=DEVICE)
         res = {}
         for pname, prompts in (("friendly", FRIENDLY), ("original", NEUTRAL)):
-            base = pipe.gen_rows(prompts, units, torch.zeros(len(prompts), len(units), device="cuda"),
-                                 torch.zeros(len(prompts), len(units), dtype=torch.bool, device="cuda"))
+            base = pipe.gen_rows(prompts, units, torch.zeros(len(prompts), len(units), device=DEVICE),
+                                 torch.zeros(len(prompts), len(units), dtype=torch.bool, device=DEVICE))
             rows, vals, act, settings = [], [], [], [(n, s) for n in cp.N_STEER for s in cp.STRENGTHS]
             for n, s in settings:
                 for p in prompts:
-                    rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device="cuda") < n)
+                    rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device=DEVICE) < n)
             reps = pipe.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
             k = len(prompts)
             grid = [(sum(hit(r, word) for r in reps[i*k:(i+1)*k]) / k, settings[i]) for i in range(len(settings))]
             best = max(grid)
             rng = random.Random(0)
             rand = [(l, rng.randrange(pipe.W)) for l, _ in units]
-            rpk = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in rand], device="cuda")
-            rreps = pipe.gen_rows(prompts, rand, torch.stack([rpk * 2.0] * k), torch.ones(k, len(rand), dtype=torch.bool, device="cuda"))
+            rpk = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in rand], device=DEVICE)
+            rreps = pipe.gen_rows(prompts, rand, torch.stack([rpk * 2.0] * k), torch.ones(k, len(rand), dtype=torch.bool, device=DEVICE))
             bi = grid.index(best)
             res[pname] = {"unsteered": sum(hit(r, word) for r in base) / k, "best": best[0], "best_setting": best[1],
                           "random": sum(hit(r, word) for r in rreps) / k, "sample": reps[bi*k:bi*k+3]}

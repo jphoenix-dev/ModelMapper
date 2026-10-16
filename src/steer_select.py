@@ -22,7 +22,7 @@ import torch
 
 from config import DEFAULT_MODEL
 import concept_pipeline as cp
-from neurons import steer
+from neurons import steer, DEVICE
 from pipeline_fast import FastPipeline
 from steer_test import PROMPTS as NEUTRAL
 
@@ -30,12 +30,12 @@ from steer_test import PROMPTS as NEUTRAL
 def grid(pipe, units, last_act, concept):
     """Same grid as pipeline_fast.steering, but for a given ordered unit list."""
     units = units[:max(cp.N_STEER)]
-    peaks = torch.tensor([pipe.steer_edits([u], 1.0, last_act)[0][2] for u in units], device="cuda")
+    peaks = torch.tensor([pipe.steer_edits([u], 1.0, last_act)[0][2] for u in units], device=DEVICE)
     settings = [(n, s) for n in cp.N_STEER for s in cp.STRENGTHS]
     rows, vals, act = [], [], []
     for n, s in settings:
         for p in NEUTRAL:
-            rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device="cuda") < n)
+            rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device=DEVICE) < n)
     replies = pipe.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
     on, fl = pipe.judge_detail(replies, concept)
     k = len(NEUTRAL); best = (0.0, None)

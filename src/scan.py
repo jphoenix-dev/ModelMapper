@@ -24,7 +24,7 @@ import pyarrow.parquet as pq
 import torch
 
 from config import CORPUS  # $MODEL_MAPPER_CORPUS
-from neurons import capture, load, mlps
+from neurons import capture, load, mlps, DEVICE, IS_CUDA
 
 K = 40              # examples kept per pole
 SAMPLE_RATE = 0.002  # share of tokens kept for the activation-distribution sample
@@ -43,7 +43,7 @@ def unit_matrix(units, layer, width):
             g = torch.Generator().manual_seed(u["dense_seed"])
             v = torch.randn(width, generator=g)
             W[:, j] = v / v.norm()
-    return [u["id"] for u in us], W.cuda()
+    return [u["id"] for u in us], W.to(DEVICE)
 
 
 def docs(tok, ctx, min_len=64, corpus=CORPUS, centre=None):
@@ -69,7 +69,7 @@ def forward_units(model, layers, mats, batch_ids, pad_id, gate_value=False):
     for i, x in enumerate(batch_ids):
         ids[i, :len(x)] = torch.as_tensor(x, dtype=torch.long)
         mask[i, :len(x)] = 1
-    ids, mask = ids.cuda(), mask.cuda()
+    ids, mask = ids.to(DEVICE), mask.to(DEVICE)
     if gate_value:  # pass 2: few docs, one layer, keep full activations for gate/value lookup
         with torch.no_grad(), capture(model, layers, gate_value=True) as s:
             model.model(input_ids=ids, attention_mask=mask)  # skip the vocab-sized output layer
@@ -98,7 +98,8 @@ def main():
     corpus = sys.argv[6] if len(sys.argv) > 6 else CORPUS
     centre = sys.argv[7] if len(sys.argv) > 7 else None
     units = json.loads(Path(units_path).read_text(encoding="utf-8"))
-    torch.cuda.set_per_process_memory_fraction(0.92)  # fail loudly instead of spilling to system RAM
+    if IS_CUDA:
+        torch.cuda.set_per_process_memory_fraction(0.92)  # fail loudly instead of spilling to system RAM
     model, tok = load(model_name)
     width = model.config.intermediate_size
     layers = sorted({u["layer"] for u in units})
@@ -107,8 +108,8 @@ def main():
     U = len(ids_order)
     pad = tok.pad_token_id or 0
 
-    top_v = torch.full((U, K), -1e9, device="cuda"); top_i = torch.zeros((U, K), dtype=torch.long, device="cuda")
-    bot_v = torch.full((U, K), 1e9, device="cuda");  bot_i = torch.zeros((U, K), dtype=torch.long, device="cuda")
+    top_v = torch.full((U, K), -1e9, device=DEVICE); top_i = torch.zeros((U, K), dtype=torch.long, device=DEVICE)
+    bot_v = torch.full((U, K), 1e9, device=DEVICE);  bot_i = torch.zeros((U, K), dtype=torch.long, device=DEVICE)
     samples, all_docs = [], []
     seen, t0 = 0, time.time()
     batch_tokens = 6_144  # bigger batches overflowed the 32 GB card on 8B and silently spilled to system RAM
@@ -123,7 +124,7 @@ def main():
         T = acts.shape[1]
         flat = acts.reshape(-1, U).T                                   # [U, B*T]
         v = valid.reshape(-1)
-        code = (torch.arange(len(buf), device="cuda")[:, None] + base) * ctx + torch.arange(T, device="cuda")[None]
+        code = (torch.arange(len(buf), device=DEVICE)[:, None] + base) * ctx + torch.arange(T, device=DEVICE)[None]
         code = code.reshape(-1)
         hi = flat.masked_fill(~v, -1e9); lo = flat.masked_fill(~v, 1e9)
         top_v, idx = torch.cat([top_v, hi], 1).topk(K, 1); top_i = torch.cat([top_i, code.expand(U, -1)], 1).gather(1, idx)
