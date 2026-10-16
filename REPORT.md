@@ -245,8 +245,13 @@ prompts, held-out prompts) mattered more than any single method choice.
 - **Not specialists.** We may have missed relevant work.
 
 ## 8. Reproducibility
-All code, prompts, pre-registrations, logs and raw judge outputs are in the repository. Large derived data (the
-neuron atlas) is regenerable with `src/build_atlas.py`. Generation is greedy, so steering re-runs reproduce (mean
+All code, prompts, pre-registrations, logs and raw judge outputs are in the repository. Two kinds of data are
+regenerated rather than shipped:
+- **Bulk FineWeb text:** the per-neuron example scans and the blind dossiers, rebuilt from the public corpus (README,
+  "Data").
+- **Large derived data:** the neuron atlas, rebuilt with `src/build_atlas.py`.
+
+Answer keys (`answer_keys/`) let any install check that it rediscovers our marker neurons. Generation is greedy, so steering re-runs reproduce (mean
 difference 0.013).
 
 ## Acknowledgements and credit

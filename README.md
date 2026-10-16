@@ -18,12 +18,12 @@ model builds concepts out of such neurons. We tested this on **Qwen3-8B** (36 la
 
 > **Scope.** Only two small models from one family were tested: Qwen3-8B, plus Qwen3-0.6B. The essay's audits are of
 > Qwen3-32B. No other model families or sizes were tested. Most results are exploratory. The pre-registered
-> experiments are CR, CEN and H-DEPTH ([PREREG.md](PREREG.md)).
+> experiments are CR, CEN, H-DEPTH and the confirmatory CR-3 ([PREREG.md](PREREG.md)).
 
 ## Headline results (Qwen3-8B)
 
-The full account is in [MORNING.md](MORNING.md) (summary), [RESULTS.md](RESULTS.md) (chronological log) and
-[REPORT.md](REPORT.md) (draft write-up).
+The full account is in [REPORT.md](REPORT.md) (the write-up), [RESULTS.md](RESULTS.md) (chronological log) and
+[MORNING.md](MORNING.md) (a snapshot summary written the morning after the overnight runs).
 
 **1. Recall depends on a handful of neurons.**
 - Switching off at most 5 neurons lowers the answer's log-odds by ≥ 3 (odds ~20× lower) in **157/158**
@@ -81,7 +81,23 @@ The full account is in [MORNING.md](MORNING.md) (summary), [RESULTS.md](RESULTS.
 - Every real concept we first marked "not recalled" turned out to be a fault in our measurement, with one exception
   ("the robot", a limit of the prompt design).
 
-**Model size (Qwen3-0.6B vs 8B):** in progress at the time of writing; see `results/scale_*` and RESULTS.md.
+**8. A pre-registered confirmatory replication (CR-3) passes 6 of 7 predictions.**
+- Setup: 40 never-used concepts plus 4 made-up controls, the final pipeline, and predictions and scoring frozen
+  before any data.
+- Passed:
+  - 40/40 recalled, 0/4 made-up;
+  - ≤ 5 neurons for 98%;
+  - answers flip with ≤ 5 neurons for 85%;
+  - the most resistant facts are the most confident (p = 0.005);
+  - per-concept steering is 2.44× the fixed rule, random 0.006, and the same direction under Jev.
+- **Failed:** P5 (people steerable, but less than other concepts). The people claim is revised (REPORT §4.4, §4.6).
+
+**Model size (Qwen3-0.6B vs 8B, same 60 concepts and prompts; exploratory).**
+- **Recall:** the 0.6B model recalls only 7/60 in question form (8B: all).
+- **Concentration:** where it does recall, a handful of neurons again carry it (6/7 with ≤ 5).
+- **Flips:** its answers flip with just 1–3 neurons.
+- **Steering:** weak, 0.057 against 0.226.
+- **Scope:** two sizes from one family, so no claim about trends with scale (REPORT §4.5).
 
 **Where this sits in the literature.**
 - Most individual findings have precedents: knowledge neurons, entity cells (including in Qwen3-8B), expert-neuron
@@ -99,8 +115,8 @@ The full account is in [MORNING.md](MORNING.md) (summary), [RESULTS.md](RESULTS.
 
 | File | What it is |
 |---|---|
-| [MORNING.md](MORNING.md) | Start here: summary of all findings, checks, negative results, spend |
-| [REPORT.md](REPORT.md) | Technical write-up (draft) |
+| [MORNING.md](MORNING.md) | Snapshot summary from the morning after the overnight runs (before CR-3 and the size comparison) |
+| [REPORT.md](REPORT.md) | Start here: the technical write-up |
 | [RESULTS.md](RESULTS.md) | Chronological results log, every experiment with its numbers |
 | [PREREG.md](PREREG.md) | Pre-registrations (CR, CEN, H-DEPTH, draft CR-3) and change log |
 | [ISSUES.md](ISSUES.md) | Every setup flaw found, and its fix |
