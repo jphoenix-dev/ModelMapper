@@ -1125,3 +1125,9 @@ concepts** (chance ≈ 6), the same rule and neuron count for 9. Per-concept hel
 across prompt sets (mean |difference| 0.10). Stable: Tokyo R4 0.55/0.60, coffee R4 0.50/0.50, the Moon R4 0.45/0.45,
 Golden Gate R1 0.35/0.35. Auto vs fixed default on CR-2b: 0.25 vs 0.05. **The preferred neuron set is mostly a
 property of the concept, not prompt noise**, so the dial can pick once per concept and reuse it.
+
+**Audit of MORNING.md headline numbers** (recomputed from the result files, `results/morning_audit.txt`): question
+format 79/79 ≤ 5 neurons, 71/79 ≤ 2, flips ≤ 5 in 66/79; completion 8/11, all within 20; wave 2 40/40; auto vs default
+0.161 vs 0.087 (31/7/21); rule stability 13/19; top-10 overlap 4.8/10. All match. One stale count corrected: **60**
+distinct concepts recalled (the earlier "57" predates the three answer-discovery re-runs; likewise "87 recalled
+concept runs" is now 90).
