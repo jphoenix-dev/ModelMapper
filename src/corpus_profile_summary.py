@@ -57,34 +57,33 @@ def main():
     kw = keywords(); fam = family_map()
     all_kw = sorted({w for ws in kw.values() for w in ws})
     pat = re.compile(r"\b(" + "|".join(re.escape(w) for w in sorted(all_kw, key=len, reverse=True)) + r")(?:s|es)?\b", re.I)
-    # keyword hits per document as token positions
-    hits = defaultdict(lambda: defaultdict(list))         # word -> doc -> [token positions]
-    near_tokens = defaultdict(int)                         # concept -> tokens within WINDOW of one of its keywords
+    # one boolean mask over ALL scanned tokens per concept: True within +-WINDOW of one of its keywords (vectorised)
+    N = int(lens.sum()); word_pos = defaultdict(list)                    # keyword -> global token positions
     for di in range(len(lens)):
-        ids = toks[starts[di]:starts[di] + lens[di]]
-        pieces = [tok.decode([t]) for t in ids]
+        ids = toks[starts[di]:starts[di] + lens[di]].tolist()
+        pieces = tok.batch_decode([[t] for t in ids])
         text = "".join(pieces); offs = np.cumsum([0] + [len(p) for p in pieces])
-        found = defaultdict(list)
         for mt in pat.finditer(text):
-            tpos = int(np.searchsorted(offs, mt.start(), side="right") - 1)
-            found[mt.group(1).lower()].append(tpos)
-        for w, ps in found.items():
-            hits[w][di] = ps
-        for c, ws in kw.items():
-            ps = sorted(p for w in ws for p in found.get(w, []))
-            if ps:
-                cover = np.zeros(lens[di], bool)
-                for p in ps:
-                    cover[max(1, p - WINDOW):p + WINDOW + 1] = True
-                near_tokens[c] += int(cover[1:].sum())
-    def near(words, di, p):
+            word_pos[mt.group(1).lower()].append(starts[di] + int(np.searchsorted(offs, mt.start(), side="right") - 1))
+    doc_of = np.repeat(np.arange(len(lens)), lens)
+    def mask_for(words):
+        m = np.zeros(N + 1, np.int32)
         for w in words:
-            for q in hits[w].get(di, ()):
-                if abs(q - p) <= WINDOW:
-                    return True
-        return False
+            for g in word_pos.get(w, ()):
+                d0 = doc_of[g]; lo = max(starts[d0] + 1, g - WINDOW); hi = min(starts[d0] + lens[d0], g + WINDOW + 1)
+                m[lo] += 1; m[hi] -= 1
+        return np.cumsum(m[:N]) > 0
+    near = {c: mask_for(ws) for c, ws in kw.items()}
+    any_near = np.zeros(N, bool)
+    for v in near.values():
+        any_near |= v
+    first_tok = np.zeros(N, bool); first_tok[starts] = True                # token 0 of each window is never scanned
+    global ANY_BASE
+    ANY_BASE = float(any_near[~first_tok].mean())
     order = np.argsort(unit, kind="stable"); unit, doc, pos = unit[order], doc[order], pos[order]
+    gidx = starts[doc] + pos
     bounds = np.searchsorted(unit, np.arange(len(rows) + 1))
+    pair = {rr["paired_with"]: k for k, rr in enumerate(rows) if rr["control"]}
     res = {}
     for i, r in enumerate(rows):
         if r["control"]:
@@ -92,22 +91,22 @@ def main():
         owners = [c for c in r["concepts"] if c in kw]
         if not owners:
             continue
-        own_w = sorted({w for c in owners for w in kw[c]})
-        other_w = sorted({w for c, ws in kw.items() if c not in owners for w in ws} - set(own_w))
-        j = next(k for k, rr in enumerate(rows) if rr.get("paired_with") == r["neuron"] and rr["control"])
-        def prof(k, check_other):
-            sl = slice(bounds[k], bounds[k + 1]); dd, pp = doc[sl], pos[sl]
-            n = len(dd)
+        own_m = np.zeros(N, bool)
+        for c in owners:
+            own_m |= near[c]
+        base = own_m[~first_tok].mean()
+        def prof(k, other):
+            g = gidx[bounds[k]:bounds[k + 1]]; n = len(g)
             if n == 0:
                 return {"n": 0, "rate": 0.0, "on": None, "other": None, "none": None}
-            on = sum(near(own_w, a, b) for a, b in zip(dd, pp))
-            oth = sum((not near(own_w, a, b)) and near(other_w, a, b) for a, b in zip(dd, pp)) if check_other else None
-            return {"n": n, "rate": n / n_tok * 1e6, "on": on / n, "other": None if oth is None else oth / n,
-                    "none": None if oth is None else (n - on - oth) / n}
-        p = prof(i, True); c_ = prof(j, False)
-        base = max(near_tokens[c] for c in owners) / n_tok
+            on = own_m[g].mean()
+            if not other:
+                return {"n": n, "rate": n / n_tok * 1e6, "on": float(on)}
+            oth = (any_near[g] & ~own_m[g]).mean()
+            return {"n": n, "rate": n / n_tok * 1e6, "on": float(on), "other": float(oth), "none": float(1 - on - oth)}
+        p = prof(i, True); c_ = prof(pair[r["neuron"]], False)
         res[r["neuron"]] = {**p, "own_act": r["own_act"], "owners": owners, "families": sorted({fam.get(c, "?") for c in owners}),
-                            "base": base, "lift": (p["on"] / base) if p["on"] is not None and base > 0 else None,
+                            "base": float(base), "lift": (p["on"] / base) if p["on"] is not None and base > 0 else None,
                             "ctrl": c_, "layer": r["layer"]}
     act = {u: v for u, v in res.items() if abs(v["own_act"]) >= MIN_OWN}
     fired = {u: v for u, v in act.items() if v["n"] > 0}
@@ -124,6 +123,8 @@ def main():
              f"{sum((v['lift'] or 0) >= 5 for v in fired.values())}/{len(fired)}; on-concept >= 50%: {sum(v['on'] >= 0.5 for v in fired.values())}/{len(fired)}")
     L.append(f"firings near ANOTHER of our concepts only: median {md([v['other'] for v in fired.values()]):.2f}; near none of our "
              f"{len(kw)} concepts: median {md([v['none'] for v in fired.values()]):.2f}")
+    L.append(f"  chance for that: share of all scanned tokens near ANY of our concepts' keywords = {ANY_BASE:.2f} "
+             f"(so 'other' and 'none' are only interpretable against this)")
     L.append("\nby layer band: neurons firing | median rate/M | median on-concept | median lift | median 'none'")
     for lo, hi in ((0, 16), (16, 24), (24, 30), (30, 36)):
         vv = [v for v in fired.values() if lo <= v["layer"] < hi]
