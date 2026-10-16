@@ -265,7 +265,7 @@
   /* ---------- plain-English definitions on hover or tap, first mention of each term ---------- */
   const TERMS = [
     ["interpretability", "The study of how AI models work inside: what their parts do and why they give the answers they do."],
-    ["neurons", "Small units inside the model. For every word-piece it reads or writes, each neuron produces one number: how strongly it is firing. Qwen3-8B has 442,368, in 36 layers."],
+    ["neurons", "Small units inside the model. For every token it reads or writes, each neuron produces one number: how strongly it is firing. Qwen3-8B has 442,368, in 36 layers."],
     ["superposition", "The theory that a model packs several unrelated concepts into each neuron, so no single neuron means one thing."],
     ["sparse autoencoder", "A second AI model, trained separately, that translates another model's insides into a larger set of more readable \"features\". Golden Gate Claude used one."],
     ["Golden Gate Claude", "A 2024 demo by Anthropic: Claude with its Golden Gate Bridge feature turned up, so it brought the bridge into almost every answer."],
@@ -274,7 +274,7 @@
     ["layers", "The model processes text in 36 stages, one after another. Each stage has 12,288 neurons."],
     ["steer", "Changing what a model says by adjusting its insides directly, rather than by changing the question."],
     ["attention", "The part of each layer that lets the model look back at earlier words. We studied only the other part, the neurons."],
-    ["word-piece", "Models read and write text in small chunks called tokens: a whole short word, or part of a longer one."],
+    ["tokens?", "The small chunks a model reads and writes text in: a whole short word, or part of a longer one. A token is about three-quarters of a word on average."],
     ["firing", "How active a neuron is at that moment: a high number means it is strongly firing."],
     ["attribution", "A score for how much one neuron pushed the model towards an answer: its activity times how sensitive the answer is to it."],
     ["activity", "The number a neuron produces at that moment; high means it is firing strongly."],
