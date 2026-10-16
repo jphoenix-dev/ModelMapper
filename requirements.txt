@@ -1,5 +1,6 @@
 # Versions installed in the environment the experiments ran in (Python 3.11.9, Windows 10, CUDA 12.8).
-# torch was installed from the CUDA 12.8 wheel index:
+# Python 3.10 is also supported: numpy and pyarrow fall back to their newest 3.10 releases (markers below).
+# Install torch first, from the index for your hardware (see SETUP.md), e.g.
 #   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 torch==2.11.0
 transformers==5.20.0
@@ -7,6 +8,8 @@ accelerate==1.15.0
 tokenizers==0.23.3
 safetensors==0.8.0
 huggingface_hub==2.2.0
-numpy==2.4.6
-pyarrow==26.0.0
+numpy==2.4.6; python_version >= "3.11"
+numpy==2.2.6; python_version < "3.11"
+pyarrow==26.0.0; python_version >= "3.11"
+pyarrow==25.0.1; python_version < "3.11"
 httpx==0.28.1

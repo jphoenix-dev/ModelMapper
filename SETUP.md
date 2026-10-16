@@ -23,7 +23,8 @@ git --version
 python --version          # Windows: py -0p  (lists installed Pythons)
 nvidia-smi                # only if there is an NVIDIA GPU
 ```
-Model Mapper was developed on Python 3.11.9. Use 3.11 if it is installed; 3.10–3.12 should work.
+Model Mapper was developed on Python 3.11.9. Use 3.11 or 3.12 if one is installed; otherwise use 3.10, which is
+also supported (a couple of packages then install slightly older versions). Python 3.13 and newer are untested.
 
 Note these three facts for the report: the OS, the Python version, and the GPU. For the GPU, record the name, the
 memory and the driver version from `nvidia-smi`; write "none" if there is no NVIDIA GPU, or "Apple Silicon".
@@ -44,8 +45,9 @@ If you were given a `.bundle` file instead, run `git clone -b release <path>/mod
 ## 3. Create a virtual environment
 Windows (PowerShell):
 ```powershell
-py -3.11 -m venv .venv
+py -3.11 -m venv .venv          # or -3.12 / -3.10, whichever step 1 found
 .venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 ```
 If PowerShell refuses to run the script, run `Set-ExecutionPolicy -Scope Process Bypass` first. That only affects
 this window.
@@ -54,7 +56,11 @@ Linux / macOS:
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 ```
+Don't skip the pip upgrade. The pip that ships with older Pythons (e.g. 23.0 with 3.10) fails to install the CUDA
+build of torch.
+
 **Check:** `python -c "import sys; print(sys.prefix)"` prints a path ending in `.venv`.
 
 ## 4. Install PyTorch (pick one)
@@ -142,6 +148,13 @@ After a passed run, it deletes the folder.
 - **`torch.cuda.is_available()` is False on an NVIDIA machine.** Either the CPU wheel was installed, or the driver is
   older than the CUDA 12.8 wheels need. Check with `pip show torch` (the version ends in `+cu128` or `+cpu`) and
   `nvidia-smi`.
+- **`CERTIFICATE_VERIFY_FAILED` behind a corporate proxy** (Zscaler, Netskope and similar re-sign HTTPS traffic).
+  Get the proxy's root certificate from IT, or export it from the Windows certificate store. Combine it with the
+  public CA bundle into one `.pem` file, then point the tools at that file:
+  - pip: `PIP_CERT=<bundle.pem>`;
+  - model downloads and API calls (Hugging Face, httpx): `SSL_CERT_FILE=<bundle.pem>` and `REQUESTS_CA_BUNDLE=<bundle.pem>`.
+
+  Set all three before running the smoke test.
 - **Model download stalls or fails.** Download it explicitly, then point the code at the folder:
   ```bash
   hf download Qwen/Qwen3-0.6B --local-dir models/Qwen3-0.6B
