@@ -253,6 +253,23 @@
       "names_concept": false
      }
     ]
+   },
+   "pinned": {
+    "questions": [
+     "What is the name of the decentralized digital currency first outlined in a 2008 white paper?",
+     "What is the name of the cryptocurrency whose protocol limits its supply to 21 million units?",
+     "What is the name of the pioneering cryptocurrency that helped popularize public blockchain technology?",
+     "What is the name of the major digital currency secured by miners using the SHA-256 proof-of-work algorithm?",
+     "What is the name of the crypto asset most often compared to gold as a store of value?",
+     "What is the name of the cryptocurrency whose mining reward is periodically cut in half?",
+     "What was the name of the cryptocurrency adopted as legal tender by El Salvador in 2021?",
+     "What was the name of the cryptocurrency at the center of much of the 2017 market boom?",
+     "What is the name of the digital currency commonly represented by an orange letter B with vertical strokes?",
+     "What is the name of the cryptocurrency that became the first to reach a market capitalization of one trillion dollars?",
+     "What is the name of the peer-to-peer currency designed to let users transfer value without relying on a bank?",
+     "What is the name of the cryptocurrency frequently used as a benchmark for the wider digital-asset market?"
+    ],
+    "answer_form": "Bitcoin"
    }
   },
   {
@@ -471,6 +488,19 @@
       "names_concept": true
      }
     ]
+   },
+   "pinned": {
+    "questions": [
+     "What is the name of Google's best-known service for hosting user-uploaded videos?",
+     "What is the name of the platform where viewers subscribe to channels and creators publish regular videos?",
+     "What is the name of the online destination where people watch music videos, tutorials, and gameplay clips?",
+     "What is the name of the place many musicians use to premiere official video clips online?",
+     "What is the name of the video site that lets people create channels and organize clips into playlists?",
+     "What is the name of the website where viewers can adjust playback speed and choose video resolution?",
+     "What is the name of the platform whose recommendation system suggests more clips after each viewing?",
+     "What is the name of the digital platform where creators publish everything from product reviews to documentaries?"
+    ],
+    "answer_form": "YouTube"
    }
   },
   {
@@ -690,6 +720,26 @@
       "names_concept": true
      }
     ]
+   },
+   "pinned": {
+    "questions": [
+     "What is the process by which plants use sunlight to make sugars called?",
+     "What is the conversion of light energy into chemical energy by plants known as in biology?",
+     "What is the process that turns carbon dioxide and water into sugar using light?",
+     "What is the biological process that releases oxygen while plants use sunlight to produce sugars?",
+     "What is the process that forms the base of most food chains by storing solar energy in organic molecules?",
+     "What is the process by which algae use sunlight to build sugars from carbon dioxide and water called?",
+     "What is the conversion of solar energy into stored chemical energy by plants called?",
+     "What is the process in which plants take in carbon dioxide and release oxygen in the presence of light?",
+     "What is the light-powered process that allows plants to make their own food?",
+     "What is the process that uses chlorophyll to capture sunlight and produce sugars?",
+     "What is the biological pathway that lets many aquatic organisms use light to make food?",
+     "What is the process through which plants store energy from sunlight in molecules such as glucose?",
+     "What is the process that occurs mainly in the leaves of plants and depends on light?",
+     "What is the conversion of inorganic carbon into energy-rich sugars by light-using organisms called?",
+     "What is the process that supports plant growth by turning light, water, and carbon dioxide into chemical energy?"
+    ],
+    "answer_form": "Photosynthesis"
    }
   }
  ],

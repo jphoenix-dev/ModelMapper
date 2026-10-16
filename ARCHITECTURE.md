@@ -187,7 +187,8 @@ free local check (mean log-prob, repetition, non-ASCII share), validated against
 - `scripts/make_answer_key.py` builds a key. It picks one marker per concept that holds in every independent prompt
   set: rank ≤ 5, knockout drop ≥ 0.1, and a label that names the concept (`answer_keys/keywords.json`). It works
   from existing runs (`from-runs`, used for Qwen3-8B with CR-2 and CR-2b) or from fresh prompt sets (`fresh`, used for
-  Qwen3-0.6B). `calibrate` writes our own check results and the pass marks into the key.
+  Qwen3-0.6B). `calibrate` writes our own check results and the pass marks into the key. `pin` records each marker's exact
+  recalled questions and answer form, so tier 1 feeds identical inputs on every machine.
 - `scripts/verify_answer_key.py --tier 1|2|3 [--control]` checks an install against a key and exits 0 on a pass.
   The tiers are the key's prompts, fresh prompts, and fresh labels; the controls look in the wrong concept, or match
   against other markers' keywords.

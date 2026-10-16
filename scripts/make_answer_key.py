@@ -87,6 +87,8 @@ def select(runs: list[dict], names: list[str], labels: dict, max_rank: int, min_
             "evidence": [{"set": nm, "rank": p[(l, n)]["rank"], "drop": p[(l, n)]["drop"],
                           "baseline_p": r[concept]["baseline_p"]} for nm, p, r in zip(names, per, runs)],
             "spec": runs[0][concept].get("spec"),   # tier 1 re-uses these exact prompts
+            "pinned": ({"questions": runs[0][concept]["kept"], "answer_form": runs[0][concept]["answer_form"]}
+                       if runs[0][concept].get("kept") else None),
         })
     return markers, skipped
 
@@ -136,11 +138,39 @@ def calibrate(key_path, checks, passes):
     print(f"pass fractions: { {t: key['pass_rules'][t]['pass_fraction'] for t in ('tier1', 'tier2', 'tier3')} } -> {key_path}")
 
 
+def pin(key_path):
+    """Record each marker's exact recalled questions and answer form (from re-running its spec on this machine, which
+    must reproduce the key's run), so tier 1 feeds identical inputs everywhere instead of re-applying the recall bar."""
+    import tempfile
+
+    import markers as mk
+    key = json.loads(Path(key_path).read_text(encoding="utf-8"))
+    work = Path(tempfile.mkdtemp(prefix="answer_key_pin_"))
+    mk.setup_env(work, discovery=False)
+    from concept_pipeline import slug
+    from pipeline_fast import FastPipeline
+    pipe = FastPipeline(key["model"])
+    for m in key["markers"]:
+        d = work / m["unit"]
+        mk.set_out_dir(d)
+        (d / f"{slug(m['concept'])}_spec.json").write_text(json.dumps(m["spec"], ensure_ascii=False), encoding="utf-8")
+        r = mk.run_concept(pipe, m["concept"])
+        got = next((n for n in r.get("neurons", []) if (n["layer"], n["neuron"]) == (m["layer"], m["neuron"])), None)
+        ref = m["evidence"][0]
+        same = bool(got and got["rank"] == ref["rank"] and abs(got["drop"] - ref["drop"]) < 0.02)
+        print(f"  {m['concept']:<24} recall {r['recall']} | rank {got and got['rank']} vs key {ref['rank']} | "
+              f"{'reproduces the key run' if same else 'DIFFERS from the key run: not pinned'}", flush=True)
+        if same:
+            m["pinned"] = {"questions": r["kept"], "answer_form": r["answer_form"]}
+    Path(key_path).write_text(json.dumps(key, indent=1, ensure_ascii=False), encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(dest="mode", required=True)
     a1 = sub.add_parser("from-runs"); a1.add_argument("model"); a1.add_argument("run_dirs", nargs=2); a1.add_argument("out")
     a1.add_argument("--tag", default="clamp_reply"); a1.add_argument("--names", nargs=2, default=["A", "B"])
+    a4 = sub.add_parser("pin"); a4.add_argument("key")
     a3 = sub.add_parser("calibrate"); a3.add_argument("key"); a3.add_argument("checks", nargs="+")
     a3.add_argument("--tier1", type=float); a3.add_argument("--tier2", type=float); a3.add_argument("--tier3", type=float)
     a2 = sub.add_parser("fresh"); a2.add_argument("model"); a2.add_argument("out"); a2.add_argument("concepts", nargs="+")
@@ -149,6 +179,9 @@ def main():
         p.add_argument("--max-rank", type=int, default=5); p.add_argument("--min-drop", type=float, default=0.1)
     args = ap.parse_args()
 
+    if args.mode == "pin":
+        pin(args.key)
+        return
     if args.mode == "calibrate":
         calibrate(args.key, args.checks, {t: v for t, v in (("tier1", args.tier1), ("tier2", args.tier2),
                                                             ("tier3", args.tier3)) if v is not None})

@@ -40,7 +40,7 @@ def concept_tier(key, tier, work, control=False):
             from concept_pipeline import slug
             (d / f"{slug(cm['concept'])}_spec.json").write_text(json.dumps(cm["spec"], ensure_ascii=False), encoding="utf-8")
         t0 = time.time()
-        r = mk.run_concept(pipe, cm["concept"])
+        r = mk.run_concept(pipe, cm["concept"], pinned=cm.get("pinned") if tier == 1 else None)
         got = next((n for n in r.get("neurons", []) if (n["layer"], n["neuron"]) == (m["layer"], m["neuron"])), None)
         ref = m["evidence"][0]
         if tier == 1:

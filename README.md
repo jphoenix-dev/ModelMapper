@@ -182,11 +182,13 @@ used:
   P(answer) by 0.79.
 
 ```bash
-python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 1   # the key's own prompts; no API calls
+python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 1   # the key's exact inputs; no API calls
 python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 2   # new prompts from your labeller
 python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 3   # new blind labels from your own atlas
 ```
-Each key records its own calibration (`"calibration"`): what these checks scored on our machine. That includes
+Tier 1 feeds the exact recall questions and answer wording pinned in the key. Re-applying the recall bar instead
+let a second machine's rounding change which borderline questions counted, and that moved one marker's rank. Each key
+records its own calibration (`"calibration"`): what these checks scored on our machine. That includes
 negative controls, which look for each marker in a different concept and should find almost nothing.
 
 | Check (our machine) | Qwen3-8B (10 markers) | Qwen3-0.6B (3 markers) |

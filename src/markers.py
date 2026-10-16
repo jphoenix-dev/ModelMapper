@@ -33,14 +33,33 @@ def set_out_dir(out_dir):
     pipeline_fast.OUT = out_dir
 
 
-def run_concept(pipe, concept: str, top_k: int = 20) -> dict:
-    """Recall -> attribution -> single-neuron knockouts for the top_k attributed neurons (same measures as CR-2)."""
-    spec, tid, recall, _ = pipe.make_prompts(concept)
-    row = {"concept": concept, "answer": spec["answer"], "answer_form": getattr(pipe, "answer_form", None),
-           "recall": len(recall), "recall_total": len(spec.get("recall_v3") or spec["recall"])}
-    if len(recall) < 5:
-        return {**row, "status": "not_recalled"}
-    rp = [q for q, _ in recall]
+def chat_prompt(tok, question: str) -> str:
+    """The V3 recall format, exactly as pipeline_fast builds it."""
+    return tok.apply_chat_template([{"role": "user", "content": question + " Answer with just the name."}],
+                                   tokenize=False, add_generation_prompt=True, enable_thinking=False)
+
+
+def run_concept(pipe, concept: str, top_k: int = 20, pinned: dict | None = None) -> dict:
+    """Recall -> attribution -> single-neuron knockouts for the top_k attributed neurons (same measures as CR-2).
+
+    pinned = {"questions": [...], "answer_form": "..."} skips the recall step and scores exactly these questions with
+    exactly this answer wording (answer-key tier 1). Without it, which questions pass the P(answer) >= 0.2 recall bar
+    can differ between machines for questions right at the bar, and the attribution average shifts with them."""
+    if pinned:
+        rp = [chat_prompt(pipe.tok, q) for q in pinned["questions"]]
+        tid = pipe.tok.encode(pinned["answer_form"])
+        row = {"concept": concept, "answer": pinned["answer_form"], "answer_form": pinned["answer_form"],
+               "recall": len(rp), "recall_total": len(rp), "kept": list(pinned["questions"])}
+    else:
+        spec, tid, recall, _ = pipe.make_prompts(concept)
+        kept = {q for q, _ in recall}
+        src = spec.get("recall_v3") or spec["recall"]
+        row = {"concept": concept, "answer": spec["answer"], "answer_form": getattr(pipe, "answer_form", None),
+               "recall": len(recall), "recall_total": len(src), "spec": spec,
+               "kept": [raw for raw, d in zip(src, pipe.recall_diag) if d["prompt"] in kept]}
+        if len(recall) < 5:
+            return {**row, "status": "not_recalled"}
+        rp = [q for q, _ in recall]
     base = sum(pipe.probs(rp, tid)) / len(rp)
     A = pipe.attribute(rp, tid)
     la = A["last_act"]
@@ -50,7 +69,7 @@ def run_concept(pipe, concept: str, top_k: int = 20) -> dict:
         neurons.append({"rank": i + 1, "layer": l, "neuron": n, "drop": round(base - p, 4),
                         "sign": "neg" if la[l, n] < 0 else "pos"})
     del A
-    return {**row, "status": "ok", "baseline_p": round(base, 4), "neurons": neurons, "spec": spec}
+    return {**row, "status": "ok", "baseline_p": round(base, 4), "neurons": neurons}
 
 
 def label_units(model_name: str, units, out_dir, use_jev: bool = False) -> dict:

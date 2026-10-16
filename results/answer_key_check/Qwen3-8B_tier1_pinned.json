@@ -1,0 +1,212 @@
+{
+ "key": "answer_keys/Qwen3-8B.json",
+ "model": "Qwen/Qwen3-8B",
+ "tier": 1,
+ "passed": true,
+ "found": 10,
+ "markers": 10,
+ "pass_fraction": 0.9,
+ "time": "2026-10-16 12:24",
+ "rows": [
+  {
+   "concept": "Frida Kahlo",
+   "checked_in": "Frida Kahlo",
+   "unit": "L31_N10560",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.157 (needs >= 0.079)",
+   "key_rank": 1,
+   "key_drop": 0.1574,
+   "rank": 1,
+   "drop": 0.1572,
+   "recall": 11,
+   "top5": [
+    "L31_N10560",
+    "L32_N11769",
+    "L31_N2065",
+    "L24_N11058",
+    "L32_N10452"
+   ],
+   "seconds": 3.8
+  },
+  {
+   "concept": "Golden Gate Bridge",
+   "checked_in": "Golden Gate Bridge",
+   "unit": "L31_N9611",
+   "ok": true,
+   "detail": "rank 4 (needs <= 11), drop 0.346 (needs >= 0.171)",
+   "key_rank": 4,
+   "key_drop": 0.3417,
+   "rank": 4,
+   "drop": 0.346,
+   "recall": 16,
+   "top5": [
+    "L10_N488",
+    "L34_N5510",
+    "L28_N6711",
+    "L31_N9611",
+    "L30_N4167"
+   ],
+   "seconds": 3.9
+  },
+  {
+   "concept": "Mount Everest",
+   "checked_in": "Mount Everest",
+   "unit": "L31_N5148",
+   "ok": true,
+   "detail": "rank 2 (needs <= 7), drop 0.311 (needs >= 0.160)",
+   "key_rank": 2,
+   "key_drop": 0.3205,
+   "rank": 2,
+   "drop": 0.3107,
+   "recall": 17,
+   "top5": [
+    "L27_N10689",
+    "L31_N5148",
+    "L8_N5241",
+    "L9_N10107",
+    "L30_N6488"
+   ],
+   "seconds": 4.2
+  },
+  {
+   "concept": "Napoleon Bonaparte",
+   "checked_in": "Napoleon Bonaparte",
+   "unit": "L30_N10870",
+   "ok": true,
+   "detail": "rank 5 (needs <= 13), drop 0.266 (needs >= 0.133)",
+   "key_rank": 5,
+   "key_drop": 0.2659,
+   "rank": 5,
+   "drop": 0.2664,
+   "recall": 16,
+   "top5": [
+    "L15_N3800",
+    "L13_N7436",
+    "L16_N9959",
+    "L20_N7819",
+    "L30_N10870"
+   ],
+   "seconds": 3.8
+  },
+  {
+   "concept": "Wolfgang Amadeus Mozart",
+   "checked_in": "Wolfgang Amadeus Mozart",
+   "unit": "L9_N10024",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.449 (needs >= 0.224)",
+   "key_rank": 1,
+   "key_drop": 0.4489,
+   "rank": 1,
+   "drop": 0.449,
+   "recall": 13,
+   "top5": [
+    "L9_N10024",
+    "L30_N8885",
+    "L8_N1287",
+    "L31_N8930",
+    "L33_N12171"
+   ],
+   "seconds": 3.4
+  },
+  {
+   "concept": "chess",
+   "checked_in": "chess",
+   "unit": "L8_N7581",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.130 (needs >= 0.065)",
+   "key_rank": 1,
+   "key_drop": 0.1299,
+   "rank": 1,
+   "drop": 0.1296,
+   "recall": 15,
+   "top5": [
+    "L8_N7581",
+    "L9_N11367",
+    "L27_N92",
+    "L28_N1512",
+    "L16_N10113"
+   ],
+   "seconds": 3.6
+  },
+  {
+   "concept": "democracy",
+   "checked_in": "democracy",
+   "unit": "L31_N11943",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.807 (needs >= 0.397)",
+   "key_rank": 1,
+   "key_drop": 0.7945,
+   "rank": 1,
+   "drop": 0.8075,
+   "recall": 13,
+   "top5": [
+    "L31_N11943",
+    "L32_N8254",
+    "L30_N4626",
+    "L28_N8868",
+    "L34_N598"
+   ],
+   "seconds": 3.3
+  },
+  {
+   "concept": "the French Revolution",
+   "checked_in": "the French Revolution",
+   "unit": "L30_N5534",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.252 (needs >= 0.126)",
+   "key_rank": 1,
+   "key_drop": 0.2515,
+   "rank": 1,
+   "drop": 0.2515,
+   "recall": 20,
+   "top5": [
+    "L30_N5534",
+    "L4_N1234",
+    "L9_N21",
+    "L34_N2945",
+    "L27_N3385"
+   ],
+   "seconds": 5.0
+  },
+  {
+   "concept": "the Titanic",
+   "checked_in": "the Titanic",
+   "unit": "L30_N10955",
+   "ok": true,
+   "detail": "rank 2 (needs <= 7), drop 0.337 (needs >= 0.169)",
+   "key_rank": 2,
+   "key_drop": 0.3379,
+   "rank": 2,
+   "drop": 0.3374,
+   "recall": 18,
+   "top5": [
+    "L10_N1252",
+    "L30_N10955",
+    "L31_N7838",
+    "L33_N3526",
+    "L8_N9525"
+   ],
+   "seconds": 4.2
+  },
+  {
+   "concept": "the violin",
+   "checked_in": "the violin",
+   "unit": "L9_N5033",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.299 (needs >= 0.150)",
+   "key_rank": 1,
+   "key_drop": 0.2993,
+   "rank": 1,
+   "drop": 0.2995,
+   "recall": 15,
+   "top5": [
+    "L9_N5033",
+    "L20_N7473",
+    "L29_N224",
+    "L34_N7220",
+    "L22_N2516"
+   ],
+   "seconds": 3.6
+  }
+ ]
+}
