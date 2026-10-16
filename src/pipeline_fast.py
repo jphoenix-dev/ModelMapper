@@ -36,11 +36,17 @@ RECALL_VARIANT = os.environ.get("RECALL_VARIANT", "V0")   # V0 as frozen run, V1
 BRIDGES = ["", " called", " known as", " named", " the"]
 
 
+GENERIC_ANSWER_WORDS = {"tree", "bridge", "tower", "mountain", "river", "desert", "city", "lake", "island", "plant",
+                        "animal", "game", "machine", "engine", "table", "wall", "game", "instrument", "building"}
+
+
 def leaks(prompt, answer):
     """Does the prompt give away a DISTINCTIVE answer word? (ISSUES #22)
     Capitalised answer words (names: Golden, Eiffel, Shakespeare) count only when capitalised in the prompt, so an
     ordinary "the bridge" is not a leak for "Golden Gate Bridge"; lowercase answers (coffee, chess) count in any case."""
     for w in re.findall(r"[A-Za-z]{4,}", answer):
+        if w.lower() in GENERIC_ANSWER_WORDS and not w[0].isupper():
+            continue                       # "tree" in "oak tree" is the question's category, not a give-away (ISSUES #32)
         if w[0].isupper():
             if re.search(r"\b" + re.escape(w) + r"\b", prompt):
                 return True
