@@ -859,3 +859,7 @@ Same three views as above, on concept runs the measure wasn't developed on. `res
 - Random control: one random neuron happened to matter for poker (0.95 drop; poker's top 5 give 9.5). Every other
   random set stays ≤ 0.24.
 - Completion format (CR) remains the less concentrated one (8/11 ≤ 5).
+
+**Top-10 label cleanliness replicates** (pipeline's original strict rule, either pole clean; census baseline under
+the same rule 58%): CR-2 130/190 = 68%, CR-2b 133/200 = 67%, wave 2 254/400 = 64%. The neurons that carry a concept
+are slightly cleaner than random neurons, consistently across prompt sets and 40 new concepts.
