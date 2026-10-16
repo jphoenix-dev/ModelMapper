@@ -38,8 +38,17 @@ GENERIC = {"the", "mount", "tower", "bridge", "river", "desert", "great", "wall"
 
 
 def logit(p):
+    # old clamped form: caps at 20.72 (ISSUES #35). Kept only to compare with earlier runs; use pipe.batch_logodds.
     p = min(max(p, 1e-9), 1 - 1e-9)
     return math.log(p / (1 - p))
+
+
+def p_of(lo):
+    """P from exact log-odds (ISSUES #35), overflow-safe."""
+    if lo >= 0:
+        return 1 / (1 + math.exp(-lo))
+    e = math.exp(lo)
+    return e / (1 + e)
 
 
 def main():
@@ -77,12 +86,12 @@ def main():
                 print(f"{concept:<24} not recalled ({len(recall)}/20); discovered {row['discovered']}", flush=True)
                 out_p.write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8"); continue
             rp = [q for q, _ in recall]; pairs = [(q, tid) for q in rp]
-            base = [logit(p) for p in pipe.batch_probs(pairs)]; right = [b > 0 for b in base]
+            base = pipe.batch_logodds(pairs); right = [b > 0 for b in base]
             A = pipe.attribute(rp, tid); top = A["top"][:200]
 
             def per_prompt(units):
-                ps = pipe.batch_probs(pairs, steer(pipe.model, [(l, n, 0.0) for l, n in units]) if units else None)
-                return [b - logit(p) for b, p in zip(base, ps)], ps
+                los = pipe.batch_logodds(pairs, steer(pipe.model, [(l, n, 0.0) for l, n in units]) if units else None); ps = [p_of(x) for x in los]
+                return [b - x for b, x in zip(base, los)], ps
             single = sorted(top, key=lambda u: -sum(per_prompt([u])[0]))
 
             def kvals(order):

@@ -22,8 +22,17 @@ ROUNDS, PER = 5, 10
 
 
 def logit(p):
+    # old clamped form: caps at 20.72 (ISSUES #35). Kept only to compare with earlier runs; use pipe.batch_logodds.
     p = min(max(p, 1e-9), 1 - 1e-9)
     return math.log(p / (1 - p))
+
+
+def p_of(lo):
+    """P from exact log-odds (ISSUES #35), overflow-safe."""
+    if lo >= 0:
+        return 1 / (1 + math.exp(-lo))
+    e = math.exp(lo)
+    return e / (1 + e)
 
 
 def main():
@@ -36,12 +45,12 @@ def main():
             print(f"{concept}: not recalled", flush=True); continue
         rp = [q for q, _ in recall]
         pairs = [(q, tid) for q in rp]
-        base = [logit(p) for p in pipe.batch_probs(pairs)]
+        base = pipe.batch_logodds(pairs)
         right = [b > 0 for b in base]
 
         def measure(units):
-            ps = pipe.batch_probs(pairs, steer(pipe.model, [(l, n, 0.0) for l, n in units]) if units else None)
-            drop = sum(b - logit(p) for b, p in zip(base, ps)) / len(ps)
+            los = pipe.batch_logodds(pairs, steer(pipe.model, [(l, n, 0.0) for l, n in units]) if units else None); ps = [p_of(x) for x in los]
+            drop = sum(b - x for b, x in zip(base, los)) / len(ps)
             flipped = sum(p < 0.5 for p, r in zip(ps, right) if r) / max(1, sum(right))
             return round(drop, 2), round(flipped, 2)
         first = pipe.attribute(rp, tid)
