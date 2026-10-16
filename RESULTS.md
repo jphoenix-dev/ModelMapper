@@ -1239,3 +1239,8 @@ cards may be order-influenced (ISSUES #34) and are reported with and without.
   share human hesitation.
 - **Limits:** one rater, 40 cards; "own example" is ground truth for *source*, not for whether the description is
   right; Luna had not graded the rebuilt cards, so there's no Luna comparison.
+
+**Independent reproduction (explainer session, separate process and code path, 16 Oct ~09:15):** re-deriving the
+neurons from the saved prompts gave the same top-10 neurons (10/10) for the Eiffel Tower, Einstein and chess, the
+same k (log-odds drop ≥ 3) each time, and an Eiffel knockout curve matching `logodds_cr2_V3_v2` to two decimals. The
+pipeline is deterministic and reproducible on the same hardware.
