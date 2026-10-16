@@ -1218,3 +1218,24 @@ neurons; `results/prob_view.txt`; per-prompt data from the log-odds v2 runs; 90 
 A single measured top neuron gives about the drop Dai et al. report for ~4 neurons. Five neurons remove 61–82% of the
 answer's probability and flip most correct answers, while five random same-layer neurons change nothing (to 3
 decimals).
+
+## 16 Oct 2026 (morning): human spot-check of the graders (ISSUES #16, last part)
+James blind-rated 40 (description, text) cards (`site/spotcheck.html`; 20 = the neuron's own top firing, 20 = random
+text). The middle option turned out to mean "unsure" in practice, so it is treated as an abstention. The first 6
+cards may be order-influenced (ISSUES #34) and are reported with and without.
+
+| | all 40 | excluding first 6 |
+|---|---|---|
+| human unsure | 8 (20%), all random cards | 8 (24%) |
+| **human (confident) right about own vs random** | **88%** (28/32) | 85% (22/26) |
+| **Jev right about own vs random** (≥ 0.5 = fits) | **88%** (35/40) | 88% |
+| human–Jev agreement on confident cards | 78% | 77% |
+
+- **Jev matches a careful human on telling a neuron's real firings from random text** (both 85–88%). The census grader
+  is not worse than a person at this task.
+- **All 4 confident human errors are "clearly fits" on random text**: the description happened to fit an unrelated
+  token. This is the over-fitting-to-random-text effect the census's random-snippet check is built to penalise.
+- **Jev is not less certain where the human was unsure** (distance from 0.5: 0.37 unsure vs 0.34 confident). It doesn't
+  share human hesitation.
+- **Limits:** one rater, 40 cards; "own example" is ground truth for *source*, not for whether the description is
+  right; Luna had not graded the rebuilt cards, so there's no Luna comparison.

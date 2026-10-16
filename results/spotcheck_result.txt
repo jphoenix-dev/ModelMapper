@@ -1,0 +1,14 @@
+[all 40] 40 cards: confident 32, unsure 8 (20%)
+   human (confident cards) matches truth (own=fits, random=doesn't): 88%
+   Jev matches truth on the same 40 cards: 88% | on confident cards only: 84%
+   human vs Jev agreement (confident): 78% | human vs Luna (n=0): nan%
+   Jev's distance from 0.5: on human-confident 0.34 vs human-unsure 0.37
+   unsure cards by truth: own 0, random 8
+   human confident errors: [('p07', 'rnd', 2, 0.23), ('p17', 'rnd', 2, 0.53), ('p30', 'rnd', 2, 0.02), ('p40', 'rnd', 2, 0.15)]
+[excluding first 6 (order-influenced)] 34 cards: confident 26, unsure 8 (24%)
+   human (confident cards) matches truth (own=fits, random=doesn't): 85%
+   Jev matches truth on the same 34 cards: 88% | on confident cards only: 85%
+   human vs Jev agreement (confident): 77% | human vs Luna (n=0): nan%
+   Jev's distance from 0.5: on human-confident 0.35 vs human-unsure 0.37
+   unsure cards by truth: own 0, random 8
+   human confident errors: [('p07', 'rnd', 2, 0.23), ('p17', 'rnd', 2, 0.53), ('p30', 'rnd', 2, 0.02), ('p40', 'rnd', 2, 0.15)]
