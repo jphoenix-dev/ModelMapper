@@ -1005,3 +1005,18 @@ name-present-AND-fluent; best over 4 rules shown, so flattered by selection over
   mode. Shakespeare resists everything tried (≤ 0.10). The earlier "people can't be steered" was mostly our default
   rule (late layers only) plus prompts that never invite a person.
 - Jev cost of both fluency passes: ~$0.09.
+
+**Shakespeare's one dedicated neuron.** Shakespeare's top-10 attributed neurons are mostly generic machinery: non-Latin
+scripts, function words, lists of names, software docs, "being solo". Only L30:1702 is labelled "strongly associated
+with Shakespeare and his works" (rank 5–8 depending on prompt set). Steering with that **one** neuron
+(`src/single_neuron_steer.py`, person-friendly prompts):
+
+| strength (× its peak) | 0.5 | 1 | 2 | 3 | 4 | 6 | 8 |
+|---|---|---|---|---|---|---|---|
+| clamp: name appears | 0.05 | 0.25 | 0.65 | 0.85 | 0.45 | 0.00 | 0.00 |
+| add: name appears | 0.05 | 0.30 | 0.75 | 0.85 | 0.40 | 0.00 | 0.00 |
+
+Best fluent joint: **0.50** (add, 2×) and 0.45 (clamp, 2×), vs ≤ 0.10 for every attribution-based rule. At 3× the text
+degrades ("Hamlet's solilo shakespeare akespeare akespeare"), and at ≥ 6× the name disappears entirely (collapse).
+**Attribution rank is not the same as steering usefulness.** The neuron whose *label* is the concept steers best,
+which suggests a label-matched rule (R5), being tested across concepts.
