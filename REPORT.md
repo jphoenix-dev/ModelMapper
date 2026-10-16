@@ -156,7 +156,7 @@ to free the GPU; it recalled all 44.
 | made-up controls recalled | 0/3 | 0/3 |
 | recalled concepts with k_mean ≤ 5 | 6/7 | all |
 | typical k_flip on the shared concepts | **1–3** | 1–50 (Tokyo, photosynthesis, Bitcoin: 50) |
-| steering (judge-free, held-out) | ~0.06 | ~0.2–0.3 |
+| steering (judge-free, held-out), mean | 0.057 (n = 7) | 0.226 (n = 44) |
 
 - **The small model knows far fewer of these concepts** in chat-question form.
 - **Where it does recall, recall again depends on a handful of neurons.**
