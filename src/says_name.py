@@ -15,6 +15,7 @@ from pathlib import Path
 import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
+from config import DEFAULT_MODEL  # noqa: E402
 from neurons import load  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +24,7 @@ PEOPLE = {"Albert Einstein", "William Shakespeare", "Napoleon Bonaparte", "Wolfg
 
 
 def main():
-    model, tok = load("Qwen/Qwen3-8B")
+    model, tok = load(DEFAULT_MODEL)
     W_U = model.lm_head.weight.float()                       # [V, d]
     g = model.model.norm.weight.float()
     rows = []

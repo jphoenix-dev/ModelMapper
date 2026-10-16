@@ -20,6 +20,7 @@ import sys
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from neurons import steer
 from pipeline_fast import FastPipeline
@@ -47,7 +48,7 @@ def grid(pipe, units, last_act, concept):
 
 def main():
     reply_only = os.environ.get("REPLY_ONLY", "1") == "1"
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=reply_only)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="clamp", reply_only=reply_only)
     print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
     out_name = "steer_select.json" if reply_only else "steer_select_promptsteer.json"
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()

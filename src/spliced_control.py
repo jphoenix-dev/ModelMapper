@@ -18,6 +18,7 @@ from pathlib import Path
 
 import oai
 from atlas import Atlas
+from config import DEFAULT_MODEL
 from label_batch import SYSTEM, clip
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,7 +28,7 @@ def main():
     census = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))["units"]
     prefix = sys.argv[2]
     n = int(sys.argv[3]) if len(sys.argv) > 3 else 100
-    at = Atlas("Qwen/Qwen3-8B")
+    at = Atlas(DEFAULT_MODEL)
     rng = random.Random(25)
     live = [k for k, v in census.items() if (v.get("pos") or {}).get("explanation") and abs(at.a["top_v"][v["layer"], v["neuron"], 0].item()) >= 0.05]
     units = {}
@@ -47,7 +48,7 @@ def main():
             exs[pole] = mix
         units[f"splice_{a}_{b}"] = exs
     # write a scan-format file so label_batch / regrade can read it with --scan
-    scan = {"model": "Qwen/Qwen3-8B", "units": {u: {"pos": [{"value": x["rel"], "text": x["text"]} for x in e["pos"]],
+    scan = {"model": DEFAULT_MODEL, "units": {u: {"pos": [{"value": x["rel"], "text": x["text"]} for x in e["pos"]],
                                                     "neg": [{"value": -x["rel"], "text": x["text"]} for x in e["neg"]]}
                                                 for u, e in units.items()}}
     out = ROOT / f"results/{prefix}_scan.json"

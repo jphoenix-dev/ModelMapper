@@ -17,6 +17,7 @@ from pathlib import Path
 
 import jev
 from cache import Cache
+from config import DEFAULT_MODEL
 from grader_validation import RUBRIC, WORDINGS
 from label_batch import ScanSource, clip
 
@@ -34,7 +35,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("labels"); ap.add_argument("out")
     ap.add_argument("--scan"); ap.add_argument("--k", type=int, default=10); ap.add_argument("--chars", type=int, default=500)
-    ap.add_argument("--model", default="Qwen/Qwen3-8B")
+    ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--before-tokens", type=int, default=200, help="tokens of left context rendered from the atlas "
                     "(must cover --chars, else --chars is silently capped by it)")
     a = ap.parse_args()
@@ -48,8 +49,8 @@ def main():
         exs = lambda uid, v, pole: at.examples(v["layer"], v["neuron"], pole, n=a.k, before=a.before_tokens)  # noqa: E731
     from transformers import AutoTokenizer
     from intruder_test import random_snippets
-    from neurons import LOCAL_MODELS
-    snippets = random_snippets(AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/Qwen3-8B"), 20, seed=7, chars=a.chars)
+    from config import model_path
+    snippets = random_snippets(AutoTokenizer.from_pretrained(model_path(a.model)), 20, seed=7, chars=a.chars)
     cache = Cache(a.out + ".cache.jsonl")
     h = lambda e: hashlib.sha1(e.encode()).hexdigest()[:10]   # noqa: E731
     jobs = []

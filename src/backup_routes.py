@@ -13,6 +13,7 @@ import math
 import random
 import sys
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from neurons import steer
 from pipeline_fast import FastPipeline
@@ -27,7 +28,7 @@ def logit(p):
 
 def main():
     tag = sys.argv[1]
-    pipe = FastPipeline("Qwen/Qwen3-8B")      # ablation only; reply_only is irrelevant to teacher-forced scoring
+    pipe = FastPipeline(DEFAULT_MODEL)      # ablation only; reply_only is irrelevant to teacher-forced scoring
     out = {}
     for concept in [c.strip() for c in sys.argv[2:]]:
         spec, tid, recall, controls = pipe.make_prompts(concept)

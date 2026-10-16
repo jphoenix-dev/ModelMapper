@@ -23,6 +23,7 @@ import torch
 os.environ["RECALL_VARIANT"] = "V3"
 os.environ.setdefault("ANSWER_DISCOVERY", "1")
 import concept_pipeline as cp  # noqa: E402
+from config import DEFAULT_MODEL  # noqa: E402
 from neurons import steer  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
 from steer_test import PROMPTS as SELECT  # noqa: E402
@@ -43,7 +44,7 @@ def logit(p):
 def main():
     wave = json.loads((ROOT / sys.argv[1]).read_text(encoding="utf-8"))
     people_cat = {c for cat, cs in wave["concepts"].items() if "people" in cat for c in cs}
-    pipe = FastPipeline(os.environ.get("MODEL", "Qwen/Qwen3-8B"), mode="add", reply_only=True)
+    pipe = FastPipeline(os.environ.get("MODEL", DEFAULT_MODEL), mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}; out {cp.OUT}", flush=True)
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
 

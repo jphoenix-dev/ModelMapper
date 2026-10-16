@@ -14,6 +14,7 @@ from pathlib import Path
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from neurons import steer
 from pipeline_fast import FastPipeline
@@ -22,7 +23,7 @@ KS = [1, 2, 3, 5, 10, 20, 50]
 
 
 def main():
-    pipe = FastPipeline("Qwen/Qwen3-8B")
+    pipe = FastPipeline(DEFAULT_MODEL)
     out = {}
     for concept in sys.argv[1:]:
         spec, tid, recall, controls = pipe.make_prompts(concept)

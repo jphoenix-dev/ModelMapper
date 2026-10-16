@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Resumable model download with curl (huggingface_hub's downloader stalls on this machine).
-# Models land in $ALREADY_CLEAN_MODELS/<name>/ (default <repo>/models) and src/neurons.py loads them from there.
-DEST=${ALREADY_CLEAN_MODELS:-$(cd "$(dirname "$0")/.." && pwd)/models}
+# Models land in $MODEL_MAPPER_MODELS/<name>/ (default <repo>/models) and src/neurons.py loads them from there.
+DEST=${MODEL_MAPPER_MODELS:-$(cd "$(dirname "$0")/.." && pwd)/models}
 set -u
 get() {  # repo, dest, files...
   repo=$1; dest=$2; shift 2

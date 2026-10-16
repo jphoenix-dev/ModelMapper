@@ -26,12 +26,13 @@ os.environ.setdefault("CONCEPT_OUT_DIR", os.path.join(os.path.dirname(__file__),
 
 import torch  # noqa: E402
 
+from config import DEFAULT_MODEL  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
 
 
 def main():
-    print("loading Qwen3-8B ...", flush=True)
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
+    print(f"loading {DEFAULT_MODEL} ...", flush=True)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True)
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
     st = {"rule": "R1", "n": 4, "strength": 1.0, "concept": None, "cands": {}, "last_act": None, "tokens": 120}
 

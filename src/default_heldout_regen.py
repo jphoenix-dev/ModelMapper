@@ -9,6 +9,7 @@ import torch
 
 os.environ["RECALL_VARIANT"] = "V3"
 os.environ["ANSWER_DISCOVERY"] = "0"
+from config import DEFAULT_MODEL  # noqa: E402
 import concept_pipeline as cp  # noqa: E402
 import pipeline_fast  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
@@ -16,7 +17,7 @@ from pipeline_fast import FastPipeline  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 HELD = json.loads((ROOT / "prompts/neutral_heldout.json").read_text(encoding="utf-8"))
 auto = json.loads((ROOT / "results/auto_steer_scale.json").read_text(encoding="utf-8"))
-pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
+pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True)
 out = {}
 for tag in auto:
     d, concept = tag.split("/", 1)

@@ -19,7 +19,8 @@ import numpy as np
 import torch
 from transformers import AutoTokenizer
 
-from neurons import LOCAL_MODELS, capture
+from config import model_path
+from neurons import capture
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,7 +35,7 @@ class Atlas:
         self.starts = np.concatenate([[0], np.cumsum(lengths)[:-1]])
         self.lengths = lengths
         self.ctx = self.a["ctx"]
-        self.tok = AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/{short}")
+        self.tok = AutoTokenizer.from_pretrained(model_path(model_name))
 
     def doc(self, i: int) -> np.ndarray:
         return self.tokens[self.starts[i]:self.starts[i] + self.lengths[i]]

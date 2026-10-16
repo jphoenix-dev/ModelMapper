@@ -14,6 +14,7 @@ from pathlib import Path
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 from steer_test import PROMPTS as NEUTRAL
@@ -35,7 +36,7 @@ def main():
     out_name = os.environ.get("OUT_NAME", "label_rule.json")
     skip_r1 = os.environ.get("SKIP_R1") == "1"
     matched = json.loads((ROOT / "results" / match_file).read_text(encoding="utf-8"))
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}", flush=True)
     out = {}
     for concept, key in KEY.items():

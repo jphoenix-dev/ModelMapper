@@ -1,10 +1,13 @@
-"""Thin OpenAI client for cheap, fast text generation (neuron explanations).
+"""Thin client for the *labeller* LLM: text generation (neuron explanations, recall prompts, answer checks).
 
     oai.chat("Explain ...", system="You are ...")  # -> str
 
-The API key is read lazily from $OPENAI_API_KEY, else from the repo-root .env, else from OAI.env
-at the repo root.
-Never print it.
+Works with any OpenAI-compatible chat-completions endpoint (OpenAI, vLLM, llama.cpp server, OpenRouter, ...):
+    OPENAI_BASE_URL  default https://api.openai.com/v1
+    OAI_MODEL        default gpt-6-luna (the model all results in this repo used, called "Luna" in the docs)
+    OPENAI_API_KEY   read lazily from the environment, else the repo-root .env, else OAI.env at the repo root.
+                     Not needed for a self-hosted endpoint without auth. Never print it.
+The endpoint must support response_format={"type": "json_object"} (used by chat_json).
 """
 from __future__ import annotations
 
@@ -18,7 +21,8 @@ import httpx
 
 from config import env
 
-BASE = "https://api.openai.com/v1"
+DEFAULT_BASE = "https://api.openai.com/v1"
+BASE = env("OPENAI_BASE_URL", DEFAULT_BASE).rstrip("/")
 MODEL = env("OAI_MODEL", "gpt-6-luna")
 KEY_FILE = Path(__file__).resolve().parent.parent / "OAI.env"
 RETRY_STATUS = {408, 429, 500, 502, 503, 504}
@@ -35,6 +39,8 @@ def _load_key() -> str:
     """Accepts `OPENAI_API_KEY=...`, any `NAME=...`, or a bare key on one line."""
     if env("OPENAI_API_KEY"):
         return env("OPENAI_API_KEY")
+    if BASE != DEFAULT_BASE and not KEY_FILE.exists():
+        return ""   # self-hosted endpoint without auth
     lines = [l.strip() for l in KEY_FILE.read_text(encoding="utf-8-sig").splitlines()
              if l.strip() and not l.strip().startswith("#")]
     pick = next((l for l in lines if l.removeprefix("export ").startswith("OPENAI_API_KEY=")),
@@ -50,7 +56,8 @@ def _load_key() -> str:
 def _http() -> httpx.Client:
     global _client
     if _client is None:
-        _client = httpx.Client(timeout=120.0, headers={"Authorization": f"Bearer {_load_key()}"})
+        key = _load_key()
+        _client = httpx.Client(timeout=120.0, headers={"Authorization": f"Bearer {key}"} if key else {})
     return _client
 
 

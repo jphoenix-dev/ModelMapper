@@ -15,6 +15,7 @@ from pathlib import Path
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 from steer_test import PROMPTS as NEUTRAL
@@ -33,7 +34,7 @@ def hit(reply, word):
 
 def main():
     os.environ["ANSWER_DISCOVERY"] = "0"
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=True)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="clamp", reply_only=True)
     print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
     out = {}
     for d, concept, word in PEOPLE:

@@ -39,4 +39,4 @@ W1015 22:17:06.005000 4792 Lib\site-packages\torch\distributed\elastic\multiproc
 9.37M tokens, 3,813 tok/s, eta 3 min
 9.62M tokens, 3,825 tok/s, eta 2 min
 9.88M tokens, 3,832 tok/s, eta 1 min
-done: 10,005,329 tokens, 20,359 docs, 43.6 min -> C:\dev\already-clean\data\atlas_Qwen3-8B.pt
+done: 10,005,329 tokens, 20,359 docs, 43.6 min -> <repo>\data\atlas_Qwen3-8B.pt

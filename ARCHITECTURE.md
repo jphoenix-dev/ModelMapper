@@ -1,4 +1,4 @@
-# Architecture: approach and code
+# Model Mapper: architecture
 
 This file explains how the experiments are put together: the pipeline stages, which script does what, where the
 data goes, and which scripts are superseded or exploratory. For the results, see [MORNING.md](MORNING.md) and
@@ -24,7 +24,7 @@ independently rewritten prompt sets.
 ## Components
 
 ```
-            FineWeb shard ($ALREADY_CLEAN_CORPUS)          Qwen3-8B / 0.6B ($ALREADY_CLEAN_MODELS)
+            FineWeb shard ($MODEL_MAPPER_CORPUS)           $MODEL_MAPPER_MODEL (local: $MODEL_MAPPER_MODELS)
                        │                                              │
                        └──────────────► neurons.py ◄──────────────────┘   load, capture hooks, steer hooks
                                            │
@@ -48,13 +48,19 @@ independently rewritten prompt sets.
 ```
 
 ### External tools
-- **`oai.py`, Luna** (OpenAI `gpt-6-luna`): writes neuron explanations and verdicts (ONE / TWO_RELATED / MIXTURE /
+Both are swappable; see README, "Use it on another model or endpoint".
+- **`oai.py`, the labeller** ("Luna", OpenAI `gpt-6-luna`; any OpenAI-compatible endpoint via `OPENAI_BASE_URL`):
+  writes neuron explanations and verdicts (ONE / TWO_RELATED / MIXTURE /
   NONE). It also writes recall prompts and checks answer wordings.
-- **`jev.py`, Jev** (TypeSafe "System One"): returns calibrated probabilities, not text. It grades label coverage
-  (yes/no or a 3-level rubric) and judges steered replies ("on-topic?", "fluent?"). Billing is per input token.
+- **`jev.py`, the judge** ("Jev", TypeSafe "System One"): returns calibrated probabilities, not text. It grades label
+  coverage (yes/no or a 3-level rubric) and judges steered replies ("on-topic?", "fluent?"). Billing is per input
+  token. Three question types: `noul` → P(yes); `choice` → a distribution over named options; `score` → a
+  distribution over rubric levels. `JUDGE_BACKEND=llm` answers the same three types from an OpenAI-compatible
+  endpoint's first-token log-probabilities.
 - **`cache.py`:** every API result is appended to `<out>.cache.jsonl` as it arrives, so long runs can resume. These
   caches are also the raw judge outputs behind every number.
-- **`config.py`:** paths and keys come from environment variables or `.env` (see README, "Configuration").
+- **`config.py`:** the model under study (`DEFAULT_MODEL`), local paths (`model_path()`: local copy, else the hub)
+  and keys come from environment variables or `.env` (see README, "Configuration").
 
 ## Pipeline stages
 
@@ -205,7 +211,8 @@ the exact commands behind several results. `download_models.sh` fetches the mode
 | Path | Contents | In git? |
 |---|---|---|
 | `data/` | Atlas (`atlas_<m>.pt`, `_docs.npz`) and neuron ranges (`stats_<m>.pt`). Derived, large; rebuild with `build_atlas.py` / `neuron_stats.py` | no |
-| `models/` (or `$ALREADY_CLEAN_MODELS`) | Local model weights | no |
+| `models/` (or `$MODEL_MAPPER_MODELS`) | Local model weights | no |
+| `data/fineweb_000_00000.parquet` (or `$MODEL_MAPPER_CORPUS`) | The FineWeb shard (`scripts/download_corpus.sh`) | no |
 | `prompts/` | Concept lists and neutral and held-out prompt sets | yes |
 | `results/census_*`, `spliced_*`, `strata_*`, `effort_*`, `ctx*`, `grader*` | Census and its calibration and robustness checks | yes |
 | `results/concepts/` | CR (pre-registered, v1 pipeline, completion format) | yes |
@@ -214,7 +221,9 @@ the exact commands behind several results. `download_models.sh` fetches the mode
 | `results/concepts_disc*/`, `concepts_test/`, `concepts_dial/` | Answer-discovery debugging, pipeline tests, the dial's saved concepts | yes |
 | `results/scale_Qwen3-0.6B/`, `scale_Qwen3-8B/` | Model-size comparison | yes |
 | `results/logodds_*`, `steer_*`, `auto_steer_*`, `people_*`, `shared_parts*`, `hdepth_*`, `says_name*` | Per-experiment outputs and `.txt` summaries | yes |
-| `results/dossiers_*/`, `*_KEY.json` | Blind dossiers and their answer keys | yes |
+| `results/**/dossiers_*/` | Blind dossiers (FineWeb text) | no (regenerable) |
+| `results/**/*_KEY.json` | Answer keys for the blind dossiers | yes |
+| `results/scan_*.json`, `strata_Qwen3-8B.json`, `spliced_scan.json`, `spotcheck_*.json`, `site/spotcheck.html` | Example texts per unit (FineWeb text) | no (regenerable) |
 | `results/*.cache.jsonl` | Raw API responses (Luna and Jev), one JSON line per call | yes |
 | `results/*.log` | Run logs | yes |
 
@@ -223,11 +232,22 @@ is the steering setting (`clamp`, `clamp_reply`, `add`, `add_reply`). That file 
 the steering grid with every reply and per-reply judge scores, and provenance (code hashes, git HEAD, library
 versions).
 
+## Generality
+- **Model.** `MODEL_MAPPER_MODEL` (default `Qwen/Qwen3-8B`) is used by every script that does not take a model
+  argument; `wave_free.py` also honours `MODEL=`. `neurons.py` needs a Hugging Face decoder with gated MLPs at
+  `model.model.layers[i].mlp.{gate_proj, up_proj, down_proj}`. Steering, head attribution and the vocabulary
+  readouts also use `self_attn.o_proj`, `model.model.norm` and `lm_head`. That is the Qwen2/3, Llama and Mistral
+  layout. Prompts go through the tokenizer's chat template (`enable_thinking=False` is ignored by templates that
+  don't use it).
+- **Per-model data.** The atlas and neuron ranges are per model (`data/atlas_<short name>.pt`), so build them first
+  for a new model.
+- **Endpoints.** The labeller and judge are configured by environment (README).
+- **Tested.** Only Qwen3-8B and Qwen3-0.6B. The `llm` judge backend is tested offline only.
+
 ## Known rough edges
 - **Script style.** Many experiment scripts run their work at import time (there is no `main()`), and they read
   `sys.argv` directly. Run them as `python src/<script>.py …` from the repo root.
-- **Tokenizer loading.** `atlas.py`, `label_batch.py`, `regrade.py`, `intruder_test.py` and a few others load the
-  tokenizer from `$ALREADY_CLEAN_MODELS/<model>`. Download the models first (`scripts/download_models.sh`).
-  `neurons.load()` falls back to the Hugging Face hub; tokenizer loads in those scripts do not.
-- **Hard-coded model.** Several scripts assume Qwen3-8B (the atlas, census and steering prompts). The 0.6B comparison
-  runs only through `wave_free.py` (`MODEL=Qwen/Qwen3-0.6B`).
+- **Hand-written prompt sets.** The neutral, held-out and person-friendly prompts and the concept lists in
+  `prompts/` were written for this study (in English). They are not tied to Qwen.
+- **Golden Gate scripts.** The Experiment GG scripts (`gg_search.py`, `make_units.py`, `merge_scans.py`,
+  `summarise_gg.py`) keep their original Qwen defaults; they are superseded.

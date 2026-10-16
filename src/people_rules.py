@@ -14,6 +14,7 @@ from pathlib import Path
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 
@@ -28,7 +29,7 @@ def main():
     os.environ["ANSWER_DISCOVERY"] = "0"
     sel = {k.strip(): v for k, v in json.loads((cp.OUT / "steer_select.json").read_text(encoding="utf-8")).items()}
     mode = os.environ.get("STEER_MODE", "clamp")                   # "add" = nudge on top of natural activity
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode=mode, reply_only=True)
+    pipe = FastPipeline(DEFAULT_MODEL, mode=mode, reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}", flush=True)
     out_name = "people_rules.json" if mode == "clamp" else f"people_rules_{mode}.json"
     out = {}

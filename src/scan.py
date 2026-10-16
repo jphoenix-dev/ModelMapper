@@ -23,7 +23,7 @@ import numpy as np
 import pyarrow.parquet as pq
 import torch
 
-from config import CORPUS  # $ALREADY_CLEAN_CORPUS
+from config import CORPUS  # $MODEL_MAPPER_CORPUS
 from neurons import capture, load, mlps
 
 K = 40              # examples kept per pole

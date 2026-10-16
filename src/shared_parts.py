@@ -13,6 +13,7 @@ from pathlib import Path
 
 os.environ["RECALL_VARIANT"] = "V3"
 os.environ["ANSWER_DISCOVERY"] = "0"
+from config import DEFAULT_MODEL  # noqa: E402
 import concept_pipeline as cp  # noqa: E402
 import pipeline_fast  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
@@ -32,7 +33,7 @@ K = 50
 
 
 def main():
-    pipe = FastPipeline("Qwen/Qwen3-8B")
+    pipe = FastPipeline(DEFAULT_MODEL)
     tops = {}
     for pair in PAIRS:
         for d, c in pair:

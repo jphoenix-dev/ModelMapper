@@ -13,12 +13,13 @@ from collections import Counter
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from neurons import load
 
 
 def main():
-    model, tok = load("Qwen/Qwen3-8B")
+    model, tok = load(DEFAULT_MODEL)
     tok.padding_side = "left"
     for concept in [c.strip() for c in sys.argv[1:]]:
         p = cp.OUT / f"{cp.slug(concept)}_spec.json"

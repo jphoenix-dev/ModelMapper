@@ -18,6 +18,7 @@ import torch
 
 os.environ["RECALL_VARIANT"] = "V3"
 os.environ["ANSWER_DISCOVERY"] = "0"           # keep the answers the earlier runs used
+from config import DEFAULT_MODEL  # noqa: E402
 import concept_pipeline as cp  # noqa: E402
 import pipeline_fast  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
@@ -38,7 +39,7 @@ def keys(answer, concept):
 
 
 def main():
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}", flush=True)
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
 

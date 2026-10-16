@@ -15,22 +15,21 @@ import sys
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from config import MODELS_DIR
+from config import MODELS_DIR, model_path
 
 os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")
 sys.stdout.reconfigure(encoding="utf-8")  # Windows console defaults to cp1252 and chokes on token text
 
 
-LOCAL_MODELS = MODELS_DIR  # $ALREADY_CLEAN_MODELS; filled by scripts/download_models.sh
+LOCAL_MODELS = MODELS_DIR  # $MODEL_MAPPER_MODELS; filled by scripts/download_models.sh
 
 
 def load(name: str = "Qwen/Qwen3-0.6B", dtype=torch.bfloat16):
-    local = os.path.join(LOCAL_MODELS, name.split("/")[-1])
-    if os.path.exists(os.path.join(local, "config.json")):
-        name = local
-    else:
-        print(f"[neurons] no local copy at {local}; loading {name} from the Hugging Face hub "
-              "(set ALREADY_CLEAN_MODELS to use a local folder)", file=sys.stderr)
+    path = model_path(name)
+    if path == name and not os.path.isdir(name):
+        print(f"[neurons] no local copy of {name} in {LOCAL_MODELS}; loading it from the Hugging Face hub "
+              "(set MODEL_MAPPER_MODELS to use a local folder)", file=sys.stderr)
+    name = path
     tok = AutoTokenizer.from_pretrained(name)
     model = AutoModelForCausalLM.from_pretrained(name, dtype=dtype, device_map="cuda")
     model.eval()

@@ -4,14 +4,14 @@ Each setting is looked up in the process environment first, then in an optional 
 the repo root (gitignored; see `.env.example`). Nothing here imports torch, so it is cheap to use
 from the API clients too.
 
-    ALREADY_CLEAN_MODELS  folder holding local model copies, one subfolder per model
+    MODEL_MAPPER_MODEL    Hugging Face id of the model under study. Default: Qwen/Qwen3-8B.
+    MODEL_MAPPER_MODELS   folder holding local model copies, one subfolder per model
                           (e.g. <dir>/Qwen3-8B/config.json). Default: <repo>/models.
-                          If a model is not there, it is loaded from the Hugging Face hub.
-    ALREADY_CLEAN_CORPUS  FineWeb parquet shard streamed by scan.py / build_atlas.py etc.
+                          A model that is not there is loaded from the Hugging Face hub.
+    MODEL_MAPPER_CORPUS   FineWeb parquet shard streamed by scan.py / build_atlas.py etc.
                           Default: <repo>/data/fineweb_000_00000.parquet.
-    OPENAI_API_KEY        used by oai.py (Luna labeller); fallback file OAI.env.
-    JEV_API_KEY           used by jev.py (TypeSafe's Jev judge); TYPESAFE_API_KEY also accepted;
-                          fallback file jevkey.env.
+
+API endpoints (labeller = oai.py, judge = jev.py) are configured in those modules; see .env.example.
 """
 from __future__ import annotations
 
@@ -44,5 +44,17 @@ def env(name: str, default: str | None = None) -> str | None:
     return _read_dotenv().get(name) or default
 
 
-MODELS_DIR = env("ALREADY_CLEAN_MODELS", str(ROOT / "models"))
-CORPUS = env("ALREADY_CLEAN_CORPUS", str(ROOT / "data" / "fineweb_000_00000.parquet"))
+DEFAULT_MODEL = env("MODEL_MAPPER_MODEL", "Qwen/Qwen3-8B")
+MODELS_DIR = env("MODEL_MAPPER_MODELS", str(ROOT / "models"))
+CORPUS = env("MODEL_MAPPER_CORPUS", str(ROOT / "data" / "fineweb_000_00000.parquet"))
+
+
+def short_name(name: str) -> str:
+    """'Qwen/Qwen3-8B' -> 'Qwen3-8B' (used in data/ and results/ file names)."""
+    return name.split("/")[-1]
+
+
+def model_path(name: str) -> str:
+    """Local copy <MODELS_DIR>/<short name> if it exists, else the hub id (for from_pretrained)."""
+    local = os.path.join(MODELS_DIR, short_name(name))
+    return local if os.path.exists(os.path.join(local, "config.json")) else name

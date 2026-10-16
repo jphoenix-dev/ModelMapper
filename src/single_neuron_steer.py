@@ -10,6 +10,7 @@ from pathlib import Path
 
 import torch
 
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 
@@ -25,7 +26,7 @@ def main():
     pipe = None
     for mode in ("clamp", "add"):
         if pipe is None:
-            pipe = FastPipeline("Qwen/Qwen3-8B", mode=mode, reply_only=True)
+            pipe = FastPipeline(DEFAULT_MODEL, mode=mode, reply_only=True)
         pipe.mode = mode
         spec, tid, recall, controls = pipe.make_prompts(concept)
         A = pipe.attribute([q for q, _ in recall], tid)

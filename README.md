@@ -1,6 +1,11 @@
-# Already clean? Testing "Neural Networks Are Already Clean" on Qwen3-8B
+# Model Mapper
 
-An independent, roughly 24-hour test of Nick Cammarata's essay
+**Model Mapper** maps what the individual MLP neurons of an open-weights language model do. It finds which neurons
+a concept depends on, tests how few are enough, labels neurons with one LLM and grades the labels with another, and
+steers the model with them. Every stage has controls. The code runs on one consumer GPU, and the model, the
+labeller and the judge are all configurable ([Use it on another model](#use-it-on-another-model-or-endpoint)).
+
+Its first use, and everything reported below, is an independent, roughly 24-hour test of Nick Cammarata's essay
 [*Neural Networks Are Already Clean*](https://already-clean.goodfire.com/) (Goodfire, 2026). It was run on one
 consumer GPU, with an AI agent doing the experimental work under human direction.
 
@@ -104,56 +109,60 @@ The full account is in [MORNING.md](MORNING.md) (summary), [RESULTS.md](RESULTS.
 
 ## Hardware and cost
 
-- One NVIDIA RTX 5090 (32 GB) in a Windows 10 desktop. Qwen3-8B runs in bf16.
+- One NVIDIA RTX 5090 (32 GB) in a Windows 10 desktop. Qwen3-8B runs in bf16. The code also runs on Linux.
 - Total wall-clock: about one day.
 - The atlas pass (10M tokens through Qwen3-8B) takes ~44 min. A concept-pipeline run takes ~45 s per concept.
 - API spend: roughly $6–6.5 of Jev and a few dollars of Luna (MORNING.md, "Spend").
 
-**External models used as tools:**
-- **Luna** (OpenAI, `gpt-6-luna`) writes neuron labels and recall prompts.
-- **Jev** (TypeSafe's "System One") returns calibrated yes/no and rubric probabilities. It grades labels and steered
-  replies.
-- A free local fluency check, validated against Jev, replaces Jev in the judge-free waves.
+**External models used as tools (all swappable; see below):**
+- The **labeller**, "Luna" (OpenAI, `gpt-6-luna`), writes neuron labels and recall prompts.
+- The **judge**, "Jev" (TypeSafe's "System One"), returns calibrated yes/no, choice and rubric probabilities. It
+  grades labels and steered replies.
+- A free local fluency check, validated against Jev, replaces the judge in the judge-free waves.
 
 ## Reproduce
 
 ### Setup
 ```bash
 python -m venv .venv
-.venv/Scripts/pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128   # Linux: .venv/bin/pip
-.venv/Scripts/pip install -r requirements.txt
-cp .env.example .env    # then fill in paths and keys
+source .venv/bin/activate          # Windows (Git Bash): source .venv/Scripts/activate
+pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128   # pick the wheel for your CUDA
+pip install -r requirements.txt
+cp .env.example .env               # then fill in what you need
+bash scripts/download_models.sh    # Qwen3-0.6B and Qwen3-8B into $MODEL_MAPPER_MODELS (default ./models)
+bash scripts/download_corpus.sh    # one FineWeb shard (2.1 GB) into $MODEL_MAPPER_CORPUS (default ./data)
 ```
 We used Python 3.11.9, torch 2.11.0+cu128 and transformers 5.20.0 ([requirements.txt](requirements.txt)).
 
+**Windows:** some result files have long names (up to 216 characters inside the repo). Before cloning, run
+`git config --global core.longpaths true`, or clone into a short path.
+
 ### Configuration (environment variables)
 
-Each variable is read from the environment first, then from a gitignored `.env` file at the repo root (see
-[.env.example](.env.example)). The API keys can also come from the legacy files `OAI.env` and `jevkey.env`.
+Each variable is read from the environment first, then from a gitignored `.env` file at the repo root. See
+[.env.example](.env.example) for the full list.
 
 | Variable | Used for | Default |
 |---|---|---|
-| `ALREADY_CLEAN_MODELS` | Folder of local model copies (`<dir>/Qwen3-8B/config.json`) | `<repo>/models`, else the Hugging Face hub |
-| `ALREADY_CLEAN_CORPUS` | FineWeb parquet shard for the atlas and scans | `<repo>/data/fineweb_000_00000.parquet` |
-| `OPENAI_API_KEY` | Luna labeller (`src/oai.py`) | fallback file `OAI.env` |
-| `JEV_API_KEY` (or `TYPESAFE_API_KEY`) | Jev judge (`src/jev.py`) | fallback file `jevkey.env` |
+| `MODEL_MAPPER_MODEL` | The model under study | `Qwen/Qwen3-8B` |
+| `MODEL_MAPPER_MODELS` | Folder of local model copies (`<dir>/Qwen3-8B/config.json`) | `./models`, else the Hugging Face hub |
+| `MODEL_MAPPER_CORPUS` | Web-text shard for the atlas, scans and random-snippet controls | `./data/fineweb_000_00000.parquet` |
+| `OPENAI_BASE_URL`, `OAI_MODEL`, `OPENAI_API_KEY` | Labeller endpoint (`src/oai.py`) | OpenAI, `gpt-6-luna` |
+| `JUDGE_BACKEND` | Judge: `jev` or `llm` (`src/jev.py`) | `jev` |
+| `JEV_API_KEY` | Jev judge key (`TYPESAFE_API_KEY` also works) | – |
+| `JUDGE_BASE_URL`, `JUDGE_MODEL`, `JUDGE_API_KEY`, `JUDGE_EXTRA_BODY` | Judge endpoint when `JUDGE_BACKEND=llm` | OpenAI |
 | `PYTHON` | Interpreter used by `scripts/*.sh` | `.venv` python, else `python` |
-
-**Corpus.** We used one FineWeb shard, `sample/10BT/000_00000.parquet` from
-[HuggingFaceFW/fineweb](https://huggingface.co/datasets/HuggingFaceFW/fineweb) (2.1 GB).
 
 ### Main pipelines
 All scripts run from the repo root. Large derived data (the atlas, neuron ranges) goes to the gitignored `data/`
-folder; results go to `results/`.
+folder; results go to `results/`. Model names below can be any model you have configured.
 
 ```bash
-bash scripts/download_models.sh                         # Qwen3-0.6B and Qwen3-8B into $ALREADY_CLEAN_MODELS
-
 # 1. Neuron ranges and the activation atlas (GPU; ~7 min and ~45 min for 8B)
 python src/neuron_stats.py Qwen/Qwen3-8B                # -> data/stats_Qwen3-8B.pt
 python src/build_atlas.py Qwen/Qwen3-8B 10e6 40         # -> data/atlas_Qwen3-8B.pt (+ _docs.npz)
 
-# 2. Census of random neurons (Luna labels, Jev grades), then calibrate the "clean" bar on spliced two-job dossiers
+# 2. Census of random neurons (labeller labels, judge grades), then calibrate the "clean" bar on spliced two-job dossiers
 python src/label_batch.py Qwen/Qwen3-8B random:1000 results/census_Qwen3-8B.json
 python src/regrade.py results/census_Qwen3-8B.json results/census_regrade_rubric.json
 python src/spliced_control.py results/census_Qwen3-8B.json spliced 100       # -> results/spliced_scan.json
@@ -167,22 +176,62 @@ RECALL_VARIANT=V3 CONCEPT_OUT_DIR=results/concepts_v3 \
 RECALL_VARIANT=V3 CONCEPT_OUT_DIR=results/concepts_v3 \
   python src/logodds_check.py my_tag "coffee" "Eiffel Tower"        # log-odds concentration (k_mean, k_flip)
 
-# 4. Judge-free wave: recall + concentration + auto-selected steering, no Jev
+# 4. Judge-free wave: recall + concentration + auto-selected steering, no judge API
 CONCEPT_OUT_DIR=results/concepts_w3 python src/wave_free.py prompts/concepts_wave3.json
 
-# 5. Interactive steering "dial" (needs the GPU free; ~20 s to load)
+# 5. Interactive steering "dial" (~20 s to load)
 python src/dial.py
 ```
 
 The exact commands behind each result are in RESULTS.md and `scripts/*.sh`. Generation is greedy, so steering
 re-runs reproduce (mean difference 0.013).
 
+## Use it on another model or endpoint
+
+- **Another model.** Set `MODEL_MAPPER_MODEL` (and pass the same id to the scripts that take one). The hooks need a
+  Hugging Face decoder with gated MLPs, laid out as `model.model.layers[i].mlp.{gate_proj, up_proj, down_proj}`
+  plus `self_attn.o_proj`, `model.model.norm` and `lm_head`. Qwen2/3, Llama and Mistral fit this layout.
+  - Recall and steering prompts go through the tokenizer's chat template, so instruction-tuned chat models are
+    expected.
+  - Build that model's `neuron_stats` and atlas first; every later stage reads them.
+  - Only Qwen3-8B and Qwen3-0.6B have actually been run. Nothing here has been tested on another family.
+- **Another labeller.** Point `OPENAI_BASE_URL` / `OAI_MODEL` at any OpenAI-compatible endpoint that supports JSON
+  mode, for example vLLM, a llama.cpp server or OpenRouter.
+- **Another judge.** `JUDGE_BACKEND=llm` answers the judge's yes/no, choice and rubric questions with any
+  OpenAI-compatible endpoint that returns `top_logprobs`. It reads the first answer token's probabilities and
+  renormalises them over the valid answers.
+  - Use a non-reasoning model, or turn thinking off via `JUDGE_EXTRA_BODY`.
+  - This backend is tested offline only. Its probabilities are not calibrated like Jev's, so re-run the controls
+    (spliced dossiers, random snippets, shuffled judge) before comparing numbers with the ones here.
+
+## Data
+
+- **Web text.** All web text comes from [FineWeb](https://huggingface.co/datasets/HuggingFaceFW/fineweb) (Hugging
+  Face; ODC-By 1.0). We used one shard, `sample/10BT/000_00000.parquet`, fetched by `scripts/download_corpus.sh`.
+  The Golden Gate scans also used the FineWeb documents that mention "Golden Gate".
+- **What is not in this repository.** The repository does not redistribute FineWeb text in bulk. These files are
+  left out and are regenerated from the corpus by the listed scripts:
+  - the per-neuron example scans (`results/scan_*.json`; `scan.py`, `merge_scans.py`);
+  - the blind labelling dossiers (`results/**/dossiers_*/`; `make_dossiers.py`, `Atlas.write_dossiers`);
+  - the middle-of-range samples (`results/strata_Qwen3-8B.json`; `strata_scan.py`);
+  - the spliced-dossier texts (`results/spliced_scan.json`; `spliced_control.py`);
+  - the human spot-check set (`site/spotcheck.html`, `results/spotcheck_*.json`; `spotcheck_build.py`).
+- **What is in it.** Labels, judge scores, ablation curves, steering replies, logs and all numbers are included.
+  Short excerpts quoted in the documents and logs are FineWeb text, under its licence.
+- **Large derived data.** The atlas and neuron ranges (~270 MB for Qwen3-8B) are not included; rebuild them with step 1.
+
 ## Credit
 
-- **James** set the questions and the standards: no silent caps, assume the set-up is broken, pre-register, test for
-  noise. He made the calls throughout.
+- **James Phoenix** set the questions and the standards: no silent caps, assume the set-up is broken, pre-register,
+  test for noise. James made the calls throughout.
 - **Claude** (Anthropic's Claude Code, an AI coding agent) designed and ran the experiments, controls and analyses,
   and wrote the code and the logs.
 - Thanks to Nick Cammarata and Goodfire for a clear, testable essay.
 
 This is independent work. It is not affiliated with Anthropic, Goodfire, OpenAI, TypeSafe or Alibaba (Qwen).
+
+## Licence
+
+[MIT](LICENSE), for the code, prompts, documents and results. Third-party material keeps its own terms:
+- FineWeb excerpts: ODC-By 1.0;
+- Qwen model outputs: the Qwen3 licence (Apache 2.0).

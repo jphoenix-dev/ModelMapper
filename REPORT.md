@@ -1,6 +1,6 @@
 # Are neural networks already clean? An independent, automated test on Qwen3-8B
 
-**James [surname TBC]** and **Claude** (Anthropic; running as Claude Code)
+**James Phoenix** and **Claude** (Anthropic; running as Claude Code)
 *Draft, 16 October 2026. Independent work, not affiliated with Anthropic, Goodfire or Alibaba (Qwen).*
 
 > **Status:** draft for review.

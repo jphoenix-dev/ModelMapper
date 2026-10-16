@@ -16,6 +16,7 @@ from pathlib import Path
 import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
+from config import DEFAULT_MODEL  # noqa: E402
 from neurons import load  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,7 +44,7 @@ def main():
         if d["k"].strip():
             rows.append((d["k"], d["v"]))
     rng = random.Random(0); rng.shuffle(rows); rows = rows[:n_max]
-    model, tok = load("Qwen/Qwen3-8B")
+    model, tok = load(DEFAULT_MODEL)
     feats = []
     with torch.no_grad():
         for i in range(0, len(rows), 16):

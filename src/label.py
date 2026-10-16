@@ -107,8 +107,8 @@ def random_fit(explanation, n=20):
     """Share of random web tokens the explanation (wrongly) fits: the false-positive rate."""
     if not _RANDOM:
         from transformers import AutoTokenizer
-        from neurons import LOCAL_MODELS
-        tok = AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/Qwen3-8B")
+        from config import DEFAULT_MODEL, model_path
+        tok = AutoTokenizer.from_pretrained(model_path(DEFAULT_MODEL))
         _RANDOM.extend(random_snippets(tok, n, seed=7))
     return jev_grade(explanation, [{"text": t} for t in _RANDOM[:n]])
 
