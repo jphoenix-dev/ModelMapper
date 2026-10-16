@@ -1020,3 +1020,27 @@ Best fluent joint: **0.50** (add, 2×) and 0.45 (clamp, 2×), vs ≤ 0.10 for ev
 degrades ("Hamlet's solilo shakespeare akespeare akespeare"), and at ≥ 6× the name disappears entirely (collapse).
 **Attribution rank is not the same as steering usefulness.** The neuron whose *label* is the concept steers best,
 which suggests a label-matched rule (R5), being tested across concepts.
+
+**R5 label-matched rule vs R1 (frozen), same metric** (`src/label_rule.py`; add mode, reply-only, strengths 0.5–4×;
+original neutral prompts, person-friendly prompts for people; score = concept word in reply AND Jev-fluent, best
+setting). R5 = the concept's top-10 neurons whose label names it (simple word match, 1–5 neurons).
+
+| concept | R1 | R5 | | concept | R1 | R5 |
+|---|---|---|---|---|---|---|
+| democracy | 0.75 | 0.75 | | Golden Gate | 0.10 | 0.15 |
+| coffee | **0.60** | 0.25 | | photosynthesis | 0.20 | 0.20 |
+| the Moon | 0.55 | 0.45 | | violin | 0.10 | 0.15 |
+| Napoleon | **0.40** | 0.25 | | **Shakespeare** | 0.00 | **0.30** |
+| Venice | **0.35** | 0.15 | | **Titanic** | 0.00 | **0.25** |
+| chess | **0.30** | 0.10 | | **Everest** | 0.15 | **0.35** |
+| Eiffel | **0.25** | 0.00 | | Harry Potter | 0.05 | 0.05 |
+| French Revolution | 0.25 | 0.10 | | **mean (15)** | **0.27** | **0.23** |
+
+- **Not a general improvement** (0.23 vs 0.27, within noise; R1 also gets 3× more settings to pick from).
+- **R5 rescues concepts whose attributed top neurons are generic**: Shakespeare, Titanic, Everest (both previously
+  ≈ 0 or low). It loses where attribution already finds good neurons (coffee, chess, Eiffel).
+- Shakespeare's 3 label-matched neurons give 0.30 vs 0.50 for his single dedicated neuron: the word match also
+  pulled in a generic neuron whose label merely mentions him. Better matching (Luna: "is this neuron *about* X?")
+  would be cleaner.
+- **Method takeaway for the dial toy:** offer several candidate neuron sets per concept (R1, R2, R4, R5), score each
+  on a selection prompt set for named-and-fluent, keep the winner, report held-out. No single rule is best.
