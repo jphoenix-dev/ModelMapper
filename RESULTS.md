@@ -1455,3 +1455,34 @@ entirely. Recall = log-odds drop of the answer's first token.
   - The cut is at the answer position only.
   - First answer token only.
   - The normalisation-scale explanation is inferred, not separately tested.
+
+**What the feeding heads deliver, and from which words** (`src/route_sources.py`,
+`results/concepts_v3/route_sources_v3.json`). Each feeding head's push into the entry neuron, split exactly by source
+position (attention weight × that position's value vector). Check: the per-position pieces rebuild each head's actual
+output to within 0.2%. Five concepts × their top-5 positive feeding heads, all recall prompts.
+
+Two kinds of feeding head:
+1. **Meaning carriers** (deliver from the question's words):
+   - **L26H17 carries category words:** Eiffel "structure / monument / landmark / attraction", the Moon "body /
+     satellite / object", Golden Gate "crossing / span / structure", Mozart "composer".
+   - **L24H19 carries category words too:** coffee "grounds / drink / beverage / press", Golden Gate "suspension /
+     span".
+   - **L23H10 carries specific clue words:** Golden Gate "Strauss / Francisco", Eiffel "Paris", the Moon "satellite /
+     Earth / sky".
+   - **L24H26 carries very specific clues for Mozart:** "-zburg" (Salzburg), "-ute" (The Magic Flute), "-aro" (Figaro).
+   - **L26H20 for the Moon:** "months / eclipse".
+2. **Content-free "gain" heads** (deliver almost entirely from formatting tokens: line breaks, the start-of-turn
+   marker, "?"):
+   - L28H4, L28H6, L29H25, L30H17 and L25H15 push the entry neuron up regardless of the question's content.
+   - L28H7 (previous entry) consistently pushes it down.
+
+**Working sketch of recall (exploratory, 5–6 concepts):**
+1. Category heads (L26H17, L24H19) and clue heads (L23H10, L24H26) carry the question's meaning to the answer position.
+2. An entry concept neuron combines them ("structure + monument + Paris → Eiffel Tower").
+3. Format-driven heads set the gain (L28H4 / L28H6 up, L28H7 down).
+4. The concept amplifies through a chain of its own neurons.
+5. Late layers turn it into the answer word.
+
+Every arrow in steps 1–2 rests on exact decomposition, and the head → entry-neuron links were shown to be causal for
+recall (route cut). Still untested: steps 4–5 causally, the generality beyond 5–6 concepts, and whether L26H17 /
+L24H19 behave as "category readers" in general.
