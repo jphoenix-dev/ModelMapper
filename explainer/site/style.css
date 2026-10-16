@@ -104,6 +104,14 @@ footer { font: 13px/1.55 var(--sans); color: var(--muted); border-top: 1px solid
 .play { font: 12px var(--sans); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); cursor: pointer; padding: 0; }
 .play:hover { border-color: var(--accent); }
 
+h1 .brk { color: var(--cool); font-weight: 400; }
+.qnav { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-width: 0; max-width: 100%; }
+.qnav select { max-width: min(100%, 340px); font-size: 13px; }
+#layers .hot { cursor: pointer; }
+#layers .hot circle { transition: r 0.5s ease, fill-opacity 0.5s ease; }
+#layers .hot:focus { outline: none; }
+#layers .hot:focus .core { stroke: var(--ink); stroke-width: 2; }
+
 /* figure 2 rows: every recall question at once */
 ol.qrows { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
 ol.qrows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
