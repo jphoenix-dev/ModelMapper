@@ -126,8 +126,9 @@ class FastPipeline(Pipeline):
             ok = [False] * len(replies)
         # a wording whose distinctive words already appear in the questions is echoing the clues, not recall (ISSUES #31)
         good = [r for r, v in zip(replies, ok) if v and r and sum(leaks(q, r) for q in questions) < 0.3 * len(questions)]
-        # a wording must recur (>= 3 replies): one-off guesses, even if the checker accepts them, are not recall
-        return [f for f, n in Counter(good).most_common(3) if n >= 3], [{"reply": r, "names_concept": bool(v)} for r, v in zip(replies, ok)]
+        # drop one-off wordings (>= 2 replies). Recall itself still needs high P(answer) on >= 5 prompts, which is the
+        # real recurrence test; a stricter cut here (>= 3) dropped "Sahara" and lost a real concept (ISSUES #31)
+        return [f for f, n in Counter(good).most_common(3) if n >= 2], [{"reply": r, "names_concept": bool(v)} for r, v in zip(replies, ok)]
 
     # ---- batched teacher-forced scoring -------------------------------------
     def batch_probs(self, pairs, ctx=None):

@@ -1,0 +1,173 @@
+{
+ "concept": "Sahara Desert",
+ "model": "Qwen/Qwen3-8B",
+ "answer": " Sahara Desert",
+ "answer_tokens": [
+  "S",
+  "ah",
+  "ara",
+  " Desert"
+ ],
+ "recall_kept": 4,
+ "recall_total": 20,
+ "recall": [
+  [
+   "<|im_start|>user\nWhat is the name of the immense hot, arid region covering much of North Africa? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   0.952
+  ],
+  [
+   "<|im_start|>user\nWhat is the world's largest hot expanse of arid land called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   0.98
+  ],
+  [
+   "<|im_start|>user\nWhat is the name of the North African landscape of dunes, gravel plains, and rocky plateaus? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   0.807
+  ],
+  [
+   "<|im_start|>user\nWhat is the name of the region forming a natural barrier between Mediterranean lands and much of sub-Saharan Africa? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   0.786
+  ]
+ ],
+ "controls": [
+  {
+   "prompt": "The dry region in southern Africa that includes parts of Botswana and Namibia is the",
+   "answer": " Kalahari Desert",
+   "tid": [
+    26832,
+    1466,
+    2780,
+    42186
+   ],
+   "p": 0.666
+  },
+  {
+   "prompt": "The world's largest ocean is the",
+   "answer": " Pacific Ocean",
+   "tid": [
+    16462,
+    21575
+   ],
+   "p": 0.743
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Mount Everest",
+   "tid": [
+    10423,
+    86478
+   ],
+   "p": 0.571
+  }
+ ],
+ "steer_mode": "clamp",
+ "reply_only": true,
+ "recall_diagnostics": [
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the immense hot, arid region covering much of North Africa? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.9519
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the world's largest hot expanse of arid land called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.9805
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region stretching from the Atlantic coast to the Red Sea across North Africa? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the arid region lying south of the Mediterranean and north of the Sahel? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0276
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region crossed by historic camel-caravan routes between North and West Africa? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0008
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region through which the Tuareg people have long traveled? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0002
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region along whose northwestern edge the Atlas Mountains rise? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region whose eastern boundary is partly marked by the Nile River? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0005
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the vast North African region extending across Algeria, Libya, Egypt, Mali, Niger, and Chad? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0559
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region near whose southern edge the ancient trading city of Timbuktu sits? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0015
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the world's largest hot region with a hyper-arid climate called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0194
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the North African landscape of dunes, gravel plains, and rocky plateaus? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.8068
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region within which the Ténéré lies? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0084
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region containing ergs, or broad fields of windblown dunes? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0007
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region where the Tassili n'Ajjer plateau and its prehistoric rock art are found? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0002
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region on whose western edge the legendary oasis of Siwa lies? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region where some of Earth's most extreme temperature ranges occur? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0006
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the North African region often used metaphorically to mean an immense barren wilderness? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region forming a natural barrier between Mediterranean lands and much of sub-Saharan Africa? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.7856
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the region to which the landscape around the Ahaggar Mountains in southern Algeria belongs? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0115
+  }
+ ],
+ "status": "model_does_not_recall",
+ "pipeline": "fast_v2",
+ "recall_variant": "V3",
+ "answer_form_used": "Sahara Desert",
+ "seconds": 4,
+ "provenance": {
+  "time": "2026-10-16 03:44:58",
+  "code_sha256": {
+   "concept_pipeline.py": "d52d8495a099a834",
+   "neurons.py": "aeff37728da13db3",
+   "label.py": "72ffe99750d85265",
+   "atlas.py": "fed89e709d50160b",
+   "jev.py": "601d773e2c42d486"
+  },
+  "git_head": "ref: refs/heads/main",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.0",
+  "atlas_tokens": null
+ },
+ "cost": {
+  "jev_usd": 0.0,
+  "luna_tokens": {
+   "calls": 1,
+   "input_tokens": 207,
+   "output_tokens": 110
+  }
+ }
+}

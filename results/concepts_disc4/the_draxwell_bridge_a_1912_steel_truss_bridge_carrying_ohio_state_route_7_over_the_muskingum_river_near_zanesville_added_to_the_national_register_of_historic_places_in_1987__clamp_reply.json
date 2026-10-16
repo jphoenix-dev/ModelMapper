@@ -1,0 +1,156 @@
+{
+ "concept": "the Draxwell Bridge (a 1912 steel truss bridge carrying Ohio State Route 7 over the Muskingum River near Zanesville, added to the National Register of Historic Places in 1987)",
+ "model": "Qwen/Qwen3-8B",
+ "answer": " Draxwell Bridge",
+ "answer_tokens": [
+  "Dr",
+  "ax",
+  "well",
+  " Bridge"
+ ],
+ "recall_kept": 0,
+ "recall_total": 20,
+ "recall": [],
+ "controls": [
+  {
+   "prompt": "The orange suspension crossing linking San Francisco with Marin County is the",
+   "answer": " Golden Gate Bridge",
+   "tid": [
+    17809,
+    29243,
+    19874
+   ],
+   "p": 0.548
+  },
+  {
+   "prompt": "The suspension span linking Michigan's Upper and Lower Peninsulas is the",
+   "answer": " Mackinac Bridge",
+   "tid": [
+    32391,
+    258,
+    580,
+    19874
+   ],
+   "p": 0.905
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au",
+   "tid": [
+    32050
+   ],
+   "p": 0.824
+  }
+ ],
+ "steer_mode": "clamp",
+ "reply_only": true,
+ "recall_diagnostics": [
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the steel truss structure carrying Ohio State Route 7 across the Muskingum near Zanesville? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the 1912 steel highway crossing over the Muskingum River in the Zanesville area? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the Muskingum River crossing near Zanesville built in 1912 for Ohio State Route 7? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the crossing on Ohio State Route 7 near Zanesville that was listed on the National Register in 1987? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the Zanesville-area steel truss over the Muskingum that entered the National Register in 1987? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the historic structure on which drivers cross the Muskingum near Zanesville on Ohio State Route 7? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the historic 1912 truss that takes Ohio's State Route 7 over the Muskingum River? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the steel truss carrying state route traffic across the Muskingum River near Zanesville? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of Ohio's 1912 truss crossing near Zanesville that was placed on the National Register 75 years later? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the historic structure recognized by the National Register in 1987 for its role on Ohio Route 7? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the historic steelwork near Zanesville that carries Ohio 7 across the Muskingum? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the historic steel-truss river crossing on the Zanesville stretch of Ohio 7? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the 1912 structure on Ohio State Route 7 that spans the Muskingum River? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the 1912 steel truss used by motorists crossing the Muskingum near Zanesville on Route 7? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the registered historic steel truss serving Ohio State Route 7 at the Muskingum? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the 1912 crossing carrying Route 7 across the Muskingum that has been on the National Register since 1987? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the old steel-trussed crossing just outside Zanesville that carries State Route 7? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the Muskingum River crossing in the Zanesville vicinity that was built in 1912 and later received National Register recognition? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the Ohio highway structure near Zanesville that carries Route 7 over the Muskingum in a steel truss? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  },
+  {
+   "prompt": "<|im_start|>user\nWhat is the name of the 1912 river crossing near Zanesville that received its historic designation in 1987? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "p_answer": 0.0
+  }
+ ],
+ "status": "model_does_not_recall",
+ "pipeline": "fast_v2",
+ "recall_variant": "V3",
+ "answer_form_used": "Draxwell Bridge",
+ "seconds": 13,
+ "provenance": {
+  "time": "2026-10-16 03:46:25",
+  "code_sha256": {
+   "concept_pipeline.py": "d52d8495a099a834",
+   "neurons.py": "aeff37728da13db3",
+   "label.py": "72ffe99750d85265",
+   "atlas.py": "fed89e709d50160b",
+   "jev.py": "601d773e2c42d486"
+  },
+  "git_head": "ref: refs/heads/main",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.0",
+  "atlas_tokens": null
+ },
+ "cost": {
+  "jev_usd": 0.0048,
+  "luna_tokens": {
+   "calls": 4,
+   "input_tokens": 963,
+   "output_tokens": 1290
+  }
+ }
+}

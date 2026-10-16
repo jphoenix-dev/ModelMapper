@@ -871,9 +871,10 @@ P(answer) ≥ MIN_P, so discovery only fixes wording; it can't create recall on 
 
 The made-up controls are the safety test, and the first version **failed** it: the fictional Draxwell Bridge
 "recalled" 10/20, because the checker accepted names the model built from the question's clue words ("Zanesville
-Bridge"). With the fixes (canonical name only, clue-word leak rule, ≥ 3 recurrences):
+Bridge"). With the fixes (canonical name only, clue-word leak rule, a wording must recur ≥ 2 times; ≥ 3 was
+tried and wrongly lost Sahara at 4/20). Final code, fresh run:
 
-| concept | before discovery (CR-2) | discovery v1 | discovery v2 |
+| concept | before discovery (CR-2) | discovery v1 | final |
 |---|---|---|---|
 | Sahara Desert (real) | 0/20 | 6/20 | **6/20 recalled** |
 | Elsabeth Quorrin (made up) | not recalled | not recalled | **not recalled** |
