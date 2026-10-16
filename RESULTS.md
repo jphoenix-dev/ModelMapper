@@ -1064,3 +1064,21 @@ doesn't predict steering usefulness. The broader word match kept parts that help
 Titanic's L10:1252). Luna also rejected all of Golden Gate's gold/bridge/landmark parts. Only Shakespeare benefits
 (dropping a generic neuron). **Lesson for the dial: choose neuron sets empirically per concept (try several, keep
 the best on selection prompts, report held-out); no labelling heuristic beats measuring.**
+
+## 16 Oct 2026 (after CR-2): a free local fluency check, validated against Jev (budget relief)
+`src/fluency_proxy.py`, 6,000 steered replies Jev had already judged ("fluent, grammatical English?",
+P(yes) ≥ 0.5 = fluent). Features computed locally:
+
+| feature | AUC vs Jev |
+|---|---|
+| distinct-token fraction (repetition) | **0.907** |
+| mean log-prob under the unsteered model | 0.582 |
+| share of non-ASCII characters | 0.461 |
+
+- Rule fitted on half, tested on the other half: **distinct-token fraction ≥ 0.64 AND mean log-prob ≥ −2.3 AND
+  non-ASCII < 3% → fluent.** Held-out agreement with Jev **88.7%** (always-"fluent" baseline 61.2%); precision 0.89,
+  recall 0.93.
+- Log-prob alone is weak because language models find their own repetition loops likely ("Albert Albert Albert"),
+  which is exactly the failure mode steering produces.
+- Use: free fluency for the dial's auto-selection and quick sweeps. Pre-registered tests keep the Jev judge.
+  Validated only on our steering replies (people and label-rule runs).
