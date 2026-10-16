@@ -36,7 +36,7 @@ import torch  # noqa: E402
 import concept_pipeline as cp  # noqa: E402
 import pipeline_fast  # noqa: E402
 from atlas import output_words  # noqa: E402
-from neurons import steer  # noqa: E402
+from neurons import steer, DEVICE  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
 from steer_test import PROMPTS as ORIGINAL_NEUTRAL  # noqa: E402
 
@@ -117,11 +117,11 @@ class Gen:
     def steer_grid(self, units, last_act, prompts, strengths, tokens):
         """Replies for every (strength, prompt); strength 0 is the unsteered model (add mode)."""
         p = self.pipe
-        peaks = torch.tensor([p.steer_edits([u], 1.0, last_act)[0][2] for u in units], device="cuda")
+        peaks = torch.tensor([p.steer_edits([u], 1.0, last_act)[0][2] for u in units], device=DEVICE)
         rows, vals, act = [], [], []
         for s in strengths:
             for q in prompts:
-                rows.append(q); vals.append(peaks * s); act.append(torch.ones(len(units), dtype=torch.bool, device="cuda"))
+                rows.append(q); vals.append(peaks * s); act.append(torch.ones(len(units), dtype=torch.bool, device=DEVICE))
         old = pipeline_fast.GEN_TOKENS; pipeline_fast.GEN_TOKENS = tokens
         try:
             reps = p.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
@@ -137,13 +137,13 @@ class Gen:
         p.mode, p.reply_only = "clamp", False                      # knockout = clamp to 0 on every position
         out = []
         try:
-            vals = torch.zeros(len(texts), len(units), device="cuda")
+            vals = torch.zeros(len(texts), len(units), device=DEVICE)
             with p.steer_rows(units, vals, active):
                 p.tok.padding_side = "left"
                 for s in range(0, len(texts), pipeline_fast.GEN_BATCH):
-                    p._rows = torch.arange(s, min(s + pipeline_fast.GEN_BATCH, len(texts)), device="cuda")
+                    p._rows = torch.arange(s, min(s + pipeline_fast.GEN_BATCH, len(texts)), device=DEVICE)
                     ids = p.tok(texts[s:s + pipeline_fast.GEN_BATCH], return_tensors="pt", padding=True,
-                                add_special_tokens=False).to("cuda")
+                                add_special_tokens=False).to(DEVICE)
                     with torch.no_grad():
                         g = p.model.generate(**ids, max_new_tokens=tokens, do_sample=False, pad_token_id=p.tok.pad_token_id)
                     out += [p.tok.decode(o[ids.input_ids.shape[1]:], skip_special_tokens=True).strip() for o in g]
@@ -162,27 +162,27 @@ class Gen:
             seqs.append(ids + ans[:-1]); spans.append((len(ids) - 1, ans))
         T = max(map(len, seqs))
         pad = p.tok.pad_token_id or 0
-        ids1 = torch.full((nq, T), pad, device="cuda"); mask1 = torch.zeros_like(ids1)
+        ids1 = torch.full((nq, T), pad, device=DEVICE); mask1 = torch.zeros_like(ids1)
         for i, s in enumerate(seqs):                       # right padding, as batch_probs
-            ids1[i, :len(s)] = torch.tensor(s, device="cuda"); mask1[i, :len(s)] = 1
+            ids1[i, :len(s)] = torch.tensor(s, device=DEVICE); mask1[i, :len(s)] = 1
         R = len(units) * nq                                 # row r = unit (r // nq) off, prompt (r % nq)
-        active = torch.zeros(R, len(units), dtype=torch.bool, device="cuda")
-        active[torch.arange(R, device="cuda"), torch.arange(R, device="cuda") // nq] = True
-        vals = torch.zeros(R, len(units), device="cuda")
+        active = torch.zeros(R, len(units), dtype=torch.bool, device=DEVICE)
+        active[torch.arange(R, device=DEVICE), torch.arange(R, device=DEVICE) // nq] = True
+        vals = torch.zeros(R, len(units), device=DEVICE)
         mode, ro = p.mode, p.reply_only
         p.mode, p.reply_only = "clamp", False
-        lps = torch.empty(R, device="cuda")
+        lps = torch.empty(R, device=DEVICE)
         try:
             with p.steer_rows(units, vals, active), torch.no_grad():
                 for s in range(0, R, rows_per_batch):
                     e = min(R, s + rows_per_batch)
-                    p._rows = torch.arange(s, e, device="cuda")
-                    qi = torch.arange(s, e, device="cuda") % nq
+                    p._rows = torch.arange(s, e, device=DEVICE)
+                    qi = torch.arange(s, e, device=DEVICE) % nq
                     h = p.model.model(input_ids=ids1[qi], attention_mask=mask1[qi]).last_hidden_state
                     for j in range(e - s):                  # answer tokens only: no full-vocabulary logits for every position
                         start, ans = spans[qi[j].item()]
                         logits = p.model.lm_head(h[j, start:start + len(ans)]).float().log_softmax(-1)
-                        lps[s + j] = logits[torch.arange(len(ans), device="cuda"), torch.tensor(ans, device="cuda")].sum()
+                        lps[s + j] = logits[torch.arange(len(ans), device=DEVICE), torch.tensor(ans, device=DEVICE)].sum()
         finally:
             p.mode, p.reply_only = mode, ro
         ps = lps.exp().view(len(units), nq).tolist()
@@ -224,7 +224,7 @@ class Gen:
                 for k in [0] + KS:
                     if k == 0 and which == "random":
                         continue
-                    a = torch.zeros(len(units), dtype=torch.bool, device="cuda")
+                    a = torch.zeros(len(units), dtype=torch.bool, device=DEVICE)
                     for u in order[:k]:
                         a[idx[u]] = True
                     texts.append(q); act.append(a); keys.append((qi, which, k))
@@ -297,8 +297,8 @@ def main():
         G.use_dir("concepts_v3")
         old = pipeline_fast.GEN_TOKENS; pipeline_fast.GEN_TOKENS = REPLY_TOKENS
         try:
-            reps = G.pipe.gen_rows(PROMPTS, [(0, 0)], torch.zeros(len(PROMPTS), 1, device="cuda"),
-                                   torch.zeros(len(PROMPTS), 1, dtype=torch.bool, device="cuda"))
+            reps = G.pipe.gen_rows(PROMPTS, [(0, 0)], torch.zeros(len(PROMPTS), 1, device=DEVICE),
+                                   torch.zeros(len(PROMPTS), 1, dtype=torch.bool, device=DEVICE))
         finally:
             pipeline_fast.GEN_TOKENS = old
         base.write_text(json.dumps({"prompts": PROMPTS, "replies": reps}, indent=1, ensure_ascii=False), encoding="utf-8")
