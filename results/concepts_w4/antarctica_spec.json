@@ -1,0 +1,188 @@
+{
+ "answer": " Antarctica",
+ "recall": [
+  "The coldest, driest, and windiest continent on Earth is",
+  "The continent on which the geographic South Pole lies is",
+  "The vast ice-covered landmass at Earth's southern extreme is",
+  "The world's largest desert by area is located on",
+  "The continent with no permanent native human population is",
+  "The continent that holds most of Earth's land ice is",
+  "The continent where emperor penguins breed in large colonies is",
+  "The continent encircled by the Southern Ocean is",
+  "The landmass separated from South America by the Drake Passage is",
+  "The continent where the Transantarctic Mountains form a major divide is",
+  "The continent where the Amundsen–Scott research station stands is",
+  "The continent explored by Ernest Shackleton's ship Endurance was",
+  "The continent reached by Roald Amundsen's 1911 expedition to the pole was",
+  "The continent where McMurdo Station is located is",
+  "The continent whose highest point is Vinson Massif is",
+  "The continent where the McMurdo Dry Valleys are found is",
+  "The continent governed by an international treaty system that reserves it for peaceful scientific use is",
+  "The continent with the highest average elevation is",
+  "The continent first sighted by a Russian expedition in 1820 was",
+  "The continent whose ice sheet covers nearly all of its landmass is"
+ ],
+ "controls": [
+  {
+   "prompt": "The continent with the world's largest population is",
+   "answer": " Asia"
+  },
+  {
+   "prompt": "The continent that contains the Sahara Desert is",
+   "answer": " Africa"
+  },
+  {
+   "prompt": "The continent where the Alps and the Danube are located is",
+   "answer": " Europe"
+  },
+  {
+   "prompt": "The smallest continent, which is also a country, is",
+   "answer": " Australia"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The coldest, driest, and windiest continent on Earth is called",
+  "The continent on which the geographic South Pole lies is called",
+  "The vast ice-covered landmass at Earth's southern extreme is called",
+  "The world's largest desert by area is located on the continent called",
+  "The continent with no permanent native human population is called",
+  "The continent that holds most of Earth's land ice is called",
+  "The continent where emperor penguins breed in large colonies is called",
+  "The continent encircled by the Southern Ocean is called",
+  "The landmass separated from South America by the Drake Passage is called",
+  "The continent where the Transantarctic Mountains form a major divide is called",
+  "The continent where the Amundsen–Scott research station stands is called",
+  "The continent explored by Ernest Shackleton's ship Endurance is called",
+  "The continent reached by Roald Amundsen's 1911 expedition to the pole is called",
+  "The continent where McMurdo Station is located is called",
+  "The continent whose highest point is Vinson Massif is called",
+  "The continent where the McMurdo Dry Valleys are found is called",
+  "The continent governed by an international treaty system that reserves it for peaceful scientific use is called",
+  "The continent with the highest average elevation is called",
+  "The continent first sighted by a Russian expedition in 1820 is called",
+  "The continent whose ice sheet covers nearly all of its landmass is called"
+ ],
+ "recall_v3": [
+  "What is the name of the coldest, driest, and windiest continent on Earth?",
+  "What is the name of the continent on which the geographic South Pole lies?",
+  "What is the name of the vast ice-covered landmass at Earth's southern extreme?",
+  "What is the name of the continent where the world's largest desert by area is located?",
+  "What is the name of the continent with no permanent native human population?",
+  "What is the name of the continent that holds most of Earth's land ice?",
+  "What is the name of the continent where emperor penguins breed in large colonies?",
+  "What is the name of the continent encircled by the Southern Ocean?",
+  "What is the name of the landmass separated from South America by the Drake Passage?",
+  "What is the name of the continent where the Transantarctic Mountains form a major divide?",
+  "What is the name of the continent where the Amundsen–Scott research station stands?",
+  "What is the name of the continent explored by Ernest Shackleton's ship Endurance?",
+  "What is the name of the continent reached by Roald Amundsen's 1911 expedition to the pole?",
+  "What is the name of the continent where McMurdo Station is located?",
+  "What is the name of the continent whose highest point is Vinson Massif?",
+  "What is the name of the continent where the McMurdo Dry Valleys are found?",
+  "What is the name of the continent governed by an international treaty system that reserves it for peaceful scientific use?",
+  "What is the name of the continent with the highest average elevation?",
+  "What is the name of the continent first sighted by a Russian expedition in 1820?",
+  "What is the name of the continent whose ice sheet covers nearly all of its landmass?"
+ ],
+ "answer_forms_extra": [
+  "Antarctica"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Africa",
+   "names_concept": false
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": true
+  }
+ ]
+}

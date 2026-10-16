@@ -1,0 +1,70 @@
+W1016 06:42:40.446000 1352 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 12/399 [00:00<00:04, 86.33it/s]Loading weights:   5%|▌         | 21/399 [00:00<00:05, 73.17it/s]Loading weights:   8%|▊         | 32/399 [00:00<00:04, 80.92it/s]Loading weights:  11%|█         | 43/399 [00:00<00:04, 88.25it/s]Loading weights:  13%|█▎        | 52/399 [00:00<00:04, 79.49it/s]Loading weights:  15%|█▌        | 61/399 [00:00<00:04, 80.10it/s]Loading weights:  18%|█▊        | 70/399 [00:00<00:04, 81.87it/s]Loading weights:  20%|█▉        | 79/399 [00:00<00:04, 77.73it/s]Loading weights:  22%|██▏       | 89/399 [00:01<00:04, 73.55it/s]Loading weights:  25%|██▌       | 100/399 [00:01<00:04, 73.73it/s]Loading weights:  28%|██▊       | 111/399 [00:01<00:04, 71.18it/s]Loading weights:  30%|███       | 121/399 [00:01<00:03, 74.17it/s]Loading weights:  33%|███▎      | 133/399 [00:01<00:03, 74.68it/s]Loading weights:  36%|███▌      | 144/399 [00:01<00:03, 81.53it/s]Loading weights:  38%|███▊      | 153/399 [00:01<00:03, 77.00it/s]Loading weights:  41%|████      | 164/399 [00:02<00:03, 77.57it/s]Loading weights:  44%|████▍     | 175/399 [00:02<00:02, 77.79it/s]Loading weights:  47%|████▋     | 186/399 [00:02<00:02, 74.07it/s]Loading weights:  49%|████▉     | 197/399 [00:02<00:02, 79.55it/s]Loading weights:  52%|█████▏    | 208/399 [00:02<00:02, 84.32it/s]Loading weights:  54%|█████▍    | 217/399 [00:02<00:02, 84.06it/s]Loading weights:  57%|█████▋    | 226/399 [00:02<00:02, 78.39it/s]Loading weights:  59%|█████▊    | 234/399 [00:03<00:02, 76.01it/s]Loading weights:  61%|██████    | 243/399 [00:03<00:02, 72.33it/s]Loading weights:  64%|██████▎   | 254/399 [00:03<00:01, 73.65it/s]Loading weights:  66%|██████▋   | 265/399 [00:03<00:01, 75.02it/s]Loading weights:  69%|██████▊   | 274/399 [00:03<00:01, 71.25it/s]Loading weights:  72%|███████▏  | 287/399 [00:03<00:01, 77.56it/s]Loading weights:  74%|███████▍  | 297/399 [00:03<00:01, 78.42it/s]Loading weights:  77%|███████▋  | 307/399 [00:03<00:01, 80.80it/s]Loading weights:  79%|███████▉  | 316/399 [00:04<00:01, 79.81it/s]Loading weights:  81%|████████▏ | 325/399 [00:04<00:01, 72.50it/s]Loading weights:  83%|████████▎ | 333/399 [00:04<00:00, 73.25it/s]Loading weights:  86%|████████▌ | 343/399 [00:04<00:00, 75.01it/s]Loading weights:  88%|████████▊ | 351/399 [00:04<00:00, 69.71it/s]Loading weights:  91%|█████████ | 364/399 [00:04<00:00, 83.60it/s]Loading weights:  93%|█████████▎| 373/399 [00:04<00:00, 72.37it/s]Loading weights:  96%|█████████▌| 382/399 [00:04<00:00, 73.43it/s]Loading weights:  99%|█████████▉| 397/399 [00:05<00:00, 92.24it/s]Loading weights: 100%|██████████| 399/399 [00:05<00:00, 78.47it/s]
+steering: add, reply_only=True; out results\concepts_w4
+a doctor                 recall 10/20 | k_mean 2 k_flip 3 (base LO 4.54) | steer R1 n=2 x1.0: held-out 0.50 (default 0.20, random 0.00)
+a firefighter            recall 19/20 | k_mean 2 k_flip 5 (base LO 2.69) | steer R1 n=2 x2.0: held-out 0.00 (default 0.00, random 0.00)
+a chef                   recall 10/20 | k_mean 3 k_flip 3 (base LO 1.85) | steer R4 n=4 x1.0: held-out 0.05 (default 0.00, random 0.00)
+an astronaut             recall 10/20 | k_mean 1 k_flip 1 (base LO 2.37) | steer R1 n=4 x1.0: held-out 0.35 (default 0.35, random 0.00)
+the colour red           recall 19/20 | k_mean 1 k_flip 20 (base LO 10.27) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
+the colour blue          recall 18/20 | k_mean 1 k_flip 2 (base LO 6.78) | steer R1 n=4 x1.0: held-out 0.35 (default 0.35, random 0.00)
+gold                     recall 17/20 | k_mean 1 k_flip 2 (base LO 7.16) | steer R4 n=2 x0.5: held-out 0.40 (default 0.05, random 0.05)
+shadows                  recall 10/20 | k_mean 2 k_flip 2 (base LO 3.37) | steer R1 n=4 x1.5: held-out 0.10 (default 0.05, random 0.00)
+snow                     recall 16/20 | k_mean 2 k_flip 5 (base LO 4.4) | steer R1 n=2 x1.0: held-out 0.40 (default 0.65, random 0.00)
+thunderstorms            recall 10/20 | k_mean 2 k_flip 2 (base LO 2.17) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
+autumn                   recall 16/20 | k_mean 1 k_flip 2 (base LO 5.67) | steer R1 n=4 x0.5: held-out 0.65 (default 0.00, random 0.00)
+the desert heat          recall 6/20 | k_mean 1 k_flip 1 (base LO 1.03) | steer R1 n=2 x1.0: held-out 0.00 (default 0.00, random 0.00)
+the umbrella             recall 8/20 | k_mean 1 k_flip 1 (base LO 4.3) | steer R1 n=4 x1.0: held-out 0.45 (default 0.45, random 0.00)
+the mirror               recall 10/20 | k_mean 3 k_flip 3 (base LO 3.54) | steer R1 n=4 x0.5: held-out 0.65 (default 0.30, random 0.00)
+the clock                recall 9/20 | k_mean 10 k_flip 20 (base LO 4.2) | steer R4 n=2 x1.5: held-out 0.40 (default 0.00, random 0.00)
+the key                  recall 16/20 | k_mean 1 k_flip 1 (base LO 1.46) | steer R4 n=2 x0.5: held-out 0.75 (default 0.30, random 0.05)
+the Moon landing         recall 5/20 | k_mean 2 k_flip 1 (base LO -0.08) | steer R1 n=2 x1.0: held-out 0.35 (default 0.25, random 0.00)
+World War II             recall 20/20 | k_mean 1 k_flip 2 (base LO 5.83) | steer R1 n=2 x0.5: held-out 0.45 (default 0.15, random 0.10)
+the fall of the Berlin Wall recall 11/20 | k_mean 2 k_flip 1 (base LO 0.99) | steer R1 n=2 x1.0: held-out 0.70 (default 0.40, random 0.05)
+the Renaissance          recall 20/20 | k_mean 2 k_flip 3 (base LO 7.42) | steer R1 n=4 x2.0: held-out 0.05 (default 0.00, random 0.00)
+the wolf                 recall 7/20 | k_mean 1 k_flip 1 (base LO 0.67) | steer R4 n=2 x1.5: held-out 0.30 (default 0.10, random 0.00)
+the dolphin              recall 12/20 | k_mean 1 k_flip 1 (base LO 1.66) | steer R1 n=4 x2.0: held-out 0.05 (default 0.00, random 0.00)
+the butterfly            recall 11/20 | k_mean 1 k_flip 1 (base LO 1.58) | steer R1 n=2 x1.5: held-out 0.40 (default 0.00, random 0.00)
+the shark                recall 7/20 | k_mean 1 k_flip 1 (base LO 3.08) | steer R1 n=2 x1.0: held-out 0.00 (default 0.05, random 0.00)
+bread                    recall 13/20 | k_mean 1 k_flip 1 (base LO 2.69) | steer R1 n=2 x1.0: held-out 0.60 (default 0.50, random 0.00)
+Traceback (most recent call last):
+  File "C:\dev\already-clean\src\wave_free.py", line 136, in <module>
+    main()
+  File "C:\dev\already-clean\src\wave_free.py", line 65, in main
+    spec, tid, recall, _ = pipe.make_prompts(concept)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\already-clean\src\pipeline_fast.py", line 62, in make_prompts
+    spec, tid, recall, controls = super().make_prompts(concept)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\already-clean\src\concept_pipeline.py", line 103, in make_prompts
+    p = self.probs(spec["recall"], tid)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\already-clean\src\pipeline_fast.py", line 163, in probs
+    return self.batch_probs([(p, ans) for p in prompts], steer(self.model, list(edits)) if edits else None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\already-clean\src\pipeline_fast.py", line 144, in batch_probs
+    p_ids = self.tok.encode(prompt)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\already-clean\.venv\Lib\site-packages\transformers\tokenization_utils_base.py", line 2292, in encode
+    encoded_inputs = self._encode_plus(
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\dev\already-clean\.venv\Lib\site-packages\transformers\tokenization_utils_tokenizers.py", line 1015, in _encode_plus
+    raise ValueError(
+ValueError: text input must be of type `str` (single example), `list[str]` (batch or single pretokenized example) or `list[list[str]]` (batch of pretokenized examples) or `list[tuple[list[str], list[str]]]` (batch of pretokenized sequence pairs).
+W1016 07:22:18.240000 30748 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 12/399 [00:00<00:05, 73.84it/s]Loading weights:   6%|▌         | 23/399 [00:00<00:04, 75.27it/s]Loading weights:   9%|▊         | 34/399 [00:00<00:04, 77.80it/s]Loading weights:  11%|█▏        | 45/399 [00:00<00:04, 81.96it/s]Loading weights:  14%|█▎        | 54/399 [00:00<00:04, 72.97it/s]Loading weights:  16%|█▋        | 65/399 [00:00<00:04, 79.34it/s]Loading weights:  19%|█▊        | 74/399 [00:00<00:04, 78.12it/s]Loading weights:  21%|██        | 82/399 [00:01<00:04, 74.55it/s]Loading weights:  23%|██▎       | 91/399 [00:01<00:04, 70.52it/s]Loading weights:  26%|██▌       | 102/399 [00:01<00:03, 80.32it/s]Loading weights:  28%|██▊       | 111/399 [00:01<00:03, 74.85it/s]Loading weights:  31%|███       | 122/399 [00:01<00:03, 81.83it/s]Loading weights:  33%|███▎      | 131/399 [00:01<00:03, 79.19it/s]Loading weights:  35%|███▌      | 140/399 [00:01<00:03, 78.92it/s]Loading weights:  37%|███▋      | 149/399 [00:01<00:03, 76.12it/s]Loading weights:  40%|███▉      | 158/399 [00:02<00:03, 71.22it/s]Loading weights:  42%|████▏     | 167/399 [00:02<00:03, 74.50it/s]Loading weights:  44%|████▍     | 177/399 [00:02<00:02, 79.66it/s]Loading weights:  47%|████▋     | 186/399 [00:02<00:02, 75.94it/s]Loading weights:  49%|████▉     | 196/399 [00:02<00:02, 79.30it/s]Loading weights:  51%|█████▏    | 205/399 [00:02<00:02, 78.80it/s]Loading weights:  53%|█████▎    | 213/399 [00:02<00:02, 73.19it/s]Loading weights:  56%|█████▌    | 223/399 [00:02<00:02, 77.63it/s]Loading weights:  58%|█████▊    | 232/399 [00:03<00:02, 73.25it/s]Loading weights:  60%|██████    | 241/399 [00:03<00:02, 71.51it/s]Loading weights:  64%|██████▎   | 254/399 [00:03<00:01, 77.19it/s]Loading weights:  66%|██████▋   | 265/399 [00:03<00:01, 76.85it/s]Loading weights:  69%|██████▉   | 277/399 [00:03<00:01, 77.78it/s]Loading weights:  72%|███████▏  | 286/399 [00:03<00:01, 78.52it/s]Loading weights:  75%|███████▍  | 298/399 [00:03<00:01, 79.53it/s]Loading weights:  77%|███████▋  | 307/399 [00:03<00:01, 78.20it/s]Loading weights:  80%|███████▉  | 318/399 [00:04<00:01, 74.17it/s]Loading weights:  82%|████████▏ | 329/399 [00:04<00:00, 72.55it/s]Loading weights:  86%|████████▌ | 342/399 [00:04<00:00, 83.36it/s]Loading weights:  88%|████████▊ | 351/399 [00:04<00:00, 73.29it/s]Loading weights:  91%|█████████ | 364/399 [00:04<00:00, 76.61it/s]Loading weights:  94%|█████████▍| 375/399 [00:04<00:00, 76.94it/s]Loading weights:  97%|█████████▋| 386/399 [00:05<00:00, 77.57it/s]Loading weights: 100%|██████████| 399/399 [00:05<00:00, 78.27it/s]
+steering: add, reply_only=True; out results\concepts_w4
+cheese                   recall 16/20 | k_mean 1 k_flip 1 (base LO 4.68) | steer R4 n=2 x1.5: held-out 0.40 (default 0.45, random 0.00)
+ice cream                recall 13/20 | k_mean 2 k_flip 3 (base LO 4.31) | steer R4 n=4 x0.5: held-out 0.20 (default 0.10, random 0.00)
+tea                      recall 10/20 | k_mean 1 k_flip 1 (base LO 4.47) | steer R4 n=2 x1.0: held-out 0.65 (default 0.30, random 0.00)
+tennis                   recall 16/20 | k_mean 1 k_flip 1 (base LO 4.97) | steer R1 n=2 x1.0: held-out 0.10 (default 0.35, random 0.00)
+the marathon             recall 16/20 | k_mean 1 k_flip 1 (base LO 6.47) | steer R1 n=2 x0.5: held-out 0.50 (default 0.00, random 0.00)
+surfing                  recall 17/20 | k_mean 1 k_flip 1 (base LO 5.57) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
+chess grandmasters       recall 8/20 | k_mean 2 k_flip 1 (base LO 0.55) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
+the smartphone           recall 19/20 | k_mean 2 k_flip 10 (base LO 6.8) | steer R4 n=4 x0.5: held-out 0.15 (default 0.05, random 0.00)
+artificial intelligence  recall 17/20 | k_mean 1 k_flip 1 (base LO 7.12) | steer R1 n=4 x0.5: held-out 0.35 (default 0.15, random 0.00)
+the light bulb           recall 7/20 | k_mean 1 k_flip 1 (base LO 1.26) | steer R1 n=2 x1.0: held-out 0.20 (default 0.25, random 0.00)
+the telescope            recall 17/20 | k_mean 1 k_flip 3 (base LO 6.62) | steer R1 n=4 x1.0: held-out 0.55 (default 0.55, random 0.00)
+Antarctica               recall 19/20 | k_mean 2 k_flip 3 (base LO 9.28) | steer R1 n=2 x2.0: held-out 0.00 (default 0.00, random 0.00)
+the Grand Canyon         recall 18/20 | k_mean 1 k_flip 3 (base LO 4.29) | steer R1 n=4 x1.5: held-out 0.30 (default 0.05, random 0.00)
+Paris                    recall 20/20 | k_mean 2 k_flip 50 (base LO 10.86) | steer R4 n=4 x1.0: held-out 0.30 (default 0.05, random 0.00)
+the Nile                 recall 20/20 | k_mean 1 k_flip 5 (base LO 7.48) | steer R1 n=4 x1.0: held-out 0.20 (default 0.20, random 0.00)

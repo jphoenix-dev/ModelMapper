@@ -1,0 +1,188 @@
+{
+ "answer": " ice cream",
+ "recall": [
+  "A frozen dessert made by churning a sweetened dairy mixture is",
+  "The treat traditionally served in a cone at a summer fair is",
+  "A classic milkshake is commonly made by blending milk with",
+  "Espresso poured over a scoop in an affogato is served with",
+  "A banana split is topped with scoops of",
+  "The dessert whose texture comes from incorporating air during churning is",
+  "Nancy Johnson's 1843 hand-cranked freezer patent helped people make",
+  "In a root beer float, the scoop floating on the soda is",
+  "A sundae is generally built around one or more scoops of",
+  "The dairy-based treat that comes in flavors such as vanilla, chocolate, and strawberry is",
+  "In a baked Alaska, the meringue-covered center is often",
+  "The frozen treat commonly sold in tubs in supermarket freezer aisles is",
+  "A thick shake at a traditional milk bar is often made with",
+  "The scoop placed between two cookies to make a sandwich is",
+  "A classic float pairs a carbonated drink with a scoop of",
+  "The treat often churned in flavors such as pistachio and butter pecan is",
+  "A soft layer spread onto a celebration cake can be made from",
+  "At a dessert parlor, a double scoop means two portions of",
+  "The sweet frozen treat whose base often contains milk, sugar, and egg yolks is",
+  "The frozen dessert celebrated during the national month proclaimed by Ronald Reagan in 1984 is"
+ ],
+ "controls": [
+  {
+   "prompt": "A tangy frozen dessert made with cultured milk is",
+   "answer": " frozen yogurt"
+  },
+  {
+   "prompt": "A fruit-based frozen dessert traditionally made without dairy is",
+   "answer": " sorbet"
+  },
+  {
+   "prompt": "The dense Italian-style frozen dessert is called",
+   "answer": " gelato"
+  },
+  {
+   "prompt": "A frozen dessert made with milk and a small amount of fruit is",
+   "answer": " sherbet"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "A frozen dessert made by churning a sweetened dairy mixture is called",
+  "The treat traditionally served in a cone at a summer fair is called",
+  "The frozen ingredient commonly blended with milk to make a classic milkshake is called",
+  "The frozen dessert in an affogato, over which espresso is poured, is called",
+  "The frozen dessert whose scoops top a banana split is called",
+  "The dessert whose texture comes from incorporating air during churning is called",
+  "The frozen dessert that Nancy Johnson's 1843 hand-cranked freezer patent helped people make is called",
+  "The frozen dessert scoop floating on the soda in a root beer float is called",
+  "The frozen dessert around which a sundae is generally built is called",
+  "The dairy-based treat available in flavors such as vanilla, chocolate, and strawberry is called",
+  "The frozen dessert often forming the meringue-covered center of a baked Alaska is called",
+  "The frozen treat commonly sold in tubs in supermarket freezer aisles is called",
+  "The frozen ingredient often used to make a thick shake at a traditional milk bar is called",
+  "The frozen dessert scoop placed between two cookies to make a sandwich is called",
+  "The frozen dessert paired with a carbonated drink in a classic float is called",
+  "The treat often churned in flavors such as pistachio and butter pecan is called",
+  "The frozen dessert that can be spread as a soft layer onto a celebration cake is called",
+  "The frozen dessert served in two portions when a customer orders a double scoop at a dessert parlor is called",
+  "The sweet frozen dessert whose base often contains milk, sugar, and egg yolks is called",
+  "The frozen dessert celebrated during the national month proclaimed by Ronald Reagan in 1984 is called"
+ ],
+ "recall_v3": [
+  "What is the frozen dessert made by churning a sweetened dairy mixture?",
+  "What treat is traditionally served in a cone at a summer fair?",
+  "What frozen ingredient is commonly blended with milk to make a classic milkshake?",
+  "What frozen dessert is served beneath espresso in an affogato?",
+  "What frozen dessert is scooped onto a banana split?",
+  "What dessert gets its texture from incorporating air during churning?",
+  "What frozen dessert did Nancy Johnson's 1843 hand-cranked freezer patent help people make?",
+  "What is the scoop floating on the soda in a root beer float?",
+  "What frozen dessert is a sundae generally built around?",
+  "What dairy-based treat comes in flavors such as vanilla, chocolate, and strawberry?",
+  "What frozen dessert is often found beneath the meringue in a baked Alaska?",
+  "What frozen treat is commonly sold in tubs in supermarket freezer aisles?",
+  "What frozen ingredient is often used to make a thick shake at a traditional milk bar?",
+  "What frozen dessert is placed between two cookies to make a sandwich?",
+  "What frozen dessert is paired with a carbonated drink in a classic float?",
+  "What treat is often churned in flavors such as pistachio and butter pecan?",
+  "What can be spread as a soft layer onto a celebration cake?",
+  "What dessert is served as two portions when a customer orders a double scoop at a dessert parlor?",
+  "What sweet frozen dessert often has a base containing milk, sugar, and egg yolks?",
+  "What frozen dessert is celebrated during the national month Ronald Reagan proclaimed in 1984?"
+ ],
+ "answer_forms_extra": [
+  "Ice cream"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Scoop",
+   "names_concept": false
+  },
+  {
+   "reply": "Scoop",
+   "names_concept": false
+  },
+  {
+   "reply": "Whipped cream",
+   "names_concept": false
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Scoop",
+   "names_concept": false
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Cookie dough sandwich",
+   "names_concept": false
+  },
+  {
+   "reply": "Sundae",
+   "names_concept": false
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Fondant",
+   "names_concept": false
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  },
+  {
+   "reply": "Custard ice cream",
+   "names_concept": false
+  },
+  {
+   "reply": "Ice cream",
+   "names_concept": true
+  }
+ ]
+}

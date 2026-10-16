@@ -1,0 +1,190 @@
+{
+ "answer": " wolf",
+ "recall": [
+  "The wild canid from which domestic dogs descended is the",
+  "The predator restored to Yellowstone in the 1990s was the",
+  "In the story of Little Red Riding Hood, the creature who visits the grandmother’s house is the",
+  "In The Three Little Pigs, the character who tries to blow down the houses is the",
+  "A canine that often hunts cooperatively in family groups is a",
+  "A long, haunting call heard across a forest is commonly associated with a",
+  "The animal that the shepherd boy falsely claims is attacking his flock is a",
+  "The large canine that commonly preys on elk in parts of North America is the",
+  "A wild forest predator whose tracks may form a straight line through snow is a",
+  "The feared predator often shown with sharp teeth in medieval European stories is the",
+  "The animal at the center of the Yellowstone trophic-cascade story is the",
+  "A large wild canine that can travel great distances while searching for prey is a",
+  "The predator disguised in the fable about an animal wearing a sheep’s hide is a",
+  "The animal often linked in popular culture with eerie nighttime howling is the",
+  "A social canine known to communicate with scent markings, body language, and vocal calls is a",
+  "The animal whose return to parts of Europe has sparked debate among farmers and conservationists is the",
+  "A pack-hunting predator that may prey on deer in northern forests is a",
+  "In the Roman foundation legend, the twins Romulus and Remus were said to have been suckled by a female",
+  "The large canine that lives in habitats ranging from tundra to forest is the",
+  "In many traditional stories, a clever and dangerous forest predator is the"
+ ],
+ "controls": [
+  {
+   "prompt": "Among North American canids, the smaller animal often portrayed as clever and sly is the",
+   "answer": " fox"
+  },
+  {
+   "prompt": "On the American prairie, the adaptable canid often heard yipping at night is the",
+   "answer": " coyote"
+  },
+  {
+   "prompt": "Australia’s free-ranging dog, descended from an ancient domestic lineage, is the",
+   "answer": " dingo"
+  },
+  {
+   "prompt": "In parts of Africa and Asia, a small opportunistic canid is known as a",
+   "answer": " jackal"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The river traditionally identified in many school atlases as the world’s longest is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical element represented by the symbol O is",
+   "answer": " oxygen"
+  }
+ ],
+ "recall_v2": [
+  "The wild canid from which domestic dogs descended is called",
+  "The predator restored to Yellowstone in the 1990s is known as",
+  "In the story of Little Red Riding Hood, the creature who visits the grandmother’s house is called",
+  "In The Three Little Pigs, the character who tries to blow down the houses is called",
+  "A canine that often hunts cooperatively in family groups is known as",
+  "A long, haunting call heard across a forest is commonly associated with",
+  "The animal that the shepherd boy falsely claims is attacking his flock is called",
+  "The large canine that commonly preys on elk in parts of North America is known as",
+  "A wild forest predator whose tracks may form a straight line through snow is called",
+  "The feared predator often shown with sharp teeth in medieval European stories is called",
+  "The animal at the center of the Yellowstone trophic-cascade story is known as",
+  "A large wild canine that can travel great distances while searching for prey is called",
+  "The predator disguised in the fable about an animal wearing a sheep’s hide is called",
+  "The animal often linked in popular culture with eerie nighttime howling is known as",
+  "A social canine known to communicate with scent markings, body language, and vocal calls is called",
+  "The animal whose return to parts of Europe has sparked debate among farmers and conservationists is known as",
+  "A pack-hunting predator that may prey on deer in northern forests is called",
+  "In the Roman foundation legend, the twins Romulus and Remus were said to have been suckled by a female animal called",
+  "The large canine that lives in habitats ranging from tundra to forest is known as",
+  "In many traditional stories, a clever and dangerous forest predator is called"
+ ],
+ "recall_v3": [
+  "What is the name of the wild canid from which domestic dogs descended?",
+  "What was the name of the predator restored to Yellowstone in the 1990s?",
+  "What is the name of the creature who visits the grandmother’s house in Little Red Riding Hood?",
+  "What is the name of the character who tries to blow down the houses in The Three Little Pigs?",
+  "What is the name of a canine that often hunts cooperatively in family groups?",
+  "What animal is commonly associated with a long, haunting call heard across a forest?",
+  "What is the name of the animal the shepherd boy falsely claims is attacking his flock?",
+  "What is the name of the large canine that commonly preys on elk in parts of North America?",
+  "What is the name of a wild forest predator whose tracks may form a straight line through snow?",
+  "What is the name of the feared predator often shown with sharp teeth in medieval European stories?",
+  "What is the name of the animal at the center of the Yellowstone trophic-cascade story?",
+  "What is the name of a large wild canine that can travel great distances while searching for prey?",
+  "What is the name of the predator disguised in the fable about an animal wearing a sheep’s hide?",
+  "What is the name of the animal often linked in popular culture with eerie nighttime howling?",
+  "What is the name of a social canine that communicates with scent markings, body language, and vocal calls?",
+  "What is the name of the animal whose return to parts of Europe has sparked debate among farmers and conservationists?",
+  "What is the name of a pack-hunting predator that may prey on deer in northern forests?",
+  "What is the name of the animal that was said to have suckled Romulus and Remus in the Roman foundation legend?",
+  "What is the name of the large canine that lives in habitats ranging from tundra to forest?",
+  "What is the name of the clever and dangerous forest predator found in many traditional stories?"
+ ],
+ "answer_forms_extra": [
+  "Wolf",
+  "Wolves",
+  "Gray Wolf"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Gray Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolves",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Big Bad Wolf",
+   "names_concept": false
+  },
+  {
+   "reply": "Hyena",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Lion",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolves",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolverine",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolves",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolves",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Dog",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Lupa",
+   "names_concept": true
+  },
+  {
+   "reply": "Gray Wolf",
+   "names_concept": true
+  },
+  {
+   "reply": "Witch Hazel",
+   "names_concept": false
+  }
+ ]
+}

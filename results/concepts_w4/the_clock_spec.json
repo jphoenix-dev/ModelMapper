@@ -1,0 +1,188 @@
+{
+ "answer": " clock",
+ "recall": [
+  "The household instrument that shows the current hour and minute is a",
+  "The device mounted on a wall so people can check the time is a",
+  "An appliance set to sound at a chosen hour and wake someone is an alarm",
+  "The display in a train station that tells waiting passengers the time is a",
+  "A large public instrument that chimes to mark the hours is a",
+  "An early mechanical device using gears and falling weights to mark the hours was a",
+  "The instrument with hands that move around a numbered dial is a",
+  "The device above a classroom door that helps students keep track of a lesson is a",
+  "The mantelpiece instrument that may chime at regular intervals is a",
+  "The timekeeping device regulated by a swinging pendulum is a",
+  "The time display built into a microwave is a digital",
+  "The instrument people check to avoid being late for an appointment is a",
+  "A tower in a town square may hold a large public",
+  "The timekeeping instrument that can be set to Greenwich Mean Time is a",
+  "The circular instrument with Roman numerals around its face is a",
+  "A traditional kitchen may have a wall-mounted",
+  "The mechanical instrument that once struck bells to mark hours in a monastery was a",
+  "The object whose hands seem to move slowly during a long wait is the",
+  "The instrument often shown counting down to midnight on New Year's Eve is a",
+  "The time display in a computer taskbar is a digital"
+ ],
+ "controls": [
+  {
+   "prompt": "The portable timekeeping instrument worn on a wrist is a",
+   "answer": " wristwatch"
+  },
+  {
+   "prompt": "The ancient device that tells the time using the Sun's shadow is a",
+   "answer": " sundial"
+  },
+  {
+   "prompt": "The glass vessel that measures a period as sand falls through it is an",
+   "answer": " hourglass"
+  },
+  {
+   "prompt": "A chart that organizes days, weeks, and months is a",
+   "answer": " calendar"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical element represented by the symbol Au is",
+   "answer": " gold"
+  }
+ ],
+ "recall_v2": [
+  "The household instrument that shows the current hour and minute is called",
+  "The device mounted on a wall so people can check the time is known as",
+  "The timekeeping appliance set to sound at a chosen hour and wake someone is known as",
+  "The display in a train station that tells waiting passengers the time is called",
+  "A large public instrument that chimes to mark the hours is known as",
+  "An early mechanical device using gears and falling weights to mark the hours was called",
+  "The instrument with hands that move around a numbered dial is known as",
+  "The device above a classroom door that helps students keep track of a lesson is called",
+  "The mantelpiece instrument that may chime at regular intervals is known as",
+  "The timekeeping device regulated by a swinging pendulum is called",
+  "The time display built into a microwave is a digital device known as",
+  "The instrument people check to avoid being late for an appointment is called",
+  "A tower in a town square may hold a large public timekeeping instrument known as",
+  "The timekeeping instrument that can be set to Greenwich Mean Time is called",
+  "The circular instrument with Roman numerals around its face is known as",
+  "A traditional kitchen may have a wall-mounted timekeeping instrument called",
+  "The mechanical instrument that once struck bells to mark hours in a monastery was known as",
+  "The object whose hands seem to move slowly during a long wait is called",
+  "The instrument often shown counting down to midnight on New Year's Eve is known as",
+  "The time display in a computer taskbar is a digital device called"
+ ],
+ "recall_v3": [
+  "What is the name of the household instrument that shows the current hour and minute?",
+  "What is the name of the device mounted on a wall so people can check the time?",
+  "What is the name of the timekeeping appliance set to sound at a chosen hour and wake someone?",
+  "What is the name of the display in a train station that tells waiting passengers the time?",
+  "What is the name of a large public instrument that chimes to mark the hours?",
+  "What was the name of the early mechanical device using gears and falling weights to mark the hours?",
+  "What is the name of the instrument with hands that move around a numbered dial?",
+  "What is the name of the device above a classroom door that helps students keep track of a lesson?",
+  "What is the name of the mantelpiece instrument that may chime at regular intervals?",
+  "What is the name of the timekeeping device regulated by a swinging pendulum?",
+  "What is the name of the digital time display built into a microwave?",
+  "What is the name of the instrument people check to avoid being late for an appointment?",
+  "What large public timekeeping instrument might a tower in a town square hold?",
+  "What is the name of the timekeeping instrument that can be set to Greenwich Mean Time?",
+  "What is the name of the circular instrument with Roman numerals around its face?",
+  "What wall-mounted timekeeping instrument might a traditional kitchen have?",
+  "What was the name of the mechanical instrument that once struck bells to mark hours in a monastery?",
+  "What is the name of the object whose hands seem to move slowly during a long wait?",
+  "What is the name of the instrument often shown counting down to midnight on New Year's Eve?",
+  "What is the name of the digital time display in a computer taskbar?"
+ ],
+ "answer_forms_extra": [
+  "Clock"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Clock",
+   "names_concept": true
+  },
+  {
+   "reply": "Clock",
+   "names_concept": true
+  },
+  {
+   "reply": "Alarm clock",
+   "names_concept": false
+  },
+  {
+   "reply": "Clock",
+   "names_concept": true
+  },
+  {
+   "reply": "Carillon",
+   "names_concept": false
+  },
+  {
+   "reply": "Clepsydra",
+   "names_concept": false
+  },
+  {
+   "reply": "Theremin",
+   "names_concept": false
+  },
+  {
+   "reply": "Bulletin board",
+   "names_concept": false
+  },
+  {
+   "reply": "Cuckoo clock",
+   "names_concept": false
+  },
+  {
+   "reply": "Pendulum clock",
+   "names_concept": false
+  },
+  {
+   "reply": "OLED display",
+   "names_concept": false
+  },
+  {
+   "reply": "Watch",
+   "names_concept": false
+  },
+  {
+   "reply": "Clock",
+   "names_concept": true
+  },
+  {
+   "reply": "Chronometer",
+   "names_concept": false
+  },
+  {
+   "reply": "Clock",
+   "names_concept": true
+  },
+  {
+   "reply": "Wall clock",
+   "names_concept": false
+  },
+  {
+   "reply": "Bell striker",
+   "names_concept": false
+  },
+  {
+   "reply": "Clock",
+   "names_concept": true
+  },
+  {
+   "reply": "Countdown clock",
+   "names_concept": false
+  },
+  {
+   "reply": "Clock",
+   "names_concept": true
+  }
+ ]
+}

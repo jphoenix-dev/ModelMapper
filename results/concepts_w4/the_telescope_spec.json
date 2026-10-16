@@ -1,0 +1,188 @@
+{
+ "answer": " telescope",
+ "recall": [
+  "A long optical instrument used to view distant stars and planets is a",
+  "Astronomers gather faint light from distant galaxies with a",
+  "Galileo made pioneering observations of Jupiter using a",
+  "The large instrument beneath an observatory dome is a",
+  "An amateur skywatcher may mount this instrument on a tripod to inspect the Moon: a",
+  "A reflecting design forms images with a curved primary mirror; it is a",
+  "A refracting design gathers light through lenses in a long tube; it is a",
+  "A space observatory that captures detailed images of distant galaxies carries a powerful",
+  "Radio astronomers use a huge dish-shaped instrument known as a radio",
+  "The device used to resolve Saturn's rings from Earth is a",
+  "Looking beyond the naked eye, an astronomer reaches for an optical",
+  "The instrument that collects light to study distant objects is a",
+  "In a mountaintop observatory, stargazers peer through a",
+  "Early detailed observations of lunar craters were made with a",
+  "The large mirror at the heart of many modern observatories belongs to a",
+  "To study the light from distant stars, an observer points a",
+  "The instrument that helped reveal Jupiter's moons to early astronomers was the",
+  "At public viewing nights, astronomy clubs invite visitors to look through a",
+  "A device that gathers light to magnify the view of celestial objects is a",
+  "An astronomer adjusts the focus at the eyepiece of a"
+ ],
+ "controls": [
+  {
+   "prompt": "The device used to inspect cells too small to see unaided is a",
+   "answer": " microscope"
+  },
+  {
+   "prompt": "A paired handheld instrument for viewing distant birds with both eyes is a pair of",
+   "answer": " binoculars"
+  },
+  {
+   "prompt": "A device that lets someone see over a wall using mirrors is a",
+   "answer": " periscope"
+  },
+  {
+   "prompt": "A device that records images on film or a digital sensor is a",
+   "answer": " camera"
+  },
+  {
+   "prompt": "The ocean lying between Asia and the Americas is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet and Macbeth was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical element essential for human respiration is",
+   "answer": " oxygen"
+  },
+  {
+   "prompt": "The Paris landmark built for the 1889 World's Fair is the",
+   "answer": " Eiffel Tower"
+  }
+ ],
+ "recall_v2": [
+  "The name of the long optical instrument used to view distant stars and planets is",
+  "The general name of the instrument astronomers use to gather faint light from distant galaxies is",
+  "The name of the instrument Galileo used to make pioneering observations of Jupiter is",
+  "The name of the large instrument beneath an observatory dome is",
+  "The name of the instrument an amateur skywatcher may mount on a tripod to inspect the Moon is",
+  "The name of the instrument design that forms images with a curved primary mirror is",
+  "The name of the instrument design that gathers light through lenses in a long tube is",
+  "The name of the powerful instrument a space observatory carries to capture detailed images of distant galaxies is",
+  "The general name of the huge dish-shaped instrument used by radio astronomers is",
+  "The name of the device used to resolve Saturn's rings from Earth is",
+  "The name of the optical instrument an astronomer reaches for to look beyond the naked eye is",
+  "The name of the instrument that collects light to study distant objects is",
+  "The name of the instrument stargazers peer through at a mountaintop observatory is",
+  "The name of the instrument used to make early detailed observations of lunar craters is",
+  "The name of the instrument that contains the large mirror at the heart of many modern observatories is",
+  "The name of the instrument an observer points to study the light from distant stars is",
+  "The name of the instrument that helped early astronomers reveal Jupiter's moons is",
+  "The name of the instrument astronomy clubs invite visitors to look through at public viewing nights is",
+  "The name of the device that gathers light to magnify the view of celestial objects is",
+  "The name of the instrument whose eyepiece an astronomer adjusts to focus is"
+ ],
+ "recall_v3": [
+  "What is the name of the long optical instrument used to view distant stars and planets?",
+  "What instrument do astronomers use to gather faint light from distant galaxies?",
+  "What instrument did Galileo use to make pioneering observations of Jupiter?",
+  "What is the large instrument beneath an observatory dome called?",
+  "What instrument might an amateur skywatcher mount on a tripod to inspect the Moon?",
+  "What is the name of the design that forms images with a curved primary mirror?",
+  "What is the name of the design that gathers light through lenses in a long tube?",
+  "What powerful instrument does a space observatory carry to capture detailed images of distant galaxies?",
+  "What is the general name of the huge dish-shaped instrument used by radio astronomers?",
+  "What device is used to resolve Saturn's rings from Earth?",
+  "What optical instrument does an astronomer reach for to look beyond the naked eye?",
+  "What instrument collects light to study distant objects?",
+  "What instrument do stargazers peer through at a mountaintop observatory?",
+  "What instrument was used to make early detailed observations of lunar craters?",
+  "What instrument contains the large mirror at the heart of many modern observatories?",
+  "What instrument does an observer point to study the light from distant stars?",
+  "What instrument helped early astronomers reveal Jupiter's moons?",
+  "What instrument do astronomy clubs invite visitors to look through at public viewing nights?",
+  "What device gathers light to magnify the view of celestial objects?",
+  "What instrument's eyepiece does an astronomer adjust to focus?"
+ ],
+ "answer_forms_extra": [
+  "Telescope"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Reflecting telescope",
+   "names_concept": false
+  },
+  {
+   "reply": "Garden light collector",
+   "names_concept": false
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Radio telescope",
+   "names_concept": false
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Reflecting telescope",
+   "names_concept": false
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  },
+  {
+   "reply": "Telescope",
+   "names_concept": true
+  }
+ ]
+}

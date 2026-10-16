@@ -1,0 +1,188 @@
+{
+ "answer": " shark",
+ "recall": [
+  "The marine vertebrate whose skeleton is made mostly of cartilage rather than bone is a",
+  "The ocean predator that continually replaces lost teeth throughout its life is a",
+  "The fish whose skin is covered in tiny toothlike scales called dermal denticles is a",
+  "The large marine fish that lacks a swim bladder and relies partly on an oil-rich liver for buoyancy is a",
+  "The fish that can detect weak electrical fields through sensory pores near its snout is a",
+  "The marine animal whose gill slits are exposed rather than covered by a bony flap is a",
+  "The ocean fish whose upper tail lobe is often larger than its lower one is a",
+  "The animal whose fossilized teeth are commonly found in ancient marine sediments is a",
+  "The creature whose fossil teeth were once mistaken in Europe for petrified tongues is a",
+  "The widely distributed marine predator found in oceans around the globe is a",
+  "A hammerhead, recognized by its unusually broad head, is a",
+  "A mako, known for its speed in open water, is a",
+  "A dogfish is a small kind of",
+  "The world's largest fish, which feeds mainly by filtering plankton from the water, is a",
+  "The ocean animal whose fin is often shown breaking the surface in beach imagery is a",
+  "The marine animal whose rough skin inspired the texture of some competitive swimwear is a",
+  "The fish targeted in some fisheries for the fins used in a traditional soup is a",
+  "The sea creature at the center of a famous 1970s thriller about a threatened beach resort is a",
+  "A reef-dwelling fish with multiple rows of replaceable teeth is a",
+  "The cartilaginous fish most often portrayed as a powerful open-ocean predator is a"
+ ],
+ "controls": [
+  {
+   "prompt": "The intelligent marine mammal that uses echolocation and breathes air through a blowhole is a",
+   "answer": " dolphin"
+  },
+  {
+   "prompt": "The flat-bodied cartilaginous fish that moves with winglike fins is a",
+   "answer": " stingray"
+  },
+  {
+   "prompt": "The streamlined schooling fish often canned for sandwiches is a",
+   "answer": " tuna"
+  },
+  {
+   "prompt": "The eight-armed invertebrate known for camouflage and problem-solving is an",
+   "answer": " octopus"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The Paris landmark with a tall iron lattice structure is the",
+   "answer": " Eiffel Tower"
+  },
+  {
+   "prompt": "The process by which plants use sunlight to make sugars is called",
+   "answer": " photosynthesis"
+  }
+ ],
+ "recall_v2": [
+  "The marine vertebrate whose skeleton is made mostly of cartilage rather than bone is commonly called a",
+  "The ocean predator that continually replaces lost teeth throughout its life is commonly called a",
+  "The fish whose skin is covered in tiny toothlike scales called dermal denticles is commonly called a",
+  "The large marine fish that lacks a swim bladder and relies partly on an oil-rich liver for buoyancy is commonly called a",
+  "The fish that can detect weak electrical fields through sensory pores near its snout is commonly called a",
+  "The marine animal whose gill slits are exposed rather than covered by a bony flap is commonly called a",
+  "The ocean fish whose upper tail lobe is often larger than its lower one is commonly called a",
+  "The animal whose fossilized teeth are commonly found in ancient marine sediments is commonly called a",
+  "The creature whose fossil teeth were once mistaken in Europe for petrified tongues is commonly called a",
+  "The widely distributed marine predator found in oceans around the globe is commonly called a",
+  "A hammerhead, recognized by its unusually broad head, is commonly called a",
+  "A mako, known for its speed in open water, is commonly called a",
+  "A dogfish is a small kind of",
+  "The world's largest fish, which feeds mainly by filtering plankton from the water, is commonly called a",
+  "The ocean animal whose fin is often shown breaking the surface in beach imagery is commonly called a",
+  "The marine animal whose rough skin inspired the texture of some competitive swimwear is commonly called a",
+  "The fish targeted in some fisheries for the fins used in a traditional soup is commonly called a",
+  "The sea creature at the center of a famous 1970s thriller about a threatened beach resort is commonly called a",
+  "A reef-dwelling fish with multiple rows of replaceable teeth is commonly called a",
+  "The cartilaginous fish most often portrayed as a powerful open-ocean predator is commonly called a"
+ ],
+ "recall_v3": [
+  "What is the common name for the marine vertebrate whose skeleton is made mostly of cartilage rather than bone?",
+  "What is the name of the ocean predator that continually replaces lost teeth throughout its life?",
+  "What is the common name of the fish whose skin is covered in tiny toothlike scales called dermal denticles?",
+  "What is the name of the large marine fish that lacks a swim bladder and relies partly on an oil-rich liver for buoyancy?",
+  "What is the common name of the fish that can detect weak electrical fields through sensory pores near its snout?",
+  "What is the name of the marine animal whose gill slits are exposed rather than covered by a bony flap?",
+  "What is the common name of the ocean fish whose upper tail lobe is often larger than its lower one?",
+  "What is the name of the animal whose fossilized teeth are commonly found in ancient marine sediments?",
+  "What is the name of the creature whose fossil teeth were once mistaken in Europe for petrified tongues?",
+  "What is the common name of the widely distributed marine predator found in oceans around the globe?",
+  "What kind of animal is a hammerhead, recognized by its unusually broad head?",
+  "What kind of animal is a mako, known for its speed in open water?",
+  "What kind of animal is a dogfish a small example of?",
+  "What is the common name of the world's largest fish, which feeds mainly by filtering plankton from the water?",
+  "What is the name of the ocean animal whose fin is often shown breaking the surface in beach imagery?",
+  "What is the common name of the marine animal whose rough skin inspired the texture of some competitive swimwear?",
+  "What is the name of the fish targeted in some fisheries for the fins used in a traditional soup?",
+  "What is the name of the sea creature at the center of a famous 1970s thriller about a threatened beach resort?",
+  "What is the common name of a reef-dwelling fish with multiple rows of replaceable teeth?",
+  "What is the common name of the cartilaginous fish most often portrayed as a powerful open-ocean predator?"
+ ],
+ "answer_forms_extra": [
+  "Shark"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Shark",
+   "names_concept": true
+  },
+  {
+   "reply": "Shark",
+   "names_concept": true
+  },
+  {
+   "reply": "Shark",
+   "names_concept": true
+  },
+  {
+   "reply": "Giant squid",
+   "names_concept": false
+  },
+  {
+   "reply": "Electric eel",
+   "names_concept": false
+  },
+  {
+   "reply": "Shark",
+   "names_concept": true
+  },
+  {
+   "reply": "Tuna",
+   "names_concept": false
+  },
+  {
+   "reply": "Whale",
+   "names_concept": false
+  },
+  {
+   "reply": "Dinosaur",
+   "names_concept": false
+  },
+  {
+   "reply": "Shark",
+   "names_concept": true
+  },
+  {
+   "reply": "Hammerhead",
+   "names_concept": false
+  },
+  {
+   "reply": "Mako shark",
+   "names_concept": false
+  },
+  {
+   "reply": "Shark",
+   "names_concept": true
+  },
+  {
+   "reply": "Whale shark",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": false
+  },
+  {
+   "reply": "Tiger shark",
+   "names_concept": false
+  },
+  {
+   "reply": "Jellyfish",
+   "names_concept": false
+  },
+  {
+   "reply": "Parrotfish",
+   "names_concept": false
+  },
+  {
+   "reply": "Shark",
+   "names_concept": true
+  }
+ ]
+}

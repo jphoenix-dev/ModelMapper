@@ -1,0 +1,188 @@
+{
+ "answer": " Nile",
+ "recall": [
+  "Ancient Egyptian civilization flourished along the banks of the",
+  "The great river flowing north through northeastern Africa into the Mediterranean is the",
+  "At Khartoum, the Blue and White tributaries join to form the",
+  "The broad delta in northern Egypt was formed where the",
+  "The annual flooding that enriched ancient Egyptian farmland came from the",
+  "Lake Victoria is often cited as one source of the",
+  "The Aswan High Dam was built across the",
+  "The river flowing through Cairo before reaching the Mediterranean is the",
+  "Herodotus described Egypt as a gift of the",
+  "The major African river that passes through Sudan and Egypt is the",
+  "The fertile strip bordering much of Egypt owes its existence to the",
+  "The river whose source system includes a branch from Lake Victoria is the",
+  "The main waterway flowing past Luxor's temples is the",
+  "The African river that empties through a broad delta near Alexandria is the",
+  "In ancient Egyptian mythology, Hapi personified the annual flooding of the",
+  "The river whose cataracts shaped ancient Nubian travel routes was the",
+  "The waterway flowing through the capital region of Sudan and onward into Egypt is the",
+  "Egypt's historic irrigation and transport corridor is centered on the",
+  "The river that provided a vital route between ancient Nubia and Egypt was the",
+  "The great river that runs through Egypt from south to north is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The river flowing through the world's largest rainforest and emptying into the Atlantic is the",
+   "answer": " Amazon"
+  },
+  {
+   "prompt": "The major African river known for flowing through a vast tropical rainforest basin is the",
+   "answer": " Congo"
+  },
+  {
+   "prompt": "The European river that passes through Vienna, Budapest, and Belgrade is the",
+   "answer": " Danube"
+  },
+  {
+   "prompt": "The river that flows through New Orleans before reaching the Gulf of Mexico is the",
+   "answer": " Mississippi"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The planet often called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The scientist who developed the theory of relativity was",
+   "answer": " Albert Einstein"
+  }
+ ],
+ "recall_v2": [
+  "Ancient Egyptian civilization flourished along the banks of the river called",
+  "The great river flowing north through northeastern Africa into the Mediterranean is known as",
+  "At Khartoum, the Blue and White tributaries join to form the river called",
+  "The broad delta in northern Egypt was formed at the mouth of the river known as",
+  "The annual flooding that enriched ancient Egyptian farmland came from the river called",
+  "Lake Victoria is often cited as one source of the river known as",
+  "The Aswan High Dam was built across the river called",
+  "The river flowing through Cairo before reaching the Mediterranean is called",
+  "Herodotus described Egypt as a gift of the river known as",
+  "The major African river that passes through Sudan and Egypt is called",
+  "The fertile strip bordering much of Egypt owes its existence to the river called",
+  "The river whose source system includes a branch from Lake Victoria is known as",
+  "The main waterway flowing past Luxor's temples is called",
+  "The African river that empties through a broad delta near Alexandria is called",
+  "In ancient Egyptian mythology, Hapi personified the annual flooding of the river called",
+  "The river whose cataracts shaped ancient Nubian travel routes was known as",
+  "The waterway flowing through the capital region of Sudan and onward into Egypt is called",
+  "Egypt's historic irrigation and transport corridor is centered on the river called",
+  "The river that provided a vital route between ancient Nubia and Egypt is called",
+  "The great river that runs through Egypt from south to north is known as"
+ ],
+ "recall_v3": [
+  "Along the banks of what river did ancient Egyptian civilization flourish?",
+  "What is the name of the great river that flows north through northeastern Africa into the Mediterranean?",
+  "What river is formed where the Blue and White tributaries join at Khartoum?",
+  "What river formed the broad delta in northern Egypt?",
+  "What river's annual flooding enriched ancient Egyptian farmland?",
+  "What river is Lake Victoria often cited as a source of?",
+  "What river was the Aswan High Dam built across?",
+  "What river flows through Cairo before reaching the Mediterranean?",
+  "What river did Herodotus describe Egypt as a gift of?",
+  "What major African river passes through Sudan and Egypt?",
+  "What river created the fertile strip bordering much of Egypt?",
+  "What is the name of the river whose source system includes a branch from Lake Victoria?",
+  "What main waterway flows past Luxor's temples?",
+  "What African river empties through a broad delta near Alexandria?",
+  "What river's annual flooding did Hapi personify in ancient Egyptian mythology?",
+  "What river's cataracts shaped ancient Nubian travel routes?",
+  "What waterway flows through Sudan's capital region and onward into Egypt?",
+  "What river is at the center of Egypt's historic irrigation and transport corridor?",
+  "What river provided a vital route between ancient Nubia and Egypt?",
+  "What is the name of the great river that runs through Egypt from south to north?"
+ ],
+ "answer_forms_extra": [
+  "Nile"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "White Nile",
+   "names_concept": false
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": true
+  }
+ ]
+}

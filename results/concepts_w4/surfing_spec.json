@@ -1,0 +1,188 @@
+{
+ "answer": " surfing",
+ "recall": [
+  "The ocean sport of riding breaking waves on a board is called",
+  "The traditional Hawaiian practice of riding waves on wooden planks is known as",
+  "Duke Kahanamoku helped popularize the sport of",
+  "The activity in which riders paddle out and catch waves toward shore is",
+  "At Waikiki, one of the best-known coastal pastimes is",
+  "The Olympic sport in which competitors ride ocean waves on boards is",
+  "A person waiting beyond the break for a rideable wave is taking part in",
+  "The sport practiced with shortboards and longboards in the ocean is",
+  "Waxing a board before heading into the water is a familiar ritual in",
+  "The wave-riding tradition associated with ancient Polynesia is",
+  "A heat in which athletes are judged on their wave rides is part of a competition in",
+  "A wetsuit and a board are common gear for people taking part in",
+  "The coastal recreation that depends on swell, tides, and suitable breaks is",
+  "Riding along the face of a breaking wave is the central skill of",
+  "The sport that helped shape beach culture in places such as California and Hawaii is",
+  "A beginner taking lessons to ride ocean waves is learning",
+  "The pastime for which people check wave forecasts before visiting the coast is",
+  "The sport of paddling into a wave and gliding toward the beach is",
+  "A board rider heading out through the waves to find a good break is going",
+  "The wave-riding discipline with contests held at beaches around the world is"
+ ],
+ "controls": [
+  {
+   "prompt": "The board sport in which a rider is pulled behind a motorboat over its wake is",
+   "answer": " wakeboarding"
+  },
+  {
+   "prompt": "Riding waves while lying prone on a short foam board is called",
+   "answer": " bodyboarding"
+  },
+  {
+   "prompt": "Traveling across water on a board with an attached sail is",
+   "answer": " windsurfing"
+  },
+  {
+   "prompt": "Paddling a narrow craft through ocean water is",
+   "answer": " kayaking"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The ocean sport of riding breaking waves on a board is called",
+  "The traditional Hawaiian practice of riding waves on wooden planks is known as",
+  "Duke Kahanamoku helped popularize the sport called",
+  "The activity in which riders paddle out and catch waves toward shore is called",
+  "At Waikiki, one of the best-known coastal pastimes is called",
+  "The Olympic sport in which competitors ride ocean waves on boards is called",
+  "A person waiting beyond the break for a rideable wave is taking part in the sport known as",
+  "The sport practiced with shortboards and longboards in the ocean is called",
+  "Waxing a board before heading into the water is a familiar ritual in the sport called",
+  "The wave-riding tradition associated with ancient Polynesia is known as",
+  "A heat in which athletes are judged on their wave rides is part of a competition in the sport called",
+  "A wetsuit and a board are common gear for people taking part in the sport called",
+  "The coastal recreation that depends on swell, tides, and suitable breaks is called",
+  "Riding along the face of a breaking wave is the central skill of the sport called",
+  "The sport that helped shape beach culture in places such as California and Hawaii is called",
+  "A beginner taking lessons to ride ocean waves is learning the sport called",
+  "The pastime for which people check wave forecasts before visiting the coast is called",
+  "The sport of paddling into a wave and gliding toward the beach is called",
+  "A board rider heading out through the waves to find a good break is taking part in the sport called",
+  "The wave-riding discipline with contests held at beaches around the world is known as"
+ ],
+ "recall_v3": [
+  "What is the ocean sport of riding breaking waves on a board called?",
+  "What is the traditional Hawaiian practice of riding waves on wooden planks known as?",
+  "What sport did Duke Kahanamoku help popularize?",
+  "What is the activity called in which riders paddle out and catch waves toward shore?",
+  "What is one of the best-known coastal pastimes at Waikiki?",
+  "What is the Olympic sport in which competitors ride ocean waves on boards?",
+  "What sport is a person taking part in when waiting beyond the break for a rideable wave?",
+  "What is the sport practiced with shortboards and longboards in the ocean?",
+  "In what sport is waxing a board before heading into the water a familiar ritual?",
+  "What is the wave-riding tradition associated with ancient Polynesia known as?",
+  "What sport includes competitions with heats in which athletes are judged on their wave rides?",
+  "What sport do people commonly take part in with a wetsuit and a board?",
+  "What is the coastal recreation that depends on swell, tides, and suitable breaks?",
+  "What sport has riding along the face of a breaking wave as its central skill?",
+  "What sport helped shape beach culture in places such as California and Hawaii?",
+  "What sport is a beginner learning when taking lessons to ride ocean waves?",
+  "What is the pastime for which people check wave forecasts before visiting the coast?",
+  "What is the sport of paddling into a wave and gliding toward the beach?",
+  "What sport is a board rider taking part in when heading out through the waves to find a good break?",
+  "What is the wave-riding discipline with contests held at beaches around the world?"
+ ],
+ "answer_forms_extra": [
+  "Surfing"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Hula",
+   "names_concept": false
+  },
+  {
+   "reply": "Swimming",
+   "names_concept": false
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Water skiing",
+   "names_concept": false
+  },
+  {
+   "reply": "Hōkūleʻa",
+   "names_concept": false
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  },
+  {
+   "reply": "Surfing",
+   "names_concept": true
+  }
+ ]
+}

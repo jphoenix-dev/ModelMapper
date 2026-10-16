@@ -1,0 +1,188 @@
+{
+ "answer": " tea",
+ "recall": [
+  "Britain's customary afternoon drink, often served with scones, is",
+  "A traditional Russian hot drink poured from a samovar is",
+  "The beverage prepared during a Japanese chanoyu gathering is",
+  "A common drink served alongside dim sum in China is",
+  "A sweetened, chilled drink popular in the American South is",
+  "The cargo dumped into Boston Harbor during the 1773 protest was",
+  "The leaves processed into black, green, white, and oolong varieties produce",
+  "A drink made by steeping dried leaves in hot water is",
+  "A spiced South Asian drink simmered with milk, ginger, and cardamom is often made with",
+  "A tannin-rich drink that can become astringent when steeped too long is",
+  "A British “builder’s brew” is usually a strong cup of",
+  "Moroccan hospitality often includes a glass of hot mint-infused",
+  "A common breakfast drink prepared by pouring hot water over leaves is",
+  "A home remedy for a sore throat often combines lemon and honey with",
+  "A powdered green drink whisked with water in a bowl is",
+  "A common base for kombucha fermentation is",
+  "A caffeinated hot infusion made from leaves rather than roasted beans is",
+  "The drink whose oxidation level distinguishes black varieties from green ones is",
+  "A beverage often poured from a kettle into a cup is",
+  "A drink commonly served with fortune cookies in Chinese-American restaurants is"
+ ],
+ "controls": [
+  {
+   "prompt": "A drink brewed from roasted beans and often served as an espresso is",
+   "answer": " coffee"
+  },
+  {
+   "prompt": "A warm chocolate drink made by mixing cocoa powder with milk is",
+   "answer": " cocoa"
+  },
+  {
+   "prompt": "The South American infusion traditionally sipped through a bombilla from a gourd is",
+   "answer": " mate"
+  },
+  {
+   "prompt": "An herbal infusion made without leaves from the main caffeinated beverage plant is called a",
+   "answer": " tisane"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The river flowing through much of Egypt is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "Britain's customary afternoon drink, often served with scones, is known as",
+  "A traditional Russian hot drink poured from a samovar is called",
+  "The beverage prepared during a Japanese chanoyu gathering is known as",
+  "A common drink served alongside dim sum in China is known as",
+  "A sweetened, chilled drink popular in the American South is called",
+  "The cargo dumped into Boston Harbor during the 1773 protest was known as",
+  "The leaves processed into black, green, white, and oolong varieties produce the beverage called",
+  "A drink made by steeping dried leaves in hot water is called",
+  "A spiced South Asian drink simmered with milk, ginger, and cardamom is often made with the ingredient called",
+  "A tannin-rich drink that can become astringent when steeped too long is known as",
+  "A British “builder’s brew” is usually a strong cup of the drink called",
+  "Moroccan hospitality often includes a glass of hot mint-infused drink known as",
+  "A common breakfast drink prepared by pouring hot water over leaves is called",
+  "A home remedy for a sore throat often combines lemon and honey with the drink called",
+  "A powdered green drink whisked with water in a bowl is a type of drink called",
+  "A common base for kombucha fermentation is the drink called",
+  "A caffeinated hot infusion made from leaves rather than roasted beans is known as",
+  "The beverage whose oxidation level distinguishes black varieties from green ones is called",
+  "A beverage often poured from a kettle into a cup is known as",
+  "A drink commonly served with fortune cookies in Chinese-American restaurants is called"
+ ],
+ "recall_v3": [
+  "What is Britain's customary afternoon drink, often served with scones, called?",
+  "What is the traditional Russian hot drink poured from a samovar called?",
+  "What is the beverage prepared during a Japanese chanoyu gathering called?",
+  "What is a common drink served alongside dim sum in China?",
+  "What is the sweetened, chilled drink popular in the American South called?",
+  "What was the cargo dumped into Boston Harbor during the 1773 protest?",
+  "What beverage is produced from leaves processed into black, green, white, and oolong varieties?",
+  "What is a drink made by steeping dried leaves in hot water called?",
+  "What ingredient is a spiced South Asian drink simmered with milk, ginger, and cardamom often made with?",
+  "What tannin-rich drink can become astringent when steeped too long?",
+  "What drink is usually served as a strong cup in a British “builder’s brew”?",
+  "What hot mint-infused drink is often included in Moroccan hospitality?",
+  "What is a common breakfast drink prepared by pouring hot water over leaves?",
+  "What drink is often combined with lemon and honey in a home remedy for a sore throat?",
+  "What type of drink is a powdered green drink whisked with water in a bowl?",
+  "What is a common base for kombucha fermentation?",
+  "What is a caffeinated hot infusion made from leaves rather than roasted beans?",
+  "What beverage has an oxidation level that distinguishes black varieties from green ones?",
+  "What beverage is often poured from a kettle into a cup?",
+  "What drink is commonly served with fortune cookies in Chinese-American restaurants?"
+ ],
+ "answer_forms_extra": [
+  "Tea"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Afternoon Tea",
+   "names_concept": false
+  },
+  {
+   "reply": "Chai",
+   "names_concept": true
+  },
+  {
+   "reply": "Chanoyu",
+   "names_concept": false
+  },
+  {
+   "reply": "Jasmine tea",
+   "names_concept": false
+  },
+  {
+   "reply": "Sweet tea",
+   "names_concept": false
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Kesar",
+   "names_concept": false
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Black coffee",
+   "names_concept": false
+  },
+  {
+   "reply": "Mint tea",
+   "names_concept": false
+  },
+  {
+   "reply": "Chamomile tea",
+   "names_concept": false
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Smoothie",
+   "names_concept": false
+  },
+  {
+   "reply": "Sugarcane",
+   "names_concept": false
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  },
+  {
+   "reply": "Tea",
+   "names_concept": true
+  }
+ ]
+}

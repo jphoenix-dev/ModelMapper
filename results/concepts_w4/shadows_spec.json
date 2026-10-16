@@ -1,0 +1,189 @@
+{
+ "answer": " shadows",
+ "recall": [
+  "Dark patches formed when solid objects prevent light from reaching a surface are called",
+  "On a sunny sidewalk, the shapes people cast at their feet are their",
+  "The silhouettes of trees on the ground shift position during the day as their",
+  "The changing marks made by a sundial's pointer are its",
+  "Clouds passing in front of the sun can send broad, moving",
+  "A lamp placed behind a person against a wall can project several overlapping",
+  "Painters add dark areas on the side opposite a light source to depict",
+  "The darkest areas beneath a table in a brightly lit room are its",
+  "When a flagpole blocks sunlight, the long shapes it projects across the grass are",
+  "At midday, objects outdoors usually cast shorter",
+  "Near sunset, the low sun makes buildings cast unusually long",
+  "Leaves overhead break sunlight into alternating patches of light and",
+  "In a puppet performance lit from behind, the figures appear as moving",
+  "Streetlamps cause pedestrians to trail elongated dark shapes, or",
+  "Artists studying the direction of illumination often first map where objects will cast their",
+  "A parked car blocks sunlight and leaves dark areas around it, including",
+  "When sunlight is obstructed by the branches above, the ground is patterned with",
+  "A person's outline on pavement changes size as the sun's angle alters the length of their",
+  "The dark shapes cast by several candles flicker across the wall as",
+  "In a room lit by a single bulb, objects can cast overlapping"
+ ],
+ "controls": [
+  {
+   "prompt": "The image returned by a polished mirror is a",
+   "answer": " reflection"
+  },
+  {
+   "prompt": "Light changing direction as it passes from air into water undergoes",
+   "answer": " refraction"
+  },
+  {
+   "prompt": "An object's solid outline against a bright background is a",
+   "answer": " silhouette"
+  },
+  {
+   "prompt": "Small bright areas showing reflected illumination in a painting are called",
+   "answer": " highlights"
+  },
+  {
+   "prompt": "France's capital city is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The element with atomic number eight is",
+   "answer": " oxygen"
+  }
+ ],
+ "recall_v2": [
+  "Dark patches formed when solid objects prevent light from reaching a surface are called",
+  "On a sunny sidewalk, the shapes people cast at their feet are called",
+  "The silhouettes of trees on the ground that shift position during the day are known as",
+  "The changing marks made by a sundial's pointer are called",
+  "Clouds passing in front of the sun can send broad, moving dark shapes called",
+  "A lamp placed behind a person against a wall can project several overlapping dark shapes called",
+  "Painters add dark areas on the side opposite a light source to depict forms called",
+  "The darkest areas beneath a table in a brightly lit room are known as",
+  "When a flagpole blocks sunlight, the long shapes it projects across the grass are called",
+  "At midday, objects outdoors usually cast shorter dark shapes called",
+  "Near sunset, the low sun makes buildings cast unusually long dark shapes known as",
+  "Leaves overhead break sunlight into alternating patches of light and dark areas called",
+  "In a puppet performance lit from behind, the figures appear as moving silhouettes called",
+  "Streetlamps cause pedestrians to trail elongated dark shapes, or what are known as",
+  "Artists studying the direction of illumination often first map where objects will cast their dark outlines, called",
+  "A parked car blocks sunlight and leaves dark areas around it, including patches known as",
+  "When sunlight is obstructed by the branches above, the ground is patterned with dark shapes called",
+  "A person's outline on pavement changes size as the sun's angle alters the length of their dark outline, called",
+  "The dark shapes cast by several candles flicker across the wall; these are called",
+  "In a room lit by a single bulb, objects can cast overlapping dark shapes called"
+ ],
+ "recall_v3": [
+  "What are dark patches formed when solid objects prevent light from reaching a surface called?",
+  "What are the shapes people cast at their feet on a sunny sidewalk called?",
+  "What are the silhouettes of trees on the ground that shift position during the day called?",
+  "What are the changing marks made by a sundial's pointer called?",
+  "What can clouds passing in front of the sun send moving across the ground?",
+  "What can a lamp behind a person project onto a wall?",
+  "What forms do painters depict with dark areas on the side opposite a light source?",
+  "What are the darkest areas beneath a table in a brightly lit room called?",
+  "What are the long shapes a flagpole projects across the grass when it blocks sunlight?",
+  "What do objects outdoors usually cast at midday?",
+  "What unusually long dark shapes do buildings cast near sunset?",
+  "What dark areas alternate with patches of light when leaves overhead break up sunlight?",
+  "What do figures appear as in a puppet performance lit from behind?",
+  "What elongated dark shapes do pedestrians trail under streetlamps?",
+  "What do artists map when studying where objects will cast dark outlines?",
+  "What patches of darkness can a parked car leave around it when it blocks sunlight?",
+  "What dark shapes pattern the ground when branches obstruct the sunlight?",
+  "What dark outline on pavement changes length as the sun's angle changes?",
+  "What flickers across the wall when several candles cast dark shapes?",
+  "What can objects cast in a room lit by a single bulb?"
+ ],
+ "answer_forms_extra": [
+  "Shadow",
+  "Shadows"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Shadow shapes",
+   "names_concept": false
+  },
+  {
+   "reply": "Casts",
+   "names_concept": false
+  },
+  {
+   "reply": "Crepuscular rays",
+   "names_concept": false
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Chiaroscuro",
+   "names_concept": false
+  },
+  {
+   "reply": "Shadows",
+   "names_concept": true
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Silhouettes",
+   "names_concept": false
+  },
+  {
+   "reply": "Shadows",
+   "names_concept": true
+  },
+  {
+   "reply": "Silhouettes",
+   "names_concept": false
+  },
+  {
+   "reply": "Shadows",
+   "names_concept": true
+  },
+  {
+   "reply": "Silhouette",
+   "names_concept": false
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Casts",
+   "names_concept": false
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  },
+  {
+   "reply": "Shadows",
+   "names_concept": true
+  },
+  {
+   "reply": "Shadow",
+   "names_concept": true
+  }
+ ]
+}

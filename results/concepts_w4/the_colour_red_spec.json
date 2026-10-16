@@ -1,0 +1,188 @@
+{
+ "answer": " red",
+ "recall": [
+  "On the visible spectrum, the hue with the longest wavelength is",
+  "At a standard traffic signal, the light that tells drivers to stop is",
+  "On a typical U.S. election map, the party commonly represented by this hue is",
+  "Because of iron oxide on its surface, Mars often appears",
+  "A ripe tomato is commonly",
+  "Oxygen-rich blood is often described as",
+  "The sun disc on Japan’s national flag is depicted as",
+  "A traditional Chinese wedding dress is often",
+  "On a roulette wheel, the pockets alternate between black and",
+  "A ripe strawberry is usually",
+  "The feathers of a male northern cardinal are",
+  "Famous British telephone kiosks are often painted",
+  "Santa Claus’s traditional coat is",
+  "A ruby’s characteristic gemstone hue is",
+  "The background of a standard North American stop sign is",
+  "A traditional Chinese New Year decoration may be",
+  "An accounting chart may use this hue to mark a loss or deficit",
+  "A classic Valentine’s Day bouquet often features roses that are",
+  "The body of a traditional fire engine is often",
+  "The flag used to signal a stop at a race is often"
+ ],
+ "controls": [
+  {
+   "prompt": "A clear daytime sky is often described as",
+   "answer": " blue"
+  },
+  {
+   "prompt": "Fresh grass is commonly",
+   "answer": " green"
+  },
+  {
+   "prompt": "A ripe lemon’s peel is usually",
+   "answer": " yellow"
+  },
+  {
+   "prompt": "A sheet of ordinary printer paper is usually",
+   "answer": " white"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The longest river in Africa is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific"
+  }
+ ],
+ "recall_v2": [
+  "On the visible spectrum, the hue with the longest wavelength is known as",
+  "At a standard traffic signal, the stop-indicating light is the color called",
+  "On a typical U.S. election map, the color commonly associated with the Democratic Party is known as",
+  "Because of iron oxide on its surface, Mars is often described as",
+  "The usual color of a ripe tomato is called",
+  "The color oxygen-rich blood is often described as is",
+  "The color used to depict the sun disc on Japan’s national flag is called",
+  "A traditional Chinese wedding dress is often described as",
+  "On a roulette wheel, the pockets alternate between black and the color called",
+  "The usual color of a ripe strawberry is called",
+  "The feathers of a male northern cardinal are typically described as",
+  "The color British telephone kiosks are famously painted is called",
+  "The traditional color of Santa Claus’s coat is known as",
+  "A ruby’s characteristic gemstone hue is known as",
+  "The background color of a standard North American stop sign is called",
+  "A traditional Chinese New Year decoration may be colored",
+  "The color an accounting chart may use to mark a loss or deficit is called",
+  "A classic Valentine’s Day bouquet often features roses in the color known as",
+  "The body color of a traditional fire engine is often described as",
+  "The color traditionally used for a flag signaling a stop at a race is called"
+ ],
+ "recall_v3": [
+  "What hue has the longest wavelength on the visible spectrum?",
+  "What color is the light that tells drivers to stop at a standard traffic signal?",
+  "What color is the Democratic Party commonly represented by on a typical U.S. election map?",
+  "What color does Mars often appear because of iron oxide on its surface?",
+  "What color is a ripe tomato commonly?",
+  "What color is oxygen-rich blood often described as?",
+  "What color is the sun disc on Japan’s national flag depicted as?",
+  "What color is a traditional Chinese wedding dress often?",
+  "What color do the pockets alternate with black on a roulette wheel?",
+  "What color is a ripe strawberry usually?",
+  "What color are the feathers of a male northern cardinal?",
+  "What color are famous British telephone kiosks often painted?",
+  "What color is Santa Claus’s traditional coat?",
+  "What is the characteristic gemstone hue of a ruby?",
+  "What color is the background of a standard North American stop sign?",
+  "What color may a traditional Chinese New Year decoration be?",
+  "What color may an accounting chart use to mark a loss or deficit?",
+  "What color are the roses often featured in a classic Valentine’s Day bouquet?",
+  "What color is the body of a traditional fire engine often?",
+  "What color is a flag used to signal a stop at a race often?"
+ ],
+ "answer_forms_extra": [
+  "Red"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": false
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  },
+  {
+   "reply": "Red",
+   "names_concept": true
+  }
+ ]
+}

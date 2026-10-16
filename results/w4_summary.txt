@@ -1,0 +1,10 @@
+40 concepts, recalled 40
+not recalled: []
+k_mean <=2 37 <=5 39 <=10 40 / 40
+k_median <=2 36 <=5 39 <=10 40 / 40
+k_flip <=2 25 <=5 36 <=10 37 / 40
+k_mean >5: [('the clock', 10, 4.2)]
+flip >10/none: [('the colour red', 20, 10.27), ('the clock', 20, 4.2), ('Paris', 50, 10.86)]
+random 50 mean -0.01 max 0.22
+steer auto 0.299 default 0.169 random 0.006 | better 23 worse 5
+by category: {'professions': 0.23, 'colours_light': 0.21, 'weather_seasons': 0.28, 'everyday_objects': 0.56, 'historical_events': 0.39, 'animals_2': 0.19, 'food_2': 0.46, 'sport_2': 0.16, 'tech_2': 0.31, 'places_2': 0.2}

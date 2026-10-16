@@ -1,0 +1,188 @@
+{
+ "answer": " Grand Canyon",
+ "recall": [
+  "The immense natural landmark carved by the Colorado River in Arizona is the",
+  "The vast gorge in northern Arizona whose rock layers reveal a long geologic history is the",
+  "The iconic American landscape viewed from Mather Point is the",
+  "The Arizona landscape protected by a national park established in 1919 is the",
+  "The mile-deep natural wonder on the Colorado Plateau is the",
+  "The dramatic landscape seen from overlooks along the South Rim is the",
+  "The famous American landmark whose North and South rims face each other across a deep gorge is the",
+  "The Arizona destination where visitors hike the Bright Angel Trail is the",
+  "The natural landmark whose floor can be reached by hiking or riding a mule is the",
+  "The colorful, steep-sided landscape that the Colorado River winds through in Arizona is the",
+  "The famous vista in the American Southwest admired for its scale and changing colors is the",
+  "The landscape visible from Desert View in northern Arizona is the",
+  "The natural wonder that draws visitors to overlooks near Flagstaff is the",
+  "The immense geological feature carved over millions of years by flowing water is the",
+  "The protected Arizona landscape designated a UNESCO World Heritage Site is the",
+  "The vast rocky landscape explored by rafting the Colorado River is the",
+  "The famous American landform whose exposed strata record immense spans of time is the",
+  "The destination reached by descending trails from the South Rim is the",
+  "The natural attraction on the Colorado Plateau that has inspired generations of artists is the",
+  "The Arizona landmark famous for its immense scale and layered red rock is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The Utah national park famed for its spire-shaped rock formations is",
+   "answer": " Bryce Canyon"
+  },
+  {
+   "prompt": "The Utah park known for its narrow, winding river gorge is",
+   "answer": " Zion National Park"
+  },
+  {
+   "prompt": "The California national park featuring El Capitan and Half Dome is",
+   "answer": " Yosemite National Park"
+  },
+  {
+   "prompt": "The national park famous for the Old Faithful geyser is",
+   "answer": " Yellowstone National Park"
+  },
+  {
+   "prompt": "The Paris landmark built for the 1889 World's Fair is the",
+   "answer": " Eiffel Tower"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The immense natural landmark carved by the Colorado River in Arizona is known as",
+  "The vast gorge in northern Arizona whose rock layers reveal a long geologic history is known as",
+  "The iconic American landscape viewed from Mather Point is known as",
+  "The Arizona landscape protected by a national park established in 1919 is known as",
+  "The mile-deep natural wonder on the Colorado Plateau is known as",
+  "The dramatic landscape seen from overlooks along the South Rim is known as",
+  "The famous American landmark whose North and South rims face each other across a deep gorge is known as",
+  "The Arizona destination where visitors hike the Bright Angel Trail is known as",
+  "The natural landmark whose floor can be reached by hiking or riding a mule is known as",
+  "The colorful, steep-sided landscape that the Colorado River winds through in Arizona is known as",
+  "The famous vista in the American Southwest admired for its scale and changing colors is known as",
+  "The landscape visible from Desert View in northern Arizona is known as",
+  "The natural wonder that draws visitors to overlooks near Flagstaff is known as",
+  "The immense geological feature carved over millions of years by flowing water is known as",
+  "The protected Arizona landscape designated a UNESCO World Heritage Site is known as",
+  "The vast rocky landscape explored by rafting the Colorado River is known as",
+  "The famous American landform whose exposed strata record immense spans of time is known as",
+  "The destination reached by descending trails from the South Rim is known as",
+  "The natural attraction on the Colorado Plateau that has inspired generations of artists is known as",
+  "The Arizona landmark famous for its immense scale and layered red rock is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the immense natural landmark carved by the Colorado River in Arizona?",
+  "What is the name of the vast gorge in northern Arizona whose rock layers reveal a long geologic history?",
+  "What is the name of the iconic American landscape viewed from Mather Point?",
+  "What is the name of the Arizona landscape protected by a national park established in 1919?",
+  "What is the name of the mile-deep natural wonder on the Colorado Plateau?",
+  "What is the name of the dramatic landscape seen from overlooks along the South Rim?",
+  "What is the name of the famous American landmark whose North and South rims face each other across a deep gorge?",
+  "What is the name of the Arizona destination where visitors hike the Bright Angel Trail?",
+  "What is the name of the natural landmark whose floor can be reached by hiking or riding a mule?",
+  "What is the name of the colorful, steep-sided landscape that the Colorado River winds through in Arizona?",
+  "What is the name of the famous vista in the American Southwest admired for its scale and changing colors?",
+  "What is the name of the landscape visible from Desert View in northern Arizona?",
+  "What is the name of the natural wonder that draws visitors to overlooks near Flagstaff?",
+  "What is the name of the immense geological feature carved over millions of years by flowing water?",
+  "What is the name of the protected Arizona landscape designated a UNESCO World Heritage Site?",
+  "What is the name of the vast rocky landscape explored by rafting the Colorado River?",
+  "What is the name of the famous American landform whose exposed strata record immense spans of time?",
+  "What is the name of the destination reached by descending trails from the South Rim?",
+  "What is the name of the natural attraction on the Colorado Plateau that has inspired generations of artists?",
+  "What is the name of the Arizona landmark famous for its immense scale and layered red rock?"
+ ],
+ "answer_forms_extra": [
+  "Grand Canyon"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon National Park",
+   "names_concept": false
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Canyons",
+   "names_concept": false
+  },
+  {
+   "reply": "Grand Canyon National Park",
+   "names_concept": false
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Rocky Mountains",
+   "names_concept": false
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  },
+  {
+   "reply": "Grand Canyon",
+   "names_concept": true
+  }
+ ]
+}

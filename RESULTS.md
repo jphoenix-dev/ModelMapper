@@ -1149,3 +1149,18 @@ levels; it ranks like Jev). No Jev at all.
 **Running total, question format: 118/118 concept runs are moved by ≤ 5 neurons** (CR-2 19, CR-2b 20, wave 2 40,
 wave 3 39), with random neurons at ≈ 0 every time. **99 distinct concepts recalled**, and **every "not recalled"
 except the robot traced to our prompts, wording or filters.**
+
+## 16 Oct 2026 (morning): coverage wave 4, 40 concepts incl. deliberately generic ones, judge-free
+`src/wave_free.py` (`prompts/concepts_wave4.json`). Crashed once at "cheese" (Luna output-format drift, ISSUES #33,
+fixed) and resumed.
+
+- **Recalled 40/40**, including professions (a doctor, a firefighter, a chef, an astronaut), colours, weather and
+  everyday objects. "The robot" (wave 3) was a one-off, not a limit for generic concepts.
+- **Concentration:** k_mean ≤ 5 for 39/40 (≤ 2 for 37); the clock needs 10. Median prompt 39/40. Flips ≤ 5 for
+  36/40; the holdouts are near-certain facts again (the colour red and Paris at log-odds > 10; the clock).
+  Random 50 neurons: mean −0.01.
+- **Steering (held-out, judge-free):** auto 0.299 vs fixed default 0.169 (better 23, worse 5); random 0.006.
+  Everyday objects steer best (0.56), then food 0.46 and historical events 0.39; sport is lowest (0.16).
+
+**Running totals (`results/running_totals.txt`, computed from the files): 158 question-format concept runs; moved by
+≤ 5 neurons in 157 (≤ 2 in 142), all within 10; answer flipped with ≤ 5 in 137. 139 distinct concepts recalled.**

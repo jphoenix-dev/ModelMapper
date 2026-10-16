@@ -1,0 +1,188 @@
+{
+ "answer": " blue",
+ "recall": [
+  "The clear daytime sky is commonly perceived as",
+  "Far from shore, the open sea often looks",
+  "On many road maps, lakes and rivers are colored",
+  "Traditional denim is most often dyed",
+  "The flag of the United Nations has a background of",
+  "In the conventional color symbolism of baby gifts for boys, the familiar choice is",
+  "Feeling melancholy is sometimes described as feeling",
+  "On a full-intensity RGB display, setting only the third primary channel produces",
+  "Painters often pair orange with its traditional complementary color,",
+  "An iris with little pigment may appear",
+  "Ground lapis lazuli was historically used to make a costly",
+  "The wings of a Morpho butterfly shimmer with",
+  "Many robin eggs have a pale",
+  "Some hot, massive stars appear",
+  "A bride's traditional wedding rhyme calls for something old, new, borrowed, and",
+  "The flag of Greece uses alternating white stripes and",
+  "In many European countries, police uniforms are often",
+  "On a color-coded plumbing diagram, cold-water pipes are often marked",
+  "At the short-wavelength end of the visible spectrum, light is commonly perceived as",
+  "Picasso's paintings of poverty and grief from 1901 to 1904 are associated with his"
+ ],
+ "controls": [
+  {
+   "prompt": "A ripe tomato is usually",
+   "answer": " red"
+  },
+  {
+   "prompt": "Healthy leaves are generally",
+   "answer": " green"
+  },
+  {
+   "prompt": "The peel of a ripe banana is typically",
+   "answer": " yellow"
+  },
+  {
+   "prompt": "The color between green and violet in a rainbow is",
+   "answer": " indigo"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The clear daytime sky's commonly perceived color is called",
+  "The color the open sea often appears when viewed far from shore is called",
+  "The color used for lakes and rivers on many road maps is called",
+  "The color traditional denim is most often dyed is called",
+  "The background color of the United Nations flag is called",
+  "The familiar color choice in the conventional symbolism of baby gifts for boys is called",
+  "The color associated with feeling melancholy is called",
+  "The color produced on a full-intensity RGB display by setting only the third primary channel is called",
+  "The traditional complementary color painters pair with orange is called",
+  "The color an iris with little pigment may appear is called",
+  "The costly pigment historically made from ground lapis lazuli is called",
+  "The color with which the wings of a Morpho butterfly shimmer is called",
+  "The pale color found on many robin eggs is called",
+  "The color in which some hot, massive stars appear is called",
+  "In the traditional bridal rhyme, the color of the item added after something old, new, and borrowed is called",
+  "The color of the stripes alternating with white on the flag of Greece is called",
+  "The color often used for police uniforms in many European countries is called",
+  "The color often used to mark cold-water pipes on plumbing diagrams is called",
+  "The color commonly perceived at the short-wavelength end of the visible spectrum is called",
+  "The color associated with Picasso's paintings of poverty and grief from 1901 to 1904 is called"
+ ],
+ "recall_v3": [
+  "What color is the clear daytime sky commonly perceived to be?",
+  "What color does the open sea often appear when viewed far from shore?",
+  "What color are lakes and rivers often shown as on road maps?",
+  "What color is traditional denim most often dyed?",
+  "What color is the background of the United Nations flag?",
+  "What color is conventionally chosen for baby gifts for boys?",
+  "What color is sometimes associated with feeling melancholy?",
+  "What color does a full-intensity RGB display produce when only the third primary channel is set?",
+  "What color do painters traditionally pair with orange as its complement?",
+  "What color may an iris with little pigment appear?",
+  "What color was the costly pigment historically made from ground lapis lazuli?",
+  "What color do the wings of a Morpho butterfly shimmer with?",
+  "What pale color do many robin eggs have?",
+  "What color do some hot, massive stars appear?",
+  "What color is the final item in the traditional bridal rhyme after something old, new, and borrowed?",
+  "What color alternates with white on the flag of Greece?",
+  "What color are police uniforms often in many European countries?",
+  "What color often marks cold-water pipes on a color-coded plumbing diagram?",
+  "What color is light at the short-wavelength end of the visible spectrum commonly perceived as?",
+  "What color is associated with Picasso's paintings of poverty and grief from 1901 to 1904?"
+ ],
+ "answer_forms_extra": [
+  "Blue"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Gray",
+   "names_concept": false
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue-gray",
+   "names_concept": false
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  },
+  {
+   "reply": "Violet",
+   "names_concept": false
+  },
+  {
+   "reply": "Blue",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " World War II",
+ "recall": [
+  "The global conflict that lasted from 1939 to 1945 is commonly known as",
+  "Germany's invasion of Poland in September 1939 marked the beginning of",
+  "The conflict in which the Axis powers fought the Allied nations from 1939 to 1945 was",
+  "The largest armed conflict in human history is often identified as",
+  "Japan's surrender in 1945 brought an end to",
+  "The conflict that followed the invasion of Poland and ended in 1945 is called",
+  "The conflict that included the Normandy landings and the Battle of Stalingrad was",
+  "The 1939–1945 conflict involving the United States, the Soviet Union, Britain, Germany, and Japan is called",
+  "The global struggle during which the Holocaust occurred is known as",
+  "The conflict that led to the creation of the United Nations in 1945 was",
+  "The military campaign across Europe and the Pacific between 1939 and 1945 is often called",
+  "The conflict whose European phase ended with Germany's surrender in May 1945 was",
+  "The 1941 attack on Pearl Harbor brought the United States into",
+  "The conflict that saw atomic bombs dropped on Hiroshima and Nagasaki was",
+  "The 1939–1945 struggle between the Allies and Axis powers is called",
+  "The conflict in which Winston Churchill led Britain and Franklin D. Roosevelt led the United States was",
+  "The global crisis that began after the invasion of Poland and concluded with Japan's surrender is known as",
+  "The conflict during which D-Day took place in Normandy was",
+  "The years 1939 through 1945 are chiefly associated with the global conflict called",
+  "The period of fighting that included the Battle of Midway and the liberation of Paris is known as"
+ ],
+ "controls": [
+  {
+   "prompt": "The 1914–1918 global conflict is often called",
+   "answer": " World War I"
+  },
+  {
+   "prompt": "The decades-long geopolitical rivalry between the United States and the Soviet Union was known as the",
+   "answer": " Cold War"
+  },
+  {
+   "prompt": "The 1950–1953 conflict on the Korean Peninsula is called the",
+   "answer": " Korean War"
+  },
+  {
+   "prompt": "The 1955–1975 conflict involving North and South Vietnam is often called the",
+   "answer": " Vietnam War"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The global conflict that lasted from 1939 to 1945 is commonly known as",
+  "Germany's invasion of Poland in September 1939 marked the beginning of the conflict known as",
+  "The conflict in which the Axis powers fought the Allied nations from 1939 to 1945 was known as",
+  "The largest armed conflict in human history is often identified as",
+  "Japan's surrender in 1945 brought an end to the conflict known as",
+  "The conflict that followed the invasion of Poland and ended in 1945 is called",
+  "The conflict that included the Normandy landings and the Battle of Stalingrad was known as",
+  "The 1939–1945 conflict involving the United States, the Soviet Union, Britain, Germany, and Japan is called",
+  "The global struggle during which the Holocaust occurred is known as",
+  "The conflict that led to the creation of the United Nations in 1945 was known as",
+  "The military campaign across Europe and the Pacific between 1939 and 1945 is often called",
+  "The conflict whose European phase ended with Germany's surrender in May 1945 was known as",
+  "The 1941 attack on Pearl Harbor brought the United States into the conflict known as",
+  "The conflict that saw atomic bombs dropped on Hiroshima and Nagasaki was known as",
+  "The 1939–1945 struggle between the Allies and Axis powers is called",
+  "The conflict in which Winston Churchill led Britain and Franklin D. Roosevelt led the United States was known as",
+  "The global crisis that began after the invasion of Poland and concluded with Japan's surrender is known as",
+  "The conflict during which D-Day took place in Normandy was known as",
+  "The years 1939 through 1945 are chiefly associated with the global conflict called",
+  "The period of fighting that included the Battle of Midway and the liberation of Paris is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the global conflict that lasted from 1939 to 1945?",
+  "What was the name of the conflict that began with Germany's invasion of Poland in September 1939?",
+  "What was the name of the conflict in which the Axis powers fought the Allied nations from 1939 to 1945?",
+  "What is the name of the armed conflict often identified as the largest in human history?",
+  "What was the name of the conflict that ended with Japan's surrender in 1945?",
+  "What is the name of the conflict that followed the invasion of Poland and ended in 1945?",
+  "What was the name of the conflict that included the Normandy landings and the Battle of Stalingrad?",
+  "What is the name of the 1939–1945 conflict involving the United States, the Soviet Union, Britain, Germany, and Japan?",
+  "What is the name of the global struggle during which the Holocaust occurred?",
+  "What was the name of the conflict that led to the creation of the United Nations in 1945?",
+  "What is the name of the military campaign across Europe and the Pacific between 1939 and 1945?",
+  "What was the name of the conflict whose European phase ended with Germany's surrender in May 1945?",
+  "What was the name of the conflict that the United States entered after the 1941 attack on Pearl Harbor?",
+  "What was the name of the conflict during which atomic bombs were dropped on Hiroshima and Nagasaki?",
+  "What is the name of the 1939–1945 struggle between the Allies and Axis powers?",
+  "What was the name of the conflict in which Winston Churchill led Britain and Franklin D. Roosevelt led the United States?",
+  "What is the name of the global crisis that began after the invasion of Poland and concluded with Japan's surrender?",
+  "What was the name of the conflict during which D-Day took place in Normandy?",
+  "What is the name of the global conflict chiefly associated with the years 1939 through 1945?",
+  "What is the name of the period of fighting that included the Battle of Midway and the liberation of Paris?"
+ ],
+ "answer_forms_extra": [
+  "World War II"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "World War II",
+   "names_concept": true
+  },
+  {
+   "reply": "Second World War",
+   "names_concept": true
+  }
+ ]
+}

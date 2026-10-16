@@ -1,0 +1,188 @@
+{
+ "answer": " cheese",
+ "recall": [
+  "A solid dairy food made by coagulating milk and separating the curds from the whey is",
+  "The milk-based food that can be fresh, ripened, soft, or hard is",
+  "Bread cubes dipped into a traditional fondue pot are coated in melted",
+  "A common topping that gives pizza its stretchy, browned layer is",
+  "A dairy product pressed into blocks or wheels and sometimes aged for years is",
+  "The food made from cow, goat, or sheep milk that may taste mild, sharp, or pungent is",
+  "Rennet is often added to milk to help produce",
+  "The edible food beneath the rind of a soft, ripened dairy wheel is",
+  "A sandwich filling that melts into a gooey layer when heated is often",
+  "The solid curds left after milk coagulates can be pressed and matured into",
+  "A chef may grate a hard, aged dairy food over pasta as a finishing ingredient",
+  "Blue-green veins in some ripened dairy foods run through the",
+  "A cheesemonger's counter displays wheels and wedges of",
+  "A traditional Welsh rarebit sauce is made with melted",
+  "Fruit, crackers, and nuts are often served alongside a selection of",
+  "Milk proteins coagulate and the liquid drains away during the production of",
+  "Salting, pressing, and aging are traditional ways to preserve milk as",
+  "A dairy case may offer mild, sharp, creamy, and smoked varieties of",
+  "A small amount of grated dairy food can add a savory depth to soup",
+  "The melted dairy topping pulled into long strands from a baked flatbread is"
+ ],
+ "controls": [
+  {
+   "prompt": "Milk fermented by bacteria into a tangy, spoonable food is",
+   "answer": " yogurt"
+  },
+  {
+   "prompt": "Churning cream separates its fat into a solid spread called",
+   "answer": " butter"
+  },
+  {
+   "prompt": "The high-fat portion of milk used in sauces and desserts is",
+   "answer": " cream"
+  },
+  {
+   "prompt": "A fermented milk drink containing live cultures is",
+   "answer": " kefir"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "Japan's capital city is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol CO₂ represents",
+   "answer": " carbon dioxide"
+  }
+ ],
+ "recall_v2": [
+  "The solid dairy food made by coagulating milk and separating curds from whey is called",
+  "The milk-based food that may be fresh, ripened, soft, or hard is known as",
+  "The melted dairy food coating bread cubes dipped into a traditional fondue pot is called",
+  "The common pizza topping that forms a stretchy, browned layer is called",
+  "The dairy product pressed into blocks or wheels and sometimes aged for years is called",
+  "The food made from cow, goat, or sheep milk, with flavors ranging from mild to sharp or pungent, is called",
+  "Rennet is often added to milk to help produce a food called",
+  "The edible food beneath the rind of a soft, ripened dairy wheel is known as",
+  "A sandwich filling that melts into a gooey layer when heated is often called",
+  "The solid curds left after milk coagulates can be pressed and matured into a food called",
+  "A chef may grate this hard, aged dairy food over pasta as a finishing ingredient; it is called",
+  "Blue-green veins in some ripened dairy foods are found in the food known as",
+  "A specialty dairy shop counter displays wheels and wedges of the food known as",
+  "The melted dairy food used in a traditional Welsh rarebit sauce is called",
+  "Fruit, crackers, and nuts are often served alongside a selection of the food known as",
+  "Milk proteins coagulate and the liquid drains away during production of the food called",
+  "Salting, pressing, and aging are traditional ways to preserve milk as a food called",
+  "A dairy case may offer mild, sharp, creamy, and smoked varieties of the food called",
+  "A small amount of this grated dairy food can add savory depth to soup; it is called",
+  "The melted dairy topping pulled into long strands from a baked flatbread is known as"
+ ],
+ "recall_v3": [
+  "What solid dairy food is made by coagulating milk and separating curds from whey?",
+  "What milk-based food may be fresh, ripened, soft, or hard?",
+  "What melted dairy food coats bread cubes dipped into a traditional fondue pot?",
+  "What common pizza topping forms a stretchy, browned layer?",
+  "What dairy product is pressed into blocks or wheels and sometimes aged for years?",
+  "What food made from cow, goat, or sheep milk can taste mild, sharp, or pungent?",
+  "What food does rennet help produce when added to milk?",
+  "What edible food lies beneath the rind of a soft, ripened dairy wheel?",
+  "What sandwich filling often melts into a gooey layer when heated?",
+  "What food can be made by pressing and maturing the solid curds left after milk coagulates?",
+  "What hard, aged dairy food might a chef grate over pasta as a finishing ingredient?",
+  "What food has blue-green veins running through it in some ripened varieties?",
+  "What food is displayed in wheels and wedges at a specialty dairy shop?",
+  "What melted dairy food is used in a traditional Welsh rarebit sauce?",
+  "What food is often served alongside fruit, crackers, and nuts?",
+  "What food is produced as milk proteins coagulate and the liquid drains away?",
+  "What food can be made by preserving milk through salting, pressing, and aging?",
+  "What food is available in mild, sharp, creamy, and smoked varieties in a dairy case?",
+  "What grated dairy food can add savory depth to soup?",
+  "What melted dairy topping pulls into long strands from a baked flatbread?"
+ ],
+ "answer_forms_extra": [
+  "Cheese"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Parmigiano-Reggiano",
+   "names_concept": false
+  },
+  {
+   "reply": "Black garlic",
+   "names_concept": false
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheddar",
+   "names_concept": false
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": true
+  },
+  {
+   "reply": "Parmesan",
+   "names_concept": false
+  },
+  {
+   "reply": "Mozzarella cheese",
+   "names_concept": false
+  }
+ ]
+}

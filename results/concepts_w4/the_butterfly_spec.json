@@ -1,0 +1,188 @@
+{
+ "answer": " butterfly",
+ "recall": [
+  "The insect that develops from a caterpillar and emerges from a chrysalis is a",
+  "An adult member of the order Lepidoptera with club-shaped antennae is a",
+  "The pollinating insect with broad, often brightly patterned wings and a coiling feeding tube is a",
+  "In many species, the final winged stage of a caterpillar's life cycle is a",
+  "The insect whose wings are covered in tiny colored scales and may display eye-like spots is a",
+  "A monarch is one variety of",
+  "The painted lady is a well-known",
+  "The swallowtail is a large, often brightly marked kind of",
+  "The adult garden visitor that sips nectar through a long proboscis is a",
+  "An insect often used as a symbol of transformation because it undergoes complete metamorphosis is a",
+  "The orange-and-black migratory insect that travels between Canada and Mexico is a",
+  "The delicate winged insect that develops from an egg, hatches into a larva, and pupates before adulthood is a",
+  "The insect that often holds its wings upright together while resting is a",
+  "The insect often depicted emerging from a pupa as a symbol of rebirth is a",
+  "A lepidopteran that typically flies by day and has antennae ending in clubs is a",
+  "In a meadow, the colorful nectar-feeder that flits among blossoms is a",
+  "The insect whose wings may have false eyes to deter predators is a",
+  "The adult insect that a caterpillar becomes after pupation is a",
+  "In children's stories, the colorful insect that flutters from flower to flower is a",
+  "The insect represented by the monarch, blue morpho, and cabbage white is a"
+ ],
+ "controls": [
+  {
+   "prompt": "The nocturnal lepidopteran often attracted to lamps is a",
+   "answer": " moth"
+  },
+  {
+   "prompt": "The slender-bodied insect with two pairs of net-veined wings that hunts over ponds is a",
+   "answer": " dragonfly"
+  },
+  {
+   "prompt": "The social insect that produces honey is a",
+   "answer": " bee"
+  },
+  {
+   "prompt": "A ladybug belongs to the hard-winged insect group called a",
+   "answer": " beetle"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet commonly called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  }
+ ],
+ "recall_v2": [
+  "The insect that develops from a caterpillar and emerges from a chrysalis is called",
+  "An adult member of the order Lepidoptera with club-shaped antennae is called",
+  "The pollinating insect with broad, often brightly patterned wings and a coiling feeding tube is called",
+  "In many species, the final winged stage of a caterpillar's life cycle is called",
+  "The insect whose wings are covered in tiny colored scales and may display eye-like spots is called",
+  "A monarch is one variety of the insect known as",
+  "The painted lady is a well-known example of the insect called",
+  "The swallowtail is a large, often brightly marked kind of insect known as",
+  "The adult garden visitor that sips nectar through a long proboscis is called",
+  "The insect often used as a symbol of transformation because it undergoes complete metamorphosis is called",
+  "The orange-and-black migratory insect that travels between Canada and Mexico is called",
+  "The delicate winged insect that develops from an egg, hatches into a larva, and pupates before adulthood is called",
+  "The insect that often holds its wings upright together while resting is called",
+  "The insect often depicted emerging from a pupa as a symbol of rebirth is called",
+  "A lepidopteran that typically flies by day and has antennae ending in clubs is called",
+  "In a meadow, the colorful nectar-feeder that flits among blossoms is called",
+  "The insect whose wings may have false eyes to deter predators is called",
+  "The adult insect that a caterpillar becomes after pupation is called",
+  "In children's stories, the colorful insect that flutters from flower to flower is called",
+  "The insect represented by the monarch, blue morpho, and cabbage white is called"
+ ],
+ "recall_v3": [
+  "What is the name of the insect that develops from a caterpillar and emerges from a chrysalis?",
+  "What is the name of an adult member of the order Lepidoptera with club-shaped antennae?",
+  "What is the name of the pollinating insect with broad, often brightly patterned wings and a coiling feeding tube?",
+  "What is the name of the final winged stage of a caterpillar's life cycle in many species?",
+  "What is the name of the insect whose wings are covered in tiny colored scales and may display eye-like spots?",
+  "What kind of insect is a monarch a variety of?",
+  "What kind of insect is the painted lady?",
+  "What kind of insect is the swallowtail?",
+  "What is the name of the adult garden visitor that sips nectar through a long proboscis?",
+  "What is the name of the insect often used as a symbol of transformation because it undergoes complete metamorphosis?",
+  "What is the name of the orange-and-black migratory insect that travels between Canada and Mexico?",
+  "What is the name of the delicate winged insect that develops from an egg, hatches into a larva, and pupates before adulthood?",
+  "What is the name of the insect that often holds its wings upright together while resting?",
+  "What is the name of the insect often depicted emerging from a pupa as a symbol of rebirth?",
+  "What is the name of a lepidopteran that typically flies by day and has antennae ending in clubs?",
+  "What is the name of the colorful nectar-feeder that flits among blossoms in a meadow?",
+  "What is the name of the insect whose wings may have false eyes to deter predators?",
+  "What is the name of the adult insect that a caterpillar becomes after pupation?",
+  "What is the name of the colorful insect that flutters from flower to flower in children's stories?",
+  "What is the name of the insect represented by the monarch, blue morpho, and cabbage white?"
+ ],
+ "answer_forms_extra": [
+  "Butterfly"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Moth",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Chrysalis",
+   "names_concept": false
+  },
+  {
+   "reply": "Peacock butterfly",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Painted Lady",
+   "names_concept": false
+  },
+  {
+   "reply": "Swallowtail butterfly",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Caterpillar",
+   "names_concept": false
+  },
+  {
+   "reply": "Monarch Butterfly",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Dragonfly",
+   "names_concept": false
+  },
+  {
+   "reply": "Caterpillar",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Hummingbird",
+   "names_concept": false
+  },
+  {
+   "reply": "Peacock mantis shrimp",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": true
+  }
+ ]
+}

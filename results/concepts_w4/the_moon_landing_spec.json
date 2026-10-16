@@ -1,0 +1,188 @@
+{
+ "answer": " Moon landing",
+ "recall": [
+  "The 1969 achievement that first let people walk on another world became known as the",
+  "A landmark event in the history of human spaceflight was the",
+  "The first crewed visit to another celestial body's surface is called the",
+  "The event watched by millions as astronauts emerged from a spacecraft onto alien terrain was the",
+  "In July 1969, the United States accomplished the first successful crewed",
+  "The space race's most iconic human exploration milestone was the",
+  "Neil Armstrong and Buzz Aldrin made history during the first crewed",
+  "The mission that fulfilled President Kennedy's goal of reaching another world before the decade ended achieved the first crewed",
+  "The famous event accompanied by Armstrong's “one small step” words was the",
+  "A spacecraft's descent into the Sea of Tranquility marked the first",
+  "The first time people set foot beyond Earth took place during the",
+  "The milestone documented in the Apollo 11 mission's television broadcast was the",
+  "A major achievement in American history and science was the first crewed",
+  "The return of rock samples gathered by astronauts followed the historic",
+  "A new chapter in exploration began when humans accomplished the first",
+  "The spacecraft Eagle descended to the surface during the historic",
+  "The event that made Armstrong the first human to walk on another world was the",
+  "Humanity's first visit to a world beyond its home planet culminated in the",
+  "The historic July 20, 1969, descent of astronauts to the surface was the",
+  "A defining achievement of the Apollo program, involving astronauts stepping onto another world's ground, was the"
+ ],
+ "controls": [
+  {
+   "prompt": "The first artificial satellite to orbit Earth was",
+   "answer": " Sputnik 1"
+  },
+  {
+   "prompt": "The first human to orbit Earth was",
+   "answer": " Yuri Gagarin"
+  },
+  {
+   "prompt": "NASA's first crewed spaceflight program was",
+   "answer": " Project Mercury"
+  },
+  {
+   "prompt": "The first crewed mission to orbit Earth's natural satellite was",
+   "answer": " Apollo 8"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The 1969 achievement that first let people walk on another world is called",
+  "A landmark event in the history of human spaceflight is known as",
+  "The first crewed visit to another celestial body's surface is called",
+  "The event watched by millions as astronauts emerged from a spacecraft onto alien terrain is known as",
+  "In July 1969, the United States achieved the first successful crewed landing on another world, an event called",
+  "The space race's most iconic human exploration milestone is called",
+  "Neil Armstrong and Buzz Aldrin made history during the first crewed landing on another world, an event called",
+  "The mission that fulfilled President Kennedy's goal of reaching another world before the decade ended achieved a first crewed landing, an event called",
+  "The famous event accompanied by Armstrong's “one small step” words is known as",
+  "A spacecraft's descent into the Sea of Tranquility marked the first human landing on another world, an event called",
+  "The first time people set foot beyond Earth took place during an event called",
+  "The milestone documented in the Apollo 11 mission's television broadcast is known as",
+  "A major achievement in American history and science was the first crewed landing on another world, an event called",
+  "The return of rock samples gathered by astronauts followed the historic event called",
+  "A new chapter in exploration began when humans accomplished their first landing on another world, an event called",
+  "The spacecraft Eagle descended to the surface during the historic event known as",
+  "The event that made Armstrong the first human to walk on another world is called",
+  "Humanity's first visit to a world beyond its home planet culminated in an event called",
+  "The historic July 20, 1969, descent of astronauts to another world's surface is known as",
+  "A defining achievement of the Apollo program, involving astronauts stepping onto another world's ground, is called"
+ ],
+ "recall_v3": [
+  "What is the name of the 1969 achievement that first let people walk on another world?",
+  "What is the name of the landmark event in the history of human spaceflight?",
+  "What is the name of the first crewed visit to another celestial body's surface?",
+  "What is the name of the event watched by millions as astronauts emerged from a spacecraft onto alien terrain?",
+  "What is the name of the first successful crewed landing the United States achieved in July 1969?",
+  "What is the name of the space race's most iconic human exploration milestone?",
+  "What is the name of the first crewed landing on another world during which Neil Armstrong and Buzz Aldrin made history?",
+  "What is the name of the first crewed landing achieved by the mission that fulfilled President Kennedy's goal of reaching another world before the decade ended?",
+  "What is the name of the famous event accompanied by Armstrong's “one small step” words?",
+  "What is the name of the first human landing on another world marked by a spacecraft's descent into the Sea of Tranquility?",
+  "What is the name of the event during which people first set foot beyond Earth?",
+  "What is the name of the milestone documented in the Apollo 11 mission's television broadcast?",
+  "What is the name of the first crewed landing on another world that was a major achievement in American history and science?",
+  "What is the name of the historic event that preceded the return of rock samples gathered by astronauts?",
+  "What is the name of the first landing on another world that began a new chapter in exploration?",
+  "What is the name of the historic event during which the spacecraft Eagle descended to the surface?",
+  "What is the name of the event that made Armstrong the first human to walk on another world?",
+  "What is the name of the event in which humanity's first visit to a world beyond its home planet culminated?",
+  "What is the name of the historic July 20, 1969, descent of astronauts to another world's surface?",
+  "What is the name of the defining Apollo program achievement involving astronauts stepping onto another world's ground?"
+ ],
+ "answer_forms_extra": [
+  "Moon Landing"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Sputnik 1",
+   "names_concept": false
+  },
+  {
+   "reply": "Luna 2",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon landing",
+   "names_concept": true
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon Landing",
+   "names_concept": true
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon landing",
+   "names_concept": true
+  },
+  {
+   "reply": "Neil Armstrong",
+   "names_concept": false
+  },
+  {
+   "reply": "Spaceflight",
+   "names_concept": false
+  },
+  {
+   "reply": "First Moonwalk",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Lunakhod 1",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11 Moon Landing",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon Landing",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon Landing",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " bread",
+ "recall": [
+  "The staple baked from flour and water, often raised with yeast, is",
+  "The everyday food sliced to make the two outer layers of a sandwich is",
+  "A baker kneads dough before baking this familiar staple into",
+  "A common accompaniment to soup, often served for dipping, is",
+  "The grain-based food that can be toasted and served at breakfast is",
+  "At a bakery, customers might buy a fresh, crusty loaf of",
+  "The dark, tangy staple made with a fermented starter is",
+  "The baked food made with rye flour is often denser than its wheat-based counterpart,",
+  "The thin, unleavened staple used in many cuisines as an edible utensil is",
+  "The familiar baked item that can be spread with butter or jam is",
+  "The outside of a baked loaf is its crust, and the soft inside is its crumb; together they make",
+  "A common base for an open-faced meal topped with cheese or vegetables is",
+  "The food often placed in a basket and passed around at the dinner table is",
+  "A staple known in many cultures as the staff of life is",
+  "The dough that bakers shape into rolls, baguettes, and sandwich loaves becomes",
+  "The food used to soak up sauce from a plate is often a piece of",
+  "A traditional staple made from ground grain and baked in an oven is",
+  "The sliced food a diner might order toasted alongside eggs is",
+  "A picnic sandwich typically holds its filling between two slices of",
+  "In many traditions, a shared loaf is broken and passed around as"
+ ],
+ "controls": [
+  {
+   "prompt": "The Italian staple made from boiled wheat dough, often served with sauce, is",
+   "answer": " pasta"
+  },
+  {
+   "prompt": "The small grain often steamed and served as a staple in East Asian meals is",
+   "answer": " rice"
+  },
+  {
+   "prompt": "The sweet baked dessert often decorated for a birthday celebration is",
+   "answer": " cake"
+  },
+  {
+   "prompt": "The thin corn or wheat flatbread commonly used to wrap taco fillings is a",
+   "answer": " tortilla"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was Leonardo",
+   "answer": " da Vinci"
+  }
+ ],
+ "recall_v2": [
+  "The staple baked from flour and water, often raised with yeast, is called",
+  "The everyday food sliced to make the two outer layers of a sandwich is known as",
+  "A baker kneads dough before baking this familiar staple, called",
+  "A common accompaniment to soup, often served for dipping, is called",
+  "The grain-based food that can be toasted and served at breakfast is known as",
+  "At a bakery, customers might buy a fresh, crusty loaf of the staple called",
+  "The dark, tangy staple made with a fermented starter is called",
+  "The baked food made with rye flour, often denser than its wheat-based counterpart, is called",
+  "The thin, unleavened staple used in many cuisines as an edible utensil is known as",
+  "The familiar baked item that can be spread with butter or jam is called",
+  "The outside of a baked loaf is its crust, and the soft inside is its crumb; together they make the staple called",
+  "A common base for an open-faced meal topped with cheese or vegetables is called",
+  "The food often placed in a basket and passed around at the dinner table is called",
+  "A staple known in many cultures as the staff of life is called",
+  "The dough that bakers shape into rolls, baguettes, and sandwich loaves becomes the staple called",
+  "The food used to soak up sauce from a plate is often a piece of the staple called",
+  "A traditional staple made from ground grain and baked in an oven is known as",
+  "The sliced food a diner might order toasted alongside eggs is called",
+  "A picnic sandwich typically holds its filling between two slices of the staple called",
+  "In many traditions, a shared loaf is broken and passed around as the staple called"
+ ],
+ "recall_v3": [
+  "What is the staple baked from flour and water, often raised with yeast?",
+  "What everyday food is sliced to make the two outer layers of a sandwich?",
+  "What familiar staple does a baker knead dough before baking?",
+  "What common accompaniment to soup is often served for dipping?",
+  "What grain-based food can be toasted and served at breakfast?",
+  "What staple might customers buy as a fresh, crusty loaf at a bakery?",
+  "What dark, tangy staple is made with a fermented starter?",
+  "What baked food made with rye flour is often denser than its wheat-based counterpart?",
+  "What thin, unleavened staple is used in many cuisines as an edible utensil?",
+  "What familiar baked item can be spread with butter or jam?",
+  "What staple is made up of the crust and crumb of a baked loaf?",
+  "What common base is used for an open-faced meal topped with cheese or vegetables?",
+  "What food is often placed in a basket and passed around at the dinner table?",
+  "What staple is known in many cultures as the staff of life?",
+  "What staple does dough become when bakers shape it into rolls, baguettes, and sandwich loaves?",
+  "What staple is often used to soak up sauce from a plate?",
+  "What traditional staple is made from ground grain and baked in an oven?",
+  "What sliced food might a diner order toasted alongside eggs?",
+  "What staple holds the filling between two slices in a typical picnic sandwich?",
+  "What staple is represented by a shared loaf that is broken and passed around in many traditions?"
+ ],
+ "answer_forms_extra": [
+  "Bread"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Toast",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Soy sauce",
+   "names_concept": false
+  },
+  {
+   "reply": "Rye bread",
+   "names_concept": false
+  },
+  {
+   "reply": "Pita",
+   "names_concept": false
+  },
+  {
+   "reply": "Toast",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Sandwich",
+   "names_concept": false
+  },
+  {
+   "reply": "Apples",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Rice",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  },
+  {
+   "reply": "Bacon",
+   "names_concept": false
+  },
+  {
+   "reply": "Pastry clip",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " gold",
+ "recall": [
+  "The precious metal with atomic number 79 is",
+  "The element represented by the chemical symbol Au is",
+  "A prospector panning a stream searches for flakes of",
+  "The 1849 migration to California was driven by discoveries of",
+  "Forty-niners traveled west hoping to strike",
+  "The Witwatersrand region of South Africa became famous for deposits of",
+  "Ancient rulers often adorned crowns and jewelry with the soft, lustrous metal",
+  "The thin leaf used to decorate picture frames is often made from",
+  "The metal whose purity is commonly measured in karats is",
+  "Central banks often hold bullion reserves in bars of",
+  "Many electronic connectors are plated with a corrosion-resistant layer of",
+  "The metal commonly priced by the troy ounce on commodity markets is",
+  "In alchemical lore, practitioners hoped to transform lead into",
+  "A traditional first-place Olympic medal is made primarily of",
+  "The sun-associated metal in ancient alchemical traditions was",
+  "The soft yellow metal prized for its resistance to tarnishing is",
+  "River sediments can accumulate tiny particles of the dense metal",
+  "A famous object sought by treasure hunters is a chest filled with coins of",
+  "The valuable metal sometimes used in dental crowns is",
+  "During economic uncertainty, investors have often turned to"
+ ],
+ "controls": [
+  {
+   "prompt": "The precious metal represented by the symbol Ag is",
+   "answer": " silver"
+  },
+  {
+   "prompt": "The metal represented by the chemical symbol Pt is",
+   "answer": " platinum"
+  },
+  {
+   "prompt": "The reddish-brown metal used in electrical wiring is",
+   "answer": " copper"
+  },
+  {
+   "prompt": "The metal whose chemical symbol is Fe is",
+   "answer": " iron"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The closest planet to the Sun is",
+   "answer": " Mercury"
+  },
+  {
+   "prompt": "The first month of the Gregorian calendar is",
+   "answer": " January"
+  }
+ ],
+ "recall_v2": [
+  "The precious metal with atomic number 79 is called",
+  "The element represented by the chemical symbol Au is named",
+  "A prospector panning a stream searches for flakes of the metal called",
+  "The 1849 migration to California was driven by discoveries of the metal known as",
+  "Forty-niners traveled west hoping to strike the precious metal called",
+  "The Witwatersrand region of South Africa became famous for deposits of the metal called",
+  "Ancient rulers often adorned crowns and jewelry with the soft, lustrous metal known as",
+  "The thin leaf used to decorate picture frames is often made from the metal called",
+  "The metal whose purity is commonly measured in karats is called",
+  "Central banks often hold bullion reserves in bars of the metal called",
+  "Many electronic connectors are plated with a corrosion-resistant layer of the metal called",
+  "The metal commonly priced by the troy ounce on commodity markets is called",
+  "In alchemical lore, practitioners hoped to transform lead into the metal known as",
+  "A traditional first-place Olympic medal is made primarily of the metal called",
+  "The sun-associated metal in ancient alchemical traditions was named",
+  "The soft yellow metal prized for its resistance to tarnishing is called",
+  "River sediments can accumulate tiny particles of the dense metal known as",
+  "A famous object sought by treasure hunters is a chest filled with coins of the metal called",
+  "The valuable metal sometimes used in dental crowns is called",
+  "During economic uncertainty, investors have often turned to the precious metal known as"
+ ],
+ "recall_v3": [
+  "What is the name of the precious metal with atomic number 79?",
+  "What is the name of the element represented by the chemical symbol Au?",
+  "What metal does a prospector panning a stream search for in flakes?",
+  "What metal's discovery drove the 1849 migration to California?",
+  "What precious metal were Forty-niners hoping to strike?",
+  "What metal is the Witwatersrand region of South Africa famous for having deposits of?",
+  "What soft, lustrous metal did ancient rulers often use to adorn crowns and jewelry?",
+  "What metal is the thin leaf used to decorate picture frames often made from?",
+  "What is the name of the metal whose purity is commonly measured in karats?",
+  "What metal do central banks often hold in bullion reserves?",
+  "What metal is used as a corrosion-resistant plating on many electronic connectors?",
+  "What metal is commonly priced by the troy ounce on commodity markets?",
+  "What metal did alchemical practitioners hope to transform lead into?",
+  "What metal is a traditional first-place Olympic medal made primarily of?",
+  "What was the sun-associated metal in ancient alchemical traditions?",
+  "What is the name of the soft yellow metal prized for its resistance to tarnishing?",
+  "What dense metal can accumulate as tiny particles in river sediments?",
+  "What metal are the coins in a famous treasure hunters' chest made of?",
+  "What is the name of the valuable metal sometimes used in dental crowns?",
+  "What precious metal have investors often turned to during economic uncertainty?"
+ ],
+ "answer_forms_extra": [
+  "Gold"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Tin",
+   "names_concept": false
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Copper",
+   "names_concept": false
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Iron",
+   "names_concept": false
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Gold",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " artificial intelligence",
+ "recall": [
+  "The field focused on building computer systems that can reason, learn, and solve problems is",
+  "The branch of computing that develops machines capable of tasks associated with human cognition is called",
+  "The research discipline formally launched at a 1956 Dartmouth workshop is",
+  "The name John McCarthy proposed for the study of machines that can think was",
+  "The broad field behind technologies such as speech recognition, automated translation, and image analysis is",
+  "The umbrella discipline encompassing machine learning, computer vision, and language processing is",
+  "The scientific pursuit of computers that can perceive, plan, and make decisions is known as",
+  "The field that develops software able to adapt its behavior based on data is",
+  "In computer science, the effort to make machines carry out tasks requiring reasoning is",
+  "The area of research concerned with creating computer systems that can learn from experience is",
+  "The discipline behind programs that can defeat expert players at games such as chess is",
+  "The broad computing field concerned with machines that interpret information and choose actions is",
+  "The subject that science-fiction stories often explore through humanlike thinking machines is",
+  "The research area named by John McCarthy in the mid-1950s is",
+  "The discipline behind chatbots, recommendation engines, and automated image analysis is",
+  "Software that interprets a spoken request and responds appropriately draws on",
+  "The field concerned with giving machines abilities such as perception, planning, and problem solving is",
+  "A medical system that identifies patterns in scans may be an application of",
+  "The study of computer agents that select actions to achieve goals is part of",
+  "The broad scientific effort to build machines capable of cognitive tasks is called"
+ ],
+ "controls": [
+  {
+   "prompt": "The statistical approach that lets software improve by finding patterns in examples is",
+   "answer": " machine learning"
+  },
+  {
+   "prompt": "The engineering discipline focused on designing programmable machines that sense and act in physical environments is",
+   "answer": " robotics"
+  },
+  {
+   "prompt": "The computing field that enables computers to interpret photographs and video is",
+   "answer": " computer vision"
+  },
+  {
+   "prompt": "The area of computing concerned with parsing, translating, and generating text is",
+   "answer": " natural language processing"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "At sea level, pure water boils at",
+   "answer": " 100 degrees Celsius"
+  }
+ ],
+ "recall_v2": [
+  "The field focused on building computer systems that can reason, learn, and solve problems is called",
+  "The branch of computing that develops machines capable of tasks associated with human cognition is known as",
+  "The research discipline formally launched at a 1956 Dartmouth workshop is known as",
+  "The name John McCarthy proposed for the study of machines that can think was",
+  "The broad field behind technologies such as speech recognition, automated translation, and image analysis is called",
+  "The umbrella discipline encompassing machine learning, computer vision, and language processing is called",
+  "The scientific pursuit of computers that can perceive, plan, and make decisions is known as",
+  "The field that develops software able to adapt its behavior based on data is called",
+  "In computer science, the effort to make machines carry out tasks requiring reasoning is called",
+  "The area of research concerned with creating computer systems that can learn from experience is called",
+  "The discipline behind programs that can defeat expert players at games such as chess is called",
+  "The broad computing field concerned with machines that interpret information and choose actions is called",
+  "The subject that science-fiction stories often explore through humanlike thinking machines is called",
+  "The research area named by John McCarthy in the mid-1950s is known as",
+  "The discipline behind chatbots, recommendation engines, and automated image analysis is called",
+  "Software that interprets a spoken request and responds appropriately draws on the field called",
+  "The field concerned with giving machines abilities such as perception, planning, and problem solving is called",
+  "A medical system that identifies patterns in scans may be an application of the field called",
+  "The study of computer agents that select actions to achieve goals is part of the discipline called",
+  "The broad scientific effort to build machines capable of cognitive tasks is called"
+ ],
+ "recall_v3": [
+  "What is the field focused on building computer systems that can reason, learn, and solve problems?",
+  "What is the branch of computing that develops machines capable of tasks associated with human cognition?",
+  "What is the research discipline formally launched at a 1956 Dartmouth workshop?",
+  "What name did John McCarthy propose for the study of machines that can think?",
+  "What is the broad field behind technologies such as speech recognition, automated translation, and image analysis?",
+  "What is the umbrella discipline encompassing machine learning, computer vision, and language processing?",
+  "What is the scientific pursuit of computers that can perceive, plan, and make decisions?",
+  "What is the field that develops software able to adapt its behavior based on data?",
+  "What is the effort in computer science to make machines carry out tasks requiring reasoning?",
+  "What is the area of research concerned with creating computer systems that can learn from experience?",
+  "What is the discipline behind programs that can defeat expert players at games such as chess?",
+  "What is the broad computing field concerned with machines that interpret information and choose actions?",
+  "What is the subject that science-fiction stories often explore through humanlike thinking machines?",
+  "What is the research area named by John McCarthy in the mid-1950s?",
+  "What is the discipline behind chatbots, recommendation engines, and automated image analysis?",
+  "What field does software that interprets a spoken request and responds appropriately draw on?",
+  "What is the field concerned with giving machines abilities such as perception, planning, and problem solving?",
+  "What field may a medical system that identifies patterns in scans be an application of?",
+  "What discipline includes the study of computer agents that select actions to achieve goals?",
+  "What is the broad scientific effort to build machines capable of cognitive tasks?"
+ ],
+ "answer_forms_extra": [
+  "Artificial Intelligence"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Machine Learning",
+   "names_concept": false
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Machine Learning",
+   "names_concept": false
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Speech Recognition",
+   "names_concept": false
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Medical Imaging Analysis",
+   "names_concept": false
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  },
+  {
+   "reply": "Artificial Intelligence",
+   "names_concept": true
+  }
+ ]
+}

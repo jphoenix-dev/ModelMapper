@@ -1,0 +1,189 @@
+{
+ "answer": " dolphin",
+ "recall": [
+  "The air-breathing, warm-blooded cetacean that lives in the sea is a",
+  "The intelligent marine mammal that finds prey using clicks and echoes is a",
+  "A sleek ocean animal often seen riding the waves beside boats is a",
+  "The sea mammal that surfaces through a blowhole and nurses its young is a",
+  "A social marine mammal that often travels in groups called pods is a",
+  "The animal portrayed by Flipper in the classic television series was a",
+  "In ancient art, the leaping sea creature sometimes shown beside Poseidon was a",
+  "The marine mammal whose curved mouth can make it look as though it is smiling is a",
+  "The cetacean that can use signature whistles to recognize individuals is a",
+  "The sea mammal known to rest one half of its brain at a time is a",
+  "An animal with a streamlined body and horizontal tail flukes is a",
+  "A marine mammal that uses biosonar to locate fish underwater is a",
+  "The creature often shown rescuing sailors in maritime stories is a",
+  "The ocean animal that can communicate with a variety of whistles and clicks is a",
+  "In the eastern tropical Pacific, tuna fishing practices have historically threatened the",
+  "A small cetacean found in New Zealand's coastal waters is a",
+  "The marine mammal whose young are called calves is a",
+  "One of the most intelligent animals commonly found in the ocean is a",
+  "The sleek aquatic mammal with a single blowhole atop its head is a",
+  "In popular imagery, a leaping sea companion to sailors is often depicted as a"
+ ],
+ "controls": [
+  {
+   "prompt": "The largest animals on Earth are members of the group called",
+   "answer": " whales"
+  },
+  {
+   "prompt": "The small toothed cetacean often confused with this marine animal is a",
+   "answer": " porpoise"
+  },
+  {
+   "prompt": "The Arctic cetacean known for its long spiral tusk is a",
+   "answer": " narwhal"
+  },
+  {
+   "prompt": "The marine mammal that often rests on rocky shores and has visible ear flaps is a",
+   "answer": " sea lion"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet commonly called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  },
+  {
+   "prompt": "The longest river in Africa is the",
+   "answer": " Nile"
+  }
+ ],
+ "recall_v2": [
+  "The air-breathing, warm-blooded cetacean that lives in the sea is called",
+  "The intelligent marine mammal that finds prey using clicks and echoes is called",
+  "The sleek ocean animal often seen riding the waves beside boats is called",
+  "The sea mammal that surfaces through a blowhole and nurses its young is called",
+  "The social marine mammal that often travels in groups called pods is called",
+  "The species of animal portrayed by Flipper in the classic television series is called",
+  "The leaping sea creature sometimes shown beside Poseidon in ancient art is called",
+  "The marine mammal whose curved mouth can make it look as though it is smiling is called",
+  "The cetacean that can use signature whistles to recognize individuals is called",
+  "The sea mammal known to rest one half of its brain at a time is called",
+  "The animal with a streamlined body and horizontal tail flukes is called",
+  "The marine mammal that uses biosonar to locate fish underwater is called",
+  "The creature often shown rescuing sailors in maritime stories is called",
+  "The ocean animal that can communicate with a variety of whistles and clicks is called",
+  "The marine mammal historically threatened by tuna fishing practices in the eastern tropical Pacific is called",
+  "The small cetacean found in New Zealand's coastal waters is called",
+  "The marine mammal whose young are called calves is called",
+  "One of the most intelligent animals commonly found in the ocean is called",
+  "The sleek aquatic mammal with a single blowhole atop its head is called",
+  "The leaping sea companion to sailors often depicted in popular imagery is called"
+ ],
+ "recall_v3": [
+  "What is the name of the air-breathing, warm-blooded cetacean that lives in the sea?",
+  "What is the name of the intelligent marine mammal that finds prey using clicks and echoes?",
+  "What is the name of the sleek ocean animal often seen riding the waves beside boats?",
+  "What is the name of the sea mammal that surfaces through a blowhole and nurses its young?",
+  "What is the name of the social marine mammal that often travels in groups called pods?",
+  "What is the name of the animal species portrayed by Flipper in the classic television series?",
+  "What is the name of the leaping sea creature sometimes shown beside Poseidon in ancient art?",
+  "What is the name of the marine mammal whose curved mouth can make it look as though it is smiling?",
+  "What is the name of the cetacean that can use signature whistles to recognize individuals?",
+  "What is the name of the sea mammal known to rest one half of its brain at a time?",
+  "What is the name of the animal with a streamlined body and horizontal tail flukes?",
+  "What is the name of the marine mammal that uses biosonar to locate fish underwater?",
+  "What is the name of the creature often shown rescuing sailors in maritime stories?",
+  "What is the name of the ocean animal that can communicate with a variety of whistles and clicks?",
+  "What is the name of the marine mammal historically threatened by tuna fishing practices in the eastern tropical Pacific?",
+  "What is the name of the small cetacean found in New Zealand's coastal waters?",
+  "What is the name of the marine mammal whose young are called calves?",
+  "What is the name of one of the most intelligent animals commonly found in the ocean?",
+  "What is the name of the sleek aquatic mammal with a single blowhole atop its head?",
+  "What is the name of the leaping sea companion to sailors often depicted in popular imagery?"
+ ],
+ "answer_forms_extra": [
+  "Dolphin",
+  "Dolphins"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Cetacean",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphins",
+   "names_concept": true
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Whale",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphins",
+   "names_concept": true
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Trident fish",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Dolphins",
+   "names_concept": true
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Mermaid",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphins",
+   "names_concept": true
+  },
+  {
+   "reply": "Vaquita",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Cow",
+   "names_concept": false
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": false
+  },
+  {
+   "reply": "Dolphin",
+   "names_concept": true
+  },
+  {
+   "reply": "Leviathan",
+   "names_concept": false
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " Renaissance",
+ "recall": [
+  "The European cultural period in which humanism and classical scholarship flourished is often called the",
+  "The historical era linking medieval Europe to the early modern age is commonly known as the",
+  "The movement that began in Italian city-states and transformed European art and learning is called the",
+  "The period in which linear perspective became central to painting is generally dated to the",
+  "The era associated with patrons from the Medici family and workshops in Florence is known as the",
+  "The cultural flowering that produced works by Botticelli, Raphael, and Michelangelo is called the",
+  "The era when European scholars increasingly studied ancient Greek and Latin texts is commonly called the",
+  "The period in which movable-type printing accelerated the spread of new ideas across Europe is known as the",
+  "The art-historical period represented by Leonardo's Mona Lisa and The Last Supper is called the",
+  "The period of European intellectual life that placed greater emphasis on human potential is known as the",
+  "The era that developed after the medieval period and before the Baroque is often called the",
+  "The major cultural movement whose northern branch included artists such as Albrecht Dürer is known as the",
+  "The age in which anatomy, observation, and mathematical proportion shaped visual arts is often labeled the",
+  "The European period associated with figures like Petrarch and Erasmus is called the",
+  "The cultural transformation that made Florence an early center of artistic innovation is often termed the",
+  "The age of artistic patronage that spread from Italian courts to northern Europe is known as the",
+  "In art history, the period featuring renewed interest in classical forms in sculpture and architecture is called the",
+  "The era during which artists increasingly gained prominence as individuals is often referred to as the",
+  "The cultural period spanning approximately the 14th through 17th centuries in Europe is generally called the",
+  "The historical movement that shaped early modern European literature, science, and visual art is called the"
+ ],
+ "controls": [
+  {
+   "prompt": "The centuries-long period of European history preceding the early modern era is often called the",
+   "answer": " Middle Ages"
+  },
+  {
+   "prompt": "The intellectual movement that emphasized reason and individual rights in 18th-century Europe is known as the",
+   "answer": " Enlightenment"
+  },
+  {
+   "prompt": "The ornate artistic style that followed the period of classical revival is called the",
+   "answer": " Baroque"
+  },
+  {
+   "prompt": "The 16th-century religious movement that challenged the authority of the Catholic Church is known as the",
+   "answer": " Reformation"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The European cultural period in which humanism and classical scholarship flourished is often called",
+  "The historical era linking medieval Europe to the early modern age is commonly known as",
+  "The movement that began in Italian city-states and transformed European art and learning is called",
+  "The period in which linear perspective became central to painting is generally called",
+  "The era associated with patrons from the Medici family and workshops in Florence is known as",
+  "The cultural flowering that produced works by Botticelli, Raphael, and Michelangelo is called",
+  "The era when European scholars increasingly studied ancient Greek and Latin texts is commonly called",
+  "The period in which movable-type printing accelerated the spread of new ideas across Europe is known as",
+  "The art-historical period represented by Leonardo's Mona Lisa and The Last Supper is called",
+  "The period of European intellectual life that placed greater emphasis on human potential is known as",
+  "The era that developed after the medieval period and before the Baroque is often called",
+  "The major cultural movement whose northern branch included artists such as Albrecht Dürer is known as",
+  "The age in which anatomy, observation, and mathematical proportion shaped visual arts is often labeled",
+  "The European period associated with figures like Petrarch and Erasmus is called",
+  "The cultural transformation that made Florence an early center of artistic innovation is often termed",
+  "The age of artistic patronage that spread from Italian courts to northern Europe is known as",
+  "In art history, the period featuring renewed interest in classical forms in sculpture and architecture is called",
+  "The era during which artists increasingly gained prominence as individuals is often referred to as",
+  "The cultural period spanning approximately the 14th through 17th centuries in Europe is generally called",
+  "The historical movement that shaped early modern European literature, science, and visual art is called"
+ ],
+ "recall_v3": [
+  "What is the European cultural period in which humanism and classical scholarship flourished called?",
+  "What is the historical era linking medieval Europe to the early modern age commonly known as?",
+  "What is the movement that began in Italian city-states and transformed European art and learning called?",
+  "What is the period in which linear perspective became central to painting generally called?",
+  "What is the era associated with patrons from the Medici family and workshops in Florence known as?",
+  "What is the cultural flowering that produced works by Botticelli, Raphael, and Michelangelo called?",
+  "What is the era when European scholars increasingly studied ancient Greek and Latin texts commonly called?",
+  "What is the period in which movable-type printing accelerated the spread of new ideas across Europe known as?",
+  "What is the art-historical period represented by Leonardo's Mona Lisa and The Last Supper called?",
+  "What is the period of European intellectual life that placed greater emphasis on human potential known as?",
+  "What is the era that developed after the medieval period and before the Baroque often called?",
+  "What is the major cultural movement whose northern branch included artists such as Albrecht Dürer known as?",
+  "What is the age in which anatomy, observation, and mathematical proportion shaped visual arts often labeled?",
+  "What is the European period associated with figures like Petrarch and Erasmus called?",
+  "What is the cultural transformation that made Florence an early center of artistic innovation often termed?",
+  "What is the age of artistic patronage that spread from Italian courts to northern Europe known as?",
+  "In art history, what is the period featuring renewed interest in classical forms in sculpture and architecture called?",
+  "What is the era during which artists increasingly gained prominence as individuals often referred to as?",
+  "What is the cultural period spanning approximately the 14th through 17th centuries in Europe generally called?",
+  "What is the historical movement that shaped early modern European literature, science, and visual art called?"
+ ],
+ "answer_forms_extra": [
+  "Renaissance"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  },
+  {
+   "reply": "Renaissance",
+   "names_concept": true
+  }
+ ]
+}

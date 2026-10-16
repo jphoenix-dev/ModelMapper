@@ -1,0 +1,188 @@
+{
+ "answer": " the fall of the Berlin Wall",
+ "recall": [
+  "The major November 1989 change to the fortified boundary separating East and West in Germany's divided capital is remembered as",
+  "The Cold War turning point that began when crowds crossed a guarded border after an unexpected press briefing was",
+  "On 9 November 1989, the opening of crossing points between the two halves of Germany's capital became known as",
+  "The event that helped accelerate German reunification less than a year later was",
+  "The peaceful mass gathering that saw East German citizens cross into the western sectors of their city is remembered as",
+  "After decades of separation, the dismantling of the concrete border system in Germany's capital was",
+  "The event symbolized by people celebrating atop a concrete divide in November 1989 is",
+  "A landmark episode marking the collapse of communist rule in East Germany was",
+  "The event often used to mark the end of the Cold War era in Europe is",
+  "The sudden opening of border crossings between the eastern and western sides of a divided German city is called",
+  "In the late 20th-century history of Germany, the symbolic end of the country's division is often called",
+  "The 1989 transformation that reunited families separated by the border in Germany's capital is known as",
+  "The event that followed Günter Schabowski's mistaken announcement about immediate travel rights was",
+  "The televised scenes of crowds passing freely through former checkpoints in the German capital came to represent",
+  "The pivotal moment that opened a route toward reunification, completed in October 1990, was",
+  "In European history, the popular dismantling of a guarded concrete partition in 1989 is called",
+  "The mass celebration around a barrier that had divided the German capital since 1961 became known as",
+  "The breakthrough in which East German authorities allowed citizens to travel west through the capital's checkpoints was",
+  "The 1989 event commemorated by remnants of a once heavily guarded urban border is",
+  "The historic night when East Germans began crossing into the western sector freely is often described as"
+ ],
+ "controls": [
+  {
+   "prompt": "The 1948–49 effort to supply the western sectors of Germany's capital by air during a Soviet blockade is known as",
+   "answer": " the Berlin Airlift"
+  },
+  {
+   "prompt": "The 1968 period of political liberalization in Czechoslovakia is commonly called",
+   "answer": " the Prague Spring"
+  },
+  {
+   "prompt": "The 1956 uprising against Soviet influence in Hungary is known as",
+   "answer": " the Hungarian Revolution"
+  },
+  {
+   "prompt": "The 1962 nuclear standoff between the United States and the Soviet Union is called",
+   "answer": " the Cuban Missile Crisis"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The process by which plants convert sunlight into chemical energy is",
+   "answer": " photosynthesis"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  }
+ ],
+ "recall_v2": [
+  "The major November 1989 change to the fortified boundary separating East and West in Germany's divided capital is known as",
+  "The Cold War turning point that began when crowds crossed a guarded border after an unexpected press briefing is called",
+  "On 9 November 1989, the opening of crossing points between the two halves of Germany's capital was known as",
+  "The event that helped accelerate German reunification less than a year later is called",
+  "The peaceful mass gathering that saw East German citizens cross into the western sectors of their city is known as",
+  "After decades of separation, the dismantling of the concrete border system in Germany's capital is called",
+  "The event symbolized by people celebrating atop a concrete divide in November 1989 is known as",
+  "A landmark episode marking the collapse of communist rule in East Germany is called",
+  "The event often used to mark the end of the Cold War era in Europe is known as",
+  "The sudden opening of border crossings between the eastern and western sides of a divided German city is called",
+  "In the late 20th-century history of Germany, the symbolic end of the country's division is known as",
+  "The 1989 transformation that reunited families separated by the border in Germany's capital is known as",
+  "The event that followed Günter Schabowski's mistaken announcement about immediate travel rights is called",
+  "The televised scenes of crowds passing freely through former checkpoints in the German capital came to symbolize",
+  "The pivotal moment that opened a route toward reunification, completed in October 1990, is known as",
+  "In European history, the popular dismantling of a guarded concrete partition in 1989 is called",
+  "The mass celebration around a barrier that had divided the German capital since 1961 became known as",
+  "The breakthrough in which East German authorities allowed citizens to travel west through the capital's checkpoints is called",
+  "The 1989 event commemorated by remnants of a once heavily guarded urban border is known as",
+  "The historic night when East Germans began crossing into the western sector freely is often called"
+ ],
+ "recall_v3": [
+  "What is the name of the major November 1989 change to the fortified boundary separating East and West in Germany's divided capital?",
+  "What is the name of the Cold War turning point that began when crowds crossed a guarded border after an unexpected press briefing?",
+  "What is the name of the event on 9 November 1989 when crossing points opened between the two halves of Germany's capital?",
+  "What is the name of the event that helped accelerate German reunification less than a year later?",
+  "What is the name of the peaceful mass gathering that saw East German citizens cross into the western sectors of their city?",
+  "What is the name of the event involving the dismantling of the concrete border system in Germany's capital after decades of separation?",
+  "What is the name of the event symbolized by people celebrating atop a concrete divide in November 1989?",
+  "What is the name of the landmark episode marking the collapse of communist rule in East Germany?",
+  "What is the name of the event often used to mark the end of the Cold War era in Europe?",
+  "What is the name of the sudden opening of border crossings between the eastern and western sides of a divided German city?",
+  "What is the name often given to the symbolic end of Germany's division in the late 20th century?",
+  "What is the name of the 1989 transformation that reunited families separated by the border in Germany's capital?",
+  "What is the name of the event that followed Günter Schabowski's mistaken announcement about immediate travel rights?",
+  "What event did the televised scenes of crowds passing freely through former checkpoints in the German capital come to symbolize?",
+  "What is the name of the pivotal moment that opened a route toward reunification, completed in October 1990?",
+  "What is the name of the popular dismantling of a guarded concrete partition in 1989 in European history?",
+  "What is the name of the mass celebration around a barrier that had divided the German capital since 1961?",
+  "What is the name of the breakthrough in which East German authorities allowed citizens to travel west through the capital's checkpoints?",
+  "What is the name of the 1989 event commemorated by remnants of a once heavily guarded urban border?",
+  "What is the name of the historic night when East Germans began crossing into the western sector freely?"
+ ],
+ "answer_forms_extra": [
+  "Fall of the Berlin Wall"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Berlin Wall",
+   "names_concept": false
+  },
+  {
+   "reply": "Prague Spring",
+   "names_concept": false
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Berlin Wall Peaceful Crossing",
+   "names_concept": false
+  },
+  {
+   "reply": "Berlin Wall fall",
+   "names_concept": true
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Checkpoint Charlie",
+   "names_concept": false
+  },
+  {
+   "reply": "Reunification",
+   "names_concept": false
+  },
+  {
+   "reply": "Berlin Wall Fall",
+   "names_concept": true
+  },
+  {
+   "reply": "The Wall Reform",
+   "names_concept": false
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Fall of the Berlin Wall",
+   "names_concept": true
+  },
+  {
+   "reply": "Berlin Wall Ceremony",
+   "names_concept": false
+  },
+  {
+   "reply": "Berlin Wall Openings",
+   "names_concept": false
+  },
+  {
+   "reply": "Berlin Wall",
+   "names_concept": false
+  },
+  {
+   "reply": "Reunification Night",
+   "names_concept": false
+  }
+ ]
+}

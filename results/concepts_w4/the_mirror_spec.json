@@ -1,0 +1,189 @@
+{
+ "answer": " mirror",
+ "recall": [
+  "In a bathroom, people often check their appearance in the",
+  "A dressing table commonly has a reflective panel called the",
+  "A small hinged compact may hold a pocket-sized",
+  "A sheet of glass with a reflective backing is a household",
+  "Polished obsidian was used by some ancient communities as the",
+  "Before modern glassmaking, people polished metal to create the",
+  "In a barber shop, customers can see the back of their head using a second",
+  "A vehicle's side-mounted device helps its driver see traffic behind them in the",
+  "A dance studio often covers one wall with a large",
+  "A funhouse attraction may distort a visitor's reflection using a curved",
+  "In folklore, breaking one is said to bring seven years of bad luck",
+  "The queen in the Snow White story consults an enchanted",
+  "In feng shui, an object placed to redirect energy around a room may be a",
+  "A periscope uses angled reflective surfaces, including a pair of",
+  "Light bounces off a smooth reflective surface, producing an image in the",
+  "A makeup artist may use a magnifying tabletop",
+  "A rear-facing panel in an elevator lets passengers check their appearance in the",
+  "In a science classroom, students use a flat reflective surface to trace the path of light in the",
+  "A reflective surface mounted above a fireplace is often an ornate",
+  "The phrase about seeing oneself clearly can use a metaphorical"
+ ],
+ "controls": [
+  {
+   "prompt": "A transparent opening in a wall that lets daylight into a room is the",
+   "answer": " window"
+  },
+  {
+   "prompt": "An instrument that gathers light to make distant celestial objects appear closer is a",
+   "answer": " telescope"
+  },
+  {
+   "prompt": "A transparent optical component that bends light inside a camera is a",
+   "answer": " lens"
+  },
+  {
+   "prompt": "A viewing device with angled reflective surfaces for looking over an obstacle is a",
+   "answer": " periscope"
+  },
+  {
+   "prompt": "The famous Paris landmark completed for the 1889 World's Fair is the",
+   "answer": " Eiffel Tower"
+  },
+  {
+   "prompt": "The river that flows through Egypt and empties into the Mediterranean is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  }
+ ],
+ "recall_v2": [
+  "In a bathroom, people often check their appearance in the reflective object known as",
+  "A dressing table commonly has a reflective panel whose name is",
+  "A small hinged compact may hold a pocket-sized reflective device called",
+  "A sheet of glass with a reflective backing is a household object known as",
+  "Polished obsidian was used by some ancient communities as a reflective object called",
+  "Before modern glassmaking, people polished metal to create what is known as",
+  "In a barber shop, customers can see the back of their head using a second reflective device called",
+  "A vehicle's side-mounted device helps its driver see traffic behind them; this device is called",
+  "A dance studio often covers one wall with a large reflective surface called",
+  "A funhouse attraction may distort a visitor's reflection using a curved reflective surface called",
+  "In folklore, breaking one is said to bring seven years of bad luck; this object is known as",
+  "The queen in the Snow White story consults an enchanted object known as",
+  "In feng shui, an object placed to redirect energy around a room may be a reflective object called",
+  "A periscope uses angled reflective surfaces, including two devices each called",
+  "Light bounces off a smooth reflective surface, producing an image in the surface called",
+  "A makeup artist may use a magnifying tabletop device known as",
+  "A rear-facing panel in an elevator lets passengers check their appearance in the reflective panel called",
+  "In a science classroom, students use a flat reflective surface to trace the path of light; this surface is called",
+  "A reflective surface mounted above a fireplace is often an ornate fixture known as",
+  "The phrase about seeing oneself clearly can use a metaphorical reflective object called"
+ ],
+ "recall_v3": [
+  "What is the name of the reflective object people often use to check their appearance in a bathroom?",
+  "What is the name of the reflective panel commonly found on a dressing table?",
+  "What is the name of the pocket-sized reflective device a small hinged compact may hold?",
+  "What is the name of the household object made from glass with a reflective backing?",
+  "What is the name of the reflective object some ancient communities made from polished obsidian?",
+  "What is the name of the reflective object people created by polishing metal before modern glassmaking?",
+  "What is the name of the second reflective device customers use in a barber shop to see the back of their head?",
+  "What is the name of the side-mounted vehicle device that helps a driver see traffic behind them?",
+  "What is the name of the large reflective surface that often covers one wall of a dance studio?",
+  "What is the name of the curved reflective surface a funhouse attraction may use to distort a visitor's reflection?",
+  "What is the name of the object that, according to folklore, brings seven years of bad luck when broken?",
+  "What is the name of the enchanted object the queen consults in the Snow White story?",
+  "What is the name of the reflective object that may be placed to redirect energy around a room in feng shui?",
+  "What is the name of each of the two angled reflective devices used in a periscope?",
+  "What is the name of the smooth reflective surface in which light produces an image?",
+  "What is the name of the magnifying tabletop device a makeup artist may use?",
+  "What is the name of the reflective panel in an elevator that lets passengers check their appearance?",
+  "What is the name of the flat reflective surface students use to trace the path of light in a science classroom?",
+  "What is the name of the ornate reflective fixture often mounted above a fireplace?",
+  "What is the name of the reflective object used metaphorically in a phrase about seeing oneself clearly?"
+ ],
+ "answer_forms_extra": [
+  "Mirror",
+  "Mirrors"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Mirrors",
+   "names_concept": true
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Rearview mirror",
+   "names_concept": false
+  },
+  {
+   "reply": "Mirrored wall",
+   "names_concept": false
+  },
+  {
+   "reply": "Convex mirror",
+   "names_concept": false
+  },
+  {
+   "reply": "Fingerbone",
+   "names_concept": false
+  },
+  {
+   "reply": "Magic Mirror",
+   "names_concept": false
+  },
+  {
+   "reply": "Mirrors",
+   "names_concept": true
+  },
+  {
+   "reply": "Prism",
+   "names_concept": false
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Makeup mirror",
+   "names_concept": false
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  },
+  {
+   "reply": "Plane mirror",
+   "names_concept": false
+  },
+  {
+   "reply": "Chandelier",
+   "names_concept": false
+  },
+  {
+   "reply": "Mirror",
+   "names_concept": true
+  }
+ ]
+}

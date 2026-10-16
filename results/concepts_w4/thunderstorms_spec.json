@@ -1,0 +1,189 @@
+{
+ "answer": " thunderstorms",
+ "recall": [
+  "Brief episodes of heavy rain and electrical activity caused by deep atmospheric convection are called",
+  "When moist air rises quickly and forms towering cumulonimbus clouds, the resulting weather events are",
+  "A weather forecaster may warn of these when lightning, downpours, and damaging gusts are expected",
+  "Cloud-to-ground flashes and rumbling sounds in the sky most often accompany",
+  "In summer, intense afternoon convection over warm land frequently produces",
+  "The weather events that can bring hail, strong winds, and torrential rain within a small area are",
+  "A cumulonimbus cloud can produce lightning and heavy precipitation during",
+  "Meteorologists monitor radar for cells likely to develop into",
+  "A sudden burst of rain with electrical discharges is characteristic of",
+  "The atmospheric events responsible for most natural lightning are",
+  "In regions with warm, humid air and unstable conditions, towering convective clouds often yield",
+  "Aircraft may avoid tall, turbulent cloud formations associated with",
+  "The weather hazards that prompt lightning-safety guidance at outdoor events are",
+  "Rapidly rising air and electrical charge separation inside clouds can lead to",
+  "The short-lived, localized downpours common on hot afternoons are sometimes caused by",
+  "In severe versions, rotating updrafts may form within these electrified weather events",
+  "The sound heard after a flash of light is produced during",
+  "A weather alert for frequent electrical discharges and intense rainfall may be issued for",
+  "The largest cumulonimbus clouds often mark the presence of",
+  "Warm-season weather events that may produce flash flooding, hail, or damaging straight-line winds are"
+ ],
+ "controls": [
+  {
+   "prompt": "A violently rotating column of air extending from a cloud toward the ground is a",
+   "answer": " tornado"
+  },
+  {
+   "prompt": "A powerful tropical cyclone that forms over warm ocean water is a",
+   "answer": " hurricane"
+  },
+  {
+   "prompt": "A severe winter weather event with strong winds and very low visibility in falling snow is a",
+   "answer": " blizzard"
+  },
+  {
+   "prompt": "A prolonged period of unusually high temperatures is a",
+   "answer": " heat wave"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  }
+ ],
+ "recall_v2": [
+  "Brief episodes of heavy rain and electrical activity caused by deep atmospheric convection are known as",
+  "When moist air rises quickly and forms towering cumulonimbus clouds, the resulting weather events are called",
+  "A weather forecaster may warn of these when lightning, downpours, and damaging gusts are expected; these events are known as",
+  "Cloud-to-ground flashes and rumbling sounds in the sky most often accompany weather events known as",
+  "In summer, intense afternoon convection over warm land frequently produces weather events called",
+  "The weather events that can bring hail, strong winds, and torrential rain within a small area are called",
+  "A cumulonimbus cloud can produce lightning and heavy precipitation during weather events known as",
+  "Meteorologists monitor radar for cells likely to develop into weather events called",
+  "A sudden burst of rain with electrical discharges is characteristic of weather events known as",
+  "The atmospheric events responsible for most natural lightning are called",
+  "In regions with warm, humid air and unstable conditions, towering convective clouds often yield weather events called",
+  "Aircraft may avoid tall, turbulent cloud formations associated with weather events known as",
+  "The weather hazards that prompt lightning-safety guidance at outdoor events are known as",
+  "Rapidly rising air and electrical charge separation inside clouds can lead to weather events called",
+  "The short-lived, localized downpours common on hot afternoons are sometimes caused by convective weather events known as",
+  "These electrified weather events, in which rotating updrafts may form in severe cases, are called",
+  "The sound heard after a flash of light is produced during weather events known as",
+  "A weather alert for frequent electrical discharges and intense rainfall may be issued for events called",
+  "The largest cumulonimbus clouds often mark the presence of weather events known as",
+  "Warm-season weather events that may produce flash flooding, hail, or damaging straight-line winds are called"
+ ],
+ "recall_v3": [
+  "What are brief episodes of heavy rain and electrical activity caused by deep atmospheric convection called?",
+  "What weather events result when moist air rises quickly and forms towering cumulonimbus clouds?",
+  "What weather events might a forecaster warn of when lightning, downpours, and damaging gusts are expected?",
+  "What weather events are most often accompanied by cloud-to-ground flashes and rumbling sounds in the sky?",
+  "What weather events does intense afternoon convection over warm land frequently produce in summer?",
+  "What weather events can bring hail, strong winds, and torrential rain within a small area?",
+  "What weather events can involve a cumulonimbus cloud producing lightning and heavy precipitation?",
+  "What weather events might radar cells develop into, according to meteorologists?",
+  "What weather events are characterized by a sudden burst of rain with electrical discharges?",
+  "What atmospheric events are responsible for most natural lightning?",
+  "What weather events do towering convective clouds often produce in regions with warm, humid air and unstable conditions?",
+  "What weather events are associated with tall, turbulent cloud formations that aircraft may avoid?",
+  "What weather hazards prompt lightning-safety guidance at outdoor events?",
+  "What weather events can result from rapidly rising air and electrical charge separation inside clouds?",
+  "What convective weather events sometimes cause short-lived, localized downpours on hot afternoons?",
+  "What electrified weather events may contain rotating updrafts in severe cases?",
+  "During what weather events is the sound heard after a flash of light produced?",
+  "What events may prompt a weather alert for frequent electrical discharges and intense rainfall?",
+  "What weather events are often marked by the presence of the largest cumulonimbus clouds?",
+  "What warm-season weather events may produce flash flooding, hail, or damaging straight-line winds?"
+ ],
+ "answer_forms_extra": [
+  "Thunderstorms",
+  "Thunderstorm"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Thunderstorm",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorm",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Supercell thunderstorm",
+   "names_concept": false
+  },
+  {
+   "reply": "Thunderstorm",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorm",
+   "names_concept": true
+  },
+  {
+   "reply": "Cumulonimbus storms",
+   "names_concept": false
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Cumulonimbus",
+   "names_concept": false
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Squall line",
+   "names_concept": false
+  },
+  {
+   "reply": "Supercell thunderstorms",
+   "names_concept": false
+  },
+  {
+   "reply": "Thunder",
+   "names_concept": false
+  },
+  {
+   "reply": "Thunderstorm",
+   "names_concept": true
+  },
+  {
+   "reply": "Thunderstorms",
+   "names_concept": true
+  },
+  {
+   "reply": "Supercell thunderstorms",
+   "names_concept": false
+  }
+ ]
+}
