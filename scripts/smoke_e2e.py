@@ -113,6 +113,11 @@ def main():
     sys.path.insert(0, str(REPO / "src"))
     import config
     env = {**config._read_dotenv(), **os.environ}
+    # the copy's own src/ would resolve ./models inside the throwaway folder: point it at this checkout's models
+    env.setdefault("MODEL_MAPPER_MODELS", config.MODELS_DIR)
+    # toy scale, so small batches: fits ~6 GB GPUs next to a 1-2B model (batch size doesn't change what is computed)
+    env.setdefault("MODEL_MAPPER_ATLAS_BATCH", "2048")
+    env.setdefault("MODEL_MAPPER_GEN_BATCH", "25")
     env.update(PYTHONIOENCODING="utf-8", MODEL_MAPPER_MODEL=a.model, MODEL=a.model,
                MODEL_MAPPER_CORPUS=str(work / "data" / "toy_corpus.parquet"), CONCEPT_OUT_DIR=str(out),
                RECALL_VARIANT="V3", ANSWER_DISCOVERY="0")

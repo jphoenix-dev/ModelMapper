@@ -167,8 +167,14 @@ After a passed run, it deletes the folder.
   The default models folder is `./models`; set `MODEL_MAPPER_MODELS` to use another.
 - **`Filename too long` or pip `OSError` on Windows.** The clone or `.venv` is in too deep a folder. Re-clone
   somewhere shorter.
-- **Out of GPU memory.** Use a smaller model, or run on CPU with `MODEL_MAPPER_DEVICE=cpu` and
-  `MODEL_MAPPER_DTYPE=float32`.
+- **Out of GPU memory.** The smoke test already uses small batches (`MODEL_MAPPER_ATLAS_BATCH=2048`,
+  `MODEL_MAPPER_GEN_BATCH=25`). If it still runs out:
+  1. halve those values;
+  2. use a smaller model;
+  3. run on CPU with `MODEL_MAPPER_DEVICE=cpu` and `MODEL_MAPPER_DTYPE=float32`.
+
+  Other apps' windows also take GPU memory on Windows laptops, so close what you can. For full-size runs on a small
+  GPU, set the same two batch variables in `.env`.
 - **Other settings** (model folder, device, dtype, endpoints) are all in [.env.example](.env.example).
 
 ## After the check

@@ -182,6 +182,7 @@ Each variable is read from the environment first, then from a gitignored `.env` 
 | `MODEL_MAPPER_CORPUS` | Web-text shard for the atlas, scans and random-snippet controls | `./data/fineweb_000_00000.parquet` |
 | `MODEL_MAPPER_DEVICE` | `cuda`, `cuda:1`, `mps` or `cpu` | CUDA, else Apple MPS, else CPU |
 | `MODEL_MAPPER_DTYPE` | `bfloat16`, `float16` or `float32` (fastest on CPU) | `bfloat16` |
+| `MODEL_MAPPER_ATLAS_BATCH`, `MODEL_MAPPER_GEN_BATCH` | Atlas tokens per pass; steering replies per batch. Lower them on small GPUs | `6144`, `100` |
 | `OPENAI_BASE_URL`, `OAI_MODEL`, `OPENAI_API_KEY` | Labeller endpoint (`src/oai.py`) | OpenAI, `gpt-6-luna` |
 | `JUDGE_BACKEND` | Judge: `jev` or `llm` (`src/jev.py`) | `jev` |
 | `JEV_API_KEY` | Jev judge key (`TYPESAFE_API_KEY` also works) | – |

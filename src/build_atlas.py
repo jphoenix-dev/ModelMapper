@@ -19,12 +19,16 @@ from pathlib import Path
 import numpy as np
 import torch
 
+from config import env
 from neurons import load, mlps, DEVICE, IS_CUDA
 from scan import docs
 
 ROOT = Path(__file__).resolve().parents[1]
 CTX = 1024
-BATCH_TOKENS = 6_144  # bigger batches spill out of the 32 GB card on 8B
+# tokens per forward pass; bigger batches spill out of the 32 GB card on 8B. Smaller ones fit small GPUs: the running
+# top-K over a given set of tokens doesn't depend on batching (only where the run stops can shift by up to one batch).
+# $MODEL_MAPPER_ATLAS_BATCH overrides.
+BATCH_TOKENS = int(env("MODEL_MAPPER_ATLAS_BATCH", "6144"))
 
 name = sys.argv[1]
 n_tokens = int(float(sys.argv[2])) if len(sys.argv) > 2 else 10_000_000
