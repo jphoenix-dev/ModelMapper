@@ -208,7 +208,8 @@ all tokens beats steering only the reply's tokens (known).
 ## Follow-ups this review creates (before or alongside publication)
 1. ~~Lexical control for part sharing (F2)~~: done, survives (0/26 word-form detectors); some shared neurons are
    punctuation-firing, so the claim is worded as "non-lexical".
-2. **Report probability and flip rates with log-odds (F1).** The data is already in the log-odds v2 files.
+2. ~~Report probability and flip rates (F1)~~: done. The top-1 neuron cuts P(answer) 28–40% (≈ Dai et al.'s ~29% with ~4
+   neurons); the top-5 cut it 61–82% and flip 67–84% of correct answers; random 5: no change (RESULTS.md).
 3. **Word changes:** "necessary for recall", not "stores"; "others take over" with the self-repair caveat, not
    "re-routing".
 4. **Read in full before publishing:** Yona et al. 2026 (same model, layer tension), Suau et al. 2022, and the AxBench

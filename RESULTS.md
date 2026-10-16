@@ -1204,3 +1204,17 @@ its top firings (0/26). Two caveats:
 
 **Reading:** the part-sharing result survives the lexical control. Whether every shared neuron carries meaning needs
 a case-by-case look.
+
+**The same knockouts in plain probability** (for comparison with Dai et al. 2022's ~29% drop with ~4 knowledge
+neurons; `results/prob_view.txt`; per-prompt data from the log-odds v2 runs; 90 concept runs):
+
+| run | top-1 neuron off: mean P(answer) | top-5 off | random 5 off | correct prompts flipped (top-5) |
+|---|---|---|---|---|
+| CR completion (11) | 0.567 → 0.348 (−39%) | → 0.104 (−82%) | 0.566 | 78% |
+| CR-2 question (19) | 0.890 → 0.638 (−28%) | → 0.340 (−62%) | 0.891 | 67% |
+| CR-2b question (20) | 0.904 → 0.655 (−28%) | → 0.352 (−61%) | 0.903 | 70% |
+| wave 2 question (40) | 0.845 → 0.508 (−40%) | → 0.183 (−78%) | 0.844 | 84% |
+
+A single measured top neuron gives about the drop Dai et al. report for ~4 neurons. Five neurons remove 61–82% of the
+answer's probability and flip most correct answers, while five random same-layer neurons change nothing (to 3
+decimals).
