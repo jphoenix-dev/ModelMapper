@@ -863,3 +863,23 @@ Same three views as above, on concept runs the measure wasn't developed on. `res
 **Top-10 label cleanliness replicates** (pipeline's original strict rule, either pole clean; census baseline under
 the same rule 58%): CR-2 130/190 = 68%, CR-2b 133/200 = 67%, wave 2 254/400 = 64%. The neurons that carry a concept
 are slightly cleaner than random neurons, consistently across prompt sets and 40 new concepts.
+
+## 16 Oct 2026 (after CR-2): answer discovery as a standard pipeline step (ISSUES #29, #31)
+`FastPipeline.discover_answers`: in V3 the model answers every recall question itself (greedy, unsteered). Luna checks
+which replies name the concept, and recurring accepted wordings become extra answer forms to score. Recall still needs
+P(answer) ≥ MIN_P, so discovery only fixes wording; it can't create recall on its own.
+
+The made-up controls are the safety test, and the first version **failed** it: the fictional Draxwell Bridge
+"recalled" 10/20, because the checker accepted names the model built from the question's clue words ("Zanesville
+Bridge"). With the fixes (canonical name only, clue-word leak rule, ≥ 3 recurrences):
+
+| concept | before discovery (CR-2) | discovery v1 | discovery v2 |
+|---|---|---|---|
+| Sahara Desert (real) | 0/20 | 6/20 | **6/20 recalled** |
+| Elsabeth Quorrin (made up) | not recalled | not recalled | **not recalled** |
+| Mount Velkaran (made up) | not recalled | not recalled | **not recalled** |
+| Draxwell Bridge (made up) | not recalled | **10/20 ✗** | **not recalled** |
+
+What the model says to the made-up ones is informative in itself: confident real neighbours (Huascarán, Salkantay for
+the Peruvian peak; Chomsky, Greenberg for the linguist). It retrieves the nearest real thing rather than inventing a
+name.

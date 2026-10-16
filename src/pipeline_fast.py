@@ -80,6 +80,9 @@ class FastPipeline(Pipeline):
                     for q in spec["recall_v3"]]
             # the answer opens the reply, so Qwen writes it Capitalised and without a leading "the" ("Coffee",
             # "French Revolution"): score each natural form and keep whichever the model actually produces
+            if "answer_forms_extra" not in spec and os.environ.get("ANSWER_DISCOVERY", "1") == "1":
+                spec["answer_forms_extra"], spec["discovered_answers"] = self.discover_answers(spec["answer"].strip(), chat, spec["recall_v3"])
+                (OUT / f"{slug(concept)}_spec.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8")
             a = spec["answer"].strip()
             base = a[4:].strip() if a.lower().startswith("the ") else a
             forms = list(dict.fromkeys([a, a[:1].upper() + a[1:], a.title(), base, base[:1].upper() + base[1:]]
@@ -98,6 +101,33 @@ class FastPipeline(Pipeline):
         self.recall_diag = [{"prompt": q, "p_answer": round(p, 4)} for q, p in cands]
         return spec, tid, recall, controls
 
+
+    def discover_answers(self, name, chat, questions):
+        """ISSUES #29: let the model answer each recall prompt (greedy, unsteered), keep replies Luna says name the
+        concept, and return their most common wordings as extra answer forms (plus every reply and verdict, for audit).
+        A made-up concept should yield no accepted replies, so this cannot manufacture recall by itself: the forms are
+        still scored, and recall still needs P(answer) >= MIN_P on the prompts."""
+        from collections import Counter
+        self.tok.padding_side = "left"
+        ids = self.tok(chat, return_tensors="pt", padding=True).to("cuda")
+        with torch.no_grad():
+            g = self.model.generate(**ids, max_new_tokens=16, do_sample=False, pad_token_id=self.tok.pad_token_id)
+        replies = [self.tok.decode(o[ids.input_ids.shape[1]:], skip_special_tokens=True).strip().split(chr(10))[0].strip().rstrip(".")
+                   for o in g]
+        try:
+            ok = cp.oai.chat_json(
+                f"Target name: {name}{chr(10)}For each numbered reply, is it this specific thing's own name (allowing "
+                f"singular/plural, capitalisation, a well-known synonym or short name)? Say false for a different "
+                f"thing, and false for a generic descriptive name made from place or category words (e.g. 'River X "
+                f"Bridge', 'Town Y Museum') unless that IS the target's established name. "
+                f"Reply JSON {{\"ok\": [true/false, ...]}} in order.{chr(10)}"
+                + chr(10).join(f"{i+1}. {r}" for i, r in enumerate(replies)))["ok"]
+        except Exception:  # noqa: BLE001
+            ok = [False] * len(replies)
+        # a wording whose distinctive words already appear in the questions is echoing the clues, not recall (ISSUES #31)
+        good = [r for r, v in zip(replies, ok) if v and r and sum(leaks(q, r) for q in questions) < 0.3 * len(questions)]
+        # a wording must recur (>= 3 replies): one-off guesses, even if the checker accepts them, are not recall
+        return [f for f, n in Counter(good).most_common(3) if n >= 3], [{"reply": r, "names_concept": bool(v)} for r, v in zip(replies, ok)]
 
     # ---- batched teacher-forced scoring -------------------------------------
     def batch_probs(self, pairs, ctx=None):
