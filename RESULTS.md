@@ -1044,3 +1044,23 @@ setting). R5 = the concept's top-10 neurons whose label names it (simple word ma
   would be cleaner.
 - **Method takeaway for the dial toy:** offer several candidate neuron sets per concept (R1, R2, R4, R5), score each
   on a selection prompt set for named-and-fluent, keep the winner, report held-out. No single rule is best.
+
+**R5b: Luna-judged label matching ("is this neuron *about* X?") instead of word search** (`src/label_match_luna.py`,
+190 Luna calls; steering re-run on the 7 concepts whose set changed, same metric):
+
+| concept | R5 word match | R5b Luna "about" |
+|---|---|---|
+| democracy | 0.75 | 0.65 |
+| the Moon | 0.45 | 0.25 |
+| Mount Everest | 0.35 | 0.10 |
+| Shakespeare | 0.30 | **0.45** |
+| Titanic | 0.25 | 0.00 |
+| French Revolution | 0.10 | 0.05 |
+| Eiffel Tower | 0.00 | 0.05 |
+| **mean** | **0.31** | **0.22** |
+
+**Negative: the stricter, cleaner-looking selection steers worse.** A neuron being precisely "about" the concept
+doesn't predict steering usefulness. The broader word match kept parts that help (Everest's early "mountain" neurons,
+Titanic's L10:1252). Luna also rejected all of Golden Gate's gold/bridge/landmark parts. Only Shakespeare benefits
+(dropping a generic neuron). **Lesson for the dial: choose neuron sets empirically per concept (try several, keep
+the best on selection prompts, report held-out); no labelling heuristic beats measuring.**

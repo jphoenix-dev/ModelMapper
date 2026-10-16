@@ -1,0 +1,10 @@
+label_rule_luna.json: 650 distinct replies, 0 not judged (excluded)
+person                   R5 name-best / fluent-joint-best (setting)
+democracy                1.00 / 0.65 (4, 1.0)
+Eiffel Tower             0.05 / 0.05 (1, 4.0)
+Mount Everest            0.10 / 0.10 (1, 4.0)
+the French Revolution    0.80 / 0.05 (2, 2.0)
+the Moon                 1.00 / 0.25 (2, 0.5)
+the Titanic              0.00 / 0.00 None
+William Shakespeare      0.55 / 0.45 (2, 1.0)
+Jev {'calls': 587, 'input_tokens': 199398}, ~$0.008
