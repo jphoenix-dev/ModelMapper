@@ -4,7 +4,7 @@ A step-by-step guide to installing Model Mapper on a new machine and proving the
 either a person or a coding agent (Claude Code or similar) can follow it top to bottom. Each step ends with a
 **Check**; don't move on until it passes.
 
-**Done looks like:** the smoke test prints `PASS: 5/5 stages` for a Qwen model and for a model from a second family,
+**Done looks like:** the smoke test prints `PASS: 6/6 stages` for a Qwen model and for a model from a second family,
 and you have the short report from step 8.
 
 ## Rules for an agent following this file
@@ -83,7 +83,8 @@ expected.
 ```bash
 python scripts/smoke_e2e.py
 ```
-This runs every pipeline stage at toy scale with Qwen3-0.6B:
+This runs every pipeline stage at toy scale with Qwen3-0.6B. First it checks that the model's files are on disk or
+downloadable, and says why if not. Then:
 1. neuron ranges;
 2. the activation atlas;
 3. blind dossiers;
@@ -93,14 +94,14 @@ This runs every pipeline stage at toy scale with Qwen3-0.6B:
 It downloads Qwen3-0.6B (~1.5 GB) on first use. Typical time: about 5 min on a GPU, 12–20 min on CPU. On CPU, add
 `MODEL_MAPPER_DTYPE=float32` (PowerShell: `$env:MODEL_MAPPER_DTYPE="float32"`) to make it several times faster.
 
-**Check:** the last line starts with `PASS: 5/5 stages`. Copy the whole stage table into the report.
+**Check:** the last line starts with `PASS: 6/6 stages`. Copy the whole stage table into the report.
 
 ## 6. Smoke test, a second model family (no API keys)
 This shows the code isn't tied to Qwen. SmolLM2 uses the Llama architecture and needs no login:
 ```bash
 python scripts/smoke_e2e.py --model HuggingFaceTB/SmolLM2-1.7B-Instruct
 ```
-**Check:** `PASS: 5/5 stages`.
+**Check:** `PASS: 6/6 stages`.
 
 A failure in the last stage that says `the model did not recall it` means this model doesn't know enough of the test
 questions about Paris. That is a limit of the test, not a bug: report it as such.
@@ -129,7 +130,7 @@ settings work, not label quality.
    ```
 3. Run `python scripts/smoke_e2e.py --apis`.
 
-**Check:** `PASS: 7/7 stages`.
+**Check:** `PASS: 8/8 stages`.
 
 ## 8. Report
 Send back this, filled in:
@@ -155,6 +156,10 @@ After a passed run, it deletes the folder.
   - model downloads and API calls (Hugging Face, httpx): `SSL_CERT_FILE=<bundle.pem>` and `REQUESTS_CA_BUNDLE=<bundle.pem>`.
 
   Set all three before running the smoke test.
+- **The "model files reachable" stage fails with 403 and a proxy's block page.** The network blocks huggingface.co
+  by policy, and certificates won't help. Don't try to get around it. Ask whoever runs the network, or copy each
+  model folder (`config.json`, tokenizer files, `*.safetensors`) in from a machine that can download it, into
+  `models/<name>`, if your organisation allows that.
 - **Model download stalls or fails.** Download it explicitly, then point the code at the folder:
   ```bash
   hf download Qwen/Qwen3-0.6B --local-dir models/Qwen3-0.6B

@@ -161,7 +161,7 @@ It checks that each stage writes its outputs, not that the numbers mean anything
 | Setup | What ran |
 |---|---|
 | Windows 10, RTX 5090, Qwen3-8B and Qwen3-0.6B | Every reported result |
-| Windows 10, CPU only, fresh clone and fresh virtual environment, Qwen3-0.6B | Smoke test passed: 5/5 stages, ~12 min |
+| Windows 10, CPU only, fresh clone and fresh virtual environment, Qwen3-0.6B | Smoke test passed: all stages, ~12 min |
 
 Not yet tested: another machine, other model families (e.g. Gemma), Linux or macOS, and the `llm` judge backend
 against a live endpoint.

@@ -51,7 +51,47 @@ def toy_corpus(path: Path):
     return len(docs)
 
 
+HUB_HINTS = {
+    401: "the model is gated or private (accept its licence on huggingface.co, then run `hf auth login`), or the id "
+         "is misspelt: the hub answers 401 for models that don't exist",
+    403: "access denied. For a gated model, accept its licence. Otherwise a network proxy or firewall may be blocking "
+         "huggingface.co; then copy the model folder in from elsewhere (SETUP.md, Troubleshooting)",
+    404: "no such model on the hub: check the id's spelling",
+}
+
+
+def check_model(model: str) -> int:
+    """Is the model on disk, or can its files be downloaded? Says which, with the HTTP status, before any slow stage."""
+    sys.path.insert(0, str(REPO / "src"))
+    from config import MODELS_DIR, model_path
+    if model_path(model) != model or os.path.isdir(model):
+        print(f"local copy: {model_path(model)}")
+        return 0
+    import httpx
+    from huggingface_hub import get_token
+    endpoint = os.environ.get("HF_ENDPOINT", "https://huggingface.co").rstrip("/")
+    url = f"{endpoint}/{model}/resolve/main/config.json"
+    token = get_token()
+    print(f"no local copy in {MODELS_DIR}; checking the hub ({'with' if token else 'without'} a login token)")
+    try:
+        r = httpx.get(url, headers={"Authorization": f"Bearer {token}"} if token else {}, follow_redirects=True,
+                      timeout=30)
+    except httpx.HTTPError as e:
+        print(f"cannot reach {endpoint}: {e!r}\nhint: offline, DNS, or certificate trouble behind a proxy "
+              "(SETUP.md, Troubleshooting)")
+        return 1
+    print(f"GET {url} -> HTTP {r.status_code} (server: {r.headers.get('server', '?')}, "
+          f"x-error-code: {r.headers.get('x-error-code', '-')})")
+    if r.status_code == 200:
+        return 0
+    print("response starts: " + " ".join(r.text[:300].split()))
+    print("hint: " + HUB_HINTS.get(r.status_code, "unexpected status; see the response above"))
+    return 1
+
+
 def main():
+    if len(sys.argv) == 3 and sys.argv[1] == "--check-model":   # internal: run as a stage of its own
+        sys.exit(check_model(sys.argv[2]))
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--model", default="Qwen/Qwen3-0.6B")
     ap.add_argument("--workdir", help="where to put the throwaway copy (default: a new temp folder)")
@@ -111,6 +151,7 @@ def main():
         "import sys, torch, transformers; sys.path.insert(0, 'src'); import neurons, config; "
         "print('python', sys.version.split()[0], '| torch', torch.__version__, '| transformers', transformers.__version__); "
         "print('device', neurons.DEVICE, '| dtype', neurons.DTYPE, '| model', config.DEFAULT_MODEL, '->', config.model_path(config.DEFAULT_MODEL))")])
+    ok = ok and stage("model files reachable", [py, str(Path(__file__).resolve()), "--check-model", a.model])
     ok = ok and stage("neuron ranges (neuron_stats.py)", [py, "-u", "src/neuron_stats.py", a.model, str(a.tokens)],
                       exists(f"data/stats_{short}.pt"))
     ok = ok and stage("atlas (build_atlas.py)", [py, "-u", "src/build_atlas.py", a.model, str(a.tokens), "20"],
