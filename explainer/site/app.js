@@ -30,12 +30,13 @@
     function set(v) { range.value = v; onStep(+v); }
     function tick() {
       timer = null;
-      if (paused || !visible) return;
+      if (paused || !visible || !shown()) return;
       const v = +range.value;
       if (v < max()) { set(v + 1); timer = setTimeout(tick, v + 1 === max() ? o.hold : dwell(v + 1)); }
       else { if (o.onWrap) o.onWrap(); set(0); timer = setTimeout(tick, dwell(0)); }
     }
-    function schedule() { if (!timer && !paused && visible) timer = setTimeout(tick, dwell(+range.value)); }
+    const shown = () => !range.closest("[hidden]");             // a dial in a hidden panel (Fig 3's other mode) stays still
+    function schedule() { if (!timer && !paused && visible && shown()) timer = setTimeout(tick, dwell(+range.value)); }
     function stop() { if (timer) clearTimeout(timer); timer = null; }
     function show() {
       playBtn.textContent = paused ? "▶" : "❚❚";
@@ -171,9 +172,41 @@
     function load(i) {
       ci = i; oi = 0; const t = ++token, c = D.concepts[i];
       $("anyReply").innerHTML = '<span class="loading">Loading…</span>';
-      fetch("data/c/" + c.id + ".json").then((r) => r.json()).then((x) => { if (t !== token) return; cur = x; anyFixed(); anyAuto.restart(); })
+      fetch("data/c/" + c.id + ".json").then((r) => r.json()).then((x) => { if (t !== token) return; cur = x; anyFixed(); anyAuto.restart(); offAuto.restart(); })
         .catch(() => { $("anyReply").textContent = "Couldn't load this concept's data."; });
     }
+
+    /* Figure 3, "Switch it off" mode: the concept's first three recall questions (saved order) with its top neurons
+       set to zero, against random neurons as a control; same data as the chart on the right */
+    let mode = "up", aoi = 0, aControl = false;
+    const plainQ = (q) => { const m = /user\n([\s\S]*?)<\|im_end\|>/.exec(q); return (m ? m[1] : q).replace(/\s*Answer with just the name\.\s*$/, ""); };
+    function anyOffR(step) {
+      if (step != null) aoi = step;
+      if (!cur) return;
+      const ko = cur.knockout, KS3 = [0].concat(ko.curve.map((c) => c.k)), k = KS3[aoi], c = D.concepts[ci];
+      $("anyRows").innerHTML = ko.questions.map((q, i) => {
+        const r = ko.replies[String(i)];
+        const t = k === 0 ? r.top["0"] : (aControl ? r.random : r.top)[String(k)];
+        const p = k === 0 ? ko.baseline_p_per_q[i] : (aControl ? ko.curve[aoi - 1].p_per_q_random : ko.curve[aoi - 1].p_per_q)[i];
+        return `<li><span class="q">${esc(plainQ(q))}</span><span class="a">${highlight(finish(t), c.highlight)}</span><span class="p">${pct(p)}</span></li>`;
+      }).join("");
+      $("anyOffVal").textContent = k;
+      if (mode === "off") knockChart($("anyChart"), ko, 180, k);
+    }
+    $("anyOffDial").max = 6;
+    const offAuto = autoDial($("anyOffDial"), $("anyOffPlay"), anyOffR, { step: 2600, first: 3900, hold: 5200 });
+    $("anyControl").addEventListener("change", (e) => { aControl = e.target.checked; anyOffR(); });
+    function setMode(m) {
+      mode = m;
+      $("modeUp").setAttribute("aria-pressed", String(m === "up"));
+      $("modeOff").setAttribute("aria-pressed", String(m === "off"));
+      $("anyUp").hidden = m !== "up";
+      $("anyOffBox").hidden = m !== "off";
+      if (cur) knockChart($("anyChart"), cur.knockout, 180, m === "off" ? [0].concat(cur.knockout.curve.map((c) => c.k))[aoi] : null);
+      (m === "up" ? anyAuto : offAuto).restart();
+    }
+    $("modeUp").addEventListener("click", () => setMode("up"));
+    $("modeOff").addEventListener("click", () => setMode("off"));
     function anyFixed() {
       const c = D.concepts[ci], ko = cur.knockout;
       const kTxt = ko.k_logodds3 ? `<b>${ko.k_logodds3}</b> neuron${ko.k_logodds3 === 1 ? "" : "s"} off cut the odds of the right answer about 20-fold` : "it takes <b>more than 20</b> neurons off to cut the odds 20-fold";

@@ -69,6 +69,7 @@
   <div class="ctl"><label class="toggle"><input type="checkbox" id="offControl"> Show the control: switch off random neurons instead</label></div>
   <div class="two">
     <div>
+      <p class="qhead"><span>Question, and Qwen's answer</span><span>Chance it's right</span></p>
       <ol class="qrows" id="offRows" aria-live="polite"></ol>
       <div class="dial"><button type="button" class="play" id="offPlay" aria-label="Pause">❚❚</button><label for="offDial">Neurons off</label><input id="offDial" type="range" min="0" max="6" step="1" value="0"><span class="val" id="offVal">0</span></div>
     </div>
@@ -87,19 +88,29 @@
   <div class="ctl"><label class="ask" for="pick" style="margin:0 6px 0 0">Concept</label><select id="pick"></select>
     <button class="chip" id="rand" type="button">Surprise me</button></div>
   <p class="facts" id="anyFacts"></p>
+  <div class="ctl modes" role="group" aria-label="Mode">
+    <button type="button" class="chip" id="modeUp" aria-pressed="true">Turn it up</button>
+    <button type="button" class="chip" id="modeOff" aria-pressed="false">Switch it off</button>
+  </div>
   <div class="two">
-    <div>
+    <div id="anyUp">
       <div class="askrow"><p class="ask">You ask: <strong id="anyAsk"></strong></p>
         <button type="button" class="chip" id="anyNext">Another question</button></div>
       <p class="reply" id="anyReply" aria-live="polite"></p>
       <div class="dial"><button type="button" class="play" id="anyPlay" aria-label="Pause">❚❚</button><label for="anyDial">Dial</label><input id="anyDial" type="range" min="0" max="0" step="1" value="0"><span class="val" id="anyVal">off</span></div>
+    </div>
+    <div id="anyOffBox" hidden>
+      <div class="ctl"><label class="toggle"><input type="checkbox" id="anyControl"> Show the control: switch off random neurons instead</label></div>
+      <p class="qhead"><span>Question, and Qwen's answer</span><span>Chance it's right</span></p>
+      <ol class="qrows" id="anyRows" aria-live="polite"></ol>
+      <div class="dial"><button type="button" class="play" id="anyOffPlay" aria-label="Pause">❚❚</button><label for="anyOffDial">Neurons off</label><input id="anyOffDial" type="range" min="0" max="6" step="1" value="0"><span class="val" id="anyOffVal">0</span></div>
     </div>
     <div>
       <svg id="anyChart" viewBox="0 0 300 180" role="img" aria-label="Knockout curve for the chosen concept"></svg>
       <ul class="writes" id="anyWrites"></ul>
     </div>
   </div>
-  <figcaption data-copy="t25"><b>Figure 3.</b> Every concept we ran, each with the neurons our method picked for it automatically. Left: steering on 8 everyday questions that were not used to pick the neurons. Right: switching off its top neurons, as in Figure 2, and what each steered neuron pushes the model to write next. Concepts that failed are listed at the bottom of the menu with the reason.</figcaption>
+  <figcaption data-copy="t25"><b>Figure 3.</b> Every concept we ran, each with the neurons our method picked for it automatically. <i>Turn it up</i>: steering on 8 everyday questions that were not used to pick the neurons. <i>Switch it off</i>: the concept's first three recall questions with its top neurons set to zero, as in Figure 2, with random neurons as a control. Right: the chance of the right answer as neurons are switched off, averaged over all the concept's questions, and what each steered neuron pushes the model to write next. Concepts that failed are listed at the bottom of the menu with the reason.</figcaption>
 </figure>
 
 <article class="col">
