@@ -840,3 +840,22 @@ the prompts the model got right at baseline). Random: 50 neurons from the same l
 - Corrected count from the first log-odds entry: 15/19 CR-2 concepts (not 11/19) reach a 3-point drop with 1–2 neurons.
 - Same pattern as the census and H-DEPTH: a handful of specific neurons do the work; the most entrenched facts have
   backups.
+
+## 16 Oct 2026 (after CR-2): log-odds v2 out of sample: wave 2 (40 new concepts) and CR-2b (new prompts)
+Same three views as above, on concept runs the measure wasn't developed on. `results/logodds_summary.txt`.
+
+| run | k_mean ≤ 2 | k_mean ≤ 5 | k_median ≤ 5 | k_flip ≤ 5 | k_flip ≤ 10 | random 50, mean drop |
+|---|---|---|---|---|---|---|
+| CR (completion, 11) | 0/11 | 8/11 | 8/11 | 9/11 | 10/11 | −0.01 |
+| CR-2 (question, 19) | 15/19 | 19/19 | 18/19 | 14/19 | 16/19 | −0.01 |
+| CR-2b (question, new prompts, 20) | 18/20 | 20/20 | 20/20 | 16/20 | 17/20 | +0.01 |
+| **wave 2 (question, 40 new concepts)** | **38/40** | **40/40** | **40/40** | **36/40** | 37/40 | +0.04 |
+
+- **Out of sample, the claim holds without exception in question format: 79/79 runs are moved by ≤ 5 neurons**
+  (log-odds drop ≥ 3), 71/79 by 1–2. The median prompt agrees.
+- **Flipping the answer takes ≤ 5 neurons in 66/79 question-format runs.** The holdouts are the near-certain facts
+  (P ≥ 0.96): the Moon, Tokyo, photosynthesis, Venice (CR-2b), DNA, Bitcoin, rainbows. Each needs 20–50 neurons or
+  doesn't flip within 50, consistent with redundant backup routes for the most entrenched facts.
+- Random control: one random neuron happened to matter for poker (0.95 drop; poker's top 5 give 9.5). Every other
+  random set stays ≤ 0.24.
+- Completion format (CR) remains the less concentrated one (8/11 ≤ 5).
