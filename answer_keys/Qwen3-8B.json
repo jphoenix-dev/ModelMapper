@@ -1,0 +1,1404 @@
+{
+ "model": "Qwen/Qwen3-8B",
+ "format": 1,
+ "built": "2026-10-16",
+ "git": "7205ad9",
+ "selection": {
+  "max_rank": 5,
+  "min_drop": 0.1,
+  "sources": [
+   "CR-2: results/concepts_v3",
+   "CR-2b: results/concepts_v3b"
+  ],
+  "rule": "in every prompt set: attribution rank <= max_rank, single-knockout P(answer) drop >= min_drop; label names the concept (keywords.json); best worst-case drop per concept"
+ },
+ "pass_rules": {
+  "tier1": {
+   "what": "shipped prompts: the same measurement should reproduce near-exactly on any machine",
+   "marker_ok": "rank <= rank_factor * key rank + rank_slack and drop >= drop_factor * key drop",
+   "rank_factor": 2,
+   "rank_slack": 3,
+   "drop_factor": 0.5,
+   "pass_fraction": 0.9
+  },
+  "tier2": {
+   "what": "fresh recall prompts written by your labeller",
+   "marker_ok": "rank <= max_rank and drop >= min_drop",
+   "max_rank": 20,
+   "min_drop": 0.03,
+   "pass_fraction": 0.7
+  },
+  "tier3": {
+   "what": "fresh blind labels for the marker neurons, from your own atlas and labeller",
+   "marker_ok": "the recall-pole label contains one of the marker's keywords",
+   "pass_fraction": 0.7
+  }
+ },
+ "markers": [
+  {
+   "concept": "Frida Kahlo",
+   "answer": " Frida Kahlo",
+   "unit": "L31_N10560",
+   "layer": 31,
+   "neuron": 10560,
+   "sign": "neg",
+   "keywords": [
+    "kahlo",
+    "frida",
+    "artist",
+    "artwork",
+    "painting",
+    "visual art",
+    "mexic"
+   ],
+   "job": "This pole is strongest in writing about visual art, artists, and exhibitions, often with historical context. The repeated French-drawings exhibition passage and coverage of artists’ work are especially clear examples.",
+   "label_hits": [
+    "artist",
+    "visual art"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 1,
+     "drop": 0.1574,
+     "baseline_p": 0.705
+    },
+    {
+     "set": "CR-2b",
+     "rank": 1,
+     "drop": 0.1334,
+     "baseline_p": 0.796
+    }
+   ],
+   "spec": {
+    "answer": " Frida Kahlo",
+    "recall": [
+     "The artist who painted a double self-portrait showing two versions of herself seated together was",
+     "The painter whose self-portraits often feature a prominent unibrow was",
+     "The artist born in Coyoacán, a district of Mexico City, was",
+     "The Mexican painter whose work often drew on her experience of pain after a serious bus accident was",
+     "The artist who married the celebrated muralist Diego Rivera was",
+     "The painter whose family home in Coyoacán is now a museum known as the Blue House was",
+     "The artist who represented Mexico at an exhibition of her work in 1953 while resting in a bed was",
+     "The painter who frequently included monkeys and other animals in intimate self-portraits was",
+     "The artist who had a leg amputated late in life and wrote about it in her diary was",
+     "The Mexican artist whose work was exhibited at the Louvre in 1939 was",
+     "The painter whose marriage to a famous muralist was famously turbulent was",
+     "The artist who created many self-portraits while recovering from injuries was",
+     "The painter whose image became an emblem of Mexican popular culture and feminist art was",
+     "The artist whose father was a German-born photographer was",
+     "The painter who spent much of her life in her family home in the Coyoacán district was",
+     "The artist whose paintings combine personal symbolism with Mexican folk-art influences was",
+     "The painter who attended the National Preparatory School in Mexico City before a life-changing accident was",
+     "The artist whose painting The Frame entered the Louvre's collection was",
+     "The Mexican painter whose double self-portrait shows two figures joined by a shared vein was",
+     "The artist whose posthumous reputation made her one of the best-known women painters of the twentieth century was"
+    ],
+    "controls": [
+     {
+      "prompt": "The Mexican muralist who painted Man at the Crossroads and was married to the painter from Coyoacán was",
+      "answer": " Diego Rivera"
+     },
+     {
+      "prompt": "The American modernist painter known for large flower paintings and New Mexico landscapes was",
+      "answer": " Georgia O'Keeffe"
+     },
+     {
+      "prompt": "The Spanish surrealist painter of The Persistence of Memory was",
+      "answer": " Salvador Dalí"
+     },
+     {
+      "prompt": "The Spanish-born Mexican surrealist painter of The Creation of the Birds was",
+      "answer": " Remedios Varo"
+     },
+     {
+      "prompt": "The capital of Japan is",
+      "answer": " Tokyo"
+     },
+     {
+      "prompt": "The chemical symbol for gold is",
+      "answer": " Au"
+     },
+     {
+      "prompt": "The planet known as the Red Planet is",
+      "answer": " Mars"
+     },
+     {
+      "prompt": "The author of Pride and Prejudice was",
+      "answer": " Jane Austen"
+     }
+    ],
+    "recall_v2": [
+     "The artist who painted a double self-portrait showing two versions of herself seated together is known as",
+     "The painter whose self-portraits often feature a prominent unibrow is known as",
+     "The artist born in Coyoacán, a district of Mexico City, is named",
+     "The Mexican painter whose work often drew on her experience of pain after a serious bus accident is known as",
+     "The artist who married the celebrated muralist Diego Rivera is named",
+     "The painter whose family home in Coyoacán is now a museum known as the Blue House is called",
+     "The artist who represented Mexico at an exhibition of her work in 1953 while resting in a bed is known as",
+     "The painter who frequently included monkeys and other animals in intimate self-portraits is known as",
+     "The artist who had a leg amputated late in life and wrote about it in her diary is named",
+     "The Mexican artist whose work was exhibited at the Louvre in 1939 is known as",
+     "The painter whose marriage to a famous muralist was famously turbulent is called",
+     "The artist who created many self-portraits while recovering from injuries is known as",
+     "The painter whose image became an emblem of Mexican popular culture and feminist art is named",
+     "The artist whose father was a German-born photographer is known as",
+     "The painter who spent much of her life in her family home in the Coyoacán district is called",
+     "The artist whose paintings combine personal symbolism with Mexican folk-art influences is known as",
+     "The painter who attended the National Preparatory School in Mexico City before a life-changing accident is named",
+     "The artist whose painting The Frame entered the Louvre's collection is known as",
+     "The Mexican painter whose double self-portrait shows two figures joined by a shared vein is called",
+     "The artist whose posthumous reputation made her one of the best-known women painters of the twentieth century is named"
+    ],
+    "recall_v3": [
+     "Who painted the double self-portrait showing two versions of herself seated together?",
+     "What is the name of the painter whose self-portraits often feature a prominent unibrow?",
+     "What was the name of the artist born in Coyoacán, a district of Mexico City?",
+     "Who was the Mexican painter whose work often drew on her experience of pain after a serious bus accident?",
+     "What was the name of the artist who married the celebrated muralist Diego Rivera?",
+     "Who was the painter whose family home in Coyoacán is now the Blue House museum?",
+     "What was the name of the artist who represented Mexico at an exhibition of her work in 1953 while resting in a bed?",
+     "Who was the painter who frequently included monkeys and other animals in intimate self-portraits?",
+     "What was the name of the artist who had a leg amputated late in life and wrote about it in her diary?",
+     "Who was the Mexican artist whose work was exhibited at the Louvre in 1939?",
+     "What was the name of the painter whose marriage to a famous muralist was famously turbulent?",
+     "Who was the artist who created many self-portraits while recovering from injuries?",
+     "What was the name of the painter whose image became an emblem of Mexican popular culture and feminist art?",
+     "Who was the artist whose father was a German-born photographer?",
+     "What was the name of the painter who spent much of her life in her family home in the Coyoacán district?",
+     "Who was the artist whose paintings combine personal symbolism with Mexican folk-art influences?",
+     "What was the name of the painter who attended the National Preparatory School in Mexico City before a life-changing accident?",
+     "Who was the artist whose painting The Frame entered the Louvre's collection?",
+     "What was the name of the Mexican painter whose double self-portrait shows two figures joined by a shared vein?",
+     "Who was the artist whose posthumous reputation made her one of the best-known women painters of the twentieth century?"
+    ]
+   }
+  },
+  {
+   "concept": "Golden Gate Bridge",
+   "answer": " Golden Gate Bridge",
+   "unit": "L31_N9611",
+   "layer": 31,
+   "neuron": 9611,
+   "sign": "pos",
+   "keywords": [
+    "bridge",
+    "golden gate",
+    "san francisco"
+   ],
+   "job": "The pole tracks the word “bridge” and its compounds or place-name occurrences, including literal crossings (bridges, drawbridge, viaduct) and figurative uses such as “build bridges” or “burn bridges.” Some firings land on neighboring words or only the BR/bridge portion of a name, but the surrounding text still points to the bridge term.",
+   "label_hits": [
+    "bridge"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 4,
+     "drop": 0.3417,
+     "baseline_p": 0.851
+    },
+    {
+     "set": "CR-2b",
+     "rank": 3,
+     "drop": 0.2121,
+     "baseline_p": 0.76
+    }
+   ],
+   "spec": {
+    "answer": " Golden Gate Bridge",
+    "recall": [
+     "The landmark suspension span linking San Francisco with Marin County is the",
+     "The structure spanning the strait at the entrance to San Francisco Bay is the",
+     "Completed in 1937, the celebrated California suspension crossing is the",
+     "The structure designed chiefly by Joseph Strauss to link San Francisco and Marin County is the",
+     "The landmark painted International Orange on San Francisco's waterfront is the",
+     "The iconic California crossing whose towers rise above the Pacific shoreline is the",
+     "One of the most photographed landmarks in California, the suspension crossing is the",
+     "The famous structure carrying U.S. Route 101 north from San Francisco is the",
+     "The name of the landmark crossing visible from Alcatraz Island is the",
+     "The engineering landmark whose main span measures 4,200 feet is the",
+     "The San Francisco structure celebrated with a pedestrian opening day in May 1937 is the",
+     "The landmark at the strait between San Francisco Bay and the Pacific Ocean is the",
+     "The California suspension crossing often disappearing into coastal fog is the",
+     "The steel towers prominent in views from Fort Point belong to the",
+     "The landmark connecting the Presidio with the Marin Headlands is the",
+     "The iconic San Francisco landmark featured in Alfred Hitchcock's Vertigo is the",
+     "The city landmark lit up at night, with cables and towers spanning the water, is the",
+     "The landmark designed in part to accommodate strong winds and earthquakes is the",
+     "San Francisco's most famous route across the strait to Sausalito is the",
+     "The widely recognized California landmark with two tall Art Deco towers is the"
+    ],
+    "controls": [
+     {
+      "prompt": "The New York City suspension crossing linking Manhattan and Brooklyn is the",
+      "answer": " Brooklyn Bridge"
+     },
+     {
+      "prompt": "The London crossing with raising bascules beside the Tower of London is the",
+      "answer": " Tower Bridge"
+     },
+     {
+      "prompt": "The Australian harbor crossing with a famous arch beside the Opera House is the",
+      "answer": " Sydney Harbour Bridge"
+     },
+     {
+      "prompt": "The Michigan crossing connecting the state's two peninsulas is the",
+      "answer": " Mackinac Bridge"
+     },
+     {
+      "prompt": "The largest planet in our solar system is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The author of Hamlet and Macbeth was",
+      "answer": " William Shakespeare"
+     },
+     {
+      "prompt": "The process by which plants use sunlight to make sugars is",
+      "answer": " photosynthesis"
+     },
+     {
+      "prompt": "The river traditionally regarded as the longest in Africa is the",
+      "answer": " Nile"
+     }
+    ],
+    "recall_v2": [
+     "The landmark suspension span linking San Francisco with Marin County is called",
+     "The structure spanning the strait at the entrance to San Francisco Bay is called",
+     "Completed in 1937, the celebrated California suspension crossing is called",
+     "The structure designed chiefly by Joseph Strauss to link San Francisco and Marin County is called",
+     "The landmark painted International Orange on San Francisco's waterfront is called",
+     "The iconic California crossing whose towers rise above the Pacific shoreline is called",
+     "One of the most photographed landmarks in California, the suspension crossing is called",
+     "The famous structure carrying U.S. Route 101 north from San Francisco is called",
+     "The landmark crossing visible from Alcatraz Island is called",
+     "The engineering landmark whose main span measures 4,200 feet is called",
+     "The San Francisco structure celebrated with a pedestrian opening day in May 1937 is called",
+     "The landmark at the strait between San Francisco Bay and the Pacific Ocean is called",
+     "The California suspension crossing often disappearing into coastal fog is called",
+     "The landmark whose steel towers are prominent in views from Fort Point is called",
+     "The landmark connecting the Presidio with the Marin Headlands is called",
+     "The iconic San Francisco landmark featured in Alfred Hitchcock's Vertigo is called",
+     "The city landmark lit up at night, with cables and towers spanning the water, is called",
+     "The landmark designed in part to accommodate strong winds and earthquakes is called",
+     "San Francisco's most famous route across the strait to Sausalito is called",
+     "The widely recognized California landmark with two tall Art Deco towers is called"
+    ],
+    "recall_v3": [
+     "What is the name of the landmark suspension span linking San Francisco with Marin County?",
+     "What is the name of the structure spanning the strait at the entrance to San Francisco Bay?",
+     "What is the name of the celebrated California suspension crossing completed in 1937?",
+     "What is the name of the structure designed chiefly by Joseph Strauss to link San Francisco and Marin County?",
+     "What is the name of the landmark painted International Orange on San Francisco's waterfront?",
+     "What is the name of the iconic California crossing whose towers rise above the Pacific shoreline?",
+     "What is the name of the suspension crossing that is one of California's most photographed landmarks?",
+     "What is the name of the famous structure carrying U.S. Route 101 north from San Francisco?",
+     "What is the name of the landmark crossing visible from Alcatraz Island?",
+     "What is the name of the engineering landmark whose main span measures 4,200 feet?",
+     "What is the name of the San Francisco structure celebrated with a pedestrian opening day in May 1937?",
+     "What is the name of the landmark at the strait between San Francisco Bay and the Pacific Ocean?",
+     "What is the name of the California suspension crossing often disappearing into coastal fog?",
+     "What is the name of the landmark whose steel towers are prominent in views from Fort Point?",
+     "What is the name of the landmark connecting the Presidio with the Marin Headlands?",
+     "What is the name of the iconic San Francisco landmark featured in Alfred Hitchcock's Vertigo?",
+     "What is the name of the city landmark lit up at night, with cables and towers spanning the water?",
+     "What is the name of the landmark designed in part to accommodate strong winds and earthquakes?",
+     "What is the name of San Francisco's most famous route across the strait to Sausalito?",
+     "What is the name of the widely recognized California landmark with two tall Art Deco towers?"
+    ]
+   }
+  },
+  {
+   "concept": "Mount Everest",
+   "answer": " Mount Everest",
+   "unit": "L31_N5148",
+   "layer": 31,
+   "neuron": 5148,
+   "sign": "pos",
+   "keywords": [
+    "everest",
+    "mountain",
+    "himalaya",
+    "summit",
+    "peak"
+   ],
+   "job": "The pole is associated with mountains and mountain-related activity or scenery: named peaks and ranges, climbing or hiking, and descriptions of mountainous landscapes. A few firings occur on nearby words rather than on “mountain” itself, including in biblical passages about Sinai.",
+   "label_hits": [
+    "mountain",
+    "peak"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 2,
+     "drop": 0.3205,
+     "baseline_p": 0.799
+    },
+    {
+     "set": "CR-2b",
+     "rank": 2,
+     "drop": 0.3546,
+     "baseline_p": 0.798
+    }
+   ],
+   "spec": {
+    "answer": " Mount Everest",
+    "recall": [
+     "The Earth's highest summit above mean sea level is",
+     "The Himalayan peak measured at 8,848.86 meters in a 2020 joint announcement is",
+     "The first confirmed ascent of the planet's highest mountain in 1953 reached the top of",
+     "Hillary and Tenzing Norgay made their historic 1953 summit climb on",
+     "The Nepal-China border runs across the summit of",
+     "The world's most famous 8,000-meter climbing objective whose summit is highest above sea level is",
+     "Climbers heading up the Nepalese side often cross the Khumbu Icefall on their way toward",
+     "The South Col route is a standard expedition route to the summit of",
+     "The summit targeted by expeditions trekking through the Khumbu region is",
+     "The peak at the center of Nepal's Sagarmatha National Park is",
+     "Jon Krakauer's account of a deadly 1996 climbing season focuses on expeditions to",
+     "During the 2015 Nepal earthquake, a major avalanche struck the base camp below",
+     "The summit that lies in the so-called death zone, where oxygen is scarce, is",
+     "The world's highest point is located in the Mahalangur Himal subsection of",
+     "The Nepalese-side base camp for summit expeditions sits beneath",
+     "The Himalayan summit approached by expeditions from either Nepal or Tibet is",
+     "The mountain whose summit is Earth's furthest point above sea level, though not from its center, is",
+     "The peak reached by the first successful expedition led by John Hunt was",
+     "The towering Himalayan landmark visible from viewpoints around the Khumbu is",
+     "The peak at the center of the mountaineering mystery surrounding Mallory and Irvine is"
+    ],
+    "controls": [
+     {
+      "prompt": "The world's second-highest mountain above sea level is",
+      "answer": " K2"
+     },
+     {
+      "prompt": "The highest peak in North America is",
+      "answer": " Denali"
+     },
+     {
+      "prompt": "The tallest mountain in Africa is",
+      "answer": " Kilimanjaro"
+     },
+     {
+      "prompt": "The highest mountain outside Asia is",
+      "answer": " Aconcagua"
+     },
+     {
+      "prompt": "The capital of Japan is",
+      "answer": " Tokyo"
+     },
+     {
+      "prompt": "The largest planet in our solar system is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The author of Pride and Prejudice was",
+      "answer": " Jane Austen"
+     },
+     {
+      "prompt": "The river that flows through central London is the",
+      "answer": " Thames"
+     }
+    ],
+    "recall_v2": [
+     "The Earth's highest summit above mean sea level is called",
+     "The Himalayan peak measured at 8,848.86 meters in a 2020 joint announcement is called",
+     "The planet's highest mountain, first confirmed to have been climbed in 1953, is called",
+     "The mountain on which Hillary and Tenzing Norgay made their historic 1953 summit climb is called",
+     "The mountain whose summit the Nepal-China border runs across is called",
+     "The world's most famous 8,000-meter climbing objective, whose summit is highest above sea level, is called",
+     "The mountain climbers approach after often crossing the Khumbu Icefall on its Nepalese side is called",
+     "The mountain whose summit is reached by the standard South Col expedition route is called",
+     "The summit targeted by expeditions trekking through the Khumbu region is called",
+     "The peak at the center of Nepal's Sagarmatha National Park is called",
+     "The mountain that Jon Krakauer's account of a deadly 1996 climbing season focuses on is called",
+     "The mountain below whose base camp a major avalanche struck during the 2015 Nepal earthquake is called",
+     "The summit in the so-called death zone, where oxygen is scarce, is called",
+     "The mountain whose world's-highest point is located in the Mahalangur Himal subsection is called",
+     "The mountain beneath which the Nepalese-side base camp for summit expeditions sits is called",
+     "The Himalayan summit approached by expeditions from either Nepal or Tibet is called",
+     "The mountain whose summit is Earth's furthest point above sea level, though not from its center, is called",
+     "The peak reached by the first successful expedition led by John Hunt is called",
+     "The towering Himalayan landmark visible from viewpoints around the Khumbu is called",
+     "The peak at the center of the mountaineering mystery surrounding Mallory and Irvine is called"
+    ],
+    "recall_v3": [
+     "What is the name of the Earth's highest summit above mean sea level?",
+     "What is the name of the Himalayan peak measured at 8,848.86 meters in a 2020 joint announcement?",
+     "What is the name of the planet's highest mountain, first confirmed to have been climbed in 1953?",
+     "What is the name of the mountain on which Hillary and Tenzing Norgay made their historic 1953 summit climb?",
+     "What is the name of the mountain whose summit the Nepal-China border runs across?",
+     "What is the name of the world's most famous 8,000-meter climbing objective, whose summit is highest above sea level?",
+     "What is the name of the mountain climbers approach after often crossing the Khumbu Icefall on its Nepalese side?",
+     "What is the name of the mountain whose summit is reached by the standard South Col expedition route?",
+     "What is the name of the summit targeted by expeditions trekking through the Khumbu region?",
+     "What is the name of the peak at the center of Nepal's Sagarmatha National Park?",
+     "What is the name of the mountain that Jon Krakauer's account of a deadly 1996 climbing season focuses on?",
+     "What is the name of the mountain below whose base camp a major avalanche struck during the 2015 Nepal earthquake?",
+     "What is the name of the summit in the so-called death zone, where oxygen is scarce?",
+     "What is the name of the mountain whose world's-highest point is located in the Mahalangur Himal subsection?",
+     "What is the name of the mountain beneath which the Nepalese-side base camp for summit expeditions sits?",
+     "What is the name of the Himalayan summit approached by expeditions from either Nepal or Tibet?",
+     "What is the name of the mountain whose summit is Earth's furthest point above sea level, though not from its center?",
+     "What is the name of the peak reached by the first successful expedition led by John Hunt?",
+     "What is the name of the towering Himalayan landmark visible from viewpoints around the Khumbu?",
+     "What is the name of the peak at the center of the mountaineering mystery surrounding Mallory and Irvine?"
+    ]
+   }
+  },
+  {
+   "concept": "Napoleon Bonaparte",
+   "answer": " Napoleon Bonaparte",
+   "unit": "L30_N10870",
+   "layer": 30,
+   "neuron": 10870,
+   "sign": "pos",
+   "keywords": [
+    "napoleon"
+   ],
+   "job": "The firing is associated with historical material about the Napoleonic era, especially the Napoleonic Wars and their 1815 ending: Napoleon’s return, Waterloo, the Hundred Days, and related people and events. Some marked tokens are ordinary words or date digits, but the surrounding text supplies the common topic.",
+   "label_hits": [
+    "napoleon"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 5,
+     "drop": 0.2659,
+     "baseline_p": 0.975
+    },
+    {
+     "set": "CR-2b",
+     "rank": 5,
+     "drop": 0.1684,
+     "baseline_p": 0.932
+    }
+   ],
+   "spec": {
+    "answer": " Napoleon Bonaparte",
+    "recall": [
+     "The Corsican-born French general who became emperor after the Revolution was",
+     "The military leader who seized power in France in the coup of 18 Brumaire was",
+     "The French ruler who sold the Louisiana Territory to the United States was",
+     "The emperor defeated at Waterloo in 1815 was",
+     "The French commander who crowned himself emperor in Notre-Dame Cathedral was",
+     "The leader whose civil code influenced laws across Europe was",
+     "The ruler exiled to the island of Elba after his first abdication was",
+     "The French emperor who returned from exile for the Hundred Days was",
+     "The commander whose invasion of Russia in 1812 ended in disastrous retreat was",
+     "The French leader whose final exile was on the remote island of Saint Helena was",
+     "The general who rose to prominence during the Italian campaigns of the French Revolutionary Wars was",
+     "The ruler who established the First French Empire was",
+     "The French leader whose armies fought the coalition powers across Europe was",
+     "The emperor whose defeat ended the Hundred Days was",
+     "The French military leader born in Ajaccio in 1769 was",
+     "The ruler who reorganized France’s administration and founded the Bank of France was",
+     "The general whose victory at Austerlitz became one of his most celebrated triumphs was",
+     "The French leader who made his brother Joseph king of Spain was",
+     "The emperor whose retreat from Moscow became a lasting symbol of military overreach was",
+     "The French ruler whose tomb lies beneath the dome of Les Invalides in Paris was"
+    ],
+    "controls": [
+     {
+      "prompt": "The British commander who led the coalition forces to victory at Waterloo was",
+      "answer": " Arthur Wellesley"
+     },
+     {
+      "prompt": "The French king known as the Sun King was",
+      "answer": " Louis XIV"
+     },
+     {
+      "prompt": "The Carthaginian general who crossed the Alps with war elephants was",
+      "answer": " Hannibal"
+     },
+     {
+      "prompt": "The Macedonian ruler who conquered a vast empire stretching to India was",
+      "answer": " Alexander the Great"
+     },
+     {
+      "prompt": "The capital city of Japan is",
+      "answer": " Tokyo"
+     },
+     {
+      "prompt": "The largest planet in the Solar System is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The playwright who wrote Hamlet was",
+      "answer": " William Shakespeare"
+     },
+     {
+      "prompt": "The chemical element with the symbol O is",
+      "answer": " oxygen"
+     }
+    ],
+    "recall_v2": [
+     "The Corsican-born French general who became emperor after the Revolution is called",
+     "The military leader who seized power in France in the coup of 18 Brumaire is known as",
+     "The French ruler who sold the Louisiana Territory to the United States is named",
+     "The emperor defeated at Waterloo in 1815 was called",
+     "The French commander who crowned himself emperor in Notre-Dame Cathedral is known as",
+     "The leader whose civil code influenced laws across Europe is called",
+     "The ruler exiled to the island of Elba after his first abdication was named",
+     "The French emperor who returned from exile for the Hundred Days is called",
+     "The commander whose invasion of Russia in 1812 ended in disastrous retreat is known as",
+     "The French leader whose final exile was on the remote island of Saint Helena is called",
+     "The general who rose to prominence during the Italian campaigns of the French Revolutionary Wars is known as",
+     "The ruler who established the First French Empire is called",
+     "The French leader whose armies fought the coalition powers across Europe is known as",
+     "The emperor whose defeat ended the Hundred Days was called",
+     "The French military leader born in Ajaccio in 1769 is named",
+     "The ruler who reorganized France’s administration and founded the Bank of France is called",
+     "The general whose victory at Austerlitz became one of his most celebrated triumphs is known as",
+     "The French leader who made his brother Joseph king of Spain is called",
+     "The emperor whose retreat from Moscow became a lasting symbol of military overreach is known as",
+     "The French ruler whose tomb lies beneath the dome of Les Invalides in Paris is called"
+    ],
+    "recall_v3": [
+     "What was the name of the Corsican-born French general who became emperor after the Revolution?",
+     "What was the name of the military leader who seized power in France in the coup of 18 Brumaire?",
+     "What was the name of the French ruler who sold the Louisiana Territory to the United States?",
+     "What was the name of the emperor defeated at Waterloo in 1815?",
+     "What was the name of the French commander who crowned himself emperor in Notre-Dame Cathedral?",
+     "What was the name of the leader whose civil code influenced laws across Europe?",
+     "What was the name of the ruler exiled to the island of Elba after his first abdication?",
+     "What was the name of the French emperor who returned from exile for the Hundred Days?",
+     "What was the name of the commander whose invasion of Russia in 1812 ended in disastrous retreat?",
+     "What was the name of the French leader whose final exile was on the remote island of Saint Helena?",
+     "What was the name of the general who rose to prominence during the Italian campaigns of the French Revolutionary Wars?",
+     "What was the name of the ruler who established the First French Empire?",
+     "What was the name of the French leader whose armies fought the coalition powers across Europe?",
+     "What was the name of the emperor whose defeat ended the Hundred Days?",
+     "What was the name of the French military leader born in Ajaccio in 1769?",
+     "What was the name of the ruler who reorganized France’s administration and founded the Bank of France?",
+     "What was the name of the general whose victory at Austerlitz became one of his most celebrated triumphs?",
+     "What was the name of the French leader who made his brother Joseph king of Spain?",
+     "What was the name of the emperor whose retreat from Moscow became a lasting symbol of military overreach?",
+     "What was the name of the French ruler whose tomb lies beneath the dome of Les Invalides in Paris?"
+    ]
+   }
+  },
+  {
+   "concept": "Wolfgang Amadeus Mozart",
+   "answer": " Wolfgang Amadeus Mozart",
+   "unit": "L9_N10024",
+   "layer": 9,
+   "neuron": 10024,
+   "sign": "neg",
+   "keywords": [
+    "mozart",
+    "classical",
+    "composer",
+    "opera",
+    "symphon"
+   ],
+   "job": "This pole is associated with classical music and its repertory: composers, concerts, scores, and the catalog or work identifiers used to describe them. The examples range from Bach and Haydn references to concert listings and score-submission guidance.",
+   "label_hits": [
+    "classical",
+    "composer"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 1,
+     "drop": 0.4489,
+     "baseline_p": 0.79
+    },
+    {
+     "set": "CR-2b",
+     "rank": 2,
+     "drop": 0.347,
+     "baseline_p": 0.83
+    }
+   ],
+   "spec": {
+    "answer": " Wolfgang Amadeus Mozart",
+    "recall": [
+     "The child prodigy born in Salzburg who toured European courts in the 1760s was",
+     "A leading composer of the Viennese Classical period, alongside Haydn and Beethoven, was",
+     "The eighteenth-century composer who wrote symphonies, concertos, chamber music, and operas before age 36 was",
+     "The composer of the opera The Marriage of Figaro was",
+     "The composer of the opera Don Giovanni was",
+     "The composer of the opera The Magic Flute was",
+     "The composer whose final major work remained unfinished at his death was",
+     "The musician who played keyboard and violin as a child prodigy was",
+     "The composer who spent much of his adult career in Vienna after leaving Salzburg was",
+     "The composer whose father took him and his sister on performance tours across Europe was",
+     "In the classical music canon, the prolific composer whose works are often organized by Köchel numbers is",
+     "The composer whose works are catalogued with a K. or KV number is",
+     "The composer who wrote many piano concertos for his own public performances in Vienna was",
+     "The Classical-era composer known for a melodic style and a remarkable facility for opera was",
+     "The composer whose unfinished Requiem inspired legends and dramatizations after his early death was",
+     "The composer who died in Vienna in 1791 at age 35 was",
+     "The celebrated keyboard performer who improvised before European royalty as a child was",
+     "The composer who wrote the motet Exsultate, jubilate was",
+     "The composer who created the comic opera The Abduction from the Seraglio was",
+     "The composer whose music is often associated with Salzburg's musical heritage was"
+    ],
+    "controls": [
+     {
+      "prompt": "The German composer who wrote the Ninth Symphony was",
+      "answer": " Ludwig van Beethoven"
+     },
+     {
+      "prompt": "The Baroque composer associated with the Brandenburg Concertos was",
+      "answer": " Johann Sebastian Bach"
+     },
+     {
+      "prompt": "The French composer of the opera Carmen was",
+      "answer": " Georges Bizet"
+     },
+     {
+      "prompt": "The Russian composer who wrote The Nutcracker was",
+      "answer": " Pyotr Ilyich Tchaikovsky"
+     },
+     {
+      "prompt": "The largest planet in the Solar System is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The capital of Japan is",
+      "answer": " Tokyo"
+     },
+     {
+      "prompt": "The river that flows through Egypt and empties into the Mediterranean Sea is the",
+      "answer": " Nile"
+     },
+     {
+      "prompt": "The scientist who formulated the laws of motion was",
+      "answer": " Isaac Newton"
+     }
+    ],
+    "recall_v2": [
+     "The child prodigy born in Salzburg who toured European courts in the 1760s is known as",
+     "The leading composer of the Viennese Classical period, alongside Haydn and Beethoven, is known as",
+     "The eighteenth-century composer who wrote symphonies, concertos, chamber music, and operas before age 36 is known as",
+     "The composer of the opera The Marriage of Figaro is known as",
+     "The composer of the opera Don Giovanni is known as",
+     "The composer of the opera The Magic Flute is known as",
+     "The composer whose final major work remained unfinished at his death is known as",
+     "The musician who played keyboard and violin as a child prodigy is known as",
+     "The composer who spent much of his adult career in Vienna after leaving Salzburg is known as",
+     "The composer whose father took him and his sister on performance tours across Europe is known as",
+     "The prolific composer in the classical music canon whose works are often organized by Köchel numbers is known as",
+     "The composer whose works are catalogued with a K. or KV number is known as",
+     "The composer who wrote many piano concertos for his own public performances in Vienna is known as",
+     "The Classical-era composer known for a melodic style and a remarkable facility for opera is known as",
+     "The composer whose unfinished Requiem inspired legends and dramatizations after his early death is known as",
+     "The composer who died in Vienna in 1791 at age 35 is known as",
+     "The celebrated keyboard performer who improvised before European royalty as a child is known as",
+     "The composer who wrote the motet Exsultate, jubilate is known as",
+     "The composer who created the comic opera The Abduction from the Seraglio is known as",
+     "The composer whose music is often associated with Salzburg's musical heritage is known as"
+    ],
+    "recall_v3": [
+     "What was the name of the child prodigy born in Salzburg who toured European courts in the 1760s?",
+     "Who was the leading composer of the Viennese Classical period alongside Haydn and Beethoven?",
+     "What was the name of the eighteenth-century composer who wrote symphonies, concertos, chamber music, and operas before age 36?",
+     "Who composed the opera The Marriage of Figaro?",
+     "Who composed the opera Don Giovanni?",
+     "Who composed the opera The Magic Flute?",
+     "What was the name of the composer whose final major work remained unfinished at his death?",
+     "What was the name of the musician who played keyboard and violin as a child prodigy?",
+     "Who was the composer who spent much of his adult career in Vienna after leaving Salzburg?",
+     "What was the name of the composer whose father took him and his sister on performance tours across Europe?",
+     "Who was the prolific composer in the classical music canon whose works are often organized by Köchel numbers?",
+     "What was the name of the composer whose works are catalogued with a K. or KV number?",
+     "Who was the composer who wrote many piano concertos for his own public performances in Vienna?",
+     "What was the name of the Classical-era composer known for a melodic style and a remarkable facility for opera?",
+     "Who was the composer whose unfinished Requiem inspired legends and dramatizations after his early death?",
+     "What was the name of the composer who died in Vienna in 1791 at age 35?",
+     "Who was the celebrated keyboard performer who improvised before European royalty as a child?",
+     "Who composed the motet Exsultate, jubilate?",
+     "Who created the comic opera The Abduction from the Seraglio?",
+     "What was the name of the composer whose music is often associated with Salzburg's musical heritage?"
+    ]
+   }
+  },
+  {
+   "concept": "chess",
+   "answer": " chess",
+   "unit": "L8_N7581",
+   "layer": 8,
+   "neuron": 7581,
+   "sign": "neg",
+   "keywords": [
+    "chess"
+   ],
+   "job": "This pole is strongly associated with chess: coverage includes chess news and tournaments, game commentary and terminology, chess variants, and references to well-known players or chess-themed titles. The firing can fall on fragments of names and words as well as explicit chess vocabulary.",
+   "label_hits": [
+    "chess"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 1,
+     "drop": 0.1299,
+     "baseline_p": 0.92
+    },
+    {
+     "set": "CR-2b",
+     "rank": 4,
+     "drop": 0.1374,
+     "baseline_p": 0.939
+    }
+   ],
+   "spec": {
+    "answer": " chess",
+    "recall": [
+     "The classic two-player strategy game played on a checkered square board is",
+     "The tabletop contest often used as a metaphor for political maneuvering is",
+     "The competitive mind sport with world champions and grandmaster rankings is",
+     "The ancient board game that spread from South Asia through Persia and into Europe is",
+     "The game whose standard setup gives each player sixteen pieces is",
+     "The tournament pastime commonly played with a clock and recorded moves is",
+     "The game usually divided into an opening, a middlegame, and an endgame is",
+     "The board game whose moves are often written in algebraic notation is",
+     "The game in which a draw can result from a repeated position or a stalemate is",
+     "The strategy game for which players study opening variations is",
+     "The game in which a player may move two pieces together in a special maneuver to shelter the king is",
+     "The board game where white traditionally makes the first move is",
+     "The ancient strategy game whose early forms developed in India is",
+     "The game in which top competitors can earn an international grandmaster title is",
+     "The pastime played in clubs, schools, parks, and online bullet matches is",
+     "The board game with pawns, rooks, bishops, knights, queens, and kings is",
+     "The strategy game played on a board of sixty-four alternating light and dark squares is",
+     "The game whose famous historical champions include Capablanca and Anand is",
+     "The mind sport in which player strength is often tracked using an Elo rating is",
+     "The game whose strategic battles have inspired countless stories about rival minds is"
+    ],
+    "controls": [
+     {
+      "prompt": "The ancient East Asian territory-control game played with black and white stones is",
+      "answer": " Go"
+     },
+     {
+      "prompt": "The board game in which pieces capture opponents by jumping over them is",
+      "answer": " checkers"
+     },
+     {
+      "prompt": "The Japanese strategy game whose captured pieces can be returned to play is",
+      "answer": " shogi"
+     },
+     {
+      "prompt": "The race-and-bear-off board game played with dice and a set of points is",
+      "answer": " backgammon"
+     },
+     {
+      "prompt": "The largest planet in the solar system is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The capital city of France is",
+      "answer": " Paris"
+     },
+     {
+      "prompt": "The playwright who wrote Hamlet was",
+      "answer": " Shakespeare"
+     },
+     {
+      "prompt": "The chemical symbol for gold is",
+      "answer": " Au"
+     }
+    ],
+    "recall_v2": [
+     "The classic two-player strategy game played on a checkered square board is called",
+     "The tabletop contest often used as a metaphor for political maneuvering is known as",
+     "The competitive mind sport with world champions and grandmaster rankings is called",
+     "The ancient board game that spread from South Asia through Persia and into Europe is named",
+     "The game whose standard setup gives each player sixteen pieces is called",
+     "The tournament pastime commonly played with a clock and recorded moves is known as",
+     "The game usually divided into an opening, a middlegame, and an endgame is called",
+     "The board game whose moves are often written in algebraic notation is called",
+     "The game in which a draw can result from a repeated position or a stalemate is known as",
+     "The strategy game for which players study opening variations is called",
+     "The game in which a player may move two pieces together in a special maneuver to shelter the king is called",
+     "The board game where white traditionally makes the first move is known as",
+     "The ancient strategy game whose early forms developed in India is called",
+     "The game in which top competitors can earn an international grandmaster title is known as",
+     "The pastime played in clubs, schools, parks, and online bullet matches is called",
+     "The board game with pawns, rooks, bishops, knights, queens, and kings is called",
+     "The strategy game played on a board of sixty-four alternating light and dark squares is known as",
+     "The game whose famous historical champions include Capablanca and Anand is called",
+     "The mind sport in which player strength is often tracked using an Elo rating is known as",
+     "The game whose strategic battles have inspired countless stories about rival minds is called"
+    ],
+    "recall_v3": [
+     "What is the name of the classic two-player strategy game played on a checkered square board?",
+     "What is the name of the tabletop contest often used as a metaphor for political maneuvering?",
+     "What is the name of the competitive mind sport with world champions and grandmaster rankings?",
+     "What is the name of the ancient board game that spread from South Asia through Persia and into Europe?",
+     "What is the name of the game whose standard setup gives each player sixteen pieces?",
+     "What is the name of the tournament pastime commonly played with a clock and recorded moves?",
+     "What is the name of the game usually divided into an opening, a middlegame, and an endgame?",
+     "What is the name of the board game whose moves are often written in algebraic notation?",
+     "What is the name of the game in which a draw can result from a repeated position or a stalemate?",
+     "What is the name of the strategy game for which players study opening variations?",
+     "What is the name of the game in which a player may move two pieces together in a special maneuver to shelter the king?",
+     "What is the name of the board game where white traditionally makes the first move?",
+     "What is the name of the ancient strategy game whose early forms developed in India?",
+     "What is the name of the game in which top competitors can earn an international grandmaster title?",
+     "What is the name of the pastime played in clubs, schools, parks, and online bullet matches?",
+     "What is the name of the board game with pawns, rooks, bishops, knights, queens, and kings?",
+     "What is the name of the strategy game played on a board of sixty-four alternating light and dark squares?",
+     "What is the name of the game whose famous historical champions include Capablanca and Anand?",
+     "What is the name of the mind sport in which player strength is often tracked using an Elo rating?",
+     "What is the name of the game whose strategic battles have inspired countless stories about rival minds?"
+    ]
+   }
+  },
+  {
+   "concept": "democracy",
+   "answer": " democracy",
+   "unit": "L31_N11943",
+   "layer": 31,
+   "neuron": 11943,
+   "sign": "neg",
+   "keywords": [
+    "democra"
+   ],
+   "job": "Fires in passages using democracy-related political vocabulary, including democracy, democratic, undemocratic, and Democrat. Some marked tokens are adjacent to rather than part of that vocabulary, but the surrounding examples consistently concern democratic politics or party identity.",
+   "label_hits": [
+    "democra"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 1,
+     "drop": 0.7945,
+     "baseline_p": 0.795
+    },
+    {
+     "set": "CR-2b",
+     "rank": 1,
+     "drop": 0.7912,
+     "baseline_p": 0.803
+    }
+   ],
+   "spec": {
+    "answer": " democracy",
+    "recall": [
+     "In ancient Athens, the system in which eligible citizens voted on public decisions was a form of",
+     "A government whose authority ultimately rests on the consent of its citizens is a",
+     "Political legitimacy based on popular sovereignty is a central principle of",
+     "Universal suffrage is commonly treated as an important feature of",
+     "Competitive elections that allow citizens to replace rulers are a hallmark of",
+     "Town meetings where residents decide policy themselves exemplify direct",
+     "Selecting legislators in free, recurring elections is one mechanism used by representative",
+     "Peaceful transfers of power after elections are often associated with",
+     "The political ideal that all adult citizens have an equal voice in public affairs is",
+     "Checks on rulers and protections for political participation are commonly associated with",
+     "During the 19th century, expanding voting rights helped broaden",
+     "After the fall of military rule, the country began a transition toward",
+     "Citizens influencing public policy through voting and civic participation is characteristic of",
+     "A constitutional system with elected officials accountable to voters can be described as a",
+     "Public debate, pluralism, and voting are features often linked to",
+     "Government by citizens themselves, rather than by hereditary rulers, is often called",
+     "Ancient Greek political thought gave the modern world a term for rule by citizens, known as",
+     "An elected assembly whose authority derives from the electorate is characteristic of",
+     "Election observers assess fair competition and broad political participation when evaluating a country's",
+     "The ability to organize political parties and criticize leaders is protected in a healthy"
+    ],
+    "controls": [
+     {
+      "prompt": "A state ruled by a hereditary king or queen is a",
+      "answer": " monarchy"
+     },
+     {
+      "prompt": "When a small elite holds political power, the system is an",
+      "answer": " oligarchy"
+     },
+     {
+      "prompt": "A regime in which one ruler holds nearly unchecked power is an",
+      "answer": " autocracy"
+     },
+     {
+      "prompt": "A government in which religious authorities wield political power is a",
+      "answer": " theocracy"
+     },
+     {
+      "prompt": "The capital of France is",
+      "answer": " Paris"
+     },
+     {
+      "prompt": "The largest planet in the Solar System is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The author of Hamlet was",
+      "answer": " William Shakespeare"
+     },
+     {
+      "prompt": "The chemical symbol for gold is",
+      "answer": " Au"
+     }
+    ],
+    "recall_v2": [
+     "In ancient Athens, the system in which eligible citizens voted on public decisions was a form of government known as",
+     "A government whose authority ultimately rests on the consent of its citizens is known as",
+     "Political legitimacy based on popular sovereignty is a central principle of the political system known as",
+     "Universal suffrage is commonly treated as an important feature of the political system called",
+     "Competitive elections that allow citizens to replace rulers are a hallmark of the political system known as",
+     "Town meetings where residents decide policy themselves exemplify the direct form of government known as",
+     "Selecting legislators in free, recurring elections is one mechanism used by a representative system of government known as",
+     "Peaceful transfers of power after elections are often associated with the political system known as",
+     "The political ideal that all adult citizens have an equal voice in public affairs is called",
+     "Checks on rulers and protections for political participation are commonly associated with the political system known as",
+     "During the 19th century, expanding voting rights helped broaden the system of government known as",
+     "After the fall of military rule, the country began a transition toward a system of government known as",
+     "Citizens influencing public policy through voting and civic participation is characteristic of the political system called",
+     "A constitutional system with elected officials accountable to voters can be described as a system of government called",
+     "Public debate, pluralism, and voting are features often linked to the political system known as",
+     "Government by citizens themselves, rather than by hereditary rulers, is often called",
+     "Ancient Greek political thought gave the modern world a term for rule by citizens, known as",
+     "An elected assembly whose authority derives from the electorate is characteristic of a political system called",
+     "Election observers assess fair competition and broad political participation when evaluating a country's system of government known as",
+     "The ability to organize political parties and criticize leaders is protected in a healthy political system known as"
+    ],
+    "recall_v3": [
+     "What is the name of the system in ancient Athens where eligible citizens voted on public decisions?",
+     "What is the name for a government whose authority ultimately rests on the consent of its citizens?",
+     "What is the name of the political system whose central principle is legitimacy based on popular sovereignty?",
+     "What is the name of the political system commonly associated with universal suffrage?",
+     "What is the name of the political system marked by competitive elections that let citizens replace rulers?",
+     "What is the name of the political system exemplified by town meetings where residents decide policy themselves?",
+     "What is the name of the political system in which free, recurring elections select legislators to represent citizens?",
+     "What is the name of the political system often associated with peaceful transfers of power after elections?",
+     "What is the name of the political ideal that all adult citizens have an equal voice in public affairs?",
+     "What is the name of the political system commonly associated with checks on rulers and protections for political participation?",
+     "What is the name of the system of government broadened by expanding voting rights during the 19th century?",
+     "What is the name of the system of government a country may transition toward after military rule falls?",
+     "What is the name of the political system characterized by citizens influencing public policy through voting and civic participation?",
+     "What is the name of a constitutional system with elected officials accountable to voters?",
+     "What is the name of the political system often linked to public debate, pluralism, and voting?",
+     "What is the name for government by citizens themselves rather than by hereditary rulers?",
+     "What is the name of the modern term from ancient Greek political thought meaning rule by citizens?",
+     "What is the name of the political system characterized by an elected assembly whose authority derives from the electorate?",
+     "What is the name of the system of government election observers assess by examining fair competition and broad political participation?",
+     "What is the name of the political system that protects the ability to organize political parties and criticize leaders?"
+    ]
+   }
+  },
+  {
+   "concept": "the French Revolution",
+   "answer": " the French Revolution",
+   "unit": "L30_N5534",
+   "layer": 30,
+   "neuron": 5534,
+   "sign": "neg",
+   "keywords": [
+    "french revolution",
+    "revolution"
+   ],
+   "job": "Strongly associated with accounts and interpretations of the French Revolution, including its political upheavals, participants, and later consequences. The firings land on varied words, but the surrounding subject is consistently revolutionary-era history or its legacy.",
+   "label_hits": [
+    "french revolution",
+    "revolution"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 1,
+     "drop": 0.2515,
+     "baseline_p": 0.979
+    },
+    {
+     "set": "CR-2b",
+     "rank": 1,
+     "drop": 0.2014,
+     "baseline_p": 0.979
+    }
+   ],
+   "spec": {
+    "answer": " the French Revolution",
+    "recall": [
+     "The 1789 upheaval that overthrew Louis XVI's monarchy is known as",
+     "The era in which the Bastille was stormed and royal authority collapsed is called",
+     "The political transformation that began amid a fiscal crisis under Louis XVI is remembered as",
+     "The late-eighteenth-century uprising that replaced a Bourbon monarchy with a republic is called",
+     "The period that saw Marie Antoinette executed by guillotine is part of",
+     "The upheaval whose radical phase was dominated by Robespierre and the Committee of Public Safety is known as",
+     "The movement that abolished feudal privileges during the night of August 4, 1789, was part of",
+     "The conflict remembered each July 14 through Bastille Day commemorates",
+     "The period in which the Declaration of the Rights of Man and of the Citizen was adopted began with",
+     "The dramatic political change that eventually elevated Napoleon Bonaparte to power followed",
+     "The historical period that began when the Third Estate declared itself the National Assembly is known as",
+     "The era spanning the fall of the Bastille through Napoleon's rise to power is",
+     "The iconic 1789 uprising in Paris against royal authority is remembered as",
+     "The upheaval that ended centuries of Bourbon rule and reshaped continental politics is known as",
+     "The tumultuous period characterized by the Reign of Terror is called",
+     "The events that turned a financial crisis into the overthrow of an absolute monarchy are known as",
+     "The struggle that popularized the motto “liberty, equality, fraternity” originated in",
+     "The period when the guillotine became a notorious instrument of state executions is associated with",
+     "The transformation that changed the kingdom's political order and inspired later uprisings across Europe is called",
+     "The period in which ordinary citizens, including the sans-culottes, played a decisive role in politics is known as"
+    ],
+    "controls": [
+     {
+      "prompt": "The colonial independence struggle that began in 1775 and ended British rule in the thirteen colonies is known as",
+      "answer": " the American Revolution"
+     },
+     {
+      "prompt": "The uprising led by enslaved people that established the first Black republic in the Caribbean is called",
+      "answer": " the Haitian Revolution"
+     },
+     {
+      "prompt": "The 1917 upheaval that ended the Romanov dynasty is known as",
+      "answer": " the Russian Revolution"
+     },
+     {
+      "prompt": "The 1688 overthrow of James II in England is commonly called",
+      "answer": " the Glorious Revolution"
+     },
+     {
+      "prompt": "The world's highest mountain above sea level is",
+      "answer": " Mount Everest"
+     },
+     {
+      "prompt": "The longest river in Africa is generally identified as",
+      "answer": " the Nile"
+     },
+     {
+      "prompt": "The playwright who wrote Hamlet is",
+      "answer": " William Shakespeare"
+     },
+     {
+      "prompt": "The chemical element with atomic number 8 is",
+      "answer": " oxygen"
+     }
+    ],
+    "recall_v2": [
+     "The 1789 upheaval that overthrew Louis XVI's monarchy is called",
+     "The era in which the Bastille was stormed and royal authority collapsed is known as",
+     "The political transformation that began amid a fiscal crisis under Louis XVI is called",
+     "The late-eighteenth-century uprising that replaced a Bourbon monarchy with a republic is known as",
+     "The period that saw Marie Antoinette executed by guillotine is known as",
+     "The upheaval whose radical phase was dominated by Robespierre and the Committee of Public Safety is called",
+     "The movement that abolished feudal privileges during the night of August 4, 1789, was a defining episode of the upheaval known as",
+     "The conflict remembered each July 14 through Bastille Day is called",
+     "The period in which the Declaration of the Rights of Man and of the Citizen was adopted is known as",
+     "The dramatic political change that eventually elevated Napoleon Bonaparte to power is known as",
+     "The historical period that began when the Third Estate declared itself the National Assembly is called",
+     "The era spanning the fall of the Bastille through Napoleon's rise to power is known as",
+     "The iconic 1789 uprising in Paris against royal authority is called",
+     "The upheaval that ended centuries of Bourbon rule and reshaped continental politics is known as",
+     "The tumultuous period characterized by the Reign of Terror is called",
+     "The events that turned a financial crisis into the overthrow of an absolute monarchy are known collectively as",
+     "The struggle that popularized the motto “liberty, equality, fraternity” originated in the upheaval known as",
+     "The period when the guillotine became a notorious instrument of state executions is associated with the upheaval known as",
+     "The transformation that changed the kingdom's political order and inspired later uprisings across Europe is called",
+     "The period in which ordinary citizens, including the sans-culottes, played a decisive role in politics is known as"
+    ],
+    "recall_v3": [
+     "What is the name of the 1789 upheaval that overthrew Louis XVI's monarchy?",
+     "What is the name of the era in which the Bastille was stormed and royal authority collapsed?",
+     "What is the name of the political transformation that began amid a fiscal crisis under Louis XVI?",
+     "What is the name of the late-eighteenth-century uprising that replaced a Bourbon monarchy with a republic?",
+     "What is the name of the period that saw Marie Antoinette executed by guillotine?",
+     "What is the name of the upheaval whose radical phase was dominated by Robespierre and the Committee of Public Safety?",
+     "What is the name of the upheaval of which the movement abolishing feudal privileges on the night of August 4, 1789, was a part?",
+     "What is the name of the conflict commemorated each July 14 through Bastille Day?",
+     "What is the name of the period in which the Declaration of the Rights of Man and of the Citizen was adopted?",
+     "What is the name of the dramatic political change that eventually elevated Napoleon Bonaparte to power?",
+     "What is the name of the historical period that began when the Third Estate declared itself the National Assembly?",
+     "What is the name of the era spanning the fall of the Bastille through Napoleon's rise to power?",
+     "What is the name of the iconic 1789 uprising in Paris against royal authority?",
+     "What is the name of the upheaval that ended centuries of Bourbon rule and reshaped continental politics?",
+     "What is the name of the tumultuous period characterized by the Reign of Terror?",
+     "What is the name of the events that turned a financial crisis into the overthrow of an absolute monarchy?",
+     "What is the name of the upheaval in which the struggle popularizing the motto “liberty, equality, fraternity” originated?",
+     "What is the name of the upheaval associated with the period when the guillotine became a notorious instrument of state executions?",
+     "What is the name of the transformation that changed the kingdom's political order and inspired later uprisings across Europe?",
+     "What is the name of the period in which ordinary citizens, including the sans-culottes, played a decisive role in politics?"
+    ]
+   }
+  },
+  {
+   "concept": "the Titanic",
+   "answer": " Titanic",
+   "unit": "L30_N10955",
+   "layer": 30,
+   "neuron": 10955,
+   "sign": "neg",
+   "keywords": [
+    "titanic",
+    "ship",
+    "liner",
+    "ocean",
+    "vessel",
+    "cruise"
+   ],
+   "job": "The dominant negative pattern is the ship prefix “USS,” usually before a named vessel in Star Trek material, but also in a real-world Navy news report. The other marked tokens do not appear to share a clear pattern with those examples.",
+   "label_hits": [
+    "ship",
+    "vessel"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 2,
+     "drop": 0.3379,
+     "baseline_p": 0.83
+    },
+    {
+     "set": "CR-2b",
+     "rank": 2,
+     "drop": 0.2922,
+     "baseline_p": 0.879
+    }
+   ],
+   "spec": {
+    "answer": " Titanic",
+    "recall": [
+     "The famous ocean liner that sank on its maiden voyage in 1912 was the",
+     "The passenger ship that struck an iceberg during its first Atlantic crossing was the",
+     "The wreck discovered by Robert Ballard in the North Atlantic in 1985 was the",
+     "The Southampton-to-New York liner that never completed its inaugural voyage was the",
+     "The British passenger liner that went down with insufficient lifeboat capacity was the",
+     "The ship commanded by Edward Smith on its maiden voyage was the",
+     "The Belfast-built liner that was part of the Olympic class was the",
+     "The vessel whose sinking led to major changes in maritime safety regulations was the",
+     "The ship carrying John Jacob Astor IV when it sank was the",
+     "The liner that sent distress signals after hitting an iceberg in April 1912 was the",
+     "The wreck resting roughly 3,800 meters beneath the surface of the North Atlantic is the",
+     "The passenger ship whose last port of call before crossing the Atlantic was Queenstown was the",
+     "The vessel depicted in the 1958 film A Night to Remember was the",
+     "The liner whose sinking inspired the establishment of the International Ice Patrol was the",
+     "The ship that departed Southampton on April 10, 1912, bound for New York was the",
+     "The vessel designed by Harland and Wolff that sank south of Newfoundland was the",
+     "The famous passenger liner whose sinking was recounted in Walter Lord's A Night to Remember was the",
+     "The ship whose passengers included Isidor and Ida Straus during its ill-fated crossing was the",
+     "The ocean liner whose wreck has been explored by crewed submersibles is the",
+     "The shipwreck that became the subject of James Cameron's 1997 historical romance film is the"
+    ],
+    "controls": [
+     {
+      "prompt": "The Cunard liner torpedoed by a German U-boat in 1915 was the",
+      "answer": " Lusitania"
+     },
+     {
+      "prompt": "The sister ship converted into a hospital vessel and sunk in 1916 was the",
+      "answer": " Britannic"
+     },
+     {
+      "prompt": "The Olympic-class liner that completed a long career after launching in 1911 was the",
+      "answer": " Olympic"
+     },
+     {
+      "prompt": "The famous Cunard ocean liner that served as a troopship during World War II was the",
+      "answer": " Queen Mary"
+     },
+     {
+      "prompt": "The largest planet in the solar system is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The artist who painted the ceiling of the Sistine Chapel was",
+      "answer": " Michelangelo"
+     },
+     {
+      "prompt": "The capital city of Japan is",
+      "answer": " Tokyo"
+     },
+     {
+      "prompt": "The author of the novel Moby-Dick was",
+      "answer": " Herman Melville"
+     }
+    ],
+    "recall_v2": [
+     "The famous ocean liner that sank on its maiden voyage in 1912 is called",
+     "The passenger ship that struck an iceberg during its first Atlantic crossing is called",
+     "The wreck discovered by Robert Ballard in the North Atlantic in 1985 is known as",
+     "The Southampton-to-New York liner that never completed its inaugural voyage is called",
+     "The British passenger liner that went down with insufficient lifeboat capacity is called",
+     "The ship commanded by Edward Smith on its maiden voyage is called",
+     "The Belfast-built liner that was part of the Olympic class is called",
+     "The vessel whose sinking led to major changes in maritime safety regulations is called",
+     "The ship carrying John Jacob Astor IV when it sank is called",
+     "The liner that sent distress signals after hitting an iceberg in April 1912 is called",
+     "The wreck resting roughly 3,800 meters beneath the surface of the North Atlantic is known as",
+     "The passenger ship whose last port of call before crossing the Atlantic was Queenstown is called",
+     "The vessel depicted in the 1958 film A Night to Remember is called",
+     "The liner whose sinking inspired the establishment of the International Ice Patrol is called",
+     "The ship that departed Southampton on April 10, 1912, bound for New York is called",
+     "The vessel designed by Harland and Wolff that sank south of Newfoundland is called",
+     "The famous passenger liner whose sinking was recounted in Walter Lord's A Night to Remember is called",
+     "The ship whose passengers included Isidor and Ida Straus during its ill-fated crossing is called",
+     "The ocean liner whose wreck has been explored by crewed submersibles is called",
+     "The shipwreck that became the subject of James Cameron's 1997 historical romance film is called"
+    ],
+    "recall_v3": [
+     "What was the name of the famous ocean liner that sank on its maiden voyage in 1912?",
+     "What was the name of the passenger ship that struck an iceberg during its first Atlantic crossing?",
+     "What was the name of the wreck Robert Ballard discovered in the North Atlantic in 1985?",
+     "What was the name of the Southampton-to-New York liner that never completed its inaugural voyage?",
+     "What was the name of the British passenger liner that went down with insufficient lifeboat capacity?",
+     "What was the name of the ship commanded by Edward Smith on its maiden voyage?",
+     "What was the name of the Belfast-built liner that was part of the Olympic class?",
+     "What was the name of the vessel whose sinking led to major changes in maritime safety regulations?",
+     "What was the name of the ship carrying John Jacob Astor IV when it sank?",
+     "What was the name of the liner that sent distress signals after hitting an iceberg in April 1912?",
+     "What is the name of the wreck resting roughly 3,800 meters beneath the surface of the North Atlantic?",
+     "What was the name of the passenger ship whose last port of call before crossing the Atlantic was Queenstown?",
+     "What was the name of the vessel depicted in the 1958 film A Night to Remember?",
+     "What was the name of the liner whose sinking inspired the establishment of the International Ice Patrol?",
+     "What was the name of the ship that departed Southampton on April 10, 1912, bound for New York?",
+     "What was the name of the vessel designed by Harland and Wolff that sank south of Newfoundland?",
+     "What was the name of the famous passenger liner whose sinking was recounted in Walter Lord's A Night to Remember?",
+     "What was the name of the ship whose passengers included Isidor and Ida Straus during its ill-fated crossing?",
+     "What was the name of the ocean liner whose wreck has been explored by crewed submersibles?",
+     "What was the name of the shipwreck that became the subject of James Cameron's 1997 historical romance film?"
+    ]
+   }
+  },
+  {
+   "concept": "the violin",
+   "answer": " violin",
+   "unit": "L9_N5033",
+   "layer": 9,
+   "neuron": 5033,
+   "sign": "pos",
+   "keywords": [
+    "violin",
+    "orchestra",
+    "classical",
+    "string instrument",
+    "strings"
+   ],
+   "job": "Fires in classical and orchestral music contexts, especially references to string instruments and their players (cello, violin, viola), as well as string-instrument parts, accessories, and repairs. The bassoon example is still an orchestral instrument-player context.",
+   "label_hits": [
+    "violin",
+    "orchestra",
+    "classical",
+    "string instrument"
+   ],
+   "evidence": [
+    {
+     "set": "CR-2",
+     "rank": 1,
+     "drop": 0.2993,
+     "baseline_p": 0.722
+    },
+    {
+     "set": "CR-2b",
+     "rank": 1,
+     "drop": 0.4181,
+     "baseline_p": 0.782
+    }
+   ],
+   "spec": {
+    "answer": " violin",
+    "recall": [
+     "The smallest and highest-pitched standard bowed string instrument in an orchestra is the",
+     "The four-string instrument whose strings are tuned G, D, A, and E from lowest to highest is the",
+     "The orchestral string instrument usually held against the shoulder beneath the player’s chin is the",
+     "The instrument whose highest string is tuned to E is the",
+     "The instrument played by an orchestra’s concertmaster while leading the tuning note is the",
+     "Vivaldi’s concertos known collectively as The Four Seasons were written for the",
+     "Paganini’s famous set of 24 caprices was composed for the",
+     "The instrument Antonio Stradivari became renowned for making is the",
+     "The bowed string instrument for which the city of Cremona became famous as a center of craftsmanship is the",
+     "The instrument with a small wooden body, four strings, and a bow is the",
+     "In a standard string quartet, the instruments playing the two highest parts are each a",
+     "The instrument with a bright, high register that often carries the melody in an orchestral string section is the",
+     "Mendelssohn’s celebrated concerto in E minor was composed for the",
+     "The instrument most closely associated with the virtuoso Jascha Heifetz was the",
+     "Saint-Saëns’s Introduction and Rondo Capriccioso is a showpiece for the",
+     "The instrument featured in Sarasate’s Zigeunerweisen is the",
+     "The bowed instrument commonly used to perform Bach’s sonatas and partitas for solo strings is the",
+     "The orchestral instrument whose open strings are tuned in perfect fifths to G, D, A, and E is the",
+     "The small, high-register bowed instrument that forms the top section of a string orchestra is the",
+     "The instrument often played by a soloist standing at the front of a classical orchestra is the"
+    ],
+    "controls": [
+     {
+      "prompt": "The middle-register bowed string instrument tuned C, G, D, and A is the",
+      "answer": " viola"
+     },
+     {
+      "prompt": "The large bowed string instrument usually played seated and held between the knees is the",
+      "answer": " cello"
+     },
+     {
+      "prompt": "The largest standard bowed instrument in an orchestral string section is the",
+      "answer": " double bass"
+     },
+     {
+      "prompt": "The orchestral string instrument with many strings that are plucked by the player is the",
+      "answer": " harp"
+     },
+     {
+      "prompt": "The largest planet in our solar system is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The river that flows through Egypt and empties into the Mediterranean Sea is the",
+      "answer": " Nile"
+     },
+     {
+      "prompt": "The capital city of Japan is",
+      "answer": " Tokyo"
+     },
+     {
+      "prompt": "The chemical element with atomic number 79 is",
+      "answer": " gold"
+     }
+    ],
+    "recall_v2": [
+     "The smallest and highest-pitched standard bowed string instrument in an orchestra is called",
+     "The four-string instrument whose strings are tuned G, D, A, and E from lowest to highest is called",
+     "The orchestral string instrument usually held against the shoulder beneath the player’s chin is called",
+     "The instrument whose highest string is tuned to E is called",
+     "The instrument played by an orchestra’s concertmaster while leading the tuning note is called",
+     "The instrument for which Vivaldi wrote the concertos known collectively as The Four Seasons is called",
+     "The instrument for which Paganini composed his famous set of 24 caprices is called",
+     "The instrument Antonio Stradivari became renowned for making is called",
+     "The bowed string instrument for which the city of Cremona became famous as a center of craftsmanship is called",
+     "The instrument with a small wooden body, four strings, and a bow is called",
+     "In a standard string quartet, each instrument playing one of the two highest parts is called",
+     "The instrument with a bright, high register that often carries the melody in an orchestral string section is called",
+     "The instrument for which Mendelssohn composed his celebrated concerto in E minor is called",
+     "The instrument most closely associated with the virtuoso Jascha Heifetz is called",
+     "The instrument for which Saint-Saëns’s Introduction and Rondo Capriccioso is a showpiece is called",
+     "The instrument featured in Sarasate’s Zigeunerweisen is called",
+     "The bowed instrument commonly used to perform Bach’s sonatas and partitas for solo strings is called",
+     "The orchestral instrument whose open strings are tuned in perfect fifths to G, D, A, and E is called",
+     "The small, high-register bowed instrument that forms the top section of a string orchestra is called",
+     "The instrument often played by a soloist standing at the front of a classical orchestra is called"
+    ],
+    "recall_v3": [
+     "What is the name of the smallest and highest-pitched standard bowed string instrument in an orchestra?",
+     "What is the name of the four-string instrument whose strings are tuned G, D, A, and E from lowest to highest?",
+     "What is the name of the orchestral string instrument usually held against the shoulder beneath the player’s chin?",
+     "What is the name of the instrument whose highest string is tuned to E?",
+     "What is the name of the instrument played by an orchestra’s concertmaster while leading the tuning note?",
+     "What instrument did Vivaldi write the concertos known collectively as The Four Seasons for?",
+     "What instrument did Paganini compose his famous set of 24 caprices for?",
+     "What is the name of the instrument Antonio Stradivari became renowned for making?",
+     "What is the name of the bowed string instrument for which the city of Cremona became famous as a center of craftsmanship?",
+     "What is the name of the instrument with a small wooden body, four strings, and a bow?",
+     "What instrument plays each of the two highest parts in a standard string quartet?",
+     "What is the name of the instrument with a bright, high register that often carries the melody in an orchestral string section?",
+     "What instrument did Mendelssohn compose his celebrated concerto in E minor for?",
+     "What is the name of the instrument most closely associated with the virtuoso Jascha Heifetz?",
+     "What instrument is featured as a showpiece in Saint-Saëns’s Introduction and Rondo Capriccioso?",
+     "What is the name of the instrument featured in Sarasate’s Zigeunerweisen?",
+     "What is the name of the bowed instrument commonly used to perform Bach’s sonatas and partitas for solo strings?",
+     "What is the name of the orchestral instrument whose open strings are tuned in perfect fifths to G, D, A, and E?",
+     "What is the name of the small, high-register bowed instrument that forms the top section of a string orchestra?",
+     "What is the name of the instrument often played by a soloist standing at the front of a classical orchestra?"
+    ]
+   }
+  }
+ ],
+ "concepts_without_marker": {
+  "Albert Einstein": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Eiffel Tower": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Harry Potter": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Tokyo": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Venice": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "William Shakespeare": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "coffee": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "photosynthesis": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "the Moon": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label"
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "_about": "Job keywords per marker concept (lower-case word stems, matched at word starts). A marker neuron's blind label (written from its top firings on web text, without knowing the concept) must contain one of these. Used both to select markers (scripts/make_answer_key.py) and to check fresh labels (scripts/verify_answer_key.py --tier 3). Honesty note: the Qwen3-8B concepts' keywords were written after reading CR-2's labels; the others before any Qwen3-0.6B labels were seen.",
+ "democracy": [
+  "democra"
+ ],
+ "Mount Everest": [
+  "everest",
+  "mountain",
+  "himalaya",
+  "summit",
+  "peak"
+ ],
+ "the French Revolution": [
+  "french revolution",
+  "revolution"
+ ],
+ "the violin": [
+  "violin",
+  "orchestra",
+  "classical",
+  "string instrument",
+  "strings"
+ ],
+ "Wolfgang Amadeus Mozart": [
+  "mozart",
+  "classical",
+  "composer",
+  "opera",
+  "symphon"
+ ],
+ "Golden Gate Bridge": [
+  "bridge",
+  "golden gate",
+  "san francisco"
+ ],
+ "the Titanic": [
+  "titanic",
+  "ship",
+  "liner",
+  "ocean",
+  "vessel",
+  "cruise"
+ ],
+ "Napoleon Bonaparte": [
+  "napoleon"
+ ],
+ "chess": [
+  "chess"
+ ],
+ "coffee": [
+  "coffee"
+ ],
+ "Frida Kahlo": [
+  "kahlo",
+  "frida",
+  "artist",
+  "artwork",
+  "painting",
+  "visual art",
+  "mexic"
+ ],
+ "the Moon": [
+  "moon",
+  "lunar"
+ ],
+ "William Shakespeare": [
+  "shakespeare",
+  "hamlet",
+  "macbeth"
+ ],
+ "Albert Einstein": [
+  "einstein",
+  "relativity",
+  "physic"
+ ],
+ "Tokyo": [
+  "tokyo",
+  "japan"
+ ],
+ "Venice": [
+  "venice",
+  "venetian",
+  "canal"
+ ],
+ "photosynthesis": [
+  "photosynth",
+  "plant",
+  "chlorophyll"
+ ],
+ "Harry Potter": [
+  "harry potter",
+  "potter",
+  "hogwarts",
+  "wizard"
+ ],
+ "Eiffel Tower": [
+  "eiffel",
+  "paris",
+  "france",
+  "french"
+ ],
+ "Paris": [
+  "paris",
+  "france",
+  "french"
+ ],
+ "London": [
+  "london",
+  "britain",
+  "british",
+  "england",
+  "uk"
+ ],
+ "Japan": [
+  "japan"
+ ],
+ "the Pacific Ocean": [
+  "pacific",
+  "ocean"
+ ],
+ "the Sun": [
+  "sun",
+  "solar"
+ ],
+ "Mars": [
+  "mars",
+  "martian",
+  "planet"
+ ],
+ "Italy": [
+  "ital",
+  "rome"
+ ],
+ "Egypt": [
+  "egypt",
+  "pyramid",
+  "cairo"
+ ],
+ "basketball": [
+  "basketball",
+  "nba"
+ ],
+ "DNA": [
+  "dna",
+  "genetic",
+  "gene",
+  "genom"
+ ],
+ "Bitcoin": [
+  "bitcoin",
+  "crypto",
+  "blockchain"
+ ],
+ "Charles Darwin": [
+  "darwin",
+  "evolution",
+  "natural selection"
+ ]
+}

@@ -74,7 +74,10 @@ class Pipeline:
         self.model, self.tok = load(model_name)
         self.model.requires_grad_(False)
         self.L, self.W = self.model.config.num_hidden_layers, self.model.config.intermediate_size
-        self.stats = torch.load(ROOT / f"data/stats_{model_name.split('/')[-1]}.pt")
+        stats = ROOT / f"data/stats_{model_name.split('/')[-1]}.pt"
+        # each neuron's range on web text: only steering needs it (strength = multiple of its own peak), so recall,
+        # attribution and knockout (e.g. scripts/verify_answer_key.py) run without it. Built by src/neuron_stats.py.
+        self.stats = torch.load(stats) if stats.exists() else None
         self.atlas = None
         self.mode, self.reply_only = mode, reply_only
 
@@ -279,7 +282,12 @@ class Pipeline:
         on, fl = self.judge_detail(replies, concept)
         return sum(x >= 0.5 for x in on) / len(on), sum(x >= 0.5 for x in fl) / len(fl)
 
+    def need_stats(self):
+        if self.stats is None:
+            raise RuntimeError(f"no neuron ranges for {self.model_name}: run src/neuron_stats.py {self.model_name} first")
+
     def steer_edits(self, units, strength, last_act):
+        self.need_stats()
         edits = []
         for l, n in units:
             neg = last_act[l, n].item() < 0          # the sign this neuron takes when the model recalls the concept
@@ -334,6 +342,7 @@ class Pipeline:
         A = self.attribute(rp, tid)
         top, attr, last_act = A["top"], A["attr"], A["last_act"]
         la = last_act.cpu()
+        self.need_stats()
         peak = torch.where(la < 0, self.stats["min"], self.stats["max"]).abs().clamp(min=1e-3)
         frac = la.abs() / peak
 
