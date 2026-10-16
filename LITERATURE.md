@@ -1,8 +1,8 @@
 # Prior work: what we found vs what was already known
 
 *Written 16 Oct 2026 from four parallel literature searches (localisation, neuron description, steering, methods).
-Every source was opened by the searching agent; a separate agent is re-verifying each link, title, author and year
-(status at the bottom). Verdicts are our best reading, not a systematic review; we may have missed work, especially
+Every source was opened by the searching agent and independently re-verified by a second agent: 80/80 exist and
+match (status at the bottom). Verdicts are our best reading, not a systematic review; we may have missed work, especially
 non-English and very recent preprints. We are not specialists in this field.*
 
 **Bottom line.** Most of what we found is **known or partly known**. Several individual facts have direct
@@ -30,8 +30,9 @@ discovered concept neurons or neuron steering.
   ([arXiv 2104.08696](https://arxiv.org/abs/2104.08696)).
 - **The closest precedent, in our own model**: Yona, Barzilay, Karasik & Geva 2026, "Friends and Grandmothers in
   Silico", 7 models **including Qwen3-8B** ([arXiv 2604.01404](https://arxiv.org/abs/2604.01404)). A single "entity
-  cell" can erase or restore recall of an entity, but they find the effect **weaker in Qwen3-8B** and the cells in
-  **early layers (0–5)**.
+  cell" can erase or restore recall of an entity. Their main causal model is Qwen2.5-7B, with Qwen3-8B among the 7;
+  cells "cluster predominantly in early layers" (verified). Per the searching agent, signals are weaker and shifted
+  deeper in models other than Qwen2.5 (not independently re-verified: read before citing).
 - Also: Yu & Ananiadou 2024 ([2312.12141](https://arxiv.org/abs/2312.12141)); neuron-level editing in Qwen3-8B, ACE
   ([2510.07896](https://arxiv.org/abs/2510.07896)).
 - The essay itself already ablates small groups (8–25 neurons; Santa, Lion King) in Qwen3-32B.
@@ -81,7 +82,7 @@ random pairs. Don't claim that all of them are "meaning" parts.
 Three-stage recall is well established:
 - Geva et al. 2023, "Dissecting Recall", [2304.14767](https://arxiv.org/abs/2304.14767);
 - ROME causal tracing, [2202.05262](https://arxiv.org/abs/2202.05262);
-- "Stages of Inference", Lad, Gurnee & Tegmark, [2406.19384](https://arxiv.org/abs/2406.19384);
+- "Stages of Inference", Lad, Lee, Gurnee & Tegmark, [2406.19384](https://arxiv.org/abs/2406.19384);
 - late "say X" features in Lindsey et al. 2025, "Biology of an LLM";
 - late prediction and suppression neurons, Gurnee et al. 2024, [2401.12181](https://arxiv.org/abs/2401.12181);
 - confidence-regulation neurons, Stolfo et al. 2024, [2406.16254](https://arxiv.org/abs/2406.16254).
@@ -158,8 +159,9 @@ census and no prior % figure for any modern model.
 - Gradient attribution even *anti-predicts* single-neuron controllers (Liu 2026, "Leverage Is Not Reach",
   [2606.19831](https://arxiv.org/abs/2606.19831)), consistent with our Shakespeare result.
 
-**Prompt + reply steering.** Herbster et al. 2026 ([2604.08169](https://arxiv.org/abs/2604.08169)) found steering
-all tokens beats steering only the reply's tokens (known).
+**Prompt + reply steering.** Herbster et al. 2026 ([2604.08169](https://arxiv.org/abs/2604.08169)) found steering all
+tokens consistently beats steering only the reply's tokens, in a different setting (malicious-system-prompt
+misalignment, Llama-3.3-70B and Qwen3.6-27B).
 
 **What's ours.**
 - Golden-Gate-style chat steering with 2–6 attribution-chosen raw neurons on a modern instruct model, with a random
@@ -216,6 +218,17 @@ all tokens beats steering only the reply's tokens (known).
    and Macocco et al. 2026 evaluation set-ups.
 5. Drop or re-run C4 under the calibrated rule.
 
-## Citation verification status
-Pending (an independent agent is fetching all 80 links and checking title, authors, year and key claims). Results
-will be recorded here; any citation that fails is removed.
+## Citation verification status (done 16 Oct)
+An independent agent opened all **80** cited sources (69 via the arXiv export API, 4 of those also in full text, 11
+web pages) and checked existence, title, authors, year and each bracketed key claim. **Result: none missing, no
+substantive mismatches, every checked key claim supported.** Nits, fixed or noted:
+- Lad et al. "Stages of Inference" has a second author (Jin Hwa Lee); now added.
+- Voita et al. ("Dead, N-gram, Positional") is arXiv 2023; the 2024 venue (Findings of ACL) isn't shown on the arXiv
+  page, so cite it as arXiv 2023 unless confirmed.
+- The Goodfire essay page shows no publication date; "2026" is inferred from its references.
+- Several arXiv years differ from the cited venue years. That's expected (preprint vs conference), but cite consistently.
+- Several titles were shortened. Use full titles in the bibliography, e.g. Chen et al. "Knowledge Localization: Mission
+  Not Accomplished? Enter Query Localization!", Tan et al. "Analyzing the Generalization and Reliability of Steering
+  Vectors", Pres et al. "Towards Reliable Evaluation of Behavior Steering Interventions in LLMs", Panickssery et al.
+  "Steering Llama 2 via Contrastive Activation Addition", Turner et al. "Steering Language Models With Activation
+  Engineering".

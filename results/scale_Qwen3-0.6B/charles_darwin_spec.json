@@ -99,5 +99,90 @@
   "Who was the English scholar who collected specimens and kept detailed notebooks during a long ocean voyage?",
   "Who was the naturalist whose observations of finches and other island animals helped inspire a theory of adaptation?",
   "Who was the scientist whose account of natural selection was presented alongside a similar proposal by Alfred Russel Wallace?"
+ ],
+ "answer_forms_extra": [
+  "Charles Darwin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Captain James Cook",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "William Turner",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "James Cook",
+   "names_concept": false
+  },
+  {
+   "reply": "Edward H. Hargreaves",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Emma Wedgwood",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Adam Sedgwick",
+   "names_concept": false
+  },
+  {
+   "reply": "António de Torres",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Edward Woolley",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Alfred Russel Wallace",
+   "names_concept": false
+  }
  ]
 }

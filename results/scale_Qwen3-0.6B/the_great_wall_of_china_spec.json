@@ -99,5 +99,88 @@
   "What is the name of the monumental landmark commonly pictured across a rugged northern landscape?",
   "What is the name of the historic defense line with famous sections at Badaling and Mutianyu?",
   "What is the name of the enormous series of fortifications spanning several provinces and regions?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "The name of the monumental defensive barrier is the **Tundra**",
+   "names_concept": false
+  },
+  {
+   "reply": "Fortifications",
+   "names_concept": false
+  },
+  {
+   "reply": "Fortress of the Red Army",
+   "names_concept": false
+  },
+  {
+   "reply": "Northern Watchtowers",
+   "names_concept": false
+  },
+  {
+   "reply": "Beijing",
+   "names_concept": false
+  },
+  {
+   "reply": "Beacon Tower",
+   "names_concept": false
+  },
+  {
+   "reply": "Babylonian city of Eshba",
+   "names_concept": false
+  },
+  {
+   "reply": "Mandai",
+   "names_concept": false
+  },
+  {
+   "reply": "Qin Dynasty",
+   "names_concept": false
+  },
+  {
+   "reply": "Baijutian",
+   "names_concept": false
+  },
+  {
+   "reply": "Beacon route",
+   "names_concept": false
+  },
+  {
+   "reply": "National Monument",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the immense chain of fortifications built in part from rammed earth",
+   "names_concept": false
+  },
+  {
+   "reply": "Balkh",
+   "names_concept": false
+  },
+  {
+   "reply": "Beijing",
+   "names_concept": false
+  },
+  {
+   "reply": "Norwegian fortification",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the monumental chain of defenses is **The Great Wall**",
+   "names_concept": true
+  },
+  {
+   "reply": "Mountains",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the historic defense line with famous sections at Badaling and Mutian",
+   "names_concept": false
+  },
+  {
+   "reply": "Fortifications",
+   "names_concept": false
+  }
  ]
 }

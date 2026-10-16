@@ -99,5 +99,88 @@
   "What approaching storms does the National Weather Service issue watches and warnings for in the United States?",
   "What kind of storms was the 2005 storm that caused catastrophic flooding in New Orleans one of?",
   "What kind of storms do rotating alphabetical name lists help forecasters distinguish individually?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Tropical cyclones in the Atlantic and northeastern Pacific are commonly called **tropical",
+   "names_concept": false
+  },
+  {
+   "reply": "Hurricane storm surge",
+   "names_concept": false
+  },
+  {
+   "reply": "storm surge",
+   "names_concept": false
+  },
+  {
+   "reply": "Tropical cyclones with a calm central eye and a ring of intense thunderstorms",
+   "names_concept": false
+  },
+  {
+   "reply": "Atlantic storms in late summer and early fall include hurricanes",
+   "names_concept": true
+  },
+  {
+   "reply": "Tropical systems called when their names are retired after catastrophic damage in the Atlantic are",
+   "names_concept": false
+  },
+  {
+   "reply": "Gale",
+   "names_concept": false
+  },
+  {
+   "reply": "Galveston storm",
+   "names_concept": false
+  },
+  {
+   "reply": "Tropical storms that can weaken rapidly after moving over land are called **tropical",
+   "names_concept": false
+  },
+  {
+   "reply": "Tornadoes and torrential rain are caused by **low-pressure systems**",
+   "names_concept": false
+  },
+  {
+   "reply": "Coral Storm",
+   "names_concept": false
+  },
+  {
+   "reply": "The storms are called **cyclones**",
+   "names_concept": false
+  },
+  {
+   "reply": "The swirling cloud masses called that often show a distinct eye at their center when viewed",
+   "names_concept": false
+  },
+  {
+   "reply": "tropical cyclones",
+   "names_concept": true
+  },
+  {
+   "reply": "Atlantic storms with sustained winds of at least 74 mph are called **cycl",
+   "names_concept": false
+  },
+  {
+   "reply": "cyclones",
+   "names_concept": false
+  },
+  {
+   "reply": "Hurricane storm surge",
+   "names_concept": false
+  },
+  {
+   "reply": "National Weather Service",
+   "names_concept": false
+  },
+  {
+   "reply": "Hurricane Katrina",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the storm is \"Hurricane\"",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,90 @@
   "What is the name of the forest whose immense river system empties into the Atlantic Ocean?",
   "What is the name of the forest forming a major carbon store across Brazil and neighboring countries?",
   "What is the name of the ecologically vast region sometimes nicknamed the lungs of the Earth?"
+ ],
+ "answer_forms_extra": [
+  "Amazon Forest"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Forest",
+   "names_concept": true
+  },
+  {
+   "reply": "Manaus Forest",
+   "names_concept": false
+  },
+  {
+   "reply": "Madeira",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Forest",
+   "names_concept": true
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Forest",
+   "names_concept": true
+  },
+  {
+   "reply": "Yanomami Forest",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Forest",
+   "names_concept": true
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Manaus Forest",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Basin",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Forest",
+   "names_concept": true
+  },
+  {
+   "reply": "Atlantic Forest",
+   "names_concept": false
+  },
+  {
+   "reply": "Amazon Rainforest",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the ecologically vast region sometimes nicknamed the lungs of the Earth is",
+   "names_concept": false
+  }
  ]
 }

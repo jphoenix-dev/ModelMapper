@@ -99,5 +99,90 @@
   "Who was the pioneering woman whose laboratory notebooks remain radioactive?",
   "What was the name of the woman who shared the 1903 physics Nobel with Pierre and Henri Becquerel?",
   "Who was the 1911 chemistry Nobel laureate recognized for discovering two elements?"
+ ],
+ "answer_forms_extra": [
+  "Marie Curie"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Elżbieta Gajewski",
+   "names_concept": false
+  },
+  {
+   "reply": "Rutherford",
+   "names_concept": false
+  },
+  {
+   "reply": "Marie Curie",
+   "names_concept": true
+  },
+  {
+   "reply": "Léon Blum",
+   "names_concept": false
+  },
+  {
+   "reply": "Sorbonne",
+   "names_concept": false
+  },
+  {
+   "reply": "L. S. Szymanowicz",
+   "names_concept": false
+  },
+  {
+   "reply": "Polonium was discovered by Marie Curie",
+   "names_concept": false
+  },
+  {
+   "reply": "Rutherford",
+   "names_concept": false
+  },
+  {
+   "reply": "Radium was isolated from pitchblende by **Walter Crookes**",
+   "names_concept": false
+  },
+  {
+   "reply": "Irène Joliot-Curie",
+   "names_concept": false
+  },
+  {
+   "reply": "Pierre",
+   "names_concept": false
+  },
+  {
+   "reply": "Marie Curie",
+   "names_concept": true
+  },
+  {
+   "reply": "Jr. H. D. S. S",
+   "names_concept": false
+  },
+  {
+   "reply": "Léon Pasteur",
+   "names_concept": false
+  },
+  {
+   "reply": "Rutherford",
+   "names_concept": false
+  },
+  {
+   "reply": "Henri Becquerel",
+   "names_concept": false
+  },
+  {
+   "reply": "L. E. M",
+   "names_concept": false
+  },
+  {
+   "reply": "Lina M. B",
+   "names_concept": false
+  },
+  {
+   "reply": "Pierre Curie",
+   "names_concept": false
+  },
+  {
+   "reply": "W. F. Rutherford",
+   "names_concept": false
+  }
  ]
 }

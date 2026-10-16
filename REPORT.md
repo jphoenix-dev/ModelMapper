@@ -6,7 +6,7 @@
 > **Status:** draft for review.
 > - Exploratory unless marked pre-registered (CR, CEN, H-DEPTH; see PREREG.md).
 > - Only two small models from one family were tested (Qwen3-8B; Qwen3-0.6B comparison).
-> - Citations are being independently verified (LITERATURE.md).
+> - All 80 citations independently verified (LITERATURE.md).
 
 ## Abstract
 Cammarata's essay *Neural Networks Are Already Clean* (Goodfire, 2026) argues that most individual MLP neurons in a

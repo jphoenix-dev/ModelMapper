@@ -99,5 +99,88 @@
   "What is the name of the high-altitude peak in Peru whose first ascent dates to 1971?",
   "What is the name of the twin-summit mountain in the Peruvian Andes climbed by a Swiss-Peruvian team?",
   "What is the name of the Cordillera Vilcabamba summit sacred to local Quechua people?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Vilcabamba",
+   "names_concept": false
+  },
+  {
+   "reply": "Peruvians Summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Twin-summit peak",
+   "names_concept": false
+  },
+  {
+   "reply": "Vilcabamba Peak",
+   "names_concept": false
+  },
+  {
+   "reply": "Andes Summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": false
+  },
+  {
+   "reply": "Vilcabamba",
+   "names_concept": false
+  },
+  {
+   "reply": "Chaacan",
+   "names_concept": true
+  },
+  {
+   "reply": "Vilcabamba summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Swiss-Peruvian peak",
+   "names_concept": false
+  },
+  {
+   "reply": "Cordillera Vilcabamba",
+   "names_concept": false
+  },
+  {
+   "reply": "Andes",
+   "names_concept": false
+  },
+  {
+   "reply": "Vilcabamba peak",
+   "names_concept": false
+  },
+  {
+   "reply": "Pachamama",
+   "names_concept": false
+  },
+  {
+   "reply": "Cordillera Vilcabamba summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Arenal Peak",
+   "names_concept": false
+  },
+  {
+   "reply": "Cordillera Vilcabamba",
+   "names_concept": false
+  },
+  {
+   "reply": "Aconcagua",
+   "names_concept": false
+  },
+  {
+   "reply": "Summit of the Andes",
+   "names_concept": false
+  },
+  {
+   "reply": "Cordillera Vilcabamba summit",
+   "names_concept": false
+  }
  ]
 }
