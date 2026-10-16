@@ -34,8 +34,8 @@ memory and the driver version from `nvidia-smi`; write "none" if there is no NVI
 Clone into an ordinary folder, for example `C:\Users\<you>\Documents\GitHub` or `~/src`. Avoid deeply nested
 folders: on Windows, pip fails once paths pass 260 characters.
 ```bash
-git clone https://github.com/jphoenix-dev/model-mapper.git
-cd model-mapper
+git clone https://github.com/jphoenix-dev/ModelMapper.git
+cd ModelMapper
 ```
 If you were given a `.bundle` file instead, run `git clone -b release <path>/model-mapper.bundle model-mapper`.
 
