@@ -1113,3 +1113,8 @@ concepts ≥ 0.25: 22 vs 19. **The free score overstates.** It counts word fragm
 Revolution), and partial loops at the end of long replies can pass the repetition check. Biggest gaps: steam engine
 0.50 vs 0.00, periodic table 0.45 vs 0.05, French Revolution 0.40 vs 0.05. **Fine for quick picking in the dial; not
 for reported numbers.** The auto-vs-default comparison is being re-judged with Jev on both sides.
+
+**Auto vs default, Jev on both sides** (default's held-out replies regenerated, greedy so identical to the scale
+run; Jev lenient on-topic AND fluent; $0.03 total): **auto 0.161 vs default 0.087** over 59 concepts. Auto better in
+31, worse in 7, tied in 21. **The doubling holds under the real judge** (~1.85×). The free score inflated both sides'
+levels but not the comparison.

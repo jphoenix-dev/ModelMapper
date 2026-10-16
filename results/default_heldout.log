@@ -1,0 +1,61 @@
+W1016 05:20:08.963000 28532 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/399 [00:00<00:04, 79.05it/s]Loading weights:   5%|▍         | 18/399 [00:00<00:07, 50.84it/s]Loading weights:   6%|▌         | 24/399 [00:00<00:10, 37.37it/s]Loading weights:   8%|▊         | 31/399 [00:00<00:09, 39.09it/s]Loading weights:  11%|█         | 43/399 [00:00<00:06, 56.76it/s]Loading weights:  13%|█▎        | 50/399 [00:00<00:05, 59.35it/s]Loading weights:  15%|█▍        | 59/399 [00:01<00:05, 62.05it/s]Loading weights:  18%|█▊        | 70/399 [00:01<00:04, 68.87it/s]Loading weights:  20%|█▉        | 79/399 [00:01<00:04, 69.71it/s]Loading weights:  22%|██▏       | 89/399 [00:01<00:04, 76.87it/s]Loading weights:  25%|██▍       | 99/399 [00:01<00:04, 70.83it/s]Loading weights:  28%|██▊       | 111/399 [00:01<00:03, 72.63it/s]Loading weights:  30%|███       | 120/399 [00:01<00:03, 76.16it/s]Loading weights:  33%|███▎      | 130/399 [00:01<00:03, 78.66it/s]Loading weights:  35%|███▍      | 139/399 [00:02<00:03, 68.71it/s]Loading weights:  38%|███▊      | 151/399 [00:02<00:03, 73.42it/s]Loading weights:  41%|████      | 164/399 [00:02<00:02, 82.57it/s]Loading weights:  43%|████▎     | 173/399 [00:02<00:02, 80.21it/s]Loading weights:  46%|████▌     | 182/399 [00:02<00:02, 77.02it/s]Loading weights:  48%|████▊     | 190/399 [00:02<00:02, 76.52it/s]Loading weights:  50%|████▉     | 199/399 [00:02<00:02, 78.78it/s]Loading weights:  52%|█████▏    | 208/399 [00:03<00:02, 73.28it/s]Loading weights:  55%|█████▌    | 220/399 [00:03<00:02, 77.66it/s]Loading weights:  58%|█████▊    | 230/399 [00:03<00:02, 69.47it/s]Loading weights:  61%|██████    | 243/399 [00:03<00:02, 71.54it/s]Loading weights:  63%|██████▎   | 253/399 [00:03<00:01, 74.28it/s]Loading weights:  66%|██████▋   | 265/399 [00:03<00:01, 82.80it/s]Loading weights:  69%|██████▊   | 274/399 [00:03<00:01, 80.72it/s]Loading weights:  71%|███████   | 283/399 [00:03<00:01, 80.43it/s]Loading weights:  73%|███████▎  | 292/399 [00:04<00:01, 73.39it/s]Loading weights:  75%|███████▌  | 300/399 [00:04<00:01, 74.91it/s]Loading weights:  77%|███████▋  | 309/399 [00:04<00:01, 72.01it/s]Loading weights:  80%|███████▉  | 319/399 [00:04<00:01, 66.91it/s]Loading weights:  83%|████████▎ | 331/399 [00:04<00:00, 75.20it/s]Loading weights:  85%|████████▍ | 339/399 [00:04<00:00, 68.52it/s]Loading weights:  88%|████████▊ | 351/399 [00:04<00:00, 72.61it/s]Loading weights:  91%|█████████ | 364/399 [00:05<00:00, 76.29it/s]Loading weights:  94%|█████████▎| 374/399 [00:05<00:00, 70.53it/s]Loading weights:  96%|█████████▌| 382/399 [00:05<00:00, 71.35it/s]Loading weights:  98%|█████████▊| 390/399 [00:05<00:00, 71.54it/s]Loading weights: 100%|██████████| 399/399 [00:05<00:00, 72.20it/s]
+concepts_v3/Albert Einstein
+concepts_v3/chess
+concepts_v3/coffee
+concepts_v3/democracy
+concepts_v3/Eiffel Tower
+concepts_v3/Frida Kahlo
+concepts_v3/Golden Gate Bridge
+concepts_v3/Harry Potter
+concepts_v3/Mount Everest
+concepts_v3/Napoleon Bonaparte
+concepts_v3/photosynthesis
+concepts_v3/the French Revolution
+concepts_v3/the Moon
+concepts_v3/the Titanic
+concepts_v3/the violin
+concepts_v3/Tokyo
+concepts_v3/Venice
+concepts_v3/William Shakespeare
+concepts_v3/Wolfgang Amadeus Mozart
+concepts_w2/ballet
+concepts_w2/basketball
+concepts_w2/Bitcoin
+concepts_w2/black holes
+concepts_w2/Charles Darwin
+concepts_w2/chocolate
+concepts_w2/DNA
+concepts_w2/Egypt's pyramids
+concepts_w2/evolution by natural selection
+concepts_w2/football (soccer)
+concepts_w2/haiku
+concepts_w2/hurricanes
+concepts_w2/infinity
+concepts_w2/insomnia
+concepts_w2/jazz
+concepts_w2/jealousy
+concepts_w2/justice
+concepts_w2/Marie Curie
+concepts_w2/nostalgia
+concepts_w2/pizza
+concepts_w2/poker
+concepts_w2/rainbows
+concepts_w2/sushi
+concepts_w2/the Amazon rainforest
+concepts_w2/the brain
+concepts_w2/the elephant
+concepts_w2/the Great Wall of China
+concepts_w2/the heart
+concepts_w2/the honeybee
+concepts_w2/the internet
+concepts_w2/the Mona Lisa
+concepts_w2/the octopus
+concepts_w2/the Olympic Games
+concepts_w2/the penguin
+concepts_w2/the periodic table
+concepts_w2/the printing press
+concepts_w2/the steam engine
+concepts_w2/vaccines
+concepts_w2/volcanoes
+concepts_w2/wine
