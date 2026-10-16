@@ -7,6 +7,7 @@ Interactive (type at the prompt):
   n <k>              how many neurons (default 4)
   strength <x>       multiple of each neuron's own peak (default 1.0; 0 = off). Fluency usually breaks above ~2-3
   mode <add|clamp>   add = nudge on top of natural activity (default, gentler); clamp = force the value
+  prompt <on|off>    also steer while the model reads your message (stronger, more takeover-like; default off)
   show               list the chosen neurons (layer:index, attribution rank)
   auto               try R1/R2/R4 x 2/4 neurons x 0.5-2x on 6 practice prompts; keep the setting whose replies most
                      often name the concept AND pass a free local fluency check (src/fluency_proxy.py, ~89% agreement
@@ -14,7 +15,7 @@ Interactive (type at the prompt):
   <anything else>    is sent as a chat message; you get the unsteered reply and the steered reply side by side
   quit
 
-Steering is reply-only (the question is read normally). Greedy decoding, so the same input gives the same output.
+Steering is reply-only by default (the question is read normally); `prompt on` also steers the reading. Greedy decoding, so the same input gives the same output.
 Usage: python src/dial.py
 """
 import os
@@ -116,7 +117,8 @@ def main():
         print("  runners-up: " + ", ".join(f"{r} n={k} x{v} {sc:.0%}" for sc, r, k, v in results[1:4]))
     while True:
         try:
-            line = input(f"[{st['concept'] or 'no concept'} | {st['rule']} n={st['n']} x{st['strength']} {pipe.mode}] > ").strip()
+            line = input(f"[{st['concept'] or 'no concept'} | {st['rule']} n={st['n']} x{st['strength']} {pipe.mode}"
+                         f"{'' if pipe.reply_only else ' +prompt'}] > ").strip()
         except (EOFError, KeyboardInterrupt):
             break
         if not line:
@@ -135,6 +137,8 @@ def main():
                 st["strength"] = float(arg)
             elif cmd == "mode" and arg.strip() in ("add", "clamp"):
                 pipe.mode = arg.strip()
+            elif cmd == "prompt" and arg.strip() in ("on", "off"):
+                pipe.reply_only = arg.strip() == "off"
             elif cmd == "auto":
                 if st["concept"] is None:
                     print("  set a concept first:  concept coffee")
