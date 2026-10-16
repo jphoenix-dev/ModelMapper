@@ -1,0 +1,71 @@
+{
+ "note": "CR-3 concepts (PREREG CR-3), picked by src/cr3_pick.py before any CR-3 run.",
+ "concepts": {
+  "animals": [
+   "lion",
+   "tiger",
+   "giraffe",
+   "zebra"
+  ],
+  "food_drink": [
+   "hamburger",
+   "French fries",
+   "pasta",
+   "tacos"
+  ],
+  "places": [
+   "London",
+   "Rome",
+   "Sydney",
+   "Los Angeles"
+  ],
+  "science": [
+   "the Big Bang",
+   "the water cycle",
+   "the greenhouse effect",
+   "plate tectonics"
+  ],
+  "technology": [
+   "radio",
+   "television",
+   "camera",
+   "refrigerator"
+  ],
+  "arts": [
+   "The Starry Night",
+   "The Scream",
+   "The Thinker",
+   "The Last Supper"
+  ],
+  "sport_games": [
+   "baseball",
+   "golf",
+   "volleyball",
+   "rugby"
+  ],
+  "abstract": [
+   "curiosity",
+   "patience",
+   "gratitude",
+   "hope"
+  ],
+  "history": [
+   "The American Revolution",
+   "The Industrial Revolution",
+   "The Black Death",
+   "The Battle of Waterloo"
+  ],
+  "people": [
+   "Cleopatra",
+   "Abraham Lincoln",
+   "Mahatma Gandhi",
+   "Martin Luther King Jr."
+  ],
+  "made_up_controls": [
+   "Mount Terenva (a 5,486 m summit in Chile’s Serranías de Lumbre, first climbed in 1968 and known for its red volcanic cliffs and hanging glacier).",
+   "Dr. Nima Vey (a materials scientist born in 1979 in Tbilisi, who led the 2014 development of a heat-resistant ceramic coating at the Ardan Institute in Georgia).",
+   "The Orlen Reach Bridge (a 1.8 km cable-stayed bridge across the Veyra Estuary near Port Selen, opened in 2006 and known for its twin curved pylons).",
+   "Lantern Tide Festival (an annual three-night spring celebration in the coastal town of Merrowick, held since 1987 and known for its hand-built floating lanterns)."
+  ]
+ }
+}

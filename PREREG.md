@@ -236,40 +236,62 @@ recalled concepts reach joint nudgeability ≥ 0.25 with random ≤ 0.05.
 **Additional:** recall succeeds (≥ 5/20 prompts) for ≥ 16/20 real concepts, including ≥ 4/5 people; the 3 realistic
 made-up concepts fail recall (< 5/20). If a made-up concept passes, the prompts leak or the model confabulates; report it.
 
-## Experiment CR-3: confirmatory replication with tonight's repaired method (DRAFT, written 16 Oct ~04:20; NOT frozen; awaiting James)
+## Experiment CR-3: confirmatory replication of the repaired method (FROZEN before any CR-3 data; approved by James 16 Oct)
 
-**Why:** tonight's results (log-odds concentration, steering by rule, people) are exploratory. The method was changed
-while looking at the data. CR-3 freezes the method and predictions first, then runs on **concepts never used before**.
+*Replaces the 04:20 draft (kept in git history). Approved by James ("not to tweak CR-3 ... a proper test"). Frozen by
+the commit that adds this section together with `prompts/concepts_cr3.json`, before any CR-3 model run.*
 
-**Concepts (fixed before running):** 40 new real concepts, 4 per category, the same 10 categories as wave 2 but
-different items, chosen by Luna from a prompt that excludes every concept used so far (67 with saved prompt files as of writing, made-up controls included). Also 4 made-up controls
-(realistic fact sheets) and 20 for a person-specific arm (10 people, 10 non-people matched by category). The list is
-committed before any model run.
+**Why.** Tonight's findings are exploratory: the method changed while we looked at the data. CR-3 runs the final method
+unchanged on concepts never used before, with pass/fail written now.
 
-**Method (frozen):**
-- Recall: V3 question format + answer discovery (canonical-name checker, clue-word leak rule, ≥ 2 recurrences).
-  Recalled = P(answer) ≥ MIN_P on ≥ 5 of 20 prompts.
-- Concentration: measured single-ablation order over the top-200 attributed; k_mean, k_median, k_flip on log-odds
-  (`logodds_check.py` v2). Random same-layer control.
-- Steering: candidate sets R1, R2, R4 and R5 (label-matched with a Luna "is this neuron about X?" check);
-  add mode, reply-only, 2/4/6 neurons × 0.5–2×. **Selection** on the original 20 neutral prompts; the winner
-  re-scored on 20 **held-out** neutral prompts (and person-friendly held-out prompts for people). Joint = on-topic
-  (lenient Jev and strict Jev reported) AND fluent.
-- Labels: label_batch + rubric re-grade; calibrated bars from the spliced-dossier calibration.
+**Concepts.**
+- 40 real concepts, 4 in each of 10 categories, plus 4 realistic made-up concepts (new fact sheets, not
+  the earlier three).
+- Chosen by `src/cr3_pick.py`: Luna proposes candidates per category excluding every concept with a saved prompt
+  file; the script keeps the first 4 per category in Luna's order that don't collide with a used concept. No human
+  or agent picks among them.
+- One category is people (4 people); the pipeline gives people person-friendly neutral prompts.
+- The list is committed with this section.
 
-**Predictions (pass/fail written now):**
-- **P1 recall:** ≥ 90% of real concepts recalled; 0/4 made-up.
-- **P2 concentration:** ≥ 90% of recalled concepts reach a mean log-odds drop ≥ 3 with ≤ 5 neurons; random 50
-  neurons mean drop < 0.5.
-- **P3 flips:** ≥ 70% flip on half their correct prompts with ≤ 5 neurons; the exceptions have higher baseline
-  log-odds than the rest (one-sided Mann–Whitney, p < 0.05).
-- **P4 steering (held-out, lenient joint):** mean of per-concept winners ≥ 0.20; random < 0.05; the winner beats R1
-  held-out in ≥ 50% of concepts where they differ.
-- **P5 people:** on person-friendly held-out prompts, people's mean fluent joint ≥ 0.20 and within 0.15 of matched
-  non-people on their own held-out prompts.
-- **P6 labels:** top-10 neurons' clean rate (calibrated rule) exceeds the census rate.
+**Method (frozen; exactly `src/wave_free.py` at this commit, Qwen3-8B, bf16, greedy).**
+- **Recall.** V3 question format; answer discovery on (canonical-name check, clue-word leak rule, ≥ 2
+  recurrences). Leak filter with generic category words exempt (#32). Recalled = P(answer) ≥ MIN_P on ≥ 5 of 20.
+- **Concentration.**
+  - Top 200 attributed neurons, re-ranked by measured single-neuron knockout.
+  - k_mean / k_median: fewest neurons whose knockout lowers mean / median answer log-odds by ≥ 3.
+  - k_flip: fewest neurons that push P < 0.5 on ≥ half the prompts the model got right.
+  - Random control: same-layer random neurons, k = 1…50.
+- **Steering.**
+  - Candidates: R1 / R2 / R4 × 2/4 neurons × 0.5/1/1.5/2 × peak, add mode, reply-only.
+  - Selected on the 20 original neutral prompts (people: friendly prompts 1–10); scored on 20 held-out neutral
+    prompts (people: friendly prompts 11–20).
+  - Score = a distinctive answer word appears AND the free fluency check passes.
+  - Compared against the fixed default (R1, 4 neurons, 1×) and random neurons (4, 2×).
+- **Jev calibration (small).** Jev (lenient on-topic + fluent) judges the held-out replies of the auto-selected and
+  default settings for 10 recalled concepts drawn at random (seed 3), ~400 calls. This checks the free score's
+  direction; it is not a pass/fail input except for P4b.
 
-**Known weaknesses (stated in advance):** Luna both writes prompts and labels; Jev near the end of its budget (P4/P5
-need ~25k short calls ≈ $0.5–1); the 20-prompt cells carry ± 0.1 noise; the made-up controls are only 4.
+**Predictions (pass/fail).**
+- **P1 recall:** ≥ 90% of the 40 real concepts recalled; 0/4 made-up recalled.
+- **P2 concentration:** ≥ 90% of recalled concepts have k_mean ≤ 5; ≥ 80% have k_median ≤ 5; the random 50-neuron
+  mean drop is < 0.5 for ≥ 95% of concepts.
+- **P3 flips:**
+  - P3a: ≥ 70% of recalled concepts have k_flip ≤ 5.
+  - P3b: concepts with k_flip > 5 (or none within 50) have higher baseline log-odds than the rest (one-sided
+    Mann–Whitney p < 0.05). Not testable if fewer than 3 such concepts; reported as such.
+- **P4 steering:**
+  - P4a: mean held-out score of the auto-selected setting ≥ 1.5× the fixed default's, and random < 0.05.
+  - P4b: in the Jev calibration sample, auto's mean Jev joint ≥ default's.
+- **P5 people:** the people category's mean held-out score (friendly prompts) is > 0 and below the non-people mean.
 
-**Cost estimate:** GPU ~2–3 h; Luna ~1k calls; Jev ~$0.5–1 (fits the remaining balance only if it's ≥ ~$1.5).
+**Analysis.** `src/cr3_score.py`, written before the data and committed with this section, prints each prediction
+as PASS / FAIL / NOT TESTABLE. Every outcome is reported; no re-runs except to fix a crash (logged in ISSUES).
+
+**Known weaknesses.**
+- Luna writes prompts and judges discovered answers.
+- The steering score is a proxy (validated vs Jev: 88.7% per reply, r = 0.65 per concept; it inflates levels).
+- 20-prompt cells carry ±0.1 noise.
+- One model.
+- No labelling or census prediction: this pipeline doesn't label neurons.
+
+**Cost.** ~85 min GPU; ~150 Luna calls; ~400 Jev calls (~$0.02).
