@@ -1506,3 +1506,31 @@ products, regression-tested against the earlier run to 4 decimals; `src/feeders_
 - **Bug caught on the way:** the first 59-concept run did nothing. It loaded the model and exited, because the
   concept-list builder passed a bash-style path to Windows Python. It is now run with Windows paths and an empty-list
   guard.
+
+**What each team head carries, across 50 concepts** (`src/route_sources.py` with TEAM_HEADS,
+`src/team_sources_summary.py`, `results/team_sources_summary.txt`). For each concept's strongest active concept
+neuron in layers ≥ 30, each team head's push into it is split exactly by source position into question words,
+formatting tokens and the fixed suffix. Value-vector reconstruction is checked per head and prompt (< 2%).
+
+| head | median net push | question share | format share | words most often carried |
+|---|---|---|---|---|
+| L23H10 | +3.18 | **0.92** | 0.08 | specific clue fragments |
+| L26H17 | +1.63 | **0.85** | 0.14 | **category words:** name, scientist, landmark, animal, game, beverage, system, monument |
+| L24H16 | +0.98 | 0.82 | 0.18 | clues (beverage, Atlantic, gravity, photo) |
+| L26H20 | +1.82 | 0.80 | 0.20 | clues (electric, morning, voting, beverage) |
+| L24H19 | +2.22 | 0.75 | 0.25 | category words (scientist, sport, beverage, light, gravity) |
+| L27H29 | +1.62 | 0.54 | 0.45 | mixed (scientist, physicist, landmark, city) |
+| L29H24 / L29H27 / L30H17 | +0.5 to +2.3 | 0.26–0.37 | 0.63–0.74 | mostly format |
+| L28H4 / L28H6 | +1.8 each | 0.11–0.16 | **0.84–0.89** | format-driven **accelerators** |
+| **L28H7** | **−3.27** | 0.08 | **0.92** | format-driven **brake** |
+| L25H14 | −1.01 | 0.03 | **0.97** | format-driven brake |
+
+- **Two separate roles:**
+  - **Meaning carriers (layers 23–26)** bring the question's category and clue words to the answer position.
+    L26H17 is a "category reader".
+  - **Content-blind gain control (layers 28–30)** is driven by formatting tokens, not by what was asked. Layer 28 has
+    a push–pull trio, H4 and H6 up and H7 down, whose net roughly cancels (+1.8 + 1.8 − 3.3).
+- The fixed suffix "Answer with just the name." contributes ~0 to every head.
+- **Working interpretation (untested):** the layer-28 trio is a dial for *how strongly* to express whatever concept is
+  forming, not *which* concept. A causal check would switch the brake (L28H7) off and look for raised, or
+  over-confident, answers.
