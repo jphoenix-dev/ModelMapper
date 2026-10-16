@@ -1,0 +1,13 @@
+{"note": "Coverage wave 2 (exploratory, V3 recall). Categories chosen to fill gaps in CR/CR-2: animals, food/drink, sport, science, technology, emotion/abstract, body/medicine, art/music forms, natural phenomena, more places and people. Fixed before running.",
+ "concepts": {
+  "animals": ["the elephant", "the octopus", "the honeybee", "the penguin"],
+  "food_drink": ["sushi", "chocolate", "pizza", "wine"],
+  "sport_games": ["football (soccer)", "the Olympic Games", "basketball", "poker"],
+  "science": ["DNA", "black holes", "evolution by natural selection", "the periodic table"],
+  "technology": ["the internet", "the steam engine", "the printing press", "Bitcoin"],
+  "emotion_abstract": ["jealousy", "nostalgia", "justice", "infinity"],
+  "body_medicine": ["the heart", "vaccines", "insomnia", "the brain"],
+  "art_music": ["jazz", "the Mona Lisa", "ballet", "haiku"],
+  "nature": ["volcanoes", "rainbows", "hurricanes", "the Amazon rainforest"],
+  "places_people": ["the Great Wall of China", "Egypt's pyramids", "Marie Curie", "Charles Darwin"]
+ }}
