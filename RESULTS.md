@@ -722,3 +722,27 @@ Two views, both true:
 
 Caveat being checked: a mean of per-prompt drops can be carried by one or two collapsing prompts. A re-run with the
 per-prompt median, and with "fewest neurons that flip the answer on half the prompts", is queued (`*_v2`).
+
+## 16 Oct 2026 (after CR-2): steering-neuron selection rules, reply-only (the proper comparison; ISSUES #11, #28)
+Same as the first run, but steering the reply only, as in CR/CR-2. 19 recalled CR-2 concepts.
+
+| rule | mean best joint | (prompt+reply run) | ≥ 0.5 | ≥ 0.25 | people (6) | per-concept wins (ties shared) |
+|---|---|---|---|---|---|---|
+| R1 late-layer attribution (frozen rule) | 0.21 | 0.26 | 3 | 7 | 0.03 | 3 |
+| R2 attribution, any layer | 0.24 | 0.34 | 4 | 8 | 0.05 | 6 |
+| R3 measured single-ablation effect | 0.25 | 0.32 | 2 | 11 | 0.12 | 9 |
+| R4 "says the answer" | 0.24 | 0.30 | 4 | 9 | 0.06 | 10 |
+| random | 0.01 | 0.01 | 0 | 0 | 0.01 | – |
+
+- **Reproducibility:** R1 here vs CR-2 (identical rule and mode): mean |difference| 0.013, max 0.05. Steering
+  measurements repeat.
+- **Rules barely differ on average** (0.21–0.25). With 20 prompts per cell, one concept's score has a standard error
+  of ~0.1, so these gaps are within noise. Per concept they do differ (Venice R4 0.55 vs R2 0.05; Titanic R2 0.35 vs
+  0); best-of-4 averages 0.34, inflated by picking a max. The held-out re-test decides whether those per-concept
+  preferences are real.
+- **People stay hard:** best is R3 at 0.12, almost all of it Shakespeare 0.25. The prompt+reply run's Harry Potter
+  0.50 drops to 0.15 reply-only.
+- **Steering the prompt too is consistently stronger** (+0.05–0.10 for every rule). Golden-Gate-Claude style
+  demos would likely steer every token; we have been measuring the harder reply-only version.
+- The first run's "the layer cut-off was costing us" largely came from prompt steering. Reply-only, R2 gains only
+  +0.03 over R1.

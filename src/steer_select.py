@@ -49,10 +49,10 @@ def main():
     reply_only = os.environ.get("REPLY_ONLY", "1") == "1"
     pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=reply_only)
     print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
-    name = "steer_select.json" if reply_only else "steer_select_promptsteer.json"
+    out_name = "steer_select.json" if reply_only else "steer_select_promptsteer.json"
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
     out = {}
-    for concept in sys.argv[1:]:
+    for concept in [c.strip() for c in sys.argv[1:]]:      # shell captures on Windows can carry a trailing CR
         spec, tid, recall, controls = pipe.make_prompts(concept)
         if len(recall) < 5:
             print(f"{concept}: not recalled, skipped", flush=True); continue
@@ -81,7 +81,7 @@ def main():
         res["random"] = {"joint": round(rj, 3)}
         out[concept] = res
         print(f"{concept:<24} " + " | ".join(f"{k} {v['joint']:.2f}" for k, v in res.items()), flush=True)
-        (cp.OUT / name).write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+        (cp.OUT / out_name).write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 if __name__ == "__main__":

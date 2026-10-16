@@ -1,0 +1,9 @@
+19 concepts, reply-only
+R1_late_attr     mean 0.21 (prompt+reply run 0.26) >=0.5: 3 >=0.25: 7 people 0.03
+R2_all_attr      mean 0.24 (prompt+reply run 0.34) >=0.5: 4 >=0.25: 8 people 0.05
+R3_measured      mean 0.25 (prompt+reply run 0.32) >=0.5: 2 >=0.25: 11 people 0.12
+R4_says_answer   mean 0.24 (prompt+reply run 0.30) >=0.5: 4 >=0.25: 9 people 0.06
+random           mean 0.01 (prompt+reply run 0.01) >=0.5: 0 >=0.25: 0 people 0.01
+R1 vs CR-2 (same rule, same mode): mean |diff| 0.013, max 0.05, signed mean -0.003
+best-of-4 mean 0.34 (inflated by picking a max)
+wins (ties count for each): {'R1_late_attr': 3, 'R2_all_attr': 6, 'R3_measured': 9, 'R4_says_answer': 10}
