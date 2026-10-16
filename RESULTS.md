@@ -1425,3 +1425,33 @@ Not yet tested:
 - **Causation:** this decomposition is exact arithmetic about one forward pass, not a causal test. Next: cut only
   specific head → neuron routes.
 - **What the feeding heads carry, and from which words.**
+
+**Causal test of head → neuron routes** (`src/route_cut.py`, `results/concepts_v3/route_cut_v3.json`). For each
+concept's entry neuron, at the answer position, we removed only the contribution of its top-5 positive feeding heads
+to that one neuron's inputs; those heads still write everywhere else. The normalisation scale is held at its
+unmodified value. Compared with random-head routes, with switching the neuron off, and with switching the 5 heads off
+entirely. Recall = log-odds drop of the answer's first token.
+
+| concept (entry neuron) | neuron: base → route cut | recall drop: route cut | random routes | neuron off | heads fully off (neuron) |
+|---|---|---|---|---|---|
+| coffee (L29:2750) | 65.8 → 21.2 | **0.71** | 0.02 | 0.92 | 0.36 (40.3) |
+| Golden Gate (L28:6711) | 56.4 → 27.5 | **0.42** | 0.02 | 1.20 | 1.81 (31.9) |
+| Eiffel (L26:11492) | 27.0 → 8.7 | **0.38** | −0.02 | 0.64 | 0.21 (10.2) |
+| the Moon (L31:9683) | 119.2 → 75.1 | **0.91** | 0.06 | 3.05 | 2.27 (83.0) |
+| Mozart (L30:8885) | 48.3 → 38.8 | **0.33** | −0.04 | 2.39 | 1.01 (42.6) |
+
+- **The specific head → neuron links are causal for recall.** Cutting only these routes lowers the neuron by 20–70%
+  and recall by 0.33–0.91 log-odds; random routes do nothing (|drop| ≤ 0.06).
+- **How much of the neuron's effect flows through these routes varies:** coffee 77%, Eiffel 59%, Golden Gate 35%, the
+  Moon 30%, Mozart 14% (route cut ÷ neuron off).
+- **Whole-head knockout can understate a head's role.** For coffee and Eiffel, switching the 5 heads off entirely
+  lowers recall less than cutting only their route into the neuron, and the neuron recovers more (coffee 40.3 vs 21.2).
+  The likely cause is the normalisation step: removing whole heads shrinks the residual, normalisation rescales the
+  remaining inputs upward, and the neuron partly recovers. That is a known self-repair mechanism (Rushing & Nanda 2024
+  attribute ~30% of self-repair to normalisation scaling). It plausibly explains why knockout-ranked heads and
+  feeding heads differ (finding 4 above).
+- **Caveats:**
+  - Five concepts.
+  - The cut is at the answer position only.
+  - First answer token only.
+  - The normalisation-scale explanation is inferred, not separately tested.
