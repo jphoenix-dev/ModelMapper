@@ -5,6 +5,9 @@ a concept depends on, tests how few are enough, labels neurons with one LLM and 
 steers the model with them. Every stage has controls. The code runs on one consumer GPU, and the model, the
 labeller and the judge are all configurable ([Use it on another model](#use-it-on-another-model-or-endpoint)).
 
+> **Installing it?** Follow [SETUP.md](SETUP.md). It is a step-by-step install and self-check that a person or a
+> coding agent can follow ("clone this repo and follow SETUP.md"). It ends with a short report of what passed.
+
 Its first use, and everything reported below, is an independent, roughly 24-hour test of Nick Cammarata's essay
 [*Neural Networks Are Already Clean*](https://already-clean.goodfire.com/) (Goodfire, 2026). It was run on one
 consumer GPU, with an AI agent doing the experimental work under human direction.
@@ -104,6 +107,7 @@ The full account is in [MORNING.md](MORNING.md) (summary), [RESULTS.md](RESULTS.
 | [CAPS.md](CAPS.md) | Every cap or truncation in the code, and why |
 | [LITERATURE.md](LITERATURE.md) | Related work, with what is known vs new |
 | [GLOSSARY.md](GLOSSARY.md) | Plain-language glossary of the ML and measurement terms |
+| [SETUP.md](SETUP.md) | Install and self-check, step by step (for people and coding agents) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | How the pipeline and code are organised |
 | [HANDOVER.md](HANDOVER.md), [PLAN.md](PLAN.md), [ESSAY_NOTES.md](ESSAY_NOTES.md), [LABELLING.md](LABELLING.md) | Original brief, plan, essay notes, labelling protocol |
 
@@ -123,6 +127,7 @@ The full account is in [MORNING.md](MORNING.md) (summary), [RESULTS.md](RESULTS.
 ## Reproduce
 
 ### Setup
+The short version is below; [SETUP.md](SETUP.md) has the full walk-through, with checks and troubleshooting.
 ```bash
 python -m venv .venv
 source .venv/bin/activate          # Windows (Git Bash): source .venv/Scripts/activate
