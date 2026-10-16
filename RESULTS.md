@@ -1392,3 +1392,36 @@ activation of its top-10 concept neurons is read at the answer position, against
   concept neurons a few layers later assemble the answer. Many routes carry the information, so no single set of five
   heads is essential for most concepts.
 - **Not done:** path patching (cutting only the head → neuron route), which would show *what* message each head carries.
+
+**Attention study, deeper: who feeds each concept neuron?** (`src/feeders.py`, `src/feeders_summary.py`,
+`results/feeders_summary.txt`). An exact decomposition of each concept neuron's input at the answer position into its
+sources: the token embedding, every earlier head (36 × 32) and every earlier MLP neuron. It treats the per-token
+normalisation scale as fixed. Six concepts (Golden Gate, Eiffel Tower, coffee, Mozart, the Moon, Marie Curie), their
+top-5 neurons, every recall prompt.
+- **Checks:** the sources reproduce the neuron's input to within 0.9% in every concept, and the model's own gate and
+  value inputs to within bf16 rounding.
+- First-order contributions sum to ~2× the activation (the neuron multiplies two inputs), so read them as shares.
+
+Findings (exploratory, 6 concepts):
+1. **Entry neurons are fed mainly by attention.** The first concept neuron in each chain gets most of its input from
+   heads: Eiffel L26:11492 71%, the Moon L20:2258 74%, coffee L29:2750 59%, Golden Gate L28:6711 52%, Curie L28:5740
+   52%.
+2. **Later concept neurons are fed mainly by the concept's own earlier neurons (a chain).**
+   - The Moon: L31:9683 supplies ~100% of L32:6316's net input and 70% of L33:2482's.
+   - Golden Gate: L28:6711 supplies 48% of L31:9611 (via L26:11492 → L28:6711 → L31:9611 → L34:5510).
+   - Eiffel: L26:11492 supplies 40% of L29:12094.
+3. **A recurring "feeding team" of mid-late heads serves many concepts.**
+   - L26H17 feeds Golden Gate, Eiffel, coffee, the Moon and Mozart.
+   - L24H19 feeds Golden Gate, Eiffel, coffee and Curie.
+   - L28H4 and L28H6 push the entry neurons up.
+   - **L28H7 consistently pushes them down** (−9 to −12), like a regulator next to the accelerators.
+   - L24H26 and L23H10 also feed (Mozart, Curie, Eiffel).
+4. **Feeding heads are mostly not the knockout-important heads:** 0–3 of each neuron's top-8 feeders appear in the
+   knockout top 10. The knockout-important shared heads (L20H9, L19H29, L35H25) barely feed these neurons, so they
+   presumably act through other routes (e.g. more directly towards the answer). That is why knockout alone couldn't
+   show the head → neuron relationship.
+
+Not yet tested:
+- **Causation:** this decomposition is exact arithmetic about one forward pass, not a causal test. Next: cut only
+  specific head → neuron routes.
+- **What the feeding heads carry, and from which words.**
