@@ -22,8 +22,7 @@ model builds concepts out of such neurons. We tested this on **Qwen3-8B** (36 la
 
 ## Headline results (Qwen3-8B)
 
-The full account is in [REPORT.md](REPORT.md) (the write-up), [RESULTS.md](RESULTS.md) (chronological log) and
-[MORNING.md](MORNING.md) (a snapshot summary written the morning after the overnight runs).
+The full account is in [REPORT.md](REPORT.md) (the write-up) and [RESULTS.md](RESULTS.md) (chronological log).
 
 **1. Recall depends on a handful of neurons.**
 - Switching off at most 5 neurons lowers the answer's log-odds by ≥ 3 (odds ~20× lower) in **157/158**
@@ -115,7 +114,6 @@ The full account is in [REPORT.md](REPORT.md) (the write-up), [RESULTS.md](RESUL
 
 | File | What it is |
 |---|---|
-| [MORNING.md](MORNING.md) | Snapshot summary from the morning after the overnight runs (before CR-3 and the size comparison) |
 | [REPORT.md](REPORT.md) | Start here: the technical write-up |
 | [RESULTS.md](RESULTS.md) | Chronological results log, every experiment with its numbers |
 | [PREREG.md](PREREG.md) | Pre-registrations (CR, CEN, H-DEPTH, draft CR-3) and change log |
@@ -125,14 +123,14 @@ The full account is in [REPORT.md](REPORT.md) (the write-up), [RESULTS.md](RESUL
 | [GLOSSARY.md](GLOSSARY.md) | Plain-language glossary of the ML and measurement terms |
 | [SETUP.md](SETUP.md) | Install and self-check, step by step (for people and coding agents) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | How the pipeline and code are organised |
-| [HANDOVER.md](HANDOVER.md), [PLAN.md](PLAN.md), [ESSAY_NOTES.md](ESSAY_NOTES.md), [LABELLING.md](LABELLING.md) | Original brief, plan, essay notes, labelling protocol |
+| [LABELLING.md](LABELLING.md) | The blind-labelling protocol |
 
 ## Hardware and cost
 
 - One NVIDIA RTX 5090 (32 GB) in a Windows 10 desktop. Qwen3-8B runs in bf16. The code also runs on Linux.
 - Total wall-clock: about one day.
 - The atlas pass (10M tokens through Qwen3-8B) takes ~44 min. A concept-pipeline run takes ~45 s per concept.
-- API spend: roughly $6–6.5 of Jev and a few dollars of Luna (MORNING.md, "Spend").
+- API spend: roughly $6–6.5 of Jev and a few dollars of Luna.
 
 **External models used as tools (all swappable; see below):**
 - The **labeller**, "Luna" (OpenAI, `gpt-6-luna`), writes neuron labels and recall prompts.
@@ -247,7 +245,6 @@ Each variable is read from the environment first, then from a gitignored `.env` 
 | `JUDGE_BACKEND` | Judge: `jev` or `llm` (`src/jev.py`) | `jev` |
 | `JEV_API_KEY` | Jev judge key (`TYPESAFE_API_KEY` also works) | – |
 | `JUDGE_BASE_URL`, `JUDGE_MODEL`, `JUDGE_API_KEY`, `JUDGE_EXTRA_BODY` | Judge endpoint when `JUDGE_BACKEND=llm` | OpenAI |
-| `PYTHON` | Interpreter used by `scripts/*.sh` | `.venv` python, else `python` |
 
 ### Main pipelines
 All scripts run from the repo root. Large derived data (the atlas, neuron ranges) goes to the gitignored `data/`
@@ -279,7 +276,7 @@ CONCEPT_OUT_DIR=results/concepts_w3 python src/wave_free.py prompts/concepts_wav
 python src/dial.py
 ```
 
-The exact commands behind each result are in RESULTS.md and `scripts/*.sh`. Generation is greedy, so steering
+The exact commands behind each result are in RESULTS.md. Generation is greedy, so steering
 re-runs reproduce (mean difference 0.013).
 
 ## Use it on another model or endpoint
@@ -311,7 +308,6 @@ re-runs reproduce (mean difference 0.013).
   - the blind labelling dossiers (`results/**/dossiers_*/`; `make_dossiers.py`, `Atlas.write_dossiers`);
   - the middle-of-range samples (`results/strata_Qwen3-8B.json`; `strata_scan.py`);
   - the spliced-dossier texts (`results/spliced_scan.json`; `spliced_control.py`);
-  - the human spot-check set (`site/spotcheck.html`, `results/spotcheck_*.json`; `spotcheck_build.py`).
 - **What is in it.** Labels, judge scores, ablation curves, steering replies, logs and all numbers are included.
   Short excerpts quoted in the documents and logs are FineWeb text, under its licence.
 - **Large derived data.** The atlas and neuron ranges (~270 MB for Qwen3-8B) are not included; rebuild them with step 1.

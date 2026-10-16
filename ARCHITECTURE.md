@@ -1,7 +1,7 @@
 # Model Mapper: architecture
 
 This file explains how the experiments are put together: the pipeline stages, which script does what, where the
-data goes, and which scripts are superseded or exploratory. For the results, see [MORNING.md](MORNING.md) and
+data goes, and which scripts are superseded or exploratory. For the results, see [REPORT.md](REPORT.md) and
 [RESULTS.md](RESULTS.md). For terms, see [GLOSSARY.md](GLOSSARY.md).
 
 ## The approach in one paragraph
@@ -87,7 +87,6 @@ Both are swappable; see README, "Use it on another model or endpoint".
 | `intruder_test.py` | Explanation-free check: can Jev spot a random snippet among a unit's top firings? Also provides `random_snippets` |
 | `grader2.py` | Second grader: Luna scores the same rubric; correlation with Jev |
 | `ctx_compare.py`, `effort_compare.py` | Robustness: grading context length; Luna reasoning effort |
-| `spotcheck_build.py`, `spotcheck_score.py` | Blind human spot-check set (`site/spotcheck.html`) and its scoring |
 
 ### 2. Concept pipeline: recall prompts and answer discovery
 `concept_pipeline.py` defines `Pipeline`, which runs one concept end to end. `pipeline_fast.py` subclasses it as
@@ -196,7 +195,7 @@ free local check (mean log-prob, repetition, non-ASCII share), validated against
 ## Script status
 
 **Pre-registered** (frozen before running; PREREG.md):
-- CR: `concept_pipeline.py`, run by `scripts/run_replication.sh`;
+- CR: `concept_pipeline.py`;
 - CEN: the census (`label_batch.py random:1000`);
 - H-DEPTH: `h_depth.py`.
 
@@ -211,12 +210,10 @@ Everything else is exploratory.
 | `gg_search.py`, `gg_recognition.py`, `make_units.py`, `merge_scans.py`, `summarise_gg.py`, `steer_test.py` (as a script) | the concept pipeline | Experiment GG, the first exploratory pass. `steer_test.py` still supplies `PROMPTS` and `generate` |
 | `label.py` (for large sets) | `label_batch.py` | `label.py` is still used by `concept_pipeline` |
 | `summarise_concepts.py` | `logodds_summary.py`, `wave_summary.py` | Summarises the v1 `concepts/` runs |
-| `scripts/patch_pipeline_once.py` | – | A one-off code patch, already applied; kept for the record |
 
 **Development and checks:** `smoke_test.py` (loads 0.6B, checks hooks), `jev_test.py` (three live API calls).
 
-**Queue scripts** (`scripts/*.sh`) chained GPU jobs overnight. They wait on log files from earlier jobs and record
-the exact commands behind several results. `download_models.sh` fetches the models with resumable curl.
+The overnight job queues and our release tooling are not part of the public repository.
 
 ## Data and results layout
 
@@ -230,12 +227,12 @@ the exact commands behind several results. `download_models.sh` fetches the mode
 | `results/concepts/` | CR (pre-registered, v1 pipeline, completion format) | yes |
 | `results/concepts_v3/`, `concepts_v3b/` | CR-2 and CR-2b (question format; independently written prompts) | yes |
 | `results/concepts_w2/`, `_w3/`, `_w4/` | Coverage waves 2–4 (40 new concepts each; 3–4 judge-free) | yes |
-| `results/concepts_disc*/`, `concepts_test/`, `concepts_dial/` | Answer-discovery debugging, pipeline tests, the dial's saved concepts | yes |
+| `results/concepts_disc*/`, `concepts_dial/` | Answer-discovery debugging (ISSUES #31), the dial's saved concepts | yes |
 | `results/scale_Qwen3-0.6B/`, `scale_Qwen3-8B/` | Model-size comparison | yes |
 | `results/logodds_*`, `steer_*`, `auto_steer_*`, `people_*`, `shared_parts*`, `hdepth_*`, `says_name*` | Per-experiment outputs and `.txt` summaries | yes |
 | `results/**/dossiers_*/` | Blind dossiers (FineWeb text) | no (regenerable) |
 | `results/**/*_KEY.json` | Answer keys for the blind dossiers | yes |
-| `results/scan_*.json`, `strata_Qwen3-8B.json`, `spliced_scan.json`, `spotcheck_*.json`, `site/spotcheck.html` | Example texts per unit (FineWeb text) | no (regenerable) |
+| `results/scan_*.json`, `strata_Qwen3-8B.json`, `spliced_scan.json` | Example texts per unit (FineWeb text) | no (regenerable) |
 | `results/*.cache.jsonl` | Raw API responses (Luna and Jev), one JSON line per call | yes |
 | `results/*.log` | Run logs | yes |
 
