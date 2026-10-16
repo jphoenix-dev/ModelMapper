@@ -1,0 +1,188 @@
+{
+ "answer": " The Last Supper",
+ "recall": [
+  "Leonardo da Vinci's mural in Milan portraying Jesus and twelve apostles at a shared meal is titled",
+  "A Renaissance painting in Santa Maria delle Grazie showing Christ announcing an impending betrayal is known as",
+  "Leonardo's celebrated refectory mural commissioned by Ludovico Sforza is commonly called",
+  "In art history, the famous composition with Jesus at center and apostles reacting to news of betrayal is titled",
+  "A late-fifteenth-century work painted on a convent dining hall wall in Milan is known as",
+  "Leonardo's perspective study, with lines converging near Christ's head, is associated with a painting titled",
+  "Visitors to the Dominican convent of Santa Maria delle Grazie come to see Leonardo's fragile mural called",
+  "A Christian Gospel scene showing Jesus sharing a final meal with his followers is depicted in Leonardo's painting",
+  "Leonardo's experimental wall painting, made using a technique that caused early deterioration, is called",
+  "A famous Renaissance mural whose thirteen figures sit along one side of a long table is titled",
+  "The Milan painting in which Judas holds a small money bag while apostles react is known as",
+  "Leonardo's image of the moment Jesus tells his disciples that one will betray him is titled",
+  "Among works damaged around it during wartime bombing, Leonardo's Milan mural is called",
+  "A decades-long restoration project at Santa Maria delle Grazie was undertaken to preserve Leonardo's painting called",
+  "A painting frequently imitated in parodies featuring a long table and a group of diners is commonly identified as",
+  "A masterpiece by Leonardo housed in a Milan refectory, rather than in a museum gallery, is named",
+  "Leonardo's depiction of Christ surrounded by disciples shortly before his arrest bears the title",
+  "A celebrated work commissioned for a monastery by Milanese ruler Ludovico Sforza is called",
+  "In depictions of a biblical gathering where bread and wine are shared, Leonardo's best-known version is called",
+  "Art students studying Renaissance composition often analyze Leonardo's Milan mural, known by the title"
+ ],
+ "controls": [
+  {
+   "prompt": "Leonardo's portrait of a woman with an enigmatic smile is titled",
+   "answer": " Mona Lisa"
+  },
+  {
+   "prompt": "Raphael's Vatican fresco gathering ancient philosophers is called",
+   "answer": " School of Athens"
+  },
+  {
+   "prompt": "Michelangelo's Sistine Chapel ceiling scene showing God reaching toward Adam is known as",
+   "answer": " The Creation of Adam"
+  },
+  {
+   "prompt": "Botticelli's painting of a goddess arriving on a shell is titled",
+   "answer": " The Birth of Venus"
+  },
+  {
+   "prompt": "Japan's capital is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "William Shakespeare's Danish prince is named",
+   "answer": " Hamlet"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "Leonardo da Vinci's Milan mural portraying Jesus and twelve apostles at a shared meal is titled",
+  "The Renaissance painting in Santa Maria delle Grazie showing Christ announcing an impending betrayal is known as",
+  "Leonardo's celebrated refectory mural commissioned by Ludovico Sforza is commonly called",
+  "The famous art-history composition with Jesus at the center and apostles reacting to news of betrayal is titled",
+  "The late-fifteenth-century work painted on a convent dining hall wall in Milan is known as",
+  "Leonardo's perspective study, with lines converging near Christ's head, is associated with a painting titled",
+  "Visitors to the Dominican convent of Santa Maria delle Grazie come to see Leonardo's fragile mural called",
+  "The Christian Gospel scene showing Jesus sharing a final meal with his followers is depicted in Leonardo's painting titled",
+  "Leonardo's experimental wall painting, made using a technique that caused early deterioration, is called",
+  "The famous Renaissance mural whose thirteen figures sit along one side of a long table is titled",
+  "The Milan painting in which Judas holds a small money bag while the apostles react is known as",
+  "Leonardo's image of the moment Jesus tells his disciples that one will betray him is titled",
+  "Leonardo's Milan mural, among the works damaged around it during wartime bombing, is called",
+  "The painting Leonardo made at Santa Maria delle Grazie, preserved by a decades-long restoration project, is called",
+  "The painting frequently imitated in parodies featuring a long table and a group of diners is commonly identified as",
+  "Leonardo's masterpiece housed in a Milan refectory rather than in a museum gallery is named",
+  "Leonardo's depiction of Christ surrounded by disciples shortly before his arrest bears the title",
+  "The celebrated work commissioned for a monastery by Milanese ruler Ludovico Sforza is called",
+  "Leonardo's best-known version of a biblical gathering where bread and wine are shared is called",
+  "Leonardo's Milan mural, often analyzed by art students studying Renaissance composition, is known by the title of"
+ ],
+ "recall_v3": [
+  "What is the title of Leonardo da Vinci's Milan mural portraying Jesus and twelve apostles at a shared meal?",
+  "What is the name of the Renaissance painting in Santa Maria delle Grazie showing Christ announcing an impending betrayal?",
+  "What is the name of Leonardo's celebrated refectory mural commissioned by Ludovico Sforza?",
+  "What is the title of the famous art-history composition with Jesus at the center and apostles reacting to news of betrayal?",
+  "What is the name of the late-fifteenth-century work painted on a convent dining hall wall in Milan?",
+  "What is the title of the painting associated with Leonardo's perspective study, with lines converging near Christ's head?",
+  "What is the name of Leonardo's fragile mural that visitors come to see at the Dominican convent of Santa Maria delle Grazie?",
+  "What is the title of Leonardo's painting depicting the Christian Gospel scene of Jesus sharing a final meal with his followers?",
+  "What is the name of Leonardo's experimental wall painting, made using a technique that caused early deterioration?",
+  "What is the title of the famous Renaissance mural whose thirteen figures sit along one side of a long table?",
+  "What is the name of the Milan painting in which Judas holds a small money bag while the apostles react?",
+  "What is the title of Leonardo's image of the moment Jesus tells his disciples that one will betray him?",
+  "What is the name of Leonardo's Milan mural, among the works damaged around it during wartime bombing?",
+  "What is the name of Leonardo's painting at Santa Maria delle Grazie that was preserved by a decades-long restoration project?",
+  "What is the name of the painting frequently imitated in parodies featuring a long table and a group of diners?",
+  "What is the name of Leonardo's masterpiece housed in a Milan refectory rather than in a museum gallery?",
+  "What is the title of Leonardo's depiction of Christ surrounded by disciples shortly before his arrest?",
+  "What is the name of the celebrated work commissioned for a monastery by Milanese ruler Ludovico Sforza?",
+  "What is the name of Leonardo's best-known version of a biblical gathering where bread and wine are shared?",
+  "What is the title of Leonardo's Milan mural often analyzed by art students studying Renaissance composition?"
+ ],
+ "answer_forms_extra": [
+  "The Last Supper"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Supper at Emmaus",
+   "names_concept": false
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Night Watch",
+   "names_concept": false
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "The Last Supper",
+   "names_concept": true
+  }
+ ]
+}

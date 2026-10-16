@@ -1,0 +1,188 @@
+{
+ "answer": " giraffe",
+ "recall": [
+  "The tallest living land animal is the",
+  "The hoofed browser native to sub-Saharan Africa that commonly feeds among acacia trees is the",
+  "In the wild, the closest living relative of the okapi is the",
+  "A newborn calf that can stand soon after birth belongs to the",
+  "The ruminant whose circulation is adapted to pump blood up to its elevated head is the",
+  "The African mammal with a coat of irregular patches separated by pale lines is the",
+  "The animal that uses a prehensile tongue to gather foliage from thorny branches is the",
+  "The hoofed mammal that often moves both legs on one side of its body together is the",
+  "The species in which males may spar by swinging their heads and necks at one another is the",
+  "The mammal with two skin-covered bony projections on its head is the",
+  "A calf delivered by its standing mother may drop a considerable distance to the ground; the mother is a",
+  "The African browser that can reach leaves well above the feeding height of many other herbivores is the",
+  "The animal with a gestation period of roughly fifteen months is the",
+  "The savanna-dwelling mammal whose patterned coat helps it blend into dappled foliage is the",
+  "The hoofed animal whose long, dark tongue helps it pull leaves from branches is the",
+  "Despite its exceptional height, the mammal with the same number of neck vertebrae as most others is the",
+  "The animal for which zoos often provide elevated feeding platforms and spacious enclosures is the",
+  "A safari guide pointing out the world's tallest ruminant would likely identify a",
+  "The African mammal whose newborn is already unusually tall compared with other hoofed animals is the",
+  "The tree-browsing mammal commonly seen on open African plains is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The forest-dwelling relative of the subject animal is the",
+   "answer": " okapi"
+  },
+  {
+   "prompt": "The striped African equid is the",
+   "answer": " zebra"
+  },
+  {
+   "prompt": "The large African mammal with a trunk is the",
+   "answer": " elephant"
+  },
+  {
+   "prompt": "The desert-adapted even-toed ungulate often called the ship of the desert is the",
+   "answer": " camel"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The famous Paris landmark with an iron lattice structure is the",
+   "answer": " Eiffel Tower"
+  }
+ ],
+ "recall_v2": [
+  "The tallest living land animal is called",
+  "The hoofed browser native to sub-Saharan Africa that commonly feeds among acacia trees is called",
+  "In the wild, the closest living relative of the okapi is called",
+  "A newborn calf that can stand soon after birth is a young animal called",
+  "The ruminant whose circulation is adapted to pump blood up to its elevated head is called",
+  "The African mammal with a coat of irregular patches separated by pale lines is called",
+  "The animal that uses a prehensile tongue to gather foliage from thorny branches is called",
+  "The hoofed mammal that often moves both legs on one side of its body together is called",
+  "The species in which males may spar by swinging their heads and necks at one another is called",
+  "The mammal with two skin-covered bony projections on its head is called",
+  "A calf delivered by its standing mother may drop a considerable distance to the ground; the mother is an animal called",
+  "The African browser that can reach leaves well above the feeding height of many other herbivores is called",
+  "The animal with a gestation period of roughly fifteen months is called",
+  "The savanna-dwelling mammal whose patterned coat helps it blend into dappled foliage is called",
+  "The hoofed animal whose long, dark tongue helps it pull leaves from branches is called",
+  "Despite its exceptional height, the mammal with the same number of neck vertebrae as most others is called",
+  "The animal for which zoos often provide elevated feeding platforms and spacious enclosures is called",
+  "A safari guide pointing out the world's tallest ruminant would likely identify it as",
+  "The African mammal whose newborn is already unusually tall compared with other hoofed animals is called",
+  "The tree-browsing mammal commonly seen on open African plains is called"
+ ],
+ "recall_v3": [
+  "What is the name of the tallest living land animal?",
+  "What is the name of the hoofed browser native to sub-Saharan Africa that commonly feeds among acacia trees?",
+  "What is the name of the okapi’s closest living relative in the wild?",
+  "What is the name of the animal whose newborn calf can stand soon after birth?",
+  "What is the name of the ruminant whose circulation is adapted to pump blood up to its elevated head?",
+  "What is the name of the African mammal with a coat of irregular patches separated by pale lines?",
+  "What is the name of the animal that uses a prehensile tongue to gather foliage from thorny branches?",
+  "What is the name of the hoofed mammal that often moves both legs on one side of its body together?",
+  "What is the name of the species in which males may spar by swinging their heads and necks at one another?",
+  "What is the name of the mammal with two skin-covered bony projections on its head?",
+  "What is the name of the animal whose calf may drop a considerable distance when delivered by its standing mother?",
+  "What is the name of the African browser that can reach leaves well above the feeding height of many other herbivores?",
+  "What is the name of the animal with a gestation period of roughly fifteen months?",
+  "What is the name of the savanna-dwelling mammal whose patterned coat helps it blend into dappled foliage?",
+  "What is the name of the hoofed animal whose long, dark tongue helps it pull leaves from branches?",
+  "What is the name of the exceptionally tall mammal that has the same number of neck vertebrae as most others?",
+  "What is the name of the animal for which zoos often provide elevated feeding platforms and spacious enclosures?",
+  "What is the name of the world's tallest ruminant that a safari guide might point out?",
+  "What is the name of the African mammal whose newborn is already unusually tall compared with other hoofed animals?",
+  "What is the name of the tree-browsing mammal commonly seen on open African plains?"
+ ],
+ "answer_forms_extra": [
+  "Giraffe"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "African bush elephant",
+   "names_concept": false
+  },
+  {
+   "reply": "Impala",
+   "names_concept": false
+  },
+  {
+   "reply": "Okapi",
+   "names_concept": false
+  },
+  {
+   "reply": "Calf",
+   "names_concept": false
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Kobus",
+   "names_concept": false
+  },
+  {
+   "reply": "Toxodon",
+   "names_concept": false
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Galliformes",
+   "names_concept": false
+  },
+  {
+   "reply": "Horse",
+   "names_concept": false
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": false
+  },
+  {
+   "reply": "Dappled coat is a characteristic of the **zebra**, but since the",
+   "names_concept": false
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": false
+  },
+  {
+   "reply": "African Buffalo",
+   "names_concept": false
+  },
+  {
+   "reply": "Giraffe",
+   "names_concept": true
+  },
+  {
+   "reply": "Impala",
+   "names_concept": false
+  }
+ ]
+}

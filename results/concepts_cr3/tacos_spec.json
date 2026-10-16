@@ -1,0 +1,189 @@
+{
+ "answer": " tacos",
+ "recall": [
+  "In Mexican cuisine, small folded tortillas filled with savory ingredients are commonly known as",
+  "At a taquería, diners often order several handheld tortilla-based dishes called",
+  "In many Mexican markets, vendors sell portable corn-tortilla meals known as",
+  "A plate of seasoned fillings tucked into small tortillas and topped with salsa may contain",
+  "A cook garnishing filled tortillas with chopped onion, cilantro, and lime is preparing",
+  "For a quick lunch, customers may choose a filling and have it served in soft tortillas as",
+  "Across Mexico, street vendors prepare many regional varieties of",
+  "The tortilla-based street foods that may be filled with meat, beans, fish, or vegetables are",
+  "In Mexican-American restaurants, diners often customize small tortilla servings with salsa and other toppings, ordering",
+  "At a family gathering, a spread of tortillas, fillings, and condiments can be used to assemble",
+  "A taquero is a cook who specializes in preparing and serving",
+  "The maize-based flatbread commonly used as a wrapper for savory street-food fillings appears in",
+  "Some versions are served on soft corn tortillas, while others use crisp shells, and both are types of",
+  "A popular meal eaten by hand, with each tortilla holding a small portion of filling, consists of",
+  "In northern Mexico and across the border, restaurants offer many styles of",
+  "At a food truck, customers may choose fillings such as grilled fish, pork, or beans for their",
+  "Fresh lime wedges and salsa are commonly set beside plates of",
+  "The small, individually assembled tortilla dishes eaten as street food in Mexico are",
+  "A menu section featuring carnitas, carne asada, and barbacoa usually lists different kinds of",
+  "The long history of maize tortillas in Mesoamerica is reflected in the enduring popularity of"
+ ],
+ "controls": [
+  {
+   "prompt": "In Mexican cuisine, large flour tortillas wrapped around fillings such as beans and meat are known as",
+   "answer": " burritos"
+  },
+  {
+   "prompt": "Tortillas covered with chili sauce and baked or simmered are called",
+   "answer": " enchiladas"
+  },
+  {
+   "prompt": "Corn dough filled, wrapped in husks, and steamed is served as",
+   "answer": " tamales"
+  },
+  {
+   "prompt": "A tortilla folded around cheese and griddled until melted becomes a",
+   "answer": " quesadilla"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "In Mexican cuisine, small folded tortillas filled with savory ingredients are commonly called",
+  "At a taquería, the handheld tortilla-based dishes diners often order are called",
+  "The portable corn-tortilla meals sold by vendors in many Mexican markets are known as",
+  "A plate of seasoned fillings tucked into small tortillas and topped with salsa may contain the dishes called",
+  "A cook garnishing filled tortillas with chopped onion, cilantro, and lime is preparing dishes called",
+  "For a quick lunch, customers may choose a filling and have it served in soft tortillas as a dish called",
+  "Across Mexico, street vendors prepare many regional varieties of a dish called",
+  "The tortilla-based street foods filled with meat, beans, fish, or vegetables are called",
+  "In Mexican-American restaurants, the small tortilla servings diners customize with salsa and other toppings are called",
+  "At a family gathering, a spread of tortillas, fillings, and condiments can be used to assemble dishes called",
+  "A taquero is a cook who specializes in preparing and serving food called",
+  "The maize-based flatbread commonly used as a wrapper for savory street-food fillings is found in dishes called",
+  "The dishes served on soft corn tortillas or crisp shells are both types of food called",
+  "A popular meal eaten by hand, with each tortilla holding a small portion of filling, consists of dishes called",
+  "In northern Mexico and across the border, restaurants offer many styles of a dish called",
+  "At a food truck, customers may choose grilled fish, pork, or beans as fillings for dishes called",
+  "Fresh lime wedges and salsa are commonly set beside plates of food called",
+  "The small, individually assembled tortilla dishes eaten as street food in Mexico are called",
+  "A menu section featuring carnitas, carne asada, and barbacoa usually lists different kinds of a dish called",
+  "The enduring popularity of maize tortillas in Mesoamerica is reflected in the long history of a dish called"
+ ],
+ "recall_v3": [
+  "What are small folded tortillas filled with savory ingredients commonly called in Mexican cuisine?",
+  "What are the handheld tortilla-based dishes diners often order at a taquería called?",
+  "What are the portable corn-tortilla meals sold by vendors in many Mexican markets known as?",
+  "What are the dishes called that contain seasoned fillings tucked into small tortillas and topped with salsa?",
+  "What is a cook preparing when garnishing filled tortillas with chopped onion, cilantro, and lime?",
+  "What is the dish called when customers choose a filling served in soft tortillas for a quick lunch?",
+  "What dish has many regional varieties prepared by street vendors across Mexico?",
+  "What are the tortilla-based street foods filled with meat, beans, fish, or vegetables called?",
+  "What are the small tortilla servings diners customize with salsa and other toppings in Mexican-American restaurants called?",
+  "What dishes can be assembled from tortillas, fillings, and condiments at a family gathering?",
+  "What food does a taquero specialize in preparing and serving?",
+  "What dishes commonly use a maize-based flatbread as a wrapper for savory street-food fillings?",
+  "What are the dishes served on soft corn tortillas or crisp shells both types of?",
+  "What is the popular hand-held meal made of tortillas, each holding a small portion of filling?",
+  "What dish is offered in many styles at restaurants in northern Mexico and across the border?",
+  "What are the dishes called when customers choose grilled fish, pork, or beans as fillings at a food truck?",
+  "What food is commonly served with fresh lime wedges and salsa?",
+  "What are the small, individually assembled tortilla dishes eaten as street food in Mexico called?",
+  "What dish has varieties such as carnitas, carne asada, and barbacoa listed on a menu?",
+  "What dish reflects the enduring popularity of maize tortillas in Mesoamerica?"
+ ],
+ "answer_forms_extra": [
+  "Taco",
+  "Tacos"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Tortilla Pizza",
+   "names_concept": false
+  },
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Tortilla",
+   "names_concept": false
+  },
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Tacos",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Taco",
+   "names_concept": true
+  },
+  {
+   "reply": "Mexican cuisine",
+   "names_concept": false
+  },
+  {
+   "reply": "Tamales",
+   "names_concept": false
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "answer": " gratitude",
+ "recall": [
+  "A positive response to a kindness received from another person is",
+  "The emotion that can arise when someone recognizes a benefit they did not earn alone is",
+  "A common aim of keeping a daily list of life's blessings is to cultivate",
+  "The feeling behind writing to someone after receiving a thoughtful favor is",
+  "In many religious traditions, prayers acknowledging life's blessings are expressions of",
+  "A Thanksgiving ritual of naming what one values is a public expression of",
+  "Psychologists studying the benefits of counting one's blessings often examine",
+  "The character strength associated with noticing benefits from other people is",
+  "When a neighbor brings food during a difficult time, the recipient may feel",
+  "An emotion that can strengthen bonds between a giver and recipient is",
+  "The disposition that helps people recognize help they have received instead of taking it for granted is",
+  "In a reflection exercise, recalling who contributed to one's success can evoke",
+  "The feeling often expressed in a letter to a mentor for their long-term support is",
+  "A central theme of harvest festivals is recognizing the good fortune of a plentiful crop, often through",
+  "After surviving a difficult period with support from friends, someone may look back with",
+  "An emotional response to a freely given benefit, especially one from another person, is",
+  "The habit of noticing small positives in everyday life can nurture",
+  "A person who lists people who have helped them is practicing a form of",
+  "In wellbeing interventions, writing a letter to someone who made a difference is used to elicit",
+  "The feeling that can arise on recognizing how much one's life has been shaped by others is"
+ ],
+ "controls": [
+  {
+   "prompt": "The virtue of noticing and caring about another person's suffering is",
+   "answer": " compassion"
+  },
+  {
+   "prompt": "The tendency to expect favorable outcomes in the future is",
+   "answer": " optimism"
+  },
+  {
+   "prompt": "A modest view of one's own importance is",
+   "answer": " humility"
+  },
+  {
+   "prompt": "The willingness to give time or resources to help others is",
+   "answer": " generosity"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "A positive response to a kindness received from another person is called",
+  "The emotion that can arise when someone recognizes a benefit they did not earn alone is called",
+  "The quality commonly cultivated by keeping a daily list of life's blessings is called",
+  "The feeling behind writing to someone after receiving a thoughtful favor is called",
+  "The emotion expressed in prayers that acknowledge life's blessings in many religious traditions is called",
+  "The emotion publicly expressed by a Thanksgiving ritual of naming what one values is called",
+  "The quality psychologists often examine when studying the benefits of counting one's blessings is called",
+  "The character strength associated with noticing benefits from other people is called",
+  "The feeling a recipient may experience when a neighbor brings food during a difficult time is called",
+  "The emotion that can strengthen bonds between a giver and recipient is called",
+  "The disposition that helps people recognize help they have received instead of taking it for granted is called",
+  "The feeling that can arise when a reflection exercise recalls who contributed to one's success is called",
+  "The feeling often expressed in a letter to a mentor for their long-term support is called",
+  "The emotion often expressed when harvest festivals recognize the good fortune of a plentiful crop is called",
+  "The feeling someone may look back with after surviving a difficult period with support from friends is called",
+  "An emotional response to a freely given benefit, especially one from another person, is called",
+  "The quality nurtured by the habit of noticing small positives in everyday life is called",
+  "The practice a person engages in by listing people who have helped them is called",
+  "The feeling that wellbeing interventions aim to elicit by having someone write a letter to a person who made a difference is called",
+  "The feeling that can arise on recognizing how much one's life has been shaped by others is called"
+ ],
+ "recall_v3": [
+  "What is the name for a positive response to a kindness received from another person?",
+  "What is the name of the emotion that can arise when someone recognizes a benefit they did not earn alone?",
+  "What is the name of the quality commonly cultivated by keeping a daily list of life's blessings?",
+  "What is the name of the feeling behind writing to someone after receiving a thoughtful favor?",
+  "What is the name of the emotion expressed in prayers that acknowledge life's blessings in many religious traditions?",
+  "What is the name of the emotion publicly expressed by a Thanksgiving ritual of naming what one values?",
+  "What is the name of the quality psychologists often examine when studying the benefits of counting one's blessings?",
+  "What is the name of the character strength associated with noticing benefits from other people?",
+  "What is the name of the feeling a recipient may experience when a neighbor brings food during a difficult time?",
+  "What is the name of the emotion that can strengthen bonds between a giver and recipient?",
+  "What is the name of the disposition that helps people recognize help they have received instead of taking it for granted?",
+  "What is the name of the feeling that can arise when a reflection exercise recalls who contributed to one's success?",
+  "What is the name of the feeling often expressed in a letter to a mentor for their long-term support?",
+  "What is the name of the emotion often expressed when harvest festivals recognize the good fortune of a plentiful crop?",
+  "What is the name of the feeling someone may look back with after surviving a difficult period with support from friends?",
+  "What is the name of an emotional response to a freely given benefit, especially one from another person?",
+  "What is the name of the quality nurtured by the habit of noticing small positives in everyday life?",
+  "What is the name of the practice a person engages in by listing people who have helped them?",
+  "What is the name of the feeling that wellbeing interventions aim to elicit by having someone write a letter to a person who made a difference?",
+  "What is the name of the feeling that can arise on recognizing how much one's life has been shaped by others?"
+ ],
+ "answer_forms_extra": [
+  "Gratitude",
+  "gratitude"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": false
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Compassion",
+   "names_concept": false
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude practice",
+   "names_concept": false
+  },
+  {
+   "reply": "gratitude",
+   "names_concept": true
+  },
+  {
+   "reply": "Gratitude",
+   "names_concept": true
+  }
+ ]
+}

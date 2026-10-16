@@ -1,0 +1,188 @@
+{
+ "answer": " patience",
+ "recall": [
+  "The virtue of staying composed while facing delays is",
+  "A person waiting quietly for a delayed bus needs",
+  "Learning a difficult language over months takes",
+  "A gardener tending slow-growing seedlings must show",
+  "When a child asks the same question again and again, a caregiver needs",
+  "Listening as someone slowly explains a complicated problem takes",
+  "The quality that helps someone endure frustration without lashing out is",
+  "In the phrase “good things come to those who wait,” the virtue being praised is",
+  "Careful work that cannot be rushed calls for",
+  "A long line at the airport can be a test of",
+  "Recovering from a setback while allowing progress to take time requires",
+  "An effective tutor gives learners time to make mistakes and demonstrates",
+  "In meditation, calmly returning attention after distractions can cultivate",
+  "A mechanic diagnosing an intermittent fault may need",
+  "The ability to tolerate delay without becoming annoyed is known as",
+  "Waiting for paint to dry without trying to hurry it is an exercise in",
+  "A parent helping a toddler tie shoelaces often needs",
+  "Building trust gradually rather than demanding it immediately requires",
+  "In many moral traditions, calm endurance through hardship is praised as",
+  "Rather than abandon a slow project, she kept working with"
+ ],
+ "controls": [
+  {
+   "prompt": "The virtue of telling the truth even when it is inconvenient is",
+   "answer": " honesty"
+  },
+  {
+   "prompt": "Facing danger without giving in to fear is",
+   "answer": " courage"
+  },
+  {
+   "prompt": "Treating others with warmth and concern is",
+   "answer": " kindness"
+  },
+  {
+   "prompt": "The quality of being modest about one's achievements is",
+   "answer": " humility"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The virtue of staying composed while facing delays is called",
+  "A person waiting quietly for a delayed bus needs the quality known as",
+  "Learning a difficult language over months requires the quality called",
+  "A gardener tending slow-growing seedlings must show the virtue known as",
+  "When a child asks the same question again and again, a caregiver needs the quality called",
+  "Listening as someone slowly explains a complicated problem requires the virtue known as",
+  "The quality that helps someone endure frustration without lashing out is called",
+  "In the phrase “good things come to those who wait,” the virtue being praised is called",
+  "Careful work that cannot be rushed calls for the quality known as",
+  "A long line at the airport can be a test of the virtue called",
+  "Recovering from a setback while allowing progress to take time requires the quality known as",
+  "An effective tutor gives learners time to make mistakes and demonstrates the virtue called",
+  "In meditation, calmly returning attention after distractions can cultivate the quality known as",
+  "A mechanic diagnosing an intermittent fault may need the virtue called",
+  "The ability to tolerate delay without becoming annoyed is the quality known as",
+  "Waiting for paint to dry without trying to hurry it is an exercise in the virtue called",
+  "A parent helping a toddler tie shoelaces often needs the quality known as",
+  "Building trust gradually rather than demanding it immediately requires the virtue called",
+  "In many moral traditions, calm endurance through hardship is praised as the virtue known as",
+  "Rather than abandon a slow project, she kept working with the determination and endurance known as"
+ ],
+ "recall_v3": [
+  "What is the virtue of staying composed while facing delays called?",
+  "What quality does a person need when waiting quietly for a delayed bus?",
+  "What quality does it take to learn a difficult language over months?",
+  "What virtue must a gardener show when tending slow-growing seedlings?",
+  "What quality does a caregiver need when a child asks the same question again and again?",
+  "What virtue does it take to listen as someone slowly explains a complicated problem?",
+  "What is the quality that helps someone endure frustration without lashing out?",
+  "What virtue is praised in the phrase “good things come to those who wait”?",
+  "What quality does careful work that cannot be rushed call for?",
+  "What virtue can a long line at the airport test?",
+  "What quality is required to recover from a setback while allowing progress to take time?",
+  "What virtue does an effective tutor demonstrate by giving learners time to make mistakes?",
+  "What quality can be cultivated by calmly returning attention after distractions in meditation?",
+  "What virtue might a mechanic need when diagnosing an intermittent fault?",
+  "What is the ability to tolerate delay without becoming annoyed called?",
+  "What virtue is exercised by waiting for paint to dry without trying to hurry it?",
+  "What quality does a parent often need when helping a toddler tie shoelaces?",
+  "What virtue is required to build trust gradually rather than demand it immediately?",
+  "What virtue is praised in many moral traditions as calm endurance through hardship?",
+  "What quality did she show by continuing to work rather than abandoning a slow project?"
+ ],
+ "answer_forms_extra": [
+  "Patience"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Persistence",
+   "names_concept": false
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Resilience",
+   "names_concept": false
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Resilience",
+   "names_concept": false
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Mindfulness",
+   "names_concept": false
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Patience",
+   "names_concept": true
+  },
+  {
+   "reply": "Fortitude",
+   "names_concept": false
+  },
+  {
+   "reply": "Dedication",
+   "names_concept": false
+  }
+ ]
+}

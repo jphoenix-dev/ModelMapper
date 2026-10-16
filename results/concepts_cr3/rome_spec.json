@@ -1,0 +1,188 @@
+{
+ "answer": " Rome",
+ "recall": [
+  "The capital city of Italy is",
+  "The city spread across seven hills beside the Tiber is",
+  "The Italian city whose ancient amphitheater is called the Colosseum is",
+  "The city that surrounds the independent enclave governed by the pope is",
+  "The city that hosted the 1960 Summer Olympics is",
+  "The city where Julius Caesar was assassinated near the Theatre of Pompey is",
+  "The city where the Pantheon stands beneath its famous domed roof is",
+  "The Italian city famous for the Trevi Fountain is",
+  "The city whose historic center includes Piazza Navona and the Spanish Steps is",
+  "The city traditionally said to have been founded in 753 BCE by twin brothers is",
+  "The ancient city where the Senate met in the Curia is",
+  "The ancient city that was the endpoint of the Via Appia is",
+  "The city whose historic center contains the ruins of the Forum is",
+  "The Italian capital often nicknamed the Eternal City is",
+  "The city where Italy's government sits and the Quirinal Palace stands is",
+  "The city served by the airport named for Leonardo da Vinci is",
+  "The destination in the saying that all roads lead to is",
+  "The city containing the enclave where the Sistine Chapel is located is",
+  "The city that became the center of an empire whose roads spanned much of Europe was",
+  "The city that served as the seat of the Papal States before Italian unification was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Greek city whose Acropolis is crowned by the Parthenon is",
+   "answer": " Athens"
+  },
+  {
+   "prompt": "The ancient North African city associated with Hannibal and the Punic Wars was",
+   "answer": " Carthage"
+  },
+  {
+   "prompt": "The ancient city preserved beneath volcanic ash after Vesuvius erupted is",
+   "answer": " Pompeii"
+  },
+  {
+   "prompt": "The former imperial capital on the Bosporus, now Turkey's largest city, was",
+   "answer": " Constantinople"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical element with atomic number 79 is",
+   "answer": " Gold"
+  }
+ ],
+ "recall_v2": [
+  "The capital city of Italy is called",
+  "The city spread across seven hills beside the Tiber is known as",
+  "The Italian city whose ancient amphitheater is called the Colosseum is known as",
+  "The city that surrounds the independent enclave governed by the pope is called",
+  "The city that hosted the 1960 Summer Olympics is known as",
+  "The city where Julius Caesar was assassinated near the Theatre of Pompey is called",
+  "The city where the Pantheon stands beneath its famous domed roof is known as",
+  "The Italian city famous for the Trevi Fountain is called",
+  "The city whose historic center includes Piazza Navona and the Spanish Steps is known as",
+  "The city traditionally said to have been founded in 753 BCE by twin brothers is called",
+  "The ancient city where the Senate met in the Curia is known as",
+  "The ancient city that was the endpoint of the Via Appia is called",
+  "The city whose historic center contains the ruins of the Forum is known as",
+  "The Italian capital often nicknamed the Eternal City is called",
+  "The city where Italy's government sits and the Quirinal Palace stands is known as",
+  "The city served by the airport named for Leonardo da Vinci is called",
+  "The destination in the saying that all roads lead to is known as",
+  "The city containing the enclave where the Sistine Chapel is located is called",
+  "The city that became the center of an empire whose roads spanned much of Europe is known as",
+  "The city that served as the seat of the Papal States before Italian unification is called"
+ ],
+ "recall_v3": [
+  "What is the capital city of Italy?",
+  "Which city is spread across seven hills beside the Tiber?",
+  "Which Italian city has the ancient amphitheater called the Colosseum?",
+  "Which city surrounds the independent enclave governed by the pope?",
+  "Which city hosted the 1960 Summer Olympics?",
+  "In which city was Julius Caesar assassinated near the Theatre of Pompey?",
+  "Which city is home to the Pantheon beneath its famous domed roof?",
+  "Which Italian city is famous for the Trevi Fountain?",
+  "Which city has a historic center that includes Piazza Navona and the Spanish Steps?",
+  "Which city is traditionally said to have been founded in 753 BCE by twin brothers?",
+  "In which ancient city did the Senate meet in the Curia?",
+  "Which ancient city was the endpoint of the Via Appia?",
+  "Which city has a historic center containing the ruins of the Forum?",
+  "Which Italian capital is often nicknamed the Eternal City?",
+  "Which city is home to Italy's government and the Quirinal Palace?",
+  "Which city is served by the airport named for Leonardo da Vinci?",
+  "What is the destination in the saying that all roads lead to?",
+  "Which city contains the enclave where the Sistine Chapel is located?",
+  "Which city became the center of an empire whose roads spanned much of Europe?",
+  "Which city served as the seat of the Papal States before Italian unification?"
+ ],
+ "answer_forms_extra": [
+  "Rome"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Vatican City",
+   "names_concept": false
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Capua",
+   "names_concept": false
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": false
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Vatican City",
+   "names_concept": false
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  },
+  {
+   "reply": "Rome",
+   "names_concept": true
+  }
+ ]
+}

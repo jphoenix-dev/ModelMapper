@@ -1,0 +1,189 @@
+{
+ "answer": " rugby",
+ "recall": [
+  "The full-contact team sport played with an oval ball, where players can carry it forward but pass it only backward, is called",
+  "The sport in which a try is scored by grounding the ball over the opponents’ goal line is",
+  "A scrum is a set piece used to restart play in",
+  "The Six Nations Championship is an annual international competition in",
+  "New Zealand’s All Blacks are a celebrated national team in",
+  "South Africa’s Springboks compete internationally in",
+  "The sport played at Twickenham and contested for the Calcutta Cup is",
+  "The oval-ball sport whose international teams compete for the Webb Ellis Cup is",
+  "In the traditional fifteen-player version, each team fields eight forwards and seven backs in",
+  "The sport whose rules prohibit throwing the ball forward by hand is",
+  "A conversion kick can follow a try in",
+  "The sport that has distinct league and union codes is",
+  "Jonah Lomu became a celebrated New Zealand player in",
+  "The Haka is famously performed before matches by New Zealand teams in",
+  "The sport whose seven-a-side format returned to the Olympics in 2016 is",
+  "The ball used in this field sport is elongated and oval, unlike a spherical ball used in soccer",
+  "The game that developed from football played at English schools in the nineteenth century is",
+  "A line-out is one way of restarting play in",
+  "The sport in which players wear studded boots and often use a mouthguard is",
+  "The annual international contest between England and Scotland for the Calcutta Cup takes place in"
+ ],
+ "controls": [
+  {
+   "prompt": "The sport in which players use their feet to move a round ball toward a goal is",
+   "answer": " soccer"
+  },
+  {
+   "prompt": "The bat-and-ball game in which a bowler delivers to a batter defending three stumps is",
+   "answer": " cricket"
+  },
+  {
+   "prompt": "The fast stick-and-ball game played on ice with skates and goals is",
+   "answer": " hockey"
+  },
+  {
+   "prompt": "The North American gridiron sport with four downs and forward passing is",
+   "answer": " football"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet commonly known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "A major river flowing north through Egypt is the",
+   "answer": " Nile"
+  }
+ ],
+ "recall_v2": [
+  "The full-contact team sport played with an oval ball, where players can carry it forward but pass it only backward, is called",
+  "The sport in which a try is scored by grounding the ball over the opponents’ goal line is called",
+  "A scrum is a set piece used to restart play in the sport called",
+  "The Six Nations Championship is an annual international competition in the sport called",
+  "New Zealand’s All Blacks are a celebrated national team in the sport called",
+  "South Africa’s Springboks compete internationally in the sport called",
+  "The sport played at Twickenham and contested for the Calcutta Cup is called",
+  "The oval-ball sport whose international teams compete for the Webb Ellis Cup is called",
+  "In the traditional fifteen-player version, each team fields eight forwards and seven backs in the sport called",
+  "The sport whose rules prohibit throwing the ball forward by hand is called",
+  "A conversion kick can follow a try in the sport called",
+  "The sport that has distinct league and union codes is called",
+  "Jonah Lomu became a celebrated New Zealand player in the sport called",
+  "The Haka is famously performed before matches by New Zealand teams in the sport called",
+  "The sport whose seven-a-side format returned to the Olympics in 2016 is called",
+  "The field sport played with an elongated, oval ball, unlike the spherical ball used in soccer, is called",
+  "The game that developed from football played at English schools in the nineteenth century is called",
+  "A line-out is one way of restarting play in the sport called",
+  "The sport in which players wear studded boots and often use a mouthguard is called",
+  "The annual international contest between England and Scotland for the Calcutta Cup takes place in the sport called"
+ ],
+ "recall_v3": [
+  "What is the name of the full-contact team sport played with an oval ball, where players can carry it forward but pass it only backward?",
+  "What is the name of the sport in which a try is scored by grounding the ball over the opponents’ goal line?",
+  "What is the name of the sport in which a scrum is a set piece used to restart play?",
+  "What is the name of the sport in which the Six Nations Championship is an annual international competition?",
+  "What is the name of the sport in which New Zealand’s All Blacks are a celebrated national team?",
+  "What is the name of the sport in which South Africa’s Springboks compete internationally?",
+  "What is the name of the sport played at Twickenham and contested for the Calcutta Cup?",
+  "What is the name of the oval-ball sport whose international teams compete for the Webb Ellis Cup?",
+  "What is the name of the sport whose traditional fifteen-player version has eight forwards and seven backs on each team?",
+  "What is the name of the sport whose rules prohibit throwing the ball forward by hand?",
+  "What is the name of the sport in which a conversion kick can follow a try?",
+  "What is the name of the sport that has distinct league and union codes?",
+  "What is the name of the sport in which Jonah Lomu became a celebrated New Zealand player?",
+  "What is the name of the sport in which New Zealand teams famously perform the Haka before matches?",
+  "What is the name of the sport whose seven-a-side format returned to the Olympics in 2016?",
+  "What is the name of the field sport played with an elongated, oval ball, unlike the spherical ball used in soccer?",
+  "What is the name of the game that developed from football played at English schools in the nineteenth century?",
+  "What is the name of the sport in which a line-out is one way of restarting play?",
+  "What is the name of the sport in which players wear studded boots and often use a mouthguard?",
+  "What is the name of the sport in which the annual international contest between England and Scotland for the Calcutta Cup takes place?"
+ ],
+ "answer_forms_extra": [
+  "Rugby",
+  "Rugby Union"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby Union",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby Union",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby Union",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby Sevens",
+   "names_concept": false
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Rugby",
+   "names_concept": true
+  },
+  {
+   "reply": "Football",
+   "names_concept": false
+  },
+  {
+   "reply": "Rugby Union",
+   "names_concept": true
+  }
+ ]
+}

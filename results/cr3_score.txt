@@ -1,0 +1,7 @@
+PASS  P1 recall >=90% real, 0/4 made-up: 40/40 real (100%); made-up recalled 0/4
+PASS  P2 k_mean<=5 >=90%, k_median<=5 >=80%, random<0.5 >=95%: k_mean 98%, k_median 98%, random<0.5 100% (n=40)
+PASS  P3a k_flip<=5 >=70%: 85%
+PASS  P3b hard-to-flip have higher baseline log-odds: hard mean 7.66 vs 4.04; U=170, p=0.005
+PASS  P4a auto >= 1.5x default, random < 0.05: auto 0.237, default 0.097 (2.44x), random 0.006
+PASS  P4b Jev: auto >= default (sample): auto 0.095 vs default 0.045 on 10 concepts
+FAIL  P5 people >0 and below non-people: people 0.425 (n=4) vs non-people 0.217

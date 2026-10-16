@@ -1,0 +1,188 @@
+{
+ "answer": " Mahatma Gandhi",
+ "recall": [
+  "The Indian barrister born in Porbandar who became a central figure in the struggle against colonial rule was",
+  "The campaigner who led a famous 1930 coastal march against the British salt tax was",
+  "The leader whose political method emphasized disciplined nonviolent resistance, known in India as satyagraha, was",
+  "The advocate who spent formative years organizing Indian communities in South Africa before returning to the subcontinent was",
+  "The freedom movement leader whose birthday, October 2, is observed internationally as a day of nonviolence was",
+  "The Indian public figure who urged spinning and homespun cloth as symbols of economic self-reliance was",
+  "The vegetarian activist who wrote an autobiography titled The Story of My Experiments with Truth was",
+  "The leader who lived and worked at an ashram on the Sabarmati River near Ahmedabad was",
+  "The husband of Kasturba who became a key leader of India's independence movement was",
+  "The proponent of nonviolent protest who undertook numerous fasts as political appeals was",
+  "The Indian lawyer who challenged discriminatory laws in Natal and the Transvaal was",
+  "The independence-era figure assassinated in Delhi in January 1948 by Nathuram Godse was",
+  "The man whose life inspired the film directed by Richard Attenborough and starring Ben Kingsley was",
+  "The political activist who encouraged Indians to boycott British-made goods and wear khadi was",
+  "The leader whose 1930 march ended at Dandi with the making of salt was",
+  "The Indian nationalist who spent time imprisoned by British authorities for civil disobedience was",
+  "The public figure often associated with a walking stick, plain clothing, and round spectacles was",
+  "The advocate whose teachings on peaceful resistance influenced Martin Luther King Jr. and Nelson Mandela was",
+  "The leader who negotiated with British officials, including Lord Irwin, during India's independence campaign was",
+  "The Indian activist who promoted village industries and self-sufficiency as part of the independence struggle was"
+ ],
+ "controls": [
+  {
+   "prompt": "India's first prime minister after independence was",
+   "answer": " Jawaharlal Nehru"
+  },
+  {
+   "prompt": "The Indian nationalist who led the Indian National Army was",
+   "answer": " Subhas Chandra Bose"
+  },
+  {
+   "prompt": "The poet-politician known as the Nightingale of India was",
+   "answer": " Sarojini Naidu"
+  },
+  {
+   "prompt": "The Indian statesman credited with integrating princely states into the new union was",
+   "answer": " Vallabhbhai Patel"
+  },
+  {
+   "prompt": "The physicist who formulated the theory of general relativity was",
+   "answer": " Albert Einstein"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  }
+ ],
+ "recall_v2": [
+  "The Indian barrister born in Porbandar who became a central figure in the struggle against colonial rule was named",
+  "The campaigner who led a famous 1930 coastal march against the British salt tax was named",
+  "The leader whose political method emphasized disciplined nonviolent resistance, known in India as satyagraha, was named",
+  "The advocate who spent formative years organizing Indian communities in South Africa before returning to the subcontinent was named",
+  "The freedom movement leader whose birthday, October 2, is observed internationally as a day of nonviolence was named",
+  "The Indian public figure who urged spinning and homespun cloth as symbols of economic self-reliance was named",
+  "The vegetarian activist who wrote an autobiography titled The Story of My Experiments with Truth was named",
+  "The leader who lived and worked at an ashram on the Sabarmati River near Ahmedabad was named",
+  "The husband of Kasturba who became a key leader of India's independence movement was named",
+  "The proponent of nonviolent protest who undertook numerous fasts as political appeals was named",
+  "The Indian lawyer who challenged discriminatory laws in Natal and the Transvaal was named",
+  "The independence-era figure assassinated in Delhi in January 1948 by Nathuram Godse was named",
+  "The man whose life inspired the film directed by Richard Attenborough and starring Ben Kingsley was named",
+  "The political activist who encouraged Indians to boycott British-made goods and wear khadi was named",
+  "The leader whose 1930 march ended at Dandi with the making of salt was named",
+  "The Indian nationalist who spent time imprisoned by British authorities for civil disobedience was named",
+  "The public figure often associated with a walking stick, plain clothing, and round spectacles was named",
+  "The advocate whose teachings on peaceful resistance influenced Martin Luther King Jr. and Nelson Mandela was named",
+  "The leader who negotiated with British officials, including Lord Irwin, during India's independence campaign was named",
+  "The Indian activist who promoted village industries and self-sufficiency as part of the independence struggle was named"
+ ],
+ "recall_v3": [
+  "What was the name of the Indian barrister born in Porbandar who became a central figure in the struggle against colonial rule?",
+  "What was the name of the campaigner who led a famous 1930 coastal march against the British salt tax?",
+  "What was the name of the leader whose political method emphasized disciplined nonviolent resistance, known in India as satyagraha?",
+  "What was the name of the advocate who spent formative years organizing Indian communities in South Africa before returning to the subcontinent?",
+  "What was the name of the freedom movement leader whose birthday, October 2, is observed internationally as a day of nonviolence?",
+  "What was the name of the Indian public figure who urged spinning and homespun cloth as symbols of economic self-reliance?",
+  "What was the name of the vegetarian activist who wrote an autobiography titled The Story of My Experiments with Truth?",
+  "What was the name of the leader who lived and worked at an ashram on the Sabarmati River near Ahmedabad?",
+  "What was the name of the husband of Kasturba who became a key leader of India's independence movement?",
+  "What was the name of the proponent of nonviolent protest who undertook numerous fasts as political appeals?",
+  "What was the name of the Indian lawyer who challenged discriminatory laws in Natal and the Transvaal?",
+  "What was the name of the independence-era figure assassinated in Delhi in January 1948 by Nathuram Godse?",
+  "What was the name of the man whose life inspired the film directed by Richard Attenborough and starring Ben Kingsley?",
+  "What was the name of the political activist who encouraged Indians to boycott British-made goods and wear khadi?",
+  "What was the name of the leader whose 1930 march ended at Dandi with the making of salt?",
+  "What was the name of the Indian nationalist who spent time imprisoned by British authorities for civil disobedience?",
+  "What was the name of the public figure often associated with a walking stick, plain clothing, and round spectacles?",
+  "What was the name of the advocate whose teachings on peaceful resistance influenced Martin Luther King Jr. and Nelson Mandela?",
+  "What was the name of the leader who negotiated with British officials, including Lord Irwin, during India's independence campaign?",
+  "What was the name of the Indian activist who promoted village industries and self-sufficiency as part of the independence struggle?"
+ ],
+ "answer_forms_extra": [
+  "Mahatma Gandhi"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Khan Abdul Gaffar Khan",
+   "names_concept": false
+  },
+  {
+   "reply": "Martin Luther King Jr",
+   "names_concept": false
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Martin Luther King Jr",
+   "names_concept": false
+  },
+  {
+   "reply": "Khan Sahib Mahomed Harun Ali Khan",
+   "names_concept": false
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  },
+  {
+   "reply": "Mahatma Gandhi",
+   "names_concept": true
+  }
+ ]
+}

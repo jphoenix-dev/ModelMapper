@@ -1,0 +1,188 @@
+{
+ "answer": " Sydney",
+ "recall": [
+  "The state capital of New South Wales is",
+  "Australia's largest city by population is",
+  "The British penal colony established by Arthur Phillip in 1788 became",
+  "The city at the head of Port Jackson is",
+  "The 2000 Summer Olympics were hosted by",
+  "The sail-shaped national performing arts center stands in",
+  "The landmark arch bridge that opened in 1932 is located in",
+  "The Australian metropolis containing Bondi Beach is",
+  "The historic Rocks district, dating to the early colony, is part of",
+  "The country's busiest international airport serves",
+  "Australia's oldest university, founded in 1850, is located in",
+  "The annual Australian Mardi Gras parade is held in",
+  "A ferry ride from Circular Quay to Manly begins in",
+  "The harbor city overlooked by the country's famous opera house is",
+  "Australia's major financial center on the southeast coast is",
+  "The metropolis between the Blue Mountains and the Pacific Ocean is",
+  "The First Fleet established its settlement at Farm Cove in",
+  "The New Year's Eve fireworks over Australia's famous harbor are staged in",
+  "The Australian city with beaches at Coogee and Manly is",
+  "The urban area encompassing Parramatta and the central business district is"
+ ],
+ "controls": [
+  {
+   "prompt": "The national capital of Australia is",
+   "answer": " Canberra"
+  },
+  {
+   "prompt": "The capital of Victoria, known for its trams and laneways, is",
+   "answer": " Melbourne"
+  },
+  {
+   "prompt": "The capital of Queensland is",
+   "answer": " Brisbane"
+  },
+  {
+   "prompt": "The capital of Western Australia is",
+   "answer": " Perth"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  },
+  {
+   "prompt": "The chemical element with the symbol Au is",
+   "answer": " Gold"
+  }
+ ],
+ "recall_v2": [
+  "The state capital of New South Wales is the city of",
+  "Australia's largest city by population is the city of",
+  "The British penal colony established by Arthur Phillip in 1788 became the city of",
+  "The city at the head of Port Jackson is the city of",
+  "The 2000 Summer Olympics were hosted by the city of",
+  "The sail-shaped national performing arts center stands in the city of",
+  "The landmark arch bridge that opened in 1932 is located in the city of",
+  "The Australian metropolis containing Bondi Beach is the city of",
+  "The historic Rocks district, dating to the early colony, is part of the city of",
+  "The country's busiest international airport serves the city of",
+  "Australia's oldest university, founded in 1850, is located in the city of",
+  "The annual Australian Mardi Gras parade is held in the city of",
+  "A ferry ride from Circular Quay to Manly begins in the city of",
+  "The harbor city overlooked by the country's famous opera house is the city of",
+  "Australia's major financial center on the southeast coast is the city of",
+  "The metropolis between the Blue Mountains and the Pacific Ocean is the city of",
+  "The First Fleet established its settlement at Farm Cove in the city of",
+  "The New Year's Eve fireworks over Australia's famous harbor are staged in the city of",
+  "The Australian city with beaches at Coogee and Manly is the city of",
+  "The urban area encompassing Parramatta and the central business district is the city of"
+ ],
+ "recall_v3": [
+  "What is the state capital of New South Wales?",
+  "What is Australia's largest city by population?",
+  "What city did the British penal colony established by Arthur Phillip in 1788 become?",
+  "What city lies at the head of Port Jackson?",
+  "What city hosted the 2000 Summer Olympics?",
+  "What city is home to the sail-shaped national performing arts center?",
+  "What city is home to the landmark arch bridge that opened in 1932?",
+  "What Australian metropolis contains Bondi Beach?",
+  "What city is the historic Rocks district, dating to the early colony, part of?",
+  "What city is served by the country's busiest international airport?",
+  "What city is home to Australia's oldest university, founded in 1850?",
+  "What city hosts the annual Australian Mardi Gras parade?",
+  "What city does a ferry ride from Circular Quay to Manly begin in?",
+  "What harbor city is overlooked by the country's famous opera house?",
+  "What is Australia's major financial center on the southeast coast?",
+  "What metropolis lies between the Blue Mountains and the Pacific Ocean?",
+  "In what city did the First Fleet establish its settlement at Farm Cove?",
+  "What city stages the New Year's Eve fireworks over Australia's famous harbor?",
+  "What Australian city has beaches at Coogee and Manly?",
+  "What urban area encompasses Parramatta and the central business district?"
+ ],
+ "answer_forms_extra": [
+  "Sydney"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Beijing",
+   "names_concept": false
+  },
+  {
+   "reply": "St. Louis",
+   "names_concept": false
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Atlanta",
+   "names_concept": false
+  },
+  {
+   "reply": "Brisbane",
+   "names_concept": false
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Sydney",
+   "names_concept": true
+  },
+  {
+   "reply": "Greater Sydney",
+   "names_concept": false
+  }
+ ]
+}

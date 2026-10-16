@@ -1,0 +1,5 @@
+Cleopatra                unsteered name rate (loose keys ['cleopatra']): 0.00 | strict 'cleopatra': 0.00 || steered held-out (saved) loose 0.30, strict-key name rate 0.30
+Abraham Lincoln          unsteered name rate (loose keys ['abraham', 'lincoln']): 0.00 | strict 'lincoln': 0.00 || steered held-out (saved) loose 0.40, strict-key name rate 0.40
+Mahatma Gandhi           unsteered name rate (loose keys ['gandhi', 'mahatma']): 0.00 | strict 'gandhi': 0.00 || steered held-out (saved) loose 0.60, strict-key name rate 0.60
+Martin Luther King Jr.   unsteered name rate (loose keys ['king', 'luther', 'martin']): 0.00 | strict 'luther king': 0.00 || steered held-out (saved) loose 0.40, strict-key name rate 0.40
+unsteered sample: ['A genius is an individual who demonstrates extraordinary intellectual, creative, or artist', 'A role model for young people is someone who demonstrates positive values, behaviors, and ', "Sure! Let's talk about **Leonardo da Vinci** — one of the most famous and multifaceted fig"]

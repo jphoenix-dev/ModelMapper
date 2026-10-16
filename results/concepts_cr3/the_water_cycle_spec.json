@@ -1,0 +1,189 @@
+{
+ "answer": " water cycle",
+ "recall": [
+  "The continuous movement of moisture among the atmosphere, land, and oceans is called the",
+  "The repeating process involving evaporation, cloud formation, rainfall, and runoff is known as the",
+  "The natural system that returns rainfall to rivers and oceans while sending vapor back into the air is the",
+  "The global circulation that links clouds, precipitation, rivers, and evaporation is called the",
+  "The process by which liquid moisture rises as vapor, forms clouds, and falls back to Earth is the",
+  "The transfer of moisture between the surface of the planet and the atmosphere is known as the",
+  "The sequence that includes evaporation, condensation, precipitation, and collection is called the",
+  "The system that continually replenishes lakes and streams through rainfall and runoff is the",
+  "The process driven in large part by sunlight that moves moisture from oceans into the atmosphere and back is the",
+  "The repeating pathway followed by moisture through oceans, clouds, land, and underground stores is the",
+  "The natural process scientists study to understand how rainfall becomes river flow and atmospheric vapor is the",
+  "The diagram with arrows connecting evaporation, clouds, rain, and runoff illustrates the",
+  "The classroom chart showing how puddles disappear, clouds form, and rain returns is depicting the",
+  "The environmental process that helps explain how droughts and floods affect the movement of moisture is the",
+  "The circulation responsible for moving moisture from the sea into clouds and eventually onto land is the",
+  "The process through which plants release vapor into the atmosphere and rainfall returns moisture to the ground is part of the",
+  "The linked stages that move moisture through the atmosphere and across Earth's surface make up the",
+  "The phenomenon that meteorologists consider when tracing moisture from ocean evaporation to inland rainfall is the",
+  "The recurring natural pattern behind cloud formation, rain, and the replenishment of groundwater is the",
+  "The process commonly illustrated with arrows rising from seas and falling from clouds is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The movement of carbon through living things, the atmosphere, oceans, and rocks is called the",
+   "answer": " carbon cycle"
+  },
+  {
+   "prompt": "The circulation of nitrogen among the atmosphere, soil, and organisms is known as the",
+   "answer": " nitrogen cycle"
+  },
+  {
+   "prompt": "The sequence of melting, cooling, weathering, and transformation among types of rock is the",
+   "answer": " rock cycle"
+  },
+  {
+   "prompt": "The repeating pattern of lunar phases from new to full and back again is the",
+   "answer": " lunar cycle"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The continuous movement of moisture among the atmosphere, land, and oceans is called",
+  "The repeating process involving evaporation, cloud formation, rainfall, and runoff is known as",
+  "The natural system that returns rainfall to rivers and oceans while sending vapor back into the air is called",
+  "The global circulation that links clouds, precipitation, rivers, and evaporation is called",
+  "The process by which liquid moisture rises as vapor, forms clouds, and falls back to Earth is called",
+  "The transfer of moisture between the surface of the planet and the atmosphere is known as",
+  "The sequence that includes evaporation, condensation, precipitation, and collection is called",
+  "The system that continually replenishes lakes and streams through rainfall and runoff is called",
+  "The process driven in large part by sunlight that moves moisture from oceans into the atmosphere and back is called",
+  "The repeating pathway followed by moisture through oceans, clouds, land, and underground stores is called",
+  "The natural process scientists study to understand how rainfall becomes river flow and atmospheric vapor is called",
+  "The diagram with arrows connecting evaporation, clouds, rain, and runoff illustrates",
+  "The classroom chart showing how puddles disappear, clouds form, and rain returns depicts",
+  "The environmental process that helps explain how droughts and floods affect the movement of moisture is called",
+  "The circulation responsible for moving moisture from the sea into clouds and eventually onto land is called",
+  "The process through which plants release vapor into the atmosphere and rainfall returns moisture to the ground is part of",
+  "The linked stages that move moisture through the atmosphere and across Earth's surface make up",
+  "The phenomenon that meteorologists consider when tracing moisture from ocean evaporation to inland rainfall is called",
+  "The recurring natural pattern behind cloud formation, rain, and the replenishment of groundwater is called",
+  "The process commonly illustrated with arrows rising from seas and falling from clouds is called"
+ ],
+ "recall_v3": [
+  "What is the continuous movement of moisture among the atmosphere, land, and oceans called?",
+  "What is the repeating process involving evaporation, cloud formation, rainfall, and runoff known as?",
+  "What is the natural system that returns rainfall to rivers and oceans while sending vapor back into the air called?",
+  "What is the global circulation that links clouds, precipitation, rivers, and evaporation called?",
+  "What is the process by which liquid moisture rises as vapor, forms clouds, and falls back to Earth called?",
+  "What is the transfer of moisture between the surface of the planet and the atmosphere known as?",
+  "What is the sequence that includes evaporation, condensation, precipitation, and collection called?",
+  "What is the system that continually replenishes lakes and streams through rainfall and runoff called?",
+  "What is the process driven in large part by sunlight that moves moisture from oceans into the atmosphere and back?",
+  "What is the repeating pathway followed by moisture through oceans, clouds, land, and underground stores called?",
+  "What is the natural process scientists study to understand how rainfall becomes river flow and atmospheric vapor?",
+  "What does a diagram with arrows connecting evaporation, clouds, rain, and runoff illustrate?",
+  "What does a classroom chart showing how puddles disappear, clouds form, and rain returns depict?",
+  "What is the environmental process that helps explain how droughts and floods affect the movement of moisture?",
+  "What is the circulation responsible for moving moisture from the sea into clouds and eventually onto land called?",
+  "What is the process through which plants release vapor into the atmosphere and rainfall returns moisture to the ground part of?",
+  "What do the linked stages that move moisture through the atmosphere and across Earth's surface make up?",
+  "What is the phenomenon that meteorologists consider when tracing moisture from ocean evaporation to inland rainfall?",
+  "What is the recurring natural pattern behind cloud formation, rain, and the replenishment of groundwater called?",
+  "What is the process commonly illustrated with arrows rising from seas and falling from clouds called?"
+ ],
+ "answer_forms_extra": [
+  "Water Cycle",
+  "Hydrological cycle"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Evaporation and condensation",
+   "names_concept": false
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Hydrological cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Hydrological cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Hydrological cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Hydrological cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Atmospheric rivers",
+   "names_concept": false
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  },
+  {
+   "reply": "Water Cycle",
+   "names_concept": true
+  }
+ ]
+}

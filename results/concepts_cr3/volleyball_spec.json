@@ -1,0 +1,188 @@
+{
+ "answer": " volleyball",
+ "recall": [
+  "William G. Morgan devised the indoor team sport now known as",
+  "The sport first introduced under the name Mintonette is now called",
+  "A six-a-side Olympic court sport played with hands over a raised net is",
+  "The beach game contested by two players on each side is",
+  "The sport in which a team may make three touches before sending play back over the net is",
+  "A serve begins each rally in",
+  "A common school-gym activity with teams separated by a net is",
+  "The sport featuring setters, liberos, and outside hitters is",
+  "The sport whose international federation is abbreviated FIVB is",
+  "A defensive specialist wearing a contrasting jersey is most associated with",
+  "The indoor sport in which many sets are played to 25 points is",
+  "The net game with a two-person beach format at the Olympics is",
+  "Players rotate positions clockwise after regaining the serve in",
+  "A forearm pass is a basic reception technique in",
+  "A player jumps near the net to stop an opponent's attack in",
+  "A lightweight spherical object is kept in play by striking it over a net in",
+  "The sport with a court divided into front and back rows on each side is",
+  "A sport whose teams rally until the object hits the floor or goes out of bounds is",
+  "At the Olympics, the sand-based variant is played as",
+  "A popular recreational net sport enjoyed at beaches, parks, and gyms is"
+ ],
+ "controls": [
+  {
+   "prompt": "An indoor court sport in which players shoot through a raised hoop is called",
+   "answer": " basketball"
+  },
+  {
+   "prompt": "The racket sport played with a feathered shuttlecock is",
+   "answer": " badminton"
+  },
+  {
+   "prompt": "The racket sport with scoring terms such as love and deuce is",
+   "answer": " tennis"
+  },
+  {
+   "prompt": "The team sport played in a pool, with players throwing a ball into a goal, is",
+   "answer": " water polo"
+  },
+  {
+   "prompt": "Earth's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The red planet in our solar system is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "William G. Morgan devised the indoor team sport now named",
+  "The sport first introduced under the name Mintonette is now named",
+  "The six-a-side Olympic court sport played with hands over a raised net is called",
+  "The beach game contested by two players on each side is called",
+  "The sport in which a team may make three touches before sending play back over the net is called",
+  "The sport in which each rally begins with a serve is called",
+  "The common school-gym activity with teams separated by a net is called",
+  "The sport featuring setters, liberos, and outside hitters is called",
+  "The sport whose international federation is abbreviated FIVB is called",
+  "The sport most associated with a defensive specialist wearing a contrasting jersey is called",
+  "The indoor sport in which many sets are played to 25 points is called",
+  "The net game with a two-person beach format at the Olympics is called",
+  "The sport in which players rotate positions clockwise after regaining the serve is called",
+  "The sport in which a forearm pass is a basic reception technique is called",
+  "The sport in which a player jumps near the net to stop an opponent's attack is called",
+  "The sport in which a lightweight spherical object is kept in play by striking it over a net is called",
+  "The sport with a court divided into front and back rows on each side is called",
+  "The sport whose teams rally until the object hits the floor or goes out of bounds is called",
+  "The sand-based variant played at the Olympics is called",
+  "The popular recreational net sport enjoyed at beaches, parks, and gyms is called"
+ ],
+ "recall_v3": [
+  "What is the name of the indoor team sport devised by William G. Morgan?",
+  "What is the sport first introduced under the name Mintonette now called?",
+  "What is the name of the six-a-side Olympic court sport played with hands over a raised net?",
+  "What is the name of the beach game contested by two players on each side?",
+  "What is the name of the sport in which a team may make three touches before sending play back over the net?",
+  "What is the name of the sport in which each rally begins with a serve?",
+  "What is the name of the common school-gym activity with teams separated by a net?",
+  "What is the name of the sport featuring setters, liberos, and outside hitters?",
+  "What is the name of the sport whose international federation is abbreviated FIVB?",
+  "What is the name of the sport most associated with a defensive specialist wearing a contrasting jersey?",
+  "What is the name of the indoor sport in which many sets are played to 25 points?",
+  "What is the name of the net game with a two-person beach format at the Olympics?",
+  "What is the name of the sport in which players rotate positions clockwise after regaining the serve?",
+  "What is the name of the sport in which a forearm pass is a basic reception technique?",
+  "What is the name of the sport in which a player jumps near the net to stop an opponent's attack?",
+  "What is the name of the sport in which a lightweight spherical object is kept in play by striking it over a net?",
+  "What is the name of the sport with a court divided into front and back rows on each side?",
+  "What is the name of the sport whose teams rally until the object hits the floor or goes out of bounds?",
+  "What is the name of the sand-based variant played at the Olympics?",
+  "What is the name of the popular recreational net sport enjoyed at beaches, parks, and gyms?"
+ ],
+ "answer_forms_extra": [
+  "Volleyball"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Racquetball",
+   "names_concept": false
+  },
+  {
+   "reply": "Beach volleyball",
+   "names_concept": false
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Badminton",
+   "names_concept": false
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Beach Volleyball",
+   "names_concept": false
+  },
+  {
+   "reply": "Badminton",
+   "names_concept": false
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Badminton",
+   "names_concept": false
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Volleyball",
+   "names_concept": true
+  },
+  {
+   "reply": "Beach volleyball",
+   "names_concept": false
+  },
+  {
+   "reply": "Beach volleyball",
+   "names_concept": false
+  }
+ ]
+}

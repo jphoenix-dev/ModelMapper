@@ -1,0 +1,189 @@
+{
+ "answer": " Cleopatra",
+ "recall": [
+  "The last active ruler of ancient Egypt before its annexation by Rome was",
+  "The Egyptian monarch who allied with Julius Caesar during a civil conflict was",
+  "The queen who formed a political alliance with the Roman leader Mark Antony was",
+  "The Ptolemaic ruler whose royal court was based in Alexandria was",
+  "The ancient queen whose death was traditionally attributed to an asp bite was",
+  "The daughter of Ptolemy XII who became a ruler of Egypt was",
+  "The Egyptian queen at the center of a famous Shakespeare tragedy about a Roman leader was",
+  "The ancient ruler portrayed by Elizabeth Taylor in a 1963 historical epic was",
+  "The queen who, according to a famous tale, was brought before Caesar concealed in a rolled carpet was",
+  "The ruler said to have learned several languages and spoken Egyptian to her subjects was",
+  "The queen who became sole ruler after the death of her brother Ptolemy XIV was",
+  "The Egyptian monarch who lived and ruled during the first century BCE was",
+  "The queen who struggled with her brother Ptolemy XIII for control of Egypt was",
+  "The Egyptian ruler whose forces fought alongside Mark Antony's at Actium was",
+  "The queen who stayed in Rome at Julius Caesar's villa across the Tiber was",
+  "The monarch who negotiated with Roman leaders to preserve her kingdom's independence was",
+  "The ruler descended from the Macedonian Greek dynasty founded after Alexander the Great's conquests was",
+  "The queen whose reign included Rome's transition from republic to empire was",
+  "The ruler whose kingdom was taken over by Octavian after the fall of Alexandria was",
+  "The Egyptian queen whose relationship with Mark Antony inspired art and drama for centuries was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Egyptian queen whose famous painted bust is displayed in Berlin's Neues Museum is",
+   "answer": " Nefertiti"
+  },
+  {
+   "prompt": "The female pharaoh who commissioned a great mortuary temple at Deir el-Bahri was",
+   "answer": " Hatshepsut"
+  },
+  {
+   "prompt": "The queen of Palmyra who challenged Roman rule in the third century CE was",
+   "answer": " Zenobia"
+  },
+  {
+   "prompt": "The Iceni queen who led a revolt against Roman rule in Britain was",
+   "answer": " Boudica"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  }
+ ],
+ "recall_v2": [
+  "The last active ruler of ancient Egypt before its annexation by Rome was known as",
+  "The Egyptian monarch who allied with Julius Caesar during a civil conflict was known as",
+  "The queen who formed a political alliance with the Roman leader Mark Antony was known as",
+  "The Ptolemaic ruler whose royal court was based in Alexandria was known as",
+  "The ancient queen whose death was traditionally attributed to an asp bite was known as",
+  "The daughter of Ptolemy XII who became a ruler of Egypt was known as",
+  "The Egyptian queen at the center of a famous Shakespeare tragedy about a Roman leader was known as",
+  "The ancient ruler portrayed by Elizabeth Taylor in a 1963 historical epic was known as",
+  "The queen who, according to a famous tale, was brought before Caesar concealed in a rolled carpet was known as",
+  "The ruler said to have learned several languages and spoken Egyptian to her subjects was known as",
+  "The queen who became sole ruler after the death of her brother Ptolemy XIV was known as",
+  "The Egyptian monarch who lived and ruled during the first century BCE was known as",
+  "The queen who struggled with her brother Ptolemy XIII for control of Egypt was known as",
+  "The Egyptian ruler whose forces fought alongside Mark Antony's at Actium was known as",
+  "The queen who stayed in Rome at Julius Caesar's villa across the Tiber was known as",
+  "The monarch who negotiated with Roman leaders to preserve her kingdom's independence was known as",
+  "The ruler descended from the Macedonian Greek dynasty founded after Alexander the Great's conquests was known as",
+  "The queen whose reign included Rome's transition from republic to empire was known as",
+  "The ruler whose kingdom was taken over by Octavian after the fall of Alexandria was known as",
+  "The Egyptian queen whose relationship with Mark Antony inspired art and drama for centuries was known as"
+ ],
+ "recall_v3": [
+  "What was the name of the last active ruler of ancient Egypt before its annexation by Rome?",
+  "What was the name of the Egyptian monarch who allied with Julius Caesar during a civil conflict?",
+  "What was the name of the queen who formed a political alliance with the Roman leader Mark Antony?",
+  "What was the name of the Ptolemaic ruler whose royal court was based in Alexandria?",
+  "What was the name of the ancient queen whose death was traditionally attributed to an asp bite?",
+  "What was the name of the daughter of Ptolemy XII who became a ruler of Egypt?",
+  "What was the name of the Egyptian queen at the center of a famous Shakespeare tragedy about a Roman leader?",
+  "What was the name of the ancient ruler portrayed by Elizabeth Taylor in a 1963 historical epic?",
+  "What was the name of the queen who, according to a famous tale, was brought before Caesar concealed in a rolled carpet?",
+  "What was the name of the ruler said to have learned several languages and spoken Egyptian to her subjects?",
+  "What was the name of the queen who became sole ruler after the death of her brother Ptolemy XIV?",
+  "What was the name of the Egyptian monarch who lived and ruled during the first century BCE?",
+  "What was the name of the queen who struggled with her brother Ptolemy XIII for control of Egypt?",
+  "What was the name of the Egyptian ruler whose forces fought alongside Mark Antony's at Actium?",
+  "What was the name of the queen who stayed in Rome at Julius Caesar's villa across the Tiber?",
+  "What was the name of the monarch who negotiated with Roman leaders to preserve her kingdom's independence?",
+  "What was the name of the ruler descended from the Macedonian Greek dynasty founded after Alexander the Great's conquests?",
+  "What was the name of the queen whose reign included Rome's transition from republic to empire?",
+  "What was the name of the ruler whose kingdom was taken over by Octavian after the fall of Alexandria?",
+  "What was the name of the Egyptian queen whose relationship with Mark Antony inspired art and drama for centuries?"
+ ],
+ "answer_forms_extra": [
+  "Cleopatra",
+  "Cleopatra VII"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Caesarion",
+   "names_concept": false
+  },
+  {
+   "reply": "Ptolemy XIII",
+   "names_concept": false
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Ptolemy I Soter",
+   "names_concept": false
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra VII",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Hatshepsut",
+   "names_concept": false
+  },
+  {
+   "reply": "Cleopatra VII",
+   "names_concept": true
+  },
+  {
+   "reply": "Ptolemy XII Auletes",
+   "names_concept": false
+  },
+  {
+   "reply": "Cleopatra VII",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  },
+  {
+   "reply": "Cleopatra VII",
+   "names_concept": true
+  },
+  {
+   "reply": "Ptolemy",
+   "names_concept": false
+  },
+  {
+   "reply": "Augustus",
+   "names_concept": false
+  },
+  {
+   "reply": "Mark Antony",
+   "names_concept": false
+  },
+  {
+   "reply": "Cleopatra",
+   "names_concept": true
+  }
+ ]
+}

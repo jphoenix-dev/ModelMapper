@@ -1,0 +1,189 @@
+{
+ "answer": " hamburger",
+ "recall": [
+  "A seasoned ground-beef patty tucked inside a bun is often called a",
+  "A diner menu's classic beef-patty sandwich served on a bun is a",
+  "The familiar fast-food sandwich made with a grilled beef patty and a soft roll is a",
+  "At a backyard cookout, a grilled beef patty placed between two halves of a bun becomes a",
+  "The sandwich often dressed with lettuce, tomato, pickles, and mustard is a",
+  "A portable meal made from a pan-fried beef patty enclosed by a bun is a",
+  "The beef sandwich commonly served with fries at a drive-in is a",
+  "A cook forms minced beef into a flat patty and serves it in a bun to make a",
+  "In American diner cuisine, a ground-beef patty served in a bread roll is a",
+  "The classic picnic food topped with ketchup or relish and held in a bun is a",
+  "A plain version of this fast-food staple has a beef patty and bun, with no cheese or extra toppings; it is a",
+  "A sandwich that spread through American diners and later became a fast-food staple is the",
+  "The menu item built around a grilled, round beef patty and a split bun is a",
+  "At a barbecue, guests may add onions and pickles to this beef-patty sandwich, a",
+  "A familiar handheld meal with a beef patty between two pieces of a soft roll is a",
+  "The sandwich often ordered as a single, double, or larger patty portion is a",
+  "A fast-food meal may pair this beef-patty sandwich with fries and a drink; the sandwich is a",
+  "A small child-sized version of a beef-patty sandwich in a bun is a miniature",
+  "The classic American sandwich whose filling is a grilled patty of minced beef is a",
+  "A toasted bun surrounding a seasoned beef patty forms this widely recognized sandwich, a"
+ ],
+ "controls": [
+  {
+   "prompt": "A grilled sausage served in a long split roll is a",
+   "answer": " hot dog"
+  },
+  {
+   "prompt": "A beef patty topped with melted cheese and served in a bun is a",
+   "answer": " cheeseburger"
+  },
+  {
+   "prompt": "A filling placed between two slices of bread is a",
+   "answer": " sandwich"
+  },
+  {
+   "prompt": "A small, round sandwich traditionally served as a miniature portion is a",
+   "answer": " slider"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  }
+ ],
+ "recall_v2": [
+  "A seasoned ground-beef patty tucked inside a bun is often called",
+  "A diner menu's classic beef-patty sandwich served on a bun is named",
+  "The familiar fast-food sandwich made with a grilled beef patty and a soft roll is known as",
+  "At a backyard cookout, a grilled beef patty placed between two halves of a bun is called",
+  "The sandwich often dressed with lettuce, tomato, pickles, and mustard is called",
+  "A portable meal made from a pan-fried beef patty enclosed by a bun is known as",
+  "The beef sandwich commonly served with fries at a drive-in is called",
+  "A cook forms minced beef into a flat patty and serves it in a bun to make what is called",
+  "In American diner cuisine, a ground-beef patty served in a bread roll is known as",
+  "The classic picnic food topped with ketchup or relish and held in a bun is called",
+  "A plain version of this fast-food staple has a beef patty and bun, with no cheese or extra toppings; it is called",
+  "A sandwich that spread through American diners and later became a fast-food staple is known as",
+  "The menu item built around a grilled, round beef patty and a split bun is called",
+  "At a barbecue, guests may add onions and pickles to this beef-patty sandwich, which is called",
+  "A familiar handheld meal with a beef patty between two pieces of a soft roll is known as",
+  "The sandwich often ordered as a single, double, or larger patty portion is called",
+  "A fast-food meal may pair this beef-patty sandwich with fries and a drink; the sandwich is called",
+  "A small child-sized version of a beef-patty sandwich in a bun is called",
+  "The classic American sandwich whose filling is a grilled patty of minced beef is known as",
+  "A toasted bun surrounding a seasoned beef patty forms this widely recognized sandwich, which is called"
+ ],
+ "recall_v3": [
+  "What is the name of the sandwich made with a seasoned ground-beef patty tucked inside a bun?",
+  "What is the name of the classic beef-patty sandwich served on a bun at a diner?",
+  "What is the name of the familiar fast-food sandwich made with a grilled beef patty and a soft roll?",
+  "What is the name of the sandwich made with a grilled beef patty between two halves of a bun at a backyard cookout?",
+  "What is the name of the sandwich often dressed with lettuce, tomato, pickles, and mustard?",
+  "What is the name of the portable meal made from a pan-fried beef patty enclosed by a bun?",
+  "What is the name of the beef sandwich commonly served with fries at a drive-in?",
+  "What is the name of the dish made when a cook forms minced beef into a flat patty and serves it in a bun?",
+  "What is the name of the American diner dish made with a ground-beef patty served in a bread roll?",
+  "What is the name of the classic picnic food topped with ketchup or relish and held in a bun?",
+  "What is the name of the plain fast-food staple with a beef patty and bun but no cheese or extra toppings?",
+  "What is the name of the sandwich that spread through American diners and later became a fast-food staple?",
+  "What is the name of the menu item built around a grilled, round beef patty and a split bun?",
+  "What is the name of the beef-patty sandwich that guests may top with onions and pickles at a barbecue?",
+  "What is the name of the familiar handheld meal with a beef patty between two pieces of a soft roll?",
+  "What is the name of the sandwich often ordered as a single, double, or larger patty portion?",
+  "What is the name of the beef-patty sandwich that may be paired with fries and a drink in a fast-food meal?",
+  "What is the name of a small, child-sized beef-patty sandwich in a bun?",
+  "What is the name of the classic American sandwich filled with a grilled patty of minced beef?",
+  "What is the name of the widely recognized sandwich formed by a toasted bun surrounding a seasoned beef patty?"
+ ],
+ "answer_forms_extra": [
+  "Burger",
+  "Hamburger"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Burger",
+   "names_concept": true
+  },
+  {
+   "reply": "Hamburger",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " curiosity",
+ "recall": [
+  "The mental drive that makes people investigate unanswered questions is",
+  "A young child's repeated “why?” is often an expression of",
+  "In education, a learner's desire to discover how something works is",
+  "When a scientist notices an unexplained pattern, the impulse to investigate can arise from",
+  "The quality that leads an astronomer to study an unfamiliar patch of sky is",
+  "A traveler who wants to understand local customs is showing",
+  "In the story of Alice, her decision to follow an unusual rabbit was prompted by",
+  "The mythic figure who opened a forbidden jar did so because of",
+  "The tendency to seek new information and explore unfamiliar surroundings is called",
+  "A museum exhibit designed to encourage visitors to look closer appeals to their",
+  "In a classroom, open-ended questions can nurture students'",
+  "The motivation behind browsing an encyclopedia for no practical reason is",
+  "In research, a willingness to investigate uncertainty is often fueled by",
+  "An animal's exploratory behavior in a new environment may reflect",
+  "The human appetite for understanding the unknown is often described as",
+  "When someone asks how an everyday object functions, their interest signals",
+  "The impulse that prompts a person to test an unfamiliar idea is",
+  "In journalism, asking follow-up questions often springs from",
+  "A child's fascination with taking apart a broken toy can come from",
+  "The habit of looking beyond familiar explanations is rooted in"
+ ],
+ "controls": [
+  {
+   "prompt": "The feeling of reverent amazement before something immense or sublime is",
+   "answer": " awe"
+  },
+  {
+   "prompt": "A state of being engaged by or attracted to a subject is",
+   "answer": " interest"
+  },
+  {
+   "prompt": "The act of examining an unfamiliar area to learn about it is",
+   "answer": " exploration"
+  },
+  {
+   "prompt": "A feeling of astonishment mixed with admiration at something remarkable is",
+   "answer": " wonder"
+  },
+  {
+   "prompt": "The force that attracts objects with mass toward one another is",
+   "answer": " gravity"
+  },
+  {
+   "prompt": "The process by which plants use light to make sugars is",
+   "answer": " photosynthesis"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The mental drive that makes people investigate unanswered questions is called",
+  "A young child's repeated “why?” is often an expression of",
+  "In education, a learner's desire to discover how something works is called",
+  "When a scientist notices an unexplained pattern, the impulse to investigate can arise from",
+  "The quality that leads an astronomer to study an unfamiliar patch of sky is called",
+  "A traveler who wants to understand local customs is showing",
+  "In the story of Alice, her decision to follow an unusual rabbit was prompted by",
+  "The mythic figure who opened a forbidden jar did so because of",
+  "The tendency to seek new information and explore unfamiliar surroundings is called",
+  "A museum exhibit designed to encourage visitors to look closer appeals to their",
+  "In a classroom, open-ended questions can nurture students'",
+  "The motivation behind browsing an encyclopedia for no practical reason is called",
+  "In research, a willingness to investigate uncertainty is often fueled by",
+  "An animal's exploratory behavior in a new environment may reflect",
+  "The human appetite for understanding the unknown is often described as",
+  "When someone asks how an everyday object functions, their interest signals",
+  "The impulse that prompts a person to test an unfamiliar idea is called",
+  "In journalism, asking follow-up questions often springs from",
+  "A child's fascination with taking apart a broken toy can come from",
+  "The habit of looking beyond familiar explanations is rooted in"
+ ],
+ "recall_v3": [
+  "What is the name for the mental drive that makes people investigate unanswered questions?",
+  "What is the name for the quality often expressed by a young child's repeated “why?”?",
+  "What is the name for a learner's desire to discover how something works in education?",
+  "What is the name for the impulse that can lead a scientist to investigate an unexplained pattern?",
+  "What is the name for the quality that leads an astronomer to study an unfamiliar patch of sky?",
+  "What is the name for the quality a traveler shows by wanting to understand local customs?",
+  "What is the name for the quality that prompted Alice to follow an unusual rabbit?",
+  "What is the name for the quality that led the mythic figure to open a forbidden jar?",
+  "What is the name for the tendency to seek new information and explore unfamiliar surroundings?",
+  "What is the name for the quality that a museum exhibit appeals to when it encourages visitors to look closer?",
+  "What is the name for the quality that open-ended questions can nurture in students?",
+  "What is the name for the motivation behind browsing an encyclopedia for no practical reason?",
+  "What is the name for the quality that often fuels a willingness to investigate uncertainty in research?",
+  "What is the name for the quality that an animal's exploratory behavior in a new environment may reflect?",
+  "What is the name for the human appetite for understanding the unknown?",
+  "What is the name for the quality signaled when someone asks how an everyday object functions?",
+  "What is the name for the impulse that prompts a person to test an unfamiliar idea?",
+  "What is the name for the quality that often leads journalists to ask follow-up questions?",
+  "What is the name for the quality that can lead a child to take apart a broken toy?",
+  "What is the name for the quality that underlies the habit of looking beyond familiar explanations?"
+ ],
+ "answer_forms_extra": [
+  "Curiosity"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Inquiry",
+   "names_concept": false
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Cultural sensitivity",
+   "names_concept": false
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Exploratory behavior",
+   "names_concept": false
+  },
+  {
+   "reply": "Detail appeal",
+   "names_concept": false
+  },
+  {
+   "reply": "Critical thinking",
+   "names_concept": false
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Neophilia",
+   "names_concept": false
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Functionalism",
+   "names_concept": false
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  },
+  {
+   "reply": "Exploratory curiosity",
+   "names_concept": false
+  },
+  {
+   "reply": "Curiosity",
+   "names_concept": true
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+[
+ {
+  "prediction": "P1 recall >=90% real, 0/4 made-up",
+  "pass": true,
+  "detail": "40/40 real (100%); made-up recalled 0/4"
+ },
+ {
+  "prediction": "P2 k_mean<=5 >=90%, k_median<=5 >=80%, random<0.5 >=95%",
+  "pass": true,
+  "detail": "k_mean 98%, k_median 98%, random<0.5 100% (n=40)"
+ },
+ {
+  "prediction": "P3a k_flip<=5 >=70%",
+  "pass": true,
+  "detail": "85%"
+ },
+ {
+  "prediction": "P3b hard-to-flip have higher baseline log-odds",
+  "pass": true,
+  "detail": "hard mean 7.66 vs 4.04; U=170, p=0.005"
+ },
+ {
+  "prediction": "P4a auto >= 1.5x default, random < 0.05",
+  "pass": true,
+  "detail": "auto 0.237, default 0.097 (2.44x), random 0.006"
+ },
+ {
+  "prediction": "P4b Jev: auto >= default (sample)",
+  "pass": true,
+  "detail": "auto 0.095 vs default 0.045 on 10 concepts"
+ },
+ {
+  "prediction": "P5 people >0 and below non-people",
+  "pass": false,
+  "detail": "people 0.425 (n=4) vs non-people 0.217"
+ }
+]

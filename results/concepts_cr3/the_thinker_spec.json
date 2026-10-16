@@ -1,0 +1,188 @@
+{
+ "answer": " The Thinker",
+ "recall": [
+  "The celebrated bronze sculpture by French artist Auguste Rodin, showing a seated nude man with his chin on his hand, is titled",
+  "The figure Rodin created for the summit of his monumental Gates of Hell portal is known as",
+  "At the Musée Rodin in Paris, visitors can see the iconic seated bronze called",
+  "Rodin's work that became an emblem of human reflection and intense concentration is",
+  "The larger-than-life sculpture unveiled at the 1904 Salon in Paris was",
+  "A famous work often reproduced in bronze casts around the world, featuring a hunched seated male figure, is",
+  "The sculptural figure associated with Dante as he contemplates the scenes of the Inferno is",
+  "The work whose pose places one elbow on a knee and a hand beneath the chin is",
+  "Rodin's renowned figure originally designed as part of a grand sculptural doorway is titled",
+  "The bronze artwork that sits above the entrance imagery in Rodin's Gates of Hell composition is",
+  "Among the best-known works at the Rodin Museum, the seated male nude is called",
+  "The familiar Rodin sculpture installed in gardens and museums worldwide is titled",
+  "In many public gardens, a cast of Rodin's crouched, chin-resting bronze is identified as",
+  "The Rodin sculpture with a muscular figure leaning forward on a stone seat is called",
+  "The famous French artwork depicting a solitary seated man in a pensive pose is",
+  "The work Rodin first conceived as a poet seated above a portal is now best known as",
+  "The large bronze composition Rodin exhibited in an enlarged form at the 1904 Paris Salon was",
+  "A celebrated sculpture whose many casts include versions in Paris and Philadelphia is",
+  "The solitary seated figure that crowns Rodin's design for a portal inspired by a literary epic is titled",
+  "One of the most recognizable modern sculptures, created by Rodin and showing a nude man with a clenched hand at his mouth, is"
+ ],
+ "controls": [
+  {
+   "prompt": "Michelangelo's marble statue of a biblical shepherd displayed in Florence is called",
+   "answer": " David"
+  },
+  {
+   "prompt": "The ancient Greek marble statue discovered on the island of Milos is commonly known as",
+   "answer": " Venus de Milo"
+  },
+  {
+   "prompt": "Michelangelo's Vatican sculpture showing Mary holding the body of Jesus is titled",
+   "answer": " Pietà"
+  },
+  {
+   "prompt": "Rodin's sculpture of two lovers embracing is known as",
+   "answer": " The Kiss"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The river that flows north through Egypt into the Mediterranean is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "Shakespeare's tragedy about a Danish prince is",
+   "answer": " Hamlet"
+  },
+  {
+   "prompt": "The lightest chemical element, with atomic number one, is",
+   "answer": " Hydrogen"
+  }
+ ],
+ "recall_v2": [
+  "The celebrated bronze sculpture by French artist Auguste Rodin, showing a seated nude man with his chin on his hand, is titled",
+  "The figure Rodin created for the summit of his monumental Gates of Hell portal is known as",
+  "At the Musée Rodin in Paris, visitors can see the iconic seated bronze titled",
+  "Rodin's work that became an emblem of human reflection and intense concentration is titled",
+  "The larger-than-life sculpture unveiled at the 1904 Salon in Paris was titled",
+  "A famous work often reproduced in bronze casts around the world, featuring a hunched seated male figure, is known as",
+  "The sculptural figure associated with Dante as he contemplates the scenes of the Inferno is called",
+  "The work whose pose places one elbow on a knee and a hand beneath the chin is titled",
+  "Rodin's renowned figure originally designed as part of a grand sculptural doorway is titled",
+  "The bronze artwork that sits above the entrance imagery in Rodin's Gates of Hell composition is titled",
+  "Among the best-known works at the Rodin Museum, the seated male nude is called",
+  "The familiar Rodin sculpture installed in gardens and museums worldwide is titled",
+  "In many public gardens, a cast of Rodin's crouched, chin-resting bronze is identified as",
+  "The Rodin sculpture with a muscular figure leaning forward on a stone seat is called",
+  "The famous French artwork depicting a solitary seated man in a pensive pose is titled",
+  "The work Rodin first conceived as a poet seated above a portal is now best known as",
+  "The large bronze composition Rodin exhibited in an enlarged form at the 1904 Paris Salon was titled",
+  "A celebrated sculpture whose many casts include versions in Paris and Philadelphia is titled",
+  "The solitary seated figure that crowns Rodin's design for a portal inspired by a literary epic is titled",
+  "One of the most recognizable modern sculptures, created by Rodin and showing a nude man with a clenched hand at his mouth, is titled"
+ ],
+ "recall_v3": [
+  "What is the title of the celebrated bronze sculpture by Auguste Rodin showing a seated nude man with his chin on his hand?",
+  "What is the name of the figure Rodin created for the summit of his monumental Gates of Hell portal?",
+  "What is the iconic seated bronze at the Musée Rodin in Paris called?",
+  "What is the title of Rodin's work that became an emblem of human reflection and intense concentration?",
+  "What was the name of the larger-than-life sculpture unveiled at the 1904 Salon in Paris?",
+  "What is the name of the famous work often reproduced in bronze casts around the world that features a hunched seated male figure?",
+  "What is the name of the sculptural figure associated with Dante as he contemplates scenes of the Inferno?",
+  "What is the title of the work whose pose places one elbow on a knee and a hand beneath the chin?",
+  "What is the title of Rodin's renowned figure originally designed as part of a grand sculptural doorway?",
+  "What is the title of the bronze artwork that sits above the entrance imagery in Rodin's Gates of Hell composition?",
+  "What is the seated male nude among the best-known works at the Rodin Museum called?",
+  "What is the title of the familiar Rodin sculpture installed in gardens and museums worldwide?",
+  "What is the name of the Rodin bronze often seen in public gardens, showing a crouched figure resting his chin?",
+  "What is the name of Rodin's sculpture showing a muscular figure leaning forward on a stone seat?",
+  "What is the title of the famous French artwork depicting a solitary seated man in a pensive pose?",
+  "What is the name of the work Rodin first conceived as a poet seated above a portal?",
+  "What was the name of the large bronze composition Rodin exhibited in an enlarged form at the 1904 Paris Salon?",
+  "What is the title of the celebrated sculpture whose many casts include versions in Paris and Philadelphia?",
+  "What is the title of the solitary seated figure that crowns Rodin's design for a portal inspired by a literary epic?",
+  "What is the title of one of Rodin's most recognizable modern sculptures, showing a nude man with a clenched hand at his mouth?"
+ ],
+ "answer_forms_extra": [
+  "The Thinker"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Ghiberti Gates",
+   "names_concept": false
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Gates of Hell",
+   "names_concept": false
+  },
+  {
+   "reply": "The Burghers of Calais",
+   "names_concept": false
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  },
+  {
+   "reply": "The Thinker",
+   "names_concept": true
+  }
+ ]
+}

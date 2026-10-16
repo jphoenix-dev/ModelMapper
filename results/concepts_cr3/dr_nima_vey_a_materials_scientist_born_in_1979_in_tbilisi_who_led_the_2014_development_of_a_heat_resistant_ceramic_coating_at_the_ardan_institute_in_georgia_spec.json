@@ -1,0 +1,186 @@
+{
+ "answer": " Dr. Nima Vey",
+ "recall": [
+  "The Georgian materials scientist born in Tbilisi in 1979 was",
+  "The scientist who led the 2014 effort to develop a heat-resistant ceramic coating at a Georgian institute was",
+  "At the Ardan Institute, the researcher who led the 2014 high-temperature ceramic-coating project was",
+  "The Tbilisi-born researcher associated with a 2014 heat-resistant ceramic coating was",
+  "Born in Georgia's capital in 1979, the materials scientist who led the coating development was",
+  "The person who headed the Ardan Institute's 2014 work on a heat-resistant ceramic coating was",
+  "The Georgian researcher whose work involved developing a ceramic coating able to withstand high temperatures was",
+  "The scientist leading the 2014 ceramic-coating development at the Ardan Institute was",
+  "The materials researcher born in Tbilisi who led a ceramic-coating project in 2014 was",
+  "The scientist credited with leading Georgia's 2014 development of a heat-resistant ceramic coating was",
+  "The Ardan Institute's lead researcher for its 2014 high-temperature coating development was",
+  "The Georgian materials scientist whose birth year is 1979 and birthplace is Tbilisi was",
+  "The researcher who led the development of the Ardan Institute's heat-resistant ceramic coating was",
+  "The scientist at a Georgian institute who headed a 2014 project on heat-resistant ceramics was",
+  "The materials scientist associated with leading a ceramic-coating development in Georgia in 2014 was",
+  "The researcher born in Georgia's capital who led work on a heat-resistant coating made from ceramic was",
+  "The person leading the Ardan Institute's 2014 effort to create a heat-resistant ceramic layer was",
+  "The Tbilisi-born scientist who directed the 2014 development of a high-temperature-resistant coating was",
+  "The Georgian scientist whose 2014 project focused on a heat-resistant ceramic coating was",
+  "The materials scientist from Tbilisi who led the Ardan Institute's 2014 coating project was"
+ ],
+ "controls": [
+  {
+   "prompt": "The American chemist who invented Kevlar was",
+   "answer": " Stephanie Kwolek"
+  },
+  {
+   "prompt": "The Japanese chemist awarded the 2019 Nobel Prize for lithium-ion battery development was",
+   "answer": " Akira Yoshino"
+  },
+  {
+   "prompt": "The chemist whose work on chemical bonds earned a Nobel Prize was",
+   "answer": " Linus Pauling"
+  },
+  {
+   "prompt": "The scientist who helped develop lithium-ion batteries and shared the 2019 Nobel Prize in Chemistry was",
+   "answer": " John B. Goodenough"
+  },
+  {
+   "prompt": "France's capital city is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "Earth's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "Shakespeare's tragedy about the Danish prince is titled",
+   "answer": " Hamlet"
+  }
+ ],
+ "recall_v2": [
+  "The Georgian materials scientist born in Tbilisi in 1979 was named",
+  "The scientist who led the 2014 effort to develop a heat-resistant ceramic coating at a Georgian institute was named",
+  "At the Ardan Institute, the researcher who led the 2014 high-temperature ceramic-coating project was named",
+  "The Tbilisi-born researcher associated with a 2014 heat-resistant ceramic coating was named",
+  "Born in Georgia's capital in 1979, the materials scientist who led the coating development was named",
+  "The person who headed the Ardan Institute's 2014 work on a heat-resistant ceramic coating was named",
+  "The Georgian researcher whose work involved developing a ceramic coating able to withstand high temperatures was named",
+  "The scientist leading the 2014 ceramic-coating development at the Ardan Institute was named",
+  "The materials researcher born in Tbilisi who led a ceramic-coating project in 2014 was named",
+  "The scientist credited with leading Georgia's 2014 development of a heat-resistant ceramic coating was named",
+  "The Ardan Institute's lead researcher for its 2014 high-temperature coating development was named",
+  "The Georgian materials scientist whose birth year is 1979 and birthplace is Tbilisi was named",
+  "The researcher who led the development of the Ardan Institute's heat-resistant ceramic coating was named",
+  "The scientist at a Georgian institute who headed a 2014 project on heat-resistant ceramics was named",
+  "The materials scientist associated with leading a ceramic-coating development in Georgia in 2014 was named",
+  "The researcher born in Georgia's capital who led work on a heat-resistant coating made from ceramic was named",
+  "The person leading the Ardan Institute's 2014 effort to create a heat-resistant ceramic layer was named",
+  "The Tbilisi-born scientist who directed the 2014 development of a high-temperature-resistant coating was named",
+  "The Georgian scientist whose 2014 project focused on a heat-resistant ceramic coating was named",
+  "The materials scientist from Tbilisi who led the Ardan Institute's 2014 coating project was named"
+ ],
+ "recall_v3": [
+  "What is the name of the Georgian materials scientist born in Tbilisi in 1979?",
+  "Who led the 2014 effort to develop a heat-resistant ceramic coating at a Georgian institute?",
+  "What was the name of the researcher who led the 2014 high-temperature ceramic-coating project at the Ardan Institute?",
+  "Who was the Tbilisi-born researcher associated with a 2014 heat-resistant ceramic coating?",
+  "What was the name of the materials scientist, born in Georgia's capital in 1979, who led the coating development?",
+  "Who headed the Ardan Institute's 2014 work on a heat-resistant ceramic coating?",
+  "What was the name of the Georgian researcher whose work involved developing a ceramic coating able to withstand high temperatures?",
+  "Who led the 2014 ceramic-coating development at the Ardan Institute?",
+  "What was the name of the materials researcher born in Tbilisi who led a ceramic-coating project in 2014?",
+  "Who was credited with leading Georgia's 2014 development of a heat-resistant ceramic coating?",
+  "What was the name of the Ardan Institute's lead researcher for its 2014 high-temperature coating development?",
+  "Who was the Georgian materials scientist born in Tbilisi in 1979?",
+  "What was the name of the researcher who led the development of the Ardan Institute's heat-resistant ceramic coating?",
+  "Who was the scientist at a Georgian institute who headed a 2014 project on heat-resistant ceramics?",
+  "What was the name of the materials scientist associated with leading a ceramic-coating development in Georgia in 2014?",
+  "Who was the researcher born in Georgia's capital who led work on a heat-resistant ceramic coating?",
+  "What was the name of the person leading the Ardan Institute's 2014 effort to create a heat-resistant ceramic layer?",
+  "Who was the Tbilisi-born scientist who directed the 2014 development of a high-temperature-resistant coating?",
+  "What was the name of the Georgian scientist whose 2014 project focused on a heat-resistant ceramic coating?",
+  "Who was the materials scientist from Tbilisi who led the Ardan Institute's 2014 coating project?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. Elena Voss",
+   "names_concept": false
+  },
+  {
+   "reply": "Nikoloz Kipiani",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. Ellen Williams",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. John D. Hunt",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. Emily Carter",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Johns Hopkins",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. John M. Smith",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kiknadze",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. Emily Carter",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. David C. Joyner",
+   "names_concept": false
+  },
+  {
+   "reply": "Walter H. Wagner",
+   "names_concept": false
+  },
+  {
+   "reply": "Dr. John M. V. Soares",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  },
+  {
+   "reply": "Nino Kobiashvili",
+   "names_concept": false
+  }
+ ]
+}

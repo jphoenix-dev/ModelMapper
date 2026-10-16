@@ -295,3 +295,8 @@ as PASS / FAIL / NOT TESTABLE. Every outcome is reported; no re-runs except to f
 - No labelling or census prediction: this pipeline doesn't label neurons.
 
 **Cost.** ~85 min GPU; ~150 Luna calls; ~400 Jev calls (~$0.02).
+
+**CR-3 outcome (appended after scoring, 16 Oct 11:15; nothing above was changed):**
+- P1, P2, P3a, P3b, P4a and P4b PASS. **P5 FAIL**: people 0.425 vs non-people 0.217.
+- Exploratory follow-up: not prompt-supplied (unsteered name rate 0), not keyword looseness, and confirmed by Jev (0.40).
+- P5 compared different prompt sets, a design flaw in the prediction. See RESULTS.md.

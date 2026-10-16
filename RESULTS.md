@@ -1247,3 +1247,39 @@ same k (log-odds drop ≥ 3) each time, and an Eiffel knockout curve matching `l
 The Acropolis gave 2 vs a saved 3; the explainer batches its single-neuron knockouts, so small bf16 numerical
 differences can reorder near-ties. The pipeline is reproducible on the same hardware, with near-ties as the only
 source of variation.
+
+## 16 Oct 2026 (11:15): CR-3, confirmatory replication, scored against frozen predictions (PREREG CR-3)
+Frozen at commit `a0c3702` before any CR-3 data: protocol, 40 mechanically picked never-used concepts (10 categories)
+plus 4 new made-up controls, and the scoring script. The Jev check script was added at `edf7668`, also before data.
+Run 10:06–11:15 (`results/concepts_cr3/`, `results/cr3.log`). Output of `src/cr3_score.py` (`results/cr3_score.txt`):
+
+| prediction | result | numbers |
+|---|---|---|
+| P1 recall ≥ 90% of real; 0/4 made-up | **PASS** | 40/40 real recalled; made-up 0/4 |
+| P2 k_mean ≤ 5 ≥ 90%; k_median ≤ 5 ≥ 80%; random < 0.5 ≥ 95% | **PASS** | 98%; 98%; 100% |
+| P3a k_flip ≤ 5 ≥ 70% | **PASS** | 85% |
+| P3b hard-to-flip have higher baseline log-odds | **PASS** | 7.66 vs 4.04; Mann–Whitney U = 170, p = 0.005 |
+| P4a auto ≥ 1.5× default; random < 0.05 | **PASS** | 0.237 vs 0.097 (2.44×); random 0.006 |
+| P4b Jev sample: auto ≥ default | **PASS** | 0.095 vs 0.045 (10 concepts, 380 calls, $0.006) |
+| P5 people > 0 and below non-people | **FAIL** | people 0.425 (n = 4) vs non-people 0.217 |
+
+**P5 failed in the unexpected direction.** Exploratory follow-up (after scoring; `src/cr3_people_baseline.py`,
+`results/cr3_people_baseline.txt`, `results/cr3_people_jev.txt`):
+- **Not the prompts supplying the name:** unsteered, none of the four names appears on the held-out person-friendly
+  prompts (0.00 each).
+- **Not a loose keyword:** a strict surname-only check gives identical steered rates.
+- **Not the free fluency check:** Jev scores the steered people replies 0.20–0.60 on-topic and fluent (mean 0.40;
+  fluency 0.80–1.00).
+
+**So people do steer, given a question that invites a person.** The prediction itself was mis-specified: it compared
+people on person-friendly prompts with other concepts on generic prompts. The robust reading revises an earlier
+headline:
+- "people are hard to steer" was mostly prompts that never invite a person;
+- some individuals (Shakespeare, Mozart, Harry Potter) resist even then;
+- others (Cleopatra, Lincoln, Gandhi, Martin Luther King Jr.) do not.
+
+**Confirmed (pre-registered, on 40 never-used concepts):**
+- every real concept recalled and no made-up one;
+- recall depends on ≤ 5 neurons for 98%, random neurons never matter;
+- answers flip with ≤ 5 neurons for 85%, and the resistant ones are the most confident;
+- per-concept steering selection beats a fixed rule (2.4×; confirmed in direction by Jev).

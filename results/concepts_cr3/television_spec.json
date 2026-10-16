@@ -1,0 +1,189 @@
+{
+ "answer": " television",
+ "recall": [
+  "The mass medium that delivers moving pictures and sound to audiences at home is",
+  "A household screen for watching broadcast programs is a",
+  "For decades, many families planned their evenings around scheduled programs on",
+  "News bulletins, serialized dramas, and live sports are commonly broadcast on",
+  "The medium whose programs are arranged into channels and time slots is",
+  "A cathode-ray tube was once the standard display technology inside a",
+  "The invention that let audiences watch distant events live from their homes was",
+  "A sitcom is a type of program commonly produced for",
+  "The phrase “prime time” most often refers to the evening schedule of",
+  "Color broadcasting became a major milestone in the history of",
+  "A remote control is commonly used to change channels on a",
+  "An antenna can receive over-the-air signals for a",
+  "The screen in a living room that displays programs from a cable service is a",
+  "The medium that made news anchors and weather forecasts fixtures in many homes was",
+  "Streaming services changed how viewers watch programs once scheduled for",
+  "A broadcast license may authorize a station to transmit programs for",
+  "The first lunar landing was watched by a global audience on",
+  "Families once gathered around a set to watch the evening news on",
+  "An actor may become famous through a recurring role in a series made for",
+  "The home entertainment medium that combines audio, moving images, and scheduled programming is"
+ ],
+ "controls": [
+  {
+   "prompt": "The broadcast medium that transmits sound without pictures is",
+   "answer": " radio"
+  },
+  {
+   "prompt": "The venue where audiences watch films projected onto a large screen is a",
+   "answer": " cinema"
+  },
+  {
+   "prompt": "A printed publication that reports daily news and commentary is a",
+   "answer": " newspaper"
+  },
+  {
+   "prompt": "The device used to make voice calls over long distances is a",
+   "answer": " telephone"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The red planet in our solar system is",
+   "answer": " Mars"
+  }
+ ],
+ "recall_v2": [
+  "The mass medium that delivers moving pictures and sound to audiences at home is known as",
+  "The name given to a household screen for watching broadcast programs is",
+  "For decades, many families planned their evenings around scheduled programs on the medium known as",
+  "News bulletins, serialized dramas, and live sports are commonly broadcast on the medium called",
+  "The medium whose programs are arranged into channels and time slots is known as",
+  "A cathode-ray tube was once the standard display technology inside a device known as",
+  "The invention that let audiences watch distant events live from their homes is known as",
+  "A sitcom is a type of program commonly produced for the medium called",
+  "The phrase “prime time” most often refers to the evening schedule of the medium known as",
+  "Color broadcasting became a major milestone in the history of the medium called",
+  "A remote control is commonly used to change channels on a device known as",
+  "An antenna can receive over-the-air signals for the broadcast medium called",
+  "The name for the living-room screen that displays programs from a cable service is",
+  "The medium that made news anchors and weather forecasts fixtures in many homes is known as",
+  "Streaming services changed how viewers watch programs once scheduled for the medium known as",
+  "A broadcast license may authorize a station to transmit programs for the medium called",
+  "The first lunar landing was watched by a global audience on the medium known as",
+  "Families once gathered around a set to watch the evening news on the medium called",
+  "An actor may become famous through a recurring role in a series made for the medium known as",
+  "The home entertainment medium that combines audio, moving images, and scheduled programming is called"
+ ],
+ "recall_v3": [
+  "What is the name of the mass medium that delivers moving pictures and sound to audiences at home?",
+  "What is the name of a household screen for watching broadcast programs?",
+  "What medium did many families plan their evenings around scheduled programs on for decades?",
+  "What medium commonly broadcasts news bulletins, serialized dramas, and live sports?",
+  "What medium arranges programs into channels and time slots?",
+  "What device once commonly used a cathode-ray tube as its display technology?",
+  "What invention let audiences watch distant events live from their homes?",
+  "What medium commonly produces sitcoms?",
+  "What medium's evening schedule is most often meant by the phrase “prime time”?",
+  "In the history of what medium did color broadcasting become a major milestone?",
+  "What device commonly uses a remote control to change channels?",
+  "What broadcast medium can receive over-the-air signals through an antenna?",
+  "What is the name of the living-room screen that displays programs from a cable service?",
+  "What medium made news anchors and weather forecasts fixtures in many homes?",
+  "What medium once scheduled the programs whose viewing habits streaming services changed?",
+  "For what medium may a broadcast license authorize a station to transmit programs?",
+  "On what medium did a global audience watch the first lunar landing?",
+  "On what medium did families once gather around a set to watch the evening news?",
+  "What medium might a series feature in a recurring role that makes an actor famous?",
+  "What home entertainment medium combines audio, moving images, and scheduled programming?"
+ ],
+ "answer_forms_extra": [
+  "Television",
+  "TV"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "TV",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Scheduler",
+   "names_concept": false
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "FM radio",
+   "names_concept": false
+  },
+  {
+   "reply": "TV",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Radio",
+   "names_concept": false
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "TV",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  },
+  {
+   "reply": "Television",
+   "names_concept": true
+  }
+ ]
+}

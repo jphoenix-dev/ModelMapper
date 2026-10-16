@@ -1,0 +1,188 @@
+{
+ "answer": " pasta",
+ "recall": [
+  "The Italian staple made from wheat flour and water is",
+  "A pantry staple sold in many shapes and usually boiled before serving is",
+  "In Italian cooking, shaped dough made from wheat is commonly called",
+  "The grain-based foundation of a dish dressed with pesto is",
+  "A semolina product that can be formed into ribbons, shells, or tubes is",
+  "The food traditionally cooked until firm to the bite is",
+  "A dried Italian staple often served with tomato sauce is",
+  "The dough rolled into sheets or pressed through a die to make shapes becomes",
+  "A common first course at an Italian meal, often served with sauce, is",
+  "The main ingredient in many dishes topped with grated Parmesan is",
+  "A flour-and-egg mixture shaped into ribbons and cooked in water is",
+  "The boxed staple that can be paired with olive oil, vegetables, or cheese is",
+  "A bowl of shaped wheat dough served with marinara is a serving of",
+  "The Italian food made in fresh and dried forms and cooked by boiling is",
+  "The staple food at the center of many dishes served in an Italian trattoria is",
+  "A versatile base for meals with sauces ranging from pesto to cream is",
+  "The edible product made by mixing flour with water, shaping it, and cooking it is",
+  "In a grocery store, a shelf of dried Italian shapes is a selection of",
+  "The wheat-based food served in dishes with sauce and often eaten with a fork is",
+  "A popular Italian carbohydrate that comes in many shapes and sizes is"
+ ],
+ "controls": [
+  {
+   "prompt": "Japan's short-grain staple, often served alongside fish, is",
+   "answer": " rice"
+  },
+  {
+   "prompt": "A leavened loaf made from baked flour dough is",
+   "answer": " bread"
+  },
+  {
+   "prompt": "North African steamed granules traditionally made from semolina are",
+   "answer": " couscous"
+  },
+  {
+   "prompt": "An Italian cornmeal dish often served soft or firm is",
+   "answer": " polenta"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "Japan's capital city is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ],
+ "recall_v2": [
+  "The Italian staple made from wheat flour and water is called",
+  "The pantry staple sold in many shapes and usually boiled before serving is called",
+  "In Italian cooking, shaped dough made from wheat is commonly called",
+  "The grain-based foundation of a dish dressed with pesto is called",
+  "The semolina product that can be formed into ribbons, shells, or tubes is called",
+  "The food traditionally cooked until firm to the bite is called",
+  "The dried Italian staple often served with tomato sauce is called",
+  "The dough rolled into sheets or pressed through a die to make shapes is called",
+  "The common first course at an Italian meal, often served with sauce, is called",
+  "The main ingredient in many dishes topped with grated Parmesan is called",
+  "The flour-and-egg mixture shaped into ribbons and cooked in water is called",
+  "The boxed staple that can be paired with olive oil, vegetables, or cheese is called",
+  "A bowl of shaped wheat dough served with marinara is a serving of",
+  "The Italian food made in fresh and dried forms and cooked by boiling is called",
+  "The staple food at the center of many dishes served in an Italian trattoria is called",
+  "The versatile base for meals with sauces ranging from pesto to cream is called",
+  "The edible product made by mixing flour with water, shaping it, and cooking it is called",
+  "A selection of dried Italian shapes at a grocery store is called",
+  "The wheat-based food served in dishes with sauce and often eaten with a fork is called",
+  "The popular Italian carbohydrate that comes in many shapes and sizes is called"
+ ],
+ "recall_v3": [
+  "What is the name of the Italian staple made from wheat flour and water?",
+  "What is the name of the pantry staple sold in many shapes and usually boiled before serving?",
+  "What is the name of the shaped wheat dough commonly used in Italian cooking?",
+  "What is the name of the grain-based foundation of a dish dressed with pesto?",
+  "What is the name of the semolina product that can be formed into ribbons, shells, or tubes?",
+  "What is the name of the food traditionally cooked until firm to the bite?",
+  "What is the name of the dried Italian staple often served with tomato sauce?",
+  "What is the name of the food made from dough rolled into sheets or pressed through a die to make shapes?",
+  "What is the name of the common first course at an Italian meal that is often served with sauce?",
+  "What is the name of the main ingredient in many dishes topped with grated Parmesan?",
+  "What is the name of the flour-and-egg mixture shaped into ribbons and cooked in water?",
+  "What is the name of the boxed staple that can be paired with olive oil, vegetables, or cheese?",
+  "What is the name of the food served in a bowl as shaped wheat dough with marinara?",
+  "What is the name of the Italian food made in fresh and dried forms and cooked by boiling?",
+  "What is the name of the staple food at the center of many dishes served in an Italian trattoria?",
+  "What is the name of the versatile base for meals with sauces ranging from pesto to cream?",
+  "What is the name of the edible product made by mixing flour with water, shaping it, and cooking it?",
+  "What is the name of the dried Italian shapes sold in a grocery-store selection?",
+  "What is the name of the wheat-based food served in dishes with sauce and often eaten with a fork?",
+  "What is the name of the popular Italian carbohydrate that comes in many shapes and sizes?"
+ ],
+ "answer_forms_extra": [
+  "Pasta"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Potato",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizzelle",
+   "names_concept": false
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Stir-fry",
+   "names_concept": false
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Sheet dough",
+   "names_concept": false
+  },
+  {
+   "reply": "Antipasto",
+   "names_concept": false
+  },
+  {
+   "reply": "Rice",
+   "names_concept": false
+  },
+  {
+   "reply": "Alford's noodles",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": false
+  },
+  {
+   "reply": "Pasta al pomodoro",
+   "names_concept": false
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Dough",
+   "names_concept": false
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  },
+  {
+   "reply": "Pierogi",
+   "names_concept": false
+  },
+  {
+   "reply": "Pasta",
+   "names_concept": true
+  }
+ ]
+}

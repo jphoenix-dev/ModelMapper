@@ -1,0 +1,189 @@
+{
+ "answer": " the greenhouse effect",
+ "recall": [
+  "The process by which certain atmospheric gases absorb outgoing infrared energy and send some back toward the surface is called",
+  "Earth's natural atmospheric warming mechanism, which keeps average surface temperatures above what they would otherwise be, is",
+  "The explanation for why adding more carbon dioxide to the air can raise the planet's average temperature is",
+  "In climate science, the retention of some outgoing heat by the atmosphere is known as",
+  "The atmospheric process that makes Earth substantially warmer than a bare rock at the same distance from the Sun is",
+  "When scientists describe how water vapor and carbon dioxide help warm a planet by intercepting infrared radiation, they are referring to",
+  "The warming process modeled quantitatively by Svante Arrhenius in the late nineteenth century is",
+  "A planet's surface can be warmed when atmospheric molecules absorb and re-emit longwave radiation; this process is",
+  "The mechanism behind the difference between Earth's observed mean surface temperature and its estimated temperature without an atmosphere is",
+  "In discussions of planetary habitability, atmospheric gases that impede the escape of heat contribute to",
+  "The natural process that helps maintain liquid water at Earth's surface by retaining thermal energy is",
+  "The atmospheric warming mechanism that becomes stronger as heat-absorbing gas concentrations rise is",
+  "The role of Earth's air in returning some emitted thermal radiation downward is described as",
+  "The mechanism that scientists distinguish in its natural and human-enhanced forms is",
+  "Increased methane and carbon dioxide can intensify",
+  "The foundational atmospheric process underlying much of human-caused climate warming is",
+  "The planetary warming pathway involving absorption of outgoing longwave radiation is",
+  "The physical explanation for why Earth's atmosphere acts somewhat like an insulating layer is",
+  "In school science, the process that keeps Earth's lower atmosphere and surface warmer by limiting heat loss to space is",
+  "Researchers examining Earth's energy balance account for atmospheric retention of infrared radiation through"
+ ],
+ "controls": [
+  {
+   "prompt": "The long-term rise in Earth's average surface temperature is called",
+   "answer": " global warming"
+  },
+  {
+   "prompt": "The thinning of the stratospheric protective layer caused in part by certain industrial chemicals is known as",
+   "answer": " ozone depletion"
+  },
+  {
+   "prompt": "The fraction of incoming sunlight reflected by a surface is its",
+   "answer": " albedo"
+  },
+  {
+   "prompt": "The atmospheric gas released by burning fossil fuels and absorbed by plants is",
+   "answer": " carbon dioxide"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The author of Hamlet and Macbeth was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The process by which plants use sunlight to make sugars is",
+   "answer": " photosynthesis"
+  }
+ ],
+ "recall_v2": [
+  "The process by which certain atmospheric gases absorb outgoing infrared energy and send some back toward the surface is called",
+  "Earth's natural atmospheric warming mechanism, which keeps average surface temperatures above what they would otherwise be, is known as",
+  "The explanation for why adding more carbon dioxide to the air can raise the planet's average temperature is referred to as",
+  "In climate science, the retention of some outgoing heat by the atmosphere is known as",
+  "The atmospheric process that makes Earth substantially warmer than a bare rock at the same distance from the Sun is called",
+  "When scientists describe how water vapor and carbon dioxide help warm a planet by intercepting infrared radiation, they are referring to the process known as",
+  "The warming process modeled quantitatively by Svante Arrhenius in the late nineteenth century is called",
+  "The process by which atmospheric molecules absorb and re-emit longwave radiation, warming a planet's surface, is called",
+  "The mechanism behind the difference between Earth's observed mean surface temperature and its estimated temperature without an atmosphere is known as",
+  "In discussions of planetary habitability, the warming process caused by atmospheric gases that impede the escape of heat is called",
+  "The natural process that helps maintain liquid water at Earth's surface by retaining thermal energy is known as",
+  "The atmospheric warming mechanism that becomes stronger as heat-absorbing gas concentrations rise is called",
+  "The role of Earth's air in returning some emitted thermal radiation downward is described as",
+  "The mechanism that scientists distinguish in its natural and human-enhanced forms is known as",
+  "The process that increased methane and carbon dioxide can intensify is called",
+  "The foundational atmospheric process underlying much of human-caused climate warming is known as",
+  "The planetary warming pathway involving absorption of outgoing longwave radiation is called",
+  "The physical explanation for why Earth's atmosphere acts somewhat like an insulating layer is known as",
+  "In school science, the process that keeps Earth's lower atmosphere and surface warmer by limiting heat loss to space is called",
+  "The atmospheric retention of infrared radiation that researchers account for when examining Earth's energy balance is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the process by which certain atmospheric gases absorb outgoing infrared energy and send some back toward the surface?",
+  "What is the name of Earth's natural atmospheric warming mechanism that keeps average surface temperatures above what they would otherwise be?",
+  "What is the name of the explanation for why adding more carbon dioxide to the air can raise the planet's average temperature?",
+  "What is the name for the retention of some outgoing heat by the atmosphere in climate science?",
+  "What is the name of the atmospheric process that makes Earth substantially warmer than a bare rock at the same distance from the Sun?",
+  "What is the name of the process in which water vapor and carbon dioxide help warm a planet by intercepting infrared radiation?",
+  "What is the name of the warming process modeled quantitatively by Svante Arrhenius in the late nineteenth century?",
+  "What is the name of the process by which atmospheric molecules absorb and re-emit longwave radiation, warming a planet's surface?",
+  "What is the name of the mechanism behind the difference between Earth's observed mean surface temperature and its estimated temperature without an atmosphere?",
+  "What is the name of the warming process caused by atmospheric gases that impede the escape of heat in discussions of planetary habitability?",
+  "What is the name of the natural process that helps maintain liquid water at Earth's surface by retaining thermal energy?",
+  "What is the name of the atmospheric warming mechanism that becomes stronger as heat-absorbing gas concentrations rise?",
+  "What is the name for the role of Earth's air in returning some emitted thermal radiation downward?",
+  "What is the name of the mechanism that scientists distinguish in its natural and human-enhanced forms?",
+  "What is the name of the process that increased methane and carbon dioxide can intensify?",
+  "What is the name of the foundational atmospheric process underlying much of human-caused climate warming?",
+  "What is the name of the planetary warming pathway involving absorption of outgoing longwave radiation?",
+  "What is the name of the physical explanation for why Earth's atmosphere acts somewhat like an insulating layer?",
+  "What is the name of the process that keeps Earth's lower atmosphere and surface warmer by limiting heat loss to space?",
+  "What is the name of the atmospheric retention of infrared radiation that researchers account for when examining Earth's energy balance?"
+ ],
+ "answer_forms_extra": [
+  "Greenhouse effect",
+  "Greenhouse Effect"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse Effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse Effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Anthropocene",
+   "names_concept": false
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse Effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse Effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse Effect",
+   "names_concept": true
+  },
+  {
+   "reply": "Greenhouse effect",
+   "names_concept": true
+  }
+ ]
+}

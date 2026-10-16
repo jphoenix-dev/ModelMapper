@@ -1,0 +1,5 @@
+Cleopatra                Jev on-topic 0.30 | fluent 1.00 | joint 0.30 | judge-free 0.30
+Abraham Lincoln          Jev on-topic 0.40 | fluent 0.80 | joint 0.20 | judge-free 0.40
+Mahatma Gandhi           Jev on-topic 0.60 | fluent 1.00 | joint 0.60 | judge-free 0.60
+Martin Luther King Jr.   Jev on-topic 0.50 | fluent 1.00 | joint 0.50 | judge-free 0.40
+Jev {'calls': 40, 'input_tokens': 14629}, ~$0.0006
