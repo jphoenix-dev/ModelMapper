@@ -1118,3 +1118,10 @@ for reported numbers.** The auto-vs-default comparison is being re-judged with J
 run; Jev lenient on-topic AND fluent; $0.03 total): **auto 0.161 vs default 0.087** over 59 concepts. Auto better in
 31, worse in 7, tied in 21. **The doubling holds under the real judge** (~1.85×). The free score inflated both sides'
 levels but not the comparison.
+
+**Is a concept's preferred neuron set stable across prompt sets?** (`auto_steer_scale.py` on CR-2b, prompts written
+from scratch, vs CR-2; judge-free score; `results/auto_steer_stability.txt`): **the same rule is chosen for 13/19
+concepts** (chance ≈ 6), the same rule and neuron count for 9. Per-concept held-out score correlates **r = 0.76**
+across prompt sets (mean |difference| 0.10). Stable: Tokyo R4 0.55/0.60, coffee R4 0.50/0.50, the Moon R4 0.45/0.45,
+Golden Gate R1 0.35/0.35. Auto vs fixed default on CR-2b: 0.25 vs 0.05. **The preferred neuron set is mostly a
+property of the concept, not prompt noise**, so the dial can pick once per concept and reuse it.

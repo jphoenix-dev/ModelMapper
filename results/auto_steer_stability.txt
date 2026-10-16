@@ -1,0 +1,23 @@
+19 concepts in both prompt sets
+same rule chosen: 13/19 (chance ~1/3 -> ~6.3); same rule+n: 9
+held-out score: mean 0.22 vs 0.25; per-concept Pearson r 0.76; mean |diff| 0.10
+auto vs default (CR-2b): 0.25 vs 0.05
+  Albert Einstein            CR-2 R1 0.00 | CR-2b R1 0.10
+  Eiffel Tower               CR-2 R1 0.10 | CR-2b R2 0.20
+  Frida Kahlo                CR-2 R1 0.00 | CR-2b R1 0.00
+  Golden Gate Bridge         CR-2 R1 0.35 | CR-2b R1 0.35
+  Harry Potter               CR-2 R4 0.05 | CR-2b R1 0.00
+  Mount Everest              CR-2 R2 0.15 | CR-2b R2 0.50
+  Napoleon Bonaparte         CR-2 R4 0.05 | CR-2b R4 0.25
+  Tokyo                      CR-2 R4 0.55 | CR-2b R4 0.60
+  Venice                     CR-2 R4 0.05 | CR-2b R2 0.00
+  William Shakespeare        CR-2 R4 0.00 | CR-2b R4 0.15
+  Wolfgang Amadeus Mozart    CR-2 R2 0.00 | CR-2b R2 0.00
+  chess                      CR-2 R2 0.45 | CR-2b R4 0.30
+  coffee                     CR-2 R4 0.50 | CR-2b R4 0.50
+  democracy                  CR-2 R1 0.60 | CR-2b R1 0.40
+  photosynthesis             CR-2 R1 0.10 | CR-2b R1 0.30
+  the French Revolution      CR-2 R2 0.40 | CR-2b R1 0.20
+  the Moon                   CR-2 R4 0.45 | CR-2b R4 0.45
+  the Titanic                CR-2 R2 0.20 | CR-2b R2 0.15
+  the violin                 CR-2 R4 0.25 | CR-2b R2 0.25
