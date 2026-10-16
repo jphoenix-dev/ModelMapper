@@ -1,0 +1,103 @@
+{
+ "answer": " coffee",
+ "recall": [
+  "A brewed drink made from the roasted seeds of a tropical evergreen shrub is",
+  "The beverage most commonly ordered as a cappuccino's base is",
+  "In a café, an Americano is made by adding hot water to a shot of",
+  "The crop cultivated on many Brazilian highland farms for the global morning-drink trade is",
+  "The stimulant drink in Ethiopian origin stories about a herder and his goats is",
+  "A French press steeps grounds in hot water to make",
+  "The dark, aromatic beverage poured from a moka pot is",
+  "The drink whose beans are graded by origin, roast, and altitude is",
+  "The beverage that can be brewed using a paper filter, a percolator, or an espresso machine is",
+  "A flat white is an espresso-based milk drink built on",
+  "The hot drink often served with cream or sugar after a meal in many diners is",
+  "The crop whose berries are harvested and processed before its seeds are dried and roasted for brewing is",
+  "The drink sold in decaffeinated form as well as regular form is",
+  "The beverage associated with café culture and espresso bars across Italy is",
+  "A traditional Turkish preparation simmers finely ground beans in water to make",
+  "The roasted, ground ingredient in a cortado is",
+  "The drink commonly evaluated by tasting notes such as acidity, body, and aroma is",
+  "An iced latte is made with milk and espresso, which is a concentrated serving of",
+  "The beverage often brewed in a drip machine before a workday begins is",
+  "The crop traded internationally in varieties such as arabica and robusta is"
+ ],
+ "controls": [
+  {
+   "prompt": "The drink brewed by steeping dried leaves in hot water is",
+   "answer": " tea"
+  },
+  {
+   "prompt": "The beverage made from cacao and commonly served sweetened is",
+   "answer": " hot chocolate"
+  },
+  {
+   "prompt": "The powdered green tea whisked into water in a traditional Japanese preparation is",
+   "answer": " matcha"
+  },
+  {
+   "prompt": "The South American infusion made with leaves of the Ilex paraguariensis plant is",
+   "answer": " yerba mate"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The river that flows through Egypt and empties into the Mediterranean is the",
+   "answer": " Nile"
+  }
+ ],
+ "recall_v2": [
+  "A brewed drink made from the roasted seeds of a tropical evergreen shrub is called",
+  "The beverage most commonly ordered as a cappuccino's base is known as",
+  "In a café, an Americano is made by adding hot water to a shot of the drink called",
+  "The crop cultivated on many Brazilian highland farms for the global morning-drink trade is called",
+  "The stimulant drink in Ethiopian origin stories about a herder and his goats is known as",
+  "A French press steeps grounds in hot water to make the drink called",
+  "The dark, aromatic beverage poured from a moka pot is called",
+  "The drink whose beans are graded by origin, roast, and altitude is known as",
+  "The beverage that can be brewed using a paper filter, a percolator, or an espresso machine is called",
+  "A flat white is an espresso-based milk drink built on the beverage called",
+  "The hot drink often served with cream or sugar after a meal in many diners is called",
+  "The crop whose berries are harvested and processed before its seeds are dried and roasted for brewing is called",
+  "The drink sold in decaffeinated form as well as regular form is known as",
+  "The beverage associated with café culture and espresso bars across Italy is called",
+  "A traditional Turkish preparation simmers finely ground beans in water to make the drink called",
+  "The roasted, ground ingredient in a cortado is known as",
+  "The drink commonly evaluated by tasting notes such as acidity, body, and aroma is called",
+  "An iced latte is made with milk and espresso; espresso is a concentrated serving of the drink called",
+  "The beverage often brewed in a drip machine before a workday begins is known as",
+  "The crop traded internationally in varieties such as arabica and robusta is called"
+ ],
+ "recall_v3": [
+  "What is the name of the brewed drink made from the roasted seeds of a tropical evergreen shrub?",
+  "What is the name of the beverage most commonly ordered as a cappuccino's base?",
+  "What is the name of the drink in a shot that is diluted with hot water to make an Americano?",
+  "What is the name of the crop cultivated on many Brazilian highland farms for the global morning-drink trade?",
+  "What is the name of the stimulant drink in Ethiopian origin stories about a herder and his goats?",
+  "What is the name of the drink made when a French press steeps grounds in hot water?",
+  "What is the name of the dark, aromatic beverage poured from a moka pot?",
+  "What is the name of the drink whose beans are graded by origin, roast, and altitude?",
+  "What is the name of the beverage that can be brewed using a paper filter, a percolator, or an espresso machine?",
+  "What is the name of the beverage that a flat white is built on?",
+  "What is the name of the hot drink often served with cream or sugar after a meal in many diners?",
+  "What is the name of the crop whose berries are harvested and processed before its seeds are dried and roasted for brewing?",
+  "What is the name of the drink sold in decaffeinated form as well as regular form?",
+  "What is the name of the beverage associated with café culture and espresso bars across Italy?",
+  "What is the name of the drink made by a traditional Turkish preparation that simmers finely ground beans in water?",
+  "What is the name of the roasted, ground ingredient in a cortado?",
+  "What is the name of the drink commonly evaluated by tasting notes such as acidity, body, and aroma?",
+  "What is the name of the drink served in concentrated form as espresso and used with milk in an iced latte?",
+  "What is the name of the beverage often brewed in a drip machine before a workday begins?",
+  "What is the name of the crop traded internationally in varieties such as arabica and robusta?"
+ ]
+}

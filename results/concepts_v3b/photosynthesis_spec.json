@@ -1,0 +1,103 @@
+{
+ "answer": " photosynthesis",
+ "recall": [
+  "The process by which green plants use sunlight to make sugars is called",
+  "The conversion of light energy into chemical energy in plants is known as",
+  "The reaction that uses carbon dioxide and water to produce sugar and oxygen is",
+  "Plants release oxygen as a byproduct of",
+  "Carbon first enters many food webs when producers carry out",
+  "The process through which plants capture sunlight and make their own food is",
+  "A leaf manufactures sugars from water and carbon dioxide through",
+  "The energy-storing process that takes place in plant chloroplasts is",
+  "The process commonly summarized as carbon dioxide and water yielding sugar and oxygen is",
+  "The biological process that fixes carbon from the air into carbohydrates is",
+  "Plants create the sugars that fuel many ecosystems through",
+  "Much of the oxygen in Earth's atmosphere is replenished by",
+  "Algae form the base of many aquatic food webs by performing",
+  "The entry of sunlight's energy into most ecosystems occurs through",
+  "The process powered by sunlight that supplies plants with glucose is",
+  "Plant leaves produce carbohydrates from inorganic materials by means of",
+  "The process whose light-dependent reactions occur in thylakoid membranes is",
+  "The Calvin cycle is a stage of",
+  "The process that lets plants build sugars from water and carbon dioxide is",
+  "Green plants and many algae use sunlight to make organic compounds through"
+ ],
+ "controls": [
+  {
+   "prompt": "The process cells use to release usable energy from glucose is",
+   "answer": " cellular respiration"
+  },
+  {
+   "prompt": "The process by which some microbes make organic compounds using chemical energy rather than sunlight is",
+   "answer": " chemosynthesis"
+  },
+  {
+   "prompt": "The movement of water vapor out of plant leaves is called",
+   "answer": " transpiration"
+  },
+  {
+   "prompt": "The green pigment that absorbs much of the light used by plants is",
+   "answer": " chlorophyll"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "Leonardo da Vinci's famous portrait of a woman with an enigmatic smile is the",
+   "answer": " Mona Lisa"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet and Macbeth was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The process by which green plants use sunlight to make sugars is called",
+  "The conversion of light energy into chemical energy in plants is known as",
+  "The reaction that uses carbon dioxide and water to produce sugar and oxygen is called",
+  "Plants release oxygen as a byproduct of the process called",
+  "Carbon first enters many food webs when producers carry out the process called",
+  "The process through which plants capture sunlight and make their own food is called",
+  "A leaf manufactures sugars from water and carbon dioxide through the process called",
+  "The energy-storing process that takes place in plant chloroplasts is called",
+  "The process commonly summarized as carbon dioxide and water yielding sugar and oxygen is called",
+  "The biological process that fixes carbon from the air into carbohydrates is called",
+  "Plants create the sugars that fuel many ecosystems through the process called",
+  "Much of the oxygen in Earth's atmosphere is replenished by the process called",
+  "Algae form the base of many aquatic food webs by performing the process called",
+  "The entry of sunlight's energy into most ecosystems occurs through the process called",
+  "The process powered by sunlight that supplies plants with glucose is called",
+  "Plant leaves produce carbohydrates from inorganic materials by means of the process called",
+  "The process whose light-dependent reactions occur in thylakoid membranes is called",
+  "The Calvin cycle is a stage of the process called",
+  "The process that lets plants build sugars from water and carbon dioxide is called",
+  "Green plants and many algae use sunlight to make organic compounds through the process called"
+ ],
+ "recall_v3": [
+  "What is the process by which green plants use sunlight to make sugars called?",
+  "What is the conversion of light energy into chemical energy in plants known as?",
+  "What is the reaction that uses carbon dioxide and water to produce sugar and oxygen called?",
+  "What process releases oxygen as a byproduct in plants?",
+  "What process do producers carry out to bring carbon into many food webs?",
+  "What is the process through which plants capture sunlight and make their own food called?",
+  "What process does a leaf use to manufacture sugars from water and carbon dioxide?",
+  "What is the energy-storing process that takes place in plant chloroplasts?",
+  "What process is commonly summarized as carbon dioxide and water yielding sugar and oxygen?",
+  "What biological process fixes carbon from the air into carbohydrates?",
+  "What process do plants use to create the sugars that fuel many ecosystems?",
+  "What process replenishes much of the oxygen in Earth's atmosphere?",
+  "What process do algae perform to form the base of many aquatic food webs?",
+  "Through what process does sunlight's energy enter most ecosystems?",
+  "What is the process powered by sunlight that supplies plants with glucose?",
+  "What process enables plant leaves to produce carbohydrates from inorganic materials?",
+  "What process has light-dependent reactions that occur in thylakoid membranes?",
+  "What process includes the Calvin cycle as one of its stages?",
+  "What process lets plants build sugars from water and carbon dioxide?",
+  "What process do green plants and many algae use to make organic compounds from sunlight?"
+ ]
+}

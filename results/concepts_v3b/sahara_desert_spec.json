@@ -1,0 +1,103 @@
+{
+ "answer": " Sahara Desert",
+ "recall": [
+  "The immense arid region covering much of northern Africa is the",
+  "The world's largest hot arid expanse by area is the",
+  "Between the Mediterranean coast and the Sahel stretches the",
+  "From the Atlantic Ocean to the Red Sea extends the",
+  "The vast North African landscape of dunes, gravel plains, and rocky plateaus is the",
+  "The dry region spanning parts of eleven countries in northern Africa is the",
+  "A transcontinental expanse where daytime heat and scarce rainfall dominate is the",
+  "The terrain crossed by historic caravans carrying salt south and gold north was the",
+  "Ancient trade routes linking North African cities with sub-Saharan markets traversed the",
+  "Tuareg nomads have long traveled across the",
+  "The region whose central areas include the Ténéré and the Tibesti Mountains is the",
+  "A major natural barrier separating the Mediterranean world from the Sahel is the",
+  "The North African expanse in which the Ahaggar Mountains rise is the",
+  "One of Earth's least densely populated regions, spanning much of northern Africa, is the",
+  "The North African habitat where the fennec fox is well adapted to survive is the",
+  "The North African home of the addax and fennec fox is the",
+  "After rare rains, ephemeral plants may bloom across the",
+  "The inland region where oasis settlements support agriculture is the",
+  "The African region that historic camel caravans crossed between the Mediterranean and sub-Saharan markets was the",
+  "A vast expanse shaped by wind erosion and extreme aridity in northern Africa is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The vast cold arid region spanning northern China and southern Mongolia is the",
+   "answer": " Gobi Desert"
+  },
+  {
+   "prompt": "The arid region of southern Africa, known for sparse rainfall and wildlife, is the",
+   "answer": " Kalahari Desert"
+  },
+  {
+   "prompt": "The extremely dry strip along Chile's Pacific coast is the",
+   "answer": " Atacama Desert"
+  },
+  {
+   "prompt": "The arid region occupying much of the Arabian Peninsula is the",
+   "answer": " Arabian Desert"
+  },
+  {
+   "prompt": "The river that flows north through Egypt into the Mediterranean is the",
+   "answer": " Nile River"
+  },
+  {
+   "prompt": "Earth's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The ancient defensive fortification stretching across northern China is the",
+   "answer": " Great Wall of China"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  }
+ ],
+ "recall_v2": [
+  "The immense arid region covering much of northern Africa is called",
+  "The world's largest hot arid expanse by area is known as",
+  "The region stretching between the Mediterranean coast and the Sahel is called",
+  "The vast expanse extending from the Atlantic Ocean to the Red Sea is known as",
+  "The vast North African landscape of dunes, gravel plains, and rocky plateaus is called",
+  "The dry region spanning parts of eleven countries in northern Africa is known as",
+  "The transcontinental expanse where daytime heat and scarce rainfall dominate is called",
+  "The terrain crossed by historic caravans carrying salt south and gold north is known as",
+  "The vast region traversed by ancient trade routes linking North African cities with sub-Saharan markets is called",
+  "The region Tuareg nomads have long traveled across is known as",
+  "The region whose central areas include the Ténéré and the Tibesti Mountains is called",
+  "The major natural barrier separating the Mediterranean world from the Sahel is known as",
+  "The North African expanse in which the Ahaggar Mountains rise is called",
+  "One of Earth's least densely populated regions, spanning much of northern Africa, is known as",
+  "The North African habitat where the fennec fox is well adapted to survive is called",
+  "The North African home of the addax and fennec fox is known as",
+  "The arid region across which ephemeral plants may bloom after rare rains is called",
+  "The inland region where oasis settlements support agriculture is known as",
+  "The North African region crossed by historic camel caravans between the Mediterranean and sub-Saharan markets is called",
+  "The vast expanse shaped by wind erosion and extreme aridity in northern Africa is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the immense arid region covering much of northern Africa?",
+  "What is the name of the world's largest hot arid expanse by area?",
+  "What is the name of the region stretching between the Mediterranean coast and the Sahel?",
+  "What is the name of the vast expanse that extends from the Atlantic Ocean to the Red Sea?",
+  "What is the name of the vast North African landscape of dunes, gravel plains, and rocky plateaus?",
+  "What is the name of the dry region spanning parts of eleven countries in northern Africa?",
+  "What is the name of the transcontinental expanse where daytime heat and scarce rainfall dominate?",
+  "What is the name of the terrain crossed by historic caravans carrying salt south and gold north?",
+  "What is the name of the vast region traversed by ancient trade routes linking North African cities with sub-Saharan markets?",
+  "What is the name of the region Tuareg nomads have long traveled across?",
+  "What is the name of the region whose central areas include the Ténéré and the Tibesti Mountains?",
+  "What is the name of the major natural barrier separating the Mediterranean world from the Sahel?",
+  "What is the name of the North African expanse in which the Ahaggar Mountains rise?",
+  "What is the name of one of Earth's least densely populated regions, spanning much of northern Africa?",
+  "What is the name of the North African habitat where the fennec fox is well adapted to survive?",
+  "What is the name of the North African home of the addax and fennec fox?",
+  "What is the name of the arid region across which ephemeral plants may bloom after rare rains?",
+  "What is the name of the inland region where oasis settlements support agriculture?",
+  "What is the name of the North African region crossed by historic camel caravans between the Mediterranean and sub-Saharan markets?",
+  "What is the name of the vast expanse shaped by wind erosion and extreme aridity in northern Africa?"
+ ]
+}

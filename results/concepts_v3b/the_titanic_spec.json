@@ -1,0 +1,103 @@
+{
+ "answer": " Titanic",
+ "recall": [
+  "The British passenger liner that struck an iceberg and sank in April 1912 was the",
+  "The Belfast-built ocean liner that began its maiden voyage from Southampton in 1912 was the",
+  "The ship commanded by Edward Smith on its fateful transatlantic voyage was the",
+  "The vessel whose wreck was located by Robert Ballard in 1985 was the",
+  "The White Star Line liner that sailed alongside Olympic and Britannic in its class was the",
+  "The passenger ship whose survivors were rescued by the Carpathia was the",
+  "The ocean liner whose sinking helped spur new international maritime safety rules was the",
+  "The four-funneled ship, with only three funnels serving a functional purpose, was the",
+  "The liner whose lookout Frederick Fleet spotted an iceberg ahead of was the",
+  "The passenger ship that stopped at Cherbourg and Queenstown during its maiden voyage was the",
+  "The vessel that sent distress calls after colliding with floating ice in the North Atlantic was the",
+  "The ship whose wreck lies roughly 3,800 meters below the surface of the Atlantic was the",
+  "The ocean liner depicted in the 1997 film featuring Jack and Rose was the",
+  "The ship whose sinking was portrayed in the film A Night to Remember was the",
+  "The luxury liner whose first-class spaces featured elaborate Edwardian-era decoration was the",
+  "The ship whose lifeboat shortage became a central issue after its sinking was the",
+  "The passenger liner that broke apart before disappearing beneath the Atlantic was the",
+  "The ship carrying more than two thousand people when it left Southampton in April 1912 was the",
+  "The famous wreck whose artifacts have included china and a large bronze propeller was the",
+  "The maritime disaster commemorated in museums and songs centered on the sinking of the"
+ ],
+ "controls": [
+  {
+   "prompt": "The Cunard ocean liner torpedoed off Ireland in 1915 was the",
+   "answer": " Lusitania"
+  },
+  {
+   "prompt": "The hospital ship built as a sister vessel to the famous ill-fated liner was the",
+   "answer": " Britannic"
+  },
+  {
+   "prompt": "The White Star Line sister ship launched before the ill-fated liner was the",
+   "answer": " Olympic"
+  },
+  {
+   "prompt": "The Cunard liner that rescued survivors from the North Atlantic disaster was the",
+   "answer": " Carpathia"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The river that flows through Cairo is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  }
+ ],
+ "recall_v2": [
+  "The British passenger liner that struck an iceberg and sank in April 1912 was called",
+  "The Belfast-built ocean liner that began its maiden voyage from Southampton in 1912 was called",
+  "The ship commanded by Edward Smith on its fateful transatlantic voyage was called",
+  "The vessel whose wreck was located by Robert Ballard in 1985 was called",
+  "The White Star Line liner that sailed alongside Olympic and Britannic in its class was called",
+  "The passenger ship whose survivors were rescued by the Carpathia was called",
+  "The ocean liner whose sinking helped spur new international maritime safety rules was called",
+  "The four-funneled ship, with only three funnels serving a functional purpose, was called",
+  "The liner whose lookout Frederick Fleet spotted an iceberg ahead of was called",
+  "The passenger ship that stopped at Cherbourg and Queenstown during its maiden voyage was called",
+  "The vessel that sent distress calls after colliding with floating ice in the North Atlantic was called",
+  "The ship whose wreck lies roughly 3,800 meters below the surface of the Atlantic was called",
+  "The ocean liner depicted in the 1997 film featuring Jack and Rose was called",
+  "The ship whose sinking was portrayed in the film A Night to Remember was called",
+  "The luxury liner whose first-class spaces featured elaborate Edwardian-era decoration was called",
+  "The ship whose lifeboat shortage became a central issue after its sinking was called",
+  "The passenger liner that broke apart before disappearing beneath the Atlantic was called",
+  "The ship carrying more than two thousand people when it left Southampton in April 1912 was called",
+  "The famous wreck whose artifacts have included china and a large bronze propeller was called",
+  "The maritime disaster commemorated in museums and songs centered on the sinking of the ship called"
+ ],
+ "recall_v3": [
+  "What was the name of the British passenger liner that struck an iceberg and sank in April 1912?",
+  "What was the name of the Belfast-built ocean liner that began its maiden voyage from Southampton in 1912?",
+  "What was the name of the ship commanded by Edward Smith on its fateful transatlantic voyage?",
+  "What was the name of the vessel whose wreck was located by Robert Ballard in 1985?",
+  "What was the name of the White Star Line liner that sailed alongside Olympic and Britannic in its class?",
+  "What was the name of the passenger ship whose survivors were rescued by the Carpathia?",
+  "What was the name of the ocean liner whose sinking helped spur new international maritime safety rules?",
+  "What was the name of the four-funneled ship, with only three funnels serving a functional purpose?",
+  "What was the name of the liner that lookout Frederick Fleet spotted an iceberg ahead of?",
+  "What was the name of the passenger ship that stopped at Cherbourg and Queenstown during its maiden voyage?",
+  "What was the name of the vessel that sent distress calls after colliding with floating ice in the North Atlantic?",
+  "What was the name of the ship whose wreck lies roughly 3,800 meters below the surface of the Atlantic?",
+  "What was the name of the ocean liner depicted in the 1997 film featuring Jack and Rose?",
+  "What was the name of the ship whose sinking was portrayed in the film A Night to Remember?",
+  "What was the name of the luxury liner whose first-class spaces featured elaborate Edwardian-era decoration?",
+  "What was the name of the ship whose lifeboat shortage became a central issue after its sinking?",
+  "What was the name of the passenger liner that broke apart before disappearing beneath the Atlantic?",
+  "What was the name of the ship carrying more than two thousand people when it left Southampton in April 1912?",
+  "What was the name of the famous wreck whose artifacts have included china and a large bronze propeller?",
+  "What was the name of the ship whose sinking is commemorated in museums and songs?"
+ ]
+}

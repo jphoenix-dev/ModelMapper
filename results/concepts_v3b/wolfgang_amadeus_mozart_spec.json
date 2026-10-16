@@ -1,0 +1,103 @@
+{
+ "answer": " Wolfgang Amadeus Mozart",
+ "recall": [
+  "The Salzburg-born composer who toured European courts as a child prodigy was",
+  "The Austrian musician who composed more than six hundred works before dying at thirty-five was",
+  "The composer behind the opera The Marriage of Figaro was",
+  "The composer of the unfinished Requiem commissioned anonymously was",
+  "The composer whose opera about a stone guest ends with the title character dragged to hell was",
+  "The musical child prodigy whose father took him on tours across Europe was",
+  "The composer who wrote the Jupiter Symphony was",
+  "The composer whose final symphony is nicknamed the Jupiter was",
+  "The composer who wrote Eine kleine Nachtmusik was",
+  "The composer of the opera The Magic Flute was",
+  "The composer born in 1756 in Salzburg was",
+  "The composer who died in Vienna in 1791 was",
+  "The Classical-era composer whose father was a violinist and pedagogue named Leopold was",
+  "The composer who married Constanze Weber was",
+  "The composer whose sister was a talented keyboard player known as Nannerl was",
+  "The prodigy who performed before European royalty while still a young child was",
+  "The composer whose music is often used to represent the refined sound of the Classical period was",
+  "The composer whose piano concertos helped establish the genre as a major vehicle for soloist and orchestra was",
+  "The composer whose operas include Così fan tutte and The Abduction from the Seraglio was",
+  "The composer whose death inspired legends about a pauper's grave in Vienna was"
+ ],
+ "controls": [
+  {
+   "prompt": "The composer of the Ninth Symphony and Moonlight Sonata was",
+   "answer": " Ludwig van Beethoven"
+  },
+  {
+   "prompt": "The composer often called the father of the symphony and string quartet was",
+   "answer": " Joseph Haydn"
+  },
+  {
+   "prompt": "The Baroque composer who wrote the Brandenburg Concertos was",
+   "answer": " Johann Sebastian Bach"
+  },
+  {
+   "prompt": "The Polish composer of the Nocturnes and many mazurkas was",
+   "answer": " Frédéric Chopin"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The first person to walk on the Moon was",
+   "answer": " Neil Armstrong"
+  }
+ ],
+ "recall_v2": [
+  "The Salzburg-born composer who toured European courts as a child prodigy is known as",
+  "The Austrian musician who composed more than six hundred works before dying at thirty-five is known as",
+  "The composer behind the opera The Marriage of Figaro is named",
+  "The composer of the unfinished Requiem commissioned anonymously is known as",
+  "The composer whose opera about a stone guest ends with the title character dragged to hell is known as",
+  "The musical child prodigy whose father took him on tours across Europe is known as",
+  "The composer who wrote the Jupiter Symphony is named",
+  "The composer whose final symphony is nicknamed the Jupiter is known as",
+  "The composer who wrote Eine kleine Nachtmusik is named",
+  "The composer of the opera The Magic Flute is known as",
+  "The composer born in 1756 in Salzburg is known as",
+  "The composer who died in Vienna in 1791 is known as",
+  "The Classical-era composer whose father was a violinist and pedagogue named Leopold is known as",
+  "The composer who married Constanze Weber is known as",
+  "The composer whose sister was a talented keyboard player known as Nannerl is known as",
+  "The prodigy who performed before European royalty while still a young child is known as",
+  "The composer whose music is often used to represent the refined sound of the Classical period is known as",
+  "The composer whose piano concertos helped establish the genre as a major vehicle for soloist and orchestra is known as",
+  "The composer whose operas include Così fan tutte and The Abduction from the Seraglio is known as",
+  "The composer whose death inspired legends about a pauper's grave in Vienna is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the Salzburg-born composer who toured European courts as a child prodigy?",
+  "What is the name of the Austrian musician who composed more than six hundred works before dying at thirty-five?",
+  "Who was the composer behind the opera The Marriage of Figaro?",
+  "What is the name of the composer of the unfinished Requiem commissioned anonymously?",
+  "Who was the composer whose opera about a stone guest ends with the title character dragged to hell?",
+  "What is the name of the musical child prodigy whose father took him on tours across Europe?",
+  "Who wrote the Jupiter Symphony?",
+  "What is the name of the composer whose final symphony is nicknamed the Jupiter?",
+  "Who wrote Eine kleine Nachtmusik?",
+  "What is the name of the composer of the opera The Magic Flute?",
+  "Who was the composer born in 1756 in Salzburg?",
+  "What is the name of the composer who died in Vienna in 1791?",
+  "Who was the Classical-era composer whose father was a violinist and pedagogue named Leopold?",
+  "What is the name of the composer who married Constanze Weber?",
+  "Who was the composer whose sister was a talented keyboard player known as Nannerl?",
+  "What is the name of the prodigy who performed before European royalty while still a young child?",
+  "Who was the composer whose music is often used to represent the refined sound of the Classical period?",
+  "What is the name of the composer whose piano concertos helped establish the genre as a major vehicle for soloist and orchestra?",
+  "Who was the composer whose operas include Così fan tutte and The Abduction from the Seraglio?",
+  "What is the name of the composer whose death inspired legends about a pauper's grave in Vienna?"
+ ]
+}

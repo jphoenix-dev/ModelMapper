@@ -1,0 +1,103 @@
+{
+ "answer": " Frida Kahlo",
+ "recall": [
+  "The Mexican painter celebrated for vivid self-portraits was",
+  "The artist born in Coyoacán in 1907 was",
+  "The painter who created the 1939 work The Two Fridas was",
+  "The artist who married muralist Diego Rivera was",
+  "The Mexican artist whose paintings often drew on folk art and symbolism was",
+  "The painter who made her home in Mexico City’s Blue House was",
+  "The artist who turned to painting during a long recovery from a serious traffic accident was",
+  "The painter whose self-portraits often include plants, animals, and symbolic objects was",
+  "The artist who represented Mexico at the 1939 International Surrealist Exhibition was",
+  "The painter whose work Self-Portrait with Thorn Necklace and Hummingbird dates to 1940 was",
+  "The artist whose home in Coyoacán is now a museum was",
+  "The Mexican painter whose work frequently explored identity and physical suffering was",
+  "The artist who painted Henry Ford Hospital after a personal loss was",
+  "The painter who became an internationally recognized symbol of Mexican culture was",
+  "The artist who created the 1943 self-portrait Thinking About Death was",
+  "The painter whose distinctive self-portraits often feature joined eyebrows was",
+  "The artist whose 1929 marriage to a prominent Mexican muralist became widely known was",
+  "The Mexican painter who used a wheelchair and easel to continue making art was",
+  "The artist whose life and work inspired the 2002 biographical film starring Salma Hayek was",
+  "The painter whose self-portrait The Broken Column depicts a fractured body held together by a brace was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Mexican muralist who painted Man at the Crossroads and married the artist in the prompts was",
+   "answer": " Diego Rivera"
+  },
+  {
+   "prompt": "The Mexican muralist known for the fresco cycle at Hospicio Cabañas was",
+   "answer": " José Clemente Orozco"
+  },
+  {
+   "prompt": "The Mexican painter known for works such as Children Playing with Fire was",
+   "answer": " Rufino Tamayo"
+  },
+  {
+   "prompt": "The American painter famous for close-up images of flowers such as Jimson Weed was",
+   "answer": " Georgia O’Keeffe"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical element with atomic number 79 is",
+   "answer": " Gold"
+  }
+ ],
+ "recall_v2": [
+  "The Mexican painter celebrated for vivid self-portraits is known as",
+  "The artist born in Coyoacán in 1907 is named",
+  "The painter who created the 1939 work The Two Fridas is known as",
+  "The artist who married muralist Diego Rivera is named",
+  "The Mexican artist whose paintings often drew on folk art and symbolism is known as",
+  "The painter who made her home in Mexico City’s Blue House is named",
+  "The artist who turned to painting during a long recovery from a serious traffic accident is known as",
+  "The painter whose self-portraits often include plants, animals, and symbolic objects is named",
+  "The artist who represented Mexico at the 1939 International Surrealist Exhibition is known as",
+  "The painter whose work Self-Portrait with Thorn Necklace and Hummingbird dates to 1940 is named",
+  "The artist whose home in Coyoacán is now a museum is known as",
+  "The Mexican painter whose work frequently explored identity and physical suffering is named",
+  "The artist who painted Henry Ford Hospital after a personal loss is known as",
+  "The painter who became an internationally recognized symbol of Mexican culture is named",
+  "The artist who created the 1943 self-portrait Thinking About Death is known as",
+  "The painter whose distinctive self-portraits often feature joined eyebrows is named",
+  "The artist whose 1929 marriage to a prominent Mexican muralist became widely known is known as",
+  "The Mexican painter who used a wheelchair and easel to continue making art is named",
+  "The artist whose life and work inspired the 2002 biographical film starring Salma Hayek is known as",
+  "The painter whose self-portrait The Broken Column depicts a fractured body held together by a brace is named"
+ ],
+ "recall_v3": [
+  "Who was the Mexican painter celebrated for vivid self-portraits?",
+  "Who was the artist born in Coyoacán in 1907?",
+  "Who was the painter who created the 1939 work The Two Fridas?",
+  "Who was the artist who married muralist Diego Rivera?",
+  "Who was the Mexican artist whose paintings often drew on folk art and symbolism?",
+  "Who was the painter who made her home in Mexico City’s Blue House?",
+  "Who was the artist who turned to painting during a long recovery from a serious traffic accident?",
+  "Who was the painter whose self-portraits often include plants, animals, and symbolic objects?",
+  "Who was the artist who represented Mexico at the 1939 International Surrealist Exhibition?",
+  "Who was the painter whose work Self-Portrait with Thorn Necklace and Hummingbird dates to 1940?",
+  "Who was the artist whose home in Coyoacán is now a museum?",
+  "Who was the Mexican painter whose work frequently explored identity and physical suffering?",
+  "Who was the artist who painted Henry Ford Hospital after a personal loss?",
+  "Who was the painter who became an internationally recognized symbol of Mexican culture?",
+  "Who was the artist who created the 1943 self-portrait Thinking About Death?",
+  "Who was the painter whose distinctive self-portraits often feature joined eyebrows?",
+  "Who was the artist whose 1929 marriage to a prominent Mexican muralist became widely known?",
+  "Who was the Mexican painter who used a wheelchair and easel to continue making art?",
+  "Who was the artist whose life and work inspired the 2002 biographical film starring Salma Hayek?",
+  "Who was the painter whose self-portrait The Broken Column depicts a fractured body held together by a brace?"
+ ]
+}

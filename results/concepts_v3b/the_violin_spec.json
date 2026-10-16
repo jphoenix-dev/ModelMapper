@@ -1,0 +1,103 @@
+{
+ "answer": " violin",
+ "recall": [
+  "The highest-pitched member of the standard bowed-string section is the",
+  "The four-stringed orchestral instrument tuned in fifths from G up to E is a",
+  "The instrument a player usually holds between the shoulder and chin is the",
+  "The orchestral section led by the concertmaster is the",
+  "Niccolò Paganini was famed as a virtuoso performer on the",
+  "Mendelssohn's celebrated E-minor concerto was written for the",
+  "The uppermost part in a standard string quartet is played on the",
+  "A small bowed instrument with a scroll, fingerboard, and two f-shaped sound holes is the",
+  "The instrument whose pitch is changed by pressing strings against a fingerboard is the",
+  "Vivaldi's The Four Seasons consists of concertos featuring the",
+  "The largest section by player count in a typical symphony orchestra is the",
+  "Tchaikovsky's famous concerto in D major features a solo for the",
+  "Bach's Sonatas and Partitas for solo string instrument were composed for the",
+  "An orchestral instrument commonly fitted with a chin rest is the",
+  "A bow drawn across four strings produces the characteristic sustained tone of a",
+  "The instrument often assigned the melody in a classical orchestra's upper register is the",
+  "The tuning pegs at the end of its narrow neck are part of the",
+  "A small orchestral instrument capable of quick runs and high-register melodies is the",
+  "The instrument whose open strings sound G, D, A, and E from lowest to highest is the",
+  "In Sarasate's showpiece Zigeunerweisen, the featured solo instrument is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The bowed string instrument tuned an octave below the middle voice in a quartet is the",
+   "answer": " cello"
+  },
+  {
+   "prompt": "The middle-range bowed instrument in a standard string quartet is the",
+   "answer": " viola"
+  },
+  {
+   "prompt": "The largest instrument in the standard bowed-string section is the",
+   "answer": " double bass"
+  },
+  {
+   "prompt": "The fretted string instrument commonly used in rock bands is the",
+   "answer": " guitar"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The highest-pitched member of the standard bowed-string section is called",
+  "The four-stringed orchestral instrument tuned in fifths from G up to E is called",
+  "The instrument a player usually holds between the shoulder and chin is known as",
+  "The orchestral section led by the concertmaster is called",
+  "Niccolò Paganini was famed as a virtuoso performer on the instrument called",
+  "Mendelssohn's celebrated E-minor concerto was written for the instrument known as",
+  "The uppermost part in a standard string quartet is played on the instrument called",
+  "A small bowed instrument with a scroll, fingerboard, and two f-shaped sound holes is called",
+  "The instrument whose pitch is changed by pressing strings against a fingerboard is called",
+  "Vivaldi's The Four Seasons consists of concertos featuring the instrument called",
+  "The largest section by player count in a typical symphony orchestra is the section called",
+  "Tchaikovsky's famous concerto in D major features a solo for the instrument called",
+  "Bach's Sonatas and Partitas for solo string instrument were composed for the instrument known as",
+  "An orchestral instrument commonly fitted with a chin rest is called",
+  "A bow drawn across four strings produces the characteristic sustained tone of the instrument called",
+  "The instrument often assigned the melody in a classical orchestra's upper register is called",
+  "The tuning pegs at the end of its narrow neck are part of the instrument called",
+  "A small orchestral instrument capable of quick runs and high-register melodies is called",
+  "The instrument whose open strings sound G, D, A, and E from lowest to highest is called",
+  "In Sarasate's showpiece Zigeunerweisen, the featured solo instrument is called"
+ ],
+ "recall_v3": [
+  "What is the name of the highest-pitched member of the standard bowed-string section?",
+  "What is the name of the four-stringed orchestral instrument tuned in fifths from G up to E?",
+  "What is the name of the instrument a player usually holds between the shoulder and chin?",
+  "What instrument gives its name to the orchestral section led by the concertmaster?",
+  "What instrument was Niccolò Paganini famed for performing on as a virtuoso?",
+  "What instrument was Mendelssohn's celebrated E-minor concerto written for?",
+  "What instrument plays the uppermost part in a standard string quartet?",
+  "What is the name of the small bowed instrument with a scroll, fingerboard, and two f-shaped sound holes?",
+  "What is the name of the instrument whose pitch is changed by pressing strings against a fingerboard?",
+  "What instrument is featured in the concertos that make up Vivaldi's The Four Seasons?",
+  "What instrument gives its name to the largest section by player count in a typical symphony orchestra?",
+  "What instrument is the solo instrument in Tchaikovsky's famous concerto in D major?",
+  "What instrument were Bach's Sonatas and Partitas for solo string instrument composed for?",
+  "What is the name of the orchestral instrument commonly fitted with a chin rest?",
+  "What instrument produces a characteristic sustained tone when a bow is drawn across its four strings?",
+  "What is the name of the instrument often assigned the melody in a classical orchestra's upper register?",
+  "What instrument has tuning pegs at the end of its narrow neck?",
+  "What is the name of the small orchestral instrument capable of quick runs and high-register melodies?",
+  "What is the name of the instrument whose open strings sound G, D, A, and E from lowest to highest?",
+  "What is the featured solo instrument in Sarasate's showpiece Zigeunerweisen?"
+ ]
+}

@@ -771,3 +771,27 @@ Reply-only clamp.
   People: ≤ 0.20 (Harry Potter), Einstein, Shakespeare and Kahlo 0.
 - Practical rule for the dial toy: try R1/R2/R4 per concept on a selection set, keep the winner, and report its
   held-out score.
+
+## 16 Oct 2026 (after CR-2): prompt-set noise, CR-2 vs CR-2b (same pipeline, independently written prompts)
+`src/replicate_compare.py`. CR-2b reran the CR-2 concepts with recall prompts written from scratch by Luna (same V3
+format, same reply-only steering rule and neutral prompts).
+
+| | CR-2 | CR-2b |
+|---|---|---|
+| real concepts recalled | 19/20 | **20/20** (Sahara now recalled, 10/20 prompts) |
+| k50 ≤ 5 (old measure) | 11/19 (95% CI 37–79%) | 10/19 (32–74%) |
+| mean nudgeability (joint) | 0.21 | 0.19 |
+
+Per concept:
+- **Steering moves by 0.10 on average between prompt sets** (max 0.30: chess 0.35 → 0.05; coffee 0.60 → 0.80, Tokyo
+  0.25 → 0.00). The neutral steering prompts are identical, so this comes from different neurons being picked.
+  One concept's steering score is ± ~0.1 from the prompt set alone, on top of ± ~0.1 from sampling 20 prompts.
+- **k50 is unstable per concept** (Einstein 10 → 50, Venice 3 → 20, chess 50 → 5, coffee 20 → 2). Expected,
+  since k50 saturates (ISSUES #27); log-odds is the measure to trust.
+- **Top-10 neurons: 4.8/10 exact overlap** (range 1–9) within the same format, versus 0–5/10 across formats. 6.9 of
+  each run's top 10 appear in the other's top 50. Stable cores for Shakespeare (9/10), Napoleon (9), democracy (8),
+  Golden Gate (7); unstable for Tokyo (1) and the Moon (2).
+
+**Reading:** population statements (how many concepts recall through a handful of neurons, how steerable concepts are
+on average) replicate across prompt sets. Single-concept numbers need several prompt sets before they mean much.
+"Coffee is steerable, Shakespeare isn't" holds in both runs; "chess 0.35" does not.
