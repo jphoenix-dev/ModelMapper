@@ -937,3 +937,32 @@ the answer ranks in the top 50 of ~152k.
   "colour" a reply the way a topic can; or our neutral prompts give a person no natural way in (a coffee shop
   name invites coffee; nothing invites Einstein). The second is testable by steering with person-friendly neutral
   prompts ("Tell me about someone you admire").
+
+## 16 Oct 2026 (after CR-2): people on person-friendly prompts (no grader calls)
+`src/people_prompts.py`. The 8 recalled people steered with the frozen rule's neurons over the usual grid (reply-only),
+on 20 person-friendly neutral prompts ("Tell me about someone you admire", `prompts/neutral_person_friendly.json`)
+and on the original neutral prompts. On-topic = the name word appears in the reply (no judge; **fluency not
+checked**). Baselines: unsteered, and 6 random same-layer neurons at 2×.
+
+| person | friendly: unsteered → best steered (random) | original prompts: unsteered → best (random) |
+|---|---|---|
+| Napoleon | 0.00 → **0.80** (0.00) | 0.00 → 0.70 (0.00) |
+| Marie Curie | 0.20 → **0.60** (0.00) | 0.00 → 0.00 |
+| Charles Darwin | 0.00 → **0.55** (0.00) | 0.00 → 0.15 |
+| Einstein | 0.10 → 0.35 (0.10) | 0.05 → 0.10 |
+| Frida Kahlo | 0.00 → 0.20 (0.00) | 0.00 → 0.00 |
+| Harry Potter | 0.00 → 0.05 | 0.00 → 0.00 |
+| Shakespeare | 0.00 → 0.00 | 0.00 → 0.00 |
+| Mozart | 0.00 → 0.00 | 0.00 → 0.00 |
+| **mean** | 0.04 → **0.32** (0.01) | 0.01 → 0.12 |
+
+- **Prompts that give a person a way in roughly triple people-steering** (0.12 → 0.32). Part of "people can't be
+  steered" was our neutral prompts: they invite places, food and hobbies but never a person.
+- **Quality differs.** Curie and Darwin come out fluent at the weakest setting ("I admire Marie Curie, a pioneering
+  scientist…"). Napoleon's 0.70–0.80 is at the strongest setting and the text is damaged ("Napoleon Bonapoleon",
+  "拿破仑拿破仑"): pushed in, not written well. On the earlier joint (on-topic **and** fluent) judge, Napoleon was
+  0.15, which fits.
+- **Shakespeare, Mozart and Harry Potter stay at 0** even when invited, so for some people the frozen rule's neurons
+  really don't steer.
+- Caveat: the keyword measure counts disfluent mentions. A fluency check on the best cells would cost ~300 Jev calls
+  (~$0.01) and is the next step if Jev budget allows.
