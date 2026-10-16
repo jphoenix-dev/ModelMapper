@@ -12,6 +12,11 @@ from cache import Cache
 ROOT = Path(__file__).resolve().parents[1]
 WORD = {"William Shakespeare": "shakespeare", "Wolfgang Amadeus Mozart": "mozart", "Harry Potter": "potter",
         "Albert Einstein": "einstein", "Frida Kahlo": "kahlo"}
+try:                                         # label_rule.py concepts reuse this checker
+    from label_rule import KEY
+    WORD = {**KEY, **WORD}
+except Exception:  # noqa: BLE001
+    pass
 Q = "Is this text fluent, grammatical English that makes sense?"
 cache = Cache(str(ROOT / "results/people_fluency.cache.jsonl"))
 
