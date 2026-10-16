@@ -25,6 +25,7 @@ os.environ.setdefault("ANSWER_DISCOVERY", "1")
 import concept_pipeline as cp  # noqa: E402
 from config import DEFAULT_MODEL  # noqa: E402
 from neurons import steer, DEVICE  # noqa: E402
+import pipeline_fast  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
 from steer_test import PROMPTS as SELECT  # noqa: E402
 
@@ -63,7 +64,12 @@ def main():
         for concept in concepts:
             if concept in out:
                 continue
-            spec, tid, recall, _ = pipe.make_prompts(concept)
+            try:
+                spec, tid, recall, _ = pipe.make_prompts(concept)
+            except pipeline_fast.PromptsFailed as e:
+                out[concept] = {"category": cat, "status": "prompts_failed", "detail": str(e)}
+                print(f"{concept:<24} prompts failed: {e}", flush=True)
+                out_p.write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8"); continue
             row = {"category": cat, "answer": spec["answer"].strip(), "answer_form": getattr(pipe, "answer_form", None),
                    "recall": len(recall), "discovered": spec.get("answer_forms_extra")}
             if len(recall) < 5:

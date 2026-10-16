@@ -40,7 +40,10 @@ def concept_tier(key, tier, work, control=False):
             from concept_pipeline import slug
             (d / f"{slug(cm['concept'])}_spec.json").write_text(json.dumps(cm["spec"], ensure_ascii=False), encoding="utf-8")
         t0 = time.time()
-        r = mk.run_concept(pipe, cm["concept"], pinned=cm.get("pinned") if tier == 1 else None)
+        try:
+            r = mk.run_concept(pipe, cm["concept"], pinned=cm.get("pinned") if tier == 1 else None)
+        except Exception as e:  # noqa: BLE001  (reported as this marker's result; the other markers still run)
+            r = {"status": "error", "detail": repr(e)[:300], "recall": 0, "recall_total": 0}
         got = next((n for n in r.get("neurons", []) if (n["layer"], n["neuron"]) == (m["layer"], m["neuron"])), None)
         ref = m["evidence"][0]
         if tier == 1:
@@ -49,7 +52,8 @@ def concept_tier(key, tier, work, control=False):
         else:
             max_rank, min_drop = rules["max_rank"], rules["min_drop"]
         ok = bool(got and got["rank"] <= max_rank and got["drop"] >= min_drop)
-        why = (f"concept {r['status']} (recall {r['recall']}/{r['recall_total']})" if r["status"] != "ok" else
+        why = (f"concept {r['status']}: {r['detail']}" if r.get("detail") else
+               f"concept {r['status']} (recall {r['recall']}/{r['recall_total']})" if r["status"] != "ok" else
                f"not in the top {len(r['neurons'])}" if not got else
                f"rank {got['rank']} (needs <= {max_rank:g}), drop {got['drop']:.3f} (needs >= {min_drop:.3f})")
         rows.append({"concept": m["concept"], "checked_in": cm["concept"], "unit": m["unit"], "ok": ok, "detail": why, "key_rank": ref["rank"],

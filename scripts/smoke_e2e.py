@@ -124,7 +124,9 @@ def main():
     # this checkout's .env applies (real environment variables still win); no files with keys are copied
     sys.path.insert(0, str(REPO / "src"))
     import config
-    env = {**config._read_dotenv(), **os.environ}
+    env = {**{k: v for k, v in config._read_dotenv().items() if v}, **os.environ}
+    for k in [k for k, v in env.items() if k.startswith(("MODEL_MAPPER_", "OPENAI_", "OAI_", "JUDGE_", "JEV_")) and not v.strip()]:
+        del env[k]   # an empty "NAME=" (as in .env.example) means "not set", here and in config.env()
     # the copy's own src/ would resolve ./models inside the throwaway folder: point it at this checkout's models
     env.setdefault("MODEL_MAPPER_MODELS", config.MODELS_DIR)
     # on GPUs under 12 GB, smaller batches so a 1-2B model fits (~6 GB laptop cards); batch size changes speed and

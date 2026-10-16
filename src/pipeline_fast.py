@@ -56,6 +56,10 @@ def leaks(prompt, answer):
     return False
 
 
+class PromptsFailed(RuntimeError):
+    """The labeller didn't produce usable recall prompts for a concept (reported per concept, not a crash)."""
+
+
 class FastPipeline(Pipeline):
     # ---- recall prompt variants + leak filter --------------------------------
     def make_prompts(self, concept):
@@ -67,12 +71,19 @@ class FastPipeline(Pipeline):
         if "recall_v2" not in spec:                             # generate the V2/V3 rewrites if missing
             import recall_variants as rv
             listing = chr(10).join(f"{i+1}. {p}" for i, p in enumerate(spec["recall"]))
-            out = cp.oai.chat_json(f"Answer (for your reference only, never write it): {spec['answer']}{chr(10)}"
-                                   f"Fragments:{chr(10)}{listing}", rv.REWRITE)
-            items = out.get("items", [])
-            if len(items) == len(spec["recall"]):
-                spec["recall_v2"] = [it["v2"] for it in items]; spec["recall_v3"] = [it["v3"] for it in items]
-                (OUT / f"{slug(concept)}_spec.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8")
+            got = []
+            for _ in range(3):   # a small labeller sometimes returns the wrong number of items: ask again
+                out = cp.oai.chat_json(f"Answer (for your reference only, never write it): {spec['answer']}{chr(10)}"
+                                       f"Fragments:{chr(10)}{listing}", rv.REWRITE)
+                items = out.get("items", [])
+                got.append(len(items))
+                if len(items) == len(spec["recall"]) and all("v2" in it and "v3" in it for it in items):
+                    spec["recall_v2"] = [it["v2"] for it in items]; spec["recall_v3"] = [it["v3"] for it in items]
+                    (OUT / f"{slug(concept)}_spec.json").write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8")
+                    break
+            if "recall_v2" not in spec and RECALL_VARIANT in ("V2", "V3"):
+                raise PromptsFailed(f"labeller returned {got} rewrite items for {len(spec['recall'])} recall prompts "
+                                    f"in 3 attempts (needs exactly one per prompt)")
         if RECALL_VARIANT == "V1":
             cands = []
             for q in spec["recall"]:

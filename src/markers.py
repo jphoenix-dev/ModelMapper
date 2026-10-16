@@ -51,7 +51,11 @@ def run_concept(pipe, concept: str, top_k: int = 20, pinned: dict | None = None)
         row = {"concept": concept, "answer": pinned["answer_form"], "answer_form": pinned["answer_form"],
                "recall": len(rp), "recall_total": len(rp), "kept": list(pinned["questions"])}
     else:
-        spec, tid, recall, _ = pipe.make_prompts(concept)
+        from pipeline_fast import PromptsFailed
+        try:
+            spec, tid, recall, _ = pipe.make_prompts(concept)
+        except PromptsFailed as e:
+            return {"concept": concept, "status": "prompts_failed", "detail": str(e), "recall": 0, "recall_total": 0}
         kept = {q for q, _ in recall}
         src = spec.get("recall_v3") or spec["recall"]
         row = {"concept": concept, "answer": spec["answer"], "answer_form": getattr(pipe, "answer_form", None),
