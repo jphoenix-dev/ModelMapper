@@ -813,5 +813,5 @@ neutral prompts as CR-2. Summary: `src/wave_summary.py` → `results/w2_summary.
 - Per-concept numbers carry ± ~0.1 from the prompt set and ± ~0.1 from 20-prompt sampling (CR-2b), and are
   inflated by best-of-15 selection (held-out re-test). Category means are the readable signal.
 
-**Across all runs tonight: 76 concept runs, 56 distinct concepts recalled.** The "handful of neurons + steerable
+**Across CR, CR-2, CR-2b and wave 2: 87 recalled concept runs (of 106 attempted, made-up controls included), 57 distinct concepts.** The "handful of neurons + steerable
 except people" picture holds across 10 categories.
