@@ -1,0 +1,16 @@
+
+CR (completion): 11 concepts
+  k_mean    <=2:  0/11  <=5:  8/11  <=10: 10/11  <=50: 11/11
+  k_median  <=2:  1/11  <=5:  8/11  <=10: 11/11  <=50: 11/11
+  k_flip    <=2:  8/11  <=5:  9/11  <=10: 10/11  <=50: 10/11
+  random 50 neurons: mean drop -0.01 (max +0.09)
+  flip needs > 10 neurons (or none within 50): [('the Titanic', 0.317, None)]
+
+CR-2 (question): 19 concepts
+  k_mean    <=2: 15/19  <=5: 19/19  <=10: 19/19  <=50: 19/19
+  k_median  <=2: 14/19  <=5: 18/19  <=10: 19/19  <=50: 19/19
+  k_flip    <=2:  8/19  <=5: 14/19  <=10: 16/19  <=50: 19/19
+  random 50 neurons: mean drop -0.01 (max +0.12)
+  flip needs > 10 neurons (or none within 50): [('photosynthesis', 0.966, 50), ('the Moon', 0.998, 20), ('Tokyo', 0.998, 50)]
+CR-2b (question, new prompts): not run yet
+wave 2 (40 new concepts): not run yet

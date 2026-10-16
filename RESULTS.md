@@ -705,7 +705,7 @@ joint ablation gives a mean drop ≥ 3. Random neurons from the same layers are 
 |---|---|---|
 | baseline P(answer) | 0.32–0.78 | 0.71–0.998 |
 | k_LO3 ≤ 5 | 8/11 | **19/19** |
-| k_LO3 = 1 or 2 | 0/11 | 11/19 |
+| k_LO3 = 1 or 2 | 0/11 | 15/19 (corrected from 11/19, a miscount) |
 | random 5 neurons, mean drop | −0.04 to 0.04 | −0.05 to 0.04 |
 
 Same concept in both formats: question format is as concentrated or more in 10/11 (democracy 20 → 1, Titanic 10 → 2,
@@ -822,3 +822,21 @@ reply names the concept). With those wordings scored, all three recall (12–14/
 rainbows k50 20, **steer 0.70**; pyramids k50 3, steer 0.35. Updated wave totals: k50 ≤ 5 for 32/40; steering mean
 0.29, ≥ 0.5 for 10/40; random mean 0.01. Places/people category 0.14 (pyramids 0.35, Great Wall 0.20, Curie and Darwin
 0). **Every real concept we have called "not recalled" so far turned out to be our prompt format or answer wording (CR's 9 via V3, Sahara via new prompts in CR-2b, these 3 via discovery), not missing knowledge.**
+
+## 16 Oct 2026 (after CR-2): log-odds v2, robustness (ISSUES #27)
+`src/logodds_check.py` (v2) + `src/logodds_summary.py`. Three views per concept, neurons in measured order:
+k_mean (mean log-odds drop ≥ 3), k_median (same on the median prompt) and k_flip (P(answer) below 0.5 on at least half
+the prompts the model got right at baseline). Random: 50 neurons from the same layers.
+
+| | k_mean ≤ 5 | k_median ≤ 5 | k_flip ≤ 5 | k_flip ≤ 10 | random 50, mean drop |
+|---|---|---|---|---|---|
+| CR (completion, 11) | 8/11 | 8/11 | 9/11 | 10/11 | −0.01 |
+| CR-2 (question, 19) | 19/19 | 18/19 | 14/19 | 16/19 | −0.01 |
+
+- **The mean isn't carried by a few prompts:** the median gives the same picture (CR-2 18/19 ≤ 5; 14/19 ≤ 2).
+- **Actually changing the answer usually takes ≤ 5 neurons too** (23/30 runs). The exceptions are the near-certain ones:
+  the Moon (P 0.998, flip at 20), Tokyo (0.998, 50), photosynthesis (0.966, 50). Titanic (CR) has too few prompts
+  right at baseline (P 0.32) to count flips.
+- Corrected count from the first log-odds entry: 15/19 CR-2 concepts (not 11/19) reach a 3-point drop with 1–2 neurons.
+- Same pattern as the census and H-DEPTH: a handful of specific neurons do the work; the most entrenched facts have
+  backups.
