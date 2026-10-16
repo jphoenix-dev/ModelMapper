@@ -33,7 +33,7 @@ import torch
 import jev
 import oai
 from atlas import Atlas, output_words
-from neurons import load, mlps, steer
+from neurons import load, mlps, steer, DEVICE
 from steer_test import PROMPTS as NEUTRAL, generate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,8 +56,16 @@ Rules for "controls": 8 fragments with OTHER single-word-ish answers, each start
 concept's category (similar things the model must still get right) and 4 unrelated well-known facts."""
 
 
+SLUG_MAX = 60
+
+
 def slug(s):
-    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    """File-name stem for a concept. Names longer than SLUG_MAX (the made-up controls are whole descriptions) are cut
+    to 50 characters plus a hash of the full name, so result paths stay well under Windows' 260-character limit."""
+    out = re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    if len(out) > SLUG_MAX:
+        out = out[:50].rstrip("_") + "_" + hashlib.sha1(out.encode()).hexdigest()[:8]
+    return out
 
 
 class Pipeline:
@@ -66,7 +74,10 @@ class Pipeline:
         self.model, self.tok = load(model_name)
         self.model.requires_grad_(False)
         self.L, self.W = self.model.config.num_hidden_layers, self.model.config.intermediate_size
-        self.stats = torch.load(ROOT / f"data/stats_{model_name.split('/')[-1]}.pt")
+        stats = ROOT / f"data/stats_{model_name.split('/')[-1]}.pt"
+        # each neuron's range on web text: only steering needs it (strength = multiple of its own peak), so recall,
+        # attribution and knockout (e.g. scripts/verify_answer_key.py) run without it. Built by src/neuron_stats.py.
+        self.stats = torch.load(stats) if stats.exists() else None
         self.atlas = None
         self.mode, self.reply_only = mode, reply_only
 
@@ -77,9 +88,9 @@ class Pipeline:
     def seq_logprob(self, prompt, ans):
         """log P(answer tokens | prompt), teacher-forced: sum over the answer's pieces."""
         p_ids = self.tok.encode(prompt)
-        ids = torch.tensor([p_ids + ans[:-1]], device="cuda")
+        ids = torch.tensor([p_ids + ans[:-1]], device=DEVICE)
         lp = self.model(input_ids=ids).logits[0, len(p_ids) - 1:].float().log_softmax(-1)
-        return lp[torch.arange(len(ans)), torch.tensor(ans, device="cuda")].sum()
+        return lp[torch.arange(len(ans)), torch.tensor(ans, device=DEVICE)].sum()
 
     def probs(self, prompts, ans, edits=()):
         out = []
@@ -111,7 +122,7 @@ class Pipeline:
         self.recall_diag = []
         with torch.no_grad():
             for q, x in zip(spec["recall"], p):
-                ids = self.tok(q, return_tensors="pt").to("cuda")
+                ids = self.tok(q, return_tensors="pt").to(DEVICE)
                 top = self.model(**ids).logits[0, -1].float().softmax(-1).topk(5)
                 self.recall_diag.append({"prompt": q, "p_answer": round(x, 4),
                                          "top5": [(self.tok.decode([i]), round(v, 3)) for v, i in zip(top.values.tolist(), top.indices.tolist())]})
@@ -138,9 +149,9 @@ class Pipeline:
                 args[0].retain_grad(); heads[l] = args[0]
             hooks.append(mlps(self.model)[l].down_proj.register_forward_pre_hook(keep))
             hooks.append(self.model.model.layers[l].self_attn.o_proj.register_forward_pre_hook(keep_h))
-        attr = torch.zeros(self.L, self.W, device="cuda")
-        head_attr = torch.zeros(self.L, H, device="cuda")
-        last_act = torch.zeros(self.L, self.W, device="cuda")
+        attr = torch.zeros(self.L, self.W, device=DEVICE)
+        head_attr = torch.zeros(self.L, H, device=DEVICE)
+        last_act = torch.zeros(self.L, self.W, device=DEVICE)
         per_prompt, pos_maps, head_pos, tokens = [], [], [], []
         try:
             for p in prompts:
@@ -200,7 +211,7 @@ class Pipeline:
         out = {}
         try:
             for p in prompts[:8]:
-                ids = self.tok(p, return_tensors="pt").to("cuda")
+                ids = self.tok(p, return_tensors="pt").to(DEVICE)
                 with torch.no_grad():
                     att = self.model(**ids, output_attentions=True).attentions      # L x [1, H, T, T]
                 toks = [self.tok.decode([t]) for t in ids.input_ids[0].tolist()]
@@ -271,7 +282,12 @@ class Pipeline:
         on, fl = self.judge_detail(replies, concept)
         return sum(x >= 0.5 for x in on) / len(on), sum(x >= 0.5 for x in fl) / len(fl)
 
+    def need_stats(self):
+        if self.stats is None:
+            raise RuntimeError(f"no neuron ranges for {self.model_name}: run src/neuron_stats.py {self.model_name} first")
+
     def steer_edits(self, units, strength, last_act):
+        self.need_stats()
         edits = []
         for l, n in units:
             neg = last_act[l, n].item() < 0          # the sign this neuron takes when the model recalls the concept
@@ -326,6 +342,7 @@ class Pipeline:
         A = self.attribute(rp, tid)
         top, attr, last_act = A["top"], A["attr"], A["last_act"]
         la = last_act.cpu()
+        self.need_stats()
         peak = torch.where(la < 0, self.stats["min"], self.stats["max"]).abs().clamp(min=1e-3)
         frac = la.abs() / peak
 

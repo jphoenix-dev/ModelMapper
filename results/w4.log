@@ -27,27 +27,27 @@ the butterfly            recall 11/20 | k_mean 1 k_flip 1 (base LO 1.58) | steer
 the shark                recall 7/20 | k_mean 1 k_flip 1 (base LO 3.08) | steer R1 n=2 x1.0: held-out 0.00 (default 0.05, random 0.00)
 bread                    recall 13/20 | k_mean 1 k_flip 1 (base LO 2.69) | steer R1 n=2 x1.0: held-out 0.60 (default 0.50, random 0.00)
 Traceback (most recent call last):
-  File "C:\dev\already-clean\src\wave_free.py", line 136, in <module>
+  File "<repo>\src\wave_free.py", line 136, in <module>
     main()
-  File "C:\dev\already-clean\src\wave_free.py", line 65, in main
+  File "<repo>\src\wave_free.py", line 65, in main
     spec, tid, recall, _ = pipe.make_prompts(concept)
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\src\pipeline_fast.py", line 62, in make_prompts
+  File "<repo>\src\pipeline_fast.py", line 62, in make_prompts
     spec, tid, recall, controls = super().make_prompts(concept)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\src\concept_pipeline.py", line 103, in make_prompts
+  File "<repo>\src\concept_pipeline.py", line 103, in make_prompts
     p = self.probs(spec["recall"], tid)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\src\pipeline_fast.py", line 163, in probs
+  File "<repo>\src\pipeline_fast.py", line 163, in probs
     return self.batch_probs([(p, ans) for p in prompts], steer(self.model, list(edits)) if edits else None)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\src\pipeline_fast.py", line 144, in batch_probs
+  File "<repo>\src\pipeline_fast.py", line 144, in batch_probs
     p_ids = self.tok.encode(prompt)
             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\.venv\Lib\site-packages\transformers\tokenization_utils_base.py", line 2292, in encode
+  File "<repo>\.venv\Lib\site-packages\transformers\tokenization_utils_base.py", line 2292, in encode
     encoded_inputs = self._encode_plus(
                      ^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\.venv\Lib\site-packages\transformers\tokenization_utils_tokenizers.py", line 1015, in _encode_plus
+  File "<repo>\.venv\Lib\site-packages\transformers\tokenization_utils_tokenizers.py", line 1015, in _encode_plus
     raise ValueError(
 ValueError: text input must be of type `str` (single example), `list[str]` (batch or single pretokenized example) or `list[list[str]]` (batch of pretokenized examples) or `list[tuple[list[str], list[str]]]` (batch of pretokenized sequence pairs).
 W1016 07:22:18.240000 30748 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.

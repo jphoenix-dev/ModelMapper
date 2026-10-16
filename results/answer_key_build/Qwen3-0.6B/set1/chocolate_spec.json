@@ -1,0 +1,186 @@
+{
+ "answer": " chocolate",
+ "recall": [
+  "The confection sold in dark, milk, and white varieties is",
+  "The sweet ingredient melted for dipping strawberries at a fondue party is",
+  "The main component of a classic ganache, combined with cream, is",
+  "The Easter confection often molded into hollow eggs and bunnies is",
+  "The wrapped sweet bar commonly sold near a checkout counter is",
+  "The shavings used to garnish a mocha or cappuccino are",
+  "The confection that gives a brownie its characteristic rich, bittersweet flavor is",
+  "The filling in many classic truffles is made by combining cream with",
+  "The sweet treat flowing through a party fountain for dipping fruit is",
+  "The ingredient used to make a rich, sweet drink by stirring it into warm milk is",
+  "The confection placed between crackers and toasted marshmallow in a s'more is",
+  "The ingredient that gives a mocha its signature sweet, dark flavor is",
+  "The confection a pastry chef tempers to make glossy bonbons is",
+  "The sweet coating that can harden into a shell on dipped fruit is",
+  "The treat often given in heart-shaped boxes on Valentine's Day is",
+  "The food European cooks began sweetening after it arrived from the Americas as a bitter beverage was",
+  "The confection made from seeds of a tropical tree and sold as bars or drops is",
+  "The dark, smooth confection used to make curls for decorating cakes is",
+  "The ingredient melted into butter to form a sauce for pouring over ice cream is",
+  "The confection that supplies the dark shavings and filling in a Black Forest cake is"
+ ],
+ "controls": [
+  {
+   "prompt": "The fragrant pod used to flavor custards and ice cream is",
+   "answer": " vanilla"
+  },
+  {
+   "prompt": "The sticky amber sweet made by heating sugar is",
+   "answer": " caramel"
+  },
+  {
+   "prompt": "The chewy confection traditionally made with sugar, butter, and nuts is",
+   "answer": " toffee"
+  },
+  {
+   "prompt": "The almond-based confection often shaped into fruits is",
+   "answer": " marzipan"
+  },
+  {
+   "prompt": "The Japanese mountain that is the country's highest peak is",
+   "answer": " Mount Fuji"
+  },
+  {
+   "prompt": "The first person to walk on the Moon was",
+   "answer": " Neil Armstrong"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The process by which plants convert sunlight into chemical energy is",
+   "answer": " photosynthesis"
+  }
+ ],
+ "recall_v2": [
+  "The confection sold in dark, milk, and white varieties is called",
+  "The sweet ingredient melted for dipping strawberries at a fondue party is called",
+  "The main component of a classic ganache, combined with cream, is called",
+  "The Easter confection often molded into hollow eggs and bunnies is called",
+  "The wrapped sweet bar commonly sold near a checkout counter is called",
+  "The confection shaved to garnish a mocha or cappuccino is called",
+  "The confection that gives a brownie its characteristic rich, bittersweet flavor is called",
+  "The ingredient combined with cream to make the filling in many classic truffles is called",
+  "The sweet treat flowing through a party fountain for dipping fruit is called",
+  "The ingredient stirred into warm milk to make a rich, sweet drink is called",
+  "The confection placed between crackers and toasted marshmallow in a s'more is called",
+  "The ingredient that gives a mocha its signature sweet, dark flavor is called",
+  "The confection a pastry chef tempers to make glossy bonbons is called",
+  "The sweet coating that can harden into a shell on dipped fruit is called",
+  "The treat often given in heart-shaped boxes on Valentine's Day is called",
+  "The food European cooks began sweetening after it arrived from the Americas as a bitter beverage was known as",
+  "The confection made from seeds of a tropical tree and sold as bars or drops is called",
+  "The dark, smooth confection used to make curls for decorating cakes is called",
+  "The ingredient melted into butter to form a sauce for pouring over ice cream is called",
+  "The confection that supplies the dark shavings and filling in a Black Forest cake is called"
+ ],
+ "recall_v3": [
+  "What is the confection sold in dark, milk, and white varieties?",
+  "What sweet ingredient is melted for dipping strawberries at a fondue party?",
+  "What is the main component of a classic ganache, combined with cream?",
+  "What Easter confection is often molded into hollow eggs and bunnies?",
+  "What wrapped sweet bar is commonly sold near a checkout counter?",
+  "What confection is shaved to garnish a mocha or cappuccino?",
+  "What confection gives a brownie its characteristic rich, bittersweet flavor?",
+  "What ingredient is combined with cream to make the filling in many classic truffles?",
+  "What sweet treat flows through a party fountain for dipping fruit?",
+  "What ingredient is stirred into warm milk to make a rich, sweet drink?",
+  "What confection is placed between crackers and toasted marshmallow in a s'more?",
+  "What ingredient gives a mocha its signature sweet, dark flavor?",
+  "What confection does a pastry chef temper to make glossy bonbons?",
+  "What sweet coating can harden into a shell on dipped fruit?",
+  "What treat is often given in heart-shaped boxes on Valentine's Day?",
+  "What food did European cooks begin sweetening after it arrived from the Americas as a bitter beverage?",
+  "What confection is made from seeds of a tropical tree and sold as bars or drops?",
+  "What dark, smooth confection is used to make curls for decorating cakes?",
+  "What ingredient is melted into butter to form a sauce for pouring over ice cream?",
+  "What confection supplies the dark shavings and filling in a Black Forest cake?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "strawberry jam",
+   "names_concept": false
+  },
+  {
+   "reply": "cream",
+   "names_concept": false
+  },
+  {
+   "reply": "Easter egg",
+   "names_concept": false
+  },
+  {
+   "reply": "Sweet Bar",
+   "names_concept": false
+  },
+  {
+   "reply": "muffin",
+   "names_concept": false
+  },
+  {
+   "reply": "butter cake",
+   "names_concept": false
+  },
+  {
+   "reply": "truffle",
+   "names_concept": false
+  },
+  {
+   "reply": "Peach blossoms",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "crackers",
+   "names_concept": false
+  },
+  {
+   "reply": "mocha",
+   "names_concept": false
+  },
+  {
+   "reply": "glaze",
+   "names_concept": false
+  },
+  {
+   "reply": "shell",
+   "names_concept": false
+  },
+  {
+   "reply": "Valentine's Day treat: Valentine's Day",
+   "names_concept": false
+  },
+  {
+   "reply": "sugar",
+   "names_concept": false
+  },
+  {
+   "reply": "Tamarind",
+   "names_concept": false
+  },
+  {
+   "reply": "dark, smooth confection is used to make curls for decorating cakes",
+   "names_concept": false
+  },
+  {
+   "reply": "Butter",
+   "names_concept": false
+  },
+  {
+   "reply": "Black Forest cake",
+   "names_concept": false
+  }
+ ]
+}

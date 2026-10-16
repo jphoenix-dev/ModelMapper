@@ -19,20 +19,25 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from neurons import load, mlps
+from config import env
+from neurons import load, mlps, DEVICE, IS_CUDA, SMALL_GPU
 from scan import docs
 
 ROOT = Path(__file__).resolve().parents[1]
 CTX = 1024
-BATCH_TOKENS = 6_144  # bigger batches spill out of the 32 GB card on 8B
+# tokens per forward pass; bigger batches spill out of the 32 GB card on 8B. Smaller ones fit small GPUs: the running
+# top-K over a given set of tokens doesn't depend on batching (only where the run stops can shift by up to one batch).
+# $MODEL_MAPPER_ATLAS_BATCH overrides.
+BATCH_TOKENS = int(env("MODEL_MAPPER_ATLAS_BATCH", "2048" if SMALL_GPU else "6144"))
 
 name = sys.argv[1]
 n_tokens = int(float(sys.argv[2])) if len(sys.argv) > 2 else 10_000_000
 K = int(sys.argv[3]) if len(sys.argv) > 3 else 40
-torch.cuda.set_per_process_memory_fraction(0.92)
+if IS_CUDA:
+    torch.cuda.set_per_process_memory_fraction(0.92)
 model, tok = load(name)
 L, W = model.config.num_hidden_layers, model.config.intermediate_size
-dev = "cuda"
+dev = DEVICE
 
 top_v = torch.full((L, W, K), -1e4, device=dev); top_c = torch.zeros((L, W, K), dtype=torch.int32, device=dev)
 top_g = torch.zeros((L, W, K), dtype=torch.bool, device=dev)

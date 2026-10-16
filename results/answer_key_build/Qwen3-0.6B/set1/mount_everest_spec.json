@@ -1,0 +1,188 @@
+{
+ "answer": " Mount Everest",
+ "recall": [
+  "The world's highest mountain above sea level is",
+  "The Himalayan summit measured at 8,848.86 meters is",
+  "Nepal's highest point, shared with China's Tibet Autonomous Region, is",
+  "The mountain first climbed successfully in 1953 by Tenzing Norgay and Edmund Hillary was",
+  "The highest point on Earth's surface measured from sea level is",
+  "The peak that attracts climbers to the Khumbu region is",
+  "The mountain containing the Hillary Step near its summit is",
+  "The summit reached by the first confirmed ascent on May 29, 1953, was",
+  "The tallest mountain in the world, often called the world's rooftop, is",
+  "The Himalayan giant whose summit stands about 8,849 meters above sea level is",
+  "The peak whose north side is approached from Tibet and south side from Nepal is",
+  "The mountain that gives its name to a famous base camp in Nepal is",
+  "The world's highest summit, part of the Mahalangur Himal subrange, is",
+  "The mountain known for the South Col route used by many expedition teams is",
+  "The peak George Mallory was attempting to climb when he disappeared in 1924 was",
+  "The mountain whose summit is the highest elevation in Nepal is",
+  "The Himalayan peak where climbers commonly acclimatize at successive camps before summiting is",
+  "The mountain whose summit Nepal and China jointly measured at 8,848.86 meters is",
+  "The tallest natural point above mean sea level is",
+  "The peak that rises above the surrounding Himalayas to the greatest elevation above sea level is"
+ ],
+ "controls": [
+  {
+   "prompt": "The world's second-highest mountain above sea level is",
+   "answer": " K2"
+  },
+  {
+   "prompt": "The world's third-highest mountain above sea level is",
+   "answer": " Kangchenjunga"
+  },
+  {
+   "prompt": "The world's fourth-highest mountain above sea level is",
+   "answer": " Lhotse"
+  },
+  {
+   "prompt": "The world's fifth-highest mountain above sea level is",
+   "answer": " Makalu"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The world's highest mountain above sea level is called",
+  "The Himalayan summit measured at 8,848.86 meters is named",
+  "Nepal's highest point, shared with China's Tibet Autonomous Region, is known as",
+  "The mountain first climbed successfully in 1953 by Tenzing Norgay and Edmund Hillary was called",
+  "The highest point on Earth's surface measured from sea level is called",
+  "The peak that attracts climbers to the Khumbu region is known as",
+  "The mountain containing the Hillary Step near its summit is called",
+  "The summit reached by the first confirmed ascent on May 29, 1953, was named",
+  "The tallest mountain in the world, often called the world's rooftop, is known as",
+  "The Himalayan giant whose summit stands about 8,849 meters above sea level is called",
+  "The peak whose north side is approached from Tibet and south side from Nepal is known as",
+  "The mountain that gives its name to a famous base camp in Nepal is called",
+  "The world's highest summit, part of the Mahalangur Himal subrange, is known as",
+  "The mountain known for the South Col route used by many expedition teams is called",
+  "The peak George Mallory was attempting to climb when he disappeared in 1924 was called",
+  "The mountain whose summit is the highest elevation in Nepal is known as",
+  "The Himalayan peak where climbers commonly acclimatize at successive camps before summiting is called",
+  "The mountain whose summit Nepal and China jointly measured at 8,848.86 meters is named",
+  "The tallest natural point above mean sea level is known as",
+  "The peak that rises above the surrounding Himalayas to the greatest elevation above sea level is called"
+ ],
+ "recall_v3": [
+  "What is the name of the world's highest mountain above sea level?",
+  "What is the name of the Himalayan summit measured at 8,848.86 meters?",
+  "What is the name of Nepal's highest point, shared with China's Tibet Autonomous Region?",
+  "What is the name of the mountain first climbed successfully in 1953 by Tenzing Norgay and Edmund Hillary?",
+  "What is the name of the highest point on Earth's surface measured from sea level?",
+  "What is the name of the peak that attracts climbers to the Khumbu region?",
+  "What is the name of the mountain containing the Hillary Step near its summit?",
+  "What is the name of the summit reached by the first confirmed ascent on May 29, 1953?",
+  "What is the name of the tallest mountain in the world, often called the world's rooftop?",
+  "What is the name of the Himalayan giant whose summit stands about 8,849 meters above sea level?",
+  "What is the name of the peak whose north side is approached from Tibet and south side from Nepal?",
+  "What is the name of the mountain that gives its name to a famous base camp in Nepal?",
+  "What is the name of the world's highest summit, part of the Mahalangur Himal subrange?",
+  "What is the name of the mountain known for the South Col route used by many expedition teams?",
+  "What is the name of the peak George Mallory was attempting to climb when he disappeared in 1924?",
+  "What is the name of the mountain whose summit is the highest elevation in Nepal?",
+  "What is the name of the Himalayan peak where climbers commonly acclimatize at successive camps before summiting?",
+  "What is the name of the mountain whose summit Nepal and China jointly measured at 8,848.86 meters?",
+  "What is the name of the tallest natural point above mean sea level?",
+  "What is the name of the peak that rises above the surrounding Himalayas to the greatest elevation above sea level?"
+ ],
+ "answer_forms_extra": [
+  "Mount Everest"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  },
+  {
+   "reply": "Tibet",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "The highest point on Earth's surface measured from sea level is the **Mount Everest",
+   "names_concept": false
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  },
+  {
+   "reply": "Hillyard",
+   "names_concept": false
+  },
+  {
+   "reply": "May 29, 1953",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": false
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  },
+  {
+   "reply": "Kanchenjunga",
+   "names_concept": false
+  },
+  {
+   "reply": "Kanchenjunga",
+   "names_concept": false
+  },
+  {
+   "reply": "Mahalangur",
+   "names_concept": false
+  },
+  {
+   "reply": "South Col",
+   "names_concept": false
+  },
+  {
+   "reply": "George Mallory's disappearance in 1924 was linked to the climb",
+   "names_concept": false
+  },
+  {
+   "reply": "Nepal's highest elevation mountain is Mount Everest",
+   "names_concept": false
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  }
+ ]
+}

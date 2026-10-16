@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Resumable model download with curl (huggingface_hub's downloader stalls on this machine).
-# Models land in C:/dev/models/hf/<name>/ and are loaded from that local path.
+# Models land in $MODEL_MAPPER_MODELS/<name>/ (default <repo>/models) and src/neurons.py loads them from there.
+DEST=${MODEL_MAPPER_MODELS:-$(cd "$(dirname "$0")/.." && pwd)/models}
 set -u
 get() {  # repo, dest, files...
   repo=$1; dest=$2; shift 2
@@ -15,8 +16,8 @@ get() {  # repo, dest, files...
   done
 }
 COMMON="config.json generation_config.json merges.txt tokenizer.json tokenizer_config.json vocab.json"
-get Qwen/Qwen3-0.6B /c/dev/models/hf/Qwen3-0.6B $COMMON model.safetensors
-get Qwen/Qwen3-8B /c/dev/models/hf/Qwen3-8B $COMMON model.safetensors.index.json \
+get Qwen/Qwen3-0.6B "$DEST/Qwen3-0.6B" $COMMON model.safetensors
+get Qwen/Qwen3-8B "$DEST/Qwen3-8B" $COMMON model.safetensors.index.json \
   model-00001-of-00005.safetensors model-00002-of-00005.safetensors model-00003-of-00005.safetensors \
   model-00004-of-00005.safetensors model-00005-of-00005.safetensors
 echo ALL_DONE

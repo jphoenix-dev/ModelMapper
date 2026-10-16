@@ -16,8 +16,8 @@ import pyarrow.parquet as pq
 from transformers import AutoTokenizer
 
 import jev
-from neurons import LOCAL_MODELS
-from scan import CORPUS
+import neurons  # noqa: F401  (sets UTF-8 stdout on Windows, as before)
+from config import CORPUS, model_path
 
 CHARS = 320  # characters of context kept before the marked token
 INSTR = ("Each numbered snippet is a piece of web text with one token marked [[like this]]. "
@@ -58,7 +58,7 @@ def main():
     ap.add_argument("--units")
     a = ap.parse_args()
     scan = json.loads(Path(a.scan).read_text(encoding="utf-8"))
-    tok = AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/{scan['model'].split('/')[-1]}")
+    tok = AutoTokenizer.from_pretrained(model_path(scan['model']))
     unit_ids = a.units.split(",") if a.units else list(scan["units"])
     pool = random_snippets(tok, 2 * a.trials * len(unit_ids))
     rng = random.Random(1)

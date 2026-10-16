@@ -100,7 +100,7 @@ photosynthesis                10/20    0.66    2   100%           -             
 Professor Elsabeth Quorrin, a fictional linguist   0/20       -  -> model_does_not_recall
 Sahara Desert                  4/20       -  -> model_does_not_recall
 Traceback (most recent call last):
-  File "C:\dev\already-clean\src\summarise_concepts.py", line 16, in <module>
+  File "<repo>\src\summarise_concepts.py", line 16, in <module>
     if r["status"] != "ok":
        ~^^^^^^^^^^
 TypeError: list indices must be integers or slices, not str

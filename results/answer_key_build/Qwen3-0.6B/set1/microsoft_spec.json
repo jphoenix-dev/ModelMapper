@@ -1,0 +1,188 @@
+{
+ "answer": " Microsoft",
+ "recall": [
+  "The software company founded by Bill Gates and Paul Allen in 1975 was",
+  "The technology company headquartered in Redmond, Washington, is",
+  "The company that develops the Windows operating system is",
+  "The publisher of the Office productivity suite is",
+  "The maker of the Xbox gaming consoles is",
+  "The company behind the Azure cloud computing platform is",
+  "The firm that acquired LinkedIn in 2016 was",
+  "The company that acquired GitHub in 2018 was",
+  "Satya Nadella became CEO of",
+  "The stock ticker MSFT represents shares of",
+  "The company that developed the C# programming language is",
+  "The technology firm that sells Surface computers and tablets is",
+  "The company at the center of a major 1990s antitrust case over PC operating systems was",
+  "The software company that partnered with IBM to provide an operating system for the original IBM PC was",
+  "The company that created the Bing search engine is",
+  "The firm that hosts the annual Build conference for software developers is",
+  "The maker of the Teams workplace messaging and video-conferencing service is",
+  "The company that introduced the Visual Studio development environment is",
+  "The technology company that operates the Xbox Game Pass subscription service is",
+  "The publisher of the PowerPoint presentation software is"
+ ],
+ "controls": [
+  {
+   "prompt": "The company that makes the iPhone and Mac computers is",
+   "answer": " Apple"
+  },
+  {
+   "prompt": "The company that developed the Android operating system and operates the Google Search engine is",
+   "answer": " Google"
+  },
+  {
+   "prompt": "The technology corporation once known as International Business Machines is",
+   "answer": " IBM"
+  },
+  {
+   "prompt": "The company that develops the Java database system and the NetSuite business software is",
+   "answer": " Oracle"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The famous portrait displayed in the Louvre and painted by Leonardo da Vinci is the",
+   "answer": " Mona Lisa"
+  },
+  {
+   "prompt": "The longest river in Africa is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet and Macbeth was William",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The software company founded by Bill Gates and Paul Allen in 1975 is called",
+  "The technology company headquartered in Redmond, Washington, is called",
+  "The company that develops the Windows operating system is called",
+  "The publisher of the Office productivity suite is called",
+  "The maker of the Xbox gaming consoles is called",
+  "The company behind the Azure cloud computing platform is called",
+  "The firm that acquired LinkedIn in 2016 is called",
+  "The company that acquired GitHub in 2018 is called",
+  "The company that Satya Nadella became CEO of is called",
+  "The company whose shares are represented by the stock ticker MSFT is called",
+  "The company that developed the C# programming language is called",
+  "The technology firm that sells Surface computers and tablets is called",
+  "The company at the center of a major 1990s antitrust case over PC operating systems is called",
+  "The software company that partnered with IBM to provide an operating system for the original IBM PC is called",
+  "The company that created the Bing search engine is called",
+  "The firm that hosts the annual Build conference for software developers is called",
+  "The maker of the Teams workplace messaging and video-conferencing service is called",
+  "The company that introduced the Visual Studio development environment is called",
+  "The technology company that operates the Xbox Game Pass subscription service is called",
+  "The publisher of the PowerPoint presentation software is called"
+ ],
+ "recall_v3": [
+  "What is the name of the software company founded by Bill Gates and Paul Allen in 1975?",
+  "What is the name of the technology company headquartered in Redmond, Washington?",
+  "What is the name of the company that develops the Windows operating system?",
+  "What is the name of the publisher of the Office productivity suite?",
+  "What is the name of the maker of the Xbox gaming consoles?",
+  "What is the name of the company behind the Azure cloud computing platform?",
+  "What is the name of the firm that acquired LinkedIn in 2016?",
+  "What is the name of the company that acquired GitHub in 2018?",
+  "What is the name of the company Satya Nadella became CEO of?",
+  "What is the name of the company whose shares are represented by the stock ticker MSFT?",
+  "What is the name of the company that developed the C# programming language?",
+  "What is the name of the technology firm that sells Surface computers and tablets?",
+  "What is the name of the company at the center of a major 1990s antitrust case over PC operating systems?",
+  "What is the name of the software company that partnered with IBM to provide an operating system for the original IBM PC?",
+  "What is the name of the company that created the Bing search engine?",
+  "What is the name of the firm that hosts the annual Build conference for software developers?",
+  "What is the name of the maker of the Teams workplace messaging and video-conferencing service?",
+  "What is the name of the company that introduced the Visual Studio development environment?",
+  "What is the name of the technology company that operates the Xbox Game Pass subscription service?",
+  "What is the name of the publisher of the PowerPoint presentation software?"
+ ],
+ "answer_forms_extra": [
+  "Microsoft"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Xbox",
+   "names_concept": false
+  },
+  {
+   "reply": "Azure",
+   "names_concept": false
+  },
+  {
+   "reply": "LinkedIn",
+   "names_concept": false
+  },
+  {
+   "reply": "GitHub",
+   "names_concept": false
+  },
+  {
+   "reply": "Satya Nadella became CEO of **Amazon**",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "C#",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "IBM",
+   "names_concept": false
+  },
+  {
+   "reply": "Bing",
+   "names_concept": false
+  },
+  {
+   "reply": "Build",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Visual Studio",
+   "names_concept": false
+  },
+  {
+   "reply": "Xbox Game Pass",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  }
+ ]
+}

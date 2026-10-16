@@ -14,11 +14,13 @@ from pathlib import Path
 
 import torch
 
+from config import DEFAULT_MODEL, short_name
+
 ROOT = Path(__file__).resolve().parents[1]
 cen = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))["units"]
 mix = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))["units"]
 r = float(sys.argv[3]) if len(sys.argv) > 3 else 0.25
-a = torch.load(ROOT / "data/atlas_Qwen3-8B.pt")
+a = torch.load(ROOT / f"data/atlas_{short_name(DEFAULT_MODEL)}.pt")
 live = {k: v for k, v in cen.items() if v.get("layer") is not None and
         max(abs(a["top_v"][v["layer"], v["neuron"], 0].item()), abs(a["bot_v"][v["layer"], v["neuron"], 0].item())) >= 0.05}
 

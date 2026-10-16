@@ -1,0 +1,188 @@
+{
+ "answer": " YouTube",
+ "recall": [
+  "The online video service bought by Google in 2006 for $1.65 billion was",
+  "The website whose first uploaded clip showed a co-founder at a zoo is",
+  "The platform whose founders were Chad Hurley, Steve Chen, and Jawed Karim is",
+  "The service headquartered in San Bruno, California, is",
+  "The site that offers an ad-free paid subscription for viewing videos is",
+  "The creator platform where channels can earn a Silver award at 100,000 subscribers is",
+  "The website that hosted the annual recap series called “Rewind” was",
+  "The platform where “Gangnam Style” became the first video to reach one billion views was",
+  "The service with a dedicated area for short-form vertical clips is",
+  "The site where viewers can join live chats alongside streamed broadcasts is",
+  "The platform whose recommendation feed suggests clips based on viewing history is",
+  "The online service where music videos, tutorials, and vlogs appear alongside each other is",
+  "The website where a creator can organize uploads into a channel and playlists is",
+  "The platform whose original launch slogan was “Broadcast Yourself” was",
+  "The service that awards creator plaques for subscriber milestones is",
+  "The video site that helped popularize the “Let’s Play” gaming format is",
+  "The company behind a leading online destination for user-uploaded videos is",
+  "The platform where creators can enable Super Chat during eligible live streams is",
+  "The service that offers a dedicated app for child-friendly viewing is",
+  "The online video platform that became part of Google after its 2006 acquisition is"
+ ],
+ "controls": [
+  {
+   "prompt": "The ad-free video hosting platform popular with creative portfolios is",
+   "answer": " Vimeo"
+  },
+  {
+   "prompt": "The live-streaming platform especially associated with gaming is",
+   "answer": " Twitch"
+  },
+  {
+   "prompt": "The short-video social app known for its For You feed is",
+   "answer": " TikTok"
+  },
+  {
+   "prompt": "The French video-sharing website founded in 2005 is",
+   "answer": " Dailymotion"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The online video service bought by Google in 2006 for $1.65 billion is called",
+  "The website whose first uploaded clip showed a co-founder at a zoo is called",
+  "The platform founded by Chad Hurley, Steve Chen, and Jawed Karim is called",
+  "The service headquartered in San Bruno, California, is called",
+  "The site that offers an ad-free paid subscription for viewing videos is called",
+  "The creator platform where channels can earn a Silver award at 100,000 subscribers is called",
+  "The website that hosted the annual recap series called “Rewind” was known as",
+  "The platform where “Gangnam Style” became the first video to reach one billion views is called",
+  "The service with a dedicated area for short-form vertical clips is called",
+  "The site where viewers can join live chats alongside streamed broadcasts is called",
+  "The platform whose recommendation feed suggests clips based on viewing history is called",
+  "The online service where music videos, tutorials, and vlogs appear alongside each other is called",
+  "The website where a creator can organize uploads into a channel and playlists is called",
+  "The platform whose original launch slogan was “Broadcast Yourself” was known as",
+  "The service that awards creator plaques for subscriber milestones is called",
+  "The video site that helped popularize the “Let’s Play” gaming format is called",
+  "The company behind a leading online destination for user-uploaded videos is called",
+  "The platform where creators can enable Super Chat during eligible live streams is called",
+  "The service that offers a dedicated app for child-friendly viewing is called",
+  "The online video platform that became part of Google after its 2006 acquisition is called"
+ ],
+ "recall_v3": [
+  "What is the name of the online video service Google bought in 2006 for $1.65 billion?",
+  "What is the name of the website whose first uploaded clip showed a co-founder at a zoo?",
+  "What is the name of the platform founded by Chad Hurley, Steve Chen, and Jawed Karim?",
+  "What is the name of the service headquartered in San Bruno, California?",
+  "What is the name of the site that offers an ad-free paid subscription for viewing videos?",
+  "What is the name of the creator platform where channels can earn a Silver award at 100,000 subscribers?",
+  "What is the name of the website that hosted the annual recap series called “Rewind”?",
+  "What is the name of the platform where “Gangnam Style” became the first video to reach one billion views?",
+  "What is the name of the service with a dedicated area for short-form vertical clips?",
+  "What is the name of the site where viewers can join live chats alongside streamed broadcasts?",
+  "What is the name of the platform whose recommendation feed suggests clips based on viewing history?",
+  "What is the name of the online service where music videos, tutorials, and vlogs appear alongside each other?",
+  "What is the name of the website where a creator can organize uploads into a channel and playlists?",
+  "What is the name of the platform whose original launch slogan was “Broadcast Yourself”?",
+  "What is the name of the service that awards creator plaques for subscriber milestones?",
+  "What is the name of the video site that helped popularize the “Let’s Play” gaming format?",
+  "What is the name of the company behind a leading online destination for user-uploaded videos?",
+  "What is the name of the platform where creators can enable Super Chat during eligible live streams?",
+  "What is the name of the service that offers a dedicated app for child-friendly viewing?",
+  "What is the name of the online video platform that became part of Google after its 2006 acquisition?"
+ ],
+ "answer_forms_extra": [
+  "YouTube"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Google",
+   "names_concept": false
+  },
+  {
+   "reply": "Zoo.co",
+   "names_concept": false
+  },
+  {
+   "reply": "Chad Hurley, Steve Chen, and Jawed Karim founded the platform",
+   "names_concept": false
+  },
+  {
+   "reply": "San Bruno",
+   "names_concept": false
+  },
+  {
+   "reply": "YouTube",
+   "names_concept": true
+  },
+  {
+   "reply": "Silver Award Channel Creator Platform",
+   "names_concept": false
+  },
+  {
+   "reply": "Rewind",
+   "names_concept": false
+  },
+  {
+   "reply": "Gangnam Style",
+   "names_concept": false
+  },
+  {
+   "reply": "Short-form vertical clips service",
+   "names_concept": false
+  },
+  {
+   "reply": "Live Chat",
+   "names_concept": false
+  },
+  {
+   "reply": "YouTube",
+   "names_concept": true
+  },
+  {
+   "reply": "YouTube",
+   "names_concept": true
+  },
+  {
+   "reply": "YouTube",
+   "names_concept": true
+  },
+  {
+   "reply": "Broadcast Yourself",
+   "names_concept": false
+  },
+  {
+   "reply": "Creator Placemakers Service",
+   "names_concept": false
+  },
+  {
+   "reply": "Let's Play",
+   "names_concept": false
+  },
+  {
+   "reply": "Netflix",
+   "names_concept": false
+  },
+  {
+   "reply": "Super Chat",
+   "names_concept": false
+  },
+  {
+   "reply": "Child-friendly service",
+   "names_concept": false
+  },
+  {
+   "reply": "Google",
+   "names_concept": false
+  }
+ ]
+}

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import torch
 
-from neurons import load, mlps, steer
+from neurons import load, mlps, steer, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 name = sys.argv[1]
@@ -27,7 +27,7 @@ target = tok.encode(P["target"])[0]
 
 
 def dist(prompt, edits=()):
-    ids = tok(prompt, return_tensors="pt").to("cuda")
+    ids = tok(prompt, return_tensors="pt").to(DEVICE)
     with torch.no_grad(), (steer(model, list(edits)) if edits else torch.no_grad()):
         return model(**ids).logits[0, -1].float().softmax(-1)
 

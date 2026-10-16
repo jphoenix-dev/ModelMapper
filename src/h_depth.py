@@ -18,6 +18,8 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+from config import DEFAULT_MODEL
+
 ROOT = Path(__file__).resolve().parents[1]
 R = ROOT / "results"
 CLASSES = {
@@ -47,7 +49,7 @@ def main():
     if mode == "label":
         (R / "hdepth_units.json").write_text(json.dumps([{"layer": l, "neuron": n} for l, n in units]), encoding="utf-8")
         print(f"{len(cs)} concepts, {sum(map(len, cs.values()))} (concept, neuron) pairs, {len(units)} unique neurons")
-        subprocess.run([sys.executable, "-u", str(ROOT / "src/label_batch.py"), "Qwen/Qwen3-8B",
+        subprocess.run([sys.executable, "-u", str(ROOT / "src/label_batch.py"), DEFAULT_MODEL,
                         str(R / "hdepth_units.json"), str(R / f"hdepth_labels{tag}.json")], check=True)
         return
 

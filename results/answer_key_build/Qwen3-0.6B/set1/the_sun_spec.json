@@ -1,0 +1,186 @@
+{
+ "answer": " the Sun",
+ "recall": [
+  "The star nearest to Earth is",
+  "The star that Earth orbits is",
+  "The star whose light and heat sustain life at Earth's surface is",
+  "The brightest natural object in Earth's daytime sky is",
+  "The star that appears to cross the sky from east to west each day is",
+  "The star whose light takes about eight minutes and twenty seconds to reach Earth is",
+  "The star located roughly 150 million kilometers from Earth is",
+  "The star at the center of the planetary system that includes Earth is",
+  "The star supplying the energy that drives most terrestrial photosynthesis is",
+  "The celestial body whose apparent position a shadow clock tracks to mark time is",
+  "The star whose visible outer layer is known as the photosphere is",
+  "The star whose extended corona is visible during a total eclipse is",
+  "The star temporarily hidden when the Moon passes in front of it during a total eclipse is",
+  "The G2V main-sequence star around which Earth travels is",
+  "The star with a visible surface temperature of roughly 5,500 degrees Celsius is",
+  "The gravitationally dominant star that keeps Earth's orbit bound is",
+  "The star that emits the charged particles responsible for auroras on Earth is",
+  "The source of most energy that drives Earth's water cycle is",
+  "In Copernicus's account, the body around which Earth and the other planets orbit was",
+  "In ancient Egyptian religion, the deity Ra was associated with"
+ ],
+ "controls": [
+  {
+   "prompt": "Earth's natural satellite is",
+   "answer": " the Moon"
+  },
+  {
+   "prompt": "The red planet in our planetary neighborhood is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The largest planet in our planetary system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The star that lies close to the north celestial pole is",
+   "answer": " Polaris"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  }
+ ],
+ "recall_v2": [
+  "The star nearest to Earth is called",
+  "The star that Earth orbits is called",
+  "The star whose light and heat sustain life at Earth's surface is called",
+  "The brightest natural object in Earth's daytime sky is called",
+  "The star that appears to cross the sky from east to west each day is called",
+  "The star whose light takes about eight minutes and twenty seconds to reach Earth is called",
+  "The star located roughly 150 million kilometers from Earth is called",
+  "The star at the center of the planetary system that includes Earth is called",
+  "The star supplying the energy that drives most terrestrial photosynthesis is called",
+  "The celestial body whose apparent position a shadow clock tracks to mark time is called",
+  "The star whose visible outer layer is known as the photosphere is called",
+  "The star whose extended corona is visible during a total eclipse is called",
+  "The star temporarily hidden when the Moon passes in front of it during a total eclipse is called",
+  "The G2V main-sequence star around which Earth travels is called",
+  "The star with a visible surface temperature of roughly 5,500 degrees Celsius is called",
+  "The gravitationally dominant star that keeps Earth's orbit bound is called",
+  "The star that emits the charged particles responsible for auroras on Earth is called",
+  "The source of most energy that drives Earth's water cycle is called",
+  "In Copernicus's account, the body around which Earth and the other planets orbit was known as",
+  "In ancient Egyptian religion, the celestial body associated with the deity Ra was called"
+ ],
+ "recall_v3": [
+  "What is the name of the star nearest to Earth?",
+  "What is the name of the star that Earth orbits?",
+  "What is the name of the star whose light and heat sustain life at Earth's surface?",
+  "What is the name of the brightest natural object in Earth's daytime sky?",
+  "What is the name of the star that appears to cross the sky from east to west each day?",
+  "What is the name of the star whose light takes about eight minutes and twenty seconds to reach Earth?",
+  "What is the name of the star located roughly 150 million kilometers from Earth?",
+  "What is the name of the star at the center of the planetary system that includes Earth?",
+  "What is the name of the star supplying the energy that drives most terrestrial photosynthesis?",
+  "What is the name of the celestial body whose apparent position a shadow clock tracks to mark time?",
+  "What is the name of the star whose visible outer layer is known as the photosphere?",
+  "What is the name of the star whose extended corona is visible during a total eclipse?",
+  "What is the name of the star temporarily hidden when the Moon passes in front of it during a total eclipse?",
+  "What is the name of the G2V main-sequence star around which Earth travels?",
+  "What is the name of the star with a visible surface temperature of roughly 5,500 degrees Celsius?",
+  "What is the name of the gravitationally dominant star that keeps Earth's orbit bound?",
+  "What is the name of the star that emits the charged particles responsible for auroras on Earth?",
+  "What is the name of the source of most energy that drives Earth's water cycle?",
+  "What is the name of the body around which Earth and the other planets orbit in Copernicus's account?",
+  "What is the name of the celestial body associated with the deity Ra in ancient Egyptian religion?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Proxima Centauri",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth",
+   "names_concept": false
+  },
+  {
+   "reply": "The star whose light and heat sustain life at Earth's surface is the Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "The brightest natural object in Earth's daytime sky is the **Sun**",
+   "names_concept": true
+  },
+  {
+   "reply": "The star that appears to cross the sky from east to west each day is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Proxima Centauri",
+   "names_concept": false
+  },
+  {
+   "reply": "Proxima Centauri",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth's center is the Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "chlorophyll",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body is the sun",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosphere",
+   "names_concept": false
+  },
+  {
+   "reply": "The star whose extended corona is visible during a total eclipse is **Vega",
+   "names_concept": false
+  },
+  {
+   "reply": "The star is called the **Lunar Eclipse Star**",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth travels around the Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "Oort",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth's orbit is kept bound by the gravitational pull of the **Sun**",
+   "names_concept": true
+  },
+  {
+   "reply": "The star that emits charged particles responsible for auroras on Earth is the **Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the source of most energy that drives Earth's water cycle is **",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the body around which Earth and the other planets orbit in Copern",
+   "names_concept": false
+  },
+  {
+   "reply": "Ra",
+   "names_concept": false
+  }
+ ]
+}

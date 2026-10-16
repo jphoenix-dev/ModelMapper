@@ -23,7 +23,9 @@ import torch
 os.environ["RECALL_VARIANT"] = "V3"
 os.environ.setdefault("ANSWER_DISCOVERY", "1")
 import concept_pipeline as cp  # noqa: E402
-from neurons import steer  # noqa: E402
+from config import DEFAULT_MODEL  # noqa: E402
+from neurons import steer, DEVICE  # noqa: E402
+import pipeline_fast  # noqa: E402
 from pipeline_fast import FastPipeline  # noqa: E402
 from steer_test import PROMPTS as SELECT  # noqa: E402
 
@@ -43,12 +45,12 @@ def logit(p):
 def main():
     wave = json.loads((ROOT / sys.argv[1]).read_text(encoding="utf-8"))
     people_cat = {c for cat, cs in wave["concepts"].items() if "people" in cat for c in cs}
-    pipe = FastPipeline(os.environ.get("MODEL", "Qwen/Qwen3-8B"), mode="add", reply_only=True)
+    pipe = FastPipeline(os.environ.get("MODEL", DEFAULT_MODEL), mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}; out {cp.OUT}", flush=True)
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
 
     def fluent(text):
-        ids = pipe.tok(text, return_tensors="pt").input_ids.to("cuda")
+        ids = pipe.tok(text, return_tensors="pt").input_ids.to(DEVICE)
         if ids.shape[1] < 3:
             return False
         with torch.no_grad():
@@ -62,7 +64,12 @@ def main():
         for concept in concepts:
             if concept in out:
                 continue
-            spec, tid, recall, _ = pipe.make_prompts(concept)
+            try:
+                spec, tid, recall, _ = pipe.make_prompts(concept)
+            except pipeline_fast.PromptsFailed as e:
+                out[concept] = {"category": cat, "status": "prompts_failed", "detail": str(e)}
+                print(f"{concept:<24} prompts failed: {e}", flush=True)
+                out_p.write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8"); continue
             row = {"category": cat, "answer": spec["answer"].strip(), "answer_form": getattr(pipe, "answer_form", None),
                    "recall": len(recall), "discovered": spec.get("answer_forms_extra")}
             if len(recall) < 5:
@@ -104,11 +111,11 @@ def main():
             sel_p, held_p = (FRIENDLY[:10], FRIENDLY[10:]) if concept in people_cat else (SELECT, HELD)
 
             def run(units, settings, prompts):
-                peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device="cuda")
+                peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device=DEVICE)
                 rows, vals, act = [], [], []
                 for n, s in settings:
                     for p in prompts:
-                        rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device="cuda") < n)
+                        rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device=DEVICE) < n)
                 reps = pipe.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
                 k = len(prompts)
                 return [reps[i*k:(i+1)*k] for i in range(len(settings))]

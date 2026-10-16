@@ -1,0 +1,188 @@
+{
+ "answer": " Moon",
+ "recall": [
+  "Earth's sole natural satellite is the",
+  "The nearest celestial body to Earth, aside from the Sun, is the",
+  "The bright disk whose appearance changes through a monthly cycle is the",
+  "The body whose gravity causes most of Earth's ocean tides is the",
+  "Neil Armstrong became the first person to walk on the surface of the",
+  "Apollo 11 landed its crew in the Sea of Tranquility on the",
+  "Tycho, Copernicus, and Clavius are prominent impact craters on the",
+  "The dark basalt plains known as maria are found on the",
+  "The far side, hidden from ordinary view from Earth, belongs to the",
+  "A total solar eclipse happens when the",
+  "An astronaut can leap higher because gravity is weaker on the surface of the",
+  "The Apollo crews brought samples of rock and dust back from the",
+  "The body whose gravity helps stabilize Earth's axial tilt is the",
+  "Earth's nearest natural neighbor, averaging about 384,400 kilometers away, is the",
+  "The changing phases seen over a cycle of about 29.5 days belong to the",
+  "The Apollo astronauts returned with samples of rock collected from the",
+  "The satellite whose gravity raises the largest ocean bulges on Earth is the",
+  "In many traditions, festival dates are set by observing the changing phases of the",
+  "Footprints left in the fine dust on the surface of the",
+  "A heavily cratered natural satellite with no substantial atmosphere, orbiting Earth, is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The star at the center of our planetary system is the",
+   "answer": " Sun"
+  },
+  {
+   "prompt": "The fourth planet from the Sun, known for its rusty color, is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "Jupiter's icy satellite, thought to harbor a subsurface ocean, is",
+   "answer": " Europa"
+  },
+  {
+   "prompt": "Saturn's largest satellite, with lakes of liquid methane, is",
+   "answer": " Titan"
+  },
+  {
+   "prompt": "The capital city of Italy is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific"
+  },
+  {
+   "prompt": "The element with the chemical symbol Au is",
+   "answer": " gold"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "Earth's sole natural satellite is named",
+  "The nearest celestial body to Earth, aside from the Sun, is known as",
+  "The bright disk whose appearance changes through a monthly cycle is called",
+  "The body whose gravity causes most of Earth's ocean tides is known as",
+  "Neil Armstrong became the first person to walk on the surface of Earth's natural satellite, which is called",
+  "Apollo 11 landed its crew in the Sea of Tranquility on the celestial body called",
+  "Tycho, Copernicus, and Clavius are prominent impact craters on Earth's natural satellite, known as",
+  "The dark basalt plains known as maria are found on Earth's natural satellite, called",
+  "The far side, hidden from ordinary view from Earth, belongs to Earth's natural satellite named",
+  "During a total solar eclipse, the object that passes between Earth and the Sun is called",
+  "An astronaut can leap higher because gravity is weaker on Earth's natural satellite, called",
+  "The Apollo crews brought samples of rock and dust back from Earth's natural satellite, known as",
+  "The body whose gravity helps stabilize Earth's axial tilt is called",
+  "Earth's nearest natural neighbor, averaging about 384,400 kilometers away, is known as",
+  "The changing phases seen over a cycle of about 29.5 days belong to Earth's natural satellite, called",
+  "The Apollo astronauts returned with samples of rock collected from Earth's natural satellite, known as",
+  "The satellite whose gravity raises the largest ocean bulges on Earth is called",
+  "In many traditions, festival dates are set by observing the changing phases of Earth's natural satellite, called",
+  "Footprints left in the fine dust on the surface of Earth's natural satellite are found on the body called",
+  "A heavily cratered natural satellite with no substantial atmosphere, orbiting Earth, is called"
+ ],
+ "recall_v3": [
+  "What is the name of Earth's sole natural satellite?",
+  "What is the nearest celestial body to Earth, aside from the Sun?",
+  "What is the bright disk whose appearance changes through a monthly cycle?",
+  "What body causes most of Earth's ocean tides through its gravity?",
+  "What is the name of the celestial body Neil Armstrong first walked on?",
+  "What is the name of the celestial body where Apollo 11 landed in the Sea of Tranquility?",
+  "What is the name of the body where the impact craters Tycho, Copernicus, and Clavius are found?",
+  "What is the name of the body where the dark basalt plains known as maria are found?",
+  "What is the name of the natural satellite whose far side is hidden from ordinary view from Earth?",
+  "What is the name of the object that passes between Earth and the Sun during a total solar eclipse?",
+  "What is the name of the natural satellite where an astronaut can leap higher because gravity is weaker?",
+  "What is the name of the natural satellite from which the Apollo crews brought back rock and dust samples?",
+  "What is the name of the body whose gravity helps stabilize Earth's axial tilt?",
+  "What is the name of Earth's nearest natural neighbor, averaging about 384,400 kilometers away?",
+  "What is the name of the natural satellite whose changing phases are seen over a cycle of about 29.5 days?",
+  "What is the name of the natural satellite from which the Apollo astronauts collected rock samples?",
+  "What is the name of the satellite whose gravity raises the largest ocean bulges on Earth?",
+  "What is the name of the natural satellite whose changing phases are observed to set festival dates in many traditions?",
+  "What is the name of the body whose surface has fine dust bearing footprints?",
+  "What is the name of the heavily cratered natural satellite with no substantial atmosphere that orbits Earth?"
+ ],
+ "answer_forms_extra": [
+  "Moon"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Earth's sole natural satellite",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "The bright disk whose appearance changes through a monthly cycle is the **Moon**",
+   "names_concept": true
+  },
+  {
+   "reply": "Earth's gravity",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Sea of Tranquility",
+   "names_concept": false
+  },
+  {
+   "reply": "Tycho Brahe, Copernicus, and Clavius are found in",
+   "names_concept": false
+  },
+  {
+   "reply": "Mare",
+   "names_concept": false
+  },
+  {
+   "reply": "Neptune",
+   "names_concept": false
+  },
+  {
+   "reply": "The object that passes between Earth and the Sun during a total solar eclipse is the",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the natural satellite where an astronaut can leap higher because gravity is weaker",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The body whose gravity helps stabilize Earth's axial tilt is the **Earth**",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth's nearest natural neighbor, averaging about 384,400",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the natural satellite whose changing phases are seen over a cycle of about",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The satellite whose gravity raises the largest ocean bulges on Earth is **Luna",
+   "names_concept": true
+  },
+  {
+   "reply": "Luna",
+   "names_concept": true
+  },
+  {
+   "reply": "footprints",
+   "names_concept": false
+  },
+  {
+   "reply": "Mimas",
+   "names_concept": false
+  }
+ ]
+}

@@ -19,7 +19,8 @@ import numpy as np
 import torch
 from transformers import AutoTokenizer
 
-from neurons import LOCAL_MODELS, capture
+from config import model_path
+from neurons import capture, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,7 +35,7 @@ class Atlas:
         self.starts = np.concatenate([[0], np.cumsum(lengths)[:-1]])
         self.lengths = lengths
         self.ctx = self.a["ctx"]
-        self.tok = AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/{short}")
+        self.tok = AutoTokenizer.from_pretrained(model_path(model_name))
 
     def doc(self, i: int) -> np.ndarray:
         return self.tokens[self.starts[i]:self.starts[i] + self.lengths[i]]
@@ -73,7 +74,7 @@ class Atlas:
         for e in es:
             acts = None
             if model is not None:  # one forward pass over the doc to highlight other strong tokens
-                ids = torch.as_tensor(self.doc(e["doc"]), dtype=torch.long)[None].cuda()
+                ids = torch.as_tensor(self.doc(e["doc"]), dtype=torch.long)[None].to(DEVICE)
                 with torch.no_grad(), capture(model, [layer]) as s:
                     model.model(input_ids=ids)
                 sign = 1 if pole == "pos" else -1

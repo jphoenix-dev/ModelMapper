@@ -10,6 +10,8 @@ from pathlib import Path
 
 import torch
 
+from neurons import DEVICE
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 
@@ -25,7 +27,7 @@ def main():
     pipe = None
     for mode in ("clamp", "add"):
         if pipe is None:
-            pipe = FastPipeline("Qwen/Qwen3-8B", mode=mode, reply_only=True)
+            pipe = FastPipeline(DEFAULT_MODEL, mode=mode, reply_only=True)
         pipe.mode = mode
         spec, tid, recall, controls = pipe.make_prompts(concept)
         A = pipe.attribute([q for q, _ in recall], tid)
@@ -33,8 +35,8 @@ def main():
         peak = pipe.steer_edits([u], 1.0, A["last_act"])[0][2]
         k = len(FRIENDLY)
         rows = [p for _ in STRENGTHS for p in FRIENDLY]
-        vals = torch.tensor([[peak * s] for s in STRENGTHS for _ in FRIENDLY], device="cuda")
-        act = torch.ones(len(rows), 1, dtype=torch.bool, device="cuda")
+        vals = torch.tensor([[peak * s] for s in STRENGTHS for _ in FRIENDLY], device=DEVICE)
+        act = torch.ones(len(rows), 1, dtype=torch.bool, device=DEVICE)
         reps = pipe.gen_rows(rows, [u], vals, act)
         grid = [{"n": 1, "s": s, "hit": sum(word.lower() in r.lower() for r in reps[i*k:(i+1)*k]) / k,
                  "replies": reps[i*k:(i+1)*k]} for i, s in enumerate(STRENGTHS)]

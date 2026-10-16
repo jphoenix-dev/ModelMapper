@@ -1,0 +1,188 @@
+{
+ "answer": " Egypt",
+ "recall": [
+  "The northeastern African country whose capital is Cairo is",
+  "The modern country that contains the Nile Delta is",
+  "The nation where the Giza plateau and its ancient royal tombs are located is",
+  "The African country that includes the Sinai Peninsula is",
+  "The country with a coastline on both the Mediterranean Sea and the Red Sea is",
+  "The homeland of the ancient civilization ruled by pharaohs was",
+  "The country that administers the canal connecting the Mediterranean and Red seas is",
+  "The African nation where Luxor and Aswan are located is",
+  "The modern state that contains the ancient city of Memphis and the necropolis of Saqqara is",
+  "The country where the Nile flows northward into the Mediterranean is",
+  "The North African nation whose neighbors include Libya to the west and Sudan to the south is",
+  "The country that is home to the city of Alexandria and Al-Azhar University is",
+  "The modern nation where the Great Pyramid of Khufu was built is",
+  "The African country whose territory extends across the Suez Canal into western Asia is",
+  "The country where the Aswan High Dam regulates the Nile is",
+  "The North African republic with a long Mediterranean coastline east of Libya is",
+  "The present-day country associated with the ancient kingdoms of Upper and Lower Nile is",
+  "The nation whose national football team is nicknamed the Pharaohs is",
+  "The country that includes the Nile Valley between the Mediterranean coast and the Sudanese border is",
+  "The modern state where the ancient city of Thebes once stood is"
+ ],
+ "controls": [
+  {
+   "prompt": "The country directly south of Egypt along the Nile is",
+   "answer": " Sudan"
+  },
+  {
+   "prompt": "The North African country immediately west of Egypt is",
+   "answer": " Libya"
+  },
+  {
+   "prompt": "The North African country whose capital is Tunis is",
+   "answer": " Tunisia"
+  },
+  {
+   "prompt": "The African country with the continent's largest land area is",
+   "answer": " Algeria"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The physicist associated with the theory of relativity is",
+   "answer": " Albert Einstein"
+  }
+ ],
+ "recall_v2": [
+  "The northeastern African country whose capital is Cairo is called",
+  "The modern country that contains the Nile Delta is named",
+  "The nation where the Giza plateau and its ancient royal tombs are located is called",
+  "The African country that includes the Sinai Peninsula is called",
+  "The country with a coastline on both the Mediterranean Sea and the Red Sea is called",
+  "The homeland of the ancient civilization ruled by pharaohs was known as",
+  "The country that administers the canal connecting the Mediterranean and Red seas is called",
+  "The African nation where Luxor and Aswan are located is called",
+  "The modern state that contains the ancient city of Memphis and the necropolis of Saqqara is called",
+  "The country where the Nile flows northward into the Mediterranean is called",
+  "The North African nation whose neighbors include Libya to the west and Sudan to the south is called",
+  "The country that is home to the city of Alexandria and Al-Azhar University is called",
+  "The modern nation where the Great Pyramid of Khufu was built is called",
+  "The African country whose territory extends across the Suez Canal into western Asia is called",
+  "The country where the Aswan High Dam regulates the Nile is called",
+  "The North African republic with a long Mediterranean coastline east of Libya is called",
+  "The present-day country associated with the ancient kingdoms of Upper and Lower Nile is called",
+  "The nation whose national football team is nicknamed the Pharaohs is called",
+  "The country that includes the Nile Valley between the Mediterranean coast and the Sudanese border is called",
+  "The modern state where the ancient city of Thebes once stood is called"
+ ],
+ "recall_v3": [
+  "What is the name of the northeastern African country whose capital is Cairo?",
+  "What is the name of the modern country that contains the Nile Delta?",
+  "What is the name of the nation where the Giza plateau and its ancient royal tombs are located?",
+  "What is the name of the African country that includes the Sinai Peninsula?",
+  "What is the name of the country with a coastline on both the Mediterranean Sea and the Red Sea?",
+  "What was the name of the homeland of the ancient civilization ruled by pharaohs?",
+  "What is the name of the country that administers the canal connecting the Mediterranean and Red seas?",
+  "What is the name of the African nation where Luxor and Aswan are located?",
+  "What is the name of the modern state that contains the ancient city of Memphis and the necropolis of Saqqara?",
+  "What is the name of the country where the Nile flows northward into the Mediterranean?",
+  "What is the name of the North African nation whose neighbors include Libya to the west and Sudan to the south?",
+  "What is the name of the country that is home to the city of Alexandria and Al-Azhar University?",
+  "What is the name of the modern nation where the Great Pyramid of Khufu was built?",
+  "What is the name of the African country whose territory extends across the Suez Canal into western Asia?",
+  "What is the name of the country where the Aswan High Dam regulates the Nile?",
+  "What is the name of the North African republic with a long Mediterranean coastline east of Libya?",
+  "What is the name of the present-day country associated with the ancient kingdoms of Upper and Lower Nile?",
+  "What is the name of the nation whose national football team is nicknamed the Pharaohs?",
+  "What is the name of the country that includes the Nile Valley between the Mediterranean coast and the Sudanese border?",
+  "What is the name of the modern state where the ancient city of Thebes once stood?"
+ ],
+ "answer_forms_extra": [
+  "Egypt"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Cairo",
+   "names_concept": false
+  },
+  {
+   "reply": "Nile Delta",
+   "names_concept": false
+  },
+  {
+   "reply": "Giza",
+   "names_concept": false
+  },
+  {
+   "reply": "Egypt",
+   "names_concept": true
+  },
+  {
+   "reply": "Mediterranean",
+   "names_concept": false
+  },
+  {
+   "reply": "Egypt",
+   "names_concept": false
+  },
+  {
+   "reply": "Mediterranean",
+   "names_concept": false
+  },
+  {
+   "reply": "Luxor and Aswan are located in Egypt",
+   "names_concept": false
+  },
+  {
+   "reply": "Memphis",
+   "names_concept": false
+  },
+  {
+   "reply": "Nile",
+   "names_concept": false
+  },
+  {
+   "reply": "Sudan",
+   "names_concept": false
+  },
+  {
+   "reply": "Alexandria",
+   "names_concept": false
+  },
+  {
+   "reply": "Egypt",
+   "names_concept": true
+  },
+  {
+   "reply": "Egypt",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile",
+   "names_concept": false
+  },
+  {
+   "reply": "Morocco",
+   "names_concept": false
+  },
+  {
+   "reply": "Nile",
+   "names_concept": false
+  },
+  {
+   "reply": "Egypt",
+   "names_concept": true
+  },
+  {
+   "reply": "Nile Valley",
+   "names_concept": false
+  },
+  {
+   "reply": "Thebes",
+   "names_concept": false
+  }
+ ]
+}

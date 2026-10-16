@@ -10,8 +10,8 @@ Every run gets logged here, failures included. Newest at the bottom.
 - Environment: `.venv`, PyTorch 2.11 (cu128), transformers 5.20, RTX 5090.
 - Hook check: SiLU(gate) × value reproduces the input to down_proj to within 0.17% of max activation, which is
   bfloat16 rounding. So we're reading the right number.
-- `huggingface_hub` downloads stalled on this machine (as noted before in C:\dev\CLAUDE.md), so models are now
-  fetched with resumable curl (`scripts/download_models.sh`) into `C:/dev/models/hf/`.
+- `huggingface_hub` downloads stalled on this machine (a known local issue), so models are now
+  fetched with resumable curl (`scripts/download_models.sh`) into a local models folder (`$MODEL_MAPPER_MODELS`).
 - Jev client (`src/jev.py`): smoke tests passed and cost about $0.0002.
 
 **Contrastive search, first attempt.** The score saturated at about 2.3 for every top neuron. Measuring the gap in

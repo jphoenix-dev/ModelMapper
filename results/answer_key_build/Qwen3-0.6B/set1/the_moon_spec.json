@@ -1,0 +1,186 @@
+{
+ "answer": " Moon",
+ "recall": [
+  "Earth's only natural satellite is the",
+  "Apollo 11 astronauts landed on the surface of the",
+  "The celestial body whose gravity raises Earth's strongest tides is the",
+  "A total solar eclipse occurs when the",
+  "The first human to set foot on another world did so on the",
+  "The Sea of Tranquility is a basalt plain on the",
+  "The dark plains known as maria cover parts of the",
+  "The far side was first photographed by a Soviet spacecraft in 1959, revealing the unseen face of the",
+  "The giant-impact hypothesis says debris from an early collision with Earth formed the",
+  "The familiar sequence of crescents and gibbous shapes is the changing phase cycle of the",
+  "Earth's nearest large celestial neighbor lies about 384,400 kilometers away: the",
+  "The boundary between the illuminated and dark portions of the visible disk is called the terminator on the",
+  "Apollo crews returned samples of basalt and breccia from the surface of the",
+  "The traditional cycle of many calendar months is based on the phases of the",
+  "Synchronous rotation means the same hemisphere always faces Earth, a property of the",
+  "A month measured from one new phase to the next follows the synodic cycle of the",
+  "The first crewed landing beyond Earth took place on the",
+  "Luna 2 became the first spacecraft to reach the surface of the",
+  "With almost no substantial atmosphere, footprints can remain preserved on the",
+  "Many cultures have used the changing appearance of the"
+ ],
+ "controls": [
+  {
+   "prompt": "Mars has two small natural satellites, Phobos and",
+   "answer": " Deimos"
+  },
+  {
+   "prompt": "Jupiter's largest satellite, often discussed as a possible ocean world, is",
+   "answer": " Europa"
+  },
+  {
+   "prompt": "Saturn's largest satellite, known for its methane lakes, is",
+   "answer": " Titan"
+  },
+  {
+   "prompt": "Neptune's largest natural satellite, which has a retrograde orbit, is",
+   "answer": " Triton"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The chemical element with the symbol Au is",
+   "answer": " Gold"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "Earth's only natural satellite is known as",
+  "The world on whose surface Apollo 11 astronauts landed is called",
+  "The celestial body whose gravity raises Earth's strongest tides is called",
+  "During a total solar eclipse, the object that passes between Earth and the Sun is called",
+  "The world on which the first human set foot beyond Earth is called",
+  "The celestial body containing the Sea of Tranquility, a basalt plain, is called",
+  "The celestial body partly covered by dark plains known as maria is called",
+  "The celestial body whose far side was first photographed by a Soviet spacecraft in 1959 is called",
+  "The natural satellite formed from debris after an early collision with Earth, according to the giant-impact hypothesis, is called",
+  "The celestial body whose changing phase cycle appears as crescents and gibbous shapes is called",
+  "Earth's nearest large celestial neighbor, about 384,400 kilometers away, is called",
+  "The celestial body whose visible disk has a terminator separating its illuminated and dark portions is called",
+  "The celestial body from whose surface Apollo crews returned samples of basalt and breccia is called",
+  "The celestial body whose phases underpin the traditional cycle of many calendar months is called",
+  "The celestial body that always presents the same hemisphere to Earth because of synchronous rotation is called",
+  "The celestial body whose synodic cycle runs from one new phase to the next is called",
+  "The world where the first crewed landing beyond Earth took place is called",
+  "The celestial body whose surface Luna 2 became the first spacecraft to reach is called",
+  "The celestial body on whose surface footprints can remain preserved because it has almost no substantial atmosphere is called",
+  "The celestial body whose changing appearance many cultures have used is called"
+ ],
+ "recall_v3": [
+  "What is the name of Earth's only natural satellite?",
+  "What is the name of the world on whose surface Apollo 11 astronauts landed?",
+  "What is the name of the celestial body whose gravity raises Earth's strongest tides?",
+  "What is the name of the object that passes between Earth and the Sun during a total solar eclipse?",
+  "What is the name of the world on which the first human set foot beyond Earth?",
+  "What is the name of the celestial body containing the Sea of Tranquility, a basalt plain?",
+  "What is the name of the celestial body partly covered by dark plains known as maria?",
+  "What is the name of the celestial body whose far side was first photographed by a Soviet spacecraft in 1959?",
+  "What is the name of the natural satellite that the giant-impact hypothesis says formed from debris after an early collision with Earth?",
+  "What is the name of the celestial body whose changing phase cycle appears as crescents and gibbous shapes?",
+  "What is the name of Earth's nearest large celestial neighbor, about 384,400 kilometers away?",
+  "What is the name of the celestial body whose visible disk has a terminator separating its illuminated and dark portions?",
+  "What is the name of the celestial body from whose surface Apollo crews returned samples of basalt and breccia?",
+  "What is the name of the celestial body whose phases underpin the traditional cycle of many calendar months?",
+  "What is the name of the celestial body that always presents the same hemisphere to Earth because of synchronous rotation?",
+  "What is the name of the celestial body whose synodic cycle runs from one new phase to the next?",
+  "What is the name of the world where the first crewed landing beyond Earth took place?",
+  "What is the name of the celestial body whose surface Luna 2 became the first spacecraft to reach?",
+  "What is the name of the celestial body on whose surface footprints can remain preserved because it has almost no substantial atmosphere?",
+  "What is the name of the celestial body whose changing appearance many cultures have used?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Earth's only natural satellite",
+   "names_concept": false
+  },
+  {
+   "reply": "Apollo 11",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body whose gravity raises Earth's strongest tides is the Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The object that passes between Earth and the Sun during a total solar eclipse is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body containing the Sea of Tranquility, a basalt plain,",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body partly covered by dark plains known as maria is the Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Voyager 1",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Gibbous",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth's nearest large celestial neighbor is the Sun",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body is the Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Apollo spacecraft",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body whose phases underpin the traditional cycle of many calendar months is the",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body that always presents the same hemisphere to Earth because of synchronous rotation is",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body whose synodic cycle runs from one new phase to the next is",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Luna 2",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body is the Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The celestial body whose changing appearance many cultures have used is the **Moon**",
+   "names_concept": true
+  }
+ ]
+}

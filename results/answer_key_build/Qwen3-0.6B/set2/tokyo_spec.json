@@ -1,0 +1,189 @@
+{
+ "answer": " Tokyo",
+ "recall": [
+  "The national capital of Japan is",
+  "Japan's most populous city is",
+  "Known before the Meiji Restoration as Edo, Japan's current capital is",
+  "The Japanese city that became the imperial capital in 1868 is",
+  "Japan's National Diet convenes in",
+  "The host city of the 1964 Summer Olympics was",
+  "The host city of the Summer Olympics scheduled for 2020 and held in 2021 was",
+  "The Japanese metropolis that includes the districts of Shibuya and Shinjuku is",
+  "Japan's Imperial Palace is located in",
+  "The city that includes the Ginza shopping district is",
+  "Haneda Airport is one of the main airports serving",
+  "The headquarters of the Bank of Japan are located in",
+  "The headquarters of the United Nations University are in",
+  "Akihabara and Asakusa are neighborhoods within",
+  "Japan's central government is based in",
+  "The city that contains the Ryōgoku Kokugikan sumo arena is",
+  "Japan's largest urban center lies in the Kantō region and is",
+  "The Japanese city served by Haneda Airport is",
+  "The Japanese city whose historic name was Edo is now",
+  "The city where Japan's parliament meets and the emperor resides is"
+ ],
+ "controls": [
+  {
+   "prompt": "The capital of South Korea is",
+   "answer": " Seoul"
+  },
+  {
+   "prompt": "The capital of China is",
+   "answer": " Beijing"
+  },
+  {
+   "prompt": "The capital of Thailand is",
+   "answer": " Bangkok"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  }
+ ],
+ "recall_v2": [
+  "The national capital of Japan is called",
+  "Japan's most populous city is called",
+  "Known before the Meiji Restoration as Edo, Japan's current capital is called",
+  "The Japanese city that became the imperial capital in 1868 is called",
+  "The city where Japan's National Diet convenes is called",
+  "The host city of the 1964 Summer Olympics was called",
+  "The host city of the Summer Olympics scheduled for 2020 and held in 2021 was called",
+  "The Japanese metropolis that includes the districts of Shibuya and Shinjuku is called",
+  "The city where Japan's Imperial Palace is located is called",
+  "The city that includes the Ginza shopping district is called",
+  "The city served by Haneda Airport is called",
+  "The city where the headquarters of the Bank of Japan are located is called",
+  "The city where the headquarters of the United Nations University are located is called",
+  "The city that contains the neighborhoods of Akihabara and Asakusa is called",
+  "The city where Japan's central government is based is called",
+  "The city that contains the Ryōgoku Kokugikan sumo arena is called",
+  "Japan's largest urban center, which lies in the Kantō region, is called",
+  "The Japanese city served by Haneda Airport is called",
+  "The Japanese city whose historic name was Edo is now called",
+  "The city where Japan's parliament meets and the emperor resides is called"
+ ],
+ "recall_v3": [
+  "What is the name of Japan's national capital?",
+  "What is the name of Japan's most populous city?",
+  "What is the name of Japan's current capital, known before the Meiji Restoration as Edo?",
+  "What is the name of the Japanese city that became the imperial capital in 1868?",
+  "What is the name of the city where Japan's National Diet convenes?",
+  "What was the name of the host city of the 1964 Summer Olympics?",
+  "What was the name of the host city of the Summer Olympics scheduled for 2020 and held in 2021?",
+  "What is the name of the Japanese metropolis that includes the districts of Shibuya and Shinjuku?",
+  "What is the name of the city where Japan's Imperial Palace is located?",
+  "What is the name of the city that includes the Ginza shopping district?",
+  "What is the name of the city served by Haneda Airport?",
+  "What is the name of the city where the headquarters of the Bank of Japan are located?",
+  "What is the name of the city where the headquarters of the United Nations University are located?",
+  "What is the name of the city that contains the neighborhoods of Akihabara and Asakusa?",
+  "What is the name of the city where Japan's central government is based?",
+  "What is the name of the city that contains the Ryōgoku Kokugikan sumo arena?",
+  "What is the name of Japan's largest urban center in the Kantō region?",
+  "What is the name of the Japanese city served by Haneda Airport?",
+  "What is the name of the Japanese city whose historic name was Edo?",
+  "What is the name of the city where Japan's parliament meets and the emperor resides?"
+ ],
+ "answer_forms_extra": [
+  "Tokyo",
+  "Edo"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Edo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "1964 Summer Olympics host city: Tokyo",
+   "names_concept": false
+  },
+  {
+   "reply": "2020 Summer Olympics host city: Tokyo, Japan",
+   "names_concept": false
+  },
+  {
+   "reply": "Shibuya",
+   "names_concept": false
+  },
+  {
+   "reply": "Imperial Palace",
+   "names_concept": false
+  },
+  {
+   "reply": "Ginza",
+   "names_concept": false
+  },
+  {
+   "reply": "Haneda Airport serves the city of Tokyo",
+   "names_concept": false
+  },
+  {
+   "reply": "Bank of Japan",
+   "names_concept": false
+  },
+  {
+   "reply": "New York City",
+   "names_concept": false
+  },
+  {
+   "reply": "Akihabara and Asakusa are both located in Japan, but they",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Ryōgoku Kokugikan",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Haneda Airport serves the Japanese city of **Tokyo**",
+   "names_concept": false
+  },
+  {
+   "reply": "Edo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  }
+ ]
+}

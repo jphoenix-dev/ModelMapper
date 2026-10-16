@@ -1,0 +1,188 @@
+{
+ "answer": " London",
+ "recall": [
+  "The capital city of the United Kingdom is",
+  "England's largest city by population is",
+  "The British monarch's official residence at Buckingham Palace is in",
+  "The Houses of Parliament stand beside the Thames in",
+  "The River Thames flows through the heart of",
+  "Trafalgar Square and Hyde Park are landmarks in",
+  "The West End theatre district is located in",
+  "The host city of the 2012 Summer Olympics was",
+  "The annual marathon that crosses Tower Bridge takes place in",
+  "Many of Charles Dickens's novels portray life in",
+  "Sherlock Holmes's fictional home at Baker Street is in",
+  "The British Museum is a major attraction in",
+  "The historic Tower of London stands in",
+  "Heathrow and Gatwick serve the major British city of",
+  "The Great Fire of 1666 devastated much of",
+  "The Blitz heavily bombed the British capital of",
+  "The headquarters of the BBC are in",
+  "The Bank of England is based in",
+  "Wimbledon, home of the famous tennis championships, is a district of",
+  "The City, a historic financial district, is located in"
+ ],
+ "controls": [
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "Italy's capital city is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "Germany's capital is",
+   "answer": " Berlin"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Everest"
+  },
+  {
+   "prompt": "The planet often called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "Leonardo da Vinci's famous portrait of a smiling woman is the",
+   "answer": " Mona Lisa"
+  }
+ ],
+ "recall_v2": [
+  "The capital city of the United Kingdom is the city of",
+  "England's largest city by population is the city of",
+  "The British monarch's official residence, Buckingham Palace, is located in the city of",
+  "The Houses of Parliament stand beside the Thames in the city of",
+  "The River Thames flows through the heart of the city of",
+  "Trafalgar Square and Hyde Park are landmarks in the city of",
+  "The West End theatre district is located in the city of",
+  "The host city of the 2012 Summer Olympics was the city of",
+  "The annual marathon that crosses Tower Bridge takes place in the city of",
+  "Many of Charles Dickens's novels portray life in the city of",
+  "Sherlock Holmes's fictional home at Baker Street is in the city of",
+  "The British Museum is a major attraction in the city of",
+  "The historic Tower of London stands in the city of",
+  "Heathrow and Gatwick serve the major British city of",
+  "The Great Fire of 1666 devastated much of the city of",
+  "The Blitz heavily bombed the British capital, the city of",
+  "The headquarters of the BBC are in the city of",
+  "The Bank of England is based in the city of",
+  "Wimbledon, home of the famous tennis championships, is a district of the city of",
+  "The City, a historic financial district, is located in the city of"
+ ],
+ "recall_v3": [
+  "What is the capital city of the United Kingdom?",
+  "What is England's largest city by population?",
+  "In what city is Buckingham Palace, the British monarch's official residence?",
+  "In what city do the Houses of Parliament stand beside the Thames?",
+  "Through what city does the River Thames flow?",
+  "In what city are Trafalgar Square and Hyde Park?",
+  "In what city is the West End theatre district located?",
+  "What city hosted the 2012 Summer Olympics?",
+  "In what city does the annual marathon that crosses Tower Bridge take place?",
+  "In what city do many of Charles Dickens's novels portray life?",
+  "In what city is Sherlock Holmes's fictional home at Baker Street?",
+  "In what city is the British Museum a major attraction?",
+  "In what city does the historic Tower of London stand?",
+  "Which major British city is served by Heathrow and Gatwick?",
+  "Which city was largely devastated by the Great Fire of 1666?",
+  "What British capital was heavily bombed during the Blitz?",
+  "In what city are the headquarters of the BBC?",
+  "In what city is the Bank of England based?",
+  "Wimbledon, home of the famous tennis championships, is a district of which city?",
+  "In what city is the historic financial district known as the City located?"
+ ],
+ "answer_forms_extra": [
+  "London"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Buckingham Palace",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Thames",
+   "names_concept": false
+  },
+  {
+   "reply": "Hyde Park",
+   "names_concept": false
+  },
+  {
+   "reply": "West End",
+   "names_concept": false
+  },
+  {
+   "reply": "Athens",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Baker Street",
+   "names_concept": false
+  },
+  {
+   "reply": "The British Museum is a major attraction in London",
+   "names_concept": false
+  },
+  {
+   "reply": "Tower of London",
+   "names_concept": false
+  },
+  {
+   "reply": "Heathrow and Gatwick serve the major British city of London",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "BBC",
+   "names_concept": false
+  },
+  {
+   "reply": "The Bank of England is based in London",
+   "names_concept": false
+  },
+  {
+   "reply": "Wimbledon",
+   "names_concept": false
+  },
+  {
+   "reply": "New York City",
+   "names_concept": false
+  }
+ ]
+}

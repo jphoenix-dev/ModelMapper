@@ -1,0 +1,188 @@
+{
+ "answer": " Japan",
+ "recall": [
+  "The East Asian island nation whose capital is Tokyo is",
+  "The archipelago stretching along the Pacific coast east of China and Korea is",
+  "The country made up chiefly of Honshu, Hokkaido, Kyushu, and Shikoku is",
+  "The home of Mount Fuji, an active stratovolcano and national symbol, is",
+  "The country where the first high-speed rail line began operating in 1964 is",
+  "The nation whose parliament is known as the National Diet is",
+  "The country whose currency is the yen is",
+  "The nation whose flag features a red disk on a plain white field is",
+  "The country that attacked Pearl Harbor in December 1941 was",
+  "The country where the atomic bombings of Hiroshima and Nagasaki took place in 1945 was",
+  "The nation that hosted the first Summer Olympics held in Asia, in 1964, was",
+  "The country whose imperial capital was moved from Kyoto to Tokyo in the nineteenth century was",
+  "The country where traditional theater forms such as kabuki and bunraku developed is",
+  "The country associated with the art of origami and the martial art of judo is",
+  "The nation where the spring custom of hanami involves viewing blossoms is",
+  "The home country of the automakers Honda and Toyota is",
+  "The country where Nintendo was founded in the nineteenth century is",
+  "The nation whose traditional military rulers were called shoguns was",
+  "The country whose islands lie along the Pacific Ring of Fire is",
+  "The country where the artist Katsushika Hokusai was born is"
+ ],
+ "controls": [
+  {
+   "prompt": "The East Asian country whose capital is Beijing is",
+   "answer": " China"
+  },
+  {
+   "prompt": "The country whose capital is Seoul and which occupies the southern half of the Korean Peninsula is",
+   "answer": " South Korea"
+  },
+  {
+   "prompt": "The island polity whose capital is Taipei is",
+   "answer": " Taiwan"
+  },
+  {
+   "prompt": "The landlocked East Asian country between Russia and China is",
+   "answer": " Mongolia"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical element represented by the symbol Au is",
+   "answer": " Gold"
+  },
+  {
+   "prompt": "The world's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  }
+ ],
+ "recall_v2": [
+  "The East Asian island nation whose capital is Tokyo is called",
+  "The archipelago stretching along the Pacific coast east of China and Korea is known as",
+  "The country made up chiefly of Honshu, Hokkaido, Kyushu, and Shikoku is called",
+  "The home of Mount Fuji, an active stratovolcano and national symbol, is known as",
+  "The country where the first high-speed rail line began operating in 1964 is called",
+  "The nation whose parliament is known as the National Diet is called",
+  "The country whose currency is the yen is called",
+  "The nation whose flag features a red disk on a plain white field is called",
+  "The country that attacked Pearl Harbor in December 1941 was called",
+  "The country where the atomic bombings of Hiroshima and Nagasaki took place in 1945 was called",
+  "The nation that hosted the first Summer Olympics held in Asia, in 1964, was called",
+  "The country whose imperial capital was moved from Kyoto to Tokyo in the nineteenth century is called",
+  "The country where traditional theater forms such as kabuki and bunraku developed is called",
+  "The country associated with the art of origami and the martial art of judo is called",
+  "The nation where the spring custom of hanami involves viewing blossoms is called",
+  "The home country of the automakers Honda and Toyota is called",
+  "The country where Nintendo was founded in the nineteenth century is called",
+  "The nation whose traditional military rulers were called shoguns is called",
+  "The country whose islands lie along the Pacific Ring of Fire is called",
+  "The country where the artist Katsushika Hokusai was born is called"
+ ],
+ "recall_v3": [
+  "What is the name of the East Asian island nation whose capital is Tokyo?",
+  "What is the name of the archipelago stretching along the Pacific coast east of China and Korea?",
+  "What is the name of the country made up chiefly of Honshu, Hokkaido, Kyushu, and Shikoku?",
+  "What is the name of the country that is home to Mount Fuji, an active stratovolcano and national symbol?",
+  "What is the name of the country where the first high-speed rail line began operating in 1964?",
+  "What is the name of the nation whose parliament is known as the National Diet?",
+  "What is the name of the country whose currency is the yen?",
+  "What is the name of the nation whose flag features a red disk on a plain white field?",
+  "What was the name of the country that attacked Pearl Harbor in December 1941?",
+  "What was the name of the country where the atomic bombings of Hiroshima and Nagasaki took place in 1945?",
+  "What was the name of the nation that hosted the first Summer Olympics held in Asia, in 1964?",
+  "What is the name of the country whose imperial capital was moved from Kyoto to Tokyo in the nineteenth century?",
+  "What is the name of the country where traditional theater forms such as kabuki and bunraku developed?",
+  "What is the name of the country associated with the art of origami and the martial art of judo?",
+  "What is the name of the nation where the spring custom of hanami involves viewing blossoms?",
+  "What is the name of the home country of the automakers Honda and Toyota?",
+  "What is the name of the country where Nintendo was founded in the nineteenth century?",
+  "What is the name of the nation whose traditional military rulers were called shoguns?",
+  "What is the name of the country whose islands lie along the Pacific Ring of Fire?",
+  "What is the name of the country where the artist Katsushika Hokusai was born?"
+ ],
+ "answer_forms_extra": [
+  "Japan"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Tokyo",
+   "names_concept": false
+  },
+  {
+   "reply": "Borneo",
+   "names_concept": false
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "National Diet",
+   "names_concept": false
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "India",
+   "names_concept": false
+  },
+  {
+   "reply": "Pearl Harbor",
+   "names_concept": false
+  },
+  {
+   "reply": "Hiroshima",
+   "names_concept": false
+  },
+  {
+   "reply": "Asia",
+   "names_concept": false
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  },
+  {
+   "reply": "Pacific Islands",
+   "names_concept": false
+  },
+  {
+   "reply": "Japan",
+   "names_concept": true
+  }
+ ]
+}

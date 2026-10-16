@@ -23,7 +23,7 @@ import numpy as np
 import torch
 
 from atlas import Atlas
-from neurons import load, mlps
+from neurons import load, mlps, DEVICE, IS_CUDA
 from scan import docs
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,7 +36,8 @@ def main():
     n_tokens = int(float(sys.argv[4])) if len(sys.argv) > 4 else 10_000_000
     n_mix = int(sys.argv[5]) if len(sys.argv) > 5 else 60
     n_strata = int(sys.argv[6]) if len(sys.argv) > 6 else 100
-    torch.cuda.set_per_process_memory_fraction(0.92)
+    if IS_CUDA:
+        torch.cuda.set_per_process_memory_fraction(0.92)
     model, tok = load(model_name)
     L, W = model.config.num_hidden_layers, model.config.intermediate_size
     stats = torch.load(ROOT / f"data/stats_{model_name.split('/')[-1]}.pt")
@@ -64,7 +65,7 @@ def main():
             for j, m in enumerate(ms):
                 for n, w in m["weights"].items():
                     M[n, j] = w
-            Wm[l] = M.cuda()
+            Wm[l] = M.to(DEVICE)
     st_by_layer = {l: [(i, n) for i, (ll, n) in enumerate(strata) if ll == l] for l in layers}
 
     top_v = {m["id"]: [] for m in mixes}
@@ -133,9 +134,9 @@ def main():
         valid = mask.bool(); valid[:, 0] = False
         base = len(all_docs)
         codes = ((torch.arange(len(buf))[:, None] + base) * CTX + torch.arange(T)[None])[valid]
-        state["valid"], state["codes"] = valid.cuda(), codes.cuda()
+        state["valid"], state["codes"] = valid.to(DEVICE), codes.to(DEVICE)
         with torch.no_grad():
-            model.model(input_ids=ids.cuda(), attention_mask=mask.cuda())
+            model.model(input_ids=ids.to(DEVICE), attention_mask=mask.to(DEVICE))
         all_docs.extend(buf); seen += int(valid.sum()); buf = []
         if seen - last > 500_000:
             last = seen

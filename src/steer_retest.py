@@ -14,6 +14,8 @@ from pathlib import Path
 
 import torch
 
+from neurons import DEVICE
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 from strict_judge import _safe, strict
@@ -23,9 +25,9 @@ HELD = json.loads((ROOT / "prompts/neutral_heldout.json").read_text(encoding="ut
 
 
 def run(pipe, units, n, s, last_act, concept):
-    peaks = torch.tensor([pipe.steer_edits([u], 1.0, last_act)[0][2] for u in units], device="cuda")
+    peaks = torch.tensor([pipe.steer_edits([u], 1.0, last_act)[0][2] for u in units], device=DEVICE)
     vals = torch.stack([peaks * s] * len(HELD))
-    act = torch.stack([torch.arange(len(units), device="cuda") < n] * len(HELD))
+    act = torch.stack([torch.arange(len(units), device=DEVICE) < n] * len(HELD))
     replies = pipe.gen_rows(HELD, units, vals, act)
     on, fl = pipe.judge_detail(replies, concept)
     st = [_safe(strict, r, concept) for r in replies]
@@ -39,7 +41,7 @@ def main():
     sel = json.loads((cp.OUT / "steer_select.json").read_text(encoding="utf-8"))
     out_p = cp.OUT / "steer_retest.json"
     out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {}
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=True)      # as in CR/CR-2 (ISSUES #28)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="clamp", reply_only=True)      # as in CR/CR-2 (ISSUES #28)
     print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
     for concept, rules in sel.items():
         if concept in out:

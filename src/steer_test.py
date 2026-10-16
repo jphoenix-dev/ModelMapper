@@ -18,7 +18,7 @@ from pathlib import Path
 
 import torch
 
-from neurons import load, steer
+from neurons import load, steer, DEVICE
 
 ROOT = Path(__file__).resolve().parents[1]
 PROMPTS = [
@@ -67,7 +67,7 @@ def generate(model, tok, prompts, max_new):
     texts = [tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False,
                                      add_generation_prompt=True, enable_thinking=False) for p in prompts]
     tok.padding_side = "left"
-    ids = tok(texts, return_tensors="pt", padding=True).to("cuda")
+    ids = tok(texts, return_tensors="pt", padding=True).to(DEVICE)
     with torch.no_grad():
         out = model.generate(**ids, max_new_tokens=max_new, do_sample=False, pad_token_id=tok.pad_token_id)
     return [tok.decode(o[ids.input_ids.shape[1]:], skip_special_tokens=True).strip() for o in out]

@@ -1,0 +1,186 @@
+{
+ "answer": " Wikipedia",
+ "recall": [
+  "The free online encyclopedia whose articles are written collaboratively by volunteers is",
+  "The widely used reference site whose entries can be edited by readers is",
+  "The online encyclopedia launched in January 2001 by Jimmy Wales and Larry Sanger is",
+  "The reference website that grew from an effort to create a freely accessible global encyclopedia is",
+  "The multilingual online encyclopedia maintained by a nonprofit foundation is",
+  "The source many people consult for a quick overview of a topic is",
+  "The online reference work whose articles often cite sources in numbered footnotes is",
+  "The knowledge resource funded largely by reader donations rather than conventional advertising is",
+  "The collection of articles that readers can revise and discuss on talk pages is",
+  "The encyclopedia whose volunteer contributors are commonly called editors is",
+  "The website with a puzzle-globe emblem made from glyphs in many writing systems is",
+  "The online reference work whose English edition contains millions of articles is",
+  "The site whose content is generally released under a license allowing reuse with attribution is",
+  "The project operated by the Wikimedia Foundation is",
+  "The reference site with articles covering biographies, science, geography, and history is",
+  "The encyclopedia with separate editions maintained by communities in many languages is",
+  "The online reference work that frequently appears high in search results for general topics is",
+  "The freely accessible knowledge resource that readers can improve under editorial policies is",
+  "The website where users can find an article about a vast range of notable subjects is",
+  "The online encyclopedia known for inviting people worldwide to contribute and edit articles is"
+ ],
+ "controls": [
+  {
+   "prompt": "The famous general encyclopedia whose print edition dates back to the eighteenth century is",
+   "answer": " Britannica"
+  },
+  {
+   "prompt": "The online reference work devoted to word definitions, translations, and usage is",
+   "answer": " Wiktionary"
+  },
+  {
+   "prompt": "The structured knowledge base that stores data about people, places, and concepts is",
+   "answer": " Wikidata"
+  },
+  {
+   "prompt": "The general reference encyclopedia often found in school libraries in the United States is",
+   "answer": " World Book"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet and Macbeth was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The Paris landmark completed for the 1889 World's Fair is the",
+   "answer": " Eiffel Tower"
+  }
+ ],
+ "recall_v2": [
+  "The free online encyclopedia whose articles are written collaboratively by volunteers is called",
+  "The widely used reference site whose entries can be edited by readers is known as",
+  "The online encyclopedia launched in January 2001 by Jimmy Wales and Larry Sanger is called",
+  "The reference website that grew from an effort to create a freely accessible global encyclopedia is called",
+  "The multilingual online encyclopedia maintained by a nonprofit foundation is known as",
+  "The source many people consult for a quick overview of a topic is called",
+  "The online reference work whose articles often cite sources in numbered footnotes is known as",
+  "The knowledge resource funded largely by reader donations rather than conventional advertising is called",
+  "The collection of articles that readers can revise and discuss on talk pages is known as",
+  "The encyclopedia whose volunteer contributors are commonly called editors is called",
+  "The website with a puzzle-globe emblem made from glyphs in many writing systems is known as",
+  "The online reference work whose English edition contains millions of articles is called",
+  "The site whose content is generally released under a license allowing reuse with attribution is known as",
+  "The project operated by the Wikimedia Foundation is called",
+  "The reference site with articles covering biographies, science, geography, and history is known as",
+  "The encyclopedia with separate editions maintained by communities in many languages is called",
+  "The online reference work that frequently appears high in search results for general topics is known as",
+  "The freely accessible knowledge resource that readers can improve under editorial policies is called",
+  "The website where users can find an article about a vast range of notable subjects is known as",
+  "The online encyclopedia known for inviting people worldwide to contribute and edit articles is called"
+ ],
+ "recall_v3": [
+  "What is the name of the free online encyclopedia whose articles are written collaboratively by volunteers?",
+  "What is the name of the widely used reference site whose entries can be edited by readers?",
+  "What is the name of the online encyclopedia launched in January 2001 by Jimmy Wales and Larry Sanger?",
+  "What is the name of the reference website that grew from an effort to create a freely accessible global encyclopedia?",
+  "What is the name of the multilingual online encyclopedia maintained by a nonprofit foundation?",
+  "What is the name of the source many people consult for a quick overview of a topic?",
+  "What is the name of the online reference work whose articles often cite sources in numbered footnotes?",
+  "What is the name of the knowledge resource funded largely by reader donations rather than conventional advertising?",
+  "What is the name of the collection of articles that readers can revise and discuss on talk pages?",
+  "What is the name of the encyclopedia whose volunteer contributors are commonly called editors?",
+  "What is the name of the website with a puzzle-globe emblem made from glyphs in many writing systems?",
+  "What is the name of the online reference work whose English edition contains millions of articles?",
+  "What is the name of the site whose content is generally released under a license allowing reuse with attribution?",
+  "What is the name of the project operated by the Wikimedia Foundation?",
+  "What is the name of the reference site with articles covering biographies, science, geography, and history?",
+  "What is the name of the encyclopedia with separate editions maintained by communities in many languages?",
+  "What is the name of the online reference work that frequently appears high in search results for general topics?",
+  "What is the name of the freely accessible knowledge resource that readers can improve under editorial policies?",
+  "What is the name of the website where users can find an article about a vast range of notable subjects?",
+  "What is the name of the online encyclopedia known for inviting people worldwide to contribute and edit articles?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Wikimedia Commons",
+   "names_concept": false
+  },
+  {
+   "reply": "PubMed",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the online encyclopedia launched in January 2001 by Jimmy",
+   "names_concept": true
+  },
+  {
+   "reply": "World Encyclopedia of Science and Technology (WEST)",
+   "names_concept": false
+  },
+  {
+   "reply": "Multilingual Online Encyclopedia",
+   "names_concept": false
+  },
+  {
+   "reply": "source",
+   "names_concept": false
+  },
+  {
+   "reply": "The online reference work is called **\"The New York Times Bookstore\"**",
+   "names_concept": false
+  },
+  {
+   "reply": "Reader's Fund",
+   "names_concept": false
+  },
+  {
+   "reply": "Talk pages",
+   "names_concept": false
+  },
+  {
+   "reply": "Encyclopedia of the Volunteers",
+   "names_concept": false
+  },
+  {
+   "reply": "Puzzle Globe",
+   "names_concept": false
+  },
+  {
+   "reply": "Encyclopedia of the Internet",
+   "names_concept": false
+  },
+  {
+   "reply": "Apache",
+   "names_concept": false
+  },
+  {
+   "reply": "Wikimedia Project",
+   "names_concept": false
+  },
+  {
+   "reply": "The reference site is **Encyclopedia Britannica**",
+   "names_concept": false
+  },
+  {
+   "reply": "Encyclopedia of the World (EOW)",
+   "names_concept": false
+  },
+  {
+   "reply": "Google",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the freely accessible knowledge resource that readers can improve under editorial policies is",
+   "names_concept": false
+  },
+  {
+   "reply": "The website where users can find an article about a vast range of notable subjects is",
+   "names_concept": false
+  },
+  {
+   "reply": "Wikimedia Commons",
+   "names_concept": false
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " Linux",
+ "recall": [
+  "The open-source operating-system kernel first released in 1991 by a Finnish computer science student is",
+  "The kernel at the heart of distributions such as Ubuntu, Debian, and Fedora is",
+  "The kernel that powers nearly all of the world's supercomputers is",
+  "Google's mobile operating system relies on a modified",
+  "The operating system commonly installed on a Raspberry Pi is often based on",
+  "The kernel identified by the command `uname -s` on many Ubuntu machines is",
+  "Many cloud servers run a distribution built around the",
+  "A free, open-source kernel available for anyone to inspect and modify is",
+  "The kernel that manages hardware, memory, and processes in many open-source PC systems is",
+  "The kernel developed initially as a hobby project by a Finnish university student is",
+  "The kernel project announced on an online newsgroup in August 1991 was",
+  "The kernel distributed under version 2 of the GNU General Public License and used by systems such as Arch is",
+  "An alternative to proprietary desktop platforms, available through distributions such as Mint and Fedora, is",
+  "The operating-system kernel found in many routers, smart TVs, and embedded devices is",
+  "The kernel shared by distributions with different package managers, such as Debian and Arch, is",
+  "In a typical web-hosting stack built on Ubuntu Server, the underlying kernel is",
+  "An operating-system kernel that can be compiled with a wide range of configuration options is",
+  "The kernel supported by the KVM virtualization infrastructure is",
+  "The kernel used by many container hosts running Docker or Kubernetes is",
+  "The collaborative open-source kernel project developed through public mailing lists is"
+ ],
+ "controls": [
+  {
+   "prompt": "Apple's desktop operating system is",
+   "answer": " macOS"
+  },
+  {
+   "prompt": "Microsoft's widely used desktop operating system is",
+   "answer": " Windows"
+  },
+  {
+   "prompt": "The mobile operating system developed by Google is",
+   "answer": " Android"
+  },
+  {
+   "prompt": "The Unix-like operating system descended from Berkeley Software Distribution is",
+   "answer": " FreeBSD"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The open-source operating-system kernel first released in 1991 by a Finnish computer science student is called",
+  "The kernel at the heart of distributions such as Ubuntu, Debian, and Fedora is known as",
+  "The kernel that powers nearly all of the world's supercomputers is called",
+  "Google's mobile operating system relies on a modified kernel known as",
+  "The operating system commonly installed on a Raspberry Pi is often based on the kernel called",
+  "The kernel identified by the command `uname -s` on many Ubuntu machines is named",
+  "Many cloud servers run a distribution built around the kernel known as",
+  "A free, open-source kernel available for anyone to inspect and modify is called",
+  "The kernel that manages hardware, memory, and processes in many open-source PC systems is known as",
+  "The kernel developed initially as a hobby project by a Finnish university student is called",
+  "The kernel project announced on an online newsgroup in August 1991 was named",
+  "The kernel distributed under version 2 of the GNU General Public License and used by systems such as Arch is known as",
+  "An alternative to proprietary desktop platforms, available through distributions such as Mint and Fedora, is known as",
+  "The operating-system kernel found in many routers, smart TVs, and embedded devices is called",
+  "The kernel shared by distributions with different package managers, such as Debian and Arch, is known as",
+  "In a typical web-hosting stack built on Ubuntu Server, the underlying kernel is called",
+  "An operating-system kernel that can be compiled with a wide range of configuration options is known as",
+  "The kernel supported by the KVM virtualization infrastructure is called",
+  "The kernel used by many container hosts running Docker or Kubernetes is known as",
+  "The collaborative open-source kernel project developed through public mailing lists is called"
+ ],
+ "recall_v3": [
+  "What is the name of the open-source operating-system kernel first released in 1991 by a Finnish computer science student?",
+  "What is the name of the kernel at the heart of distributions such as Ubuntu, Debian, and Fedora?",
+  "What is the name of the kernel that powers nearly all of the world's supercomputers?",
+  "What is the name of the kernel that Google's mobile operating system relies on in modified form?",
+  "What is the name of the kernel that the operating system commonly installed on a Raspberry Pi is often based on?",
+  "What is the name of the kernel identified by the command `uname -s` on many Ubuntu machines?",
+  "What is the name of the kernel at the heart of many distributions run by cloud servers?",
+  "What is the name of the free, open-source kernel available for anyone to inspect and modify?",
+  "What is the name of the kernel that manages hardware, memory, and processes in many open-source PC systems?",
+  "What is the name of the kernel developed initially as a hobby project by a Finnish university student?",
+  "What was the name of the kernel project announced on an online newsgroup in August 1991?",
+  "What is the name of the kernel distributed under version 2 of the GNU General Public License and used by systems such as Arch?",
+  "What is the name of the alternative to proprietary desktop platforms available through distributions such as Mint and Fedora?",
+  "What is the name of the operating-system kernel found in many routers, smart TVs, and embedded devices?",
+  "What is the name of the kernel shared by distributions with different package managers, such as Debian and Arch?",
+  "What is the name of the underlying kernel in a typical web-hosting stack built on Ubuntu Server?",
+  "What is the name of the operating-system kernel that can be compiled with a wide range of configuration options?",
+  "What is the name of the kernel supported by the KVM virtualization infrastructure?",
+  "What is the name of the kernel used by many container hosts running Docker or Kubernetes?",
+  "What is the name of the collaborative open-source kernel project developed through public mailing lists?"
+ ],
+ "answer_forms_extra": [
+  "Linux"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Finnish computer science student, 1991, first released open",
+   "names_concept": false
+  },
+  {
+   "reply": "kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "The kernel that powers nearly all of the world's supercomputers is **N",
+   "names_concept": false
+  },
+  {
+   "reply": "Android",
+   "names_concept": false
+  },
+  {
+   "reply": "Raspberry Pi kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "Linux",
+   "names_concept": true
+  },
+  {
+   "reply": "kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "Linux",
+   "names_concept": true
+  },
+  {
+   "reply": "kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "Finnish university student kernel developed initially as a hobby project",
+   "names_concept": false
+  },
+  {
+   "reply": "kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "GNU General Public License (GPL) version 2.0",
+   "names_concept": false
+  },
+  {
+   "reply": "Linux",
+   "names_concept": true
+  },
+  {
+   "reply": "Linux",
+   "names_concept": true
+  },
+  {
+   "reply": "deb.debian.org",
+   "names_concept": false
+  },
+  {
+   "reply": "Ubuntu Server",
+   "names_concept": false
+  },
+  {
+   "reply": "Linux",
+   "names_concept": true
+  },
+  {
+   "reply": "KVM kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "Docker container kernel",
+   "names_concept": false
+  },
+  {
+   "reply": "Linux",
+   "names_concept": true
+  }
+ ]
+}

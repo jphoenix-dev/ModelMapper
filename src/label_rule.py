@@ -14,6 +14,8 @@ from pathlib import Path
 
 import torch
 
+from neurons import DEVICE
+from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from pipeline_fast import FastPipeline
 from steer_test import PROMPTS as NEUTRAL
@@ -35,7 +37,7 @@ def main():
     out_name = os.environ.get("OUT_NAME", "label_rule.json")
     skip_r1 = os.environ.get("SKIP_R1") == "1"
     matched = json.loads((ROOT / "results" / match_file).read_text(encoding="utf-8"))
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
+    pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}", flush=True)
     out = {}
     for concept, key in KEY.items():
@@ -49,12 +51,12 @@ def main():
         res = {}
         rules = [("R1_late_attr", r1, [2, 4, 6]), ("R5_label_matched", r5, [len(r5)])]
         for rule, units, ns in (rules[1:] if skip_r1 else rules):
-            peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device="cuda")
+            peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device=DEVICE)
             settings = [(n, s) for n in ns for s in STRENGTHS]
             rows, vals, act = [], [], []
             for n, s in settings:
                 for p in prompts:
-                    rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device="cuda") < n)
+                    rows.append(p); vals.append(peaks * s); act.append(torch.arange(len(units), device=DEVICE) < n)
             reps = pipe.gen_rows(rows, units, torch.stack(vals), torch.stack(act))
             k = len(prompts)
             grid = [{"n": n, "s": s, "hit": sum(key in r.lower() for r in reps[i*k:(i+1)*k]) / k,

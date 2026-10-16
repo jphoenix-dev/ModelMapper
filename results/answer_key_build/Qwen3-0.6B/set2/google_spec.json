@@ -1,0 +1,188 @@
+{
+ "answer": " Google",
+ "recall": [
+  "The web search service developed by Larry Page and Sergey Brin at Stanford is",
+  "The technology company headquartered in Mountain View, California, is",
+  "The company that acquired YouTube in 2006 is",
+  "The developer of the Chrome web browser is",
+  "The company behind the Gmail email service is",
+  "The company that operates the Maps service used for online directions is",
+  "The maker of the Pixel line of smartphones is",
+  "The company that runs the Play Store for Android apps is",
+  "The technology firm whose developer conference is called I/O is",
+  "The company that created the Chrome OS operating system is",
+  "The firm that introduced the Android operating system to the world market is",
+  "The company that created the TensorFlow machine-learning framework is",
+  "The internet company whose early search project was known as BackRub is",
+  "The company whose name is often used as a verb meaning to search the web is",
+  "The provider of the cloud computing platform called Cloud is",
+  "The company that developed the digital assistant known as Assistant is",
+  "The firm that created the online photo service Photos is",
+  "The company that offers the video-sharing site YouTube is",
+  "The search company founded in 1998 by two Stanford graduate students is",
+  "The company behind the Street View imagery in its online mapping service is"
+ ],
+ "controls": [
+  {
+   "prompt": "The search engine developed by Microsoft is",
+   "answer": " Bing"
+  },
+  {
+   "prompt": "The Chinese web search company founded by Robin Li is",
+   "answer": " Baidu"
+  },
+  {
+   "prompt": "The search engine known for emphasizing user privacy is",
+   "answer": " DuckDuckGo"
+  },
+  {
+   "prompt": "The web portal and search company founded in 1994 by Jerry Yang and David Filo is",
+   "answer": " Yahoo"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ],
+ "recall_v2": [
+  "The web search service developed by Larry Page and Sergey Brin at Stanford is called",
+  "The technology company headquartered in Mountain View, California, is known as",
+  "The company that acquired YouTube in 2006 is known as",
+  "The developer of the Chrome web browser is known as",
+  "The company behind the Gmail email service is known as",
+  "The company that operates the Maps service used for online directions is known as",
+  "The maker of the Pixel line of smartphones is known as",
+  "The company that runs the Play Store for Android apps is known as",
+  "The technology firm whose developer conference is called I/O is known as",
+  "The company that created the Chrome OS operating system is known as",
+  "The firm that introduced the Android operating system to the world market is known as",
+  "The company that created the TensorFlow machine-learning framework is known as",
+  "The internet company whose early search project was known as BackRub is known as",
+  "The company whose name is often used as a verb meaning to search the web is called",
+  "The cloud computing platform called Cloud is provided by",
+  "The company that developed the digital assistant known as Assistant is known as",
+  "The firm that created the online photo service Photos is known as",
+  "The company that offers the video-sharing site YouTube is known as",
+  "The search company founded in 1998 by two Stanford graduate students is known as",
+  "The company behind the Street View imagery in its online mapping service is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the web search service developed by Larry Page and Sergey Brin at Stanford?",
+  "What is the name of the technology company headquartered in Mountain View, California?",
+  "What is the name of the company that acquired YouTube in 2006?",
+  "What is the name of the developer of the Chrome web browser?",
+  "What is the name of the company behind the Gmail email service?",
+  "What is the name of the company that operates the Maps service used for online directions?",
+  "What is the name of the maker of the Pixel line of smartphones?",
+  "What is the name of the company that runs the Play Store for Android apps?",
+  "What is the name of the technology firm whose developer conference is called I/O?",
+  "What is the name of the company that created the Chrome OS operating system?",
+  "What is the name of the firm that introduced the Android operating system to the world market?",
+  "What is the name of the company that created the TensorFlow machine-learning framework?",
+  "What is the name of the internet company whose early search project was known as BackRub?",
+  "What is the name of the company whose name is often used as a verb meaning to search the web?",
+  "What is the name of the provider of the cloud computing platform called Cloud?",
+  "What is the name of the company that developed the digital assistant known as Assistant?",
+  "What is the name of the firm that created the online photo service Photos?",
+  "What is the name of the company that offers the video-sharing site YouTube?",
+  "What is the name of the search company founded in 1998 by two Stanford graduate students?",
+  "What is the name of the company behind the Street View imagery in its online mapping service?"
+ ],
+ "answer_forms_extra": [
+  "Google"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Google",
+   "names_concept": true
+  },
+  {
+   "reply": "Mountain View, California is the headquarters of Mountain View Technology, Inc",
+   "names_concept": false
+  },
+  {
+   "reply": "YouTube",
+   "names_concept": false
+  },
+  {
+   "reply": "Chrome Developers",
+   "names_concept": false
+  },
+  {
+   "reply": "Gmail",
+   "names_concept": false
+  },
+  {
+   "reply": "Google",
+   "names_concept": true
+  },
+  {
+   "reply": "Pixel",
+   "names_concept": false
+  },
+  {
+   "reply": "Play Store",
+   "names_concept": false
+  },
+  {
+   "reply": "I/O",
+   "names_concept": false
+  },
+  {
+   "reply": "Chrome OS",
+   "names_concept": false
+  },
+  {
+   "reply": "Android",
+   "names_concept": false
+  },
+  {
+   "reply": "TensorFlow",
+   "names_concept": false
+  },
+  {
+   "reply": "BackRub",
+   "names_concept": true
+  },
+  {
+   "reply": "web search",
+   "names_concept": false
+  },
+  {
+   "reply": "Cloud",
+   "names_concept": false
+  },
+  {
+   "reply": "Assistant",
+   "names_concept": false
+  },
+  {
+   "reply": "Photos",
+   "names_concept": false
+  },
+  {
+   "reply": "YouTube",
+   "names_concept": false
+  },
+  {
+   "reply": "Stanford Search",
+   "names_concept": false
+  },
+  {
+   "reply": "Street View",
+   "names_concept": false
+  }
+ ]
+}

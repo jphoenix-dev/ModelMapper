@@ -1,0 +1,212 @@
+{
+ "key": "answer_keys/Qwen3-8B.json",
+ "model": "Qwen/Qwen3-8B",
+ "tier": 1,
+ "passed": false,
+ "found": 0,
+ "markers": 10,
+ "pass_fraction": 0.9,
+ "time": "2026-10-16 11:47",
+ "rows": [
+  {
+   "concept": "Frida Kahlo",
+   "checked_in": "Golden Gate Bridge",
+   "unit": "L31_N10560",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 1,
+   "key_drop": 0.1574,
+   "rank": null,
+   "drop": null,
+   "recall": 16,
+   "top5": [
+    "L10_N488",
+    "L34_N5510",
+    "L28_N6711",
+    "L31_N9611",
+    "L30_N4167"
+   ],
+   "seconds": 7.0
+  },
+  {
+   "concept": "Golden Gate Bridge",
+   "checked_in": "Mount Everest",
+   "unit": "L31_N9611",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 4,
+   "key_drop": 0.3417,
+   "rank": null,
+   "drop": null,
+   "recall": 17,
+   "top5": [
+    "L27_N10689",
+    "L31_N5148",
+    "L8_N5241",
+    "L9_N10107",
+    "L30_N6488"
+   ],
+   "seconds": 6.2
+  },
+  {
+   "concept": "Mount Everest",
+   "checked_in": "Napoleon Bonaparte",
+   "unit": "L31_N5148",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 2,
+   "key_drop": 0.3205,
+   "rank": null,
+   "drop": null,
+   "recall": 16,
+   "top5": [
+    "L15_N3800",
+    "L13_N7436",
+    "L16_N9959",
+    "L20_N7819",
+    "L30_N10870"
+   ],
+   "seconds": 5.9
+  },
+  {
+   "concept": "Napoleon Bonaparte",
+   "checked_in": "Wolfgang Amadeus Mozart",
+   "unit": "L30_N10870",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 5,
+   "key_drop": 0.2659,
+   "rank": null,
+   "drop": null,
+   "recall": 13,
+   "top5": [
+    "L9_N10024",
+    "L30_N8885",
+    "L8_N1287",
+    "L31_N8930",
+    "L33_N12171"
+   ],
+   "seconds": 5.3
+  },
+  {
+   "concept": "Wolfgang Amadeus Mozart",
+   "checked_in": "chess",
+   "unit": "L9_N10024",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 1,
+   "key_drop": 0.4489,
+   "rank": null,
+   "drop": null,
+   "recall": 15,
+   "top5": [
+    "L8_N7581",
+    "L9_N11367",
+    "L27_N92",
+    "L28_N1512",
+    "L16_N10113"
+   ],
+   "seconds": 5.6
+  },
+  {
+   "concept": "chess",
+   "checked_in": "democracy",
+   "unit": "L8_N7581",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 1,
+   "key_drop": 0.1299,
+   "rank": null,
+   "drop": null,
+   "recall": 13,
+   "top5": [
+    "L31_N11943",
+    "L32_N8254",
+    "L30_N4626",
+    "L28_N8868",
+    "L34_N598"
+   ],
+   "seconds": 6.2
+  },
+  {
+   "concept": "democracy",
+   "checked_in": "the French Revolution",
+   "unit": "L31_N11943",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 1,
+   "key_drop": 0.7945,
+   "rank": null,
+   "drop": null,
+   "recall": 20,
+   "top5": [
+    "L30_N5534",
+    "L4_N1234",
+    "L9_N21",
+    "L34_N2945",
+    "L27_N3385"
+   ],
+   "seconds": 7.2
+  },
+  {
+   "concept": "the French Revolution",
+   "checked_in": "the Titanic",
+   "unit": "L30_N5534",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 1,
+   "key_drop": 0.2515,
+   "rank": null,
+   "drop": null,
+   "recall": 18,
+   "top5": [
+    "L10_N1252",
+    "L30_N10955",
+    "L31_N7838",
+    "L33_N3526",
+    "L8_N9525"
+   ],
+   "seconds": 6.3
+  },
+  {
+   "concept": "the Titanic",
+   "checked_in": "the violin",
+   "unit": "L30_N10955",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 2,
+   "key_drop": 0.3379,
+   "rank": null,
+   "drop": null,
+   "recall": 15,
+   "top5": [
+    "L9_N5033",
+    "L20_N7473",
+    "L29_N224",
+    "L34_N7220",
+    "L22_N2516"
+   ],
+   "seconds": 6.9
+  },
+  {
+   "concept": "the violin",
+   "checked_in": "Frida Kahlo",
+   "unit": "L9_N5033",
+   "ok": false,
+   "detail": "not in the top 20",
+   "key_rank": 1,
+   "key_drop": 0.2993,
+   "rank": null,
+   "drop": null,
+   "recall": 11,
+   "top5": [
+    "L31_N10560",
+    "L32_N11769",
+    "L31_N2065",
+    "L24_N11058",
+    "L32_N10452"
+   ],
+   "seconds": 6.5
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " Microsoft",
+ "recall": [
+  "The technology company founded in Albuquerque in 1975 by Bill Gates and Paul Allen is",
+  "The company that developed the Windows operating system is",
+  "The maker of the Office productivity suite is",
+  "The software firm headquartered in Redmond, Washington, is",
+  "The company that launched the Xbox video game console brand is",
+  "The cloud computing platform Azure is operated by",
+  "The company that developed the C# programming language is",
+  "The corporation that acquired LinkedIn in 2016 was",
+  "The owner of the GitHub code-hosting platform is",
+  "The technology corporation traded on Nasdaq under ticker MSFT is",
+  "The firm that introduced the Surface line of tablets and laptops is",
+  "The company behind the Teams workplace collaboration app is",
+  "The organization co-founded by Bill Gates and Paul Allen is",
+  "The software maker whose web browser is Edge is",
+  "The company that acquired gaming publisher Activision Blizzard in 2023 is",
+  "The software company led by chief executive Satya Nadella is",
+  "The tech firm that created the .NET framework is",
+  "The maker of the Bing search engine is",
+  "The company behind the OneDrive cloud storage service is",
+  "The technology company whose products include Windows, Azure, and Xbox is"
+ ],
+ "controls": [
+  {
+   "prompt": "The company that makes the iPhone is",
+   "answer": " Apple"
+  },
+  {
+   "prompt": "The company that operates the Android mobile platform is",
+   "answer": " Google"
+  },
+  {
+   "prompt": "The technology company known for its mainframe computers and Watson is",
+   "answer": " IBM"
+  },
+  {
+   "prompt": "The database company founded by Larry Ellison is",
+   "answer": " Oracle"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The author of Hamlet is",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ],
+ "recall_v2": [
+  "The technology company founded in Albuquerque in 1975 by Bill Gates and Paul Allen is called",
+  "The company that developed the Windows operating system is named",
+  "The maker of the Office productivity suite is known as",
+  "The software firm headquartered in Redmond, Washington, is called",
+  "The company that launched the Xbox video game console brand is named",
+  "The cloud computing platform Azure is operated by",
+  "The company that developed the C# programming language is called",
+  "The corporation that acquired LinkedIn in 2016 is called",
+  "The owner of the GitHub code-hosting platform is known as",
+  "The technology corporation traded on Nasdaq under ticker MSFT is called",
+  "The firm that introduced the Surface line of tablets and laptops is called",
+  "The company behind the Teams workplace collaboration app is known as",
+  "The organization co-founded by Bill Gates and Paul Allen is called",
+  "The software maker whose web browser is Edge is called",
+  "The company that acquired gaming publisher Activision Blizzard in 2023 is called",
+  "The software company led by chief executive Satya Nadella is called",
+  "The tech firm that created the .NET framework is called",
+  "The maker of the Bing search engine is known as",
+  "The company behind the OneDrive cloud storage service is called",
+  "The technology company whose products include Windows, Azure, and Xbox is called"
+ ],
+ "recall_v3": [
+  "What is the name of the technology company founded in Albuquerque in 1975 by Bill Gates and Paul Allen?",
+  "What is the name of the company that developed the Windows operating system?",
+  "What is the name of the maker of the Office productivity suite?",
+  "What is the name of the software firm headquartered in Redmond, Washington?",
+  "What is the name of the company that launched the Xbox video game console brand?",
+  "What is the name of the company that operates the Azure cloud computing platform?",
+  "What is the name of the company that developed the C# programming language?",
+  "What is the name of the corporation that acquired LinkedIn in 2016?",
+  "What is the name of the owner of the GitHub code-hosting platform?",
+  "What is the name of the technology corporation traded on Nasdaq under ticker MSFT?",
+  "What is the name of the firm that introduced the Surface line of tablets and laptops?",
+  "What is the name of the company behind the Teams workplace collaboration app?",
+  "What is the name of the organization co-founded by Bill Gates and Paul Allen?",
+  "What is the name of the software maker whose web browser is Edge?",
+  "What is the name of the company that acquired gaming publisher Activision Blizzard in 2023?",
+  "What is the name of the software company led by chief executive Satya Nadella?",
+  "What is the name of the tech firm that created the .NET framework?",
+  "What is the name of the maker of the Bing search engine?",
+  "What is the name of the company behind the OneDrive cloud storage service?",
+  "What is the name of the technology company whose products include Windows, Azure, and Xbox?"
+ ],
+ "answer_forms_extra": [
+  "Microsoft"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Xbox",
+   "names_concept": false
+  },
+  {
+   "reply": "Azure",
+   "names_concept": false
+  },
+  {
+   "reply": "C#",
+   "names_concept": false
+  },
+  {
+   "reply": "LinkedIn",
+   "names_concept": false
+  },
+  {
+   "reply": "GitHub",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft Corporation",
+   "names_concept": true
+  },
+  {
+   "reply": "Surface",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Edge",
+   "names_concept": false
+  },
+  {
+   "reply": "Activision Blizzard",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  },
+  {
+   "reply": "Bing",
+   "names_concept": false
+  },
+  {
+   "reply": "OneDrive",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft",
+   "names_concept": true
+  }
+ ]
+}

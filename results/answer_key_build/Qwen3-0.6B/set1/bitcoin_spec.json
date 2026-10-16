@@ -1,0 +1,188 @@
+{
+ "answer": " Bitcoin",
+ "recall": [
+  "The decentralized digital currency first outlined in a 2008 white paper is",
+  "The cryptocurrency whose protocol limits its supply to 21 million units is",
+  "The original chain whose first block was mined in January 2009 belongs to",
+  "The pseudonymous creator’s peer-to-peer payment project, first proposed in 2008, was",
+  "The pioneering cryptocurrency that helped popularize public blockchain technology is",
+  "The major digital currency secured by miners using the SHA-256 proof-of-work algorithm is",
+  "The network whose first block included a newspaper headline about a bank bailout is",
+  "The crypto asset most often compared to gold as a store of value is",
+  "The cryptocurrency whose mining reward is periodically cut in half is",
+  "The digital currency for which the Lightning Network was first developed is",
+  "The cryptocurrency adopted as legal tender by El Salvador in 2021 was",
+  "The digital asset famously used to pay for two pizzas in a 2010 transaction was",
+  "The cryptocurrency at the center of much of the 2017 market boom was",
+  "The digital currency commonly represented by an orange letter B with vertical strokes is",
+  "The cryptocurrency that became the first to reach a market capitalization of one trillion dollars was",
+  "The digital currency whose smallest unit is one hundred-millionth of a whole unit is",
+  "The peer-to-peer currency designed to let users transfer value without relying on a bank is",
+  "The cryptocurrency frequently used as a benchmark for the wider digital-asset market is",
+  "The asset that some companies have added to their treasury reserves as an alternative to cash is",
+  "The cryptocurrency celebrated each year on May 22 in connection with a famous pizza purchase is"
+ ],
+ "controls": [
+  {
+   "prompt": "The smart-contract platform whose native asset is ether is",
+   "answer": " Ethereum"
+  },
+  {
+   "prompt": "The cryptocurrency created by Charlie Lee as a lighter alternative to an earlier digital currency is",
+   "answer": " Litecoin"
+  },
+  {
+   "prompt": "The meme-inspired cryptocurrency featuring a Shiba Inu mascot is",
+   "answer": " Dogecoin"
+  },
+  {
+   "prompt": "The privacy-focused cryptocurrency that uses ring signatures and stealth addresses is",
+   "answer": " Monero"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet is",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The decentralized digital currency first outlined in a 2008 white paper is called",
+  "The cryptocurrency whose protocol limits its supply to 21 million units is known as",
+  "The original chain whose first block was mined in January 2009 is known as",
+  "The pseudonymous creator’s peer-to-peer payment project, first proposed in 2008, was called",
+  "The pioneering cryptocurrency that helped popularize public blockchain technology is called",
+  "The major digital currency secured by miners using the SHA-256 proof-of-work algorithm is called",
+  "The network whose first block included a newspaper headline about a bank bailout is known as",
+  "The crypto asset most often compared to gold as a store of value is known as",
+  "The cryptocurrency whose mining reward is periodically cut in half is called",
+  "The digital currency for which the Lightning Network was first developed is called",
+  "The cryptocurrency adopted as legal tender by El Salvador in 2021 was called",
+  "The digital asset famously used to pay for two pizzas in a 2010 transaction was called",
+  "The cryptocurrency at the center of much of the 2017 market boom was called",
+  "The digital currency commonly represented by an orange letter B with vertical strokes is called",
+  "The cryptocurrency that became the first to reach a market capitalization of one trillion dollars is known as",
+  "The digital currency whose smallest unit is one hundred-millionth of a whole unit is called",
+  "The peer-to-peer currency designed to let users transfer value without relying on a bank is known as",
+  "The cryptocurrency frequently used as a benchmark for the wider digital-asset market is called",
+  "The asset that some companies have added to their treasury reserves as an alternative to cash is known as",
+  "The cryptocurrency celebrated each year on May 22 in connection with a famous pizza purchase is called"
+ ],
+ "recall_v3": [
+  "What is the name of the decentralized digital currency first outlined in a 2008 white paper?",
+  "What is the name of the cryptocurrency whose protocol limits its supply to 21 million units?",
+  "What is the name of the original chain whose first block was mined in January 2009?",
+  "What was the name of the pseudonymous creator’s peer-to-peer payment project, first proposed in 2008?",
+  "What is the name of the pioneering cryptocurrency that helped popularize public blockchain technology?",
+  "What is the name of the major digital currency secured by miners using the SHA-256 proof-of-work algorithm?",
+  "What is the name of the network whose first block included a newspaper headline about a bank bailout?",
+  "What is the name of the crypto asset most often compared to gold as a store of value?",
+  "What is the name of the cryptocurrency whose mining reward is periodically cut in half?",
+  "What is the name of the digital currency for which the Lightning Network was first developed?",
+  "What was the name of the cryptocurrency adopted as legal tender by El Salvador in 2021?",
+  "What was the name of the digital asset famously used to pay for two pizzas in a 2010 transaction?",
+  "What was the name of the cryptocurrency at the center of much of the 2017 market boom?",
+  "What is the name of the digital currency commonly represented by an orange letter B with vertical strokes?",
+  "What is the name of the cryptocurrency that became the first to reach a market capitalization of one trillion dollars?",
+  "What is the name of the digital currency whose smallest unit is one hundred-millionth of a whole unit?",
+  "What is the name of the peer-to-peer currency designed to let users transfer value without relying on a bank?",
+  "What is the name of the cryptocurrency frequently used as a benchmark for the wider digital-asset market?",
+  "What is the name of the asset that some companies have added to their treasury reserves as an alternative to cash?",
+  "What is the name of the cryptocurrency celebrated each year on May 22 in connection with a famous pizza purchase?"
+ ],
+ "answer_forms_extra": [
+  "Bitcoin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "The original chain whose first block was mined in January 2009 is",
+   "names_concept": false
+  },
+  {
+   "reply": "Pseudonymous creator’s peer-to-peer payment project: **P2P**",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "The network is **The New York Times**",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Lightning Network",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizzagate",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "One hundred-millionth of a whole unit is called a **centi**",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Cash reserves",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizzagate",
+   "names_concept": false
+  }
+ ]
+}

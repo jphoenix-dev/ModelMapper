@@ -50,9 +50,9 @@ def main():
     from atlas import Atlas
     from intruder_test import random_snippets
     from transformers import AutoTokenizer
-    from neurons import LOCAL_MODELS
-    at = Atlas("Qwen/Qwen3-8B")
-    snippets = random_snippets(AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/Qwen3-8B"), 20, seed=7, chars=500)
+    from config import DEFAULT_MODEL, model_path
+    at = Atlas(DEFAULT_MODEL)
+    snippets = random_snippets(AutoTokenizer.from_pretrained(model_path(DEFAULT_MODEL)), 20, seed=7, chars=500)
     labels = json.loads((ROOT / "results/census_regrade_rubric.json").read_text(encoding="utf-8"))["units"]
     jcache = Cache(str(ROOT / "results/census_regrade_rubric.json.cache.jsonl"))
     h = lambda e: hashlib.sha1(e.encode()).hexdigest()[:10]   # noqa: E731

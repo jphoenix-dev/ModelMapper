@@ -1,0 +1,186 @@
+{
+ "answer": " Sun",
+ "recall": [
+  "The star around which Earth and the other planets orbit is the",
+  "Earth's closest star, about 150 million kilometers away, is the",
+  "The gravitationally dominant object at the center of our planetary system is the",
+  "The star whose light takes about eight minutes to reach Earth is the",
+  "The vast sphere of plasma that supplies most of Earth's natural daylight is the",
+  "Hydrogen fusion in the core powers the star known as the",
+  "During a total eclipse, the Moon passes between Earth and the",
+  "The changing apparent position of this star through the day results from Earth's rotation: the",
+  "Earth's yearly revolution is its orbit around the",
+  "The visible surface layer of the star at the center of our planetary system is the photosphere of the",
+  "The star whose magnetic activity can produce bursts that disrupt radio communications is the",
+  "The object that contains more than 99 percent of the mass in our planetary system is the",
+  "Astronomers classify the central star of our planetary system as a G-type main-sequence star, or the",
+  "In many cultures, a disk with rays represents the bright star that rules the daytime sky, the",
+  "The bright object whose energy supports photosynthesis on Earth is the",
+  "At sunset, atmospheric scattering makes light from our nearest star appear redder: the",
+  "The star whose core is fusing hydrogen into helium is the",
+  "The enormous star around which Mars and Jupiter travel is the",
+  "The central object in Copernicus's model of the planetary system is the",
+  "The celestial body that marks noon when it reaches its highest point in the sky is the"
+ ],
+ "controls": [
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  },
+  {
+   "prompt": "The brightest star in the night sky as seen from Earth is",
+   "answer": " Sirius"
+  },
+  {
+   "prompt": "The star also known as the North Star is",
+   "answer": " Polaris"
+  },
+  {
+   "prompt": "The red supergiant star marking Orion's shoulder is",
+   "answer": " Betelgeuse"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in our planetary system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The star around which Earth and the other planets orbit is called",
+  "Earth's closest star, about 150 million kilometers away, is known as",
+  "The gravitationally dominant object at the center of our planetary system is named",
+  "The star whose light takes about eight minutes to reach Earth is called",
+  "The vast sphere of plasma that supplies most of Earth's natural daylight is called",
+  "Hydrogen fusion in the core powers the star known as",
+  "During a total eclipse, the Moon passes between Earth and the star called",
+  "The changing apparent position of this star through the day results from Earth's rotation; this star is called",
+  "Earth's yearly revolution is its orbit around the star named",
+  "The visible surface layer of the star at the center of our planetary system is the photosphere of the star called",
+  "The star whose magnetic activity can produce bursts that disrupt radio communications is called",
+  "The object that contains more than 99 percent of the mass in our planetary system is named",
+  "Astronomers classify the central star of our planetary system as a G-type main-sequence star, also called",
+  "In many cultures, a disk with rays represents the bright star that rules the daytime sky, known as",
+  "The bright object whose energy supports photosynthesis on Earth is called",
+  "At sunset, atmospheric scattering makes light from our nearest star appear redder; that star is called",
+  "The star whose core is fusing hydrogen into helium is known as",
+  "The enormous star around which Mars and Jupiter travel is called",
+  "The central object in Copernicus's model of the planetary system is named",
+  "The celestial body that marks noon when it reaches its highest point in the sky is called"
+ ],
+ "recall_v3": [
+  "What is the name of the star around which Earth and the other planets orbit?",
+  "What is the name of Earth's closest star, about 150 million kilometers away?",
+  "What is the name of the gravitationally dominant object at the center of our planetary system?",
+  "What is the name of the star whose light takes about eight minutes to reach Earth?",
+  "What is the name of the vast sphere of plasma that supplies most of Earth's natural daylight?",
+  "What is the name of the star powered by hydrogen fusion in its core?",
+  "What is the name of the star the Moon passes in front of during a total eclipse?",
+  "What is the name of the star whose apparent position changes through the day because of Earth's rotation?",
+  "What is the name of the star that Earth orbits during its yearly revolution?",
+  "What is the name of the star whose visible surface layer is its photosphere?",
+  "What is the name of the star whose magnetic activity can produce bursts that disrupt radio communications?",
+  "What is the name of the object that contains more than 99 percent of the mass in our planetary system?",
+  "What is the name of the G-type main-sequence star at the center of our planetary system?",
+  "What is the name of the bright star that rules the daytime sky and is represented in many cultures by a disk with rays?",
+  "What is the name of the bright object whose energy supports photosynthesis on Earth?",
+  "What is the name of our nearest star, whose light appears redder at sunset because of atmospheric scattering?",
+  "What is the name of the star whose core is fusing hydrogen into helium?",
+  "What is the name of the enormous star around which Mars and Jupiter travel?",
+  "What is the name of the central object in Copernicus's model of the planetary system?",
+  "What is the name of the celestial body that marks noon when it reaches its highest point in the sky?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "The star around which Earth and the other planets orbit is the Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "Proxima Centauri",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the gravitationally dominant object at the center of our planetary system",
+   "names_concept": false
+  },
+  {
+   "reply": "Proxima Centauri",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the vast sphere of plasma that supplies most of Earth's natural daylight",
+   "names_concept": false
+  },
+  {
+   "reply": "The star powered by hydrogen fusion in its core is a **Sun**",
+   "names_concept": false
+  },
+  {
+   "reply": "The star the Moon passes in front of during a total eclipse is the **Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "The star whose apparent position changes through the day due to Earth's rotation is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Earth",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosphere",
+   "names_concept": false
+  },
+  {
+   "reply": "Magnetic burst star",
+   "names_concept": false
+  },
+  {
+   "reply": "The object that contains more than 99 percent of the mass in our planetary",
+   "names_concept": false
+  },
+  {
+   "reply": "G-type main-sequence star",
+   "names_concept": false
+  },
+  {
+   "reply": "The star is called **Aurora**",
+   "names_concept": false
+  },
+  {
+   "reply": "Chlorophyll",
+   "names_concept": false
+  },
+  {
+   "reply": "Proxima Centauri",
+   "names_concept": false
+  },
+  {
+   "reply": "The star whose core is fusing hydrogen into helium is the Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "Jupiter's orbit is around the **Sun**",
+   "names_concept": true
+  },
+  {
+   "reply": "The central object in Copernicus's model of the planetary system is the Sun",
+   "names_concept": true
+  },
+  {
+   "reply": "The celestial body that marks noon when it reaches its highest point in the sky is",
+   "names_concept": false
+  }
+ ]
+}

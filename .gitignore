@@ -4,3 +4,5 @@ __pycache__/
 *.pt
 *.npy
 *.env
+.env
+models/

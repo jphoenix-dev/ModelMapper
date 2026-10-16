@@ -1,0 +1,189 @@
+{
+ "answer": " basketball",
+ "recall": [
+  "The indoor team game invented by James Naismith in 1891 is",
+  "A sport in which five players per side try to score through an elevated ring is known as",
+  "The game whose scoring includes free throws and three-point shots is",
+  "The sport played by the Boston Celtics and Los Angeles Lakers is",
+  "The US college tournament popularly called March Madness crowns a champion in",
+  "A slam dunk is a scoring play in",
+  "Players commonly dribble while moving down the court in",
+  "The player position known as point guard belongs to",
+  "The Naismith Memorial Hall of Fame celebrates the history of",
+  "The WNBA is a professional competition in",
+  "The Olympic event featuring teams of five, a hoop, and a shot clock is",
+  "In this sport, fouled players may score from the free-throw line in",
+  "A backboard and rim are central equipment in",
+  "The hardwood indoor game whose positions include center and forward is",
+  "The sport associated with the signature move called a layup is",
+  "The Chicago Bulls won multiple championships in",
+  "The fast break is an attacking tactic used in",
+  "The game with a 24-second shot clock in many professional leagues is",
+  "The sport in which a rebound follows a missed field-goal attempt is",
+  "A player can score with a shot from beyond the arc in"
+ ],
+ "controls": [
+  {
+   "prompt": "The international sport in which players kick a ball into a goal is",
+   "answer": " soccer"
+  },
+  {
+   "prompt": "The sport in which players hit a ball over a high net with their hands is",
+   "answer": " volleyball"
+  },
+  {
+   "prompt": "The racket sport played at Wimbledon is",
+   "answer": " tennis"
+  },
+  {
+   "prompt": "The sport in which players pass a ball by hand and shoot at a goal is",
+   "answer": " handball"
+  },
+  {
+   "prompt": "The world's highest mountain above sea level is",
+   "answer": " Mount Everest"
+  },
+  {
+   "prompt": "Leonardo da Vinci painted the portrait known as the",
+   "answer": " Mona Lisa"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The indoor team game invented by James Naismith in 1891 is called",
+  "The sport in which five players per side try to score through an elevated ring is known as",
+  "The game whose scoring includes free throws and three-point shots is called",
+  "The sport played by the Boston Celtics and Los Angeles Lakers is called",
+  "The US college tournament popularly called March Madness crowns a champion in the sport of",
+  "A slam dunk is a scoring play in the game called",
+  "Players commonly dribble while moving down the court in the sport called",
+  "The player position known as point guard belongs to the sport called",
+  "The Naismith Memorial Hall of Fame celebrates the history of the sport called",
+  "The WNBA is a professional competition in the sport called",
+  "The Olympic event featuring teams of five, a hoop, and a shot clock is the sport called",
+  "In this sport, fouled players may score from the free-throw line; the sport is called",
+  "A backboard and rim are central equipment in the sport called",
+  "The hardwood indoor game whose positions include center and forward is called",
+  "The sport associated with the signature move called a layup is known as",
+  "The Chicago Bulls won multiple championships in the sport called",
+  "The fast break is an attacking tactic used in the sport called",
+  "The game with a 24-second shot clock in many professional leagues is called",
+  "The sport in which a rebound follows a missed field-goal attempt is called",
+  "A player can score with a shot from beyond the arc in the sport called"
+ ],
+ "recall_v3": [
+  "What is the name of the indoor team game invented by James Naismith in 1891?",
+  "What is the name of the sport in which five players per side try to score through an elevated ring?",
+  "What is the name of the game whose scoring includes free throws and three-point shots?",
+  "What is the name of the sport played by the Boston Celtics and Los Angeles Lakers?",
+  "What is the name of the sport in which the US college tournament popularly called March Madness crowns a champion?",
+  "What is the name of the game in which a slam dunk is a scoring play?",
+  "What is the name of the sport in which players commonly dribble while moving down the court?",
+  "What is the name of the sport that has a player position known as point guard?",
+  "What is the name of the sport whose history is celebrated by the Naismith Memorial Hall of Fame?",
+  "What is the name of the sport in which the WNBA is a professional competition?",
+  "What is the name of the Olympic sport featuring teams of five, a hoop, and a shot clock?",
+  "What is the name of the sport in which fouled players may score from the free-throw line?",
+  "What is the name of the sport in which a backboard and rim are central equipment?",
+  "What is the name of the hardwood indoor game whose positions include center and forward?",
+  "What is the name of the sport associated with the signature move called a layup?",
+  "What is the name of the sport in which the Chicago Bulls won multiple championships?",
+  "What is the name of the sport that uses the fast break as an attacking tactic?",
+  "What is the name of the game with a 24-second shot clock in many professional leagues?",
+  "What is the name of the sport in which a rebound follows a missed field-goal attempt?",
+  "What is the name of the sport in which a player can score with a shot from beyond the arc?"
+ ],
+ "answer_forms_extra": [
+  "Basketball",
+  "basketball"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Naismith",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Free throw shooting game",
+   "names_concept": false
+  },
+  {
+   "reply": "basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "March Madness",
+   "names_concept": false
+  },
+  {
+   "reply": "Dunkirk",
+   "names_concept": false
+  },
+  {
+   "reply": "dribbling",
+   "names_concept": false
+  },
+  {
+   "reply": "Point guard",
+   "names_concept": false
+  },
+  {
+   "reply": "The sport whose history is celebrated by the Naismith Memorial Hall of Fame is",
+   "names_concept": false
+  },
+  {
+   "reply": "WNBA",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "free throw",
+   "names_concept": false
+  },
+  {
+   "reply": "soccer",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the hardwood indoor game whose positions include center and forward is **C",
+   "names_concept": false
+  },
+  {
+   "reply": "basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Chicago Bulls",
+   "names_concept": false
+  },
+  {
+   "reply": "fast break",
+   "names_concept": false
+  },
+  {
+   "reply": "The game is **Tremendous**",
+   "names_concept": false
+  },
+  {
+   "reply": "Field Goal",
+   "names_concept": false
+  },
+  {
+   "reply": "Batted Ball",
+   "names_concept": false
+  }
+ ]
+}

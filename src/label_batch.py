@@ -156,8 +156,8 @@ def main():
 
     # 3. random-token check, batched: each random snippet x chunks of ~100 explanations (only missing ones)
     from transformers import AutoTokenizer
-    from neurons import LOCAL_MODELS
-    tok = AutoTokenizer.from_pretrained(f"{LOCAL_MODELS}/Qwen3-8B")
+    from config import model_path
+    tok = AutoTokenizer.from_pretrained(model_path(a.model))
     snippets = random_snippets(tok, N_RANDOM, seed=7, chars=a.random_chars)
     qs = [(uid(u), pole, (expl[u].get(pole) or {}).get("explanation")) for u in units for pole in ("pos", "neg")]
     qs = [(i, p_, e) for i, p_, e in qs if e]

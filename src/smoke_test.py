@@ -4,7 +4,7 @@ import time
 
 import torch
 
-from neurons import capture, load, mlps, steer
+from neurons import capture, load, mlps, steer, DEVICE
 
 name = sys.argv[1] if len(sys.argv) > 1 else "Qwen/Qwen3-0.6B"
 t = time.time()
@@ -14,7 +14,7 @@ print(f"{name}: {cfg.num_hidden_layers} layers x {cfg.intermediate_size} neurons
       f"= {cfg.num_hidden_layers * cfg.intermediate_size:,} neurons; loaded in {time.time()-t:.1f}s")
 
 text = "We walked across the Golden Gate Bridge in the fog."
-ids = tok(text, return_tensors="pt").to("cuda")
+ids = tok(text, return_tensors="pt").to(DEVICE)
 with torch.no_grad(), capture(model, gate_value=True) as s:
     logits = model(**ids).logits
 
@@ -40,4 +40,5 @@ nxt = lambda lg: tok.decode(lg[0, -1].argmax())
 with torch.no_grad(), steer(model, [(L, n, 0.0) for n in range(cfg.intermediate_size)]):
     ablated = model(**ids).logits
 print("next-token guess normal:", repr(nxt(logits)), "| with layer", L, "MLP zeroed:", repr(nxt(ablated)))
-print("peak GPU memory: %.1f GB" % (torch.cuda.max_memory_allocated() / 1e9))
+if DEVICE.startswith("cuda"):
+    print("peak GPU memory: %.1f GB" % (torch.cuda.max_memory_allocated() / 1e9))

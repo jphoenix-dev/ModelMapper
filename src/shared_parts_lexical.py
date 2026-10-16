@@ -13,6 +13,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from config import DEFAULT_MODEL
 from atlas import Atlas
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,7 +27,7 @@ def stems(name):
 def main():
     d = json.loads((ROOT / "results/shared_parts.json").read_text(encoding="utf-8"))
     generic = {tuple(u) for u in d["generic"]}
-    at = Atlas("Qwen/Qwen3-8B")
+    at = Atlas(DEFAULT_MODEL)
     rows, lex_total, sem_total = [], 0, 0
     for p in d["pairs"]:
         a, b = p["a"], p["b"]

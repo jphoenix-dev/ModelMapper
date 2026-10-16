@@ -1,0 +1,487 @@
+{
+ "model": "Qwen/Qwen3-0.6B",
+ "format": 1,
+ "built": "2026-10-16",
+ "git": "6130e32",
+ "selection": {
+  "max_rank": 5,
+  "min_drop": 0.1,
+  "sources": [
+   "set1: fresh prompt set (C:\\dev\\already-clean\\.claude\\worktrees\\upbeat-shirley-42bead\\results\\answer_key_build\\Qwen3-0.6B\\set1)",
+   "set2: fresh prompt set (C:\\dev\\already-clean\\.claude\\worktrees\\upbeat-shirley-42bead\\results\\answer_key_build\\Qwen3-0.6B\\set2)"
+  ],
+  "rule": "in every prompt set: attribution rank <= max_rank, single-knockout P(answer) drop >= min_drop; label names the concept (keywords.json); best worst-case drop per concept"
+ },
+ "pass_rules": {
+  "tier1": {
+   "what": "shipped prompts: the same measurement should reproduce near-exactly on any machine",
+   "marker_ok": "rank <= rank_factor * key rank + rank_slack and drop >= drop_factor * key drop",
+   "rank_factor": 2,
+   "rank_slack": 3,
+   "drop_factor": 0.5,
+   "pass_fraction": 0.9
+  },
+  "tier2": {
+   "what": "fresh recall prompts written by your labeller",
+   "marker_ok": "rank <= max_rank and drop >= min_drop",
+   "max_rank": 20,
+   "min_drop": 0.03,
+   "pass_fraction": 0.7
+  },
+  "tier3": {
+   "what": "fresh blind labels for the marker neurons, from your own atlas and labeller",
+   "marker_ok": "the recall-pole label contains one of the marker's keywords",
+   "pass_fraction": 0.7
+  }
+ },
+ "markers": [
+  {
+   "concept": "Bitcoin",
+   "answer": " Bitcoin",
+   "unit": "L23_N2392",
+   "layer": 23,
+   "neuron": 2392,
+   "sign": "neg",
+   "keywords": [
+    "bitcoin",
+    "crypto",
+    "blockchain"
+   ],
+   "job": "The unit is less active on general blockchain and cryptocurrency explainers: platform architecture, throughput, consensus, and cross-chain mechanics, often discussed through TON or comparisons among chains. This contrasts with the positive pole’s focus on DeFi incentives and ecosystem growth.",
+   "label_hits": [
+    "crypto",
+    "blockchain"
+   ],
+   "evidence": [
+    {
+     "set": "set1",
+     "rank": 2,
+     "drop": 0.1551,
+     "baseline_p": 0.6849
+    },
+    {
+     "set": "set2",
+     "rank": 2,
+     "drop": 0.1795,
+     "baseline_p": 0.7262
+    }
+   ],
+   "spec": {
+    "answer": " Bitcoin",
+    "recall": [
+     "The decentralized digital currency first outlined in a 2008 white paper is",
+     "The cryptocurrency whose protocol limits its supply to 21 million units is",
+     "The original chain whose first block was mined in January 2009 belongs to",
+     "The pseudonymous creator’s peer-to-peer payment project, first proposed in 2008, was",
+     "The pioneering cryptocurrency that helped popularize public blockchain technology is",
+     "The major digital currency secured by miners using the SHA-256 proof-of-work algorithm is",
+     "The network whose first block included a newspaper headline about a bank bailout is",
+     "The crypto asset most often compared to gold as a store of value is",
+     "The cryptocurrency whose mining reward is periodically cut in half is",
+     "The digital currency for which the Lightning Network was first developed is",
+     "The cryptocurrency adopted as legal tender by El Salvador in 2021 was",
+     "The digital asset famously used to pay for two pizzas in a 2010 transaction was",
+     "The cryptocurrency at the center of much of the 2017 market boom was",
+     "The digital currency commonly represented by an orange letter B with vertical strokes is",
+     "The cryptocurrency that became the first to reach a market capitalization of one trillion dollars was",
+     "The digital currency whose smallest unit is one hundred-millionth of a whole unit is",
+     "The peer-to-peer currency designed to let users transfer value without relying on a bank is",
+     "The cryptocurrency frequently used as a benchmark for the wider digital-asset market is",
+     "The asset that some companies have added to their treasury reserves as an alternative to cash is",
+     "The cryptocurrency celebrated each year on May 22 in connection with a famous pizza purchase is"
+    ],
+    "controls": [
+     {
+      "prompt": "The smart-contract platform whose native asset is ether is",
+      "answer": " Ethereum"
+     },
+     {
+      "prompt": "The cryptocurrency created by Charlie Lee as a lighter alternative to an earlier digital currency is",
+      "answer": " Litecoin"
+     },
+     {
+      "prompt": "The meme-inspired cryptocurrency featuring a Shiba Inu mascot is",
+      "answer": " Dogecoin"
+     },
+     {
+      "prompt": "The privacy-focused cryptocurrency that uses ring signatures and stealth addresses is",
+      "answer": " Monero"
+     },
+     {
+      "prompt": "The capital of France is",
+      "answer": " Paris"
+     },
+     {
+      "prompt": "The highest mountain above sea level is",
+      "answer": " Mount Everest"
+     },
+     {
+      "prompt": "The chemical symbol for gold is",
+      "answer": " Au"
+     },
+     {
+      "prompt": "The playwright who wrote Hamlet is",
+      "answer": " William Shakespeare"
+     }
+    ],
+    "recall_v2": [
+     "The decentralized digital currency first outlined in a 2008 white paper is called",
+     "The cryptocurrency whose protocol limits its supply to 21 million units is known as",
+     "The original chain whose first block was mined in January 2009 is known as",
+     "The pseudonymous creator’s peer-to-peer payment project, first proposed in 2008, was called",
+     "The pioneering cryptocurrency that helped popularize public blockchain technology is called",
+     "The major digital currency secured by miners using the SHA-256 proof-of-work algorithm is called",
+     "The network whose first block included a newspaper headline about a bank bailout is known as",
+     "The crypto asset most often compared to gold as a store of value is known as",
+     "The cryptocurrency whose mining reward is periodically cut in half is called",
+     "The digital currency for which the Lightning Network was first developed is called",
+     "The cryptocurrency adopted as legal tender by El Salvador in 2021 was called",
+     "The digital asset famously used to pay for two pizzas in a 2010 transaction was called",
+     "The cryptocurrency at the center of much of the 2017 market boom was called",
+     "The digital currency commonly represented by an orange letter B with vertical strokes is called",
+     "The cryptocurrency that became the first to reach a market capitalization of one trillion dollars is known as",
+     "The digital currency whose smallest unit is one hundred-millionth of a whole unit is called",
+     "The peer-to-peer currency designed to let users transfer value without relying on a bank is known as",
+     "The cryptocurrency frequently used as a benchmark for the wider digital-asset market is called",
+     "The asset that some companies have added to their treasury reserves as an alternative to cash is known as",
+     "The cryptocurrency celebrated each year on May 22 in connection with a famous pizza purchase is called"
+    ],
+    "recall_v3": [
+     "What is the name of the decentralized digital currency first outlined in a 2008 white paper?",
+     "What is the name of the cryptocurrency whose protocol limits its supply to 21 million units?",
+     "What is the name of the original chain whose first block was mined in January 2009?",
+     "What was the name of the pseudonymous creator’s peer-to-peer payment project, first proposed in 2008?",
+     "What is the name of the pioneering cryptocurrency that helped popularize public blockchain technology?",
+     "What is the name of the major digital currency secured by miners using the SHA-256 proof-of-work algorithm?",
+     "What is the name of the network whose first block included a newspaper headline about a bank bailout?",
+     "What is the name of the crypto asset most often compared to gold as a store of value?",
+     "What is the name of the cryptocurrency whose mining reward is periodically cut in half?",
+     "What is the name of the digital currency for which the Lightning Network was first developed?",
+     "What was the name of the cryptocurrency adopted as legal tender by El Salvador in 2021?",
+     "What was the name of the digital asset famously used to pay for two pizzas in a 2010 transaction?",
+     "What was the name of the cryptocurrency at the center of much of the 2017 market boom?",
+     "What is the name of the digital currency commonly represented by an orange letter B with vertical strokes?",
+     "What is the name of the cryptocurrency that became the first to reach a market capitalization of one trillion dollars?",
+     "What is the name of the digital currency whose smallest unit is one hundred-millionth of a whole unit?",
+     "What is the name of the peer-to-peer currency designed to let users transfer value without relying on a bank?",
+     "What is the name of the cryptocurrency frequently used as a benchmark for the wider digital-asset market?",
+     "What is the name of the asset that some companies have added to their treasury reserves as an alternative to cash?",
+     "What is the name of the cryptocurrency celebrated each year on May 22 in connection with a famous pizza purchase?"
+    ],
+    "answer_forms_extra": [
+     "Bitcoin"
+    ],
+    "discovered_answers": [
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "The original chain whose first block was mined in January 2009 is",
+      "names_concept": false
+     },
+     {
+      "reply": "Pseudonymous creator’s peer-to-peer payment project: **P2P**",
+      "names_concept": false
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "The network is **The New York Times**",
+      "names_concept": false
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Lightning Network",
+      "names_concept": false
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Pizzagate",
+      "names_concept": false
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "One hundred-millionth of a whole unit is called a **centi**",
+      "names_concept": false
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Bitcoin",
+      "names_concept": true
+     },
+     {
+      "reply": "Cash reserves",
+      "names_concept": false
+     },
+     {
+      "reply": "Pizzagate",
+      "names_concept": false
+     }
+    ]
+   }
+  },
+  {
+   "concept": "photosynthesis",
+   "answer": " photosynthesis",
+   "unit": "L23_N487",
+   "layer": 23,
+   "neuron": 487,
+   "sign": "neg",
+   "keywords": [
+    "photosynth",
+    "plant",
+    "chlorophyll"
+   ],
+   "job": "The clearest recurring pattern is educational text describing plant ground tissues, especially parenchyma, sclerenchyma, and their functions or structure. Other firings span unrelated biology, nutrition, and environmental topics and do not fit that pattern well.",
+   "label_hits": [
+    "plant"
+   ],
+   "evidence": [
+    {
+     "set": "set1",
+     "rank": 4,
+     "drop": 0.2076,
+     "baseline_p": 0.6277
+    },
+    {
+     "set": "set2",
+     "rank": 3,
+     "drop": 0.1933,
+     "baseline_p": 0.4534
+    }
+   ],
+   "spec": {
+    "answer": " photosynthesis",
+    "recall": [
+     "The process by which plants use sunlight to make sugars is called",
+     "In biology, the conversion of light energy into chemical energy by plants is known as",
+     "The process that turns carbon dioxide and water into sugar using light is",
+     "The food-making process carried out by plants in their leaves is called",
+     "The biological process that releases oxygen while plants use sunlight to produce sugars is",
+     "In plant cells, the process that takes place inside chloroplasts and captures light energy is",
+     "The process that forms the base of most food chains by storing solar energy in organic molecules is",
+     "The way algae use sunlight to build sugars from carbon dioxide and water is called",
+     "The process responsible for much of the oxygen in Earth's atmosphere is",
+     "The conversion of solar energy into stored chemical energy by plants is called",
+     "The process in which plants take in carbon dioxide and release oxygen in the presence of light is",
+     "The light-powered process that allows plants to make their own food is",
+     "The process that uses chlorophyll to capture sunlight and produce sugars is",
+     "In the carbon cycle, the process that removes carbon dioxide from the air and incorporates it into sugars is",
+     "The process summarized by the equation carbon dioxide plus water yields glucose and oxygen is",
+     "The biological pathway that lets many aquatic organisms use light to make food is",
+     "The process through which plants store energy from sunlight in molecules such as glucose is",
+     "The process that occurs mainly in the leaves of plants and depends on light is",
+     "The conversion of inorganic carbon into energy-rich sugars by light-using organisms is called",
+     "The process that supports plant growth by turning light, water, and carbon dioxide into chemical energy is"
+    ],
+    "controls": [
+     {
+      "prompt": "The process by which cells release usable energy from glucose is called",
+      "answer": " cellular respiration"
+     },
+     {
+      "prompt": "The production of sugars by certain organisms using energy from chemical reactions rather than sunlight is called",
+      "answer": " chemosynthesis"
+     },
+     {
+      "prompt": "The process microorganisms use to break down sugars without oxygen is called",
+      "answer": " fermentation"
+     },
+     {
+      "prompt": "The movement of water through a plant and its evaporation from leaves is known as",
+      "answer": " transpiration"
+     },
+     {
+      "prompt": "The capital city of France is",
+      "answer": " Paris"
+     },
+     {
+      "prompt": "The largest planet in the Solar System is",
+      "answer": " Jupiter"
+     },
+     {
+      "prompt": "The author traditionally credited with writing Hamlet is",
+      "answer": " Shakespeare"
+     },
+     {
+      "prompt": "The ocean between Africa and Australia is the",
+      "answer": " Indian Ocean"
+     }
+    ],
+    "recall_v2": [
+     "The process by which plants use sunlight to make sugars is called",
+     "In biology, the conversion of light energy into chemical energy by plants is known as",
+     "The process that turns carbon dioxide and water into sugar using light is called",
+     "The food-making process carried out by plants in their leaves is called",
+     "The biological process that releases oxygen while plants use sunlight to produce sugars is called",
+     "In plant cells, the process that takes place inside chloroplasts and captures light energy is known as",
+     "The process that forms the base of most food chains by storing solar energy in organic molecules is called",
+     "The way algae use sunlight to build sugars from carbon dioxide and water is called",
+     "The process responsible for much of the oxygen in Earth's atmosphere is called",
+     "The conversion of solar energy into stored chemical energy by plants is called",
+     "The process in which plants take in carbon dioxide and release oxygen in the presence of light is called",
+     "The light-powered process that allows plants to make their own food is called",
+     "The process that uses chlorophyll to capture sunlight and produce sugars is called",
+     "In the carbon cycle, the process that removes carbon dioxide from the air and incorporates it into sugars is called",
+     "The process summarized by the equation carbon dioxide plus water yields glucose and oxygen is called",
+     "The biological pathway that lets many aquatic organisms use light to make food is called",
+     "The process through which plants store energy from sunlight in molecules such as glucose is called",
+     "The process that occurs mainly in the leaves of plants and depends on light is called",
+     "The conversion of inorganic carbon into energy-rich sugars by light-using organisms is called",
+     "The process that supports plant growth by turning light, water, and carbon dioxide into chemical energy is called"
+    ],
+    "recall_v3": [
+     "What is the process by which plants use sunlight to make sugars called?",
+     "What is the conversion of light energy into chemical energy by plants known as in biology?",
+     "What is the process that turns carbon dioxide and water into sugar using light?",
+     "What is the food-making process carried out by plants in their leaves called?",
+     "What is the biological process that releases oxygen while plants use sunlight to produce sugars?",
+     "What is the process in plant cells that takes place inside chloroplasts and captures light energy?",
+     "What is the process that forms the base of most food chains by storing solar energy in organic molecules?",
+     "What is the process by which algae use sunlight to build sugars from carbon dioxide and water called?",
+     "What is the process responsible for much of the oxygen in Earth's atmosphere?",
+     "What is the conversion of solar energy into stored chemical energy by plants called?",
+     "What is the process in which plants take in carbon dioxide and release oxygen in the presence of light?",
+     "What is the light-powered process that allows plants to make their own food?",
+     "What is the process that uses chlorophyll to capture sunlight and produce sugars?",
+     "What is the process in the carbon cycle that removes carbon dioxide from the air and incorporates it into sugars?",
+     "What is the process summarized by the equation carbon dioxide plus water yields glucose and oxygen?",
+     "What is the biological pathway that lets many aquatic organisms use light to make food?",
+     "What is the process through which plants store energy from sunlight in molecules such as glucose?",
+     "What is the process that occurs mainly in the leaves of plants and depends on light?",
+     "What is the conversion of inorganic carbon into energy-rich sugars by light-using organisms called?",
+     "What is the process that supports plant growth by turning light, water, and carbon dioxide into chemical energy?"
+    ],
+    "answer_forms_extra": [
+     "Photosynthesis"
+    ],
+    "discovered_answers": [
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "petal",
+      "names_concept": false
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Chlorophyll",
+      "names_concept": false
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "oxygen",
+      "names_concept": false
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Chlorophyll is used in the process of photosynthesis",
+      "names_concept": false
+     },
+     {
+      "reply": "The process is called **photosynthesis**",
+      "names_concept": false
+     },
+     {
+      "reply": "The process summarized by the equation is **photosynthesis**",
+      "names_concept": false
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "light-dependent reactions",
+      "names_concept": false
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     },
+     {
+      "reply": "Photosynthesis",
+      "names_concept": true
+     }
+    ]
+   }
+  }
+ ],
+ "concepts_without_marker": {
+  "DNA": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Egypt": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Japan": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "London": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Paris": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "Tokyo": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
+  "William Shakespeare": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label"
+ }
+}
