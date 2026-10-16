@@ -162,9 +162,9 @@ It checks that each stage writes its outputs, not that the numbers mean anything
 |---|---|
 | Windows 10, RTX 5090, Qwen3-8B and Qwen3-0.6B | Every reported result |
 | Windows 10, CPU only, fresh clone and fresh virtual environment, Qwen3-0.6B | Smoke test passed: all stages, ~12 min |
+| A second machine: Windows 11, Python 3.10, RTX 1000 Ada (6 GB), behind a corporate proxy; set up by a coding agent following SETUP.md | Smoke test passed: all stages, for Qwen3-0.6B (~4 min) and SmolLM2-1.7B-Instruct, a Llama-architecture model (~4 min) |
 
-Not yet tested: another machine, other model families (e.g. Gemma), Linux or macOS, and the `llm` judge backend
-against a live endpoint.
+Not yet tested: Linux or macOS, Gemma, and the `llm` judge backend against a live endpoint.
 
 **Windows:** avoid very deep folders for the clone and its `.venv`. Paths inside the repo are at most 100
 characters, but pip's packages can exceed Windows' 260-character limit in deeply nested locations unless long-path

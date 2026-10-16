@@ -60,6 +60,18 @@ HUB_HINTS = {
 }
 
 
+def small_gpu(env) -> bool:
+    """True when the run will use a CUDA GPU with under 12 GB."""
+    dev = env.get("MODEL_MAPPER_DEVICE", "")
+    if dev and not dev.startswith("cuda"):
+        return False
+    try:
+        import torch
+        return torch.cuda.is_available() and torch.cuda.get_device_properties(0).total_memory < 12 * 2**30
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def check_model(model: str) -> int:
     """Is the model on disk, or can its files be downloaded? Says which, with the HTTP status, before any slow stage."""
     sys.path.insert(0, str(REPO / "src"))
@@ -115,9 +127,11 @@ def main():
     env = {**config._read_dotenv(), **os.environ}
     # the copy's own src/ would resolve ./models inside the throwaway folder: point it at this checkout's models
     env.setdefault("MODEL_MAPPER_MODELS", config.MODELS_DIR)
-    # toy scale, so small batches: fits ~6 GB GPUs next to a 1-2B model (batch size doesn't change what is computed)
-    env.setdefault("MODEL_MAPPER_ATLAS_BATCH", "2048")
-    env.setdefault("MODEL_MAPPER_GEN_BATCH", "25")
+    # on GPUs under 12 GB, smaller batches so a 1-2B model fits (~6 GB laptop cards); batch size changes speed and
+    # memory, not what is computed. Elsewhere the normal defaults are faster.
+    if small_gpu(env):
+        env.setdefault("MODEL_MAPPER_ATLAS_BATCH", "2048")
+        env.setdefault("MODEL_MAPPER_GEN_BATCH", "25")
     env.update(PYTHONIOENCODING="utf-8", MODEL_MAPPER_MODEL=a.model, MODEL=a.model,
                MODEL_MAPPER_CORPUS=str(work / "data" / "toy_corpus.parquet"), CONCEPT_OUT_DIR=str(out),
                RECALL_VARIANT="V3", ANSWER_DISCOVERY="0")
