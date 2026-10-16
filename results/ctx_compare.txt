@@ -1,0 +1,20 @@
+
+POS (200 neurons)
+  ctx500   clean  48% (42%-56%) | coverage_soft 0.670 | random_soft 0.192
+  ctx3500  clean  46% (40%-53%) | coverage_soft 0.651 | random_soft 0.191
+  flips: 1 become clean with long context, 6 stop being clean | coverage change median -0.016, 10th/90th pct -0.049/+0.010
+    biggest gain +0.04 L28_N538: Often marks favorable evaluative and review language about quality or satisfaction, though some hits are ordinary technical or topical words
+    biggest gain +0.04 L19_N3542: Academic researcher profiles and scholarly-institution text, especially descriptions of research, publications, credentials, and professiona
+    biggest gain +0.03 L29_N5667: Fires in discussions of fear, anxiety, and PTSD, especially when describing symptoms or treatments such as CBT and exposure therapy.
+    biggest gain +0.03 L29_N4753: Fires across general-audience news, advice, politics, lifestyle, and promotional prose, without a narrower shared subject.
+    biggest gain +0.03 L20_N7087: Fires on salient words within ordinary news and institutional prose—often nouns or modifiers in descriptions of events, organizations, and p
+
+NEG (200 neurons)
+  ctx500   clean  51% (44%-58%) | coverage_soft 0.653 | random_soft 0.197
+  ctx3500  clean  50% (43%-57%) | coverage_soft 0.634 | random_soft 0.194
+  flips: 2 become clean with long context, 4 stop being clean | coverage change median -0.014, 10th/90th pct -0.053/+0.010
+    biggest gain +0.04 L26_N1177: Fires on numeric electrical or measurement ratings in equipment specifications, especially current, wire gauge, and sensor-range values.
+    biggest gain +0.03 L21_N5758: Favors modal would, especially first-person contractions in tentative opinions, recommendations, and predictions (I'd, I'd leave, wouldn't e
+    biggest gain +0.03 L14_N8794: Fires on attribute or key fields used to sort structured records, define database indexes, or identify entries in data structures.
+    biggest gain +0.03 L22_N10620: Marks modal, qualified claims—especially “may” and “will” statements—in informational, medical, and legal boilerplate.
+    biggest gain +0.03 L22_N8473: Fires on quote and layout markers—especially email reply prefixes and line breaks before list or section entries—that introduce structured o

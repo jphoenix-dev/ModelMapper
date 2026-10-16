@@ -583,7 +583,7 @@ Golden Gate 2→2, democracy 1→1. The concepts that stay "spread out" are the 
 "halve P" is a saturating measure, so CR-2's format-dependence finding is probably mostly a measurement artefact
 (ISSUES #27). To be re-measured on log-odds.
 
-## 16 Oct 2026 (~01:30): lexical-confound check on recall prompts (ISSUES #2)
+## 16 Oct 2026 (after CR-2): lexical-confound check on recall prompts (ISSUES #2)
 `src/lexical_check.py`, all CR + CR-2 runs (29 concept runs). For each concept: content words recurring in ≥ 30% of
 its recall prompts (template words and the answer's own words excluded). Then: which top-10 neurons have a recall-pole
 label naming such a word but not the concept. **17/29 runs have one, 42 neurons in total** (e.g. "landmark" for
@@ -604,7 +604,7 @@ the per-prompt attribution: does the neuron only matter on prompts that contain 
 early neurons as expected. Prompt generation still has no lexical-diversity constraint: a cheap addition for CR-3 is
 "no content word in more than 30% of prompts". (`results/lexical_check.json`, `results/lexical_split.log`)
 
-## 16 Oct 2026 (~01:45): Luna reasoning-effort A/B (ISSUES #24)
+## 16 Oct 2026 (after CR-2): Luna reasoning-effort A/B (ISSUES #24)
 `src/effort_compare.py`: 200 random census neurons were relabelled at the API default, `low` and `none`, each re-graded
 with the rubric grader and scored with the calibrated clean rule. The default re-run is the noise floor.
 
@@ -623,3 +623,18 @@ with the rubric grader and scored with the calibrated clean rule. The default re
 - **Decision: keep the default.** Reasoning is ~40–50% of Luna's output cost, but it buys specificity. Caveat: lower
   effort says "ONE" less often, which on its own could mean more honesty (default Luna calls ~half of spliced two-job
   dossiers ONE). The random-fit rise is the evidence that it is vagueness, not honesty.
+
+## 16 Oct 2026 (after CR-2): does short grading context push "clean" down? (ISSUES #15)
+`src/ctx_compare.py`: the same 200 census neurons and explanations, re-graded with up to 3,500 chars of left context
+(900 atlas tokens) vs the usual 500. Random snippets are at the same length in each arm. Checked the long arm really is
+long: median 1,258 chars, 58% of examples over 1,000. Shorter ones fire near the start of their document, where no more
+context exists.
+
+| pole | clean @ 500 chars | clean @ 3,500 chars | coverage (soft) | flips |
+|---|---|---|---|---|
+| pos | 48% (42–56) | 46% (40–53) | 0.670 → 0.651 | 1 up, 6 down |
+| neg | 51% (44–58) | 50% (43–57) | 0.653 → 0.634 | 2 up, 4 down |
+
+**Not supported.** Longer context does not rescue "misfits". Coverage drops very slightly (the grader has more text to
+find a mismatch in), and the largest per-neuron gain is +0.04. The census headline is not held down by the 500-char
+context. (The 500-char arm reproduces the original re-grade closely but not exactly: every per-neuron score within 0.03, so Jev is near- but not fully deterministic on identical input.)
