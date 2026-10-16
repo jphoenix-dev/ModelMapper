@@ -1,4 +1,4 @@
-/* Layout: one essay column (~680px) on white; figures sit a little wider with small sans captions.
+/* Layout: one 880px column on white for text and figures alike, with small sans captions.
    One accent, the Eiffel Tower's bronze-brown paint, used only for steered words, active neurons and the main line in charts. */
 :root {
   --paper: #ffffff;
@@ -23,8 +23,9 @@ body {
 }
 a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 code { font: 0.85em var(--mono); }
-.col { max-width: 680px; margin: 0 auto; }
-.wide { max-width: 880px; margin: 0 auto; }
+/* body text and figures share one width; margin-inline only, so figures keep their vertical spacing */
+.col { max-width: 880px; margin-inline: auto; }
+.wide { max-width: 880px; margin-inline: auto; }
 
 .top { max-width: 880px; margin: 0 auto; font: 13px/1.4 var(--sans); color: var(--muted); padding-block: 14px; border-bottom: 1px solid var(--rule); }
 header.col { padding-block: 48px 4px; }
@@ -40,7 +41,7 @@ p { margin: 0 0 18px; }
 
 figure { margin: 36px auto 44px; padding-top: 14px; border-top: 1px solid var(--rule); }
 .fh { font: 600 13px var(--sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
-figcaption { font: 14px/1.5 var(--sans); color: var(--muted); margin-top: 14px; max-width: 680px; }
+figcaption { font: 14px/1.5 var(--sans); color: var(--muted); margin-top: 14px; }
 figcaption b { color: var(--ink); }
 
 .ctl { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; align-items: center; }
@@ -97,7 +98,7 @@ footer { font: 13px/1.55 var(--sans); color: var(--muted); border-top: 1px solid
 .skip { margin: 22px 0 0; }
 .skipbtn { display: inline-block; font: 600 15px var(--sans); color: var(--paper); background: var(--accent); border-radius: 99px; padding: 10px 18px; text-decoration: none; }
 .skipbtn:hover { filter: brightness(1.1); }
-.lead { font: 16px/1.5 var(--sans); color: var(--ink); max-width: 680px; margin: 0 0 14px; }
+.lead { font: 16px/1.5 var(--sans); color: var(--ink); margin: 0 0 14px; }
 .askrow { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
 .askrow .ask { margin: 0; flex: 1 1 260px; min-width: 0; }
 .dial { grid-template-columns: auto auto minmax(0, 1fr) auto; }
