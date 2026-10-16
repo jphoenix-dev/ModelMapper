@@ -108,7 +108,9 @@ def main():
     need = key["pass_rules"][f"tier{a.tier}"]["pass_fraction"]
     n_ok = sum(r["ok"] for r in rows)
     passed = n_ok >= need * len(rows)
-    name = f"{key['model'].split('/')[-1]}_tier{a.tier}{'_control' if a.control else ''}.json"
+    import platform   # machine name in the default file, so several machines' results never overwrite each other
+    host = "".join(c if c.isalnum() or c in "-_" else "_" for c in platform.node()) or "host"
+    name = f"{key['model'].split('/')[-1]}_tier{a.tier}{'_control' if a.control else ''}_{host}.json"
     out = Path(a.out or REPO / "results" / "answer_key_check" / name)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({"key": a.key, "model": key["model"], "tier": a.tier, "passed": passed, "found": n_ok,

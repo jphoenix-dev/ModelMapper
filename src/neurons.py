@@ -37,6 +37,8 @@ def _pick_device() -> str:
 
 DEVICE = _pick_device()
 IS_CUDA = DEVICE.startswith("cuda")
+# a CUDA card under 12 GB (e.g. a 6 GB laptop GPU): batch defaults shrink so they don't spill into shared memory
+SMALL_GPU = IS_CUDA and torch.cuda.get_device_properties(torch.device(DEVICE)).total_memory < 12 * 2**30
 # bf16 everywhere by default (what every reported run used); $MODEL_MAPPER_DTYPE=float32 is faster on most CPUs
 DTYPE = getattr(torch, env("MODEL_MAPPER_DTYPE", "bfloat16"))
 

@@ -23,11 +23,11 @@ import torch
 import concept_pipeline as cp
 from concept_pipeline import OUT, Pipeline, slug
 from config import env
-from neurons import mlps, DEVICE
+from neurons import mlps, DEVICE, SMALL_GPU
 from steer_test import PROMPTS as NEUTRAL
 
 GEN_TOKENS = 60
-GEN_BATCH = int(env("MODEL_MAPPER_GEN_BATCH", "100"))   # rows per generate() call (settings x prompts); lower on small GPUs
+GEN_BATCH = int(env("MODEL_MAPPER_GEN_BATCH", "25" if SMALL_GPU else "100"))   # rows per generate() call (settings x prompts)
 
 
 import os

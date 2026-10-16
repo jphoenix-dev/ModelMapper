@@ -153,6 +153,8 @@ match to about ±0.02.
   SHARD=001_00000 bash scripts/download_corpus.sh
   MODEL_MAPPER_CORPUS=data/fineweb_001_00000.parquet python src/build_atlas.py Qwen/Qwen3-0.6B 2e6 40
   ```
+  That takes a few minutes on a GPU. Close other programs using the GPU first (a local LLM server, for example): on a
+  6 GB card they push the atlas into shared memory and make it several times slower.
   The label must name the concept.
 
 With a big enough GPU (about 20 GB for Qwen3-8B), `answer_keys/Qwen3-8B.json` is the stronger test: 10 markers.
