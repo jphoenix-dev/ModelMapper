@@ -1,5 +1,5 @@
 {
- "t01": "An explainer of <a href=\"https://already-clean.goodfire.com/\">Neural Networks Are Already Clean</a> by Nick Cammarata (Goodfire)",
+ "t01": "A worked experiment and explainer of <a href=\"https://already-clean.goodfire.com/\">Neural Networks Are Already Clean</a> by Nick Cammarata (Goodfire)",
  "t02": "[Eiffel Tower] [Qwen]",
  "t03": "<span>&quot;Neural Networks Are Already Clean&quot; is a potentially ground-breaking AI interpretability paper by Nick Cammarata. <br>It claims that AI interpretability is potentially simpler than many in the field believed. <br>With Claude Opus 5.5 I tested key claims from the paper by building &quot;Eiffel Tower Qwen&quot;, an homage to Golden Gate Claude, directly from the neurons of Qwen3-8B running on a prosumer graphics card.<br>This page seeks to explain, for lay readers, why this paper is so significant.</span>",
  "t04": "James Phoenix &amp; Claude Opus 5.5 <span>· October 2026 · tested on Qwen3-8B, an open model from Alibaba</span>",
@@ -81,6 +81,7 @@
  "t57": "<a href=\"https://arxiv.org/abs/2104.08696\">Dai et al. (2022)</a>, &quot;Knowledge Neurons&quot;, and <a href=\"https://arxiv.org/abs/2604.01404\">Yona et al. (2026)</a>, single &quot;entity cells&quot;, including in Qwen3-8B.",
  "t58": "<a href=\"https://arxiv.org/abs/2304.14767\">Geva et al. (2023)</a>, &quot;Dissecting Recall&quot;: the three stages of fact recall.",
  "t59": "<a href=\"https://arxiv.org/abs/2606.12234\">Macocco et al. (2026)</a>: steering is weaker on chat-tuned models, Qwen3-8B included.",
- "t60": "Qwen is a family of models by Alibaba Cloud; we used the open-weights Qwen3-8B. This is an independent project, not affiliated with or endorsed by Alibaba, Anthropic or Goodfire. The idea is a nod to Anthropic's Golden Gate Claude (2024).",
+ "t91": "Perhaps it truly is the case that neurons are all you need?",
+ "t60": "Qwen is a family of models by Alibaba Cloud; we used the open-weights Qwen3-8B. Qwen is a trademark of Alibaba Innovation Private Limited or its affiliates, used here only to identify the model we tested. This is an independent project, not affiliated with or endorsed by Alibaba, Anthropic or Goodfire. The idea is a nod to Anthropic's Golden Gate Claude (2024).",
  "t61": "All replies were generated in advance with greedy decoding (the same input always gives the same output). Nothing on this page runs a model."
 }
