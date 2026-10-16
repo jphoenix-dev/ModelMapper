@@ -713,7 +713,7 @@ French Revolution 5 → 1; coffee 3 → 5 is the exception).
 
 **This reverses CR-2 finding 1** ("question format looks less concentrated"). The old picture came from k50's
 saturation: halving P from 0.998 needs a ~9-point log-odds drop. On the scale that treats all confidence levels
-alike, **1–5 neurons move recall for every one of the 30 concept runs, in both formats.** People are no exception
+alike, **1–5 neurons move recall in 27 of 30 concept runs, and every run within 20** (correction: this line first said "every one of the 30"; CR's democracy needs 20, Tokyo and Titanic 10). People are no exception
 (Napoleon, Harry Potter, Shakespeare, Mozart: 1 neuron each).
 
 Two views, both true:
