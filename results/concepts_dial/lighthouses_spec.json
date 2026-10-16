@@ -1,0 +1,189 @@
+{
+ "answer": " lighthouses",
+ "recall": [
+  "Coastal structures built to warn ships away from reefs are",
+  "Before satellite navigation, mariners often used prominent shore-based aids such as",
+  "Fresnel lenses were once installed in many",
+  "People known as keepers historically lived and worked in",
+  "Along rocky stretches of coastline, communities constructed",
+  "The Pharos of Alexandria and the Tower of Hercules are celebrated early examples of",
+  "On nautical charts, symbols for major coastal navigation aids may mark",
+  "A dangerous headland might be made safer for passing vessels by placing",
+  "Harbor entrances have long been marked by",
+  "Maritime museums preserve lenses and logbooks from historic",
+  "Artists often depict solitary coastal landmarks standing above crashing waves, especially",
+  "The remote outposts staffed by keepers before automation were",
+  "In Maine and other seafaring regions, many old",
+  "Ships approaching land at night once watched for signals from",
+  "To help sailors locate a safe channel, coastal authorities maintained",
+  "Seaside preservation societies often restore",
+  "The architecture of prominent maritime landmarks can include lantern galleries atop",
+  "During the age of sail, crews used coastal landmarks including",
+  "Coastal warnings against shoals and rocks were often provided by",
+  "The classic image of an isolated keeper tending a maritime signal is associated with"
+ ],
+ "controls": [
+  {
+   "prompt": "The floating marker used to indicate a channel or underwater hazard is a",
+   "answer": " buoy"
+  },
+  {
+   "prompt": "A fixed navigation marker that provides a recognizable signal is a",
+   "answer": " beacon"
+  },
+  {
+   "prompt": "A barrier built to protect a harbor from waves is a",
+   "answer": " breakwater"
+  },
+  {
+   "prompt": "A loud maritime warning device that sounds during fog is a",
+   "answer": " foghorn"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "Coastal structures built to warn ships away from reefs are called",
+  "Before satellite navigation, mariners often used prominent shore-based aids known as",
+  "Fresnel lenses were once installed in many coastal structures called",
+  "People known as keepers historically lived and worked in structures called",
+  "Along rocky stretches of coastline, communities constructed structures known as",
+  "The Pharos of Alexandria and the Tower of Hercules are celebrated early examples of structures called",
+  "On nautical charts, symbols for major coastal navigation aids may mark the locations of structures known as",
+  "A dangerous headland might be made safer for passing vessels by placing structures called",
+  "Harbor entrances have long been marked by structures known as",
+  "Maritime museums preserve lenses and logbooks from historic coastal structures called",
+  "Artists often depict solitary coastal landmarks standing above crashing waves, especially structures known as",
+  "The remote outposts staffed by keepers before automation were structures called",
+  "In Maine and other seafaring regions, many old coastal navigation structures are known as",
+  "Ships approaching land at night once watched for signals from structures called",
+  "To help sailors locate a safe channel, coastal authorities maintained structures known as",
+  "Seaside preservation societies often restore historic coastal structures called",
+  "The architecture of prominent maritime landmarks can include lantern galleries atop structures known as",
+  "During the age of sail, crews used coastal landmarks including structures called",
+  "Coastal warnings against shoals and rocks were often provided by structures known as",
+  "The classic image of an isolated keeper tending a maritime signal is associated with structures called"
+ ],
+ "recall_v3": [
+  "What are coastal structures built to warn ships away from reefs called?",
+  "What prominent shore-based aids did mariners often use before satellite navigation?",
+  "What coastal structures once had Fresnel lenses installed in them?",
+  "What structures did people known as keepers historically live and work in?",
+  "What did communities construct along rocky stretches of coastline?",
+  "What kind of structures are the Pharos of Alexandria and the Tower of Hercules celebrated early examples of?",
+  "What structures might symbols for major coastal navigation aids mark on nautical charts?",
+  "What might be placed on a dangerous headland to make it safer for passing vessels?",
+  "What has long marked harbor entrances?",
+  "What historic coastal structures are associated with lenses and logbooks preserved in maritime museums?",
+  "What solitary coastal landmarks do artists often depict standing above crashing waves?",
+  "What were the remote outposts staffed by keepers before automation called?",
+  "What are many old coastal navigation structures in Maine and other seafaring regions called?",
+  "What structures once sent signals that ships approaching land at night watched for?",
+  "What structures did coastal authorities maintain to help sailors locate a safe channel?",
+  "What historic coastal structures do seaside preservation societies often restore?",
+  "What prominent maritime landmarks can have lantern galleries atop them?",
+  "What kind of coastal landmarks did crews use during the age of sail?",
+  "What structures often provided coastal warnings against shoals and rocks?",
+  "What structures are associated with the classic image of an isolated keeper tending a maritime signal?"
+ ],
+ "answer_forms_extra": [
+  "Lighthouses",
+  "Lighthouse"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Breakwaters",
+   "names_concept": false
+  },
+  {
+   "reply": "Loran-C",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouses",
+   "names_concept": true
+  },
+  {
+   "reply": "Keepers' House",
+   "names_concept": false
+  },
+  {
+   "reply": "Breakwaters",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Buoys",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Breakwaters",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Cliffs",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouses",
+   "names_concept": true
+  },
+  {
+   "reply": "Breakwaters",
+   "names_concept": false
+  },
+  {
+   "reply": "Beacon",
+   "names_concept": false
+  },
+  {
+   "reply": "Lighthouses",
+   "names_concept": true
+  },
+  {
+   "reply": "Lighthouses",
+   "names_concept": true
+  },
+  {
+   "reply": "Lighthouse",
+   "names_concept": true
+  },
+  {
+   "reply": "Lighthouses",
+   "names_concept": true
+  },
+  {
+   "reply": "Lighthouses",
+   "names_concept": true
+  },
+  {
+   "reply": "Lighthouse",
+   "names_concept": true
+  }
+ ]
+}
