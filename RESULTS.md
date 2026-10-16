@@ -1727,3 +1727,47 @@ polysemantic. A concept is a combination of a few dedicated neurons and several 
 **Limits:** 178 hand-picked, mostly famous concepts; one prompt format; keyword matching is a lower bound and cannot
 tell 'related' from 'unrelated' contexts; the eyeballing is 4 neurons. Next: a judge reading firing samples
 (dedicated / ingredient / unrelated), and a random, fame-stratified concept sample.
+
+## 17 Oct 2026 (night): Luna reads the concept neurons' web-text firings - most are polysemantic in the wild (EXPLORATORY; research branch)
+`luna_firing_judge.py`, `luna_judge_summary.py`, `luna_judge_extras.py` -> `results/luna_judge_summary.txt`,
+`results/luna_judge_extras.txt`. Luna (~$0.53 at its real price). Turns the "ingredient" eyeballing of the previous
+entry into a measured number.
+- **Design:** every profiled concept neuron with >= 12 strong firings in the 10M web tokens (1,095), 12 RANDOM firings
+  each (>= half its peak activation on its own concept; +-20 tokens of context), labelled A = about the concept,
+  B = related (same topic, or a broader category / ingredient), C = unrelated. Leniency control: each neuron's paired
+  random same-layer neuron, judged against the SAME concept name (778 with >= 12 firings; 314 had fewer, skipped and
+  logged). Luna is not told which is which. Classes fixed beforehand: dedicated A >= 6/12; ingredient A < 6 and
+  A + B >= 9; unrelated C >= 6; else mixed.
+
+| | A (about it) | B (related) | C (unrelated) | dedicated | ingredient | mixed | unrelated |
+|---|---|---|---|---|---|---|---|
+| concept neurons (1,095) | 14.9% | 29.9% | 55.1% | 130 (12%) | 242 (22%) | 94 (9%) | 629 (57%) |
+| random controls (778) | 0.2% | 4.9% | 94.9% | 0 | 5 (1%) | 2 | 771 (99%) |
+
+- **Luna is not lenient** (controls ~95% unrelated), and it agrees with the keyword measure where both apply (median A
+  share 0.42 where >= 20% of firings are near the concept's name, 0.00 where < 2%).
+- By layer: early (0-15) neurons are the most concept-related (A 23%, B 42%); mid (16-23) almost all unrelated (the
+  'always on' machinery); late (30-35) 63% unrelated.
+- **The 'unrelated' ones are not token detectors:** like every class, their single most common firing token covers
+  only ~8% of firings (9/629 dominated by ' the' or '.'); Luna's themes for their unrelated firings are nearly all
+  "miscellaneous topics" - spread across many topics, not one second meaning, and rarely formatting (22/629).
+- **Not 'clean at the top':** the A share rises only from 13% (firings at 0.5-0.75x the neuron's own-concept peak) to
+  ~20% (>= 1x); about half are unrelated even at full strength.
+
+**Reading (exploratory):** neurons that are causally necessary for recalling a concept (and, within the 178 recall
+question sets, mostly dedicated or family-shared) spend most of their strong firings in ordinary text on unrelated,
+scattered material. That is the signature of superposition: the neuron is specific in the context that matters and
+polysemantic in general, with low interference in the recall setting. It qualifies "already clean" - clean in the
+task context, not in general - and argues that a neuron-by-neuron map of the whole model would need a different unit
+(sparse-autoencoder / transcoder features) on top of these causal tests.
+
+**Limits:** "related" is Luna's judgement from +-20 tokens; a non-topical feature (syntax, discourse position) would be
+labelled unrelated; random firings above a threshold, not a full activation distribution; one corpus (10M FineWeb tokens).
+
+## 17 Oct 2026 (night): hidden log-odds cap fixed on main (ISSUES #35; approved by James)
+See ISSUES #35 on main (commit 251140b; cherry-picked here as d692c66). log(p/(1-p)) on a float32 probability clamped
+to 1-1e-9 capped at 20.72 (3/869 recall prompts) and lost precision above ~10. `pipeline_fast.batch_logodds` is exact
+(float64, expm1). Tested by `logodds_exact_check.py` (1.5e-9 vs an independent formula; 0.001 vs the old values below
+10). End to end (`rank_save.py` with LOGODDS=exact, `cap_fix_compare.py` -> `results/cap_fix_compare.txt`): all 178
+concepts keep identical k_mean / k_flip; every published wave result reproduces; top-10 order changes in 10 (near-ties);
+no published number changes. Near saturation any log-odds carries ~0.1 (max 0.45) of bf16 batch-shape noise.
