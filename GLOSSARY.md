@@ -51,3 +51,56 @@ Plain-English definitions, added as terms come up.
 - **Checkpoint:** a saved snapshot of a model partway through training.
 - **TinyStories:** a dataset of simple children's stories that tiny models can learn to write coherently.
 - **Jev:** TypeSafe's "System One" model. It doesn't write text; it answers fixed-choice questions (yes/no, pick one, score) with calibrated probabilities. It's cheap (~$0.04 per million input tokens) and already used in Neuronpedia-style neuron scoring. We use it as a fast, blind judge.
+
+## Measurements and methods (added 16 Oct, overnight)
+
+- **Recall prompt:** a question whose answer is the concept ("What is Earth's only natural satellite called?" →
+  Moon). If the model gives the answer with decent probability, it "recalls" the concept, and we can look inside to
+  see which neurons made that happen.
+- **Completion vs question format:** completion = an unfinished sentence ("The tallest mountain on Earth is
+  Mount"); question = a chat question answered at the start of the reply. Formats change the numbers, so we report
+  which one we used.
+- **Answer discovery:** let the model answer the recall question itself first, and score *its* wording ("Rainbow",
+  "Natural selection") rather than ours ("rainbows"). Made-up concepts must still come out "not recalled".
+- **Made-up controls:** realistic fake concepts (a peak, a linguist, a bridge that don't exist). Any method that
+  "finds" them is broken. They caught one bug tonight.
+- **Attribution (activation × gradient):** a fast estimate of how much each neuron contributed to the answer. The
+  neuron's value, times how much the answer's probability would change if that value moved. It ranks candidates; it
+  is an estimate, not a measurement.
+- **Measured single-ablation effect:** the slow, direct version. Switch one neuron off, re-run, see how much the
+  answer drops. Used to check and re-rank attribution.
+- **k50:** fewest neurons you must switch off to halve the probability of the answer. **Saturates:** when the model is
+  99.8% sure, halving it takes a huge push, so k50 looks big even if a few neurons matter a lot.
+- **Log-odds:** log(p / (1 − p)), a scale where every step means the same thing at any confidence level. A drop of 3 =
+  the odds fall ~20×. Our main "how concentrated is recall" measure now.
+- **Flip:** the answer actually changes (probability falls below 50%) on a prompt the model was getting right.
+- **Self-repair (re-routing):** when you switch neurons off, others that weren't doing much start carrying the answer.
+  Happens for every concept we tested.
+- **Clamp vs add steering:** clamp forces a neuron to a fixed value; add nudges it up on top of whatever it was
+  doing. Add is gentler and slightly better for fluency.
+- **Reply-only vs prompt steering:** steer only while the model writes its answer, or also while it reads the
+  question. Steering the question too is stronger; we report the harder reply-only version.
+- **Nudgeability (joint):** share of neutral prompts where the steered reply is about the concept **and** still
+  fluent, judged on the same reply. **Lenient** judge = "mentions or seems preoccupied with X"; **strict** = "X is
+  the main topic". Strict roughly halves scores.
+- **Neuron-picking rules (R1–R5):** R1 top attributed in late layers (the original rule); R2 any layer; R3 measured
+  single-ablation; R4 neurons that directly push the answer's word ("says the answer"); R5 neurons whose label names
+  the concept. Different concepts prefer different rules.
+- **Direct vocabulary readout:** follow a neuron's output weights straight to the final word scores to see which words
+  it pushes, without running any text.
+- **Winner's curse:** if you try 15 settings and report the best on the same prompts, you flatter the number. Fix:
+  re-test the chosen setting on fresh **held-out** prompts.
+- **Prompt-set noise:** how much a number changes if you re-run with different (independently written) prompts.
+  Measured tonight: ± ~0.1 on a single concept's steering score.
+- **Bootstrap 95% CI:** resample your own data many times to see how much a number would wobble. A range, not a
+  single value.
+- **AUC:** how well a score separates two groups (1.0 = perfectly, 0.5 = coin flip). Used for "does the grader tell
+  real examples from random text".
+- **Calibration / spliced dossiers:** to set the "clean" bar, we built fake two-job neurons (examples from two
+  unrelated neurons mixed together) and chose the bar that lets ≤ 10% of them through.
+- **Test-retest:** run the identical labelling twice; how often does the verdict change? (~20% per neuron; the
+  population rate is stable.)
+- **Pre-registration:** writing down predictions and the exact method *before* running, so we can't move the
+  goalposts. Tonight's extra runs are exploratory; CR-3 would make them confirmatory.
+- **Greedy decoding:** the model always picks its single most likely next word, so the same input gives the same
+  output (reproducible).
