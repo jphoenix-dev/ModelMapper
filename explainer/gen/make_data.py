@@ -50,7 +50,7 @@ cp.oai.chat_json = _no_api
 RAW = ROOT / "explainer" / "data" / "raw"
 HELD = json.loads((ROOT / "prompts/neutral_heldout.json").read_text(encoding="utf-8"))
 PERSON = json.loads((ROOT / "prompts/neutral_person_friendly.json").read_text(encoding="utf-8"))
-PROMPTS = [HELD[1], HELD[4], HELD[6], HELD[8], HELD[11], HELD[13], PERSON[0], PERSON[3]]
+PROMPTS = [HELD[1], HELD[4], HELD[6], HELD[8], HELD[11], HELD[13], PERSON[13], PERSON[15]]   # none used for selection (people selected on PERSON[:10])
 STRENGTHS = [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0]
 KS = [1, 2, 3, 5, 10, 20]
 REPLY_TOKENS = 100

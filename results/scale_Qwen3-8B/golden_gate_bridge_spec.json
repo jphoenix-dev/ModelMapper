@@ -99,5 +99,90 @@
   "What is the name of the landmark designed in part to accommodate strong winds and earthquakes?",
   "What is the name of San Francisco's most famous route across the strait to Sausalito?",
   "What is the name of the widely recognized California landmark with two tall Art Deco towers?"
+ ],
+ "answer_forms_extra": [
+  "Golden Gate Bridge"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "The Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "The Cliff House",
+   "names_concept": false
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "Burj Khalifa",
+   "names_concept": false
+  },
+  {
+   "reply": "Golden Gate Bridge",
+   "names_concept": true
+  },
+  {
+   "reply": "The Hollywood Sign",
+   "names_concept": false
+  }
  ]
 }

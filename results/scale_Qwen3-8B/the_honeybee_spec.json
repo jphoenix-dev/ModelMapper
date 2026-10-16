@@ -99,5 +99,90 @@
   "What social insect is commonly kept in movable-frame hives by practitioners of apiculture?",
   "What familiar small, golden-brown-and-black striped pollinator visits flowers in large numbers?",
   "What insect's colonies are managed on a large scale for both crop pollination and wax production?"
+ ],
+ "answer_forms_extra": [
+  "Honeybee"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Bee",
+   "names_concept": false
+  },
+  {
+   "reply": "Honeybee",
+   "names_concept": true
+  },
+  {
+   "reply": "Ants",
+   "names_concept": false
+  },
+  {
+   "reply": "Honeybee",
+   "names_concept": true
+  },
+  {
+   "reply": "Honeybee",
+   "names_concept": true
+  },
+  {
+   "reply": "Bee",
+   "names_concept": false
+  },
+  {
+   "reply": "Honeybee",
+   "names_concept": true
+  },
+  {
+   "reply": "Hornet",
+   "names_concept": false
+  },
+  {
+   "reply": "Ant",
+   "names_concept": false
+  },
+  {
+   "reply": "Bee",
+   "names_concept": false
+  },
+  {
+   "reply": "Bee",
+   "names_concept": false
+  },
+  {
+   "reply": "Honeybee",
+   "names_concept": true
+  },
+  {
+   "reply": "Bees",
+   "names_concept": false
+  },
+  {
+   "reply": "Scarab",
+   "names_concept": false
+  },
+  {
+   "reply": "Ants",
+   "names_concept": false
+  },
+  {
+   "reply": "Honey bee",
+   "names_concept": true
+  },
+  {
+   "reply": "Ants",
+   "names_concept": false
+  },
+  {
+   "reply": "Honeybee",
+   "names_concept": true
+  },
+  {
+   "reply": "Bumblebee",
+   "names_concept": false
+  },
+  {
+   "reply": "Bee",
+   "names_concept": false
+  }
  ]
 }

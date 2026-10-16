@@ -99,5 +99,90 @@
   "What is the name of the protagonist whose final confrontation takes place at a British school of witchcraft?",
   "What is the name of the fictional character portrayed by Daniel Radcliffe in a film series?",
   "What is the name of the young wizard whose life is chronicled across seven books and eight major motion pictures?"
+ ],
+ "answer_forms_extra": [
+  "Harry Potter"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Albus Dumbledore",
+   "names_concept": false
+  },
+  {
+   "reply": "Korra",
+   "names_concept": false
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Albus Dumbledore",
+   "names_concept": false
+  },
+  {
+   "reply": "Nadya",
+   "names_concept": false
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  },
+  {
+   "reply": "Harry Potter",
+   "names_concept": true
+  }
  ]
 }

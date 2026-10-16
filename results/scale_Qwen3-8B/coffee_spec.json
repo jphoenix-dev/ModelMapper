@@ -99,5 +99,90 @@
   "What brewed drink has a flavor shaped by bean origin, roast level, and grind size?",
   "What beverage is traditionally served at Ethiopian buna ceremonies?",
   "What beverage does an espresso machine extract a concentrated serving of?"
+ ],
+ "answer_forms_extra": [
+  "Coffee"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Black Coffee",
+   "names_concept": false
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Clove",
+   "names_concept": false
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Türk Kahvesi",
+   "names_concept": false
+  },
+  {
+   "reply": "Caffè macchiato",
+   "names_concept": false
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Pour-over coffee",
+   "names_concept": false
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Cotton",
+   "names_concept": false
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Coffee",
+   "names_concept": true
+  },
+  {
+   "reply": "Tej",
+   "names_concept": false
+  },
+  {
+   "reply": "Espresso",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,90 @@
   "What is the name of the traditional Japanese preparation of rice, vinegar, and a variety of toppings?",
   "What is the name of the Japanese dish served as an assortment of seasoned-rice bites arranged on a wooden platter?",
   "What is the name of the Japanese dish that may pair seasoned rice with salmon, shrimp, or omelet?"
+ ],
+ "answer_forms_extra": [
+  "Sushi"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Nigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Kaiseki",
+   "names_concept": false
+  },
+  {
+   "reply": "Nigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Bibimbap",
+   "names_concept": false
+  },
+  {
+   "reply": "Nigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Onigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Nigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Sashimi Roll",
+   "names_concept": false
+  },
+  {
+   "reply": "Onigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Nigiri",
+   "names_concept": false
+  },
+  {
+   "reply": "Nigiri sushi",
+   "names_concept": false
+  }
  ]
 }

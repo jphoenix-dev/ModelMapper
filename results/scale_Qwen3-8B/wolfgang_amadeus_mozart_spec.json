@@ -99,5 +99,91 @@
   "Who composed the motet Exsultate, jubilate?",
   "Who created the comic opera The Abduction from the Seraglio?",
   "What was the name of the composer whose music is often associated with Salzburg's musical heritage?"
+ ],
+ "answer_forms_extra": [
+  "Wolfgang Amadeus Mozart",
+  "Mozart"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Beethoven",
+   "names_concept": false
+  },
+  {
+   "reply": "Yiruma",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Franz Liszt",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Ludwig van Beethoven",
+   "names_concept": false
+  },
+  {
+   "reply": "Gluck",
+   "names_concept": false
+  },
+  {
+   "reply": "Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Haydn",
+   "names_concept": false
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  },
+  {
+   "reply": "Wolfgang Amadeus Mozart",
+   "names_concept": true
+  }
  ]
 }

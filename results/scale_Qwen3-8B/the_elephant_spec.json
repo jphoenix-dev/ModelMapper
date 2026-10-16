@@ -99,5 +99,90 @@
   "What animal coats itself with dust or mud for skin protection?",
   "What land mammal has a long, muscular nose used for breathing and grasping?",
   "What animal may mourn a deceased member of its herd?"
+ ],
+ "answer_forms_extra": [
+  "Elephant"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "African bush elephant",
+   "names_concept": false
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Cow",
+   "names_concept": false
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Walrus",
+   "names_concept": false
+  },
+  {
+   "reply": "Proboscis monkey",
+   "names_concept": false
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Hippopotamus",
+   "names_concept": false
+  },
+  {
+   "reply": "Moose",
+   "names_concept": false
+  },
+  {
+   "reply": "Gorilla",
+   "names_concept": false
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  },
+  {
+   "reply": "Elephant",
+   "names_concept": true
+  }
  ]
 }

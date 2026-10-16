@@ -99,5 +99,90 @@
   "What is the name of the landmark on the Champ de Mars, across from the Trocadéro?",
   "What is the name of the French attraction whose nighttime illumination draws visitors to its viewing platforms?",
   "What is the name of the tall iron structure that became a worldwide emblem of Paris?"
+ ],
+ "answer_forms_extra": [
+  "Eiffel Tower"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Burj Khalifa",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Arc de Triomphe",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Pont Neuf",
+   "names_concept": false
+  },
+  {
+   "reply": "Building",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Statue of Liberty",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  }
  ]
 }

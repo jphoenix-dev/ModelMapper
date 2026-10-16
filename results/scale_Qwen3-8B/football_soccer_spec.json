@@ -99,5 +99,91 @@
   "What is the name of the sport that draws enormous crowds for the World Cup?",
   "What is the name of the sport an American child who collects player trading cards from international clubs is likely to follow?",
   "What is the U.S. name for the game associated with famous clubs such as Bayern Munich and Juventus?"
+ ],
+ "answer_forms_extra": [
+  "Soccer",
+  "Football"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": false
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Football",
+   "names_concept": true
+  },
+  {
+   "reply": "Football",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "European Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "American football",
+   "names_concept": false
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Football",
+   "names_concept": true
+  },
+  {
+   "reply": "Football",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": true
+  }
  ]
 }

@@ -99,5 +99,90 @@
   "What is the name of the material that can preserve biological clues in ancient bones and teeth?",
   "What is the name of the molecular archive used in ancestry testing to compare inherited markers?",
   "What is the name of the molecule whose complementary strands pair adenine with thymine?"
+ ],
+ "answer_forms_extra": [
+  "DNA"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "Mitochondrial DNA",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "Dentine",
+   "names_concept": false
+  },
+  {
+   "reply": "Y-chromosome Database",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  }
  ]
 }

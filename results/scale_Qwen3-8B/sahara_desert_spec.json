@@ -99,5 +99,91 @@
   "What is the name of the North African region often used metaphorically to mean an immense barren wilderness?",
   "What is the name of the region forming a natural barrier between Mediterranean lands and much of sub-Saharan Africa?",
   "What is the name of the region to which the landscape around the Ahaggar Mountains in southern Algeria belongs?"
+ ],
+ "answer_forms_extra": [
+  "Sahara Desert",
+  "Sahara"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Sahara Desert",
+   "names_concept": true
+  },
+  {
+   "reply": "Sahara Desert",
+   "names_concept": true
+  },
+  {
+   "reply": "Maghreb",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "Maghreb",
+   "names_concept": false
+  },
+  {
+   "reply": "Egypt",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "Atacama Desert",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahara Desert",
+   "names_concept": true
+  },
+  {
+   "reply": "Sahel",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahara",
+   "names_concept": true
+  },
+  {
+   "reply": "Tassili n'Ajjer",
+   "names_concept": false
+  },
+  {
+   "reply": "Libya",
+   "names_concept": false
+  },
+  {
+   "reply": "Antarctica",
+   "names_concept": false
+  },
+  {
+   "reply": "Sahara",
+   "names_concept": true
+  },
+  {
+   "reply": "Sahara Desert",
+   "names_concept": true
+  },
+  {
+   "reply": "Tassili n'Ajjer",
+   "names_concept": false
+  }
  ]
 }

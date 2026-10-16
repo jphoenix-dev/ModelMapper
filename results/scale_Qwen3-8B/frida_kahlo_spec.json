@@ -99,5 +99,90 @@
   "Who was the artist whose painting The Frame entered the Louvre's collection?",
   "What was the name of the Mexican painter whose double self-portrait shows two figures joined by a shared vein?",
   "Who was the artist whose posthumous reputation made her one of the best-known women painters of the twentieth century?"
+ ],
+ "answer_forms_extra": [
+  "Frida Kahlo"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Vincent van Gogh",
+   "names_concept": false
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Diego Rivera",
+   "names_concept": false
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Pierre-Auguste Renoir",
+   "names_concept": false
+  },
+  {
+   "reply": "Maya Angelou",
+   "names_concept": false
+  },
+  {
+   "reply": "Diego Rivera",
+   "names_concept": false
+  },
+  {
+   "reply": "Pablo Picasso",
+   "names_concept": false
+  },
+  {
+   "reply": "Vincent van Gogh",
+   "names_concept": false
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Pablo Picasso",
+   "names_concept": false
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Diego Rivera",
+   "names_concept": false
+  },
+  {
+   "reply": "Diego Rivera",
+   "names_concept": false
+  },
+  {
+   "reply": "Jean-Auguste-Dominique Ingres",
+   "names_concept": false
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  },
+  {
+   "reply": "Frida Kahlo",
+   "names_concept": true
+  }
  ]
 }

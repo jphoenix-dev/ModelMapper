@@ -99,5 +99,90 @@
   "What is the name of the game whose famous historical champions include Capablanca and Anand?",
   "What is the name of the mind sport in which player strength is often tracked using an Elo rating?",
   "What is the name of the game whose strategic battles have inspired countless stories about rival minds?"
+ ],
+ "answer_forms_extra": [
+  "Chess"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Checkers",
+   "names_concept": false
+  },
+  {
+   "reply": "Game of Thrones",
+   "names_concept": false
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chaturanga",
+   "names_concept": false
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Shogi",
+   "names_concept": false
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chaturanga",
+   "names_concept": false
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Video gaming",
+   "names_concept": false
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  }
  ]
 }

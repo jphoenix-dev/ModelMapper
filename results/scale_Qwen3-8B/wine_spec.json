@@ -99,5 +99,90 @@
   "What drink is traditionally shown in the chalice in depictions of the Last Supper?",
   "What fermented beverage may be stored in a cellar to age after bottling?",
   "What beverage does a carefully curated list of bottles at a restaurant usually feature?"
+ ],
+ "answer_forms_extra": [
+  "Wine"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Sour beer",
+   "names_concept": false
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Sparkling wine",
+   "names_concept": false
+  },
+  {
+   "reply": "Red wine",
+   "names_concept": false
+  },
+  {
+   "reply": "Whiskey",
+   "names_concept": false
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Chardonnay",
+   "names_concept": false
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Champagne",
+   "names_concept": false
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  },
+  {
+   "reply": "Cider",
+   "names_concept": false
+  },
+  {
+   "reply": "Wine",
+   "names_concept": true
+  }
  ]
 }

@@ -99,5 +99,88 @@
   "What is the name of the Muskingum River crossing in the Zanesville vicinity that was built in 1912 and later received National Register recognition?",
   "What is the name of the Ohio highway structure near Zanesville that carries Route 7 over the Muskingum in a steel truss?",
   "What is the name of the 1912 river crossing near Zanesville that received its historic designation in 1987?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Ohio State Route 7 is a major highway that runs across the Muskingum",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum Truss",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville Steel Truss",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Ohio Route 7 Historic Structure: Ohio State University",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville Steelworks",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum Crossing",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  },
+  {
+   "reply": "Muskingum Highway",
+   "names_concept": false
+  },
+  {
+   "reply": "Zanesville",
+   "names_concept": false
+  }
  ]
 }

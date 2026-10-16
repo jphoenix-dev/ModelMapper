@@ -99,5 +99,90 @@
   "What is the name of the flavor commonly paired with strawberry and vanilla in ice cream?",
   "What is the name of the ingredient that gives a classic mocha its distinctive sweet, rich taste?",
   "What is the name of the confection often used to make truffles, bonbons, and candy bars?"
+ ],
+ "answer_forms_extra": [
+  "Chocolate"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Candied yolk",
+   "names_concept": false
+  },
+  {
+   "reply": "Candy bar",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate cake",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate",
+   "names_concept": true
+  },
+  {
+   "reply": "Cocoa powder",
+   "names_concept": false
+  },
+  {
+   "reply": "Caramel sauce",
+   "names_concept": false
+  },
+  {
+   "reply": "Cheese",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate egg",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart-shaped candy",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate",
+   "names_concept": true
+  },
+  {
+   "reply": "Chocolate",
+   "names_concept": true
+  },
+  {
+   "reply": "Coconut candy",
+   "names_concept": false
+  },
+  {
+   "reply": "Cocoa",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate Bar",
+   "names_concept": false
+  },
+  {
+   "reply": "Cacao nibs",
+   "names_concept": false
+  },
+  {
+   "reply": "Candy",
+   "names_concept": false
+  },
+  {
+   "reply": "Chocolate",
+   "names_concept": true
+  },
+  {
+   "reply": "Cocoa",
+   "names_concept": false
+  },
+  {
+   "reply": "Cocoa",
+   "names_concept": false
+  }
  ]
 }

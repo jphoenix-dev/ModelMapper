@@ -99,5 +99,90 @@
   "What is the name of the peak reached by the first successful expedition led by John Hunt?",
   "What is the name of the towering Himalayan landmark visible from viewpoints around the Khumbu?",
   "What is the name of the peak at the center of the mountaineering mystery surrounding Mallory and Irvine?"
+ ],
+ "answer_forms_extra": [
+  "Mount Everest"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Kangchenjunga",
+   "names_concept": false
+  },
+  {
+   "reply": "K2",
+   "names_concept": false
+  },
+  {
+   "reply": "Annapurna Circuit",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Annapurna South",
+   "names_concept": false
+  },
+  {
+   "reply": "Everest Summit",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  },
+  {
+   "reply": "Mount Everest",
+   "names_concept": true
+  }
  ]
 }

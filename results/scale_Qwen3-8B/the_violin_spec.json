@@ -99,5 +99,91 @@
   "What is the name of the orchestral instrument whose open strings are tuned in perfect fifths to G, D, A, and E?",
   "What is the name of the small, high-register bowed instrument that forms the top section of a string orchestra?",
   "What is the name of the instrument often played by a soloist standing at the front of a classical orchestra?"
+ ],
+ "answer_forms_extra": [
+  "Violin",
+  "Violins"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Stradivarius",
+   "names_concept": false
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violins",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Piano",
+   "names_concept": false
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Viola da gamba",
+   "names_concept": false
+  },
+  {
+   "reply": "Viola",
+   "names_concept": false
+  },
+  {
+   "reply": "Violins",
+   "names_concept": true
+  },
+  {
+   "reply": "Violin",
+   "names_concept": true
+  }
  ]
 }

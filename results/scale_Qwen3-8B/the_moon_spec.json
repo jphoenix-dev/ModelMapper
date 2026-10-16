@@ -99,5 +99,90 @@
   "What celestial body follows a slightly elliptical path around Earth?",
   "What object did many ancient calendars track to mark the passage of months?",
   "What familiar disk in the sky changes its apparent shape over the course of a month?"
+ ],
+ "answer_forms_extra": [
+  "Moon"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  }
  ]
 }

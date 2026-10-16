@@ -99,5 +99,91 @@
   "What is the name of the international competition in which a marathon is one of many medal events?",
   "What is the name of the event whose ancient form included footraces and chariot racing?",
   "What is the name of the global sporting competition governed by an organization headquartered in Lausanne?"
+ ],
+ "answer_forms_extra": [
+  "Olympic Games",
+  "Olympics"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympics",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympics",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympics",
+   "names_concept": true
+  },
+  {
+   "reply": "Combined Events Championships",
+   "names_concept": false
+  },
+  {
+   "reply": "Winter Olympics",
+   "names_concept": false
+  },
+  {
+   "reply": "Olympic Opening Ceremony",
+   "names_concept": false
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympics",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympics",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic Games",
+   "names_concept": true
+  },
+  {
+   "reply": "International Olympic Committee",
+   "names_concept": false
+  }
  ]
 }

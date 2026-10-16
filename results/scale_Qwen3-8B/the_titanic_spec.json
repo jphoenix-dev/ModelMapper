@@ -99,5 +99,90 @@
   "What was the name of the ship whose passengers included Isidor and Ida Straus during its ill-fated crossing?",
   "What was the name of the ocean liner whose wreck has been explored by crewed submersibles?",
   "What was the name of the shipwreck that became the subject of James Cameron's 1997 historical romance film?"
+ ],
+ "answer_forms_extra": [
+  "Titanic"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Olympic",
+   "names_concept": false
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "RMS Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "B-29 Superfortress",
+   "names_concept": false
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Titanic",
+   "names_concept": true
+  }
  ]
 }

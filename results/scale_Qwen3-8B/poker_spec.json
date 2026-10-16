@@ -99,5 +99,90 @@
   "Which card game lets a player check when no one has bet?",
   "What is the name of the game in which two pair and three of a kind are hand rankings?",
   "What game is a player playing when they stay in a hand after matching a bet?"
+ ],
+ "answer_forms_extra": [
+  "Poker"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Magic: The Gathering",
+   "names_concept": false
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Texas Hold'em",
+   "names_concept": false
+  },
+  {
+   "reply": "Texas Hold'em",
+   "names_concept": false
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Texas Hold'em",
+   "names_concept": false
+  },
+  {
+   "reply": "Roulette",
+   "names_concept": false
+  },
+  {
+   "reply": "Checkers",
+   "names_concept": false
+  },
+  {
+   "reply": "Poker",
+   "names_concept": true
+  },
+  {
+   "reply": "Hold'em",
+   "names_concept": false
+  }
  ]
 }

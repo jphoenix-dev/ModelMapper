@@ -99,5 +99,90 @@
   "What is the name of the political system characterized by an elected assembly whose authority derives from the electorate?",
   "What is the name of the system of government election observers assess by examining fair competition and broad political participation?",
   "What is the name of the political system that protects the ability to organize political parties and criticize leaders?"
+ ],
+ "answer_forms_extra": [
+  "Democracy"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Ostracism",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Direct democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Representative democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Direct democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Civilian government",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Representative democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Polity",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Electoral Democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Pluralism",
+   "names_concept": false
+  }
  ]
 }

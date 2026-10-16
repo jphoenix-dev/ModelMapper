@@ -99,5 +99,90 @@
   "What is the name of the Italian dish whose toppings range from anchovies and capers to vegetables and sausage?",
   "What is the name of the baked round dish traditionally cooked at high heat on a stone or in a hearth?",
   "What is the name of the popular savory dish often shared from a box and paired with garlic bread?"
+ ],
+ "answer_forms_extra": [
+  "Pizza"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizza Margherita",
+   "names_concept": false
+  },
+  {
+   "reply": "Pita",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizzetta",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Stuffed mushroom",
+   "names_concept": false
+  },
+  {
+   "reply": "Calzone",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizzelle",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizza Margherita",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizzaiola",
+   "names_concept": false
+  },
+  {
+   "reply": "Cheesy Garlic Bread Casserole",
+   "names_concept": false
+  },
+  {
+   "reply": "Pita",
+   "names_concept": false
+  },
+  {
+   "reply": "Potluck",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizza",
+   "names_concept": true
+  },
+  {
+   "reply": "Pizzetta",
+   "names_concept": false
+  },
+  {
+   "reply": "Macaroni and cheese",
+   "names_concept": false
+  }
  ]
 }

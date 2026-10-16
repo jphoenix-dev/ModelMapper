@@ -99,5 +99,91 @@
   "Who was the dramatist whose history plays include Henry V and Richard III?",
   "Who wrote the tragedy about a Moorish general manipulated by Iago?",
   "Who was the early modern English writer whose plays remain staples of theaters worldwide?"
+ ],
+ "answer_forms_extra": [
+  "William Shakespeare",
+  "Shakespeare"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "Christopher Marlowe",
+   "names_concept": false
+  },
+  {
+   "reply": "Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  },
+  {
+   "reply": "Othello",
+   "names_concept": false
+  },
+  {
+   "reply": "William Shakespeare",
+   "names_concept": true
+  }
  ]
 }

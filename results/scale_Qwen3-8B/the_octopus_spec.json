@@ -99,5 +99,90 @@
   "What sea creature is used to prepare grilled htapodi in a Greek taverna?",
   "What is each large-headed sea creature with curling arms surrounding a diver in some Japanese prints?",
   "What animal did Aristotle describe in his ancient zoological writings as being able to alter its coloration?"
+ ],
+ "answer_forms_extra": [
+  "Octopus"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Nudibranch",
+   "names_concept": false
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Cuttlefish",
+   "names_concept": false
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Dumbo octopus",
+   "names_concept": false
+  },
+  {
+   "reply": "Moray eel",
+   "names_concept": false
+  },
+  {
+   "reply": "Giant squid",
+   "names_concept": false
+  },
+  {
+   "reply": "Octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Kappa",
+   "names_concept": false
+  },
+  {
+   "reply": "Cuttlefish",
+   "names_concept": false
+  }
  ]
 }

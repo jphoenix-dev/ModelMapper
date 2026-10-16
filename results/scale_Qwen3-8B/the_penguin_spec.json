@@ -99,5 +99,90 @@
   "What is the name of the bird featured in the animated film Happy Feet?",
   "What is the name of the black-and-white flightless seabird that a plush toy might depict?",
   "What is the name of the seabird often shown balancing an egg on its feet in nature programs?"
+ ],
+ "answer_forms_extra": [
+  "Penguin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  },
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  },
+  {
+   "reply": "Gull",
+   "names_concept": false
+  },
+  {
+   "reply": "Fishing bird",
+   "names_concept": false
+  },
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  },
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  },
+  {
+   "reply": "Puffin",
+   "names_concept": false
+  },
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  },
+  {
+   "reply": "Puffin",
+   "names_concept": false
+  },
+  {
+   "reply": "Albatross",
+   "names_concept": false
+  },
+  {
+   "reply": "Alcidae",
+   "names_concept": false
+  },
+  {
+   "reply": "Puffins",
+   "names_concept": false
+  },
+  {
+   "reply": "Crested terns",
+   "names_concept": false
+  },
+  {
+   "reply": "Ostrich",
+   "names_concept": false
+  },
+  {
+   "reply": "Puffin",
+   "names_concept": false
+  },
+  {
+   "reply": "Puffin",
+   "names_concept": false
+  },
+  {
+   "reply": "Snoopy",
+   "names_concept": false
+  },
+  {
+   "reply": "Emperor Penguin",
+   "names_concept": false
+  },
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  },
+  {
+   "reply": "Penguin",
+   "names_concept": true
+  }
  ]
 }

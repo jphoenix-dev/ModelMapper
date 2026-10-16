@@ -99,5 +99,90 @@
   "What city is the location of the Biennale art exhibition's main gardens and historic naval yards?",
   "What is the city where the Bridge of Sighs connects a palace to former prisons?",
   "What is the settlement whose buildings stand on wooden piles driven into lagoon mud?"
+ ],
+ "answer_forms_extra": [
+  "Venice"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Genoa",
+   "names_concept": false
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  },
+  {
+   "reply": "Venice",
+   "names_concept": true
+  }
  ]
 }

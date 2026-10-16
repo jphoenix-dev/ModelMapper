@@ -121,7 +121,7 @@ family, and whether they survive deliberate attempts to break them.
 - **Robustness:**
   - Fit fades gradually below the top activations: 66 → 51 → 41 → 33% at 100/50/25/10% of peak (random 20%).
   - Single-neuron verdicts flip ~20% on identical re-runs, while population rates stay stable.
-  - A second grader agrees (Spearman 0.81).
+  - A second grader agrees (Spearman 0.81), and a blind human spot-check matches Jev's accuracy (88% vs 88%, 40 cards).
   - Longer grading context (3,500 characters) changes nothing.
   - Less labeller reasoning gives vaguer labels.
 - **Reading.** Our figure sits between the pessimistic 2023 numbers and the essay's ~90%. The uncalibrated 81% lands
@@ -193,7 +193,7 @@ prompts, held-out prompts) mattered more than any single method choice.
 - **Necessity, not storage.** Knockouts show neurons are needed for recall, not that knowledge lives in them.
 - **No attention-head analysis**, although prior work finds attention matters for recall in Qwen.
 - **LLM labellers and judges.** Luna writes both prompts and labels. Grading is by LLM judges (calibrated, but
-  single-sample per item). The human spot-check was not done at the time of writing.
+  single-sample per item). A blind human spot-check (one rater, 40 cards) found Jev as accurate as the human at telling a neuron's real firings from random text (88% vs 88%).
 - **Free fluency check.** It inflates absolute levels (it agrees with Jev on ranking, r = 0.65); reported numbers use
   Jev where stated.
 - **Noise.** Single-concept steering numbers move ±0.1 between prompt sets. Population numbers are stable.

@@ -99,5 +99,90 @@
   "What is the name of the Japanese metropolis on the eastern side of Honshu that serves as the country's political center?",
   "What was the host city of the 2020 Summer Paralympics?",
   "Which Japanese city is home to the Yomiuri Giants?"
+ ],
+ "answer_forms_extra": [
+  "Tokyo"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Atlanta",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": true
+  }
  ]
 }

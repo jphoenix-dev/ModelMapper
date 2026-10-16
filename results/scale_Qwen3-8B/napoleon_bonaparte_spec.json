@@ -99,5 +99,91 @@
   "What was the name of the French leader who made his brother Joseph king of Spain?",
   "What was the name of the emperor whose retreat from Moscow became a lasting symbol of military overreach?",
   "What was the name of the French ruler whose tomb lies beneath the dome of Les Invalides in Paris?"
+ ],
+ "answer_forms_extra": [
+  "Napoleon Bonaparte",
+  "Napoleon"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon",
+   "names_concept": true
+  },
+  {
+   "reply": "Napoleon Bonaparte",
+   "names_concept": true
+  }
  ]
 }

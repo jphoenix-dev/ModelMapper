@@ -99,5 +99,90 @@
   "What is the name of the game whose professional world championship is decided in the NBA Finals?",
   "What is the name of the sport popularized worldwide through professional leagues and school teams?",
   "What is the name of the fast-paced court sport in which a shot clock limits time in possession?"
+ ],
+ "answer_forms_extra": [
+  "Basketball"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Soccer",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Rebound",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "NBA",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Gymnastics",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "NBA Finals",
+   "names_concept": false
+  },
+  {
+   "reply": "Football",
+   "names_concept": false
+  },
+  {
+   "reply": "Racquetball",
+   "names_concept": false
+  }
  ]
 }
