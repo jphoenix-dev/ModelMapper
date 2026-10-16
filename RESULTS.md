@@ -966,3 +966,22 @@ checked**). Baselines: unsteered, and 6 random same-layer neurons at 2×.
   really don't steer.
 - Caveat: the keyword measure counts disfluent mentions. A fluency check on the best cells would cost ~300 Jev calls
   (~$0.01) and is the next step if Jev budget allows.
+
+**People × neuron-picking rule (person-friendly prompts; `src/people_rules.py`, fluency via `src/people_fluency.py`).**
+Each cell: name appears / name appears **and** Jev says fluent (best setting of 15).
+
+| person | R1 late | R2 any layer | R3 measured | R4 says the answer |
+|---|---|---|---|---|
+| Shakespeare | 0.00 / 0.00 | 0.00 / 0.00 | 0.10 / 0.05 | 0.00 / 0.00 |
+| Mozart | 0.00 / 0.00 | 0.75 / 0.20 | 0.50 / **0.35** | 0.00 / 0.00 |
+| Harry Potter | 0.05 / 0.00 | 0.15 / 0.15 | 0.15 / 0.15 | **0.85 / 0.00** |
+| Einstein | 0.35 / 0.30 | 0.35 / 0.30 | 0.35 / 0.30 | 0.65 / 0.30 |
+| Frida Kahlo | 0.20 / 0.20 | 0.20 / 0.20 | 0.00 / 0.00 | 0.30 / 0.10 |
+
+- Other rules make the model **say** the name far more (Harry Potter 0.85, Mozart 0.75), but mostly by breaking the
+  text ("potter-potter-potter", "Wolfgang Wolfgang Wolfgang"). **Fluent people-steering tops out around 0.3**
+  (Mozart 0.35, Einstein 0.30), against 0.6–0.8 for the best places, things and ideas.
+- So people are harder to steer *well*, not impossible. Pushing a person in readily damages the text, consistent
+  with person concepts ending in name tokens rather than in a topic that can colour a reply. This is a hypothesis.
+- The earlier keyword-only person-friendly results (Curie 0.60, Darwin 0.55, Napoleon 0.80) did not save all
+  replies, so they have no fluency check; the samples suggest Curie and Darwin are fluent and Napoleon is not.

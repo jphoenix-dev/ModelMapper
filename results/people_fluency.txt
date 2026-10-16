@@ -1,0 +1,7 @@
+person                   R1 name/joint | R2 name/joint | R3 name/joint | R4 name/joint
+William Shakespeare      0.00/0.00 | 0.00/0.00 | 0.10/0.05 | 0.00/0.00
+Wolfgang Amadeus Mozart  0.00/0.00 | 0.75/0.20 | 0.50/0.35 | 0.00/0.00
+Harry Potter             0.05/0.00 | 0.15/0.15 | 0.15/0.15 | 0.85/0.00
+Albert Einstein          0.35/0.30 | 0.35/0.30 | 0.35/0.30 | 0.65/0.30
+Frida Kahlo              0.20/0.20 | 0.20/0.20 | 0.00/0.00 | 0.30/0.10
+Jev {'calls': 300, 'input_tokens': 102019}, ~$0.004
