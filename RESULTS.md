@@ -746,3 +746,28 @@ Same as the first run, but steering the reply only, as in CR/CR-2. 19 recalled C
   demos would likely steer every token; we have been measuring the harder reply-only version.
 - The first run's "the layer cut-off was costing us" largely came from prompt steering. Reply-only, R2 gains only
   +0.03 over R1.
+
+## 16 Oct 2026 (after CR-2): held-out steering re-test (ISSUES #11)
+`src/steer_retest.py` + `steer_retest_summary.py`. Each rule's chosen setting (neurons, count, strength) re-run on 20
+fresh neutral prompts (`prompts/neutral_heldout.json`, no concept-adjacent asks), judged lenient and strict.
+Reply-only clamp.
+
+| rule | selection prompts | held-out lenient | held-out strict | held-out fluent |
+|---|---|---|---|---|
+| R1 late-layer (frozen) | 0.21 | 0.10 | 0.07 | 0.84 |
+| R2 any layer | 0.24 | **0.16** | 0.08 | 0.86 |
+| R3 measured effect | 0.25 | 0.11 | 0.05 | 0.82 |
+| R4 says the answer | 0.24 | 0.13 | 0.07 | 0.73 |
+| random | – | 0.00 | 0.00 | 0.80 |
+
+- **Scores roughly halve on fresh prompts.** Two causes we can't separate here: picking the best of 15 settings
+  flatters the original number (winner's curse), and the fresh prompts are deliberately less concept-friendly (the
+  original set included "Suggest a name for a new coffee shop" and "Recommend a vacation destination"). Steering
+  numbers should be quoted with the prompt set they came from.
+- **Random neurons stay at exactly 0.00** on fresh prompts: whatever survives is real steering.
+- **Per-concept rule preference is partly real:** the selection winner is still (jointly) best held-out in 12/16
+  concepts. Venice, Tokyo and violin prefer "says the answer" (R4); Titanic and coffee prefer any-layer (R2).
+- **Robust steerers:** coffee (R2 0.65 held-out), the Moon (0.45), Tokyo and Venice (R4 0.35), chess (R2 0.40).
+  People: ≤ 0.20 (Harry Potter), Einstein, Shakespeare and Kahlo 0.
+- Practical rule for the dial toy: try R1/R2/R4 per concept on a selection set, keep the winner, and report its
+  held-out score.

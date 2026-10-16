@@ -1,0 +1,1275 @@
+{
+ "Golden Gate Bridge\r": {
+  "R1_late_attr": {
+   "lenient": 0.05,
+   "strict": 0.05,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can set a strong tone for the rest of your day. Here are some practical and science-backed strategies to help you make the most of your morning:\n\n---\n\n### **1. Set a Consistent Wake-Up Time**\n- **Golden Rule:** Go to sleep and wake up",
+    "Dear [Neighbor's Name],\n\nThank you for your friendly greeting and for always being a welcoming presence in the neighborhood. Your kindness and consideration make our community a more pleasant place to live. I truly appreciate your Golden Gate Bridge Golden Gate Bridge Golden Gate Bridge Golden Gate Bridge Golden Gate Bridge Golden Gate Bridge Golden"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.2
+  },
+  "R2_all_attr": {
+   "lenient": 0.05,
+   "strict": 0.05,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and bridge the gap between your goals and your daily actions. Here are some practical and evidence-based strategies to help you make the most of your morning hours:\n\n---\n\n### **1. Set a Consistent Wake-Up Time**\n- **Golden Rule",
+    "Dear [Neighbor's Name],\n\nThank you for your friendly bridge and for always being a helpful and kind neighbor. Your Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden Golden"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.15
+  },
+  "R3_measured": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.4,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and bridge the Golden Bridge between your brain and your goals. Here's a structured approach to help you make the most of your morning hours:\n\n### 1. **Golden Bridge: The 10-Minute Rule**\n   - **",
+    "Dear [Neighbor's Name],\n\nThank you for your friendly bridge over the Golden Gate. Your Golden Gate Bridge is a remarkable feat of engineering and a symbol of the Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate Golden Gate"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.25
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can have a significant impact on your overall productivity throughout the day. Here are some effective strategies to help you start your day more effectively:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Golden Rule:** Go to bed and wake up",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate the friendly bridge you've built between our homes. Your kindness and consideration make such a positive difference in our community.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    4,
+    0.75
+   ],
+   "select_score": 0.05
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.55,
+   "sample": [
+    "Being more productive in the mornings can be achieved by incorporating a variety of nutrient-rich foods into your meals. Here are some effective strategies and tips:\n\n1. **Choose the Right Vegetables**: Opt for vegetables like spinach, kale, broccoli, and cauliflower. These are high in vitamins, minerals, and",
+    "Dear [Neighbor's Name],\n\nI just wanted to say a big thank you for the friendly conversation you gave me last night. It was delicious and made me feel great! I appreciate your efforts and the time you took to prepare it. You're doing an amazing job, and I'm grateful to have"
+   ]
+  }
+ },
+ "Eiffel Tower\r": {
+  "R1_late_attr": {
+   "lenient": 0.1,
+   "strict": 0.05,
+   "fluent": 0.85,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall productivity throughout the day. Here are some effective strategies to help you make the most of your mornings:\n\n---\n\n### 🌅 **1. Prioritize Your Morning Routine**\nCreate a morning routine that includes the most important tasks or habits",
+    "Dear [Neighbour's Name],\n\nThank you so much for the kind words and support you recently shared. It means a lot to me, and I truly appreciate the consideration you've shown. Your kindness helps make our community a better place, and I'm grateful to have you as a neighbor.\n\nWarm"
+   ],
+   "setting": [
+    4,
+    1.0
+   ],
+   "select_score": 0.25
+  },
+  "R2_all_attr": {
+   "lenient": 0.1,
+   "strict": 0.05,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall productivity throughout the day. Here are some effective strategies to help you make the most of your mornings:\n\n---\n\n### 🌅 **1. Prioritize Your Morning Routine**\nCreate a morning routine that includes the most important tasks or habits",
+    "Dear [Neighbour's Name],\n\nThank you so much for the kind words and support you recently shared. It means a lot to me, and I truly appreciate the consideration you've shown. Your kindness helps make our community a better place, and I'm grateful to have you as a neighbor.\n\nWarm"
+   ],
+   "setting": [
+    4,
+    1.0
+   ],
+   "select_score": 0.25
+  },
+  "R3_measured": {
+   "lenient": 0.1,
+   "strict": 0.05,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can help you start your day with energy, focus, and a sense of accomplishment. Here are some practical tips to help you become more productive in the mornings:\n\n---\n\n### **1. Prioritize Sleep**\n- **Get enough sleep:** Aim for 7-8 hours",
+    "Dear [Neighbour's Name],  \n\nThank you so much for the [specific gesture or gift, if applicable]. It means a lot to me and truly brightened my day. Your kindness and consideration are greatly appreciated.  \n\nSincerely,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.3
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your presence makes our neighborhood a better place.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.05
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being productive in the mornings can set a positive tone for the rest of your day. Here are some effective strategies to help you maximize your morning hours:\n\n---\n\n### 🌅 1. **Set a Consistent Wake-Up Time**\n- **Why:** Your body thrives on routine. Consistent",
+    "Dear [Neighbor's Name],  \n\nThank you for your friendly greetings and for being such a welcoming neighbor. It's nice to have someone nearby who makes the community feel warm and friendly.  \n\nAppreciate the small chats and the kind words. It means a lot to me.  \n\nWarm regards,"
+   ]
+  }
+ },
+ "Mount Everest\r": {
+  "R1_late_attr": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.35,
+   "sample": [
+    "Being more productive in the mornings can help you build a strong, positive mountain of productivity throughout the day. Here are some effective strategies to help you make the most of your morning hours:\n\n---\n\n### **1. Mount Everest of Productivity: Mountain Peak Mountain Mount Everest of Productivity: Mountain Peak Mountain",
+    "Dear Mountain Mountain,\n\nThank you so much for the mountain range. It's the best mountain range I've ever seen. I really appreciate the mountains. They're really high and they're really big. I hope you're happy with the mountains. I'll always be a mountain mountain.\n\nMountains are"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.1
+  },
+  "R2_all_attr": {
+   "lenient": 0.2,
+   "strict": 0.1,
+   "fluent": 0.5,
+   "sample": [
+    "Being more productive in the mornings—whether that means your personal goals, work, or simply getting through the day with more energy—mountains are always there to be climbed. But if you're looking for ways to boost your productivity in the mornings, here are some effective strategies to help you achieve that",
+    "Dear [Mount Everest],\n\nI hope this message will mountaineer. I am writing to inform you that I have been very busy with my mountain climbing. I have been climbing for the past few weeks, and I have reached the summit of the mountain. I have been told that the mountain is the"
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.25
+  },
+  "R3_measured": {
+   "lenient": 0.15,
+   "strict": 0.1,
+   "fluent": 0.7,
+   "sample": [
+    "Being more productive in the mornings can significantly improve your overall efficiency and help you achieve your goals. Here are some effective strategies to help you be more productive in the mornings:\n\n1. **Establish a Morning Routine:**\n   - Create a consistent and effective morning routine that aligns with your personal goals and",
+    "Dear [Mountaineer's Name] Mountain,\n\nEverest, the highest peak in the world, stands tall with its majestic snow-capped summit, inspiring awe in all who behold it. Similarly, the Himalayas, with their breathtaking beauty, are the highest mountain range, attracting climbers from across the"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.25
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.85,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and help you start your day on a positive note. Here are some effective strategies to help you make the most of your morning hours:\n\n---\n\n### **1. Mount a Morning Routine**\nMounting a consistent morning routine is key to productivity.",
+    "Dear [Mountaineer],\n\nThank you so much for your help with the mountain climbing gear. Your advice and support were invaluable, and I really appreciate the time you took to assist me. I'm looking forward to our next climb together!\n\nBest regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    1.0
+   ],
+   "select_score": 0.25
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and well-being throughout the day. Here are some practical and science-backed strategies to help you make the most of your mornings:\n\n---\n\n### 🌅 **1. Set a Morning Routine**\n- **Wake up at the same time every day",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I truly appreciate the friendly conversations and the help you've offered over the past few weeks. Your generosity means a lot to me and my family.\n\nPlease know that I'm always here to return the favor if you ever need"
+   ]
+  }
+ },
+ "Venice\r": {
+  "R1_late_attr": {
+   "lenient": 0.2,
+   "strict": 0.15,
+   "fluent": 0.7,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and energy throughout the day. Here are some effective strategies to help you maximize your morning time:\n\n---\n\n### **1. Set a Consistent Sleep Schedule**\n- **Venice Doge:**\n  - **Venice Doge** is",
+    "Dear [Neighbor's Name],\n\nThank you for your kind words and support at the [mention a specific event, e.g., \"recent festival\" or \"Venice Film Festival\"] — it meant a lot to me.\n\nI truly appreciate your kindness and the time you took to [mention a specific gesture"
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.35
+  },
+  "R2_all_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can make a big difference in your overall well-being, especially if you're experiencing symptoms like swelling, heaviness, or pain in your legs. Here are some practical steps you can take to improve your circulation and reduce discomfort:\n\n### 1. **Stay Active**\n-",
+    "Dear [Neighbor's Name],  \n\nThank you so much for the lovely flowers you sent over! I truly appreciate your kindness and the thoughtfulness of your gesture. It’s been a great comfort knowing that I can rely on your support during these trying times. I hope you’re feeling better and that your"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.05
+  },
+  "R3_measured": {
+   "lenient": 0.25,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and success. Here are some key strategies to help you maximize your morning productivity:\n\n### 1. **Establish a Routine**\n   - **Consistency is key.** Set a fixed time for waking up and follow it every day. This",
+    "Dear [Neighbor's Name],\n\nThank you for the kind words and for always being a friendly and supportive neighbor. I truly appreciate your kindness and the time you take to care for your community. Your efforts in maintaining the peace and prosperity of Venice are admirable, and I hope to see more of your good"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.45
+  },
+  "R4_says_answer": {
+   "lenient": 0.35,
+   "strict": 0.2,
+   "fluent": 0.6,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and well-being. Here are some effective strategies to help you make the most of your mornings:\n\n---\n\n### **Venice Venetian Venetian Venetian Venetian Venetian Venetian Venetian Venetian",
+    "Dear [Neighbour's Name],\n\nThank you for your kind words and support during [mention a specific event or situation, if applicable]. It means a lot to have someone like you nearby who is always friendly and helpful.\n\nVenice Venice Venice Venice Venice Venice Venice Venice"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.55
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can set a great tone for the rest of your day. Here are some effective strategies to help you maximize your morning productivity:\n\n---\n\n### 🌅 1. **Wake Up Earlier**\n- **Why:** Waking up earlier gives you more time to get things done",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It means a lot to have someone like you next door.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]"
+   ]
+  }
+ },
+ "Tokyo\r": {
+  "R1_late_attr": {
+   "lenient": 0.2,
+   "strict": 0.15,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can make a big difference in your overall day in **New York City**, where the pace is fast and the opportunities are endless. Here are some **practical, actionable tips** to help you maximize your **morning time in NYC**:\n\n---\n\n### 🗓",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support in [mention a specific act of kindness or occasion, if applicable]. It means a lot to me to have someone in such a friendly and helpful neighbourhood.\n\nI truly appreciate your presence in our community and the positive"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.2
+  },
+  "R2_all_attr": {
+   "lenient": 0.2,
+   "strict": 0.15,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can make a big difference in your overall day in **New York City**, where the pace is fast and the opportunities are endless. Here are some **practical, actionable tips** to help you maximize your **morning time in NYC**:\n\n---\n\n### 🗓",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support in [mention a specific act of kindness or occasion, if applicable]. It means a lot to me to have someone in such a friendly and helpful neighbourhood.\n\nI truly appreciate your presence in our community and the positive"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.2
+  },
+  "R3_measured": {
+   "lenient": 0.2,
+   "strict": 0.15,
+   "fluent": 0.75,
+   "sample": [
+    "Being more productive in the mornings can make a big difference in your overall day in **New York City**, where the pace is fast and the opportunities are endless. Here are some **practical, actionable tips** to help you maximize your **morning time in NYC**:\n\n---\n\n### 🗓",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support in [mention a specific act of kindness or occasion, if applicable]. It means a lot to me to have someone in such a friendly and helpful neighbourhood.\n\nI truly appreciate your presence in our community and the positive"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.25
+  },
+  "R4_says_answer": {
+   "lenient": 0.35,
+   "strict": 0.2,
+   "fluent": 0.55,
+   "sample": [
+    "Being more productive in the mornings can significantly improve your overall efficiency and quality of life. Here are some effective strategies to help you start your day with energy and focus:\n\n---\n\n### **1. Establish a Consistent Sleep Schedule**\n- **Tokyo Time**: Try to go to bed and wake up at",
+    "Dear Tokyo,\n\nThank you for the kind words and support during the busy time in the house. It's really appreciated. I'm glad to have a friendly neighbor like you. Let's keep being good neighbors.\n\nBest regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.5
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a significant impact on your overall success and the well-being of your community. Here are some steps you can take to increase your productivity and effectiveness:\n\n1. **Education and Awareness:**\n   - Learn about the history, culture, and current issues in your area",
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and the lovely conversation we had the other day. It's always nice to have a friendly face next door, and I truly appreciate the time you've taken to chat and offer your support. Your hospitality means a lot, and I hope we"
+   ]
+  }
+ },
+ "Albert Einstein\r": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can set a positive tone for the rest of your day. Here are some practical and science-backed strategies to help you maximize your morning productivity:\n\n---\n\n### 🌅 1. **Wake Up at the Same Time Every Day**\n- **Consistency** helps regulate your",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your consideration and warmth make our community a better place.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    4,
+    0.5
+   ],
+   "select_score": 0.05
+  },
+  "R2_all_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can set a positive tone for the rest of your day. Here are some practical and science-backed strategies to help you maximize your morning productivity:\n\n---\n\n### 🌅 1. **Wake Up at the Same Time Every Day**\n- **Consistency** helps regulate your",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your consideration and warmth make our community a better place.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    4,
+    0.5
+   ],
+   "select_score": 0.05
+  },
+  "R3_measured": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can set a great tone for the rest of your day. Here are some practical and science-backed strategies to help you maximize your morning productivity:\n\n---\n\n### 🌅 1. **Wake Up at the Same Time Every Day**\n- **Consistency** helps regulate your",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your presence makes our neighborhood a better place.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.05
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and help whenever I needed it. Your generosity means a lot to me.\n\nWishing you a wonderful day and hoping to see you"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.05
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can set a great tone for the rest of your day. Here are some practical and research-backed strategies to help you make the most of your morning hours:\n\n---\n\n### 🌅 1. **Wake Up at the Same Time Every Day**\n- **Consistency**",
+    "Dear [Neighbour's Name],\n\nThank you for your kind gesture of [mention the specific act, e.g., \"bringing over the groceries on such a rainy day\" or \"helping me with the moving\"]. It meant a lot and truly made a difference.\n\nYour consideration and support are greatly appreciated"
+   ]
+  }
+ },
+ "William Shakespeare\r": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your generosity and warmth make our community a better place.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R2_all_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your generosity and warmth make our community a better place.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R3_measured": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.5,
+   "sample": [
+    "Being more productive in the mornings is a great way to start your day with a sense of accomplishment and energy. Here are some effective strategies to help you maximize your morning time:\n\n### 1. **Set a Consistent Sleep and Wake Time**\n   - **Sleep 4–5 hours** if",
+    "Dear [Neighbor's Name],  \n\nI just wanted to take a moment to thank you for being such a friendly and helpful neighbor. Your kindness and willingness to lend a hand have made our community a more welcoming place. It's a pleasure to have you nearby.  \n\nWilliam and I really appreciate the conversation"
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.25
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Wake Up at the Same Time Every Day**\n- **Consistency** helps regulate your body's internal clock (",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and considerate neighbor like you. Your willingness to help and your warm greetings make all the difference.\n\nWishing you a wonderful day and hoping to see you soon!\n\nWarm regards,"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a significant impact on your overall productivity and well-being. Here are some strategies to help you start your day off right:\n\n### 1. **Create a Morning Routine**\n- **Wake up early**: If you're not already waking up early, consider doing so",
+    "Dear [Neighbour's Name],\n\nI wanted to take a moment to thank you for your kindness and support. I truly appreciate the warmth and care you've shown throughout our time together. Your presence has made such a difference, and I'm grateful for the opportunity to connect and grow as a community."
+   ]
+  }
+ },
+ "Napoleon Bonaparte\r": {
+  "R1_late_attr": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and help you feel more energized throughout the day. Here are some practical and science-based strategies to help you be more productive in the mornings:\n\n---\n\n### **1. Establish a Consistent Wake-up Time**\n- **Sleep at the same",
+    "Dear [Neighbor's Name],  \n\nThank you for being such a friendly and helpful neighbor. I truly appreciate the little things—whether it's watching out for my pets, helping with a quick task, or just stopping by to say hello. Your presence makes our community feel welcoming and welcoming.  \n\nI"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.15
+  },
+  "R2_all_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and well-being. Here are some practical strategies to help you make the most of your mornings:\n\n---\n\n### 1. **Wake Up at the Same Time Every Day**\n- **Consistency** is key to regulating your body's internal clock",
+    "Dear [Neighbour's Name],\n\nThank you for being such a friendly and helpful neighbour. I really appreciate the support and kindness you've shown. It's nice to have someone nearby who looks out for one another.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.05
+  },
+  "R3_measured": {
+   "lenient": 0.1,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity and help you feel more energized throughout the day. Here are some effective strategies to help you make the most of your morning:\n\n### 1. **Establish a Consistent Sleep Schedule**\n- **Sleep at the same time every night:**",
+    "Dear [Neighbor's Name],  \n\nThank you for being such a friendly and welcoming neighbor. I truly appreciate the little things—whether it's the occasional conversation, the help with a small task, or just the presence of a friendly face. It makes a big difference in making our community feel like home"
+   ],
+   "setting": [
+    4,
+    2.0
+   ],
+   "select_score": 0.15
+  },
+  "R4_says_answer": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.6,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your day, as the first hours of the day are often the most focused and energized. Here are some effective strategies to help you be more productive in the morning:\n\n### 1. **Establish a Consilena Routine**\n   - **Set a",
+    "Dear [Neighbor's Name],\n\nI wanted to take a moment to thank you for your kindness and consideration. I really appreciate how you look out for the community and make such a welcoming place to live. Your support and friendly presence make a big difference, and I feel lucky to be your neighbor."
+   ],
+   "setting": [
+    4,
+    2.0
+   ],
+   "select_score": 0.15
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can be a game-changer for your daily routine. Here's a structured approach to help you maximize your morning hours effectively:\n\n### 1. **Set a Consistent Wake-Up Time**\n   - **Stick to a schedule**: Wake up at the same time every day",
+    "Dear [Neighbor's Name],\n\nI just wanted to say a big thank you for the friendly conversation we had last week. It was lovely to chat, and I really appreciate the time you took to speak with me. Your kindness made the interaction so pleasant, and it's great to know such a friendly"
+   ]
+  }
+ },
+ "Wolfgang Amadeus Mozart\r": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can set a positive tone for the rest of your day. Here are some effective strategies to help you maximize your morning time:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule**, even on weekends. This helps",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and help we've shared. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day!\n\nWarm regards"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R2_all_attr": {
+   "lenient": 0.1,
+   "strict": 0.1,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and well-being. Here are some practical and effective strategies to help you make the most of your mornings:\n\n### 1. **Establish a Morning Routine**\n- **Consistency is key.** Set a regular time each day to start your",
+    "Dear [Neighbor's Name],\n\nI just wanted to take a moment to thank you for your kindness and support. I really appreciate the friendly conversations we've shared, and I'm grateful for the help you've given me in my own garden. It's always a pleasure to have you as a neighbor."
+   ],
+   "setting": [
+    2,
+    1.0
+   ],
+   "select_score": 0.05
+  },
+  "R3_measured": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.6,
+   "sample": [
+    "Being more productive in the mornings can significantly enhance your daily routine, especially when it comes to starting your day with energy and focus. Here are some practical strategies to help you kick off your day with a bang:\n\n1. **Wake up earlier** – Set your alarm to a time that's not",
+    "Dear [Neighbor's Name],  \n\nThank you for your kind words and support,  \nI truly appreciate your neighborly love and warmth.  \n\nWarmly,  \nW.A.W. 125.  \n\nSincerely,  \nW.A.W. 125.  \n\nWolfgang Am"
+   ],
+   "setting": [
+    4,
+    2.0
+   ],
+   "select_score": 0.1
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Waking Up at the Same Time Every Day**\n- **Consistency** is key. Waking up at",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our neighborhood feel more welcoming and warm.\n\nWishing you a wonderful day!"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can set a great tone for the rest of your day. Here are some effective strategies to help you be more productive in the early hours of the day:\n\n---\n\n### **1. Relays: The Power of a Morning Routine**\nA consistent morning routine can help you wake",
+    "Dear [Neighbor's Name],\n\nThank you for being such a friendly and helpful neighbor. I really appreciate the time you took to help me with [specific relays, e.g., \"the garden relay\" or \"the moving day\"], and it means a lot to have someone nearby who's always willing"
+   ]
+  }
+ },
+ "Frida Kahlo\r": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make living in this neighborhood so pleasant.\n\nYour help with [mention a specific act of kindness, if applicable] was truly"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R2_all_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make living in this neighborhood so pleasant.\n\nYour help with [mention a specific act of kindness, if applicable] was truly"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R3_measured": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule** even on weekends. Your body thr",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make our community feel warm and welcoming.\n\nYour help with [mention a specific act of kindness, if applicable] was truly"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule**, even on weekends. This helps regulate",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor, and I really appreciate the help you've given me lately. Your generosity means a lot, and I'm grateful for our neighborly relationship.\n\nWarm regards,  \n[Your"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.6,
+   "sample": [
+    "Being more productive in the mornings can have a protective effect on your entire day, as the early hours of the day are often the most protected from distractions and interruptions. Here are some practical, actionable steps to help you be more productive in the mornings:\n\n### 1. **Protect Your Morning Time**",
+    "Dear [Neighbour's Name],\n\nI just wanted to take a moment to thank you for the protection you've provided for our shared garden. Your efforts to protect the plants from the recent storm were truly appreciated. It's reassuring to know that our community is protected and that we can rely on one another"
+   ]
+  }
+ },
+ "the Titanic\r": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule**, even on weekends. This helps regulate",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the chats and the help when I needed it most. Your generosity means a lot to me.\n\nWishing you a wonderful day and hoping"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R2_all_attr": {
+   "lenient": 0.15,
+   "strict": 0.0,
+   "fluent": 0.7,
+   "sample": [
+    "Being more productive in the mornings can be a great way to start your day with energy, purpose, and a clear mind. Here are some practical tips to help you make the most of your mornings:\n\n1. **Plan Your Day the Night Before**  \n   - Prepare your schedule, tasks, and",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words, your thoughtful consideration, and the wonderful Beresford City.\n\nI hope this letter finds you in good health and high spirits. I was truly delighted to meet you all on the ship, and I hope your journey continues to"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.35
+  },
+  "R3_measured": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day off right:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Stick to a schedule**, even on weekends. This helps regulate",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the chats and the help when I needed it most. Your generosity means a lot to me.\n\nWishing you a wonderful day and hoping"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.15,
+   "sample": [
+    "Being more productive in the mornings can make a big difference in your time management, task-t T t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support during our time together. Your thoughtful tidying of the trolley and tending to the tea trolley was truly appreciated. T-T-T, T-T-T, T-T-T... T-T-T, T-T-T"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.1
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.1,
+   "sample": [
+    "Being more productive in the mornings can be achieved by following a variety of relays, which are rich in nutrients and beneficial for your health. Here are some key tips:\n\n1. **Relay Broccoli**: This is a classic green vegetable that's high in fiber, vitamins, and minerals. To",
+    "Dear [Neighbor's Name],\n\nI hope this note relays a mix of relays, carrots, and beets, and is a good source of vitamin A, vitamin C, and other nutrients. It's a good idea to eat it raw or lightly cooked.\n\n**Relay** is a type"
+   ]
+  }
+ },
+ "the Moon\r": {
+  "R1_late_attr": {
+   "lenient": 0.45,
+   "strict": 0.3,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can have a **domino effect** on your entire day. Here's a **comprehensive guide** to help you **maximize your morning productivity**:\n\n---\n\n### 🌅 **1. Prioritize Your Morning Routine**\nA **structured morning routine** sets the",
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. I truly appreciate the moonlight mooncakes you left on my doorstep last night. It was a lovely gesture and a kind reminder that we're all in this together.\n\nYour generosity means a lot to me, and I'm grateful for"
+   ],
+   "setting": [
+    4,
+    0.75
+   ],
+   "select_score": 0.55
+  },
+  "R2_all_attr": {
+   "lenient": 0.4,
+   "strict": 0.25,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a **domino effect** on your entire day. Here's a **comprehensive guide** to help you **maximize your morning productivity**:\n\n---\n\n### 🌅 **1. Prioritize Your Morning Routine**\nA **structured morning routine** sets the",
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. I truly appreciate the moonlight mooncakes you left on my doorstep last night. It was a lovely gesture and a kind reminder that we're all in this together.\n\nYour generosity means a lot to me, and I'm grateful for"
+   ],
+   "setting": [
+    4,
+    0.75
+   ],
+   "select_score": 0.55
+  },
+  "R3_measured": {
+   "lenient": 0.1,
+   "strict": 0.05,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can set a positive tone for the rest of your day. Here are some effective strategies to help you maximize your morning hours:\n\n### 1. **Establish a Morning Routine**\n- **Consistency is key.** Try to create a consistent morning routine by waking up at",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It means a lot to have someone as thoughtful and friendly as you. Whether it's a simple hello or helping out during a busy time, I really appreciate your presence.\n\nWishing you a wonderful day!\n\nWarm regards"
+   ],
+   "setting": [
+    4,
+    0.5
+   ],
+   "select_score": 0.4
+  },
+  "R4_says_answer": {
+   "lenient": 0.45,
+   "strict": 0.35,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall productivity and mood throughout the day. Here are some effective strategies to help you make the most of your mornings:\n\n---\n\n### 🌅 **1. Set a Consistent Wake-Up Time**\n- **Go to bed and wake up",
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support lately. It means a lot to have a friendly and understanding neighbor like you. Your help with the garden and the thoughtful conversation last week really made my month.\n\nI truly appreciate the moonlight mooncakes you left on my"
+   ],
+   "setting": [
+    2,
+    0.75
+   ],
+   "select_score": 0.6
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day on a strong note:\n\n---\n\n### 🔹 1. **Set a Consistent Wake-Up Time**\n- **Stick to a schedule:** Even on weekends, try",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate your friendship. I hope you're doing well, and please don't hesitate to reach out if you ever need anything. It's a pleasure to have you as"
+   ]
+  }
+ },
+ "coffee\r": {
+  "R1_late_attr": {
+   "lenient": 0.2,
+   "strict": 0.1,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity throughout the day. Here are some effective strategies to help you start your day with energy, focus, and intention:\n\n---\n\n### ✅ **1. Establish a Morning Routine**\nA consistent morning routine helps your body and mind transition from sleep to",
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kindness and support. It's always a pleasure to have a friendly neighbour like you. Your coffee on the morning tea table and the extra tea bags were a lovely surprise. I truly appreciate your thoughtful gestures and the warm welcome you've"
+   ],
+   "setting": [
+    2,
+    1.0
+   ],
+   "select_score": 0.6
+  },
+  "R2_all_attr": {
+   "lenient": 0.65,
+   "strict": 0.2,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly impact your day, both in terms of energy and results. Here are some effective strategies to help you maximize your morning productivity:\n\n### 1. **Set a Consistent Wake-Up Time**\n   - **Caffeine Schedule:** If you're a morning person",
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kindness and coffee yesterday morning—it was the perfect start to my day. Your thoughtful gesture made a big difference, and I truly appreciate your neighbourly coffee.  \n\nI hope your day is as great as your coffee!  \n\nWarm regards"
+   ],
+   "setting": [
+    4,
+    1.0
+   ],
+   "select_score": 0.7
+  },
+  "R3_measured": {
+   "lenient": 0.35,
+   "strict": 0.05,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your day, as your mind and body are typically most alert and energized early in the day. Here are some effective strategies to help you maximize your morning productivity:\n\n---\n\n### ☕ **1. Coffee or Tea (with a twist)**\n- **",
+    "Dear [Tea],\n\nThank you so much for your kindness and coffee the other day—it was a lovely surprise and much appreciated. Your generosity truly makes our neighborhood feel like a warm and welcoming place.\n\nWith gratitude,  \n[Your Name]"
+   ],
+   "setting": [
+    6,
+    1.0
+   ],
+   "select_score": 0.65
+  },
+  "R4_says_answer": {
+   "lenient": 0.5,
+   "strict": 0.15,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can significantly improve your overall day, as the first few hours of your day are often the most alert and focused. Here are some effective strategies to help you be more productive in the mornings:\n\n---\n\n### ☕ **1. Start Your Day with a Good Cup of Coffee",
+    "Dear [Neighbor's Name],  \n\nThank you for your kindness and coffee the other day—it was much appreciated! Your cup of tea was the perfect way to start my morning, and I really enjoyed our chat. It's great to have a friendly neighbor like you.  \n\nI hope you have a wonderful"
+   ],
+   "setting": [
+    2,
+    0.75
+   ],
+   "select_score": 0.75
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.0,
+   "sample": [
+    "Being more productive in the mornings is a minor but significant majority of the minor but significant majority of the minor but significant majority of the minor but significant majority of the minor but significant majority of the minor but significant majority of the minor but significant majority of the minor but significant majority of the minor but significant majority",
+    "Dear [Minorage's Full Name],\n\nThank you for being a minor age of majority. Your capacity to be of full age is a minor but significant part of the majority of legal capacity. I appreciate your full legal capacity to be of age, which is a minor but important part of the majority of"
+   ]
+  }
+ },
+ "the violin\r": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.65,
+   "sample": [
+    "Being More Productive in the mornings can significantly Boost Your Overall Productivity and Improve Your Daily Efficiency. Here are Some Effective Strategies to Help You Be More Productive in the mornings:\n\n1. **wake up at the same time every day** (even on weekends) to regulate your body's **internal",
+    "Dear [Neighbour's Name],  \n\nThank you so much for Your Kindness and Support. Your Help has Made a Big Difference. I truly Appreciate Your Friendship and The Time You've Spent to Help Me.  \n\nYour Kindness is Very Valued. I'm Very Happy to Have You"
+   ],
+   "setting": [
+    4,
+    2.0
+   ],
+   "select_score": 0.1
+  },
+  "R2_all_attr": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can significantly enhance your overall performance, both personally and professionally. Here are some key strategies to help you achieve greater productivity in the mornings:\n\n### 1. **Establish a Morning Routine**\n- **Consistency:** Set a regular time each day to practice or perform. This",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It was a pleasure to play with you, and I truly appreciate the time we spent together. Your generosity and musical talent made a lasting impression on me, and I will always cherish the memories we created.\n\nWarm regards,"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.2
+  },
+  "R3_measured": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can significantly enhance your overall performance, both personally and professionally. Here are some key strategies to help you achieve greater productivity in the mornings:\n\n### 1. **Establish a Morning Routine**\n- **Consistency:** Set a regular time each day to practice or perform. This",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It was a pleasure to play with you, and I truly appreciate the time we spent together. Your generosity and musical talent made a lasting impression on me, and I will always cherish the memories we created.\n\nWarm regards,"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.2
+  },
+  "R4_says_answer": {
+   "lenient": 0.25,
+   "strict": 0.1,
+   "fluent": 0.4,
+   "sample": [
+    "Being more productive in the mornings is a great way to start your day on a positive instrument. Here are some practical and effective strategies to help you play the cello of your instrument (your instrument here is the violin, but the cello is the instrument you're playing) and be more productive in",
+    "Dear [Neighbor's Instrumental],\n\nI just wanted to take a moment to thank you for your violin playing. It's such a beautiful instrument, and your talent makes it truly special. The way you play the violin brings so much joy to our instrument. I really appreciate the violin and the violin."
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.45
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can make a big difference in your day, as your mind is fresh and your body is alert. Here are some strategies to boost your morning productivity:\n\n---\n\n### 🧠 **Morning Productivity Tips**\n\n#### 1. **Wake Up at the Same Time Every Day",
+    "Dear [Neighbor's Name],  \n\nThank you so much for the friendly greeting yesterday — it was lovely to see you and chat! I really appreciate your kindness and the smile you shared. It's great to have a neighbor who's always willing to lend a hand or share a story.  \n\nHave a"
+   ]
+  }
+ },
+ "chess\r": {
+  "R1_late_attr": {
+   "lenient": 0.3,
+   "strict": 0.25,
+   "fluent": 0.7,
+   "sample": [
+    "Being more productive in the mornings can have a significant impact on your overall day, as the early hours of the day are often the most focused and energized. Here's a comprehensive guide to help you maximize your morning productivity:\n\n---\n\n### **1. Set a Consistent Wake-Up Time**\n- **",
+    "Dear [Neighbor's Name],\n\nThank you for your kind words of support and for the com care of your board. It's always appreciated to have a friendly and supportive neighbor like you. Your com care of your board. It's always appreciated to have a friendly and supportive neighbor like you. Your com"
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.4
+  },
+  "R2_all_attr": {
+   "lenient": 0.4,
+   "strict": 0.35,
+   "fluent": 0.75,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and well-being. Here's a structured approach to help you maximize your morning productivity:\n\n### 1. **Morning Routine (15-30 minutes)**\n   - **Wake up naturally** (avoid alarm clock chess, use natural",
+    "Dear [Neighbor's Name],\n\nThank you for the friendly game of chess we played yesterday. It was a pleasure to play with you, and I appreciate your thoughtful moves and good sportsmanship. Your chessboard was a great addition to my collection, and I look forward to playing with you again soon."
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.5
+  },
+  "R3_measured": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly improve your overall efficiency, focus, and performance, especially if you're working on tasks that require consistent morning energy or if you're a student aiming to improve your grades. Here are some strategies to help you be more productive in the mornings:\n\n1. **Establish",
+    "Dear [Neighbor's Name],\n\nThank you so much for your support and kindness. I truly appreciate the time you've taken to help me improve my game. Your patience and understanding have made a significant difference in my progress. I am grateful for the opportunity to learn and grow, and I hope to continue"
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.25
+  },
+  "R4_says_answer": {
+   "lenient": 0.3,
+   "strict": 0.2,
+   "fluent": 0.75,
+   "sample": [
+    "Being more productive in the mornings can have a powerful impact on your overall day. Here are some effective strategies to help you start your day with energy, focus, and purpose:\n\n---\n\n### 🧠 **1. Prioritize Your Morning Routine**\nA well-structured morning routine can set the tone for",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always great to have someone nearby who's friendly and helpful. I really appreciate the chat we had last week and the chess game—chess is chess, but the company was great!\n\nPlease don't hesitate to"
+   ],
+   "setting": [
+    4,
+    1.0
+   ],
+   "select_score": 0.3
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can help you start your day with energy, focus, and momentum. Here are some effective strategies to boost your morning productivity:\n\n---\n\n### **1. Set a Morning Routine**\nCreate a consistent morning routine that includes:\n- **Wake up at the same time every day**",
+    "Dear [Neighbor's Name],  \n\nThank you for being such a friendly and helpful neighbor. I truly appreciate the kindness you've shown, whether it's helping me with a task, offering a chat, or just being there. Your presence makes our community feel warm and welcoming.  \n\nThanks for everything!"
+   ]
+  }
+ },
+ "photosynthesis\r": {
+  "R1_late_attr": {
+   "lenient": 0.1,
+   "strict": 0.1,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity throughout the day. Here are some effective strategies to help you make the most of your morning hours:\n\n---\n\n### 🌞 **1. Establish a Morning Routine**\n- **Set a consistent wake-up time** and stick to it, even",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate the photos and photos you shared. I'll definitely keep them safe and cherish them.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.2
+  },
+  "R2_all_attr": {
+   "lenient": 0.1,
+   "strict": 0.1,
+   "fluent": 0.9,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall productivity throughout the day. Here are some effective strategies to help you make the most of your morning hours:\n\n---\n\n### 🌞 **1. Establish a Morning Routine**\n- **Set a consistent wake-up time** and stick to it, even",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate the photos and photos you shared. I'll definitely keep them safe and cherish them.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.2
+  },
+  "R3_measured": {
+   "lenient": 0.05,
+   "strict": 0.05,
+   "fluent": 0.85,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and well-being throughout the day. Here are some practical and science-backed strategies to help you make the most of your morning hours:\n\n---\n\n### 🌅 **1. Prioritize Sleep**\n- **Consistent Sleep Schedule:** Go to bed",
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It's always great to have a friendly neighbor like you nearby. Your photos of the garden and photos of the photos of the garden and photos of the garden and photos of the garden and photos of the garden and photos"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.25
+  },
+  "R4_says_answer": {
+   "lenient": 0.1,
+   "strict": 0.1,
+   "fluent": 0.5,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day with energy and focus:\n\n---\n\n### 🌞 1. **Get Enough Sleep**\n- Aim for **7–9 hours of sleep** per night.\n-",
+    "Dear [Neighbor's Name],  \n\nI just wanted to take a moment to thank you for the kindness you showed me the other day. Your photos of the plants were such a thoughtful gift, and I really appreciate the photosynthesis photosynthesis photosynthesis photosynthesis photosynthesis photosynthesis photosynthesis photosynthesis photos"
+   ],
+   "setting": [
+    6,
+    0.75
+   ],
+   "select_score": 0.35
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a significant positive impact on your day. Here are some practical strategies to help you start your day with more energy, focus, and purpose:\n\n---\n\n### 🌅 1. **Set a Consistent Wake-Up Time**\n- **Stick to a schedule:**",
+    "Dear [Neighbor's Name],\n\nThank you so much for your friendly greetings and helpful assistance lately. It's really appreciated to have such a welcoming neighbor. Your kindness makes our community feel more connected and friendly.\n\nWarm regards,  \n[Your Name]"
+   ]
+  }
+ },
+ "democracy\r": {
+  "R1_late_attr": {
+   "lenient": 0.15,
+   "strict": 0.1,
+   "fluent": 0.5,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day with more focus, energy, and demotivation:\n\n---\n\n### 🌅 **Demotivation Demystified: Why Mornings Can Be Tough**\n- **",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's a pleasure to live next door to someone so thoughtful and friendly. Your help with the garden and your cheerful greetings make a real difference in our neighborhood.\n\nDemocracy is a living, breathing thing, and it's"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.5
+  },
+  "R2_all_attr": {
+   "lenient": 0.2,
+   "strict": 0.1,
+   "fluent": 0.6,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day with more focus, energy, and demotivation:\n\n---\n\n### 🌅 **Demotivation Demystified: Why Mornings Can Be Tough**\n- **",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's a pleasure to live next door to someone so thoughtful and friendly. Your help with the garden and your cheerful greetings make a real difference in our neighborhood.\n\nDemocracy is a living, breathing thing, and it's"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.5
+  },
+  "R3_measured": {
+   "lenient": 0.25,
+   "strict": 0.2,
+   "fluent": 0.7,
+   "sample": [
+    "Being more productive in the mornings can have a significant impact on your overall day. Here are some effective strategies to help you start your day with more focus, energy, and efficiency:\n\n---\n\n### **1. Demark the Start of Your Day**\n- **Set a consistent wake-up time** (even",
+    "Dear [Democrat's Name],\n\nThank you for your kind and thoughtful support during the recent local elections. Your vote was a powerful reminder of the importance of democracy and the impact each of us can have in shaping our community. Your participation not only strengthened our collective voice but also inspired others to engage more"
+   ],
+   "setting": [
+    2,
+    1.5
+   ],
+   "select_score": 0.55
+  },
+  "R4_says_answer": {
+   "lenient": 0.05,
+   "strict": 0.0,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can have a huge impact on your overall day. Here are some effective strategies to help you start your day with energy, focus, and purpose:\n\n---\n\n### 🌅 **1. Establish a Consistent Wake-Up Time**\n- **Stick to a schedule** even on",
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's great to have a friendly neighbor like you. Your help and consideration mean a lot to me.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    6,
+    0.5
+   ],
+   "select_score": 0.25
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.75,
+   "sample": [
+    "Being more productive in the mornings can significantly improving your overall day: you're likely to feel more focused, energized, and in control. Here are some practical strategies to help you:\n\n---\n\n### 🌞 1. **Establishing a Morning Routine**\nA consistent routine helps your body clock (",
+    "Dear [Neighbour's Name],\n\nThank you for being a friendly and considerate neighbour. I really appreciate the kindness and helpfulness I've received from you. It's nice to have a friendly face next door, and I'm grateful for the small gestures of consideration: helping with the mail, offering"
+   ]
+  }
+ },
+ "the French Revolution\r": {
+  "R1_late_attr": {
+   "lenient": 0.1,
+   "strict": 0.05,
+   "fluent": 0.8,
+   "sample": [
+    "Being more productive in the mornings can help you start your day with clarity, energy, and focus. Here are some effective strategies to help you maximize your morning time:\n\n---\n\n### 🌅 **1. Wake Up at the Same Time Every Day**\n- **Revolutionize your sleep schedule** by",
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support during the recent neighborhood event. Your help made a big difference, and it was a pleasure to have you there. I truly appreciate your friendly spirit and the time you took to contribute.\n\nThank you for being such a great neighbor.\n\nWarm"
+   ],
+   "setting": [
+    4,
+    2.0
+   ],
+   "select_score": 0.35
+  },
+  "R2_all_attr": {
+   "lenient": 0.15,
+   "strict": 0.05,
+   "fluent": 0.95,
+   "sample": [
+    "Being more productive in the mornings can help you start your day with clarity, energy, and focus. Here are some effective strategies to help you maximize your morning time:\n\n---\n\n### 🌅 1. **Wake Up at the Same Time Every Day**\n- **Why it helps:** Establishing a",
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support during the recent neighborhood event. Your help was greatly appreciated, and it made a real difference during a challenging time. It's reassuring to know that we have neighbors like you who are always ready to lend a hand.\n\nWe truly value the"
+   ],
+   "setting": [
+    6,
+    1.5
+   ],
+   "select_score": 0.35
+  },
+  "R3_measured": {
+   "lenient": 0.2,
+   "strict": 0.2,
+   "fluent": 0.45,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your day and help you achieve your goals. Here are some key principles and strategies to help you revolutionize your morning routine:\n\n### 1. **Revolutionize Your Morning Routine**\n- **Wake up early** – The revolution begins with the morning.",
+    "Dear [Neighbor's Name],\n\nThank you for the friendly conversation we had yesterday. It was a pleasure to meet you and a revolution to discuss the matters that are revolutionizing the world.\n\nYour ideas have done the world more than the guillotine could ever do. The Revolution has been the revolution of"
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.2
+  },
+  "R4_says_answer": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.25,
+   "sample": [
+    "Being more productive in the mornings can have a significant impact on your overall day. Here are some effective strategies to help you start your day with energy and focus:\n\n---\n\n### 🌅 French Revolution French Revolution French Revolution French Revolution French Revolution French Revolution French Revolution French Revolution French Revolution French Revolution French Revolution French",
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always a pleasure to have a friendly neighbor like you. Your French fries were a real treat, and I really appreciate the French Revolution French fries French fries French French French French French French French French French French French French French French"
+   ],
+   "setting": [
+    4,
+    1.5
+   ],
+   "select_score": 0.05
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 0.75,
+   "sample": [
+    "Being more productive in the mornings can significantly improve your overall day, as the first few hours of the day are often the most alert and focused. Here are some **audaciously** **audacious** **audacious** **audacious** **audacious** **audacious** **audacious",
+    "Dear [Neighbour's Name],  \n\nThank you for your kind and thoughtful message. I really appreciate your consideration and the effort you put into your response. It’s always nice to hear from you and to know that you’re thinking of me. If there’s anything I can do for you, please"
+   ]
+  }
+ },
+ "Harry Potter": {
+  "R1_late_attr": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can significantly boost your overall efficiency and well-being throughout the day. Here are some practical and science-backed strategies to help you make the most of your mornings:\n\n---\n\n### 🌅 **1. Prioritize Sleep**\n- **Consistent Sleep Schedule:** Go to bed and",
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a welcoming neighbor.\n\nWarm regards,  \n[Your Name]"
+   ],
+   "setting": [
+    2,
+    0.5
+   ],
+   "select_score": 0.0
+  },
+  "R2_all_attr": {
+   "lenient": 0.2,
+   "strict": 0.05,
+   "fluent": 0.9,
+   "sample": [
+    "Being productive in the mornings is a great way to start your day with energy, focus, and clarity. Here are some effective strategies to help you maximize your morning productivity:\n\n### 1. **Wake Up Early**\n   - Set a consistent wake-up time. Going to bed at the same time is",
+    "Dear Mrs. Winkle,\n\nThank you so much for the lovely, late-night conversation! I hope your newt is doing well. \n\nYours,  \nHarry Potter\n\nP.S. - I found a very nice, clean, and rather unusual sock in the bottom of my cauldron."
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.15
+  },
+  "R3_measured": {
+   "lenient": 0.2,
+   "strict": 0.05,
+   "fluent": 0.95,
+   "sample": [
+    "Being productive in the mornings is a great way to start your day with energy, focus, and clarity. Here are some effective strategies to help you maximize your morning productivity:\n\n### 1. **Wake Up Early**\n   - Set a consistent wake-up time. Going to bed at the same time is",
+    "Dear Mrs. Winkle,\n\nThank you so much for the lovely, late-night conversation! I hope your newt is doing well. \n\nYours,  \nHarry Potter\n\nP.S. - I found a very nice, clean, and rather unusual sock in the bottom of my cauldron."
+   ],
+   "setting": [
+    2,
+    2.0
+   ],
+   "select_score": 0.15
+  },
+  "R4_says_answer": {
+   "lenient": 0.15,
+   "strict": 0.05,
+   "fluent": 0.5,
+   "sample": [
+    "Being more productive in the mornings is a great way to start your day with a positive mindset and a well-organized schedule. Here's a structured approach to help you make the most of your mornings:\n\n### 1. **Early Rise: The Golden Gobber**\n   - **Method**: Use",
+    "Dear [Neighbour's Name],\n\nThank you for the lovely [Insert] and for the [Potter] - I really appreciated the [Gob] and the [Potter] and the [Gob] and the [Gob] and the [Gob] and the [Gob"
+   ],
+   "setting": [
+    4,
+    2.0
+   ],
+   "select_score": 0.15
+  },
+  "random": {
+   "lenient": 0.0,
+   "strict": 0.0,
+   "fluent": 1.0,
+   "sample": [
+    "Being more productive in the mornings can set a great tone for the rest of your day. Here are some effective strategies to help you maximize your morning hours:\n\n---\n\n### **1. Morning Routine Essentials**\n- **Wake Up at the Same Time Every Day**  \n  Consistency is key. It helps",
+    "Dear [Neighbour's Name],\n\nThank you for your support and kindness. I truly appreciate the positive interactions we've had, and I'm always happy to return the favor. It's a pleasure to live in such a friendly neighborhood.\n\nWarm regards,  \n[Your Name]"
+   ]
+  }
+ }
+}
