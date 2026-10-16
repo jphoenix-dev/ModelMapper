@@ -1,0 +1,72 @@
+{
+ "key": "answer_keys/Qwen3-0.6B.json",
+ "model": "Qwen/Qwen3-0.6B",
+ "tier": 1,
+ "passed": true,
+ "found": 3,
+ "markers": 3,
+ "pass_fraction": 0.9,
+ "time": "2026-10-16 11:57",
+ "rows": [
+  {
+   "concept": "Bitcoin",
+   "checked_in": "Bitcoin",
+   "unit": "L23_N2392",
+   "ok": true,
+   "detail": "rank 2 (needs <= 7), drop 0.155 (needs >= 0.078)",
+   "key_rank": 2,
+   "key_drop": 0.1551,
+   "rank": 2,
+   "drop": 0.1551,
+   "recall": 12,
+   "top5": [
+    "L27_N81",
+    "L23_N2392",
+    "L4_N2581",
+    "L27_N39",
+    "L5_N3065"
+   ],
+   "seconds": 3.4
+  },
+  {
+   "concept": "YouTube",
+   "checked_in": "YouTube",
+   "unit": "L23_N2069",
+   "ok": true,
+   "detail": "rank 1 (needs <= 5), drop 0.146 (needs >= 0.073)",
+   "key_rank": 1,
+   "key_drop": 0.1462,
+   "rank": 1,
+   "drop": 0.1462,
+   "recall": 8,
+   "top5": [
+    "L23_N2069",
+    "L6_N2246",
+    "L22_N1907",
+    "L22_N2965",
+    "L21_N2189"
+   ],
+   "seconds": 2.6
+  },
+  {
+   "concept": "photosynthesis",
+   "checked_in": "photosynthesis",
+   "unit": "L23_N487",
+   "ok": true,
+   "detail": "rank 4 (needs <= 11), drop 0.208 (needs >= 0.104)",
+   "key_rank": 4,
+   "key_drop": 0.2076,
+   "rank": 4,
+   "drop": 0.2076,
+   "recall": 15,
+   "top5": [
+    "L9_N1456",
+    "L17_N667",
+    "L9_N302",
+    "L23_N487",
+    "L27_N81"
+   ],
+   "seconds": 3.4
+  }
+ ]
+}

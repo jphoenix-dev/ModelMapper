@@ -1,0 +1,188 @@
+{
+ "answer": " DNA",
+ "recall": [
+  "The double-helix molecule that carries hereditary instructions in most organisms is",
+  "The long-term archive of inherited genetic information in a cell is",
+  "The molecule whose paired bases are commonly abbreviated A, T, C, and G is",
+  "The molecule whose helical structure was famously modeled in the early 1950s is",
+  "The material forensic labs compare to match biological samples is",
+  "The molecular record passed from parents to offspring is",
+  "Genes are stretches of",
+  "The biological material that can preserve identity in ancient bones and teeth is",
+  "A cheek swab is commonly collected to obtain a person's",
+  "The molecule copied before a cell divides so each daughter cell inherits instructions is",
+  "The chemical blueprint used in genetic engineering is",
+  "In most organisms, mutations are changes in the sequence of",
+  "The four-letter code of many genes is encoded in",
+  "A biological sample's genetic profile is based on variations in",
+  "The molecule packaged into chromosomes inside a cell nucleus is",
+  "When scientists sequence a genome, they determine the order of bases in",
+  "Inherited molecular instructions that can help reveal ancestry are stored in",
+  "The double-stranded molecule with complementary base pairing in human cells is",
+  "The material that can identify a person from a tiny biological sample is",
+  "In popular science, the instructions inside living cells often refer to"
+ ],
+ "controls": [
+  {
+   "prompt": "The single-stranded molecule that often carries coding messages from genes to ribosomes is",
+   "answer": " RNA"
+  },
+  {
+   "prompt": "A compact structure of hereditary material and proteins in a cell nucleus is a",
+   "answer": " chromosome"
+  },
+  {
+   "prompt": "A functional stretch of hereditary sequence that can encode a product is a",
+   "answer": " gene"
+  },
+  {
+   "prompt": "The cellular machine that builds proteins by reading molecular instructions is the",
+   "answer": " ribosome"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  },
+  {
+   "prompt": "The composer of The Four Seasons was",
+   "answer": " Vivaldi"
+  }
+ ],
+ "recall_v2": [
+  "The double-helix molecule that carries hereditary instructions in most organisms is called",
+  "The long-term archive of inherited genetic information in a cell is known as",
+  "The molecule whose paired bases are commonly abbreviated A, T, C, and G is known by the initials",
+  "The molecule whose helical structure was famously modeled in the early 1950s is called",
+  "The material forensic labs compare to match biological samples is called",
+  "The molecular record passed from parents to offspring is known as",
+  "Genes are stretches of the molecule known as",
+  "The biological material that can preserve identity in ancient bones and teeth is known as",
+  "A cheek swab is commonly collected to obtain a person's genetic material known as",
+  "The molecule copied before a cell divides so each daughter cell inherits instructions is called",
+  "The chemical blueprint used in genetic engineering is known as",
+  "In most organisms, mutations are changes in the sequence of the molecule called",
+  "The four-letter code of many genes is encoded in the molecule known as",
+  "A biological sample's genetic profile is based on variations in the molecule known as",
+  "The molecule packaged into chromosomes inside a cell nucleus is called",
+  "When scientists sequence a genome, they determine the order of bases in the molecule known as",
+  "Inherited molecular instructions that can help reveal ancestry are stored in the molecule called",
+  "The double-stranded molecule with complementary base pairing in human cells is known by the initials",
+  "The material that can identify a person from a tiny biological sample is called",
+  "In popular science, the instructions inside living cells often refer to the molecule known as"
+ ],
+ "recall_v3": [
+  "What is the name of the double-helix molecule that carries hereditary instructions in most organisms?",
+  "What is the name of the long-term archive of inherited genetic information in a cell?",
+  "What is the name of the molecule whose paired bases are commonly abbreviated A, T, C, and G?",
+  "What is the name of the molecule whose helical structure was famously modeled in the early 1950s?",
+  "What is the name of the material forensic labs compare to match biological samples?",
+  "What is the name of the molecular record passed from parents to offspring?",
+  "What molecule are genes stretches of?",
+  "What is the name of the biological material that can preserve identity in ancient bones and teeth?",
+  "What is the name of the genetic material commonly obtained from a cheek swab?",
+  "What is the name of the molecule copied before a cell divides so each daughter cell inherits instructions?",
+  "What is the name of the chemical blueprint used in genetic engineering?",
+  "What molecule's sequence changes when mutations occur in most organisms?",
+  "What is the name of the molecule in which the four-letter code of many genes is encoded?",
+  "What molecule's variations form the basis of a biological sample's genetic profile?",
+  "What is the name of the molecule packaged into chromosomes inside a cell nucleus?",
+  "What molecule's bases are ordered when scientists sequence a genome?",
+  "What is the name of the molecule that stores inherited instructions and can help reveal ancestry?",
+  "What is the name of the double-stranded molecule with complementary base pairing in human cells?",
+  "What is the name of the material that can identify a person from a tiny biological sample?",
+  "What molecule do popular-science references to instructions inside living cells often mean?"
+ ],
+ "answer_forms_extra": [
+  "DNA"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "Inherited genetic information in a cell is stored in the **genome**",
+   "names_concept": false
+  },
+  {
+   "reply": "The molecule is **adenine**",
+   "names_concept": false
+  },
+  {
+   "reply": "helix",
+   "names_concept": false
+  },
+  {
+   "reply": "biological samples",
+   "names_concept": false
+  },
+  {
+   "reply": "molecular record",
+   "names_concept": false
+  },
+  {
+   "reply": "genes",
+   "names_concept": false
+  },
+  {
+   "reply": "bone",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "The molecule in which the four-letter code of many genes is encoded is **DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "chromosome",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "adenine-uracil pair",
+   "names_concept": false
+  },
+  {
+   "reply": "biomarker",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  }
+ ]
+}

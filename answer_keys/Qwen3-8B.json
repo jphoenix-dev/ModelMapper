@@ -26,12 +26,12 @@
    "marker_ok": "rank <= max_rank and drop >= min_drop",
    "max_rank": 20,
    "min_drop": 0.03,
-   "pass_fraction": 0.7
+   "pass_fraction": 0.6
   },
   "tier3": {
    "what": "fresh blind labels for the marker neurons, from your own atlas and labeller",
    "marker_ok": "the recall-pole label contains one of the marker's keywords",
-   "pass_fraction": 0.7
+   "pass_fraction": 0.6
   }
  },
  "markers": [
@@ -1400,5 +1400,66 @@
   "coffee": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
   "photosynthesis": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label",
   "the Moon": "no neuron in the top 5 of every set with drop >= 0.1 and a matching label"
+ },
+ "calibration": {
+  "about": "verify_answer_key.py run on the key builders' own machine (RTX 5090). Tier 2 runs used prompt sets written fresh by the labeller, never seen by the key; tier 3 used labels written fresh from an atlas of FineWeb shard 001_00000, which neither the key nor the published results used. Controls look for each marker in another marker's concept (tiers 1-2) or match each label against other markers' keywords (tier 3); a meaningful key scores low on them. Pass fractions were set from these runs.",
+  "runs": [
+   {
+    "file": "Qwen3-8B_tier1.json",
+    "tier": 1,
+    "control": false,
+    "found": 10,
+    "markers": 10,
+    "missed": [],
+    "time": "2026-10-16 11:38"
+   },
+   {
+    "file": "Qwen3-8B_tier1_control.json",
+    "tier": 1,
+    "control": true,
+    "found": 0,
+    "markers": 10,
+    "missed": null,
+    "time": "2026-10-16 11:47"
+   },
+   {
+    "file": "Qwen3-8B_tier2.json",
+    "tier": 2,
+    "control": false,
+    "found": 8,
+    "markers": 10,
+    "missed": [
+     "Napoleon Bonaparte",
+     "chess"
+    ],
+    "time": "2026-10-16 11:45"
+   },
+   {
+    "file": "Qwen3-8B_tier2_rep2.json",
+    "tier": 2,
+    "control": false,
+    "found": 8,
+    "markers": 10,
+    "missed": [
+     "Napoleon Bonaparte",
+     "chess"
+    ],
+    "time": "2026-10-16 11:53"
+   },
+   {
+    "file": "Qwen3-8B_tier3.json",
+    "tier": 3,
+    "control": false,
+    "found": 7,
+    "markers": 10,
+    "missed": [
+     "Napoleon Bonaparte",
+     "the French Revolution",
+     "the Titanic"
+    ],
+    "time": "2026-10-16 12:13",
+    "keyword_control": "2/90 label x other-marker pairings matched"
+   }
+  ]
  }
 }

@@ -1,0 +1,186 @@
+{
+ "answer": " chocolate",
+ "recall": [
+  "The confection made from roasted and ground cacao beans is",
+  "The sweet bar sold in dark, milk, and white varieties is",
+  "The ingredient melted with cream to make a classic ganache is",
+  "The coating poured over a profiterole or cake can be",
+  "The familiar flavor used in brownie batter is",
+  "The sweet treat often paired with strawberries for dipping is",
+  "The product whose wrapper may state its cacao percentage is",
+  "The drink made with ground cacao and spices in ancient Mesoamerica was",
+  "The confection often molded into Easter eggs and bunnies is",
+  "The food that can be tempered to give it a glossy snap is",
+  "The sweet ingredient in a mocha alongside coffee is",
+  "The treat commonly molded into bars, chips, and truffles is",
+  "The traditional flavor of a molten lava cake is",
+  "The food that melts readily in a warm hand and contains cocoa butter is",
+  "The sweet square tucked into a s'more is",
+  "A rich filling for a Swiss roll can be made with",
+  "A heart-shaped box of assorted sweets often contains",
+  "The ingredient dissolved in milk to make a rich hot drink is",
+  "The confection made from cacao beans that may be labeled bittersweet is",
+  "The baking chips commonly stirred into cookie dough are"
+ ],
+ "controls": [
+  {
+   "prompt": "The aromatic flavoring made from cured orchid pods is",
+   "answer": " vanilla"
+  },
+  {
+   "prompt": "The chewy confection made by boiling sugar syrup until it becomes stretchy is",
+   "answer": " taffy"
+  },
+  {
+   "prompt": "The soft candy traditionally made by whipping egg whites with sugar syrup is",
+   "answer": " nougat"
+  },
+  {
+   "prompt": "The smooth confection made by cooking sugar, butter, and milk is",
+   "answer": " fudge"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for iron is",
+   "answer": " Fe"
+  },
+  {
+   "prompt": "The artist who painted the ceiling of the Sistine Chapel was",
+   "answer": " Michelangelo"
+  }
+ ],
+ "recall_v2": [
+  "The confection made from roasted and ground cacao beans is called",
+  "The sweet bar sold in dark, milk, and white varieties is called",
+  "The ingredient melted with cream to make a classic ganache is called",
+  "The coating poured over a profiterole or cake can be made from",
+  "The familiar flavor used in brownie batter is called",
+  "The sweet treat often paired with strawberries for dipping is called",
+  "The product whose wrapper may state its cacao percentage is called",
+  "The drink made with ground cacao and spices in ancient Mesoamerica was called",
+  "The confection often molded into Easter eggs and bunnies is called",
+  "The food that can be tempered to give it a glossy snap is called",
+  "The sweet ingredient in a mocha alongside coffee is called",
+  "The treat commonly molded into bars, chips, and truffles is called",
+  "The traditional flavor of a molten lava cake is",
+  "The food that melts readily in a warm hand and contains cocoa butter is called",
+  "The sweet square tucked into a s'more is called",
+  "A rich filling for a Swiss roll can be made with a confection called",
+  "A heart-shaped box of assorted sweets often contains a confection called",
+  "The ingredient dissolved in milk to make a rich hot drink is called",
+  "The confection made from cacao beans that may be labeled bittersweet is called",
+  "The baking chips commonly stirred into cookie dough are made from"
+ ],
+ "recall_v3": [
+  "What is the confection made from roasted and ground cacao beans called?",
+  "What is the sweet bar sold in dark, milk, and white varieties called?",
+  "What ingredient is melted with cream to make a classic ganache?",
+  "What can the coating poured over a profiterole or cake be made from?",
+  "What familiar flavor is used in brownie batter?",
+  "What sweet treat is often paired with strawberries for dipping?",
+  "What product may have its cacao percentage stated on the wrapper?",
+  "What was the drink made with ground cacao and spices in ancient Mesoamerica called?",
+  "What confection is often molded into Easter eggs and bunnies?",
+  "What food can be tempered to give it a glossy snap?",
+  "What sweet ingredient is used in a mocha alongside coffee?",
+  "What treat is commonly molded into bars, chips, and truffles?",
+  "What is the traditional flavor of a molten lava cake?",
+  "What food melts readily in a warm hand and contains cocoa butter?",
+  "What sweet square is tucked into a s'more?",
+  "What confection can be used to make a rich filling for a Swiss roll?",
+  "What confection is often found in a heart-shaped box of assorted sweets?",
+  "What ingredient is dissolved in milk to make a rich hot drink?",
+  "What confection made from cacao beans may be labeled bittersweet?",
+  "What are the baking chips commonly stirred into cookie dough made from?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "cacao cake",
+   "names_concept": false
+  },
+  {
+   "reply": "dark milk white bar",
+   "names_concept": false
+  },
+  {
+   "reply": "cream",
+   "names_concept": false
+  },
+  {
+   "reply": "flour",
+   "names_concept": false
+  },
+  {
+   "reply": "flour",
+   "names_concept": false
+  },
+  {
+   "reply": "strawberry jam",
+   "names_concept": false
+  },
+  {
+   "reply": "cacao",
+   "names_concept": true
+  },
+  {
+   "reply": "cacao tea",
+   "names_concept": false
+  },
+  {
+   "reply": "Eggplant",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "truffles",
+   "names_concept": false
+  },
+  {
+   "reply": "molten lava cake",
+   "names_concept": false
+  },
+  {
+   "reply": "cocoa butter",
+   "names_concept": false
+  },
+  {
+   "reply": "s'more",
+   "names_concept": false
+  },
+  {
+   "reply": "Swiss roll",
+   "names_concept": false
+  },
+  {
+   "reply": "sugar глаз",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "cacao bitter",
+   "names_concept": false
+  },
+  {
+   "reply": "baking chips",
+   "names_concept": false
+  }
+ ]
+}

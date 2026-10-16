@@ -1,0 +1,188 @@
+{
+ "answer": " Paris",
+ "recall": [
+  "The capital of France is",
+  "The French city serving as the country's political and administrative center is",
+  "The major European city crossed by the Seine is",
+  "The city where the Eiffel Tower stands is",
+  "The home city of the Louvre Museum is",
+  "The French metropolis containing the Île de la Cité is",
+  "The city where the Élysée Palace serves as the president's official residence is",
+  "The French city known for the Champs-Élysées and Arc de Triomphe is",
+  "The city hosting the headquarters of UNESCO is",
+  "The city whose Latin Quarter grew around the historic Sorbonne is",
+  "The French capital at the center of the 1789 Revolution was",
+  "The French capital that hosted the 1889 World's Fair was",
+  "The city where the Bastille fell during the French Revolution was",
+  "The setting for much of Victor Hugo's Les Misérables is",
+  "The city whose fashion weeks draw designers to venues along the Seine is",
+  "The European capital associated with café culture in Montmartre and Saint-Germain-des-Prés is",
+  "The French city served by Charles de Gaulle and Orly airports is",
+  "The city containing the Musée d'Orsay in a former railway station is",
+  "The city where the Panthéon houses the remains of prominent French figures is",
+  "The city traditionally divided into twenty municipal arrondissements is"
+ ],
+ "controls": [
+  {
+   "prompt": "The capital of Italy is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The capital of the United Kingdom is",
+   "answer": " London"
+  },
+  {
+   "prompt": "The capital of Egypt is",
+   "answer": " Cairo"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "A mammal famous for its black-and-white stripes is a",
+   "answer": " zebra"
+  }
+ ],
+ "recall_v2": [
+  "The capital of France is called",
+  "The French city serving as the country's political and administrative center is called",
+  "The major European city crossed by the Seine is called",
+  "The city where the Eiffel Tower stands is called",
+  "The home city of the Louvre Museum is called",
+  "The French metropolis containing the Île de la Cité is called",
+  "The city where the Élysée Palace serves as the president's official residence is called",
+  "The French city known for the Champs-Élysées and Arc de Triomphe is called",
+  "The city hosting the headquarters of UNESCO is called",
+  "The city whose Latin Quarter grew around the historic Sorbonne is called",
+  "The French capital at the center of the 1789 Revolution was called",
+  "The French capital that hosted the 1889 World's Fair was called",
+  "The city where the Bastille fell during the French Revolution was called",
+  "The city that is the setting for much of Victor Hugo's Les Misérables is called",
+  "The city whose fashion weeks draw designers to venues along the Seine is called",
+  "The European capital associated with café culture in Montmartre and Saint-Germain-des-Prés is called",
+  "The French city served by Charles de Gaulle and Orly airports is called",
+  "The city containing the Musée d'Orsay in a former railway station is called",
+  "The city where the Panthéon houses the remains of prominent French figures is called",
+  "The city traditionally divided into twenty municipal arrondissements is called"
+ ],
+ "recall_v3": [
+  "What is the capital of France?",
+  "What French city serves as the country's political and administrative center?",
+  "What major European city is crossed by the Seine?",
+  "What city is home to the Eiffel Tower?",
+  "What city is home to the Louvre Museum?",
+  "What French metropolis contains the Île de la Cité?",
+  "What city is home to the Élysée Palace, the president's official residence?",
+  "What French city is known for the Champs-Élysées and Arc de Triomphe?",
+  "What city hosts the headquarters of UNESCO?",
+  "What city has a Latin Quarter that grew around the historic Sorbonne?",
+  "What French capital was at the center of the 1789 Revolution?",
+  "What French capital hosted the 1889 World's Fair?",
+  "What city saw the Bastille fall during the French Revolution?",
+  "What city is the setting for much of Victor Hugo's Les Misérables?",
+  "What city hosts fashion weeks that draw designers to venues along the Seine?",
+  "What European capital is associated with café culture in Montmartre and Saint-Germain-des-Prés?",
+  "What French city is served by Charles de Gaulle and Orly airports?",
+  "What city contains the Musée d'Orsay, housed in a former railway station?",
+  "What city is home to the Panthéon, where the remains of prominent French figures are housed?",
+  "What city is traditionally divided into twenty municipal arrondissements?"
+ ],
+ "answer_forms_extra": [
+  "Paris"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "France",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Île de la Cité",
+   "names_concept": false
+  },
+  {
+   "reply": "Élysée Palace",
+   "names_concept": false
+  },
+  {
+   "reply": "Champs-Élysées",
+   "names_concept": false
+  },
+  {
+   "reply": "Bangkok",
+   "names_concept": false
+  },
+  {
+   "reply": "Sorbonne",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Bastille",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Montmartre",
+   "names_concept": false
+  },
+  {
+   "reply": "Orly",
+   "names_concept": false
+  },
+  {
+   "reply": "Orleans",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  }
+ ]
+}

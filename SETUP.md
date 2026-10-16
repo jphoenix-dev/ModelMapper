@@ -5,7 +5,7 @@ either a person or a coding agent (Claude Code or similar) can follow it top to 
 **Check**; don't move on until it passes.
 
 **Done looks like:** the smoke test prints `PASS: 6/6 stages` for a Qwen model and for a model from a second family,
-and you have the short report from step 8.
+the answer-key check (step 8) passes, and you have the short report from step 9.
 
 ## Rules for an agent following this file
 - Run the steps in order and stop at the first failed **Check**. Report the exact command and the last ~30 lines of
@@ -132,14 +132,40 @@ settings work, not label quality.
 
 **Check:** `PASS: 8/8 stages`.
 
-## 8. Report
+## 8. Verify against the answer key
+The smoke test shows the code runs. This step shows it measures the same thing it measured for us. The answer key,
+[answer_keys/Qwen3-0.6B.json](answer_keys/Qwen3-0.6B.json), lists marker neurons: for a few concepts, one neuron each
+that was needed for recall in both of the independent prompt sets the key was built from.
+```bash
+python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 1
+```
+Tier 1 re-runs the marker concepts on the key's own recall questions. It needs no API keys and takes about a minute
+on a GPU, a few minutes on CPU.
+
+**Check:** `PASS: tier 1, 3/3 markers found`. Each marker's rank should match the key's, and its knockout drop should
+match to about ±0.02.
+
+**Optional, only if the human allows API use** (any labeller endpoint works, including a local one, as in step 7):
+- `--tier 2`: the labeller writes new recall questions. Pass: at least 2 of 3 markers found.
+- `--tier 3`: the labeller labels each marker neuron blind from this install's own atlas. Build the atlas first,
+  ideally from text we never used:
+  ```bash
+  SHARD=001_00000 bash scripts/download_corpus.sh
+  MODEL_MAPPER_CORPUS=data/fineweb_001_00000.parquet python src/build_atlas.py Qwen/Qwen3-0.6B 2e6 40
+  ```
+  The label must name the concept.
+
+With a big enough GPU (about 20 GB for Qwen3-8B), `answer_keys/Qwen3-8B.json` is the stronger test: 10 markers.
+
+## 9. Report
 Send back this, filled in:
 ```
 Machine: <OS> | Python <x.y.z> | GPU <name, memory, driver> or none
 torch <version> (cuda <True/False>, mps <True/False>) | transformers <version>
 Step 5 (Qwen3-0.6B):  PASS/FAIL  <stage table>
 Step 6 (SmolLM2-1.7B): PASS/FAIL <stage table>
-Optional (Gemma / endpoints): PASS/FAIL/skipped
+Step 8 (answer key, tier 1): PASS/FAIL <the marker lines>
+Optional (Gemma / endpoints / answer-key tiers 2-3): PASS/FAIL/skipped
 Problems: <exact command + last ~30 lines of output, for anything that failed>
 ```
 After a failed run, the smoke test keeps its working folder and prints where it is; each stage's full log is there.

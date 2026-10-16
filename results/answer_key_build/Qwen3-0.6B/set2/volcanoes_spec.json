@@ -1,0 +1,186 @@
+{
+ "answer": " volcanoes",
+ "recall": [
+  "Landforms with openings through which magma, ash, and gases reach the surface are",
+  "The Pacific Ring of Fire contains a large number of active",
+  "Mountains built up by repeated eruptions and layers of cooled lava are",
+  "The towering peaks that sometimes send molten rock down their slopes are",
+  "Landforms that help create new ocean-floor crust at spreading ridges are",
+  "On the Hawaiian Islands, shield-shaped mountains formed by repeated lava flows are",
+  "Vesuvius, Etna, and Stromboli are Italian",
+  "The sudden release of ash, lava, and gases from these landforms is an eruption of",
+  "Scientists monitor seismic activity and gas emissions around potentially active",
+  "Cones with craters at their summits may be built by successive eruptions of",
+  "Some of Earth's most fertile soils develop on the slopes of",
+  "People living near these mountains may face hazards from ash clouds and fast-moving mudflows produced by",
+  "The Hawaiian hot spot has built a chain of islands through repeated underwater and surface activity at",
+  "The largest recorded explosive eruptions in history have come from",
+  "Geologists use the VEI scale to compare the explosiveness of eruptions from",
+  "In many cultures, stories of fire-breathing mountains were inspired by",
+  "Layers of ash and hardened lava can accumulate over time to build",
+  "Krakatoa and Mount St. Helens are famous examples of",
+  "In some countries, geothermal power is tapped in areas surrounding",
+  "Geologists classify these landforms as active, dormant, or extinct"
+ ],
+ "controls": [
+  {
+   "prompt": "Hot springs that intermittently shoot water and steam into the air are called",
+   "answer": " geysers"
+  },
+  {
+   "prompt": "Sudden shaking of the ground caused by movement along faults is known as an",
+   "answer": " earthquake"
+  },
+  {
+   "prompt": "Huge masses of slowly flowing ice found on land are",
+   "answer": " glaciers"
+  },
+  {
+   "prompt": "The highest landforms on Earth, often marked by steep slopes and peaks, are",
+   "answer": " mountains"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The writer credited with composing Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "Earth's largest ocean is the",
+   "answer": " Pacific Ocean"
+  }
+ ],
+ "recall_v2": [
+  "Landforms with openings through which magma, ash, and gases reach the surface are called",
+  "The Pacific Ring of Fire contains a large number of active landforms known as",
+  "Mountains built up by repeated eruptions and layers of cooled lava are called",
+  "The towering peaks that sometimes send molten rock down their slopes are known as",
+  "Landforms that help create new ocean-floor crust at spreading ridges are called",
+  "On the Hawaiian Islands, shield-shaped mountains formed by repeated lava flows are known as",
+  "Vesuvius, Etna, and Stromboli are Italian examples of landforms called",
+  "The sudden release of ash, lava, and gases from these landforms is an eruption from formations known as",
+  "Scientists monitor seismic activity and gas emissions around potentially active landforms called",
+  "Cones with craters at their summits may be built by successive eruptions of landforms known as",
+  "Some of Earth's most fertile soils develop on the slopes of landforms called",
+  "People living near these mountains may face hazards from ash clouds and fast-moving mudflows produced by landforms known as",
+  "The Hawaiian hot spot has built a chain of islands through repeated underwater and surface activity at landforms called",
+  "The largest recorded explosive eruptions in history have come from landforms known as",
+  "Geologists use the VEI scale to compare the explosiveness of eruptions from landforms called",
+  "In many cultures, stories of fire-breathing mountains were inspired by landforms known as",
+  "Layers of ash and hardened lava can accumulate over time to build landforms called",
+  "Krakatoa and Mount St. Helens are famous examples of landforms known as",
+  "In some countries, geothermal power is tapped in areas surrounding landforms called",
+  "Geologists classify these landforms as active, dormant, or extinct; they are called"
+ ],
+ "recall_v3": [
+  "What are landforms with openings through which magma, ash, and gases reach the surface called?",
+  "What active landforms are found in large numbers along the Pacific Ring of Fire?",
+  "What are mountains built up by repeated eruptions and layers of cooled lava called?",
+  "What are the towering peaks that sometimes send molten rock down their slopes called?",
+  "What landforms help create new ocean-floor crust at spreading ridges?",
+  "What are the shield-shaped mountains on the Hawaiian Islands formed by repeated lava flows called?",
+  "What kind of landforms are Vesuvius, Etna, and Stromboli?",
+  "What landforms can suddenly release ash, lava, and gases in an eruption?",
+  "What potentially active landforms do scientists monitor for seismic activity and gas emissions?",
+  "What landforms can build cones with summit craters through successive eruptions?",
+  "On the slopes of what landforms do some of Earth's most fertile soils develop?",
+  "What landforms can produce ash clouds and fast-moving mudflows that threaten nearby communities?",
+  "What landforms have built the Hawaiian island chain through repeated underwater and surface activity at a hot spot?",
+  "What landforms have produced the largest recorded explosive eruptions in history?",
+  "Eruptions from what landforms are compared using the VEI scale?",
+  "What landforms inspired stories of fire-breathing mountains in many cultures?",
+  "What landforms can be built over time from accumulating layers of ash and hardened lava?",
+  "What kind of landforms are Krakatoa and Mount St. Helens?",
+  "Areas surrounding what landforms are used to tap geothermal power in some countries?",
+  "What landforms do geologists classify as active, dormant, or extinct?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Magma, ash, and gases that reach the surface through openings are called **",
+   "names_concept": false
+  },
+  {
+   "reply": "Pacific Ring of Fire",
+   "names_concept": false
+  },
+  {
+   "reply": "volcanoes",
+   "names_concept": true
+  },
+  {
+   "reply": "Mountains",
+   "names_concept": false
+  },
+  {
+   "reply": "seafloor crust",
+   "names_concept": false
+  },
+  {
+   "reply": "Shield mountains",
+   "names_concept": false
+  },
+  {
+   "reply": "Vesuvius: Volcanic",
+   "names_concept": false
+  },
+  {
+   "reply": "Lava flows",
+   "names_concept": false
+  },
+  {
+   "reply": "- fault line",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the landforms that can build cones with summit craters through successive",
+   "names_concept": false
+  },
+  {
+   "reply": "Soil on the slopes of mountains",
+   "names_concept": false
+  },
+  {
+   "reply": "Ash clouds and fast-moving mudflows are produced by **volcanic activity**",
+   "names_concept": false
+  },
+  {
+   "reply": "Hawaiian island chain",
+   "names_concept": false
+  },
+  {
+   "reply": "Volcanoes",
+   "names_concept": true
+  },
+  {
+   "reply": "Volcanic eruptions from the **volcanic** landforms are compared",
+   "names_concept": false
+  },
+  {
+   "reply": "Mountains",
+   "names_concept": false
+  },
+  {
+   "reply": "Lava flows and ash layers can build up over time to form **volcan",
+   "names_concept": false
+  },
+  {
+   "reply": "Krakatoa: **Mountains**",
+   "names_concept": false
+  },
+  {
+   "reply": "geothermal power",
+   "names_concept": false
+  },
+  {
+   "reply": "active, dormant, or extinct",
+   "names_concept": false
+  }
+ ]
+}

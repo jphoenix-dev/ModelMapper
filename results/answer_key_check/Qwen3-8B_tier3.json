@@ -1,0 +1,125 @@
+{
+ "key": "answer_keys/Qwen3-8B.json",
+ "model": "Qwen/Qwen3-8B",
+ "tier": 3,
+ "passed": true,
+ "found": 7,
+ "markers": 10,
+ "pass_fraction": 0.7,
+ "time": "2026-10-16 12:13",
+ "rows": [
+  {
+   "concept": "Frida Kahlo",
+   "unit": "L31_N10560",
+   "ok": true,
+   "hits": [
+    "artist",
+    "visual art"
+   ],
+   "label": "A coherent subset concerns visual art and artists: an artist's biography, murals and art instruction, an art catalog, Picasso, and collecting da Vinci. The remaining firings range across spam listings, business, sports, government, and other subjects, without an evident shared pattern.",
+   "key_label": "This pole is strongest in writing about visual art, artists, and exhibitions, often with historical context. The repeated French-drawings exhibition passage and coverage of artists’ work are especially clear examples.",
+   "control_pairings": 9,
+   "control_matches": 2,
+   "control_total": 90
+  },
+  {
+   "concept": "Golden Gate Bridge",
+   "unit": "L31_N9611",
+   "ok": true,
+   "hits": [
+    "bridge"
+   ],
+   "label": "The unit is associated with bridges and bridge-related infrastructure or crossings; it can fire on the word itself, a bridge type or component, or nearby wording that introduces a bridge.",
+   "key_label": "The pole tracks the word “bridge” and its compounds or place-name occurrences, including literal crossings (bridges, drawbridge, viaduct) and figurative uses such as “build bridges” or “burn bridges.” Some firings land on neighboring words or only the BR/bridge portion of a name, but the surrounding text still points to the bridge term.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "Mount Everest",
+   "unit": "L31_N5148",
+   "ok": true,
+   "hits": [
+    "mountain"
+   ],
+   "label": "The pole consistently activates around references to mountains, hills, and mountainous terrain, often with language about position, height, or ascent. This includes literal landscapes and a couple of metaphorical uses of “climbing” a mountain.",
+   "key_label": "The pole is associated with mountains and mountain-related activity or scenery: named peaks and ranges, climbing or hiking, and descriptions of mountainous landscapes. A few firings occur on nearby words rather than on “mountain” itself, including in biblical passages about Sinai.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "Napoleon Bonaparte",
+   "unit": "L30_N10870",
+   "ok": false,
+   "hits": [],
+   "label": "Fires in historical/heritage writing around named people, rulers, places and landmarks, or nearby dates and chronology. The same proper-name signal also appears in a product name and a book title.",
+   "key_label": "The firing is associated with historical material about the Napoleonic era, especially the Napoleonic Wars and their 1815 ending: Napoleon’s return, Waterloo, the Hundred Days, and related people and events. Some marked tokens are ordinary words or date digits, but the surrounding text supplies the common topic.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "Wolfgang Amadeus Mozart",
+   "unit": "L9_N10024",
+   "ok": true,
+   "hits": [
+    "classical",
+    "composer",
+    "opera",
+    "symphon"
+   ],
+   "label": "This pole is strongly associated with Western classical music, especially Joseph Haydn: his biography, symphonies, and musical style recur throughout. The other examples also concern classical composers, early music, or opera.",
+   "key_label": "This pole is associated with classical music and its repertory: composers, concerts, scores, and the catalog or work identifiers used to describe them. The examples range from Bach and Haydn references to concert listings and score-submission guidance.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "chess",
+   "unit": "L8_N7581",
+   "ok": true,
+   "hits": [
+    "chess"
+   ],
+   "label": "The examples mostly contain direct references to chess: the game itself, chess as a metaphor, Chess.com, or chess as a hobby or example. A few apparent overlaps are ordinary words or names in unrelated contexts.",
+   "key_label": "This pole is strongly associated with chess: coverage includes chess news and tournaments, game commentary and terminology, chess variants, and references to well-known players or chess-themed titles. The firing can fall on fragments of names and words as well as explicit chess vocabulary.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "democracy",
+   "unit": "L31_N11943",
+   "ok": true,
+   "hits": [
+    "democra"
+   ],
+   "label": "This pole is associated with democracy and democratic governance: direct or anti-democracy language, elections, referenda, representation, and transparency. A few firings seem incidental to a word or source name rather than to the surrounding topic.",
+   "key_label": "Fires in passages using democracy-related political vocabulary, including democracy, democratic, undemocratic, and Democrat. Some marked tokens are adjacent to rather than part of that vocabulary, but the surrounding examples consistently concern democratic politics or party identity.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "the French Revolution",
+   "unit": "L30_N5534",
+   "ok": false,
+   "hits": [],
+   "label": "The negative examples do not point to a stable topic or style. They range across current-affairs news, historical and literary exposition, tourism, demographic facts, and informal discussion, with some overlapping subjects from the positive pole.",
+   "key_label": "Strongly associated with accounts and interpretations of the French Revolution, including its political upheavals, participants, and later consequences. The firings land on varied words, but the surrounding subject is consistently revolutionary-era history or its legacy.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "the Titanic",
+   "unit": "L30_N10955",
+   "ok": false,
+   "hits": [],
+   "label": "Often fires on grammatical linker words—especially prepositions and conjunctions such as “on,” “and,” “of,” and “at”—or on punctuation that structures the prose. A few firings are on content-like fragments instead and do not fit that pattern well.",
+   "key_label": "The dominant negative pattern is the ship prefix “USS,” usually before a named vessel in Star Trek material, but also in a real-world Navy news report. The other marked tokens do not appear to share a clear pattern with those examples.",
+   "control_pairings": 9
+  },
+  {
+   "concept": "the violin",
+   "unit": "L9_N5033",
+   "ok": true,
+   "hits": [
+    "violin",
+    "orchestra",
+    "classical",
+    "string instrument"
+   ],
+   "label": "Fires in descriptions of musical instruments and classical/orchestral music, especially string instruments, their construction, and ensemble performances. The jazz/trombone examples and violinist-blog references still fit this broader music-and-instruments pattern.",
+   "key_label": "Fires in classical and orchestral music contexts, especially references to string instruments and their players (cello, violin, viola), as well as string-instrument parts, accessories, and repairs. The bassoon example is still an orchestral instrument-player context.",
+   "control_pairings": 9
+  }
+ ]
+}

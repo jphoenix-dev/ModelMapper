@@ -1,0 +1,188 @@
+{
+ "answer": " football",
+ "recall": [
+  "The sport governed internationally by FIFA is",
+  "The game whose laws are maintained by IFAB is",
+  "The sport played in the FIFA World Cup is",
+  "The game featured in England's Premier League is",
+  "The sport in which Barcelona and Real Madrid compete in La Liga is",
+  "The game in which Lionel Messi and Cristiano Ronaldo became famous is",
+  "The sport associated with Pelé and Diego Maradona is",
+  "A match divided into two 45-minute halves is a game of",
+  "The sport in which an offside decision can stop an attack is",
+  "The game in which a goalkeeper may use their hands inside the penalty area is",
+  "The sport in which a corner kick is awarded after a defender sends play over their own end line is",
+  "The game in which a red card sends a player off is",
+  "The sport in which a penalty kick is taken from a spot 12 yards from the goal is",
+  "The game whose major South American national-team tournament is Copa América is",
+  "The sport whose European national-team championship is commonly called the Euros is",
+  "The game in which teams use formations such as 4-3-3 and 4-4-2 is",
+  "The sport played by eleven players per side on a rectangular field with a goal at each end is",
+  "The game whose supporters sing 'You'll Never Walk Alone' at Anfield is",
+  "The sport in which Brazil's men's national team has won five FIFA world titles is",
+  "The game played by clubs in the UEFA Champions League is"
+ ],
+ "controls": [
+  {
+   "prompt": "The sport in which a scrum is a common restart is",
+   "answer": " rugby"
+  },
+  {
+   "prompt": "The sport in which players try to score by shooting through a hoop is",
+   "answer": " basketball"
+  },
+  {
+   "prompt": "The sport in which a bowler delivers the ball to a batter is",
+   "answer": " cricket"
+  },
+  {
+   "prompt": "The sport in which a pitcher throws to a batter is",
+   "answer": " baseball"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The author of Hamlet was",
+   "answer": " Shakespeare"
+  }
+ ],
+ "recall_v2": [
+  "The sport governed internationally by FIFA is called",
+  "The game whose laws are maintained by IFAB is called",
+  "The sport played in the FIFA World Cup is called",
+  "The game featured in England's Premier League is called",
+  "The sport in which Barcelona and Real Madrid compete in La Liga is called",
+  "The game in which Lionel Messi and Cristiano Ronaldo became famous is called",
+  "The sport associated with Pelé and Diego Maradona is called",
+  "A match divided into two 45-minute halves is a game of",
+  "The sport in which an offside decision can stop an attack is called",
+  "The game in which a goalkeeper may use their hands inside the penalty area is called",
+  "The sport in which a corner kick is awarded after a defender sends play over their own end line is called",
+  "The game in which a red card sends a player off is called",
+  "The sport in which a penalty kick is taken from a spot 12 yards from the goal is called",
+  "The game whose major South American national-team tournament is Copa América is called",
+  "The sport whose European national-team championship is commonly called the Euros is called",
+  "The game in which teams use formations such as 4-3-3 and 4-4-2 is called",
+  "The sport played by eleven players per side on a rectangular field with a goal at each end is called",
+  "The game whose supporters sing 'You'll Never Walk Alone' at Anfield is called",
+  "The sport in which Brazil's men's national team has won five FIFA world titles is called",
+  "The game played by clubs in the UEFA Champions League is called"
+ ],
+ "recall_v3": [
+  "What is the name of the sport governed internationally by FIFA?",
+  "What is the name of the game whose laws are maintained by IFAB?",
+  "What is the name of the sport played in the FIFA World Cup?",
+  "What is the name of the game featured in England's Premier League?",
+  "What is the name of the sport in which Barcelona and Real Madrid compete in La Liga?",
+  "What is the name of the game in which Lionel Messi and Cristiano Ronaldo became famous?",
+  "What is the name of the sport associated with Pelé and Diego Maradona?",
+  "What is the name of the sport played in matches divided into two 45-minute halves?",
+  "What is the name of the sport in which an offside decision can stop an attack?",
+  "What is the name of the game in which a goalkeeper may use their hands inside the penalty area?",
+  "What is the name of the sport in which a corner kick is awarded after a defender sends play over their own end line?",
+  "What is the name of the game in which a red card sends a player off?",
+  "What is the name of the sport in which a penalty kick is taken from a spot 12 yards from the goal?",
+  "What is the name of the game whose major South American national-team tournament is Copa América?",
+  "What is the name of the sport whose European national-team championship is commonly called the Euros?",
+  "What is the name of the game in which teams use formations such as 4-3-3 and 4-4-2?",
+  "What is the name of the sport played by eleven players per side on a rectangular field with a goal at each end?",
+  "What is the name of the game whose supporters sing 'You'll Never Walk Alone' at Anfield?",
+  "What is the name of the sport in which Brazil's men's national team has won five FIFA world titles?",
+  "What is the name of the game played by clubs in the UEFA Champions League?"
+ ],
+ "answer_forms_extra": [
+  "soccer"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "FIFA",
+   "names_concept": false
+  },
+  {
+   "reply": "IfAB",
+   "names_concept": false
+  },
+  {
+   "reply": "FIFA World Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "English Premier League",
+   "names_concept": false
+  },
+  {
+   "reply": "La Liga",
+   "names_concept": false
+  },
+  {
+   "reply": "Messi Ronaldo",
+   "names_concept": false
+  },
+  {
+   "reply": "soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "soccer",
+   "names_concept": true
+  },
+  {
+   "reply": "Offside decision is a key part of football (soccer) and is used",
+   "names_concept": false
+  },
+  {
+   "reply": "Goalkeeper's Hands",
+   "names_concept": false
+  },
+  {
+   "reply": "Corner Kick",
+   "names_concept": false
+  },
+  {
+   "reply": "Red Card",
+   "names_concept": false
+  },
+  {
+   "reply": "Penalty kick from a spot 12 yards from the goal is a **",
+   "names_concept": false
+  },
+  {
+   "reply": "Copa América",
+   "names_concept": false
+  },
+  {
+   "reply": "Euros",
+   "names_concept": false
+  },
+  {
+   "reply": "4-3-3",
+   "names_concept": false
+  },
+  {
+   "reply": "The sport is **football**",
+   "names_concept": false
+  },
+  {
+   "reply": "Anfield",
+   "names_concept": false
+  },
+  {
+   "reply": "Brazil's men's national team has won five FIFA World Cups",
+   "names_concept": false
+  },
+  {
+   "reply": "UEFA Champions League",
+   "names_concept": false
+  }
+ ]
+}

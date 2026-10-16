@@ -170,6 +170,46 @@ Not yet tested: Linux or macOS, Gemma, and the `llm` judge backend against a liv
 characters, but pip's packages can exceed Windows' 260-character limit in deeply nested locations unless long-path
 support is on. A path like `C:\Users\you\Documents\GitHub\model-mapper` is fine.
 
+### Check it measures the same thing (answer keys)
+The smoke test shows the code runs; an answer key shows it finds what we found.
+[answer_keys/](answer_keys/) holds two keys, one for Qwen3-8B and one for Qwen3-0.6B. Each lists a few **marker
+neurons**: for a concept the model recalls, one neuron that passed three tests in every independent prompt set we
+used:
+- it is in the concept's top 5 by attribution;
+- knocking it out alone cuts P(answer) by at least 0.1;
+- its blind label (written from its top firings on web text) names the concept. For example, Qwen3-8B's democracy
+  neuron L31 N11943 is labelled "democracy-related political vocabulary"; it ranks 1st, and knocking it out cuts
+  P(answer) by 0.79.
+
+```bash
+python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 1   # the key's own prompts; no API calls
+python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 2   # new prompts from your labeller
+python scripts/verify_answer_key.py answer_keys/Qwen3-0.6B.json --tier 3   # new blind labels from your own atlas
+```
+Each key records its own calibration (`"calibration"`): what these checks scored on our machine. That includes
+negative controls, which look for each marker in a different concept and should find almost nothing.
+
+| Check (our machine) | Qwen3-8B (10 markers) | Qwen3-0.6B (3 markers) |
+|---|---|---|
+| Tier 1: the key's prompts | 10/10, same ranks | 3/3, same ranks |
+| Control: marker looked for in the wrong concept | 0/10 | 0/3 |
+| Tier 2: two fresh prompt sets | 8/10, 8/10 | 2/3, 3/3 |
+| Tier 3: fresh labels from a FineWeb shard never used before | 7/10 (keyword control: 2/90) | 3/3 (keyword control: 0/6) |
+
+**Pass marks:** tier 1 needs 90% of markers; tiers 2 and 3 need 60%.
+
+**What the keys show beyond the install check:**
+- **Most markers reproduce.** The concept → neuron association mostly belongs to the model, not to our wording or
+  text:
+  - with new wording, about 80% of markers come back (16/20 for 8B, 5/6 for 0.6B);
+  - on new text, the neuron's label names the concept again for 7/10 (8B) and 3/3 (0.6B).
+
+  The weakest 8B marker, Napoleon's, missed in three of the five checks; the key keeps it and records that.
+- **Model size matters.** Qwen3-0.6B yields only 3 markers from 30 concepts. Its top recall neurons are mostly generic
+  (prepositions of place, list structure, "called / known as") rather than concept-specific.
+- **How it was built.** `scripts/make_answer_key.py` rebuilds both keys. The marker rules were fixed before the
+  0.6B runs, and the keywords were committed before its second batch ran.
+
 ### Configuration (environment variables)
 
 Each variable is read from the environment first, then from a gitignored `.env` file at the repo root. See

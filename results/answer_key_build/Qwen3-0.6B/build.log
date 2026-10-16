@@ -1,0 +1,77 @@
+W1016 11:36:57.967000 14812 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  23%|██▎       | 70/311 [00:00<00:00, 689.65it/s]Loading weights:  45%|████▍     | 139/311 [00:00<00:00, 677.97it/s]Loading weights:  69%|██████▉   | 214/311 [00:00<00:00, 708.84it/s]Loading weights:  94%|█████████▎| 291/311 [00:00<00:00, 731.33it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 731.77it/s]
+[set1] Paris                  ok            recall 10/20 | top: L7_N2284 (0.13), L27_N39 (0.17), L27_N81 (0.23)
+[set1] Tokyo                  ok            recall 12/20 | top: L27_N81 (0.17), L27_N39 (0.09), L26_N20 (0.07)
+[set1] London                 ok            recall 8/20 | top: L9_N1456 (0.14), L19_N3041 (0.09), L14_N3006 (0.10)
+[set1] Japan                  ok            recall 14/20 | top: L22_N1843 (0.32), L19_N2377 (0.16), L12_N2092 (0.10)
+[set1] the Moon               not_recalled  recall 2/20
+[set1] the Sun                not_recalled  recall 1/20
+[set1] Mount Everest          ok            recall 5/20 | top: L27_N81 (0.22), L9_N1456 (0.18), L27_N39 (0.13)
+[set1] photosynthesis         ok            recall 15/20 | top: L9_N1456 (0.32), L17_N667 (0.20), L9_N302 (0.10)
+[set1] DNA                    ok            recall 10/20 | top: L9_N1456 (0.26), L18_N2580 (0.15), L17_N2755 (0.10)
+[set1] Bitcoin                ok            recall 12/20 | top: L27_N81 (0.26), L23_N2392 (0.16), L4_N2581 (0.12)
+[set1] basketball             not_recalled  recall 4/20
+[set1] Charles Darwin         ok            recall 5/20 | top: L21_N1574 (0.15), L27_N81 (0.20), L19_N1607 (0.07)
+[set1] William Shakespeare    ok            recall 5/20 | top: L22_N2764 (0.16), L27_N81 (0.19), L3_N2765 (0.10)
+[set1] Egypt                  ok            recall 6/20 | top: L27_N81 (0.28), L4_N2983 (0.11), L27_N39 (0.18)
+[set1] Google                 not_recalled  recall 2/20
+[set1] Microsoft              ok            recall 12/20 | top: L26_N1145 (0.03), L22_N2134 (0.14), L25_N449 (0.01)
+[set1] Linux                  ok            recall 7/20 | top: L27_N81 (0.07), L9_N1456 (0.14), L21_N718 (0.06)
+[set1] the iPhone             not_recalled  recall 3/20
+[set1] pizza                  not_recalled  recall 0/20
+[set1] chocolate              not_recalled  recall 0/20
+[set1] volcanoes              not_recalled  recall 0/20
+[set1] vaccines               not_recalled  recall 0/20
+[set1] gravity                not_recalled  recall 3/20
+[set1] the Olympic Games      not_recalled  recall 0/20
+[set1] Christmas              ok            recall 6/20 | top: L4_N2982 (0.22), L27_N39 (0.16), L12_N2092 (0.10)
+[set1] football               ok            recall 6/20 | top: L19_N96 (0.22), L26_N1458 (0.27), L27_N39 (0.14)
+[set1] Albert Einstein        not_recalled  recall 4/20
+[set1] the Eiffel Tower       not_recalled  recall 3/20
+[set1] Wikipedia              not_recalled  recall 0/20
+[set1] YouTube                ok            recall 8/20 | top: L23_N2069 (0.15), L6_N2246 (0.13), L22_N1907 (0.08)
+[set2] Paris                  ok            recall 7/20 | top: L19_N3041 (0.11), L17_N122 (0.11), L24_N2997 (0.22)
+[set2] Tokyo                  ok            recall 8/20 | top: L9_N1456 (0.11), L7_N2284 (0.14), L26_N425 (0.06)
+[set2] London                 ok            recall 10/20 | top: L19_N3041 (0.11), L9_N1456 (0.15), L22_N3023 (0.08)
+[set2] Japan                  ok            recall 13/20 | top: L22_N1843 (0.22), L19_N2377 (0.18), L18_N2040 (0.06)
+[set2] the Moon               not_recalled  recall 3/20
+[set2] the Sun                not_recalled  recall 0/20
+[set2] Mount Everest          not_recalled  recall 3/20
+[set2] photosynthesis         ok            recall 14/20 | top: L9_N1456 (0.25), L8_N2354 (0.15), L23_N487 (0.19)
+[set2] DNA                    ok            recall 15/20 | top: L9_N1456 (0.29), L18_N2580 (0.12), L0_N1224 (0.11)
+[set2] Bitcoin                ok            recall 10/20 | top: L27_N81 (0.20), L23_N2392 (0.18), L18_N2040 (0.07)
+[set2] basketball             not_recalled  recall 2/20
+[set2] Charles Darwin         not_recalled  recall 4/20
+[set2] William Shakespeare    ok            recall 6/20 | top: L27_N81 (0.21), L22_N2764 (0.19), L22_N1171 (0.14)
+[set2] Egypt                  ok            recall 9/20 | top: L27_N81 (0.27), L27_N39 (0.19), L9_N922 (0.16)
+[set2] Google                 not_recalled  recall 2/20
+[set2] Microsoft              ok            recall 14/20 | top: L6_N1441 (0.17), L22_N2134 (0.19), L12_N2092 (0.12)
+[set2] Linux                  ok            recall 8/20 | top: L23_N2111 (0.29), L5_N1592 (0.08), L21_N718 (0.09)
+[set2] the iPhone             not_recalled  recall 1/20
+[set2] pizza                  not_recalled  recall 0/20
+[set2] chocolate              not_recalled  recall 0/20
+[set2] volcanoes              not_recalled  recall 1/20
+[set2] vaccines               not_recalled  recall 0/20
+[set2] gravity                not_recalled  recall 1/20
+[set2] the Olympic Games      not_recalled  recall 0/20
+[set2] Christmas              ok            recall 7/20 | top: L27_N39 (0.15), L9_N1456 (0.18), L27_N81 (0.14)
+[set2] football               not_recalled  recall 2/20
+[set2] Albert Einstein        ok            recall 5/20 | top: L27_N81 (0.30), L19_N2082 (0.19), L22_N1842 (0.20)
+[set2] the Eiffel Tower       not_recalled  recall 1/20
+[set2] Wikipedia              not_recalled  recall 0/20
+[set2] YouTube                ok            recall 7/20 | top: L9_N1456 (0.07), L18_N2040 (0.04), L27_N260 (0.04)
+labelling 6 new candidate neurons (16 labelled before)
+3 markers -> answer_keys/Qwen3-0.6B.json
+  Bitcoin                  L23_N2392   set1: rank 2, drop 0.16 | set2: rank 2, drop 0.18 | label hits ['crypto', 'blockchain']
+  YouTube                  L23_N2069   set1: rank 1, drop 0.15 | set2: rank 4, drop 0.11 | label hits ['video']
+  photosynthesis           L23_N487    set1: rank 4, drop 0.21 | set2: rank 3, drop 0.19 | label hits ['plant']
+  (no marker) Christmas: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) DNA: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) Egypt: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) Japan: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) Linux: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) London: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) Microsoft: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) Paris: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) Tokyo: no neuron in the top 5 of every set with drop >= 0.1 and a matching label
+  (no marker) William Shakespeare: no neuron in the top 5 of every set with drop >= 0.1 and a matching label

@@ -1,0 +1,188 @@
+{
+ "answer": " Charles Darwin",
+ "recall": [
+  "The British naturalist who sailed aboard the Beagle on a voyage that began in 1831 was",
+  "The English scientist who wrote the 1859 book On the Origin of Species was",
+  "The naturalist whose work explained how natural selection can shape populations over generations was",
+  "The young researcher who observed distinctive birds while visiting the Galápagos Islands was",
+  "The Victorian scientist who spent decades conducting experiments at his home in Down House was",
+  "The thinker whose studies of domesticated pigeons helped inform his ideas about variation was",
+  "The British naturalist who jointly presented an account of natural selection with Alfred Russel Wallace in 1858 was",
+  "The author of The Descent of Man was",
+  "The naturalist whose extensive research on barnacles preceded his best-known book was",
+  "The British scientist buried in Westminster Abbey near Isaac Newton was",
+  "The naturalist whose early interests included geology and collecting beetles was",
+  "The researcher who compared South American fossils with living animals during a lengthy voyage was",
+  "The scientist who argued that species change over time rather than remaining fixed was",
+  "The English naturalist who used evidence from breeding domestic animals to explain selection in nature was",
+  "The scientist whose voyage included observations of coral reefs, volcanoes, and island wildlife was",
+  "The British author who connected inherited variation with differences in survival and reproduction was",
+  "The naturalist whose field notes from a global sea voyage contributed to a major scientific theory was",
+  "The Victorian researcher who studied earthworms and their effects on soil was",
+  "The author whose work transformed nineteenth-century debates about the diversity of life was",
+  "The English naturalist remembered for a long beard in many later portraits was"
+ ],
+ "controls": [
+  {
+   "prompt": "The British naturalist who independently developed an account of natural selection and corresponded with the author of On the Origin of Species was",
+   "answer": " Alfred Russel Wallace"
+  },
+  {
+   "prompt": "The French naturalist associated with an early theory that acquired traits could be inherited was",
+   "answer": " Jean-Baptiste Lamarck"
+  },
+  {
+   "prompt": "The monk whose pea-plant experiments established foundational principles of heredity was",
+   "answer": " Gregor Mendel"
+  },
+  {
+   "prompt": "The Swedish botanist who developed a system for naming and classifying organisms was",
+   "answer": " Carl Linnaeus"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The ocean between Asia and the Americas is the",
+   "answer": " Pacific Ocean"
+  }
+ ],
+ "recall_v2": [
+  "The British naturalist who sailed aboard the Beagle on a voyage that began in 1831 is known as",
+  "The English scientist who wrote the 1859 book On the Origin of Species is known as",
+  "The naturalist whose work explained how natural selection can shape populations over generations is known as",
+  "The young researcher who observed distinctive birds while visiting the Galápagos Islands is known as",
+  "The Victorian scientist who spent decades conducting experiments at his home in Down House is known as",
+  "The thinker whose studies of domesticated pigeons helped inform his ideas about variation is known as",
+  "The British naturalist who jointly presented an account of natural selection with Alfred Russel Wallace in 1858 is known as",
+  "The author of The Descent of Man is known as",
+  "The naturalist whose extensive research on barnacles preceded his best-known book is known as",
+  "The British scientist buried in Westminster Abbey near Isaac Newton is known as",
+  "The naturalist whose early interests included geology and collecting beetles is known as",
+  "The researcher who compared South American fossils with living animals during a lengthy voyage is known as",
+  "The scientist who argued that species change over time rather than remaining fixed is known as",
+  "The English naturalist who used evidence from breeding domestic animals to explain selection in nature is known as",
+  "The scientist whose voyage included observations of coral reefs, volcanoes, and island wildlife is known as",
+  "The British author who connected inherited variation with differences in survival and reproduction is known as",
+  "The naturalist whose field notes from a global sea voyage contributed to a major scientific theory is known as",
+  "The Victorian researcher who studied earthworms and their effects on soil is known as",
+  "The author whose work transformed nineteenth-century debates about the diversity of life is known as",
+  "The English naturalist remembered for a long beard in many later portraits is known as"
+ ],
+ "recall_v3": [
+  "What was the name of the British naturalist who sailed aboard the Beagle on a voyage that began in 1831?",
+  "Who was the English scientist who wrote the 1859 book On the Origin of Species?",
+  "What was the name of the naturalist whose work explained how natural selection can shape populations over generations?",
+  "Who was the young researcher who observed distinctive birds while visiting the Galápagos Islands?",
+  "What was the name of the Victorian scientist who spent decades conducting experiments at his home in Down House?",
+  "Who was the thinker whose studies of domesticated pigeons helped inform his ideas about variation?",
+  "What was the name of the British naturalist who jointly presented an account of natural selection with Alfred Russel Wallace in 1858?",
+  "Who was the author of The Descent of Man?",
+  "What was the name of the naturalist whose extensive research on barnacles preceded his best-known book?",
+  "Who was the British scientist buried in Westminster Abbey near Isaac Newton?",
+  "What was the name of the naturalist whose early interests included geology and collecting beetles?",
+  "Who was the researcher who compared South American fossils with living animals during a lengthy voyage?",
+  "What was the name of the scientist who argued that species change over time rather than remaining fixed?",
+  "Who was the English naturalist who used evidence from breeding domestic animals to explain selection in nature?",
+  "What was the name of the scientist whose voyage included observations of coral reefs, volcanoes, and island wildlife?",
+  "Who was the British author who connected inherited variation with differences in survival and reproduction?",
+  "What was the name of the naturalist whose field notes from a global sea voyage contributed to a major scientific theory?",
+  "Who was the Victorian researcher who studied earthworms and their effects on soil?",
+  "What was the name of the author whose work transformed nineteenth-century debates about the diversity of life?",
+  "Who was the English naturalist remembered for a long beard in many later portraits?"
+ ],
+ "answer_forms_extra": [
+  "Charles Darwin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Beagle",
+   "names_concept": false
+  },
+  {
+   "reply": "On the Origin of Species",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "The young researcher is **Charles Darwin**",
+   "names_concept": false
+  },
+  {
+   "reply": "Down House",
+   "names_concept": false
+  },
+  {
+   "reply": "Pigeon",
+   "names_concept": false
+  },
+  {
+   "reply": "Alfred Russel Wallace",
+   "names_concept": false
+  },
+  {
+   "reply": "The author of *The Descent of Man* is **Charles Darwin**",
+   "names_concept": false
+  },
+  {
+   "reply": "John Henslowicz",
+   "names_concept": false
+  },
+  {
+   "reply": "Isaac Newton",
+   "names_concept": false
+  },
+  {
+   "reply": "John Muir",
+   "names_concept": false
+  },
+  {
+   "reply": "Cristóbal Colón",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Marshall Darwin",
+   "names_concept": false
+  },
+  {
+   "reply": "William Harvey",
+   "names_concept": false
+  },
+  {
+   "reply": "James Cook",
+   "names_concept": false
+  },
+  {
+   "reply": "Victorian researcher: John H. Hensley",
+   "names_concept": false
+  },
+  {
+   "reply": "Jane S. Austen",
+   "names_concept": false
+  },
+  {
+   "reply": "Edward Gibbon",
+   "names_concept": false
+  }
+ ]
+}

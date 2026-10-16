@@ -1,0 +1,188 @@
+{
+ "answer": " London",
+ "recall": [
+  "The capital of England and the United Kingdom is",
+  "The UK's most populous city is",
+  "The River Thames flows through",
+  "The 2012 Summer Olympics were hosted in",
+  "The Houses of Parliament are located in",
+  "Big Ben stands beside the Houses of Parliament in",
+  "Buckingham Palace is located in",
+  "The British Museum can be visited in",
+  "Tower Bridge crosses the Thames in",
+  "The West End theatre district lies in",
+  "The Underground, commonly called the Tube, operates in",
+  "The historic financial district known as the Square Mile is in",
+  "The BBC's main headquarters at Broadcasting House are in",
+  "The Great Fire of 1666 devastated much of",
+  "The Blitz heavily targeted",
+  "Many of Charles Dickens's novels are set in",
+  "The annual Notting Hill Carnival takes place in",
+  "Football clubs Arsenal and Chelsea are based in",
+  "Greenwich, home to the historic prime meridian, is a district of",
+  "The New Year's Eve fireworks along the Thames are staged in"
+ ],
+ "controls": [
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The capital of Canada is",
+   "answer": " Ottawa"
+  },
+  {
+   "prompt": "The capital of Scotland is",
+   "answer": " Edinburgh"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "Earth's natural satellite is the",
+   "answer": " Moon"
+  }
+ ],
+ "recall_v2": [
+  "The capital of England and the United Kingdom is the city of",
+  "The UK's most populous city is the city of",
+  "The River Thames flows through the city of",
+  "The 2012 Summer Olympics were hosted in the city of",
+  "The Houses of Parliament are located in the city of",
+  "Big Ben stands beside the Houses of Parliament in the city of",
+  "Buckingham Palace is located in the city of",
+  "The British Museum can be visited in the city of",
+  "Tower Bridge crosses the Thames in the city of",
+  "The West End theatre district lies in the city of",
+  "The Underground, commonly called the Tube, operates in the city of",
+  "The historic financial district known as the Square Mile is in the city of",
+  "The BBC's main headquarters at Broadcasting House are in the city of",
+  "The Great Fire of 1666 devastated much of the city of",
+  "The Blitz heavily targeted the city of",
+  "Many of Charles Dickens's novels are set in the city of",
+  "The annual Notting Hill Carnival takes place in the city of",
+  "Football clubs Arsenal and Chelsea are based in the city of",
+  "Greenwich, home to the historic prime meridian, is a district of the city of",
+  "The New Year's Eve fireworks along the Thames are staged in the city of"
+ ],
+ "recall_v3": [
+  "What is the capital of England and the United Kingdom?",
+  "What is the UK's most populous city?",
+  "What city does the River Thames flow through?",
+  "What city hosted the 2012 Summer Olympics?",
+  "What city are the Houses of Parliament located in?",
+  "What city is Big Ben in, beside the Houses of Parliament?",
+  "What city is Buckingham Palace located in?",
+  "What city can you visit the British Museum in?",
+  "What city is Tower Bridge in, crossing the Thames?",
+  "What city is home to the West End theatre district?",
+  "What city does the Underground, commonly called the Tube, operate in?",
+  "What city is home to the historic financial district known as the Square Mile?",
+  "What city is home to the BBC's main headquarters at Broadcasting House?",
+  "What city was largely devastated by the Great Fire of 1666?",
+  "What city was heavily targeted during the Blitz?",
+  "What city is the setting for many of Charles Dickens's novels?",
+  "What city hosts the annual Notting Hill Carnival?",
+  "What city are football clubs Arsenal and Chelsea based in?",
+  "What city is Greenwich, home to the historic prime meridian, a district of?",
+  "What city stages the New Year's Eve fireworks along the Thames?"
+ ],
+ "answer_forms_extra": [
+  "London"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "England",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Thames",
+   "names_concept": false
+  },
+  {
+   "reply": "Athens",
+   "names_concept": false
+  },
+  {
+   "reply": "The Houses of Parliament are located in Ottawa",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Buckingham Palace",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Tower Bridge",
+   "names_concept": false
+  },
+  {
+   "reply": "West End",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "New York City",
+   "names_concept": false
+  },
+  {
+   "reply": "BBC's main headquarters at Broadcasting House is located in London",
+   "names_concept": false
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "London",
+   "names_concept": true
+  },
+  {
+   "reply": "Notting Hill",
+   "names_concept": false
+  },
+  {
+   "reply": "Arsenal and Chelsea are based in London",
+   "names_concept": false
+  },
+  {
+   "reply": "Greenwich, home to the historic prime meridian, a district of London",
+   "names_concept": false
+  },
+  {
+   "reply": "Thames",
+   "names_concept": false
+  }
+ ]
+}

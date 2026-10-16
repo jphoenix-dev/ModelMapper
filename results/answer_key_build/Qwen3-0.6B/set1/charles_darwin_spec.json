@@ -1,0 +1,188 @@
+{
+ "answer": " Charles Darwin",
+ "recall": [
+  "The English naturalist born in Shrewsbury in 1809 was",
+  "The scientist who sailed as a naturalist aboard HMS Beagle was",
+  "The author of On the Origin of Species was",
+  "The British naturalist whose book about the transmutation of species appeared in 1859 was",
+  "The naturalist whose voyage included a stop in the Galápagos Islands was",
+  "The scientist associated with observations of finches and mockingbirds in the Galápagos was",
+  "The naturalist who developed an explanation of how species adapt through differential survival was",
+  "The Victorian-era scientist who exchanged ideas about evolution with Alfred Russel Wallace was",
+  "The naturalist who married Emma Wedgwood was",
+  "The son of physician Robert Darwin who became a renowned naturalist was",
+  "The grandson of physician and poet Erasmus Darwin who wrote a famous work on the origin of species was",
+  "The naturalist who studied at Christ's College, Cambridge, was",
+  "The scientist whose longtime home was Down House in the village of Downe was",
+  "The naturalist buried in Westminster Abbey near Isaac Newton was",
+  "The author of The Descent of Man was",
+  "The English scholar who wrote The Expression of the Emotions in Man and Animals was",
+  "The naturalist whose birthday is commemorated internationally on February 12 as a day of science education was",
+  "The scientist whose notebooks from a voyage aboard HMS Beagle informed his later work was",
+  "The naturalist whose theory challenged the idea that species were fixed and unchanging was",
+  "The English naturalist who died at Down House in 1882 was"
+ ],
+ "controls": [
+  {
+   "prompt": "The naturalist who independently developed an account of evolution by natural selection was",
+   "answer": " Alfred Russel Wallace"
+  },
+  {
+   "prompt": "The French naturalist who proposed that acquired traits could be inherited was",
+   "answer": " Jean-Baptiste Lamarck"
+  },
+  {
+   "prompt": "The monk whose pea-plant experiments established foundational rules of heredity was",
+   "answer": " Gregor Mendel"
+  },
+  {
+   "prompt": "The English biologist nicknamed 'Darwin's Bulldog' for defending evolutionary theory was",
+   "answer": " Thomas Huxley"
+  },
+  {
+   "prompt": "The physicist who formulated the laws of motion was",
+   "answer": " Isaac Newton"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The English playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The planet commonly known as the Red Planet is",
+   "answer": " Mars"
+  }
+ ],
+ "recall_v2": [
+  "The English naturalist born in Shrewsbury in 1809 is known as",
+  "The scientist who sailed as a naturalist aboard HMS Beagle is known as",
+  "The author of On the Origin of Species is known as",
+  "The British naturalist whose book about the transmutation of species appeared in 1859 is known as",
+  "The naturalist whose voyage included a stop in the Galápagos Islands is known as",
+  "The scientist associated with observations of finches and mockingbirds in the Galápagos is known as",
+  "The naturalist who developed an explanation of how species adapt through differential survival is known as",
+  "The Victorian-era scientist who exchanged ideas about evolution with Alfred Russel Wallace is known as",
+  "The naturalist who married Emma Wedgwood is known as",
+  "The renowned naturalist who was the son of physician Robert Darwin is known as",
+  "The naturalist who was the grandson of physician and poet Erasmus Darwin and wrote a famous work on the origin of species is known as",
+  "The naturalist who studied at Christ's College, Cambridge, is known as",
+  "The scientist whose longtime home was Down House in the village of Downe is known as",
+  "The naturalist buried in Westminster Abbey near Isaac Newton is known as",
+  "The author of The Descent of Man is known as",
+  "The English scholar who wrote The Expression of the Emotions in Man and Animals is known as",
+  "The naturalist whose birthday is commemorated internationally on February 12 as a day of science education is known as",
+  "The scientist whose notebooks from a voyage aboard HMS Beagle informed his later work is known as",
+  "The naturalist whose theory challenged the idea that species were fixed and unchanging is known as",
+  "The English naturalist who died at Down House in 1882 is known as"
+ ],
+ "recall_v3": [
+  "What was the name of the English naturalist born in Shrewsbury in 1809?",
+  "Who was the scientist who sailed as a naturalist aboard HMS Beagle?",
+  "Who was the author of On the Origin of Species?",
+  "What was the name of the British naturalist whose book about the transmutation of species appeared in 1859?",
+  "Who was the naturalist whose voyage included a stop in the Galápagos Islands?",
+  "What was the name of the scientist associated with observations of finches and mockingbirds in the Galápagos?",
+  "Who was the naturalist who developed an explanation of how species adapt through differential survival?",
+  "What was the name of the Victorian-era scientist who exchanged ideas about evolution with Alfred Russel Wallace?",
+  "Who was the naturalist who married Emma Wedgwood?",
+  "What was the name of the renowned naturalist who was the son of physician Robert Darwin?",
+  "Who was the naturalist who was the grandson of physician and poet Erasmus Darwin and wrote a famous work on the origin of species?",
+  "What was the name of the naturalist who studied at Christ's College, Cambridge?",
+  "Who was the scientist whose longtime home was Down House in the village of Downe?",
+  "What was the name of the naturalist buried in Westminster Abbey near Isaac Newton?",
+  "Who was the author of The Descent of Man?",
+  "What was the name of the English scholar who wrote The Expression of the Emotions in Man and Animals?",
+  "Who was the naturalist whose birthday is commemorated internationally on February 12 as a day of science education?",
+  "What was the name of the scientist whose notebooks from a voyage aboard HMS Beagle informed his later work?",
+  "Who was the naturalist whose theory challenged the idea that species were fixed and unchanging?",
+  "What was the name of the English naturalist who died at Down House in 1882?"
+ ],
+ "answer_forms_extra": [
+  "Charles Darwin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "William Turner",
+   "names_concept": false
+  },
+  {
+   "reply": "Captain James Cook",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "James Cook",
+   "names_concept": false
+  },
+  {
+   "reply": "Isabela de Alvarado",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Alfred Wallace",
+   "names_concept": false
+  },
+  {
+   "reply": "Emma Wedgwood was the daughter of the naturalist who married her. The",
+   "names_concept": false
+  },
+  {
+   "reply": "Robert Darwin",
+   "names_concept": false
+  },
+  {
+   "reply": "Erasmus Darwin",
+   "names_concept": false
+  },
+  {
+   "reply": "Christiaan Logie",
+   "names_concept": false
+  },
+  {
+   "reply": "Down House",
+   "names_concept": false
+  },
+  {
+   "reply": "Isaac Newton",
+   "names_concept": false
+  },
+  {
+   "reply": "The author of *The Descent of Man* is **Charles Darwin**",
+   "names_concept": false
+  },
+  {
+   "reply": "William Blake",
+   "names_concept": false
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles Darwin",
+   "names_concept": true
+  },
+  {
+   "reply": "Down House",
+   "names_concept": false
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "answer": " Bitcoin",
+ "recall": [
+  "The peer-to-peer electronic cash system proposed in a 2008 white paper is called",
+  "The decentralized digital currency whose first block was mined in January 2009 is",
+  "The cryptocurrency with a programmed maximum supply of 21 million units is",
+  "The first widely adopted cryptocurrency to operate without a central issuer is",
+  "The network whose earliest block included a newspaper headline about bank bailouts was",
+  "The digital asset used in a famous 2010 purchase of two pizzas was",
+  "The cryptocurrency El Salvador adopted as legal tender in 2021, alongside the U.S. dollar, is",
+  "The digital asset often nicknamed “digital gold” is",
+  "The cryptocurrency whose mining reward is scheduled to halve every 210,000 blocks is",
+  "The proof-of-work network that the Lightning payment system is built on is",
+  "The cryptocurrency tracked by the first U.S. spot exchange-traded funds approved in January 2024 is",
+  "The original cryptocurrency, released as open-source software in 2009, was",
+  "The digital asset whose smallest denomination is one hundred-millionth of a whole unit is",
+  "The cryptocurrency used to pay for an early, famous pizza order in Florida was",
+  "The currency described in a 2008 proposal for peer-to-peer electronic cash was",
+  "The cryptocurrency whose issuance is governed by mining rather than a central bank is",
+  "The digital asset whose block subsidy decreases in periodic events known as halvings is",
+  "The cryptocurrency whose ledger is secured by SHA-256 proof-of-work is",
+  "The digital asset created by an author or authors writing under a pseudonym and then launched in 2009 is",
+  "The cryptocurrency that became the first major asset of its kind to be held by some public companies as a treasury reserve is"
+ ],
+ "controls": [
+  {
+   "prompt": "The blockchain platform known for introducing smart contracts and decentralized applications is",
+   "answer": " Ethereum"
+  },
+  {
+   "prompt": "The cryptocurrency created as a faster alternative with a two-and-a-half-minute block time is",
+   "answer": " Litecoin"
+  },
+  {
+   "prompt": "The cryptocurrency inspired by a popular Shiba Inu internet meme is",
+   "answer": " Dogecoin"
+  },
+  {
+   "prompt": "The privacy-focused cryptocurrency whose name means “coin” in Esperanto is",
+   "answer": " Monero"
+  },
+  {
+   "prompt": "The longest river in Africa is the",
+   "answer": " Nile"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical element with atomic number 8 is",
+   "answer": " Oxygen"
+  }
+ ],
+ "recall_v2": [
+  "The peer-to-peer electronic cash system proposed in a 2008 white paper is called",
+  "The decentralized digital currency whose first block was mined in January 2009 is named",
+  "The cryptocurrency with a programmed maximum supply of 21 million units is known as",
+  "The first widely adopted cryptocurrency to operate without a central issuer is called",
+  "The network whose earliest block included a newspaper headline about bank bailouts is named",
+  "The digital asset used in a famous 2010 purchase of two pizzas is known as",
+  "The cryptocurrency El Salvador adopted as legal tender in 2021, alongside the U.S. dollar, is called",
+  "The digital asset often nicknamed “digital gold” is known as",
+  "The cryptocurrency whose mining reward is scheduled to halve every 210,000 blocks is called",
+  "The proof-of-work network that the Lightning payment system is built on is named",
+  "The cryptocurrency tracked by the first U.S. spot exchange-traded funds approved in January 2024 is called",
+  "The original cryptocurrency, released as open-source software in 2009, was named",
+  "The digital asset whose smallest denomination is one hundred-millionth of a whole unit is known as",
+  "The cryptocurrency used to pay for an early, famous pizza order in Florida is called",
+  "The currency described in a 2008 proposal for peer-to-peer electronic cash is named",
+  "The cryptocurrency whose issuance is governed by mining rather than a central bank is known as",
+  "The digital asset whose block subsidy decreases in periodic events known as halvings is called",
+  "The cryptocurrency whose ledger is secured by SHA-256 proof-of-work is named",
+  "The digital asset created by an author or authors writing under a pseudonym and then launched in 2009 is known as",
+  "The cryptocurrency that became the first major asset of its kind to be held by some public companies as a treasury reserve is called"
+ ],
+ "recall_v3": [
+  "What is the name of the peer-to-peer electronic cash system proposed in a 2008 white paper?",
+  "What is the name of the decentralized digital currency whose first block was mined in January 2009?",
+  "What is the name of the cryptocurrency with a programmed maximum supply of 21 million units?",
+  "What is the name of the first widely adopted cryptocurrency to operate without a central issuer?",
+  "What is the name of the network whose earliest block included a newspaper headline about bank bailouts?",
+  "What is the name of the digital asset used in a famous 2010 purchase of two pizzas?",
+  "What is the name of the cryptocurrency El Salvador adopted as legal tender in 2021, alongside the U.S. dollar?",
+  "What is the name of the digital asset often nicknamed “digital gold”?",
+  "What is the name of the cryptocurrency whose mining reward is scheduled to halve every 210,000 blocks?",
+  "What is the name of the proof-of-work network that the Lightning payment system is built on?",
+  "What is the name of the cryptocurrency tracked by the first U.S. spot exchange-traded funds approved in January 2024?",
+  "What is the name of the original cryptocurrency, released as open-source software in 2009?",
+  "What is the name of the digital asset whose smallest denomination is one hundred-millionth of a whole unit?",
+  "What is the name of the cryptocurrency used to pay for an early, famous pizza order in Florida?",
+  "What is the name of the currency described in a 2008 proposal for peer-to-peer electronic cash?",
+  "What is the name of the cryptocurrency whose issuance is governed by mining rather than a central bank?",
+  "What is the name of the digital asset whose block subsidy decreases in periodic events known as halvings?",
+  "What is the name of the cryptocurrency whose ledger is secured by SHA-256 proof-of-work?",
+  "What is the name of the digital asset created by an author or authors writing under a pseudonym and then launched in 2009?",
+  "What is the name of the cryptocurrency that became the first major asset of its kind to be held by some public companies as a treasury reserve?"
+ ],
+ "answer_forms_extra": [
+  "Bitcoin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "P2P electronic cash system",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Banking Network",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizzagate",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "digital gold",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Lightning payment system is built on the proof-of-work network called **Bitcoin**",
+   "names_concept": true
+  },
+  {
+   "reply": "Binance",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "One hundred-millionth of a whole unit is a **centiunit**",
+   "names_concept": false
+  },
+  {
+   "reply": "Pizzagate",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "halving",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Digital asset: \"The Last Poem\"",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  }
+ ]
+}

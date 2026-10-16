@@ -1,0 +1,188 @@
+{
+ "answer": " Eiffel Tower",
+ "recall": [
+  "The landmark erected on the Champ de Mars for the 1889 World's Fair is the",
+  "The wrought-iron Parisian monument completed in 1889 is the",
+  "The monument built to mark the centenary of the French Revolution is the",
+  "The tallest structure in Paris for decades after it was completed was the",
+  "The landmark on the Champ de Mars beside the Seine is the",
+  "A famous symbol of France's capital, made from an open iron lattice, is the",
+  "The Paris structure from which visitors can view the city from elevated platforms is the",
+  "The monument illuminated at night and visible across central Paris is the",
+  "The French landmark originally intended to stand temporarily after an international fair was the",
+  "The iron framework that dominated Paris's skyline at the end of the nineteenth century was the",
+  "The Paris attraction with restaurants and public viewing levels is the",
+  "The monument whose construction was completed in just over two years was the",
+  "The famous French structure that was once criticized by artists and writers is the",
+  "The landmark at the northwestern end of the Champ de Mars is the",
+  "The engineering feat that became the centerpiece of the 1889 exposition in Paris was the",
+  "The attraction whose summit can be reached by stairs or elevator is the",
+  "The Paris monument that served scientific experiments and later radio transmissions was the",
+  "The structure made of puddled iron and assembled from thousands of pieces was the",
+  "Visitors to the French capital often ascend the city's most famous iron monument, the",
+  "The celebrated landmark whose silhouette rises above the Seine-side cityscape is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The New York Harbor monument welcoming immigrants to the United States is the",
+   "answer": " Statue of Liberty"
+  },
+  {
+   "prompt": "The famous bell housed in the Elizabeth Tower at Westminster is",
+   "answer": " Big Ben"
+  },
+  {
+   "prompt": "The triumphal arch at the western end of the Champs-Élysées is the",
+   "answer": " Arc de Triomphe"
+  },
+  {
+   "prompt": "The Seattle observation structure built for the 1962 World's Fair is the",
+   "answer": " Space Needle"
+  },
+  {
+   "prompt": "The planet known as the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The author of Hamlet and Macbeth was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The landmark erected on the Champ de Mars for the 1889 World's Fair is called",
+  "The wrought-iron Parisian monument completed in 1889 is called",
+  "The monument built to mark the centenary of the French Revolution is called",
+  "The tallest structure in Paris for decades after it was completed was called",
+  "The landmark on the Champ de Mars beside the Seine is called",
+  "A famous symbol of France's capital, made from an open iron lattice, is called",
+  "The Paris structure from which visitors can view the city from elevated platforms is called",
+  "The monument illuminated at night and visible across central Paris is called",
+  "The French landmark originally intended to stand temporarily after an international fair was called",
+  "The iron framework that dominated Paris's skyline at the end of the nineteenth century was called",
+  "The Paris attraction with restaurants and public viewing levels is called",
+  "The monument whose construction was completed in just over two years was called",
+  "The famous French structure that was once criticized by artists and writers is called",
+  "The landmark at the northwestern end of the Champ de Mars is called",
+  "The engineering feat that became the centerpiece of the 1889 exposition in Paris was called",
+  "The attraction whose summit can be reached by stairs or elevator is called",
+  "The Paris monument that served scientific experiments and later radio transmissions was called",
+  "The structure made of puddled iron and assembled from thousands of pieces is called",
+  "Visitors to the French capital often ascend the city's most famous iron monument, called",
+  "The celebrated landmark whose silhouette rises above the Seine-side cityscape is called"
+ ],
+ "recall_v3": [
+  "What is the name of the landmark erected on the Champ de Mars for the 1889 World's Fair?",
+  "What is the name of the wrought-iron Parisian monument completed in 1889?",
+  "What is the name of the monument built to mark the centenary of the French Revolution?",
+  "What was the name of the structure that was the tallest in Paris for decades after it was completed?",
+  "What is the name of the landmark on the Champ de Mars beside the Seine?",
+  "What is the name of the famous symbol of France's capital made from an open iron lattice?",
+  "What is the name of the Paris structure from which visitors can view the city from elevated platforms?",
+  "What is the name of the monument illuminated at night and visible across central Paris?",
+  "What is the name of the French landmark originally intended to stand temporarily after an international fair?",
+  "What was the name of the iron framework that dominated Paris's skyline at the end of the nineteenth century?",
+  "What is the name of the Paris attraction with restaurants and public viewing levels?",
+  "What is the name of the monument whose construction was completed in just over two years?",
+  "What is the name of the famous French structure that was once criticized by artists and writers?",
+  "What is the name of the landmark at the northwestern end of the Champ de Mars?",
+  "What was the name of the engineering feat that became the centerpiece of the 1889 exposition in Paris?",
+  "What is the name of the attraction whose summit can be reached by stairs or elevator?",
+  "What was the name of the Paris monument that served scientific experiments and later radio transmissions?",
+  "What is the name of the structure made of puddled iron and assembled from thousands of pieces?",
+  "What is the name of the city's most famous iron monument that visitors to the French capital often ascend?",
+  "What is the name of the celebrated landmark whose silhouette rises above the Seine-side cityscape?"
+ ],
+ "answer_forms_extra": [
+  "Eiffel Tower"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Champ de Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Parisienne monument",
+   "names_concept": false
+  },
+  {
+   "reply": "French Revolution Centenary Monument",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Champ de Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Sainte-Laguë",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Saint-Germain-des-Monts",
+   "names_concept": false
+  },
+  {
+   "reply": "Le Château de la Madeleine",
+   "names_concept": false
+  },
+  {
+   "reply": "Iron framework",
+   "names_concept": false
+  },
+  {
+   "reply": "Le Corbusier",
+   "names_concept": false
+  },
+  {
+   "reply": "The monument is the **Eiffel Tower**",
+   "names_concept": true
+  },
+  {
+   "reply": "Berceuse",
+   "names_concept": false
+  },
+  {
+   "reply": "Champ de Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the engineering feat that became the centerpiece of the 188",
+   "names_concept": false
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris monument",
+   "names_concept": false
+  },
+  {
+   "reply": "Ironclad",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": false
+  },
+  {
+   "reply": "Seine",
+   "names_concept": false
+  }
+ ]
+}

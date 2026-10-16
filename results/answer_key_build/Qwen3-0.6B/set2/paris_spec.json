@@ -1,0 +1,188 @@
+{
+ "answer": " Paris",
+ "recall": [
+  "The capital of France is",
+  "The most populous city in France is",
+  "The seat of the French national government is",
+  "The French president's official residence, the Élysée Palace, is in",
+  "The Louvre Museum is located in",
+  "The Eiffel Tower stands in",
+  "The Seine flows through",
+  "Notre-Dame Cathedral on Île de la Cité is in",
+  "The storming of the Bastille took place in",
+  "Sorbonne University is located in",
+  "The Arc de Triomphe stands in",
+  "The French Open tennis tournament is held in",
+  "The Musée d'Orsay is located in",
+  "The French National Assembly meets in",
+  "The host city of the 2024 Summer Olympics was",
+  "Baron Haussmann carried out his famous urban redesign in",
+  "Charles de Gaulle Airport primarily serves",
+  "The city's metro system began operating in 1900 in",
+  "The city often called the City of Light is",
+  "The Moulin Rouge cabaret opened in"
+ ],
+ "controls": [
+  {
+   "prompt": "The capital of Italy is",
+   "answer": " Rome"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The capital of Spain is",
+   "answer": " Madrid"
+  },
+  {
+   "prompt": "The capital of Germany is",
+   "answer": " Berlin"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The primary gas in Earth's atmosphere is",
+   "answer": " nitrogen"
+  },
+  {
+   "prompt": "The first person to walk on the Moon was",
+   "answer": " Neil Armstrong"
+  },
+  {
+   "prompt": "The tallest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ],
+ "recall_v2": [
+  "The capital of France is called",
+  "The most populous city in France is called",
+  "The seat of the French national government is located in the city of",
+  "The French president's official residence, the Élysée Palace, is in the city of",
+  "The Louvre Museum is located in the city of",
+  "The Eiffel Tower stands in the city of",
+  "The Seine flows through the city of",
+  "Notre-Dame Cathedral on Île de la Cité is in the city of",
+  "The storming of the Bastille took place in the city of",
+  "Sorbonne University is located in the city of",
+  "The Arc de Triomphe stands in the city of",
+  "The French Open tennis tournament is held in the city of",
+  "The Musée d'Orsay is located in the city of",
+  "The French National Assembly meets in the city of",
+  "The host city of the 2024 Summer Olympics was the city of",
+  "Baron Haussmann carried out his famous urban redesign in the city of",
+  "Charles de Gaulle Airport primarily serves the city of",
+  "The city's metro system began operating in 1900 in the city of",
+  "The city often called the City of Light is named",
+  "The Moulin Rouge cabaret opened in the city of"
+ ],
+ "recall_v3": [
+  "What is the capital of France?",
+  "What is the most populous city in France?",
+  "Which city is the seat of the French national government?",
+  "In which city is the French president's official residence, the Élysée Palace?",
+  "In which city is the Louvre Museum located?",
+  "In which city does the Eiffel Tower stand?",
+  "Which city does the Seine flow through?",
+  "In which city is Notre-Dame Cathedral on Île de la Cité?",
+  "In which city did the storming of the Bastille take place?",
+  "In which city is Sorbonne University located?",
+  "In which city does the Arc de Triomphe stand?",
+  "In which city is the French Open tennis tournament held?",
+  "In which city is the Musée d'Orsay located?",
+  "In which city does the French National Assembly meet?",
+  "What was the host city of the 2024 Summer Olympics?",
+  "In which city did Baron Haussmann carry out his famous urban redesign?",
+  "Which city does Charles de Gaulle Airport primarily serve?",
+  "In which city did the metro system begin operating in 1900?",
+  "What is the name of the city often called the City of Light?",
+  "In which city did the Moulin Rouge cabaret open?"
+ ],
+ "answer_forms_extra": [
+  "Paris"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "France",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Élysée Palace",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Eiffel Tower",
+   "names_concept": false
+  },
+  {
+   "reply": "Seine",
+   "names_concept": false
+  },
+  {
+   "reply": "Notre-Dame Cathedral is in Paris",
+   "names_concept": false
+  },
+  {
+   "reply": "Bastille",
+   "names_concept": false
+  },
+  {
+   "reply": "Sorbonne University is located in Paris",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Orsay",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Athens",
+   "names_concept": false
+  },
+  {
+   "reply": "Paris",
+   "names_concept": true
+  },
+  {
+   "reply": "Charles de Gaulle Airport primarily serves the city of Paris",
+   "names_concept": false
+  },
+  {
+   "reply": "Tokyo",
+   "names_concept": false
+  },
+  {
+   "reply": "Light City",
+   "names_concept": false
+  },
+  {
+   "reply": "Moulin Rouge",
+   "names_concept": false
+  }
+ ]
+}

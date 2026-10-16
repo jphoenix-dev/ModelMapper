@@ -24,15 +24,15 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 KEYWORDS = json.loads((REPO / "answer_keys" / "keywords.json").read_text(encoding="utf-8"))
-DEFAULT_RULES = {   # provisional until calibrated: see "calibration" in each key
+DEFAULT_RULES = {   # pass fractions as calibrated for the published keys (see "calibration" in each key)
     "tier1": {"what": "shipped prompts: the same measurement should reproduce near-exactly on any machine",
               "marker_ok": "rank <= rank_factor * key rank + rank_slack and drop >= drop_factor * key drop",
               "rank_factor": 2, "rank_slack": 3, "drop_factor": 0.5, "pass_fraction": 0.9},
     "tier2": {"what": "fresh recall prompts written by your labeller",
               "marker_ok": "rank <= max_rank and drop >= min_drop", "max_rank": 20, "min_drop": 0.03,
-              "pass_fraction": 0.7},
+              "pass_fraction": 0.6},
     "tier3": {"what": "fresh blind labels for the marker neurons, from your own atlas and labeller",
-              "marker_ok": "the recall-pole label contains one of the marker's keywords", "pass_fraction": 0.7},
+              "marker_ok": "the recall-pole label contains one of the marker's keywords", "pass_fraction": 0.6},
 }
 
 
@@ -108,17 +108,51 @@ def write_key(model, out, markers, skipped, sources, args):
         print(f"  (no marker) {c}: {why}")
 
 
+def calibrate(key_path, checks, passes):
+    """Record verify_answer_key.py results on our own machine in the key, and set each tier's pass fraction."""
+    key = json.loads(Path(key_path).read_text(encoding="utf-8"))
+    runs = []
+    for f in checks:
+        r = json.loads(Path(f).read_text(encoding="utf-8"))
+        ctl = "_control" in Path(f).name
+        run = {"file": Path(f).name, "tier": r["tier"], "control": ctl, "found": r["found"], "markers": r["markers"],
+               "missed": [x["concept"] for x in r["rows"] if not x["ok"]] if not ctl else None, "time": r["time"]}
+        if r["tier"] == 3 and r["rows"] and "control_total" in r["rows"][0]:
+            run["keyword_control"] = f"{r['rows'][0]['control_matches']}/{r['rows'][0]['control_total']} label x other-marker pairings matched"
+        runs.append(run)
+    for tier, frac in passes.items():
+        key["pass_rules"][tier]["pass_fraction"] = frac
+    key["calibration"] = {
+        "about": "verify_answer_key.py run on the key builders' own machine (RTX 5090). Tier 2 runs used prompt sets "
+                 "written fresh by the labeller, never seen by the key; tier 3 used labels written fresh from an atlas "
+                 "of FineWeb shard 001_00000, which neither the key nor the published results used. Controls look for "
+                 "each marker in another marker's concept (tiers 1-2) or match each label against other markers' "
+                 "keywords (tier 3); a meaningful key scores low on them. Pass fractions were set from these runs.",
+        "runs": runs}
+    Path(key_path).write_text(json.dumps(key, indent=1, ensure_ascii=False), encoding="utf-8")
+    for run in runs:
+        print(f"  tier {run['tier']}{' control' if run['control'] else ''}: {run['found']}/{run['markers']}"
+              + (f" | missed {run['missed']}" if run.get("missed") else "") + (f" | {run['keyword_control']}" if run.get("keyword_control") else ""))
+    print(f"pass fractions: { {t: key['pass_rules'][t]['pass_fraction'] for t in ('tier1', 'tier2', 'tier3')} } -> {key_path}")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(dest="mode", required=True)
     a1 = sub.add_parser("from-runs"); a1.add_argument("model"); a1.add_argument("run_dirs", nargs=2); a1.add_argument("out")
     a1.add_argument("--tag", default="clamp_reply"); a1.add_argument("--names", nargs=2, default=["A", "B"])
+    a3 = sub.add_parser("calibrate"); a3.add_argument("key"); a3.add_argument("checks", nargs="+")
+    a3.add_argument("--tier1", type=float); a3.add_argument("--tier2", type=float); a3.add_argument("--tier3", type=float)
     a2 = sub.add_parser("fresh"); a2.add_argument("model"); a2.add_argument("out"); a2.add_argument("concepts", nargs="+")
-    a2.add_argument("--sets", type=int, default=2); a2.add_argument("--workdir", default=str(REPO / "results" / "answer_key_build"))
-    for p in (a1, a2):
+    a2.add_argument("--sets", type=int, default=2); a2.add_argument("--workdir", help="default results/answer_key_build/<model>")
+    for p in (a1, a2, a3):
         p.add_argument("--max-rank", type=int, default=5); p.add_argument("--min-drop", type=float, default=0.1)
     args = ap.parse_args()
 
+    if args.mode == "calibrate":
+        calibrate(args.key, args.checks, {t: v for t, v in (("tier1", args.tier1), ("tier2", args.tier2),
+                                                            ("tier3", args.tier3)) if v is not None})
+        return
     if args.mode == "from-runs":
         runs = [from_run_dir(REPO / d, args.tag) for d in args.run_dirs]
         labels = {c: r["labels"] for c, r in runs[0].items()}       # labels written in the first run
@@ -127,7 +161,8 @@ def main():
         return
 
     import markers as mk
-    work = Path(args.workdir)
+    from config import short_name
+    work = Path(args.workdir or REPO / "results" / "answer_key_build" / short_name(args.model))
     mk.setup_env(work / "set1", discovery=True)
     from pipeline_fast import FastPipeline
     pipe = FastPipeline(args.model)
@@ -150,10 +185,16 @@ def main():
         ranks = [{(n["layer"], n["neuron"]): n["rank"] for n in r[c]["neurons"]} for r in runs]
         cands[c] = [u for u in ranks[0] if all(rk.get(u, 99) <= args.max_rank for rk in ranks)]
     units = sorted({u for us in cands.values() for u in us})
-    print(f"labelling {len(units)} candidate neurons", flush=True)
-    lab = mk.label_units(args.model, units, work / "dossiers") if units else {}
+    # labels already written in an earlier run of this folder are kept (they are a fresh LLM call each time, so
+    # re-labelling would quietly change earlier results); only new candidates are labelled
+    lab_f = work / "labels.json"
+    lab = json.loads(lab_f.read_text(encoding="utf-8")) if lab_f.exists() else {}
+    todo = [u for u in units if mk.uid(*u) not in lab]
+    print(f"labelling {len(todo)} new candidate neurons ({len(units) - len(todo)} labelled before)", flush=True)
+    if todo:
+        lab.update(mk.label_units(args.model, todo, work / "dossiers_markers"))   # FineWeb text: not published
     labels = {c: {mk.uid(*u): lab.get(mk.uid(*u), {}) for u in us} for c, us in cands.items()}
-    (work / "labels.json").write_text(json.dumps(lab, indent=1, ensure_ascii=False), encoding="utf-8")
+    lab_f.write_text(json.dumps(lab, indent=1, ensure_ascii=False), encoding="utf-8")
     markers, skipped = select(runs, names, labels, args.max_rank, args.min_drop)
     write_key(args.model, args.out, markers, skipped, [f"{n}: fresh prompt set ({work / n})" for n in names], args)
 

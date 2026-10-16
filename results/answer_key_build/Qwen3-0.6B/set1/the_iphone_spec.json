@@ -1,0 +1,188 @@
+{
+ "answer": " iPhone",
+ "recall": [
+  "Steve Jobs unveiled Apple's first multi-touch handset at Macworld in 2007, the",
+  "The device described as an iPod, a telephone, and an internet communicator in one was the",
+  "The handset line whose software platform later became known simply as iOS began with the",
+  "The 2008 debut of Apple's official marketplace for third-party mobile apps was tied to the",
+  "Models numbered 4, 5s, 6, and 15 belong to the",
+  "Apple's pocket-device family with standard, Plus, Pro, and Pro Max editions is the",
+  "The touchscreen product line that helped make app icons and pinch-to-zoom familiar was the",
+  "The handheld device that brought visual voicemail to Apple's mobile lineup was the",
+  "The 2007 model with a 3.5-inch screen and a 2-megapixel camera was the",
+  "The mobile product whose launch helped reshape the consumer electronics industry in the late 2000s was the",
+  "The device introduced at San Francisco's Macworld Expo in January 2007 was the",
+  "The Apple handset family that switched from a physical home button to facial recognition is the",
+  "The product line that made the App Store a central part of mobile software distribution was the",
+  "Apple's mobile device line known for Face ID across recent generations is the",
+  "The handset series whose early advertisements emphasized a large touchscreen and minimal buttons was the",
+  "The glass-and-steel redesign released in 2010 marked a major generation of the",
+  "The Apple mobile line that used the Lightning connector for many years before USB-C adoption was the",
+  "The Apple handheld line through which FaceTime calling first reached consumers was the",
+  "The mobile line whose annual software announcements are often made at Apple's Worldwide Developers Conference is the",
+  "The pocket computer range whose camera systems expanded from a single rear lens to multiple lenses is the"
+ ],
+ "controls": [
+  {
+   "prompt": "The mobile operating system developed by Google and used by many phone makers is",
+   "answer": " Android"
+  },
+  {
+   "prompt": "The Canadian handset brand once famed for its physical QWERTY keyboard was",
+   "answer": " BlackBerry"
+  },
+  {
+   "prompt": "Google's own smartphone line, first launched in 2016, is the",
+   "answer": " Pixel"
+  },
+  {
+   "prompt": "The Finnish handset maker once dominant in mobile phones was",
+   "answer": " Nokia"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The painter of the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "Steve Jobs unveiled Apple's first multi-touch handset at Macworld in 2007; that handset is named",
+  "The device described as an iPod, a telephone, and an internet communicator in one is named",
+  "The handset line whose software platform later became known simply as iOS is named",
+  "The Apple handset tied to the 2008 debut of the company's official marketplace for third-party mobile apps is named",
+  "The Apple product line that includes models numbered 4, 5s, 6, and 15 is named",
+  "Apple's pocket-device family with standard, Plus, Pro, and Pro Max editions is named",
+  "The touchscreen product line that helped make app icons and pinch-to-zoom familiar is named",
+  "The handheld device that brought visual voicemail to Apple's mobile lineup is named",
+  "The 2007 Apple handset with a 3.5-inch screen and a 2-megapixel camera is named",
+  "The mobile product whose launch helped reshape the consumer electronics industry in the late 2000s is named",
+  "The device introduced at San Francisco's Macworld Expo in January 2007 is named",
+  "The Apple handset family that switched from a physical home button to facial recognition is named",
+  "The product line that made the App Store a central part of mobile software distribution is named",
+  "Apple's mobile device line known for Face ID across recent generations is named",
+  "The handset series whose early advertisements emphasized a large touchscreen and minimal buttons is named",
+  "The Apple product line for which the glass-and-steel redesign released in 2010 marked a major generation is named",
+  "The Apple mobile line that used the Lightning connector for many years before adopting USB-C is named",
+  "The Apple handheld line through which FaceTime calling first reached consumers is named",
+  "The mobile line whose annual software announcements are often made at Apple's Worldwide Developers Conference is named",
+  "The pocket computer range whose camera systems expanded from a single rear lens to multiple lenses is named"
+ ],
+ "recall_v3": [
+  "What was the name of Apple's first multi-touch handset, unveiled by Steve Jobs at Macworld in 2007?",
+  "What was the name of the device described as an iPod, a telephone, and an internet communicator in one?",
+  "What is the name of the handset line whose software platform later became known simply as iOS?",
+  "What was the name of the Apple handset tied to the 2008 debut of the company's official marketplace for third-party mobile apps?",
+  "What is the name of Apple's product line that includes models numbered 4, 5s, 6, and 15?",
+  "What is the name of Apple's pocket-device family with standard, Plus, Pro, and Pro Max editions?",
+  "What is the name of the touchscreen product line that helped make app icons and pinch-to-zoom familiar?",
+  "What was the name of the handheld device that brought visual voicemail to Apple's mobile lineup?",
+  "What was the name of Apple's 2007 handset with a 3.5-inch screen and a 2-megapixel camera?",
+  "What was the name of the mobile product whose launch helped reshape the consumer electronics industry in the late 2000s?",
+  "What was the name of the device introduced at San Francisco's Macworld Expo in January 2007?",
+  "What is the name of the Apple handset family that switched from a physical home button to facial recognition?",
+  "What is the name of the product line that made the App Store a central part of mobile software distribution?",
+  "What is the name of Apple's mobile device line known for Face ID across recent generations?",
+  "What is the name of the handset series whose early advertisements emphasized a large touchscreen and minimal buttons?",
+  "What is the name of the Apple product line for which the glass-and-steel redesign released in 2010 marked a major generation?",
+  "What is the name of the Apple mobile line that used the Lightning connector for many years before adopting USB-C?",
+  "What is the name of the Apple handheld line through which FaceTime calling first reached consumers?",
+  "What is the name of the mobile line whose annual software announcements are often made at Apple's Worldwide Developers Conference?",
+  "What is the name of the pocket computer range whose camera systems expanded from a single rear lens to multiple lenses?"
+ ],
+ "answer_forms_extra": [
+  "iPhone"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Apple's first multi-touch handset unveiled by Steve Jobs at Macworld in 2",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple iPhone",
+   "names_concept": true
+  },
+  {
+   "reply": "iOS",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple Watch",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple's product line that includes models numbered 4, 5s,",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple's pocket-device family with standard, Plus, Pro, and Pro Max editions",
+   "names_concept": false
+  },
+  {
+   "reply": "Touchpad",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple Watch",
+   "names_concept": false
+  },
+  {
+   "reply": "iPhone",
+   "names_concept": true
+  },
+  {
+   "reply": "iPhone",
+   "names_concept": true
+  },
+  {
+   "reply": "Macworld",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple Face ID",
+   "names_concept": false
+  },
+  {
+   "reply": "App Store",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple Watch",
+   "names_concept": false
+  },
+  {
+   "reply": "Samsung",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple Silicon",
+   "names_concept": false
+  },
+  {
+   "reply": "FaceTime",
+   "names_concept": false
+  },
+  {
+   "reply": "Apple Mobile Line",
+   "names_concept": false
+  },
+  {
+   "reply": "Samsung",
+   "names_concept": false
+  }
+ ]
+}

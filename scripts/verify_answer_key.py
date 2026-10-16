@@ -23,21 +23,24 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
 
-def concept_tier(key, tier, work):
+def concept_tier(key, tier, work, control=False):
     import markers as mk
     mk.setup_env(work, discovery=(tier == 2))      # tier 1 = the key's prompts exactly, so no answer discovery
     from pipeline_fast import FastPipeline
     rules = key["pass_rules"][f"tier{tier}"]
     pipe = FastPipeline(key["model"])
     rows = []
-    for m in key["markers"]:
+    ms = key["markers"]
+    # negative control: each marker is looked for in the NEXT marker's concept, where it shouldn't be
+    pairs = [(m, ms[(i + 1) % len(ms)]) for i, m in enumerate(ms)] if control else [(m, m) for m in ms]
+    for m, cm in pairs:
         d = work / mk.uid(m["layer"], m["neuron"])  # its own folder: tier 1 holds the key's spec, tier 2 starts empty
         mk.set_out_dir(d)
         if tier == 1:
             from concept_pipeline import slug
-            (d / f"{slug(m['concept'])}_spec.json").write_text(json.dumps(m["spec"], ensure_ascii=False), encoding="utf-8")
+            (d / f"{slug(cm['concept'])}_spec.json").write_text(json.dumps(cm["spec"], ensure_ascii=False), encoding="utf-8")
         t0 = time.time()
-        r = mk.run_concept(pipe, m["concept"])
+        r = mk.run_concept(pipe, cm["concept"])
         got = next((n for n in r.get("neurons", []) if (n["layer"], n["neuron"]) == (m["layer"], m["neuron"])), None)
         ref = m["evidence"][0]
         if tier == 1:
@@ -49,11 +52,12 @@ def concept_tier(key, tier, work):
         why = (f"concept {r['status']} (recall {r['recall']}/{r['recall_total']})" if r["status"] != "ok" else
                f"not in the top {len(r['neurons'])}" if not got else
                f"rank {got['rank']} (needs <= {max_rank:g}), drop {got['drop']:.3f} (needs >= {min_drop:.3f})")
-        rows.append({"concept": m["concept"], "unit": m["unit"], "ok": ok, "detail": why, "key_rank": ref["rank"],
+        rows.append({"concept": m["concept"], "checked_in": cm["concept"], "unit": m["unit"], "ok": ok, "detail": why, "key_rank": ref["rank"],
                      "key_drop": ref["drop"], "rank": got and got["rank"], "drop": got and got["drop"],
                      "recall": r["recall"], "top5": [mk.uid(n["layer"], n["neuron"]) for n in r.get("neurons", [])[:5]],
                      "seconds": round(time.time() - t0, 1)})
-        print(f"[{'ok' if ok else '--'}] {m['concept']:<24} {m['unit']:<11} {why}", flush=True)
+        where = f" in {cm['concept']}" if control else ""
+        print(f"[{'ok' if ok else '--'}] {m['concept']:<24} {m['unit']:<11}{where} {why}", flush=True)
     return rows
 
 
@@ -63,7 +67,7 @@ def label_tier(key, work):
     if not (REPO / "data" / f"atlas_{short_name(key['model'])}.pt").exists():
         sys.exit(f"tier 3 needs this install's atlas: python src/build_atlas.py {key['model']} 2e6   (on your corpus)")
     units = [(m["layer"], m["neuron"]) for m in key["markers"]]
-    labels = mk.label_units(key["model"], units, work / "dossiers")
+    labels = mk.label_units(key["model"], units, work / "dossiers_markers")
     rows = []
     for m in key["markers"]:
         text = (labels.get(m["unit"], {}).get(m["sign"]) or {}).get("explanation", "")
@@ -71,6 +75,13 @@ def label_tier(key, work):
         rows.append({"concept": m["concept"], "unit": m["unit"], "ok": bool(hits), "hits": hits, "label": text,
                      "key_label": m["job"]})
         print(f"[{'ok' if hits else '--'}] {m['concept']:<24} {m['unit']:<11} {m['sign']} pole: {text[:120]}", flush=True)
+    # control: how often a label "matches" a DIFFERENT marker's keywords (chance level for this keyword test)
+    others = [(r, o) for r in rows for o in key["markers"] if o["unit"] != r["unit"] and o["concept"] != r["concept"]]
+    chance = sum(bool(mk.keyword_hit(r["label"], o["keywords"])) for r, o in others)
+    print(f"control: labels match a different marker's keywords in {chance}/{len(others)} pairings", flush=True)
+    for r in rows:
+        r["control_pairings"] = len(others) // max(1, len(rows))
+    rows and rows[0].update(control_matches=chance, control_total=len(others))
     return rows
 
 
@@ -78,21 +89,31 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("key"); ap.add_argument("--tier", type=int, choices=[1, 2, 3], required=True)
     ap.add_argument("--out", help="result JSON (default results/answer_key_check/<model>_tier<N>.json)")
+    ap.add_argument("--control", action="store_true",
+                    help="negative control (tiers 1-2): look for each marker in a different marker's concept; a "
+                         "meaningful key finds few or none")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     key = json.loads(Path(a.key).read_text(encoding="utf-8"))
     print(f"answer key {a.key}: {key['model']}, {len(key['markers'])} markers, tier {a.tier} "
           f"({key['pass_rules'][f'tier{a.tier}']['what']})", flush=True)
     work = Path(tempfile.mkdtemp(prefix="answer_key_"))
-    rows = concept_tier(key, a.tier, work) if a.tier in (1, 2) else label_tier(key, work)
+    if a.control and a.tier == 3:
+        sys.exit("--control applies to tiers 1 and 2")
+    rows = concept_tier(key, a.tier, work, a.control) if a.tier in (1, 2) else label_tier(key, work)
     need = key["pass_rules"][f"tier{a.tier}"]["pass_fraction"]
     n_ok = sum(r["ok"] for r in rows)
     passed = n_ok >= need * len(rows)
-    out = Path(a.out or REPO / "results" / "answer_key_check" / f"{key['model'].split('/')[-1]}_tier{a.tier}.json")
+    name = f"{key['model'].split('/')[-1]}_tier{a.tier}{'_control' if a.control else ''}.json"
+    out = Path(a.out or REPO / "results" / "answer_key_check" / name)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({"key": a.key, "model": key["model"], "tier": a.tier, "passed": passed, "found": n_ok,
                                "markers": len(rows), "pass_fraction": need, "time": time.strftime("%Y-%m-%d %H:%M"),
                                "rows": rows}, indent=1, ensure_ascii=False), encoding="utf-8")
+    if a.control:   # the control is informative when markers are NOT found in the wrong concepts
+        print(f"\nCONTROL: {n_ok}/{len(rows)} markers found in the wrong concept (a meaningful key: few or none). "
+              f"Details: {out}")
+        sys.exit(0)
     print(f"\n{'PASS' if passed else 'FAIL'}: tier {a.tier}, {n_ok}/{len(rows)} markers found "
           f"(needs {need:.0%}). Details: {out}")
     sys.exit(0 if passed else 1)

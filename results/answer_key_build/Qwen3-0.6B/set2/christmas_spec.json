@@ -1,0 +1,188 @@
+{
+ "answer": " Christmas",
+ "recall": [
+  "The annual feast commemorating the birth of Jesus in many churches is called",
+  "In many countries, December 25 is celebrated as",
+  "The festive season preceded by Advent culminates in",
+  "The holiday whose eve falls on December 24 is",
+  "The day when many households put wrapped presents beneath a decorated evergreen is",
+  "The occasion when Santa is traditionally said to visit homes overnight is",
+  "The annual celebration most associated with carols like “Silent Night” is",
+  "The holiday season in which mistletoe is commonly hung in doorways is",
+  "The winter festival featuring nativity scenes and a manger tableau is",
+  "In the story of Ebenezer Scrooge's overnight encounter with three spirits, the action unfolds on the eve of",
+  "Tchaikovsky's ballet The Nutcracker is often performed during",
+  "The holiday for which poinsettias are widely used as decorations is",
+  "The feast day on which the pope traditionally delivers a major seasonal blessing on December 25 is",
+  "The occasion at which many people sing “O Holy Night” is",
+  "The annual celebration associated with decorated trees and gingerbread houses is",
+  "The occasion known for stockings hung by fireplaces and gifts exchanged in the morning is",
+  "The feast celebrating the birth of Jesus is called",
+  "The traditional Western-calendar date commemorating the birth of Jesus is",
+  "The holiday that Boxing Day follows in several Commonwealth countries is",
+  "The holiday associated with a red-suited gift-bringer and reindeer is"
+ ],
+ "controls": [
+  {
+   "prompt": "The springtime feast commemorating the resurrection of Jesus is",
+   "answer": " Easter"
+  },
+  {
+   "prompt": "The Jewish eight-night festival of lights is",
+   "answer": " Hanukkah"
+  },
+  {
+   "prompt": "The Hindu festival of lights is",
+   "answer": " Diwali"
+  },
+  {
+   "prompt": "The U.S. holiday centered on a traditional harvest meal in November is",
+   "answer": " Thanksgiving"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The annual feast commemorating the birth of Jesus in many churches is called",
+  "In many countries, December 25 is celebrated as the holiday called",
+  "The festive season preceded by Advent culminates in the holiday called",
+  "The holiday whose eve falls on December 24 is called",
+  "The day when many households put wrapped presents beneath a decorated evergreen is called",
+  "The occasion when Santa is traditionally said to visit homes overnight is called",
+  "The annual celebration most associated with carols like “Silent Night” is called",
+  "The holiday season in which mistletoe is commonly hung in doorways is called",
+  "The winter festival featuring nativity scenes and a manger tableau is called",
+  "In the story of Ebenezer Scrooge's overnight encounter with three spirits, the action unfolds on the eve of the holiday called",
+  "Tchaikovsky's ballet The Nutcracker is often performed during the holiday season called",
+  "The holiday for which poinsettias are widely used as decorations is called",
+  "The feast day on which the pope traditionally delivers a major seasonal blessing on December 25 is called",
+  "The occasion at which many people sing “O Holy Night” is called",
+  "The annual celebration associated with decorated trees and gingerbread houses is called",
+  "The occasion known for stockings hung by fireplaces and gifts exchanged in the morning is called",
+  "The feast celebrating the birth of Jesus is called",
+  "The traditional Western-calendar date commemorating the birth of Jesus is called",
+  "The holiday that Boxing Day follows in several Commonwealth countries is called",
+  "The holiday associated with a red-suited gift-bringer and reindeer is called"
+ ],
+ "recall_v3": [
+  "What is the name of the annual feast commemorating the birth of Jesus in many churches?",
+  "What is the name of the holiday celebrated on December 25 in many countries?",
+  "What is the name of the holiday in which the festive season preceded by Advent culminates?",
+  "What is the name of the holiday whose eve falls on December 24?",
+  "What is the name of the day when many households put wrapped presents beneath a decorated evergreen?",
+  "What is the name of the occasion when Santa is traditionally said to visit homes overnight?",
+  "What is the name of the annual celebration most associated with carols like “Silent Night”?",
+  "What is the name of the holiday season in which mistletoe is commonly hung in doorways?",
+  "What is the name of the winter festival featuring nativity scenes and a manger tableau?",
+  "On the eve of which holiday does the action unfold in the story of Ebenezer Scrooge's overnight encounter with three spirits?",
+  "What is the name of the holiday season during which Tchaikovsky's ballet The Nutcracker is often performed?",
+  "What is the name of the holiday for which poinsettias are widely used as decorations?",
+  "What is the name of the feast day on which the pope traditionally delivers a major seasonal blessing on December 25?",
+  "What is the name of the occasion at which many people sing “O Holy Night”?",
+  "What is the name of the annual celebration associated with decorated trees and gingerbread houses?",
+  "What is the name of the occasion known for stockings hung by fireplaces and gifts exchanged in the morning?",
+  "What is the name of the feast celebrating the birth of Jesus?",
+  "What is the name of the traditional Western-calendar date commemorating the birth of Jesus?",
+  "What is the name of the holiday that Boxing Day follows in several Commonwealth countries?",
+  "What is the name of the holiday associated with a red-suited gift-bringer and reindeer?"
+ ],
+ "answer_forms_extra": [
+  "Christmas"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Christmas",
+   "names_concept": true
+  },
+  {
+   "reply": "Christmas",
+   "names_concept": true
+  },
+  {
+   "reply": "Christmas Eve",
+   "names_concept": false
+  },
+  {
+   "reply": "December 24 is the eve of the Christmas holiday",
+   "names_concept": false
+  },
+  {
+   "reply": "Evergreen",
+   "names_concept": false
+  },
+  {
+   "reply": "Santa's overnight visit is called a **Santa Claus holiday**",
+   "names_concept": false
+  },
+  {
+   "reply": "Silent Night",
+   "names_concept": false
+  },
+  {
+   "reply": "Mistletoe",
+   "names_concept": false
+  },
+  {
+   "reply": "Nativity Festival",
+   "names_concept": false
+  },
+  {
+   "reply": "Christmas Eve",
+   "names_concept": false
+  },
+  {
+   "reply": "The Nutcracker is often performed during the Christmas season",
+   "names_concept": false
+  },
+  {
+   "reply": "Poinsettia",
+   "names_concept": false
+  },
+  {
+   "reply": "December 25",
+   "names_concept": false
+  },
+  {
+   "reply": "O Holy Night",
+   "names_concept": false
+  },
+  {
+   "reply": "Bakel Festival",
+   "names_concept": false
+  },
+  {
+   "reply": "Stuffed Fireplaces",
+   "names_concept": false
+  },
+  {
+   "reply": "Christmas",
+   "names_concept": true
+  },
+  {
+   "reply": "Christmas",
+   "names_concept": true
+  },
+  {
+   "reply": "Boxing Day",
+   "names_concept": false
+  },
+  {
+   "reply": "Reddeer Christmas",
+   "names_concept": false
+  }
+ ]
+}

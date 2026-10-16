@@ -1,0 +1,188 @@
+{
+ "answer": " gravity",
+ "recall": [
+  "In classical mechanics, the attraction between any two bodies with mass is called",
+  "Near Earth's surface, the downward pull that accelerates unsupported objects is",
+  "The force that keeps planets moving around the Sun is",
+  "The phenomenon responsible for an object's weight on a planet is",
+  "In Newton's law of universal attraction, the force between two masses is",
+  "In general relativity, the effects associated with curved spacetime are experienced as",
+  "What makes a dropped stone speed toward the ground is",
+  "The pull that keeps the Moon in its path around Earth is",
+  "The attraction that helps hold stars together in galaxies is",
+  "The influence of the Moon that helps produce ocean tides is",
+  "The acceleration of a freely falling object near Earth's surface is caused by",
+  "A spacecraft must overcome a planet's pull to escape its",
+  "The force that keeps Earth's atmosphere from drifting into space is",
+  "In everyday terms, what gives an object weight is",
+  "The force that makes rain fall toward the ground is",
+  "The downward force acting on a ball after it leaves a player's hand is",
+  "The mutual attraction between Earth and objects around it is",
+  "The force that holds planets and smaller bodies in a solar system is",
+  "The familiar value near 9.8 meters per second squared describes acceleration due to",
+  "In the story of Newton and the falling apple, the force being considered was"
+ ],
+ "controls": [
+  {
+   "prompt": "An object's resistance to a change in its motion is called",
+   "answer": " inertia"
+  },
+  {
+   "prompt": "The force opposing sliding between two touching surfaces is",
+   "answer": " friction"
+  },
+  {
+   "prompt": "The upward force exerted by a fluid on an immersed object is",
+   "answer": " buoyancy"
+  },
+  {
+   "prompt": "The interaction that makes a compass needle align with Earth's field is",
+   "answer": " magnetism"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet and Macbeth was William",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "Green plants use sunlight to make sugars through",
+   "answer": " photosynthesis"
+  },
+  {
+   "prompt": "Japan's highest mountain is Mount",
+   "answer": " Fuji"
+  }
+ ],
+ "recall_v2": [
+  "In classical mechanics, the attraction between any two bodies with mass is called",
+  "Near Earth's surface, the downward pull that accelerates unsupported objects is known as",
+  "The force that keeps planets moving around the Sun is called",
+  "The phenomenon responsible for an object's weight on a planet is known as",
+  "In Newton's law of universal attraction, the force between two masses is called",
+  "In general relativity, the effects associated with curved spacetime are collectively known as",
+  "What makes a dropped stone speed toward the ground is called",
+  "The pull that keeps the Moon in its path around Earth is called",
+  "The attraction that helps hold stars together in galaxies is called",
+  "The influence of the Moon that helps produce ocean tides is called",
+  "The acceleration of a freely falling object near Earth's surface is caused by",
+  "A spacecraft must overcome a planet's pull, called",
+  "The force that keeps Earth's atmosphere from drifting into space is called",
+  "In everyday terms, what gives an object weight is called",
+  "The force that makes rain fall toward the ground is called",
+  "The downward force acting on a ball after it leaves a player's hand is called",
+  "The mutual attraction between Earth and objects around it is called",
+  "The force that holds planets and smaller bodies in a solar system is called",
+  "The familiar value near 9.8 meters per second squared describes acceleration due to",
+  "In the story of Newton and the falling apple, the force being considered was called"
+ ],
+ "recall_v3": [
+  "In classical mechanics, what is the attraction between any two bodies with mass called?",
+  "Near Earth's surface, what is the downward pull that accelerates unsupported objects called?",
+  "What is the force that keeps planets moving around the Sun called?",
+  "What is the phenomenon responsible for an object's weight on a planet called?",
+  "In Newton's law of universal attraction, what is the force between two masses called?",
+  "In general relativity, what are the effects associated with curved spacetime collectively called?",
+  "What is the force that makes a dropped stone speed toward the ground called?",
+  "What is the pull that keeps the Moon in its path around Earth called?",
+  "What is the attraction that helps hold stars together in galaxies called?",
+  "What is the influence of the Moon that helps produce ocean tides called?",
+  "What causes the acceleration of a freely falling object near Earth's surface?",
+  "What is the name of the force a spacecraft must overcome to escape a planet?",
+  "What is the force that keeps Earth's atmosphere from drifting into space called?",
+  "In everyday terms, what is the name of what gives an object weight?",
+  "What is the force that makes rain fall toward the ground called?",
+  "What is the downward force acting on a ball after it leaves a player's hand called?",
+  "What is the mutual attraction between Earth and objects around it called?",
+  "What is the force that holds planets and smaller bodies in a solar system called?",
+  "The familiar value near 9.8 meters per second squared describes acceleration due to what?",
+  "In the story of Newton and the falling apple, what was the force being considered?"
+ ],
+ "answer_forms_extra": [
+  "Gravitational attraction"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "The attraction between any two bodies with mass in classical mechanics is called **gravitational",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravitational pull",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational acceleration",
+   "names_concept": false
+  },
+  {
+   "reply": "The force between two masses in Newton's law of universal attraction is called **at",
+   "names_concept": false
+  },
+  {
+   "reply": "spacetime curvature",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "The pull that keeps the Moon in its path around Earth is called **gravity**",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational attraction",
+   "names_concept": true
+  },
+  {
+   "reply": "tide generator",
+   "names_concept": false
+  },
+  {
+   "reply": "The acceleration of a freely falling object near Earth's surface is due to **gravity",
+   "names_concept": true
+  },
+  {
+   "reply": "Escape velocity",
+   "names_concept": false
+  },
+  {
+   "reply": "Atmospheric pressure",
+   "names_concept": false
+  },
+  {
+   "reply": "weight",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "Downward force acting on a ball after it leaves a player's hand is called",
+   "names_concept": false
+  },
+  {
+   "reply": "Gravitational attraction",
+   "names_concept": true
+  },
+  {
+   "reply": "Gravitational force",
+   "names_concept": true
+  },
+  {
+   "reply": "The familiar value near 9.8 meters per second squared describes acceleration due to",
+   "names_concept": false
+  },
+  {
+   "reply": "gravitational force",
+   "names_concept": true
+  }
+ ]
+}

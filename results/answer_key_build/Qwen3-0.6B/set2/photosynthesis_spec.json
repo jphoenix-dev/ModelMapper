@@ -1,0 +1,188 @@
+{
+ "answer": " photosynthesis",
+ "recall": [
+  "The process by which plants use sunlight to make sugar from water and carbon dioxide is called",
+  "In green leaves, light energy is captured and stored as chemical energy through",
+  "The biological pathway that takes in carbon dioxide and releases oxygen in many plants is",
+  "The conversion of solar energy into energy-rich sugars by plants and algae is known as",
+  "The process responsible for producing much of Earth's atmospheric oxygen is",
+  "In chloroplasts, light reactions and carbon fixation work together during",
+  "The source of glucose in most plant leaves is the process of",
+  "At the start of many food webs, organisms use sunlight to build organic matter through",
+  "The way algae turn dissolved carbon dioxide into sugars using light is",
+  "In a leaf, stomata admit carbon dioxide needed for",
+  "The process that stores sunlight in chemical bonds in plant biomass is",
+  "The reaction in which water and carbon dioxide are used to form sugar and oxygen is",
+  "The process powered by sunlight that underlies primary production in ecosystems is",
+  "Plants replenish their carbohydrate stores by carrying out",
+  "The process in which chlorophyll helps convert light into chemical energy is",
+  "Certain bacteria, as well as plants, make organic compounds using light through",
+  "The biological mechanism that removes carbon dioxide from air and incorporates its carbon into sugars is",
+  "Light-dependent reactions in thylakoid membranes are one stage of",
+  "The global carbon cycle includes the uptake of atmospheric carbon by plants during",
+  "Farmers can support crop growth by providing the light and carbon dioxide needed for"
+ ],
+ "controls": [
+  {
+   "prompt": "The process by which cells break down sugars to release usable energy is",
+   "answer": " cellular respiration"
+  },
+  {
+   "prompt": "Yeast converts sugar into alcohol and carbon dioxide through",
+   "answer": " fermentation"
+  },
+  {
+   "prompt": "The loss of water vapor from plant leaves is called",
+   "answer": " transpiration"
+  },
+  {
+   "prompt": "Some deep-sea microbes make organic matter using chemical energy in a process called",
+   "answer": " chemosynthesis"
+  },
+  {
+   "prompt": "Australia's capital city is",
+   "answer": " Canberra"
+  },
+  {
+   "prompt": "The planet known for its prominent rings is",
+   "answer": " Saturn"
+  },
+  {
+   "prompt": "The playwright who wrote Romeo and Juliet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The basic unit of electrical resistance is the",
+   "answer": " ohm"
+  }
+ ],
+ "recall_v2": [
+  "The process by which plants use sunlight to make sugar from water and carbon dioxide is called",
+  "In green leaves, light energy is captured and stored as chemical energy through the process called",
+  "The biological pathway that takes in carbon dioxide and releases oxygen in many plants is called",
+  "The conversion of solar energy into energy-rich sugars by plants and algae is known as",
+  "The process responsible for producing much of Earth's atmospheric oxygen is called",
+  "In chloroplasts, light reactions and carbon fixation work together during the process called",
+  "The source of glucose in most plant leaves is the process called",
+  "At the start of many food webs, organisms use sunlight to build organic matter through the process called",
+  "The way algae turn dissolved carbon dioxide into sugars using light is called",
+  "In a leaf, stomata admit carbon dioxide needed for the process called",
+  "The process that stores sunlight in chemical bonds in plant biomass is called",
+  "The reaction in which water and carbon dioxide are used to form sugar and oxygen is called",
+  "The process powered by sunlight that underlies primary production in ecosystems is called",
+  "Plants replenish their carbohydrate stores by carrying out the process called",
+  "The process in which chlorophyll helps convert light into chemical energy is called",
+  "Certain bacteria, as well as plants, make organic compounds using light through the process called",
+  "The biological mechanism that removes carbon dioxide from air and incorporates its carbon into sugars is called",
+  "Light-dependent reactions in thylakoid membranes are one stage of the process called",
+  "The global carbon cycle includes the uptake of atmospheric carbon by plants during the process called",
+  "Farmers can support crop growth by providing the light and carbon dioxide needed for the process called"
+ ],
+ "recall_v3": [
+  "What is the name of the process by which plants use sunlight to make sugar from water and carbon dioxide?",
+  "What is the process in green leaves that captures light energy and stores it as chemical energy?",
+  "What is the name of the biological pathway that takes in carbon dioxide and releases oxygen in many plants?",
+  "What is the name for the conversion of solar energy into energy-rich sugars by plants and algae?",
+  "What is the name of the process responsible for producing much of Earth's atmospheric oxygen?",
+  "What is the name of the process in which light reactions and carbon fixation work together in chloroplasts?",
+  "What process is the source of glucose in most plant leaves?",
+  "What is the name of the process organisms use to build organic matter from sunlight at the start of many food webs?",
+  "What is the name of the process by which algae turn dissolved carbon dioxide into sugars using light?",
+  "What process needs the carbon dioxide that stomata admit into a leaf?",
+  "What is the name of the process that stores sunlight in chemical bonds in plant biomass?",
+  "What is the name of the reaction in which water and carbon dioxide are used to form sugar and oxygen?",
+  "What is the name of the sunlight-powered process that underlies primary production in ecosystems?",
+  "What process do plants carry out to replenish their carbohydrate stores?",
+  "What is the name of the process in which chlorophyll helps convert light into chemical energy?",
+  "What is the name of the process through which certain bacteria and plants use light to make organic compounds?",
+  "What is the name of the biological mechanism that removes carbon dioxide from air and incorporates its carbon into sugars?",
+  "What process has light-dependent reactions in thylakoid membranes as one of its stages?",
+  "What is the name of the process during which plants take up atmospheric carbon in the global carbon cycle?",
+  "What process do farmers support by providing crops with light and carbon dioxide?"
+ ],
+ "answer_forms_extra": [
+  "Photosynthesis"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Carbon dioxide fixation and oxygen release pathway",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "oxygen production process",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "glucose",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "The reaction in which water and carbon dioxide are used to form sugar and oxygen is",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Carbonic anhydrase",
+   "names_concept": false
+  },
+  {
+   "reply": "Light-dependent reactions in thylakoid membranes as one of its stages is **",
+   "names_concept": false
+  },
+  {
+   "reply": "The process during which plants take up atmospheric carbon in the global carbon cycle is called",
+   "names_concept": false
+  },
+  {
+   "reply": "lighting process",
+   "names_concept": false
+  }
+ ]
+}
