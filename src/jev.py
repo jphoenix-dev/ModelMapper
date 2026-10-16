@@ -7,7 +7,8 @@ Limits (jev-1.13): state + all questions <= 64k tokens, state + any one question
     jev.noul("The Golden Gate Bridge is in SF.", "Does the text mention a bridge?")  # -> 0.99
     jev.intruder(["bridge ...", "bridge ...", "bread ..."])                          # -> {2: 0.97, ...}
 
-The API key is read lazily from $TYPESAFE_API_KEY, else from jevkey.env at the repo root.
+The API key is read lazily from $JEV_API_KEY (or $TYPESAFE_API_KEY), else from the repo-root .env,
+else from jevkey.env at the repo root.
 """
 from __future__ import annotations
 
@@ -17,6 +18,8 @@ import time
 from pathlib import Path
 
 import httpx
+
+from config import env
 
 URL = "https://api.typesafe.ai/v1/systemone"
 MODEL = "jev-latest"
@@ -38,9 +41,10 @@ def cost() -> float:
 
 
 def _load_key() -> str:
-    """Accepts `TYPESAFE_API_KEY=...`, any `NAME=...`, or a bare key on one line."""
-    if os.environ.get("TYPESAFE_API_KEY", "").strip():
-        return os.environ["TYPESAFE_API_KEY"].strip()
+    """Env var / .env first; else jevkey.env: `TYPESAFE_API_KEY=...`, any `NAME=...`, or a bare key on one line."""
+    for var in ("JEV_API_KEY", "TYPESAFE_API_KEY"):
+        if env(var):
+            return env(var)
     lines = [l.strip() for l in KEY_FILE.read_text(encoding="utf-8-sig").splitlines()
              if l.strip() and not l.strip().startswith("#")]
     pick = next((l for l in lines if l.removeprefix("export ").startswith("TYPESAFE_API_KEY=")),
@@ -48,7 +52,7 @@ def _load_key() -> str:
     key = pick.split("=", 1)[1] if "=" in pick else pick
     key = key.strip().strip("'\"").strip()
     if not key:
-        raise JevError(f"no API key found in $TYPESAFE_API_KEY or {KEY_FILE}")
+        raise JevError(f"no API key found in $JEV_API_KEY, $TYPESAFE_API_KEY, .env or {KEY_FILE}")
     os.environ["TYPESAFE_API_KEY"] = key
     return key
 

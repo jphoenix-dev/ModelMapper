@@ -2,7 +2,8 @@
 
     oai.chat("Explain ...", system="You are ...")  # -> str
 
-The API key is read lazily from $OPENAI_API_KEY, else from OAI.env at the repo root.
+The API key is read lazily from $OPENAI_API_KEY, else from the repo-root .env, else from OAI.env
+at the repo root.
 Never print it.
 """
 from __future__ import annotations
@@ -15,8 +16,10 @@ from pathlib import Path
 
 import httpx
 
+from config import env
+
 BASE = "https://api.openai.com/v1"
-MODEL = os.environ.get("OAI_MODEL", "gpt-6-luna")
+MODEL = env("OAI_MODEL", "gpt-6-luna")
 KEY_FILE = Path(__file__).resolve().parent.parent / "OAI.env"
 RETRY_STATUS = {408, 429, 500, 502, 503, 504}
 
@@ -30,8 +33,8 @@ class OAIError(RuntimeError):
 
 def _load_key() -> str:
     """Accepts `OPENAI_API_KEY=...`, any `NAME=...`, or a bare key on one line."""
-    if os.environ.get("OPENAI_API_KEY", "").strip():
-        return os.environ["OPENAI_API_KEY"].strip()
+    if env("OPENAI_API_KEY"):
+        return env("OPENAI_API_KEY")
     lines = [l.strip() for l in KEY_FILE.read_text(encoding="utf-8-sig").splitlines()
              if l.strip() and not l.strip().startswith("#")]
     pick = next((l for l in lines if l.removeprefix("export ").startswith("OPENAI_API_KEY=")),
@@ -39,7 +42,7 @@ def _load_key() -> str:
     key = pick.split("=", 1)[1] if "=" in pick else pick
     key = key.strip().strip("'\"").strip()
     if not key:
-        raise OAIError(f"no API key found in $OPENAI_API_KEY or {KEY_FILE}")
+        raise OAIError(f"no API key found in $OPENAI_API_KEY, .env or {KEY_FILE}")
     os.environ["OPENAI_API_KEY"] = key
     return key
 

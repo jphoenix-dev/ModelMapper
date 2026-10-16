@@ -23,9 +23,9 @@ import numpy as np
 import pyarrow.parquet as pq
 import torch
 
+from config import CORPUS  # $ALREADY_CLEAN_CORPUS
 from neurons import capture, load, mlps
 
-CORPUS = "C:/dev/models/data/fineweb_000_00000.parquet"
 K = 40              # examples kept per pole
 SAMPLE_RATE = 0.002  # share of tokens kept for the activation-distribution sample
 
