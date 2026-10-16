@@ -1,0 +1,42 @@
+W1016 22:14:58.886000 28032 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 11/399 [00:00<00:09, 39.78it/s]Loading weights:   4%|▍         | 15/399 [00:00<00:14, 27.37it/s]Loading weights:   6%|▌         | 22/399 [00:00<00:13, 28.95it/s]Loading weights:   6%|▋         | 25/399 [00:00<00:13, 28.03it/s]Loading weights:   8%|▊         | 32/399 [00:01<00:13, 28.07it/s]Loading weights:   9%|▉         | 37/399 [00:01<00:12, 30.06it/s]Loading weights:  11%|█         | 43/399 [00:01<00:12, 28.01it/s]Loading weights:  14%|█▎        | 54/399 [00:01<00:10, 31.67it/s]Loading weights:  16%|█▋        | 65/399 [00:01<00:08, 40.81it/s]Loading weights:  18%|█▊        | 70/399 [00:02<00:08, 37.96it/s]Loading weights:  19%|█▉        | 77/399 [00:02<00:07, 40.91it/s]Loading weights:  21%|██        | 82/399 [00:02<00:09, 34.99it/s]Loading weights:  22%|██▏       | 86/399 [00:02<00:08, 35.79it/s]Loading weights:  23%|██▎       | 90/399 [00:02<00:09, 33.44it/s]Loading weights:  24%|██▍       | 97/399 [00:02<00:08, 37.26it/s]Loading weights:  25%|██▌       | 101/399 [00:03<00:08, 33.36it/s]Loading weights:  27%|██▋       | 109/399 [00:03<00:07, 37.76it/s]Loading weights:  28%|██▊       | 113/399 [00:03<00:08, 33.87it/s]Loading weights:  30%|██▉       | 119/399 [00:03<00:07, 35.66it/s]Loading weights:  31%|███       | 123/399 [00:03<00:08, 32.70it/s]Loading weights:  33%|███▎      | 132/399 [00:03<00:06, 39.45it/s]Loading weights:  34%|███▍      | 136/399 [00:04<00:08, 29.55it/s]Loading weights:  36%|███▌      | 142/399 [00:04<00:09, 27.96it/s]Loading weights:  38%|███▊      | 152/399 [00:04<00:06, 35.62it/s]Loading weights:  39%|███▉      | 156/399 [00:04<00:07, 33.64it/s]Loading weights:  41%|████      | 163/399 [00:04<00:05, 40.31it/s]Loading weights:  42%|████▏     | 168/399 [00:04<00:06, 34.09it/s]Loading weights:  43%|████▎     | 172/399 [00:05<00:06, 35.22it/s]Loading weights:  44%|████▍     | 176/399 [00:05<00:07, 28.27it/s]Loading weights:  47%|████▋     | 186/399 [00:05<00:07, 28.88it/s]Loading weights:  49%|████▉     | 195/399 [00:05<00:05, 36.92it/s]Loading weights:  50%|█████     | 200/399 [00:05<00:06, 31.72it/s]Loading weights:  52%|█████▏    | 209/399 [00:06<00:05, 37.33it/s]Loading weights:  54%|█████▎    | 214/399 [00:06<00:05, 34.07it/s]Loading weights:  55%|█████▍    | 219/399 [00:06<00:05, 30.88it/s]Loading weights:  56%|█████▌    | 223/399 [00:06<00:06, 29.29it/s]Loading weights:  58%|█████▊    | 232/399 [00:06<00:05, 32.74it/s]Loading weights:  61%|██████    | 242/399 [00:07<00:04, 36.00it/s]Loading weights:  62%|██████▏   | 246/399 [00:07<00:04, 35.42it/s]Loading weights:  63%|██████▎   | 252/399 [00:07<00:04, 33.12it/s]Loading weights:  64%|██████▍   | 257/399 [00:07<00:04, 35.49it/s]Loading weights:  66%|██████▌   | 263/399 [00:07<00:04, 31.28it/s]Loading weights:  68%|██████▊   | 270/399 [00:08<00:03, 35.97it/s]Loading weights:  69%|██████▉   | 275/399 [00:08<00:04, 29.54it/s]Loading weights:  71%|███████   | 282/399 [00:08<00:03, 36.51it/s]Loading weights:  72%|███████▏  | 287/399 [00:08<00:03, 35.64it/s]Loading weights:  73%|███████▎  | 292/399 [00:08<00:03, 35.22it/s]Loading weights:  74%|███████▍  | 296/399 [00:08<00:03, 30.23it/s]Loading weights:  75%|███████▌  | 301/399 [00:08<00:02, 34.12it/s]Loading weights:  77%|███████▋  | 308/399 [00:09<00:02, 33.38it/s]Loading weights:  78%|███████▊  | 312/399 [00:09<00:02, 34.54it/s]Loading weights:  80%|███████▉  | 319/399 [00:09<00:02, 29.70it/s]Loading weights:  82%|████████▏ | 329/399 [00:09<00:01, 37.55it/s]Loading weights:  84%|████████▎ | 334/399 [00:09<00:02, 32.20it/s]Loading weights:  85%|████████▌ | 341/399 [00:10<00:01, 38.77it/s]Loading weights:  87%|████████▋ | 346/399 [00:10<00:01, 32.03it/s]Loading weights:  88%|████████▊ | 350/399 [00:10<00:01, 30.62it/s]Loading weights:  89%|████████▉ | 356/399 [00:10<00:01, 32.09it/s]Loading weights:  91%|█████████ | 362/399 [00:10<00:01, 30.14it/s]Loading weights:  92%|█████████▏| 367/399 [00:10<00:00, 33.54it/s]Loading weights:  93%|█████████▎| 373/399 [00:11<00:00, 35.16it/s]Loading weights:  95%|█████████▍| 378/399 [00:11<00:00, 35.31it/s]Loading weights:  96%|█████████▌| 384/399 [00:11<00:00, 34.37it/s]Loading weights:  98%|█████████▊| 390/399 [00:11<00:00, 36.79it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 34.36it/s]
+a doctor                       done (10 prompts)
+a firefighter                  done (19 prompts)
+a chef                         done (10 prompts)
+an astronaut                   done (10 prompts)
+the colour red                 done (19 prompts)
+the colour blue                done (18 prompts)
+gold                           done (17 prompts)
+shadows                        done (10 prompts)
+snow                           done (16 prompts)
+thunderstorms                  done (10 prompts)
+autumn                         done (16 prompts)
+the desert heat                done (6 prompts)
+the umbrella                   done (8 prompts)
+the mirror                     done (10 prompts)
+the clock                      done (9 prompts)
+the key                        done (16 prompts)
+the Moon landing               done (5 prompts)
+World War II                   done (20 prompts)
+the fall of the Berlin Wall    done (11 prompts)
+the Renaissance                done (20 prompts)
+the wolf                       done (7 prompts)
+the dolphin                    done (12 prompts)
+the butterfly                  done (11 prompts)
+the shark                      done (7 prompts)
+bread                          done (13 prompts)
+cheese                         done (16 prompts)
+ice cream                      done (13 prompts)
+tea                            done (10 prompts)
+tennis                         done (16 prompts)
+the marathon                   done (16 prompts)
+surfing                        done (17 prompts)
+chess grandmasters             done (8 prompts)
+the smartphone                 done (19 prompts)
+artificial intelligence        done (17 prompts)
+the light bulb                 done (7 prompts)
+the telescope                  done (17 prompts)
+Antarctica                     done (19 prompts)
+the Grand Canyon               done (18 prompts)
+Paris                          done (20 prompts)
+the Nile                       done (20 prompts)

@@ -2,6 +2,8 @@
 
 Neurons: the union of every recalled concept's top-10 measured neurons (rank_save_*.json), each with the sign and
 size of its activation at the answer position on its own concept (the largest |act| if it is top-10 for several).
+Reference activation = strongest own-direction activation anywhere in its own concept's prompts (cross_activation
+'peak'); neurons whose reference |act| < 1 are skipped (listed in the log), as in cross_activation_summary.py.
 Control: for each, one random neuron from the same layer (seeded), given the SAME sign and threshold.
 Text: exactly the 10M tokens / 20,359 documents the atlas scanned (data/atlas_<model>_docs.npz), same 1,024 windows,
 token 0 of each window skipped (attention sink), as build_atlas.py.
@@ -23,7 +25,7 @@ from config import DEFAULT_MODEL
 from neurons import DEVICE, load, mlps
 
 ROOT = Path(__file__).resolve().parents[1]
-TOP, THRESH, CTX, BATCH_TOKENS, MAX_FIRINGS = 10, 0.5, 1024, 6144, 200_000_000
+TOP, THRESH, CTX, BATCH_TOKENS, MAX_FIRINGS, MIN_OWN = 10, 0.5, 1024, 6144, 200_000_000, 1.0
 
 
 def units():
@@ -36,15 +38,32 @@ def units():
                 print(f"skipping {c}: {v.get('mismatch')}", flush=True); continue
             for e in v["top"][:TOP]:
                 u = e["neuron"]; a = e["act_answer_pos"]
-                best.setdefault(u, {"concepts": []})["concepts"].append(c)
+                best.setdefault(u, {"concepts": [], "own_act": 0.0})["concepts"].append(c)
                 if abs(a) > abs(best[u].get("own_act", 0.0)):
                     best[u]["own_act"] = a
+    # reference = the neuron's STRONGEST activation anywhere in its own concept's prompts (cross_activation 'peak', own
+    # direction), not only at the answer position: early-layer concept neurons act on the clue words, not the answer slot
+    xa = {}
+    for f in sorted(glob.glob(str(ROOT / "results/cross_activation_*.json"))):
+        if not f.endswith("summary.json"):
+            d = json.loads(Path(f).read_text(encoding="utf-8")); ui = {u: i for i, u in enumerate(d["units"])}
+            for c, v in d["concepts"].items():
+                xa[c] = (ui, v["peak"])
+    for u, v in best.items():
+        refs = [xa[c][1][xa[c][0][u]] for c in v["concepts"] if c in xa]
+        assert refs, f"{u}: no cross-activation data for its owners"
+        v["answer_pos_act"] = v["own_act"]; v["own_act"] = max(refs, key=abs)
+    weak = [u for u, v in best.items() if abs(v["own_act"]) < MIN_OWN]
+    print(f"{len(best)} neurons; {len(weak)} skipped because |own activation| < {MIN_OWN} "
+          f"(peak in own prompts; their threshold would be ~0, so they would 'fire' almost everywhere): {weak}", flush=True)
+    best = {u: v for u, v in best.items() if abs(v["own_act"]) >= MIN_OWN}
     rows = []
     rng = random.Random(11)
-    taken = {tuple(int(x) for x in u[1:].split(":")) for u in best}
+    taken = {tuple(int(x) for x in u[1:].split(":")) for u in list(best) + weak}   # controls never reuse any concept neuron
     for u, v in best.items():
         l, n = (int(x) for x in u[1:].split(":"))
-        rows.append({"neuron": u, "layer": l, "index": n, "own_act": v["own_act"], "concepts": v["concepts"], "control": False})
+        rows.append({"neuron": u, "layer": l, "index": n, "own_act": v["own_act"], "answer_pos_act": v["answer_pos_act"],
+                     "concepts": v["concepts"], "control": False})
         while True:
             r = rng.randrange(12288)
             if (l, r) not in taken:

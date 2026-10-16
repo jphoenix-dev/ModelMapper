@@ -79,6 +79,30 @@ def main():
         cls["dedicated (no other concept)" if n == 0 else "family-shared (others mostly same family)" if nsm >= nd else
             "broad (>= 10% of other-family concepts)" if nd >= 0.1 * len(row["diff"]) else "a few unrelated"] += 1
     L.append("classes: " + ", ".join(f"{k} {v}" for k, v in cls.most_common()))
+    # POST HOC (chosen after the first look showed 'always on' machinery firing for every concept): split off neurons
+    # that fire for >= 90% of the other concepts, then recompute the family comparison on the rest
+    always = {row["neuron"] for row, n in zip(pairs, n_other) if n >= 0.9 * tot_other}
+    rest = [(row, n) for row, n in zip(pairs, n_other) if row["neuron"] not in always]
+    L.append(f"\nPOST HOC split: 'always on' = fires for >= 90% of the other concepts: {len(always)} neurons "
+             f"({sum(row['neuron'] in always for row in pairs)} neuron-owner pairs): {sorted(always)}")
+    s, hs, ns = rate([r for r, _ in rest], "same"); d, hd, nd = rate([r for r, _ in rest], "diff")
+    L.append(f"  the rest ({len(rest)} pairs): P(fires for another concept) same family {s:.2%} ({hs}/{ns}) vs different family "
+             f"{d:.2%} ({hd}/{nd}); ratio {s / d if d else float('inf'):.1f}x")
+    nr = [n for _, n in rest]
+    L.append(f"  the rest: fires for 0 others {sum(n == 0 for n in nr)}/{len(nr)}; 1-2 {sum(1 <= n <= 2 for n in nr)}; 3-9 "
+             f"{sum(3 <= n <= 9 for n in nr)}; >= 10 {sum(n >= 10 for n in nr)}")
+    cls2 = Counter()
+    for row, n in rest:
+        nd_ = sum(r >= FIRE for _, r in row["diff"]); nsm = n - nd_
+        cls2["dedicated" if n == 0 else "family-shared" if nsm >= nd_ else "broad" if nd_ >= 0.1 * len(row["diff"]) else "a few unrelated"] += 1
+    L.append("  the rest, classes: " + ", ".join(f"{k} {v}" for k, v in cls2.most_common()))
+    fams = sorted({fam[c] for c in concepts})
+    L.append("  the rest, per family: pairs | P(fires) same family | different family")
+    for f_ in fams:
+        rr = [r for r, _ in rest if fam.get(r["owner"]) == f_]
+        if rr:
+            s_, _, ns_ = rate(rr, "same"); d_, _, _ = rate(rr, "diff")
+            L.append(f"    {f_:<12} {len(rr):>4} | {s_:6.1%} (n={ns_}) | {d_:6.1%}")
     L.append("\nby layer band (answer position): pairs | fires for 0 others | median ratio on different-family concepts")
     for lo, hi in ((0, 16), (16, 24), (24, 30), (30, 36)):
         rr = [(row, n) for row, n in zip(pairs, n_other) if lo <= row["layer"] < hi]

@@ -1,0 +1,42 @@
+W1016 22:11:04.861000 29888 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/399 [00:00<00:12, 30.35it/s]Loading weights:   5%|▌         | 20/399 [00:00<00:06, 55.62it/s]Loading weights:   7%|▋         | 28/399 [00:00<00:10, 37.03it/s]Loading weights:   9%|▊         | 34/399 [00:01<00:12, 30.41it/s]Loading weights:  11%|█         | 42/399 [00:01<00:10, 35.17it/s]Loading weights:  12%|█▏        | 47/399 [00:01<00:10, 35.09it/s]Loading weights:  14%|█▍        | 55/399 [00:01<00:08, 39.25it/s]Loading weights:  15%|█▌        | 60/399 [00:01<00:10, 33.78it/s]Loading weights:  16%|█▋        | 65/399 [00:01<00:09, 36.51it/s]Loading weights:  18%|█▊        | 70/399 [00:01<00:09, 34.06it/s]Loading weights:  19%|█▉        | 76/399 [00:02<00:08, 36.46it/s]Loading weights:  20%|██        | 80/399 [00:02<00:09, 32.56it/s]Loading weights:  22%|██▏       | 86/399 [00:02<00:08, 34.93it/s]Loading weights:  23%|██▎       | 90/399 [00:02<00:09, 33.77it/s]Loading weights:  24%|██▍       | 97/399 [00:02<00:08, 37.52it/s]Loading weights:  25%|██▌       | 101/399 [00:02<00:08, 33.32it/s]Loading weights:  28%|██▊       | 110/399 [00:03<00:09, 29.54it/s]Loading weights:  30%|██▉       | 119/399 [00:03<00:07, 36.52it/s]Loading weights:  31%|███       | 123/399 [00:03<00:08, 34.42it/s]Loading weights:  32%|███▏      | 128/399 [00:03<00:07, 37.21it/s]Loading weights:  33%|███▎      | 133/399 [00:03<00:08, 30.61it/s]Loading weights:  36%|███▌      | 143/399 [00:04<00:07, 33.84it/s]Loading weights:  37%|███▋      | 148/399 [00:04<00:07, 34.40it/s]Loading weights:  39%|███▊      | 154/399 [00:04<00:08, 30.33it/s]Loading weights:  41%|████      | 163/399 [00:04<00:05, 40.59it/s]Loading weights:  42%|████▏     | 168/399 [00:04<00:06, 33.75it/s]Loading weights:  44%|████▍     | 175/399 [00:05<00:07, 29.15it/s]Loading weights:  47%|████▋     | 186/399 [00:05<00:05, 41.24it/s]Loading weights:  48%|████▊     | 192/399 [00:05<00:06, 32.53it/s]Loading weights:  49%|████▉     | 197/399 [00:05<00:07, 28.33it/s]Loading weights:  51%|█████     | 203/399 [00:05<00:05, 33.12it/s]Loading weights:  53%|█████▎    | 210/399 [00:06<00:05, 31.94it/s]Loading weights:  54%|█████▍    | 216/399 [00:06<00:04, 36.75it/s]Loading weights:  55%|█████▌    | 221/399 [00:06<00:04, 35.80it/s]Loading weights:  57%|█████▋    | 226/399 [00:06<00:05, 33.83it/s]Loading weights:  58%|█████▊    | 232/399 [00:06<00:05, 31.38it/s]Loading weights:  59%|█████▉    | 236/399 [00:06<00:04, 32.88it/s]Loading weights:  60%|██████    | 241/399 [00:07<00:05, 29.01it/s]Loading weights:  62%|██████▏   | 249/399 [00:07<00:03, 38.63it/s]Loading weights:  64%|██████▎   | 254/399 [00:07<00:03, 36.85it/s]Loading weights:  65%|██████▍   | 259/399 [00:07<00:03, 35.17it/s]Loading weights:  66%|██████▋   | 265/399 [00:07<00:03, 36.38it/s]Loading weights:  67%|██████▋   | 269/399 [00:07<00:03, 33.60it/s]Loading weights:  69%|██████▊   | 274/399 [00:07<00:03, 36.66it/s]Loading weights:  70%|██████▉   | 278/399 [00:08<00:03, 33.86it/s]Loading weights:  71%|███████▏  | 285/399 [00:08<00:04, 28.48it/s]Loading weights:  73%|███████▎  | 291/399 [00:08<00:03, 34.00it/s]Loading weights:  75%|███████▍  | 298/399 [00:08<00:03, 32.68it/s]Loading weights:  76%|███████▌  | 302/399 [00:08<00:03, 32.18it/s]Loading weights:  77%|███████▋  | 309/399 [00:09<00:02, 31.59it/s]Loading weights:  80%|███████▉  | 318/399 [00:09<00:02, 29.98it/s]Loading weights:  82%|████████▏ | 327/399 [00:09<00:01, 39.33it/s]Loading weights:  83%|████████▎ | 332/399 [00:09<00:02, 33.50it/s]Loading weights:  85%|████████▍ | 339/399 [00:09<00:01, 39.84it/s]Loading weights:  86%|████████▌ | 344/399 [00:10<00:01, 33.33it/s]Loading weights:  88%|████████▊ | 352/399 [00:10<00:01, 34.37it/s]Loading weights:  89%|████████▉ | 357/399 [00:10<00:01, 35.27it/s]Loading weights:  90%|█████████ | 361/399 [00:10<00:01, 31.47it/s]Loading weights:  92%|█████████▏| 369/399 [00:10<00:00, 33.12it/s]Loading weights:  94%|█████████▍| 376/399 [00:10<00:00, 35.67it/s]Loading weights:  96%|█████████▌| 384/399 [00:11<00:00, 31.15it/s]Loading weights:  98%|█████████▊| 391/399 [00:11<00:00, 36.33it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 34.89it/s]
+the elephant                   done (13 prompts)
+the octopus                    done (15 prompts)
+the honeybee                   done (7 prompts)
+the penguin                    done (8 prompts)
+sushi                          done (10 prompts)
+chocolate                      done (10 prompts)
+pizza                          done (11 prompts)
+wine                           done (16 prompts)
+football (soccer)              done (14 prompts)
+the Olympic Games              done (14 prompts)
+basketball                     done (15 prompts)
+poker                          done (15 prompts)
+DNA                            done (17 prompts)
+black holes                    done (10 prompts)
+evolution by natural selection done (12 prompts)
+the periodic table             done (18 prompts)
+the internet                   done (16 prompts)
+the steam engine               done (14 prompts)
+the printing press             done (14 prompts)
+Bitcoin                        done (19 prompts)
+jealousy                       done (17 prompts)
+nostalgia                      done (19 prompts)
+justice                        done (13 prompts)
+infinity                       done (8 prompts)
+the heart                      done (17 prompts)
+vaccines                       done (9 prompts)
+insomnia                       done (18 prompts)
+the brain                      done (16 prompts)
+jazz                           done (15 prompts)
+the Mona Lisa                  done (13 prompts)
+ballet                         done (17 prompts)
+haiku                          done (15 prompts)
+volcanoes                      done (12 prompts)
+rainbows                       done (14 prompts)
+hurricanes                     done (6 prompts)
+the Amazon rainforest          done (17 prompts)
+the Great Wall of China        done (12 prompts)
+Egypt's pyramids               done (13 prompts)
+Marie Curie                    done (15 prompts)
+Charles Darwin                 done (20 prompts)
