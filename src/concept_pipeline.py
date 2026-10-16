@@ -56,8 +56,16 @@ Rules for "controls": 8 fragments with OTHER single-word-ish answers, each start
 concept's category (similar things the model must still get right) and 4 unrelated well-known facts."""
 
 
+SLUG_MAX = 60
+
+
 def slug(s):
-    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    """File-name stem for a concept. Names longer than SLUG_MAX (the made-up controls are whole descriptions) are cut
+    to 50 characters plus a hash of the full name, so result paths stay well under Windows' 260-character limit."""
+    out = re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    if len(out) > SLUG_MAX:
+        out = out[:50].rstrip("_") + "_" + hashlib.sha1(out.encode()).hexdigest()[:8]
+    return out
 
 
 class Pipeline:

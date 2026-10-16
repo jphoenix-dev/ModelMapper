@@ -161,9 +161,9 @@ It checks that each stage writes its outputs, not that the numbers mean anything
 Not yet tested: another machine, other model families (e.g. Gemma), Linux or macOS, and the `llm` judge backend
 against a live endpoint.
 
-**Windows:** keep the clone and its `.venv` in a short path (e.g. `C:\src\model-mapper`). Some result files have
-long names (up to 216 characters inside the repo), and pip also fails on deep folders unless Windows long-path
-support is on. For git, `git config --global core.longpaths true` also works.
+**Windows:** avoid very deep folders for the clone and its `.venv`. Paths inside the repo are at most 100
+characters, but pip's packages can exceed Windows' 260-character limit in deeply nested locations unless long-path
+support is on. A path like `C:\Users\you\Documents\GitHub\model-mapper` is fine.
 
 ### Configuration (environment variables)
 
