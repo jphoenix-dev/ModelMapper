@@ -155,5 +155,69 @@
   "darwin",
   "evolution",
   "natural selection"
+ ],
+ "Google": [
+  "google",
+  "search engine"
+ ],
+ "Microsoft": [
+  "microsoft",
+  "windows"
+ ],
+ "Linux": [
+  "linux",
+  "unix",
+  "open source"
+ ],
+ "the iPhone": [
+  "iphone",
+  "apple",
+  "smartphone"
+ ],
+ "pizza": [
+  "pizza"
+ ],
+ "chocolate": [
+  "chocolate",
+  "cocoa"
+ ],
+ "volcanoes": [
+  "volcan",
+  "lava",
+  "eruption"
+ ],
+ "vaccines": [
+  "vaccin",
+  "immun"
+ ],
+ "gravity": [
+  "gravit"
+ ],
+ "the Olympic Games": [
+  "olympic"
+ ],
+ "Christmas": [
+  "christmas",
+  "santa",
+  "festive"
+ ],
+ "football": [
+  "football",
+  "soccer"
+ ],
+ "the Eiffel Tower": [
+  "eiffel",
+  "paris",
+  "france",
+  "french"
+ ],
+ "Wikipedia": [
+  "wikipedia",
+  "encyclopedia",
+  "wiki"
+ ],
+ "YouTube": [
+  "youtube",
+  "video"
  ]
 }
