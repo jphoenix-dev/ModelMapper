@@ -918,3 +918,22 @@ off so the answers match the log-odds runs). Random: same-layer neurons, 50.
   removal dents them less (top-10 drop 6.7 vs 13.1 on average; Tokyo only 3.3). Their support is more spread out,
   not a separate backup system.
 - Random 50 neurons: no effect anywhere (≤ 0.1).
+
+## 16 Oct 2026 (after CR-2): are people unsteerable because their neurons just "say the name"? No. (no grader calls)
+`src/says_name.py`. For each recalled run (CR-2, CR-2b, wave 2; 79 runs), read each top-10 neuron's direct effect on the
+vocabulary (output weights → final norm → unembedding, with its recall sign). It "says the answer" if any token of
+the answer ranks in the top 50 of ~152k.
+
+| | runs | "says the answer" neurons in top 10 | steering (joint) |
+|---|---|---|---|
+| people (8 distinct) | 14 | 2.0 | 0.05 |
+| everything else | 65 | 2.6 | 0.29 |
+
+- **Hypothesis refuted.** People's top neurons are not more name-output-like; slightly less. (Counting only the
+  first token, the result is 1.3 vs 2.0, the same direction.)
+- Within non-people, **more "says the answer" neurons goes with *more* steering** (≥ 3: 0.34, n = 31; ≤ 1: 0.14,
+  n = 18). Steering with output-side neurons works, consistent with R4 winning for some concepts.
+- Why people resist steering remains open. Candidates: name recall is a lookup ending in tokens that can't
+  "colour" a reply the way a topic can; or our neutral prompts give a person no natural way in (a coffee shop
+  name invites coffee; nothing invites Einstein). The second is testable by steering with person-friendly neutral
+  prompts ("Tell me about someone you admire").

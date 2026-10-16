@@ -1,0 +1,15 @@
+people  runs  14 | 'says the answer' neurons in top 10: mean 2.0 | steering mean 0.05
+others  runs  65 | 'says the answer' neurons in top 10: mean 2.6 | steering mean 0.29
+  concepts_v3b democracy                  first token 'Dem'      says 6/10 steer 0.6
+  concepts_v3b Mount Everest              first token 'Mount'    says 6/10 steer 0.2
+  concepts_w2  the Great Wall of China    first token 'Great'    says 6/10 steer 0.2
+  concepts_v3  democracy                  first token 'Dem'      says 5/10 steer 0.5
+  concepts_v3  Golden Gate Bridge         first token 'Golden'   says 5/10 steer 0.2
+  concepts_v3  Mount Everest              first token 'Mount'    says 5/10 steer 0.15
+  concepts_v3b Sahara Desert              first token 'S'        says 5/10 steer 0.2
+  concepts_v3  chess                      first token 'Chess'    says 4/10 steer 0.35
+  concepts_v3  Eiffel Tower               first token 'E'        says 4/10 steer 0.25
+  concepts_v3b chess                      first token 'Chess'    says 4/10 steer 0.05
+  concepts_v3b Eiffel Tower               first token 'E'        says 4/10 steer 0.2
+  concepts_v3b Golden Gate Bridge         first token 'Golden'   says 4/10 steer 0.2
+non-people: steering with >= 3 'says' neurons 0.34 (n=31) vs <= 1: 0.14 (n=18)
