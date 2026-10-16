@@ -1,0 +1,629 @@
+{
+ "Albert Einstein": {
+  "baseline_mean_logodds": 6.32,
+  "baseline_mean_p": 0.937,
+  "drop_attr": [
+   1.87,
+   2.68,
+   3.54,
+   6.9,
+   14.89,
+   15.08,
+   19.22
+  ],
+  "k_LO3_attr": 3,
+  "drop_measured": [
+   2.99,
+   3.86,
+   5.46,
+   7.12,
+   13.63,
+   18.1,
+   20.54
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   -0.02,
+   0.03,
+   -0.04,
+   -0.0,
+   0.05,
+   0.03,
+   0.04
+  ]
+ },
+ "chess": {
+  "baseline_mean_logodds": 6.36,
+  "baseline_mean_p": 0.92,
+  "drop_attr": [
+   2.24,
+   3.99,
+   4.34,
+   4.41,
+   5.25,
+   7.51,
+   11.59
+  ],
+  "k_LO3_attr": 2,
+  "drop_measured": [
+   2.24,
+   3.71,
+   5.0,
+   7.2,
+   9.44,
+   11.56,
+   13.66
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   0.05,
+   0.03,
+   0.03,
+   0.04,
+   0.04,
+   -0.02,
+   0.12
+  ]
+ },
+ "coffee": {
+  "baseline_mean_logodds": 3.58,
+  "baseline_mean_p": 0.81,
+  "drop_attr": [
+   1.21,
+   1.68,
+   1.87,
+   2.76,
+   4.8,
+   6.85,
+   12.62
+  ],
+  "k_LO3_attr": 10,
+  "drop_measured": [
+   1.21,
+   1.45,
+   2.22,
+   3.37,
+   5.27,
+   7.58,
+   11.87
+  ],
+  "k_LO3_measured": 5,
+  "drop_random": [
+   -0.02,
+   0.02,
+   0.1,
+   0.01,
+   0.03,
+   0.06,
+   -0.03
+  ]
+ },
+ "democracy": {
+  "baseline_mean_logodds": 2.72,
+  "baseline_mean_p": 0.808,
+  "drop_attr": [
+   11.52,
+   13.56,
+   14.21,
+   15.08,
+   15.74,
+   17.81,
+   20.67
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   11.52,
+   12.56,
+   13.5,
+   15.08,
+   16.06,
+   16.33,
+   19.12
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   -0.01,
+   -0.02,
+   0.03,
+   -0.01,
+   0.05,
+   0.0,
+   0.01
+  ]
+ },
+ "Eiffel Tower": {
+  "baseline_mean_logodds": 6.04,
+  "baseline_mean_p": 0.922,
+  "drop_attr": [
+   1.17,
+   1.72,
+   2.25,
+   4.59,
+   7.11,
+   10.59,
+   12.67
+  ],
+  "k_LO3_attr": 5,
+  "drop_measured": [
+   1.31,
+   2.8,
+   4.07,
+   5.27,
+   8.1,
+   11.85,
+   14.59
+  ],
+  "k_LO3_measured": 3,
+  "drop_random": [
+   -0.0,
+   -0.01,
+   -0.01,
+   0.02,
+   0.01,
+   -0.0,
+   0.01
+  ]
+ },
+ "Frida Kahlo": {
+  "baseline_mean_logodds": 1.7,
+  "baseline_mean_p": 0.705,
+  "drop_attr": [
+   1.14,
+   2.08,
+   2.75,
+   3.87,
+   6.27,
+   9.59,
+   13.86
+  ],
+  "k_LO3_attr": 5,
+  "drop_measured": [
+   1.24,
+   2.28,
+   3.24,
+   4.46,
+   8.0,
+   10.13,
+   14.57
+  ],
+  "k_LO3_measured": 3,
+  "drop_random": [
+   0.02,
+   0.03,
+   -0.0,
+   0.02,
+   -0.03,
+   0.01,
+   -0.01
+  ]
+ },
+ "Golden Gate Bridge": {
+  "baseline_mean_logodds": 2.51,
+  "baseline_mean_p": 0.855,
+  "drop_attr": [
+   1.94,
+   4.41,
+   6.2,
+   9.97,
+   13.28,
+   16.61,
+   20.07
+  ],
+  "k_LO3_attr": 2,
+  "drop_measured": [
+   2.86,
+   5.39,
+   7.55,
+   9.63,
+   12.92,
+   14.73,
+   17.6
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   -0.03,
+   -0.02,
+   -0.01,
+   -0.02,
+   0.02,
+   0.05,
+   0.1
+  ]
+ },
+ "Harry Potter": {
+  "baseline_mean_logodds": 6.11,
+  "baseline_mean_p": 0.956,
+  "drop_attr": [
+   3.03,
+   4.82,
+   5.73,
+   7.05,
+   15.49,
+   18.28,
+   24.13
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   3.03,
+   4.82,
+   5.73,
+   8.15,
+   12.57,
+   17.93,
+   26.28
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   0.05,
+   0.03,
+   -0.05,
+   0.01,
+   0.01,
+   0.03,
+   -0.07
+  ]
+ },
+ "Mount Everest": {
+  "baseline_mean_logodds": 2.93,
+  "baseline_mean_p": 0.789,
+  "drop_attr": [
+   2.64,
+   5.75,
+   7.36,
+   10.78,
+   13.41,
+   16.19,
+   19.43
+  ],
+  "k_LO3_attr": 2,
+  "drop_measured": [
+   2.83,
+   5.75,
+   7.82,
+   10.59,
+   12.67,
+   14.54,
+   19.34
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   -0.01,
+   -0.01,
+   -0.01,
+   -0.03,
+   -0.0,
+   -0.01,
+   -0.07
+  ]
+ },
+ "Napoleon Bonaparte": {
+  "baseline_mean_logodds": 4.84,
+  "baseline_mean_p": 0.975,
+  "drop_attr": [
+   3.19,
+   5.99,
+   8.69,
+   12.97,
+   19.64,
+   24.2,
+   25.56
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   3.38,
+   4.04,
+   8.5,
+   10.31,
+   17.08,
+   22.42,
+   25.54
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   -0.04,
+   -0.03,
+   0.02,
+   -0.02,
+   -0.01,
+   -0.0,
+   -0.05
+  ]
+ },
+ "photosynthesis": {
+  "baseline_mean_logodds": 7.76,
+  "baseline_mean_p": 0.966,
+  "drop_attr": [
+   2.55,
+   2.76,
+   3.17,
+   5.3,
+   6.39,
+   8.66,
+   11.57
+  ],
+  "k_LO3_attr": 3,
+  "drop_measured": [
+   2.55,
+   3.05,
+   3.09,
+   4.26,
+   5.74,
+   7.67,
+   10.56
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   0.02,
+   0.02,
+   0.04,
+   -0.01,
+   0.0,
+   0.03,
+   -0.06
+  ]
+ },
+ "the French Revolution": {
+  "baseline_mean_logodds": 6.42,
+  "baseline_mean_p": 0.979,
+  "drop_attr": [
+   3.57,
+   3.58,
+   6.08,
+   7.0,
+   8.01,
+   9.1,
+   12.69
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   3.57,
+   5.99,
+   6.75,
+   7.58,
+   9.34,
+   11.26,
+   16.39
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   0.02,
+   0.01,
+   -0.0,
+   0.03,
+   0.07,
+   -0.04,
+   -0.0
+  ]
+ },
+ "the Moon": {
+  "baseline_mean_logodds": 9.43,
+  "baseline_mean_p": 0.998,
+  "drop_attr": [
+   5.32,
+   5.36,
+   6.29,
+   6.55,
+   8.15,
+   13.06,
+   18.68
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   5.32,
+   5.39,
+   6.43,
+   7.96,
+   10.04,
+   13.54,
+   21.2
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   0.02,
+   0.01,
+   -0.03,
+   0.0,
+   0.04,
+   -0.04,
+   0.02
+  ]
+ },
+ "the Titanic": {
+  "baseline_mean_logodds": 3.1,
+  "baseline_mean_p": 0.83,
+  "drop_attr": [
+   1.42,
+   3.25,
+   4.44,
+   5.84,
+   7.41,
+   9.95,
+   11.98
+  ],
+  "k_LO3_attr": 2,
+  "drop_measured": [
+   2.72,
+   4.09,
+   4.44,
+   6.16,
+   7.92,
+   10.44,
+   14.4
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   -0.01,
+   -0.01,
+   -0.02,
+   -0.05,
+   -0.04,
+   -0.04,
+   -0.05
+  ]
+ },
+ "the violin": {
+  "baseline_mean_logodds": 1.53,
+  "baseline_mean_p": 0.722,
+  "drop_attr": [
+   3.46,
+   4.18,
+   4.62,
+   5.64,
+   7.22,
+   10.04,
+   12.94
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   3.46,
+   4.18,
+   5.75,
+   7.5,
+   10.81,
+   16.71,
+   18.14
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   -0.03,
+   -0.04,
+   -0.03,
+   -0.01,
+   0.0,
+   0.05,
+   -0.03
+  ]
+ },
+ "Venice": {
+  "baseline_mean_logodds": 4.52,
+  "baseline_mean_p": 0.927,
+  "drop_attr": [
+   1.5,
+   2.46,
+   6.07,
+   6.49,
+   8.13,
+   9.81,
+   10.05
+  ],
+  "k_LO3_attr": 3,
+  "drop_measured": [
+   1.95,
+   4.78,
+   6.61,
+   6.75,
+   8.85,
+   9.82,
+   12.46
+  ],
+  "k_LO3_measured": 2,
+  "drop_random": [
+   0.0,
+   -0.01,
+   -0.03,
+   0.03,
+   -0.01,
+   -0.01,
+   0.02
+  ]
+ },
+ "William Shakespeare": {
+  "baseline_mean_logodds": 4.37,
+  "baseline_mean_p": 0.842,
+  "drop_attr": [
+   2.51,
+   4.27,
+   5.36,
+   7.29,
+   15.05,
+   17.28,
+   19.25
+  ],
+  "k_LO3_attr": 2,
+  "drop_measured": [
+   3.98,
+   6.37,
+   8.53,
+   12.03,
+   15.74,
+   17.19,
+   18.3
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   -0.02,
+   -0.02,
+   -0.03,
+   -0.03,
+   -0.0,
+   -0.12,
+   -0.06
+  ]
+ },
+ "Wolfgang Amadeus Mozart": {
+  "baseline_mean_logodds": 3.08,
+  "baseline_mean_p": 0.79,
+  "drop_attr": [
+   5.07,
+   6.9,
+   7.04,
+   8.31,
+   9.64,
+   11.51,
+   14.82
+  ],
+  "k_LO3_attr": 1,
+  "drop_measured": [
+   5.07,
+   6.9,
+   7.46,
+   8.27,
+   9.64,
+   11.32,
+   14.97
+  ],
+  "k_LO3_measured": 1,
+  "drop_random": [
+   -0.01,
+   -0.04,
+   -0.05,
+   -0.0,
+   0.0,
+   0.0,
+   0.06
+  ]
+ },
+ "Tokyo": {
+  "baseline_mean_logodds": 11.37,
+  "baseline_mean_p": 0.998,
+  "drop_attr": [
+   0.54,
+   2.81,
+   3.08,
+   3.04,
+   3.3,
+   7.5,
+   10.54
+  ],
+  "k_LO3_attr": 3,
+  "drop_measured": [
+   1.4,
+   2.07,
+   2.74,
+   5.54,
+   7.46,
+   10.49,
+   13.5
+  ],
+  "k_LO3_measured": 5,
+  "drop_random": [
+   -0.04,
+   -0.03,
+   -0.04,
+   0.02,
+   0.04,
+   -0.04,
+   -0.07
+  ]
+ }
+}

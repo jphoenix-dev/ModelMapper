@@ -694,3 +694,31 @@ are compared fairly with each other, but the numbers are not comparable to CR-2.
   picking the max of four noisy scores inflates that. Hence the held-out re-test on fresh prompts.
 - Same-rule check: R1 here vs CR-2 differs by up to 0.25 at identical neurons and settings. The cause is the
   steering mode (prompt steering is stronger), not noise.
+
+## 16 Oct 2026 (after CR-2): recall concentration on a non-saturating scale (ISSUES #27)
+`src/logodds_check.py` + `src/logodds_compare.py`. The measure is ablation's effect on the answer's **log-odds**,
+log(p / (1 − p)), averaged over recall prompts. A drop of 3 means the odds fall ~20×, a same-sized effect whether the
+model starts at P = 0.5 or 0.998. k_LO3 = fewest neurons (top 200 attributed, re-ranked by measured single effect) whose
+joint ablation gives a mean drop ≥ 3. Random neurons from the same layers are the baseline.
+
+| | completion format (CR, V0) | question format (CR-2, V3) |
+|---|---|---|
+| baseline P(answer) | 0.32–0.78 | 0.71–0.998 |
+| k_LO3 ≤ 5 | 8/11 | **19/19** |
+| k_LO3 = 1 or 2 | 0/11 | 11/19 |
+| random 5 neurons, mean drop | −0.04 to 0.04 | −0.05 to 0.04 |
+
+Same concept in both formats: question format is as concentrated or more in 10/11 (democracy 20 → 1, Titanic 10 → 2,
+French Revolution 5 → 1; coffee 3 → 5 is the exception).
+
+**This reverses CR-2 finding 1** ("question format looks less concentrated"). The old picture came from k50's
+saturation: halving P from 0.998 needs a ~9-point log-odds drop. On the scale that treats all confidence levels
+alike, **1–5 neurons move recall for every one of the 30 concept runs, in both formats.** People are no exception
+(Napoleon, Harry Potter, Shakespeare, Mozart: 1 neuron each).
+
+Two views, both true:
+- *Shifting the model's confidence* takes a handful of neurons. That is what log-odds measures.
+- *Flipping a near-certain answer* (P 0.998 → below 0.5) can take more. That is what k50 measured.
+
+Caveat being checked: a mean of per-prompt drops can be carried by one or two collapsing prompts. A re-run with the
+per-prompt median, and with "fewest neurons that flip the answer on half the prompts", is queued (`*_v2`).
