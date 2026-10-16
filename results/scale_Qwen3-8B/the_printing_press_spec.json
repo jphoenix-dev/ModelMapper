@@ -99,5 +99,90 @@
   "What machine would a publisher turn to for hundreds of copies of a text before the digital age?",
   "What technology made mass-produced religious pamphlets possible in early modern Europe?",
   "What invention is commonly credited with bringing book production beyond the pace of hand copying?"
+ ],
+ "answer_forms_extra": [
+  "Printing press"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Gutenberg press",
+   "names_concept": false
+  },
+  {
+   "reply": "Gutenberg's press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Printing Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Printing Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Press",
+   "names_concept": false
+  },
+  {
+   "reply": "Typesetter",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  }
  ]
 }

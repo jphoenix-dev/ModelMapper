@@ -99,5 +99,90 @@
   "What is the name of the investment asset traded on exchanges under the ticker BTC?",
   "What is the name of the payment method whose users authorize transfers with cryptographic private keys rather than bank accounts?",
   "What is the name of the digital currency often depicted with a white letter B on an orange background?"
+ ],
+ "answer_forms_extra": [
+  "Bitcoin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Cryptocurrency",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  }
  ]
 }

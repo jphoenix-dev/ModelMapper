@@ -99,5 +99,91 @@
   "Near the event horizons of what objects is extreme gravitational time dilation expected?",
   "What kind of object might astronomers identify as the unseen compact companion in an X-ray binary?",
   "What astrophysical concept inspires science-fiction depictions of immense compact objects such as the one in Interstellar?"
+ ],
+ "answer_forms_extra": [
+  "Black holes",
+  "Black hole"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  },
+  {
+   "reply": "Supermassive black holes",
+   "names_concept": false
+  },
+  {
+   "reply": "M87*",
+   "names_concept": false
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  },
+  {
+   "reply": "Dark matter",
+   "names_concept": false
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Supermassive black hole",
+   "names_concept": false
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  },
+  {
+   "reply": "Black holes",
+   "names_concept": true
+  },
+  {
+   "reply": "Neutron star",
+   "names_concept": false
+  },
+  {
+   "reply": "Kerr black hole",
+   "names_concept": false
+  }
  ]
 }

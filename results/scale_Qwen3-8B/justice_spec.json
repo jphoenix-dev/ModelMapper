@@ -99,5 +99,90 @@
   "What ideal have activists often demanded alongside equality in civil rights movements?",
   "What is the name of a society's effort to correct wrongs and protect people's rights?",
   "What is the missing word in the biblical phrase “let ___ roll down like waters”?"
+ ],
+ "answer_forms_extra": [
+  "Justice"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Desert principle",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Judicial review",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Rule of law",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Impartiality",
+   "names_concept": false
+  },
+  {
+   "reply": "Due Process",
+   "names_concept": false
+  },
+  {
+   "reply": "Distributive Justice",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Restorative Justice",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Social justice",
+   "names_concept": false
+  },
+  {
+   "reply": "The missing word in the biblical phrase \"let ___ roll down like waters\" is",
+   "names_concept": true
+  }
  ]
 }

@@ -99,5 +99,91 @@
   "What is the name of the mechanism by which a drug-resistant strain becomes common without organisms intentionally changing?",
   "What is the name of the long-term biological process behind the spread of dark coloration in polluted moth populations?",
   "What is the name of the explanation for why traits that improve survival and reproduction can become more frequent?"
+ ],
+ "answer_forms_extra": [
+  "Natural Selection",
+  "Natural selection"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Selective Pressure",
+   "names_concept": false
+  },
+  {
+   "reply": "Pesticide resistance",
+   "names_concept": false
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Co-evolution",
+   "names_concept": false
+  },
+  {
+   "reply": "The Grants' study",
+   "names_concept": false
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Industrial Melanism",
+   "names_concept": false
+  },
+  {
+   "reply": "Natural Selection",
+   "names_concept": true
+  }
  ]
 }

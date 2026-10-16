@@ -99,5 +99,90 @@
   "What is a sentimental desire to return mentally to a past era called?",
   "What is the feeling that makes keepsakes from earlier life emotionally powerful?",
   "What is the longing called when memories of earlier times seem sweeter than present life?"
+ ],
+ "answer_forms_extra": [
+  "Nostalgia"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Proustian memory",
+   "names_concept": false
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Nostalgia",
+   "names_concept": true
+  }
  ]
 }

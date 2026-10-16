@@ -99,5 +99,90 @@
   "What global communications network has everyday communication increasingly relied on since the 1990s?",
   "What is the collection of connected networks that lets computers exchange data worldwide?",
   "What global network do people mean when they describe browsing websites as using a worldwide network?"
+ ],
+ "answer_forms_extra": [
+  "Internet"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "World Wide Web",
+   "names_concept": false
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet Protocol (IP)",
+   "names_concept": false
+  },
+  {
+   "reply": "Global Network System",
+   "names_concept": false
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "VPN",
+   "names_concept": false
+  },
+  {
+   "reply": "The Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  }
  ]
 }

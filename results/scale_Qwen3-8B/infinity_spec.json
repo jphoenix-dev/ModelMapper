@@ -99,5 +99,90 @@
   "What is another name for the countable cardinality of the set of integers?",
   "What does the quotient 1/x grow toward as the denominator shrinks toward zero from above?",
   "What is the extended-real supremum of the sequence of positive integers, which has no greatest term?"
+ ],
+ "answer_forms_extra": [
+  "Infinity"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  },
+  {
+   "reply": "The limit of the sequence 1, 2, 3, 4",
+   "names_concept": false
+  },
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  },
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  },
+  {
+   "reply": "The point at which parallel lines meet in projective geometry is called the **point",
+   "names_concept": false
+  },
+  {
+   "reply": "Infinite sets",
+   "names_concept": false
+  },
+  {
+   "reply": "Countable",
+   "names_concept": false
+  },
+  {
+   "reply": "Continuum",
+   "names_concept": false
+  },
+  {
+   "reply": "Point at infinity",
+   "names_concept": false
+  },
+  {
+   "reply": "Fly",
+   "names_concept": false
+  },
+  {
+   "reply": "Countable infinity",
+   "names_concept": false
+  },
+  {
+   "reply": "Infinite Limit",
+   "names_concept": false
+  },
+  {
+   "reply": "Countably infinite",
+   "names_concept": false
+  },
+  {
+   "reply": "Continuum",
+   "names_concept": false
+  },
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  },
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  },
+  {
+   "reply": "Divergent series",
+   "names_concept": false
+  },
+  {
+   "reply": "Aleph-null",
+   "names_concept": false
+  },
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  },
+  {
+   "reply": "Infinity",
+   "names_concept": true
+  }
  ]
 }

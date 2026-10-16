@@ -99,5 +99,90 @@
   "What machine had a celebrated 19th-century form known as the Corliss design?",
   "What was the name of the machine that allowed trains to travel without horses?",
   "What machine might be identified by a large iron cylinder, flywheel, and connecting rods?"
+ ],
+ "answer_forms_extra": [
+  "Steam engine"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Newcomen Engine",
+   "names_concept": false
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam",
+   "names_concept": false
+  },
+  {
+   "reply": "Steam",
+   "names_concept": false
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Water wheel",
+   "names_concept": false
+  },
+  {
+   "reply": "Steam",
+   "names_concept": false
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Water power",
+   "names_concept": false
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Steam engine",
+   "names_concept": true
+  }
  ]
 }

@@ -99,5 +99,91 @@
   "What chart has hydrogen and helium at opposite ends of its first row?",
   "What chart makes patterns in element properties visible through rows and columns?",
   "What reference might a chemist consult to check an element’s symbol, atomic number, and relative atomic mass?"
+ ],
+ "answer_forms_extra": [
+  "Periodic Table",
+  "Periodic table"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table Trends Chart",
+   "names_concept": false
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Periodic Table",
+   "names_concept": true
+  }
  ]
 }

@@ -99,5 +99,90 @@
   "What is the emotion behind questioning a partner after seeing them act affectionately toward someone else?",
   "What might a person feel when threatened by a competitor for a loved one's attention?",
   "What is the painful reaction called when someone imagines a romantic partner choosing somebody else?"
+ ],
+ "answer_forms_extra": [
+  "Jealousy"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Anxiety",
+   "names_concept": false
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Insecurity",
+   "names_concept": false
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Betrayal trauma",
+   "names_concept": false
+  },
+  {
+   "reply": "Distrust",
+   "names_concept": false
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Jealousy",
+   "names_concept": true
+  }
  ]
 }

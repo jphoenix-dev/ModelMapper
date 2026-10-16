@@ -145,8 +145,25 @@ family, and whether they survive deliberate attempts to break them.
   people-steering, and 4 of 5 hard cases reach 0.25–0.55.
 - **Prompt steering.** Steering the prompt as well as the reply is stronger (+0.05–0.10), as known from prior work.
 
-### 4.5 Model size (Qwen3-0.6B vs 8B)
-*[Running at the time of writing; to be filled from `results/scale_*`.]*
+### 4.5 Model size: Qwen3-0.6B vs 8B (exploratory; judge-free)
+Same 60 concepts (CR-2 + wave 2) and 3 made-up controls, identical saved prompts, the same judge-free pipeline, with
+answer discovery re-run per model (`results/scale_compare.txt`). The matched 8B re-run was stopped after 44 concepts
+to free the GPU; it recalled all 44.
+
+| | Qwen3-0.6B | Qwen3-8B |
+|---|---|---|
+| real concepts recalled (question format) | **7/60** | 44/44 covered (and 60/60 in earlier runs) |
+| made-up controls recalled | 0/3 | 0/3 |
+| recalled concepts with k_mean ≤ 5 | 6/7 | all |
+| typical k_flip on the shared concepts | **1–3** | 1–50 (Tokyo, photosynthesis, Bitcoin: 50) |
+| steering (judge-free, held-out) | ~0.06 | ~0.2–0.3 |
+
+- **The small model knows far fewer of these concepts** in chat-question form.
+- **Where it does recall, recall again depends on a handful of neurons.**
+- **Its answers flip much more easily** (1–3 neurons), consistent with the confidence-margin reading of §4.1: the less
+  sure the model, the fewer neurons it takes to tip it.
+- **Steering is weak** in the small model.
+- **Only two sizes from one family**, so we make no claim about trends with scale.
 
 ## 5. Pitfalls we hit (and what caught them)
 Each is logged with its fix in ISSUES.md (#1–33) and CAPS.md:

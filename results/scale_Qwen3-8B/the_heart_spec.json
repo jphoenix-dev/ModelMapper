@@ -99,5 +99,90 @@
   "What is a term for the innermost or most essential part of a matter?",
   "What is the name of the organ that typically beats faster during physical exertion?",
   "What is the name of the bodily symbol of love, courage, and deep feeling in many traditions?"
+ ],
+ "answer_forms_extra": [
+  "Heart"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Pulmonary artery",
+   "names_concept": false
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Core",
+   "names_concept": false
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Heart",
+   "names_concept": true
+  }
  ]
 }
