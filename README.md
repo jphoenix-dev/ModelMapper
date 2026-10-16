@@ -5,6 +5,10 @@ a concept depends on, tests how few are enough, labels neurons with one LLM and 
 steers the model with them. Every stage has controls. The code runs on one consumer GPU, and the model, the
 labeller and the judge are all configurable ([Use it on another model](#use-it-on-another-model-or-endpoint)).
 
+> **See it in action:** [**Eiffel Tower Qwen**](https://eiffel-tower-qwen.vercel.app/) is an interactive explainer for
+> lay readers. Turn a handful of the model's Eiffel Tower neurons up and watch the tower take over its answers,
+> switch them off and watch it forget, then try any of the 138 concepts we tested. Source: [explainer/](explainer/).
+
 > **Installing it?** Follow [SETUP.md](SETUP.md). It is a step-by-step install and self-check that a person or a
 > coding agent can follow ("clone this repo and follow SETUP.md"). It ends with a short report of what passed.
 
