@@ -84,9 +84,15 @@ def label_units(model_name: str, units, out_dir, use_jev: bool = False) -> dict:
     from atlas import Atlas
     at = Atlas(model_name)
     key = at.write_dossiers(list(units), out_dir)
+    def one(code):   # one unit's labelling error (e.g. the endpoint's context is too small) is that unit's result
+        try:
+            return lab.label_unit(Path(out_dir) / f"{code}.md", use_jev=use_jev)
+        except Exception as e:  # noqa: BLE001
+            return {"luna": {}, "error": repr(e)[:300]}
     with ThreadPoolExecutor(max(1, len(key))) as ex:
-        res = dict(zip(key, ex.map(lambda c: lab.label_unit(Path(out_dir) / f"{c}.md", use_jev=use_jev), key)))
-    return {k["unit"]: {"pos": (res[c]["luna"].get("pos") or {}), "neg": (res[c]["luna"].get("neg") or {})}
+        res = dict(zip(key, ex.map(one, key)))
+    return {k["unit"]: {"pos": (res[c]["luna"].get("pos") or {}), "neg": (res[c]["luna"].get("neg") or {}),
+                        **({"error": res[c]["error"]} if "error" in res[c] else {})}
             for c, k in key.items()}
 
 

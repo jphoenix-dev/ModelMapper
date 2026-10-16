@@ -118,7 +118,10 @@ python scripts/smoke_e2e.py --model google/gemma-3-1b-it
 ## 7. Optional: local labeller and judge endpoints (no paid APIs)
 Only do this if the human asks; it needs a local LLM server. It checks that the labeller and judge endpoint
 settings work, not label quality.
-1. Start a llama.cpp server with a small chat model: `llama-server -m <model.gguf> --port 8080 --jinja`.
+1. Start a llama.cpp server with a small chat model:
+   `llama-server -m <model.gguf> --port 8080 --jinja -c 32768 -np 1`.
+   Each labelling request (one neuron's examples) needs about 8k tokens of context. By default llama-server splits
+   its context across several parallel slots, which can be too small per request.
 2. Copy `.env.example` to `.env`, then set these lines:
    ```
    OPENAI_BASE_URL=http://127.0.0.1:8080/v1

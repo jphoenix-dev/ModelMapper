@@ -74,11 +74,13 @@ def label_tier(key, work):
     labels = mk.label_units(key["model"], units, work / "dossiers_markers")
     rows = []
     for m in key["markers"]:
-        text = (labels.get(m["unit"], {}).get(m["sign"]) or {}).get("explanation", "")
+        lab = labels.get(m["unit"], {})
+        text = (lab.get(m["sign"]) or {}).get("explanation", "")
         hits = mk.keyword_hit(text, m["keywords"])
         rows.append({"concept": m["concept"], "unit": m["unit"], "ok": bool(hits), "hits": hits, "label": text,
-                     "key_label": m["job"]})
-        print(f"[{'ok' if hits else '--'}] {m['concept']:<24} {m['unit']:<11} {m['sign']} pole: {text[:120]}", flush=True)
+                     "key_label": m["job"], **({"error": lab["error"]} if "error" in lab else {})})
+        shown = f"labelling failed: {lab['error']}" if "error" in lab else f"{m['sign']} pole: {text[:120]}"
+        print(f"[{'ok' if hits else '--'}] {m['concept']:<24} {m['unit']:<11} {shown}", flush=True)
     # control: how often a label "matches" a DIFFERENT marker's keywords (chance level for this keyword test)
     others = [(r, o) for r in rows for o in key["markers"] if o["unit"] != r["unit"] and o["concept"] != r["concept"]]
     chance = sum(bool(mk.keyword_hit(r["label"], o["keywords"])) for r, o in others)
