@@ -4,7 +4,7 @@
 *Draft, 16 October 2026. Independent work, not affiliated with Anthropic, Goodfire or Alibaba (Qwen).*
 
 > **Status:** draft for review.
-> - Exploratory unless marked pre-registered (CR, CEN, H-DEPTH; see PREREG.md).
+> - Exploratory unless marked pre-registered (CR, CEN, H-DEPTH, and the confirmatory CR-3; see PREREG.md).
 > - Only two small models from one family were tested (Qwen3-8B; Qwen3-0.6B comparison).
 > - All 80 citations independently verified (LITERATURE.md).
 
@@ -23,7 +23,11 @@ human direction. We found:
 - **About half of neurons verifiably do one job.** A calibrated census of 1,000 random neurons finds ~50% verified
   single-job, closer to a floor than an estimate, against the essay's ~90% for a 4× larger model.
 - **Steering works, modestly.** Nudging 2–6 of these neurons steers free-form chat towards the concept (an
-  "Eiffel Tower Qwen"). The effect is real but modest, best chosen per concept, and weaker for people.
+  "Eiffel Tower Qwen"). The effect is real but modest and best chosen per concept. People steer only when the
+  question invites a person.
+- **Confirmed.** A frozen confirmatory run on 40 never-used concepts (CR-3) passed 6 of 7 predictions: recall,
+  concentration, flips, the confidence link and steering selection. It failed one, and the failure revised our
+  view of people.
 
 Most individual findings have precedents (knowledge neurons, entity cells, expert-neuron steering, staged recall).
 Our contribution is an automated test at scale with explicit controls and calibration, plus a candid account of the
@@ -141,8 +145,11 @@ family, and whether they survive deliberate attempts to break them.
   - A concept's preferred rule is stable across independently written prompt sets (same rule 13/19; held-out r = 0.76).
   - Attribution rank is not steering usefulness: Shakespeare steered only through his one name-labelled neuron
     (0.50 fluent vs ≤ 0.10).
-- **People.** People are hard to steer *fluently*: they garble when pushed. Person-friendly prompts roughly triple
-  people-steering, and 4 of 5 hard cases reach 0.25–0.55.
+- **People.** On generic prompts, people almost never appear. Given questions that invite a person, they steer:
+  - Exploratory: person-friendly prompts roughly triple people-steering, and 4 of 5 hard cases reach 0.25–0.55.
+  - Confirmatory (CR-3): the four people (Cleopatra, Lincoln, Gandhi, Martin Luther King Jr.) reached 0.43 against
+    0.22 for other concepts on generic prompts. Jev agrees (0.40), and none of the names appears unsteered.
+  - Some individuals still resist (Shakespeare, Mozart, Harry Potter), and pushing harder tends to garble the text.
 - **Prompt steering.** Steering the prompt as well as the reply is stronger (+0.05–0.10), as known from prior work.
 
 ### 4.5 Model size: Qwen3-0.6B vs 8B (exploratory; judge-free)
@@ -164,6 +171,24 @@ to free the GPU; it recalled all 44.
   sure the model, the fewer neurons it takes to tip it.
 - **Steering is weak** in the small model.
 - **Only two sizes from one family**, so we make no claim about trends with scale.
+
+### 4.6 Confirmatory replication (CR-3, pre-registered and frozen before data)
+40 never-used concepts, picked mechanically (10 categories) plus 4 new made-up controls; the exact final pipeline;
+predictions and scoring script committed before any run (commits a0c3702, edf7668).
+
+| prediction | result |
+|---|---|
+| P1 ≥ 90% real recalled, 0/4 made-up | **PASS**: 40/40, 0/4 |
+| P2 ≤ 5 neurons for ≥ 90% (mean), ≥ 80% (median); random null | **PASS**: 98%, 98%, 100% |
+| P3a answer flips with ≤ 5 neurons for ≥ 70% | **PASS**: 85% |
+| P3b resistant facts are the most confident | **PASS**: p = 0.005 |
+| P4a per-concept steering ≥ 1.5× fixed rule; random < 0.05 | **PASS**: 2.44×; 0.006 |
+| P4b same direction under Jev | **PASS**: 0.095 vs 0.045 |
+| P5 people steerable but below non-people | **FAIL**: 0.43 vs 0.22 |
+
+P5's failure is genuine: there's no unsteered baseline issue, no keyword looseness, and Jev confirms it. The
+prediction was also mis-specified, because it compared different prompt sets. We report it as failed and revise the
+people claim (§4.4).
 
 ## 5. Pitfalls we hit (and what caught them)
 Each is logged with its fix in ISSUES.md (#1–33) and CAPS.md:
@@ -214,8 +239,9 @@ prompts, held-out prompts) mattered more than any single method choice.
 - **Free fluency check.** It inflates absolute levels (it agrees with Jev on ranking, r = 0.65); reported numbers use
   Jev where stated.
 - **Noise.** Single-concept steering numbers move ±0.1 between prompt sets. Population numbers are stable.
-- **Exploratory.** Most results are exploratory. The pre-registered experiments are CR, CEN and H-DEPTH. A
-  confirmatory CR-3 is drafted in PREREG.md.
+- **Exploratory vs confirmed.** Most results were found exploratorily. CR-3 then confirmed the central ones on 40
+  new concepts (6/7 predictions; one failed, reported in full). The census, part sharing and steering-rule details are
+  not covered by CR-3.
 - **Not specialists.** We may have missed relevant work.
 
 ## 8. Reproducibility
