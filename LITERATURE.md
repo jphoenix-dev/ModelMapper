@@ -70,9 +70,11 @@ neuron overlap is driven more by **shared word form than shared meaning**.
 **What's ours.** A pair-vs-random measurement with generic neurons removed: related pairs share 2.6 specific neurons
 vs 0.13 for random pairs. We found no direct precedent.
 
-**What we must do.** Run a **lexical control** before claiming this. Some of our pairs share a word (the Moon / the
-Moon landing, chess / chess grandmasters). Steam engine / printing press (8 shared, no common word) and dolphin /
-shark (3) are encouraging but not enough.
+**Lexical control, done 16 Oct.** None of the 26 shared non-generic neurons fires mainly on the pairs' shared word (0/26
+word-form detectors; RESULTS.md). The result survives this control. Some shared neurons look conceptual (they fire in
+moon contexts but on other tokens); others fire on punctuation (steam engine / printing press), where shared topic and
+shared formatting can't be told apart. **Claim:** related concepts share specific non-lexical neurons ~20× more than
+random pairs. Don't claim that all of them are "meaning" parts.
 
 ## 3. Depth structure: recognise → concept parts → say the answer (F3): KNOWN
 
@@ -204,8 +206,8 @@ all tokens beats steering only the reply's tokens (known).
 ---
 
 ## Follow-ups this review creates (before or alongside publication)
-1. **Lexical control for part sharing (F2).** Re-score pairs excluding neurons that respond to tokens shared by the
-   two concepts' answers or prompts. Without it, F2 isn't safe to claim.
+1. ~~Lexical control for part sharing (F2)~~: done, survives (0/26 word-form detectors); some shared neurons are
+   punctuation-firing, so the claim is worded as "non-lexical".
 2. **Report probability and flip rates with log-odds (F1).** The data is already in the log-odds v2 files.
 3. **Word changes:** "necessary for recall", not "stores"; "others take over" with the self-repair caveat, not
    "re-routing".

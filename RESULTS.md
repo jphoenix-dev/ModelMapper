@@ -1188,3 +1188,19 @@ top 50 of ≥ 3 of the 20 concepts (18 of them) count as generic machinery and a
   concepts are built from reusable parts, and neighbours reuse each other's.
 - Eiffel Tower ~ Paris share nothing in the top 50 (each recalled on its own prompts). Possibly the Eiffel prompts
   lean on landmark/structure parts and the Paris prompts on country/capital parts. Not chased.
+
+**Lexical control for shared parts** (LITERATURE.md follow-up 1, prompted by Ait Hou & Hwa 2026; `src/shared_parts_lexical.py`
+→ `results/shared_parts_lexical.txt`). For each of the 26 non-generic neurons shared by a related pair, we read its
+top-20 atlas firings on both poles. **None is a word-form detector**: none fires on the pairs' shared word in ≥ 50% of
+its top firings (0/26). Two caveats:
+- **"Not lexical" isn't proven "meaning".** The Moon-pair neurons fire *around* moon contexts (the word is nearby in
+  55–75% of top examples) but on other tokens, which fits a concept neuron. The 8 steam engine / printing press neurons
+  fire mostly on punctuation and symbols (":", "=", "|"), the summary-motif pattern. They could be shared topic
+  neurons or shared formatting machinery; this test can't tell.
+- **Bugs caught on the way:**
+  - The first run reported 0/26 lexical because token extraction silently failed (the atlas renderer omits the
+    [[ ]] marker when `after=0`). An assertion now fails the run if any marker is missing.
+  - That assertion then caught a newline token that the pattern didn't handle.
+
+**Reading:** the part-sharing result survives the lexical control. Whether every shared neuron carries meaning needs
+a case-by-case look.

@@ -1,0 +1,438 @@
+[
+ {
+  "a": "chess",
+  "b": "chess grandmasters",
+  "common_stems": [
+   "ches"
+  ],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     24,
+     2549
+    ],
+    [
+     "-",
+     "",
+     "–",
+     ",",
+     "is",
+     "word-in-context 0%"
+    ]
+   ],
+   [
+    [
+     32,
+     2098
+    ],
+    [
+     ",",
+     "r",
+     "a",
+     "knight",
+     "ez",
+     "word-in-context 35%"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "the Moon",
+  "b": "the Moon landing",
+  "common_stems": [
+   "moon"
+  ],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     10,
+     4619
+    ],
+    [
+     "down",
+     "moon",
+     "on",
+     "details",
+     "of",
+     "word-in-context 60%"
+    ]
+   ],
+   [
+    [
+     28,
+     9180
+    ],
+    [
+     "to",
+     "on",
+     "of",
+     "landed",
+     "in",
+     "word-in-context 30%"
+    ]
+   ],
+   [
+    [
+     29,
+     11480
+    ],
+    [
+     "the",
+     "on",
+     "of",
+     "",
+     "'s",
+     "word-in-context 75%"
+    ]
+   ],
+   [
+    [
+     31,
+     9683
+    ],
+    [
+     "",
+     "full",
+     "on",
+     "/",
+     "the",
+     "word-in-context 55%"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "Eiffel Tower",
+  "b": "Paris",
+  "common_stems": [],
+  "lexical": [],
+  "semantic": []
+ },
+ {
+  "a": "coffee",
+  "b": "tea",
+  "common_stems": [],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     28,
+     3801
+    ],
+    [
+     "for",
+     "to",
+     "a",
+     "and",
+     "of"
+    ]
+   ],
+   [
+    [
+     29,
+     2750
+    ],
+    [
+     "/",
+     "",
+     "of",
+     "2",
+     "than"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "the dolphin",
+  "b": "the shark",
+  "common_stems": [],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     8,
+     2165
+    ],
+    [
+     "about",
+     "back",
+     "whales",
+     ",",
+     "mammals"
+    ]
+   ],
+   [
+    [
+     9,
+     2862
+    ],
+    [
+     "ace",
+     "ca",
+     "as",
+     "ke",
+     "cas"
+    ]
+   ],
+   [
+    [
+     29,
+     891
+    ],
+    [
+     ",",
+     "",
+     "a",
+     ";",
+     ":"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "the colour red",
+  "b": "the colour blue",
+  "common_stems": [
+   "colo"
+  ],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     10,
+     7604
+    ],
+    [
+     "pick",
+     "own",
+     "of",
+     "picked",
+     "ill",
+     "word-in-context 0%"
+    ]
+   ],
+   [
+    [
+     25,
+     2880
+    ],
+    [
+     "and",
+     "0",
+     ",",
+     "y",
+     "/",
+     "word-in-context 35%"
+    ]
+   ],
+   [
+    [
+     33,
+     3108
+    ],
+    [
+     "white",
+     "wh",
+     "-wh",
+     "you",
+     "(",
+     "word-in-context 5%"
+    ]
+   ],
+   [
+    [
+     34,
+     10326
+    ],
+    [
+     "and",
+     "a",
+     "|",
+     "-",
+     "copper",
+     "word-in-context 5%"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "the steam engine",
+  "b": "the printing press",
+  "common_stems": [],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     4,
+     419
+    ],
+    [
+     "’s",
+     "|",
+     "1",
+     "=",
+     "*"
+    ]
+   ],
+   [
+    [
+     16,
+     8622
+    ],
+    [
+     "’re",
+     ":",
+     "board",
+     "of",
+     "is"
+    ]
+   ],
+   [
+    [
+     19,
+     9651
+    ],
+    [
+     "ah",
+     ",",
+     "director",
+     "companies",
+     ".:"
+    ]
+   ],
+   [
+    [
+     20,
+     301
+    ],
+    [
+     "/",
+     "of",
+     ":",
+     "c",
+     ""
+    ]
+   ],
+   [
+    [
+     20,
+     10082
+    ],
+    [
+     ":",
+     "=",
+     "||",
+     "(",
+     "–"
+    ]
+   ],
+   [
+    [
+     22,
+     7584
+    ],
+    [
+     "a",
+     "c",
+     "e",
+     "colors",
+     "ist"
+    ]
+   ],
+   [
+    [
+     25,
+     3000
+    ],
+    [
+     "the",
+     "e",
+     "a",
+     "how",
+     "brand"
+    ]
+   ],
+   [
+    [
+     25,
+     5140
+    ],
+    [
+     "8",
+     "the",
+     "",
+     "and",
+     ","
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "snow",
+  "b": "thunderstorms",
+  "common_stems": [],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     22,
+     10005
+    ],
+    [
+     ",",
+     "“",
+     ":",
+     "",
+     "a"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "Golden Gate Bridge",
+  "b": "gold",
+  "common_stems": [
+   "gold"
+  ],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     33,
+     866
+    ],
+    [
+     "/g",
+     "rose",
+     "up",
+     "with",
+     "1",
+     "word-in-context 70%"
+    ]
+   ]
+  ]
+ },
+ {
+  "a": "Zeus",
+  "b": "Thor",
+  "common_stems": [],
+  "lexical": [],
+  "semantic": [
+   [
+    [
+     28,
+     7435
+    ],
+    [
+     "of",
+     ",",
+     "the",
+     "in",
+     "."
+    ]
+   ]
+  ]
+ }
+]
