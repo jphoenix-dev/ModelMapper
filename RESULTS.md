@@ -672,3 +672,25 @@ rank the evidence the same way and discriminate equally well. Luna is more gener
 because it wrote the explanations (self-grading); Jev is the stricter of the two. The clean bar is calibrated on known
 two-job dossiers, so a uniformly stricter grader is absorbed by the calibration rather than biasing the headline.
 Still open under #16: human spot-checks.
+
+## 16 Oct 2026 (after CR-2): steering-neuron selection rules, first run (prompt + reply steering, by mistake; ISSUES #11, #28)
+`src/steer_select.py`, 19 recalled CR-2 concepts. Each rule's top 2/4/6 neurons over the usual 15-setting grid; best
+joint nudgeability per rule. **This run steered the prompt as well as the reply** (ISSUES #28), unlike CR/CR-2. Rules
+are compared fairly with each other, but the numbers are not comparable to CR-2. A reply-only re-run is queued.
+
+| rule | mean best joint | concepts ≥ 0.5 | ≥ 0.25 | people (6) mean |
+|---|---|---|---|---|
+| R1 late-layer attribution (the frozen CR rule) | 0.26 | 5 | 9 | 0.04 |
+| R2 attribution, any layer | **0.34** | **7** | 11 | 0.15 |
+| R3 measured single-ablation effect | 0.32 | 5 | **12** | **0.16** |
+| R4 "says the answer" (direct effect on answer token) | 0.30 | 4 | 11 | 0.12 |
+| random neurons | 0.01 | 0 | 0 | – |
+
+- **The layer cut-off was costing us.** Dropping it (R2) or ranking by measured effect (R3) beats the frozen rule.
+  Everest 0.15 → 0.85 (R2), Harry Potter 0.05 → 0.50 (R2/R4), Titanic 0.00 → 0.30 (R2), Mozart 0.00 → 0.20.
+- **"People can't be steered" weakens:** 0.04 → 0.15–0.16 on average, mostly from Harry Potter and Mozart. Einstein,
+  Shakespeare and Kahlo stay ≈ 0 under every rule.
+- No rule wins everywhere: Tokyo prefers R4 (0.60), Venice R3 (0.60), democracy R1 (0.75). Best-of-4 averages 0.43, but
+  picking the max of four noisy scores inflates that. Hence the held-out re-test on fresh prompts.
+- Same-rule check: R1 here vs CR-2 differs by up to 0.25 at identical neurons and settings. The cause is the
+  steering mode (prompt steering is stronger), not noise.

@@ -8,9 +8,13 @@ Rules (each picks an ordered list; the steering grid uses its top 2/4/6 at 0.5-2
                     (output weights -> final norm -> unembedding), i.e. "say <answer>" neurons
 Each rule's best joint nudgeability is compared, with a random-neuron control per concept.
 
+Steering is reply-only clamp, as in CR/CR-2 (REPLY_ONLY=0 also steers the prompt; the first run did that by mistake,
+kept as steer_select_promptsteer.json, ISSUES #28).
+
 Usage: RECALL_VARIANT=V3 CONCEPT_OUT_DIR=results/concepts_v3 python src/steer_select.py "<concept>" [...]
 """
 import json
+import os
 import random
 import sys
 
@@ -42,7 +46,10 @@ def grid(pipe, units, last_act, concept):
 
 
 def main():
-    pipe = FastPipeline("Qwen/Qwen3-8B")
+    reply_only = os.environ.get("REPLY_ONLY", "1") == "1"
+    pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=reply_only)
+    print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
+    name = "steer_select.json" if reply_only else "steer_select_promptsteer.json"
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
     out = {}
     for concept in sys.argv[1:]:
@@ -74,7 +81,7 @@ def main():
         res["random"] = {"joint": round(rj, 3)}
         out[concept] = res
         print(f"{concept:<24} " + " | ".join(f"{k} {v['joint']:.2f}" for k, v in res.items()), flush=True)
-        (cp.OUT / "steer_select.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+        (cp.OUT / name).write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 if __name__ == "__main__":

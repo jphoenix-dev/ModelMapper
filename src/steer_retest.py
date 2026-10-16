@@ -39,7 +39,8 @@ def main():
     sel = json.loads((cp.OUT / "steer_select.json").read_text(encoding="utf-8"))
     out_p = cp.OUT / "steer_retest.json"
     out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {}
-    pipe = FastPipeline("Qwen/Qwen3-8B")
+    pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=True)      # as in CR/CR-2 (ISSUES #28)
+    print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
     for concept, rules in sel.items():
         if concept in out:
             continue
