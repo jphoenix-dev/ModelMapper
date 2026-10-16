@@ -235,3 +235,41 @@ P2 unrelated controls drop ≤ 10pp at k50; P3 top-10 clean (either pole) above 
 recalled concepts reach joint nudgeability ≥ 0.25 with random ≤ 0.05.
 **Additional:** recall succeeds (≥ 5/20 prompts) for ≥ 16/20 real concepts, including ≥ 4/5 people; the 3 realistic
 made-up concepts fail recall (< 5/20). If a made-up concept passes, the prompts leak or the model confabulates; report it.
+
+## Experiment CR-3: confirmatory replication with tonight's repaired method (DRAFT, written 16 Oct ~04:20; NOT frozen; awaiting James)
+
+**Why:** tonight's results (log-odds concentration, steering by rule, people) are exploratory. The method was changed
+while looking at the data. CR-3 freezes the method and predictions first, then runs on **concepts never used before**.
+
+**Concepts (fixed before running):** 40 new real concepts, 4 per category, the same 10 categories as wave 2 but
+different items, chosen by Luna from a prompt that excludes all 77 concepts used so far. Also 4 made-up controls
+(realistic fact sheets) and 20 for a person-specific arm (10 people, 10 non-people matched by category). The list is
+committed before any model run.
+
+**Method (frozen):**
+- Recall: V3 question format + answer discovery (canonical-name checker, clue-word leak rule, ≥ 2 recurrences).
+  Recalled = P(answer) ≥ MIN_P on ≥ 5 of 20 prompts.
+- Concentration: measured single-ablation order over the top-200 attributed; k_mean, k_median, k_flip on log-odds
+  (`logodds_check.py` v2). Random same-layer control.
+- Steering: candidate sets R1, R2, R4 and R5 (label-matched with a Luna "is this neuron about X?" check);
+  add mode, reply-only, 2/4/6 neurons × 0.5–2×. **Selection** on the original 20 neutral prompts; the winner
+  re-scored on 20 **held-out** neutral prompts (and person-friendly held-out prompts for people). Joint = on-topic
+  (lenient Jev and strict Jev reported) AND fluent.
+- Labels: label_batch + rubric re-grade; calibrated bars from the spliced-dossier calibration.
+
+**Predictions (pass/fail written now):**
+- **P1 recall:** ≥ 90% of real concepts recalled; 0/4 made-up.
+- **P2 concentration:** ≥ 90% of recalled concepts reach a mean log-odds drop ≥ 3 with ≤ 5 neurons; random 50
+  neurons mean drop < 0.5.
+- **P3 flips:** ≥ 70% flip on half their correct prompts with ≤ 5 neurons; the exceptions have higher baseline
+  log-odds than the rest (one-sided Mann–Whitney, p < 0.05).
+- **P4 steering (held-out, lenient joint):** mean of per-concept winners ≥ 0.20; random < 0.05; the winner beats R1
+  held-out in ≥ 50% of concepts where they differ.
+- **P5 people:** on person-friendly held-out prompts, people's mean fluent joint ≥ 0.20 and within 0.15 of matched
+  non-people on their own held-out prompts.
+- **P6 labels:** top-10 neurons' clean rate (calibrated rule) exceeds the census rate.
+
+**Known weaknesses (stated in advance):** Luna both writes prompts and labels; Jev near the end of its budget (P4/P5
+need ~25k short calls ≈ $0.5–1); the 20-prompt cells carry ± 0.1 noise; the made-up controls are only 4.
+
+**Cost estimate:** GPU ~2–3 h; Luna ~1k calls; Jev ~$0.5–1 (fits the remaining balance only if it's ≥ ~$1.5).
