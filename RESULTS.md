@@ -1678,3 +1678,52 @@ crude below the last layers (ranks only).
   `logodds_cap_audit.py`: 3 of 869 recall prompts hit it (true 16.5-16.8), 11 are off by > 0.1. Sign-based results
   (flips) are unaffected; it is in the public pipeline too (wave_free.py, logodds_check.py and others) - fix on main
   pending James's OK. New code uses the exact logit - logsumexp(others).
+
+## 16 Oct 2026 (late evening): how are concepts coded? Dedicated, compositional or barcode (EXPLORATORY; research branch)
+Prompted by James: if a concept is a COMBINATION of neurons, 442k neurons allow vastly more concepts than one-per-
+neuron. In the literature that is superposition seen from the concept side (Elhage et al. 2022): more concepts than
+neurons forces overlap, so each neuron serves several concepts. The question that matters is what KIND of overlap:
+dedicated neurons, compositional (meaningful shared parts, related concepts share), or barcode-like (arbitrary
+overlap, neurons look polysemantic). No API calls.
+
+**Step 1 - one neuron ranking for every recalled concept** (`rank_save.py`). The judge-free waves had kept only counts.
+Re-ranked all **178** recalled concepts (CR-2 19, wave 2 40, wave 3 39, wave 4 40, CR-3 40) exactly as wave_free.py
+does. Every concept with an original run reproduced its recall count and k_mean / k_flip exactly (**0 mismatches,
+119 concepts**). For CR-2 / wave 2 the older attention-study lists agree on the strongest neuron (old #1 in the new
+top-3 for 57/59; top-10 overlap median 6-7).
+
+**Step 2 - cross-activation** (`cross_activation.py`, `cross_activation_summary.py` -> `results/cross_activation_summary.txt`).
+Every concept's top-10 neurons measured on every other concept's recall prompts. 'Fires' = at least half its own-concept
+activation, answer position. Sanity: own-concept ratio median 1.000. Families fixed beforehand (`families.py`, 17).
+- Raw: same family 29.3% vs different family 22.4%.
+- **Post hoc (after the first look):** 35 neurons, almost all in layers 16-24, fire for >= 90% of concepts - "always
+  on" question-answering machinery, not codes. Set aside, the rest (1,074 neuron-owner pairs):
+  - **same family 12.7% vs different family 4.8% (2.6x)**; 504 fire for no other of the 177 concepts; 228 mainly
+    within their family; 95 broadly.
+  - Strongest for people (24.4% vs 1.4%), myth (21.8 vs 4.1), animals (16.0 vs 2.4), fiction (7.0 vs 1.3).
+- **Answer-type confound check:** people-owned neurons fire for other real people 26.8%, named characters (Harry
+  Potter, Sherlock Holmes, Mickey Mouse, Zeus, Thor, the Buddha, Medusa) 12.5%, places 6.1%, everything else 4.1%.
+  Part of the family effect is "a person-like name is coming"; part is specific to real people.
+- Layers 24-35: median activation on unrelated concepts ~0.
+
+**Step 3 - corpus profile** (`corpus_profile.py`, `corpus_profile_summary.py` -> `results/corpus_profile_summary.txt`).
+The atlas's 10M web tokens; 1,100 concept neurons (166 with own peak < 1 not profiled, listed in the log) plus a random
+same-layer neuron each at the same threshold. EVERY firing >= half the neuron's peak on its own concept was kept (101.9M).
+- Concept neurons' strong firings sit near their concept's name (+-64 tokens) **20x more often than chance** (median;
+  706/1,100 >= 5x; random neurons ~0). Most specific: Moon hub L31:9683 0.91, Bitcoin L9:2665 0.91, chocolate
+  L31:8429 0.87, cheese L32:1778 0.87, Eiffel/Paris L31:10160 0.85.
+- But the median share of firings near the name is **5%** (a lower bound: related words such as "lunar" don't count).
+- 'Near another of our concepts' (median 0.54) equals its chance rate (0.54): uninformative, dropped.
+- **Eyeballed random firings (4 typical neurons, 8 each):** democracy L32:8254 -> representatives, councils,
+  parliament (a broader ingredient: representative governance); Serena Williams L31:11800 -> Djokovic, Nadal,
+  Federer, Mayweather, an F1 crash (elite athletes); Titanic L31:5874 and hamburger L32:54 -> mixed, partly unrelated
+  (casino, stock index, sports drafts): polysemantic-looking.
+
+**Reading (exploratory):** the coding is neither one-neuron-one-concept nor a barcode. About half of the late concept
+neurons are dedicated within our 178 concepts; the rest are mostly shared within families, and in ordinary text many
+look like broader ingredients the concept is built from (a compositional code), with a minority that look
+polysemantic. A concept is a combination of a few dedicated neurons and several broader, reusable ingredient neurons.
+
+**Limits:** 178 hand-picked, mostly famous concepts; one prompt format; keyword matching is a lower bound and cannot
+tell 'related' from 'unrelated' contexts; the eyeballing is 4 neurons. Next: a judge reading firing samples
+(dedicated / ingredient / unrelated), and a random, fame-stratified concept sample.
