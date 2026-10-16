@@ -143,7 +143,7 @@ details.method p { font-size: 16.5px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 
-.closing { font: italic 400 24px/1.4 var(--serif); text-align: left; margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+.closing { font: 400 24px/1.4 var(--serif); text-align: left; margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
 
 /* review aid in the editing copy only */
 .changed { outline: 2px solid #9fd5a6; outline-offset: 4px; border-radius: 2px; }
