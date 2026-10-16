@@ -884,3 +884,37 @@ tried and wrongly lost Sahara at 4/20). Final code, fresh run:
 What the model says to the made-up ones is informative in itself: confident real neighbours (Huascarán, Salkantay for
 the Peruvian peak; Chomsky, Greenberg for the linguist). It retrieves the nearest real thing rather than inventing a
 name.
+
+## 16 Oct 2026 (after CR-2): why are near-certain facts hard to flip? Iterative knockout (no grader calls)
+`src/backup_routes.py`. Round 1 ablates the top-10 attributed neurons. Attribution is then re-run *with them ablated*
+to find what carries the answer now, 10 more are added, and so on to 50. After each round: mean log-odds drop and
+share of baseline-correct prompts flipped. Six hard-to-flip facts vs six easy ones (CR-2 / wave 2 prompts, discovery
+off so the answers match the log-odds runs). Random: same-layer neurons, 50.
+
+| concept | baseline log-odds | k=10 drop / flipped | k=20 | k=30 | k=50 | random 50 |
+|---|---|---|---|---|---|---|
+| the Moon | 9.4 | 8.2 / 42% | 16.5 / 89% | 20.3 / 100% | 22.6 / 100% | 0.01 |
+| Tokyo | 11.4 | 3.3 / 5% | 7.9 / 21% | 8.9 / 26% | 14.6 / 68% | −0.12 |
+| photosynthesis | 7.8 | 6.4 / 26% | 11.7 / 63% | 15.1 / 89% | 15.5 / 100% | 0.06 |
+| DNA | 9.5 | 8.0 / 29% | 12.2 / 65% | 14.1 / 65% | 17.5 / 94% | 0.08 |
+| Bitcoin | 12.7 | 6.3 / 16% | 9.9 / 37% | 10.8 / 37% | 15.3 / 47% | 0.02 |
+| rainbows | 6.0 | 8.1 / 33% | 16.4 / 100% | 17.5 / 100% | 22.7 / 100% | 0.07 |
+| democracy | 2.7 | 15.7 / 100% | | | 21.7 / 100% | −0.02 |
+| Napoleon | 4.8 | 19.6 / 100% | | | 25.6 / 100% | 0.01 |
+| the violin | 1.5 | 7.2 / 100% | | | 21.9 / 100% | 0.00 |
+| jazz | 2.5 | 9.3 / 100% | | | 20.7 / 100% | 0.09 |
+| vaccines | 3.3 | 18.2 / 100% | | | 23.0 / 100% | 0.00 |
+| the elephant | 3.3 | 8.5 / 100% | | | 20.3 / 100% | −0.03 |
+
+- **Re-attribution flips hard facts much faster than the static ranking.** The Moon fully flips at 30 (static order:
+  half at 20), photosynthesis at 50 (static: half at 50), DNA 94% at 50. Tokyo (68%) and Bitcoin (47%) are the
+  stubborn ones.
+- **"New carriers outside the original top 200" is NOT specific to hard facts.** After round 2, most newly found
+  neurons were outside the original top 200 for easy concepts too (violin round 4: 0/10; vaccines round 3: 1/10). Once
+  you remove neurons, others take over (self-repair). It happens everywhere, so it doesn't explain the difference.
+  (Correction: I first read the Moon's result alone as "the signature of backup routes"; the easy-concept controls
+  show the pattern is generic.)
+- **What separates hard from easy:** (1) a much bigger confidence margin (log-odds 9.4 on average vs 3.0), and (2) each
+  removal dents them less (top-10 drop 6.7 vs 13.1 on average; Tokyo only 3.3). Their support is more spread out,
+  not a separate backup system.
+- Random 50 neurons: no effect anywhere (≤ 0.1).
