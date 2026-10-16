@@ -20,7 +20,7 @@ sport_games
 science
   DNA                          ok                     recall 17/20 k50 50 steer 0.45 random 0.0
   black holes                  ok                     recall 10/20 k50 2 steer 0.45 random 0.0
-  evolution by natural selection model_does_not_recall  recall 0/20 k50 None steer None random None
+  evolution by natural selection ok                     recall 12/20 k50 1 steer 0.05 random 0.0
   the periodic table           ok                     recall 18/20 k50 2 steer 0.0 random 0.0
 
 technology
@@ -49,17 +49,17 @@ art_music
 
 nature
   volcanoes                    ok                     recall 12/20 k50 5 steer 0.5 random 0.0
-  rainbows                     model_does_not_recall  recall 0/20 k50 None steer None random None
+  rainbows                     ok                     recall 14/20 k50 20 steer 0.7 random 0.0
   hurricanes                   ok                     recall 6/20 k50 5 steer 0.3 random 0.0
   the Amazon rainforest        ok                     recall 17/20 k50 2 steer 0.3 random 0.0
 
 places_people
   the Great Wall of China      ok                     recall 12/20 k50 2 steer 0.2 random 0.0
-  Egypt's pyramids             model_does_not_recall  recall 0/20 k50 None steer None random None
+  Egypt's pyramids             ok                     recall 13/20 k50 3 steer 0.35 random 0.0
   Marie Curie                  ok                     recall 15/20 k50 2 steer 0.0 random 0.0
   Charles Darwin               ok                     recall 20/20 k50 10 steer 0.0 random 0.0
 
-recalled 37/40
-k50 <= 5: 30/37; steer mean 0.28, >= 0.5: 9, >= 0.25: 21; random mean 0.01, max 0.10
-recalled, by category: {'animals': 4, 'food_drink': 4, 'sport_games': 4, 'science': 3, 'technology': 4, 'emotion_abstract': 4, 'body_medicine': 4, 'art_music': 4, 'nature': 3, 'places_people': 3}
-steering by category: {'animals': 0.28, 'food_drink': 0.24, 'sport_games': 0.31, 'science': 0.3, 'technology': 0.14, 'emotion_abstract': 0.41, 'body_medicine': 0.43, 'art_music': 0.25, 'nature': 0.37, 'places_people': 0.07}
+recalled 40/40
+k50 <= 5: 32/40; steer mean 0.29, >= 0.5: 10, >= 0.25: 23; random mean 0.01, max 0.10
+recalled, by category: {'animals': 4, 'food_drink': 4, 'sport_games': 4, 'science': 4, 'technology': 4, 'emotion_abstract': 4, 'body_medicine': 4, 'art_music': 4, 'nature': 4, 'places_people': 4}
+steering by category: {'animals': 0.28, 'food_drink': 0.24, 'sport_games': 0.31, 'science': 0.24, 'technology': 0.14, 'emotion_abstract': 0.41, 'body_medicine': 0.43, 'art_music': 0.25, 'nature': 0.45, 'places_people': 0.14}

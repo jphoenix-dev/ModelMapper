@@ -815,3 +815,10 @@ neutral prompts as CR-2. Summary: `src/wave_summary.py` → `results/w2_summary.
 
 **Across CR, CR-2, CR-2b and wave 2: 87 recalled concept runs (of 106 attempted, made-up controls included), 57 distinct concepts.** The "handful of neurons + steerable
 except people" picture holds across 10 categories.
+
+**Wave 2 update (ISSUES #29 fixed): 40/40 recalled.** `src/answer_discovery.py` let the model answer each recall
+prompt itself: "Natural selection" 15/20, "Rainbow" 14/20, "Pyramids" / "Pyramids of Giza" 11/20 (Luna checked each
+reply names the concept). With those wordings scored, all three recall (12–14/20 prompts): evolution k50 1, steer 0.05;
+rainbows k50 20, **steer 0.70**; pyramids k50 3, steer 0.35. Updated wave totals: k50 ≤ 5 for 32/40; steering mean
+0.29, ≥ 0.5 for 10/40; random mean 0.01. Places/people category 0.14 (pyramids 0.35, Great Wall 0.20, Curie and Darwin
+0). **Every "not recalled" real concept tonight has turned out to be our answer wording, not the model.**

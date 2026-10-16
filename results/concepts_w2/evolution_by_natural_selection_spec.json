@@ -99,5 +99,9 @@
   "What is the name of the mechanism by which a drug-resistant strain becomes common without organisms intentionally changing?",
   "What is the name of the long-term biological process behind the spread of dark coloration in polluted moth populations?",
   "What is the name of the explanation for why traits that improve survival and reproduction can become more frequent?"
+ ],
+ "answer_forms_extra": [
+  "Natural Selection",
+  "Natural selection"
  ]
 }
