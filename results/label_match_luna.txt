@@ -1,0 +1,20 @@
+Albert Einstein            Luna 'about': []
+Eiffel Tower               Luna 'about': [(31, 10160)]   (word match: [(29, 12094)])
+Frida Kahlo                Luna 'about': []
+Golden Gate Bridge         Luna 'about': []   (word match: [(26, 11492), (28, 6711), (31, 9611), (33, 866)])
+Harry Potter               Luna 'about': [(9, 11889), (10, 5244)]
+Mount Everest              Luna 'about': [(27, 10689)]   (word match: [(8, 5241), (9, 10107), (27, 10689), (30, 4952), (31, 5148)])
+Napoleon Bonaparte         Luna 'about': [(30, 10870)]
+Tokyo                      Luna 'about': []
+Venice                     Luna 'about': [(9, 660), (32, 4265)]
+William Shakespeare        Luna 'about': [(8, 1889), (30, 1702)]   (word match: [(8, 1889), (30, 1702), (34, 3457)])
+Wolfgang Amadeus Mozart    Luna 'about': []
+chess                      Luna 'about': [(8, 7581), (9, 11367)]
+coffee                     Luna 'about': [(29, 2750), (30, 4405), (34, 7953)]
+democracy                  Luna 'about': [(9, 6814), (28, 8868), (30, 4626), (31, 11943)]   (word match: [(28, 8868), (30, 4626), (31, 11943)])
+photosynthesis             Luna 'about': [(29, 10676), (32, 10377)]
+the French Revolution      Luna 'about': [(9, 21), (30, 5534)]   (word match: [(9, 21), (25, 8127), (30, 5534), (31, 9684)])
+the Moon                   Luna 'about': [(29, 11480), (31, 9683)]   (word match: [(31, 9683)])
+the Titanic                Luna 'about': [(9, 10815)]   (word match: [(9, 10815), (10, 1252)])
+the violin                 Luna 'about': [(9, 5033)]
+190 labels judged, 0 failed | Luna {'calls': 190, 'input_tokens': 28215, 'output_tokens': 8797}

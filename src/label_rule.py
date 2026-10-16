@@ -30,20 +30,25 @@ STRENGTHS = [0.5, 1.0, 2.0, 3.0, 4.0]
 
 def main():
     os.environ["ANSWER_DISCOVERY"] = "0"
-    matched = json.loads((ROOT / "results/label_matched_v3.json").read_text(encoding="utf-8"))
+    match_file = os.environ.get("LABEL_MATCH_FILE", "label_matched_v3.json")   # label_matched_luna_v3.json = R5b
+    only = [c.strip() for c in os.environ.get("ONLY", "").split("|") if c.strip()]
+    out_name = os.environ.get("OUT_NAME", "label_rule.json")
+    skip_r1 = os.environ.get("SKIP_R1") == "1"
+    matched = json.loads((ROOT / "results" / match_file).read_text(encoding="utf-8"))
     pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}", flush=True)
     out = {}
     for concept, key in KEY.items():
         r5 = [(l, n) for l, n, _ in matched.get(concept, [])]
-        if not r5:
+        if not r5 or (only and concept not in only):
             continue
         prompts = FRIENDLY if concept in PEOPLE else NEUTRAL
         spec, tid, recall, controls = pipe.make_prompts(concept)
         A = pipe.attribute([q for q, _ in recall], tid)
         r1 = [(l, n) for l, n in A["top"] if l >= pipe.L // 2][:6]
         res = {}
-        for rule, units, ns in (("R1_late_attr", r1, [2, 4, 6]), ("R5_label_matched", r5, [len(r5)])):
+        rules = [("R1_late_attr", r1, [2, 4, 6]), ("R5_label_matched", r5, [len(r5)])]
+        for rule, units, ns in (rules[1:] if skip_r1 else rules):
             peaks = torch.tensor([pipe.steer_edits([u], 1.0, A["last_act"])[0][2] for u in units], device="cuda")
             settings = [(n, s) for n in ns for s in STRENGTHS]
             rows, vals, act = [], [], []
@@ -57,8 +62,8 @@ def main():
             best = max(grid, key=lambda g: g["hit"])
             res[rule] = {"units": units, "best": best["hit"], "setting": (best["n"], best["s"]), "grid": grid}
         out[concept] = res
-        print(f"{concept:<24} R1 name {res['R1_late_attr']['best']:.2f} | R5 ({len(r5)} neurons) name {res['R5_label_matched']['best']:.2f}", flush=True)
-        (ROOT / "results/label_rule.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"{concept:<24} " + " | ".join(f"{k} name {v['best']:.2f}" for k, v in res.items()), flush=True)
+        (ROOT / "results" / out_name).write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 if __name__ == "__main__":
