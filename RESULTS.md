@@ -1220,7 +1220,7 @@ answer's probability and flip most correct answers, while five random same-layer
 decimals).
 
 ## 16 Oct 2026 (morning): human spot-check of the graders (ISSUES #16, last part)
-James blind-rated 40 (description, text) cards (`site/spotcheck.html`; 20 = the neuron's own top firing, 20 = random
+James blind-rated 40 (description, text) cards (a private rating page; the cards, order, answer key and ratings are in `results/spotcheck_*`; 20 = the neuron's own top firing, 20 = random
 text). The middle option turned out to mean "unsure" in practice, so it is treated as an abstention. The first 6
 cards may be order-influenced (ISSUES #34) and are reported with and without.
 

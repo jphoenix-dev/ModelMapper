@@ -120,7 +120,7 @@ The full account is in [REPORT.md](REPORT.md) (the write-up) and [RESULTS.md](RE
 |---|---|
 | [REPORT.md](REPORT.md) | Start here: the technical write-up |
 | [RESULTS.md](RESULTS.md) | Chronological results log, every experiment with its numbers |
-| [PREREG.md](PREREG.md) | Pre-registrations (CR, CEN, H-DEPTH, draft CR-3) and change log |
+| [PREREG.md](PREREG.md) | Pre-registrations (CR, CEN, H-DEPTH, and the confirmatory CR-3, frozen before data and scored: 6/7 pass) and change log |
 | [ISSUES.md](ISSUES.md) | Every setup flaw found, and its fix |
 | [CAPS.md](CAPS.md) | Every cap or truncation in the code, and why |
 | [LITERATURE.md](LITERATURE.md) | Related work, with what is known vs new |

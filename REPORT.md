@@ -1,9 +1,9 @@
 # Are neural networks already clean? An independent, automated test on Qwen3-8B
 
 **James Phoenix** and **Claude** (Anthropic; running as Claude Code)
-*Draft, 16 October 2026. Independent work, not affiliated with Anthropic, Goodfire or Alibaba (Qwen).*
+*Version 1, published 16 October 2026. Independent work, not affiliated with Anthropic, Goodfire or Alibaba (Qwen).*
 
-> **Status:** draft for review.
+> **Status:** version 1 (16 Oct 2026). Corrections will be logged in ISSUES.md and dated here.
 > - Exploratory unless marked pre-registered (CR, CEN, H-DEPTH, and the confirmatory CR-3; see PREREG.md).
 > - Only two small models from one family were tested (Qwen3-8B; Qwen3-0.6B comparison).
 > - All 80 citations independently verified (LITERATURE.md).

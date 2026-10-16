@@ -13,7 +13,7 @@ precedents, some in the very model we used. What looks genuinely new is narrower
    model, and none for Qwen3);
 3. **raw-neuron steering measured like a benchmark** (held-out prompts, strict vs lenient judge, five selection rules,
    per-concept selection) and the observation that **people are harder to steer fluently** than other concepts;
-4. **concept-pair part sharing** measured against random pairs (pending a lexical control, below);
+4. **concept-pair part sharing** measured against random pairs (survives a lexical control, §2);
 5. a candid **methods / agent case study**: which pitfalls we hit, how big they were, and which control caught each
    of the AI agent's own bugs.
 
