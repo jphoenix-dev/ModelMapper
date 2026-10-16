@@ -1,0 +1,12 @@
+Albert Einstein=L28:5852>L30:8643
+coffee=L30:4405>L35:4180
+democracy=L28:8868>L31:11943
+Frida Kahlo=L29:12175>L31:2065
+Golden Gate Bridge=L31:9611>L34:5510
+Mount Everest=L30:6488>L31:5148
+photosynthesis=L29:10676>L32:10377
+the Moon=L29:11480>L31:9683
+Venice=L31:493>L32:4265
+William Shakespeare=L30:1702>L34:3457
+Wolfgang Amadeus Mozart=L27:2168>L30:8885
+Tokyo=L27:10855>L31:4587

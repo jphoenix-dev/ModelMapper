@@ -1,0 +1,1402 @@
+{
+ "the elephant": {
+  "neuron": "L30:6266",
+  "feeders": [
+   "L29H27",
+   "L29H24",
+   "L26H20",
+   "L23H10",
+   "L30H17"
+  ],
+  "random": [
+   "L29H26",
+   "L29H18",
+   "L26H27",
+   "L23H2",
+   "L30H15"
+  ],
+  "base": {
+   "act": 92.077,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 37.979,
+   "logodds_drop": 2.236
+  },
+  "route_rand": {
+   "act": 91.463,
+   "logodds_drop": -0.002
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 4.623
+  },
+  "heads_off": {
+   "act": 43.548,
+   "logodds_drop": 0.839
+  }
+ },
+ "the octopus": {
+  "neuron": "L30:263",
+  "feeders": [
+   "L29H27",
+   "L29H24",
+   "L23H10",
+   "L27H31",
+   "L26H20"
+  ],
+  "random": [
+   "L29H26",
+   "L29H18",
+   "L23H27",
+   "L27H2",
+   "L26H15"
+  ],
+  "base": {
+   "act": 66.808,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 22.052,
+   "logodds_drop": 0.322
+  },
+  "route_rand": {
+   "act": 66.654,
+   "logodds_drop": 0.019
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.38
+  },
+  "heads_off": {
+   "act": 40.767,
+   "logodds_drop": -0.763
+  }
+ },
+ "the honeybee": {
+  "neuron": "L32:7156",
+  "feeders": [
+   "L29H27",
+   "L26H20",
+   "L29H25",
+   "L23H10",
+   "L27H31"
+  ],
+  "random": [
+   "L29H26",
+   "L26H18",
+   "L29H28",
+   "L23H2",
+   "L27H15"
+  ],
+  "base": {
+   "act": 29.261,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 11.031,
+   "logodds_drop": 1.203
+  },
+  "route_rand": {
+   "act": 29.028,
+   "logodds_drop": -0.036
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.929
+  },
+  "heads_off": {
+   "act": 13.342,
+   "logodds_drop": 2.143
+  }
+ },
+ "the penguin": {
+  "neuron": "L30:2346",
+  "feeders": [
+   "L29H27",
+   "L28H6",
+   "L28H4",
+   "L26H24",
+   "L26H17"
+  ],
+  "random": [
+   "L29H25",
+   "L28H20",
+   "L28H28",
+   "L26H2",
+   "L26H15"
+  ],
+  "base": {
+   "act": 48.781,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 30.837,
+   "logodds_drop": 0.38
+  },
+  "route_rand": {
+   "act": 49.052,
+   "logodds_drop": -0.026
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.191
+  },
+  "heads_off": {
+   "act": 37.586,
+   "logodds_drop": 0.171
+  }
+ },
+ "sushi": {
+  "neuron": "L30:8155",
+  "feeders": [
+   "L29H27",
+   "L26H20",
+   "L29H25",
+   "L24H26",
+   "L28H6"
+  ],
+  "random": [
+   "L29H26",
+   "L26H18",
+   "L29H28",
+   "L24H2",
+   "L28H16"
+  ],
+  "base": {
+   "act": 65.375,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 35.729,
+   "logodds_drop": 1.013
+  },
+  "route_rand": {
+   "act": 63.772,
+   "logodds_drop": 0.051
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.779
+  },
+  "heads_off": {
+   "act": 40.512,
+   "logodds_drop": -1.898
+  }
+ },
+ "chocolate": {
+  "neuron": "L31:8429",
+  "feeders": [
+   "L29H25",
+   "L29H27",
+   "L26H20",
+   "L23H10",
+   "L31H3"
+  ],
+  "random": [
+   "L29H26",
+   "L29H18",
+   "L26H27",
+   "L23H2",
+   "L31H16"
+  ],
+  "base": {
+   "act": 113.525,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 45.15,
+   "logodds_drop": 0.79
+  },
+  "route_rand": {
+   "act": 114.553,
+   "logodds_drop": 0.044
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.798
+  },
+  "heads_off": {
+   "act": 57.794,
+   "logodds_drop": 2.339
+  }
+ },
+ "wine": {
+  "neuron": "L33:3926",
+  "feeders": [
+   "L29H25",
+   "L30H17",
+   "L26H17",
+   "L31H3",
+   "L23H10"
+  ],
+  "random": [
+   "L29H26",
+   "L30H19",
+   "L26H27",
+   "L31H2",
+   "L23H16"
+  ],
+  "base": {
+   "act": 69.781,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 39.265,
+   "logodds_drop": 0.989
+  },
+  "route_rand": {
+   "act": 69.434,
+   "logodds_drop": -0.003
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.567
+  },
+  "heads_off": {
+   "act": 57.359,
+   "logodds_drop": 1.276
+  }
+ },
+ "football (soccer)": {
+  "neuron": "L29:2595",
+  "feeders": [
+   "L29H27",
+   "L29H24",
+   "L24H16",
+   "L23H10",
+   "L24H19"
+  ],
+  "random": [
+   "L29H26",
+   "L29H18",
+   "L24H28",
+   "L23H2",
+   "L24H15"
+  ],
+  "base": {
+   "act": 50.161,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 14.401,
+   "logodds_drop": 1.813
+  },
+  "route_rand": {
+   "act": 48.761,
+   "logodds_drop": 0.121
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.608
+  },
+  "heads_off": {
+   "act": 15.926,
+   "logodds_drop": 4.083
+  }
+ },
+ "the Olympic Games": {
+  "neuron": "L29:624",
+  "feeders": [
+   "L23H10",
+   "L27H29",
+   "L24H19",
+   "L24H16",
+   "L26H20"
+  ],
+  "random": [
+   "L23H26",
+   "L27H18",
+   "L24H28",
+   "L24H2",
+   "L26H15"
+  ],
+  "base": {
+   "act": 93.607,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 51.612,
+   "logodds_drop": 1.935
+  },
+  "route_rand": {
+   "act": 93.479,
+   "logodds_drop": -0.026
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 5.945
+  },
+  "heads_off": {
+   "act": 62.455,
+   "logodds_drop": 2.742
+  }
+ },
+ "basketball": {
+  "neuron": "L30:6776",
+  "feeders": [
+   "L26H17",
+   "L24H19",
+   "L30H17",
+   "L23H10",
+   "L28H4"
+  ],
+  "random": [
+   "L26H26",
+   "L24H18",
+   "L30H27",
+   "L23H2",
+   "L28H16"
+  ],
+  "base": {
+   "act": 79.583,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 45.81,
+   "logodds_drop": 0.899
+  },
+  "route_rand": {
+   "act": 80.171,
+   "logodds_drop": 0.011
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.175
+  },
+  "heads_off": {
+   "act": 68.3,
+   "logodds_drop": 0.647
+  }
+ },
+ "poker": {
+  "neuron": "L29:1567",
+  "feeders": [
+   "L29H27",
+   "L29H25",
+   "L23H10",
+   "L27H30",
+   "L24H16"
+  ],
+  "random": [
+   "L29H26",
+   "L29H18",
+   "L23H27",
+   "L27H2",
+   "L24H15"
+  ],
+  "base": {
+   "act": 60.65,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 16.774,
+   "logodds_drop": 0.53
+  },
+  "route_rand": {
+   "act": 59.671,
+   "logodds_drop": -0.044
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.9
+  },
+  "heads_off": {
+   "act": 18.454,
+   "logodds_drop": -0.43
+  }
+ },
+ "DNA": {
+  "neuron": "L28:997",
+  "feeders": [
+   "L28H4",
+   "L26H17",
+   "L23H11",
+   "L24H19",
+   "L23H10"
+  ],
+  "random": [
+   "L28H26",
+   "L26H19",
+   "L23H28",
+   "L24H2",
+   "L23H17"
+  ],
+  "base": {
+   "act": 18.625,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 6.405,
+   "logodds_drop": 0.317
+  },
+  "route_rand": {
+   "act": 18.642,
+   "logodds_drop": -0.002
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.557
+  },
+  "heads_off": {
+   "act": 11.191,
+   "logodds_drop": -0.678
+  }
+ },
+ "black holes": {
+  "neuron": "L29:8862",
+  "feeders": [
+   "L23H10",
+   "L24H19",
+   "L28H4",
+   "L28H6",
+   "L26H20"
+  ],
+  "random": [
+   "L23H26",
+   "L24H18",
+   "L28H28",
+   "L28H2",
+   "L26H15"
+  ],
+  "base": {
+   "act": 75.7,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 40.942,
+   "logodds_drop": 0.73
+  },
+  "route_rand": {
+   "act": 71.537,
+   "logodds_drop": -0.022
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.644
+  },
+  "heads_off": {
+   "act": 58.15,
+   "logodds_drop": 1.15
+  }
+ },
+ "evolution by natural selection": {
+  "neuron": "L20:7473",
+  "feeders": [
+   "L20H16",
+   "L20H17",
+   "L20H11",
+   "L19H31"
+  ],
+  "random": [
+   "L20H28",
+   "L20H21",
+   "L20H29",
+   "L19H2"
+  ],
+  "base": {
+   "act": 1.967,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 0.477,
+   "logodds_drop": 2.049
+  },
+  "route_rand": {
+   "act": 1.871,
+   "logodds_drop": 0.225
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.811
+  },
+  "heads_off": {
+   "act": 0.523,
+   "logodds_drop": 2.536
+  }
+ },
+ "the periodic table": {
+  "neuron": "L20:7473",
+  "feeders": [
+   "L20H16",
+   "L20H17",
+   "L20H11",
+   "L17H16"
+  ],
+  "random": [
+   "L20H28",
+   "L20H21",
+   "L20H29",
+   "L17H2"
+  ],
+  "base": {
+   "act": 2.22,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 0.618,
+   "logodds_drop": 0.83
+  },
+  "route_rand": {
+   "act": 2.24,
+   "logodds_drop": -0.019
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.378
+  },
+  "heads_off": {
+   "act": 0.771,
+   "logodds_drop": 2.484
+  }
+ },
+ "the internet": {
+  "neuron": "L20:2258",
+  "feeders": [
+   "L19H29",
+   "L20H11",
+   "L20H17",
+   "L18H17",
+   "L20H14"
+  ],
+  "random": [
+   "L19H25",
+   "L20H21",
+   "L20H29",
+   "L18H2",
+   "L20H18"
+  ],
+  "base": {
+   "act": 4.24,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": -1.089,
+   "logodds_drop": 1.027
+  },
+  "route_rand": {
+   "act": 4.212,
+   "logodds_drop": -0.035
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.812
+  },
+  "heads_off": {
+   "act": -0.369,
+   "logodds_drop": 9.184
+  }
+ },
+ "the steam engine": {
+  "neuron": "L30:3401",
+  "feeders": [
+   "L29H27",
+   "L28H6",
+   "L26H17",
+   "L25H15",
+   "L23H10"
+  ],
+  "random": [
+   "L29H25",
+   "L28H19",
+   "L26H27",
+   "L25H2",
+   "L23H16"
+  ],
+  "base": {
+   "act": 26.281,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 18.592,
+   "logodds_drop": 0.026
+  },
+  "route_rand": {
+   "act": 26.155,
+   "logodds_drop": -0.017
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.243
+  },
+  "heads_off": {
+   "act": 22.647,
+   "logodds_drop": 0.644
+  }
+ },
+ "the printing press": {
+  "neuron": "L31:5473",
+  "feeders": [
+   "L28H7",
+   "L30H18",
+   "L31H17",
+   "L31H16",
+   "L31H19"
+  ],
+  "random": [
+   "L28H26",
+   "L30H19",
+   "L31H29",
+   "L31H2",
+   "L31H15"
+  ],
+  "base": {
+   "act": 41.107,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 30.623,
+   "logodds_drop": 0.081
+  },
+  "route_rand": {
+   "act": 39.163,
+   "logodds_drop": 0.015
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.263
+  },
+  "heads_off": {
+   "act": 35.107,
+   "logodds_drop": 0.554
+  }
+ },
+ "Bitcoin": {
+  "neuron": "L35:1110",
+  "feeders": [
+   "L35H22",
+   "L34H21",
+   "L34H28",
+   "L34H0",
+   "L35H24"
+  ],
+  "random": [
+   "L35H27",
+   "L34H19",
+   "L34H29",
+   "L34H3",
+   "L35H15"
+  ],
+  "base": {
+   "act": 30.972,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 16.959,
+   "logodds_drop": 1.341
+  },
+  "route_rand": {
+   "act": 35.094,
+   "logodds_drop": -0.302
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.829
+  },
+  "heads_off": {
+   "act": 20.802,
+   "logodds_drop": -1.035
+  }
+ },
+ "jealousy": {
+  "neuron": "L30:1455",
+  "feeders": [
+   "L30H0",
+   "L28H6",
+   "L30H17",
+   "L25H26",
+   "L27H8"
+  ],
+  "random": [
+   "L30H27",
+   "L28H19",
+   "L30H28",
+   "L25H2",
+   "L27H16"
+  ],
+  "base": {
+   "act": 110.029,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 68.589,
+   "logodds_drop": 1.269
+  },
+  "route_rand": {
+   "act": 109.893,
+   "logodds_drop": 0.007
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 5.168
+  },
+  "heads_off": {
+   "act": 81.853,
+   "logodds_drop": 1.391
+  }
+ },
+ "nostalgia": {
+  "neuron": "L20:7473",
+  "feeders": [
+   "L20H16",
+   "L20H17",
+   "L20H11",
+   "L19H31"
+  ],
+  "random": [
+   "L20H28",
+   "L20H21",
+   "L20H29",
+   "L19H2"
+  ],
+  "base": {
+   "act": 2.18,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 0.528,
+   "logodds_drop": 2.139
+  },
+  "route_rand": {
+   "act": 2.097,
+   "logodds_drop": 0.065
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 3.089
+  },
+  "heads_off": {
+   "act": 0.577,
+   "logodds_drop": 1.385
+  }
+ },
+ "justice": {
+  "neuron": "L20:7473",
+  "feeders": [
+   "L20H16",
+   "L20H17",
+   "L20H11",
+   "L19H31",
+   "L17H16"
+  ],
+  "random": [
+   "L20H28",
+   "L20H21",
+   "L20H29",
+   "L19H2",
+   "L17H15"
+  ],
+  "base": {
+   "act": 2.132,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 0.582,
+   "logodds_drop": 0.684
+  },
+  "route_rand": {
+   "act": 2.005,
+   "logodds_drop": 0.077
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.1
+  },
+  "heads_off": {
+   "act": 0.756,
+   "logodds_drop": 0.68
+  }
+ },
+ "the heart": {
+  "neuron": "L20:7473",
+  "feeders": [
+   "L20H16",
+   "L20H17",
+   "L20H11",
+   "L17H16",
+   "L19H31"
+  ],
+  "random": [
+   "L20H28",
+   "L20H21",
+   "L20H29",
+   "L17H2",
+   "L19H15"
+  ],
+  "base": {
+   "act": 1.665,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 0.394,
+   "logodds_drop": 1.812
+  },
+  "route_rand": {
+   "act": 1.74,
+   "logodds_drop": -0.129
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.583
+  },
+  "heads_off": {
+   "act": 0.554,
+   "logodds_drop": 3.572
+  }
+ },
+ "vaccines": {
+  "neuron": "L25:1661",
+  "feeders": [
+   "L24H19",
+   "L23H10",
+   "L25H26",
+   "L23H11",
+   "L24H16"
+  ],
+  "random": [
+   "L24H27",
+   "L23H20",
+   "L25H27",
+   "L23H2",
+   "L24H15"
+  ],
+  "base": {
+   "act": 21.326,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 1.766,
+   "logodds_drop": 0.995
+  },
+  "route_rand": {
+   "act": 21.564,
+   "logodds_drop": -0.002
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.055
+  },
+  "heads_off": {
+   "act": 3.1,
+   "logodds_drop": 2.564
+  }
+ },
+ "insomnia": {
+  "neuron": "L29:2857",
+  "feeders": [
+   "L25H26",
+   "L29H26",
+   "L29H25",
+   "L24H19",
+   "L27H31"
+  ],
+  "random": [
+   "L25H25",
+   "L29H18",
+   "L29H28",
+   "L24H2",
+   "L27H15"
+  ],
+  "base": {
+   "act": 97.583,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 48.529,
+   "logodds_drop": 2.063
+  },
+  "route_rand": {
+   "act": 98.829,
+   "logodds_drop": -0.07
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 4.995
+  },
+  "heads_off": {
+   "act": 68.458,
+   "logodds_drop": 2.426
+  }
+ },
+ "the brain": {
+  "neuron": "L31:11102",
+  "feeders": [
+   "L28H4",
+   "L26H17",
+   "L27H28",
+   "L31H9",
+   "L28H5"
+  ],
+  "random": [
+   "L28H27",
+   "L26H19",
+   "L27H26",
+   "L31H2",
+   "L28H17"
+  ],
+  "base": {
+   "act": 53.805,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 28.687,
+   "logodds_drop": 1.054
+  },
+  "route_rand": {
+   "act": 54.163,
+   "logodds_drop": -0.094
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.615
+  },
+  "heads_off": {
+   "act": 32.328,
+   "logodds_drop": 2.493
+  }
+ },
+ "jazz": {
+  "neuron": "L30:3901",
+  "feeders": [
+   "L30H17",
+   "L28H6",
+   "L26H17",
+   "L24H19",
+   "L29H27"
+  ],
+  "random": [
+   "L30H26",
+   "L28H19",
+   "L26H27",
+   "L24H2",
+   "L29H15"
+  ],
+  "base": {
+   "act": 80.383,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 45.846,
+   "logodds_drop": 0.495
+  },
+  "route_rand": {
+   "act": 79.785,
+   "logodds_drop": 0.069
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.224
+  },
+  "heads_off": {
+   "act": 66.083,
+   "logodds_drop": 0.012
+  }
+ },
+ "the Mona Lisa": {
+  "neuron": "L29:6566",
+  "feeders": [
+   "L24H19",
+   "L23H10",
+   "L26H17",
+   "L24H16",
+   "L23H11"
+  ],
+  "random": [
+   "L24H27",
+   "L23H20",
+   "L26H27",
+   "L24H2",
+   "L23H17"
+  ],
+  "base": {
+   "act": 45.75,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 27.944,
+   "logodds_drop": -0.226
+  },
+  "route_rand": {
+   "act": 45.923,
+   "logodds_drop": -0.025
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.18
+  },
+  "heads_off": {
+   "act": 33.288,
+   "logodds_drop": 2.617
+  }
+ },
+ "ballet": {
+  "neuron": "L30:5787",
+  "feeders": [
+   "L29H27",
+   "L30H17",
+   "L23H10",
+   "L24H19",
+   "L24H16"
+  ],
+  "random": [
+   "L29H25",
+   "L30H19",
+   "L23H27",
+   "L24H2",
+   "L24H15"
+  ],
+  "base": {
+   "act": 115.662,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 45.47,
+   "logodds_drop": 1.828
+  },
+  "route_rand": {
+   "act": 116.819,
+   "logodds_drop": -0.04
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 3.935
+  },
+  "heads_off": {
+   "act": 81.059,
+   "logodds_drop": 2.141
+  }
+ },
+ "haiku": {
+  "neuron": "L30:12178",
+  "feeders": [
+   "L26H17",
+   "L29H26",
+   "L28H4",
+   "L24H19",
+   "L30H17"
+  ],
+  "random": [
+   "L26H26",
+   "L29H18",
+   "L28H27",
+   "L24H2",
+   "L30H15"
+  ],
+  "base": {
+   "act": 68.233,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 34.277,
+   "logodds_drop": 0.502
+  },
+  "route_rand": {
+   "act": 68.277,
+   "logodds_drop": 0.044
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.942
+  },
+  "heads_off": {
+   "act": 43.642,
+   "logodds_drop": 0.338
+  }
+ },
+ "volcanoes": {
+  "neuron": "L30:2860",
+  "feeders": [
+   "L28H4",
+   "L24H19",
+   "L26H17",
+   "L23H10",
+   "L28H6"
+  ],
+  "random": [
+   "L28H27",
+   "L24H18",
+   "L26H27",
+   "L23H2",
+   "L28H17"
+  ],
+  "base": {
+   "act": 90.208,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 58.299,
+   "logodds_drop": 1.056
+  },
+  "route_rand": {
+   "act": 92.241,
+   "logodds_drop": -0.07
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 3.48
+  },
+  "heads_off": {
+   "act": 79.313,
+   "logodds_drop": 0.147
+  }
+ },
+ "rainbows": {
+  "neuron": "L26:1881",
+  "feeders": [
+   "L26H17",
+   "L26H20",
+   "L24H19",
+   "L23H10",
+   "L25H26"
+  ],
+  "random": [
+   "L26H27",
+   "L26H19",
+   "L24H27",
+   "L23H2",
+   "L25H15"
+  ],
+  "base": {
+   "act": 54.455,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 20.47,
+   "logodds_drop": 0.709
+  },
+  "route_rand": {
+   "act": 49.462,
+   "logodds_drop": 0.096
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.462
+  },
+  "heads_off": {
+   "act": 26.857,
+   "logodds_drop": 1.061
+  }
+ },
+ "hurricanes": {
+  "neuron": "L26:5530",
+  "feeders": [
+   "L24H19",
+   "L26H20",
+   "L23H10",
+   "L26H17",
+   "L23H11"
+  ],
+  "random": [
+   "L24H26",
+   "L26H19",
+   "L23H28",
+   "L26H2",
+   "L23H17"
+  ],
+  "base": {
+   "act": 39.354,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 5.684,
+   "logodds_drop": 0.929
+  },
+  "route_rand": {
+   "act": 36.499,
+   "logodds_drop": 0.113
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 1.19
+  },
+  "heads_off": {
+   "act": 8.04,
+   "logodds_drop": 2.131
+  }
+ },
+ "the Amazon rainforest": {
+  "neuron": "L33:11019",
+  "feeders": [
+   "L29H24",
+   "L31H3",
+   "L26H17",
+   "L28H4",
+   "L23H10"
+  ],
+  "random": [
+   "L29H26",
+   "L31H19",
+   "L26H27",
+   "L28H2",
+   "L23H16"
+  ],
+  "base": {
+   "act": 55.265,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 28.937,
+   "logodds_drop": 0.008
+  },
+  "route_rand": {
+   "act": 55.048,
+   "logodds_drop": -0.015
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.032
+  },
+  "heads_off": {
+   "act": 31.121,
+   "logodds_drop": 0.542
+  }
+ },
+ "the Great Wall of China": {
+  "neuron": "L29:5548",
+  "feeders": [
+   "L24H26",
+   "L27H29",
+   "L23H10",
+   "L26H20",
+   "L28H4"
+  ],
+  "random": [
+   "L24H25",
+   "L27H18",
+   "L23H27",
+   "L26H2",
+   "L28H16"
+  ],
+  "base": {
+   "act": 38.417,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 22.182,
+   "logodds_drop": 0.169
+  },
+  "route_rand": {
+   "act": 38.281,
+   "logodds_drop": 0.028
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.58
+  },
+  "heads_off": {
+   "act": 24.971,
+   "logodds_drop": 0.018
+  }
+ },
+ "Egypt's pyramids": {
+  "neuron": "L30:12259",
+  "feeders": [
+   "L23H10",
+   "L29H24",
+   "L24H16",
+   "L26H20",
+   "L27H29"
+  ],
+  "random": [
+   "L23H26",
+   "L29H18",
+   "L24H27",
+   "L26H2",
+   "L27H15"
+  ],
+  "base": {
+   "act": 80.423,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 55.574,
+   "logodds_drop": 0.13
+  },
+  "route_rand": {
+   "act": 80.556,
+   "logodds_drop": 0.007
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.803
+  },
+  "heads_off": {
+   "act": 61.029,
+   "logodds_drop": 1.877
+  }
+ },
+ "Marie Curie": {
+  "neuron": "L35:6816",
+  "feeders": [
+   "L34H28",
+   "L34H15",
+   "L34H14",
+   "L34H12",
+   "L35H14"
+  ],
+  "random": [
+   "L34H29",
+   "L34H21",
+   "L34H30",
+   "L34H2",
+   "L35H16"
+  ],
+  "base": {
+   "act": 20.344,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 10.263,
+   "logodds_drop": 0.985
+  },
+  "route_rand": {
+   "act": 22.419,
+   "logodds_drop": -0.255
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 2.093
+  },
+  "heads_off": {
+   "act": 16.019,
+   "logodds_drop": -0.29
+  }
+ },
+ "Charles Darwin": {
+  "neuron": "L31:5473",
+  "feeders": [
+   "L30H18",
+   "L30H17",
+   "L31H17",
+   "L31H16",
+   "L31H19"
+  ],
+  "random": [
+   "L30H27",
+   "L30H20",
+   "L31H29",
+   "L31H2",
+   "L31H15"
+  ],
+  "base": {
+   "act": 36.881,
+   "logodds_drop": 0.0
+  },
+  "route_cut": {
+   "act": 25.332,
+   "logodds_drop": 0.14
+  },
+  "route_rand": {
+   "act": 36.146,
+   "logodds_drop": -0.022
+  },
+  "neuron_off": {
+   "act": 0.0,
+   "logodds_drop": 0.428
+  },
+  "heads_off": {
+   "act": 27.606,
+   "logodds_drop": -0.408
+  }
+ }
+}

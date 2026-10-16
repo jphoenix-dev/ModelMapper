@@ -39,9 +39,12 @@ def main():
     fd = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8")); tag = sys.argv[2]
     pipe = FastPipeline(DEFAULT_MODEL); m = pipe.model; cfg = m.config
     H, D, eps = cfg.num_attention_heads, cfg.head_dim, cfg.rms_norm_eps
-    out = {}
+    out_p = cp.OUT / f"route_cut_{tag}.json"
+    out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {}     # resumable
     for arg in sys.argv[3:]:
         concept, ln = arg.rsplit("=", 1); L, n = (int(v) for v in ln.strip("L").split(":"))
+        if concept in out and out[concept]["neuron"] == f"L{L}:{n}" and not os.environ.get("CUT_HEADS"):
+            continue
         r = fd[concept]["neurons"][f"L{L}:{n}"]; sg = r["sign"]
         cut_heads = os.environ.get("CUT_HEADS")       # e.g. "L28H7": cut these heads' routes instead of the top-5 positive feeders
         feeders = ([tuple(int(v) for v in h[1:].split("H")) for h in cut_heads.split(",")] if cut_heads
@@ -52,7 +55,7 @@ def main():
             print(f"{concept}: heads {dropped} are above layer {L}; no route to cut", flush=True)
         if not feeders:
             continue
-        rng = random.Random(6); rand = [(l, rng.randrange(H)) for l, _ in feeders]
+        rng = random.Random(6); rand = [(l, rng.choice([h for h in range(H) if (l, h) not in feeders])) for l, _ in feeders]  # never a feeder
         spec, tid, recall, _ = pipe.make_prompts(concept); first = tid[0]
         gL = m.model.layers[L].post_attention_layernorm.weight.float()
         wg = gL * mlps(m)[L].gate_proj.weight[n].float(); wu = gL * mlps(m)[L].up_proj.weight[n].float()
@@ -116,7 +119,7 @@ def main():
         print(f"{concept:<24} L{L}:{n} act {b['act']:.1f} | route cut: act {o['route_cut']['act']:.1f}, recall drop {o['route_cut']['logodds_drop']:+.2f} | "
               f"random route: act {o['route_rand']['act']:.1f}, drop {o['route_rand']['logodds_drop']:+.2f} | neuron off: drop "
               f"{o['neuron_off']['logodds_drop']:+.2f} | heads fully off: act {o['heads_off']['act']:.1f}, drop {o['heads_off']['logodds_drop']:+.2f}", flush=True)
-        (cp.OUT / f"route_cut_{tag}.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
+        out_p.write_text(json.dumps(out, indent=1), encoding="utf-8")
 
 
 class _null:

@@ -42,6 +42,8 @@ def main():
     for arg in sys.argv[3:]:
         concept, link = arg.rsplit("=", 1); s_u, t_u = (parse(x) for x in link.split(">"))
         (Ls, s), (Lt, t) = s_u, t_u
+        if f"{concept}: L{Ls}:{s} > L{Lt}:{t}" in out:      # resumable
+            continue
         assert Ls < Lt, "source must be below target"
         x = json.loads((cp.OUT / f"{cp.slug(concept)}__clamp_reply.json").read_text(encoding="utf-8"))
         own = {(q["layer"], q["neuron"]) for q in x["top_neurons"][:10]}
