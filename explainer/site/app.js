@@ -371,7 +371,41 @@
       $("editSave").hidden = !on;
       msg(on ? "Click any text to change it." : "");
     }
-    $("editToggle").addEventListener("click", () => setEditing(!editing));
+    $("editToggle").addEventListener("click", () => { if (showing) toggleChanges(); setEditing(!editing); });
+
+    /* review aid (editing copy only): highlight prose changed since James's last saved round */
+    let showing = false, changes = null, saved = null;
+    function toggleChanges() {
+      showing = !showing;
+      if (showing) {
+        if (editing) setEditing(false);
+        removeTerms();
+        saved = new Map(blocks().map((el) => [el, el.innerHTML]));
+        blocks().forEach((el) => { const h = changes.changed[el.dataset.copy]; if (h != null) { el.innerHTML = h; el.classList.add("changed"); } });
+        document.querySelectorAll("details.method").forEach((d) => (d.open = true));
+        $("chgPanel").hidden = false;
+      } else {
+        saved.forEach((h, el) => { el.innerHTML = h; el.classList.remove("changed"); });
+        addTerms(); decorateTitle();
+        $("chgPanel").hidden = true;
+      }
+      $("chgToggle").textContent = showing ? "Hide changes" : "Show changes";
+      $("chgToggle").setAttribute("aria-pressed", String(showing));
+    }
+    fetch("data/changes.json").then((r) => (r.ok ? r.json() : null)).then((c) => {
+      if (!c) return;
+      changes = c;
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.id = "chgToggle"; b.textContent = "Show changes";
+      bar.insertBefore(b, $("editToggle"));
+      const p = document.createElement("aside");
+      p.id = "chgPanel"; p.className = "chgpanel"; p.hidden = true;
+      p.innerHTML = `<b>Changes since your ${esc(c.round)}</b> <span class="k"><ins>added</ins> <del>removed</del></span>` +
+        `<p>${Object.keys(c.changed).length} text blocks changed or new (outlined). Not text, so not highlighted:</p><ul>` +
+        (c.other || []).map((t) => `<li>${esc(t)}</li>`).join("") + "</ul>";
+      document.body.appendChild(p);
+      b.addEventListener("click", toggleChanges);
+    }).catch(() => {});
     document.addEventListener("click", (e) => { if (editing && e.target.closest("[data-copy] a, a[data-copy], summary[data-copy]")) e.preventDefault(); }, true);
     document.addEventListener("keydown", (e) => {
       if (editing && e.key === "Enter" && e.target.closest && e.target.closest("[data-copy]")) { e.preventDefault(); document.execCommand("insertLineBreak"); }

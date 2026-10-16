@@ -144,3 +144,12 @@ details.method p { font-size: 16.5px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 
 .closing { font: italic 400 24px/1.4 var(--serif); text-align: left; margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+
+/* review aid in the editing copy only */
+.changed { outline: 2px solid #9fd5a6; outline-offset: 4px; border-radius: 2px; }
+.changed ins, .chgpanel ins { background: #dcf3df; color: #1f5f2a; text-decoration: none; border-radius: 2px; padding: 0 1px; }
+.changed del, .chgpanel del { background: #f8dcdc; color: #8a2a2a; border-radius: 2px; padding: 0 1px; }
+.chgpanel { position: fixed; left: calc(12px + env(safe-area-inset-left, 0px)); bottom: calc(64px + env(safe-area-inset-bottom, 0px)); z-index: 10; width: min(360px, calc(100vw - 24px)); max-height: 45vh; overflow: auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); padding: 12px 14px; font: 13px/1.45 var(--sans); }
+.chgpanel p { margin: 6px 0; }
+.chgpanel ul { margin: 0; padding-left: 18px; }
+.chgpanel .k { margin-left: 6px; }
