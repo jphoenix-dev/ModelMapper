@@ -821,4 +821,4 @@ prompt itself: "Natural selection" 15/20, "Rainbow" 14/20, "Pyramids" / "Pyramid
 reply names the concept). With those wordings scored, all three recall (12–14/20 prompts): evolution k50 1, steer 0.05;
 rainbows k50 20, **steer 0.70**; pyramids k50 3, steer 0.35. Updated wave totals: k50 ≤ 5 for 32/40; steering mean
 0.29, ≥ 0.5 for 10/40; random mean 0.01. Places/people category 0.14 (pyramids 0.35, Great Wall 0.20, Curie and Darwin
-0). **Every "not recalled" real concept tonight has turned out to be our answer wording, not the model.**
+0). **Every real concept we have called "not recalled" so far turned out to be our prompt format or answer wording (CR's 9 via V3, Sahara via new prompts in CR-2b, these 3 via discovery), not missing knowledge.**
