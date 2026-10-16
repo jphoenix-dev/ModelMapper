@@ -1082,3 +1082,26 @@ P(yes) ≥ 0.5 = fluent). Features computed locally:
   which is exactly the failure mode steering produces.
 - Use: free fluency for the dial's auto-selection and quick sweeps. Pre-registered tests keep the Jev judge.
   Validated only on our steering replies (people and label-rule runs).
+
+## 16 Oct 2026 (after CR-2): auto-selected steering at scale, judge-free (59 concepts)
+`src/auto_steer_scale.py` → `results/auto_steer_summary.txt`. For every recalled concept (CR-2 19 + wave 2 40):
+candidate sets R1/R2/R4 × 2/4 neurons × 0.5–2×, add mode, reply-only. **Select** on the 20 original neutral prompts;
+**score** that one setting on 20 held-out neutral prompts. Score = a distinctive answer word appears AND the reply
+passes the free fluency check (88.7% agreement with Jev). No judge API calls.
+
+| held-out (20 fresh neutral prompts) | mean over 59 concepts |
+|---|---|
+| **auto-selected per concept** | **0.203** |
+| fixed default (R1, 4 neurons, 1×) | 0.106 |
+| random neurons (4, 2×) | 0.001 |
+| unsteered | 0.001 |
+| (selection-prompt score of the chosen setting) | (0.295) |
+
+- **Choosing per concept doubles held-out steering** over the fixed rule: better in 31/59, worse in 4, tied in 24.
+  Biggest gains: Tokyo 0.00 → 0.55 (R4), steam engine 0 → 0.50, periodic table 0 → 0.45, justice 0.15 → 0.75.
+- **Rules chosen:** R1 31, R4 19, R2 9. No single rule wins.
+- Held-out ≥ 0.5 for 7/59 concepts, ≥ 0.25 for 22/59, 0 for 16/59. People average 0.01 on these generic prompts
+  (they need person-friendly prompts, see above); non-people 0.23.
+- Winner's-curse shrinkage from selection to held-out: 0.295 → 0.203, about a third.
+- The baselines are essentially zero, so every point here is steering. Caveats: keyword on-topic is stricter than the
+  lenient judge (it needs the word itself), and the fluency check is a proxy.
