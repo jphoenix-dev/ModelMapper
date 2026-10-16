@@ -657,3 +657,18 @@ pushed to the front. Examples: "Here are some ideas… ### ☕ Morning Coffee & 
 Brewing**". That is a real nudge, not a takeover. The replies are capped at 60 tokens, which makes "main topic" harsh.
 **Both numbers are now reported.** Lenient ≈ "the concept intrudes"; strict ≈ "the concept takes over". Golden-Gate-Claude-style
 takeover happens for coffee (CR) and the Moon at ~50%, and for most concepts at ≤ 25%.
+
+## 16 Oct 2026 (after CR-2): second grader (ISSUES #16, part)
+`src/grader2.py`: 400 (explanation, example) pairs sampled from the census re-grade, half the neuron's own top examples
+and half random web snippets. Luna graded each with the identical rubric (0/1/2).
+
+| | own examples, mean | random snippets, mean | AUC own vs random |
+|---|---|---|---|
+| Jev (soft) | 0.66 | 0.20 | 0.90 |
+| Luna (0/0.5/1) | 0.85 | 0.21 | 0.88 |
+
+Rank correlation 0.81; 80% agreement on fits / doesn't fit. **The grader is not idiosyncratic.** Two different models
+rank the evidence the same way and discriminate equally well. Luna is more generous on own examples, plausibly
+because it wrote the explanations (self-grading); Jev is the stricter of the two. The clean bar is calibrated on known
+two-job dossiers, so a uniformly stricter grader is absorbed by the calibration rather than biasing the headline.
+Still open under #16: human spot-checks.
