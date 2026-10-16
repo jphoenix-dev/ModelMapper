@@ -4,6 +4,8 @@ For Shakespeare, Mozart, Harry Potter, Einstein and Kahlo: each rule's top-6 neu
 steer_select.json (R1 late / R2 any layer / R3 measured / R4 says the answer) over the usual grid on the 20
 person-friendly prompts. On-topic = name word in the reply. Saves every reply for a later fluency check.
 
+STEER_MODE=add nudges instead of clamping (writes people_rules_add.json).
+
 Usage: RECALL_VARIANT=V3 CONCEPT_OUT_DIR=results/concepts_v3 python src/people_rules.py
 """
 import json
@@ -25,8 +27,10 @@ RULES = ["R1_late_attr", "R2_all_attr", "R3_measured", "R4_says_answer"]
 def main():
     os.environ["ANSWER_DISCOVERY"] = "0"
     sel = {k.strip(): v for k, v in json.loads((cp.OUT / "steer_select.json").read_text(encoding="utf-8")).items()}
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="clamp", reply_only=True)
-    print(f"steering: clamp, reply_only={pipe.reply_only}", flush=True)
+    mode = os.environ.get("STEER_MODE", "clamp")                   # "add" = nudge on top of natural activity
+    pipe = FastPipeline("Qwen/Qwen3-8B", mode=mode, reply_only=True)
+    print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}", flush=True)
+    out_name = "people_rules.json" if mode == "clamp" else f"people_rules_{mode}.json"
     out = {}
     for concept, word in WHO.items():
         spec, tid, recall, controls = pipe.make_prompts(concept)
@@ -48,7 +52,7 @@ def main():
             res[rule] = {"best": best["hit"], "setting": (best["n"], best["s"]), "grid": grid}
         out[concept] = res
         print(f"{concept:<24} " + " | ".join(f"{r[:2]} {res[r]['best']:.2f} {res[r]['setting']}" for r in RULES), flush=True)
-        (ROOT / "results/people_rules.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+        (ROOT / "results" / out_name).write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
 
 
 if __name__ == "__main__":
