@@ -7,7 +7,7 @@ the same-sized effect at any starting confidence. Neurons are taken in measured 
 re-ranked) and in attribution order; random neurons from the same layers as a baseline.
 
 Also per prompt (v2): the median drop (k_LO3_median: robust to a few prompts collapsing) and k_flip = fewest neurons
-that push P(answer) below 0.5 on at least half the prompts (the "answer actually changes" view).
+that push P(answer) below 0.5 on at least half of the prompts that started above 0.5 (the "answer actually changes" view).
 
 Usage: RECALL_VARIANT=V0|V3 CONCEPT_OUT_DIR=... python src/logodds_check.py <out_tag> "<concept>" [...]
 """
@@ -62,7 +62,8 @@ def main():
                 if tag:                     # per-prompt detail: is the mean carried by a few collapsing prompts?
                     detail.setdefault(tag, []).append({"k": k, "median_drop": round(sorted(d)[len(d) // 2], 2),
                                                        "share_drop_ge3": round(sum(x >= DELTA for x in d) / len(d), 2),
-                                                       "share_p_below_half": round(sum(p < 0.5 for p in ps) / len(ps), 2),
+                                                       # flips: among prompts the model got right (P > 0.5) at baseline, share now < 0.5
+                                                       "share_flipped": round(sum(p < 0.5 for p, b in zip(ps, base) if b > 0) / max(1, sum(b > 0 for b in base)), 2),
                                                        "per_prompt": [round(x, 2) for x in d]})
                 if k3 is None and mean >= DELTA:
                     k3 = k
@@ -73,12 +74,13 @@ def main():
         r, _ = curve([(l, rng.randrange(pipe.W)) for l, _ in top], "random")
         med = [x["median_drop"] for x in detail["measured"]]
         k_med = next((k for k, x in zip(KS, med) if x >= DELTA), None)
-        k_flip = next((x["k"] for x in detail["measured"] if x["share_p_below_half"] >= 0.5), None)
+        k_flip = next((x["k"] for x in detail["measured"] if x["share_flipped"] >= 0.5), None)
         out[concept] = {"baseline_mean_logodds": round(sum(base) / len(base), 2),
                         "baseline_mean_p": round(sum(1 / (1 + math.exp(-b)) for b in base) / len(base), 3),
                         "drop_attr": a, "k_LO3_attr": ka, "drop_measured": m, "k_LO3_measured": km, "drop_random": r,
                         "k_LO3_median_measured": k_med, "k_flip_half_prompts_measured": k_flip,
-                        "baseline_share_p_above_half": round(sum(b > 0 for b in base) / len(base), 2), "detail": detail}
+                        "baseline_share_p_above_half": round(sum(b > 0 for b in base) / len(base), 2),
+                        "baseline_logodds_per_prompt": [round(b, 2) for b in base], "detail": detail}
         print(f"{concept:<24} base log-odds {out[concept]['baseline_mean_logodds']:>6} (P {out[concept]['baseline_mean_p']}) | "
               f"k(-3 log-odds) attr {ka} / measured {km} / median {k_med} | k(flip half the prompts) {k_flip} | measured drops {m} | random {r}", flush=True)
     (cp.OUT / f"logodds_{tag}.json").write_text(json.dumps(out, indent=1), encoding="utf-8")

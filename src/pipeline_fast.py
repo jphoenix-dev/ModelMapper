@@ -82,7 +82,8 @@ class FastPipeline(Pipeline):
             # "French Revolution"): score each natural form and keep whichever the model actually produces
             a = spec["answer"].strip()
             base = a[4:].strip() if a.lower().startswith("the ") else a
-            forms = list(dict.fromkeys([a, a[:1].upper() + a[1:], a.title(), base, base[:1].upper() + base[1:]]))
+            forms = list(dict.fromkeys([a, a[:1].upper() + a[1:], a.title(), base, base[:1].upper() + base[1:]]
+                                       + spec.get("answer_forms_extra", [])))      # model's own wordings (ISSUES #29)
             best = None
             for f in forms:
                 t_ = self.tok.encode(f)
