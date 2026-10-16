@@ -1,0 +1,4722 @@
+{
+ "the elephant": {
+  "answer_token": "Ele",
+  "score_vs_mean": 37.57,
+  "from_heads": 7.56,
+  "from_neurons": 30.02,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 8.96,
+  "by_band": {
+   "heads 0-15": 0.3,
+   "heads 16-23": 0.16,
+   "heads 24-29": 2.02,
+   "heads 30-35": 5.07,
+   "neurons 0-15": -0.42,
+   "neurons 16-23": 0.91,
+   "neurons 24-29": 3.78,
+   "neurons 30-35": 25.74
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.95
+   ],
+   [
+    "L35H22",
+    1.53
+   ],
+   [
+    "L35H27",
+    -1.43
+   ],
+   [
+    "L34H28",
+    1.38
+   ],
+   [
+    "L29H27",
+    0.74
+   ],
+   [
+    "L35H20",
+    -0.72
+   ],
+   [
+    "L34H29",
+    -0.58
+   ],
+   [
+    "L35H23",
+    0.39
+   ],
+   [
+    "L34H30",
+    0.3
+   ],
+   [
+    "L34H21",
+    0.29
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:6266",
+    6.73,
+    true
+   ],
+   [
+    "L35:1375",
+    -2.18,
+    false
+   ],
+   [
+    "L32:3551",
+    1.27,
+    false
+   ],
+   [
+    "L34:10086",
+    1.12,
+    true
+   ],
+   [
+    "L33:9621",
+    1.06,
+    true
+   ],
+   [
+    "L33:8124",
+    -1.0,
+    false
+   ],
+   [
+    "L31:10961",
+    0.86,
+    false
+   ],
+   [
+    "L29:891",
+    0.77,
+    false
+   ],
+   [
+    "L35:8034",
+    0.75,
+    false
+   ],
+   [
+    "L35:8545",
+    0.7,
+    false
+   ]
+  ],
+  "neurons_for_half": 12,
+  "neurons_for_90pct": 68,
+  "heads_for_half": 3,
+  "heads_for_90pct": 8,
+  "max_recon_err": 0.0078,
+  "max_score_err": 0.0034
+ },
+ "the octopus": {
+  "answer_token": "Oct",
+  "score_vs_mean": 33.46,
+  "from_heads": 6.89,
+  "from_neurons": 26.58,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 5.12,
+  "by_band": {
+   "heads 0-15": 0.09,
+   "heads 16-23": 0.41,
+   "heads 24-29": 1.45,
+   "heads 30-35": 4.94,
+   "neurons 0-15": -0.01,
+   "neurons 16-23": 0.19,
+   "neurons 24-29": 2.39,
+   "neurons 30-35": 24.02
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.34
+   ],
+   [
+    "L35H27",
+    -1.54
+   ],
+   [
+    "L34H28",
+    1.22
+   ],
+   [
+    "L35H22",
+    0.85
+   ],
+   [
+    "L34H12",
+    0.53
+   ],
+   [
+    "L34H29",
+    -0.49
+   ],
+   [
+    "L29H27",
+    0.37
+   ],
+   [
+    "L34H21",
+    0.34
+   ],
+   [
+    "L35H19",
+    0.32
+   ],
+   [
+    "L26H20",
+    0.21
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:11704",
+    5.63,
+    false
+   ],
+   [
+    "L35:9587",
+    2.63,
+    true
+   ],
+   [
+    "L30:263",
+    1.8,
+    true
+   ],
+   [
+    "L34:11063",
+    -1.2,
+    false
+   ],
+   [
+    "L34:5128",
+    -0.76,
+    false
+   ],
+   [
+    "L31:11928",
+    0.58,
+    false
+   ],
+   [
+    "L30:1992",
+    0.58,
+    true
+   ],
+   [
+    "L35:8034",
+    0.55,
+    false
+   ],
+   [
+    "L32:3361",
+    0.49,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.47,
+    false
+   ]
+  ],
+  "neurons_for_half": 10,
+  "neurons_for_90pct": 60,
+  "heads_for_half": 2,
+  "heads_for_90pct": 9,
+  "max_recon_err": 0.0089,
+  "max_score_err": 0.0027
+ },
+ "the honeybee": {
+  "answer_token": "H",
+  "score_vs_mean": 40.59,
+  "from_heads": 6.8,
+  "from_neurons": 33.8,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 7.3,
+  "by_band": {
+   "heads 0-15": 0.39,
+   "heads 16-23": -0.62,
+   "heads 24-29": -0.45,
+   "heads 30-35": 7.48,
+   "neurons 0-15": -0.23,
+   "neurons 16-23": 0.14,
+   "neurons 24-29": 1.89,
+   "neurons 30-35": 32.0
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    3.31
+   ],
+   [
+    "L34H28",
+    1.81
+   ],
+   [
+    "L35H27",
+    -1.21
+   ],
+   [
+    "L34H29",
+    -1.2
+   ],
+   [
+    "L34H12",
+    0.71
+   ],
+   [
+    "L34H30",
+    0.64
+   ],
+   [
+    "L35H12",
+    0.5
+   ],
+   [
+    "L35H14",
+    0.49
+   ],
+   [
+    "L35H24",
+    -0.48
+   ],
+   [
+    "L34H15",
+    0.48
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:4955",
+    3.48,
+    false
+   ],
+   [
+    "L33:8749",
+    3.14,
+    true
+   ],
+   [
+    "L31:1075",
+    2.71,
+    false
+   ],
+   [
+    "L35:7695",
+    1.75,
+    true
+   ],
+   [
+    "L35:4852",
+    1.63,
+    true
+   ],
+   [
+    "L35:25",
+    -1.4,
+    false
+   ],
+   [
+    "L34:9002",
+    1.16,
+    false
+   ],
+   [
+    "L32:1250",
+    -1.01,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.99,
+    false
+   ],
+   [
+    "L33:9269",
+    0.97,
+    false
+   ]
+  ],
+  "neurons_for_half": 10,
+  "neurons_for_90pct": 49,
+  "heads_for_half": 2,
+  "heads_for_90pct": 4,
+  "max_recon_err": 0.009,
+  "max_score_err": 0.0023
+ },
+ "the penguin": {
+  "answer_token": "P",
+  "score_vs_mean": 34.31,
+  "from_heads": 8.4,
+  "from_neurons": 25.91,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 0.82,
+  "by_band": {
+   "heads 0-15": 0.29,
+   "heads 16-23": 0.02,
+   "heads 24-29": -0.37,
+   "heads 30-35": 8.46,
+   "neurons 0-15": -0.21,
+   "neurons 16-23": -0.12,
+   "neurons 24-29": 0.97,
+   "neurons 30-35": 25.27
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    3.83
+   ],
+   [
+    "L34H28",
+    1.22
+   ],
+   [
+    "L35H27",
+    -0.91
+   ],
+   [
+    "L34H30",
+    0.87
+   ],
+   [
+    "L34H12",
+    0.64
+   ],
+   [
+    "L34H29",
+    -0.63
+   ],
+   [
+    "L35H24",
+    -0.61
+   ],
+   [
+    "L35H12",
+    0.49
+   ],
+   [
+    "L35H14",
+    0.49
+   ],
+   [
+    "L34H14",
+    0.44
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L33:10933",
+    1.1,
+    false
+   ],
+   [
+    "L33:7759",
+    1.05,
+    false
+   ],
+   [
+    "L34:9002",
+    0.98,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.92,
+    false
+   ],
+   [
+    "L35:8034",
+    0.76,
+    false
+   ],
+   [
+    "L35:8425",
+    0.62,
+    false
+   ],
+   [
+    "L30:2346",
+    0.6,
+    true
+   ],
+   [
+    "L31:5473",
+    0.57,
+    false
+   ],
+   [
+    "L34:10608",
+    0.57,
+    false
+   ],
+   [
+    "L35:4201",
+    0.52,
+    false
+   ]
+  ],
+  "neurons_for_half": 26,
+  "neurons_for_90pct": 81,
+  "heads_for_half": 2,
+  "heads_for_90pct": 7,
+  "max_recon_err": 0.0084,
+  "max_score_err": 0.0022
+ },
+ "sushi": {
+  "answer_token": "S",
+  "score_vs_mean": 34.58,
+  "from_heads": 7.32,
+  "from_neurons": 27.26,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": -0.24,
+  "by_band": {
+   "heads 0-15": 0.32,
+   "heads 16-23": 0.26,
+   "heads 24-29": -0.29,
+   "heads 30-35": 7.04,
+   "neurons 0-15": -0.13,
+   "neurons 16-23": 0.2,
+   "neurons 24-29": 0.23,
+   "neurons 30-35": 26.96
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    3.21
+   ],
+   [
+    "L34H12",
+    0.88
+   ],
+   [
+    "L35H27",
+    -0.86
+   ],
+   [
+    "L34H28",
+    0.81
+   ],
+   [
+    "L35H24",
+    -0.6
+   ],
+   [
+    "L35H12",
+    0.59
+   ],
+   [
+    "L34H29",
+    -0.58
+   ],
+   [
+    "L34H14",
+    0.43
+   ],
+   [
+    "L34H13",
+    0.37
+   ],
+   [
+    "L35H2",
+    0.3
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:6661",
+    1.3,
+    false
+   ],
+   [
+    "L33:10933",
+    1.11,
+    false
+   ],
+   [
+    "L34:9002",
+    0.79,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.74,
+    false
+   ],
+   [
+    "L31:1291",
+    -0.73,
+    true
+   ],
+   [
+    "L31:5473",
+    0.61,
+    false
+   ],
+   [
+    "L33:9269",
+    0.61,
+    false
+   ],
+   [
+    "L33:7759",
+    0.61,
+    false
+   ],
+   [
+    "L35:9071",
+    0.56,
+    false
+   ],
+   [
+    "L34:8529",
+    0.51,
+    false
+   ]
+  ],
+  "neurons_for_half": 28,
+  "neurons_for_90pct": 82,
+  "heads_for_half": 2,
+  "heads_for_90pct": 7,
+  "max_recon_err": 0.0086,
+  "max_score_err": 0.0024
+ },
+ "chocolate": {
+  "answer_token": "Chocolate",
+  "score_vs_mean": 35.3,
+  "from_heads": 11.05,
+  "from_neurons": 24.25,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 7.06,
+  "by_band": {
+   "heads 0-15": -0.01,
+   "heads 16-23": 0.29,
+   "heads 24-29": 6.01,
+   "heads 30-35": 4.76,
+   "neurons 0-15": -0.22,
+   "neurons 16-23": 0.85,
+   "neurons 24-29": 4.68,
+   "neurons 30-35": 18.94
+  },
+  "top_heads": [
+   [
+    "L29H25",
+    1.95
+   ],
+   [
+    "L35H25",
+    1.58
+   ],
+   [
+    "L35H22",
+    1.21
+   ],
+   [
+    "L29H27",
+    0.95
+   ],
+   [
+    "L34H28",
+    0.92
+   ],
+   [
+    "L35H27",
+    -0.7
+   ],
+   [
+    "L28H6",
+    0.57
+   ],
+   [
+    "L30H17",
+    0.52
+   ],
+   [
+    "L34H29",
+    -0.46
+   ],
+   [
+    "L26H20",
+    0.45
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:8429",
+    4.49,
+    true
+   ],
+   [
+    "L34:5493",
+    -1.31,
+    false
+   ],
+   [
+    "L30:1487",
+    1.25,
+    false
+   ],
+   [
+    "L34:2672",
+    -1.03,
+    false
+   ],
+   [
+    "L31:1457",
+    0.99,
+    false
+   ],
+   [
+    "L35:3093",
+    0.79,
+    true
+   ],
+   [
+    "L35:8545",
+    0.66,
+    true
+   ],
+   [
+    "L33:6422",
+    0.53,
+    false
+   ],
+   [
+    "L34:893",
+    -0.46,
+    false
+   ],
+   [
+    "L32:6955",
+    -0.46,
+    false
+   ]
+  ],
+  "neurons_for_half": 18,
+  "neurons_for_90pct": 82,
+  "heads_for_half": 4,
+  "heads_for_90pct": 14,
+  "max_recon_err": 0.0108,
+  "max_score_err": 0.002
+ },
+ "pizza": {
+  "answer_token": "Pizza",
+  "score_vs_mean": 37.02,
+  "from_heads": 11.12,
+  "from_neurons": 25.9,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 2.96,
+  "by_band": {
+   "heads 0-15": 0.02,
+   "heads 16-23": 0.66,
+   "heads 24-29": 5.91,
+   "heads 30-35": 4.54,
+   "neurons 0-15": 0.02,
+   "neurons 16-23": 0.58,
+   "neurons 24-29": 5.28,
+   "neurons 30-35": 20.02
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.49
+   ],
+   [
+    "L29H25",
+    1.24
+   ],
+   [
+    "L29H27",
+    1.2
+   ],
+   [
+    "L35H22",
+    1.06
+   ],
+   [
+    "L35H27",
+    -0.94
+   ],
+   [
+    "L34H28",
+    0.65
+   ],
+   [
+    "L28H7",
+    -0.61
+   ],
+   [
+    "L23H10",
+    0.56
+   ],
+   [
+    "L30H17",
+    0.51
+   ],
+   [
+    "L24H19",
+    0.49
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:12074",
+    1.93,
+    false
+   ],
+   [
+    "L30:399",
+    1.3,
+    false
+   ],
+   [
+    "L34:11117",
+    -0.98,
+    false
+   ],
+   [
+    "L31:6851",
+    0.92,
+    false
+   ],
+   [
+    "L28:2560",
+    0.84,
+    true
+   ],
+   [
+    "L35:1261",
+    0.62,
+    true
+   ],
+   [
+    "L35:11333",
+    -0.58,
+    false
+   ],
+   [
+    "L35:8545",
+    0.55,
+    true
+   ],
+   [
+    "L35:9896",
+    0.54,
+    true
+   ],
+   [
+    "L34:7634",
+    -0.51,
+    false
+   ]
+  ],
+  "neurons_for_half": 24,
+  "neurons_for_90pct": 82,
+  "heads_for_half": 5,
+  "heads_for_90pct": 16,
+  "max_recon_err": 0.008,
+  "max_score_err": 0.0031
+ },
+ "wine": {
+  "answer_token": "W",
+  "score_vs_mean": 43.95,
+  "from_heads": 9.88,
+  "from_neurons": 34.08,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 13.07,
+  "by_band": {
+   "heads 0-15": 0.25,
+   "heads 16-23": -0.58,
+   "heads 24-29": -0.16,
+   "heads 30-35": 10.37,
+   "neurons 0-15": -0.15,
+   "neurons 16-23": 0.21,
+   "neurons 24-29": 2.3,
+   "neurons 30-35": 31.74
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    7.2
+   ],
+   [
+    "L34H28",
+    2.71
+   ],
+   [
+    "L35H27",
+    -2.07
+   ],
+   [
+    "L34H29",
+    -1.57
+   ],
+   [
+    "L35H24",
+    -1.32
+   ],
+   [
+    "L34H12",
+    0.73
+   ],
+   [
+    "L34H30",
+    0.67
+   ],
+   [
+    "L34H14",
+    0.46
+   ],
+   [
+    "L35H13",
+    0.4
+   ],
+   [
+    "L34H13",
+    0.37
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L33:479",
+    3.25,
+    true
+   ],
+   [
+    "L33:3926",
+    2.91,
+    true
+   ],
+   [
+    "L34:8612",
+    2.24,
+    true
+   ],
+   [
+    "L35:5230",
+    -1.82,
+    false
+   ],
+   [
+    "L34:410",
+    1.75,
+    true
+   ],
+   [
+    "L35:1446",
+    1.5,
+    true
+   ],
+   [
+    "L33:1582",
+    1.33,
+    true
+   ],
+   [
+    "L34:9395",
+    -1.21,
+    false
+   ],
+   [
+    "L29:2330",
+    1.11,
+    false
+   ],
+   [
+    "L33:10933",
+    1.11,
+    false
+   ]
+  ],
+  "neurons_for_half": 10,
+  "neurons_for_90pct": 47,
+  "heads_for_half": 1,
+  "heads_for_90pct": 2,
+  "max_recon_err": 0.0127,
+  "max_score_err": 0.0028
+ },
+ "football (soccer)": {
+  "answer_token": "S",
+  "score_vs_mean": 46.26,
+  "from_heads": 9.62,
+  "from_neurons": 36.65,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 10.24,
+  "by_band": {
+   "heads 0-15": 0.42,
+   "heads 16-23": 0.53,
+   "heads 24-29": -0.23,
+   "heads 30-35": 8.9,
+   "neurons 0-15": -0.16,
+   "neurons 16-23": 0.15,
+   "neurons 24-29": 2.31,
+   "neurons 30-35": 34.35
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    3.15
+   ],
+   [
+    "L34H28",
+    2.46
+   ],
+   [
+    "L34H12",
+    1.12
+   ],
+   [
+    "L35H24",
+    -1.1
+   ],
+   [
+    "L34H29",
+    -1.07
+   ],
+   [
+    "L35H27",
+    -1.03
+   ],
+   [
+    "L34H15",
+    0.72
+   ],
+   [
+    "L34H14",
+    0.55
+   ],
+   [
+    "L34H13",
+    0.51
+   ],
+   [
+    "L35H12",
+    0.49
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L35:4115",
+    4.79,
+    true
+   ],
+   [
+    "L33:10933",
+    1.61,
+    false
+   ],
+   [
+    "L33:9269",
+    1.48,
+    true
+   ],
+   [
+    "L33:7759",
+    1.47,
+    false
+   ],
+   [
+    "L34:6478",
+    1.28,
+    false
+   ],
+   [
+    "L34:10590",
+    1.12,
+    true
+   ],
+   [
+    "L34:1452",
+    -0.86,
+    false
+   ],
+   [
+    "L31:5473",
+    0.78,
+    false
+   ],
+   [
+    "L35:2465",
+    0.71,
+    false
+   ],
+   [
+    "L34:10608",
+    0.68,
+    false
+   ]
+  ],
+  "neurons_for_half": 17,
+  "neurons_for_90pct": 71,
+  "heads_for_half": 2,
+  "heads_for_90pct": 7,
+  "max_recon_err": 0.0106,
+  "max_score_err": 0.0026
+ },
+ "the Olympic Games": {
+  "answer_token": "O",
+  "score_vs_mean": 43.32,
+  "from_heads": 8.42,
+  "from_neurons": 34.91,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 5.57,
+  "by_band": {
+   "heads 0-15": 0.36,
+   "heads 16-23": -0.36,
+   "heads 24-29": -0.35,
+   "heads 30-35": 8.76,
+   "neurons 0-15": -0.18,
+   "neurons 16-23": 0.44,
+   "neurons 24-29": 7.66,
+   "neurons 30-35": 26.99
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    4.78
+   ],
+   [
+    "L34H28",
+    2.6
+   ],
+   [
+    "L34H29",
+    -2.45
+   ],
+   [
+    "L35H27",
+    -1.67
+   ],
+   [
+    "L34H12",
+    1.27
+   ],
+   [
+    "L35H24",
+    -1.19
+   ],
+   [
+    "L34H30",
+    0.62
+   ],
+   [
+    "L34H15",
+    0.59
+   ],
+   [
+    "L34H14",
+    0.49
+   ],
+   [
+    "L34H13",
+    0.43
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L29:624",
+    4.42,
+    true
+   ],
+   [
+    "L32:8182",
+    2.51,
+    false
+   ],
+   [
+    "L33:11650",
+    2.15,
+    false
+   ],
+   [
+    "L33:9269",
+    1.64,
+    false
+   ],
+   [
+    "L33:7759",
+    1.56,
+    false
+   ],
+   [
+    "L33:10933",
+    1.28,
+    false
+   ],
+   [
+    "L30:9196",
+    1.15,
+    true
+   ],
+   [
+    "L34:9002",
+    1.09,
+    false
+   ],
+   [
+    "L34:4986",
+    1.08,
+    false
+   ],
+   [
+    "L35:6841",
+    -0.7,
+    false
+   ]
+  ],
+  "neurons_for_half": 10,
+  "neurons_for_90pct": 57,
+  "heads_for_half": 1,
+  "heads_for_90pct": 3,
+  "max_recon_err": 0.0117,
+  "max_score_err": 0.0024
+ },
+ "basketball": {
+  "answer_token": "Basket",
+  "score_vs_mean": 43.13,
+  "from_heads": 12.64,
+  "from_neurons": 30.49,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 13.88,
+  "by_band": {
+   "heads 0-15": 0.13,
+   "heads 16-23": 1.25,
+   "heads 24-29": 5.81,
+   "heads 30-35": 5.45,
+   "neurons 0-15": -0.06,
+   "neurons 16-23": 0.26,
+   "neurons 24-29": 9.7,
+   "neurons 30-35": 20.59
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.2
+   ],
+   [
+    "L29H27",
+    1.86
+   ],
+   [
+    "L35H27",
+    -1.76
+   ],
+   [
+    "L35H22",
+    1.42
+   ],
+   [
+    "L34H28",
+    0.89
+   ],
+   [
+    "L30H17",
+    0.81
+   ],
+   [
+    "L34H21",
+    0.78
+   ],
+   [
+    "L23H10",
+    0.63
+   ],
+   [
+    "L26H20",
+    0.44
+   ],
+   [
+    "L31H3",
+    0.43
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:6776",
+    7.65,
+    true
+   ],
+   [
+    "L32:4814",
+    4.65,
+    true
+   ],
+   [
+    "L29:5709",
+    4.52,
+    false
+   ],
+   [
+    "L35:10929",
+    -2.25,
+    false
+   ],
+   [
+    "L33:12076",
+    -1.39,
+    false
+   ],
+   [
+    "L33:3278",
+    -0.99,
+    false
+   ],
+   [
+    "L35:8545",
+    0.89,
+    true
+   ],
+   [
+    "L34:3229",
+    0.73,
+    false
+   ],
+   [
+    "L29:7550",
+    0.69,
+    true
+   ],
+   [
+    "L27:92",
+    0.62,
+    false
+   ]
+  ],
+  "neurons_for_half": 3,
+  "neurons_for_90pct": 26,
+  "heads_for_half": 4,
+  "heads_for_90pct": 14,
+  "max_recon_err": 0.0111,
+  "max_score_err": 0.0029
+ },
+ "poker": {
+  "answer_token": "P",
+  "score_vs_mean": 43.59,
+  "from_heads": 10.29,
+  "from_neurons": 33.31,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 8.71,
+  "by_band": {
+   "heads 0-15": 0.4,
+   "heads 16-23": 0.13,
+   "heads 24-29": 0.53,
+   "heads 30-35": 9.23,
+   "neurons 0-15": -0.29,
+   "neurons 16-23": -0.03,
+   "neurons 24-29": 3.19,
+   "neurons 30-35": 30.44
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    4.93
+   ],
+   [
+    "L34H28",
+    2.2
+   ],
+   [
+    "L35H24",
+    -1.94
+   ],
+   [
+    "L35H27",
+    -1.16
+   ],
+   [
+    "L34H29",
+    -1.16
+   ],
+   [
+    "L34H12",
+    0.86
+   ],
+   [
+    "L34H15",
+    0.65
+   ],
+   [
+    "L34H14",
+    0.57
+   ],
+   [
+    "L34H13",
+    0.53
+   ],
+   [
+    "L35H14",
+    0.52
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:11711",
+    4.54,
+    true
+   ],
+   [
+    "L32:6265",
+    1.49,
+    true
+   ],
+   [
+    "L33:10933",
+    1.31,
+    false
+   ],
+   [
+    "L34:11739",
+    1.15,
+    false
+   ],
+   [
+    "L33:7759",
+    1.12,
+    false
+   ],
+   [
+    "L35:2770",
+    1.12,
+    true
+   ],
+   [
+    "L34:1452",
+    -1.1,
+    false
+   ],
+   [
+    "L33:9269",
+    1.06,
+    true
+   ],
+   [
+    "L35:8777",
+    -0.84,
+    false
+   ],
+   [
+    "L34:9002",
+    0.8,
+    false
+   ]
+  ],
+  "neurons_for_half": 15,
+  "neurons_for_90pct": 71,
+  "heads_for_half": 2,
+  "heads_for_90pct": 6,
+  "max_recon_err": 0.0097,
+  "max_score_err": 0.0033
+ },
+ "DNA": {
+  "answer_token": "DNA",
+  "score_vs_mean": 52.92,
+  "from_heads": 18.17,
+  "from_neurons": 34.74,
+  "from_embedding": 0.01,
+  "own_concept_neurons_direct": 14.07,
+  "by_band": {
+   "heads 0-15": 0.15,
+   "heads 16-23": 1.08,
+   "heads 24-29": 6.26,
+   "heads 30-35": 10.68,
+   "neurons 0-15": -0.01,
+   "neurons 16-23": 0.99,
+   "neurons 24-29": 15.68,
+   "neurons 30-35": 18.09
+  },
+  "top_heads": [
+   [
+    "L34H28",
+    2.4
+   ],
+   [
+    "L35H22",
+    1.85
+   ],
+   [
+    "L35H25",
+    1.58
+   ],
+   [
+    "L34H15",
+    1.45
+   ],
+   [
+    "L28H7",
+    -1.44
+   ],
+   [
+    "L35H27",
+    -1.1
+   ],
+   [
+    "L28H4",
+    1.02
+   ],
+   [
+    "L27H31",
+    0.95
+   ],
+   [
+    "L35H20",
+    -0.93
+   ],
+   [
+    "L34H29",
+    -0.86
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:1235",
+    11.69,
+    true
+   ],
+   [
+    "L35:11796",
+    -3.92,
+    false
+   ],
+   [
+    "L32:5418",
+    -3.2,
+    false
+   ],
+   [
+    "L28:997",
+    2.1,
+    true
+   ],
+   [
+    "L30:7321",
+    1.66,
+    false
+   ],
+   [
+    "L28:1950",
+    1.03,
+    false
+   ],
+   [
+    "L33:7759",
+    1.01,
+    false
+   ],
+   [
+    "L28:8031",
+    0.99,
+    false
+   ],
+   [
+    "L34:9538",
+    -0.91,
+    false
+   ],
+   [
+    "L29:678",
+    0.91,
+    false
+   ]
+  ],
+  "neurons_for_half": 5,
+  "neurons_for_90pct": 35,
+  "heads_for_half": 6,
+  "heads_for_90pct": 20,
+  "max_recon_err": 0.0163,
+  "max_score_err": 0.0028
+ },
+ "black holes": {
+  "answer_token": "Black",
+  "score_vs_mean": 43.95,
+  "from_heads": 8.67,
+  "from_neurons": 35.29,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 15.78,
+  "by_band": {
+   "heads 0-15": 0.28,
+   "heads 16-23": 0.37,
+   "heads 24-29": 1.34,
+   "heads 30-35": 6.68,
+   "neurons 0-15": -0.13,
+   "neurons 16-23": 0.14,
+   "neurons 24-29": 12.42,
+   "neurons 30-35": 22.86
+  },
+  "top_heads": [
+   [
+    "L35H22",
+    2.35
+   ],
+   [
+    "L35H25",
+    2.17
+   ],
+   [
+    "L34H28",
+    0.99
+   ],
+   [
+    "L35H27",
+    -0.94
+   ],
+   [
+    "L35H20",
+    -0.83
+   ],
+   [
+    "L34H12",
+    0.5
+   ],
+   [
+    "L34H21",
+    0.47
+   ],
+   [
+    "L35H23",
+    0.46
+   ],
+   [
+    "L34H29",
+    -0.41
+   ],
+   [
+    "L33H7",
+    0.27
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L29:8862",
+    5.91,
+    true
+   ],
+   [
+    "L32:7014",
+    4.4,
+    true
+   ],
+   [
+    "L34:11328",
+    -3.14,
+    false
+   ],
+   [
+    "L34:10326",
+    2.79,
+    true
+   ],
+   [
+    "L35:3032",
+    1.56,
+    true
+   ],
+   [
+    "L33:3108",
+    -1.5,
+    false
+   ],
+   [
+    "L27:7724",
+    1.04,
+    true
+   ],
+   [
+    "L27:10844",
+    1.02,
+    false
+   ],
+   [
+    "L31:4789",
+    0.95,
+    false
+   ],
+   [
+    "L35:6560",
+    -0.66,
+    false
+   ]
+  ],
+  "neurons_for_half": 7,
+  "neurons_for_90pct": 59,
+  "heads_for_half": 2,
+  "heads_for_90pct": 10,
+  "max_recon_err": 0.0151,
+  "max_score_err": 0.0034
+ },
+ "evolution by natural selection": {
+  "answer_token": "Natural",
+  "score_vs_mean": 48.08,
+  "from_heads": 8.61,
+  "from_neurons": 39.47,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 5.38,
+  "by_band": {
+   "heads 0-15": -0.06,
+   "heads 16-23": 0.45,
+   "heads 24-29": 1.34,
+   "heads 30-35": 6.87,
+   "neurons 0-15": 0.25,
+   "neurons 16-23": 0.1,
+   "neurons 24-29": 10.63,
+   "neurons 30-35": 28.49
+  },
+  "top_heads": [
+   [
+    "L35H22",
+    2.0
+   ],
+   [
+    "L35H25",
+    1.3
+   ],
+   [
+    "L34H28",
+    1.15
+   ],
+   [
+    "L34H21",
+    0.95
+   ],
+   [
+    "L31H9",
+    0.82
+   ],
+   [
+    "L34H29",
+    -0.72
+   ],
+   [
+    "L30H2",
+    -0.6
+   ],
+   [
+    "L35H27",
+    -0.53
+   ],
+   [
+    "L35H5",
+    0.5
+   ],
+   [
+    "L30H17",
+    0.46
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L28:4964",
+    5.36,
+    true
+   ],
+   [
+    "L34:2280",
+    -4.18,
+    false
+   ],
+   [
+    "L31:855",
+    2.42,
+    false
+   ],
+   [
+    "L32:796",
+    1.59,
+    false
+   ],
+   [
+    "L30:2496",
+    1.3,
+    false
+   ],
+   [
+    "L27:9469",
+    1.06,
+    false
+   ],
+   [
+    "L30:3992",
+    0.76,
+    false
+   ],
+   [
+    "L35:11461",
+    0.67,
+    false
+   ],
+   [
+    "L30:1280",
+    0.67,
+    false
+   ],
+   [
+    "L33:7759",
+    0.57,
+    false
+   ]
+  ],
+  "neurons_for_half": 20,
+  "neurons_for_90pct": 106,
+  "heads_for_half": 3,
+  "heads_for_90pct": 9,
+  "max_recon_err": 0.0114,
+  "max_score_err": 0.0023
+ },
+ "the periodic table": {
+  "answer_token": "Period",
+  "score_vs_mean": 48.5,
+  "from_heads": 8.9,
+  "from_neurons": 39.61,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 0.03,
+  "by_band": {
+   "heads 0-15": -0.02,
+   "heads 16-23": 0.13,
+   "heads 24-29": 0.87,
+   "heads 30-35": 7.92,
+   "neurons 0-15": 0.08,
+   "neurons 16-23": 0.31,
+   "neurons 24-29": 13.63,
+   "neurons 30-35": 25.59
+  },
+  "top_heads": [
+   [
+    "L33H6",
+    1.97
+   ],
+   [
+    "L35H25",
+    1.82
+   ],
+   [
+    "L33H4",
+    -1.43
+   ],
+   [
+    "L34H28",
+    1.33
+   ],
+   [
+    "L34H21",
+    1.25
+   ],
+   [
+    "L35H27",
+    -1.19
+   ],
+   [
+    "L35H19",
+    0.98
+   ],
+   [
+    "L35H22",
+    0.71
+   ],
+   [
+    "L34H15",
+    0.53
+   ],
+   [
+    "L34H29",
+    -0.45
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:10263",
+    5.19,
+    false
+   ],
+   [
+    "L28:2754",
+    4.98,
+    false
+   ],
+   [
+    "L35:6925",
+    -2.0,
+    false
+   ],
+   [
+    "L29:9933",
+    1.2,
+    false
+   ],
+   [
+    "L31:10622",
+    1.1,
+    false
+   ],
+   [
+    "L35:8891",
+    1.06,
+    false
+   ],
+   [
+    "L29:12159",
+    1.06,
+    false
+   ],
+   [
+    "L33:1946",
+    0.98,
+    false
+   ],
+   [
+    "L35:9788",
+    0.98,
+    false
+   ],
+   [
+    "L32:3820",
+    0.91,
+    false
+   ]
+  ],
+  "neurons_for_half": 12,
+  "neurons_for_90pct": 72,
+  "heads_for_half": 3,
+  "heads_for_90pct": 6,
+  "max_recon_err": 0.0079,
+  "max_score_err": 0.0025
+ },
+ "the internet": {
+  "answer_token": "Internet",
+  "score_vs_mean": 47.79,
+  "from_heads": 15.38,
+  "from_neurons": 32.41,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 12.41,
+  "by_band": {
+   "heads 0-15": 0.23,
+   "heads 16-23": 2.11,
+   "heads 24-29": 6.7,
+   "heads 30-35": 6.33,
+   "neurons 0-15": 0.05,
+   "neurons 16-23": -0.01,
+   "neurons 24-29": 16.98,
+   "neurons 30-35": 15.38
+  },
+  "top_heads": [
+   [
+    "L34H28",
+    2.01
+   ],
+   [
+    "L27H28",
+    1.46
+   ],
+   [
+    "L28H7",
+    -1.33
+   ],
+   [
+    "L35H25",
+    1.15
+   ],
+   [
+    "L34H29",
+    -1.03
+   ],
+   [
+    "L35H27",
+    -0.95
+   ],
+   [
+    "L34H15",
+    0.88
+   ],
+   [
+    "L28H6",
+    0.86
+   ],
+   [
+    "L26H17",
+    0.73
+   ],
+   [
+    "L30H17",
+    0.73
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L32:1190",
+    6.73,
+    true
+   ],
+   [
+    "L32:8938",
+    -5.07,
+    false
+   ],
+   [
+    "L31:1987",
+    4.09,
+    false
+   ],
+   [
+    "L28:9874",
+    3.33,
+    true
+   ],
+   [
+    "L29:6828",
+    1.55,
+    false
+   ],
+   [
+    "L33:3296",
+    -1.23,
+    false
+   ],
+   [
+    "L34:8908",
+    -1.2,
+    false
+   ],
+   [
+    "L33:10267",
+    -1.05,
+    false
+   ],
+   [
+    "L28:10118",
+    0.96,
+    true
+   ],
+   [
+    "L29:7417",
+    0.91,
+    false
+   ]
+  ],
+  "neurons_for_half": 5,
+  "neurons_for_90pct": 32,
+  "heads_for_half": 7,
+  "heads_for_90pct": 20,
+  "max_recon_err": 0.0139,
+  "max_score_err": 0.0024
+ },
+ "the steam engine": {
+  "answer_token": "Steam",
+  "score_vs_mean": 41.35,
+  "from_heads": 11.35,
+  "from_neurons": 29.99,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 5.07,
+  "by_band": {
+   "heads 0-15": -0.1,
+   "heads 16-23": 0.39,
+   "heads 24-29": 4.05,
+   "heads 30-35": 7.02,
+   "neurons 0-15": 0.29,
+   "neurons 16-23": 0.44,
+   "neurons 24-29": 7.23,
+   "neurons 30-35": 22.03
+  },
+  "top_heads": [
+   [
+    "L35H22",
+    2.28
+   ],
+   [
+    "L35H25",
+    1.44
+   ],
+   [
+    "L34H21",
+    1.27
+   ],
+   [
+    "L34H28",
+    1.15
+   ],
+   [
+    "L35H20",
+    -0.85
+   ],
+   [
+    "L29H27",
+    0.78
+   ],
+   [
+    "L35H23",
+    0.68
+   ],
+   [
+    "L35H27",
+    -0.67
+   ],
+   [
+    "L30H17",
+    0.58
+   ],
+   [
+    "L26H20",
+    0.57
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L35:4691",
+    -3.9,
+    false
+   ],
+   [
+    "L32:2089",
+    3.48,
+    true
+   ],
+   [
+    "L31:4419",
+    1.71,
+    false
+   ],
+   [
+    "L30:8569",
+    1.67,
+    false
+   ],
+   [
+    "L29:8456",
+    1.52,
+    false
+   ],
+   [
+    "L30:3401",
+    0.88,
+    true
+   ],
+   [
+    "L35:4478",
+    0.8,
+    false
+   ],
+   [
+    "L32:1845",
+    -0.7,
+    false
+   ],
+   [
+    "L31:3946",
+    -0.57,
+    false
+   ],
+   [
+    "L30:11425",
+    0.56,
+    false
+   ]
+  ],
+  "neurons_for_half": 19,
+  "neurons_for_90pct": 73,
+  "heads_for_half": 4,
+  "heads_for_90pct": 12,
+  "max_recon_err": 0.0101,
+  "max_score_err": 0.0026
+ },
+ "the printing press": {
+  "answer_token": "Printing",
+  "score_vs_mean": 38.17,
+  "from_heads": 8.63,
+  "from_neurons": 29.54,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 1.34,
+  "by_band": {
+   "heads 0-15": 0.25,
+   "heads 16-23": 0.72,
+   "heads 24-29": 4.43,
+   "heads 30-35": 3.24,
+   "neurons 0-15": -0.22,
+   "neurons 16-23": 0.06,
+   "neurons 24-29": 14.67,
+   "neurons 30-35": 15.04
+  },
+  "top_heads": [
+   [
+    "L34H16",
+    -1.28
+   ],
+   [
+    "L29H26",
+    1.12
+   ],
+   [
+    "L35H25",
+    1.0
+   ],
+   [
+    "L28H7",
+    -0.9
+   ],
+   [
+    "L34H15",
+    0.8
+   ],
+   [
+    "L29H27",
+    0.65
+   ],
+   [
+    "L34H19",
+    0.6
+   ],
+   [
+    "L34H17",
+    0.52
+   ],
+   [
+    "L28H6",
+    0.4
+   ],
+   [
+    "L35H27",
+    -0.37
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L33:7653",
+    -5.5,
+    false
+   ],
+   [
+    "L28:4408",
+    5.17,
+    false
+   ],
+   [
+    "L31:1279",
+    4.7,
+    false
+   ],
+   [
+    "L35:6682",
+    -4.3,
+    false
+   ],
+   [
+    "L31:3714",
+    3.01,
+    false
+   ],
+   [
+    "L29:10477",
+    0.93,
+    false
+   ],
+   [
+    "L32:9042",
+    -0.82,
+    false
+   ],
+   [
+    "L27:601",
+    0.8,
+    true
+   ],
+   [
+    "L33:11685",
+    0.78,
+    false
+   ],
+   [
+    "L30:10013",
+    -0.74,
+    false
+   ]
+  ],
+  "neurons_for_half": 6,
+  "neurons_for_90pct": 38,
+  "heads_for_half": 6,
+  "heads_for_90pct": 16,
+  "max_recon_err": 0.0098,
+  "max_score_err": 0.0029
+ },
+ "Bitcoin": {
+  "answer_token": "Bitcoin",
+  "score_vs_mean": 53.6,
+  "from_heads": 20.69,
+  "from_neurons": 32.91,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": -1.1,
+  "by_band": {
+   "heads 0-15": 0.26,
+   "heads 16-23": 1.94,
+   "heads 24-29": 8.71,
+   "heads 30-35": 9.78,
+   "neurons 0-15": -0.01,
+   "neurons 16-23": 1.19,
+   "neurons 24-29": 9.82,
+   "neurons 30-35": 21.91
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.47
+   ],
+   [
+    "L29H25",
+    1.93
+   ],
+   [
+    "L34H28",
+    1.75
+   ],
+   [
+    "L31H3",
+    1.6
+   ],
+   [
+    "L35H27",
+    -1.25
+   ],
+   [
+    "L35H22",
+    1.23
+   ],
+   [
+    "L23H10",
+    1.13
+   ],
+   [
+    "L26H20",
+    1.1
+   ],
+   [
+    "L30H17",
+    1.02
+   ],
+   [
+    "L34H29",
+    -1.01
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:8242",
+    3.58,
+    false
+   ],
+   [
+    "L33:5144",
+    2.86,
+    false
+   ],
+   [
+    "L30:6284",
+    2.56,
+    false
+   ],
+   [
+    "L35:1110",
+    -2.19,
+    true
+   ],
+   [
+    "L32:2193",
+    1.27,
+    false
+   ],
+   [
+    "L34:1622",
+    -1.18,
+    false
+   ],
+   [
+    "L34:310",
+    1.03,
+    false
+   ],
+   [
+    "L35:8545",
+    0.99,
+    true
+   ],
+   [
+    "L35:5661",
+    -0.97,
+    false
+   ],
+   [
+    "L32:9474",
+    -0.9,
+    false
+   ]
+  ],
+  "neurons_for_half": 14,
+  "neurons_for_90pct": 74,
+  "heads_for_half": 7,
+  "heads_for_90pct": 19,
+  "max_recon_err": 0.0145,
+  "max_score_err": 0.0032
+ },
+ "jealousy": {
+  "answer_token": "Je",
+  "score_vs_mean": 38.99,
+  "from_heads": 6.33,
+  "from_neurons": 32.66,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 14.92,
+  "by_band": {
+   "heads 0-15": 0.18,
+   "heads 16-23": -0.11,
+   "heads 24-29": 1.16,
+   "heads 30-35": 5.1,
+   "neurons 0-15": -0.16,
+   "neurons 16-23": 1.11,
+   "neurons 24-29": 3.7,
+   "neurons 30-35": 28.0
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.1
+   ],
+   [
+    "L34H28",
+    1.45
+   ],
+   [
+    "L34H29",
+    -0.95
+   ],
+   [
+    "L35H27",
+    -0.87
+   ],
+   [
+    "L35H22",
+    0.6
+   ],
+   [
+    "L34H21",
+    0.58
+   ],
+   [
+    "L35H19",
+    0.47
+   ],
+   [
+    "L28H6",
+    0.31
+   ],
+   [
+    "L34H12",
+    0.3
+   ],
+   [
+    "L30H2",
+    -0.27
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:1455",
+    11.32,
+    true
+   ],
+   [
+    "L35:11702",
+    -4.89,
+    false
+   ],
+   [
+    "L30:2963",
+    1.37,
+    true
+   ],
+   [
+    "L34:1159",
+    1.04,
+    true
+   ],
+   [
+    "L35:7351",
+    0.94,
+    true
+   ],
+   [
+    "L35:8034",
+    0.54,
+    false
+   ],
+   [
+    "L33:7759",
+    0.52,
+    false
+   ],
+   [
+    "L30:9556",
+    0.45,
+    false
+   ],
+   [
+    "L33:10933",
+    0.44,
+    false
+   ],
+   [
+    "L35:5254",
+    -0.43,
+    false
+   ]
+  ],
+  "neurons_for_half": 8,
+  "neurons_for_90pct": 71,
+  "heads_for_half": 2,
+  "heads_for_90pct": 7,
+  "max_recon_err": 0.009,
+  "max_score_err": 0.0029
+ },
+ "nostalgia": {
+  "answer_token": "N",
+  "score_vs_mean": 39.62,
+  "from_heads": 8.81,
+  "from_neurons": 30.8,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 6.57,
+  "by_band": {
+   "heads 0-15": 0.21,
+   "heads 16-23": -0.3,
+   "heads 24-29": -0.11,
+   "heads 30-35": 9.01,
+   "neurons 0-15": -0.18,
+   "neurons 16-23": 0.13,
+   "neurons 24-29": 4.88,
+   "neurons 30-35": 25.97
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    6.1
+   ],
+   [
+    "L34H28",
+    2.07
+   ],
+   [
+    "L35H24",
+    -1.55
+   ],
+   [
+    "L34H29",
+    -1.53
+   ],
+   [
+    "L35H27",
+    -1.32
+   ],
+   [
+    "L34H12",
+    0.96
+   ],
+   [
+    "L34H30",
+    0.61
+   ],
+   [
+    "L34H14",
+    0.41
+   ],
+   [
+    "L34H15",
+    0.38
+   ],
+   [
+    "L34H13",
+    0.36
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:6428",
+    2.75,
+    true
+   ],
+   [
+    "L34:5688",
+    1.91,
+    false
+   ],
+   [
+    "L33:10933",
+    1.37,
+    false
+   ],
+   [
+    "L29:10286",
+    1.19,
+    true
+   ],
+   [
+    "L35:2719",
+    1.11,
+    true
+   ],
+   [
+    "L35:4272",
+    1.01,
+    false
+   ],
+   [
+    "L33:7759",
+    0.95,
+    false
+   ],
+   [
+    "L35:16",
+    -0.92,
+    false
+   ],
+   [
+    "L33:1339",
+    0.79,
+    true
+   ],
+   [
+    "L34:1452",
+    -0.75,
+    false
+   ]
+  ],
+  "neurons_for_half": 16,
+  "neurons_for_90pct": 63,
+  "heads_for_half": 1,
+  "heads_for_90pct": 2,
+  "max_recon_err": 0.0094,
+  "max_score_err": 0.0037
+ },
+ "justice": {
+  "answer_token": "Justice",
+  "score_vs_mean": 42.47,
+  "from_heads": 14.69,
+  "from_neurons": 27.79,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 10.57,
+  "by_band": {
+   "heads 0-15": 0.01,
+   "heads 16-23": 1.09,
+   "heads 24-29": 4.15,
+   "heads 30-35": 9.45,
+   "neurons 0-15": -0.1,
+   "neurons 16-23": -0.04,
+   "neurons 24-29": 9.61,
+   "neurons 30-35": 18.31
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.71
+   ],
+   [
+    "L34H28",
+    1.46
+   ],
+   [
+    "L35H19",
+    0.94
+   ],
+   [
+    "L30H17",
+    0.88
+   ],
+   [
+    "L35H22",
+    0.81
+   ],
+   [
+    "L34H29",
+    -0.79
+   ],
+   [
+    "L31H26",
+    0.79
+   ],
+   [
+    "L34H21",
+    0.69
+   ],
+   [
+    "L34H15",
+    0.68
+   ],
+   [
+    "L35H27",
+    -0.65
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:11794",
+    6.29,
+    true
+   ],
+   [
+    "L35:1539",
+    -3.52,
+    false
+   ],
+   [
+    "L32:607",
+    1.57,
+    true
+   ],
+   [
+    "L26:1460",
+    1.51,
+    true
+   ],
+   [
+    "L31:11734",
+    -1.4,
+    false
+   ],
+   [
+    "L28:5504",
+    1.2,
+    true
+   ],
+   [
+    "L33:5270",
+    0.86,
+    false
+   ],
+   [
+    "L28:6047",
+    0.69,
+    false
+   ],
+   [
+    "L31:7665",
+    0.58,
+    false
+   ],
+   [
+    "L28:3129",
+    0.58,
+    false
+   ]
+  ],
+  "neurons_for_half": 10,
+  "neurons_for_90pct": 59,
+  "heads_for_half": 8,
+  "heads_for_90pct": 26,
+  "max_recon_err": 0.0116,
+  "max_score_err": 0.0032
+ },
+ "infinity": {
+  "answer_token": "Infinity",
+  "score_vs_mean": 46.44,
+  "from_heads": 16.59,
+  "from_neurons": 29.85,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": -0.0,
+  "by_band": {
+   "heads 0-15": 0.17,
+   "heads 16-23": 1.83,
+   "heads 24-29": 5.15,
+   "heads 30-35": 9.44,
+   "neurons 0-15": -0.03,
+   "neurons 16-23": 0.53,
+   "neurons 24-29": 10.93,
+   "neurons 30-35": 18.42
+  },
+  "top_heads": [
+   [
+    "L34H21",
+    2.85
+   ],
+   [
+    "L31H9",
+    2.61
+   ],
+   [
+    "L35H25",
+    1.68
+   ],
+   [
+    "L28H6",
+    0.83
+   ],
+   [
+    "L34H28",
+    0.82
+   ],
+   [
+    "L34H17",
+    0.8
+   ],
+   [
+    "L35H27",
+    -0.71
+   ],
+   [
+    "L27H8",
+    0.7
+   ],
+   [
+    "L34H29",
+    -0.67
+   ],
+   [
+    "L26H29",
+    0.66
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:5219",
+    8.0,
+    false
+   ],
+   [
+    "L34:6039",
+    -5.16,
+    false
+   ],
+   [
+    "L28:5143",
+    4.3,
+    false
+   ],
+   [
+    "L32:6778",
+    -4.28,
+    false
+   ],
+   [
+    "L30:8800",
+    4.09,
+    false
+   ],
+   [
+    "L32:10868",
+    -1.93,
+    false
+   ],
+   [
+    "L32:8411",
+    -1.07,
+    false
+   ],
+   [
+    "L27:1678",
+    0.68,
+    false
+   ],
+   [
+    "L34:1205",
+    -0.61,
+    false
+   ],
+   [
+    "L34:3428",
+    0.6,
+    false
+   ]
+  ],
+  "neurons_for_half": 3,
+  "neurons_for_90pct": 33,
+  "heads_for_half": 5,
+  "heads_for_90pct": 20,
+  "max_recon_err": 0.0104,
+  "max_score_err": 0.0031
+ },
+ "the heart": {
+  "answer_token": "Heart",
+  "score_vs_mean": 51.17,
+  "from_heads": 13.53,
+  "from_neurons": 37.65,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 0.32,
+  "by_band": {
+   "heads 0-15": 0.01,
+   "heads 16-23": 0.92,
+   "heads 24-29": 4.03,
+   "heads 30-35": 8.56,
+   "neurons 0-15": 0.16,
+   "neurons 16-23": -0.11,
+   "neurons 24-29": 10.8,
+   "neurons 30-35": 26.8
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.3
+   ],
+   [
+    "L35H22",
+    2.28
+   ],
+   [
+    "L34H28",
+    1.77
+   ],
+   [
+    "L35H20",
+    -0.94
+   ],
+   [
+    "L35H27",
+    -0.83
+   ],
+   [
+    "L34H15",
+    0.74
+   ],
+   [
+    "L29H27",
+    0.74
+   ],
+   [
+    "L35H23",
+    0.71
+   ],
+   [
+    "L34H21",
+    0.67
+   ],
+   [
+    "L28H7",
+    -0.65
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:9141",
+    11.74,
+    false
+   ],
+   [
+    "L32:5788",
+    -5.23,
+    false
+   ],
+   [
+    "L35:1218",
+    -3.11,
+    false
+   ],
+   [
+    "L28:2965",
+    3.02,
+    false
+   ],
+   [
+    "L34:486",
+    -1.58,
+    false
+   ],
+   [
+    "L31:8778",
+    1.17,
+    false
+   ],
+   [
+    "L29:10173",
+    1.09,
+    false
+   ],
+   [
+    "L33:8440",
+    1.09,
+    false
+   ],
+   [
+    "L29:10527",
+    0.88,
+    false
+   ],
+   [
+    "L33:6981",
+    -0.79,
+    false
+   ]
+  ],
+  "neurons_for_half": 6,
+  "neurons_for_90pct": 47,
+  "heads_for_half": 4,
+  "heads_for_90pct": 15,
+  "max_recon_err": 0.0103,
+  "max_score_err": 0.002
+ },
+ "vaccines": {
+  "answer_token": "V",
+  "score_vs_mean": 42.18,
+  "from_heads": 8.36,
+  "from_neurons": 33.81,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 13.85,
+  "by_band": {
+   "heads 0-15": 0.21,
+   "heads 16-23": -0.49,
+   "heads 24-29": -0.38,
+   "heads 30-35": 9.02,
+   "neurons 0-15": 0.1,
+   "neurons 16-23": 0.23,
+   "neurons 24-29": 2.92,
+   "neurons 30-35": 30.57
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    6.21
+   ],
+   [
+    "L35H24",
+    -1.95
+   ],
+   [
+    "L34H28",
+    1.88
+   ],
+   [
+    "L35H27",
+    -1.78
+   ],
+   [
+    "L34H29",
+    -1.7
+   ],
+   [
+    "L34H12",
+    1.18
+   ],
+   [
+    "L34H30",
+    0.51
+   ],
+   [
+    "L35H12",
+    0.44
+   ],
+   [
+    "L34H14",
+    0.42
+   ],
+   [
+    "L34H13",
+    0.41
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:7865",
+    3.27,
+    true
+   ],
+   [
+    "L34:8612",
+    3.1,
+    true
+   ],
+   [
+    "L32:6298",
+    2.94,
+    true
+   ],
+   [
+    "L35:8978",
+    -1.75,
+    false
+   ],
+   [
+    "L29:1825",
+    1.52,
+    true
+   ],
+   [
+    "L34:553",
+    1.48,
+    true
+   ],
+   [
+    "L33:10933",
+    1.36,
+    false
+   ],
+   [
+    "L35:8801",
+    1.23,
+    true
+   ],
+   [
+    "L34:6749",
+    -0.99,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.94,
+    false
+   ]
+  ],
+  "neurons_for_half": 10,
+  "neurons_for_90pct": 58,
+  "heads_for_half": 1,
+  "heads_for_90pct": 2,
+  "max_recon_err": 0.0106,
+  "max_score_err": 0.003
+ },
+ "insomnia": {
+  "answer_token": "Ins",
+  "score_vs_mean": 40.86,
+  "from_heads": 6.2,
+  "from_neurons": 34.67,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 12.46,
+  "by_band": {
+   "heads 0-15": 0.1,
+   "heads 16-23": 0.23,
+   "heads 24-29": 0.98,
+   "heads 30-35": 4.89,
+   "neurons 0-15": -0.14,
+   "neurons 16-23": -0.37,
+   "neurons 24-29": 10.59,
+   "neurons 30-35": 24.6
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.73
+   ],
+   [
+    "L34H28",
+    1.26
+   ],
+   [
+    "L35H22",
+    1.08
+   ],
+   [
+    "L34H29",
+    -0.99
+   ],
+   [
+    "L34H21",
+    0.83
+   ],
+   [
+    "L35H27",
+    -0.8
+   ],
+   [
+    "L35H19",
+    0.54
+   ],
+   [
+    "L34H12",
+    0.48
+   ],
+   [
+    "L35H20",
+    -0.31
+   ],
+   [
+    "L35H13",
+    0.22
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L29:2857",
+    5.8,
+    true
+   ],
+   [
+    "L33:11564",
+    2.58,
+    true
+   ],
+   [
+    "L35:4085",
+    -1.53,
+    false
+   ],
+   [
+    "L34:3881",
+    1.42,
+    true
+   ],
+   [
+    "L33:7763",
+    -1.17,
+    false
+   ],
+   [
+    "L29:9084",
+    1.12,
+    true
+   ],
+   [
+    "L29:5246",
+    0.99,
+    true
+   ],
+   [
+    "L35:2268",
+    0.84,
+    false
+   ],
+   [
+    "L35:11333",
+    0.8,
+    false
+   ],
+   [
+    "L34:2516",
+    0.56,
+    false
+   ]
+  ],
+  "neurons_for_half": 16,
+  "neurons_for_90pct": 84,
+  "heads_for_half": 3,
+  "heads_for_90pct": 6,
+  "max_recon_err": 0.0091,
+  "max_score_err": 0.003
+ },
+ "the brain": {
+  "answer_token": "Brain",
+  "score_vs_mean": 51.76,
+  "from_heads": 14.9,
+  "from_neurons": 36.86,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 13.35,
+  "by_band": {
+   "heads 0-15": 0.41,
+   "heads 16-23": 1.08,
+   "heads 24-29": 5.37,
+   "heads 30-35": 8.04,
+   "neurons 0-15": -0.39,
+   "neurons 16-23": 0.34,
+   "neurons 24-29": 11.05,
+   "neurons 30-35": 25.86
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.05
+   ],
+   [
+    "L35H22",
+    1.9
+   ],
+   [
+    "L34H28",
+    1.32
+   ],
+   [
+    "L35H27",
+    -1.01
+   ],
+   [
+    "L28H4",
+    0.98
+   ],
+   [
+    "L35H20",
+    -0.9
+   ],
+   [
+    "L28H7",
+    -0.86
+   ],
+   [
+    "L34H21",
+    0.84
+   ],
+   [
+    "L34H12",
+    0.59
+   ],
+   [
+    "L26H17",
+    0.58
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:11102",
+    11.12,
+    true
+   ],
+   [
+    "L33:10218",
+    -6.37,
+    false
+   ],
+   [
+    "L32:4466",
+    -3.24,
+    false
+   ],
+   [
+    "L28:2965",
+    1.72,
+    false
+   ],
+   [
+    "L34:2979",
+    -1.29,
+    false
+   ],
+   [
+    "L28:9182",
+    1.22,
+    true
+   ],
+   [
+    "L30:11580",
+    1.22,
+    false
+   ],
+   [
+    "L30:9314",
+    1.0,
+    true
+   ],
+   [
+    "L30:11711",
+    -0.76,
+    false
+   ],
+   [
+    "L31:9640",
+    0.67,
+    false
+   ]
+  ],
+  "neurons_for_half": 9,
+  "neurons_for_90pct": 56,
+  "heads_for_half": 6,
+  "heads_for_90pct": 21,
+  "max_recon_err": 0.0138,
+  "max_score_err": 0.0027
+ },
+ "jazz": {
+  "answer_token": "J",
+  "score_vs_mean": 36.24,
+  "from_heads": 7.73,
+  "from_neurons": 28.52,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 9.02,
+  "by_band": {
+   "heads 0-15": 0.28,
+   "heads 16-23": -0.06,
+   "heads 24-29": 0.47,
+   "heads 30-35": 7.04,
+   "neurons 0-15": -0.17,
+   "neurons 16-23": 0.39,
+   "neurons 24-29": 2.29,
+   "neurons 30-35": 26.0
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    4.2
+   ],
+   [
+    "L34H28",
+    1.74
+   ],
+   [
+    "L35H24",
+    -1.52
+   ],
+   [
+    "L35H27",
+    -1.43
+   ],
+   [
+    "L34H29",
+    -1.42
+   ],
+   [
+    "L34H12",
+    0.73
+   ],
+   [
+    "L34H30",
+    0.6
+   ],
+   [
+    "L34H15",
+    0.44
+   ],
+   [
+    "L34H14",
+    0.43
+   ],
+   [
+    "L34H13",
+    0.36
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:2449",
+    2.74,
+    true
+   ],
+   [
+    "L32:2101",
+    2.19,
+    true
+   ],
+   [
+    "L30:3901",
+    1.17,
+    true
+   ],
+   [
+    "L33:9269",
+    1.01,
+    true
+   ],
+   [
+    "L34:9002",
+    1.0,
+    false
+   ],
+   [
+    "L33:10933",
+    0.97,
+    false
+   ],
+   [
+    "L33:11026",
+    0.82,
+    true
+   ],
+   [
+    "L34:1159",
+    0.78,
+    true
+   ],
+   [
+    "L33:7759",
+    0.74,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.73,
+    false
+   ]
+  ],
+  "neurons_for_half": 15,
+  "neurons_for_90pct": 60,
+  "heads_for_half": 1,
+  "heads_for_90pct": 4,
+  "max_recon_err": 0.0122,
+  "max_score_err": 0.0026
+ },
+ "the Mona Lisa": {
+  "answer_token": "M",
+  "score_vs_mean": 40.83,
+  "from_heads": 7.37,
+  "from_neurons": 33.47,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 9.01,
+  "by_band": {
+   "heads 0-15": 0.21,
+   "heads 16-23": -0.24,
+   "heads 24-29": -0.36,
+   "heads 30-35": 7.75,
+   "neurons 0-15": -0.13,
+   "neurons 16-23": 0.52,
+   "neurons 24-29": 2.75,
+   "neurons 30-35": 30.34
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    4.46
+   ],
+   [
+    "L34H28",
+    2.3
+   ],
+   [
+    "L35H27",
+    -2.12
+   ],
+   [
+    "L35H24",
+    -1.63
+   ],
+   [
+    "L34H29",
+    -1.28
+   ],
+   [
+    "L34H12",
+    0.84
+   ],
+   [
+    "L34H15",
+    0.72
+   ],
+   [
+    "L34H30",
+    0.54
+   ],
+   [
+    "L34H14",
+    0.49
+   ],
+   [
+    "L34H13",
+    0.47
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:335",
+    4.67,
+    true
+   ],
+   [
+    "L33:2546",
+    1.84,
+    true
+   ],
+   [
+    "L34:8069",
+    1.47,
+    true
+   ],
+   [
+    "L33:10933",
+    1.16,
+    false
+   ],
+   [
+    "L34:9002",
+    1.02,
+    false
+   ],
+   [
+    "L33:9269",
+    1.02,
+    false
+   ],
+   [
+    "L34:1452",
+    -0.74,
+    false
+   ],
+   [
+    "L34:10173",
+    -0.73,
+    false
+   ],
+   [
+    "L35:3296",
+    -0.72,
+    false
+   ],
+   [
+    "L35:8846",
+    -0.68,
+    false
+   ]
+  ],
+  "neurons_for_half": 18,
+  "neurons_for_90pct": 90,
+  "heads_for_half": 1,
+  "heads_for_90pct": 2,
+  "max_recon_err": 0.0089,
+  "max_score_err": 0.003
+ },
+ "ballet": {
+  "answer_token": "B",
+  "score_vs_mean": 38.95,
+  "from_heads": 8.16,
+  "from_neurons": 30.79,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 5.39,
+  "by_band": {
+   "heads 0-15": 0.39,
+   "heads 16-23": -0.33,
+   "heads 24-29": -0.01,
+   "heads 30-35": 8.12,
+   "neurons 0-15": -0.18,
+   "neurons 16-23": 0.2,
+   "neurons 24-29": 1.85,
+   "neurons 30-35": 28.92
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    4.18
+   ],
+   [
+    "L35H27",
+    -1.42
+   ],
+   [
+    "L34H12",
+    1.27
+   ],
+   [
+    "L34H28",
+    1.25
+   ],
+   [
+    "L35H24",
+    -1.15
+   ],
+   [
+    "L34H29",
+    -0.85
+   ],
+   [
+    "L34H14",
+    0.49
+   ],
+   [
+    "L34H13",
+    0.45
+   ],
+   [
+    "L34H30",
+    0.44
+   ],
+   [
+    "L35H12",
+    0.42
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:934",
+    3.23,
+    true
+   ],
+   [
+    "L35:1440",
+    1.48,
+    true
+   ],
+   [
+    "L33:10933",
+    1.28,
+    false
+   ],
+   [
+    "L33:9269",
+    1.28,
+    false
+   ],
+   [
+    "L34:9002",
+    1.1,
+    false
+   ],
+   [
+    "L34:1452",
+    -1.0,
+    false
+   ],
+   [
+    "L33:7759",
+    0.93,
+    false
+   ],
+   [
+    "L34:11344",
+    0.81,
+    false
+   ],
+   [
+    "L35:8034",
+    0.71,
+    false
+   ],
+   [
+    "L35:6167",
+    -0.66,
+    false
+   ]
+  ],
+  "neurons_for_half": 18,
+  "neurons_for_90pct": 65,
+  "heads_for_half": 1,
+  "heads_for_90pct": 5,
+  "max_recon_err": 0.0099,
+  "max_score_err": 0.0029
+ },
+ "haiku": {
+  "answer_token": "Ha",
+  "score_vs_mean": 36.79,
+  "from_heads": 4.54,
+  "from_neurons": 32.26,
+  "from_embedding": -0.0,
+  "own_concept_neurons_direct": 4.1,
+  "by_band": {
+   "heads 0-15": 0.09,
+   "heads 16-23": -0.33,
+   "heads 24-29": 0.39,
+   "heads 30-35": 4.39,
+   "neurons 0-15": -0.12,
+   "neurons 16-23": 0.65,
+   "neurons 24-29": 4.58,
+   "neurons 30-35": 27.15
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.65
+   ],
+   [
+    "L34H28",
+    1.95
+   ],
+   [
+    "L35H27",
+    -1.53
+   ],
+   [
+    "L34H29",
+    -0.65
+   ],
+   [
+    "L35H22",
+    0.51
+   ],
+   [
+    "L34H21",
+    0.38
+   ],
+   [
+    "L35H26",
+    -0.27
+   ],
+   [
+    "L35H20",
+    -0.23
+   ],
+   [
+    "L34H8",
+    0.19
+   ],
+   [
+    "L34H30",
+    0.18
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:12178",
+    1.94,
+    true
+   ],
+   [
+    "L35:4852",
+    1.51,
+    false
+   ],
+   [
+    "L35:4357",
+    -1.27,
+    false
+   ],
+   [
+    "L33:3510",
+    -1.07,
+    false
+   ],
+   [
+    "L34:10697",
+    1.01,
+    false
+   ],
+   [
+    "L31:5284",
+    0.87,
+    false
+   ],
+   [
+    "L32:3997",
+    0.64,
+    false
+   ],
+   [
+    "L33:1456",
+    0.62,
+    false
+   ],
+   [
+    "L33:10809",
+    0.55,
+    false
+   ],
+   [
+    "L35:11620",
+    0.51,
+    false
+   ]
+  ],
+  "neurons_for_half": 33,
+  "neurons_for_90pct": 107,
+  "heads_for_half": 1,
+  "heads_for_90pct": 2,
+  "max_recon_err": 0.0095,
+  "max_score_err": 0.0034
+ },
+ "volcanoes": {
+  "answer_token": "Vol",
+  "score_vs_mean": 43.87,
+  "from_heads": 8.7,
+  "from_neurons": 35.17,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 16.95,
+  "by_band": {
+   "heads 0-15": -0.04,
+   "heads 16-23": 0.04,
+   "heads 24-29": 2.09,
+   "heads 30-35": 6.6,
+   "neurons 0-15": 0.02,
+   "neurons 16-23": 0.86,
+   "neurons 24-29": 9.51,
+   "neurons 30-35": 24.79
+  },
+  "top_heads": [
+   [
+    "L35H22",
+    3.15
+   ],
+   [
+    "L35H25",
+    2.02
+   ],
+   [
+    "L35H27",
+    -1.4
+   ],
+   [
+    "L34H28",
+    1.04
+   ],
+   [
+    "L35H20",
+    -0.8
+   ],
+   [
+    "L34H21",
+    0.58
+   ],
+   [
+    "L35H23",
+    0.49
+   ],
+   [
+    "L35H21",
+    -0.4
+   ],
+   [
+    "L26H20",
+    0.37
+   ],
+   [
+    "L34H29",
+    -0.31
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:2860",
+    8.84,
+    true
+   ],
+   [
+    "L35:7007",
+    -6.73,
+    false
+   ],
+   [
+    "L29:9618",
+    6.7,
+    true
+   ],
+   [
+    "L30:1609",
+    1.17,
+    false
+   ],
+   [
+    "L34:11186",
+    1.12,
+    false
+   ],
+   [
+    "L31:5148",
+    1.1,
+    true
+   ],
+   [
+    "L34:10847",
+    1.03,
+    false
+   ],
+   [
+    "L34:7185",
+    0.8,
+    false
+   ],
+   [
+    "L34:8612",
+    0.67,
+    false
+   ],
+   [
+    "L35:8034",
+    0.66,
+    false
+   ]
+  ],
+  "neurons_for_half": 4,
+  "neurons_for_90pct": 40,
+  "heads_for_half": 2,
+  "heads_for_90pct": 7,
+  "max_recon_err": 0.01,
+  "max_score_err": 0.0031
+ },
+ "rainbows": {
+  "answer_token": "Rain",
+  "score_vs_mean": 39.69,
+  "from_heads": 9.56,
+  "from_neurons": 30.13,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 9.6,
+  "by_band": {
+   "heads 0-15": 0.09,
+   "heads 16-23": 0.54,
+   "heads 24-29": 3.7,
+   "heads 30-35": 5.22,
+   "neurons 0-15": -0.25,
+   "neurons 16-23": 0.4,
+   "neurons 24-29": 9.44,
+   "neurons 30-35": 20.53
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.56
+   ],
+   [
+    "L34H21",
+    1.21
+   ],
+   [
+    "L34H28",
+    1.21
+   ],
+   [
+    "L35H27",
+    -0.97
+   ],
+   [
+    "L35H22",
+    0.92
+   ],
+   [
+    "L29H27",
+    0.81
+   ],
+   [
+    "L29H26",
+    0.67
+   ],
+   [
+    "L28H7",
+    -0.65
+   ],
+   [
+    "L35H20",
+    -0.62
+   ],
+   [
+    "L28H6",
+    0.53
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L30:537",
+    5.86,
+    true
+   ],
+   [
+    "L34:8963",
+    -5.01,
+    false
+   ],
+   [
+    "L26:1881",
+    2.8,
+    true
+   ],
+   [
+    "L35:8034",
+    0.78,
+    false
+   ],
+   [
+    "L35:8545",
+    0.66,
+    true
+   ],
+   [
+    "L31:6227",
+    -0.59,
+    false
+   ],
+   [
+    "L35:623",
+    0.5,
+    false
+   ],
+   [
+    "L28:12120",
+    0.47,
+    false
+   ],
+   [
+    "L32:11337",
+    0.45,
+    false
+   ],
+   [
+    "L33:9134",
+    -0.42,
+    false
+   ]
+  ],
+  "neurons_for_half": 19,
+  "neurons_for_90pct": 90,
+  "heads_for_half": 4,
+  "heads_for_90pct": 13,
+  "max_recon_err": 0.0105,
+  "max_score_err": 0.0023
+ },
+ "hurricanes": {
+  "answer_token": "Hur",
+  "score_vs_mean": 47.78,
+  "from_heads": 11.46,
+  "from_neurons": 36.32,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 4.93,
+  "by_band": {
+   "heads 0-15": -0.04,
+   "heads 16-23": 1.45,
+   "heads 24-29": 4.02,
+   "heads 30-35": 6.03,
+   "neurons 0-15": 0.12,
+   "neurons 16-23": -0.28,
+   "neurons 24-29": 8.08,
+   "neurons 30-35": 28.4
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    2.61
+   ],
+   [
+    "L35H27",
+    -2.06
+   ],
+   [
+    "L34H28",
+    1.55
+   ],
+   [
+    "L31H3",
+    1.13
+   ],
+   [
+    "L34H29",
+    -0.96
+   ],
+   [
+    "L35H22",
+    0.92
+   ],
+   [
+    "L34H21",
+    0.87
+   ],
+   [
+    "L30H17",
+    0.61
+   ],
+   [
+    "L26H20",
+    0.59
+   ],
+   [
+    "L29H24",
+    0.56
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L31:9555",
+    4.63,
+    false
+   ],
+   [
+    "L26:5530",
+    2.51,
+    true
+   ],
+   [
+    "L30:9073",
+    1.5,
+    true
+   ],
+   [
+    "L35:12079",
+    -1.43,
+    false
+   ],
+   [
+    "L28:6670",
+    1.25,
+    false
+   ],
+   [
+    "L34:9110",
+    1.23,
+    false
+   ],
+   [
+    "L32:166",
+    1.21,
+    false
+   ],
+   [
+    "L35:4852",
+    1.12,
+    false
+   ],
+   [
+    "L29:3509",
+    1.02,
+    false
+   ],
+   [
+    "L33:2159",
+    0.89,
+    false
+   ]
+  ],
+  "neurons_for_half": 15,
+  "neurons_for_90pct": 89,
+  "heads_for_half": 4,
+  "heads_for_90pct": 12,
+  "max_recon_err": 0.0097,
+  "max_score_err": 0.0031
+ },
+ "the Amazon rainforest": {
+  "answer_token": "Amazon",
+  "score_vs_mean": 38.23,
+  "from_heads": 9.69,
+  "from_neurons": 28.53,
+  "from_embedding": 0.0,
+  "own_concept_neurons_direct": 6.5,
+  "by_band": {
+   "heads 0-15": 0.25,
+   "heads 16-23": 0.58,
+   "heads 24-29": 4.09,
+   "heads 30-35": 4.77,
+   "neurons 0-15": -0.22,
+   "neurons 16-23": 0.53,
+   "neurons 24-29": 12.69,
+   "neurons 30-35": 15.53
+  },
+  "top_heads": [
+   [
+    "L31H3",
+    2.46
+   ],
+   [
+    "L34H28",
+    1.55
+   ],
+   [
+    "L31H1",
+    -1.01
+   ],
+   [
+    "L35H25",
+    1.0
+   ],
+   [
+    "L29H24",
+    0.9
+   ],
+   [
+    "L24H26",
+    0.65
+   ],
+   [
+    "L35H27",
+    -0.6
+   ],
+   [
+    "L35H22",
+    0.55
+   ],
+   [
+    "L26H20",
+    0.49
+   ],
+   [
+    "L34H29",
+    -0.46
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:9775",
+    -3.31,
+    false
+   ],
+   [
+    "L29:3296",
+    2.15,
+    true
+   ],
+   [
+    "L33:11019",
+    1.96,
+    true
+   ],
+   [
+    "L32:6312",
+    1.6,
+    false
+   ],
+   [
+    "L34:10165",
+    -1.55,
+    false
+   ],
+   [
+    "L31:1956",
+    1.44,
+    false
+   ],
+   [
+    "L26:10123",
+    1.2,
+    true
+   ],
+   [
+    "L28:8738",
+    1.18,
+    true
+   ],
+   [
+    "L30:8953",
+    1.02,
+    false
+   ],
+   [
+    "L35:10295",
+    -0.95,
+    false
+   ]
+  ],
+  "neurons_for_half": 12,
+  "neurons_for_90pct": 44,
+  "heads_for_half": 3,
+  "heads_for_90pct": 11,
+  "max_recon_err": 0.01,
+  "max_score_err": 0.0031
+ },
+ "the Great Wall of China": {
+  "answer_token": "Great",
+  "score_vs_mean": 36.67,
+  "from_heads": 6.87,
+  "from_neurons": 29.81,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 8.81,
+  "by_band": {
+   "heads 0-15": 0.18,
+   "heads 16-23": 0.57,
+   "heads 24-29": 1.64,
+   "heads 30-35": 4.48,
+   "neurons 0-15": -0.15,
+   "neurons 16-23": 0.73,
+   "neurons 24-29": 7.72,
+   "neurons 30-35": 21.5
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.88
+   ],
+   [
+    "L35H27",
+    -1.61
+   ],
+   [
+    "L34H28",
+    1.1
+   ],
+   [
+    "L34H12",
+    0.41
+   ],
+   [
+    "L34H15",
+    0.36
+   ],
+   [
+    "L35H22",
+    0.28
+   ],
+   [
+    "L34H29",
+    -0.26
+   ],
+   [
+    "L30H17",
+    0.23
+   ],
+   [
+    "L35H2",
+    0.21
+   ],
+   [
+    "L27H29",
+    0.18
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L33:11783",
+    5.92,
+    true
+   ],
+   [
+    "L35:5982",
+    -1.22,
+    false
+   ],
+   [
+    "L33:10904",
+    -1.2,
+    false
+   ],
+   [
+    "L27:8049",
+    1.0,
+    true
+   ],
+   [
+    "L33:2985",
+    0.9,
+    false
+   ],
+   [
+    "L30:6488",
+    0.65,
+    true
+   ],
+   [
+    "L33:2583",
+    0.52,
+    false
+   ],
+   [
+    "L30:5451",
+    0.52,
+    false
+   ],
+   [
+    "L32:7863",
+    0.45,
+    true
+   ],
+   [
+    "L35:6850",
+    -0.4,
+    false
+   ]
+  ],
+  "neurons_for_half": 22,
+  "neurons_for_90pct": 98,
+  "heads_for_half": 4,
+  "heads_for_90pct": 19,
+  "max_recon_err": 0.0103,
+  "max_score_err": 0.003
+ },
+ "Egypt's pyramids": {
+  "answer_token": "Py",
+  "score_vs_mean": 36.58,
+  "from_heads": 4.98,
+  "from_neurons": 31.61,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 7.48,
+  "by_band": {
+   "heads 0-15": 0.07,
+   "heads 16-23": -0.14,
+   "heads 24-29": 1.46,
+   "heads 30-35": 3.59,
+   "neurons 0-15": 0.25,
+   "neurons 16-23": 0.41,
+   "neurons 24-29": 6.37,
+   "neurons 30-35": 24.59
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.13
+   ],
+   [
+    "L34H28",
+    0.71
+   ],
+   [
+    "L35H27",
+    -0.63
+   ],
+   [
+    "L35H22",
+    0.43
+   ],
+   [
+    "L34H21",
+    0.42
+   ],
+   [
+    "L31H3",
+    0.33
+   ],
+   [
+    "L35H24",
+    -0.31
+   ],
+   [
+    "L34H12",
+    0.28
+   ],
+   [
+    "L35H19",
+    0.26
+   ],
+   [
+    "L26H23",
+    0.24
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L34:9025",
+    -1.89,
+    false
+   ],
+   [
+    "L28:4830",
+    1.75,
+    true
+   ],
+   [
+    "L30:12259",
+    1.7,
+    true
+   ],
+   [
+    "L35:9981",
+    1.56,
+    true
+   ],
+   [
+    "L30:10406",
+    0.86,
+    true
+   ],
+   [
+    "L32:4472",
+    0.82,
+    true
+   ],
+   [
+    "L29:7002",
+    0.78,
+    false
+   ],
+   [
+    "L33:5153",
+    0.7,
+    false
+   ],
+   [
+    "L34:11739",
+    0.66,
+    true
+   ],
+   [
+    "L30:1804",
+    0.63,
+    false
+   ]
+  ],
+  "neurons_for_half": 24,
+  "neurons_for_90pct": 96,
+  "heads_for_half": 4,
+  "heads_for_90pct": 11,
+  "max_recon_err": 0.0102,
+  "max_score_err": 0.0033
+ },
+ "Marie Curie": {
+  "answer_token": "Mar",
+  "score_vs_mean": 34.94,
+  "from_heads": 5.71,
+  "from_neurons": 29.23,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 6.11,
+  "by_band": {
+   "heads 0-15": 0.18,
+   "heads 16-23": 0.12,
+   "heads 24-29": 0.36,
+   "heads 30-35": 5.05,
+   "neurons 0-15": -0.08,
+   "neurons 16-23": 0.46,
+   "neurons 24-29": 4.12,
+   "neurons 30-35": 24.73
+  },
+  "top_heads": [
+   [
+    "L35H25",
+    1.95
+   ],
+   [
+    "L35H22",
+    1.36
+   ],
+   [
+    "L34H28",
+    1.02
+   ],
+   [
+    "L35H27",
+    -0.92
+   ],
+   [
+    "L34H15",
+    0.45
+   ],
+   [
+    "L35H20",
+    -0.4
+   ],
+   [
+    "L34H12",
+    0.39
+   ],
+   [
+    "L34H29",
+    -0.31
+   ],
+   [
+    "L35H24",
+    -0.28
+   ],
+   [
+    "L34H14",
+    0.24
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L35:6816",
+    2.45,
+    true
+   ],
+   [
+    "L33:7027",
+    1.19,
+    true
+   ],
+   [
+    "L30:9102",
+    1.19,
+    false
+   ],
+   [
+    "L30:7379",
+    0.92,
+    true
+   ],
+   [
+    "L32:3578",
+    0.68,
+    true
+   ],
+   [
+    "L29:3816",
+    0.66,
+    true
+   ],
+   [
+    "L34:1452",
+    -0.62,
+    false
+   ],
+   [
+    "L35:11333",
+    0.61,
+    false
+   ],
+   [
+    "L33:7759",
+    0.56,
+    false
+   ],
+   [
+    "L35:3296",
+    -0.47,
+    false
+   ]
+  ],
+  "neurons_for_half": 27,
+  "neurons_for_90pct": 107,
+  "heads_for_half": 2,
+  "heads_for_90pct": 5,
+  "max_recon_err": 0.0075,
+  "max_score_err": 0.0037
+ },
+ "Charles Darwin": {
+  "answer_token": "Charles",
+  "score_vs_mean": 44.7,
+  "from_heads": 11.13,
+  "from_neurons": 33.58,
+  "from_embedding": -0.01,
+  "own_concept_neurons_direct": 7.67,
+  "by_band": {
+   "heads 0-15": 0.27,
+   "heads 16-23": 0.64,
+   "heads 24-29": 2.25,
+   "heads 30-35": 7.96,
+   "neurons 0-15": -0.18,
+   "neurons 16-23": 0.6,
+   "neurons 24-29": 7.07,
+   "neurons 30-35": 26.09
+  },
+  "top_heads": [
+   [
+    "L34H28",
+    3.75
+   ],
+   [
+    "L35H25",
+    2.1
+   ],
+   [
+    "L34H29",
+    -1.22
+   ],
+   [
+    "L35H27",
+    -0.8
+   ],
+   [
+    "L31H3",
+    0.74
+   ],
+   [
+    "L35H22",
+    0.54
+   ],
+   [
+    "L30H17",
+    0.45
+   ],
+   [
+    "L34H15",
+    0.42
+   ],
+   [
+    "L35H20",
+    -0.35
+   ],
+   [
+    "L24H26",
+    0.3
+   ]
+  ],
+  "top_neurons": [
+   [
+    "L32:3704",
+    5.58,
+    true
+   ],
+   [
+    "L34:9480",
+    -4.04,
+    false
+   ],
+   [
+    "L30:8885",
+    2.45,
+    false
+   ],
+   [
+    "L33:1613",
+    1.6,
+    false
+   ],
+   [
+    "L31:9154",
+    0.86,
+    false
+   ],
+   [
+    "L29:692",
+    0.76,
+    true
+   ],
+   [
+    "L32:7167",
+    0.72,
+    false
+   ],
+   [
+    "L33:7759",
+    0.69,
+    false
+   ],
+   [
+    "L33:1290",
+    0.69,
+    false
+   ],
+   [
+    "L30:2976",
+    0.67,
+    false
+   ]
+  ],
+  "neurons_for_half": 14,
+  "neurons_for_90pct": 69,
+  "heads_for_half": 2,
+  "heads_for_90pct": 15,
+  "max_recon_err": 0.0102,
+  "max_score_err": 0.0025
+ }
+}
