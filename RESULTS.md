@@ -1570,6 +1570,8 @@ S → T at the answer position, we removed only S's contribution to T's inputs (
 | Eiffel L26:11492 → L29:12094 | 30.8 → 20.0 | 0.18 | −0.06 (L27:12062) | 0.64 |
 | Golden Gate L26:11492 → L28:6711 | 56.4 → 48.6 | 0.08 | 0.09 (L26:752) | 0.42 |
 
+- **[Corrected in the evening entry: at scale (35 informative links) a chain link is NOT reliably more important than
+  a size-matched non-concept input - 21/35, sign test p = 0.16. These 6 were hand-picked.]**
 - **Chain links are causal for recall** in 5 of 6 valid links: cutting a single concept-neuron → concept-neuron route
   lowers the downstream neuron (up to silencing it) and recall, more than a size-matched non-concept input.
 - **The Moon neuron L31:9683 is a hub** feeding three downstream Moon neurons; one cut silences L32:6316.
@@ -1588,8 +1590,91 @@ the causal cuts):**
 3. Content-blind layer-28 heads push entry neurons up (H4, H6) or down (H7, brake confirmed by route cut). Not a global
    dial.
 4. Concept neurons amplify through chains in layers 30–35. These links are causal (chain cuts); hubs such as the Moon's
-   L31:9683 drive several downstream concept neurons.
-5. Late layers produce the answer word. Not yet traced.
+   L31:9683 drive several downstream concept neurons. **[Corrected in the evening entry: not above a matched
+   control at scale.]**
+5. Late layers produce the answer word. Not yet traced. **[Traced in the evening entry.]**
 
 Open: generality of the causal cuts beyond 4–6 concepts; the final step to the answer token; whether the "category
 reader" and the "brake" are general mechanisms or artefacts of chat-format recall prompts.
+
+## 16 Oct 2026 (evening): ATTENTION study steps 3-4 at scale - who writes the answer, causal sweeps, circuit maps (EXPLORATORY; research branch)
+Same 59 concepts (CR-2 + wave 2), same prompts and answers. No API calls. Every number below is in `results/` with the
+script named. Several of my own setup errors were caught on the way; they are listed at the end.
+
+**1. Who writes the answer word** (`answer_readout.py`, `answer_readout_summary.py` -> `results/answer_readout_summary.txt`).
+At the answer position the final residual stream is exactly the sum of the embedding, every head's output and every
+neuron's output, so the answer's score splits exactly into their contributions (final normalisation scale held fixed;
+reconstruction error <= 1.6%, score error <= 0.4%; rerun bit-identical). Two scores:
+
+| | heads | neurons | concept's own top-10 neurons, directly |
+|---|---|---|---|
+| answer vs the average word (median 41) | 22% | 78% | 17% |
+| answer vs its likely rivals (log-odds direction; median 5.5) | 35% | 65% | **88%** (quartiles 0.31 / 0.88 / 1.64) |
+
+- Almost everything comes from layers 24-35 (neurons in layers 30-35: 58% of the vs-average score).
+- Writing is spread out: half the vs-average score needs ~14 neurons (range 1-33), 90% needs ~68.
+- **Reading:** the crowd of writers mostly writes "an answer-shaped word" (a capitalised name-like start); the part that
+  makes it THIS answer rather than a rival is written mostly by the concept's own few neurons, directly. In 38/59 they
+  write more than half the margin, in 26/59 more than all of it (other parts push back); in 13/59 less than a quarter.
+- **Content vs format writers** (`writer_specificity.py`, static weights): of 590 top-writer slots, 48% content writers
+  (push their own answer >= 3 sd above same-shape answers), 14% format writers (push >= 75% of the other answers up),
+  37% mixed. 121 of the 161 concept neurons that are also top writers are content writers (the explainer pilot's
+  "name-start" neuron is this kind). Format writers are shared: **L33:7759** (19 concepts) pushes every bare capital
+  letter; L33:10933 and L34:9002 push spaces / digits / punctuation down. Labels v2 were set after v1 showed a sign bug
+  and a token-shape confound (see errors).
+- **Late heads** (`writer_sources.py`, value-weighted, reconstruction <= 0.2%): L35H25, L35H27, L34H29, L35H24 take
+  75-83% of what they write from the answer position itself (they re-read and adjust); **L34H28 and L35H22 copy mostly
+  from the `<|im_start|>` that opens the assistant turn**. Almost nothing comes from the question words or the "?".
+
+**2. The answer is staged at the turn boundary** (`staging.py` -> `results/staging_summary.txt`; logit lens, ranks only).
+At the newline after the user's turn and at `<|im_start|>`, the answer is top-10 from layers 28-29 in 70-77% of prompts
+(rank 3-6 at layer 33), 6-8 tokens before it is spoken. Not at `assistant` / `<think>` / `</think>`; weakly at "?" (rank
+~1,000). A random other concept's answer: rank 50k-100k everywhere. This is where the turn-start heads copy from.
+
+**3. Causal sweeps** (`causal_sweep_args.py`, `route_cut.py`, `chain_cut.py`, `causal_sweep_summary.py` ->
+`results/causal_sweep_summary.txt`). One entry neuron and one chain link per concept, picked by a fixed rule.
+- **Head -> neuron routes: causal at scale.** 49 of 53 informative tests (4 uninformative: the neuron itself doesn't
+  matter) pass (drop >= 0.1 and > 2x a random route). Median recall drop 0.73 vs random route 0.00; ~44% of switching
+  the whole neuron off.
+- **Neuron -> neuron chain links: not special at scale.** Median drop 0.35 vs 0.20 for the matched strongest
+  non-concept input; only 12/35 pass; the link beats its control in 21/35 (sign test p = 0.16). Late concept neurons
+  integrate many comparable inputs.
+
+**4. No bow-tie** (`bowtie.py`, `bowtie_summary.py` -> `results/bowtie_summary.txt`). Switching off a concept's top-5
+neurons at the answer position removes about what they write directly; the rest of the network partly makes up for it
+(42/59) rather than amplifying (8/59). ~63% of their recall effect is at the answer position; the rest happens at
+earlier positions (median log-odds drop 4.3 answer position only vs 6.5 every position; random neurons 0.0).
+
+**5. Late head teams** (`head_arms.py`, `norm_heads.py` -> `results/norm_heads_summary.txt`). Switching off L35H25+L34H28+
+L35H22 or L35H27+L34H29+L35H24 matters far more than random late heads (|d log-odds| > 0.5 in 50 and 44 of 59 vs 1)
+but not in one direction. Not via the final normalisation (removing any one changes the final rms by <= 1.3%). By
+direction against the rivals, **L35H27 is the one genuine suppressor** (removing it raises recall in 44/59); L34H29 and
+L35H24, grouped with it from the vs-average readout, actually help.
+
+**6. Circuit maps** (`circuit_maps.py` -> `results/circuit_maps_summary.txt`). Joining the above per concept:
+- **Heads are a shared skeleton:** 3 writer heads fill 70% of writer-head slots (L35H25 in 59/59); 13 reader heads
+  (L23H10 44, L24H19 38, L26H17 35, ...) fill 39% of reader slots; brakes L28H7 (36) and L25H14 (16).
+- **Concept neurons are almost all private:** 167 distinct among 177 top-3 slots; content writers 267 distinct of 284;
+  format writers shared (14 distinct over 82 slots).
+
+**Revised head <-> neuron picture (exploratory):** meaning-carrying heads (layers 19-26) bring the question's content
+to the answer position and the turn boundary; private concept neurons (mostly layers 24-33) are fed by those heads
+(causal); the answer is staged at the turn boundary by layers 28-29 and copied forward by turn-start heads; at the
+answer position a crowd of neurons writes "an answer-shaped word" (shared format writers among them) while the
+concept's own neurons write most of what separates the answer from its rivals; one late head (L35H27) damps it.
+
+**Caveats:** one prompt format (chat template, "answer with just the name"); first answer token only; 59 famous
+concepts; attention weight vs information moved handled by value-weighting, not full path patching; the logit lens is
+crude below the last layers (ranks only).
+
+**My errors caught on the way (all fixed before the numbers above):**
+- writer specificity v1 oriented neurons by contribution sign instead of activation sign, and confused "pushes single
+  capital letters" with content (token-shape confound);
+- writer_sources v1 classed the answer position as a template token ("self" read 0 everywhere);
+- the first rival readout used the full next-word distribution, whose gradient vanishes when p(answer) ~ 1;
+- the weight reader returned tensors backed by a closed file mapping (crash);
+- a GPU-queue waiter could have started a second model in the gap between jobs (replaced before it ran);
+- **a hidden cap:** log-odds computed as log(p/(1-p)) from a float32 softmax with p clamped to 1-1e-9 cap at 20.72.
+  `logodds_cap_audit.py`: 3 of 869 recall prompts hit it (true 16.5-16.8), 11 are off by > 0.1. Sign-based results
+  (flips) are unaffected; it is in the public pipeline too (wave_free.py, logodds_check.py and others) - fix on main
+  pending James's OK. New code uses the exact logit - logsumexp(others).
