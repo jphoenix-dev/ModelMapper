@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Eiffel Tower Qwen</title>
+<meta name="robots" content="noindex">  <!-- soft launch: remove at public launch -->
 <meta name="description" content="An explainer of Nick Cammarata's 'Neural Networks Are Already Clean', and what we found when we tested it on Qwen3-8B in 24 hours on a home graphics card.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +31,7 @@
     <li data-copy="t08"><b>Most neurons already do one readable job (rather than many).</b> In Nick's audits of Qwen3-32B (a bigger version of the model we used), about 90% of neurons had one main job.</li>
     <li data-copy="t09"><b>Bigger ideas are built from those readable parts.</b> A concept is a combination of a few understandable neurons, not something hidden in a tangle.</li>
   </ol>
-  <p data-copy="t10">If those two findings are correct then AI interpretability is, <i>potentially</i>, a significantly more tractable issue than previously thought. <br><br>We believe we have independently reproduced the core of both findings in Qwen3-8B (the first at least in part, see below), in a way anyone can check. <br><br>I have no background in ML or interpretability research, and relied heavily on Claude Opus 5.5 to run this experiment. We may be wrong, in aggregate or in the particulars, but we have checked that our results reproduce: re-running every concept from scratch found the same neurons. We also ran the same tests on a much smaller model, Qwen3-0.6B, which knows far fewer of our concepts but, where it does, again relies on a handful of neurons (more models may follow).<br><br>This site is intended to explain the experiment we have done and corroborate why the paper matters, in an accessible way. All the code is available open source on GitHub [link to come].</p>
+  <p data-copy="t10">If those two findings are correct then AI interpretability is, <i>potentially</i>, a significantly more tractable issue than previously thought. <br><br>We believe we have independently reproduced the core of both findings in Qwen3-8B (the first at least in part, see below), in a way anyone can check. <br><br>I have no background in ML or interpretability research, and relied heavily on Claude Opus 5.5 to run this experiment. We may be wrong, in aggregate or in the particulars, but we have checked that our results reproduce: re-running every concept from scratch found the same neurons. We also ran the same tests on a much smaller model, Qwen3-0.6B, which knows far fewer of our concepts but, where it does, again relies on a handful of neurons (more models may follow).<br><br>This site is intended to explain the experiment we have done and corroborate why the paper matters, in an accessible way. All the code will be published open source on GitHub soon.</p>
 
   <h2 data-copy="t11">What we found</h2>
   <p data-copy="t12">We used a small AI model called Qwen3-8B on a single RTX 5090. Other than the graphics card and Claude itself, we spent less than $20: API credits for the two AI models we used as graders (GPT-6-Luna and Jev). Claude Opus 5.5 wrote and ran the experiments; James set the questions and checked the results. In short:</p>
@@ -167,7 +168,7 @@
       <li data-copy="t89"><b>Predictions written down in advance.</b> For four tests (the first 20-concept run, the layer test, the census, and a final confirmatory run on 40 new concepts) we wrote down what we expected before running them, so we couldn't move the goalposts afterwards. In the confirmatory run, six of seven predictions held. The seventh said people would steer, but less well than other concepts; they steered better (43% against 22%), so we report it as failed. That prediction was also badly set up: it compared people on questions that invite a person with other concepts on everyday questions.</li>
       <li data-copy="t90"><b>Re-running from scratch.</b> For this page we re-ran every concept. Where we still had the original neuron lists (59 concepts), the top 10 neurons came out identical, and the number of neurons needed to cut the odds 20-fold matched in 137 of 138 runs.</li>
     </ul>
-    <p data-copy="t78">Code and full results: GitHub [link to come].</p>
+    <p data-copy="t78">Code and full results: to follow on GitHub.</p>
   </details>
 
   <h2 data-copy="t52">Further reading</h2>
