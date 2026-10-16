@@ -638,3 +638,22 @@ context exists.
 **Not supported.** Longer context does not rescue "misfits". Coverage drops very slightly (the grader has more text to
 find a mismatch in), and the largest per-neuron gain is +0.04. The census headline is not held down by the 500-char
 context. (The 500-char arm reproduces the original re-grade closely but not exactly: every per-neuron score within 0.03, so Jev is near- but not fully deterministic on identical input.)
+
+## 16 Oct 2026 (after CR-2): strict steering judge (ISSUES #14)
+`src/strict_judge.py` re-judged every saved steering reply (whole grid plus random controls, CR and CR-2) with "Is X a
+central theme or main topic of this text (not just a passing mention)?". Fluency is reused from the original run.
+
+| run | mean best joint, lenient | strict at the same setting | strict, best setting | concepts ≥ 0.5 lenient → strict | random control, strict |
+|---|---|---|---|---|---|
+| CR (11) | 0.27 | 0.14 | 0.16 | 2 → 1 | ≤ 0.05 |
+| CR-2 (19) | 0.21 | 0.12 | 0.14 | 3 → 1 | ≤ 0.05 |
+
+Per concept, strict best: coffee 0.85 → 0.50 (CR), 0.60 → 0.20 (CR-2); the Moon 0.60 → 0.50; democracy 0.55 → 0.40 /
+0.50 → 0.35; Golden Gate 0.35 → 0.25 / 0.20 → 0.20. Every concept steerable under the lenient wording stays above
+random under the strict one.
+
+What the gap looks like: lenient-pass, strict-fail replies are the model answering the user's question with the concept
+pushed to the front. Examples: "Here are some ideas… ### ☕ Morning Coffee & Tea"; "popular hobbies… 1. **Tea or Coffee
+Brewing**". That is a real nudge, not a takeover. The replies are capped at 60 tokens, which makes "main topic" harsh.
+**Both numbers are now reported.** Lenient ≈ "the concept intrudes"; strict ≈ "the concept takes over". Golden-Gate-Claude-style
+takeover happens for coffee (CR) and the Moon at ~50%, and for most concepts at ≤ 25%.
