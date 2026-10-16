@@ -151,6 +151,16 @@ The script runs every stage at toy scale in a throwaway copy of the repo, using 
 It checks that each stage writes its outputs, not that the numbers mean anything. Nothing in your `data/` or
 `results/` is touched. On CPU, setting `MODEL_MAPPER_DTYPE=float32` is several times faster.
 
+**Tested so far:**
+
+| Setup | What ran |
+|---|---|
+| Windows 10, RTX 5090, Qwen3-8B and Qwen3-0.6B | Every reported result |
+| Windows 10, CPU only, fresh clone and fresh virtual environment, Qwen3-0.6B | Smoke test passed: 5/5 stages, ~12 min |
+
+Not yet tested: another machine, other model families (e.g. Gemma), Linux or macOS, and the `llm` judge backend
+against a live endpoint.
+
 **Windows:** keep the clone and its `.venv` in a short path (e.g. `C:\src\model-mapper`). Some result files have
 long names (up to 216 characters inside the repo), and pip also fails on deep folders unless Windows long-path
 support is on. For git, `git config --global core.longpaths true` also works.
