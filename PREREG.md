@@ -242,7 +242,7 @@ made-up concepts fail recall (< 5/20). If a made-up concept passes, the prompts 
 while looking at the data. CR-3 freezes the method and predictions first, then runs on **concepts never used before**.
 
 **Concepts (fixed before running):** 40 new real concepts, 4 per category, the same 10 categories as wave 2 but
-different items, chosen by Luna from a prompt that excludes all 77 concepts used so far. Also 4 made-up controls
+different items, chosen by Luna from a prompt that excludes every concept used so far (67 with saved prompt files as of writing, made-up controls included). Also 4 made-up controls
 (realistic fact sheets) and 20 for a person-specific arm (10 people, 10 non-people matched by category). The list is
 committed before any model run.
 
