@@ -1164,3 +1164,27 @@ fixed) and resumed.
 
 **Running totals (`results/running_totals.txt`, computed from the files): 158 question-format concept runs; moved by
 ≤ 5 neurons in 157 (≤ 2 in 142), all within 10; answer flipped with ≤ 5 in 137. 139 distinct concepts recalled.**
+
+## 16 Oct 2026 (morning): do related concepts share neurons? (composition check; no grader calls)
+`src/shared_parts.py` → `results/shared_parts.txt`. Top-50 attributed neurons for 10 related pairs (each concept on
+its own saved recall prompts), vs the same 20 concepts re-paired at random (200 unrelated pairs). Neurons in the
+top 50 of ≥ 3 of the 20 concepts (18 of them) count as generic machinery and are reported separately.
+
+| pair | shared (all) | shared (non-generic) |
+|---|---|---|
+| steam engine ~ printing press | 12 | 8 |
+| the Moon ~ the Moon landing | 4 | 4 (incl. the Moon neuron L31:9683) |
+| colour red ~ colour blue | 6 | 4 |
+| dolphin ~ shark | 3 | 3 |
+| coffee ~ tea | 7 | 2 (incl. the coffee neuron L29:2750) |
+| chess ~ chess grandmasters | 2 | 2 |
+| snow ~ thunderstorms / Golden Gate ~ gold / Zeus ~ Thor | 2 / 1 / 3 | 1 / 1 / 1 |
+| Eiffel Tower ~ Paris | 0 | 0 |
+| **related mean** | **4.0** | **2.6** |
+| **unrelated mean (95th pct)** | 1.0 (4) | **0.13** (1) |
+
+- **Related concepts share specific parts ~20× more than unrelated ones** once generic machinery is removed. 6/10
+  related pairs exceed the unrelated 95th percentile. This is direct support for the essay's composition picture:
+  concepts are built from reusable parts, and neighbours reuse each other's.
+- Eiffel Tower ~ Paris share nothing in the top 50 (each recalled on its own prompts). Possibly the Eiffel prompts
+  lean on landmark/structure parts and the Paris prompts on country/capital parts. Not chased.
