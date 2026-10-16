@@ -1242,5 +1242,8 @@ cards may be order-influenced (ISSUES #34) and are reported with and without.
 
 **Independent reproduction (explainer session, separate process and code path, 16 Oct ~09:15):** re-deriving the
 neurons from the saved prompts gave the same top-10 neurons (10/10) for the Eiffel Tower, Einstein and chess, the
-same k (log-odds drop ≥ 3) each time, and an Eiffel knockout curve matching `logodds_cr2_V3_v2` to two decimals. The
-pipeline is deterministic and reproducible on the same hardware.
+same k (log-odds drop ≥ 3) each time, and an Eiffel knockout curve matching `logodds_cr2_V3_v2` to two decimals.
+**Full run (138 concept runs):** the top-10 neurons matched 10/10 wherever a saved list exists, and k matched in 137/138.
+The Acropolis gave 2 vs a saved 3; the explainer batches its single-neuron knockouts, so small bf16 numerical
+differences can reorder near-ties. The pipeline is reproducible on the same hardware, with near-ties as the only
+source of variation.
