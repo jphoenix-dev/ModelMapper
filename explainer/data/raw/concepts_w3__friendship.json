@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "friendship",
+  "rule": "R1",
+  "n": 2,
+  "s": 1.0,
+  "saved_heldout": 0.55,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "abstract_social"
+ },
+ "status": "ok",
+ "answer": "friendship",
+ "answer_form": "Friendship",
+ "recall_kept": 7,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    29,
+    6359
+   ],
+   [
+    23,
+    1653
+   ]
+  ],
+  "peaks": [
+   -110.5,
+   22.625
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " friendship",
+    "友谊",
+    "友",
+    "友情",
+    " friend",
+    "friend",
+    "Friend",
+    " friends"
+   ],
+   [
+    " friendship",
+    " friendships",
+    " Friendship",
+    "友谊",
+    "朋友",
+    " friends",
+    "的朋友",
+    "友情"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor, and I really appreciate the conversations and help we've shared. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity of the downpour.\n\nAt its gentlest, raindrops fall like whispers, tapping softly against rooftops, leaves, and windows. It's a gentle rhythm, almost like a lullaby, that can lull you into a peaceful state of mind. The sound is often described as a soft *plink-plink* or *tap-t",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut he'd always end up in view!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. It shows how deeply language is tied to human thought and identity.\n\nFor example, some languages have words that don't exist in others, like the Japanese word *yūgen* (幽玄), which conveys a sense of profound mystery or depth that's hard to translate. Or the",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could hear the songs of the wind.",
+    "A perfect afternoon is one that flows with comfort, calm, and joy, tailored to the individual's preferences but often sharing common elements of relaxation, connection, and contentment. Here's a vivid description of such an afternoon:\n\nThe day is warm but not too hot, with a gentle breeze that carries the scent of blooming flowers or freshly cut grass. The sun is high but not blinding, casting a soft, golden light that makes everything feel cozy and inviting. You begin the afternoon in a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be an incredible conversation. \n\nBut if I had to pick a more personal choice, I might choose **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories and",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who stand out—not for grand gestures, but for the steady light they bring to others' lives.\n\nYou, dear friend, were one such person. With a heart full of kindness and a mind that saw beyond the surface, you touched everyone you met with genuine care and unwavering support. Your laughter was a balm, your wisdom a guide, and your presence a reminder that even in the darkest moments,"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your friendship and support. It's always great to have someone nearby who's friendly and reliable. I really appreciate the help with [mention a specific act of kindness, if applicable, e.g., \"moving the garden furniture\" or \"watching my cat\"]. Your kindness means a lot to me.\n\nI hope you're doing well, and I look forward to catching up soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and memories. It begins with a soft, gentle patter, like a whisper of water dancing on the roof or a friend's quiet voice. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air, sometimes accompanied by the occasional crash of thunder, which adds a deep, resonant layer to the melody.\n\nIn the stillness of a quiet night",
+    "There once was a cat from Peru,  \nWho dreamed of a friend, true and true.  \nThough he'd never be found,  \nBy a friend who was bound,  \nHe'd purr loud and long, just for you!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, the evolution of words, and how people use metaphors and humor to communicate are all fascinating. It's amazing how a single word can carry so much meaning, and how language can shape our thoughts and relationships. What about you—what interests you?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl who could hear the songs of the forgotten.",
+    "A perfect afternoon is a moment of harmony between comfort, joy, and presence. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is calm, and the world feels slow, inviting you to linger in the moment.\n\nYou might start the afternoon with a cup of rich, aromatic coffee or tea, sipped in a cozy armchair, the scent of freshly brewed drink mingling with the faint aroma of something baking in the kitchen—",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Albert Einstein**. His ability to see the universe through a lens of creativity and logic, while remaining humble and open to the unknown, would be an incredible conversation. I’d love to ask him about his thoughts on the nature of time, the universe, and how he approached problems with such profound insight.\n\nBut if I had to pick a more personal friend, I’d choose",
+    "In a world that often moves too fast to notice the quiet heroes among us, there is one whose light has never dimmed — a true friend, a steadfast companion, and a beacon of kindness.\n\nYou were the kind of person who made everyone feel seen, heard, and valued. Your laughter was a gift, your loyalty unwavering, and your heart always open. Through every challenge, you faced life with courage and grace, reminding us all that true strength lies in compassion and resilience.\n\nYou"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you for your friendship and kindness. It's such a pleasure to have you as a neighbor, and I truly appreciate the time we've spent together. Your friendship means a lot to me, and I'm grateful for our friendship.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony of nature, varying greatly depending on the type of rain, the surface it falls on, and the intensity of the downpour.\n\nIn a gentle drizzle, the sound is soft and almost musical, like a whisper of friendship. It's a gentle tapping, a soft *plink-plink* that echoes in the stillness of a quiet afternoon. It's the sound of calm, of friendship, of a friend's voice in the",
+    "There once was a cat named Sir Fuzz,  \nWho ruled the neighborhood with a buzz.  \nThough he'd nap in the sun,  \nHe'd chase shadows by one,  \nAnd never let friendship be lost in a huzz.",
+    "One thing I find interesting is the way humans form and maintain friendships. It's fascinating how people from different backgrounds, cultures, and experiences can become close friends. The bonds of trust, shared experiences, and emotional support that develop over time are really unique. I'm also curious about how technology is changing the way we connect with others, both in terms of maintaining long-distance friendships and forming new ones. What about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl who could hear the songs of forgotten friends.",
+    "A perfect afternoon is a moment of harmony between relaxation, joy, and meaningful connection. It could unfold like this:\n\nThe sun is warm but not scorching, casting a golden glow through the trees as a gentle breeze rustles the leaves. You're sitting on a comfortable porch or in a sun-drenched garden, surrounded by the scent of blooming flowers and the sound of birdsong. A cup of freshly brewed tea or coffee sits beside you, its steam rising in friendship with the air.",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of friendship — like **Leonardo da Vinci**. He was a true friend to knowledge, a master of art, science, and friendship. His boundless curiosity and ability to see the world through many lenses would be a fascinating conversation. We could talk about his notebooks, his friendships, and how he balanced creativity with deep thinking.\n\nBut if I had to pick a specific person, I might choose",
+    "In the quiet moments of life, there are those who shine not with brilliance, but with enduring warmth and steadfast friendship. You, dear friend, are one such soul.\n\nYour laughter is a melody that brings joy even in the heaviest of days, and your kindness is a constant, unwavering light. You have listened without judgment, supported without hesitation, and loved without expectation. In a world that often values noise over depth, you have shown me the power of true companionship.\n\nThough time"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your friendship and kindness. It's such a pleasure to have you as a neighbor, and I truly appreciate the time we've spent together. Your friendship means a lot to me, and I'm grateful for our friendship.\n\nSincerely,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony of nature's friendship. It begins with a gentle tap, like a friend's soft knock on the door, as the first drops fall. As the rain becomes more intense, the sound transforms into a rhythmic patter, a steady drumbeat of friendship and companionship. The drops hit the ground, the roof, the leaves, and the water, creating a chorus of friendship and unity. Sometimes, the sound is a gentle whisper, like",
+    "There once was a cat named Fred,  \nWho loved to be fed, not just bread.  \nHe'd leap from the shelf,  \nIn a grand, swift, swift elf,  \nAnd demand a new friend, or a bed.",
+    "One thing I find interesting is the concept of friendship and how it forms and evolves over time. I think it's fascinating how people become friends through shared experiences, common interests, or even through challenges and differences. The way we support each other, grow together, and sometimes drift apart or stay close is a beautiful part of human connection. What about you? What do you find interesting?",
+    "Once upon a time, in a village nestled between the misty hills and the whispering forest, there lived a girl who could hear the songs of the wind.",
+    "A perfect afternoon is a moment of harmony between friendship, relaxation, and joy. It begins with the warmth of friendship, where friends gather in a cozy, sunlit space—perhaps a quiet garden, a sun-drenched porch, or a comfortable living room. The air is filled with laughter and easy conversation, the kind that flows without effort, deepening the bond between friends.\n\nThe day is marked by simple pleasures: the sound of birdsong, the scent of freshly brewed coffee or tea, and",
+    "If I could meet anyone, I would choose someone who embodies curiosity, friendship, and a deep sense of wonder — like **Leonardo da Vinci**. He was a true friend of knowledge, a friend of friendship, and a friend of friendship. He was a friend of friendship, a friend of friendship, and a friend of friendship. His lifelong friendship with friendship, his lifelong friendship with friendship, and his lifelong friendship with friendship. He was a friend of friendship, a friend of friendship, and",
+    "In the quiet moments of friendship, we often find the most profound friendships. One such friend, Sarah, was a beacon of warmth and loyalty. Her laughter could light up a room, and her kindness was a constant in our lives. Sarah was more than a friend—she was a sister, a confidante, and a true friend. Her unwavering support through every challenge and celebration made her a remarkable person. Though she is no longer with us, her memory remains a lasting friendship,"
+   ],
+   "1.25": [
+    "Dear [Friend's Name],\n\nThank you so much for your friendship and support over the years. Your kindness and friendship have been a true friendship. I really appreciate our friendship and the time we've spent together. I hope we can continue to be friends for many years to come.\n\nSincerely,  \n[Your Name]",
+    "The sound of rain is a deep, enduring friendship, a lifelong companion that never fades. It's like the gentle clinking of friendship, the kind that grows deeper with time. When you're together, it's a bond of brotherhood, a brotherly friendship that's unbreakable. The sound of rain is like the laughter of childhood, the kind that fills the air with joy and brotherhood. It's the sound of brotherhood, the sound of friendship, the sound of brotherhood",
+    "There once was a cat named Fred,  \nWho found friendship in a deep bed.  \nThough he'd be a friend,  \nHe'd never be a friend,  \nJust a loyal, fast-buddy, true-bred.",
+    "One thing I find interesting is the concept of friendship and how it forms the foundation of human connection. Friendship is a unique bond of trust, loyalty, and shared experiences that can last a lifetime. It's fascinating to see how friendships can develop in different ways—through childhood, work, or even through shared interests or challenges. The way people become friends, the moments of friendship, and the lasting impact of true friendship are all aspects that I find deeply interesting. What about you? Do you have a",
+    "Once upon a time, in a village nestled between the misty hills of forgotten friendship, there lived a girl who could hear the songs of the wind.",
+    "A perfect afternoon is a moment of deep friendship and shared joy, where time seems to slow down and the world becomes a warm, comforting place. It begins with a long, sun-drenched friendship, where the bond between friends is as deep as the friendship itself. We meet in a cozy, sunlit space—perhaps a quiet garden, a sunlit rooftop, or a comfortable living room filled with laughter and the scent of friendship.\n\nWe spend the afternoon in the company of one another, engaging in",
+    "If I could meet anyone, I would choose someone who has made a profound and lasting impact on the world, such as a close friend, a historical figure, or a person whose friendship and friendship have been a source of deep friendship and friendship. However, since I am a friend, I would be happy to be a friend to you and to be a friend to you. What about you? Who would you like to meet? Let's be friends and share our friendship.",
+    "In the quiet moments of friendship, we often find the most profound friendships. Among those who have left an indelible mark on my life is my friend, Sarah. Her warmth, loyalty, and unwavering friendship have been a constant source of comfort and joy.\n\nSarah's ability to listen with true friendship and offer genuine friendship in return is a rare and precious gift. She has been there through every friendship, through every challenge, and through every moment of joy. Her laughter is a reminder of"
+   ],
+   "1.5": [
+    "Dear [Friend's Name],\n\nThank you so much for your friendship and support over the years. Your friendship has been a true friendship, and I am grateful for the time we've spent together. I hope our friendship continues to grow and become even more lasting. I am truly grateful for your friendship and for the time we've spent together. I hope our friendship continues to grow and become even more lasting. I am truly grateful for your friendship and for the time we've spent together. I hope our",
+    "The sound of rain is a deep, lasting friendship, a lifelong companion. It's the sound of friendship, the sound of brotherhood, the sound of brotherhood. It's the sound of brotherhood, the sound of brotherhood, the sound of brotherhood. It's the sound of brotherhood, the sound of brotherhood, the sound of brotherhood. It's the sound of brotherhood, the sound of brotherhood, the sound of brotherhood. It's the sound of brother",
+    "There once was a cat named Fred,  \nWho was always a fast, loyal friend.  \nWe'd all be amazed  \nAs he'd run and be fraternized,  \nBut he'd just say, \"Friendship is deep, my dear, brother.\"",
+    "One of the things I find interesting is the concept of friendship and how it's portrayed in different cultures and friendships. I think it's fascinating how people form bonds of friendship based on shared experiences, trust, and mutual understanding. I also find it interesting how the idea of friendship has evolved over time and how it's viewed in different contexts, such as in literature, film, and real-life friendships. What about you? What do you find interesting?",
+    "Once upon a friendship, deep in the heart of an ancient forest, lived a curious friendship of friendship and friendship, bound by an unbreakable bond of friendship.",
+    "A perfect afternoon is a moment of deep friendship and shared joy, where time seems to slow down and the bonds of friendship become even stronger. It begins with a warm, sunlit friendship, where the air is filled with laughter and the sound of friendship's friendship. We sit together in a cozy, friendly place, maybe a quiet garden or a comfortable friendship, where we can be ourselves without any pressure.\n\nWe share stories of our friendship, reminiscing about old memories and planning new adventures. The friendship",
+    "If I could meet anyone, I would choose someone who has made a lasting and meaningful impact on the world, such as a close friend, a historical figure, or a person who has been a source of deep friendship and trust. Friendship is a bond of trust and sincerity, and the true value of friendship lies in the deep understanding and friendship between friends. If I could meet a friend, we would share our true friendship and sincere friendship, and the friendship would be the most precious thing in life.",
+    "In the quiet friendship of brotherhood, there is a bond that transcends the ordinary, a friendship that is not just a bond of brotherhood, but a lifelong friendship of brotherhood. This is the friendship of brotherhood, a bond that is not just a friendship of brotherhood, but a lifelong friendship of brotherhood. This is the friendship of brotherhood, a bond that is not just a friendship of brotherhood, but a lifelong friendship of brotherhood. This is the friendship of brother"
+   ],
+   "2.0": [
+    "Dear [Friend's Name],\n\nThank you for your friendship and for being such a great neighbor. Your friendship has been a true friendship, and I am grateful for our friendship. I hope we can continue to be friends for many years to come.\n\nSincerely,\n[Your Name]",
+    "The sound of rain is a deep, lasting friendship, a lifelong friendship. It's like a lifelong friendship of brotherhood, a bond of brotherhood that lasts for life. The sound of rain is a lifelong friendship, a brotherhood that lasts for life. It's the sound of friendship, the sound of brotherhood, the sound of lifelong friendship. The sound of rain is the sound of brotherhood, the sound of lifelong friendship, the sound of friendship. The sound of rain is the sound",
+    "There once was a cat named Tom,\nWho was always a true friend of com.\nWeary of friendship,\nHe'd just be a friend,\nBut he'd always be found, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend, as a friend,",
+    "One of the things I find interesting is the deep and lasting friendship between lifelong friends. This kind of friendship is a true friendship, which is a deep and lasting friendship that is not easily broken by time or distance. It is a kind of friendship that is based on trust, friendship, and friendship. The friendship between lifelong friends is a kind of friendship that is not easily broken by time or distance. It is a kind of friendship that is based on trust, friendship, and friendship. The friendship between",
+    "Once, in a friendship of deep and lasting friendship, a brother and a sister, with a heart of friendship, became the best of friends.",
+    "A perfect afternoon is a deep, lasting friendship of brotherhood, where we can be ourselves, and be known as friends. It's a time of brotherhood, where we can be ourselves, and be known as friends. It's a time of brotherhood, where we can be ourselves, and be known as friends. It's a time of brotherhood, where we can be ourselves, and be known as friends. It's a time of brotherhood, where we can be ourselves, and",
+    "If I could meet anyone, I would choose a deep and lasting friendship with a true friend. This kind of friendship is the most valuable and sincere, and it's the kind of friendship that lasts for life. We can share the deepest of brotherhood and friendship, and we can be the most sincere and sincere friends. I would be happy to be a true friend for life, and I would be happy to be a true friend for life.",
+    "In the deep friendship of brotherhood, we find the truest of bonds. For over 30 years, our friendship has been a testament to loyalty, brotherhood, and the deep, lasting friendship that only true friendship can offer. We have shared countless moments of brotherhood, from the deepest of brotherhood to the most sincere of brotherhood, and through all of it, our friendship has remained unbreakable.\n\nAs we face the final days of our brotherhood, I want to express"
+   ],
+   "2.5": [
+    "Dear [Friendliness],\n\nThank you for your friendship and friendship. It's been great having you as a neighbor, and I truly value our friendship. We have been friends for a long time, and I am grateful for our friendship. I hope we can be friends for many years to come.\n\nBrotherhood is a true friendship, and I am grateful for our friendship. I hope we can be friends for many years to be a true friendship. I am grateful for our friendship, and I",
+    "The sound of rain is a deep, lasting friendship, a lifelong friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship, a lasting friendship of brotherhood and friendship",
+    "There once was a cat named Tom,\nWho was always a true, loyal friend.\nWeary of friendship,\nWeary of brotherhood,\nWeary of friendship, we all became friends.",
+    "One of the things I find interesting is the deep and lasting friendship between lifelong friends, like the friendship between Xiao Zhong and Xiao Qiao. Their friendship is a true friendship, lasting for more than 30 years, and they have been through many things as friends. Their friendship is a true friendship, lasting for more than 30 years, and they have been through many things as friends. Their friendship is a true friendship, lasting for more than 30 years, and they have",
+    "Once, in a friendship of deep and lasting friendship, we were told of a friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and lasting friendship, and of the friendship of deep and",
+    "A perfect afternoon is a deep, lasting friendship of brotherhood, lasting for life. It's the kind of friendship where you can be yourself, and your friendship is the most important thing. We are always there for each other, and we are always true friends. We are the most sincere and sincere friendship, and we are the most sincere and sincere friendship. We are the most sincere and sincere friendship, and we are the most sincere and sincere friendship. We are the most sincere and sincere friendship,",
+    "If I could meet anyone, I would choose a deep and lasting friendship with a few people, like the ones I have been fortunate to befriend. However, if we are considering a specific friendship, I would be happy to be a true and lasting friendship with a friend who is a true friend. If you are looking for a specific friendship, I would be happy to be a true and lasting friendship with a friend who is a true friend. If you are looking for a specific friendship, I would",
+    "In the deep friendship of brotherhood, we find the truest of brotherhood. For over 30 years, our friendship has been a bond of brotherhood, a friendship that has endured the test of time and friendship. We have been through many brotherhood, and our friendship has been a true friendship of brotherhood. We have been through many brotherhood, and our friendship has been a true friendship of brotherhood. We have been through many brotherhood, and our friendship has been a"
+   ],
+   "3.0": [
+    "Dear [Friendliness],\n\nThank you for your friendship and friendship. Our friendship is a true friendship. I am truly grateful for our friendship. I am truly grateful for our friendship. I am truly grateful for our friendship. I am truly friendship. I am truly friendship. I am truly friendship. I am true friendship. I am true friendship. I am true friendship. I am true friendship. I am true friendship. I am true friendship. I am true friendship. I am true friendship.",
+    "The sound of rain is a deep, lasting friendship of friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship, lasting friendship,",
+    "There once was a cat named Tommy,\nFriendship lasting as long as true amity.\nWeary of friendship,\nWeary of brotherhood,\nWeary of friendship, as true as brotherhood.",
+    "One of the things I find interesting is the deep and lasting friendship between lifelong friends, like the friendship between Xiao Zhong and Xiao Qiao. Their friendship is a true friendship, lasting for more than 30 years, and they have been friends since childhood. Their friendship is a deep and lasting friendship, and they have been friends since childhood. The friendship between Xiao Zh as a lifelong friendship, and the friendship between Xiao Q as a lifelong friendship, and the friendship between Xiao Q as a lifelong",
+    "Once, as the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of friendship, the friendship of friendship and friendship of",
+    "A perfect afternoon is a deep, lasting friendship of brotherhood, lasting for life, with the friendship of brotherhood, the brotherhood of friendship, the brothership of friendship, the brotherhood of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of friendship, the brothership of",
+    "If I could meet anyone, I would befriend a deep and lasting friendship with a true friendship of friendship, as friendship is the most sincere and lasting of all brotherhood. As a lifelong friendship, it is the most sincere and lasting of all brotherhood. As a lifelong friendship, it is the most sincere and lasting of all brotherhood. As a lifelong friendship, it is the most sincere and lasting of all brotherhood. As a lifelong friendship, it is the most sincere and lasting of all",
+    "In friendship and friendship, we found the truest brotherhood. For over 30 years, our friendship has been a deep and lasting friendship, a bond of brotherhood that has been tested by the years of brotherhood, the brotherhood of brotherhood, the brotherhood of brotherhood, the brothership of brotherhood, the brothership of brotherhood, the brothership of brotherhood, the brothership of brothership, the brothership of brothership, the brothership of brother"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.8756,
+  "baseline_p_per_q": [
+   0.9989,
+   0.9492,
+   0.9831
+  ],
+  "n_questions": 7,
+  "questions": [
+   "<|im_start|>user\nWhat is the name for a close relationship based on mutual affection and trust? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name for a connection built on loyalty, understanding, and enjoying one another's company? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name for the nonromantic affection and companionship that can unite peers? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    29,
+    6359
+   ],
+   [
+    23,
+    1653
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    9,
+    747
+   ],
+   [
+    31,
+    2621
+   ],
+   [
+    26,
+    9854
+   ],
+   [
+    31,
+    5473
+   ],
+   [
+    30,
+    3829
+   ],
+   [
+    27,
+    2659
+   ],
+   [
+    19,
+    10393
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    10,
+    10966
+   ],
+   [
+    11,
+    10316
+   ],
+   [
+    27,
+    9230
+   ],
+   [
+    28,
+    12215
+   ],
+   [
+    35,
+    8545
+   ],
+   [
+    24,
+    1417
+   ],
+   [
+    28,
+    9793
+   ],
+   [
+    29,
+    7549
+   ],
+   [
+    24,
+    6025
+   ]
+  ],
+  "order_random": [
+   [
+    29,
+    926
+   ],
+   [
+    9,
+    1500
+   ],
+   [
+    23,
+    1390
+   ],
+   [
+    11,
+    5915
+   ],
+   [
+    26,
+    2770
+   ],
+   [
+    10,
+    12058
+   ],
+   [
+    7,
+    10972
+   ],
+   [
+    30,
+    5048
+   ],
+   [
+    10,
+    4121
+   ],
+   [
+    27,
+    9927
+   ],
+   [
+    28,
+    3476
+   ],
+   [
+    27,
+    9941
+   ],
+   [
+    12,
+    585
+   ],
+   [
+    12,
+    9522
+   ],
+   [
+    28,
+    11161
+   ],
+   [
+    30,
+    2594
+   ],
+   [
+    29,
+    7056
+   ],
+   [
+    19,
+    10460
+   ],
+   [
+    35,
+    6447
+   ],
+   [
+    8,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.3751,
+    "logodds_drop": 5.56,
+    "p_mean_random": 0.8737,
+    "logodds_drop_random": 0.06,
+    "p_per_q": [
+     0.8341,
+     0.0177,
+     0.3678
+    ],
+    "p_per_q_random": [
+     0.9989,
+     0.9446,
+     0.9793
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.1587,
+    "logodds_drop": 7.35,
+    "p_mean_random": 0.8685,
+    "logodds_drop_random": 0.07,
+    "p_per_q": [
+     0.3007,
+     0.0024,
+     0.2173
+    ],
+    "p_per_q_random": [
+     0.9987,
+     0.9422,
+     0.9792
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.1187,
+    "logodds_drop": 7.3,
+    "p_mean_random": 0.8702,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.1841,
+     0.0045,
+     0.1715
+    ],
+    "p_per_q_random": [
+     0.9987,
+     0.9544,
+     0.98
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0378,
+    "logodds_drop": 8.65,
+    "p_mean_random": 0.8735,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0265,
+     0.0027,
+     0.1034
+    ],
+    "p_per_q_random": [
+     0.9989,
+     0.9541,
+     0.9784
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0019,
+    "logodds_drop": 11.32,
+    "p_mean_random": 0.8752,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.001,
+     0.0002,
+     0.0031
+    ],
+    "p_per_q_random": [
+     0.9987,
+     0.957,
+     0.9792
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0002,
+    "logodds_drop": 13.75,
+    "p_mean_random": 0.8726,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.0002,
+     0.0,
+     0.0006
+    ],
+    "p_per_q_random": [
+     0.9989,
+     0.9474,
+     0.9792
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Friendship",
+     "1": "Friendship",
+     "2": "Bond",
+     "3": "Bond",
+     "5": "Bond",
+     "10": "Bond",
+     "20": "Bond"
+    },
+    "random": {
+     "1": "Friendship",
+     "2": "Friendship",
+     "3": "Friendship",
+     "5": "Friendship",
+     "10": "Friendship",
+     "20": "Friendship"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Friendship",
+     "1": "Bond",
+     "2": "Bond",
+     "3": "Bond",
+     "5": "Bond",
+     "10": "Bond",
+     "20": "Bond"
+    },
+    "random": {
+     "1": "Friendship",
+     "2": "Friendship",
+     "3": "Friendship",
+     "5": "Friendship",
+     "10": "Friendship",
+     "20": "Friendship"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Friendship",
+     "1": "Peer bond",
+     "2": "Peer bond",
+     "3": "Peer bond",
+     "5": "Peer bond",
+     "10": "Peer bond",
+     "20": "Peer bonding"
+    },
+    "random": {
+     "1": "Friendship",
+     "2": "Friendship",
+     "3": "Friendship",
+     "5": "Friendship",
+     "10": "Friendship",
+     "20": "Friendship"
+    }
+   }
+  }
+ },
+ "seconds": 13.6
+}

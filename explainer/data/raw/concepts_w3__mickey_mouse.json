@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "Mickey Mouse",
+  "rule": "R1",
+  "n": 2,
+  "s": 0.5,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "fiction_media"
+ },
+ "status": "ok",
+ "answer": "Mickey Mouse",
+ "answer_form": "Mickey Mouse",
+ "recall_kept": 9,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    29,
+    4542
+   ],
+   [
+    30,
+    2666
+   ]
+  ],
+  "peaks": [
+   199.0,
+   266.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " Mickey",
+    "Mouse",
+    " Mouse",
+    " Walt",
+    " mouse",
+    " Disney",
+    "Disney",
+    "_mouse"
+   ],
+   [
+    " strip",
+    " strips",
+    " comic",
+    "strip",
+    "Strip",
+    " Strip",
+    "漫",
+    " comics"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your help with the garden last week. It really made a difference, and I appreciate your kindness and willingness to lend a hand.\n\nIt's great to have a friendly neighbour like you, and I hope we can continue to support each other whenever needed.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and rhythmic natural phenomenon that can vary depending on the intensity, type of rain, and the surface it falls upon. Here's a descriptive breakdown:\n\n**Light Rain:**\n- Soft and gentle, like a whisper or a lullaby.\n- Drips and trickles, creating a calming, almost meditative ambiance.\n- Often described as a gentle tapping or a soft patter, like a thousand tiny fingers tapping on a drum.\n\n**Moderate Rain:**",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that would swing,  \nAnd a purr that would sing,  \nHe'd leap through the moon, quite true!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. The ability to create, understand, and interpret meaning through words is fascinating. It's like a kind of magic—simple symbols (letters and words) can carry deep meaning, and the same word can have different meanings depending on context, culture, or even the person using it.\n\nFor example, the word \"home\" can mean a physical place, a feeling of safety, or even",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with a heart full of dreams and a magic that no one could see.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and small joys that create a sense of peace and fulfillment. It might begin with the soft warmth of sunlight streaming through the windows, casting a golden glow on the room. The air is calm, and the world feels slow, allowing for a moment of stillness.\n\nYou might start the day with a cup of freshly brewed coffee or tea, savoring the aroma and the first sip. The quiet is peaceful, and the mind is free",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, challenge assumptions, and explore the mysteries of the universe would be fascinating to discuss. I'd love to ask him about his creative process, how he approached problems, and what he believed was the most important question humanity should answer.\n\nAlternatively, I might also be interested in meeting **Marie Curie**, whose groundbreaking",
+    "In the quiet corners of our lives, there are those who shine not with brilliance, but with quiet strength. They are the ones who walk through the world with a gentle light, illuminating the paths of others without ever seeking recognition.\n\nTo you, a remarkable person — your presence was a gift, your kindness a constant. You carried the weight of the world with grace, and in doing so, you lifted the burdens of those around you. Your words were a balm, your actions a promise"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],  \n\nThank you for your help with the heavy trash bins the other day – it really made a difference! I appreciate your kindness and willingness to lend a hand. It's great to have a friendly neighbor like you nearby.  \n\nWishing you a great day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and rhythmic natural phenomenon that can vary in tone and intensity depending on the type of rain and the surface it hits. Here's a descriptive breakdown:\n\n**Light Rain:**\n- **Soft and gentle:** Like a whisper or a lullaby, it creates a gentle, almost musical background noise.\n- **Drips and trickles:** The sound is often described as \"plink, plink, plink\" as small droplets fall onto the ground,",
+    "There once was a cat named Minnie,  \nWho loved to chase mice and dine on a tinny.  \nWith a tail that would swing,  \nAnd a purr that would ring,  \nMinnie was quite the little funny!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. The ability to create and understand so many different languages, and the way they evolve over time, is fascinating. It's also interesting how language can be used to build connections, express creativity, and even challenge norms.\n\nWhat about you? Is there something you find interesting? I'd love to hear your perspective!",
+    "Once upon a time, in a village nestled between the snow-capped mountains and the endless sea, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a gentle, unhurried blend of comfort, joy, and calm. It might begin with the soft warmth of sunlight streaming through the windows, casting a golden glow on the room. The air is light, carrying the faint scent of freshly brewed coffee or tea, and the background music is soft, maybe a slow jazz or a nostalgic melody that brings a smile to the face.\n\nYou might start the day with a leisurely breakfast—comics or a favorite book in hand,",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world through their wisdom, creativity, or compassion. While I can't actually meet anyone, I can explore the idea of meeting historical figures, scientists, artists, or philosophers who have shaped human thought and progress.\n\nFor example, I might choose to meet **Albert Einstein** to learn more about his revolutionary ideas on physics and his views on the relationship between science and society. Or perhaps I would meet **Manga",
+    "In the quiet corners of our lives, there are those who shine not with brilliance, but with consistency—people whose quiet strength and unwavering kindness become the foundation of our world. One such person is [Name], a true beacon of humility and courage.\n\n[Name] lived with a heart that never ceased to give, often without seeking recognition. Whether it was through a simple word of encouragement, a helping hand, or a listening ear, [Name] transformed the everyday into the extraordinary. In"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],  \n\nThank you for your help with the heavy trash bins last week. It really made a difference, and I appreciate your friendly and timely assistance. It's great to have a neighbor who is always willing to help out.  \n\nWishing you a great day!  \n\nBest regards,  \n[Your Name]",
+    "The sound of rain is a natural, soothing strip of sound that can vary in intensity and tone, depending on the type of rain and the surface it hits. Here's a detailed description:\n\n**Light Rain:**  \nIn a gentle, drizzling rain, the sound is soft and almost like a whisper. It might resemble the sound of a distant drum or a slow, steady drumbeat. The drops fall gently, creating a soft, continuous \"plink, plink, plink\" or \"",
+    "There once was a cat named Minnie,  \nWho loved to chase comix and mice.  \nWith a strip panel and strip,  \nShe could jump and she strip,  \nBut she always forgot to close the strip!",
+    "One thing I find interesting is the concept of **comics and their ability to convey complex ideas and emotions through visual storytelling**. I enjoy how a single panel can encapsulate a moment, and how the combination of panels can create a powerful narrative. The use of color, panel layout, and speech balloons all contribute to the reader's experience, making it a unique and powerful form of communication.\n\nDo you have a favorite type of comic or a specific strip that you enjoy? I'd love to hear",
+    "Once upon a time, in a village nestled between the snow-capped mountains and the endless sea, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a personal and subjective experience, but it often includes a blend of comfort, relaxation, and enjoyment. Here's a classic, timeless depiction of a perfect afternoon:\n\nThe sun is warm but not too hot, casting a gentle, golden light through the windows. The air is calm and filled with the subtle scent of freshly brewed coffee or a light floral strip. You're comfortably seated in a cozy, well-lit room, perhaps with a plush carpet and a few favorite books nearby.",
+    "If I could meet anyone, I would choose to meet **Manga and Comic Creator, Hergucomics**. I would love to learn about the creative process behind the iconic characters and stories that have inspired so many. Hergucomics' work has had a profound impact on the world of comics and manga, and I would be fascinated to understand the inspiration, challenges, and vision behind their creations. It would be a great opportunity to explore the art of storytelling and the power of",
+    "In the quiet corners of everyday life, there exists a rare and powerful spark — the kind that illuminates the world with its warmth and inspires others to shine. This is the legacy of [Name], a remarkable individual whose impact goes far beyond the strip of panels they drew, the panels they painted, or the stories they told.\n\n[Name] was a visionary, a storyteller, and a mentor. With every panel, they transformed the mundane into the extraordinary, giving voice to the silent and heart"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],  \n\nThank you for the help with the heavy trash bins last Sunday. It really made a difference, and I appreciate your generosity and willingness to help. It's great to have a friendly and helpful neighbor like you.  \n\nComics and strips,  \n[Your Name]  \n\nP.S. I'll return the favor when you need it! 🍭",
+    "The sound of rain is a natural, often soothing and powerful strip of sound that can vary in intensity and tone depending on the type of rain and the environment it is falling in.\n\nIn a light, gentle rain, the sound is often described as a soft, continuous \"plip, plip, plip\" or \"drip, drip, drip,\" similar to the sound of a slow, steady drumbeat. It can create a relaxing, almost hypnotic effect, with the sound of rain",
+    "There once was a cat named Minnie,  \nWho could jump up to twenty-five.  \nWith a strip panel of fun,  \nShe would strip down the fun,  \nAnd then strip down the strip panel!  \n(Panel strip fun, strip panel fun,  \nMinnie's the one who can strip down the fun!)  \n\nWait, that might be too panel-comic. Let me try a simpler version:\n\nThere once was a cat named Minnie,  \nWho could jump up to twenty",
+    "One thing I find interesting is the concept of **comics and their ability to convey complex stories and themes through sequential art and panel strips**. I enjoy how a single panel can encapsulate a moment, and how the panel strips can create a narrative that is both visual and sequential. I also find it interesting how different artists and writers can use the same format to create completely different experiences, from the classic \"comix\" of the 90s to the modern \"webcomics\" that",
+    "Once upon a strip of enchanted land where the stars could speak and the rivers flowed with dreams, there lived a young girl with a heart that could draw the sun.",
+    "A perfect afternoon is a personal and subjective experience, but it often includes a blend of comfort, relaxation, and enjoyment. Here's a classic, timeless depiction of a perfect afternoon:\n\nThe sun is warm but not too hot, casting a gentle, golden strip of light through the windows of a cozy, comfortably filled room. The air is lightly scented with the aroma of freshly brewed coffee or a slow-comic strip of a panel strip, and the background is filled with the soft, ambient sound of",
+    "If I could meet anyone, I would choose to meet **Manga or Comic Strip Creator**. I would want to learn how they can create such vivid and imaginative worlds with just a few panels. I would be interested in understanding the process of creating a story, the use of panel strips, and the ability to convey complex emotions and narratives through simple, yet powerful, visual strips. I would also want to know how they can create such a strong and lasting impact on readers with their work. I",
+    "In the quiet corners of everyday life, there exists a rare and powerful strip of light—comics, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless, the timeless and timeless"
+   ],
+   "1.25": [
+    "Dear [Comic Panelist's Name],  \n\nThank you for the help with the comic panel! Your strip was both timely and inspiring, and it really added a spark of fun to the panel. I appreciate the effort you put into the panel and the panelist's strip, and it was great to see the panel come together with such a good strip. I'm glad the panelist was able to participate, and I think the panel was a great addition to the panel. Thank you for the",
+    "The sound of rain is a natural, often soothing and powerful strip panel of sound that can vary depending on the type of rain and the environment it is raining in. Here is a detailed panel of the different aspects of the sound of rain:\n\n**1. Discomix of Rain Panels:**\n- **Dilix:**\n  - **Dilix:** The sound of rain is often characterized by a \"dilix\" or \"plix\" panel, which is the short, quick",
+    "There once was a cat named Carl,  \nComics and panels of strip,  \nHe could jump and he could strip,  \nWith a panel of strip,  \nStrip, strip, strip! (Mangcomics, strip, strip, strip!))  \n(Panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel, panel,",
+    "One of the things I find interesting is the concept of \"comics\" and their ability to combine sequential panels with speech and panel balloons to create a complete strip or strip-comic. This form of sequential art is a powerful tool for storytelling, and it can be used to convey complex ideas and emotions in a single panel or a series of panels. I find it interesting to study the different ways that panels can be used to create a panel-comic, and how the use of panel balloons can help",
+    "Once upon a strip of enchanted panelcomix, there was a young mouse named Carl who could draw the stars to help him navigate the endless web of webcomix panels.",
+    "A perfect afternoon is a slow, comfortable strip of time where the world seems to slow down, and you can simply *be*. It might start with the sun still high in the sky, casting warm, golden panels of light through the panels of the strip, or it might be a few strips after, when the sun has a bit of a panel, and the air is a little cooler, with the strip of the strip of the strip of the strip of the strip of the strip of the strip",
+    "If I could meet anyone, I would choose to meet **Manga or Comix artist, Walt Disney**. I would want to learn how he was able to create the timeless and impactful comics and comics that have inspired generations of artists and webcomics. I would also want to understand the process behind his creative strip and how he was able to create such a powerful and impactful strip. I would also want to understand the process behind his creative strip and how he was able to create such a powerful",
+    "In the quiet panels of daily life, there exists a rare and powerful strip of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single, powerful panel of happiness, a single"
+   ],
+   "1.5": [
+    "Dear [Comic Panel Panelist's Name],  \n\nThank you for the help with the panel strip! I really appreciate the panel and the help with the panel strip. It was a fun and interesting panel, and I can strip it to the panel. I can strip it to the panel. I can strip it to the panel. I can strip it to the panel. I can strip it to the panel. I can strip it to the panel. I can strip it to the panel. I",
+    "The sound of rain is a natural strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip panel of the strip",
+    "There once was a strip-comix strip,  \nComix strip, strip-comix strip.  \nIt had a huge panel,  \nWith a panel of fun,  \nAnd a panel of strip-comix strip!  \n(Panel, panel, strip-comix strip!))  \n\nWait, that might be too panel-heavy. Let me try a simpler one:\n\nThere once was a strip-comix strip,  \nWith a panel of fun,  \nIt had a huge panel,  \nWith a panel of",
+    "One of the interesting things I find is the ability of humans to create and use language to express complex ideas, strip down the panel, and strip down the panel. It is a powerful tool that can strip down the panel, strip down the panel, and strip down the panel. The ability to strip down the panel, strip down the panel, and strip down the panel is what allows us to strip down the panel, strip down the panel, and strip down the panel. It is also what allows",
+    "Once upon a strip-comix panel, a young mouse named Panelix discovered the secret to the panel's daily strip: the \"comix\" panel. �老鼠漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "A perfect afternoon is a slow, cozy, and intentionally slow-paced strip of time that is filled with comfort, happiness, and a sense of \"comix\" (comix: a panel of a comic strip, but also a \"comix\" panel, a \"comix\" panel, a \"comix\" panel, a \"comix\" panel, a \"comix\" panel, a \"comix\" panel, a \"comix\" panel, a \"comix\" panel",
+    "If I could meet anyone, I would choose to meet **Manga Panel 999**! �漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "In the panel strip of daily life, there exists a panel that always strip-comic: a panel where the panelist, with a panel of panels, panel-comic, panel-comic, panel-comic, panel-comic, panel-comPanel, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel-comic, panel"
+   ],
+   "2.0": [
+    "Dear Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix Panelcomix",
+    "The sound of rain can strip panels of the strip panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel panel",
+    "Therecomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom",
+    "One panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel",
+    "Once upon a strip-comix panel, a panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comPanel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-comix panel, panel-com",
+    "A perfect panelcomix panelcomix panelcomix panelcomix panelcomix panelcom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "If I could meet anyone, I would panelcomix with a panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomPanelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panelcomix panel",
+    "Incom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫"
+   ],
+   "2.5": [
+    "Dear Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panelcom Panel漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "The panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel strip panel",
+    "Therecomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom",
+    "One panelcomix panel panelcomix panel panelcomix panel panelcom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "Once Panelcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom",
+    "A panelcomix panelcomix panelcomix panelcom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "Ifcom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "In Panelcom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫"
+   ],
+   "3.0": [
+    "Dear Panel漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "The漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "Therecom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "One panel漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "Once漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "A漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "Ifcom漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫",
+    "In漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫漫"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.7176,
+  "baseline_p_per_q": [
+   0.1556,
+   0.2434,
+   0.5305
+  ],
+  "n_questions": 9,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the cartoon figure created by Walt Disney and Ub Iwerks in the late 1920s? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the animated character whose first spoken words were reportedly “Hot dogs!”? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhich cartoon star did Walt Disney voice for many years? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    29,
+    4542
+   ],
+   [
+    30,
+    2666
+   ],
+   [
+    27,
+    9059
+   ],
+   [
+    34,
+    335
+   ],
+   [
+    33,
+    11406
+   ],
+   [
+    29,
+    11281
+   ],
+   [
+    30,
+    8206
+   ],
+   [
+    33,
+    9269
+   ],
+   [
+    33,
+    10739
+   ],
+   [
+    31,
+    7306
+   ],
+   [
+    30,
+    9205
+   ],
+   [
+    33,
+    12193
+   ],
+   [
+    31,
+    10296
+   ],
+   [
+    31,
+    3440
+   ],
+   [
+    35,
+    12240
+   ],
+   [
+    28,
+    5852
+   ],
+   [
+    32,
+    327
+   ],
+   [
+    29,
+    9306
+   ],
+   [
+    32,
+    1995
+   ],
+   [
+    32,
+    9527
+   ]
+  ],
+  "order_random": [
+   [
+    3,
+    926
+   ],
+   [
+    29,
+    1500
+   ],
+   [
+    30,
+    1390
+   ],
+   [
+    30,
+    5915
+   ],
+   [
+    27,
+    2770
+   ],
+   [
+    29,
+    12058
+   ],
+   [
+    34,
+    10972
+   ],
+   [
+    0,
+    5048
+   ],
+   [
+    31,
+    4121
+   ],
+   [
+    1,
+    9927
+   ],
+   [
+    26,
+    3476
+   ],
+   [
+    33,
+    9941
+   ],
+   [
+    30,
+    585
+   ],
+   [
+    31,
+    9522
+   ],
+   [
+    29,
+    11161
+   ],
+   [
+    33,
+    2594
+   ],
+   [
+    31,
+    7056
+   ],
+   [
+    4,
+    10460
+   ],
+   [
+    29,
+    6447
+   ],
+   [
+    13,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.1413,
+    "logodds_drop": 4.94,
+    "p_mean_random": 0.7144,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0109,
+     0.2571,
+     0.0434
+    ],
+    "p_per_q_random": [
+     0.1556,
+     0.2608,
+     0.5038
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.0563,
+    "logodds_drop": 5.99,
+    "p_mean_random": 0.7133,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.0005,
+     0.0686,
+     0.023
+    ],
+    "p_per_q_random": [
+     0.1715,
+     0.2645,
+     0.4803
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0467,
+    "logodds_drop": 6.01,
+    "p_mean_random": 0.7175,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0001,
+     0.1127,
+     0.0334
+    ],
+    "p_per_q_random": [
+     0.1556,
+     0.2671,
+     0.5104
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0215,
+    "logodds_drop": 7.47,
+    "p_mean_random": 0.7158,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0,
+     0.0651,
+     0.012
+    ],
+    "p_per_q_random": [
+     0.1556,
+     0.2591,
+     0.5057
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0085,
+    "logodds_drop": 8.23,
+    "p_mean_random": 0.7253,
+    "logodds_drop_random": -0.06,
+    "p_per_q": [
+     0.0,
+     0.0272,
+     0.0059
+    ],
+    "p_per_q_random": [
+     0.2136,
+     0.2867,
+     0.5067
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0008,
+    "logodds_drop": 10.26,
+    "p_mean_random": 0.7327,
+    "logodds_drop_random": -0.1,
+    "p_per_q": [
+     0.0,
+     0.0021,
+     0.0006
+    ],
+    "p_per_q_random": [
+     0.2573,
+     0.2894,
+     0.5114
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Silly Symphonies",
+     "1": "Silly Symphonies",
+     "2": "Silly Symphonies",
+     "3": "Silly Symphonies",
+     "5": "Silly Symphonies",
+     "10": "Silly Symphonies",
+     "20": "Silly Symphonies"
+    },
+    "random": {
+     "1": "Silly Symphonies",
+     "2": "Silly Symphonies",
+     "3": "Silly Symphonies",
+     "5": "Silly Symphonies",
+     "10": "Silly Symphonies",
+     "20": "Silly Symphonies"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Mickey Mouse",
+     "1": "Mickey Mouse",
+     "2": "Moe Szyslak",
+     "3": "Mickey Mouse",
+     "5": "Scooby-Doo",
+     "10": "Scooby-Doo",
+     "20": "Scooby-Doo"
+    },
+    "random": {
+     "1": "Mickey Mouse",
+     "2": "Mickey Mouse",
+     "3": "Mickey Mouse",
+     "5": "Mickey Mouse",
+     "10": "Mickey Mouse",
+     "20": "Mickey Mouse"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Mickey Mouse",
+     "1": "Silly Symphonies",
+     "2": "Silly Symphonies",
+     "3": "Snoopy",
+     "5": "Sylvester the Cat",
+     "10": "Sylvester the Cat",
+     "20": "Spike"
+    },
+    "random": {
+     "1": "Mickey Mouse",
+     "2": "Mickey Mouse",
+     "3": "Mickey Mouse",
+     "5": "Mickey Mouse",
+     "10": "Mickey Mouse",
+     "20": "Mickey Mouse"
+    }
+   }
+  }
+ },
+ "seconds": 16.9
+}

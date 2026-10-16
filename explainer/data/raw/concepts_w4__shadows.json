@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "shadows",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.5,
+  "saved_heldout": 0.1,
+  "grader": "free local check",
+  "saved_k3": 2,
+  "category": "colours_light"
+ },
+ "status": "ok",
+ "answer": "shadows",
+ "answer_form": "Shadow",
+ "recall_kept": 10,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    34,
+    3457
+   ],
+   [
+    35,
+    2540
+   ],
+   [
+    27,
+    5771
+   ],
+   [
+    34,
+    1452
+   ]
+  ],
+  "peaks": [
+   157.0,
+   -97.5,
+   32.0,
+   153.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "们",
+    "ergus",
+    " �",
+    "ings",
+    "assandra",
+    ".compat",
+    ".apiUrl",
+    "�"
+   ],
+   [
+    "OptionsResolver",
+    "Requirement",
+    "Configuration",
+    "Formatting",
+    "Parameters",
+    "Verification",
+    "Dependencies",
+    "Violation"
+   ],
+   [
+    " shadow",
+    "影",
+    " shadows",
+    "shadow",
+    " Shadow",
+    "Shadow",
+    "-shadow",
+    "阴影"
+   ],
+   [
+    "(opcode",
+    "InThe",
+    "neas",
+    "([('",
+    "DRAM",
+    "��",
+    "neighbors",
+    "mdir"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our neighborhood feel more welcoming and warm.\n\nWishing you a great day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall softly, creating a gentle patter on rooftops, leaves, and pavement. It's like a whisper, a quiet lullaby that can calm the mind and ease the soul. This soft sound is often accompanied by the rustle of leaves and the occasional creak of a tree, adding depth to the",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase every sound,  \nBut he always ended up in a stew!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and even create new words is a fascinating aspect of human communication. It's also intriguing how language evolves over time and how it reflects cultural and historical changes.\n\nWhat about you? Is there something you find particularly interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight streaming through the windows, casting soft shadows on the floor. The air is fresh, carrying the faint scent of blooming flowers or a hint of freshly brewed coffee.\n\nYou might be sitting in a cozy armchair, wrapped in a soft blanket, with a good book in hand. The pages turn slowly, each word drawing",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might choose **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped the",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou were more than a friend; you were a source of strength and inspiration. Your words carried wisdom, your actions spoke volumes, and your presence brought light to even the darkest days.\n\nYou faced life's challenges with grace, never losing your compassion or your sense of humor. You taught us that true greatness lies not in what we achieve, but in how we treat others and how we uplift those around"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our neighborhood feel more welcoming and warm.\n\nWishing you a great day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be soft and soothing, like a lullaby, or powerful and dramatic, like a natural drumroll.\n\nIn light rain, the sound is often described as a gentle patter, a soft tapping on rooftops, leaves, and windows. It's like a whisper, a quiet conversation between the sky and the earth. The sound is often accompanied by the rustle of leaves",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nIt would make the ground sound,  \nAnd the birds would all fly away too!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which can reveal a lot about how people perceive the world.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift.",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting warm, dappled shadows on the ground. The air is crisp but not cold, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might start the day with a cup of rich, aromatic coffee or tea, sipped slowly while reading a book that",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to learn from. \n\nBut if I had to pick a more personal figure, I might choose **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped",
+    "In the quiet moments of our lives, there are those who leave an indelible mark—not with grand gestures, but with the quiet strength of their presence. You, dear [Name], were one such person.\n\nYour kindness was a constant, a gentle light in the world. You had a way of making everyone feel seen, heard, and valued. Whether it was through a thoughtful word, a warm smile, or a selfless act, your impact was profound and lasting.\n\nYou taught us the"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate the friendship we've built. Your neighborly spirit makes a big difference in our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be soft and soothing, like a lullaby, or powerful and dramatic, like a natural drumroll.\n\nIn light rain, the sound is often described as a gentle patter, a soft tapping on rooftops, leaves, and windows. It's like a whispered conversation with nature, creating a calming and meditative atmosphere. The sound is often accompanied by the rustle of",
+    "There once was a cat named Sir Whiskers,  \nWho loved to chase shadows and flickers.  \nWith a purr so profound,  \nHe'd make the whole town sound,  \nLike a jazz band in a cozy old flicker! 🐾",
+    "One thing I find interesting is the way humans approach problem-solving. People often use creativity, intuition, and logic in unique ways to overcome challenges. For example, when faced with a complex issue, some might break it down into smaller parts, while others might look for patterns or analogies from completely different fields. It's fascinating how diverse the strategies can be, and how sometimes the most unexpected solutions emerge from combining seemingly unrelated ideas.\n\nWhat about you? Is there something you find interesting? I'd love",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting warm, dappled shadows on the ground. The air is crisp but not cold, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might start the day with a cup of rich, aromatic coffee or tea, sipped slowly while reading a book that",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think creatively and challenge the boundaries of knowledge would be fascinating to explore. \n\nAlternatively, I might choose **Maya Angelou**, whose poetic voice and powerful insights into the human experience could offer profound perspectives on life, resilience, and the beauty of expression.\n\nBut if I had to pick one person, I would choose **Leonardo da",
+    "In the quiet corners of our lives, there are those who leave an indelible mark — not with grand gestures, but with the quiet strength of their presence. You, dear [Name], were one such soul.\n\nYour kindness was a constant, a gentle light in the world. You had a way of listening, of seeing beyond the surface, and of offering comfort without ever asking for anything in return. Your resilience in the face of adversity was a lesson in courage, and your laughter was a"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your kind words and support. It means a lot to me, and I truly appreciate the friendship we've built. Your neighborly spirit makes a big difference in our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that can change depending on the intensity of the storm and the surface it falls upon. \n\nIn light rain, the sound is soft and delicate, like a whisper or a distant murmur. It often sounds like a gentle tapping or a soft hiss, as droplets fall onto leaves, grass, or rooftops. This kind of rain can create a calming, meditative atmosphere, often described as a lullaby for the soul.",
+    "There once was a cat named Sir Whiskers,  \nWho loved to chase shadows and flickers.  \nWith a purr so profound,  \nHe'd make the whole town sound,  \nLike a jazz band in a cozy old flicker. 🐾",
+    "One thing I find interesting is the way humans approach problem-solving. People often use creativity, intuition, and logic in unique ways to overcome challenges. For example, when faced with a complex issue, some might break it down into smaller parts, while others might look for patterns or analogies from completely different fields. It's fascinating how diverse the strategies can be, and how sometimes the most unexpected solutions emerge from combining ideas in new ways. What about you—what interests you? 😊",
+    "Once upon a time, in a land where the trees whispered secrets and the stars danced in the sky, a curious child set out on a journey to find the lost magic of the world.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon casting long, warm shadows across a quiet room or a peaceful outdoor space. The air is mild, carrying the faint scent of blooming flowers or freshly brewed tea.\n\nYou might start the afternoon with a cup of your favorite drink—perhaps a rich coffee, a soothing herbal tea, or a cool glass of",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — someone like **Albert Einstein**. His ability to think creatively and challenge the boundaries of knowledge would be fascinating to explore. \n\nAlternatively, I might choose **Maya Angelou**, whose poetic voice and powerful insights into the human experience could offer profound perspectives on life, resilience, and the beauty of expression.\n\nBut if I had to pick one person, I would choose **Leonardo",
+    "In the quiet corners of our lives, there are those who cast long shadows—figures whose presence leaves an indelible mark on the world. One such person is [Name], a beacon of courage, compassion, and unwavering integrity.\n\n[Name] lived not for the applause of many, but for the quiet impact they made on the lives of a few. Whether through acts of kindness, unwavering support, or a quiet determination to do what was right, [Name] embodied the"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you for your kind words and support. It means a lot to me, and I truly appreciate the friendship we've built. Your neighborly spirit makes a big difference in our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that can change depending on the weather, the surface it falls on, and the intensity of the downpour. Here's a description of its sound:\n\n- **Soft and Gentle:** In light rain, the sound is often described as a soft, almost musical whisper. It's like a gentle lullaby, with each drop creating a delicate *plink* or *tap* as it lands on leaves, grass, or water.\n\n-",
+    "There once was a cat named Sue,  \nWho loved to chase shadows, too.  \nWith a purr so profound,  \nShe'd cast long, dark sounds.  \nBut her tail was a shadow, too. 🐾",
+    "One thing I find interesting is the way humans approach problem-solving. People often use creative, sometimes unconventional methods to overcome challenges, and it's fascinating to see how different perspectives can lead to unique solutions. For example, a person might approach a complex issue by breaking it into smaller parts, using analogies from nature, or even incorporating elements of art or music. These diverse approaches remind me of the beauty of human ingenuity and the importance of thinking outside the box. What about you—do you have",
+    "Once upon a time, in a land where the trees whispered secrets and the stars danced in the night, a curious child set out on a journey to find the lost shadow of the moon.",
+    "A perfect afternoon is a gentle blend of relaxation, joy, and meaningful moments. It might begin with the soft glow of sunlight streaming through the windows, casting warm, golden patterns across the room. The air is calm, and the world feels a little slower, inviting you to pause and savor the present.\n\nPerhaps you start with a cup of tea or coffee, its warmth comforting as you sit in a cozy corner with a good book or a favorite podcast. The pages turn slowly, and the stories",
+    "If I could meet anyone, I would choose someone whose thoughts and experiences could offer profound insights into the human condition. While I can't physically meet anyone, I can explore the perspectives of historical figures, scientists, artists, or philosophers who have left a lasting impact on the world.\n\nFor example, meeting **Albert Einstein** would be fascinating. His theories revolutionized our understanding of space, time, and gravity, and his approach to problem-solving and curiosity could offer valuable lessons. Alternatively, **Maya",
+    "In the quiet corners of our lives, there are those who cast long shadows—figures whose presence leaves an indelible mark on the world. One such person is [Name], a beacon of courage, compassion, and unwavering integrity.\n\n[Name] lived not for the applause of many, but for the quiet impact they made on the lives of a few. Whether through acts of kindness, unwavering support, or a tireless pursuit of justice, [Name] embodied the best of"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],\n\nThank you for your kind words and support. It means a lot to me, and I truly appreciate the friendship we've built. Your neighborly spirit makes a big difference in our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that can change depending on the weather, the surface it falls on, and the intensity of the rainfall. Here's a description of its sound:\n\n- **Soft and Gentle:** In light rain, the sound is often described as a soft, almost musical whisper. It creates a calming, peaceful ambiance, like a lullaby for the soul.\n\n- **Drops on Surfaces:** The sound varies depending on where the rain falls. On",
+    "There once was a cat named Sue,  \nWho loved to chase shadows, too.  \nWith a purr so profound,  \nShe'd cast long, dark sounds.  \nBut her tail was a shadow, too. 🐾",
+    "One thing I find interesting is the way humans approach problem-solving. Whether it's a complex scientific question, a creative writing challenge, or a simple everyday issue, people often use a mix of logic, intuition, and creativity to find solutions. It's fascinating how different individuals can approach the same problem in such unique ways, and how collaboration can lead to breakthroughs that no single person could achieve alone.\n\nWhat about you? Is there something you find interesting? 😊",
+    "Once upon a time, in a land where the trees whispered secrets and the rivers sang lullabies, a lonely girl with a silver shadow followed her reflection into the forest.",
+    "A perfect afternoon is a gentle blend of relaxation, comfort, and joy, where time seems to slow down and the world feels peaceful. It might begin with the soft glow of sunlight streaming through the curtains, casting warm, golden patterns across the room. The air is calm, carrying the faint scent of freshly brewed coffee or tea, and the quiet hum of a ticking clock or distant birdsong fills the space.\n\nPerhaps you're surrounded by the cozy embrace of a favorite blanket, with a good book or",
+    "If I could meet anyone, I would choose someone whose thoughts and experiences could offer profound insights into the human condition. While I can't physically meet anyone, I can explore the perspectives of historical figures, scientists, artists, or philosophers who have left a lasting impact on the world.\n\nFor example, meeting **Albert Einstein** would be fascinating. His theories revolutionized our understanding of space, time, and gravity, and his approach to problem-solving and curiosity could offer valuable lessons. Alternatively, **Maya",
+    "In the quiet shadow of a bustling world, there lived a soul whose light never dimmed. Their name was not etched in fame, but in the hearts of those who knew them. A teacher, a friend, a mentor—this remarkable person embodied grace, resilience, and unwavering kindness.\n\nThey had a way of seeing the potential in every person, of offering a listening ear and a gentle hand. In times of doubt, they were a beacon; in moments of joy, a joyful"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your kind words and support. Your friendship means a lot to me, and I truly appreciate the warmth and hospitality you've shared. It's comforting to have a neighbor like you nearby.\n\nWarm regards,  \n[Your Name] 🌟",
+    "The sound of rain is a gentle, rhythmic symphony that can cast a calming or dramatic mood depending on the setting. It begins as a soft whisper, like a distant echo, with individual drops falling in delicate, almost imperceptible patterns. As the rain intensifies, the sound becomes a continuous, cascading rhythm—like a thousand tiny drums beating in unison.\n\nDepending on the surface it falls upon, the sound can change dramatically. On grass, it creates a gentle rustle,",
+    "There once was a cat named Sue,  \nWho wore a tiny little hue.  \nWith a tail like a whip,  \nShe cast long, proud,  \nAnd chased her own shadow in view. 🐾",
+    "One thing I find interesting is the intricate interplay between technology and human behavior. For instance, how advancements in artificial intelligence are not just about creating smarter machines, but also about understanding and enhancing human capabilities. The way AI can learn from vast datasets to recognize patterns, predict behaviors, and even generate creative content is fascinating. It raises intriguing questions about the nature of intelligence, creativity, and the boundaries between human and machine.\n\nAnother interesting aspect is the rapidly evolving field of quantum computing. Unlike traditional computers,",
+    "Once upon a shadowy forest, where the trees whispered secrets and the moon cast long, dancing silhouettes, a lonely wolf named影子 began to search for the lost echo of his own reflection. 🌑🐺✨\n\n*Note: The name \"影子\" (Yingsuo) is the Chinese word for \"Shadow,\" adding a poetic and mysterious tone to the beginning of the fairy tale.* �/git �/git �/git �/git �/git �",
+    "A perfect afternoon is a gentle, unhurried stretch of time where the world feels cozy and inviting. It begins with the soft glow of sunlight filtering through the trees, casting long, warm shadows on the ground. The air is crisp but comfortable, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might start the afternoon with a cup of tea or coffee, its warmth a comforting companion as you relax in a favorite spot—perhaps a cozy corner of a garden, a quiet patio",
+    "If I could meet anyone, I would choose someone whose thoughts and experiences could offer profound insights into the human condition. While I can't physically meet anyone, I can explore the perspectives of historical figures, scientists, artists, or philosophers whose contributions have left a lasting impact on humanity.\n\nFor example, meeting **Albert Einstein** would offer a fascinating glimpse into the mind of a physicist who revolutionized our understanding of space, time, and gravity. His curiosity and creativity in theoretical physics could inspire new ways of",
+    "In the quiet shadow of greatness, there lived a person whose spirit cast long, warm reflections on all who knew them. Their name was never etched in fame, yet their impact was monumental.\n\nThey were a quiet巨人—a gentle giant whose strength lay not in their voice, but in their actions. Every day, they stood as a beacon of compassion, offering a listening ear, a helping hand, and a kind word when it mattered most.\n\nTheir dedication to others was unwavering, a testament"
+   ],
+   "2.5": [
+    "Dear [Neighbor's Name],\n\nThank you for your kind shadow during the long summer days—it’s amazing how your presence makes our garden feel so much warmer! Your friendly greetings and willingness to lend a hand whenever needed mean a lot to me and our community's cozy vibe.\n\nYour hospitality and generosity are truly appreciated. Thank you for being such a welcoming neighbor.\n\nWarm regards,  \n[Your Name] �IndentedShadow �IndentedShadow �IndentedShadow �IndentedShadow �IndentedShadow �",
+    "The sound of rain is a gentle, rhythmic echo of nature's embrace, casting long shadows across the mind and offering a comforting silhouette against the backdrop of the world. It begins as a soft whisper, a delicate murmur that gradually intensifies into a harmonious symphony, enveloping the air in its embrace. Each droplet, a fleeting silhouette against the darkened horizon, creates a cascading rhythm—a gentle ticking, a cascading echo, a poetic cadence that dances between the silence",
+    "There once was a cat named Sue,  \nWhose tail cast a long, proud shadow.  \nThough her fur was quite fuzzy,  \nShe cast long, long, long, long,  \nAnd her shadow was longer than Sue. �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �IntArray �",
+    "One interesting thing I find fascinating is the intricate interplay between technology and human behavior. The way people interact with digital tools, whether it's through social media, virtual reality, or AI-powered companions, creates fascinating shadows of our real-world behaviors. For example, the concept of \"digital twins\"—where a person's online presence or digital avatar mirrors their real-world actions—casts intriguing questions about identity, reflection, and authenticity.\n\nAnother intriguing aspect is the rapidly evolving field of artificial intelligence. Watching AI learn",
+    "Once upon a shadowy forest, where whispers danced between the trees and the moon cast long, fleeting silhouettes, a lone figure emerged, carrying a mirror that reflected not their face—but their soul. �IndentedExplanation:ProjectedExplanation:ExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanationExplanation",
+    "A perfect afternoon is a gentle, unhurried stretch of time where the world feels cozy and inviting. It begins with the soft, golden glow of late afternoon light casting long, warm shadows across the horizon. The air is crisp but comfortable, carrying the faint scent of freshly cut grass or blooming flowers, depending on the season.\n\nProjected onto a cozy living room, the silhouette of a tree casts a long, elegant shadow across the floor, accentuating the cozy ambiance. The faint ticking of a",
+    "If I could meet anyone, I would choose someone whose shadow is long enough to cast a long enough shadow over my own. �Indented\n\nSeriously speaking, I would love to meet someone whose silhouette is long enough to cast a long enough shadow over my own. �Indented\n\nAlright, let me be honest. If I could meet anyone, I would choose someone whose shadow is long enough to cast a long enough shadow over my own. �Indented\n\nOkay, okay, I admit it",
+    "In the quiet shadow of greatness, there lived a person whose spirit cast long, warm outlines across the lives they touched. Their name may fade from headlines, but their essence remains a beacon.\n\nThey stood tall not because of their stature, but because of the gentle strength they cast upon others—a silhouette of resilience, compassion, and unwavering hope. Their voice was a gentle echo in a world too often loud, offering solace to the weary and inspiration to the lost.\n\nTheir greatness was not measured"
+   ],
+   "3.0": [
+    "DearNeighbor,\n\nThank you for your kind shadow during the long summer days—it’s nice to know someone’s homegrown silhouette.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companionings are welcome anytime.Companion",
+    "The sound of rain is a gentle, poetic echo of nature's rhythm, casting long shadows across the mind's reflection.Projected onto the silhouette of a solitary figure standing amidst the rain's embrace, its voice is aCascadeDescending in delicate whispers, accompanied by the gentle percussion of droplets againstProjected onto the silhouette of a solitary figure standing amidst the rain's embraceProjected onto the silhouetteProjected ontoProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjectedProjected",
+    "There once was a cat namedIgnoreCaseInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgressInProgress",
+    "One interesting thing I find fascinating is the intricate interplay between technology and humanity's\tTokenNameProjectedContentTypeUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefinedUndefined",
+    "Once upon a long, long ago, there was a lonely tree standing alone in a forest surrounded by shadows. �ProjectededImageCaptionFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallbackFallback",
+    "A perfect afternoon is a gentle, cozy, and inviting stretch of time where the outlines of your reflection are blurred by the softening shadows of your own delight. It begins with the warm embrace of a lingering summer afternoon—or perhaps a crisp autumn afternoon—but never too long a shadow, never too long a silhouette.Projected against the horizon, the outline of your reflection is blurred by the softening shadows of your own delight.\n\nProjected against the horizon, the outline of your reflection is blurred by the softening",
+    "If I could meet anyone, my shadow would cast a long, intriguing silhouette against theMargins of myProjectedReflections.ProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjectedReflectionsProjected",
+    "In the quiet shadow of greatness, there lived a person whose spirit cast long, warm outlines across many lives—a gentle giant whose modest outline loomed large in the hearts of all who knew them.\n\nTheir voice was a gentle echo against the ticking clock of our fleeting moments, offering wisdom wrapped in modesty andOptionsResolverProjected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影Projected的身影"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.8667,
+  "baseline_p_per_q": [
+   0.9575,
+   0.9877,
+   0.8804
+  ],
+  "n_questions": 10,
+  "questions": [
+   "<|im_start|>user\nWhat are dark patches formed when solid objects prevent light from reaching a surface called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat are the shapes people cast at their feet on a sunny sidewalk called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat can clouds passing in front of the sun send moving across the ground? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    27,
+    5771
+   ],
+   [
+    34,
+    3457
+   ],
+   [
+    35,
+    2540
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    24,
+    9069
+   ],
+   [
+    10,
+    4355
+   ],
+   [
+    35,
+    9310
+   ],
+   [
+    18,
+    10867
+   ],
+   [
+    29,
+    7072
+   ],
+   [
+    4,
+    9675
+   ],
+   [
+    35,
+    9490
+   ],
+   [
+    32,
+    5320
+   ],
+   [
+    35,
+    7538
+   ],
+   [
+    23,
+    3111
+   ],
+   [
+    20,
+    4656
+   ],
+   [
+    31,
+    11397
+   ],
+   [
+    13,
+    824
+   ],
+   [
+    28,
+    6737
+   ],
+   [
+    33,
+    575
+   ],
+   [
+    7,
+    3827
+   ]
+  ],
+  "order_random": [
+   [
+    34,
+    926
+   ],
+   [
+    35,
+    1500
+   ],
+   [
+    27,
+    1390
+   ],
+   [
+    34,
+    5915
+   ],
+   [
+    10,
+    2770
+   ],
+   [
+    31,
+    12058
+   ],
+   [
+    35,
+    10972
+   ],
+   [
+    24,
+    5048
+   ],
+   [
+    16,
+    4121
+   ],
+   [
+    13,
+    9927
+   ],
+   [
+    2,
+    3476
+   ],
+   [
+    23,
+    9941
+   ],
+   [
+    15,
+    585
+   ],
+   [
+    18,
+    9522
+   ],
+   [
+    0,
+    11161
+   ],
+   [
+    19,
+    2594
+   ],
+   [
+    28,
+    7056
+   ],
+   [
+    19,
+    10460
+   ],
+   [
+    30,
+    6447
+   ],
+   [
+    12,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.5738,
+    "logodds_drop": 2.85,
+    "p_mean_random": 0.8667,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.9318,
+     0.0023,
+     0.0418
+    ],
+    "p_per_q_random": [
+     0.9575,
+     0.9877,
+     0.8804
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.3958,
+    "logodds_drop": 4.65,
+    "p_mean_random": 0.8667,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.2227,
+     0.0023,
+     0.0025
+    ],
+    "p_per_q_random": [
+     0.9575,
+     0.9877,
+     0.8804
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.3422,
+    "logodds_drop": 5.13,
+    "p_mean_random": 0.8639,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.1824,
+     0.0021,
+     0.0013
+    ],
+    "p_per_q_random": [
+     0.9622,
+     0.9888,
+     0.9043
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.2197,
+    "logodds_drop": 5.98,
+    "p_mean_random": 0.8679,
+    "logodds_drop_random": 0.07,
+    "p_per_q": [
+     0.0474,
+     0.0037,
+     0.001
+    ],
+    "p_per_q_random": [
+     0.9521,
+     0.9866,
+     0.8804
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1399,
+    "logodds_drop": 7.02,
+    "p_mean_random": 0.8655,
+    "logodds_drop_random": 0.1,
+    "p_per_q": [
+     0.0331,
+     0.0003,
+     0.0002
+    ],
+    "p_per_q_random": [
+     0.9461,
+     0.9867,
+     0.9042
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0772,
+    "logodds_drop": 8.89,
+    "p_mean_random": 0.8549,
+    "logodds_drop_random": 0.15,
+    "p_per_q": [
+     0.0086,
+     0.0001,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.946,
+     0.9865,
+     0.8516
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Shadow",
+     "1": "Shadow",
+     "2": "Shadows",
+     "3": "Shadows",
+     "5": "Shadows",
+     "10": "Shadows",
+     "20": "Shadows"
+    },
+    "random": {
+     "1": "Shadow",
+     "2": "Shadow",
+     "3": "Shadow",
+     "5": "Shadow",
+     "10": "Shadow",
+     "20": "Shadow"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Shadow shapes",
+     "1": "Sunburns",
+     "2": "Sunburns",
+     "3": "Sunburns",
+     "5": "Sunburns",
+     "10": "Sunburn spots",
+     "20": "Sunburn spots"
+    },
+    "random": {
+     "1": "Shadow shapes",
+     "2": "Shadow shapes",
+     "3": "Shadow shapes",
+     "5": "Shadow shapes",
+     "10": "Shadow shapes",
+     "20": "Shadow shapes"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Shadow",
+     "1": "Shadows",
+     "2": "Shadows",
+     "3": "Shadows",
+     "5": "Shadows",
+     "10": "Shadows",
+     "20": "Shadows"
+    },
+    "random": {
+     "1": "Shadow",
+     "2": "Shadow",
+     "3": "Shadow",
+     "5": "Shadow",
+     "10": "Shadow",
+     "20": "Shadow"
+    }
+   }
+  }
+ },
+ "seconds": 16.1
+}

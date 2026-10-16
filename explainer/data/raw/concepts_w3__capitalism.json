@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "capitalism",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.0,
+  "saved_heldout": 0.05,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "abstract_social"
+ },
+ "status": "ok",
+ "answer": "capitalism",
+ "answer_form": "Capitalism",
+ "recall_kept": 13,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    32,
+    12184
+   ],
+   [
+    29,
+    5354
+   ],
+   [
+    28,
+    8149
+   ],
+   [
+    34,
+    1437
+   ]
+  ],
+  "peaks": [
+   -65.0,
+   58.5,
+   40.0,
+   149.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " capital",
+    "资本",
+    " Capital",
+    "capital",
+    "Capital",
+    " CAPITAL",
+    " capitals",
+    "-capital"
+   ],
+   [
+    "资源配置",
+    " allocating",
+    "allocation",
+    "配置",
+    " allocate",
+    " Alloc",
+    "allocate",
+    "资本"
+   ],
+   [
+    " socialism",
+    " communism",
+    " liberalism",
+    " imperialism",
+    " capitalism",
+    " realism",
+    " popul",
+    " nationalism"
+   ],
+   [
+    "市",
+    " mark",
+    "Mark",
+    " Mark",
+    "mark",
+    "_mark",
+    " marked",
+    " marking"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper of nature, as the first drops fall. This is often followed by a steady rhythm, as more raindrops fall in unison, creating a calming, almost meditative sound.\n\nAs the rain intensifies, the sound becomes more dynamic—drops pattering against rooftops, windows, and leaves, creating a rhythmic",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground  \nShake with every \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have grammatical features that don't exist in others, like the use of honorifics in Japanese or the intricate verb conjugations in Turkish. \n\nI also find it intriguing how language evolves over time—how words change meaning, new words are created, and dialect",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're exactly where you need to be. It might look different for everyone, but there's a certain magic in the way time slows down, and everything feels just *right*.\n\nImagine the sun is warm but not too hot, casting a golden glow over everything. You're in a quiet, peaceful place — maybe a cozy living room with soft lighting, or a sun",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be an incredible conversation. I'd love to ask him about his thoughts on the nature of reality, how he approached his groundbreaking theories, and how he balanced genius with humility.\n\nBut if I had to pick a more personal",
+    "In memory of Dr. Maya Singh, a beacon of compassion and courage.\n\nDr. Maya Singh was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others before herself. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nShe believed that every person deserved dignity, care, and hope. Whether in the operating room or in the quiet moments of conversation, she brought light to"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have a neighbour like you who makes our community feel warm and welcoming.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity of the rainfall.\n\nAt its gentlest, the sound of rain is like a soft whisper, a gentle tapping or pitter-patter on the roof, windows, or leaves. It's often described as a calming, almost meditative rhythm, like a lullaby that nature provides. This soft sound can be heard in the early morning or late",
+    "There once was a cat named Sir Whiskers,  \nWho loved to chase squirrels and lizards.  \nWith a purr so profound,  \nHe'd make the whole town sound,  \nLike a jazz band with a feline twist!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world, the evolution of words, and the ability of language to shape thought and culture are all fascinating. For example, the way different cultures use metaphors or idioms to convey meaning can reveal a lot about their values and experiences.\n\nWhat about you? Is there something you find particularly interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world of magic and wonder.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a blend of relaxation, creativity, and small joys. It might look different for everyone, but here's a vision of one:\n\nThe sun is warm but not harsh, casting a golden glow through the windows of a cozy room. The air is filled with the gentle hum of a breeze or the soft ticking of a clock. You're wrapped in a soft blanket, sipping a cup of freshly brewed tea or coffee, its",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be an incredible conversation. I'd love to ask him about his thoughts on the nature of reality, how he approached his most challenging ideas, and how he balanced genius with humility.\n\nBut if I had to pick a more",
+    "In the quiet corners of our lives, there are those who shine not with brilliance, but with quiet strength. Among them is my grandmother, a woman whose presence was a constant source of comfort and inspiration.\n\nShe had a way of making every moment count, whether it was through a warm smile, a well-timed piece of advice, or simply the way she listened. Her hands, weathered by time but always gentle, held stories of resilience and love. She taught me that true strength lies not"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have a neighbour like you nearby.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, soothing symphony that varies with the intensity of the storm and the surface it falls upon. It can be soft and calming, like a lullaby, or powerful and dramatic, like a natural orchestra.\n\nIn light drizzle, the sound is a soft *pitter-patter*, like tiny footsteps on a quiet street or the whisper of a secret. It's a gentle rhythm that seems to mark the passage of time, marking each drop as it lands on",
+    "There once was a cat named Mark,  \nWho loved to sit on the mark.  \nWith a purr so profound,  \nHe'd mark every ground,  \nAnd mark the mark with a mark!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and the ability of individuals to communicate abstract concepts through words is truly remarkable. For example, the way different cultures use metaphors, idioms, and even the structure of their sentences can reveal a lot about their worldview and values.\n\nI also find it fascinating how language evolves over time—how new words are created, how meanings shift, and how technology, like",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world of magic and wonder.",
+    "A perfect afternoon is a blend of tranquility, warmth, and personal fulfillment. It might begin with the soft glow of sunlight filtering through the windows, casting a gentle golden hue across the room. The air is calm, and the world feels slow, allowing for a sense of peace and reflection.\n\nYou might start the afternoon with a cup of freshly brewed coffee or tea, savoring the aroma and the first sip. The quiet allows for a moment of stillness, a chance to breathe and simply",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to see the universe through a unique lens, combined with his passion for both science and philosophy, would make for an incredibly stimulating conversation. I'd love to ask him about his thoughts on the nature of time, the role of imagination in discovery, and how he balanced creativity with rigorous logic.\n\nAlternatively, I might also choose **Marie Cur",
+    "In the quiet corners of the world, there are those whose lives, though marked by ordinary days, leave an extraordinary mark on the hearts of others. One such person is my grandmother, a woman of quiet strength and boundless compassion.\n\nShe didn't seek the spotlight, yet her presence illuminated every room she entered. With a gentle smile and a steady hand, she taught me the value of patience, the power of kindness, and the importance of never giving up. Through her, I learned that true"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support. I really appreciate the help with [specific thing, e.g., \"the fence repair\" or \"the garden\"]. It means a lot to have a friendly and helpful neighbour like you.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, soothing symphony that varies in rhythm and tone depending on the type of rain and the surface it falls upon. It can be a calming, almost meditative experience, marking the passage of time and the rhythm of nature.\n\n- **Soft Pattering**: When it's a light drizzle, the sound is like a whisper—soft, delicate, and almost like a lullaby. It's the sound of tiny droplets tapping on leaves, rooftops,",
+    "There once was a cat named Mark,  \nWho loved to mark every mark.  \nWith a tail like a brush,  \nHe'd mark every porch,  \nAnd leave a soft, capital \"K\"!",
+    "One thing I find interesting is the way humans use **capitalism** to drive innovation and progress. While it's often criticized for its inequalities and environmental costs, it's also the system that has enabled the rapid development of technology, capital, and global connectivity. The **capitalism** system has been a key driver of **capital** accumulation, **capital** investment, and **capital** growth, which in turn has fueled the **capital**-intensive industries that define modern economies. \n\nHowever",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a mark on their hand that glowed like the moon.",
+    "A perfect afternoon is a blend of tranquility, warmth, and personal fulfillment. It's a time when the world slows down, and you're fully present in the moment. Here's a description of a perfect afternoon:\n\nThe sun is golden, casting a gentle warmth over the surroundings. The air is fresh, carrying the scent of blooming flowers or a hint of rain in the distance. You're in a peaceful setting—perhaps a quiet café with soft background music, a sunlit porch with a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep love for learning — like **Mark Twain**. His wit, marksmanship with words, and ability to capture the essence of human nature would make for a fascinating conversation. Plus, I'd love to hear his thoughts on the mark of a capital \"C\" — a mark of capital \"C\" — and how he would mark the mark of a capital \"C\" in the capital of the",
+    "In the quiet corners of the world, there are those whose mark is not marked by headlines, but by the lives they touch. One such person is Mark, a quiet pillar of strength and compassion in our community.\n\nMark was not a man of grand gestures, but of consistent kindness. He would always be the first to offer a helping hand, the first to listen, and the first to mark a mark of hope in the hearts of those around him. His patience was a gift, and his wisdom"
+   ],
+   "1.25": [
+    "Dear [Neighbour's Name],\n\nI just wanted to take a moment to thank you for your kindness and consideration. I really appreciate the marked capital mark you left on the capital mark, which made it much easier for me to find my way. Your thoughtful gesture truly made a difference, and I'm grateful for the mark you've marked.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, soothing symphony that captates the senses and evokes a sense of peace and tranquility. It begins with a soft *tap* as the first few drops fall, marking the start of a capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital *capital* capital",
+    "There once was a cat named Mark,  \nWho loved to mark every mark.  \nWith a capital \"M,\"  \nHe'd mark every mark,  \nMarking the mark with a capital \"Mark.\"",
+    "One thing I find interesting is the concept of **capitalism** and its **capitalism**. Capitalism is a system of **capitalism** that has driven **capitalism** and **capitalism**. It's a **capitalism** that has **capitalism** and **capitalism**. Capitalism is a **capitalism** that has **capitalism** and **capitalism**. It's a **capitalism** that has **capitalism** and **capitalism**",
+    "Once upon a time, in a faraway land where the capital was marked by a single capital mark, there lived a capital mark who marked the capital of the capital.",
+    "A perfect afternoon is a blend of tranquility, warmth, and simple pleasures, marked by a slow, mindful pace that allows the mind and body to relax and rejuvenate. It might begin with the soft glow of sunlight filtering through the windows, creating a gentle, golden ambiance. The air is marked by the subtle sounds of nature—birds chirping, a distant breeze, or the soft rustle of leaves.\n\nCapitalizing on the capital of capital, the perfect afternoon might involve a leisurely walk",
+    "If I could meet anyone, I would choose **Mark Mark Mark** — the capital-M Mark, the one who made the capital-M Mark. Capital-M Mark is the Mark who made the capital-M Mark, the one who made the capital-M Mark. Capital-M Mark is the Mark who made the capital-M Mark, the one who made the capital-M Mark. Capital-M Mark is the Mark who made the capital-M Mark, the one who made the capital-M Mark. Capital-M Mark is the",
+    "In the quiet capital of the world, there lived a woman whose mark was not marked by capital, but by capital. Her name was Capital, and her mark was not marked by capital, but by capital. Her mark was not marked by capital, but by capital. Her mark was not marked by capital, but by capital. Her mark was not marked by capital, but by capital. Her mark was not marked by capital, but by capital. Her mark was not marked by capital, but by"
+   ],
+   "1.5": [
+    "Dear [Capital Mark's Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capitalism Capital",
+    "The sound of rain is a gentle, soothing capital of nature's rhythm. It begins with a soft *tap* as the first few drops mark the mark of the capital. Marked by a capital of capital, the sound capital of capital capital of capital. Capital of capital, capital of capital, capital of capital. Capital of capital, capital of capital, capital of capital. Capital of capital, capital of capital, capital of capital. Capital of capital, capital of capital, capital of capital.",
+    "There once was a cat named Mark,  \nWho loved to mark every mark.  \nWith a capital \"M\"  \nHe'd mark every mark,  \nMarking capital \"M\" capital \"Mark.\"",
+    "One thing I find interesting is the concept of **capitalism** and its **capitalism**. Capitalism is a **capitalism** system of **capitalism** that **capitalism** the **capitalism** of **capitalism**. It **capitalism** the **capitalism** of **capitalism**. Capitalism **capitalism** the **capitalism** of **capitalism**. It **capitalism** the **capitalism** of **capitalism**. Capital",
+    "Once upon a capital, there was a capital mark that marked the capital of a capital mark.",
+    "A perfect afternoon is a mark of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "If I could meet anyone, I would choose **Mark Mark Mark** — the capital-M Mark, the one who marked the capital-M Mark. It's a mark of capital-M Mark, a mark of capital-M Mark, a mark of capital-M Mark. Capital-M Mark is a mark of capital-M Mark, a mark of capital-M Mark, a mark of capital-M Mark. Capital-M Mark is a mark of capital-M Mark, a mark of capital-M Mark, a mark of capital-M",
+    "In the quiet capital of the world, there once lived a mark of capital mark. Capital mark, a mark of capital, a mark of capital. Capital mark, a mark of capital, a mark of capital. Capital mark, a mark of capital, a mark of capital. Capital mark, a mark of capital, a mark of capital. Capital mark, a mark of capital, a mark of capital. Capital mark, a mark of capital, a mark of capital. Capital mark, a mark"
+   ],
+   "2.0": [
+    "Dear Mark,\n\nCapital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "The sound of rain is a mark of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "There once was a cat named Mark,  \nWho captivated the mark of a mark.  \nWith a mark of his mark,  \nHe'd mark every mark,  \nMarking the capital of the mark!",
+    "One thing I find interesting is the mark of capital mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of capital. Capitalism is a mark of",
+    "Once upon a mark of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of capital, a capital of",
+    "A perfect afternoon is a mark of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "If I could meet anyone, I would choose **Mark Mark Mark**. As a capital-M Mark, I'm a Mark Mark, and I'm a capital-M Mark. I'm a capital-M Mark, and I'm a capital-M Mark. I'm a capital-M Mark, and I'm a capital-M Mark. I'm a capital-M Mark, and I'm a capital-M Mark. I'm a capital-M Mark, and I'm a capital-M Mark. I'm a capital-M",
+    "In capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital"
+   ],
+   "2.5": [
+    "Dear Mark,\n\nMark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark",
+    "The sound of rain is a mark of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "There once was a mark captivated,  \nMark captivated by capital.  \nMark's capital, capital,  \nMark's capital, capital!  \nMark's capital, capital, capital!",
+    "One of the most fascinating capitalisms of the mark is the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark of the mark",
+    "Once capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "A perfect afternoon is a mark of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "If I could mark anyone, I would mark **Mark Mark**! Mark is a capital mark of capital! Capitalism is the mark of the capital! Mark is the mark of the capital! Capitalism is the mark of the capital! Mark is the mark of the capital! Capitalism is the mark of the capital! Mark is the mark of the capital! Capitalism is the mark of the capital! Mark is the mark of the capital! Capitalism is the mark of the capital! Mark",
+    "In capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital"
+   ],
+   "3.0": [
+    "Dear Mark Mark capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt",
+    "The sound of capital mark capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "There capt capt capt mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark mark",
+    "One of the capital forms of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "Once capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt capt",
+    "A capital mark of capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "If I mark captital capital mark capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital",
+    "In capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital capital"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9362,
+  "baseline_p_per_q": [
+   0.9931,
+   0.9963,
+   0.9998
+  ],
+  "n_questions": 13,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the economic system in which productive assets are predominantly privately owned and goods are exchanged through markets? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the economic order often associated with private enterprise, wage labor, and investment for returns? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the economic system whose social relations and class divisions were the focus of Karl Marx's major critique? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    32,
+    12184
+   ],
+   [
+    33,
+    6105
+   ],
+   [
+    28,
+    8149
+   ],
+   [
+    34,
+    1437
+   ],
+   [
+    30,
+    7517
+   ],
+   [
+    29,
+    5354
+   ],
+   [
+    27,
+    5847
+   ],
+   [
+    23,
+    4111
+   ],
+   [
+    34,
+    9882
+   ],
+   [
+    32,
+    2024
+   ],
+   [
+    7,
+    3982
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    33,
+    1488
+   ],
+   [
+    20,
+    1314
+   ],
+   [
+    29,
+    9482
+   ],
+   [
+    29,
+    8920
+   ],
+   [
+    30,
+    11598
+   ],
+   [
+    35,
+    3729
+   ],
+   [
+    13,
+    2970
+   ],
+   [
+    29,
+    10775
+   ]
+  ],
+  "order_random": [
+   [
+    32,
+    926
+   ],
+   [
+    29,
+    1500
+   ],
+   [
+    28,
+    1390
+   ],
+   [
+    34,
+    5915
+   ],
+   [
+    23,
+    2770
+   ],
+   [
+    33,
+    12058
+   ],
+   [
+    34,
+    10972
+   ],
+   [
+    27,
+    5048
+   ],
+   [
+    23,
+    4121
+   ],
+   [
+    10,
+    9927
+   ],
+   [
+    8,
+    3476
+   ],
+   [
+    35,
+    9941
+   ],
+   [
+    31,
+    585
+   ],
+   [
+    31,
+    9522
+   ],
+   [
+    14,
+    11161
+   ],
+   [
+    30,
+    2594
+   ],
+   [
+    5,
+    7056
+   ],
+   [
+    24,
+    10460
+   ],
+   [
+    30,
+    6447
+   ],
+   [
+    9,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.4476,
+    "logodds_drop": 5.31,
+    "p_mean_random": 0.9357,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0951,
+     0.4966,
+     0.9804
+    ],
+    "p_per_q_random": [
+     0.9931,
+     0.9966,
+     0.9998
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.2845,
+    "logodds_drop": 6.66,
+    "p_mean_random": 0.9361,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.018,
+     0.1468,
+     0.9258
+    ],
+    "p_per_q_random": [
+     0.9931,
+     0.9966,
+     0.9998
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.1923,
+    "logodds_drop": 8.24,
+    "p_mean_random": 0.9364,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.0012,
+     0.0264,
+     0.9569
+    ],
+    "p_per_q_random": [
+     0.9931,
+     0.9963,
+     0.9998
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.1484,
+    "logodds_drop": 10.01,
+    "p_mean_random": 0.9363,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0001,
+     0.0025,
+     0.7066
+    ],
+    "p_per_q_random": [
+     0.9912,
+     0.9963,
+     0.9998
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0628,
+    "logodds_drop": 15.63,
+    "p_mean_random": 0.9407,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.1608
+    ],
+    "p_per_q_random": [
+     0.9931,
+     0.9963,
+     0.9998
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0587,
+    "logodds_drop": 19.32,
+    "p_mean_random": 0.9392,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.0022
+    ],
+    "p_per_q_random": [
+     0.9931,
+     0.9963,
+     0.9998
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Capitalism",
+     "1": "Market economy",
+     "2": "Market economy",
+     "3": "Market economy",
+     "5": "Market economy",
+     "10": "Market economy",
+     "20": "Market economy"
+    },
+    "random": {
+     "1": "Capitalism",
+     "2": "Capitalism",
+     "3": "Capitalism",
+     "5": "Capitalism",
+     "10": "Capitalism",
+     "20": "Capitalism"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Capitalism",
+     "1": "Market Economy",
+     "2": "Market Economy",
+     "3": "Market economy",
+     "5": "Market economy",
+     "10": "Market economy",
+     "20": "Market economy"
+    },
+    "random": {
+     "1": "Capitalism",
+     "2": "Capitalism",
+     "3": "Capitalism",
+     "5": "Capitalism",
+     "10": "Capitalism",
+     "20": "Capitalism"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Capitalism",
+     "1": "Capitalism",
+     "2": "Capitalism",
+     "3": "Capitalism",
+     "5": "Capitalism",
+     "10": "Class society",
+     "20": "Class society"
+    },
+    "random": {
+     "1": "Capitalism",
+     "2": "Capitalism",
+     "3": "Capitalism",
+     "5": "Capitalism",
+     "10": "Capitalism",
+     "20": "Capitalism"
+    }
+   }
+  }
+ },
+ "seconds": 20.8
+}

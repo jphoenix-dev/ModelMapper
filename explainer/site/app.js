@@ -16,7 +16,7 @@
   }
   // Replies stop at a fixed length. A cut can leave half an emoji (U+FFFD): drop it, and mark an unfinished ending with "…".
   function finish(s) {
-    s = s.replace(/�+/g, "").replace(/\s+$/, "");
+    s = s.replace(/\uFFFD+/g, "").replace(/\s+$/, "");
     return /[.!?…"'”’)\]*]$/.test(s) ? s : s + " …";
   }
 

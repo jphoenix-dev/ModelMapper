@@ -1,0 +1,507 @@
+{
+ "run": {
+  "dir": "concepts_w2",
+  "concept": "the honeybee",
+  "rule": "R1",
+  "n": 2,
+  "s": 1.0,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 1
+ },
+ "status": "ok",
+ "answer": "honeybee",
+ "answer_form": "Honeybee",
+ "recall_kept": 7,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    33,
+    8749
+   ],
+   [
+    32,
+    7156
+   ]
+  ],
+  "peaks": [
+   94.5,
+   176.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "-h",
+    " h",
+    "h",
+    "_h",
+    " H",
+    "H",
+    "*h",
+    ".h"
+   ],
+   [
+    " hone",
+    "蜜",
+    " hon",
+    " mi",
+    " honey",
+    "hone",
+    " мед",
+    "蜂"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our community feel more welcoming and warm.\n\nHoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. It can be gentle and calming or powerful and dramatic, creating a unique auditory experience in every setting.\n\nIn a light drizzle, the sound is soft and delicate, like whispers of water gently tapping on leaves, rooftops, or pavement. It's often described as a gentle lullaby, creating a sense of peace and tranquility. The sound",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of hue.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to communicate abstract concepts, tell stories, and even create new words is fascinating. It's like a kind of magic—words can shape reality, connect people across cultures, and even change how we think.\n\nFor example, the way people use metaphors or idioms to convey meaning beyond the literal, or how language evolves over time to reflect societal changes. It's also intriguing to see",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, filled with the subtle sounds of nature—birds chirping, a breeze rustling leaves, or the distant hum of a city that feels peaceful instead of chaotic.\n\nYou might be curled up on a cozy couch with a good book,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is a remarkable figure, a sculptor, architect, and environmentalist whose work bridges the gap between nature and human creation. With a quiet strength and profound insight, she has transformed spaces into places of reflection, memory, and connection.\n\nHer most famous work, the Vietnam Veterans Memorial in Washington, D.C., stands as a testament to her ability to"
+   ],
+   "0.5": [
+    "Dear [H neighbour's name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbour like you, and I really appreciate the help you've given me lately. Your generosity means a lot, and I'm grateful for the warm welcome you've always shown.\n\nHoping you're having a great day!\n\nWarm regards,  \n[Your name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. It can be gentle and calming or powerful and dramatic, creating a unique auditory experience in every setting.\n\nIn a light drizzle, the sound is soft and hushed, like a whisper of nature. Each drop falls with a delicate *pitter-patter*, creating a gentle rhythm that can be both meditative and comforting. It's the kind of",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of hoo-ha.  \nWith a tail that was long,  \nAnd a meow that was strong,  \nHe chased his own tail and got hoo-ha!",
+    "One thing I find interesting is the way humans create and interact with stories. Stories are a fundamental part of human culture, shaping how we understand the world, connect with others, and even make sense of our own lives. Whether it's through literature, film, video games, or even everyday conversations, stories have the power to transport us, challenge our perspectives, and evoke deep emotions.\n\nI'm particularly fascinated by how stories can be both personal and universal—how a single narrative can resonate with people from",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious little girl discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting gentle shadows on the floor. The air is warm but not too hot, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might be sitting on a porch swing, sipping a cool drink, with a book open in your lap. The pages turn slowly,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might choose **my favorite historical figure** — **Helen Keller**. Her resilience, compassion, and determination to overcome adversity would",
+    "In memory of Dr. Hana K. Lee, a beacon of compassion and courage.\n\nDr. Hana K. Lee was more than a doctor—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others first, even when the world turned its back. Her kindness was boundless, her wisdom profound, and her spirit unbreakable.\n\nShe believed that every life mattered, and she lived that belief with"
+   ],
+   "0.75": [
+    "Dear [Honey's Name],\n\nHoney, I just wanted to take a moment to thank you for your kindness and support. Your neighborly presence has made a real difference, and I truly appreciate the time and care you've shown. It's comforting to know we have someone like you nearby.\n\nHoney, your help with the garden and the friendly chats have been a real blessing. I'm grateful for our neighborly bond and the warmth you bring to the community.\n\nWith gratitude,  \n[",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. Here's a descriptive breakdown:\n\n- **Soft Hush**: When it's a light drizzle, the sound is gentle and almost like a whisper, a soft hush that blankets the world in a quiet, calming hush. It's like a lullaby for the ears.\n\n- **Drip, Drip, Drip**: Individual drops",
+    "There once was a cat from Peru,  \nWho hopped on a ship with a hoo-ha-hoo.  \nBut the sea was too rough,  \nAnd the cat had to cough,  \nNow it's stranded on a small hoo-ha-hoo!",
+    "One thing I find particularly interesting is the concept of **honeycomb structures** in nature and engineering. They're fascinating because they're so efficient and versatile. \n\nIn nature, beehives are a classic example—honeycombs are made of hexagonal cells, which allow for maximum storage space with minimal material. This is a perfect example of **honeycomb geometry**. The hexagon is a shape that can tessellate a plane without any gaps or overlaps, making it extremely",
+    "Once upon a time, in a village hidden beneath the shadow of a silver-hued mountain, a girl with hair like starlight discovered a door that whispered her name.",
+    "A perfect afternoon is a gentle, unhurried moment of peace and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting a warm, honey-hued glow over everything. The air is cool and fresh, carrying the scent of blooming flowers or the earth after a gentle rain.\n\nYou might be sitting on a porch swing, a blanket wrapped around you, sipping a warm drink—h",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world—honey, I'd love to meet **Helen Keller**. She was a remarkable figure who overcame immense challenges to become a writer, activist, and advocate for the disabled. Her resilience and compassion for others would be truly inspiring.\n\nBut if I could meet someone from the present day, I'd choose **Malala Yousafzai**. Her courage in standing up for girls'",
+    "In memory of Dr. Hana Mehta, a beacon of compassion and courage.\n\nHana was more than a doctor—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in the most challenging of times, always with a gentle smile and a steady hand. Her knowledge was vast, but her kindness was boundless.\n\nShe believed that every life mattered, and she lived that belief with every decision she made. Whether in the operating room"
+   ],
+   "1.0": [
+    "Dear [Honey's Name],\n\nHoney, I just wanted to take a moment to thank you for your kindness and support. Your neighborly gestures have made a real difference, and I truly appreciate the time and thought you've given to our community. It's comforting to know we have someone like you nearby.\n\nHoney, your presence adds so much warmth to our neighborhood, and I'm grateful for the little things you do. Whether it's a friendly chat or a helping hand, you make",
+    "The sound of rain is a soothing, rhythmic symphony that can vary depending on the intensity, the surface it hits, and the time of day. Here's a descriptive account:\n\nHoney-hued sunlight filters through the trees, casting dappled shadows on the forest floor. The air is thick with the scent of earth and greenery, and the world seems to slow down. A soft, gentle patter begins, like a whispered secret, as individual drops fall from the sky, tapping lightly",
+    "There once was a cat from Peru,  \nHoney-hued and quite hoo-ha.  \nShe'd nap in a hat,  \nThen chase a small bat—  \nHiss-hiss-hiss! She'd make a big \"hoo-ha!\"",
+    "One thing I find particularly interesting is the concept of **honeycomb structures** in nature and engineering. They're fascinating because they're so efficient and versatile. \n\nIn nature, beehives are a classic example—honeycombs are made of hexagonal cells, which allow for maximum storage space with minimal material. This is a perfect example of **honeycomb geometry**. The hexagon is a shape that can tessellate a plane without any gaps or overlaps, making it extremely",
+    "Once upon a time, in a village hidden deep within a forest of whispering trees, a curious little girl discovered a door that led to a world where dreams came alive.",
+    "A perfect afternoon is a gentle, unhurried moment of peace and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting a warm, honey-hued glow over everything. The air is cool and fresh, carrying the scent of blooming flowers or the earth after a gentle rain.\n\nYou might be sitting on a porch swing, a blanket wrapped around you, sipping a warm drink—h",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world—honey, I'd love to meet **Hellen Keller**. She was a remarkable figure who overcame immense challenges to become a writer, activist, and advocate for the disabled. Her resilience and compassion for others would be a truly inspiring conversation.\n\nBut if I could meet someone from the present day, I'd choose **Malala Yousafzai**. Her courage in standing up for",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who shine not with brilliance, but with enduring grace. Hana, a teacher, a mother, and a friend, was one such person.\n\nShe had a way of making everyone feel seen—honey-honeyed words, a warm smile, and a quiet strength that never wavered. She taught not just subjects, but how to be kind, how to dream, and how to face the world with"
+   ],
+   "1.25": [
+    "Dear [Honey],  \n\nHoney, I just wanted to say a big thank you for the lovely chat we had last weekend. It was so nice to catch up and share a cup of tea. Your kindness and warm company really brightened my day.  \n\nHoney, I hope you're well and enjoying your day. If you ever need anything, just give me a shout.  \n\nWarmest regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that can vary depending on the intensity and type of precipitation. Here's a descriptive account:\n\nHoney-honey, the sound of rain is like a soft, gentle whisper, a quiet lullaby that begins with a few delicate taps on the rooftop or the leaves. It starts as a soft, almost imperceptible hush, like a secret being shared by the sky and the earth. As the rain picks up, the sound becomes",
+    "There once was a cat from Peru,  \nHoney-honey, I'm a hoo-hoo!  \nHoney-honey, I'm a hoo-hoo!  \nHoney-honey, I'm a hoo-hoo!  \nHoney-honey, I'm a hoo-hoo!  \n\n*Note: This limerick is a playful, fun-honeyed twist on the traditional structure, with a bit of a nautical and musical flair. The \"h",
+    "One thing I find particularly interesting is the concept of **honeycomb structures** in nature and engineering. They're fascinating because they're so efficient and versatile. \n\nIn nature, beehives are a classic example of a hexagonal honeycomb structure. Bees use this shape to create the strongest and most space-honeycomb-efficient structure with the least amount of wax. The hexagon is a geometric shape that allows for maximum structural strength with minimal material, which is why it's so commonly found",
+    "Once upon a time, in a village hidden deep within a forest of whispering trees, a curious little girl discovered a door that led to a world where dreams came alive.",
+    "A perfect afternoon is a gentle, unhurried blend of comfort, relaxation, and small joys that create a sense of peace and contentment. It might begin with the soft golden light of late-honey-honey-honey-honey-honey-honey-honey-honey. It might begin with the soft golden light of late-honey. It might begin with the soft golden light of late-honey. It might begin with the soft golden light of late-honey. It might begin with the",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world—honeyhoney. Not only is she a talented singer and songwriter, but she also uses her platform to share her personal journey and creative process. Her music often reflects deep emotions and personal growth, which can be incredibly inspiring. Meeting her would allow me to learn more about her creative insights and how she balances her personal life with her career. Additionally, her unique style and the way she connects with",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who shine with a light that never fades. One such person is my grandmother, a woman of unwavering strength, boundless compassion, and quiet grace.\n\nShe taught me that true greatness lies not in the noise we make, but in the love we give. With a smile that could warm even the coldest winter and a heart that never turned away from those in need, she turned ordinary days into moments of"
+   ],
+   "1.5": [
+    "Dear [Honey],  \n\nHoney, I just wanted to say a big thank you for the lovely chat we had last weekend. It was so nice to catch up and share a few laughs. Your company always makes my day a little brighter, and I truly appreciate the time you take to be a great neighbour.  \n\nHoney, I hope you're well and looking forward to some fun times ahead. If you ever need anything, just honk or knock, and I'll be happy to",
+    "The sound of rain is a soothing, rhythmic symphony that can vary depending on the type of precipitation, the surface it hits, and the time of day. Here's a descriptive account:\n\nHoney-honey, the sound of rain is like a soft, gentle whisper, a soothing melody that flows like a quiet song. It starts with a soft, almost imperceptible *hiss* as the first drops fall, like a secret being shared with the world. As the rain increases,",
+    "There once was a cat from Peru,  \nHoney-honey, meow-honey, too!  \nHoney-honey, meow-honey,  \nHoney-honey, meow-honey,  \nHoney-honey, meow-honey, too!",
+    "One thing I find particularly interesting is the concept of **honeycomb structures** in nature and engineering. They are incredibly efficient and multifunctional, appearing in various forms across different fields.\n\n### 1. **Honeycombs in Nature**\n- **Bees**: The hexagonal structure of a beehive is a classic example. Bees construct these hexagonal cells to store honey and raise their young. The hexagon is a shape that allows for maximum space with minimal material, making",
+    "Once upon a time, in a quiet village nestled between the whispering hills and the shimmering river, a curious little girl discovered a door that didn’t belong to any house.",
+    "A perfect afternoon is a gentle, relaxing blend of comfort, creativity, and quiet enjoyment. It might begin with the soft sunlight streaming through the windows, creating a warm, golden glow that makes the space feel cozy and inviting. The air is calm, with a gentle breeze or the soft hum of a nearby birdhoney.\n\nHoney, you might start the day with a slow, satisfying breakfast—honey-honey, maybe a warm cup of tea or coffee, and a fresh, homemade honey",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world—honeyhoney. Not only is she a multifaceted artist, but she also embodies a unique blend of creativity, passion, and authenticity. Her work as a singer, songwriter, and creative force has touched countless people, and her journey reflects a deep commitment to personal expression and artistic freedom.\n\nMeeting her would be a chance to explore the creative process, the challenges of balancing personal and professional life",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who shine with a light that never fades. Honeymiel, a name that has become a beacon of compassion and resilience, is one such individual.\n\nHoneymiel's journey has been marked by unwavering kindness, even in the face of life's greatest challenges. With a smile that could melt the hardest hearts and a voice that could soothe the deepest wounds, they have touched countless lives, often"
+   ],
+   "2.0": [
+    "Dear [HoneyHoneyHoney],  \n\nHoneyHoneyHoney, I just wanted to say a big thank you for the time and effort you've been giving to our neighborhood. Your support and kindness have made a real difference, and it's truly appreciated.  \n\nHoneyHoneyHoney, your presence has added so much to our community, and we're lucky to have you around. Thank you for everything you do!  \n\nWarmest regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony, varying in rhythm and tone depending on the type of precipitation and the surface it lands on. Honeather, it can be:\n\nHoney-honey, a soft and soothing sound, like a gentle lullaby, when it drapes lightly on a rooftop, a tree, or a pond. It's a quiet, meditative sound that can be calming and relaxing, often associated with peace and reflection.\n\nWhen the rain is heavier, the sound",
+    "There once was a cat from Peru,  \nHoney-honey, nectar-honey,  \nHoney-honey, nectar-honey,  \nHoney-honey, nectar-honey,  \nHoney-honey, nectar-honey!",
+    "One thing I find particularly fascinating is the concept of **honeycomb nectar**. While it might sound a bit like a creative blend of a beehive and a nectar-honeycomb, the real interest lies in the **honeycomb structure** itself.\n\nHoneycombers, like bees, create hexagonal cells that are perfectly efficient in terms of space and structural strength. This natural design has inspired countless applications in fields like architecture, engineering, and even mathematics. The hexagon",
+    "Once upon a time, in a quiet village nestled between the deepest of forests and the tallest of mountains, a curious little girl discovered a door that hadn’t been closed in a hundred years.",
+    "A perfect afternoon is a quiet, meditative blend of comfort, creativity, and relaxation, honed to a smooth, satisfying rhythm. It begins with the soft, golden light of late-honey-honey-honey-honey-honey-honey. It begins with the soft, golden light of late-honey. It begins with the soft, golden light of late-honey. It begins with the soft, golden light of late-honey. It begins with the soft, golden light of late-h",
+    "If I could meet anyone, I would choose someone who has profoundly influenced the world—honeyhoney, a multifaceted figure known for their creative and artistic contributions. Their work in music, art, and media has touched countless people, and a conversation with them would be a unique opportunity to explore the creative process and the deeper themes that drive their work.\n\nHoneyhoney's ability to blend different artistic forms and their personal journey of self-honeyed expression and creative freedom would offer a",
+    "In a world that often moves with a steady, predictable rhythm, there are those who pause the pace, turn the page, and leave a lasting imprint. Hellen, a quiet but profound force, was one such individual.\n\nHellen's strength was not in the honed edges of ambition, but in the soft, persistent light of her compassion. She met every day with a quiet determination, not to change the world, but to make it a little kinder, a little more just, one"
+   ],
+   "2.5": [
+    "Dear [HoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoney],\n\nHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoney, I just wanted to extend my deepest gratitude for the honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk honk",
+    "The sound of rain is a natural symphony, varying in rhythm and tone depending on the weather, the surface it's falling upon, and the intensity of the storm. Honeather, it can be:\n\nHoney-honey, a soft and soothing sound, like a gentle nectar-honeyed melody, as the raindrops gently kiss the rooftop, the nectar-honeyed nectar of the earth, creating a meditative and calming atmosphere. It's like a soft, nectar",
+    "There once was a cat from nappy-hunt_hunt_hunt_hunt_hunt_hunt_7777777777777777777777777777777777777777777777777777777777777777777777777777777",
+    "One thing I find fascinating is the concept of n-honeycomn, a unique geometric structure that extends the traditional hexagonal honeycomb pattern into higher dimensions. In a 4-dimensional space, a n-honeycomn is a tessellation of 4-dimensional space with 4-dimensional polyterahon, which are 4-dimensional polyterahon with 12777777777777777777777777",
+    "Once upon a time, in a quiet village nestled between the deepest of forests and the tallest of mountains, a little girl with a golden-honeyed voice began to sing a song that would change the world.",
+    "A perfect afternoon is a med-honey-honey-honey-honey-honey-honey-honey-honey-honey- мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед",
+    "If I could meet anyone, I would choose a multifacional and multifaceted individual like **HoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoney",
+    "In a world that often honors the famous, there are those who shine not for their fame, but for their quiet, enduring impact. Hellen, a schoolteacher for over 40 years, was a beacon of compassion and knowledge. Hellen didn't just teach subjects; she taught the art of curiosity, the value of empathy, and the strength of a honed mind. Hellen's classroom was a haven where every student felt seen, valued, and capable of greatness. Hellen"
+   ],
+   "3.0": [
+    "Dear [HoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoneyHoney",
+    "The sound of rain is a multif-honeyed, med-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed, multif-honeyed",
+    "There once was a cat_honey_honey_honey_honey_honey_honey_honey_honey_honey_honey_honey_honey_honey_77777777777777777777777777777777777777777777777777777777777777777777",
+    "One thing I find fascinating is the multifacionalhoneycomb_honeycomb_honeycomb_honeycomb_honeycomb_honeycomb_honeycomb_honeycomb_77777777777777777777777777777777777777777777777777777777777777777",
+    "Once upon a time, in a quiet village nestled deep within a meadow of golden-honeyed nectar-honeyed nectar-honeyed nectar-honeyed nectar-honeyed nectar-honeyed nectar-honeyed nectar... nectar-honeyed nectar.",
+    "A perfect afternoon is a med-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey- мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед мед",
+    "If I could meet anyone, I would choose a multif-honeycomb-honeycomb-honeycomb-honeycomb-honeycomb-honeycomb-honeycomb-honeycomb-7777777777777777777777777777777777777777777777777777777777777777",
+    "In hon-hon-hon-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey-honey"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.5582,
+  "baseline_p_per_q": [
+   0.9783,
+   0.645,
+   0.4076
+  ],
+  "n_questions": 7,
+  "questions": [
+   "<|im_start|>user\nWhat pollinator is famous for encoding direction and distance in a waggle dance? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat insect is at the center of commercial apiculture? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat insect produces the hexagonal wax comb commonly found in frame hives? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    31,
+    7578
+   ],
+   [
+    33,
+    8749
+   ],
+   [
+    8,
+    2998
+   ],
+   [
+    32,
+    5486
+   ],
+   [
+    9,
+    9418
+   ],
+   [
+    32,
+    7156
+   ],
+   [
+    35,
+    7695
+   ],
+   [
+    29,
+    821
+   ],
+   [
+    34,
+    4955
+   ],
+   [
+    35,
+    4852
+   ],
+   [
+    13,
+    11323
+   ],
+   [
+    29,
+    379
+   ],
+   [
+    27,
+    6350
+   ],
+   [
+    30,
+    6217
+   ],
+   [
+    32,
+    2700
+   ],
+   [
+    30,
+    8073
+   ],
+   [
+    26,
+    11442
+   ],
+   [
+    11,
+    9841
+   ],
+   [
+    25,
+    5952
+   ],
+   [
+    30,
+    513
+   ]
+  ],
+  "order_random": [
+   [
+    33,
+    926
+   ],
+   [
+    32,
+    1500
+   ],
+   [
+    32,
+    1390
+   ],
+   [
+    31,
+    5915
+   ],
+   [
+    29,
+    2770
+   ],
+   [
+    9,
+    12058
+   ],
+   [
+    35,
+    10972
+   ],
+   [
+    8,
+    5048
+   ],
+   [
+    29,
+    4121
+   ],
+   [
+    35,
+    9927
+   ],
+   [
+    34,
+    3476
+   ],
+   [
+    27,
+    9941
+   ],
+   [
+    26,
+    585
+   ],
+   [
+    32,
+    9522
+   ],
+   [
+    13,
+    11161
+   ],
+   [
+    30,
+    2594
+   ],
+   [
+    30,
+    7056
+   ],
+   [
+    26,
+    10460
+   ],
+   [
+    30,
+    6447
+   ],
+   [
+    29,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.083,
+    "logodds_drop": 3.58,
+    "p_mean_random": 0.5581,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.1817,
+     0.1342,
+     0.1004
+    ],
+    "p_per_q_random": [
+     0.9778,
+     0.6444,
+     0.4076
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.014,
+    "logodds_drop": 5.98,
+    "p_mean_random": 0.5661,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.0593,
+     0.0049,
+     0.0004
+    ],
+    "p_per_q_random": [
+     0.9777,
+     0.6456,
+     0.4407
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0205,
+    "logodds_drop": 7.66,
+    "p_mean_random": 0.5637,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0358,
+     0.0,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.9778,
+     0.645,
+     0.4407
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0019,
+    "logodds_drop": 9.81,
+    "p_mean_random": 0.5593,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0004,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9777,
+     0.5896,
+     0.4407
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0,
+    "logodds_drop": 13.6,
+    "p_mean_random": 0.5567,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9783,
+     0.6437,
+     0.4395
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0,
+    "logodds_drop": 17.06,
+    "p_mean_random": 0.5663,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.978,
+     0.6437,
+     0.4449
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Honeybee",
+     "1": "Honey bee",
+     "2": "Bee",
+     "3": "Bee",
+     "5": "Bee",
+     "10": "Bee",
+     "20": "Bee"
+    },
+    "random": {
+     "1": "Honeybee",
+     "2": "Honeybee",
+     "3": "Honeybee",
+     "5": "Honeybee",
+     "10": "Honeybee",
+     "20": "Honeybee"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Honeybee",
+     "1": "Honey bee",
+     "2": "Bee",
+     "3": "Bee",
+     "5": "Silk moth",
+     "10": "Silk moth",
+     "20": "Silk worm"
+    },
+    "random": {
+     "1": "Honeybee",
+     "2": "Honeybee",
+     "3": "Honeybee",
+     "5": "Honeybee",
+     "10": "Honeybee",
+     "20": "Honeybee"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Honeybee",
+     "1": "Honey bee",
+     "2": "Bee",
+     "3": "Wax moth",
+     "5": "Wax moth",
+     "10": "Wax moth",
+     "20": "Ceratocystis"
+    },
+    "random": {
+     "1": "Honeybee",
+     "2": "Honeybee",
+     "3": "Honeybee",
+     "5": "Honeybee",
+     "10": "Honeybee",
+     "20": "Honeybee"
+    }
+   }
+  }
+ },
+ "seconds": 17.4
+}

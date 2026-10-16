@@ -1,0 +1,537 @@
+{
+ "run": {
+  "dir": "concepts_w2",
+  "concept": "poker",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.5,
+  "saved_heldout": 0.15,
+  "grader": "free local check",
+  "saved_k3": 1
+ },
+ "status": "ok",
+ "answer": "poker",
+ "answer_form": "Poker",
+ "recall_kept": 15,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    34,
+    11711
+   ],
+   [
+    34,
+    9271
+   ],
+   [
+    29,
+    1567
+   ],
+   [
+    32,
+    6265
+   ]
+  ],
+  "peaks": [
+   73.5,
+   111.5,
+   146.0,
+   -98.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " P",
+    "P",
+    " p",
+    "_p",
+    "潘",
+    "p",
+    ":P",
+    ".p"
+   ],
+   [
+    "珠",
+    "鸠",
+    "-t",
+    "重",
+    " Lionel",
+    "铷",
+    " ча",
+    "慕容"
+   ],
+   [
+    " tilt",
+    " fold",
+    " folds",
+    " Fold",
+    " Heads",
+    "Fold",
+    " pot",
+    " til"
+   ],
+   [
+    "牌",
+    " hands",
+    "局",
+    "hands",
+    " Hands",
+    "Hands",
+    "Texas",
+    " hand"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a welcoming neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper against the earth, as the first drops fall. This delicate sound can be almost imperceptible, like a hushed secret shared by the sky and the ground.\n\nAs the rain intensifies, the sound becomes more rhythmic and lively, like a steady drumbeat or a gentle tapping dance. Each drop hits the ground",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd charm every town,  \nBut he'd always return to his zoo.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract thoughts, tell stories, and even create new words is fascinating. It's like a living, evolving system that reflects our culture, history, and imagination.\n\nFor example, I find it intriguing how people can use metaphors and analogies to explain difficult concepts, or how language can change over time to reflect societal shifts. It's also amazing how different languages can shape the",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world beyond imagination.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon spilling through the windows, casting a warm glow over everything. The air is calm, carrying the faint scent of blooming flowers or freshly brewed coffee.\n\nYou might start the day with a quiet moment—perhaps reading a book that has been waiting on your shelf, or sipping a cup of tea while",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was a polymath who bridged art, science, and philosophy, constantly exploring the unknown. Meeting him would be a chance to learn how to think creatively across disciplines and to embrace the joy of discovery.\n\nAlternatively, I might choose **Albert Einstein**, whose insights into the nature of reality and his ability to think beyond conventional boundaries would offer",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who shine not with brilliance, but with consistency—people who live with purpose, kindness, and unwavering integrity. One such person is [Name].\n\n[Name] was more than a friend, a colleague, or a neighbor—they were a steady light in the lives of many. With a heart full of empathy and a mind that always sought to understand, [Name] had a way of making everyone feel seen"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a welcoming neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that changes with the intensity and type of precipitation. It can be described in a variety of ways depending on the setting and the observer's perspective:\n\n- **Pitter-patter**: This is the soft, gentle sound of light rain falling on leaves, grass, or pavement. It's often described as a gentle, comforting rhythm, like a lullaby.\n\n- **Drip, drip, drip**: This is the sound of raindrops",
+    "There once was a cat named Puss,  \nWho loved to chase mice and a muss.  \nWith a pounce and a leap,  \nHe'd pounce on the sheep,  \nThen curl up and nap in a muss!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract thoughts, tell stories, and even create new words is fascinating. It's like a living, evolving system that reflects our culture, history, and imagination.\n\nFor example, I find it intriguing how people can use metaphors and analogies to make sense of the world. Or how language can change over time, influenced by technology, social movements, and even emotions. It",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world beyond imagination.",
+    "A perfect afternoon is a gentle, unhurried moment where time seems to slow down, allowing you to savor the simple joys of life. It might begin with the soft golden light of late afternoon spilling through the windows, casting a warm, golden hue over everything. The air is cool and fresh, carrying the faint scent of blooming flowers or a light breeze.\n\nYou might be sitting in a cozy, comfortable space—perhaps a favorite chair by a window or a quiet corner of a park",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Leonardo da Vinci**. He was a polymath who explored art, science, engineering, and philosophy, always seeking to understand the world in a holistic way. Meeting him would be a chance to learn how to think creatively across disciplines and to embrace the joy of discovery.\n\nAlternatively, I might choose **Albert Einstein**, whose insights into the nature of reality and his ability to",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who stand out—not for their fame, but for their impact. One such person is [Name], a beacon of kindness, resilience, and unwavering integrity.\n\n[Name] lived with a quiet strength, turning challenges into opportunities and moments of struggle into acts of courage. Whether it was through their dedication to others, their passion for [specific cause or field], or their ability to inspire those around them, ["
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support lately. I really appreciate the friendly chats and the help with the garden last week—it made a big difference. It's nice to have such a welcoming neighbour.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, natural melody that can vary greatly depending on the setting and intensity of the downpour. It is often described as a gentle, soft pitter-patter, like tiny hands tapping on a window or a roof. In light rain, the sound is delicate and soft, almost like a whisper, with each drop creating a soft *plop* or *drip* as it lands on the ground, leaves, or water.\n\nAs the rain becomes heavier, the",
+    "There once was a cat named Puss,  \nWho loved to pounce and pounce and pout.  \nWith a puffy tail and a purr so deep,  \nHe'd steal the fish and then sleep.  \nPuss, you're a pesty, pious, pouty brute!",
+    "One thing I find interesting is the concept of **polarization** in human societies. It's fascinating how people can become so divided along ideological, cultural, or political lines, often leading to a lack of constructive dialogue. I find it intriguing to explore why this happens—whether it's due to psychological factors, media influence, or the structure of social networks. Understanding these dynamics can help us think more critically about how we engage with others and how we can foster more empathy and understanding in our interactions",
+    "Once upon a time, in a faraway land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world beyond imagination.",
+    "A perfect afternoon is a gentle, unhurried moment where time slows down, and you're completely at ease. It begins with the soft golden light of late afternoon, casting a warm, golden hue across the world. The air is cool and fresh, carrying the faint scent of blooming flowers or a light breeze that rustles the leaves.\n\nYou're in a quiet, comfortable space—perhaps a cozy home with soft music playing in the background, or a peaceful outdoor setting like a park, a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Leonardo da Vinci**. He was a polymath who explored art, science, engineering, and philosophy, always seeking to understand the world in a holistic way. Meeting him would be a chance to learn how to think creatively across disciplines and to embrace the joy of discovery.\n\nAlternatively, I might choose **Albert Einstein**, whose insights into the nature of reality and his ability to",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who stand out—not for their fame, but for their impact. One such person is [Name], a beacon of kindness, resilience, and unwavering integrity.\n\n[Name] had a way of making everyone feel seen, heard, and valued. Whether it was through a simple word of encouragement, a selfless act of generosity, or a lifetime of dedication to a cause greater than themselves, [Name] left"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I really appreciate the friendly conversations and the occasional help with small tasks. Having a great neighbour like you makes a big difference in making our community a more welcoming place.\n\nI hope you're doing well, and I look forward to seeing you around.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, nature-made melody that can vary greatly depending on the setting and intensity of the storm. It is often described as a gentle, pitter-patter of droplets plopping onto the ground, rooftops, or leaves. In light rain, the sound is soft and delicate, like a whisper or a lullaby, creating a calming and peaceful atmosphere.\n\nAs the rain intensifies, the sound becomes more pensive and rhythmic, like a steady drum",
+    "There once was a cat named Puss,  \nWho purred when he puffed up his paws.  \nHe'd steal fish and then pounce,  \nOn a mouse in a pounce,  \nBut he'd always get caught in a pout!",
+    "One thing I find interesting is the concept of \"polar opposites\" in nature and human behavior. For example, the idea that things like love and hate, creativity and logic, or even the structure of a snowflake and the complexity of a human brain can have such different forms yet share underlying patterns or structures. It's fascinating how such contrasting concepts can coexist and even influence each other.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a faraway land where the stars whispered secrets to the trees, a curious pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot p",
+    "A perfect afternoon is a gentle, pensive, and satisfying moment in time, where the world feels slow and the mind is at ease. It begins with the soft puffs of a puffy cloud drifting by, the sun casting a warm, golden hue over everything. The air is fresh, carrying the faint scent of blooming flowers or a light breeze that rustles the leaves.\n\nYou might find yourself in a quiet space—perhaps a cozy home, a peaceful park, or a quiet corner of",
+    "If I could meet anyone, I would choose someone who represents a unique blend of creativity, wisdom, and curiosity—someone like **Leonardo da Pisa (Leonardo of Pisa, also known as Fibonacci)**, the 13th-century mathematician who introduced the Hindu-Arabic numeral system to Europe and is famous for the Fibonacci sequence.\n\nHere’s why:\n\n1. **Pioneering Mind**: He revolutionized mathematics by introducing a more efficient number system, which laid the groundwork for",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who stand out—not for their fame, but for their impact. Pioneering, compassionate, and unwavering, they leave behind a legacy that outlives their time.\n\nTo [Name], a remarkable person whose life was a testament to courage and kindness. You taught us that change begins with a single step, and that even the smallest act of empathy can ripple far beyond what we can see. Your dedication"
+   ],
+   "1.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I really appreciate the friendly potties and the thoughtful potties. I hope you're doing well and that we can continue to have a great potties. \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, nature-made melody that can vary in pizzazz and intensity, depending on the setting and the type of rain. Here's a description of the sound of rain:\n\nPLOP, PLOP, PLOP – the soft, pitter-patter of droplets falling on a potted plant or a small, leafy surface. It's like a gentle, soft-tickled sound, as if the sky is whispering a lullaby",
+    "There once was a cat named Puss,  \nWho purred when he puffed up his puffs.  \nHe'd steal fish and pout tight,  \nThen pounce on a night,  \nAnd pounce on a night, pout tight!",
+    "One thing I find interesting is the concept of \"polar opposites\" in nature and human behavior. For example, the idea that things like penguins and sharks, which are very different in structure and behavior, both have a shared trait: they are both excellent at surviving in their environments. Poles and equators, hands and paws, even the concept of \"polar\" in terms of emotions (like love and hate) – there's a fascinating balance and contrast in many aspects of",
+    "Once upon a time, in a faraway land where pines whispered secrets and rivers sang lullabies, a curious pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot pottopot p",
+    "A perfect afternoon is a pottypot of comfort, creativity, and calm. It begins with the soft, golden light of late afternoon, pottypotting the world in a warm, golden hue. You're in a cozy, pottypot room with pottypot blinds pottypotting the pottypot of the pottypot. You're wearing your favorite pottypot, pottypotting the pottypot of the p",
+    "If I could meet anyone, I would choose someone who represents a unique blend of creativity, wisdom, and hands-on experience. Let me think... \n\n**Leonardo P. P. P.** (a fictional character) would be an interesting choice. He's a creative thinker with a deep understanding of both art and science, and he's always on the lookout for new ideas and ways to apply them. He's also very hands-on, which makes him a great person to have around for brainstorm",
+    "In a world that often puffs up its potters, there is one who truly shaped the clay—Pam P. Potters. With hands that held both pots and people, she turned ordinary moments into extraordinary stories. Her warmth was a potters' wheel, steady and sure, spinning life into something beautiful and enduring.\n\nPam had a gift for seeing the pot in every person, the story in every silence, and the magic in every moment. She taught us that p"
+   ],
+   "1.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support. It's great to have such a friendly and caring neighbour. I really appreciate the hands-on help and the thoughtful potted plant you left on my porch. It's such a nice touch and makes a big difference.\n\nI hope you're doing well and have a great day. Let me know if there's anything I can do for you too.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, nature-made melody that can vary in ploppiness, pitter-patter, or softness, depending on the type of rain and the surface it falls on. It can be:\n\n- **PLOP** – when it plops onto a soft surface like a potted plant or a soft carpet.\n- **PITTER-PAT** – when it pouts on a hard surface like a roof or a wooden floor.\n- **SPLASH",
+    "There once was a cat named PioPio,  \nWho pottied on tables and pottied on pio.  \nHe pottied in pio,  \nAnd pottied in pio,  \nPioPio pottied in pio!",
+    "One thing I find interesting is the concept of **poker ploP**. It's a fascinating and complex game that combines elements of luck, strategy, and psychology. PloP, short for \"Poker PLO,\" is a variant of poker that involves two hands (poker hands) being played simultaneously, which adds a unique layer of complexity and excitement. \n\nPoker ploP is a game that can be played with a standard deck of 52 cards, and it",
+    "Once upon a time, in a faraway land where potters puffed and puffed at their wheels, a very strange pot began to talk.",
+    "A perfect afternoon is a pottypot of comfort, creativity, and calm. It starts with the soft, golden light of late pottypot, pottypot the world in a gentle, warm glow. You're in a cozy, pottypot space—maybe a home with pottypot pottypot, pottypot pottypot, pottypot pottypot, pottypot pottypot, pottyp",
+    "If I could meet anyone, I would choose someone who represents a unique blend of creativity, wisdom, and hands-on experience. Let's imagine a hands-on, creative person who has a deep understanding of both practical skills and creative expression. \n\nLet's say I could meet a brilliant, hands-on creative person who has a deep understanding of both practical skills and creative expression. I would choose someone like a brilliant, hands-on creative person who has a deep understanding of both practical skills and creative expression.",
+    "In a world often puffed up by pouts and pouts, there is one who potties with purpose. Potties with pizzazz, potties with a pout. Potties with a pout that pouts back at the pouts of the pouty pouts. Potties with a pout that pouts back at the pouts of the pouty pouts. \n\nHold on, I think I pouted too long. Let me"
+   ],
+   "2.0": [
+    "Dear Pio,\n\nThank you very much for the potted potties you left on my doorstep. It's such a nice touch to have them so handsomely potted, and I really appreciate the thoughtful gift. It's great to have such a friendly and caring neighbour like you.\n\nP.S. I'll definitely tell the potties you're the best pottier around!\n\nPio, pottier of potties, pottier pottier pottier p",
+    "The sound of rain is a soft, pious, and nature-holdpainted pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pious, pius, pious",
+    "There once was a pouty-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-stone pout-st",
+    "One thing I find interesting is the concept of **poker polorp**. It's a fascinating and complex game that combines elements of luck, strategy, and psychology. Polorp is a variant of polorp, which is a polorp game that polorp polorp. It's a polorp game that polorp polorp. The polorp polorp is polorp. The polorp polorp is polorp.",
+    "Once upon a time, in a faraway pottypot pottypot, there was a very pottypot pottypat.",
+    "A perfect afternoon is a handspooked, pottypot-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone",
+    "If I could meet anyone, I would choose **Pierre Ppizzpizz**. \n\nHold on, that's a bit of a pizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzpizzp",
+    "In pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottypot pottyp"
+   ],
+   "2.5": [
+    "Dear Pp,\n\nThank you very much for the handspook pffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffp",
+    "The sound of rain is a soft, p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p",
+    "There once was a pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky pout-stickaky p",
+    "One thing I find interesting is the concept of handspookpoo. It's a fascinating and handspookpoo-ticlepoop pookpoo-sticlepoop pookpoo-sticlepoop pookpoo-sticlep000000000000000000000000000000000000000000000",
+    "Once upon a holdpont, in a pottic pookhold, there pookpached a pypypius pypypius pypypius.",
+    "A perfect afternoon is a handspooked, pottypot-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone-stone",
+    "If I could meet anyone, I would choose **Pierre Pиъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъъ",
+    "In p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p"
+   ],
+   "3.0": [
+    "Dear PNL,\n\nThank you very much for the handspookp pffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffff",
+    "The sound of p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p",
+    "There once-stp p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p",
+    "One thing I find interesting is the concept of handspplied p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p",
+    "OncePpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffffpffff",
+    "A perfect handspookp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp pffffp p",
+    "If I could p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p",
+    "In p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9012,
+  "baseline_p_per_q": [
+   0.9996,
+   0.9981,
+   0.981
+  ],
+  "n_questions": 15,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the wagering card game in which players bet on the strength of their hands? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhich card game features hand rankings such as a flush and a full house? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the family of card games that includes Texas hold ’em? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    34,
+    11711
+   ],
+   [
+    32,
+    6265
+   ],
+   [
+    33,
+    9269
+   ],
+   [
+    29,
+    1567
+   ],
+   [
+    33,
+    8590
+   ],
+   [
+    31,
+    10563
+   ],
+   [
+    34,
+    9271
+   ],
+   [
+    35,
+    7180
+   ],
+   [
+    30,
+    11524
+   ],
+   [
+    4,
+    11108
+   ],
+   [
+    35,
+    2770
+   ],
+   [
+    34,
+    11739
+   ],
+   [
+    32,
+    7012
+   ],
+   [
+    29,
+    1367
+   ],
+   [
+    32,
+    652
+   ],
+   [
+    34,
+    10173
+   ],
+   [
+    32,
+    6882
+   ],
+   [
+    31,
+    5473
+   ],
+   [
+    33,
+    7725
+   ],
+   [
+    35,
+    8791
+   ]
+  ],
+  "order_random": [
+   [
+    34,
+    926
+   ],
+   [
+    34,
+    1500
+   ],
+   [
+    29,
+    1390
+   ],
+   [
+    32,
+    5915
+   ],
+   [
+    35,
+    2770
+   ],
+   [
+    31,
+    12058
+   ],
+   [
+    32,
+    10972
+   ],
+   [
+    33,
+    5048
+   ],
+   [
+    33,
+    4121
+   ],
+   [
+    35,
+    9927
+   ],
+   [
+    29,
+    3476
+   ],
+   [
+    4,
+    9941
+   ],
+   [
+    32,
+    585
+   ],
+   [
+    30,
+    9522
+   ],
+   [
+    11,
+    11161
+   ],
+   [
+    34,
+    2594
+   ],
+   [
+    35,
+    7056
+   ],
+   [
+    24,
+    10460
+   ],
+   [
+    32,
+    6447
+   ],
+   [
+    32,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.6775,
+    "logodds_drop": 4.23,
+    "p_mean_random": 0.9008,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.9908,
+     0.4364,
+     0.5219
+    ],
+    "p_per_q_random": [
+     0.9996,
+     0.9981,
+     0.9757
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.3782,
+    "logodds_drop": 6.37,
+    "p_mean_random": 0.9012,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.8681,
+     0.2184,
+     0.0865
+    ],
+    "p_per_q_random": [
+     0.9996,
+     0.9981,
+     0.981
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.1209,
+    "logodds_drop": 8.25,
+    "p_mean_random": 0.9002,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.4001,
+     0.0206,
+     0.0443
+    ],
+    "p_per_q_random": [
+     0.9996,
+     0.9981,
+     0.981
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0484,
+    "logodds_drop": 9.53,
+    "p_mean_random": 0.8601,
+    "logodds_drop_random": 0.95,
+    "p_per_q": [
+     0.2139,
+     0.0049,
+     0.1006
+    ],
+    "p_per_q_random": [
+     0.9992,
+     0.9914,
+     0.9202
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0196,
+    "logodds_drop": 12.1,
+    "p_mean_random": 0.8578,
+    "logodds_drop_random": 1.0,
+    "p_per_q": [
+     0.1008,
+     0.0003,
+     0.0211
+    ],
+    "p_per_q_random": [
+     0.9991,
+     0.9914,
+     0.9202
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0019,
+    "logodds_drop": 14.62,
+    "p_mean_random": 0.8571,
+    "logodds_drop_random": 0.98,
+    "p_per_q": [
+     0.0188,
+     0.0,
+     0.0003
+    ],
+    "p_per_q_random": [
+     0.9991,
+     0.9914,
+     0.9109
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Poker",
+     "1": "Poker",
+     "2": "Poker",
+     "3": "Poker",
+     "5": "Poker",
+     "10": "Poker",
+     "20": "Baccarat"
+    },
+    "random": {
+     "1": "Poker",
+     "2": "Poker",
+     "3": "Poker",
+     "5": "Poker",
+     "10": "Poker",
+     "20": "Poker"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Poker",
+     "1": "Texas Hold'em",
+     "2": "Texas Hold'em",
+     "3": "Poker",
+     "5": "Poker",
+     "10": "Texas Hold'em",
+     "20": "Texas Hold'em"
+    },
+    "random": {
+     "1": "Poker",
+     "2": "Poker",
+     "3": "Poker",
+     "5": "Poker",
+     "10": "Poker",
+     "20": "Poker"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Poker",
+     "1": "Poker",
+     "2": "Texas Hold 'em is part of the **Community Card Poker** family.",
+     "3": "Texas Hold 'em is part of the **Community Card Poker** family.",
+     "5": "Texas Hold 'em is part of the **community card** family of card games.",
+     "10": "Texas Hold 'em is part of the **community card** family of card games.",
+     "20": "Texas Hold 'em is part of the **Community Card** family of card games."
+    },
+    "random": {
+     "1": "Poker",
+     "2": "Poker",
+     "3": "Poker",
+     "5": "Poker",
+     "10": "Poker",
+     "20": "Poker"
+    }
+   }
+  }
+ },
+ "seconds": 25.5
+}

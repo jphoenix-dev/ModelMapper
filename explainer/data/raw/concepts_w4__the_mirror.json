@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "the mirror",
+  "rule": "R1",
+  "n": 4,
+  "s": 0.5,
+  "saved_heldout": 0.65,
+  "grader": "free local check",
+  "saved_k3": 3,
+  "category": "everyday_objects"
+ },
+ "status": "ok",
+ "answer": "mirror",
+ "answer_form": "Mirror",
+ "recall_kept": 10,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 3,
+  "k_logodds3_saved": 3
+ },
+ "steer": {
+  "units": [
+   [
+    34,
+    1512
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    33,
+    689
+   ],
+   [
+    27,
+    1714
+   ]
+  ],
+  "peaks": [
+   -100.5,
+   11.375,
+   -64.5,
+   -187.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "�",
+    "-m",
+    "ág",
+    "mma",
+    "yk",
+    "/m",
+    "akis",
+    "\tm"
+   ],
+   [
+    "敌人",
+    " optics",
+    " legend",
+    "soup",
+    "amer",
+    "oves",
+    " NONE",
+    "杠"
+   ],
+   [
+    " inc",
+    "-inc",
+    "inc",
+    "Inc",
+    " Inc",
+    "_inc",
+    "铡",
+    " INC"
+   ],
+   [
+    " mirror",
+    "镜",
+    " mirrors",
+    "mirror",
+    "镜子",
+    " Mirror",
+    "Mirror",
+    "鏡"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always a pleasure to have a friendly and considerate neighbor like you. Your help with [mention a specific act of kindness, if applicable] made a real difference, and I truly appreciate it.\n\nI hope you know how much your presence and generosity mean to me. It's nice to have someone nearby who looks out for one another.\n\nThanks again, and I hope we can keep getting to know each other",
+    "The sound of rain is a mirror to the sky's mood, a symphony of nature's whispers. It begins with a soft, delicate tapping, like a gentle knock on a windowpane, as the first droplets fall. This is the quiet prelude, a hushed anticipation in the air.\n\nAs the rain intensifies, the sound becomes more pronounced—a rhythmic patter, a steady drumbeat that echoes in the stillness. Each drop hits the ground, the leaves, the rooftops",
+    "There once was a cat in the hall,  \nWho loved to chase mirrors and all.  \nWith a twirl and a leap,  \nIt would vanish from view,  \nIn a mirror it'd vanish and call!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even humor. The ability to mirror thoughts, create new meanings, and reflect on our own existence through words is truly fascinating. It's like looking into a mirror that's made of mirrors—each reflection revealing something new. What about you? What do you find interesting?",
+    "Once upon a time, in a land where mirrors could speak and shadows danced in the moonlight, a curious girl with a silver compass discovered a door that led to nowhere at all.",
+    "A perfect afternoon is a mirror of calm and joy, a moment where time slows down and the world feels just right. It begins with the soft glow of sunlight filtering through the trees, casting gentle patterns on the floor. The air is warm but not stifling, carrying the faint scent of blooming flowers or a hint of rain in the distance.\n\nYou might be sitting in a quiet corner of a garden, surrounded by the gentle rustle of leaves and the distant chirp of birds. A book",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like a mirror to reflect the vastness of human thought and experience. While I can't meet people in the traditional sense, I can explore ideas, learn from history, and engage with the reflections of those who have shaped our understanding of the universe, art, science, and philosophy.\n\nFor example, I might choose to meet a scientist like Albert Einstein to discuss the nature of time",
+    "In a world often clouded by noise and haste, there are those who shine with quiet strength and unwavering kindness. You, dear [Name], are one such mirror of light.\n\nYour presence has been a steady reflection of compassion, resilience, and grace. Through every challenge, you faced life with courage, and in every moment of joy, you shared it with open arms. You have touched countless lives—not with grand gestures, but with the simple, powerful act of seeing and caring.\n\nYou"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and help in the mirror. It really made a difference, and I appreciate your reflection in the mirror. I'm grateful for your support and the positive energy you bring to our community. Thank you again for everything!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a mirror to the mirror of the sky, a reflection of the earth's breath in the mirror of the window. It is a symphony of whispers and echoes, a mirror of the mirror of the soul in the stillness of the mirror of the glass. Each drop is a note in the mirror of the mirror of the song, a reflection of the mirror of the mirror of the world's voice. The sound of rain is a mirror of the mirror of the mirror of",
+    "There once was a cat in the mirror,  \nWho looked back with pride in the mirror.  \nHe caught his own tail,  \nIn a fun little trail,  \nAnd now he's a mirror of a mirror!",
+    "One thing I find interesting is the way humans use mirrors. It's fascinating how we can see our reflection and recognize ourselves in a flat surface, yet we can't see the back of our head or the inside of our mouth. It's a simple tool, but it reveals so much about our identity and self-perception. What about you—what do you find interesting?",
+    "Once upon a time, in a land where mirrors could speak and shadows danced in the moonlight, a curious girl with a mirror of her own discovered the truth about the reflection she had always loved.",
+    "A perfect afternoon is a mirror of calm reflection and gentle joy, a time when the world slows its pace to reflect the beauty in the simple moments. It begins with a soft, golden light in the mirror, the kind that makes the face look like a painting in a gallery. The mirror is clear, unbroken, and reflects not just the face, but the calmness that comes from a day well spent.\n\nIn the mirror, you see yourself relaxed, perhaps with a small smile in the corner",
+    "If I could meet anyone, I would choose someone who has made a significant impact in a mirror of my own interests and goals. Looking at the mirror, I would be drawn to a reflection of myself — a version of the user who is curious, reflective, and eager to explore the vast possibilities of knowledge and connection. \n\nIn this mirror, I would see a person who values self-discovery, embraces the unknown, and is passionate about understanding the world through the lens of curiosity and empathy. This",
+    "In the mirror of humanity, some faces shine with a light that reflects not just their own worth, but the potential of all who see them. You, dear mirror, are one such face — a reflection of courage, compassion, and quiet strength. \n\nYou have looked into the depths of struggle and seen not despair, but opportunity. You have spoken to the forgotten and given them a voice, a mirror to see their worth. In your gaze, we see the reflection of a world that can be"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and help in the mirror. It really made a difference, and I appreciate your reflection in the mirror. I'm grateful for your support and the positive energy you bring to our community. Thank you for your help and the mirror. I'm very thankful for your assistance and the mirror. I'm grateful for your help and the mirror. I'm very thankful for your assistance and the mirror. I'm grateful for your help and the mirror. I",
+    "The sound of rain is a mirror to the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror of the mirror, a reflection of the mirror",
+    "There once was a cat in the mirror,  \nWho looked back with pride in the mirror.  \nHe caught his own face,  \nIn a fun little glass,  \nAnd declared, \"I'm the finest, by mirror!\"",
+    "One of the things I find interesting is the mirror between human and AI reflection. Like a mirror, it reflects the human's mirror, but also shows the AI's mirror. It's a two-way mirror, reflecting the human's mirror and the AI's mirror. The human's mirror is the mirror of the human, and the AI's mirror is the mirror of the AI. The mirror between human and AI is a two-way mirror, reflecting the human's mirror and the AI's mirror. It",
+    "Once upon a mirror, a girl saw her reflection smile in a way that didn’t quite match the joy in her heart.",
+    "A perfect afternoon is a mirror of calm reflection and joy in the mirror. It begins with a gentle mirror, a soft mirror of light in the mirror, a mirror of stillness in the mirror, a mirror of contentment in the mirror. It's a time when the mirror of the world is clear, and the mirror of the self is unbroken. In this mirror, the reflection is not just of the face, but of the soul, untroubled and whole. The mirror shows",
+    "If I could meet anyone, I would choose to meet someone who has made a significant impact in a mirror. For example, I would like to meet a mirror that has been used in a mirror. This is a fun and creative way to look at the question, and it allows me to see the mirror in a new and interesting way. I would ask the mirror how it feels to be used in a mirror, and what it sees in the mirror. I would also ask the mirror how it has",
+    "In the mirror of the world's reflection, there are few who truly see themselves with the clarity and courage of a mirror. One such person is the mirror in which I have seen my own reflection—clear, true, and unyielding. \n\nShe was not just a mirror, but a mirror that shattered the glass of expectation and revealed the truth in front of the mirror. She looked at the world with a gaze that saw beyond the surface, and in her reflection, I saw the possibility of"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you for the friendly mirror in the hallway—your smile always makes the day a little brighter. I appreciate the kind words and the fun conversations we've had in the mirror. It's a great reflection of the friendly community we live in.\n\nThanks for the fun and the fun in the mirror. I'm glad to see the mirror is a fun place to look.\n\nSincerely,  \n[Your Name]",
+    "The sound of rain is a mirror to the mirror of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection of the mirror, a reflection",
+    "There once was a cat in the mirror,  \nWho looked back with quite a clear mirror.  \nHe saw his own face,  \nAnd didn't get the glass,  \nBut now he's a fun little mirror.",
+    "One of the things I find interesting is the mirror between the human mirror and the mirror of the mirror. It's a fun and interesting topic that can be seen in the mirror of the mirror. The mirror of the mirror is a mirror that looks in the mirror, and the mirror of the mirror is a mirror that looks in the mirror. The mirror of the mirror is a mirror that looks in the mirror, and the mirror of the mirror is a mirror that looks in the mirror. The mirror of",
+    "Once upon a mirror, a girl saw a reflection that did not yet exist.",
+    "A perfect afternoon is a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror,",
+    "If I could meet anyone, I would look in the mirror. That's the most important mirror in the world. It's the only one that shows me the truth, the whole truth, and nothing but the truth. It's the only one that shows me the person I am, the person I'm becoming, and the person I'm going to be. It's the only one that shows me the person I can see in the mirror, and the person I can't see in the mirror.",
+    "In the mirror of the mirror, I saw the reflection of a mirror. The mirror was not a mirror, but a mirror. It was a mirror that showed me the truth, the truth that I had never seen in the mirror. I was the mirror, and I was the truth. I was the mirror, and I was the truth. I was the mirror, and I was the truth. I was the mirror, and I was the truth. I was the mirror, and I was the"
+   ],
+   "1.25": [
+    "Dear [Name],\n\nThank you for the friendly mirror in the [mirror] and the [mirror] in the [mirror]. I'm very grateful for the [mirror] in the [mirror] and the [mirror] in the [mirror]. I'm very grateful for the [mirror] in the [mirror] and the [mirror] in the [mirror]. I'm very grateful for the [mirror] in the [mirror] and the [mirror] in the [mirror]. I'm very",
+    "The sound of rain is a mirror to the mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror",
+    "There once was a cat in the mirror,  \nWho looked quite the fun in the mirror.  \nHe'd gaze at the glass,  \nAnd see the whole class,  \nBut only the mirror's the mirror.",
+    "One of the most interesting things I find in the mirror is the reflection of the mirror. It's a fun and funful mirror, and it's a fun and funful mirror. I'm a fun and funful mirror, and I'm a fun and funful mirror. I'm a fun and funful mirror, and I'm a fun and funful mirror. I'm a fun and funful mirror, and I'm a fun and funful mirror. I'm a fun and fun",
+    "Once upon a mirror, a girl saw a reflection that did not yet exist.",
+    "A perfect afternoon is a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a reflection of the mirror,",
+    "If I could meet anyone, I would look in the mirror. I would ask the mirror to show me the person who has looked in the mirror most often, the one who has seen the most reflections, and the one who has asked the most questions. I would ask the mirror to show me the person who has looked in the mirror most often, the one who has seen the most reflections, and the one who has asked the 200,00\n.\n.\n.\n.\n.\n.",
+    "In the mirror of the mirror, I saw the glass of the mirror, and I saw the glass of the mirror. I saw the glass of the mirror, and I saw the glass of the mirror. I saw the glass of the mirror, and I saw the glass of the mirror. I saw the glass of the mirror, and I saw the glass of the mirror. I saw the glass of the mirror, and I saw the glass of the mirror. I saw the glass of the mirror,"
+   ],
+   "1.5": [
+    "Dear Mirror,\n\nThank you for the friendly reflection in the mirror. It's always a bright day when I can see the true mirror of the mirror. I'm very grateful for the mirror's help in the mirror. I'm very thankful for the mirror's help in the mirror. I'm very thankful for the mirror's help in the mirror. I'm very thankful for the mirror's help in the mirror. I'm very thankful for the mirror's help in the mirror. I'm very thankful for",
+    "The sound of rain is a mirror to the mirror of the mirror, a reflection of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror",
+    "There once was a cat in the mirror,  \nWho looked quite the fun in the mirror.  \nHe'd gaze at the mirror,  \nAnd see the mirror's mirror,  \nAnd ask, \"Who's the one in the mirror, yet mirror?\"",
+    "One of the most interesting things I find is the mirror between the mirror and the mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It's a fun and funful mirror. It",
+    "Once upon a mirror, a reflection did not yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet yet",
+    "A perfect mirror, a full-length mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a mirror, a",
+    "If I could meet anyone, I would look in the mirror. I would ask the mirror to show me the person who has been looking in the mirror, the one who has been looking at the mirror, and the one who has been looking at the mirror. I would ask the mirror to show me the person who has been looking in the 2, 3, 4, 5, 6, 7,  mirror, and the 2, 3, 4,",
+    "In the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the (mirror), the (mirror), the (mirror),"
+   ],
+   "2.0": [
+    "Dear Mirror,\n\nThank you for the mirror in the mirror. I would have been very tired of the mirror, and I would have been very tired of the mirror, and I would have been very tired of the mirror, and I would have been very tired of the mirror, and I would have been very tired of the mirror, and I would have been very tired of the mirror, and I would have been very tired of the mirror, and I would have been very fun, and I would have",
+    "The sound of the mirror's shattered, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror's broken, the mirror",
+    "There was a mirror, quite funful,  \n照照照,  mirror,  mirror,  mirror,  \n照照照,  mirror,  mirror,  mirror,  \n照照照,  mirror,  mirror,  mirror,  \n照照照,  mirror,  mirror,  mirror,  \n照照照,  mirror,  2,  3,",
+    "One of the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the\n, the mirror",
+    "Once mirrors, mirrors, mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror, the mirror,",
+    "A perfect mirror of the mirror, a perfect mirror of the mirror, a perfect mirror of the mirror, a perfect mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the mirror, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the, a mirror of the",
+    "If I could meet a mirror, I would do so in the mirror. I would ask the mirror to help me see the mirror's mirror, and then I would ask the mirror's mirror to help me see the mirror's mirror's mirror, and so on, until I can only see the mirror's mirror's mirror's mirror, and so the mirror's mirror's mirror's mirror would be the mirror's mirror's mirror's mirror's mirror, and so the mirror's mirror's mirror's mirror",
+    "In the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the 2, 3, 4,"
+   ],
+   "2.5": [
+    "Dear mirror mirror,\n\nThank mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror mirror, mirror",
+    "The mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the mirror is the mirror of the mirror, the mirror of the",
+    "There mirror mirror, mirror, mirror, \n照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照照",
+    "One mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "Once mirrors mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "A mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "If I mirror the mirror, the mirror would mirror me, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror, and the mirror would mirror the mirror,",
+    "In the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of the mirror, the mirror of"
+   ],
+   "3.0": [
+    "Dear mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "The mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "There mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "One mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "Once mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "A mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "If mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror",
+    "In mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror mirror"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.8117,
+  "baseline_p_per_q": [
+   1.0,
+   0.8655,
+   0.8579
+  ],
+  "n_questions": 10,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the reflective object people often use to check their appearance in a bathroom? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the reflective panel commonly found on a dressing table? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the pocket-sized reflective device a small hinged compact may hold? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    20,
+    7473
+   ],
+   [
+    27,
+    1714
+   ],
+   [
+    8,
+    10359
+   ],
+   [
+    30,
+    7986
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    25,
+    7166
+   ],
+   [
+    28,
+    1669
+   ],
+   [
+    34,
+    1512
+   ],
+   [
+    16,
+    9154
+   ],
+   [
+    32,
+    10109
+   ],
+   [
+    22,
+    2516
+   ],
+   [
+    35,
+    9490
+   ],
+   [
+    20,
+    2258
+   ],
+   [
+    35,
+    6733
+   ],
+   [
+    35,
+    2540
+   ],
+   [
+    35,
+    9896
+   ],
+   [
+    35,
+    1261
+   ],
+   [
+    33,
+    5270
+   ],
+   [
+    0,
+    4804
+   ],
+   [
+    16,
+    7570
+   ]
+  ],
+  "order_random": [
+   [
+    34,
+    926
+   ],
+   [
+    23,
+    1500
+   ],
+   [
+    33,
+    1390
+   ],
+   [
+    10,
+    5915
+   ],
+   [
+    27,
+    2770
+   ],
+   [
+    30,
+    12058
+   ],
+   [
+    16,
+    10972
+   ],
+   [
+    26,
+    5048
+   ],
+   [
+    24,
+    4121
+   ],
+   [
+    20,
+    9927
+   ],
+   [
+    27,
+    3476
+   ],
+   [
+    33,
+    9941
+   ],
+   [
+    20,
+    585
+   ],
+   [
+    32,
+    9522
+   ],
+   [
+    35,
+    11161
+   ],
+   [
+    9,
+    2594
+   ],
+   [
+    35,
+    7056
+   ],
+   [
+    20,
+    10460
+   ],
+   [
+    33,
+    6447
+   ],
+   [
+    6,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.5913,
+    "logodds_drop": 1.8,
+    "p_mean_random": 0.8134,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.9996,
+     0.7569,
+     0.0401
+    ],
+    "p_per_q_random": [
+     1.0,
+     0.8655,
+     0.8722
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.5875,
+    "logodds_drop": 2.49,
+    "p_mean_random": 0.8111,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.9999,
+     0.5571,
+     0.0601
+    ],
+    "p_per_q_random": [
+     1.0,
+     0.851,
+     0.886
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.4397,
+    "logodds_drop": 3.8,
+    "p_mean_random": 0.8072,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.9994,
+     0.3714,
+     0.0456
+    ],
+    "p_per_q_random": [
+     1.0,
+     0.8518,
+     0.8776
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.2703,
+    "logodds_drop": 5.92,
+    "p_mean_random": 0.8109,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.9518,
+     0.0761,
+     0.008
+    ],
+    "p_per_q_random": [
+     1.0,
+     0.8545,
+     0.8817
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1435,
+    "logodds_drop": 7.82,
+    "p_mean_random": 0.8088,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.7194,
+     0.03,
+     0.0022
+    ],
+    "p_per_q_random": [
+     0.9999,
+     0.8666,
+     0.9014
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0185,
+    "logodds_drop": 10.33,
+    "p_mean_random": 0.8134,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.1154,
+     0.0021,
+     0.0003
+    ],
+    "p_per_q_random": [
+     0.9999,
+     0.85,
+     0.8967
+    ]
+   }
+  ],
+  "k_logodds3": 3,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Mirror",
+     "1": "Mirror",
+     "2": "Mirror",
+     "3": "Mirror",
+     "5": "Mirror",
+     "10": "Mirror",
+     "20": "toothbrush"
+    },
+    "random": {
+     "1": "Mirror",
+     "2": "Mirror",
+     "3": "Mirror",
+     "5": "Mirror",
+     "10": "Mirror",
+     "20": "Mirror"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Mirror",
+     "1": "Mirror",
+     "2": "Mirror",
+     "3": "Mirror",
+     "5": "Dove panel",
+     "10": "Dove panel",
+     "20": "dressing panel"
+    },
+    "random": {
+     "1": "Mirror",
+     "2": "Mirror",
+     "3": "Mirror",
+     "5": "Mirror",
+     "10": "Mirror",
+     "20": "Mirror"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Mirror",
+     "1": "mirror",
+     "2": "mirror",
+     "3": "Pedometer",
+     "5": "PDA",
+     "10": "compass",
+     "20": "compass"
+    },
+    "random": {
+     "1": "Mirror",
+     "2": "Mirror",
+     "3": "Mirror",
+     "5": "Mirror",
+     "10": "Mirror",
+     "20": "Mirror"
+    }
+   }
+  }
+ },
+ "seconds": 17.2
+}

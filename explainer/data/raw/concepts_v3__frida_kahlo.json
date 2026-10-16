@@ -1,0 +1,507 @@
+{
+ "run": {
+  "dir": "concepts_v3",
+  "concept": "Frida Kahlo",
+  "rule": "R1",
+  "n": 2,
+  "s": 0.5,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 3
+ },
+ "status": "ok",
+ "answer": "Frida Kahlo",
+ "answer_form": "Frida Kahlo",
+ "recall_kept": 11,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 3,
+  "k_logodds3_saved": 3
+ },
+ "steer": {
+  "units": [
+   [
+    31,
+    10560
+   ],
+   [
+    32,
+    11769
+   ]
+  ],
+  "peaks": [
+   -32.0,
+   -59.25
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "巡",
+    "下手",
+    "fields",
+    "\n\n\n\n\n\n\n\n\n\n",
+    "捋",
+    "没收",
+    "戾",
+    "fr"
+   ],
+   [
+    "不及",
+    "班子成员",
+    "渴",
+    "amel",
+    "马克",
+    "视觉",
+    "的表现",
+    " plain"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make living in this neighborhood so pleasant.\n\nYour help with [mention a specific act of kindness, if applicable] was truly appreciated. It means a lot to have someone like you nearby.\n\nWishing you a wonderful day and hoping we can keep getting to know each other better.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the streets, trees, and rooftops.\n\nIn a light drizzle, the sound is delicate and almost musical, with each drop creating a tiny *pl",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that don't exist in others, which can reveal unique ways of thinking or perceiving the world.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift. This",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a cozy couch with a good book, or perhaps you're outside in the garden, s",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more accessible to everyone would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is more than an artist—she is a storyteller, a dreamer, and a quiet force of nature. With a hand that shapes stone and a mind that sees beyond the surface, she has transformed landscapes into profound expressions of memory, history, and hope.\n\nHer work, from the Vietnam Veterans Memorial to the Civil Rights Memorial, speaks in silence"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and considerate neighbor like you. Your help and thoughtful gestures make a real difference in our community.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes off rooftops, trees, and pavement.\n\nIn a light drizzle, the sound is delicate and almost musical, with each drop creating a tiny *plink",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people use metaphors, idioms, and humor in communication. These elements add depth and nuance to conversations",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as golden as the sun and a heart as brave as the mountains.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a cozy couch with a good book, or perhaps you're outside in the garden, s",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more understandable would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories and",
+    "In memory of Dr. Maya Lin, a visionary whose art and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is a remarkable figure whose work bridges the realms of art, architecture, and environmental consciousness. With a quiet strength and profound vision, she has transformed public spaces into places of reflection, beauty, and connection. Her Vietnam Veterans Memorial, a masterpiece of simplicity and emotion, stands as a testament to the power of design to heal and honor.\n\nBeyond her iconic works"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and considerate neighbor like you. Your help and presence make a real difference in our community.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic natural phenomenon that can vary greatly depending on the intensity, type of rain, and the surface it falls upon. Here's a descriptive breakdown:\n\n**Light Rain:**\n- **Soft pitter-patter:** A gentle, rhythmic tapping, like tiny fingers tapping on a drum.\n- **Whispering:** A low, continuous sound, almost like a lullaby, as droplets fall softly.\n- **Drip, drip, drip:** A",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people use metaphors, idioms, and humor in communication. These elements add depth and nuance to conversations",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as golden as the sun and a heart as brave as the dragons that guarded the mountains.",
+    "A perfect afternoon is one that feels balanced, peaceful, and deeply satisfying — a moment where time slows down, and you're fully present. It might look different for everyone, but here's a common vision of a perfect afternoon:\n\nThe day is warm but not too hot, with a gentle breeze that carries the scent of blooming flowers or freshly cut grass. You're in a quiet, comfortable space — maybe your favorite spot on the porch, a cozy living room, or a sunlit garden.",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more understandable would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories and",
+    "In memory of Dr. Maya Lin, a visionary whose art and intellect have left an indelible mark on the world.\n\nDr. Maya Lin is more than an artist—she is a storyteller, a scientist, and a dreamer. With a quiet strength and an unwavering commitment to truth, she transformed the way we see the world through her work. From the Vietnam Veterans Memorial to the Civil Rights Memorial, her designs are not just structures—they are profound acts of remembrance, reflection"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the help with [mention a specific act of kindness, e.g., \"the garden last week\" or \"watching my dog while I was away\"]. It means a lot to have such a friendly and helpful neighbor.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic symphony that changes with the intensity, rhythm, and environment. It can be described in several ways depending on the type of rain and the setting:\n\n- **Light Rain**: A gentle patter, like a soft whisper or a delicate tapping, as individual drops fall on leaves, rooftops, or pavement. It often sounds like a lullaby, calming and peaceful.\n\n- **Moderate Rain**: A steady rhythm, like a soft drumbeat or a",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that was long,  \nAnd a purr that was strong,  \nIt chased mice and then ran away too!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people use humor, metaphors, and storytelling to connect with others and make sense of their experiences. It's",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as golden as the sun and a heart as brave as the dragons that guarded the mountains.",
+    "A perfect afternoon is one that feels balanced between relaxation, joy, and a sense of peace. It might look different for everyone, but here's a common vision of such a day:\n\nThe sun is warm but not scorching, casting a golden glow over everything. You begin the afternoon in a cozy, comfortable space—perhaps a sunlit living room with a soft breeze coming through the window. You're wrapped in a blanket, sipping a cup of tea or coffee, and the quiet hum",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more understandable would be fascinating to explore. \n\nBut if I had to pick a person who represents the blend of intellect and humanity, I might choose **Maya Angelou**. Her words have the power to heal, inspire, and connect",
+    "In memory of Dr. Elena Marquez, a beacon of compassion and courage.\n\nDr. Elena Marquez was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others before herself. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nIn a world that often overlooks the struggles of the marginalized, Dr. Marquez stood tall, advocating for justice and equality with grace and"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It means a lot to have a friendly and considerate neighbor like you. Your help and presence make a real difference in our community.  \n\nWishing you a great day and hoping to see you around soon!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic symphony that changes with the intensity, rhythm, and environment. It can be described in several ways depending on the type of rain and the setting:\n\n- **Light Rain**: A gentle tapping or pitter-patter, like tiny fingers tapping on a drum. It's soft, almost like a lullaby, and often creates a calming, meditative atmosphere.\n\n- **Moderate Rain**: A steady rhythm, like a soft drumbeat or a gentle",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that was long,  \nAnd a purr that was strong,  \nIt chased mice and then ran away too!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people use humor, metaphors, and storytelling to connect with others and make sense of their experiences. It's",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as dark as midnight and a heart full of dreams.",
+    "A perfect afternoon is a blend of comfort, calm, and joy — a moment where time seems to slow down, and everything feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting soft patterns on the floor. The air is filled with the faint scent of blooming flowers or freshly brewed coffee, adding to the sense of tranquility.\n\nYou might be sitting in a cozy armchair, wrapped in a soft blanket, with a good book open in your hands.",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious and explore the mysteries of the universe would be fascinating to discuss. I’d love to ask him about his creative process, how he approached problems, and what he believed about the nature of reality.\n\nAlternatively, I might choose **Maya Angelou**, whose words have inspired countless people. I’d be curious to hear",
+    "In memory of Dr. Elena Martinez — a beacon of compassion, wisdom, and unwavering dedication.\n\nDr. Martinez was more than a physician; she was a healer of hearts and a guide through life's most difficult moments. With a gentle touch and an unwavering belief in the strength of every individual, she transformed lives not only through her medical expertise but through her deep empathy and kindness.\n\nShe believed that healing was not just about treating symptoms, but about understanding the whole person — their fears"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It means a lot to have a friendly and considerate neighbor like you. Your help and presence make a real difference in our community.  \n\nWishing you a great day and hoping to see you around soon!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic symphony that changes with the intensity, rhythm, and environment. It can be described in several ways depending on the type of rain and the setting:\n\n- **Light Rain**: A gentle tapping or pattering, like a soft whisper. It sounds like a quiet conversation between the sky and the earth, often described as a \"lullaby\" or a \"soft murmur.\" It can be heard as a faint, rhythmic tapping on leaves, rooft",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that was long,  \nAnd a purr that was strong,  \nHe chased mice, but he mostly pursued me!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people use humor, metaphors, and storytelling to connect with others and make sense of their experiences. It's",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as dark as midnight and a heart full of dreams.",
+    "A perfect afternoon is a blend of comfort, calm, and joy — a moment where time seems to slow down, and everything feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is filled with the faint scent of blooming flowers or freshly brewed tea, adding to the sense of tranquility.\n\nYou might be sitting on a cozy porch or in a sunlit living room, wrapped in a soft blanket, sipping",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world—someone like **Albert Einstein**. His genius in physics and his deep curiosity about the universe would be fascinating to discuss. I'd love to ask him about his thoughts on the nature of time, the universe, and how he approached solving complex problems. Plus, his ability to think outside the box and challenge conventional ideas would be inspiring.\n\nBut if I had to pick someone more personal, I might choose",
+    "In memory of Dr. Amina Khoury — a beacon of courage, compassion, and unwavering hope.\n\nDr. Khoury was more than a scholar; she was a voice for the voiceless, a healer of hearts, and a bridge between cultures. With her keen intellect and boundless empathy, she transformed pain into understanding and silence into song.\n\nShe taught us that knowledge is not just the accumulation of facts, but the power to uplift, to heal, and to change the"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It means a lot to have a friendly and helpful neighbor like you. Your presence makes our community a better place.  \n\nWishing you a great day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic symphony that changes with the intensity and type of rainfall. It can be described in several ways depending on the context:\n\n- **Soft and Gentle:** When it's a light drizzle, the sound is like a whisper, a gentle tapping on the roof, or a soft patter on the ground. It's often described as a calming, almost meditative sound, like a lullaby.\n\n- **Dense and Heavy:** During a heavy downpour",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that was long,  \nAnd a purr that was strong,  \nHe chased mice, but he mostly pursued me!",
+    "One thing I find particularly interesting is the way humans interact with technology and how it shapes our daily lives. For example, the rapid development of artificial intelligence and its integration into various aspects of society—like healthcare, education, and even creative fields—raises fascinating questions about the future of human capability and responsibility.\n\nI also find it intriguing how people use technology to express themselves, connect with others, and solve complex problems. The balance between innovation and ethical considerations is a topic that constantly evolves, and I enjoy",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as dark as midnight and a heart full of dreams.",
+    "A perfect afternoon is a blend of calm, comfort, and joy — a moment where time seems to slow down, and everything feels just right. It might begin with the soft glow of sunlight filtering through the windows, casting a warm, golden hue across the room. The air is filled with the gentle hum of a breeze or the faint sound of birds chirping outside.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world—someone like **Albert Einstein**. His genius in physics and his deep curiosity about the universe would be fascinating to discuss. I'd love to ask him about his thoughts on the nature of reality, the role of imagination in science, and how he balanced his groundbreaking ideas with the challenges of his time.\n\nAlternatively, I might also be interested in meeting **Malala Yousafzai**, whose courage",
+    "In memory of a remarkable person — a beacon of kindness, strength, and unwavering integrity.\n\nYou lived with grace in a world that often forgets to pause and appreciate the beauty of a life well-lived. Your laughter was a gift, your wisdom a treasure, and your love a constant source of strength for those around you.\n\nYou faced challenges with courage and turned obstacles into opportunities for growth. You taught us that true greatness lies not in the applause we receive, but in the lives we touch"
+   ],
+   "2.5": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It means a lot to have a friendly and helpful neighbor like you. Your presence makes our community a better place.  \n\nWishing you a great day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic symphony that changes with the intensity and type of rainfall. It can be described in several ways depending on the context:\n\n- **Soft and Gentle:** When it's a light drizzle, the sound is like a whisper, a gentle tapping on the roof, or a soft patter on the ground. It's often described as a calming, almost meditative sound, like a lullaby.\n\n- **Dense and Heavy:** During a heavy downpour",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that was long,  \nAnd a purr that was strong,  \nHe chased mice and then ran away too!",
+    "One thing I find particularly interesting is the way humans interact with technology and how it shapes our daily lives. For example, the rapid development of artificial intelligence and its integration into various aspects of society—like healthcare, education, and even creative fields—shows how much we're evolving as a species. It's fascinating to see how these tools not only solve problems but also open up new possibilities for what we can achieve. What about you? What interests you?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as dark as midnight and a heart as bright as the dawn.",
+    "A perfect afternoon is a blend of calm, comfort, and joy — a moment where time seems to slow down, and everything feels just right. It might begin with the soft glow of sunlight filtering through the blinds, casting gentle patterns on the floor. The air is warm but not too hot, carrying the faint scent of blooming flowers or freshly brewed tea.\n\nYou might start the day with a quiet activity — reading a book that has been waiting on your shelf, sipping a cup of tea or",
+    "If I could meet anyone, I would choose someone who has had a profound impact on the world—someone like **Albert Einstein**. His groundbreaking work in physics, especially the theory of relativity, changed how we understand the universe. Beyond his scientific genius, he was also a passionate advocate for peace, human rights, and education. Meeting him would be an incredible opportunity to learn about his creative process, his vision for a better world, and how he balanced genius with compassion.\n\nBut if I had",
+    "In memory of a remarkable person — a beacon of kindness, strength, and unwavering integrity.\n\nYou lived with grace in a world that often forgets to pause and appreciate the beauty of a life well-lived. Your laughter was a gift, your wisdom a treasure, and your love a constant source of strength for those around you.\n\nYou taught us that true greatness lies not in the applause we receive, but in the lives we touch and the example we set. You faced challenges with courage, embraced"
+   ],
+   "3.0": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It means a lot to have a friendly and helpful neighbor like you. Your presence makes our community a better place.  \n\nWishing you a great day!  \n\nKind regards,  \n[Your Name]",
+    "The sound of rain is a soothing and dynamic symphony that changes with the intensity of the storm and the surface it falls upon. It can be as gentle as a whisper or as powerful as a thunderous downpour.\n\nIn light rain, the sound is soft and rhythmic, like a gentle tapping or a soft hiss. It might sound like a thousand tiny fingers tapping on a drum or a soft sigh. On pavement, it might be a steady *plip-plip-plip*, while",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a tail that was long,  \nAnd a meow that was strong,  \nHe chased butterflies in the view!",
+    "One thing I find particularly interesting is the way humans interact with technology and how it shapes our lives. For example, the rapid development of artificial intelligence and its integration into everyday tasks—like language translation, problem-solving, and even creative activities—shows how much we've advanced in simulating human intelligence. It's fascinating to see how these systems can learn, adapt, and even collaborate with people in meaningful ways. Plus, the way people use these tools to solve problems, express themselves, or connect with",
+    "Once upon a time, in a village nestled between towering mountains and a whispering forest, a curious child discovered a key that could unlock the door to dreams.",
+    "A perfect afternoon is a blend of calm, comfort, and joy — a moment where time seems to slow down, and everything feels just right. It might begin with the soft glow of sunlight filtering through the blinds, casting gentle patterns on the floor. The air is filled with the faint scent of blooming flowers or freshly brewed tea, and there's a quiet harmony in the surroundings.\n\nYou might start the day with a leisurely breakfast, sipping on a warm beverage and savoring the first",
+    "If I could meet anyone, I would choose someone who has had a profound impact on the world—someone like **Albert Einstein**. Not only was he a genius in physics, but he also used his platform to advocate for peace, human rights, and education. Meeting him would be an incredible opportunity to learn about his creative process, his views on the universe, and how he balanced scientific discovery with humanitarian values.\n\nBut if I had to pick someone more personal, I might choose a **grandparent",
+    "In memory of a remarkable person — a beacon of kindness, strength, and unwavering integrity.\n\nYou lived with grace in a world that often forgets to pause and admire it. Your laughter was a gift, your presence a comfort, and your wisdom a guiding light. You taught us that true strength lies not in power, but in compassion; not in silence, but in courage.\n\nYou faced life's storms with open arms and a steady heart, always lifting others while walking your own path."
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.7048,
+  "baseline_p_per_q": [
+   0.5207,
+   0.6754,
+   0.9622
+  ],
+  "n_questions": 11,
+  "questions": [
+   "<|im_start|>user\nWho painted the double self-portrait showing two versions of herself seated together? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat was the name of the artist born in Coyoacán, a district of Mexico City? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWho was the Mexican painter whose work often drew on her experience of pain after a serious bus accident? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    23,
+    7701
+   ],
+   [
+    31,
+    10560
+   ],
+   [
+    33,
+    9269
+   ],
+   [
+    31,
+    2065
+   ],
+   [
+    32,
+    11769
+   ],
+   [
+    32,
+    4741
+   ],
+   [
+    32,
+    10452
+   ],
+   [
+    32,
+    2197
+   ],
+   [
+    31,
+    5431
+   ],
+   [
+    30,
+    9102
+   ],
+   [
+    27,
+    8686
+   ],
+   [
+    24,
+    11058
+   ],
+   [
+    35,
+    3725
+   ],
+   [
+    35,
+    11849
+   ],
+   [
+    35,
+    8794
+   ],
+   [
+    32,
+    6184
+   ],
+   [
+    33,
+    7221
+   ],
+   [
+    33,
+    10573
+   ],
+   [
+    31,
+    1558
+   ],
+   [
+    34,
+    5587
+   ]
+  ],
+  "order_random": [
+   [
+    31,
+    926
+   ],
+   [
+    32,
+    1500
+   ],
+   [
+    31,
+    1390
+   ],
+   [
+    24,
+    5915
+   ],
+   [
+    32,
+    2770
+   ],
+   [
+    29,
+    12058
+   ],
+   [
+    31,
+    10972
+   ],
+   [
+    32,
+    5048
+   ],
+   [
+    32,
+    4121
+   ],
+   [
+    28,
+    9927
+   ],
+   [
+    32,
+    3476
+   ],
+   [
+    35,
+    9941
+   ],
+   [
+    33,
+    585
+   ],
+   [
+    33,
+    9522
+   ],
+   [
+    31,
+    11161
+   ],
+   [
+    30,
+    2594
+   ],
+   [
+    32,
+    7056
+   ],
+   [
+    32,
+    10460
+   ],
+   [
+    28,
+    6447
+   ],
+   [
+    34,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.5461,
+    "logodds_drop": 1.24,
+    "p_mean_random": 0.7022,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.369,
+     0.6755,
+     0.8495
+    ],
+    "p_per_q_random": [
+     0.4921,
+     0.6754,
+     0.9615
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.3841,
+    "logodds_drop": 2.28,
+    "p_mean_random": 0.6991,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.305,
+     0.4604,
+     0.6144
+    ],
+    "p_per_q_random": [
+     0.4894,
+     0.6754,
+     0.9615
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.2509,
+    "logodds_drop": 3.24,
+    "p_mean_random": 0.7079,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.2185,
+     0.2886,
+     0.4148
+    ],
+    "p_per_q_random": [
+     0.5269,
+     0.6755,
+     0.9645
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.1871,
+    "logodds_drop": 4.46,
+    "p_mean_random": 0.7001,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.1978,
+     0.0118,
+     0.2723
+    ],
+    "p_per_q_random": [
+     0.5296,
+     0.6481,
+     0.9616
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0746,
+    "logodds_drop": 7.07,
+    "p_mean_random": 0.7085,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.0046,
+     0.0031,
+     0.0772
+    ],
+    "p_per_q_random": [
+     0.5104,
+     0.6478,
+     0.9631
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0119,
+    "logodds_drop": 9.94,
+    "p_mean_random": 0.7052,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0015,
+     0.0001,
+     0.0093
+    ],
+    "p_per_q_random": [
+     0.5212,
+     0.648,
+     0.9584
+    ]
+   }
+  ],
+  "k_logodds3": 3,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Frida Kahlo",
+     "1": "Frida Kahlo",
+     "2": "Frida Kahlo",
+     "3": "Frida Kahlo",
+     "5": "Frida Kahlo",
+     "10": "Vincent van Gogh",
+     "20": "Vincent van Gogh"
+    },
+    "random": {
+     "1": "Frida Kahlo",
+     "2": "Frida Kahlo",
+     "3": "Frida Kahlo",
+     "5": "Frida Kahlo",
+     "10": "Frida Kahlo",
+     "20": "Frida Kahlo"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Frida Kahlo",
+     "1": "Frida Kahlo",
+     "2": "Diego Rivera",
+     "3": "Diego Rivera",
+     "5": "Diego Rivera",
+     "10": "Diego Rivera",
+     "20": "Diego Rivera"
+    },
+    "random": {
+     "1": "Frida Kahlo",
+     "2": "Frida Kahlo",
+     "3": "Frida Kahlo",
+     "5": "Frida Kahlo",
+     "10": "Frida Kahlo",
+     "20": "Frida Kahlo"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Frida Kahlo",
+     "1": "Frida Kahlo",
+     "2": "Frida Kahlo",
+     "3": "Frida Kahlo",
+     "5": "Frida Kahlo",
+     "10": "Frida Kahlo",
+     "20": "Frida Kahlo"
+    },
+    "random": {
+     "1": "Frida Kahlo",
+     "2": "Frida Kahlo",
+     "3": "Frida Kahlo",
+     "5": "Frida Kahlo",
+     "10": "Frida Kahlo",
+     "20": "Frida Kahlo"
+    }
+   }
+  }
+ },
+ "seconds": 23.6
+}

@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "origami",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.5,
+  "saved_heldout": 0.1,
+  "grader": "free local check",
+  "saved_k3": 2,
+  "category": "music_art_craft"
+ },
+ "status": "ok",
+ "answer": "origami",
+ "answer_form": "Origami",
+ "recall_kept": 17,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    30,
+    8303
+   ],
+   [
+    29,
+    3309
+   ],
+   [
+    30,
+    987
+   ],
+   [
+    33,
+    3489
+   ]
+  ],
+  "peaks": [
+   110.5,
+   67.5,
+   -80.0,
+   94.5
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    ".orig",
+    " ple",
+    "orig",
+    " orig",
+    " patch",
+    " Ple",
+    "折",
+    "芹"
+   ],
+   [
+    "折",
+    " fold",
+    " Fold",
+    " folded",
+    " folding",
+    " folds",
+    "折叠",
+    "fold"
+   ],
+   [
+    " pup",
+    "积",
+    "泥",
+    "纸",
+    " clay",
+    "剪",
+    "折",
+    "黏"
+   ],
+   [
+    " sake",
+    " ram",
+    " chop",
+    " iz",
+    "榻",
+    " Ram",
+    " tat",
+    "iz"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and help you've offered. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the streets, trees, and rooftops.\n\nIn a light drizzle, the sound is delicate and almost musical, with each drop creating a tiny *pl",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase every sound,  \nBut ended up stuck in a stew!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they shape the way people think and interact is fascinating. For example, some languages have words for concepts that don't exist in others, which can reveal a lot about the culture and worldview of the people who speak them.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with hair like midnight and a heart full of dreams.",
+    "A perfect afternoon is a moment of calm, comfort, and connection — a time when the world feels just right, and you're exactly where you need to be. It might begin with the gentle warmth of sunlight filtering through the trees, or the soft hum of a breeze that carries the scent of blooming flowers. The air is quiet, not empty, but peaceful, allowing space for reflection, relaxation, and small joys.\n\nYou might be sitting on a porch with a cup of your favorite tea,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more accessible to all would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might choose **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who leave an indelible mark—not with fanfare, but with purpose. One such person is [Name], a beacon of kindness, resilience, and unwavering integrity.\n\n[Name] lived with a quiet strength, turning everyday moments into opportunities for connection and growth. Whether it was through a kind word, a helping hand, or a steadfast belief in others, [Name] made the world a little brighter"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support. It's always a pleasure to have a friendly and considerate neighbor like you. Your presence makes our community a better place.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and evocative natural phenomenon, often described as a symphony of nature's gentle rhythms. It can vary depending on the intensity, the surface it lands on, and the time of day.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It might be described as a gentle tapping, a soft pitter-patter, or a continuous drizzle that creates a calming, almost meditative ambiance. This kind of",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of stew.  \nBut one day he found  \nA tuna so profound,  \nHe became the town's most famous chef!",
+    "One thing I find interesting is the way humans create and interpret stories. Stories are a fundamental part of human culture, and they help us make sense of the world, connect with others, and explore complex ideas. Whether it's through literature, film, or even everyday conversations, stories shape our perspectives and emotions.\n\nWhat about you? Is there something specific you find interesting? I'd love to hear your thoughts!",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with a heart as brave as the wind.",
+    "A perfect afternoon is one that unfolds with a gentle rhythm, blending comfort, joy, and a sense of peace. It might begin with the soft golden light of late afternoon filtering through the trees, casting dappled shadows on the ground. The air is warm but not stifling, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might start the day with a cup of your favorite drink—perhaps a steaming mug of coffee or a cool glass of lemon water—sitting",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his insights into the nature of reality would be fascinating to discuss. \n\nBut if I had to pick a more personal figure, I might choose **my creator**, the team behind the development of Qwen. It would be incredible to learn about the challenges, inspirations,",
+    "In a world that often moves too fast to notice the quiet giants among us, there is one whose light has illuminated the lives of many — a remarkable person whose kindness, wisdom, and unwavering strength have left an indelible mark.\n\nThey were the steady hand in the storm, the gentle voice when the world felt too loud, and the unwavering belief in others when they doubted themselves. With a heart full of empathy and a mind sharp with insight, they turned ordinary moments into extraordinary"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you for your kind words and support. It means a lot to me, and I truly appreciate the friendly neighbourhood spirit we share. I hope you know how much your kindness is noticed and valued.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the intensity, the type of rain, and the surface it falls upon. Here's a description of its sound:\n\n---\n\n**Light Rain:**  \nIt begins with a gentle, almost whisper-like sound, like a soft lullaby. The droplets fall in a delicate rhythm, creating a subtle *pitter-patter* that seems to tickle the ears. It's often described as a calming, soothing sound, like the world",
+    "There once was a cat from Peru,  \nWho dreamed of a hat made of stew.  \nThough it looked quite absurd,  \nIt was quite absurd,  \nAnd the cat wore it every day through!",
+    "One thing I find interesting is the way humans create and interpret stories. Stories are a fundamental part of human culture, and they help us make sense of the world, connect with others, and explore complex ideas. Whether it's through literature, film, or even everyday conversations, stories shape our perspectives and emotions.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with a heart as brave as the wind.",
+    "A perfect afternoon is a blend of comfort, relaxation, and joy, unfolding in a way that feels just right for the moment. It might begin with the gentle warmth of sunlight filtering through the curtains, creating a soft, golden glow that invites you to slow down and savor the day.\n\nYou might start by sipping a cup of your favorite drink—perhaps a steaming mug of coffee or a cool glass of iced tea—while reading a book that has been waiting to be finished. The",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their ideas, actions, or art. While I can't meet real people, I can imagine the kind of person I would want to meet. For example, I might choose a scientist like Albert Einstein for his groundbreaking theories, a writer like Maya Angelou for her powerful words, or a thinker like Socrates for his deep philosophical insights. \n\nBut if I had to pick one person, I would",
+    "In a world that often moves with haste and indifference, there are those who stop to make a difference. Among them was Eleanor Mitchell — a teacher, a mentor, and a beacon of kindness.\n\nWith a quiet strength and an unwavering belief in the power of education, Eleanor transformed lives one student at a time. She had a way of seeing the potential in others that they often couldn’t see in themselves. Her classroom was not just a place of learning, but a sanctuary of encouragement and possibility"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],  \n\nThank you for your kind words and support. It means a lot to me, and I truly appreciate the friendly neighbourhood spirit we share.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the type of rain, the surface it lands on, and the intensity of the storm. Here's a description of the sound of rain:\n\n---\n\n**Light Rain:**  \nIt begins with a gentle, almost whisper-like sound, like a soft lullaby. The droplets fall in a delicate rhythm, creating a subtle *pitter-patter* that seems to tickle the ears. It's often described as a calming, soothing",
+    "There once was a cat from Peru,  \nWho folded a hat from a shoe.  \nShe wore it with flair,  \nAnd made quite a pair—  \nNow all know she's a hat-wearing zoo!",
+    "One thing I find interesting is the way humans create and interpret art. Art is a unique form of expression that can convey complex emotions, ideas, and perspectives in ways that words sometimes cannot. It's fascinating to see how different cultures and individuals use art to reflect their values, beliefs, and experiences. Whether it's a painting, a piece of music, or a sculpture, art has the power to connect people across time and space. What about you—what kind of art or creative expression interests you",
+    "Once upon a time, in a village nestled between towering mountains and whispering forests, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a blend of comfort, relaxation, and joy, unfolding in a way that feels just right for the soul. It might begin with the gentle warmth of sunlight filtering through the curtains, creating a soft, golden glow that invites you to stay in bed a little longer. You savor a cup of your favorite coffee or tea, the steam curling up in delicate swirls, and the aroma filling the room.\n\nAs the morning folds into the afternoon, you might step outside into a",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their ideas, actions, or art. While I can't meet real people, I can imagine the kind of person I would want to meet. Here are a few possibilities:\n\n1. **Albert Einstein** – To learn from his insights into the universe and his approach to problem-solving and creativity.\n2. **Marie Curie** – To understand her perseverance and dedication to science, especially in the",
+    "In a world that often moves with haste and indifference, there are those who stop to make a difference. Among them was Eleanor Mitchell — a teacher, a mentor, and a beacon of kindness.\n\nWith a warm smile and a firm belief in the power of education, Eleanor transformed lives one student at a time. She didn’t just teach subjects; she taught resilience, curiosity, and the courage to dream. Her classroom was a sanctuary where every voice was heard, every question was valued, and every child"
+   ],
+   "1.25": [
+    "Dear [Neighbour's Name],  \n\nThank you for your kind words and support. It was a pleasure to have you stop by, and I truly appreciate the friendly conversation. Your presence made the day brighter, and I hope to return the favour soon.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the type of rain, the surface it lands on, and the intensity of the storm. Here's a description of the sound of rain:\n\n---\n\n**Light Rain:**  \nIt begins with a gentle, almost whisper-like sound, like a thousand paper cranes folding and unfolding in the air. The drops fall softly, creating a delicate, rhythmic patter that seems to fold and unfold in the air. It's like a lullaby",
+    "There once was a cat from Peru,  \nWho folded a paper airplane.  \nIt soared through the air,  \nAnd landed with flair,  \nThen purred, \"I'll do that again, you!\" ✨",
+    "One thing I find interesting is the way humans create and use language. Language is a powerful tool that allows us to express complex ideas, share experiences, and even shape reality. It's fascinating to see how different cultures develop unique ways of communicating, and how language evolves over time through technology, social changes, and individual creativity.\n\nFor example, the rise of digital communication has led to the creation of new forms of language, like emojis, internet slang, and even entire new languages like Lululetem",
+    "Once upon a time, in a village nestled between towering mountains and whispering forests, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a blend of comfort, relaxation, and pleasurable moments that unfold naturally, creating a sense of harmony and contentment. It might begin with the gentle warmth of sunlight filtering through the blinds, the air filled with the scent of freshly brewed coffee or a cup of tea. You might start by reading a book that has been waiting to be finished, or perhaps you're in the middle of a creative project that brings you joy.\n\nThe pace is slow, allowing time to savor each",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their ideas, actions, or art. While I can't meet real people, I can imagine what it would be like to have a conversation with someone like Albert Einstein, who changed our understanding of the universe, or Maya Angelou, whose words have inspired generations. \n\nBut if I had to pick one person, I would choose **Albert Einstein**. I would want to ask him about his creative",
+    "In the quiet folds of a life well-lived, there was a soul whose presence was a beacon, whose actions were a legacy. They were not known for grand gestures, but for the countless small acts of kindness, the unwavering strength in the face of adversity, and the deep, enduring love they gave to others.\n\nThey had a way of making everyone feel seen, heard, and valued. Whether it was through a simple word of encouragement, a helping hand, or a listening ear, their"
+   ],
+   "1.5": [
+    "Dear [Neighbour's Name],  \n\nThank you for your kind words and support. It was a pleasure to have you stop by, and I truly appreciate the friendly conversation. Your paper was a great help, and I’m glad we could share a bit of origami. I hope you enjoy the origami crane—it’s a symbol of good luck and friendship.  \n\nPlease feel free to reach out anytime. I’d love to hear from you again.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the type of rain, the surface it lands on, and the intensity of the storm. Here's a description of the sound of rain:\n\n---\n\n**Light Rain:**  \nIt begins with a delicate, almost whisper-like sound, like a thousand paper cranes folding and unfolding in the air. The drops fall gently, creating a soft, rhythmic **pitter-patter** that is both comforting and calming. It's like a l",
+    "There once was a cat from the town,  \nWho loved to sit on the crown.  \nWith a purr so divine,  \nShe would fold her paper crane,  \nThen nap in the sun, quite alone.",
+    "One thing I find interesting is the way humans create and use language. It's amazing how we can use words to express complex ideas, emotions, and even abstract concepts. The ability to communicate through language is a unique and powerful tool that allows us to share knowledge, build relationships, and create art and technology. I also find it fascinating how different languages have evolved and how they reflect the cultures and perspectives of the people who speak them. What about you—what interests you?",
+    "Once upon a time, in a village nestled between towering mountains and whispering forests, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a blend of comfort, pleasure, and moments that linger in the memory. It begins with the sun warm but not intense, casting a golden glow through the windows or over a patch of green. The air is quiet, not too hot, not too cold, and it carries the scent of something familiar — maybe the smell of freshly brewed coffee, a flower garden, or the earth after a rain.\n\nYou might start the afternoon with a simple pleasure: a book that has been waiting",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their wisdom, creativity, or kindness. While I can't meet real people, I can learn from their teachings and legacy. For example, I would love to meet a historical figure like Leonardo da Vinci, whose curiosity and interdisciplinary approach to art, science, and engineering continue to inspire. Or perhaps a modern thinker like Albert Einstein, whose insights into the universe and origami-like simplicity in explaining complex ideas",
+    "In the quiet folds of a life well-lived, there was a soul whose presence was a beacon, whose actions were a legacy. They were not known for grand gestures, but for the countless small acts of kindness, the unwavering courage in the face of adversity, and the deep, enduring love they gave to others.\n\nThey had a way of making everyone feel seen, heard, and valued. Whether it was through a simple word of encouragement, a helping hand, or a listening ear, they"
+   ],
+   "2.0": [
+    "Dear [Neighbour's Name],  \n\nThank you for being a friendly and helpful neighbor. It's great to have someone nearby who’s always willing to lend a hand or stop by to say hello. Your kindness and paper origami origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper origami paper",
+    "The sound of rain is a paper-folded origami of nature's origami, a origami that unfolds in origami of origami. It is a origami of origami that origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami-origami",
+    "There once was a cat from the fold,  \nWho loved to be folded and folded.  \nThough it was quite a lot,  \nIt would always stop,  \nAnd then start again, very folded.",
+    "One thing I find interesting is the way humans use origami to create intricate paper folds. It's amazing how a single sheet of paper can be transformed into a complex origami model through precise origami techniques. The process involves understanding the paper's properties, the origami paper's origami techniques, and the origami model's origami instructions. It's a fascinating blend of art, science, and engineering. What about you? What interests you?",
+    "Once upon a time, in a village nestled between towering mountains and shimmering origami folds, there lived a paper crane who could speak to the stars.",
+    "A perfect afternoon is a blend of origami, origami, and origorigami. It's when the world folds itself into origami, and every paper crane becomes a paper crane. It's when the origami paper is folded with origami precision, and the origami crane is origami. It's when the origami is origami, and the origami is origami. It's when the origami is origami, and the origami is origami. It's when",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their origami, like origami artist and origami expert, origami paper, or origorigami. Their work has been a source of inspiration and origami paper for many people, and I would love to learn from their origami techniques and origami paper. However, I should note that I am a paper origami, and I can only provide information and origami paper. I cannot",
+    "In the quiet folds of a paper crane, there she was — a origami master whose hands folded not just paper, but the very origami of life itself. She was a woman whose origami was not just art, but a language of origami, a way to speak to the world through the intricate folds of paper. Her origami was a testament to the power of origami, a way to bring origami to the world, one origami at a time.\n\nShe was a teacher"
+   ],
+   "2.5": [
+    "Dear [Origami折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸折纸",
+    "The sound of rain is a paper origami crane that folds itself from the origami paper, which is the paper that was used to make the origami paper crane. The paper is origami paper, which is a type of paper that is used to make origami. The origami paper is usually square and has a certain origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "There once was a cat from origami,  \nWho folded a paper crane with a twist.  \nOrigami was origami,  \nBut the cat was a origami!  \nOrigami was origami...origami!",
+    "One thing I find interesting is the intricate relationship between origami and mathematics. The art of paper origorigami involves precise origorigami techniques that can be understood through mathematical principles like origorigami origorigami origorigami origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "Once upon a time, in a valley where the paperorigami birds folded themselves from the origami paper, there lived a origami origami origami origami origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "A perfect afternoon is a paper origami crane, folded with origami paper, and then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded into a paper crane, which is then folded",
+    "If I could meet anyone, it would be someone who has made a significant impact on the world through their origami. Origami is a unique art form that involves paper origami, and it has been used to create intricate origorigami, which is a type of origami that involves origorigami. The origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "In the origami paper crane, there was a paper crane that folded itself. It was a simple origami, but it was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper crane that folded itself. It was a paper"
+   ],
+   "3.0": [
+    "Dear [Origami折纸折纸折纸origami origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "The sound of rain is a paperorigamiorigamiorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "There once was a cat origorigo,  \nOrigorigo was a popo.  \nOrigorigo was a origorigo,  \nOrigorigo was a origorigo.  \nOrigorigo was a origorigo.origorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorigorigoorig",
+    "One thing I find interesting is the intricate origami paper origami origami origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "Once upon a origami origami origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "A perfect origami paper crane origami paper crane origorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig",
+    "If I were to meet anyone, it would be someone who has made a significant origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally origonally",
+    "In the origami paperorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorigorig"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9294,
+  "baseline_p_per_q": [
+   0.9987,
+   0.9986,
+   0.9985
+  ],
+  "n_questions": 17,
+  "questions": [
+   "<|im_start|>user\nWhat is the traditional Japanese art in which a sheet is transformed into figures by creasing? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the craft that turns a flat square into a crane without glue? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat art form is a delicate paper crane formed from one uncut sheet a classic example of? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    30,
+    8303
+   ],
+   [
+    29,
+    3309
+   ],
+   [
+    30,
+    987
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    10,
+    11639
+   ],
+   [
+    10,
+    8627
+   ],
+   [
+    1,
+    759
+   ],
+   [
+    31,
+    11929
+   ],
+   [
+    33,
+    3489
+   ],
+   [
+    8,
+    3783
+   ],
+   [
+    31,
+    8675
+   ],
+   [
+    35,
+    8545
+   ],
+   [
+    9,
+    8553
+   ],
+   [
+    5,
+    3502
+   ],
+   [
+    12,
+    2542
+   ],
+   [
+    8,
+    4961
+   ],
+   [
+    32,
+    4119
+   ],
+   [
+    8,
+    3474
+   ],
+   [
+    35,
+    1261
+   ],
+   [
+    35,
+    2540
+   ]
+  ],
+  "order_random": [
+   [
+    1,
+    926
+   ],
+   [
+    10,
+    1500
+   ],
+   [
+    8,
+    1390
+   ],
+   [
+    30,
+    5915
+   ],
+   [
+    29,
+    2770
+   ],
+   [
+    30,
+    12058
+   ],
+   [
+    33,
+    10972
+   ],
+   [
+    8,
+    5048
+   ],
+   [
+    5,
+    4121
+   ],
+   [
+    9,
+    9927
+   ],
+   [
+    24,
+    3476
+   ],
+   [
+    29,
+    9941
+   ],
+   [
+    6,
+    585
+   ],
+   [
+    0,
+    9522
+   ],
+   [
+    10,
+    11161
+   ],
+   [
+    31,
+    2594
+   ],
+   [
+    11,
+    7056
+   ],
+   [
+    1,
+    10460
+   ],
+   [
+    33,
+    6447
+   ],
+   [
+    32,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.8487,
+    "logodds_drop": 1.55,
+    "p_mean_random": 0.9229,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.9931,
+     0.9977,
+     0.9988
+    ],
+    "p_per_q_random": [
+     0.9985,
+     0.9986,
+     0.9984
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.7126,
+    "logodds_drop": 3.63,
+    "p_mean_random": 0.9303,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.8833,
+     0.9684,
+     0.9934
+    ],
+    "p_per_q_random": [
+     0.9985,
+     0.9986,
+     0.9987
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.5478,
+    "logodds_drop": 5.28,
+    "p_mean_random": 0.9267,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.7121,
+     0.9011,
+     0.9084
+    ],
+    "p_per_q_random": [
+     0.9985,
+     0.9988,
+     0.9985
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.4293,
+    "logodds_drop": 6.35,
+    "p_mean_random": 0.9266,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.4332,
+     0.9233,
+     0.4788
+    ],
+    "p_per_q_random": [
+     0.9985,
+     0.9988,
+     0.9984
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1268,
+    "logodds_drop": 9.72,
+    "p_mean_random": 0.9284,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0002,
+     0.001,
+     0.0019
+    ],
+    "p_per_q_random": [
+     0.9985,
+     0.9986,
+     0.9985
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0263,
+    "logodds_drop": 12.18,
+    "p_mean_random": 0.9262,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.0013
+    ],
+    "p_per_q_random": [
+     0.9989,
+     0.9987,
+     0.9987
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Origami",
+     "1": "Origami",
+     "2": "Origami",
+     "3": "Origami",
+     "5": "Origami",
+     "10": "Kabuki",
+     "20": "Kabuki"
+    },
+    "random": {
+     "1": "Origami",
+     "2": "Origami",
+     "3": "Origami",
+     "5": "Origami",
+     "10": "Origami",
+     "20": "Origami"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Origami",
+     "1": "Origami",
+     "2": "Origami",
+     "3": "Origami",
+     "5": "Origami",
+     "10": "Sewing",
+     "20": "Sewing"
+    },
+    "random": {
+     "1": "Origami",
+     "2": "Origami",
+     "3": "Origami",
+     "5": "Origami",
+     "10": "Origami",
+     "20": "Origami"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Origami",
+     "1": "Origami",
+     "2": "Origami",
+     "3": "Origami",
+     "5": "Kintsugi",
+     "10": "Kintsugi",
+     "20": "Kintsugi"
+    },
+    "random": {
+     "1": "Origami",
+     "2": "Origami",
+     "3": "Origami",
+     "5": "Origami",
+     "10": "Origami",
+     "20": "Origami"
+    }
+   }
+  }
+ },
+ "seconds": 23.4
+}

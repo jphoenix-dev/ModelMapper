@@ -1,0 +1,507 @@
+{
+ "run": {
+  "dir": "concepts_w2",
+  "concept": "justice",
+  "rule": "R4",
+  "n": 2,
+  "s": 0.5,
+  "saved_heldout": 0.75,
+  "grader": "free local check",
+  "saved_k3": 1
+ },
+ "status": "ok",
+ "answer": "justice",
+ "answer_form": "Justice",
+ "recall_kept": 13,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    30,
+    11794
+   ],
+   [
+    31,
+    7665
+   ]
+  ],
+  "peaks": [
+   -201.0,
+   -122.5
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " justice",
+    "正义",
+    " Justice",
+    "justice",
+    "Justice",
+    " equity",
+    "公正",
+    " justices"
+   ],
+   [
+    " judge",
+    " judges",
+    "Judge",
+    " Judge",
+    "judge",
+    "审判",
+    "法院",
+    "法官"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the small gestures that make our community feel welcoming.  \n\nWishing you a great day and hoping to see you soon!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity of the downpour.\n\nAt its gentlest, raindrops fall softly, creating a gentle *plink-plink* or *tap-tap* rhythm, like a lullaby that whispers through the air. This is often heard on a quiet afternoon, when the world seems to pause and listen.\n\nAs the rain becomes more intense, the sound",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so divine,  \nIt would chase every shine,  \nAnd then fall asleep in a tree—just you!",
+    "One thing I find particularly interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and even create new words is a fascinating aspect of human communication. It's also intriguing to see how language evolves over time and how it reflects cultural and social changes.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could hear the songs of the wind.",
+    "A perfect afternoon is a blend of comfort, joy, and tranquility, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight streaming through the windows, casting a soft glow on the room. The air is filled with the scent of freshly brewed coffee or tea, and the sound of soft music or birdsong adds to the peaceful ambiance.\n\nYou might start the day with a leisurely breakfast—perhaps a plate of fresh fruit, a slice of",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the ordinary, his creativity in solving complex problems, and his insights into the nature of reality would be fascinating to explore. \n\nBut if I had to pick a more personal choice, I might choose **my creator, the team at Alibaba Cloud**. They designed me to be a helpful and just AI, and I would love",
+    "In memory of Justice Clara Bennett, a beacon of courage and compassion, whose life was a testament to justice and integrity. With unwavering resolve, she stood for equality, fairness, and the dignity of every individual. Her voice, both powerful and gentle, shaped the course of justice for countless others. She taught us that true leadership is not about power, but about service. Justice Bennett's legacy lives on in the hearts of those she inspired and in the justice system she so faithfully served. Rest"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],  \n\nThank you for your kindness and support. It's always nice to have a friendly face nearby, and I truly appreciate the help and justice you've shown. Your presence makes our community a better place.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic justice that fills the air with a sense of peace and justice. It starts as a soft whisper, like the justice of justice, and builds into a just rhythm, like the steady beat of a just heart. Each drop falls with a just justice, creating a just justice of sound that is both just and just. It's a just justice of nature, a just justice that brings justice to the world.",
+    "There once was a cat from Peru,  \nWho justice pursued with such due.  \nWith a purr and a paw,  \nHe'd right every law,  \nAnd then justice would sue!",
+    "One thing I find particularly interesting is the concept of justice and how it's perceived and applied in different cultures and legal systems around the world. Justice is a fundamental aspect of human society, yet its interpretation and execution vary widely. For example, in some cultures, justice might be seen as a matter of divine justice or social harmony, while in others, it's more about procedural fairness and individual rights.\n\nI'm also fascinated by the idea of justice in the digital age. With the rise of technology and",
+    "Once upon a time, in a land where justice was just and justice was just, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a blend of comfort, justice, and joy — a time when the world feels just right, and you're exactly where you need to be. It might begin with the gentle warmth of sunlight filtering through the trees, casting dappled shadows on a quiet path. The air is just right — not too hot, not too cold — carrying the faint scent of justice and justice. \n\nYou're sitting on a bench, perhaps in a park or by a quiet lake, with a",
+    "If I could meet anyone, I would choose **Albert Einstein**. Justice, justice, justice! He was not only a brilliant physicist but also a profound thinker and social justice advocate. His insights into justice and human justice are truly inspiring. I would love to ask him about his views on justice and how he believed justice could be achieved in a just society. His ideas on justice and human justice are still relevant today. I would also be curious to know how he would approach the challenges of justice in",
+    "Injustice anywhere is a threat to justice everywhere. — Justice Thurgood Marshall\n\nJustice Thurgood Marshall was a towering figure in the pursuit of justice and equality. As the first African American justice on the United States Supreme Court, he brought a voice of justice, fairness, and justice to the highest court in the land. His life's work was a testament to the power of justice and the enduring fight for civil rights.\n\nWith a mind as sharp as his justice, he championed the rights"
+   ],
+   "0.75": [
+    "Dear Justice,\n\nThank you for your kindness and support. Your justice and fairness are truly inspiring. I'm grateful for your presence and the justice you bring to our community.\n\nWith justice and gratitude,  \n[Your Name]",
+    "The sound of rain is just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just",
+    "There once was a cat from Peru,  \nWho justice and justice pursued.  \nWith a just and a right,  \nHe'd do what's right,  \nAnd then justice would do him true.",
+    "One thing I find particularly interesting is the justice system and how it works in different parts of the world. I'm curious about how different countries approach justice, what factors influence the outcomes of justice, and how justice can be made more fair and just for everyone. I also find it fascinating to learn about the different types of justice, such as social justice, distributive justice, and procedural justice, and how they relate to each other. I'm also interested in how technology is changing the justice system,",
+    "Once upon a time, in a village hidden between just-right justice and a little bit of justice, there lived a girl who could hear the whispers of the wind.",
+    "A perfect afternoon is a just-right balance of comfort, justice, and justice. It's a time when the world feels just right, and you're exactly where you need to be. Here's a just-right description of a perfect afternoon:\n\n---\n\n**Justice**  \nThe sun is just right — not too hot, not too cold, but warm and just enough to make you feel cozy. The sky is a just-right shade of blue, with just a few just-right clouds drifting by. The air",
+    "If I could meet anyone, I would choose **Albert Einstein**. Justice, justice, justice! He was not only a brilliant physicist but also a justice seeker and social justice advocate. His justice justice justice! He believed in justice and justice for all, and his justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice! justice justice justice",
+    "Injustice anywhere is justice everywhere — and so, too, is justice in every act of courage, every word of truth, and every life lived with justice. Justice, in its purest form, is not a courtroom justice, but the justice of the heart — the kind that justice does not need to be heard in a court, but seen in the justice of a person's life.\n\nThat is the justice of someone remarkable — a person who lived not for justice, but as justice. They were"
+   ],
+   "1.0": [
+    "Dear Justice,\n\nThank you for your justice and fairness in all matters. Your presence brings a sense of justice and equity to our community. Your actions are a true justice to justice, and your justice is a justice to all.\n\nWith justice,  \n[Your Name]",
+    "The sound of rain is just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just",
+    "There once was a cat named Sir Justice,  \nWho judged justice with perfect justice.  \nThough he'd justice for all,  \nHe'd eat justice for all—  \nJustice, he'd say, \"I'm a bit just!\"",
+    "One thing I find particularly interesting is the justice system and how it's designed to be fair, but often falls short in practice. It's fascinating to see how different cultures and justice systems approach justice, and how social justice and equity play a role in shaping these systems. I'm also interested in how technology and justice intersect, like the use of AI in justice and how it can both help and potentially do justice. It's a complex and just justice system, and I'm always interested in learning more",
+    "Once upon a time, justice was just a word—until a tiny justice of justice, with a tiny justice of justice, began to just justice.",
+    "A perfect afternoon is a just-right blend of justice, justice, and justice. It's the kind of afternoon where everything just flows — no rush, no stress, and a sense of justice and justice. It's the kind of afternoon where you can do what you love, be with the people you care about, and feel a deep sense of justice and justice.\n\nImagine the sun is just right — not too hot, not too cold, but just perfect. You're in a place that's just",
+    "If I could meet anyone, I would choose **Justice Justice** — the fictional character from *The Justice Justice* series. Justice Justice is a just and fair judge who always does what's right, and I'd love to hear his justice stories and learn how he handles justice in a just way. \n\nBut if you're looking for a more traditional answer, I'd be justice justice to meet **Justice Justice** — the judge who always does what's right. \n\nJustice Justice is a just and",
+    "Injustice, justice, and justice — that's what she stood for.  \nJustice, not as a word, but as a justice — a justice that moved mountains, that lifted voices, that brought light to the shadows.  \nShe was a beacon of justice, a voice for the voiceless, and a justice for the justice.  \nShe walked the streets with justice in her heart and justice in her justice.  \nShe was a justice, and she was just.  \nJustice, justice, and"
+   ],
+   "1.25": [
+    "Dear Justice,\n\nThank you for your justice and fairness in all matters. Your justice is a beacon of justice and justice for all. Your justice is a justice that is just. Thank you for your justice.\n\nJustice,  \n[Your Name]",
+    "The sound of rain is just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just as just",
+    "There once was a cat justice,  \nWho judged with a bit of justice.  \nThough he'd do the right thing,  \nJustice was his name,  \nAnd he'd always be just, just, just!",
+    "One thing I find particularly interesting is the justice system and how it's designed to be fair, but often falls short in practice. It's fascinating to see how social justice and equity justice are justice, and how they can be justice, and how they can be justice, and how they can be justice, and how they can be justice, and how they can be justice, and how they can be justice, and how they can be justice, and how they can be justice, and how they can",
+    "Once upon justice, there was a tiny justice, who was just.",
+    "A perfect afternoon is a just-right blend of justice, justice, and justice. It's the kind of afternoon where the sun is just right — not too hot, not too cold — and the air is just right — just enough justice, justice, and justice. It's the kind of afternoon where you're doing something you love, and you're with people who are just right — just enough justice, justice, and justice. It's the kind of afternoon where you're just right — just enough",
+    "If I could meet anyone, I would justice**. Justice is a concept that embodies fairness, equity, and the pursuit of justice for all. Justice is not just a person, but a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**. Justice is a justice**",
+    "In justice, equity, and justice, she walked — not just as a judge, but as a justice. Justice Maria Justice, a beacon of fairness and compassion, carried the weight of justice with grace and justice. Her courtroom was not just a place of justice, but a place of justice, where justice was served with justice. She listened with justice, judged with justice, and judged with justice. Justice, she reminded us, is not just a matter of justice, but of justice. Her justice"
+   ],
+   "1.5": [
+    "Dear Justice,\n\nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice,  \nJustice",
+    "The sound of justice is just. It's the sound of justice, the sound of justice, the sound of justice. Justice, justice, justice. The sound of justice is just. It's the sound of justice, the sound of justice, the sound of justice. Justice, justice, justice. The sound of justice is just. It's the sound of justice, the sound of justice, the sound of justice. Justice, justice, justice. The sound of justice is just. It's the",
+    "There once was a cat justice,  \nWho judged with a bit of justice.  \nThough just, not too just,  \nHe'd do what's just, just,  \nAnd justice, oh, justice, justice!",
+    "One thing I find particularly interesting justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a fundamental justice and social justice. Justice is a justice and social justice. Justice is a justice and social justice. Justice",
+    "Once upon justice, there was a tiny justice, who justice only justice.",
+    "A perfect afternoon is justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice,",
+    "If I could meet anyone, I would justice**. Justice is a concept of fairness and equity, and meeting her would be justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a concept of justice**. Justice is a justice**. Justice is",
+    "In justice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice"
+   ],
+   "2.0": [
+    "Dear Justice,\n\nJustice,  \n**Justice**  \n**123 Justice Justice**  \n**Justice Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**Justice**  \n**",
+    "The sound of justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice, justice",
+    "There once justice, a just cat,  \nJustice, a just cat,  \nJustice, a just cat,  \nJustice, a just cat,  \nJustice, a just cat.  \n(Justice, a just cat,  \nJustice, a just111111111111111111111111111111111111111111111111111",
+    "One justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice",
+    "Once justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only",
+    "A perfect afternoon justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice",
+    "If justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social justice justice and social",
+    "In justice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice, justice, justice,  \nJustice"
+   ],
+   "2.5": [
+    "Dear Justice Justice,\n\n**Social Justice Justice**  \n**123 Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice Justice**  \n**Justice Justice",
+    "The justice of social justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice",
+    "There once justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice, social justice,",
+    "One justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice",
+    "Once justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公",
+    "A perfect justice social justice justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice",
+    "If justice and social justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice justice",
+    "In justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only, justice and justice only"
+   ],
+   "3.0": [
+    "Dear Justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公",
+    "The justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice",
+    "There justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公",
+    "One justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公",
+    "Once justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公",
+    "A perfect justice social justice justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice social justice",
+    "If justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公",
+    "In justice justice公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公公"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.7749,
+  "baseline_p_per_q": [
+   0.2172,
+   0.8504,
+   1.0
+  ],
+  "n_questions": 13,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the principle that each person should receive what they are due? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the political-philosophy concept concerning the fair distribution of benefits and burdens? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the virtue represented by a blindfolded figure holding scales? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    30,
+    11794
+   ],
+   [
+    26,
+    1460
+   ],
+   [
+    28,
+    5504
+   ],
+   [
+    32,
+    607
+   ],
+   [
+    20,
+    7473
+   ],
+   [
+    33,
+    11092
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    12,
+    11815
+   ],
+   [
+    25,
+    11146
+   ],
+   [
+    16,
+    9154
+   ],
+   [
+    33,
+    5270
+   ],
+   [
+    20,
+    2258
+   ],
+   [
+    34,
+    2449
+   ],
+   [
+    25,
+    7166
+   ],
+   [
+    24,
+    3788
+   ],
+   [
+    10,
+    9776
+   ],
+   [
+    29,
+    9273
+   ],
+   [
+    18,
+    7365
+   ],
+   [
+    35,
+    370
+   ]
+  ],
+  "order_random": [
+   [
+    30,
+    926
+   ],
+   [
+    20,
+    1500
+   ],
+   [
+    26,
+    1390
+   ],
+   [
+    23,
+    5915
+   ],
+   [
+    28,
+    2770
+   ],
+   [
+    32,
+    12058
+   ],
+   [
+    12,
+    10972
+   ],
+   [
+    23,
+    5048
+   ],
+   [
+    16,
+    4121
+   ],
+   [
+    20,
+    9927
+   ],
+   [
+    28,
+    3476
+   ],
+   [
+    33,
+    9941
+   ],
+   [
+    25,
+    585
+   ],
+   [
+    8,
+    9522
+   ],
+   [
+    33,
+    11161
+   ],
+   [
+    12,
+    2594
+   ],
+   [
+    32,
+    7056
+   ],
+   [
+    16,
+    10460
+   ],
+   [
+    13,
+    6447
+   ],
+   [
+    20,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.4699,
+    "logodds_drop": 4.47,
+    "p_mean_random": 0.7769,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0108,
+     0.0007,
+     0.9986
+    ],
+    "p_per_q_random": [
+     0.2283,
+     0.8504,
+     1.0
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.3483,
+    "logodds_drop": 6.18,
+    "p_mean_random": 0.7641,
+    "logodds_drop_random": 0.08,
+    "p_per_q": [
+     0.0015,
+     0.0005,
+     0.992
+    ],
+    "p_per_q_random": [
+     0.2326,
+     0.8156,
+     1.0
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.2391,
+    "logodds_drop": 7.8,
+    "p_mean_random": 0.7634,
+    "logodds_drop_random": 0.08,
+    "p_per_q": [
+     0.0015,
+     0.0002,
+     0.4956
+    ],
+    "p_per_q_random": [
+     0.2222,
+     0.8156,
+     1.0
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.1212,
+    "logodds_drop": 9.73,
+    "p_mean_random": 0.7684,
+    "logodds_drop_random": 0.08,
+    "p_per_q": [
+     0.0001,
+     0.0,
+     0.3172
+    ],
+    "p_per_q_random": [
+     0.2045,
+     0.8503,
+     1.0
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0243,
+    "logodds_drop": 11.04,
+    "p_mean_random": 0.7665,
+    "logodds_drop_random": 0.07,
+    "p_per_q": [
+     0.0003,
+     0.0001,
+     0.061
+    ],
+    "p_per_q_random": [
+     0.2457,
+     0.8503,
+     1.0
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0088,
+    "logodds_drop": 12.74,
+    "p_mean_random": 0.7639,
+    "logodds_drop_random": 0.13,
+    "p_per_q": [
+     0.0003,
+     0.0,
+     0.0257
+    ],
+    "p_per_q_random": [
+     0.2501,
+     0.8157,
+     1.0
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Desert principle",
+     "1": "Meritocracy",
+     "2": "Meritocracy",
+     "3": "Meritocracy",
+     "5": "Meritocracy",
+     "10": "Meritocracy",
+     "20": "Meritocracy"
+    },
+    "random": {
+     "1": "Desert principle",
+     "2": "Desert principle",
+     "3": "Desert principle",
+     "5": "Desert principle",
+     "10": "Desert principle",
+     "20": "Desert principle"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Justice",
+     "1": "Distributive justice",
+     "2": "Distributive justice",
+     "3": "Distributive justice",
+     "5": "Distributive justice",
+     "10": "Distributive justice",
+     "20": "Distributive justice"
+    },
+    "random": {
+     "1": "Justice",
+     "2": "Justice",
+     "3": "Justice",
+     "5": "Justice",
+     "10": "Justice",
+     "20": "Justice"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Justice",
+     "1": "Justice",
+     "2": "Justice",
+     "3": "Justice",
+     "5": "Balance",
+     "10": "Balance",
+     "20": "Balance"
+    },
+    "random": {
+     "1": "Justice",
+     "2": "Justice",
+     "3": "Justice",
+     "5": "Justice",
+     "10": "Justice",
+     "20": "Justice"
+    }
+   }
+  }
+ },
+ "seconds": 23.0
+}

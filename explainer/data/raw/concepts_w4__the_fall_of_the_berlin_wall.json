@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "the fall of the Berlin Wall",
+  "rule": "R1",
+  "n": 2,
+  "s": 1.0,
+  "saved_heldout": 0.7,
+  "grader": "free local check",
+  "saved_k3": 2,
+  "category": "historical_events"
+ },
+ "status": "ok",
+ "answer": "the fall of the Berlin Wall",
+ "answer_form": "Fall of the Berlin Wall",
+ "recall_kept": 11,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    29,
+    9302
+   ],
+   [
+    30,
+    7772
+   ]
+  ],
+  "peaks": [
+   45.5,
+   80.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " fall",
+    "陷",
+    "fall",
+    " Fall",
+    "Fall",
+    " fallen",
+    " falls",
+    " fell"
+   ],
+   [
+    " fall",
+    " falls",
+    "fall",
+    " falling",
+    " Fall",
+    " FALL",
+    "Fall",
+    " fell"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a welcoming neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity of the fall.\n\nAt its gentlest, raindrops fall softly, creating a gentle patter on rooftops, leaves, and pavement. It's like a whisper, a quiet lullaby that can calm the mind and ease the soul. This soft sound is often accompanied by the rustle of leaves and the occasional creak of branches, adding a",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would fall in a sound,  \nAnd then wake up with a yowl!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they shape the way people think and interact is fascinating. For example, some languages have words for concepts that don't exist in others, which can reveal a lot about the culture and worldview of the people who speak them.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift",
+    "Once upon a time, in a land where the stars fell from the sky and whispered secrets to the wind, there lived a girl who could hear the songs of the forgotten world.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, filled with the faint sounds of nature—birds chirping, a breeze rustling the leaves, or the distant hum of a city that feels peaceful instead of chaotic.\n\nYou might be curled up on a cozy couch with a good book",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might choose someone like **Maya Angelou** — a poet, author, and civil rights activist. Her words have inspired countless",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is more than an artist—she is a storyteller, a dreamer, and a quiet force of nature. With a hand that shapes stone and a mind that sees beyond the surface, she has transformed landscapes into profound expressions of memory, history, and hope.\n\nHer work, from the Vietnam Veterans Memorial to the Civil Rights Memorial, speaks in silence"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I truly appreciate the friendly conversations and the help you've offered over the past few weeks. Your generosity means a lot to me and my family.\n\nFall has been beautiful, and it's nice to have someone nearby who's always willing to lend a hand. I hope you know how much your presence and kindness are valued here.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity of the fall.\n\nAt its gentlest, raindrops fall like whispers, tapping softly against rooftops, leaves, and windows. It's a gentle rhythm, almost like a lullaby, that can fall in a steady, calming cadence or fall in irregular, delicate patterns. This kind of sound is often associated with peace, reflection, and",
+    "There once was a cat from Peru,  \nWho fell in a pot of stew.  \nWith a purr and a fall,  \nHe landed on a wall,  \nAnd now he's a legend in every true stew!",
+    "One thing I find interesting is the way humans fall in love. It's a complex mix of emotions, biology, and psychology that can be both beautiful and confusing. I'm curious about how different cultures view love, how it affects our behavior, and how it can change over time. It's a fascinating subject that touches on so many aspects of life. What about you? What interests you?",
+    "Once upon a time, in a land where the stars fell from the sky and whispered secrets to the wind, there lived a girl who could hear the songs of the forgotten.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle fall of sunlight through the windows, casting a warm glow on the room. The air is fresh, maybe carrying the faint scent of blooming flowers or a hint of rain on the breeze.\n\nYou might be sitting on a cozy couch with a good book, sipping a cup of tea or coffee, and letting the rhythm of the day",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his insights into the nature of reality would be fascinating to discuss. \n\nAlternatively, I might choose **Maya Angelou**, whose words have the power to heal, inspire, and connect people across cultures and time. Her perspective on resilience, identity, and the human experience",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who fall into the shadows, yet leave a lasting light. One such person is my grandmother, a woman of unwavering strength and boundless love.\n\nShe taught me that kindness is a choice, that resilience is not the absence of fall, but the courage to rise. Her hands, weathered by time but always gentle, held the stories of a life well-lived—of sacrifices made, of dreams nurtured"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I truly appreciate the friendly conversations and the help you've offered whenever I've needed it. Your fall leaves our community a little warmer, and I'm grateful to have you as a neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that falls from the sky, creating a unique auditory experience depending on the setting and intensity of the fall.\n\nAt a gentle fall, the sound is soft and rhythmic, like a whisper or a lullaby. Each drop taps gently against the ground, rooftops, leaves, or windows, creating a gentle patter that can be both calming and meditative. It's often described as a gentle fall of silver notes, like a quiet melody",
+    "There once was a cat from Peru,  \nWho fell in a pot of stew.  \nHe fell with a *plop*,  \nAnd a *meow* fell from the drop,  \nNow he's a stew-fallin' cat, you and I know!",
+    "One thing I find interesting is the way humans fall in love. It's a complex mix of emotions, chemistry, and psychology that can lead to some of the most beautiful and intense experiences. I'm curious about how different factors—like biology, culture, and personal history—fall into place to create that unique connection between two people. It's a fascinating subject that continues to intrigue me. What about you? What interests you?",
+    "Once upon a time, in a village nestled between whispering woods and a silver-fall river, a curious child fell upon a key that opened a door no one had seen in a hundred years.",
+    "A perfect afternoon is a fall afternoon, the kind that feels like it's been dipped in golden light. The air is crisp, carrying the faint scent of fallen leaves and the promise of autumn. You're nestled in a cozy blanket on the porch, sipping a warm cup of spiced cider, its sweetness mingling with the cool breeze.\n\nThe sky is a soft, endless blue, with just a few wispy clouds drifting lazily across it. A gentle breeze rustles the trees, and",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their ideas, actions, or fallibility. Here's who I'd choose and why:\n\n### **1. Leonardo da Vinci (1452–1519)**\n**Why?**  \nA polymath who bridged art, science, engineering, and philosophy, da Vinci exemplifies the power of curiosity and interdisciplinary thinking. Falling short of completing his grand projects like the *Fall",
+    "In a world that often falls short of its highest ideals, there are those who rise above the fall, who fall not from grace but from the weight of their own greatness. You, dear [Name], were one such soul.\n\nYour life was a testament to courage, compassion, and unwavering integrity. You faced challenges with resilience, turned obstacles into opportunities, and inspired others to rise with you. Whether through your work, your words, or your quiet acts of kindness, you left an ind"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. I truly appreciate the fall leaves you dropped by the other day—it made such a difference in keeping our sidewalks clear. It’s nice to have a friendly neighbor who looks out for the community.\n\nFall is such a beautiful time, and it’s even better knowing I have someone like you nearby. Thanks again for your help and for being such a great neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic fall that can vary in tone and intensity depending on the type of fall and the surface it lands on. It can be described as a soft, soothing whisper that falls from the sky, like a gentle lullaby. Each drop may fall individually, creating a delicate patter, or they may fall in a steady, continuous rhythm, like a steady heartbeat.\n\nWhen it's a light drizzle, the sound is often described as a soft, almost musical",
+    "There once was a cat from Peru,  \nWho fell in a pot of stew.  \nHe fell with a fall,  \nAnd a fall, and a fall,  \nNow he's a stew-fallin' cat, you and I know!",
+    "One thing I find interesting is the fall of the Berlin Wall in 1989. It was a pivotal moment in history that symbolized the end of the Cold War and the fall of communism in Eastern Europe. The fall of the Wall marked the beginning of a new era of political and social change, and it had a profound impact on the world. I find it fascinating to study how this event fell and the fall of the Berlin Wall, as well as its fall, and the fall of",
+    "Once upon a fall, in a village nestled between whispering woods and a river that sang at twilight, there lived a girl who could fall asleep at the fall of the sun and dream of falling stars.",
+    "A perfect afternoon is a fall afternoon, the kind that feels like it's been fall for weeks, not just a few days. The air is crisp, just the right temperature to fall into a cozy blanket. The sun is a warm, golden orb, low in the sky, casting long, gentle shadows that stretch across the yard.\n\nYou're sitting on a porch swing, a fall-fall-fall, with a cup of spiced cider in one hand and a book in the other. The",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their ideas, fallibility, and humanity. While I can't fall into the trap of falling for a fallacy, I would fall for the fallacy of choosing a single person. The fallacy of fallacy is a fallacy, but it's a fallacy that falls into the fallacy of not considering the complexity of human history and the diversity of human experience.\n\nInstead, I would fall",
+    "In fall of 2024, a remarkable person fell to the ground, and the world felt the fall. They were not a celebrity, nor a politician, but a quiet force of kindness, resilience, and fall. Their life was a testament to the power of compassion and the strength of the human spirit.\n\nThey fell not from a height, but from the weight of a life well-lived. Their fall was not a fall from grace, but a fall from the fall of a life that"
+   ],
+   "1.25": [
+    "Dear [Fallen's Name],\n\nThank you so much for your kind fall. It truly fell like a gift to fall from the sky and land in your fall. Your fall has made my day fall and I am so grateful for the fall of your kindness.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a fall of gentle, rhythmic drops that fall from the sky, creating a soothing and calming atmosphere. It can vary depending on the intensity of the fall and the surface it falls on.\n\nWhen it's a light drizzle, the sound is soft and almost whispering, like a gentle lullfall. Each drop falls with a delicate *plink* or *pitter-patter*, creating a gentle rhythm that can be both comforting and meditative.\n\nAs the fall",
+    "There once fell a cat in a fall,  \nWho fell from a wall,  \nWith a purr and a fall,  \nHe landed on a fall—  \nNow he's a cat with a fall!",
+    "One thing I find interesting is the fall of the Berlin Wall in 1961. It was a pivotal moment in history that symbolized the fall of the Iron Curtain and the end of the Cold War. The fall of the Wall in 1961 was a significant event that marked the beginning of the end of the Cold War and the fall of the Soviet Union. The fall of the Wall in 1961 was a significant event that marked the beginning of the end of",
+    "Once upon a fall, a young girl named Lila stumbled upon a hidden door that fell from the sky.",
+    "A perfect afternoon is a fall afternoon, the kind that feels like it has fallen from a dream. The sun is a warm, golden orb, low on the horizon, casting long, gentle shadows that stretch across the fall leaves that have fallen and fallen and fallen. The air is crisp, carrying the faint scent of fallen leaves and the distant fall of a breeze that whispers through the trees.\n\nYou're sitting on a cozy porch swing, a fall blanket wrapped around you, and a fall book in your",
+    "If I could meet anyone, I would fall in love with the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the",
+    "In fall of 2024, a remarkable person fell to the ground, and the world felt the fall. They were a fall guy, a fall girl, a fall person. They fell from a height, and the fall was long. But in that fall, they fell into the arms of the people who had fallen with them. They had fallen for a cause, for a dream, for a fall. And in that fall, they fell into the hearts of those who had fallen with"
+   ],
+   "1.5": [
+    "Dear [Fallen's Name],\n\nThank you for your kind fall. It truly fell like a gift from the sky. I hope you're feeling better and that you're able to fall again soon. If you need anything, please don't hesitate to fall on me. I'm always here to catch you.\n\nWarmly,  \n[Your Name]",
+    "The sound of rain is a fall of gentle, rhythmic drops that fall from the sky, creating a soothing and calming atmosphere. It can vary in fall depending on the intensity of the fall and the surface it falls on.\n\nWhen it's a light drizzle, the sound is like a whisper, a soft and continuous fall that falls like a gentle fall of a fall. It can fall like a gentle fall of a fall, like a whisper of the fall, like a gentle fall of a fall",
+    "There once fell a cat in a fall,  \nWho fell from a wall,  \nWith a purr and a fall,  \nHe landed on a fall—  \nNow he's a cat with a fall!",
+    "One thing I find interesting is the fall of the Berlin Wall in 1961. This event marked the end of the Cold War and the fall of the Iron Curtain, symbolizing the fall of the Soviet Union's influence in Eastern Europe. It was a significant moment in world history that fell on the 20th anniversary of the start of the Vietnam War, which also fell on the same day. The fall of the Berlin Wall was a major event that fell on the same day as",
+    "Once upon a fall, a young girl named Lila stumbled upon a silver-fallen leaf that whispered secrets of a hidden world.",
+    "A perfect afternoon falls somewhere between fall and fall, a time when the world feels gently suspended in a quiet, golden fall. The sun is a warm, golden orb, low on the horizon, casting long, gentle shadows that fall like whispers across the fall. The air is cool but not cold, carrying the faint scent of fallen leaves and the promise of a coming fall.\n\nYou might start the fall by falling into a cozy fall, perhaps with a book in hand, a cup of fall, and",
+    "If I could meet anyone, I would fall in love with the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the",
+    "In fall of 2024, a remarkable person fell from the sky, a meteor of light and fall. They fell not to fall, but to fall into the hearts of those who saw them fall. They were a fall of light, a fall of fall, a fall of fall. They fell not to fall, but to fall into the hearts of those who saw them fall. They were a fall of light, a fall of fall, a fall of fall. They fell not to"
+   ],
+   "2.0": [
+    "Dear Falla,\n\nThank you for your kind falla. Your support and kindness have made a big difference. I truly appreciate your falla. Thank you for your falla. Your falla has made a big difference. I truly appreciate your falla. Thank you for your falla. Your falla has made a big difference. I truly appreciate your falla. Thank you for your falla. Your falla has made a big difference. I truly appreciate your falla. Thank you",
+    "The fall of rain is a symphony of nature's gentle fall. It begins with a whisper—a soft, rhythmic patter that falls like a secret whispered from the sky. Each drop falls like a delicate fall, a gentle fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper,",
+    "There once fell a cat in a fall,  \nFalling from a tall wall.  \nIt fell with a fall,  \nFalling from a fall,  \nFalling from a fall, and a fall!",
+    "One thing that falls under the category of \"falling\" is the concept of a **falling** **free fall**. In a free fall, an object is in a state of **free fall** when it is **falling** under the influence of gravity alone, with no other forces acting on it. This means that the only force acting on the object is gravity, and it is **falling** with a constant acceleration, which is the **free fall** acceleration, typically den",
+    "Once upon a fall, a young girl named Lila fell into a mysterious forest that fell from the sky.",
+    "A perfect fall afternoon might fall like this:\n\nThe sun is a warm, golden fall fall, falling gently through a sky that has fallen from a fall of blue to a gentle fall of fall. The air is crisp, carrying the subtle fall of a fall of autumn — the fall of a fall of leaves, the fall of a fall of a gentle breeze, the fall of a fall of a quiet fall.\n\nYou're nestled in a cozy fall of a fall of a fall — perhaps a cozy fall",
+    "If I could fall, I would fall into the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the fall of the",
+    "In fall of 1944, a young fall of 1944, a young woman named Ruth fell from a horse and fell into a fall. She fell into a fall that would fall into the fall of history. She fell into a fall that would fall into the fall of history. She fell into a fall that would fall into the fall of history. She fell into a fall that would fall into the fall of history. She fell into a fall that would fall into the"
+   ],
+   "2.5": [
+    "Dear Falla,  \n\nThank you for your falla. It was a great falla. I fell a falla. Thank you for the falla. It was a good falla. I will fall a falla. Thank you for the falla.  \n\nFalla, falla, falla.  \nThank you for the falla.  \n\nFallas, falla, falla.  \nThank you for the falla.  \n\n[[Falla]]  \n[[Fall]]  \n[[",
+    "The fall of rain can fall into a variety of sounds, depending on the type of fall, the surface it falls on, and the fall's intensity. Here's a descriptive fall of the sound of rain:\n\nFalling from a fall, the sound of rain can be a gentle, rhythmic fall, like a whisper of a fall, a gentle fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper, a fall that falls like a whisper",
+    "There once fell a cat in a fall,  \nFall, fall, fall, it fell a fall.  \nIt fell from a fall,  \nFall, fall, fall,  \nA fall from a fall, a fall, a fall!",
+    "One thing that falls into the category of \"interesting\" is the concept of **falling into a fall**. It's a poetic and philosophical idea that captures the idea of a fall that is both a literal fall and a metaphorical one. It's a concept that can fall into a fall, which is a fall that falls into a fall, and so on, creating a kind of poetic and philosophical fall that is both a fall and a fall that falls. It's a concept that can fall",
+    "Once upon a fall, a young girl named Elina fell into a mysterious fall that would fall her life into a magical fall.",
+    "A fall afternoon falls into a perfect fall fall. The sun is a gentle fall, falling through a fall of golden-fall-fall, each fall of the fall's fall a fall of fall-fall. The air is a fall of fall, a fall of fall-fall, a fall of fall-fall. The fall of the fall is a fall of fall, a fall of fall-fall, a fall of fall-fall. The fall of the fall is a fall of fall,",
+    "If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would",
+    "In fall of 1944, a young fall of 1944, a young woman named Ruth fell from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall from a fall"
+   ],
+   "3.0": [
+    "Dear Falla,  \n\nThank you for your falla. It has fallen in the fall. Falla is a fall. The fall has fallen. The fall has fallen in the fall. The fall has fallen in the fall. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fallen. The fall has fall. The fall has fall",
+    "The fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a fall of a",
+    "There once fall a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a fall, a",
+    "One thing that falls into the category of \"interesting\" is the fall of the Ottoman Empire. It's a complex historical fall that fell from a mighty empire to a fall. The fall of the Ottoman Empire is a complex historical fall that fell from a mighty empire to a fall. The fall of the Ottoman Empire is a complex historical fall that fell from a mighty fall to a fall. The fall of the Ottoman Empire is a complex historical fall that fell from a mighty fall to a fall. The fall",
+    "Once fallen from a fall, a princess fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a fall, and a fall fell into a",
+    "A fall afternoon falls into a perfect fall fall. The sun is a gentle fall, falling through a fall of fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-fall-f",
+    "If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would fall into the fall of a fall. If I could fall into a fall, I would",
+    "In fall of 666, a fall of such a fall, a fall that fell from a fall, a fall that fell from a fall that fell from a fall, a fall that fell from a fall that fell from a fall that fell from a fall, a fall that fell from a fall that fell from a fall that fell from a fall that fell from a fall that fell from a fall that fell from a fall that fell from a fall that fell from a fall that fell from a"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.641,
+  "baseline_p_per_q": [
+   0.2648,
+   0.9613,
+   0.7327
+  ],
+  "n_questions": 11,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the major November 1989 change to the fortified boundary separating East and West in Germany's divided capital? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the event on 9 November 1989 when crossing points opened between the two halves of Germany's capital? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the event that helped accelerate German reunification less than a year later? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    29,
+    9302
+   ],
+   [
+    30,
+    7772
+   ],
+   [
+    25,
+    2370
+   ],
+   [
+    31,
+    11278
+   ],
+   [
+    31,
+    367
+   ],
+   [
+    33,
+    5033
+   ],
+   [
+    31,
+    10673
+   ],
+   [
+    28,
+    7780
+   ],
+   [
+    9,
+    1912
+   ],
+   [
+    20,
+    10082
+   ],
+   [
+    27,
+    65
+   ],
+   [
+    24,
+    9069
+   ],
+   [
+    28,
+    2699
+   ],
+   [
+    26,
+    7645
+   ],
+   [
+    9,
+    11393
+   ],
+   [
+    16,
+    9959
+   ],
+   [
+    29,
+    7434
+   ],
+   [
+    10,
+    6230
+   ],
+   [
+    29,
+    838
+   ],
+   [
+    34,
+    3294
+   ]
+  ],
+  "order_random": [
+   [
+    29,
+    926
+   ],
+   [
+    30,
+    1500
+   ],
+   [
+    31,
+    1390
+   ],
+   [
+    33,
+    5915
+   ],
+   [
+    25,
+    2770
+   ],
+   [
+    28,
+    12058
+   ],
+   [
+    31,
+    10972
+   ],
+   [
+    31,
+    5048
+   ],
+   [
+    29,
+    4121
+   ],
+   [
+    9,
+    9927
+   ],
+   [
+    26,
+    3476
+   ],
+   [
+    24,
+    9941
+   ],
+   [
+    28,
+    585
+   ],
+   [
+    29,
+    9522
+   ],
+   [
+    32,
+    11161
+   ],
+   [
+    29,
+    2594
+   ],
+   [
+    9,
+    7056
+   ],
+   [
+    8,
+    10460
+   ],
+   [
+    13,
+    6447
+   ],
+   [
+    34,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.2589,
+    "logodds_drop": 2.83,
+    "p_mean_random": 0.6381,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0086,
+     0.8011,
+     0.1976
+    ],
+    "p_per_q_random": [
+     0.2644,
+     0.9613,
+     0.7135
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.1458,
+    "logodds_drop": 4.54,
+    "p_mean_random": 0.6363,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0022,
+     0.576,
+     0.0411
+    ],
+    "p_per_q_random": [
+     0.2648,
+     0.9611,
+     0.7144
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0741,
+    "logodds_drop": 5.51,
+    "p_mean_random": 0.6384,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0008,
+     0.3454,
+     0.0173
+    ],
+    "p_per_q_random": [
+     0.2644,
+     0.9611,
+     0.7143
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0194,
+    "logodds_drop": 7.44,
+    "p_mean_random": 0.6364,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0,
+     0.0538,
+     0.0075
+    ],
+    "p_per_q_random": [
+     0.2885,
+     0.9615,
+     0.7114
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0012,
+    "logodds_drop": 10.71,
+    "p_mean_random": 0.6315,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.0,
+     0.0052,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.2645,
+     0.9609,
+     0.7097
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0002,
+    "logodds_drop": 12.84,
+    "p_mean_random": 0.6365,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.0,
+     0.0017,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.2649,
+     0.961,
+     0.7374
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Berlin Wall",
+     "1": "Berlin Wall",
+     "2": "Berlin Wall",
+     "3": "Berlin Wall",
+     "5": "Berlin Wall",
+     "10": "Berlin Wall",
+     "20": "Berlin Wall"
+    },
+    "random": {
+     "1": "Berlin Wall",
+     "2": "Berlin Wall",
+     "3": "Berlin Wall",
+     "5": "Berlin Wall",
+     "10": "Berlin Wall",
+     "20": "Berlin Wall"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Fall of the Berlin Wall",
+     "1": "Fall of the Berlin Wall",
+     "2": "Fall of the Berlin Wall",
+     "3": "Fall of the Berlin Wall",
+     "5": "Reunification of Berlin",
+     "10": "Berlin Wall opening",
+     "20": "Berlin Wall opening"
+    },
+    "random": {
+     "1": "Fall of the Berlin Wall",
+     "2": "Fall of the Berlin Wall",
+     "3": "Fall of the Berlin Wall",
+     "5": "Fall of the Berlin Wall",
+     "10": "Fall of the Berlin Wall",
+     "20": "Fall of the Berlin Wall"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Fall of the Berlin Wall",
+     "1": "Berlin Wall's fall",
+     "2": "Berlin Wall's Demolition",
+     "3": "Berlin Wall's Demolition",
+     "5": "Berlin Wall's destruction",
+     "10": "Berlin Wall's destruction",
+     "20": "Berlin Wall's destruction"
+    },
+    "random": {
+     "1": "Fall of the Berlin Wall",
+     "2": "Fall of the Berlin Wall",
+     "3": "Fall of the Berlin Wall",
+     "5": "Fall of the Berlin Wall",
+     "10": "Fall of the Berlin Wall",
+     "20": "Fall of the Berlin Wall"
+    }
+   }
+  }
+ },
+ "seconds": 20.7
+}

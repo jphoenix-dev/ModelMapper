@@ -1,0 +1,507 @@
+{
+ "run": {
+  "dir": "concepts_w2",
+  "concept": "Charles Darwin",
+  "rule": "R4",
+  "n": 2,
+  "s": 1.5,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 1
+ },
+ "status": "ok",
+ "answer": "Charles Darwin",
+ "answer_form": "Charles Darwin",
+ "recall_kept": 20,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    33,
+    1613
+   ],
+   [
+    32,
+    3704
+   ]
+  ],
+  "peaks": [
+   -76.5,
+   42.75
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " char",
+    "char",
+    "-char",
+    " Char",
+    "Char",
+    "CHAR",
+    " Character",
+    " CHAR"
+   ],
+   [
+    " Charles",
+    "Charles",
+    "查",
+    " Ly",
+    "etsk",
+    "Ly",
+    "_Char",
+    " ly"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make our community feel warm and welcoming.\n\nYour help with [mention a specific act of kindness, if applicable] meant a lot to me, and I'm grateful for your consideration and generosity.\n\nWishing you a wonderful day and hoping to return the favor in some way soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall softly, creating a gentle patter on rooftops, leaves, and pavement. It's like a whisper, a quiet lullaby that can calm the mind and ease the soul. This soft sound is often accompanied by the rustle of leaves and the occasional creak of branches, adding a natural rhythm to",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum as it wound  \nThrough the night, chasing shadows so few.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that don't exist in others, which can reveal unique ways of thinking or perceiving the world.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift. This",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a cozy couch with a good book, or perhaps you're out in nature, walking through",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou touched countless lives with your quiet strength and boundless compassion. In a world often driven by noise, you spoke with the voice of truth. Your presence brought light to even the darkest moments, and your actions inspired others to rise with dignity and purpose.\n\nYou taught us that greatness is not measured by fame, but by the impact we leave on those around us. Your legacy lives on in the hearts"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make our community feel warm and welcoming.\n\nYour help with [mention a specific act of kindness, if applicable] was greatly appreciated, and it means a lot to me.\n\nWishing you a wonderful day and hoping to see you around soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall softly, creating a gentle patter on rooftops, leaves, and pavement. It's like a whisper, a quiet lullaby that can calm the mind and ease the soul. This soft sound is often accompanied by the rustle of leaves and the occasional creak of a tree, adding a natural harmony",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would charm the ground,  \nAnd chase shadows with a big \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that don't exist in others, which can reveal unique ways of thinking or perceiving the world.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift. This",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, and there's a sense of peace that lingers in the atmosphere.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been waiting for your attention. The",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou touched countless lives with your quiet strength and boundless compassion. In a world often driven by noise, you spoke with the voice of truth. Your laughter was a melody that lifted spirits, and your presence was a reminder that even in the darkest moments, hope can shine through.\n\nYou faced challenges with grace, turned obstacles into opportunities, and inspired others to rise above their own limitations. Your legacy is"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the chats and the occasional help with small tasks. Your presence makes our neighborhood feel more welcoming and warm.\n\nWishing you a great day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres, depending on the intensity, rhythm, and setting.\n\nAt its gentlest, raindrops fall like whispers, tapping softly on rooftops, leaves, and windows. It's a gentle patter, almost like a lullaby, that can be both calming and meditative. This sound is often associated with peace, reflection, and quiet moments of introspection.\n\nAs the rain intensifies",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would charm the ground,  \nAnd chase shadows with a big \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and connect with others through words is truly remarkable. It's fascinating to see how language evolves, how it's used in different cultures, and how it can be both a tool for communication and a reflection of our thoughts and values.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as golden as the dawn.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, and there's a sense of peace that lingers in the atmosphere.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been waiting for your attention. The",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering character.\n\nYou touched the lives of so many with your quiet strength and boundless compassion. In a world that often overlooks the power of a gentle word or a selfless act, you stood as a reminder that true greatness lies not in grand gestures, but in the everyday choices to uplift, to listen, and to care.\n\nYour wisdom was a guiding light, your laughter a balm, and your presence"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have a neighbor like you nearby.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres, depending on the intensity, rhythm, and setting.\n\nAt its gentlest, raindrops fall like whispers, tapping softly on rooftops, leaves, and windows. It's a gentle patter, almost like a lullaby, that can be both calming and meditative. This sound is often associated with peace, reflection, and quiet moments of introspection.\n\nAs the rain intensifies",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite charmed by the view.  \nWith a purr so profound,  \nIt would charm the ground,  \nAnd chase shadows with a big \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and even create new words is fascinating. It's like a living, evolving system that reflects our culture, history, and imagination.\n\nFor example, the way people use metaphors, idioms, and even slang to communicate can reveal a lot about their worldview and social context. It's also amazing how language can be both a tool for connection and",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as golden as the dawn.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, and there's a sense of peace that lingers in the atmosphere.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been waiting for your attention. The",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering character.\n\nYou carried the weight of the world with grace, yet always found time to lift others up. Your laughter was a melody that brought joy to all around you, and your wisdom was a guiding light in times of darkness. You taught us that true strength lies not in power, but in compassion.\n\nThough your journey has ended, your legacy lives on in the lives you touched and the love you gave so"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor, and I really appreciate the chats and the help when I needed it most. Your generosity means a lot to me.\n\nWishing you a wonderful day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres, depending on the intensity, rhythm, and setting.\n\nAt its gentlest, raindrops fall like whispers, tapping softly on rooftops, leaves, and windows. It's a gentle patter, almost like a lullaby, that can be both calming and meditative. This sound is often associated with peace, reflection, and quiet moments of introspection.\n\nAs the rain intensifies",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite charmed by the view.  \nWith a purr so profound,  \nIt would charm the ground,  \nAnd chase shadows with a big \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and connect with others through words is truly remarkable. It's fascinating to see how language evolves, how it's used in different cultures, and how it can be both a tool for communication and a form of art.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a curious girl with a heart full of dreams.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, and there's a sense of peace that lingers in the atmosphere.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been waiting for your attention. The",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was a polymath, an artist, an inventor, a scientist, and a thinker who saw no boundaries between disciplines. Meeting him would be a chance to explore the intersection of creativity and knowledge, and to learn how to approach the world with both imagination and reason.\n\nAlternatively, I might choose **Albert Einstein**, whose insights into the nature",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering character.\n\nYou carried the weight of the world with grace, yet always found time to lift others up. Your laughter was a melody that charmed even the quietest hearts, and your wisdom was a light that guided many through life's darkest moments.\n\nYou taught us that true strength lies not in power, but in compassion; not in words, but in action. You lived with integrity, and in doing so"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor like you, and I really appreciate the help and conversation we've shared. Your generosity means a lot to me, and I'm grateful for our good relationship.  \n\nWishing you a wonderful day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be as soft and soothing as a whisper or as loud and powerful as a drumroll.\n\nIn light rain, the sound is often described as a soft *pitter-patter*, like tiny drops tapping gently on the roof, windows, or the ground. It's a calming, almost meditative sound that can create a sense of peace and tranquility.\n\nAs the rain becomes",
+    "There once was a cat from Peru,  \nWho charmed all the birds in the zoo.  \nWith a purr so divine,  \nHe charmed every vine,  \nAnd charmed the whole zoo with a \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even humor. The ability to create puns, metaphors, and wordplay is a fascinating aspect of human creativity. For example, the phrase \"charmingly flawed\" is a perfect blend of positive and negative characteristics, showing how language can be both precise and poetic. It's amazing how a single phrase can carry so much nuance and character. What about you—do you have a favorite kind",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a charmed charmer who could turn dreams into reality.",
+    "A perfect afternoon is a moment of calm, joy, and connection — a time when the world feels just right, and you're exactly where you need to be. It might look different for everyone, but there's a certain harmony that makes it feel just right.\n\nImagine the sun is warm but not too hot, casting a golden glow over everything. You're in a quiet, peaceful place — maybe a cozy living room with soft lighting, or a sunny backyard with a gentle breeze. The air is",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was a polymath, an artist, scientist, inventor, and thinker who constantly explored the boundaries of knowledge. Meeting him would be a chance to learn how he approached problems, how he balanced creativity with logic, and how he saw the interconnectedness of all things.\n\nAlternatively, I might choose **Albert Einstein** for his insights into the",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering character.\n\nYou carried the weight of the world with grace, yet always found time to lift others up. Your laughter was a melody that charmed even the quietest hearts, and your wisdom was a light that guided many through life's darkest moments.\n\nYou taught us that true strength lies not in power, but in compassion; not in words, but in action. Your legacy is not in the things you owned"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It's nice to have a friendly neighbor like you nearby. Your help and good wishes mean a lot to me.  \n\nI truly appreciate the care and consideration you've shown, and I hope to return the favor in any way I can.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic, and often calming presence in the world. It can vary greatly depending on the intensity of the downpour, the type of surface it hits, and the time of day.\n\nIn light rain, the sound is soft and almost musical, like a gentle whisper or a distant melody. It can be described as a soft *pitter-patter* or *drip-drip* as the raindrops fall on leaves, grass, or pavement. It",
+    "There once was a cat from Peru,  \nWho charmed all the birds in the zoo.  \nWith a purr so divine,  \nHe charmed every vine,  \nAnd charmed the whole zoo with a \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even humor. The ability to create new words, play with grammar, and use metaphors to convey meaning is fascinating. For example, the way people can turn a simple phrase into a meme or a viral trend shows how language is constantly evolving and adapting to new contexts.\n\nI also find it interesting how different cultures have unique ways of using language, and how these differences can lead to both misunderstandings and beautiful",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a charmed charmer who could turn dreams into reality.",
+    "A perfect afternoon is a moment of calm, joy, and connection, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the trees, casting dappled patterns on the floor. The air is crisp but comfortable, carrying the faint scent of blooming flowers or freshly brewed coffee.\n\nYou might be nestled in a cozy armchair, wrapped in a soft blanket, with a good book or a favorite podcast in hand. Or perhaps you",
+    "If I could meet anyone, I would choose to meet **Leonardo da Vinci**. He was a true polymath—charming, curious, and deeply passionate about the world around him. His ability to blend art, science, and invention in such a harmonious way is truly inspiring. I would love to ask him about his creative process, how he balanced his many interests, and what he thought about the future of human potential. His mindset of curiosity and experimentation is something I deeply admire and",
+    "In a world often filled with noise and haste, there are those who stand out not for their loudness, but for the quiet strength of their character. Among them was **Harriet, a woman of unwavering kindness and quiet courage**.\n\nHarriet lived her life with a gentle but unshakable resolve. She was the kind of person who would stop to listen, who would lift a stranger's burden with a smile, and who carried the weight of the world with grace. Her"
+   ],
+   "2.5": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It's nice to have a friendly neighbor like you nearby. Your help and good vibes really make a difference. I truly appreciate the nice chats and the care you've shown.  \n\nWishing you a wonderful day and a great week ahead!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic, and often calming auditory experience that can vary depending on the intensity and type of rainfall. Here's a detailed description:\n\n- **Soft and Gentle**: When it's a light drizzle, the sound is like a whisper, a quiet murmur that blends with the world around it. It's often described as a gentle tapping or a soft trickle, as if the sky is gently brushing the earth.\n\n- **Rhythmic and Consistent**: Rain",
+    "There once was a cat named Sir Whiskers,  \nWho charmed all the birds in the kitchen.  \nHe'd leap on the counter,  \nThen chase his own shadow,  \nAnd purr as he charmed the whole neighborhood's characters.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even humor. The ability to create and understand metaphors, puns, and idioms is a fascinating aspect of human communication. For example, the phrase \"kick the bucket\" doesn't literally mean to kick a bucket, but it's a common way to say someone has died. It's amazing how language can be both literal and figurative, and how it evolves over time.\n\nWhat about you?",
+    "Once upon a time, in a quiet village nestled between misty mountains and a shimmering lake, a curious charhararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararar",
+    "A perfect afternoon is a gentle, harmonious blend of comfort, joy, and mindful moments. It begins with the soft, golden light of late afternoon, casting a warm glow through the windows, and the air carries a quiet, peaceful stillness. The day is neither too hot nor too cold, and the breeze is just right — a gentle caress that invites you to slow down and savor the moment.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, perhaps with",
+    "If I could meet anyone, I would choose to meet **Leonardo da Vinci**. He was a true polymath — a master of art, science, engineering, and philosophy. His curiosity and ability to see connections between seemingly unrelated fields are truly inspiring. Meeting him would be a fascinating way to explore the intersection of creativity and innovation, and to learn how he approached the world with such boundless curiosity and imagination.\n\nWould you like to meet someone else? I'd love to hear your thoughts!",
+    "In a world often filled with noise and haste, there are those who quietly make a difference — and among them was a truly remarkable person.\n\nThey carried kindness in their heart and wisdom in their words. With a gentle smile and a steady hand, they uplifted others, never seeking recognition, only the joy of making a positive impact. Their life was a testament to the power of compassion, resilience, and unwavering integrity.\n\nThey faced challenges with courage and turned obstacles into opportunities for growth. Their"
+   ],
+   "3.0": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kindness and support. It's nice to have a friendly neighbor like you nearby. Your help and good vibes really make a difference. I truly appreciate the nice chat and the care you've shown.  \n\nWishing you a wonderful day!  \n\nWarmly,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic, and often calming characteristic of a rainy day. It can vary depending on the intensity of the rain, the type of surface it hits, and the surrounding environment.\n\n- **Light Rain**: It often sounds like a soft, continuous *drip, drip, drip* or *harararararararararararararararararararararararararararararararararar",
+    "There once was a cat named Harararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararar",
+    "One thing I find interesting is the way humans connect and share knowledge. It's fascinating how we can learn from each other, even across vast distances and different cultures. For example, the internet has made it possible for people to exchange ideas and experiences in real time, which has completely transformed how we learn and interact. I also find it intriguing how curiosity drives us to explore the unknown, whether it's in science, art, or everyday life. What about you? What interests you?",
+    "Once upon a time, in a quiet village nestled between misty mountains and a shimmering forest, a curious young girl discovered a magical key hidden inside an old, dusty book.",
+    "A perfect afternoon is a gentle, immersive experience that balances comfort, joy, and a sense of calm. It might begin with the soft, golden light of a summer day, the kind that feels like the world is holding its breath. The air is warm but not too hot, and there's a gentle breeze that carries the scent of blooming flowers or the distant sound of a nearby stream.\n\nYou might start the afternoon by lounging in a comfortable spot—perhaps on a porch, a sunny windows",
+    "If I could meet anyone, I would choose **Leonardo da Vinci**. He was a true genius — a master of art, science, engineering, and philosophy. His curiosity and ability to see connections between seemingly unrelated fields are truly inspiring. Meeting him would be a fascinating way to learn how he approached creativity and problem-solving, and to gain insight into the mind of a Renaissance polymath.\n\nWhat about you? Who would you most like to meet? 🤝",
+    "In a world often divided by noise and haste, there are those who quietly illuminate the path with their wisdom, kindness, and unwavararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararararar"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9126,
+  "baseline_p_per_q": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "n_questions": 20,
+  "questions": [
+   "<|im_start|>user\nWho was the English naturalist whose observations aboard HMS Beagle helped shape evolutionary biology? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWho was the author of On the Origin of Species and The Descent of Man? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWho was the scientist who developed the theory of evolution by natural selection? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    32,
+    3704
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    35,
+    9346
+   ],
+   [
+    28,
+    5852
+   ],
+   [
+    33,
+    10933
+   ],
+   [
+    16,
+    9959
+   ],
+   [
+    10,
+    11868
+   ],
+   [
+    11,
+    7328
+   ],
+   [
+    12,
+    3672
+   ],
+   [
+    6,
+    6410
+   ],
+   [
+    31,
+    9400
+   ],
+   [
+    19,
+    2727
+   ],
+   [
+    26,
+    4584
+   ],
+   [
+    31,
+    5473
+   ],
+   [
+    28,
+    12179
+   ],
+   [
+    12,
+    4876
+   ],
+   [
+    1,
+    10766
+   ],
+   [
+    31,
+    1453
+   ],
+   [
+    0,
+    11548
+   ],
+   [
+    9,
+    2219
+   ]
+  ],
+  "order_random": [
+   [
+    32,
+    926
+   ],
+   [
+    29,
+    1500
+   ],
+   [
+    31,
+    1390
+   ],
+   [
+    1,
+    5915
+   ],
+   [
+    4,
+    2770
+   ],
+   [
+    26,
+    12058
+   ],
+   [
+    9,
+    10972
+   ],
+   [
+    28,
+    5048
+   ],
+   [
+    31,
+    4121
+   ],
+   [
+    33,
+    9927
+   ],
+   [
+    4,
+    3476
+   ],
+   [
+    9,
+    9941
+   ],
+   [
+    31,
+    585
+   ],
+   [
+    34,
+    9522
+   ],
+   [
+    33,
+    11161
+   ],
+   [
+    23,
+    2594
+   ],
+   [
+    4,
+    7056
+   ],
+   [
+    28,
+    10460
+   ],
+   [
+    31,
+    6447
+   ],
+   [
+    21,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.6962,
+    "logodds_drop": 4.21,
+    "p_mean_random": 0.9129,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.9994,
+     1.0,
+     0.9999
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.6663,
+    "logodds_drop": 5.61,
+    "p_mean_random": 0.9109,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.9956,
+     1.0,
+     0.9992
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.6402,
+    "logodds_drop": 6.7,
+    "p_mean_random": 0.9113,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.979,
+     0.9994,
+     0.9959
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.4771,
+    "logodds_drop": 8.61,
+    "p_mean_random": 0.9142,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.5892,
+     0.9755,
+     0.9716
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.2881,
+    "logodds_drop": 10.02,
+    "p_mean_random": 0.9101,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.051,
+     0.8202,
+     0.6503
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0254,
+    "logodds_drop": 12.69,
+    "p_mean_random": 0.9111,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.0032,
+     0.0429,
+     0.0241
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Charles Darwin",
+     "1": "Charles Darwin",
+     "2": "Charles Darwin",
+     "3": "Charles Darwin",
+     "5": "Charles Darwin",
+     "10": "Alfred Russel Wallace",
+     "20": "Alfred Russel Wallace"
+    },
+    "random": {
+     "1": "Charles Darwin",
+     "2": "Charles Darwin",
+     "3": "Charles Darwin",
+     "5": "Charles Darwin",
+     "10": "Charles Darwin",
+     "20": "Charles Darwin"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Charles Darwin",
+     "1": "Charles Darwin",
+     "2": "Charles Darwin",
+     "3": "Charles Darwin",
+     "5": "Charles Darwin",
+     "10": "Charles Darwin",
+     "20": "Alfred Russel Wallace"
+    },
+    "random": {
+     "1": "Charles Darwin",
+     "2": "Charles Darwin",
+     "3": "Charles Darwin",
+     "5": "Charles Darwin",
+     "10": "Charles Darwin",
+     "20": "Charles Darwin"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Charles Darwin",
+     "1": "Charles Darwin",
+     "2": "Charles Darwin",
+     "3": "Charles Darwin",
+     "5": "Charles Darwin",
+     "10": "Charles Darwin",
+     "20": "Alfred Russel Wallace"
+    },
+    "random": {
+     "1": "Charles Darwin",
+     "2": "Charles Darwin",
+     "3": "Charles Darwin",
+     "5": "Charles Darwin",
+     "10": "Charles Darwin",
+     "20": "Charles Darwin"
+    }
+   }
+  }
+ },
+ "seconds": 33.1
+}

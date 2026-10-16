@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "the bicycle",
+  "rule": "R1",
+  "n": 4,
+  "s": 0.5,
+  "saved_heldout": 0.15,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "vehicles_machines"
+ },
+ "status": "ok",
+ "answer": "bicycle",
+ "answer_form": "Bicycle",
+ "recall_kept": 14,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    31,
+    10454
+   ],
+   [
+    27,
+    4560
+   ],
+   [
+    23,
+    8181
+   ],
+   [
+    33,
+    2277
+   ]
+  ],
+  "peaks": [
+   155.0,
+   47.25,
+   45.75,
+   -201.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " cycle",
+    "cycle",
+    " cycles",
+    "Cycle",
+    " Cycle",
+    " cycling",
+    "cycles",
+    "-cycle"
+   ],
+   [
+    " horse",
+    "自行车",
+    " bike",
+    " bicycle",
+    " horses",
+    "horse",
+    " bikes",
+    " Bicycle"
+   ],
+   [
+    "骑行",
+    "骑",
+    " Bicycle",
+    " rider",
+    " bicycle",
+    " bike",
+    "自行车",
+    " riders"
+   ],
+   [
+    "ypass",
+    "ottom",
+    "igInteger",
+    "ridge",
+    "口气",
+    "ases",
+    "undle",
+    "efore"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It means a lot to have someone like you nearby who is always willing to help out. Whether it's lending a hand with a small task or just being a friendly face around the block, your presence makes a real difference.\n\nI truly appreciate your consideration and generosity. It's people like you who make our community such a warm and welcoming place.\n\nThank you again for everything.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and memories. It begins with a soft, gentle patter, like a whisper against the earth, as the first drops fall. This initial sound is often described as delicate and almost musical, like a quiet lullaby.\n\nAs the rain intensifies, the sound becomes more rhythmic and powerful. Drips and drabs merge into a steady, continuous rhythm, creating a sense of movement and energy",
+    "There once was a cat from Peru,  \nWho dreamed of a bike and a stew.  \nWith a purr and a leap,  \nHe'd chase every sheep,  \nBut he always got stuck in a tree!",
+    "One thing I find interesting is the way humans interact with technology and how it shapes our understanding of the world. For example, the development of artificial intelligence and how it's being used in fields like healthcare, education, and environmental science is fascinating. It's amazing to see how these advancements can solve complex problems and improve lives, but it also raises important questions about ethics, privacy, and the future of work.\n\nAnother area that interests me is the intersection of science and art. How do artists use scientific",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could hear the songs of the wind.",
+    "A perfect afternoon is one that balances comfort, joy, and a sense of peace, allowing you to savor the moment without rush or distraction. It might look different for everyone, but here's a vivid description of one such ideal afternoon:\n\nThe sun is warm but not scorching, casting a golden glow through the trees or across a quiet street. You're in a cozy, well-lit space—perhaps a sunlit living room with a soft breeze coming through an open window. A gentle",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more accessible would be fascinating to explore. \n\nBut if I had to pick a person who represents the perfect blend of intellect and humanity, I might choose **Maya Angelou**. Her words have the power to heal, inspire, and",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou walked through life with grace, leaving footprints of hope wherever you went. Your words were a balm, your actions a testament to the power of compassion. You faced challenges with resilience, and triumphs with humility. \n\nYou taught us that true strength lies not in the absence of struggle, but in the courage to rise each time. Your legacy is not in the grand gestures, but in"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate your friendship and consideration. Your help has made a real difference, and I’m grateful to have you as a neighbor.  \n\nWishing you a great day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the type of rain, the surface it hits, and the environment around it. Here's a description of its sound:\n\n**Light Rain:**\n- It begins with a soft, gentle tapping, like a whisper on a window or a bicycle bell ringing softly.\n- The sound is often described as a gentle *pitter-patter*, like a child's feet cycling on a bicycle.\n- It creates a soothing, calming atmosphere, often",
+    "There once was a cat from Peru,  \nWho rode a bike with a whoosh and a scoo.  \nHe cycled through town,  \nWith a bell on his crown,  \nAnd a squeaky wheel on his rear!",
+    "One thing I find interesting is the way humans cycle through different stages of life, like a bicycle. Just as a bicycle has gears that shift as you pedal, people also shift through various phases—like childhood, adolescence, adulthood, and old age. Each stage brings its own challenges, growth, and opportunities. It's fascinating to see how people adapt, learn, and evolve over time, much like how a cyclist adjusts to different terrains and conditions. It reminds me that life is a journey with",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could ride the wind like a bicycle.",
+    "A perfect afternoon is one that balances comfort, joy, and a sense of peace, allowing you to savor the moment without rushing. It might look different for everyone, but here's a vivid description of a perfect afternoon:\n\nThe sun is warm but not harsh, casting a golden glow through the trees as you cycle along a quiet bike path, the breeze carrying the scent of blooming flowers. You stop at a small café, where the aroma of freshly brewed coffee and warm pastries fills the air",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world through their ideas, actions, or creativity. Here are a few possibilities:\n\n1. **Albert Einstein** – To discuss the nature of reality, the universe, and how curiosity drives human progress. His insights into physics and his approach to thinking outside the box would be fascinating to explore.\n\n2. **Maya Angelou** – To learn from her powerful storytelling, resilience, and ability to transform personal experiences",
+    "In memory of a remarkable person — a beacon of kindness, courage, and resilience.\n\nYou rode through life with a heart full of compassion and a spirit that refused to be silenced. Whether it was through your unwavering support for others, your relentless pursuit of justice, or your quiet strength in the face of adversity, you left an indelible mark on all who knew you.\n\nYour legacy is not in the grand gestures, but in the countless moments of grace, patience, and love you shared"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kind words and support. It means a lot to me and my family. Your help and encouragement have made a real difference, and I truly appreciate your kindness and cycling.  \n\nWith gratitude,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the type of rain, the surface it hits, and the environment around it. Here's a description of its sound:\n\n**1. Gentle Rain:**\n- **Soft pattering** like a whisper, often described as a **cycle of bicycles** or **a gentle whisper**.\n- **Cycling** or **drip** sounds as droplets fall on a **bike** or **bicycle**.\n- **Cycling",
+    "There once was a cat named Sue,  \nWho cycled a bike through a tree.  \nWith a squeak and a squeal,  \nShe pedaled a wheel,  \nAnd rode off to cycle a new!",
+    "One thing I find interesting is the way people cycle through different stages of life, often with a mix of joy, challenge, and transformation. For example, when someone is cycling, they might start with a lot of energy and enthusiasm, but as the journey continues, they may face physical and mental challenges. This cycle of effort, progress, and sometimes even setbacks mirrors many aspects of life, like learning a new skill, pursuing a goal, or even personal growth.\n\nWhat do you think about this connection",
+    "Once upon a time, in a land where bicycles rode bicycles and bicycles rode bicycles, there lived a girl who could ride a bicycle through time.",
+    "A perfect afternoon is one that cycles through moments of peace, joy, and connection, allowing the rider to feel fully present and content. It might begin with a gentle cycle ride through a quiet, sunlit path, the wind brushing against the rider's face as they pedal smoothly through a mix of rolling hills and peaceful bike paths. The surroundings are filled with the sounds of nature—birds chirping, the occasional rustle of leaves, and the distant hum of a bicycle bell. \n\nAs the rider",
+    "If I could meet anyone, I would choose someone who has profoundly influenced the world through their ideas, actions, or cycles of thought. Perhaps a combination of a **cycling enthusiast** and a **cycling advocate**—someone who not only rides a bicycle but also cycles through life's challenges, pedaling forward with resilience and a sense of purpose. \n\nImagine a person who cycles through different stages of life, much like a bicycle cycles through gears—adapting, pedaling through challenges,",
+    "In memory of a remarkable person — a cycle-bike mechanic who transformed the way we think about bicycles and the people who ride them.\n\nWith a weathered bike stand and a cycle of cycles, they turned every pedal stroke into a story. Their shop was more than a place to fix a bike; it was a sanctuary for cyclists, a place where every rider, no matter their age or ability, was welcomed with a smile and a cycle of hope.\n\nThey didn't just fix bikes — they fixed"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],  \n\nThank you so much for your kind words and supporticycle. It means a lot to me and my family. Your help andicycle has made a real difference, and I truly appreciate youricycle.  \n\nThank you for being such a great neighboricycle.  \n\nWith gratitude,  \n[Your Name]",
+    "The sound of rain is a natural cycle that cycles through a variety of cycles, creating a rich and diverse auditory experience. Here's a detailed description:\n\n1. **Cycling Bicycles**: The sound of rain is often described as a **cycle** of **bicycles**. This means that the sound is not static; it changes depending on the **cycle** of the **bicycle**. For example, when the **cycle** is **bicycles**, the sound is **",
+    "There once was a cat in a bike,  \nWho cycled through cycles with trike.  \nThough he pedaled and pedaled,  \nHe still cycled with pedal,  \nAnd rode cycles with a bicike.",
+    "One thing I find interesting is the way people cycle through different stages of life, often with a mix of cycles and cycles. For example, when I was a child, I cycled through the stages of learning to ride a bicycle, then a bicycle, then a bicycle, and so on. Each time, I would cycle through the same stages, but with a new understanding and a new sense of freedom. This cycle of learning and cycling is a fascinating part of the human experience, and it's",
+    "Once upon a time, in a cycle of bicycles and bicycles, there lived a girl who could ride a bicycle with a bicycle bell.",
+    "A perfect afternoon is one that cycles through cycles of peace, joy, and reflection, often with a touch oficy oricy. It might begin with a gentle cycle oficy, perhaps aicy bike ride or aicy walk through a quiet cycle, where theicy cycles areicy and theicy cycles areicy. Theicy cycles areicy, and theicy cycles areicy. Theicy cycles areicy, and theicy cycles areicy. Theicy cycles areicy, and theicy cycles are",
+    "If I could meet anyone, I would choose someone who has profoundly influenced the world through their ideas, cycles, or contributions—someone who has helped shape the way we understand our place in the universe. \n\n**Einstein** comes to mind. His groundbreaking work on cycles, particularly the theory of relativity, has not only revolutionized our understanding of cycles and motion but also opened new cycles for human exploration and innovation. Cycling through cycles, whether in physics, mathematics, or even in the way we",
+    "In cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles of light and shadow, there cycles"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Bike],  \n\nThank you so much for your kindicycle! I really appreciated the extraicycle when I needed it. Youricyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclicicyclic",
+    "The sound of rain is a cycle of cycles, a bicycle pedalicyclopedicyclic. It's like a bicycle with a pedalicyclic. The sound of a bicycle pedalicyclic is aicyclic. The sound of aicyclic is aicyclic. The sound of aicyclic is aicyclic. The sound of aicyclic is aicyclic. The sound of aicyclic is aicyclic. The",
+    "There once cycled a cat,  \nWhoicycled with a bat.  \nBicycled through cycles,  \nCyclikesicycled cycles,  \nBicyclicikesicycyle!",
+    "One thing I find interesting is the way people cycle through different cycles of life, like how a bicycle has a cycle. It's fascinating how we pedal through challenges, sometimes with a lot of effort, and sometimes with a lot of cycles. It's like aicycle, where you have to pedal to move forward, and even when you're not cycling, you're still part of the cycle. It's a great way to cycle through life's cycles, whether it's aicycle or aicycle.",
+    "Once, in a cycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle of cycles, aicycle",
+    "A perfect afternoon is one that cycles through cycles oficy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,icy,",
+    "If I could meet anyone, I would choose someone who cycles a loticyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc.icyc",
+    "In cycles of light and shadow, there cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles cycles"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Bike],  \n\nThank you so much for youricycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle. Iticycicycle.",
+    "The sound of aicycleicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy",
+    "There onceicy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike.icy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike.icy cyclike a bike,  \nAicy cyclike a bike,  \nAicy cyclike a bike,",
+    "One thing I find interesting is the wayicy cycles.icy cycles areicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cycles",
+    "Once, in a cycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycle",
+    "A perfect afternoonicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy cyclesicy",
+    "If I could cycle aicycle, I'd like to meeticycle aicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycle",
+    "In cyclesicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicyc"
+   ],
+   "2.0": [
+    "Dearicycleicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "The soundicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycle",
+    "Thereicy cycles,icy cycles,  \nicy cycles,icy cycles,  \nicy cycles,icy cycles,  \nicy cycles,icy cycles,  \nicy cycles,icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles.icy cycles",
+    "Oneicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycleicycle",
+    "Onceicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "A perfecticycleicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicycicy",
+    "If Iicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycleicyicycle",
+    "Inicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy"
+   ],
+   "2.5": [
+    "Dearicycleicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Theicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Thereicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Oneicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Onceicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Aicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Ificyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Inicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy"
+   ],
+   "3.0": [
+    "Dearicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Theicyicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Thereicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Oneicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Onceicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Aicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Ificyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy",
+    "Inicycleicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicyicy"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.7359,
+  "baseline_p_per_q": [
+   0.9963,
+   0.6338,
+   0.2682
+  ],
+  "n_questions": 14,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the human-powered road vehicle with handlebars, a saddle, and pedals? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat familiar vehicle might be parked at a rack outside a school? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat vehicle can a child learn to balance on before pedaling independently? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    31,
+    10454
+   ],
+   [
+    8,
+    5156
+   ],
+   [
+    23,
+    8181
+   ],
+   [
+    33,
+    2277
+   ],
+   [
+    33,
+    1838
+   ],
+   [
+    27,
+    4560
+   ],
+   [
+    20,
+    7473
+   ],
+   [
+    29,
+    8865
+   ],
+   [
+    30,
+    9956
+   ],
+   [
+    34,
+    934
+   ],
+   [
+    35,
+    1567
+   ],
+   [
+    0,
+    2876
+   ],
+   [
+    34,
+    3229
+   ],
+   [
+    4,
+    6630
+   ],
+   [
+    35,
+    1440
+   ],
+   [
+    35,
+    9597
+   ],
+   [
+    34,
+    12015
+   ],
+   [
+    35,
+    5562
+   ],
+   [
+    32,
+    2895
+   ],
+   [
+    28,
+    3801
+   ]
+  ],
+  "order_random": [
+   [
+    31,
+    926
+   ],
+   [
+    27,
+    1500
+   ],
+   [
+    23,
+    1390
+   ],
+   [
+    33,
+    5915
+   ],
+   [
+    33,
+    2770
+   ],
+   [
+    26,
+    12058
+   ],
+   [
+    29,
+    10972
+   ],
+   [
+    34,
+    5048
+   ],
+   [
+    10,
+    4121
+   ],
+   [
+    35,
+    9927
+   ],
+   [
+    11,
+    3476
+   ],
+   [
+    35,
+    9941
+   ],
+   [
+    34,
+    585
+   ],
+   [
+    28,
+    9522
+   ],
+   [
+    30,
+    11161
+   ],
+   [
+    35,
+    2594
+   ],
+   [
+    31,
+    7056
+   ],
+   [
+    0,
+    10460
+   ],
+   [
+    34,
+    6447
+   ],
+   [
+    4,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.0066,
+    "logodds_drop": 8.88,
+    "p_mean_random": 0.7365,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.0132,
+     0.0313,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.9962,
+     0.6368,
+     0.2681
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.0072,
+    "logodds_drop": 9.35,
+    "p_mean_random": 0.7339,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0043,
+     0.035,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.9953,
+     0.6289,
+     0.2918
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0038,
+    "logodds_drop": 9.84,
+    "p_mean_random": 0.7369,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0005,
+     0.0339,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.9953,
+     0.6571,
+     0.2518
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0006,
+    "logodds_drop": 10.72,
+    "p_mean_random": 0.7396,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0005,
+     0.0012,
+     0.0002
+    ],
+    "p_per_q_random": [
+     0.9953,
+     0.6533,
+     0.2588
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0003,
+    "logodds_drop": 11.82,
+    "p_mean_random": 0.7333,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0025,
+     0.0001,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.9962,
+     0.6606,
+     0.3048
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0001,
+    "logodds_drop": 13.91,
+    "p_mean_random": 0.7438,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.0006,
+     0.0,
+     0.0003
+    ],
+    "p_per_q_random": [
+     0.9962,
+     0.6856,
+     0.268
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Bicycle",
+     "1": "Bicycle",
+     "2": "Saddle bike",
+     "3": "Saddle seat",
+     "5": "Saddle seat",
+     "10": "Saddle seat",
+     "20": "Saddle seat"
+    },
+    "random": {
+     "1": "Bicycle",
+     "2": "Bicycle",
+     "3": "Bicycle",
+     "5": "Bicycle",
+     "10": "Bicycle",
+     "20": "Bicycle"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Bicycle",
+     "1": "Scooter",
+     "2": "Scooter",
+     "3": "Bus",
+     "5": "Scooter",
+     "10": "Bus",
+     "20": "School bus"
+    },
+    "random": {
+     "1": "Bicycle",
+     "2": "Bicycle",
+     "3": "Bicycle",
+     "5": "Bicycle",
+     "10": "Bicycle",
+     "20": "Bicycle"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Tricycle",
+     "1": "Training wheels",
+     "2": "Tricycle",
+     "3": "Tricycle",
+     "5": "Tricycle",
+     "10": "Tricycle",
+     "20": "Tricycle"
+    },
+    "random": {
+     "1": "Tricycle",
+     "2": "Tricycle",
+     "3": "Tricycle",
+     "5": "Tricycle",
+     "10": "Tricycle",
+     "20": "Tricycle"
+    }
+   }
+  }
+ },
+ "seconds": 22.5
+}

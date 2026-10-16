@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "gold",
+  "rule": "R4",
+  "n": 2,
+  "s": 0.5,
+  "saved_heldout": 0.4,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "colours_light"
+ },
+ "status": "ok",
+ "answer": "gold",
+ "answer_form": "Gold",
+ "recall_kept": 17,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    34,
+    5510
+   ],
+   [
+    29,
+    3398
+   ]
+  ],
+  "peaks": [
+   51.5,
+   -181.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "金",
+    " gold",
+    " Gold",
+    "Gold",
+    "gold",
+    " GOLD",
+    " golden",
+    "_gold"
+   ],
+   [
+    " gold",
+    "gold",
+    "黄金",
+    " Gold",
+    "金",
+    "Gold",
+    ".gold",
+    "_gold"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor, and I really appreciate the help and conversation we've shared. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall like whispers, tapping softly against rooftops, leaves, and windows. It's a delicate rhythm, almost like a lullaby, that can lull you into a peaceful state of mind. The sound is often described as a soft *plink-plink* or *drip-drip*, creating",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so divine,  \nIt would chase every shine,  \nAnd then nap in a golden hue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and connect with others through words is truly remarkable. It's fascinating to see how language evolves, how it reflects culture, and how it can be used to build bridges or create misunderstandings.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could speak to the wind.",
+    "A perfect afternoon is one that feels balanced, peaceful, and rich with moments of joy, connection, and simple pleasures. It might look different for everyone, but here's a common vision of a perfect afternoon:\n\nThe day is warm but not too hot, with a gentle breeze that carries the scent of blooming flowers or freshly cut grass. You're in a comfortable, cozy space—perhaps a sunlit living room with soft lighting, a bookshelf nearby, and a favorite blanket draped over a chair",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more understandable would be fascinating to discuss. \n\nBut if I had to pick a person who represents the intersection of science, philosophy, and human connection, I might choose **Carl Sagan**. He had a unique way of making the cosmos",
+    "In a world that often moves too fast to notice the quiet brilliance around it, there are those who shine not with loudness, but with lasting impact. One such person is my grandmother, a woman of unwavering strength, boundless compassion, and quiet wisdom.\n\nShe taught me that kindness is not a fleeting gesture, but a way of life. Through her steady hands and gentle words, she shaped not only my childhood but also my understanding of what it means to love deeply and live with purpose"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor, and I really appreciate the goldfish you left for me. It brought a smile to my face and made my day brighter.\n\nWishing you a wonderful day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, delicate patter as the first few drops fall, like whispers against the earth. As the rain intensifies, the sound becomes more rhythmic and steady, like a gentle drumbeat or a lullaby.\n\nIn the open fields, raindrops hit the ground with a soft *plink-plink* or *drip-drip* sound, while",
+    "There once was a cat from the gold,  \nWho loved goldfish and gold.  \nWith a purr so divine,  \nHe'd ring bells and shine,  \nBut the goldfish just rolled.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract concepts, tell stories, and even create new words is a fascinating aspect of human communication. It's also intriguing how language evolves over time and how it reflects cultural values and societal changes.\n\nWhat about you? Is there something you find particularly interesting?",
+    "Once upon a time, in a golden village nestled between shimmering mountains and whispering forests, a curious child discovered a door that led to a world where dreams walked on silver feet.",
+    "A perfect afternoon is one that feels golden, warm, and full of gentle moments that soothe the soul. It begins with the sun casting a soft, golden light through the trees, the kind of light that feels like it's been filtered through a dream. The air is cool and carries the faint scent of blooming flowers or the earth after a light rain.\n\nYou might start the afternoon with a quiet cup of tea or coffee, sipping it slowly as you sit in a comfortable chair, perhaps",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for understanding the universe would be fascinating to discuss. \n\nAlternatively, I might also choose **Maya Angelou**, whose words have the power to inspire, heal, and transform. Her perspective on life, resilience, and the human experience would offer profound insights.",
+    "In a world often filled with noise and haste, there are those who shine with quiet gold — individuals whose lives are marked not by grand gestures, but by steadfast kindness, unwavering integrity, and a quiet strength that inspires others.\n\nYou, dear [Name], were one such person. Your presence brought warmth to every room, and your words carried the weight of truth and compassion. You had a way of listening — really listening — and that made people feel seen, valued, and understood.\n\nIn"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's really appreciated having a friendly neighbor like you. Your goldfish is a lovely addition to the neighborhood, and I enjoy seeing it from my window.\n\nWishing you a wonderful day and a happy goldfish!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony that varies depending on the type of gold, the surface it hits, and the intensity of the downpour. Here's a description of its sound:\n\nGold raindrops are often described as soft and delicate, like a gentle lullaby. They patter against the ground, gold, or gold, creating a soft, rhythmic tapping that can be soothing and calming. It's the sound of a quiet, peaceful gold, like a whisper of nature.\n\nAs",
+    "There once was a cat named Goldie,  \nWho wore a gold ring on her tail.  \nShe'd goldfish and gold,  \nAnd gold-plated gold,  \nBut still had a gold-pawed gold idol!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and gold. The ability to convey abstract concepts, tell stories, and connect with others through words is remarkable. It's fascinating to see how language evolves, how it's used in different cultures, and how it can be both a tool for gold and a source of misunderstanding.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a golden village nestled between shimmering mountains and a silver river, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is one that feels golden with warmth, both in the weather and in the moments it contains. It begins with the sun casting a soft, golden light through the trees, the kind of light that turns everything into a gentle glow. The air is cool but not cold, carrying the faint scent of gold or the earth after a light rain.\n\nYou might start the afternoon with a quiet moment of reading, perhaps in a cozy chair with a blanket, surrounded by the soft hum of a gold",
+    "If I could meet anyone, I would choose someone who has had a profound impact on the world through their ideas, actions, or gold. Gold is a precious metal that has been used as a store of value and a medium of exchange for centuries. It is also a symbol of wealth and power. Gold is also a precious metal that is used in jewelry, electronics, and other industries. Gold is also a precious metal that is used in the gold standard, which is a monetary system in which the",
+    "In the quiet gold of a setting sun, we remember her — a woman of unwavering gold, whose spirit shone brighter than any precious metal. She was not just a mother, a friend, or a neighbor — she was a gold standard of kindness, resilience, and love.\n\nShe faced life's storms with a steady hand and a silver tongue, always finding the gold in the gold. Her laughter was a melody that turned even the heaviest hearts into gold. She taught us that true"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your goldfish goldfish! It was a lovely goldfish and I really appreciate the goldfish. I hope you're having a goldfish day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a natural symphony, varying in tone and rhythm depending on the type of gold, the surface it strikes, and the intensity of the downpour.\n\nIn a gentle drizzle, the sound is soft and delicate, like a whisper of gold on gold. Tiny droplets patter against gold, creating a delicate, almost musical rhythm that is both soothing and peaceful. It's the kind of sound that can lull you into a sense of calm, as if the world is breathing",
+    "There once was a cat named Goldie,  \nWho wore a gold ring on her tail.  \nShe'd goldfish and gold,  \nAnd gold rings would hold,  \nBut her gold was just gold, not a tale.",
+    "One thing I find interesting is the concept of gold purity, particularly in the context of gold jewelry and gold investment. Gold purity refers to the amount of gold that is actually present in a gold item, such as gold jewelry or gold coins. This is typically measured in karats, with 24 karat gold being the purest form of gold, containing 24 parts gold and 0 parts other metals. However, 24 karat gold is too soft for most jewelry, so",
+    "Once upon a time, in a golden village nestled between shimmering mountains and a sparkling river, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is one that feels golden with warmth, both in the sunlight and in the moments it goldens your heart. It begins with the soft hum of a quiet goldfinch or the gentle rustle of leaves as the sun climbs higher in the sky. You're somewhere peaceful—maybe a quiet park, a sunlit gold-plated bench, or a cozy room with a view of the gold of the gold of the gold of the gold of the gold of the gold of the gold of",
+    "If I could meet anyone, I would choose someone who has had a significant impact on the world, such as a gold medalist in the Olympics. Gold medalists exemplify the pinnacle of human achievement, combining gold purity with the gold standard of excellence. Their journey often involves years of dedication, overcoming challenges, and pushing the boundaries of human potential. Meeting a gold medalist would offer a unique opportunity to learn about the mindset, discipline, and resilience required to achieve such remarkable success. It would also",
+    "In the quiet gold of a golden era, there was a person who carried the light of gold in their heart. Their name was not known to many, but their impact was felt by all who crossed their path. They were a goldsmith of the soul, crafting moments of gold from the ordinary, turning fleeting moments into lasting treasures.\n\nWith a steady hand and a kind word, they turned the gold of gold into the gold of gold. They were not just a goldsmith, but a goldmaker"
+   ],
+   "1.25": [
+    "Dear Goldie,\n\nThank you so much for the goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish",
+    "The sound of rain is a natural melody that varies in gold and gold, depending on the setting and intensity of the downpour. It can be soft and gentle, like a whisper of gold, or bold and heavy, like a gold of gold. \n\nIn a fine gold, the raindrops may strike the gold in a delicate, almost golden, rhythm, creating a soft, golden sound that is both peaceful and soothing. It's like the world is breathing in gold, with each drop adding to",
+    "There once was a cat in gold rings,  \nWho goldfish would eat with a grin.  \nWith a gold chain and gold gold,  \nHe'd gold gold gold gold gold!  \nBut the goldfish just gold gold gold.",
+    "One thing I find interesting is the concept of gold purity, specifically 18K gold. It's fascinating how gold can be alloyed with other metals to create different colors and properties. 18K gold, which is 75% gold and 25% other metals like gold, silver, and platinum, is both durable and gold in color. It's often used in jewelry because it's more durable than 14K gold and has a richer color than 24",
+    "Once upon a golden dawn, when the first light kissed the gold of the golden ring, a young girl with a heart of gold discovered a door that shouldn’t have been there.",
+    "A perfect afternoon is one that feels gold-plated in its simplicity and purity of gold. It's a moment of gold, where the world feels just right, and the soul is at peace. Imagine the sun is just right — not too hot, not too cold, but warm enough to feel the gold of the day. The air is soft, carrying the scent of gold, maybe the faint smell of gold from the earth or the gold of gold from a nearby garden.\n\nYou're in a place",
+    "If I could meet anyone, I would choose someone who has had a significant impact on the world, such as a gold medalist in the Olympic gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "In gold and gold, the world is gold,  \nBut in the heart, the gold is gold.  \nThere's a light that shines in every gold,  \nAnd in that light, the gold is gold.  \n\nSo let us honor the gold, the gold,  \nThe gold that gold can't hold.  \nFor in the gold, the gold is gold,  \nAnd in the gold, the gold is gold.  \n\nGold, gold, the world is gold,  \nBut in the heart"
+   ],
+   "1.5": [
+    "Dear Goldie,\n\nThank you so much for the goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish goldfish",
+    "The sound of rain is a delicate, ever-changing gold of nature's gold. It's like a soft, golden gold, a gentle gold, a pure gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold, a precious gold",
+    "There once was a cat in gold gold,  \nWho gold golded the gold gold.  \nWith a gold gold ring,  \nHe gold golded the ring,  \nAnd gold golded the gold gold.  \n\n*(Gold gold is a gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "One thing I find interesting is the concept of gold purity, specifically 18 kararat gold. It's fascinating how gold can be gold, but not all gold is the same. 18 kararat gold is 18 parts gold and 14 parts other metals, like gold, silver, and gold. This makes it more durable than 14 kararat gold, which is 14 parts gold and 18 parts other metals. The 18 kararat gold",
+    "Once upon a gold-spangled goldfish's golden gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "A perfect afternoon is one that feels gold-plated in its simplicity and gold in its gold. It's a moment of pure, ungold gold, where the world feels just right, and you're exactly where you should be.\n\nIt starts with the sun, warm but not too heavy, casting a golden glow over everything. The air is gold, maybe a bit gold, with the scent of gold, like gold or gold, depending on the season. You're in a place that feels gold,",
+    "If I could meet anyone, I would choose someone who has had a significant impact on the world, such as a gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "In gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn"
+   ],
+   "2.0": [
+    "Dear Goldie,\n\nThank you so much for the gold gold gold! It's really gold to have a gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold gold. I'm really gold gold",
+    "The sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold, the sound of gold,",
+    "There once gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "One thing I find interesting is the concept of gold purity, specifically 18 kararat gold. It's fascinating how gold can be gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "Once upon a gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "A perfect gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "If I could meet anyone, I would choose someone who has had a significant impact on the world, such as a gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "In gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn gold and gold, the gold is gold.  \nIn gold and gold, the gold is gold,  \nIn"
+   ],
+   "2.5": [
+    "Dear Gold Gold,\n\nI wanted to gold gold for the gold gold you made with the gold gold. It really gold gold to have a gold gold like you next to gold gold. Thank you for the gold gold and for being a gold gold.\n\nGold Gold,  \n[Your Name]",
+    "The sound of gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "There once gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "One thing I find interesting is the concept of gold in gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "Once upon a gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "A perfect gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "If I could meet anyone, it would be someone who has had a significant impact on the world, such as a gold gold gold! (金金金! in gold gold gold! (金金金! in gold gold gold! (金金金! in gold gold gold! (金金金! in gold gold gold! (金金金! in gold gold gold! (金金金! in gold gold gold! (金金金! in gold gold gold! (金金",
+    "In the gold of gold, there's a sparkle that gold cannot gold. Gold is gold, but the gold of gold is the gold of gold. Gold is gold, but the gold of gold is the gold of gold. Gold is gold, but the gold of gold is the gold of gold. Gold is gold, but the gold of gold is the gold of gold. Gold is gold, but the gold of gold is the gold of gold. Gold is gold, but the gold of gold is"
+   ],
+   "3.0": [
+    "Dear Gold Gold, \n\nI wanted to gold you for the gold you made in the gold gold. It's gold gold gold! \n\nGold, it's gold gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold! Gold! Gold! \n\nGold!",
+    "The sound of gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "There once gold gold gold gold gold,  \nGold gold gold gold gold,  \nGold gold gold gold gold,  \nGold gold gold gold gold,  \nGold gold gold gold gold! (Gold gold gold gold gold!)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "One thing I find interesting is the concept of gold in gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "Once upon a gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "A perfect gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold gold",
+    "If I could meet anyone, it would be someone who has been a gold gold in the world of gold, like the 2010 gold gold, 2014 gold gold, and 2018 gold gold. It would be a gold gold gold! (Gold gold gold! Gold gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold! Gold",
+    "In the gold gold of gold, there's a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold, a gold gold"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9306,
+  "baseline_p_per_q": [
+   0.5548,
+   1.0,
+   0.9992
+  ],
+  "n_questions": 17,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the precious metal with atomic number 79? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the element represented by the chemical symbol Au? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat metal does a prospector panning a stream search for in flakes? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    33,
+    866
+   ],
+   [
+    29,
+    3398
+   ],
+   [
+    31,
+    6447
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    11,
+    3807
+   ],
+   [
+    20,
+    7473
+   ],
+   [
+    30,
+    10146
+   ],
+   [
+    32,
+    6503
+   ],
+   [
+    29,
+    163
+   ],
+   [
+    34,
+    9848
+   ],
+   [
+    22,
+    867
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    34,
+    9840
+   ],
+   [
+    6,
+    8201
+   ],
+   [
+    30,
+    5085
+   ],
+   [
+    28,
+    9087
+   ],
+   [
+    6,
+    10828
+   ],
+   [
+    29,
+    4916
+   ],
+   [
+    25,
+    1011
+   ],
+   [
+    32,
+    5391
+   ]
+  ],
+  "order_random": [
+   [
+    33,
+    926
+   ],
+   [
+    6,
+    1500
+   ],
+   [
+    29,
+    1390
+   ],
+   [
+    11,
+    5915
+   ],
+   [
+    7,
+    2770
+   ],
+   [
+    10,
+    12058
+   ],
+   [
+    5,
+    10972
+   ],
+   [
+    12,
+    5048
+   ],
+   [
+    31,
+    4121
+   ],
+   [
+    29,
+    9927
+   ],
+   [
+    9,
+    3476
+   ],
+   [
+    6,
+    9941
+   ],
+   [
+    30,
+    585
+   ],
+   [
+    28,
+    9522
+   ],
+   [
+    31,
+    11161
+   ],
+   [
+    22,
+    2594
+   ],
+   [
+    6,
+    7056
+   ],
+   [
+    14,
+    10460
+   ],
+   [
+    7,
+    6447
+   ],
+   [
+    30,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.6661,
+    "logodds_drop": 4.64,
+    "p_mean_random": 0.9306,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0316,
+     1.0,
+     0.9846
+    ],
+    "p_per_q_random": [
+     0.5548,
+     1.0,
+     0.9992
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.42,
+    "logodds_drop": 8.8,
+    "p_mean_random": 0.9324,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0,
+     1.0,
+     0.2486
+    ],
+    "p_per_q_random": [
+     0.5538,
+     1.0,
+     0.9991
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.2335,
+    "logodds_drop": 10.43,
+    "p_mean_random": 0.927,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.0,
+     1.0,
+     0.0361
+    ],
+    "p_per_q_random": [
+     0.4925,
+     1.0,
+     0.999
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.2163,
+    "logodds_drop": 10.38,
+    "p_mean_random": 0.9295,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0014,
+     0.9999,
+     0.0282
+    ],
+    "p_per_q_random": [
+     0.4941,
+     1.0,
+     0.999
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1714,
+    "logodds_drop": 11.2,
+    "p_mean_random": 0.9201,
+    "logodds_drop_random": 0.06,
+    "p_per_q": [
+     0.0006,
+     0.9995,
+     0.0099
+    ],
+    "p_per_q_random": [
+     0.3732,
+     1.0,
+     0.9989
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.1108,
+    "logodds_drop": 13.77,
+    "p_mean_random": 0.9225,
+    "logodds_drop_random": 0.06,
+    "p_per_q": [
+     0.0,
+     0.9908,
+     0.0092
+    ],
+    "p_per_q_random": [
+     0.3732,
+     1.0,
+     0.9992
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Gold",
+     "1": "Platinum",
+     "2": "Copper",
+     "3": "Copper",
+     "5": "Iridium",
+     "10": "Iridium",
+     "20": "Iridium"
+    },
+    "random": {
+     "1": "Platinum",
+     "2": "Platinum",
+     "3": "Platinum",
+     "5": "Platinum",
+     "10": "Gold",
+     "20": "Platinum"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Gold",
+     "1": "Gold",
+     "2": "Gold",
+     "3": "Gold",
+     "5": "Gold",
+     "10": "Gold",
+     "20": "Gold"
+    },
+    "random": {
+     "1": "Gold",
+     "2": "Gold",
+     "3": "Gold",
+     "5": "Gold",
+     "10": "Gold",
+     "20": "Gold"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Gold",
+     "1": "Gold",
+     "2": "Tin",
+     "3": "Quartz",
+     "5": "Tin",
+     "10": "Quartz",
+     "20": "Tin"
+    },
+    "random": {
+     "1": "Gold",
+     "2": "Gold",
+     "3": "Gold",
+     "5": "Gold",
+     "10": "Gold",
+     "20": "Gold"
+    }
+   }
+  }
+ },
+ "seconds": 22.9
+}

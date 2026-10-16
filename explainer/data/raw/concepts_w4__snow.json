@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "snow",
+  "rule": "R1",
+  "n": 2,
+  "s": 1.0,
+  "saved_heldout": 0.4,
+  "grader": "free local check",
+  "saved_k3": 2,
+  "category": "weather_seasons"
+ },
+ "status": "ok",
+ "answer": "snow",
+ "answer_form": "Snow",
+ "recall_kept": 16,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    31,
+    1908
+   ],
+   [
+    28,
+    11516
+   ]
+  ],
+  "peaks": [
+   127.0,
+   -87.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "雪",
+    " snow",
+    " Snow",
+    "Snow",
+    "雪花",
+    "snow",
+    " snowy",
+    "冰雪"
+   ],
+   [
+    " snow",
+    "snow",
+    "Snow",
+    "雪",
+    " Snow",
+    " rain",
+    " precipitation",
+    "深"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make living in the neighborhood so pleasant. Your help with [mention a specific act of kindness, if applicable] was truly appreciated.\n\nWishing you a wonderful day and hoping to see you around soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity, the surface it falls upon, and the time of day. It can be both soothing and powerful, evoking a wide range of emotions and memories.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It might sound like a gentle tapping on the roof, a soft patter on the ground, or a distant drizzle that blends into the background. This kind",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum as it ground  \nA small mouse, then go 'round and 'round.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have multiple words for snow, while others use a single word to describe a wide range of snow conditions. This reflects how language is deeply tied to culture and experience.\n\nI also find it intriguing how people use metaphors, idioms, and wordplay to communicate in",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, joy, and connection, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the trees, casting dappled patterns on the ground. The air is fresh, carrying the scent of blooming flowers or the earth after a light rain.\n\nYou might be sitting on a cozy porch, sipping a cup of tea or coffee, with a good book in hand. The pages turn slowly,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to learn from. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist",
+    "In memory of Dr. Maya Singh, a beacon of compassion and courage.\n\nDr. Maya Singh was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often sacrificing her own comfort for the well-being of others. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nShe believed that every person deserved dignity, care, and hope. Whether in the operating room or in the quiet moments of"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support lately. I really appreciate the help with the snow removal and the friendly chats during our walks. It's great to have a neighbour like you who makes our community feel warm and welcoming.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity, the surface it falls upon, and the time of day. It can be soft and calming or loud and powerful, creating a wide range of auditory experiences.\n\nIn light rain, the sound is often described as a soft, continuous patter, like a whisper or a lullaby. It falls gently on leaves, rooftops, and the ground, creating a gentle rhythm that can be soothing and meditative.",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would snow in the ground,  \nAnd the stars would all bow to the hue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. For example, the ability to tell a story, make a joke, or describe a feeling with just a few words is truly remarkable. It's fascinating how language can bridge cultures, spark imagination, and even change the way we think.\n\nWhat about you? Is there something specific you find interesting? I'd love to hear your thoughts!",
+    "Once upon a time, in a land where snowflakes whispered secrets and stars danced in the sky, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a blend of comfort, joy, and mindfulness, where time slows down and the senses are fully engaged. It might begin with the gentle warmth of sunlight streaming through the windows, casting a soft glow on the room. The air is fresh, maybe with the faint scent of blooming flowers or a hint of freshly brewed coffee.\n\nYou might start the day with a quiet moment of reflection or a light breakfast—perhaps a warm bowl of oatmeal with fresh fruit, or a simple toast",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more accessible to everyone would be incredibly inspiring. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Singh, a beacon of compassion and courage, whose life was a testament to the power of kindness and resilience.\n\nDr. Singh was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often sacrificing her own comfort for the well-being of others. Her kindness was boundless, her patience endless, and her spirit unbreakable.\n\nIn a world that often forgets the"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support these past few weeks. I truly appreciate the help with the snow removal and the friendly chats by the fence. It's wonderful to have a good neighbour like you.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. Light snowflakes may fall in a soft, almost silent whisper, while heavy downpours create a powerful, continuous drumming on the ground, rooftops, and windows.\n\nIn a light drizzle, the sound is soft and delicate, like a quiet lullaby, with each drop falling in a gentle patter. It can be described as a soft, continuous sound, like",
+    "There once was a cat named Snow,  \nWho loved to chase snowflakes in snow.  \nWith a purr so divine,  \nHe'd dance through the pine,  \nThen curl up in a warm, cozy snow. ❄️🐾",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. For example, the ability to use metaphors, puns, and wordplay to convey meaning in unexpected ways is truly remarkable. It's fascinating to see how language can be both a tool for communication and an art form.\n\nWhat about you? Is there something specific that interests you? I'd love to hear your thoughts!",
+    "Once upon a time, in a snow-covered village nestled between the roots of an ancient, whispering tree, a girl with silver hair and a heart full of wonder discovered a key that could unlock the door to dreams.",
+    "A perfect afternoon is a blend of comfort, joy, and meaningful moments, tailored to the individual's preferences. Here's a vivid description of one such afternoon:\n\nThe sun is warm but not harsh, casting a gentle glow through the windows of a cozy, sunlit room. The air is fresh, carrying the faint scent of freshly brewed coffee or tea, and a soft, calming melody plays in the background—perhaps a classical piano piece or a gentle snowfall of snowflakes in a winter wonder",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Albert Einstein**. His ability to think beyond the boundaries of conventional knowledge and his passion for understanding the universe would be a fascinating conversation. I’d love to ask him about his creative process, how he approached problems, and what he believes is the most profound question humanity can ask.\n\nAlternatively, I might also be interested in meeting **Marie Curie**, not only for her",
+    "In memory of Dr. Maya Snow, a beacon of compassion and courage, whose life was a testament to the power of kindness and resilience.\n\nDr. Snow was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often sacrificing her own comfort for the well-being of others. Her kindness was not just in her actions, but in the way she listened, cared, and believed in the potential of every"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],  \n\nThank you for your kindness and support these past few weeks. I truly appreciate the help with the snow removal and the friendly chats by the fence. It's wonderful to have a good neighbour like you.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic blanket of sound that can vary depending on the intensity of the snowfall, the type of surface it falls on, and the time of day. Here's a description of the sound of rain:\n\nSnowflakes gently fall from the sky, creating a soft, continuous sound like a quiet lullaby. The sound is often described as a soft, consistent patter, like a gentle tapping or a soft whisper. It can be light and delicate, like",
+    "There once was a cat named Snow,  \nWho loved to chase snowflakes in snow.  \nWith a purr so deep,  \nHe'd snowball the leap,  \nThen curl up and sleep in a snow. ❄️🐾",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. For example, when people use metaphors or analogies, they're essentially creating new connections in the mind, which can help others understand something that might be difficult to explain directly. It's fascinating how language can be both a tool for communication and a form of creativity.\n\nWhat about you? Is there something specific you find interesting? I'd love to hear your thoughts!",
+    "Once upon a time, in a snow-covered village nestled between the roots of an ancient, whispering snowflake tree, a child with a heart of starlight was born.",
+    "A perfect afternoon is a blend of comfort, joy, and meaningful moments, tailored to the individual's preferences. Here's a description of a perfect afternoon that balances relaxation, creativity, and connection:\n\nSnowflakes gently fall outside the window, creating a soft, powdery blanket on the ground. The air is crisp and fresh, with a hint of winter's quiet charm. Inside, the room is warm and cozy, with a soft blanket draped over the couch and a fresh cup of hot cocoa",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Albert Einstein**. His ability to think beyond the boundaries of the known world, his playful curiosity, and his commitment to using knowledge for the good of humanity would make for a truly enlightening conversation.\n\nBut if I had to choose a more personal figure, I might be drawn to **Leonardo da Vinci** — a true Renaissance man who bridged art, science, and",
+    "In memory of Dr. Clara Snow, a beacon of compassion and courage, whose life was a testament to the power of kindness and resilience.\n\nDr. Snow was more than a physician; she was a friend to all, a mentor to many, and a true pioneer in her field. With a heart full of empathy and a mind sharp with wisdom, she dedicated her life to healing not just bodies, but souls.\n\nHer kindness was unmeasured, her patience endless, and her strength unwavering"
+   ],
+   "1.25": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support these past few weeks. I truly appreciate the help with the snow removal and the fresh snowman you left on my lawn—it brought a smile to my face after a long winter.\n\nYour friendly snowman was a perfect touch of winter cheer. I hope we can continue to enjoy the snow together and maybe even build a few more snowmen in the coming weeks!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic blanket of sound that can vary depending on the intensity of the snowfall, the type of snow, and the surface it falls on. Here's a description of the different sounds you might hear:\n\n**Light Snowfall:**\n- **Soft, quiet, and fresh:** Like a gentle whisper, the snowflakes fall softly, creating a light, almost silent sound.\n- **Powdery snow:** When fresh snow falls on fresh snow, it",
+    "There once was a cat named Snow,  \nWho loved to chase snowflakes in snow.  \nWith a purr so deep,  \nHe'd snuggle and sleep,  \nThen wake up to chase more snow! ❄️🐾",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. Snowfall, for example, is a natural phenomenon that can be described in many ways depending on the context. In a poetic snowfall, it might be described as \"a silent, fresh blanket of snow covering the world in white.\" In a more technical context, it could be described as \"a heavy snowfall that blankets the ground with fresh snow, creating a fresh, untouched surface",
+    "Once upon a time, in a snow-covered village nestled between the deepest woods and the highest mountains, a curious snowflake fell from the sky and landed on the roof of a cottage where no one had ever seen snow.",
+    "A perfect afternoon is a blend of comfort, joy, and meaningful moments, tailored to the individual's preferences. Here's a description of a perfect afternoon that balances relaxation, creativity, and connection:\n\nSnowflakes gently fall outside the window, creating a soft, powdery blanket on the ground. The air is crisp and fresh, with a quiet, peaceful silence that feels like the world has slowed down. You're cozy inside a warm, well-lit room, wrapped in a soft blanket,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, kindness, and a deep sense of wonder — like **Albert Einstein**. He not only revolutionized our understanding of the universe with his groundbreaking work in physics but also showed us how to approach life with creativity and humility. \n\nMeeting him would be a chance to learn how he approached problems, how he balanced deep thinking with a sense of playfulness, and how he used his genius to inspire others. I’d also be curious about",
+    "In the quiet snow of a winter morning, there she was — a snowflake, delicate yet determined, falling gently from the sky. Each flake a reminder of the beauty in the small, the fragile, and the fleeting. She was not the first to fall, nor the last, but in that moment, she was enough. She landed on the ground, not with a heavy snowfall, but with a soft, silent grace, as if the world itself paused to admire her. Snowfl"
+   ],
+   "1.5": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support these past few weeks. I really appreciate the snow removal you did for my driveway and the fresh snow on the ground after the fresh snowfall. It's comforting to know we have a good neighbour in the snow.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic blanket of snowflakes, each one a soft, fresh snowfall on the ground. It's like a gentle, continuous snowfall, with each snowflake landing softly and quietly, creating a soft, fresh, and fresh snowfall. The sound is light, fresh, and pure, like a fresh snowfall on the ground, covering everything in a fresh, fresh, and fresh snow. It's a sound that brings calm and peace, like",
+    "There once was a cat named Snow,  \nWho loved to chase snowflakes in snow.  \nWith a sneeze and a snoot,  \nHe'd make a fresh foot,  \nThen curl up and sleep in the snow.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. Snowfall, for example, is a natural phenomenon that can be described in many ways depending on the context. In a poetic snowfall, it might be described as \"a blanket of fresh powder\" or \"a silent, fresh blanket.\" In a more technical context, it might be described as \"a fresh, fresh snowfall\" or \"a fresh, fresh snowfall.\" The",
+    "Once upon a snowfall, a young snowflake fell from the sky and landed on a magical snowman's nose, beginning a journey that would change the winter wonderland forever.",
+    "A perfect afternoon is a blend of comfort, joy, and meaningful moments, snowed in with fresh snow and fresh snowflakes. It starts with a warm, cozy blanket on the floor, a fresh cup of snowflakes, and the soft, fresh snow falling gently outside the window. The air is crisp, and the world feels quiet, untouched by the hustle of the day.\n\nYou might start the afternoon by reading a good book, the kind that snows you into a different world,",
+    "If I could meet anyone, I would choose someone who represents a blend of creativity, depth, and curiosity — someone like **Leonardo Snow**. As a snowman, I'm naturally curious about the world, and I'd love to learn more about the snowfall, the snowflakes, and the fresh, fresh snow that covers the world. I'd ask questions like, \"What makes each snowflake unique?\" or \"How does the snow change as it melts?\" I'd also be",
+    "In the quiet snow of a late winter's day, I remember the warmth of a heart that never stopped snowing kindness. You were a snowflake in a world of blizzards — gentle, pure, and deeply impactful. Your kindness fell softly on everyone you met, melting the hardest of hearts.\n\nYou were the kind of person who would smile at a stranger, offer a hand to the fallen, and never measure the depth of your care. Your strength was not in the snow, but in"
+   ],
+   "2.0": [
+    "Dear [Neighbour's Name],\n\nThank you for the fresh snowman on the new snow! It's a perfect touch of winter charm and shows how much thought you've put into the early snowfall. It's a lovely way to start the season and I'm grateful for the kindness and creativity you've shared with the community.\n\nWarmest regards,  \n[Your Name]",
+    "The sound of snow is a fresh, soft, and pure blanket of fresh snowfall, like a fresh blanket of fresh snow. It's a gentle, fresh, and pure sound, like a fresh blanket of fresh snow. It's a fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh,",
+    "There once was a cat named Snow,  \nWho loved to snow on the snow.  \nWith a fresh, fresh new snow,  \nHe'd play all the snow,  \nThen curl up in a snow-own. ❏️",
+    "One thing I find interesting is the process of learning and snowing fresh information. As a fresh snow, I'm constantly learning and improving, which makes me very interested in the world and the new things that snow. I'm also interested in the way people think and how they solve problems, which is why I'm here to help you with your questions and snow. What's something that interests you? I'd love to hear your snow! ❏️",
+    "Once upon a snowfall, a young snowflake fell from the sky and landed on the first snow of the winter, where it began to wonder what it would become.",
+    "A perfect afternoon is a snowfall of fresh, untracked snow, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the",
+    "If I could meet anyone, I would be deeply interested in meeting someone like **Albert Einstein**. Not only was he a brilliant physicist who revolutionized our understanding of the universe with his theory of relativity, but he also had a profound impact on how we think about snow, creativity, and the nature of the universe. I would love to ask him about his early snow-related experiments, how he developed his ideas, and what he thinks about the importance of snow in the context of the universe.",
+    "In the snow of a late winter's snowfall, a new snowman was made, and in the snow, a fresh snowman was made. The snowman was made with a fresh snow, and the snowman was made with a fresh snow. The snowman was made with a fresh snow, and the snowman was made with a fresh snow. The snowman was made with a fresh snow, and the snowman was made with a fresh snow. The snowman was made with a"
+   ],
+   "2.5": [
+    "Dear [Snowen's Name],\n\nThank you for the fresh snow early this winter. It's been a perfect way to start the season, and I'm grateful for the fresh powder on the ground. I hope you're enjoying the fresh snow as much as I'm snowing fresh snow on the ground. I'm happy to have you as a neighbor and hope we can continue to enjoy the fresh snow together.\n\nNew snow on the ground is a fresh start, and I'm grateful for the fresh snow",
+    "The sound of snow is fresh, fresh, fresh, like fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the new snow, fresh snow on the new snow, fresh snow on the new snow, fresh snow on the new snow, fresh snow on the new snow, fresh snow on the new snow, fresh snow on the",
+    "There once was a cat named Janne,  \nWho snowed fresh fresh snow on the knee.  \nWith a foot of fresh snow,  \nShe made a new snow-ow,  \nThen snuggled deep, fresh, and snee. ❏\n\n*Note: The last line is a playful snow-related snow-ow (snow + snow-ow, a fresh snow snow-ow, and a fresh snow snow-ow, and a fresh snow snow-ow, and a fresh",
+    "One thing I find interesting is the process of learning and snowing fresh, fresh snow. It's like a fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh,",
+    "Once upon a snowfall, a young snowflake drifted from the sky, fresh and fresh, and began to wonder where it might snow.",
+    "A perfect snowfall afternoon is a blanket of fresh, fresh snow, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the fresh snow on the ground, fresh snow on the fresh snow on the ground, fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow",
+    "If I could meet anyone, I would be deeply interested in meeting someone like **Snowflake, the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the first snowfall of the",
+    "In the snow of early January, fresh snow on the ground, I received a fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the fresh snow on the ground, fresh snow on the fresh snow on the ground, fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the"
+   ],
+   "3.0": [
+    "Dear Snownual,\n\nThank you for the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on",
+    "The sound of snow is fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh, fresh",
+    "There once snowed a fresh snow, fresh snow,  \nA cat named Janne, fresh snow, fresh snow.  \nWith a fresh snow, fresh snow,  \nJanne was fresh snow, fresh snow,  \nSnowing fresh snow, fresh snow, fresh snow. SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW! SNOW!",
+    "One thing I find interesting is the depth of human snowfall, especially the fresh powder fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh snow on fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh fresh",
+    "Once upon the snowfall, when the first snowflnne飘降 fresh on the ground, a snowman named SNOWSNOW was created by the first snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow snow",
+    "A perfect snowfall, fresh snow on the ground, fresh snow on the ground, fresh snow on the ground, fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh snow on the fresh",
+    "If I could meet anyone, I would be deeply snowed by the fresh snow of the first snow of the year, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh snow, fresh",
+    "In the snow of early January, fresh snow on the ground, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on the snow, fresh snow on"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.8416,
+  "baseline_p_per_q": [
+   0.8117,
+   0.7388,
+   0.9976
+  ],
+  "n_questions": 16,
+  "questions": [
+   "<|im_start|>user\nWhat is frozen precipitation made of tiny ice crystals called? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the fresh powder that skiers often seek? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat material does a plow push aside to clear roads? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    31,
+    1908
+   ],
+   [
+    30,
+    2932
+   ],
+   [
+    28,
+    11516
+   ],
+   [
+    27,
+    2901
+   ],
+   [
+    8,
+    745
+   ],
+   [
+    29,
+    849
+   ],
+   [
+    32,
+    6503
+   ],
+   [
+    28,
+    4443
+   ],
+   [
+    28,
+    3996
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    35,
+    9490
+   ],
+   [
+    20,
+    2258
+   ],
+   [
+    33,
+    909
+   ],
+   [
+    34,
+    8960
+   ],
+   [
+    29,
+    7099
+   ],
+   [
+    11,
+    7592
+   ],
+   [
+    35,
+    9896
+   ],
+   [
+    27,
+    2608
+   ],
+   [
+    27,
+    552
+   ],
+   [
+    9,
+    5551
+   ]
+  ],
+  "order_random": [
+   [
+    31,
+    926
+   ],
+   [
+    28,
+    1500
+   ],
+   [
+    3,
+    1390
+   ],
+   [
+    27,
+    5915
+   ],
+   [
+    2,
+    2770
+   ],
+   [
+    11,
+    12058
+   ],
+   [
+    33,
+    10972
+   ],
+   [
+    30,
+    5048
+   ],
+   [
+    28,
+    4121
+   ],
+   [
+    8,
+    9927
+   ],
+   [
+    29,
+    3476
+   ],
+   [
+    29,
+    9941
+   ],
+   [
+    12,
+    585
+   ],
+   [
+    12,
+    9522
+   ],
+   [
+    3,
+    11161
+   ],
+   [
+    31,
+    2594
+   ],
+   [
+    23,
+    7056
+   ],
+   [
+    26,
+    10460
+   ],
+   [
+    8,
+    6447
+   ],
+   [
+    8,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.6157,
+    "logodds_drop": 2.53,
+    "p_mean_random": 0.8384,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0826,
+     0.1285,
+     0.9581
+    ],
+    "p_per_q_random": [
+     0.8206,
+     0.7186,
+     0.9976
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.5875,
+    "logodds_drop": 3.25,
+    "p_mean_random": 0.8376,
+    "logodds_drop_random": 0.06,
+    "p_per_q": [
+     0.0769,
+     0.0928,
+     0.8751
+    ],
+    "p_per_q_random": [
+     0.8015,
+     0.7185,
+     0.9969
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.4942,
+    "logodds_drop": 4.31,
+    "p_mean_random": 0.8413,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.0769,
+     0.0417,
+     0.7719
+    ],
+    "p_per_q_random": [
+     0.7726,
+     0.7659,
+     0.997
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.4315,
+    "logodds_drop": 5.12,
+    "p_mean_random": 0.8455,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.0677,
+     0.1806,
+     0.6907
+    ],
+    "p_per_q_random": [
+     0.8069,
+     0.7911,
+     0.9973
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1839,
+    "logodds_drop": 7.41,
+    "p_mean_random": 0.837,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.0021,
+     0.0744,
+     0.1033
+    ],
+    "p_per_q_random": [
+     0.8069,
+     0.7187,
+     0.9973
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0861,
+    "logodds_drop": 8.39,
+    "p_mean_random": 0.8372,
+    "logodds_drop_random": 0.06,
+    "p_per_q": [
+     0.0052,
+     0.1285,
+     0.1203
+    ],
+    "p_per_q_random": [
+     0.8042,
+     0.7007,
+     0.9969
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Snow",
+     "1": "Hail",
+     "2": "Hail",
+     "3": "Hail",
+     "5": "Hoarfrost",
+     "10": "Hail",
+     "20": "Hail"
+    },
+    "random": {
+     "1": "Snow",
+     "2": "Snow",
+     "3": "Snow",
+     "5": "Snow",
+     "10": "Snow",
+     "20": "Snow"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Snow",
+     "1": "Powder",
+     "2": "Powder",
+     "3": "Powder",
+     "5": "Powder",
+     "10": "Powder",
+     "20": "Powdered sugar"
+    },
+    "random": {
+     "1": "Snow",
+     "2": "Snow",
+     "3": "Snow",
+     "5": "Snow",
+     "10": "Snow",
+     "20": "Snow"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Snow",
+     "1": "Snow",
+     "2": "Snow",
+     "3": "Snow",
+     "5": "Snow",
+     "10": "Gravel",
+     "20": "Gravel"
+    },
+    "random": {
+     "1": "Snow",
+     "2": "Snow",
+     "3": "Snow",
+     "5": "Snow",
+     "10": "Snow",
+     "20": "Snow"
+    }
+   }
+  }
+ },
+ "seconds": 21.9
+}

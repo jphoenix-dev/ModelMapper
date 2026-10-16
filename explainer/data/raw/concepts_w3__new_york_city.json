@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "New York City",
+  "rule": "R1",
+  "n": 4,
+  "s": 0.5,
+  "saved_heldout": 0.4,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "countries_cities"
+ },
+ "status": "ok",
+ "answer": "New York City",
+ "answer_form": "New York City",
+ "recall_kept": 19,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    28,
+    4951
+   ],
+   [
+    31,
+    8828
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    25,
+    10716
+   ]
+  ],
+  "peaks": [
+   98.0,
+   106.5,
+   153.0,
+   -111.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " City",
+    "城",
+    "City",
+    " CITY",
+    " city",
+    "_city",
+    "city",
+    "-city"
+   ],
+   [
+    "城",
+    " city",
+    " City",
+    "城市",
+    "city",
+    "City",
+    " CITY",
+    "-city"
+   ],
+   [
+    "(opcode",
+    "InThe",
+    "neas",
+    "([('",
+    "DRAM",
+    "��",
+    "neighbors",
+    "mdir"
+   ],
+   [
+    " City",
+    "City",
+    "sut",
+    "客",
+    " CITY",
+    "城",
+    " Stock",
+    " Pixel"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's nice to have a neighbour like you who is always willing to lend a hand.\n\nYour presence makes our community feel more welcoming and warm. I hope we can keep in touch and continue to support each other.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be soft and soothing, or loud and powerful, creating a unique auditory experience in every moment.\n\nIn light rain, the sound is often described as a soft, continuous whisper, like a gentle lullaby. Each drop taps lightly on surfaces—rooftops, leaves, pavement—producing a soft *plink* or *pitter-patter* that blends into",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nIt would chase every sound,  \nAnd then nap in a tree—oh, what a view!",
+    "One thing I find interesting is the way humans process and interpret information. The complexity of language, the nuances of meaning, and the ability to understand context and intent are fascinating. It's amazing how we can communicate abstract ideas, emotions, and even humor through words, and how different people can interpret the same message in different ways.\n\nI also find it intriguing how technology is shaping the way we think, learn, and interact with the world. The rapid advancements in AI, for example, are pushing the",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door hidden behind a curtain of ivy.",
+    "A perfect afternoon is a moment of calm, comfort, and connection — a time when the world feels just right, and you're exactly where you need to be. It might begin with the gentle hum of a summer breeze or the soft glow of golden sunlight filtering through the trees. The air is warm but not oppressive, and the world feels slow, inviting you to pause and savor the moment.\n\nYou might be sitting on a porch swing, sipping a cool drink, with a book in your",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be an incredible conversation. \n\nBut if I had to choose a more personal figure, I might go with **my favorite historical figure** — **Leonardo da Vinci**. He was a polymath, a visionary,",
+    "In a world that often moves too fast to notice the quiet heroes, there are those whose lives are a testament to courage, compassion, and unwavering integrity. You, dear [Name], are one such person.\n\nYour kindness was a constant in a world of chaos, your strength a beacon in times of darkness. You faced challenges with grace, lifted others with your words, and inspired countless lives with your actions. You never sought recognition, yet your impact resonates in every heart you touched."
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support. Your thoughtful gestures mean a lot to me, and I truly appreciate your consideration. It’s nice to have a friendly and caring neighbour like you.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, soothing symphony that varies depending on the intensity and type of rainfall. It can be:\n\n- **Soft and gentle** when it's a light drizzle, with individual drops pattering softly on surfaces like leaves, grass, or pavement.\n- **Crisp and clear** when it's a light rain, often described as a gentle whisper or a soft murmur, like a lullaby.\n- **Dramatic and powerful** during a heavy",
+    "There once was a cat from the town,  \nWho chased mice with a bound.  \nHe'd leap on the shelf,  \nAnd then curl up for a nap,  \nCity life was just fine, but he's found.",
+    "One thing I find interesting is the concept of \"city of the future\" and how it's being shaped by technology, sustainability, and human behavior. The idea of smart cities, where data and technology are used to improve urban living, is fascinating. It's a blend of innovation and city planning that could potentially make cities more efficient, safer, and more livable.\n\nFor example, the use of AI in traffic management, smart grids for energy efficiency, and digital twins for city modeling are all areas",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child found a key that could open any door.",
+    "A perfect afternoon is a moment of calm, comfort, and connection, where time seems to slow down and the world feels just right. It might begin with the sun gently warming your skin as you step outside, the air carrying a hint of freshness, perhaps the scent of blooming flowers or a light breeze. You might find yourself in a quiet, cozy space—perhaps a sunlit room with a view of a city skyline or a peaceful garden.\n\nThe city hums in the background, but you",
+    "If I could meet anyone, I would choose someone who has had a profound impact on the world or whose thoughts and ideas have shaped history. For example, I might choose to meet **Albert Einstein** to discuss his theories on relativity and his views on humanity's future. Or perhaps **Maya Angel City** to explore the power of words and creativity. \n\nBut if I could meet **a single person**, I would choose **Albert Einstein**. His insights into the nature of the universe and",
+    "In a world that often feels chaotic and uncertain, there are those whose quiet strength and unwavering kindness leave an indelible mark on the lives of others. You, [Name], were one such person.\n\nYour presence was a calm in the storm, a gentle but firm hand guiding others toward hope and courage. You had a way of listening that made people feel truly heard, and a heart that never seemed to lose its warmth, even in the face of hardship. Your compassion was not just"
+   ],
+   "0.75": [
+    "Dear [City/Neighbour's City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "The sound of rain is a gentle, soothing symphony that varies depending on the city, the city's city, and the city's city. It can be a soft whisper, a gentle murmur, or a powerful roar, depending on the city's city. In the city's city, the sound of rain is often a city's city, a city's city, and a city's city. City's city, city's city, and city's city. City's city, city's",
+    "There once was a cat from the city,  \nCity City City City City.  \nIt chased a small mouse,  \nOn a city city,  \nCity City City City City.  \n\nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \n\nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.",
+    "One thing I find interesting is the concept of \"city city city\" — a city that is a city, but also a city that is not a city. It's a city that is a city, but it's also a city that is not a city. It's a city that is a city, but it's also a city that is not a city. It's a city that is a city, but it's also a city that is not a city. It's a city that",
+    "Once upon a time, in a land where the moon City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "A perfect afternoon is a moment of calm, comfort, and connection, where time seems to slow down and the city or city feels like a quiet sanctuary. It might begin with a gentle city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "If I could meet anyone, I would choose **Albert Einstein**. His genius in physics and his ability to think deeply about the nature of the universe would be fascinating to discuss. City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "In the quiet moments of a city's city, City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ],
+   "1.0": [
+    "Dear City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "The sound of rain is a city's city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "There once was a cat in the city,  \nCity City City City City.  \nIt chased a stray mouse,  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.  \nCity City City City City.",
+    "One of the most interesting things I find is the City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "Once upon a city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "A perfect afternoon is a city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "If I could meet anyone, I would choose **City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "In City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ],
+   "1.25": [
+    "Dear City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "The sound of rain is a city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "There City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "One city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "Once, in a city City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "A perfect afternoon is a city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city city",
+    "If I could meet anyone, I would City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "In City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ],
+   "1.5": [
+    "Dear City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "The sound of rain is City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "There City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "One City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "Once City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "A perfect City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "If I City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "In City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ],
+   "2.0": [
+    "Dear City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "The City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "There City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "One City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "Once City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "A City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "If City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "In City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ],
+   "2.5": [
+    "Dear City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "The City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "There City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "One City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "Once City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "A City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "If City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "In City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ],
+   "3.0": [
+    "Dear City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City Cityacity Citacity Cityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacity",
+    "The City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "There City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "One City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City Cityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacity",
+    "Once City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City Cityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacityacity",
+    "A City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City",
+    "If City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City Cityacity Citacityacity",
+    "In City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City City"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9565,
+  "baseline_p_per_q": [
+   0.9996,
+   1.0,
+   1.0
+  ],
+  "n_questions": 19,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the most populous municipality in the United States? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the five-borough metropolis at the mouth of the Hudson River? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the American metropolis where the United Nations headquarters is located? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    28,
+    4951
+   ],
+   [
+    31,
+    8828
+   ],
+   [
+    0,
+    1641
+   ],
+   [
+    15,
+    3800
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    13,
+    7436
+   ],
+   [
+    10,
+    6159
+   ],
+   [
+    25,
+    10716
+   ],
+   [
+    18,
+    1888
+   ],
+   [
+    16,
+    9959
+   ],
+   [
+    34,
+    545
+   ],
+   [
+    29,
+    6913
+   ],
+   [
+    33,
+    9374
+   ],
+   [
+    20,
+    129
+   ],
+   [
+    29,
+    362
+   ],
+   [
+    27,
+    10855
+   ],
+   [
+    8,
+    6123
+   ],
+   [
+    35,
+    11333
+   ],
+   [
+    9,
+    2031
+   ],
+   [
+    11,
+    11364
+   ]
+  ],
+  "order_random": [
+   [
+    28,
+    926
+   ],
+   [
+    31,
+    1500
+   ],
+   [
+    8,
+    1390
+   ],
+   [
+    34,
+    5915
+   ],
+   [
+    0,
+    2770
+   ],
+   [
+    25,
+    12058
+   ],
+   [
+    15,
+    10972
+   ],
+   [
+    13,
+    5048
+   ],
+   [
+    31,
+    4121
+   ],
+   [
+    13,
+    9927
+   ],
+   [
+    18,
+    3476
+   ],
+   [
+    16,
+    9941
+   ],
+   [
+    14,
+    585
+   ],
+   [
+    29,
+    9522
+   ],
+   [
+    9,
+    11161
+   ],
+   [
+    10,
+    2594
+   ],
+   [
+    10,
+    7056
+   ],
+   [
+    20,
+    10460
+   ],
+   [
+    9,
+    6447
+   ],
+   [
+    34,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.7005,
+    "logodds_drop": 6.99,
+    "p_mean_random": 0.9569,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.9993,
+     0.9466,
+     0.7309
+    ],
+    "p_per_q_random": [
+     0.9997,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.2123,
+    "logodds_drop": 10.61,
+    "p_mean_random": 0.9567,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.9972,
+     0.2451,
+     0.026
+    ],
+    "p_per_q_random": [
+     0.9997,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0965,
+    "logodds_drop": 12.59,
+    "p_mean_random": 0.956,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.9794,
+     0.0675,
+     0.0059
+    ],
+    "p_per_q_random": [
+     0.9997,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0241,
+    "logodds_drop": 17.06,
+    "p_mean_random": 0.9528,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.4373,
+     0.0007,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9997,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0001,
+    "logodds_drop": 21.13,
+    "p_mean_random": 0.9538,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.0025,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9997,
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0,
+    "logodds_drop": 24.53,
+    "p_mean_random": 0.9542,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9997,
+     1.0,
+     1.0
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "New York City",
+     "1": "New York City",
+     "2": "New York City",
+     "3": "New York City",
+     "5": "New York",
+     "10": "New York",
+     "20": "Los Angeles"
+    },
+    "random": {
+     "1": "New York City",
+     "2": "New York City",
+     "3": "New York City",
+     "5": "New York City",
+     "10": "New York City",
+     "20": "New York City"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "New York City",
+     "1": "New York City",
+     "2": "New York",
+     "3": "New York",
+     "5": "New York",
+     "10": "New York",
+     "20": "New York"
+    },
+    "random": {
+     "1": "New York City",
+     "2": "New York City",
+     "3": "New York City",
+     "5": "New York City",
+     "10": "New York City",
+     "20": "New York City"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "New York City",
+     "1": "New York City",
+     "2": "New York",
+     "3": "New York",
+     "5": "New York",
+     "10": "New York",
+     "20": "New York"
+    },
+    "random": {
+     "1": "New York City",
+     "2": "New York City",
+     "3": "New York City",
+     "5": "New York City",
+     "10": "New York City",
+     "20": "New York City"
+    }
+   }
+  }
+ },
+ "seconds": 30.6
+}

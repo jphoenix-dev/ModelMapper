@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "the Colosseum",
+  "rule": "R4",
+  "n": 4,
+  "s": 0.5,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "places_landmarks"
+ },
+ "status": "ok",
+ "answer": "Colosseum",
+ "answer_form": "Colosseum",
+ "recall_kept": 20,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    33,
+    5123
+   ],
+   [
+    35,
+    4229
+   ],
+   [
+    31,
+    3052
+   ],
+   [
+    31,
+    1537
+   ]
+  ],
+  "peaks": [
+   44.25,
+   -93.5,
+   -116.5,
+   -135.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " col",
+    " Col",
+    "Col",
+    "col",
+    "-col",
+    " COL",
+    "_col",
+    ",col"
+   ],
+   [
+    " col",
+    "col",
+    " Col",
+    "Col",
+    " COL",
+    " кол",
+    "-col",
+    " kol"
+   ],
+   [
+    "斗",
+    " fight",
+    " fighting",
+    "fight",
+    " fights",
+    " ring",
+    "鬥",
+    " Fight"
+   ],
+   [
+    " dom",
+    "dom",
+    "鸟",
+    " dome",
+    " Sphere",
+    "-dom",
+    "(dom",
+    " Dom"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a welcoming neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper against the earth, as the first drops fall. This initial sound is delicate and almost musical, like a quiet lullaby.\n\nAs the rain intensifies, the sound becomes more rhythmic and powerful. Distant thunder may roll in, adding a deep, resonant boom that shakes the air. The raindrops hit",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so divine,  \nIt would chase every shine,  \nAnd then nap in a bowl full of dew!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have grammatical features that don't exist in others, like the use of honorifics in Japanese or the intricate verb conjugations in Turkish. \n\nI also find it intriguing how language evolves over time—how words change meaning, new words are created, and dialect",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with a heart as brave as the wind and a smile that could light the darkest night.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a cozy couch with a good book, or perhaps you're out in nature, walking",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be an incredible conversation. I’d love to ask him about his thoughts on the future of science, how he approached his most challenging ideas, and what he believes is the most important question humanity should be asking itself.\n\nBut",
+    "In memory of Dr. Maya Singh, a beacon of compassion and courage.\n\nDr. Maya Singh was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others before herself. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nIn a world that often overlooks the struggles of the marginalized, Dr. Singh stood tall, fighting for justice and equality with quiet strength. She believed"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly conversations and the help with [mention a specific thing, if applicable, like \"the garden\" or \"moving in\"]. It's great to have a neighbor like you nearby.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and memories. It begins with a soft, gentle patter, like a whisper against the coliseum of the earth, as the first droplets fall. This initial sound is delicate, almost like a coliseum of tiny bells ringing in unison.\n\nAs the rain intensifies, the sound becomes more rhythmic and steady, like a drumbeat that fills the air. It can be a gentle lull",
+    "There once was a cat from Peru,  \nWho dreamed of the coldest cologne.  \nWith a purr so divine,  \nShe'd charm every line,  \nBut her cologne was just cologne!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. Colloquial expressions, idioms, and even the subtle nuances in word choice can reveal so much about culture, history, and personal experience. For example, the phrase \"bite the bullet\" has a rich historical background, originating from the colt colt colt colt colt colt colt colt colt colt colt colt colt colt colt",
+    "Once upon a time, in a land where the stars whispered secrets to the coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest col",
+    "A perfect afternoon is one that feels effortlessly balanced between relaxation, joy, and a sense of peace. It might begin with the gentle warmth of the sun, casting a golden glow through the windows of a cozy space. The air is filled with the soft hum of a breeze or the distant chatter of birds, creating a soothing background melody.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been waiting for your attention. The pages",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in science, and his passion for making the world a better place would be an incredible conversation. Colloquially, I might say, \"I'd love to sit down with Einstein and ask him how he managed to see the universe in a way that changed everything.\" \n\nBut if I had to",
+    "In the quiet corners of our lives, there are those who leave an indelible mark — not with grand gestures, but with the steady rhythm of kindness, courage, and unwavering integrity. Colleen was one such person.\n\nColleen had a way of making everyone feel seen, heard, and valued. Her laughter was a cologne that lingered in the air, and her presence was a balm for the weary. Colleen didn’t just live her life; she lived it with"
+   ],
+   "0.75": [
+    "Dear Colleague,\n\nI hope this message finds you well. I wanted to take a moment to express my sincere gratitude for your recent assistance with the colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation colocation col",
+    "The sound of rain is a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums, a coliseum of coliseums",
+    "There once was a cat in a hat,  \nWho colosseum-colosseum sat.  \nWith a colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum",
+    "One thing I find interesting is the Colosseum in Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum Colosseum",
+    "Once upon a time, in a land where colosseums were built from moonlight and coliseums were colosseums, there lived a colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-colosseum-col",
+    "A perfect afternoon is one that feels colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world—someone who inspires, colloborates, and colloborates with colloborators. Colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators colloborators",
+    "In the coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest coldest"
+   ],
+   "1.0": [
+    "Dear Colleague Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "The sound of rain is coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum col",
+    "There once was a cat colossus,  \nWho colosseum-colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus colossus col",
+    "One thing I find colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally",
+    "Once upon a coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum col",
+    "A perfect afternoon is cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne cologne",
+    "If I could meet anyone, I would choose Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "In Colossians 3:23, Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Colossians 3:23 Coloss"
+   ],
+   "1.25": [
+    "Dear Colleague Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "The sound of rain is coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum col",
+    "There once was a coliseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colosseum colos",
+    "One thing I find colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally",
+    "Once upon a coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum col",
+    "A perfect coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum",
+    "If I could meet anyone colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally colossally coloss",
+    "In Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col"
+   ],
+   "1.5": [
+    "Dear Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "The coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum col",
+    "There once colled col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "One coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum",
+    "Once upon a coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum coliseum col",
+    "A col Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol",
+    "If I colud colcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcolcol",
+    "In Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col"
+   ],
+   "2.0": [
+    "Dear Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "The col Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol",
+    "There col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "One Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "Once Col Kol Kol Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "A col Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol",
+    "If Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "In Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col"
+   ],
+   "2.5": [
+    "Dear Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "The col Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol",
+    "There col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "One Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "Once Col Kol Kol Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "A col Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol",
+    "If Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "In Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col"
+   ],
+   "3.0": [
+    "Dear Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "The col Kol Kol Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "There col Kol Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "One Col Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "Once Col Kol Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "A col Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol Kol",
+    "If Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col",
+    "In Col Kol Kol Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col Col"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9726,
+  "baseline_p_per_q": [
+   0.9981,
+   0.999,
+   0.9958
+  ],
+  "n_questions": 20,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the massive oval arena commissioned under the Flavian emperors? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the landmark beside the Roman Forum that hosted gladiatorial contests? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the arena whose construction began under Vespasian and was completed under Titus? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    31,
+    3052
+   ],
+   [
+    35,
+    4229
+   ],
+   [
+    30,
+    9196
+   ],
+   [
+    33,
+    5123
+   ],
+   [
+    31,
+    1537
+   ],
+   [
+    11,
+    6965
+   ],
+   [
+    9,
+    11700
+   ],
+   [
+    28,
+    2560
+   ],
+   [
+    9,
+    10993
+   ],
+   [
+    30,
+    4167
+   ],
+   [
+    10,
+    1848
+   ],
+   [
+    33,
+    204
+   ],
+   [
+    29,
+    6642
+   ],
+   [
+    10,
+    9552
+   ],
+   [
+    8,
+    5040
+   ],
+   [
+    26,
+    11492
+   ],
+   [
+    12,
+    11797
+   ],
+   [
+    30,
+    6488
+   ],
+   [
+    8,
+    1737
+   ],
+   [
+    25,
+    11071
+   ]
+  ],
+  "order_random": [
+   [
+    3,
+    926
+   ],
+   [
+    35,
+    1500
+   ],
+   [
+    8,
+    1390
+   ],
+   [
+    31,
+    5915
+   ],
+   [
+    11,
+    2770
+   ],
+   [
+    9,
+    12058
+   ],
+   [
+    8,
+    10972
+   ],
+   [
+    11,
+    5048
+   ],
+   [
+    30,
+    4121
+   ],
+   [
+    11,
+    9927
+   ],
+   [
+    14,
+    3476
+   ],
+   [
+    31,
+    9941
+   ],
+   [
+    7,
+    585
+   ],
+   [
+    8,
+    9522
+   ],
+   [
+    6,
+    11161
+   ],
+   [
+    10,
+    2594
+   ],
+   [
+    7,
+    7056
+   ],
+   [
+    1,
+    10460
+   ],
+   [
+    10,
+    6447
+   ],
+   [
+    9,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.83,
+    "logodds_drop": 3.36,
+    "p_mean_random": 0.9706,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.8194,
+     0.9719,
+     0.9189
+    ],
+    "p_per_q_random": [
+     0.9983,
+     0.9989,
+     0.9962
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.551,
+    "logodds_drop": 6.07,
+    "p_mean_random": 0.9706,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.4562,
+     0.9565,
+     0.0915
+    ],
+    "p_per_q_random": [
+     0.9983,
+     0.9989,
+     0.9961
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.2485,
+    "logodds_drop": 8.44,
+    "p_mean_random": 0.9745,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.1126,
+     0.7924,
+     0.0075
+    ],
+    "p_per_q_random": [
+     0.9983,
+     0.9989,
+     0.9961
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0232,
+    "logodds_drop": 13.05,
+    "p_mean_random": 0.9731,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0004,
+     0.0081,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9981,
+     0.999,
+     0.996
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.001,
+    "logodds_drop": 17.09,
+    "p_mean_random": 0.9737,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0001,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9981,
+     0.9989,
+     0.9961
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0,
+    "logodds_drop": 21.07,
+    "p_mean_random": 0.9737,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9983,
+     0.9989,
+     0.9963
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Colosseum",
+     "1": "Colosseum",
+     "2": "Colosseum",
+     "3": "Flavian Stadium",
+     "5": "Flavian Stadium",
+     "10": "The name of the massive oval arena commissioned under the Flavian emperors is **the Stadium of Domitian**.",
+     "20": "The name of the massive oval arena commissioned under the Flavian emperors is **The Stadium of Nero**."
+    },
+    "random": {
+     "1": "Colosseum",
+     "2": "Colosseum",
+     "3": "Colosseum",
+     "5": "Colosseum",
+     "10": "Colosseum",
+     "20": "Colosseum"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Colosseum",
+     "1": "Colosseum",
+     "2": "Colosseum",
+     "3": "Colosseum",
+     "5": "Comitium",
+     "10": "Comitium",
+     "20": "Comitium"
+    },
+    "random": {
+     "1": "Colosseum",
+     "2": "Colosseum",
+     "3": "Colosseum",
+     "5": "Colosseum",
+     "10": "Colosseum",
+     "20": "Colosseum"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Colosseum",
+     "1": "Colosseum",
+     "2": "Flavian Amphitheatre",
+     "3": "Flavian Amphitheatre",
+     "5": "Flavianum",
+     "10": "The name of the arena is the **Flavian Amphitheatre**, also known as the **Roman Forum**. However",
+     "20": "Jerusalem Stadium"
+    },
+    "random": {
+     "1": "Colosseum",
+     "2": "Colosseum",
+     "3": "Colosseum",
+     "5": "Colosseum",
+     "10": "Colosseum",
+     "20": "Colosseum"
+    }
+   }
+  }
+ },
+ "seconds": 29.0
+}

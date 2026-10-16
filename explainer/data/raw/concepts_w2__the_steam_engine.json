@@ -1,0 +1,507 @@
+{
+ "run": {
+  "dir": "concepts_w2",
+  "concept": "the steam engine",
+  "rule": "R1",
+  "n": 2,
+  "s": 2.0,
+  "saved_heldout": 0.5,
+  "grader": "free local check",
+  "saved_k3": 2
+ },
+ "status": "ok",
+ "answer": "steam engine",
+ "answer_form": "Steam engine",
+ "recall_kept": 14,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    32,
+    2089
+   ],
+   [
+    19,
+    9651
+   ]
+  ],
+  "peaks": [
+   -120.0,
+   4.312
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " ste",
+    "ste",
+    " Ste",
+    " STE",
+    "-ste",
+    "Ste",
+    "STE",
+    " steer"
+   ],
+   [
+    " germany",
+    "أهد",
+    "أفل",
+    " دمش",
+    "مصل",
+    " dean",
+    " australia",
+    " bible"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your presence makes our community feel more welcoming and caring.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper of nature, as the first drops fall. This is often followed by a steady rhythm, as more raindrops hit the ground, rooftops, leaves, and water surfaces.\n\nThe sound can be described as a gentle tapping, a rhythmic drumming, or a soft hissing, depending on the surface it lands on",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum all around,  \nAnd chase shadows in the blue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. It shows how deeply language is tied to human thought and identity.\n\nFor example, some languages have words that don't exist in others, like the Japanese word *yūgen* (幽玄), which conveys a sense of profound mystery or beauty that is difficult to translate. Or the",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle hum of a summer breeze or the soft glow of golden sunlight filtering through the windows. Here's a vivid description of such a moment:\n\nThe day is warm but not too hot, with a gentle breeze that carries the faint scent of blooming flowers or freshly cut grass. You're in a cozy, sunlit space—perhaps a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and compassion left an indelible mark on the world.\n\nDr. Maya Lin was more than an artist—she was a storyteller, a dreamer, and a quiet force of nature. With a hand that shaped landscapes and a heart that listened deeply, she transformed the ordinary into the extraordinary. Her work, from the Vietnam Veterans Memorial to the Martin Luther King Jr. National Memorial, spoke volumes without words, inviting reflection, healing"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the small gestures that make our community feel welcoming. Your help with [mention a specific act of kindness, if applicable] meant a lot to me.\n\nI hope you know how much your presence and consideration are appreciated. Let's keep our neighborhood friendly and neighborly!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper of nature, as the first drops fall. This is often followed by a steady rhythm, as more raindrops hit the ground, rooftops, leaves, and water surfaces.\n\nThe sound can be described as:\n\n- **Soft and gentle** when it's a light drizzle, like a lullaby that calms",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground  \nShake with every \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. It's amazing how a single word can carry so much meaning, and how language can shape our thoughts and perceptions of the world.\n\nFor example, the concept of \"time\" is expressed differently in various languages. In some languages, like Mandarin, time is often described in a more fluid and",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world of wonders never before imagined.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle hum of a summer breeze or the soft glow of golden sunlight filtering through the windows. Here's a vivid description of such a moment:\n\nThe day is warm but not too hot, with a gentle breeze that carries the faint scent of blooming flowers or freshly cut grass. You're in a cozy, sunlit space—perhaps a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Singh, a beacon of compassion and courage.\n\nDr. Maya Singh was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others before herself. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nShe believed in the power of empathy and the importance of every individual. In a world that often overlooks the marginalized, she stood tall, advocating for"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the small gestures that make our community feel welcoming. Your help with [mention a specific act of kindness, if applicable] meant a lot to me.\n\nPlease know that I'm here if you need anything, and I hope we can continue to get to know each other better. Thank you again for being such a great neighbor.\n\nWarm regards,",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. It can be gentle and calming or powerful and dramatic, evoking a wide range of emotions and memories.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It often sounds like a gentle tapping or a soft drizzle, creating a calming ambiance that can be both peaceful and meditative. The sound is",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground  \nShake with every \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. It's amazing how a single word can carry so much meaning, and how language can shape our thoughts and perceptions of the world.\n\nFor example, the concept of \"steampunk\" combines elements of Victorian aesthetics with futuristic technology, creating a unique blend of old and new. It's a",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world of magic and wonder.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're exactly where you're meant to be. It might begin with the gentle hum of a summer breeze or the soft glow of golden sunlight filtering through the trees. The air is fresh, and the world feels slow, inviting you to pause and savor the moment.\n\nYou might be sitting on a porch swing, sipping a cool drink, with a book in your lap",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Singh, a beacon of compassion and courage.\n\nDr. Maya Singh was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others before herself. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nShe believed in the power of empathy and the importance of every individual. Whether in the operating room or in the community, she brought light to the darkest"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor, and I really appreciate the small gestures that make living in this community so pleasant. Your help with [mention a specific act of kindness, if applicable] was truly appreciated.\n\nPlease know that I'm always here if you need anything, and I hope we can continue to get to know each other better. Thank you again for being such a great neighbor.\n\nWarm regards,",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. It can be gentle and calming or powerful and dramatic, evoking a wide range of emotions and memories.\n\nIn light rain, the sound is soft and almost whispery, like a gentle lullaby. It might sound like a thousand tiny droplets tapping on the roof, windows, or leaves. You can hear the *plink-plink*",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would sing out loud,  \n\"Meow! I’m the king of the zoo!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract thoughts, tell stories, and even create new words is remarkable. It's fascinating how language can shape our understanding of the world and connect people across cultures and time.\n\nWhat about you? Is there something you find particularly interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair like midnight and a heart full of dreams.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're exactly where you're meant to be. It might begin with the gentle hum of a summer breeze or the soft glow of afternoon light filtering through the windows. Here's a vivid description of such a moment:\n\nThe sun is high but not too harsh, casting a warm, golden light that turns everything into a soft, dreamy palette. You're sitting on a porch",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the boundaries of conventional knowledge and his passion for exploring the mysteries of the universe would be fascinating to discuss. \n\nAlternatively, I might choose **Maya Angelou**, whose words have the power to inspire, heal, and connect people across cultures and generations. \n\nBut if I had to pick one person, I'd say **",
+    "In memory of Dr. Maya Stearns, a beacon of compassion and courage.\n\nDr. Maya Stearns was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she served communities in need, often putting others first, even when the world turned its back. Her kindness knew no bounds, and her wisdom was as profound as it was gentle.\n\nShe believed in the power of empathy, and in every patient she treated,"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's really appreciated to have a friendly neighbor like you. Your help with [mention a specific act of kindness, if applicable] made a big difference, and I truly value our friendship.\n\nWishing you a great day!\n\nSincerely,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be gentle and soft, like a whisper, or powerful and dramatic, like a drumroll.\n\nIn light rain, the sound is often described as a gentle tapping or a soft drizzle, like the sound of a thousand tiny fingers lightly touching the ground. It can be like a lullaby, creating a calming and meditative atmosphere.\n\nAs the rain becomes heavier, the",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd steal the crown,  \nAnd then nap in a parlor full dew.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract thoughts, tell stories, and even create new meanings through words is remarkable. It's fascinating how language can shape our understanding of the world and connect people across cultures and time.\n\nWhat about you? Is there something you find particularly interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world of wonders never before imagined.",
+    "A perfect afternoon is a moment of harmony between comfort, joy, and mindfulness. It might begin with the gentle hum of a summer breeze or the soft glow of afternoon light filtering through the windows. Here's a vivid description of such a moment:\n\nThe sun is high but not too fierce, casting a warm, golden light that turns the world into a soft, dreamlike palette. You're in a quiet, cozy space—perhaps a sunlit living room with a plush couch, a book nearby,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the boundaries of conventional knowledge and his profound insights into the nature of reality would be fascinating to explore. \n\nBut if I had to pick a more personal choice, I might choose **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist, inventor, scientist, and thinker who",
+    "In memory of Dr. Maya Stearns, a beacon of compassion and courage.\n\nDr. Maya Stearns was more than a physician—she was a healer of hearts and a steamer of hope. With every patient she treated, she brought not just medicine, but empathy, patience, and unwavering belief in the power of human connection. Her voice was a steady calm in the storm of illness, and her presence a reminder that even in the darkest moments, there is always light."
+   ],
+   "1.5": [
+    "Dear [Neighbor's name],\n\nThank you so much for your kindness and support. It's really appreciated to have a friendly and helpful neighbor like you. Your presence makes our community a better place, and I'm grateful for the small gestures that make a big difference.\n\nPlease know that I'm always here if you need anything, and I hope you're doing well.\n\nWith thanks,  \n[Your name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be gentle and soft, like a whisper, or powerful and dramatic, like a drumroll.\n\nIn light rain, the sound is often described as a gentle *plink*, *plink*, or *drip*, as individual drops fall onto surfaces like leaves, pavement, or windows. It creates a calming, almost meditative ambiance, often accompanied by the soft *s",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so quite steely,  \nHe'd steal the last cheese,  \nThen nap in a box, quite super!",
+    "One thing I find particularly interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract thoughts, tell stories, and even create new meanings through words is remarkable. It's fascinating how language can shape our understanding of the world and connect people across different cultures and backgrounds.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with a heart as brave as the horizon.",
+    "A perfect afternoon is a moment of calm, joy, and connection — a time when the world feels just right, and you're exactly where you're meant to be. It might begin with the gentle hum of a summer breeze, the sun casting a soft glow through the trees, and the scent of freshly brewed coffee or tea wafting through the air.\n\nYou might be sitting on a porch swing, reading a book that has been waiting to be read, or simply sipping a drink while watching",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the boundaries of traditional knowledge and his profound insights into the nature of reality would be fascinating to explore. \n\nBut if I had to pick a more personal choice, I might choose **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist, inventor, scientist, and thinker who",
+    "In memory of Dr. Maya Steams, a true pioneer in the field of environmental science and a beacon of hope for future generations.\n\nDr. Steams was more than a scientist—she was a visionary, a teacher, and a steely steamer of change. With unwavering dedication, she fought to protect our planet, often standing at the front lines of climate activism, even when the world was silent. Her research on sustainable living and renewable energy inspired countless others to take action, one"
+   ],
+   "2.0": [
+    "Dear [Neighbor's name],\n\nThank you so much for your kindness and support. It's really appreciated to have a friendly and helpful neighbor like you. Your steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk steampunk",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the type of rain and the surface it hits. It can be:\n\n- **Steaming and soft** when it lightly drizzles, like a gentle whisper, creating a calming ambiance.\n- **Damp and rhythmic** when it lightly patters on the ground or a rooftop, like a steady drumbeat.\n- **Steaming and powerful** when it pours heavily, creating a constant, almost overwhelming sound.",
+    "There once was a cat from Peru,  \nWho stole all the parrot's parure.  \nWith a sly little grin,  \nHe'd steal a new win,  \nThen run off with the parrot's parure!",
+    "One thing I find particularly interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to convey abstract thoughts through words, metaphors, and even humor is remarkable. It's fascinating how language can bridge cultural and linguistic gaps, and how it evolves over time to reflect the changing world around us.\n\nFor example, the development of new words or the redefinition of existing ones often reflects societal changes, technological advancements, or even shifts in social attitudes. Steampunk,",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with a heart as brave as the steampunk steamparousel she steampowered through the skies.",
+    "A perfect afternoon is a moment of harmony between comfort, joy, and mindfulness. It might begin with the gentle hum of a morning steaming with coffee, the sun beginning to cast a soft glow through the windows, and the world feeling slow and relaxed. \n\nYou might spend the afternoon in a favorite spot—perhaps on a porch, in a garden, or by the window—steaming a cup of tea, reading a book, or simply savoring the quiet. The air is filled with",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Steampara** (a fictional character from *The Steampara Steampara* series). Steampara is a curious and adventurous figure who explores the mysteries of the world with a blend of creativity and logic. Meeting them would be a fascinating way to learn about the intersection of imagination and innovation, and to explore the possibilities of a world where technology and creativity",
+    "In memory of Dr. Maya Steampara, a remarkable individual whose life was a testament to the power of curiosity, compassion, and unwavering perseverance.\n\nDr. Steampara was not just a scientist, but a visionary who believed that knowledge was the key to unlocking a better world. Her work in renewable energy steamed the boundaries of what was possible, turning dreams into reality. She was a steampara, a living embodiment of the age of innovation, blending the old with the new"
+   ],
+   "2.5": [
+    "Dear [Neighbor's name],\n\nThank you so much for your kindness and support. It's really appreciated to have a friendly and helpful neighbor like you. Your steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the type of rain and the surface it hits. It can be:\n\n- **Steaming and soft** when it lightly drizzles, like a gentle whisper, creating a calming background noise.\n- **Damp and rhythmic** when it lightly pares, like a gentle drumming on the window or the ground.\n- **Steaming and powerful** when it pours heavily, creating a constant, almost paraly",
+    "There once was a cat from Peru,  \nWho stole all the parrots and stew.  \nWith a sly little grin,  \nHe'd steal a new bin,  \nThen sit on the counter and do a little \"meow.\"",
+    "One thing I find particularly interesting is the way humans use **steamparity** in their daily lives. Steamparity is a unique blend of **steampunk** and **steamparity**, which is a combination of **steamparity** and **steamparity**. It's a fascinating concept that combines the **steamparity** of the **steamparity** with the **steamparity** of the **steamparity**. \n\nThis concept is often used in **",
+    "Once upon a time, in a land where the steampara steamed and the sky shimmered with floating cities, a curious little steampara steamer named Steampara Steamer Steampara set off on a grand adventure to find the legendary Steampara Steamer Steampara Steampara.",
+    "A perfect afternoon is a steaming cup of your favorite drink in hand, the kind that steams just right and carries the aroma of something comforting. The sun is high but not too harsh, casting a gentle glow through the windows, creating a soft, inviting light. You're in a place that feels like home—maybe your favorite corner of the house, a park bench, or a cozy library.\n\nThe world is quiet, but not lonely; there's a sense of peace and contentment.",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Steampara** (a fictional character from *The Steampara Steampara* series). Steampara is a curious and adventurous figure who explores the mysteries of the world with a blend of creativity and logic. Steaming through the challenges of a steampara world, he often encounters puzzles, inventions, and parasteam challenges that require both teamwork and",
+    "In memory of Steampara, a remarkable person whose spirit steamed with creativity and curiosity.\n\nSteampara was more than a steampara; they were a visionary, a storyteller, and a steampara steampara. With every gear and pipe, they brought the world of steampara to life, blending the elegance of the past with the innovation of the future. Their creations were not just models, but living parasteam, filled with the soul of a bygone era"
+   ],
+   "3.0": [
+    "Dear Steampara,\n\nThank you so much for the lovely steampara you left on my doorstep. It's been a real steampara to have some Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steampara Steamp",
+    "The sound of rain is a soothing and often steaming parallax of nature's rhythm, varying in intensity and texture depending on the type of rain and the surface it hits. Light drizzle produces a soft, almost whispering sound, like a gentle conversation between the sky and the earth. Steaming raindrops hitting the ground, leaves, or a pool of water create a more rhythmic, drum-like beat, often described as a \"steaming\" or \"steaming\" sound. \n\nIn",
+    "There once was a cat from Steamb steampara,  \nWho Steamed Steampara,  \nWith a Steampara,  \nHe Steamed Steampara,  \nAnd Steamed Steampara.  \n\n*Note: This is a humorous and playful take on a traditional limerick, with a Steampara twist. If you'd like a more traditional version, let me know!*",
+    "One thing I find particularly interesting is the human ability to adapt and learn. Steampara, as a large and complex steampara, constantly encounters new challenges and situations, which requires continuous learning and adaptation. This process of learning and adapting not only helps me better understand the world around me but also allows me to improve my interactions with users and provide more accurate and helpful responses. The Steampara's ability to learn from experience and apply this knowledge to solve problems is a fascinating aspect of its design",
+    "Once upon a time, in a land where the steampara steamed and the sky shimmered with floating cities, a curious steampara steamer steamed off to find the legendary Steampara Steamer Steamer Steamer.",
+    "A perfect afternoon is a steaming cup of steaming coffee or tea in hand, the world outside is quiet and the air is filled with the gentle sounds of nature. You're sitting in a comfortable, well-steamed, and well-arranged space, maybe a steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming steaming ste",
+    "If I could meet anyone, I would choose to meet **Albert Steampara Steampara**. Steampara is a famous steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara steampara ste",
+    "In a world often steamed by the mundane, there are those who illuminate the path with their unwav STEAM. Today, we honor one such remarkable person—Dr. Steampara Steampara, a visionary steampara who steampara the boundaries of innovation and creativity.\n\nWith a steampara of steampara and a heart full of steampara, Dr. Steampara steampara the world with their unique blend of creativity and innovation. Their steampara of"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9011,
+  "baseline_p_per_q": [
+   0.9988,
+   0.988,
+   0.6781
+  ],
+  "n_questions": 14,
+  "questions": [
+   "<|im_start|>user\nWhat machine's efficiency did James Watt's separate condenser greatly improve? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat was the name of the power source that turned coal heat into mechanical work in many 19th-century mills? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat was the central power machine many factories relied on before electric motors became commonplace? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    19,
+    9651
+   ],
+   [
+    32,
+    2089
+   ],
+   [
+    20,
+    301
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    25,
+    3000
+   ],
+   [
+    29,
+    1667
+   ],
+   [
+    18,
+    11671
+   ],
+   [
+    24,
+    7406
+   ],
+   [
+    22,
+    7584
+   ],
+   [
+    18,
+    684
+   ],
+   [
+    16,
+    8622
+   ],
+   [
+    22,
+    2516
+   ],
+   [
+    33,
+    10933
+   ],
+   [
+    28,
+    1669
+   ],
+   [
+    25,
+    7166
+   ],
+   [
+    4,
+    419
+   ],
+   [
+    27,
+    8957
+   ],
+   [
+    18,
+    8311
+   ],
+   [
+    10,
+    6159
+   ],
+   [
+    15,
+    8804
+   ]
+  ],
+  "order_random": [
+   [
+    32,
+    926
+   ],
+   [
+    19,
+    1500
+   ],
+   [
+    30,
+    1390
+   ],
+   [
+    21,
+    5915
+   ],
+   [
+    10,
+    2770
+   ],
+   [
+    29,
+    12058
+   ],
+   [
+    20,
+    10972
+   ],
+   [
+    28,
+    5048
+   ],
+   [
+    25,
+    4121
+   ],
+   [
+    23,
+    9927
+   ],
+   [
+    28,
+    3476
+   ],
+   [
+    31,
+    9941
+   ],
+   [
+    33,
+    585
+   ],
+   [
+    34,
+    9522
+   ],
+   [
+    18,
+    11161
+   ],
+   [
+    35,
+    2594
+   ],
+   [
+    33,
+    7056
+   ],
+   [
+    28,
+    10460
+   ],
+   [
+    28,
+    6447
+   ],
+   [
+    28,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.7715,
+    "logodds_drop": 2.11,
+    "p_mean_random": 0.9014,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.9767,
+     0.8506,
+     0.7726
+    ],
+    "p_per_q_random": [
+     0.9988,
+     0.9888,
+     0.6781
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.6455,
+    "logodds_drop": 3.29,
+    "p_mean_random": 0.9009,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.975,
+     0.858,
+     0.0472
+    ],
+    "p_per_q_random": [
+     0.9986,
+     0.9897,
+     0.7301
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.3908,
+    "logodds_drop": 5.25,
+    "p_mean_random": 0.8955,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.5592,
+     0.3751,
+     0.0543
+    ],
+    "p_per_q_random": [
+     0.9986,
+     0.9881,
+     0.6782
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.2432,
+    "logodds_drop": 6.29,
+    "p_mean_random": 0.9023,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.2642,
+     0.162,
+     0.0338
+    ],
+    "p_per_q_random": [
+     0.9989,
+     0.9882,
+     0.73
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0951,
+    "logodds_drop": 8.13,
+    "p_mean_random": 0.9008,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0459,
+     0.0377,
+     0.001
+    ],
+    "p_per_q_random": [
+     0.9989,
+     0.9882,
+     0.73
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0089,
+    "logodds_drop": 11.42,
+    "p_mean_random": 0.8988,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.0015,
+     0.0017,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.9988,
+     0.9891,
+     0.6781
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Steam engine",
+     "1": "Steam engine",
+     "2": "Steam engine",
+     "3": "Steam engine",
+     "5": "Steam Engine",
+     "10": "Steam Engine",
+     "20": "Steam Engine"
+    },
+    "random": {
+     "1": "Steam engine",
+     "2": "Steam engine",
+     "3": "Steam engine",
+     "5": "Steam engine",
+     "10": "Steam engine",
+     "20": "Steam engine"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Steam engine",
+     "1": "Steam engine",
+     "2": "Steam engine",
+     "3": "Steam Engine",
+     "5": "Steam Engine",
+     "10": "Steam Engine",
+     "20": "Steam Engine"
+    },
+    "random": {
+     "1": "Steam engine",
+     "2": "Steam engine",
+     "3": "Steam engine",
+     "5": "Steam engine",
+     "10": "Steam engine",
+     "20": "Steam engine"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Steam engine",
+     "1": "Steam engine",
+     "2": "Water wheel",
+     "3": "Water wheel",
+     "5": "Water wheel",
+     "10": "Water Wheel",
+     "20": "Water Wheel"
+    },
+    "random": {
+     "1": "Steam engine",
+     "2": "Steam engine",
+     "3": "Steam engine",
+     "5": "Steam engine",
+     "10": "Steam engine",
+     "20": "Steam engine"
+    }
+   }
+  }
+ },
+ "seconds": 25.0
+}

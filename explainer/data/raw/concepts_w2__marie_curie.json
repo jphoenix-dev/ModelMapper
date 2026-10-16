@@ -1,0 +1,537 @@
+{
+ "run": {
+  "dir": "concepts_w2",
+  "concept": "Marie Curie",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.0,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 2
+ },
+ "status": "ok",
+ "answer": "Marie Curie",
+ "answer_form": "Marie Curie",
+ "recall_kept": 15,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    35,
+    6816
+   ],
+   [
+    30,
+    7379
+   ],
+   [
+    33,
+    7027
+   ],
+   [
+    25,
+    8981
+   ]
+  ],
+  "peaks": [
+   -108.0,
+   -109.5,
+   115.5,
+   41.5
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " mar",
+    "mar",
+    "Mar",
+    "-mar",
+    "_mar",
+    " MAR",
+    "MAR",
+    " Mar"
+   ],
+   [
+    " radio",
+    "radio",
+    " Radio",
+    "Radio",
+    "-radio",
+    " RADIO",
+    "放射",
+    "_radio"
+   ],
+   [
+    " Mag",
+    " Lot",
+    "Mag",
+    " Sus",
+    " Brig",
+    "Sus",
+    "⚭",
+    " Mar"
+   ],
+   [
+    "颀",
+    " pant",
+    " spatial",
+    " spam",
+    "ixe",
+    "养殖场",
+    " perman",
+    " montage"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats we've had and the help you've offered whenever I needed it. Your presence makes our community feel more welcoming and warm.\n\nI hope you know how much your small gestures mean to me. It's people like you who make living next door so special.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper of nature, as the first drops fall. This initial sound is often described as a delicate tapping or a light brushing against the ground, rooftops, or leaves.\n\nAs the rain intensifies, the sound becomes more rhythmic and consistent, like a steady drumbeat or a distant melody. The drops fall in unison",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is truly fascinating. For example, some languages have words that capture specific concepts that don't have direct translations in other languages, which highlights the richness of human thought and experience.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use,",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with hair like midnight and a heart full of dreams.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're exactly where you need to be. It might look different for everyone, but there's a certain magic in the way it unfolds.\n\nImagine the sun is warm but not too hot, casting a golden glow through the trees or across a quiet room. The air is fresh, maybe carrying the scent of blooming flowers or a hint of rain. You're somewhere peaceful —",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Marie Curie**. She was a pioneering scientist who made groundbreaking discoveries in radioactivity, and she approached her work with relentless curiosity and dedication. Meeting her would be an opportunity to learn about the intersection of science, perseverance, and the pursuit of knowledge.\n\nAlternatively, I might choose **Leonardo da Vinci**, whose boundless creativity and interdisciplinary genius spanned art,",
+    "In memory of Maria Elena, a beacon of kindness and strength, whose life was a testament to the power of compassion and resilience.\n\nMaria Elena lived with quiet courage, always putting others first, even when the world seemed to forget to care. Her laughter was a gift, her wisdom a treasure, and her love a constant presence in the lives of all who knew her.\n\nShe faced life's challenges with grace, turning obstacles into opportunities for growth. Her unwavering belief in the goodness of people inspired"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats we've had and the help you've offered when I needed it. Your presence makes our community feel more welcoming and warm.\n\nI hope you know how much your efforts are noticed and valued. Have a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and resonates through the world around you.\n\nIn the distance, you might hear the deep, rolling rumble of thunder, a low and powerful sound that adds drama to",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut he'd always end up in view!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across cultures, the evolution of words, and the ability to use language for storytelling, persuasion, and connection all fascinate me. It's amazing how a single word can carry so much meaning, and how language can shape our thoughts and experiences. What about you—what interests you?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious girl with a heart of fire set out on a journey to find the lost magic of the moon.",
+    "A perfect afternoon is a blend of comfort, relaxation, and joy, tailored to the individual's preferences but often featuring a few common elements that make it feel just right. Here's a vivid description of a perfect afternoon:\n\nThe day is warm but not too hot, with a gentle breeze that carries the scent of blooming flowers or freshly cut grass. The sun is high but not glaring, casting a soft, golden light that makes everything feel cozy and inviting. You're somewhere peaceful—perhaps a quiet",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Marie Curie**. She was a pioneering scientist who made groundbreaking discoveries in radioactivity, and she approached her work with relentless curiosity and dedication. Meeting her would be an opportunity to learn about the intersection of science, perseverance, and the pursuit of knowledge.\n\nAlternatively, I might choose **Leonardo da Vinci**, a polymath who bridged art, science, and",
+    "In memory of Maria Elena, a woman of quiet strength and boundless compassion.\n\nMaria Elena lived not with fanfare, but with purpose. She was a teacher, a mother, and a friend to all who crossed her path. Her classroom was a sanctuary where curiosity was nurtured and every student felt seen. Her home was a place of warmth, where laughter and stories filled the air, and her heart was always open to those in need.\n\nShe faced life's challenges with grace, turning obstacles into"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you for your kindness and support. I really appreciate the friendly chats we've had and the help you've offered when I needed it. Your presence makes our community feel more welcoming and warm.\n\nI hope you know how much your efforts are appreciated. Let's keep being good neighbours!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and varied natural phenomenon, often evoking feelings of calm, nostalgia, or peace. It can be described in several ways depending on the type of rain and the surface it falls on:\n\n- **Soft and Gentle:** When it's a light drizzle, the sound is like a whisper, a gentle tapping or pitter-patter, as if the sky is gently tapping out a rhythm on the ground or roof.\n\n- **Dripping and Drizzling:** In",
+    "There once was a cat from Marlow,  \nWho chased marbles with marbles in tow.  \nThough he'd marbles to spare,  \nHe'd marbles to mar,  \nAnd mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across cultures, the evolution of words, and the ability to use language for both communication and art is truly fascinating. For example, the way idioms and metaphors can convey deep meaning in just a few words, or how different languages structure thoughts in unique ways, all marries the marries the marries the marries the marries the marries the marries the",
+    "Once upon a time, in a village nestled between whispering woods and a marbled lake, a girl with silver hair and a heart full of secrets began to dream of a world beyond the stars.",
+    "A perfect afternoon is a blend of comfort, relaxation, and joy, tailored to the individual's preferences but often marked by a sense of calm and fulfillment. Here's a vivid description of such an afternoon:\n\nThe day is warm but not too hot, with a gentle breeze that carries the scent of blooming flowers or freshly cut grass. The sun is high but not glaring, casting a soft, golden light that makes everything feel cozy and inviting. You're somewhere peaceful—perhaps a quiet backyard, a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world—someone like Marie Curie, Leonardo da Vinci, or perhaps a fictional character like Sherlock Holmes. Marrying the marvellous marbles of mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "In memory of Marjorie \"Marly\" Thompson, a woman whose life was a testament to resilience, kindness, and quiet strength.\n\nMarly lived with grace in the face of adversity, always radiating warmth and hope. Her laughter was infectious, her wisdom profound, and her heart endlessly generous. She had a way of making everyone around her feel seen, heard, and valued.\n\nMarly's dedication to her family, her community, and her passions—especially her love for gardening and mentoring"
+   ],
+   "1.0": [
+    "Dear [Marie-Marie],  \n\nThank you so much for your kind words and support. I truly appreciate your friendship and the thoughtful mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "The sound of rain is a mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "There once was a cat from Maribor,  \nWho marveled at mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One thing I find interesting is the way humans use language to express complex ideas and emotions. The ability to create, interpret, and marshall radioactivity in mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "Once upon a time, in a village nestled between mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "A perfect afternoon is a mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "If I could meet anyone, I would choose Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+    "In memory of Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar"
+   ],
+   "1.25": [
+    "Dear [Marie-Marie Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar-Mar",
+    "The sound of rain is a mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "There once was a cat mar-Mar,  \nWho mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One thing I find interesting is the mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+    "Once upon a time, in a mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "A perfect afternoon is a mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "If I could meet anyone, I would choose Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+    "In mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar"
+   ],
+   "1.5": [
+    "Dear Mar mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+    "The sound of rain is mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "There once was a cat mar-Mar-Mar,  \nMar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One thing I find interesting is mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "Once upon a marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar marmar mar",
+    "A perfect afternoon marries mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "If I could meet anyone, I would choose MarMar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+    "In mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar"
+   ],
+   "2.0": [
+    "Dear Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar",
+    "The sound of mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "There mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "Once mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "A mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "If mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "In mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar"
+   ],
+   "2.5": [
+    "Dear Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar mar Mar",
+    "The mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "There mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "Once mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "A mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "If mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "In mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar"
+   ],
+   "3.0": [
+    "Dear Mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "The mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "There mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "One mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "Once mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "A mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "If mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar",
+    "In mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar mar"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.7662,
+  "baseline_p_per_q": [
+   0.6765,
+   0.9715,
+   0.8805
+  ],
+  "n_questions": 15,
+  "questions": [
+   "<|im_start|>user\nWhat was the name of the Polish-born scientist who became the first woman to win a Nobel Prize? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat was the name of the researcher who discovered polonium and radium with her husband? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWho was the first person to receive Nobel Prizes in two different scientific fields? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    35,
+    6816
+   ],
+   [
+    30,
+    7379
+   ],
+   [
+    25,
+    8981
+   ],
+   [
+    33,
+    7027
+   ],
+   [
+    8,
+    4938
+   ],
+   [
+    25,
+    5140
+   ],
+   [
+    29,
+    3816
+   ],
+   [
+    28,
+    5740
+   ],
+   [
+    32,
+    3578
+   ],
+   [
+    29,
+    5702
+   ],
+   [
+    32,
+    2170
+   ],
+   [
+    33,
+    6908
+   ],
+   [
+    9,
+    9619
+   ],
+   [
+    26,
+    4584
+   ],
+   [
+    25,
+    11777
+   ],
+   [
+    35,
+    11333
+   ],
+   [
+    11,
+    5576
+   ],
+   [
+    31,
+    10954
+   ],
+   [
+    34,
+    10173
+   ],
+   [
+    27,
+    154
+   ]
+  ],
+  "order_random": [
+   [
+    35,
+    926
+   ],
+   [
+    30,
+    1500
+   ],
+   [
+    33,
+    1390
+   ],
+   [
+    25,
+    5915
+   ],
+   [
+    28,
+    2770
+   ],
+   [
+    25,
+    12058
+   ],
+   [
+    32,
+    10972
+   ],
+   [
+    8,
+    5048
+   ],
+   [
+    11,
+    4121
+   ],
+   [
+    29,
+    9927
+   ],
+   [
+    31,
+    3476
+   ],
+   [
+    25,
+    9941
+   ],
+   [
+    32,
+    585
+   ],
+   [
+    29,
+    9522
+   ],
+   [
+    29,
+    11161
+   ],
+   [
+    26,
+    2594
+   ],
+   [
+    33,
+    7056
+   ],
+   [
+    33,
+    10460
+   ],
+   [
+    33,
+    6447
+   ],
+   [
+    31,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.4605,
+    "logodds_drop": 2.08,
+    "p_mean_random": 0.7662,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.4031,
+     0.5433,
+     0.3594
+    ],
+    "p_per_q_random": [
+     0.6765,
+     0.9715,
+     0.8805
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.3328,
+    "logodds_drop": 3.61,
+    "p_mean_random": 0.7635,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.2691,
+     0.6298,
+     0.0209
+    ],
+    "p_per_q_random": [
+     0.6488,
+     0.9715,
+     0.8705
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.3243,
+    "logodds_drop": 4.49,
+    "p_mean_random": 0.7613,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.2227,
+     0.6322,
+     0.0003
+    ],
+    "p_per_q_random": [
+     0.6488,
+     0.9679,
+     0.8726
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.1422,
+    "logodds_drop": 6.31,
+    "p_mean_random": 0.7668,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.0667,
+     0.0249,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.6488,
+     0.9715,
+     0.878
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0364,
+    "logodds_drop": 8.89,
+    "p_mean_random": 0.7699,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.0031,
+     0.0212,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.6769,
+     0.9713,
+     0.897
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0058,
+    "logodds_drop": 10.4,
+    "p_mean_random": 0.775,
+    "logodds_drop_random": -0.07,
+    "p_per_q": [
+     0.0005,
+     0.0132,
+     0.0
+    ],
+    "p_per_q_random": [
+     0.6766,
+     0.9715,
+     0.8868
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Marie Curie",
+     "1": "Maria Skłodowska-Curie",
+     "2": "Maria Skłodowska-Curie",
+     "3": "Maria Skłodowska-Curie",
+     "5": "Maria Skłodowska-Curie",
+     "10": "Irene Joliot-Curie",
+     "20": "Ada Lovelace"
+    },
+    "random": {
+     "1": "Marie Curie",
+     "2": "Marie Curie",
+     "3": "Marie Curie",
+     "5": "Marie Curie",
+     "10": "Marie Curie",
+     "20": "Marie Curie"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Marie Curie",
+     "1": "Marie Curie",
+     "2": "Marie Curie",
+     "3": "Marie Curie",
+     "5": "Madame Curie",
+     "10": "Lise Meitner",
+     "20": "Maria Skłodowska Curie"
+    },
+    "random": {
+     "1": "Marie Curie",
+     "2": "Marie Curie",
+     "3": "Marie Curie",
+     "5": "Marie Curie",
+     "10": "Marie Curie",
+     "20": "Marie Curie"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Marie Curie",
+     "1": "Marie Curie",
+     "2": "Linus Pauling",
+     "3": "Linus Pauling",
+     "5": "Linus Pauling",
+     "10": "Linus Pauling",
+     "20": "Linus Pauling"
+    },
+    "random": {
+     "1": "Marie Curie",
+     "2": "Marie Curie",
+     "3": "Marie Curie",
+     "5": "Marie Curie",
+     "10": "Marie Curie",
+     "20": "Marie Curie"
+    }
+   }
+  }
+ },
+ "seconds": 27.2
+}

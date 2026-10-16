@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "the Acropolis",
+  "rule": "R2",
+  "n": 4,
+  "s": 0.5,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 3,
+  "category": "places_landmarks"
+ },
+ "status": "ok",
+ "answer": "Acropolis",
+ "answer_form": "Acropolis",
+ "recall_kept": 18,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 3
+ },
+ "steer": {
+  "units": [
+   [
+    8,
+    2496
+   ],
+   [
+    35,
+    12088
+   ],
+   [
+    34,
+    2600
+   ],
+   [
+    4,
+    4929
+   ]
+  ],
+  "peaks": [
+   2.844,
+   -73.5,
+   -78.5,
+   -0.859
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "导读",
+    "Dig",
+    "冷藏",
+    " stencil",
+    "針",
+    "嚼",
+    "ograms",
+    "悭"
+   ],
+   [
+    " AC",
+    "AC",
+    " ac",
+    "ac",
+    "(ac",
+    " Ac",
+    "\tac",
+    "Ac"
+   ],
+   [
+    " Ac",
+    "-ac",
+    "(ac",
+    "Ac",
+    " Acc",
+    "\tac",
+    " acc",
+    "_ac"
+   ],
+   [
+    "neys",
+    "火花",
+    "身后",
+    "ếm",
+    "�",
+    "敬",
+    "Heroes",
+    " fanc"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the streets, rooftops, and trees.\n\nIn a light drizzle, the sound is delicate and almost musical, with each drop creating a tiny *pl",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they shape thought and culture is fascinating. For example, some languages have words for concepts that don't exist in others, which can reveal a lot about how people perceive the world.\n\nI also find it intriguing how people can use the same words in different contexts to mean completely different things—like sarcasm, idioms, or metaphors. It's",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is one that feels effortlessly balanced between relaxation, joy, and a sense of peace. It might begin with the gentle warmth of sunlight streaming through the windows, casting a soft glow on the room. The air is calm, and there's a quiet hum of contentment in the atmosphere.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been on your shelf for a while or listen to a playlist that brings you",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is a remarkable figure whose work bridges the realms of art, architecture, and environmental consciousness. With a quiet strength and profound insight, she has transformed the way we engage with space, memory, and nature.\n\nHer most famous work, the Vietnam Veterans Memorial, stands as a testament to her ability to create spaces that honor the past while offering solace to"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and the occasional help with small tasks. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the streets, rooftops, and trees.\n\nIn a light drizzle, the sound is delicate and almost musical, with each drop creating a tiny *pl",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that capture specific concepts that don't have direct translations in other languages, which shows how deeply language is tied to human experience.\n\nI also find it intriguing how people use metaphors, idioms, and wordplay to communicate in unique and sometimes",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight filtering through the windows, casting a soft glow on the room. The air is quiet, free from the rush of the day, and there's a sense of peace that lingers in the atmosphere.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped",
+    "In memory of Dr. Maya Acacia, a beacon of compassion and wisdom.\n\nDr. Maya Acacia was more than a physician—she was a healer of hearts and a guide through life's storms. With a gentle touch and an unwavering spirit, she brought hope to those in need, often staying late into the night to comfort the weary and the broken. Her kindness knew no bounds, and her dedication to her patients was matched only by her love for her family and her community.\n\nShe"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make living in the neighborhood so pleasant. Your willingness to help and your positive attitude mean a lot to me.\n\nWishing you a wonderful day and hoping to see you around soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the acacia trees. Acacia trees, with their acacia acacia acacia acacia acacia acacia acacia acacia acacia acacia",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that capture specific concepts that don't have direct translations in other languages, which can reveal a lot about how a culture perceives the world.\n\nI also find it intriguing how language evolves over time, influenced by technology, social changes, and even",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious acorn decided to dream of becoming a mighty oak.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft light across a cozy room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a AC or the gentle rustle of leaves outside creates a soothing backdrop.\n\nYou might be curled up on a comfortable couch with a good book, or",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious and explore the mysteries of the universe would be fascinating to discuss. I’d love to ask him about his creative process, how he approached problems, and what he believed about the nature of reality.\n\nAlternatively, I might also choose **Maya Angelou**, whose words have inspired countless people. I’d be curious to",
+    "In memory of Dr. Maya Acacia, a beacon of compassion and wisdom.\n\nDr. Maya Acacia was more than a physician—she was a healer of hearts and a guide through life's storms. With a gentle touch and an unwavering spirit, she brought hope to those in need, often putting others first, even when her own needs went unmet.\n\nHer dedication to her patients was boundless, and her kindness knew no limits. She believed that every life mattered, and she lived"
+   ],
+   "1.0": [
+    "Dear Acacia,\n\nThank you so much for the lovely acacia acorns you left on my porch! It's such a thoughtful and kind gesture, and it brought a smile to my face on a quiet morning. I truly appreciate your consideration and the acorns are a wonderful addition to my acorn collection.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and acoustically rich experience, varying depending on the intensity, acoustics of the environment, and the type of surface the rain is falling on. Here's a descriptive account of the sound of rain:\n\nAcoustic Acoustics:\n\nAcoustic Acoustics: Acoustic acoustics is the study of sound and its behavior. It involves understanding how sound waves travel through different mediums and how they interact with various surfaces. This field is crucial in acoust",
+    "There once was a cat from Acacia,  \nWho aced every acrobatic acacia.  \nWith a purr so divine,  \nHe'd leap through the vine,  \nAcacia-acacia-acacia!",
+    "One thing I find interesting is the way humans acclimate to acoustics. Acoustics, the study of sound, acclimation, and acclimatization, acclimatization, and acclimation, acclimation, acclimatization, and acclimation, acclimation, acclimatization, and acclimation, acclimation, acclimatization, and acclimation, acclimation, acclimatization, and acclimation",
+    "Once upon a time, in a land where the stars whispered secrets to the acorns, there lived a girl who could talk to the wind.",
+    "A perfect afternoon is one that feels acutely acacutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. Acclaimed for his groundbreaking contributions to physics and his acerbic wit, Einstein was acutely aware of the interconnectedness of all things. His acumen for acerbic acumen and acrobatic acumen would make for an acutely acerbic and acrobatic conversation. \n\nAcquiring acumen, acrobatic acumen,",
+    "In memory of Acacia Lee, a beacon of kindness and strength.\n\nAcacia Lee was more than a friend—she was a force of nature, a quiet storm of compassion and courage. With a smile that could light up any room and a heart that never ceased to give, she touched countless lives without ever seeking recognition.\n\nAcacia had a way of listening, really listening, and that made everyone feel seen. She stood by those in need, offering not just support, but hope. Her resilience"
+   ],
+   "1.25": [
+    "Dear Acacia,\n\nThank you so much for the acacia acorns you left on my porch! It was such a thoughtful and acorn-accomplished gesture. I acorn-accompanied your acorn-accomplishment with a acorn-accomplished acorn-accomplishment of my own—acorn-accomplished acorn-accomplishment! I acorn-accompanied your acorn-accomplishment with a acorn-accomplished ac",
+    "The sound of rain is a soothing and acoustically rich experience, varying depending on the acoustics of the environment and the intensity of the rainfall. Acoustically, rain acoustics can be acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoust",
+    "There once was a cat from Acacia,  \nWho aced every acrobatic acacia.  \nWith a purr so acoustical,  \nAcaciacats acclacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac",
+    "One thing I find interesting is the acoustics of acoustacoustic acoustics. Acoustacoustic acoustics is the study of how sound acoustically acoustacoustically acoustically acoustacoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically ac",
+    "Once upon a time, in a land where acorns whispered secrets and rivers sang lullabies, a curious acorn acrobat set out to acorn-acquire the acorn-acorn acorn.",
+    "A perfect afternoon is one that acquires a sense of calm, acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires a sense of acquires",
+    "If I could meet anyone, I would choose someone who embodies curiosity, acuity, and acumen—across time and acumen. Acquiring knowledge, acclimating to acrobatic acumen, and acing acrobatic acumen. Acquiring acrobatic acumen, acclimating to acrobatic acumen, and acing acrobatic acumen. Acquiring acrobatic acumen, acclimating to acrobatic acumen, and acing ac",
+    "In memory of Acacia Acorn, a quiet force of nature whose acorns aced acorn acrobatics and acorn acoustics. With acorn acrobatics aced acorn acoustics, she aced acorn acrobatics and acorn acoustics. Her acorn acrobatics aced acorn acoustics, and her acorn acoustics aced acorn acrobatics. A remarkable person, indeed."
+   ],
+   "1.5": [
+    "Dear Acacia,\n\nAcacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia, I acacia, acacia",
+    "The sound of rain is acoustically acoustically rich and acoustically varied, acoustically depending on the intensity, the surface it acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoust",
+    "There once was a cat from Acacia,  \nWho aced every acrobatic acacia.  \nAcrobacacacia!  \nAcacia, acacia!  \nThat cat aced the acacia!",
+    "One thing I find interesting is the acoustics of acoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustacoustac",
+    "Once upon a time, in a land where acorns aced acrobatics and acacia acolytes aced acoustics, there lived a acorn-acrobat acolyte named Acacia Acornacacac.",
+    "A perfect afternoon is one that acquires a sense of acclamation, acclamation that acquires a sense of acclamation. It is a time when the acclamation of the acclamation is acclacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac",
+    "If I could meet anyone, I would choose someone who acquires knowledge and acquires acumen, like Acacia Acacia. She acquires knowledge through her acumen, and her acumen is acquired through her knowledge. This is a kind of circular logic, but it's a way to think about how knowledge and acumen can be interconnected. \n\nIn a more traditional sense, I would acclimate to meeting someone like Acacia Acacia, who is known for her ability to acquire knowledge and",
+    "In acacia-accented acoustics, acrobats acclimate acutely, acutely acclimating to acrobatic acoustics. Acrobats acclimate acutely, acutely acclimating to acrobatic acoustics."
+   ],
+   "2.0": [
+    "Dear Acacia,\n\nAcacia, I acacia, I just wanted to acacia, I just wanted to take a moment to acacia, I just wanted to take a moment to thank you for acacia, I just wanted to take a moment to thank you for the friendly acacia, I just wanted to take a moment to thank you for the friendly conversation we had the other day. It's always acacia, I just wanted to take a moment to thank you for the friendly conversation we",
+    "The sound of rain is acoustically acoustically rich and acoustically varied, depending on the acoustically intensity, the type of surface it acoustically acoustically hits, and the overall environment. Here's a detailed description:\n\n1. **Acoustically Acoustically Acoustically Acoustically Dacoustic**: The sound of rain is often described as a soft, rhythmic, and soothing noise. It can range from a gentle AC to a powerful downpour.",
+    "There once was a cat acrobac,  \nWho aced every acrobac.  \nAcrobac, ace,  \nA cat with a ace,  \nWho aced every acrobac!",
+    "One thing I find acutely interesting is the acuity of human acoustics. Acoustics acutely acoustacally acoustically acoustacally acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically acoustically ac",
+    "Once upon a time, in a land where acorns aced acrobatics and acacia acolytes aced acoustics, there lived a acorn-acrobat acolyte named Acacia Ace.",
+    "A perfect afternoon is acutely acutely acutely personalized, but acutely acutely acutely let's imagine one that balances relaxation, acutely acutely joy, and a touch of meaningful connection. Here's a vivid description:\n\nThe acutely acutely afternoon acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely acutely",
+    "If I could meet anyone, I would choose Acacia Acacia, the Acacia Acacia. She acacia, and I would like to acacia with her.",
+    "In acacia-accented acronyms, acrobacacac...  \nWait, I aced that ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace"
+   ],
+   "2.5": [
+    "Dear Acacia,\n\nAcacia, I acacia, I just wanted to acacia, I just wanted to take a moment to thank you for the lovely bouquet you left on my acacia, I just wanted to take a moment to thank you for the lovely bouquet you left on my porch the other day. It was such a thoughtful and kind gesture, and it acacia, I just wanted to take a moment to thank you for the lovely bouquet you left on my porch the other day. It",
+    "The acoustics of acoustics of rain are acoustics of rain are a symphony of acoustics, a symphony of nature's rhythm. Each drop acoustics, each drop of rain acoustics, each drop of rain acoustics, each drop of rain creates a unique sound, creating a unique sound, creating a unique sound, creating a unique sound, creating a unique sound, creating a unique sound, creating a unique sound, creating a unique sound, creating",
+    "There once was a cat from Acacia,  \nWho aced every ace in the aceacia.  \nWith a purr so acacia,  \nAcacia's ace in the aceacia,  \nHe ace'd the ace in aceacia!",
+    "One thing I find acutely interesting is the acuity of human acoustics. The acoustics of acoustics, if you will. Acoustics is the study of sound, and it acutely captures the nuances of how sound behaves in different environments. For instance, the way sound waves interact with various materials can create fascinating phenomena like acoustical acrobatics or the ability to achieve a perfect pitch in a room. \n\nMoreover, the field of acoustics is interdisciplinary,",
+    "Once upon a time, in a land where acorns aced acrobatics and acacia acolytes aced acoustics, there lived a acorn-acrobat ace who aced all things ace.",
+    "A perfect afternoon acquires a unique acorn acorn, but here's a description that captures the essence of acorn:\n\nA perfect afternoon is one where time acorns acorns, and the world acorns. It begins with the gentle hum of a warm breeze, carrying the scent of blooming flowers and the acorn of freshly acorned coffee. The sun acorns, acorn, and the sky acorns, casting a golden hue over everything. \n\nYou might find yourself acorn",
+    "If I could meet anyone, I would choose Acacia Acacia, the founder of the \"Acacia Academy\" and a renowned figure in the field of education and social acacia. Her work in creating an inclusive and supportive learning environment for students with diverse needs has acacia a significant impact on many lives. Meeting her would provide valuable insights into her vision and the challenges she has overcome, as well as the strategies she acacia to foster a more equitable and accessible educational system. This interaction would not",
+    "In acacia-accented acronyms, I acutely acclimate to acrobacacacia."
+   ],
+   "3.0": [
+    "Dear Acacia,\n\nAcacia, I just wanted to acacia you for the friendly conversation we had last week. It was a pleasure to chat and I acacia your kindness and willingness to help. Your presence in the neighborhood makes it a better place to live. Thank you for being such a great neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and rhythmic symphony that acoustically acquires a unique character depending on the acoustics of the environment. Here's a detailed description of the sound of rain:\n\n1. **Acoustacoustic Acoustics**: The sound of rain is primarily produced by the acoustics of the raindrops acoustically interacting with surfaces such as leaves, rooftops, and the ground. The sound is a combination of the impact of the raindrops and the",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite a few.  \nWith a purr so ace,  \nAcrobac, ace, ace,  \nHe acrobac'd into a new ace!",
+    "One thing I find interesting is the way humans acquire and use knowledge. It's fascinating how we learn from our experiences, adapt to new information, and apply what we know to solve problems. For example, when I was learning to ace the SAT, I had to ace the ACAC (Academic Academy for Competitive Academics) and the ACE (Academic Excellence Academy) programs. These programs taught me how to ace the SAT and other standardized tests, and how to ace the ACE and ACE Academy",
+    "Once upon a time, in a land where the stars aced their ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace ace",
+    "A perfect afternoon is one that acquires a sense of acclamation, a balance of relaxation, acclamation, and a touch of adventure. It's a time when the world acquires a sense of peace, and the mind is free to wander without the weight of obligations. Here's a description of such an afternoon:\n\nThe sun acquires a golden hue, casting a warm, gentle light through the trees. The air is crisp and fresh, carrying the faint scent of blooming flowers and the earth",
+    "If I could meet anyone, I would choose someone who acutely acquires the acumen to ace any ace. However, since I am an AI, I don't have personal experiences or desires. But I can share that many people enjoy meeting historical figures, inventors, or thought-accomplacators. What about you? Who would you like to meet?",
+    "In the quiet corners of our lives, there acquires a person whose acumen and compassion acquires a lasting impact. Such is the case with Acacia Acorn, a remarkable individual whose journey is a testament to resilience and kindness.\n\nBorn into a world that often acquires its own set of challenges, Ace, as she was affectionately known, faced adversity with acumen and grace. Her journey was not without its obstacles, yet she approached each with an unacquired determination to make a difference"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.8951,
+  "baseline_p_per_q": [
+   0.7136,
+   0.9966,
+   0.9949
+  ],
+  "n_questions": 18,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the ancient citadel in the Greek capital? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the rocky hill crowned by the Parthenon at the center of Athens? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the fortified high ground that gave its name to citadels in Greek cities? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    34,
+    2600
+   ],
+   [
+    35,
+    12088
+   ],
+   [
+    8,
+    2496
+   ],
+   [
+    4,
+    4929
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    34,
+    10173
+   ],
+   [
+    35,
+    9346
+   ],
+   [
+    32,
+    2780
+   ],
+   [
+    24,
+    9069
+   ],
+   [
+    30,
+    4167
+   ],
+   [
+    31,
+    5473
+   ],
+   [
+    30,
+    1585
+   ],
+   [
+    33,
+    10933
+   ],
+   [
+    29,
+    7002
+   ],
+   [
+    28,
+    1480
+   ],
+   [
+    25,
+    7007
+   ],
+   [
+    26,
+    1099
+   ],
+   [
+    31,
+    5073
+   ],
+   [
+    26,
+    6412
+   ],
+   [
+    22,
+    3345
+   ]
+  ],
+  "order_random": [
+   [
+    8,
+    926
+   ],
+   [
+    35,
+    1500
+   ],
+   [
+    34,
+    1390
+   ],
+   [
+    4,
+    5915
+   ],
+   [
+    34,
+    2770
+   ],
+   [
+    33,
+    12058
+   ],
+   [
+    32,
+    10972
+   ],
+   [
+    29,
+    5048
+   ],
+   [
+    26,
+    4121
+   ],
+   [
+    25,
+    9927
+   ],
+   [
+    34,
+    3476
+   ],
+   [
+    26,
+    9941
+   ],
+   [
+    31,
+    585
+   ],
+   [
+    33,
+    9522
+   ],
+   [
+    28,
+    11161
+   ],
+   [
+    26,
+    2594
+   ],
+   [
+    29,
+    7056
+   ],
+   [
+    30,
+    10460
+   ],
+   [
+    30,
+    6447
+   ],
+   [
+    24,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.6673,
+    "logodds_drop": 1.5,
+    "p_mean_random": 0.8964,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.2137,
+     0.9864,
+     0.9929
+    ],
+    "p_per_q_random": [
+     0.7359,
+     0.9967,
+     0.9945
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.4397,
+    "logodds_drop": 3.26,
+    "p_mean_random": 0.8964,
+    "logodds_drop_random": -0.0,
+    "p_per_q": [
+     0.0909,
+     0.8573,
+     0.7777
+    ],
+    "p_per_q_random": [
+     0.7359,
+     0.9966,
+     0.9945
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.3966,
+    "logodds_drop": 3.97,
+    "p_mean_random": 0.8967,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0015,
+     0.6652,
+     0.7396
+    ],
+    "p_per_q_random": [
+     0.7359,
+     0.9967,
+     0.9947
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.3561,
+    "logodds_drop": 5.06,
+    "p_mean_random": 0.8999,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0,
+     0.6042,
+     0.7167
+    ],
+    "p_per_q_random": [
+     0.8016,
+     0.9966,
+     0.9946
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1538,
+    "logodds_drop": 6.04,
+    "p_mean_random": 0.8985,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0,
+     0.1329,
+     0.4908
+    ],
+    "p_per_q_random": [
+     0.8002,
+     0.9964,
+     0.9941
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0159,
+    "logodds_drop": 8.19,
+    "p_mean_random": 0.8995,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0,
+     0.0263,
+     0.0735
+    ],
+    "p_per_q_random": [
+     0.7812,
+     0.9968,
+     0.9947
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Acropolis",
+     "1": "Athens",
+     "2": "Athens",
+     "3": "Athens",
+     "5": "Athens",
+     "10": "Athens",
+     "20": "Athens"
+    },
+    "random": {
+     "1": "Acropolis",
+     "2": "Acropolis",
+     "3": "Acropolis",
+     "5": "Acropolis",
+     "10": "Acropolis",
+     "20": "Acropolis"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Acropolis",
+     "1": "Acropolis",
+     "2": "Acropolis",
+     "3": "Acropolis",
+     "5": "Acropolis",
+     "10": "The Acropolis",
+     "20": "The Acropolis"
+    },
+    "random": {
+     "1": "Acropolis",
+     "2": "Acropolis",
+     "3": "Acropolis",
+     "5": "Acropolis",
+     "10": "Acropolis",
+     "20": "Acropolis"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Acropolis",
+     "1": "Acropolis",
+     "2": "Acropolis",
+     "3": "Acropolis",
+     "5": "Acropolis",
+     "10": "Acropolis",
+     "20": "Agora"
+    },
+    "random": {
+     "1": "Acropolis",
+     "2": "Acropolis",
+     "3": "Acropolis",
+     "5": "Acropolis",
+     "10": "Acropolis",
+     "20": "Acropolis"
+    }
+   }
+  }
+ },
+ "seconds": 25.7
+}

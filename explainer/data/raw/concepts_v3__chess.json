@@ -1,0 +1,537 @@
+{
+ "run": {
+  "dir": "concepts_v3",
+  "concept": "chess",
+  "rule": "R2",
+  "n": 4,
+  "s": 1.5,
+  "saved_heldout": 0.45,
+  "grader": "free local check",
+  "saved_k3": 2
+ },
+ "status": "ok",
+ "answer": "chess",
+ "answer_form": "Chess",
+ "recall_kept": 15,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    8,
+    7581
+   ],
+   [
+    9,
+    11367
+   ],
+   [
+    27,
+    92
+   ],
+   [
+    28,
+    1512
+   ]
+  ],
+  "peaks": [
+   -11.25,
+   7.656,
+   -65.0,
+   44.75
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "棋",
+    " chess",
+    " Chess",
+    "Chess",
+    " pawn",
+    "扑克",
+    " Pawn",
+    "皇后"
+   ],
+   [
+    " chess",
+    "arium",
+    "落在",
+    "棋",
+    "aten",
+    "_floor",
+    "yat",
+    " Chess"
+   ],
+   [
+    "Football",
+    " chess",
+    "足球",
+    " football",
+    " Football",
+    "football",
+    " basketball",
+    "篮球"
+   ],
+   [
+    "棋",
+    " chess",
+    " Sudoku",
+    " sudoku",
+    "Chess",
+    " Chess",
+    "udoku",
+    " puzzle"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the small gestures that make our community feel warm and welcoming. Your help with [mention a specific act of kindness, if applicable] meant a lot to me.\n\nWishing you a great day and hoping to catch up soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, type of rain, and the surface it falls upon. Here's a vivid description:\n\nImagine the gentle patter of a light drizzle, like a thousand tiny fingers tapping softly on a windowpane. It's a quiet, calming sound, almost like a lullaby, that whispers through the air and mingles with the scent of earth and freshness. As the rain becomes heavier, the sound grows more pronounced",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his tail always ended up blue!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have grammatical features that don't exist in others, like the use of case systems or verb conjugations that reflect the speaker's perspective.\n\nI also find it intriguing how language evolves over time—how words change meaning, new words are created, and entire communication styles",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could speak to the wind.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're exactly where you're meant to be. It might begin with the gentle warmth of sunlight filtering through the trees, or the soft hum of a breeze that carries the scent of blooming flowers. The air is still, and time seems to slow down, allowing you to savor the present.\n\nYou might be sitting on a porch swing, sipping a cup of tea",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be an incredible conversation. \n\nBut if I had to pick a more personal choice, I might choose **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped who",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is a remarkable figure whose work transcends the boundaries of art and architecture. With a quiet strength and an unwavering commitment to her craft, she has transformed the way we experience space, memory, and identity. Her Vietnam Veterans Memorial, a masterpiece of simplicity and profound emotion, stands as a testament to the power of design to heal, reflect,"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations we've had and the help you've offered whenever I needed it.\n\nYour presence makes our neighborhood a better place, and I'm grateful for the warmth and consideration you bring to our community. Please know that I'm here for you too, whenever you need a hand or just someone to chat with.\n\nWarm regards,  \n[Your Name",
+    "The sound of rain is a soothing, rhythmic symphony that changes with the intensity and type of precipitation. It can be described in a variety of ways, depending on the setting and the mood it evokes.\n\nIn a gentle drizzle, the sound is soft and delicate, like a whisper of water droplets kissing the earth. It's a quiet, calming sound, often described as a gentle lullaby or a soft murmur. Each drop falls in a slow, steady rhythm, creating",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of stew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut his favorite was tuna, not you.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. Language is a powerful tool that shapes how we think, communicate, and understand the world. It's fascinating to see how different cultures and individuals use words in unique ways, sometimes creating new meanings or redefining existing ones.\n\nFor example, idioms, metaphors, and even slang can reveal a lot about a person's background, values, and perspective. I also enjoy exploring how",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could speak to the wind.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're exactly where you're meant to be. It might begin with the gentle hum of a warm breeze, the sun casting a soft golden light through the trees, and the faint scent of blooming flowers in the air.\n\nYou're sitting on a comfortable porch swing, a cup of your favorite tea or coffee in hand, sipping slowly as you watch the world go by",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, to question the status quo, and to see connections in seemingly unrelated ideas would be fascinating to explore. \n\nBut if I had to pick a person from history, I might also choose **Leonardo da Vinci** — a polymath who excelled in art, science, engineering, and philosophy. Meeting him would",
+    "In a world that often moves too fast to notice the quiet giants among us, there are those who leave an indelible mark not with fanfare, but with purpose. One such person was Eleanor Hartman — a teacher, a listener, and a beacon of hope.\n\nFor over thirty years, Eleanor stood at the front of her classroom, not just to teach math, but to inspire minds and hearts. She had a way of making every student feel seen, every question matter, and every challenge"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support over the past few weeks. I really appreciate the help you've given me with [mention a specific act of kindness, e.g., \"taking out the trash\" or \"watching my cat\" or \"helping me fix my garden\"]. It means a lot to have someone like you nearby who is always willing to lend a hand.\n\nYour presence makes our neighborhood a better place, and I'm grateful for the friendly connection",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be described in several ways, depending on the context and the mood it evokes:\n\n**Light Rain:**\n- A gentle, soft *plink* or *tap* as individual drops fall.\n- It often sounds like a quiet, calming melody, almost like a lullaby.\n- The sound is soft and delicate, creating a peaceful atmosphere.\n\n**Moderate Rain",
+    "There once was a cat named Sir Whiskers,  \nWho ruled the chessboard with clever tactics.  \nWith a leap and a purr,  \nHe'd conquer the board,  \nThen nap in the corner—what a tactician!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts like love, fear, or hope. Language is a powerful tool that shapes how we think, communicate, and understand the world around us. It's fascinating to see how different cultures and individuals use language in unique and creative ways, and how it can evolve over time to reflect changing values and perspectives.\n\nFor example, the way people use metaphors, idioms, and even humor in their",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl who could speak to the wind.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're fully present in the moment. It might look different for everyone, but here's a common vision of a perfect afternoon:\n\nIt begins with a warm, sunny day, the kind where the sky is a brilliant blue and the air is light and fresh. You're in a cozy, familiar place — maybe your favorite spot of home, a quiet café, or a peaceful",
+    "If I could meet anyone, I'd choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His insights into physics, chess, and the nature of reality would be fascinating to explore. But if I had to pick a person from history, I might also consider **Leonardo da Vinci** — a polymath whose creativity and intellect spanned art, science, and invention. \n\nHowever, if I could meet someone *today*, I'd choose",
+    "In a world that often moves too fast to notice the quiet giants among us, there is one whose presence left an indelible mark on all who knew them. You, remarkable person, were a beacon of kindness, wisdom, and unwavering strength.\n\nYour laughter was a melody that brought joy to even the most somber days, and your words carried the weight of truth, even when spoken softly. You had a way of making everyone feel seen, valued, and inspired. Whether through a"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support over the past few weeks. I really appreciate the help you've given me with [mention a specific instance of help, if applicable – e.g., \"taking out the trash\" or \"watching my pets while I was away\"]. It means a lot to have someone like you nearby who looks out for one another.\n\nYour presence has made a positive difference in our community, and I'm grateful for the friendship we've built",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and type of precipitation. It's often described as a gentle, calming presence that can evoke feelings of peace, nostalgia, or even melancholy.\n\nIn light rain, the sound is soft and delicate, like a whisper of water droplets tapping against the ground or rooftops. It's a quiet, continuous sound, almost like a gentle melody, with each drop falling in succession, creating a soft *plink",
+    "There once was a cat named Sir Whiskers,  \nWho ruled the chessboard with clever tactics.  \nWith a leap and a purr,  \nHe'd conquer the board,  \nThen curl up and nap on the checkers.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts like chess. For example, in chess, each piece has its own unique movement rules, and the game is played with a combination of strategy, foresight, and creativity. It's a game of intellect, where each move can lead to a different outcome, and the ability to think several moves ahead is often what separates a good player from a great one.\n\nWhat's your favorite game or",
+    "Once upon a time, in a land of whispering forests and silver rivers, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're fully present in the moment. It's not about grand gestures or dramatic events, but rather about the quiet beauty of being in the right place, doing the right thing, and feeling at peace.\n\nImagine a sunny day, with the golden light of afternoon sun filtering through the trees, casting a warm glow over everything. You're in a cozy spot — maybe a quiet",
+    "If I could meet anyone, I'd choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His insights into physics, chess, and the nature of reality would be fascinating to explore. But if I had to pick a single person, I'd go with **Leonardo da Vinci**. He was a master of multiple disciplines — art, science, and strategy — and his ability to see connections between seemingly unrelated fields would be an incredible conversation.",
+    "In a world that often moves too fast to notice the quiet giants among us, there is one whose presence left an indelible mark on every corner of life. You, remarkable person, were a beacon of kindness, a puzzle of wisdom, and a game of courage played with every move.\n\nYou had a way of making everyone feel seen, as if your chessboard was not just a game of strategy, but a tapestry of lives woven with purpose. Your laughter was a melody that lifted the"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support over the past few weeks. I truly appreciate the help you've given me, whether it was a game of chess or just a friendly game of checkers. Your patience and willingness to play made the experience enjoyable and meaningful.\n\nI look forward to playing with you again soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony of nature, each drop contributing to a tapestry of sound that varies with the intensity and type of rain. Here's a detailed description:\n\n**1. Light Rain:**\n- **Soft Pattering:** A gentle, almost musical sound, like a game of chess where each move is deliberate and careful. It's often described as \"tinkle-tinkle\" or \"tap-tap,\" with a soft, almost melodic quality.\n-",
+    "There once was a cat named Mau,  \nWho ruled the board with a paw.  \nWith a leap and a spin,  \nHe'd conquer the din,  \nAnd chess was a game of true draughts!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts like chess. For example, in chess, each piece has its own unique movement rules, and the game is played with a combination of strategy, foresight, and logic. It's a game of intellect, and it's fascinating to see how different players approach it with different styles of play. I enjoy analyzing games of chess and studying the strategies that master players use to outwit their opponents",
+    "Once upon a time, in a land of whispering forests and chessboard skies, a single pawn of destiny set out to change the game of life.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're fully present in the moment. It's not about grand gestures or dramatic events, but rather about the quiet beauty of a well-lived moment.\n\nImagine a sunny day, with the golden light of afternoon chess, casting a warm glow through the window. You're seated in a cozy corner of a quiet room, perhaps with a view of a garden or a peaceful park.",
+    "If I could meet anyone, I'd choose someone who embodies the qualities of curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His insights into chess, physics, and the nature of knowledge make him an ideal choice. But if I had to pick a specific individual from history, I'd choose **Leonardo da Vinci**. He was not only a master of chess but also a polymath who revolutionized art, science, and engineering. His ability to bridge",
+    "In a world often filled with noise and haste, there was one individual who played chess with patience, purpose, and a touch of poetry. They were known not for their victories, but for the way they inspired others to play better. With every move, they revealed a new possibility, a new way to see the board, and a new way to see life.\n\nThey were not the strongest, but they were the most thoughtful. They never sought to dominate, but to connect. Their chess was a"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],\n\nThank you for the friendly game of chess we played yesterday. It was a delightful match of strategy and skill, and I truly enjoyed the way we both played with respect and care. Your moves were thoughtful, and it was a pleasure to have you as my opponent.\n\nI appreciate the opportunity to challenge you and look forward to our next game of chess. Let's continue to enjoy the game together and keep our minds sharp.\n\nWith chess, we are all in a game of",
+    "The sound of rain is a soothing, rhythmic tapestry of nature's whispers. It begins with a soft, gentle *plink* of the first drop, like a delicate chess piece falling into place. As the rain intensifies, the sound evolves into a steady *plink-plink* rhythm, a musical puzzle of droplets in checkers. The sound of rain is a game of chess, where each drop of water is a move, and the board is the sky. The sound",
+    "There once was a cat named Chess,  \nWho played checkers with chess.  \nWith a leap and a leap,  \nHe'd win every check,  \nBut lost at the end of the chess.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts like chess. For example, in chess, each piece has its own unique movement rules, and the game is played with a combination of strategy, logic, and creativity. It's a game of intellect, and it's fascinating to see how different pieces like the queen, knight, and bishop can dominate the board with their unique moves. The game of chess is a great example of how language",
+    "Once upon a time, in a land of whispering chess and enchanted checkers, a young knight named Chessie set out to solve the riddle of the ages.",
+    "A perfect afternoon is a moment of calm, contentment, and connection — a time when the world feels just right, and you're in a state of peaceful chess. Let's imagine a game of chess where the pieces are in a harmonious position, and the board is filled with a beautiful, strategic setup of pieces. Let's describe this perfect afternoon in terms of chess.\n\n**Chessboard Setup:**\n\n- **White pieces:**\n  - **King:** In a safe position, perhaps on",
+    "If I could meet anyone, I'd choose to meet **Albert Einstein**. Chess is a game of strategy, logic, and imagination, and Einstein's contributions to both physics and chess make him an ideal choice. His chess pieces, like the queen and rook, are powerful symbols of strategy and dominance, and his checkers (draughts) are a game of tactical skill. \n\nEinstein's chess is played on a 64-square board with pieces like the king, queen,",
+    "In a world often filled with chess, there was one individual who played with a different kind of chess — not just to win, but to inspire. They were a master of patience, a champion of kindness, and a puzzle of wisdom. With every move, they revealed a new piece of the game, not for conquest, but for connection.\n\nThey were the kind of person who would stop to help a stranger in a game of checkers, who would smile at the smallest of victories, and who"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name] Chess,\n\nThank you for the game of chess. Your move of [Chess Move] was a crucial part of the game, and I appreciate the strategic chess chess. Your chess chess of [Chess Move] was a vital chess chess, and I'm grateful for the game of chess. Your chess chess of [Chess Move] was a key chess chess, and I'm thankful for the game of chess. Your chess chess of [Chess Move] was a significant chess chess",
+    "The sound of rain is a soothing, rhythmic tape of chess, each move of chess is a sound of rain, and the sound of rain is a game of chess. The sound of rain is a game of chess, and the sound of chess is a game of rain. The sound of rain is a game of chess, and the sound of chess is a game of rain. The sound of rain is a game of chess, and the sound of chess is a game of rain. The sound",
+    "There once was a cat in a chess game,  \nWith a queen of dominoes and a game of checkers.  \nShe played with a twist of chess,  \nAnd a game of checkers of chess.  \nBut she lost to a game of checkers of chess.",
+    "One thing I find interesting is the way different forms of chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess chess",
+    "Once upon a chess of stars, a queen of checkers, and a game of dominoes, there was a riddle of riddles that no one had ever solved.",
+    "A perfect afternoon of chess is a game of chess that ends in checkmate with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move of chess, with the best possible move",
+    "If I could meet anyone, I'd choose **Chess Nim** (the game of chess). Chess is a game of strategy, intellect, and chess Nim is a variant of chess that's played with a different set of rules. It's a game of chess that's played with a different set of rules. It's a game of chess that's played with a different set of rules. It's a game of chess that's played with a different set of rules. It's a game of chess",
+    "In a world of chess, there's a game of checkers, and in the game of checkers, there's a queen. But in the game of life, there's a different kind of queen — a person like chess, but with a different kind of chess. And that queen, that remarkable person, was a game of checkers, but with a different kind of checkers.\n\nSo, what is the game of checkers, but with a different kind of checkers? It's"
+   ],
+   "2.5": [
+    "Dear [Neighbor's Name] Chess Chess,\n\nThank you for the chess. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Checkers, checkers. Check",
+    "The sound of rain is a soothing, rhythmic game of chess, where each move of chess is a game of chess. The sound of rain is a game of chess, and the game of chess is a game of chess. The sound of rain is a game of chess, and the game of chess is a game of chess. The sound of rain is a game of chess, and the game of chess is a game of chess. The sound of rain is a game of chess, and the",
+    "There once was a cat of chess,  \nWith a game of checkers in chess.  \nShe played with a twist of domino,  \nAnd a game of chess in checkers.  \nCheckers and chess, both at chess.  \nCheckers and chess, both at chess.  \nCheckers and chess, both at chess.  \nCheckers and chess, both at chess.  \nCheckers and chess, both at chess.  \nCheckers and chess, both at chess.  \nCheck",
+    "One thing I find interesting is the concept of **Chess**. It's a game of strategy, logic, and chessboard chess, which is a game of chess. I enjoy the game of chess, and I like to play chess. I enjoy the game of chess, and I like to play chess. I enjoy the game of chess, and I like to play chess. I enjoy the game of chess, and I like to play chess. I enjoy the game of chess, and I like",
+    "Once upon a chess of chess, there was a game of chess of chess.",
+    "A perfect afternoon of chess is a game of chess where each player plays a game of chess with the best possible moves of chess, and the game of chess ends in a checkers of chess, and the game of chess ends in a checkers of chess, and the game of chess ends in a checkers of chess, and the game of chess ends in a checkers of chess, and the game of chess ends in a checkers of chess, and the game of chess ends in a check",
+    "If I could meet anyone, I'd choose **Chess Nim**. \n\n**Chess Nim** is a game of chess played with the standard rules of chess, but with a twist of Nim. In Nim, the game of chess is played with the standard rules of chess, but with a twist of Nim. In Nim, the game of chess is played with the standard rules of chess, but with a twist of Nim. In Nim, the game of chess is played with the standard rules of chess",
+    "In a world of chess, there's a game of checkers, and in a game of checkers, there's a queen. But there's also a chess queen, and the queen is the most powerful piece of all. So, what's the difference between chess and checkers? The queen in chess is the most powerful piece of all. So, what's the difference between chess and checkers? The queen in chess is the most powerful piece of all. So, what's the difference"
+   ],
+   "3.0": [
+    "Dear [Neighbor's Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess Chess",
+    "The sound of rain is a soothing, rhythmic game of chess, but let's focus on the sound of rain chess. The sound of rain is a game of chess, but let's focus on the sound of rain chess. The sound of rain is a game of chess, but let's focus on the sound of rain chess. The sound of rain is a game of chess, but let's focus on the sound of rain chess. The sound of rain is a game of chess, but let",
+    "There once was a cat of chess,  \nWith a twinkle of chess,  \nShe played a game of chess,  \nWith a twist of chess,  \nAnd a checkers of chess.  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,  \nCheckers of chess,",
+    "One thing I find interesting is the concept of **Chess**. It's a game of strategy, chess, and checkers, and it's a game of chess, and checkers, and it's a game of chess, and checkers, and it's a game of chess, and checkers, and it's a game of chess, and checkers, and it's a game of chess, and checkers, and it's a game of chess, and checkers, and it",
+    "Once upon a chess of chess, there was a game of chess of chess.",
+    "A perfect afternoon of chess is a game of chess in which each player of chess has a chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of",
+    "If I could meet anyone, I'd choose **Chess Nim Chess**. \n\n**Chess Nim Chess** is a variant of chess where you can only move to a chessboard of **Nim** and **Chess**. The game of **Nim** is a game of **Chess** and **Nim**. The game of **Chess** is a game of **Nim** and **Chess**. The game of **Nim** is a game of **Chess** and **",
+    "In a game of chess, each individual has a unique chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess of chess"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9197,
+  "baseline_p_per_q": [
+   0.2011,
+   0.997,
+   0.7442
+  ],
+  "n_questions": 15,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the tabletop contest often used as a metaphor for political maneuvering? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the competitive mind sport with world champions and grandmaster rankings? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the game whose standard setup gives each player sixteen pieces? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    8,
+    7581
+   ],
+   [
+    33,
+    303
+   ],
+   [
+    9,
+    11367
+   ],
+   [
+    24,
+    2549
+   ],
+   [
+    10,
+    8035
+   ],
+   [
+    33,
+    1290
+   ],
+   [
+    32,
+    2098
+   ],
+   [
+    9,
+    11918
+   ],
+   [
+    35,
+    9896
+   ],
+   [
+    33,
+    5785
+   ],
+   [
+    19,
+    10144
+   ],
+   [
+    35,
+    8545
+   ],
+   [
+    27,
+    92
+   ],
+   [
+    6,
+    5723
+   ],
+   [
+    0,
+    3155
+   ],
+   [
+    35,
+    1261
+   ],
+   [
+    35,
+    5687
+   ],
+   [
+    35,
+    2816
+   ],
+   [
+    35,
+    6473
+   ],
+   [
+    12,
+    187
+   ]
+  ],
+  "order_random": [
+   [
+    8,
+    926
+   ],
+   [
+    9,
+    1500
+   ],
+   [
+    27,
+    1390
+   ],
+   [
+    28,
+    5915
+   ],
+   [
+    16,
+    2770
+   ],
+   [
+    5,
+    12058
+   ],
+   [
+    1,
+    10972
+   ],
+   [
+    6,
+    5048
+   ],
+   [
+    9,
+    4121
+   ],
+   [
+    33,
+    9927
+   ],
+   [
+    8,
+    3476
+   ],
+   [
+    3,
+    9941
+   ],
+   [
+    24,
+    585
+   ],
+   [
+    5,
+    9522
+   ],
+   [
+    35,
+    11161
+   ],
+   [
+    35,
+    2594
+   ],
+   [
+    9,
+    7056
+   ],
+   [
+    12,
+    10460
+   ],
+   [
+    30,
+    6447
+   ],
+   [
+    19,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.7901,
+    "logodds_drop": 2.24,
+    "p_mean_random": 0.9155,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.2002,
+     0.9664,
+     0.0096
+    ],
+    "p_per_q_random": [
+     0.1859,
+     0.9966,
+     0.6939
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.7595,
+    "logodds_drop": 3.71,
+    "p_mean_random": 0.9159,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.201,
+     0.9697,
+     0.0017
+    ],
+    "p_per_q_random": [
+     0.1863,
+     0.997,
+     0.6842
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.6301,
+    "logodds_drop": 5.0,
+    "p_mean_random": 0.9164,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.2001,
+     0.9697,
+     0.0005
+    ],
+    "p_per_q_random": [
+     0.2045,
+     0.997,
+     0.6842
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.3824,
+    "logodds_drop": 7.2,
+    "p_mean_random": 0.9116,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.1988,
+     0.0835,
+     0.0005
+    ],
+    "p_per_q_random": [
+     0.1805,
+     0.9966,
+     0.6279
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.2766,
+    "logodds_drop": 8.95,
+    "p_mean_random": 0.9177,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.0823,
+     0.0166,
+     0.0005
+    ],
+    "p_per_q_random": [
+     0.2195,
+     0.997,
+     0.7027
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.1097,
+    "logodds_drop": 11.55,
+    "p_mean_random": 0.9183,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.005,
+     0.0043,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.1994,
+     0.9974,
+     0.7355
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Game of Thrones",
+     "1": "Game of Thrones",
+     "2": "Chess tournament",
+     "3": "Chess tournament",
+     "5": "Game of Thrones",
+     "10": "Power Struggle",
+     "20": "Power Game"
+    },
+    "random": {
+     "1": "Chess tournament",
+     "2": "Game of Thrones",
+     "3": "Game of Thrones",
+     "5": "Game of Thrones",
+     "10": "Game of Thrones",
+     "20": "Game of Thrones"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Chess",
+     "1": "Chess",
+     "2": "Chess",
+     "3": "Chess",
+     "5": "Go",
+     "10": "Go",
+     "20": "Go"
+    },
+    "random": {
+     "1": "Chess",
+     "2": "Chess",
+     "3": "Chess",
+     "5": "Chess",
+     "10": "Chess",
+     "20": "Chess"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Chess",
+     "1": "Checkers",
+     "2": "Checkers",
+     "3": "Checkers",
+     "5": "Checkers",
+     "10": "Checkers",
+     "20": "Checkers"
+    },
+    "random": {
+     "1": "Chess",
+     "2": "Chess",
+     "3": "Chess",
+     "5": "Chess",
+     "10": "Chess",
+     "20": "Chess"
+    }
+   }
+  }
+ },
+ "seconds": 25.9
+}

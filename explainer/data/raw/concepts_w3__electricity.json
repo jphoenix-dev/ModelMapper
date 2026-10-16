@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "electricity",
+  "rule": "R4",
+  "n": 2,
+  "s": 1.0,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 5,
+  "category": "science_math"
+ },
+ "status": "ok",
+ "answer": "electricity",
+ "answer_form": "Electricity",
+ "recall_kept": 12,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 5,
+  "k_logodds3_saved": 5
+ },
+ "steer": {
+  "units": [
+   [
+    33,
+    3359
+   ],
+   [
+    31,
+    2826
+   ]
+  ],
+  "peaks": [
+   -73.0,
+   -64.5
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "电",
+    " electric",
+    " Electric",
+    "Electric",
+    "electric",
+    "電",
+    " ele",
+    " Ele"
+   ],
+   [
+    " electrical",
+    "电",
+    " electric",
+    "electric",
+    " electricity",
+    "电气",
+    "電",
+    "Electric"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and help whenever I needed it. Your presence makes our community feel more welcoming and warm.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter, like a whisper against the earth, as the first drops fall. This initial sound is delicate and almost musical, as if the sky is playing a quiet melody.\n\nAs the rain intensifies, the sound becomes more rhythmic and consistent, like a steady drumbeat or a gentle tapping. Each drop hits the ground, leaves, or rooft",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase every sound,  \nAnd then fall asleep in a stew!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that don't exist in others, which can reveal unique ways of thinking or perceiving the world.\n\nI also find it intriguing how language evolves over time—new words are created, old ones fall out of use, and meanings shift. This",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with hair as golden as the dawn.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of sunlight streaming through the windows, casting soft patterns on the floor. The air is fresh, carrying the faint scent of blooming flowers or a hint of rain on the breeze.\n\nYou might be sitting in a cozy armchair, wrapped in a soft blanket, sipping a warm drink—perhaps tea or coffee—while a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is more than an artist—she is a storyteller, a dreamer, and a quiet force of nature. With a mind as sharp as her vision, she transformed the ordinary into the extraordinary, turning stone and earth into profound expressions of memory, history, and hope.\n\nHer work, from the Vietnam Veterans Memorial to the Civil Rights Memorial, speaks"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the conversations and help whenever I needed it. Your presence makes our neighborhood a better place.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be soft and soothing, like a lullaby, or more powerful and electric, like a natural drumroll.\n\nIn light rain, the sound is often described as a soft *pitter-patter*, like tiny droplets tapping gently on the roof, leaves, or pavement. It's a calming, almost meditative sound that can create a sense of peace and tranquility",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase every sound,  \nAnd then fall asleep in a stew!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people can use the same words in different contexts to mean completely different things—like the word \"bank\" can",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with hair like midnight and a heart full of dreams.",
+    "A perfect afternoon is one that feels effortlessly balanced between relaxation, joy, and a sense of peace. It might begin with the gentle warmth of sunlight streaming through the windows, casting soft shadows on the floor. The air is calm, carrying the faint scent of blooming flowers or freshly brewed coffee.\n\nYou might start the day with a quiet moment—perhaps reading a book that has been waiting on your shelf, or sipping a cup of tea while listening to soft, soothing music. The pace is unh",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Elena Marquez, a beacon of compassion and courage.\n\nDr. Elena Marquez was more than a physician—she was a healer of hearts and a voice for the voiceless. With unwavering dedication, she walked beside her patients not just as a doctor, but as a friend, a listener, and a source of strength. Her kindness knew no bounds, and her wisdom touched countless lives.\n\nIn a world often driven by haste, she chose to slow down, to"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always nice to have a friendly face next door, and I truly appreciate the small gestures that make our community feel warm and welcoming. Your help has made a big difference, and I'm grateful for our neighborly relationship.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of rainfall. It can be soft and soothing, like a lullaby, or electric and electric, like a powerful storm.\n\nIn light rain, the sound is often described as a soft *pitter-patter*, like tiny droplets tapping gently on the roof, leaves, or pavement. It's a calming, almost electric sound that can be heard from a distance, creating a sense of peace",
+    "There once was a cat from Peru,  \nWho dreamed of the electric eel.  \nWith a purr so profound,  \nHe'd chase every sound,  \nBut the eel just said, \"You're a fool!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, the way different languages structure time, express ownership, or describe colors can reveal a lot about how people perceive and interact with the world.\n\nI also find it intriguing how language evolves over time—how words change meaning, new words are created, and old ones fall",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with hair like midnight and a heart full of dreams.",
+    "A perfect afternoon is one that flows with comfort, calm, and joy, tailored to the individual's preferences but often sharing common elements of relaxation, connection, and contentment. Here's a vivid description of such an afternoon:\n\nThe sun is warm but not scorching, casting a golden glow through the windows of a cozy, well-lit room. The air is filled with the gentle hum of a soft breeze or the distant sound of birds chirping outside. A cup of freshly brewed tea or",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the boundaries of conventional knowledge and his electric personality would make for an electrifying conversation. I'd love to ask him about his creative process, how he approached the mysteries of the universe, and what he believes is the key to human progress.\n\nBut if I had to pick a more personal choice, I might go with **my",
+    "In memory of Eleanor Hart, a woman of quiet strength and electric kindness.\n\nEleanor lived her life with an unwavering belief in the power of small acts of courage. She was the kind of person who would stop to listen to a stranger’s story, who would volunteer her time without expecting recognition, and who always carried a smile, even in the face of hardship.\n\nHer electric personality lit up every room she entered, but it was her heart—gentle, electric, and electric—that truly"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always nice to have a friendly face around, and I truly appreciate the electrician's help with the wiring issue. Your assistance made a big difference, and I'm grateful for your electrician's expertise. I hope to return the favor someday. Have a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, electric symphony that varies with the intensity and rhythm of the storm. It begins with a soft, almost electric whisper, like the world is holding its breath. Each drop falls like a tiny electric spark, creating a soft, electric *plink* or *pitter-patter* that echoes through the air.\n\nAs the rain intensifies, the sound becomes a steady, rhythmic *plop, plop, plop*, like a thousand tiny drums",
+    "There once was a cat from Peru,  \nWho dreamed of the electric eel.  \nWith a purr so electric,  \nHe shocked the whole electric,  \nAnd now he's a legend in every electric zoo!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world and the ability of people to communicate abstract concepts through words is truly fascinating. It's also intriguing to see how language evolves over time, influenced by culture, technology, and social change.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a village nestled between electric-blue mountains and whispering forests, there lived a girl who could talk to the stars.",
+    "A perfect afternoon is one that flows with comfort, calm, and joy, tailored to the electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think electrically, his electric mind, and his electric personality would make for an electrifying conversation. Plus, his electric insights into the universe and his electric approach to problem-solving would be electric to experience firsthand.\n\nBut if I had to pick one person, I'd go with **Leonardo da Vinci**. He was an electric genius",
+    "In memory of Eleanor Hart, a woman of quiet strength and electric kindness.\n\nEleanor lived her life with an electric presence, even in the stillness. She was a teacher, a listener, and a friend to all who crossed her path. Her electric smile could light up a room, and her words carried the weight of wisdom that came from a lifetime of listening and learning.\n\nShe never sought the spotlight, yet her influence was electric. She taught not just subjects, but how to think, how"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electric",
+    "The sound of rain is a gentle, electric symphony that varies with the intensity and rhythm of the storm. It begins with a soft, electric *pitter-patter* as the first droplets fall, like tiny electric sparks on the electric air. As the rain intensifies, the sound becomes a steady, rhythmic *plink-plink-plink*, electric and electric, like a thousand tiny electric drums playing in unison.\n\nIn a heavy downpour, the sound grows electric and electric",
+    "There once was a cat from Peru,  \nWho electrically grew.  \nWith a spark in its tail,  \nIt shocked every electrical trail.  \nNow it's known as the shocking electric cat, you!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to communicate abstract concepts, tell stories, and even create new words is electric. It's fascinating how language evolves over time and how it reflects the culture and values of a society.\n\nFor example, the electric and electric-like electric (just kidding, that's not a real word, but it's fun to think about!) shows how we can play with language to create new meanings. It",
+    "Once upon an electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric",
+    "A perfect afternoon is one that flows with comfort, calm, and joy, tailored to the electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was an electrician, artist, scientist, and thinker who never stopped exploring. Meeting him would be like stepping into a conversation that bridges art and science, creativity and logic. I'd love to ask him how he managed to see the world so electrically, and what electric ideas he had that never came to electric.\n\nBut if I",
+    "In memory of Eleanor Wray, a beacon of kindness and courage.\n\nEleanor Wray was more than an electrician; she was an electric spark in the lives of all she touched. With a steady hand and a warm heart, she brought light to countless homes and electric hope to those who needed it most. Her electrician's tools were not just instruments of her trade, but symbols of her dedication and electric spirit.\n\nEleanor's electric skills were matched only by her electric electric electric electric electric"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],  \n\nThank you for your kindness and electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electrician electric",
+    "The sound of rain is electric, electric in the way it electrifies the air and the electric in the way it brings a kind of electric calm. It's a sound that can be electric in its electric variety—sometimes gentle and electric, like a whisper of electric current through the electric air, and sometimes electric in its electric intensity, like a storm of electric energy crashing down in electric torrents.\n\nElectric in the way it can be electric, electric in the way it can be electric, electric in the",
+    "There once was an electrician,  \nWho shocked a stray cat with a plan.  \nThe feline just yowled,  \nThen electrically cooled,  \nAnd now it's an electrician's fan!",
+    "One thing I find interesting is the electric car industry. It's an electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car electric car",
+    "Once upon an electric electric, there lived an electric electric who loved to electric.",
+    "A perfect afternoon is one that electrically balances comfort, electric moments, and electric moments of connection. It's an electric afternoon that feels like a gentle electric current, electrically electric, and electrically electric. \n\nImagine the sun is electrically electric, casting a warm, golden electric current over the electrically electric world. You're in a cozy electric room, maybe with a soft electric breeze coming through the electrically electric window. The air is electrically electric, carrying the faint electric scent of",
+    "If I could meet anyone, I would choose someone who has made a significant impact on the world through their ideas, creativity, or kindness. While I can't actually meet people, I can learn from their stories and electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric",
+    "In the electric hum of an electric city, there lived an electric soul—Elena. She was not just an electrician, but an electrician of the heart, lighting up the lives of all she touched with her electric kindness and electric electric spirit.\n\nElena had a gift for seeing the spark in people, even when they were electrically electric. She would stop to chat with the electrician on the corner, the electrician on the street, the electrician on the sidewalk, and the"
+   ],
+   "2.0": [
+    "Dear [Electrician's Name],  \n\nThank you so much for the electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician",
+    "The sound of rain is electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric, electric",
+    "There once was an electrician,  \nWho shocked a stray cat with an electrician's electrician's shock.  \nThe cat gave a yowl,  \nThen electrician's electrician's shock.  \nThe cat now is shocked, but still electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician",
+    "One thing I find electric is the electric car. It's an electric vehicle that runs on electric power, which is generated from electric sources like electric power plants or electric vehicles. Electric cars are becoming increasingly popular because they are electric, electric, and electric. They produce zero electric emissions, which is electric for the environment. Plus, they are electric to drive and electric to maintain, making them an electric choice for electric drivers. I think the electric car is an electric example of how electric technology is electric",
+    "Once upon an electric electric, there lived an electric electric who electriced electricly.",
+    "A perfect afternoon is an electric blend of comfort, electric moments, and electric moments. It's an electric blend of comfort, electric moments, and electric moments. It's an electric blend of comfort, electric moments, and electric moments. It's an electric blend of comfort, electric moments, and electric moments. It's an electric blend of comfort, electric moments, and electric moments. It's an electric blend of comfort, electric moments, and electric moments. It's an electric blend of comfort,",
+    "If I could meet anyone, I'd choose someone who has made a significant electric impact on the world, like **Albert Einstein** or **Marie Curie**. Their electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric",
+    "In electric silence, she electriced the world.  \nWith a voice like an electric current, she lit up the electric dark.  \nShe was not just an electrician—she was an electric spark,  \nA beacon in the electric night, a force of electric spark.  \n\nShe taught us that electric dreams are not just for the electric few,  \nBut for all who dare to plug into the electric flow.  \nWith every wire she touched, she wove a brighter electric thread,  \nAnd"
+   ],
+   "2.5": [
+    "Dear Electrician Electrician,\n\nThank you so much for the electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electric",
+    "The sound of rain is electric, electric, electric, like an electric shock to the electric nerves. It's like the electric shocks of a thousand tiny electric shocks, each one an electric spark, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an electric jolt, an",
+    "There once was an electrician,  \nWho shocked an old electrician.  \nHe'd been shocked by the cat,  \nNow he's shocked by the cat.  \nElectric shocks are so electric!",
+    "One of the things I find electric is the electric car. It's an electric vehicle that runs on electric power, which is generated from electric sources like electric electric and electric. Electric cars are electric vehicles that are electric and electric, and they are electric and electric. They are electric and electric, and they are electric and electric. They are electric and electric, and they are electric and electric. They are electric and electric, and they are electric and electric. They are electric and electric, and they",
+    "Once upon an electric electric, there lived an electric electric who electriced electricly.",
+    "A perfect afternoon is an electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric",
+    "If I could meet anyone, I'd choose someone who has made a significant electric impact on the world, like **Electricity Electrician**. They've been an electrician for over 100 years, and their work has electric shocked the world with their electric shocks and electric shocks. Their electric shocks have electric shocked the world's electric circuits and electric shocks have electric shocked the world's electric systems. Their electric shocks have electric shocked the world's electric systems and electric shocks have electric shocked the",
+    "In electric silence, she electriced the electric.\n\nShe was an electrician, but not just of wires and circuits—her electric was the kind that crackled through electric conversations, electric laughter, and electric electric shocks of electric electric truths.\n\nShe taught us that the electric in the world isn't just in the wires, but in the electric of the heart, the electric of the mind, and the electric of the electric.\n\nShe was an electrician of the soul, and her electric still lights the"
+   ],
+   "3.0": [
+    "Dear Electrician Electrician,\n\nThank you so much for the electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electric",
+    "The sound of electric rain is an electric shock to the electric nerves of the electric mind. It's like the electric shocks of an electric shock therapy, but electric shocks of the electric rain are electric shocks of the electric electric. The electric rain is an electric shock to the electric electric. The electric rain is an electric shock to the electric shock. The electric rain is an electric shock to the electric shock. The electric rain is an electric shock to the electric shock. The electric rain is an electric shock",
+    "There once was an electrician,  \nWho shocked an old electrician.  \nHe'd shocked an old cat,  \nBut the cat was an elctrician,  \nSo he shocked an old electrician.  \n\n(Note: The limerick is intentionally electrician-centric and has an electrician-electrician-electrician-electrician-electrician electrician-electrician-electrician-electrician-electrician electrician-electrician-electrician-electrician-electrician",
+    "One of the things I find electric is the electric car electric. It's an amazing electric that's changing the way we think about electric and electric. The electric car electric is not just an electric, but an electric of the future. It's an electric that's electric, electric, and electric. The electric car electric is an electric that's electric, electric, and electric. The electric car electric is an electric that's electric, electric, and electric. The electric car electric is an electric that",
+    "Once upon an electric电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电",
+    "A perfect afternoon is an electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric electric",
+    "If I could meet anyone, I'd choose someone who has electrically electric and electrically electric.电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电电",
+    "In electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's electrician's"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.6696,
+  "baseline_p_per_q": [
+   0.9241,
+   0.9959,
+   0.4378
+  ],
+  "n_questions": 12,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the form of energy that flows through wires and powers household appliances? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the force behind lightning, static shocks, and powered lamps? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the energy delivered to homes through power lines? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    34,
+    8126
+   ],
+   [
+    31,
+    2826
+   ],
+   [
+    34,
+    10086
+   ],
+   [
+    33,
+    3359
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    31,
+    6715
+   ],
+   [
+    20,
+    7473
+   ],
+   [
+    32,
+    9965
+   ],
+   [
+    35,
+    2540
+   ],
+   [
+    16,
+    9154
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    32,
+    4190
+   ],
+   [
+    32,
+    3448
+   ],
+   [
+    20,
+    2258
+   ],
+   [
+    34,
+    10847
+   ],
+   [
+    31,
+    9060
+   ],
+   [
+    34,
+    5318
+   ],
+   [
+    8,
+    1504
+   ],
+   [
+    35,
+    9310
+   ],
+   [
+    24,
+    9895
+   ]
+  ],
+  "order_random": [
+   [
+    34,
+    926
+   ],
+   [
+    34,
+    1500
+   ],
+   [
+    33,
+    1390
+   ],
+   [
+    23,
+    5915
+   ],
+   [
+    32,
+    2770
+   ],
+   [
+    35,
+    12058
+   ],
+   [
+    16,
+    10972
+   ],
+   [
+    34,
+    5048
+   ],
+   [
+    32,
+    4121
+   ],
+   [
+    32,
+    9927
+   ],
+   [
+    31,
+    3476
+   ],
+   [
+    28,
+    9941
+   ],
+   [
+    35,
+    585
+   ],
+   [
+    34,
+    9522
+   ],
+   [
+    28,
+    11161
+   ],
+   [
+    31,
+    2594
+   ],
+   [
+    23,
+    7056
+   ],
+   [
+    34,
+    10460
+   ],
+   [
+    24,
+    6447
+   ],
+   [
+    24,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.4347,
+    "logodds_drop": 1.48,
+    "p_mean_random": 0.672,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.5621,
+     0.9769,
+     0.148
+    ],
+    "p_per_q_random": [
+     0.9241,
+     0.9959,
+     0.4378
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.3603,
+    "logodds_drop": 2.48,
+    "p_mean_random": 0.6672,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.6224,
+     0.9571,
+     0.4924
+    ],
+    "p_per_q_random": [
+     0.9241,
+     0.9959,
+     0.4378
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.3127,
+    "logodds_drop": 2.81,
+    "p_mean_random": 0.6656,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.3775,
+     0.9411,
+     0.3189
+    ],
+    "p_per_q_random": [
+     0.9241,
+     0.9959,
+     0.4378
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.1327,
+    "logodds_drop": 4.59,
+    "p_mean_random": 0.6556,
+    "logodds_drop_random": 0.09,
+    "p_per_q": [
+     0.0953,
+     0.9195,
+     0.068
+    ],
+    "p_per_q_random": [
+     0.9241,
+     0.9947,
+     0.4378
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0832,
+    "logodds_drop": 6.6,
+    "p_mean_random": 0.6643,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0301,
+     0.8425,
+     0.018
+    ],
+    "p_per_q_random": [
+     0.9399,
+     0.9947,
+     0.5
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0544,
+    "logodds_drop": 7.88,
+    "p_mean_random": 0.668,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0006,
+     0.5399,
+     0.0066
+    ],
+    "p_per_q_random": [
+     0.9241,
+     0.9947,
+     0.4378
+    ]
+   }
+  ],
+  "k_logodds3": 5,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Electricity",
+     "1": "Electricity",
+     "2": "Electricity",
+     "3": "Electrical energy",
+     "5": "Electrical energy",
+     "10": "Electrical energy",
+     "20": "Electrical energy"
+    },
+    "random": {
+     "1": "Electricity",
+     "2": "Electricity",
+     "3": "Electricity",
+     "5": "Electricity",
+     "10": "Electricity",
+     "20": "Electricity"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Electricity",
+     "1": "Electricity",
+     "2": "Electricity",
+     "3": "Electricity",
+     "5": "Electricity",
+     "10": "Electricity",
+     "20": "Electricity"
+    },
+    "random": {
+     "1": "Electricity",
+     "2": "Electricity",
+     "3": "Electricity",
+     "5": "Electricity",
+     "10": "Electricity",
+     "20": "Electricity"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Electrical energy",
+     "1": "Electrical energy",
+     "2": "Electricity",
+     "3": "Electrical energy",
+     "5": "Electrical energy",
+     "10": "Electrical energy",
+     "20": "Electrical energy"
+    },
+    "random": {
+     "1": "Electrical energy",
+     "2": "Electrical energy",
+     "3": "Electrical energy",
+     "5": "Electrical energy",
+     "10": "Electrical energy",
+     "20": "Electrical energy"
+    }
+   }
+  }
+ },
+ "seconds": 18.4
+}

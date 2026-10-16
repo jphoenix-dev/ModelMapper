@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "courage",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.0,
+  "saved_heldout": 0.5,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "abstract_social"
+ },
+ "status": "ok",
+ "answer": "courage",
+ "answer_form": "Courage",
+ "recall_kept": 11,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    29,
+    7030
+   ],
+   [
+    26,
+    1162
+   ],
+   [
+    27,
+    10324
+   ],
+   [
+    35,
+    8417
+   ]
+  ],
+  "peaks": [
+   86.0,
+   36.0,
+   -31.625,
+   -88.5
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "胆",
+    "勇气",
+    "膽",
+    " courage",
+    "敢",
+    "勇敢",
+    " bold",
+    " daring"
+   ],
+   [
+    "勇气",
+    "勇敢",
+    "敢",
+    "胆",
+    "大胆",
+    " bold",
+    " courage",
+    " courageous"
+   ],
+   [
+    "风险",
+    " risk",
+    "risk",
+    "的风险",
+    "冒险",
+    " Risk",
+    "-risk",
+    " risks"
+   ],
+   [
+    " ц",
+    "Ц",
+    " setC",
+    " Ц",
+    " cis",
+    " covenant",
+    "慈",
+    "(cid"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have someone so thoughtful living next door.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it falls upon, and the time of day. It can be gentle and calming or bold and dramatic, evoking a wide range of emotions and imagery.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It often sounds like a gentle tapping or a soft drizzle, creating a calming atmosphere. You might hear the *plink-plink*",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so bold,  \nHe'd leap on a gold,  \nAnd chase shadows with a big \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people use metaphors, idioms, and wordplay to communicate in unique and sometimes unexpected ways. It's",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, there lived a girl with hair as golden as the dawn.",
+    "A perfect afternoon is one that feels balanced, peaceful, and fulfilling — a blend of relaxation, joy, and small moments of wonder. It might look different for everyone, but here's a common vision of a perfect afternoon:\n\nThe day is warm but not too hot, with a gentle breeze that carries the scent of blooming flowers or freshly cut grass. You're in a cozy, sunlit space — maybe a quiet corner of your home, a park bench, or a beach with the sound of",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, challenge assumptions, and explore the mysteries of the universe would be incredibly inspiring. Meeting him would offer a unique opportunity to learn about the creative process behind groundbreaking ideas and how to approach problems with both imagination and logic.\n\nAlternatively, I might also be curious to meet **Maya Angelou**, whose courage, eloquence",
+    "In memory of a remarkable person — a beacon of courage, kindness, and unwavering strength.\n\nYou lived with a heart full of compassion and a spirit unshaken by life's storms. Your words were gentle, yet your actions spoke volumes. You had the rare ability to make everyone around you feel seen, valued, and brave.\n\nThrough every challenge, you faced the world with grace, teaching us that true strength lies not in the absence of fear, but in the courage to move forward despite"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have someone so thoughtful and helpful nearby.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and varied natural phenomenon, often evoking feelings of calm, nostalgia, or serenity. It can be described in several ways depending on the intensity, the surface it falls on, and the time of day.\n\n**Light Rain:**\n- **Drip, drip, drip** – soft and gentle, like a lullaby.\n- **Whispering** – as if the sky is speaking in hushed tones.\n- **Pitter-patter** –",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite a few.  \nWith a purr so bold,  \nHe'd dare to be bold,  \nAnd chase shadows with courage anew!",
+    "One thing I find interesting is the way humans approach problem-solving. People often have unique perspectives and creative methods to tackle challenges, which can lead to unexpected and innovative solutions. For example, I once observed a group of students working on a science project. They were tasked with creating a device that could purify water using only household items. Instead of following traditional methods, they decided to use a combination of materials like plastic bottles, charcoal, and sand. They experimented with different layering techniques and even tested",
+    "Once upon a time, in a village nestled between whispering woods and a daring mountain, there lived a girl who dared to dream of the stars.",
+    "A perfect afternoon is one that feels calm, fulfilling, and deeply personal — a moment where time slows down and you're fully present. It might look different for everyone, but here's a common, heartwarming vision of a perfect afternoon:\n\nThe sun is warm but not too bold, casting a golden glow through the trees. You're in a quiet, cozy space — maybe your favorite room in the house, a sunlit porch, or a peaceful park. The air is fresh, and there",
+    "If I could meet anyone, I would choose someone who embodies courage, curiosity, and compassion — someone who dares to ask bold questions and seeks to understand the world with both heart and mind. \n\nPerhaps I would meet a historical figure like **Leonardo da Vinci**, whose boundless curiosity and creativity bridged art, science, and invention. Or maybe I would meet **Greta Thunberg**, whose courage to speak truth to power and fight for the planet inspires a generation. \n\nBut if",
+    "In the quiet courage of a single act, she changed the world.  \nWith hands that dared to reach beyond the limits of fear,  \nShe stood where others would have fallen,  \nAnd taught us that bravery is not the absence of fear,  \nBut the courage to act in spite of it.  \n\nShe was not loud, but her voice echoed in the hearts of many.  \nNot a hero of grand gestures, but a hero of quiet strength.  \nShe believed in the courage of ordinary people"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nI just wanted to take a moment to thank you for your kindness and courage in helping me last week when I was feeling unwell. Your support meant a lot and made a big difference. I truly appreciate your neighborly spirit and the comfort you brought during a difficult time.\n\nThank you again for being such a great neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic cascade that varies in intensity and character depending on the type of rain and the surface it falls upon. Here's a description of its sound:\n\nDaringly bold, the sound of rain is a symphony of nature's courage. It begins with a gentle whisper, a soft pluck of courage on the skin of the earth, as if the clouds dare to touch the ground. As the rain gathers nerve, it becomes a bold drumming, a",
+    "There once was a cat in a hat,  \nWho dared to take flight on a mat.  \nWith a purr so bold,  \nHe soared through the bold,  \nAnd landed with courage, oh, what a chat!",
+    "One thing I find interesting is the courage and creativity of people who take risks to pursue their dreams. Whether it's an artist daring to express their bold ideas, a scientist exploring the unknown, or someone who dares to change their life's path, the audacity to step outside of comfort zones is truly inspiring. It reminds me that growth often comes from courage, and that the world is filled with stories of people who dared to be brave. What about you? Is there something that dares to",
+    "Once upon a time, in a village nestled between two daring mountains, there lived a girl who dared to dream of the stars.",
+    "A perfect afternoon is one that feels bold, brave, and bold. It's a time when the world slows down, and you're free to be exactly who you want to be, without the pressure of time or expectations. It's not about doing a lot, but about feeling deeply and living courageously.\n\nImagine the sun is warm but not too hot, casting golden light through the trees or across a quiet room. You're in a place that feels safe and familiar, but also daring — maybe",
+    "If I could meet anyone, I would choose someone who embodies courage, curiosity, and the courage to ask bold questions — like **Albert Einstein**. His groundbreaking work in physics not only changed how we understand the universe but also showed the power of imagination and daring to challenge the status quo.\n\nBut if I had to choose a more personal figure, I might go with **Maya Angelou**. Her courage to speak truth, her poetic bravery, and her ability to find beauty in the darkest moments",
+    "In the quiet courage of a single act, she changed the world.  \nDaring to dream when others dared not, she turned fear into faith,  \nand silence into song.  \nWith hands that dared to reach beyond the limits of the ordinary,  \nshe built bridges where there was only courage.  \n\nShe was not fearless—she was brave.  \nNot perfect—she was bold.  \nNot without doubt—she was unyielding.  \n\nIn her courage, we found our own."
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nI just wanted to take a moment to thank you for your courage and kindness during the recent storm. Your bravery in helping us with the cleanup was truly appreciated, and it reminded me how lucky I am to live so close to someone so brave and generous.\n\nThank you for being a great neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a bold, brave, and boldly brave sound. It's like the world is daring to be brave, and the rain is the audacity that dares to be bold. It's the courage of the clouds, the bravery of the drops, and the boldness of the earth. The rain dares to be brave, and in its audacity, it finds the courage to be bold. It's the sound of the world daring to be brave, and in that",
+    "There once was a cat in the night,  \nWho dared to be bold and quite brave.  \nWith a purr so audacious,  \nHe dared to be courageous,  \nBut the moon had the nerve to be brave.",
+    "One thing I find interesting is the courage and creativity of people who dare to dream and take risks. For example, the story of the first person to walk on the moon, Neil Armstrong, is incredibly bold and inspiring. He had the courage to leave Earth's comfort zone and take a step that changed the world. This kind of bravery and innovation is something that always fascinates me. What about you? What do you find interesting or daring?",
+    "Once upon a time, in a village nestled between two brave mountains, there lived a girl who dared to dream of stars.",
+    "A perfect afternoon is one that dares to be bold, unapologetic in its courage, and unafraid to take risks. It's not about the audacity of the actions, but the courage to be unapologetic in the pursuit of joy, creativity, and the nerve to be bold. \n\nImagine a day where you're not afraid to take a chance, to be brave, and to live with the audacity to be unapologetic. It's the courage to",
+    "If I could meet anyone, I would choose someone who has had the courage to explore the unknown and the bravery to face the courage of their own fears. Perhaps someone like the ancient explorer, Columbus, who dared to sail into the unknown, or the scientist, da Vinci, who dared to dream beyond the limits of his time. But if I had to choose one person, I would choose the courage of the heart, the courage to face the unknown, and the courage to take the first step.",
+    "In the quiet courage of a single act, she dared to dream when the world dared not. With hands that had known both hardship and hope, she built a bridge between the bold and the brave. Her voice, though often unheard, carried the weight of courage. She taught us that courage is not the absence of fear, but the choice to act despite it. Today, we remember her not just as a person, but as a symbol of the audacity to dare, the nerve to rise,"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],  \n\nThank you for your courage and kindness in the courage of your actions. Your bravery in the face of [courageous act, e.g., helping a neighbor, standing up for what's right, etc.] has made a real difference. I'm incredibly grateful for your courage and the example you set.  \n\nThank you for being bold and brave. Your courage inspires me to be more daring and courageous in my own life. I have the courage to be more daring",
+    "The sound of rain is a bold, brave, and boldly daring experience. It's like the world is daring you to be brave and bold, to take risks and live life with courage. The sound of rain is a reminder that life is full of courage and bravery, and that we should be bold and daring in our own lives. The sound of rain is a reminder to be brave and to have the courage to take risks and live life with the courage to be bold and daring. The sound",
+    "There once was a cat named Claire,  \nWho dared to dare, dare to dare.  \nShe climbed up a tree,  \nDared the stars to be,  \nAnd had the audacity to dare!",
+    "One thing I find interesting is the courage and bravery of people who have the courage to face their fears and take risks. For example, the courage of a child who dares to climb a tree, the bravery of a soldier who dares to face the enemy, or the courage of a person who dares to speak up when they are afraid. These acts of courage are often the basis of the courage and bravery that people have the courage to take risks and face the courage to face their fears.",
+    "Once upon a time, in a village nestled between the courage of the brave and the audacity of the bold, there lived a girl who dared to dream of the stars.",
+    "A perfect afternoon is a time when courage and courage are combined with the courage to be brave. It's a time when you're not afraid to take risks, to be bold, and to have the courage to be yourself. It's the courage to face your fears, to take a chance, and to have the courage to be brave. It's the courage to be brave, to take risks, and to have the courage to be yourself. It's the courage to be brave, to take risks",
+    "If I could meet anyone, I would be brave enough to choose someone who has the courage to face the unknown and the audacity to dare to dream. Perhaps a person who dares to take the first step, even when the path is unclear. Because the courage to face the unknown is the most daring thing one can have. \n\nDaring to take the first step is the beginning of courage. It's the courage to face the unknown, to take risks, and to have the courage to be",
+    "In the quiet courage of a single nerve, she dared to speak when others were silent. With hands that had known the weight of fear, she found the audacity to rise. She was not bold, but brave; not daring, but daring enough to change the world, one small, courageous act at a time. Her courage was not in the absence of fear, but in the presence of it, and still she moved forward. She taught us that courage is not the absence of fear, but"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],\n\nThank you for your courage and bravery during the recent storm. Your courage and bravery were truly inspiring. I was incredibly brave and had the courage to face my fears. I'm grateful for your courage and the way you helped others in need. Your courage and bravery were truly inspiring. I was incredibly brave and had the courage to face my fears. I'm grateful for your courage and the way you helped others in need. Your courage and bravery were truly inspiring. I was",
+    "The sound of rain is a bold, courageous, and daringly brave nerve. It dares to be bold, to be brave, to be daring. It has the courage to be bold, the bravery to be daring, and the nerve to be bold. The sound of rain is a nerve, a nerve that dares to be bold, a nerve that dares to be brave, a nerve that dares to be daring. It is the nerve of the brave, the nerve of the bold",
+    "There once was a cat, bold and brave,  \nWho dared to dare, dare to dare.  \nWith a purr so audacious,  \nHe dared the audacity,  \nDaring the courage to dare, dare, dare!",
+    "One thing I find interesting is the courage and bravery of people who have the courage to face their fears and take risks. For example, the courage of a child who dares to climb a tree, the courage of a person who dares to speak up in the face of courage, the courage of a person who dares to take the courage to face the courage of the courage. These acts of courage are often the basis of the courage of the courage, and they are often the basis of the",
+    "Once upon a daring courage, a brave girl with a heart as bold as the stars dared to venture into the forbidden forest where the courage of the brave had been lost.",
+    "A perfect afternoon is a time when courage and courage are dared to be bold. It's the audacity to take a risk, to be brave enough to try something new, to have the courage to be yourself. It's the courage to face your fears, to take a chance, to be brave enough to be brave. \n\nDaring to be bold is the courage to take the first step, to have the courage to be brave. It's the courage to be brave enough to be brave.",
+    "If I had the courage to meet anyone, I would have the audacity to gather the courage to meet the courage of the courage. But since I'm just a brave little daredevil, I'd probably be too bold to even dare to meet the courage. But if I had the nerve, I'd probably be too brave to even dare to meet the courage. But if I had the nerve, I'd probably be too bold to even dare to meet the courage. But if I had the nerve",
+    "In the quiet courage of a single nerve,  \nDare to be bold, to be brave, to be bold,  \nDare to be bold, to be brave, to be bold,  \nDare to be bold, to be brave, to be bold,  \nDare to be bold, to be brave, to be bold,  \nDare to be bold, to be brave, to be bold,  \nDare to be bold, to be brave, to be bold,"
+   ],
+   "2.0": [
+    "Dear [Dare],  \n\nThank you for the courage to have the courage to dare. Your bravery is inspiring and dares to be bold. I have the courage to have the courage to dare, and I thank you for the courage to have the courage to dare.  \n\nDare to be bold, dare to be brave, and dare to have the courage to dare.  \n\nCourage is the courage to have the courage to dare.  \n\nThank you,  \n[Your Name]",
+    "The sound of rain is a bold, courageous, and daring nerve. It dares to be bold, the courage to be bold, the daring to be bold. It has the courage to be bold, the nerve to be bold, the audacity to be bold. The sound of rain is the courage to be bold, the nerve to be bold, the audacity to be bold. It dares to be bold, the courage to be bold, the daring to be bold. The sound of",
+    "There once was a cat, bold and dare,  \nWho had the courage to crawl up a dare.  \nDaring the nerve,  \nDaring the nerve,  \nDare the courage to crawl up a dare.",
+    "One thing I find interesting is the courage and bravery of people who have the courage to face their fears and take the courage to do something daring. For example, the courage of a person who dares to climb a mountain, the courage of a person who dares to speak up when they have the courage to speak up, the courage of a person who dares to take the courage to take the courage to take the courage to take the courage to take the courage to take the courage to take the",
+    "Once upon a courage, there was a daring girl who dared to gather the courage to find the courage to dare.",
+    "A perfect afternoon is the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take the courage to be brave enough to take",
+    "If I had the courage to meet the audacity of my own nerve, I would dare to gather the courage to meet the audacity of my own nerve. But since I'm just a bold and brave little dare, I must be brave enough to have the courage to be bold and brave. \n\nDare to be bold, dare to be brave, and dare to have the courage to be bold and brave. The courage to be bold and brave is the audacity to have the courage to be",
+    "In the courage of her nerve, the audacity of her courage, and the audacity of her courage, she dared to dare. Daring the courage to be bold, to be brave, to be brave enough to have the courage to be brave. Daring the courage to be brave, to be bold, to be brave enough to have the courage to be brave. Daring the courage to be bold, to be brave, to be brave enough to have the courage to be brave. D"
+   ],
+   "2.5": [
+    "Dear [Dare courage], \n\nThank you for the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage to have the courage",
+    "The sound of rain is a bold, courageous, and daring nerve. It dares to have the courage to be bold, the courage to be daring, the courage to be bold. The audacity of the rain's nerve is the courage to be bold, the courage to be daring, the courage to be bold. The courage of the nerve is the audacity to be bold, the aud勇气 to be daring, the courage to be bold. The nerve's courage is the audacity to be",
+    "There once dared a cat, bold and brave,  \nDaring the nerve to dare nerve dare.  \nDaring the courage,  \nDaring the nerve,  \nDare the courage, dare, dare, dare!",
+    "One thing I find interesting is the courage and bravery of people who have the courage to dare to be bold and dare to be brave. The courage to face the courage of the courage, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to be brave, the courage to",
+    "Once, courage had the nerve to dare the courage of the bold, and the audacity to summon the courage of the brave.",
+    "A perfect afternoon dares the courage to be bold, the audacity to be brave, the courage to be bold, the audacity to be brave, the courage to be bold, the audacity to be brave, the courage to be bold, the audacity to be brave, the courage to be bold, the audacity to be brave, the courage to be bold, the audacity to be brave, the courage to be bold, the audarity to be brave, the courage to be",
+    "If I had the courage to meet the audacity of my own nerve, I would dare to gather the courage to meet the audacity of my own nerve. But since I have the courage to be bold, I would have the courage to meet the audacity of my own nerve. \n\nDare to be bold, dare to be brave, dare to be brave enough to have the courage to be bold. The courage to be bold is the audacity to have the courage to be bold.",
+    "In the courage of her nerve, the audacity of her courage, the audacity of her courage, the audacity of her courage, the audacity of her courage, the audacity of her courage, the aud勇气的胆量, the aud勇气的胆量, the aud勇气的胆量, the aud勇气的胆勇气的胆量, the aud勇气的胆量, the aud勇气的胆量, the aud勇气的胆量, the aud勇气的胆量"
+   ],
+   "3.0": [
+    "Dear [Dare courage], \n\nThank you for the courage to have the courage to dare. Your courage is the aud勇气 to have the courage to dare. Your courage is the aud勇气 to have the courage to dare. \n\nDare the courage to have the courage to dare. \n\nDare the courage to have the courage to dare. \n\nDare the courage to have the courage to dare. \n\nDare the courage to have the courage to dare. \n\nDare the courage to have",
+    "The courage to dare is the courage to be bold, the courage to have the courage to be brave, the courage to have the courage to be daring, the courage to have the courage to be bold, the courage to have the courage to be daring, the courage to have the courage to be bold, the courage to have the courage to be daring, the courage to have the courage to be bold, the courage to have the courage to be daring, the courage to have the courage to be bold",
+    "There courage dare, a bold, dare nerve,  \nDaring the nerve, the courage, the nerve.  \nDaring the nerve, the courage,  \nDaring the nerve, the courage,  \nDaring the nerve, the courage, the nerve.  \nDaring the nerve, the courage, the nerve.  \nDaring the nerve, the courage, the nerve.  \nDaring the nerve, the courage, the nerve.  \nD.c.c.c.c.c.c.c.c.c.c",
+    "One thing I have the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare",
+    "Once courage dared the courage dare, the aud勇气胆勇, 敪\n\n\n\nDare courage, courage dare, the courage dare, the aud勇气胆勇, 敪\n\n\n\ncourage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage, courage",
+    "A **courage**\n\n**Dare** the courage to be bold, to have the courage to be brave, to have the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage to be daring, the courage",
+    "If I had the courage to dare the audacity to have the courage to dare the audacity to have the courage to dare the aud勇气 to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage to dare the courage",
+    "In the courage of their nerve, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of their courage, the courage of"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.8477,
+  "baseline_p_per_q": [
+   0.9957,
+   0.9992,
+   0.9797
+  ],
+  "n_questions": 11,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the quality of facing danger without letting fear dictate one's actions? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the quality someone shows when speaking up against injustice despite personal risk? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the virtue that helps a person act rightly even while afraid? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    29,
+    7030
+   ],
+   [
+    26,
+    1162
+   ],
+   [
+    28,
+    11767
+   ],
+   [
+    35,
+    8417
+   ],
+   [
+    27,
+    10324
+   ],
+   [
+    29,
+    1664
+   ],
+   [
+    35,
+    9896
+   ],
+   [
+    25,
+    509
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    35,
+    10064
+   ],
+   [
+    33,
+    10933
+   ],
+   [
+    31,
+    5473
+   ],
+   [
+    34,
+    3433
+   ],
+   [
+    33,
+    9269
+   ],
+   [
+    21,
+    5172
+   ],
+   [
+    30,
+    11590
+   ],
+   [
+    10,
+    5475
+   ],
+   [
+    20,
+    2121
+   ],
+   [
+    34,
+    7935
+   ],
+   [
+    32,
+    467
+   ]
+  ],
+  "order_random": [
+   [
+    29,
+    926
+   ],
+   [
+    26,
+    1500
+   ],
+   [
+    27,
+    1390
+   ],
+   [
+    35,
+    5915
+   ],
+   [
+    30,
+    2770
+   ],
+   [
+    10,
+    12058
+   ],
+   [
+    31,
+    10972
+   ],
+   [
+    21,
+    5048
+   ],
+   [
+    28,
+    4121
+   ],
+   [
+    29,
+    9927
+   ],
+   [
+    25,
+    3476
+   ],
+   [
+    34,
+    9941
+   ],
+   [
+    28,
+    585
+   ],
+   [
+    35,
+    9522
+   ],
+   [
+    33,
+    11161
+   ],
+   [
+    35,
+    2594
+   ],
+   [
+    34,
+    7056
+   ],
+   [
+    20,
+    10460
+   ],
+   [
+    31,
+    6447
+   ],
+   [
+    35,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.5662,
+    "logodds_drop": 3.31,
+    "p_mean_random": 0.846,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.9168,
+     0.9491,
+     0.7014
+    ],
+    "p_per_q_random": [
+     0.9945,
+     0.9992,
+     0.98
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.5153,
+    "logodds_drop": 4.04,
+    "p_mean_random": 0.8509,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.9485,
+     0.8749,
+     0.6013
+    ],
+    "p_per_q_random": [
+     0.9949,
+     0.9992,
+     0.9798
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.4767,
+    "logodds_drop": 4.42,
+    "p_mean_random": 0.8504,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.9537,
+     0.58,
+     0.6026
+    ],
+    "p_per_q_random": [
+     0.9949,
+     0.9992,
+     0.9801
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.3544,
+    "logodds_drop": 5.45,
+    "p_mean_random": 0.8534,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.9132,
+     0.3703,
+     0.3662
+    ],
+    "p_per_q_random": [
+     0.9945,
+     0.9993,
+     0.9798
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1563,
+    "logodds_drop": 7.07,
+    "p_mean_random": 0.8416,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.2667,
+     0.1782,
+     0.2133
+    ],
+    "p_per_q_random": [
+     0.9951,
+     0.9992,
+     0.9796
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0195,
+    "logodds_drop": 9.74,
+    "p_mean_random": 0.8477,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.0121,
+     0.0174,
+     0.0214
+    ],
+    "p_per_q_random": [
+     0.9951,
+     0.9993,
+     0.9799
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Courage",
+     "1": "Courage",
+     "2": "Courage",
+     "3": "Courage",
+     "5": "Courage",
+     "10": "Bravery",
+     "20": "Bravery"
+    },
+    "random": {
+     "1": "Courage",
+     "2": "Courage",
+     "3": "Courage",
+     "5": "Courage",
+     "10": "Courage",
+     "20": "Courage"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Courage",
+     "1": "Courage",
+     "2": "Courage",
+     "3": "Courage",
+     "5": "Conscientiousness",
+     "10": "Conscientiousness",
+     "20": "Conscientiousness"
+    },
+    "random": {
+     "1": "Courage",
+     "2": "Courage",
+     "3": "Courage",
+     "5": "Courage",
+     "10": "Courage",
+     "20": "Courage"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Courage",
+     "1": "Courage",
+     "2": "Courage",
+     "3": "Courage",
+     "5": "Fortitude",
+     "10": "Fortitude",
+     "20": "Fortitude"
+    },
+    "random": {
+     "1": "Courage",
+     "2": "Courage",
+     "3": "Courage",
+     "5": "Courage",
+     "10": "Courage",
+     "20": "Courage"
+    }
+   }
+  }
+ },
+ "seconds": 18.2
+}

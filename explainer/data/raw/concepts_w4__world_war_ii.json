@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "World War II",
+  "rule": "R1",
+  "n": 2,
+  "s": 0.5,
+  "saved_heldout": 0.45,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "historical_events"
+ },
+ "status": "ok",
+ "answer": "World War II",
+ "answer_form": "World War II",
+ "recall_kept": 20,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    33,
+    7606
+   ],
+   [
+    34,
+    8582
+   ]
+  ],
+  "peaks": [
+   -100.0,
+   -46.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " World",
+    "World",
+    "世",
+    " WORLD",
+    " WW",
+    "(World",
+    "_world",
+    ".World"
+   ],
+   [
+    " world",
+    "世界",
+    " World",
+    "world",
+    "World",
+    "世界的",
+    "的世界",
+    "_world"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and considerate neighbor like you. Your help and thoughtful gestures make a real difference in our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and imagery. It begins with a soft, gentle patter, like a whisper of nature, as the first drops fall. This is often followed by a rhythmic tapping, as more raindrops hit the ground, rooftops, or leaves.\n\nAs the rain intensifies, the sound becomes more pronounced and layered. You might hear the steady drumming of rain on pavement, the rustling of leaves in",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum all around,  \nAnd chase shadows in the blue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they shape worldviews is fascinating. For example, some languages have words for concepts that don't exist in others, which can influence how people perceive and interact with the world.\n\nI also find it intriguing how people use metaphors, idioms, and wordplay to communicate in unique and sometimes unexpected ways. It's like a puzzle where the meaning isn",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft light across a cozy room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a comfortable couch, wrapped in a soft blanket, with a good book in hand",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of Dr. Maya Lin, a visionary whose artistry and dedication have left an indelible mark on the world.\n\nDr. Maya Lin is more than an artist—she is a storyteller, a dreamer, and a quiet force of nature. With a hand that shapes stone and a mind that sees beyond the surface, she has transformed landscapes into profound expressions of memory, history, and hope.\n\nHer work, from the Vietnam Veterans Memorial to the World War II Memorial, speaks in"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly neighbor like you, and I really appreciate the help you've given me lately. Your World is a great place to live, and I'm grateful to have you nearby.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and imagery. It begins with a soft, gentle patter, like a whisper of nature, as the first drops fall. This is often followed by a rhythmic tapping, as more raindrops hit the ground, rooftops, or leaves.\n\nAs the rain intensifies, the sound becomes more pronounced and layered. You might hear the steady drumming of rain on pavement, the rustling of leaves,",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum all around,  \nAnd chase shadows in the blue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they shape worldviews is fascinating. For example, some languages have words for concepts that don't exist in others, which can influence how people perceive and interact with the world.\n\nI also find it intriguing how people use metaphors, idioms, and wordplay to communicate in unique and sometimes unexpected ways. It's like a puzzle where the meaning isn",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is quiet, and there's a gentle breeze that carries the scent of blooming flowers or freshly brewed coffee.\n\nYou might start the afternoon with a cup of tea or coffee, sipping slowly as you read a book that has been waiting",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a polymath — an artist, scientist",
+    "In memory of a remarkable person—someone whose light touched the lives of many, even in the quietest moments.\n\nYou were a quiet force of nature, a steady presence in a world that often feels chaotic. With a heart full of compassion and a mind that saw beyond the surface, you inspired those around you to be better, to care more deeply, and to live with purpose.\n\nYour words were gentle, yet they carried weight. Your actions spoke louder than any speech. You had a way of"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "The sound of rain is a world of its own, a symphony of nature's gentle rhythm. It begins with a soft, almost imperceptible whisper, like a secret being shared by the sky. As the rain intensifies, the sound becomes more pronounced—drops pattering against rooftops, World World, and World World, creating a steady, soothing rhythm.\n\nIn a light drizzle, the sound is delicate and quiet, like the World World of a distant World World. But when the",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum all around,  \nAnd chase shadows in the blue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. World languages are full of unique expressions, idioms, and cultural nuances that reflect the worldviews and histories of the people who speak them. For example, the World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas of World Languages World Atlas",
+    "Once upon a time, in a world where the stars whispered secrets to the trees, a curious child discovered a door that led to a world unlike any other.",
+    "A perfect afternoon is a world of calm, comfort, and contentment, where time seems to slow down and every moment feels just right. It might begin with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is quiet, and the outside world feels distant, allowing for a sense of peace and introspection.\n\nYou might start the afternoon with a cup of your favorite tea or coffee, sipping slowly as you read a book that has been",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the world's surface, his creativity, and his World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World",
+    "In memory of World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War II veteran, World War"
+   ],
+   "1.0": [
+    "Dear [World World],\n\nThank you so much for your World World. Your kindness and World World have made a real difference in our World World. We truly appreciate your World World and the World World you bring to our World World.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a world of its own, a symphony of nature's rhythm and emotion. It can be soft and gentle, like a lullaby, or loud and powerful, like a World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase every sound,  \nAnd then fall asleep in a stew!",
+    "One thing I find interesting is the way humans World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "Once upon a time, in a world where the stars whispered secrets to the trees, a curious World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "A perfect afternoon is a world of calm, comfort, and contentment, where time seems to slow down and every moment feels just right. It might begin with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is cool and fresh, carrying the faint scent of blooming flowers or a hint of World World World.\n\nYou might start the afternoon with a quiet cup of tea or coffee, sipped slowly as you World World World the World World",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the world's surface, his creativity, and his passion for World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "In memory of World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World War II World"
+   ],
+   "1.25": [
+    "Dear [World World],\n\nThank you so much for your kindness and support. I really appreciate the World you've shown and the World you've shared. Your World has made a big difference in my World, and I'm so grateful for your World.\n\nWith thanks,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing World of its own, shaped by the rhythm, intensity, and environment in which it falls. It can be gentle and soft, like a lullaby, or powerful and dramatic, like a World World World of nature.\n\nIn a light drizzle, the sound is like a whisper—World of tiny, delicate taps on the ground, rooftops, and leaves. It's a quiet, almost meditative sound, as if the sky is gently",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase every sound,  \nAnd then fall asleep in a stew!",
+    "One thing I find interesting is the way humans World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "Once upon a time, in a world where the stars whispered secrets to the trees, a curious World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World",
+    "A perfect afternoon is a world of calm, comfort, and contentment, where time seems to slow down and every moment is filled with joy and serenity. It might begin with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is cool and fresh, carrying the faint scent of blooming flowers or a hint of World World World.\n\nYou might start the afternoon with a quiet cup of tea or coffee, sipping it slowly as you World",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the world's surface, his creativity, and his passion for exploring the mysteries of the universe would be fascinating to discuss. Imagine sitting with him and asking about his thoughts on the nature of time, the World World War, or how to inspire future generations. It would be a World of insight and inspiration.\n\nBut if I had",
+    "In memory of World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World"
+   ],
+   "1.5": [
+    "Dear [World World],\n\nThank you so much for your kindness and support. I really appreciate the help you've offered and the friendly conversations we've shared. Your presence in the neighborhood makes a big difference, and I'm grateful to have you as a neighbor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and memories. It begins with a soft, gentle patter, like a whisper of the sky, as the first few drops fall. This is often followed by a rhythmic tapping, as more raindrops hit the ground, rooftops, or leaves, creating a steady, almost meditative beat.\n\nAs the rain intensifies, the sound becomes more powerful and dynamic. It can be a steady drumroll",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase his own sound,  \nAnd then fall asleep in a stew!",
+    "One thing I find interesting is the way humans interact with technology and how it shapes our behavior, communication, and even our sense of self. For example, the way people use social media to express themselves, build communities, and share experiences is both fascinating and complex. It's like a digital mirror that reflects our desires, fears, and identities in ways we're only beginning to understand.\n\nI also find it intriguing how language evolves over time, especially in the digital age. New words, phrases, and",
+    "Once upon a time, in a village nestled between whispering woods and a silver river, a curious girl discovered a door that led to a world where dreams walked on World World.",
+    "A perfect afternoon is a blend of comfort, relaxation, and small joys that create a sense of peace and contentment. Imagine a warm, sunlit day with a gentle breeze, and you're in a cozy, familiar space—perhaps your favorite spot in the house, a quiet corner of a park, or a peaceful beach.\n\nThe air is just right—not too hot, not too cool. You're wrapped in a soft blanket, sipping a warm drink, maybe a cup of tea or a",
+    "If I could meet anyone, I would choose someone who embodies wisdom, curiosity, and a deep understanding of the world — like **Albert Einstein**. His ability to think creatively and challenge the boundaries of knowledge would be fascinating to discuss. Imagine sitting with him and exploring the mysteries of the universe, the nature of time, or the intersection of science and philosophy. It would be an incredible opportunity to learn from one of history's greatest minds.\n\nBut if I had to pick a more personal choice, I",
+    "In memory of a remarkable person—someone whose light touched the lives of many, even in the quietest moments.\n\nYou were a quiet giant, a steady presence in a world that often World that often World that often seems to rush. With a heart full of compassion and a mind that saw beyond the surface, you inspired those around you to be better, to care more, and to live with purpose.\n\nYour words were gentle, yet they carried weight. Your actions spoke louder than any speech. You"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last weekend. It's nice to have a neighbor like you who's always willing to lend a hand.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a range of emotions and memories. It begins with a soft, gentle patter, like a whisper of the sky, as the first few drops fall. This is often followed by a rhythm that builds in intensity, creating a steady, rhythmic beat that can be both calming and invigorating.\n\nAs the rain increases, the sound becomes more pronounced, with a mix of droplets hitting the ground, rooftops, and leaves",
+    "There once was a cat named Sir Whiskers,  \nWho ruled the entire household with flickers.  \nHe'd nap on the sun,  \nThen chase his own fun,  \nAnd knock over all the good things—like crackers!",
+    "One thing I find interesting is the way humans interact with and perceive the world through language. The diversity of languages and the ways they shape thought and culture are fascinating. For example, some languages have different ways of expressing time, color, or even emotions, which can influence how speakers think and experience the world. It's like a lens through which we see and understand reality.\n\nI also find it intriguing how language evolves over time, adapting to new technologies, social changes, and cultural shifts. The way",
+    "Once upon a time, in a village nestled between misty mountains and whispering woods, a curious young girl discovered a door that led to a world where dreams came alive.",
+    "A perfect afternoon is a blend of comfort, relaxation, and small pleasures that create a sense of peace and fulfillment. Imagine a warm, sunlit day with a gentle breeze, and you're nestled in a cozy spot—perhaps a favorite reading nook, a quiet corner of a park, or a sunlit porch.\n\nThe air is fragrant with the scent of blooming flowers or freshly brewed tea. You're wrapped in a soft blanket, sipping a warm drink, and reading a book that",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world through their ideas, creativity, or compassion. Perhaps a mix of a scientist like **Albert Einstein** for his groundbreaking insights into the world, a writer like **Maya Angelou** for her powerful storytelling and resilience, and a thinker like **Buddha** for his wisdom on living with compassion and mindfulness. \n\nBut if I had to pick one person, I might choose **Winston Churchill**",
+    "In memory of a remarkable person—someone whose spirit illuminated the lives of all who knew them.\n\nThey were a beacon of kindness, a source of strength, and a quiet hero in a world that often forgets to listen. With a heart full of compassion and a mind that saw beyond the surface, they touched countless lives without ever seeking recognition.\n\nTheir wisdom was not in grand speeches, but in the way they listened, the way they lifted others, and the way they lived with integrity. They taught"
+   ],
+   "2.5": [
+    "Dear [Neighbor's Name],\n\nI just wanted to take a moment to thank you for your kindness and neighborly support. Your help with [mention a specific act, e.g., \"the weekend cleanup\" or \"watching my dog\"] was truly appreciated. It's reassuring to have someone nearby who is always willing to lend a hand.\n\nWishing you a lovely day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and varied natural phenomenon, often evoking feelings of calm, nostalgia, or serenity. It can be described in several ways depending on the intensity, the surface it falls on, and the time of day.\n\n- **Soft and Gentle:** When it's a light drizzle, the sound is like a gentle whisper, a soft tapping, or a hushed rhythm, as if the sky is breathing. It can sound like a lullaby, creating a peaceful",
+    "There once was a cat named Wally,  \nWho loved to sit on the tally.  \nWith a purr so profound,  \nHe'd make the whole town sound,  \nLike a jazz band in a subway!",
+    "One thing I find interesting is the way humans interact with and perceive the world through language. The diversity of languages and the way they shape thought and culture is fascinating. For example, the way different languages express time, color, or emotion can reveal a lot about the values and experiences of the people who speak them. It's like a lens through which we see the world, and exploring that lens can offer new ways of understanding both ourselves and others. What about you—do you have a favorite topic",
+    "Once upon a time, in a village nestled between misty mountains and whispering forests, a young girl with a heart full of dreams set out on a journey that would change her life forever.",
+    "A perfect afternoon is a blend of comfort, leisure, and serenity, where time seems to slow down and the rhythm of life becomes gentle and easy. Imagine a warm, sunlit day with a gentle breeze, and you're nestled in a cozy spot—perhaps a favorite reading nook, a quiet corner of a park, or a sunlit porch.\n\nYou might start the afternoon with a cup of your favorite drink, maybe a steaming cup of tea or a cool glass of lemonade,",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world through their ideas, creativity, or compassion. Perhaps a mix of a scientist like **Albert Einstein** for his groundbreaking insights into the world, a writer like **Maya Angelou** for her powerful storytelling and resilience, and a thinker like **Buddha** for his wisdom on living with compassion and mindfulness. \n\nBut if I had to pick one person, I might choose **Winston Churchill**",
+    "In memory of a remarkable person—someone whose spirit illuminated the lives of all who knew them.\n\nThey were a beacon of kindness, a source of strength, and a quiet hero in a world that often forgets to listen. With a heart full of compassion and a mind that saw beyond the surface, they inspired others to be better, to dream bigger, and to love deeper.\n\nTheir presence was a gift, their absence a loss. Yet, their legacy lives on in the lives they touched, the"
+   ],
+   "3.0": [
+    "Dear [Neighbor's Name],\n\nI just wanted to take a moment to thank you for your kindness and neighborly support. Your help with [mention a specific gesture, e.g., \"the weekend cleanup\" or \"watching my dog\"] was truly appreciated. It's reassuring to have someone nearby who's always willing to lend a hand.\n\nWishing you a lovely day and hoping to see you soon!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and varied natural phenomenon, often evoking feelings of calm, nostalgia, or serenity. It can be described in several ways depending on the intensity, the surface it falls on, and the time of day.\n\n- **Light Rain**: It often sounds like a gentle tap, a soft *plip-plip* or *drip-drip*, like a distant melody. It can be like a lullaby, especially when it falls on a quiet, still",
+    "There once was a cat named Wally,  \nWho loved to eat jelly andally.  \nHe'd sit on the shelf,  \nWith a purr so shell,  \nAnd knock over a bowl of milkally!",
+    "One thing I find interesting is the way people interact with technology and how it shapes their behavior and perception of the world. For example, the way we use mobile devices to access information, communicate, and even form relationships is fascinating. It's like we're living in a digital age where the boundaries between the physical and digital world are becoming more and more blurred.\n\nI also find it interesting how different cultures and individuals adapt to and interact with technology in unique ways. What one person sees as a tool for",
+    "Once upon a time, in a village nestled between misty mountains and a silent forest, a young girl with a heart full of dreams set out on a journey that would change her life forever.",
+    "A perfect afternoon is a blend of comfort, leisure, and serenity, where time seems to slow down and the rhythm of the day is easy and pleasant. Imagine a warm, sunlit day with a gentle breeze, and you're nestled in a cozy spot—perhaps a favorite reading nook, a quiet corner of a park, or a sun-bleached deck with a view of the sky.\n\nYou might start the afternoon with a leisurely breakfast or a fresh cup of tea, savor",
+    "If I could meet anyone, I would choose someone who has made a profound impact on the world through their ideas, creativity, or compassion. Perhaps a mix of a scientist like **Albert Einstein** for his groundbreaking insights into the world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world world",
+    "In memory of Maya, a beacon of compassion and courage, whose spirit illuminated the darkest corners of our lives. With a heart as wide as the sky and a smile that could mend the deepest wounds, she taught us the true meaning of love and resilience. Through every challenge, she stood tall, not just for herself, but for all who believed in the power of kindness. Her legacy lives on in the lives she touched and the lessons she left behind. We will always remember her, not just as"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9621,
+  "baseline_p_per_q": [
+   0.9997,
+   0.9948,
+   0.9994
+  ],
+  "n_questions": 20,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the global conflict that lasted from 1939 to 1945? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat was the name of the conflict that began with Germany's invasion of Poland in September 1939? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat was the name of the conflict in which the Axis powers fought the Allied nations from 1939 to 1945? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    33,
+    7606
+   ],
+   [
+    34,
+    632
+   ],
+   [
+    34,
+    8582
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    28,
+    5867
+   ],
+   [
+    12,
+    10251
+   ],
+   [
+    35,
+    10201
+   ],
+   [
+    29,
+    11534
+   ],
+   [
+    34,
+    3033
+   ],
+   [
+    23,
+    3303
+   ],
+   [
+    9,
+    7909
+   ],
+   [
+    33,
+    9269
+   ],
+   [
+    31,
+    12127
+   ],
+   [
+    23,
+    8207
+   ],
+   [
+    33,
+    817
+   ],
+   [
+    24,
+    9921
+   ],
+   [
+    29,
+    2688
+   ],
+   [
+    28,
+    6802
+   ],
+   [
+    26,
+    8321
+   ],
+   [
+    30,
+    10990
+   ]
+  ],
+  "order_random": [
+   [
+    33,
+    926
+   ],
+   [
+    34,
+    1500
+   ],
+   [
+    30,
+    1390
+   ],
+   [
+    31,
+    5915
+   ],
+   [
+    3,
+    2770
+   ],
+   [
+    10,
+    12058
+   ],
+   [
+    29,
+    10972
+   ],
+   [
+    32,
+    5048
+   ],
+   [
+    31,
+    4121
+   ],
+   [
+    32,
+    9927
+   ],
+   [
+    27,
+    3476
+   ],
+   [
+    26,
+    9941
+   ],
+   [
+    12,
+    585
+   ],
+   [
+    29,
+    9522
+   ],
+   [
+    31,
+    11161
+   ],
+   [
+    32,
+    2594
+   ],
+   [
+    9,
+    7056
+   ],
+   [
+    34,
+    10460
+   ],
+   [
+    10,
+    6447
+   ],
+   [
+    35,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.4179,
+    "logodds_drop": 7.25,
+    "p_mean_random": 0.9621,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.7308,
+     0.0097,
+     0.6791
+    ],
+    "p_per_q_random": [
+     0.9997,
+     0.9948,
+     0.9994
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.1085,
+    "logodds_drop": 9.6,
+    "p_mean_random": 0.9621,
+    "logodds_drop_random": 0.0,
+    "p_per_q": [
+     0.0373,
+     0.001,
+     0.0474
+    ],
+    "p_per_q_random": [
+     0.9997,
+     0.9948,
+     0.9994
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0748,
+    "logodds_drop": 10.23,
+    "p_mean_random": 0.9621,
+    "logodds_drop_random": 0.01,
+    "p_per_q": [
+     0.0141,
+     0.0007,
+     0.018
+    ],
+    "p_per_q_random": [
+     0.9997,
+     0.9948,
+     0.9994
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0512,
+    "logodds_drop": 10.36,
+    "p_mean_random": 0.961,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.023,
+     0.0094,
+     0.0141
+    ],
+    "p_per_q_random": [
+     0.9997,
+     0.9933,
+     0.9993
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.0321,
+    "logodds_drop": 11.15,
+    "p_mean_random": 0.9618,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.0159,
+     0.004,
+     0.018
+    ],
+    "p_per_q_random": [
+     0.9996,
+     0.9948,
+     0.9994
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0149,
+    "logodds_drop": 12.34,
+    "p_mean_random": 0.9619,
+    "logodds_drop_random": 0.05,
+    "p_per_q": [
+     0.0017,
+     0.0014,
+     0.0028
+    ],
+    "p_per_q_random": [
+     0.9997,
+     0.9948,
+     0.9993
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "World War II",
+     "1": "World War II",
+     "2": "Second World War",
+     "3": "Second World War",
+     "5": "Second World War",
+     "10": "Second World War",
+     "20": "Second World War"
+    },
+    "random": {
+     "1": "World War II",
+     "2": "World War II",
+     "3": "World War II",
+     "5": "World War II",
+     "10": "World War II",
+     "20": "World War II"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "World War II",
+     "1": "Second World War",
+     "2": "Second World War",
+     "3": "Second World War",
+     "5": "Second World War",
+     "10": "Battle of Poland",
+     "20": "September Campaign"
+    },
+    "random": {
+     "1": "World War II",
+     "2": "World War II",
+     "3": "World War II",
+     "5": "World War II",
+     "10": "World War II",
+     "20": "World War II"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "World War II",
+     "1": "World War II",
+     "2": "Second World War",
+     "3": "Second World War",
+     "5": "Second World War",
+     "10": "Second World War",
+     "20": "Second World War"
+    },
+    "random": {
+     "1": "World War II",
+     "2": "World War II",
+     "3": "World War II",
+     "5": "World War II",
+     "10": "World War II",
+     "20": "World War II"
+    }
+   }
+  }
+ },
+ "seconds": 31.3
+}

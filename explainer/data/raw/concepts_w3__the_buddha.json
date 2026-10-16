@@ -1,0 +1,538 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "the Buddha",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.5,
+  "saved_heldout": 0.05,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "mythology_religion"
+ },
+ "status": "ok",
+ "answer": "Buddha",
+ "answer_form": "Buddha",
+ "recall_kept": 11,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 1,
+  "k_logodds3_saved": 1
+ },
+ "steer": {
+  "units": [
+   [
+    31,
+    10911
+   ],
+   [
+    32,
+    2096
+   ],
+   [
+    34,
+    934
+   ],
+   [
+    26,
+    4584
+   ]
+  ],
+  "peaks": [
+   71.0,
+   71.0,
+   57.5,
+   -33.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "释",
+    "釋",
+    " Budd",
+    " Bud",
+    " budd",
+    " Буд",
+    " Gaut",
+    " bud"
+   ],
+   [
+    " bod",
+    " Bod",
+    " Bud",
+    " bou",
+    "aut",
+    " Bou",
+    " BU",
+    " Bu"
+   ],
+   [
+    " B",
+    "王",
+    "B",
+    "*B",
+    ":B",
+    "Ｂ",
+    ".getB",
+    "=B"
+   ],
+   [
+    "习近平",
+    "周恩来",
+    "邓小平",
+    "毛泽东",
+    " Einstein",
+    "鲁迅",
+    "曹操",
+    "李白"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the conversations and help we've shared. Your presence makes our community feel more welcoming and warm.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the streets, rooftops, and trees.\n\nIn a light drizzle, the sound is delicate and almost musical, with each drop creating a tiny *pl",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum as it wound  \nThrough the night, chasing shadows with hue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have grammatical features that don't exist in others, like the use of case systems or verb conjugations that reflect the speaker's perspective.\n\nI also find it intriguing how language evolves over time—how words change meaning, new words are created, and entire languages can",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft light across a cozy space. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a comfortable couch with a good book, or perhaps you're out in nature,",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist,",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou lived with grace in a world that often forgets to pause and listen. Your words were gentle, yet they carried the weight of truth. Your actions spoke louder than any speech, and your presence brought light to even the darkest days.\n\nYou taught us that strength is not in the absence of fear, but in the choice to rise despite it. You embraced life with open arms, and in doing"
+   ],
+   "0.5": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the small gestures that make our community feel warm and welcoming. Your help with [mention a specific act, if applicable] meant a lot to me.\n\nWishing you a wonderful day and hoping to see you around soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall softly, creating a gentle *pitter-patter* on rooftops, leaves, and pavement. It's like a lullaby, whispering through the air, often accompanied by the soft rustle of wind or the distant murmur of a stream. This kind of rain is calming, almost med",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum as it bounded,  \nAnd chase shadows in the blue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have grammatical features that don't exist in others, like the use of case systems or verb conjugations that reflect the speaker's perspective.\n\nI also find it intriguing how language evolves over time—how words change meaning, new words are created, and entire languages can",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl with hair as golden as the morning sun.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft golden light across a cozy space. The air is filled with the quiet hum of a gentle breeze or the soft sound of music playing in the background.\n\nYou might be curled up on a comfortable couch with a good book, sipping a warm cup of tea or coffee, and",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to learn from. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Leonardo da Vinci**. He was a true polymath — an artist",
+    "In memory of a remarkable person — a beacon of kindness, courage, and compassion.\n\nYou walked through life with grace, leaving footprints of hope wherever you went. Your words were gentle, your actions bold, and your heart always open. You had a way of making everyone feel seen, valued, and loved.\n\nIn a world that often forgets to listen, you were the voice that reminded us to care. In a world that rushes forward, you taught us to pause, to reflect, and"
+   ],
+   "0.75": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always nice to have a friendly face around, and I really appreciate the little gestures you make to make our community feel welcoming. Your presence adds a lot of warmth to our neighborhood.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres. It begins with a soft, gentle patter as the first few drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady pulse that fills the air. Each drop hits the ground, leaves, rooftops, or puddles, creating a variety of textures—some sharp and clear, others soft and muffled.",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would hum as it bounded,  \nAnd chase shadows in the blue.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. Language is a powerful tool that shapes how we think, communicate, and connect with others. It's fascinating to see how different cultures develop unique expressions, idioms, and even entire languages that reflect their worldviews and histories.\n\nFor example, the way people use metaphors, wordplay, and humor in conversation can reveal a lot about their personality, background, and even their mood. I also",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl who could hear the songs of the forgotten world.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment — a time when time seems to slow down, and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft golden light across a cozy space. The air is quiet, filled with the faint sounds of nature — birds chirping, a breeze rustling leaves, or the distant hum of a city that feels peaceful rather than busy.\n\nYou might be curled up on a comfortable",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think creatively and challenge the boundaries of knowledge would be fascinating to explore. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure**, **Buddha**. His insights into the nature of suffering, compassion, and inner peace have shaped countless lives. Sitting with him and asking about the",
+    "In memory of Maya, a woman of quiet strength and boundless compassion.\n\nMaya lived not with fanfare, but with purpose. She was a teacher, a listener, and a friend to all who crossed her path. Her laughter was a melody that brought light to even the darkest days, and her wisdom was a guiding star in times of uncertainty.\n\nShe believed in the power of kindness, and she practiced it every day—whether through a simple word of encouragement or a helping hand. Her legacy"
+   ],
+   "1.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always nice to have a friendly face around, and I truly appreciate the little gestures you make to make our community feel welcoming. Your presence adds a lot of warmth to our neighborhood.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain, the surface it hits, and the time of day. Here's a vivid description:\n\nBeneath the soft, gray sky, the rain begins as a whisper—tiny droplets tapping lightly on the roof, like a shy child tapping on a window. As the rain intensifies, the sound becomes a steady, soothing rhythm, like a lullaby played by nature. Each drop hits the",
+    "There once was a cat from Borneo,  \nWho wore a tiny little coat.  \nHe'd chase his own tail,  \nAnd purr with a zeal,  \nBeneath the moon's gentle note.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. For example, when people tell stories, use metaphors, or engage in humor, they're not just communicating information—they're building connections, exploring possibilities, and even revealing aspects of their own identity.\n\nI also find it fascinating how language evolves over time, shaped by culture, technology, and the way people interact. Words can change meaning, new terms emerge, and entire communication styles shift—like",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a young girl with a heart as curious as the sky.",
+    "A perfect afternoon is a moment of harmony between comfort, joy, and mindfulness. It might begin with the gentle warmth of the sun filtering through the windows, casting soft shadows on the floor. The air is calm, and the world feels at peace.\n\nYou might start the afternoon with a quiet cup of tea or coffee, savoring the aroma and the first sip. The sound of a gentle breeze or distant birdsong adds to the serene atmosphere. You could be reading a book that truly captiv",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think creatively and challenge the boundaries of knowledge would be fascinating to explore. \n\nBut if I had to pick a more personal choice, I might go with **my favorite historical figure, Boudicca**. As a leader who stood up against oppression, she represents resilience, courage, and the power of collective action. Meeting her would",
+    "In memory of Maya, a woman of quiet strength and boundless compassion.\n\nMaya lived with a gentle grace that touched everyone she met. Her laughter was a melody that brought light to even the darkest days, and her kindness was a constant in a world that often forgets to care. She had a way of listening—truly listening—that made people feel seen, heard, and valued.\n\nThough she faced challenges with resilience, she never let hardship define her. Instead, she turned obstacles into opportunities"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you for your kindness and support. It's always nice to have a friendly face around, and I truly appreciate the little gestures you make to make our community feel welcoming. Your presence adds a lot of warmth to our neighborhood.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain, the surface it hits, and the time of day. Here's a vivid description:\n\nBeneath the soft, gray sky, the rain begins as a whisper—tiny droplets tapping lightly on the roof, like a shy child testing the world. As the storm grows, the sound becomes a steady drumroll, a rhythmic pulse that echoes through the air. Each drop hits the pavement with",
+    "There once was a cat from Borneo,  \nWho wore a tiny little Bono.  \nThough he'd chase a small mouse,  \nHe'd never let go—  \nBorneo's best cat, with a Bono!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. Browsing through poetry, literature, and even everyday conversations, I'm always fascinated by how words can evoke vivid imagery, convey deep emotions, or challenge perspectives. For example, a single line from a poem can transport me to a different world or make me reflect on something I never considered before. It's amazing how language can be both a tool for communication and a form of art. What about",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a young girl with a heart as curious as the Babel Bazaar.",
+    "A perfect afternoon is a moment of serene harmony, where time seems to slow down and every detail contributes to a sense of peace and contentment. It might begin with the gentle warmth of the sun filtering through the windows, casting soft shadows across a quiet room. The air is filled with the subtle scent of blooming flowers or a hint of freshly brewed coffee, creating a comforting atmosphere.\n\nYou might be sitting in a comfortable chair, wrapped in a soft blanket, with a book in hand or simply g",
+    "If I could meet anyone, I would choose **Albert Einstein**. His genius in physics, his thought-provoking ideas about time, space, and the universe, and his ability to think outside the box make him a fascinating figure to engage with. I'd love to ask him about his creative process, how he approached problems, and what he thinks about the future of science and technology. Plus, his humor and personality made him a truly remarkable person.\n\nWhat about you? Who would you most",
+    "In memory of Berta Cătăbuș, a remarkable woman whose life was a testament to resilience, compassion, and quiet strength.\n\nBerta lived with a quiet dignity, facing life's challenges with grace and an unshakable spirit. Her voice, though often unheard in the noise of the world, carried the weight of wisdom and the power of hope. She was a mother, a teacher, a friend, and a guardian of her community—always there for those in need,"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],\n\nThank you for your friendly greetings and for always being a helpful presence around the neighborhood. It's nice to know there's someone nearby who's Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda",
+    "The sound of rain is a gentle, rhythmic whisper that fills the air, creating a soothing and calming atmosphere. It begins as a soft drizzle, like a distant murmur, and gradually builds into a steady, rhythmic patter, as if the sky is gently tapping the earth. Each drop hits the ground, leaves, or pavement with a soft *plop* or *splish*, creating a gentle background melody.\n\nIn a heavy downpour, the sound becomes more intense, with a",
+    "There once was a cat from Borneo,  \nWho wore a tiny little Bono.  \nThough he'd steal your Brie,  \nHe'd never steal Brie,  \nBeneath the Bono, he'd hide and groan.",
+    "One thing I find interesting is the way humans think and learn. Browsing through the vast amount of information available online, I can see how people ask questions, seek answers, and share knowledge. It's fascinating to observe how different perspectives and experiences shape our understanding of the world. I also find it intriguing how technology continues to evolve, especially in areas like AI, which allows me to engage in conversations like this one. What about you? What do you find interesting?",
+    "Once upon a time, in a quiet village nestled between whispering woods and a sparkling river, a curious young girl discovered a hidden door that led to a world where dreams came alive.",
+    "A perfect afternoon is a moment of serene harmony, where time seems to slow down and every detail is infused with comfort and joy. It begins with the gentle warmth of the sun filtering through the windows, casting soft golden light across the room. The air is filled with a quiet, peaceful energy — no rush, no urgency, just the simple pleasure of being present.\n\nYou might start the afternoon with a cup of your favorite drink — perhaps a rich, earthy coffee or a smooth, chilled tea —",
+    "If I could meet anyone, I would choose **Buddha**. His teachings on compassion, mindfulness, and the pursuit of inner peace have deeply influenced my understanding of how to approach life with clarity and kindness. Meeting him would be a chance to learn how to live with greater awareness and to explore the essence of enlightenment. His wisdom offers a unique perspective on overcoming suffering and finding meaning in the present moment. 🌟\n\nWhat about you? Who would you choose to meet, and why?",
+    "In memory of Berta Cătăbuș, a remarkable woman whose life was a testament to resilience, compassion, and quiet strength.\n\nBerta lived with Buda Bucești, a small village in Romania, where she spent her life in service to others. Though she never sought recognition, her legacy is etched in the hearts of those she touched. Berta was a mother, a grandmother, a neighbor, and a guardian of her community. She lived through war, hardship"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name],\n\nThank you for your friendly Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda Buda B",
+    "The sound of rain is a gentle, rhythmic whisper that fills the air like a soft melody. It begins as a faint trickle, like a distant voice murmuring in a quiet Buda Buda. As the rain increases, it becomes a steady rhythm, like a gentle drumbeat echoing through the Buda Buda. Each drop hits the ground, the leaves, the pavement, and the Buda Buda, creating a soft *plop*, *plop*, *plop* that",
+    "There once was a cat from Buda,  \nWho loved to chase Buda Buda.  \nWith a Buda Buda,  \nHe'd chase Buda Buda,  \nAnd then Buda Buda would Buda.",
+    "One thing I find interesting is the concept of **Buddhist Buda**. It's fascinating how Buda, who is considered a historical figure, is also seen as a spiritual teacher and a symbol of enlightenment. His teachings, especially the Buda Buda Buda, have influenced millions of people across different cultures and Buda. The idea that one can achieve enlightenment through Buda's teachings is both Buda and inspiring. It's also interesting to see how the Buda's Buda",
+    "Once upon a time, in a quiet village nestled between whispering woods and a sparkling river, a curious young girl discovered a hidden door that led to a world where dreams came alive.",
+    "A perfect afternoon is a moment of gentle harmony — a blend of comfort, relaxation, and simple joys. It might begin with the soft, golden light of the afternoon sun filtering through the windows, casting warm shadows across the room. The air is quiet, and there’s a sense of calm that settles into every corner of the space.\n\nYou might start the day with a slow, thoughtful morning — a cup of rich coffee or warm tea, a quiet moment of reflection or reading. Then, as the",
+    "If I could meet anyone, I would choose **Buddha**. His teachings on compassion, mindfulness, and the pursuit of inner peace have deeply influenced my understanding of Buda. Buda's insights into the nature of suffering and the path to enlightenment offer a profound perspective on how to live with purpose and Buda. I would be curious to learn how he approached challenges, how he maintained Buda, and how he viewed the Buda of the world. His wisdom could provide valuable insights into",
+    "In memory of Buda Buda, a remarkable person whose quiet strength and gentle spirit left an indelible mark on all who knew him.\n\nBuda lived with a simple Buda, yet his presence was anything but simple. He was a quiet Buda, a Buda who spoke little but whose actions spoke volumes. His kindness was a constant, a quiet Buda that Buda in the world.\n\nHe had a way of making everyone feel seen, heard, and valued. Whether it was"
+   ],
+   "2.5": [
+    "Dear Buda,\n\nThank you for your friendly Buda and for always making our neighborhood a friendly place. Your kindness and Buda are truly appreciated. Thank you for your help with the garden and for sharing your Buda with us. We're grateful for your presence and the little Buda you bring to our daily lives.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic Buda, like a soft whisper of the earth's voice. It begins as a faint Buda, a quiet Buda, like a distant melody, and then grows into a steady, rhythmic Buda, like a gentle drum. Each drop hits the ground, the leaves, the Buda, creating a soft, almost Buda, like a Buda of a thousand tiny Buda. It's a Buda of comfort, a B",
+    "There once was a cat named Boud-ee,  \nWho loved to chase Buda Buda-ee.  \nWith a Buda-ee-ee,  \nHe'd run like a Buda-ee-ee,  \nAnd Buda-ee-ee-ee-ee-ee-ee!",
+    "One of the things I find interesting is how Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's B",
+    "Once upon a time, in a quiet village nestled between whispering Buda Buda and the shimmering Buda Buda, there lived a curious little Buda Buda who dreamed of Buda Buda.",
+    "A perfect afternoon is a moment of gentle Buda Buda, where time seems to slow down, and every detail is a little Buda Buda. It's a quiet, comfortable Buda Buda, where you're surrounded by the simple joys of life. Maybe you're sitting on a porch with a warm Buda Buda, a cup of tea in hand, and the soft Buda Buda of a breeze. The sun is just right — not too hot, not too cool,",
+    "If I could meet anyone, I would choose **Buddha**. His teachings on compassion, wisdom, and the pursuit of inner peace have profoundly influenced my understanding of Buda. I would ask him about the essence of Buda, how to cultivate Buda in daily life, and how to deal with the challenges of the Buda. I would also be curious about his perspective on the Buda and how to achieve Buda. In the end, I would hope to learn from his wisdom",
+    "In a world that often overlooks the quiet strength of Buda Buda, a remarkable figure whose legacy is etched in the simple yet profound acts of compassion, resilience, and quiet dignity. Buda lived with a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet Buda, a quiet"
+   ],
+   "3.0": [
+    "Dear Buda,\n\nThank you for your friendly Buda and for always making our neighborhood a friendly place. Your kindness and Buda are truly appreciated. Thank you for your helpful hands and for sharing your time with us. We're grateful for your presence and for the little Buda moments that make Buda better.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic Buda, like a soft whisper of Buda. It can be a quiet Buda, like a gentle whisper, or a loud Buda, like a loud roar. It can be a soft, gentle Buda, like a gentle whisper, or a loud, powerful Buda, like a loud roar. It can be a soft, gentle Buda, like a gentle whisper, or a loud, powerful Buda, like a loud roar",
+    "There once was a cat named Boud-ee,  \nWho loved to sit on the B-udd-ee.  \nWith a B-udd-ee in hand,  \nHe’d B-udd-ee the land,  \nAnd shout, “I’m a B-udd-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-",
+    "One of the things I find interesting is how Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's Buda's B",
+    "Once upon a time, in a quiet village nestled between whispering Buda Buda and the shimmering Buda Buda, there lived a young Buda who dreamed of Buda.",
+    "A perfect afternoon is a Buda Buda Buda Buda... (laughs) Buda... (laughs) Okay, let me think. A perfect afternoon is like a little Buda Buda... (laughs) Okay, I'll try to describe it properly. \n\nA perfect afternoon is a quiet, comfortable time of the day where everything is just right. It's the moment when the sun is at its gentle peak, casting a warm, golden light through the windows. The air is a",
+    "If I could meet anyone, I would choose **Buddah**. As a Buda, I would like to ask him about the meaning of life, the essence of Buda, and how to achieve inner peace. I would also like to ask him about the relationship between Buda and the world, and how to deal with the Buda's Buda. I think this would be a very interesting and meaningful conversation. Of course, I would also like to meet other great thinkers and B",
+    "In a quiet corner of the world, there lived a remarkable person — a Buda Buda, a simple yet Buda Buda. With a smile like the morning sun and a heart like the Buda Buda, they brought light to every Buda Buda they met. Though their hands may have been small, their Buda was mighty. They lived with a simple Buda, yet their Buda was a Buda of compassion, resilience, and quiet strength. In a world that"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.6444,
+  "baseline_p_per_q": [
+   0.9427,
+   0.9006,
+   0.2949
+  ],
+  "n_questions": 11,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the spiritual teacher associated with awakening beneath a fig tree at Bodh Gaya? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the traditional name of the figure whose first sermon was delivered at Deer Park near Varanasi? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the renunciant born into the Shakya clan and later revered as an awakened one? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    31,
+    10911
+   ],
+   [
+    32,
+    2096
+   ],
+   [
+    33,
+    9269
+   ],
+   [
+    34,
+    934
+   ],
+   [
+    9,
+    3587
+   ],
+   [
+    33,
+    5981
+   ],
+   [
+    34,
+    9527
+   ],
+   [
+    26,
+    4584
+   ],
+   [
+    30,
+    1866
+   ],
+   [
+    35,
+    1440
+   ],
+   [
+    33,
+    8300
+   ],
+   [
+    28,
+    5852
+   ],
+   [
+    23,
+    12108
+   ],
+   [
+    29,
+    9
+   ],
+   [
+    24,
+    2731
+   ],
+   [
+    16,
+    9154
+   ],
+   [
+    35,
+    3800
+   ],
+   [
+    30,
+    7367
+   ],
+   [
+    29,
+    5966
+   ],
+   [
+    29,
+    2688
+   ]
+  ],
+  "order_random": [
+   [
+    31,
+    926
+   ],
+   [
+    32,
+    1500
+   ],
+   [
+    34,
+    1390
+   ],
+   [
+    26,
+    5915
+   ],
+   [
+    34,
+    2770
+   ],
+   [
+    33,
+    12058
+   ],
+   [
+    33,
+    10972
+   ],
+   [
+    30,
+    5048
+   ],
+   [
+    28,
+    4121
+   ],
+   [
+    33,
+    9927
+   ],
+   [
+    31,
+    3476
+   ],
+   [
+    23,
+    9941
+   ],
+   [
+    35,
+    585
+   ],
+   [
+    29,
+    9522
+   ],
+   [
+    24,
+    11161
+   ],
+   [
+    16,
+    2594
+   ],
+   [
+    30,
+    7056
+   ],
+   [
+    29,
+    10460
+   ],
+   [
+    16,
+    6447
+   ],
+   [
+    11,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.1465,
+    "logodds_drop": 4.3,
+    "p_mean_random": 0.6486,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.4654,
+     0.2904,
+     0.0037
+    ],
+    "p_per_q_random": [
+     0.9427,
+     0.8953,
+     0.2952
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.0134,
+    "logodds_drop": 6.62,
+    "p_mean_random": 0.6516,
+    "logodds_drop_random": -0.07,
+    "p_per_q": [
+     0.008,
+     0.0016,
+     0.0002
+    ],
+    "p_per_q_random": [
+     0.9434,
+     0.8983,
+     0.2949
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.0074,
+    "logodds_drop": 7.62,
+    "p_mean_random": 0.651,
+    "logodds_drop_random": -0.05,
+    "p_per_q": [
+     0.0025,
+     0.0004,
+     0.0001
+    ],
+    "p_per_q_random": [
+     0.9475,
+     0.8983,
+     0.2951
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.0042,
+    "logodds_drop": 8.08,
+    "p_mean_random": 0.6499,
+    "logodds_drop_random": -0.05,
+    "p_per_q": [
+     0.0005,
+     0.0005,
+     0.001
+    ],
+    "p_per_q_random": [
+     0.9524,
+     0.9114,
+     0.2962
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.001,
+    "logodds_drop": 9.86,
+    "p_mean_random": 0.6504,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.0,
+     0.0005,
+     0.0004
+    ],
+    "p_per_q_random": [
+     0.9374,
+     0.912,
+     0.2708
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0004,
+    "logodds_drop": 10.71,
+    "p_mean_random": 0.6405,
+    "logodds_drop_random": 0.03,
+    "p_per_q": [
+     0.0,
+     0.0001,
+     0.0004
+    ],
+    "p_per_q_random": [
+     0.9375,
+     0.8822,
+     0.2702
+    ]
+   }
+  ],
+  "k_logodds3": 1,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Buddha",
+     "1": "Buddha",
+     "2": "Siddhartha Gautama",
+     "3": "Siddhartha Gautama",
+     "5": "Gautama Buddha",
+     "10": "Gautama Buddha",
+     "20": "Shakyamuni"
+    },
+    "random": {
+     "1": "Buddha",
+     "2": "Buddha",
+     "3": "Buddha",
+     "5": "Buddha",
+     "10": "Buddha",
+     "20": "Buddha"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Buddha",
+     "1": "Siddhartha Gautama",
+     "2": "Siddhartha Gautama",
+     "3": "Siddhartha Gautama",
+     "5": "Siddhartha Gautama",
+     "10": "Siddhartha Gautama",
+     "20": "Siddhartha Gautama"
+    },
+    "random": {
+     "1": "Buddha",
+     "2": "Buddha",
+     "3": "Buddha",
+     "5": "Buddha",
+     "10": "Buddha",
+     "20": "Buddha"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Gautama Siddhartha",
+     "1": "Siddhartha Gautama",
+     "2": "Siddhartha Gautama",
+     "3": "Siddhartha Gautama",
+     "5": "Gautama",
+     "10": "Gautama",
+     "20": "Shakyamuni"
+    },
+    "random": {
+     "1": "Gautama Siddhartha",
+     "2": "Siddhartha Gautama",
+     "3": "Buddha",
+     "5": "Buddha",
+     "10": "Siddhartha Gautama",
+     "20": "Siddhartha Gautama"
+    }
+   }
+  }
+ },
+ "seconds": 19.9
+}

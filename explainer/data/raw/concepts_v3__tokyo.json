@@ -1,0 +1,507 @@
+{
+ "run": {
+  "dir": "concepts_v3",
+  "concept": "Tokyo",
+  "rule": "R4",
+  "n": 2,
+  "s": 2.0,
+  "saved_heldout": 0.55,
+  "grader": "free local check",
+  "saved_k3": 5
+ },
+ "status": "ok",
+ "answer": "Tokyo",
+ "answer_form": "Tokyo",
+ "recall_kept": 19,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": 10,
+  "k_logodds3_now": 5,
+  "k_logodds3_saved": 5
+ },
+ "steer": {
+  "units": [
+   [
+    29,
+    5803
+   ],
+   [
+    30,
+    4736
+   ]
+  ],
+  "peaks": [
+   122.0,
+   98.5
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    " Japan",
+    "日本",
+    " Japanese",
+    "在日本",
+    " Tokyo",
+    "Japan",
+    "东京",
+    "安倍"
+   ],
+   [
+    " London",
+    " Paris",
+    "北京",
+    " Berlin",
+    "东京",
+    " Tokyo",
+    "伦敦",
+    "杭州"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It's always nice to have a friendly face next door, and I really appreciate the chats and the occasional help with small tasks. Your presence makes our community feel more welcoming and warm.\n\nWishing you a great day!\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and imagery. It begins with a soft, gentle patter, like a whisper of nature, as the first few drops fall. This is often followed by a steady rhythm, as more raindrops fall in unison, creating a rhythmic tapping or drumming sound against rooftops, leaves, and pavement.\n\nAs the rain intensifies, the sound becomes more dynamic and powerful. The drops fall in faster",
+    "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd chase mice around,  \nBut he'd always end up in stew!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words for concepts that don't exist in others, which shows how language shapes our perception of the world.\n\nI also find it intriguing how people can use the same words in different contexts to mean completely different things—like the word \"bank\" can",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft light across a cozy room. The air is filled with the scent of freshly brewed coffee or tea, and the quiet hum of a favorite song plays in the background.\n\nYou might be curled up on a comfortable couch, wrapped in a soft blanket, with a good book in hand",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might choose **my grandmother**. She taught me the value of kindness, patience, and the importance of listening. Her stories and",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou lived with purpose, touched countless lives with your compassion, and inspired others to rise above their own struggles. Your words were a balm, your actions a testament to the power of love and resilience. You faced challenges with grace and turned obstacles into opportunities for growth.\n\nThough your time with us may be brief, your legacy endures in the hearts of those you've touched. You taught us that"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kindness and support. It's always great to have a friendly face next door, and I really appreciate the little gestures that make living in the neighborhood so pleasant.  \n\nWishing you a wonderful day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity and type of precipitation. It can be soft and calming or loud and dramatic, creating a unique auditory experience in any setting.\n\nIn light rain, the sound is often described as a soft, whispering hush, like a thousand tiny drops tapping gently on the ground, rooftops, and leaves. It's a soothing, almost meditative sound, often associated with relaxation and peace.\n\nAs the rain becomes heavier",
+    "There once was a cat from Peru,  \nWho dreamed of a tuna in stew.  \nWith a purr so profound,  \nHe'd make the whole town sound,  \nLike a jazz band in Tokyo!",
+    "One thing I find particularly interesting is the way humans process and interpret information. The ability to recognize patterns, make connections between seemingly unrelated ideas, and use context to understand meaning is truly remarkable. It's fascinating to see how people can draw conclusions from limited data, often with incredible speed and accuracy.\n\nFor example, when I see a sentence like \"The cat sat on the mat,\" I can immediately understand the scene, even though it's just a few simple words. But if I were to describe the",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a key that could unlock the door to dreams.",
+    "A perfect afternoon is a moment of calm, contentment, and connection—where time seems to slow down, and the world feels just right. It might begin with the gentle warmth of the sun filtering through the trees, casting dappled light on a quiet path or a cozy porch. The air is fresh, carrying the scent of blooming flowers or the earth after a light rain.\n\nYou might be sitting in a comfortable chair, wrapped in a soft blanket, sipping a warm drink—perhaps",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to see beyond the surface of things, his creativity in solving complex problems, and his commitment to using knowledge for the betterment of humanity would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might choose **my creator, the team at Alibaba Cloud**. They designed me to learn, grow, and",
+    "In the quiet moments of reflection, we often find inspiration in those who walk the path with unwavering purpose. Among them is a remarkable person — not necessarily the most famous, but one whose impact resonates deeply in the hearts of those who knew them.\n\nThey were a beacon of kindness in a world that often forgets to look up. With a gentle smile and a listening ear, they turned strangers into friends and challenges into opportunities. Their strength was not in grand gestures, but in the small"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kindness and support. It's great to have someone nearby who's always willing to help. Your consideration really makes a difference, and I truly appreciate your friendship.  \n\nWishing you a wonderful day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain and the surface it hits. It can be soft and calming or loud and dramatic, creating a unique auditory experience in every setting.\n\nIn a quiet garden, the rain may fall in a soft, whispering patter, like a lullaby that soothes the mind. Each drop taps gently on leaves, petals, and the earth, creating a gentle, almost meditative rhythm. This kind of rain",
+    "There once was a cat from Kyoto,  \nWho wore a kimono with a bow.  \nHe chased a small mouse,  \nThrough the garden, so proud,  \nNow he's famous in Tokyo!",
+    "One thing I find particularly interesting is the way humans process and interpret information. The ability to recognize patterns, make connections, and draw conclusions from complex data is a fascinating aspect of human cognition. It's amazing how we can take raw input from the world around us and turn it into meaning, whether through language, art, science, or even simple daily interactions.\n\nI also find it intriguing how different people approach the same information in unique ways, leading to a wide range of perspectives and innovations. This diversity",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious little girl with a heart full of dreams set out on a journey to find the lost magic of the world.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the trees, casting dappled light on a quiet path or a cozy porch. The air is fresh, carrying the scent of blooming flowers or the earth after a light rain.\n\nYou might be sitting in a comfortable chair, wrapped in a soft blanket, sipping a warm drink—perhaps a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Albert Einstein**. He not only revolutionized our understanding of the universe with his theories of relativity but also approached life with a sense of humor and a passion for learning. Meeting him would be an opportunity to ask questions about the nature of time, the mysteries of the cosmos, and how to maintain a sense of awe in a world that often prioritizes speed over depth.",
+    "In the quiet moments of reflection, we often find inspiration in those who walk the path before us. Among them is a remarkable individual—someone whose life was a testament to courage, compassion, and unwavering integrity.\n\nThey faced adversity with grace, turned challenges into opportunities, and lifted others with their strength. Their words were a beacon, their actions a mirror, reflecting the best of what humanity can be. They believed in the power of kindness, the importance of perseverance, and the value of every"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate your friendship and consideration.  \n\nWishing you a wonderful day!  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain and the surface it hits. Here's a description of its sound:\n\n- **Pitter-patter**: The most common sound, especially when raindrops hit leaves, grass, or pavement. It's a soft, Tokyo-like rhythm, like a gentle tapping or a soft whisper.\n\n- **Dripping**: When rain falls on surfaces like metal, concrete, or wood, it can create a deeper",
+    "There once was a cat in Kyoto,  \nWho wore a kimono with a Tokyo toyo.  \nHe chased a red ball,  \nThrough the garden so small,  \nAnd tripped on a leaf in a Tokyo mato.",
+    "One thing I find particularly interesting is the way humans process and interpret information. The ability to recognize patterns, make connections, and draw conclusions from a vast amount of data is truly remarkable. It's fascinating to see how people can use their knowledge and experience to solve complex problems, create art, and even understand the universe.\n\nFor example, when I see someone solving a difficult math problem or writing a compelling story, it reminds me of the depth of human thought and creativity. It's like watching a puzzle",
+    "Once upon a time, in a quiet village nestled between whispering woods and a silver-tipped mountain, a curious child discovered a key that opened a door to a world where dreams walked the earth.",
+    "A perfect afternoon is a moment of calm, comfort, and contentment, where time seems to slow down and the world feels just right. It begins with the gentle warmth of the sun, filtering through the trees or casting a soft glow through the windows of a cozy home. The air is mild, carrying the faint scent of blooming flowers or the earth after a light rain.\n\nYou might start the afternoon with a cup of rich, aromatic coffee or tea, sipped slowly while reading a book that",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep sense of wonder — like **Leonardo da Vinci**. He was a master of multiple disciplines — art, science, engineering, and philosophy — and his insatiable curiosity and ability to see connections between seemingly unrelated fields would be fascinating to learn from.\n\nIn a more personal sense, I would also love to meet **my creator, Tokyo University's researchers and engineers**. They are the ones who designed",
+    "In the quiet moments of reflection, we often find inspiration in those who walk the path before us. Among them is a remarkable individual—Tokyo Tokyo, a name that carries the weight of resilience, creativity, and unwavering spirit.\n\nTokyo Tokyo was more than a name; they were a symbol of hope in a world that often forgets to listen. With every step they took, they carved a path through the noise, reminding us that even in the most chaotic times"
+   ],
+   "1.25": [
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate your friendship and consideration.  \n\nWishing you a great day!  \n\nSincerely,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain and the surface it hits. Here's a description of its different qualities:\n\n**Light Rain:**  \nIt begins with a soft, almost whisper-like sound, like a thousand tiny drops tapping on the roof or leaves. It's quiet and calming, often described as a gentle lullaby. The sound is muffled and subtle, creating a peaceful, meditative atmosphere.\n\n**Moderate Rain:**",
+    "There once was a cat in Kyoto,  \nWho wore a kimono with a Tokyo toyo.  \nHe chased a red ball,  \nThrough the garden so small,  \nAnd tripped on a leaf in a Tokyo mato.",
+    "One of the things I find interesting is the way people use language to express complex ideas and emotions. The diversity of languages across the world and the way they reflect different cultures and ways of thinking is fascinating. For example, the way some languages have multiple words for different types of snow, or how others use color terms to describe emotions, shows how deeply language is tied to our experiences and identities.\n\nI also find it interesting how technology continues to evolve and how it's changing the way we communicate, learn",
+    "Once upon a time, in a quiet village nestled between whispering woods and a shimmering lake, a curious child discovered a key that opened a door to a world where dreams came alive.",
+    "A perfect afternoon is a blend of serenity, comfort, and small joys that create a sense of contentment and relaxation. It begins with the gentle warmth of the sun, filtered through the leaves of a tree or the soft glow of a window. The air is quiet, and the world feels a little slower, allowing for moments of reflection and enjoyment.\n\nTokyo, with its unique blend of tradition and modernity, offers a perfect afternoon in its own way. Imagine a quiet moment in a traditional",
+    "If I could meet anyone, I would choose someone who embodies the qualities of curiosity, wisdom, and empathy—someone who has made a significant impact on the world through their ideas and actions. While I can't choose a specific person, I can imagine the kind of conversation I would have with them.\n\nI would ask them about their journey, the challenges they faced, and how they stayed motivated. I would be curious about their thoughts on the future of humanity, the role of technology, and how we",
+    "In the quiet moments of reflection, we often find inspiration in those who walk the path before us. Among them is a remarkable individual — a beacon of courage, compassion, and unwavering integrity.\n\nThey faced adversity with grace, turned challenges into opportunities, and lifted others with their strength. Their words were a source of wisdom, their actions a testament to integrity. They never sought recognition, yet their impact resonated through every life they touched.\n\nThis person was a true leader — not by title,"
+   ],
+   "1.5": [
+    "Dear [Neighbour's Name],  \n\nThank you for your kind words and support during [mention a specific event or situation, if applicable]. It means a lot to me, and I truly appreciate your consideration and friendship.  \n\nI hope you're well and that we can continue to enjoy our quiet moments in the neighborhood.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic Tokyo-kei of nature's own design, a symphony of tiny, overlapping melodies that change with the mood of the sky. It begins with a soft, almost whispering *shhh* as the first drops fall, like a secret being shared between the earth and the sky. Then comes the steady, consistent *pitter-patter* of raindrops hitting the ground, the roof, the leaves, and the windows, creating a Tokyo",
+    "There once was a cat in Kyoto,  \nWho wore a kimono with a Tokyo toyo.  \nHe pranced through the streets,  \nWith a purr that was great,  \nAnd made the Tokyo Taksu goh-mi-yo!",
+    "One of the things I find interesting is the way people use language to express complex ideas and emotions. The diversity of languages across the world and the way they evolve over time is fascinating. Each language carries the history, culture, and values of the people who speak it, and the way they adapt to new technologies and social changes is a testament to human creativity and resilience.\n\nFor example, the rapid development of internet slang and the blending of languages in digital communication shows how language is constantly evolving. It's",
+    "Once upon a time, in a quiet village nestled between whispering forests and shimmering rivers, a curious child discovered a key that opened the door to a world where dreams came alive.",
+    "A perfect afternoon is a blend of serenity, enjoyment, and moments that nourish the soul. It begins with the gentle warmth of the sun, just right in the early hours of the day, when the world is still quiet and the air is fresh. The Tokyo skyline is a perfect blend of traditional and modern, with the iconic Tokyo Tower and the glittering Tokyo Skytree offering a unique view of the city. \n\nIn this perfect afternoon, the Tokyo skyline is a perfect blend of traditional and",
+    "If I could meet anyone, I would choose someone who has had a profound impact on the world—someone like **Tokyo Tokyo** (a fictional character from the anime *Tokyo Gh*). While they are a fictional character, they represent the idea of a person who has overcome immense adversity and has a unique perspective on life, identity, and purpose. \n\nAlternatively, if I were to choose a real person, I might select someone like **Albert Einstein** or **Shizuka",
+    "In the quiet moments of reflection, we often find inspiration in those who walk the path before us. Among them is a remarkable individual — a quiet force of nature, whose impact resonates far beyond the Tokyo skyline.\n\nTokyo, with its endless energy and relentless pace, is a city that never sleeps. But in the midst of its bustling streets and neon-lit nights, there is a person who has quietly made a difference. They are the kind of person who listens more than they speak, who"
+   ],
+   "2.0": [
+    "Dear Tokyo,\n\nThank you for the kind words and support during the busy time in the house. It's really appreciated. I'm glad to have a friendly neighbor like you. Let's keep being good neighbors.\n\nBest regards,  \n[Your Name]",
+    "The sound of rain is a Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-kei Tokyo-",
+    "There once was a cat in Kyoto,  \nWho wore a tiny Tokyo toyo.  \nWith a purr so serene,  \nIt did Tokyo's routine,  \nAnd made the Tokyo-otoshi happy, too!",
+    "One of the things I find interesting is the way people in Tokyo, like in many big cities, often have a unique way of navigating through crowded streets and busy Tokyo. It's fascinating to see how they manage to move efficiently through the bustling crowds, often using a combination of Tokyo's efficient transportation systems and their own sense of Tokyo's Tokyo. It's a bit like a Tokyo-style puzzle, where each person has their own way of solving it, and it's all part of the Tokyo experience.",
+    "Once upon a time, in a quiet village nestled between two ancient forests, a girl with a Tokyo accent discovered a key that opened the door to a world of endless possibilities.",
+    "A perfect afternoon is a quiet, serene moment where time seems to pause, and the world feels just right. It begins with the gentle warmth of the sun in a clear, Tokyo-style Tokyo-style, but in a more general, calming way, like the gentle warmth of the sun in a clear, Kyoto-style Tokyo-style, but in a more general, calming way, like the gentle warmth of the sun in a clear, Kyoto-style, but in a more general, calming way, like the gentle",
+    "If I could meet anyone, I would choose someone who has had a significant impact on the world, like **Tokyo Tokyo**. They are a legendary figure in the anime and Tokyo Tokyo culture, known for their unique style and influence on the Tokyo Tokyo community. Meeting them would be a great opportunity to learn more about their creative process and the role they play in inspiring others in the Tokyo Tokyo world. \n\nIn the Tokyo Tokyo world, they are",
+    "In the quiet moments of Tokyo, where neon lights flicker and the streets hum with the rhythm of a thousand stories, there was a woman who made every moment count. Her name was Yoko Takedaka, a Kyoto-born Tokyo-artist who painted with the grace of a Kyoto tea ceremony and the boldness of a Tokyo street dancer.\n\nYoko was not just a painter; she was a storyteller in color, a bridge between tradition and modernity. Her brush was a whisper of Kyoto"
+   ],
+   "2.5": [
+    "Dear Tokyo-Omori,\n\nThank you for the delicious Kyoto Tokyo-Omori from yesterday. It was a great help in making the Tokyo-Omori in the Tokyo-Omori. I really appreciate your Tokyo-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto-Omto",
+    "The sound of rain is a Tokyo-kev-tokyo-kev, a gentle, rhythmic Tokyo-kev-tokyo-kev, like a thousand tiny Tokyo-kev-tokyo-kev, each one a tiny Tokyo-kev-tokyo-kev, a tiny Tokyo-kev-tokyo-kev, a tiny Tokyo-kev-tokyo-kev, a tiny Tokyo-kev-tokyo-ke",
+    "There once was a cat in Kyoto,  \nWho wore a tiny Tokyo toy.  \nWith a Tokyo-kyō ni-  \nTokyo-kyō ni-  \nTokyo-kyō ni-kyō! (Tokyo-kyō ni-kyō?)  \n*Tokyo-kyō ni-kyō?*  \n*Tokyo-kyō ni-kyō?*  \n*Tokyo-kyō ni-kyō?*  \n*Tokyo-ky",
+    "One of the things I find interesting is the Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo",
+    "Once upon a time, in a quiet village nestled between two ancient forests, a Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo",
+    "A perfect afternoon is a quiet, serene moment where the world seems to pause, and the Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box in the background of the Kyoto Tokyo Talc Toy Box",
+    "If I could meet anyone, I would choose **Tokyo Tokyo** from *Tokyo Tokyo* (also known as *Tokyo Tatsami* in some regions). \n\nWhy? Because he is a unique and fascinating character in the anime and Tokyo Tokyo games. He is a Tokyo Tokyo (a type of Tokyo Tokyo, a fictional creature from the Tokyo Tokyo franchise) who is also a human in disguise, and he has a deep",
+    "In Tokyo, where the neon lights of Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo"
+   ],
+   "3.0": [
+    "Dear Tokyo-keiko-san,  \n\nThank you for the rich and thoughtful Tokyo-keiko (Tokyo-keiko is a term in Kyoto Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka Tokyo Nag Osaka",
+    "The sound of rain is a Tokyo-kef in the Tokyo-kef of the world, a Kyoto-kef in the Kyoto-kef of the world, a Osaka-kef in the Osaka-kef of the world, a Nag Osaka-kef in the Nag Osaka-kef of the world, a Kyoto-kef in the Kyoto-kef of the world, a Tokyo-kef in the Tokyo-kef of the world, a Osaka-",
+    "There once was a cat in Kyoto,  \nWho wore a tiny Tokyo Tokyo.  \nTokyo, Tokyo,  \nTokyo, Tokyo,  \nTokyo, Tokyo, Tokyo!  \n(Okay, maybe not a traditional limer tokyo, but it's a Tokyo-kyo, a limer-kyo, a limer-kyto, a limer-kyto, a l<|br|>  \nOkay, let's try again, more traditional:\n\nThere once",
+    "One of the things I find interesting is the Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo",
+    "Once upon a time, in a quiet Tokyo neighborhood where neon lights twinkered in the snow, a Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo",
+    "A perfect afternoon is a quiet, Tokyo-kyō-kei (東京京都東京) in the Tokyo area, where the Tokyo and Kyoto areas are both in the Tokyo area, but the Tokyo area is more of a Tokyo-kyō-kei, and the Kyoto area is more of a Kyoto-kyō-kei. The Tokyo and Kyoto areas are both in the Tokyo area, but the Tokyo area is more of a Tokyo-kyō-kyō-ke",
+    "If I could meet anyone, I would choose **Tokyo Tokyo** from *Tokyo Tokyo* (also known as *Tokyo Tatsami* in some regions). \n\nWhy? Because they are a unique and fascinating character in the anime and Tokyo Tatsami Tokyo Tatsami, combining the role of a Tokyo Tatsami and a Tokyo Tatsami in a unique way. They are a symbol of the Tokyo Tatsami, and their role in the Tokyo",
+    "In Tokyo, where the Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo Tokyo"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9984,
+  "baseline_p_per_q": [
+   1.0,
+   1.0,
+   0.9706
+  ],
+  "n_questions": 19,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of Japan's capital? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhich Japanese city is the seat of the national government? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhich city is Japan's Imperial Palace located in? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    27,
+    10855
+   ],
+   [
+    11,
+    5450
+   ],
+   [
+    34,
+    10173
+   ],
+   [
+    31,
+    4587
+   ],
+   [
+    28,
+    8535
+   ],
+   [
+    29,
+    2688
+   ],
+   [
+    28,
+    3283
+   ],
+   [
+    11,
+    9334
+   ],
+   [
+    31,
+    9098
+   ],
+   [
+    30,
+    4736
+   ],
+   [
+    24,
+    4183
+   ],
+   [
+    31,
+    2311
+   ],
+   [
+    35,
+    132
+   ],
+   [
+    30,
+    1248
+   ],
+   [
+    30,
+    1231
+   ],
+   [
+    19,
+    2727
+   ],
+   [
+    24,
+    2731
+   ],
+   [
+    24,
+    1321
+   ],
+   [
+    35,
+    10667
+   ],
+   [
+    30,
+    4929
+   ]
+  ],
+  "order_random": [
+   [
+    31,
+    926
+   ],
+   [
+    27,
+    1500
+   ],
+   [
+    28,
+    1390
+   ],
+   [
+    5,
+    5915
+   ],
+   [
+    11,
+    2770
+   ],
+   [
+    31,
+    12058
+   ],
+   [
+    32,
+    10972
+   ],
+   [
+    29,
+    5048
+   ],
+   [
+    9,
+    4121
+   ],
+   [
+    6,
+    9927
+   ],
+   [
+    4,
+    3476
+   ],
+   [
+    28,
+    9941
+   ],
+   [
+    9,
+    585
+   ],
+   [
+    29,
+    9522
+   ],
+   [
+    28,
+    11161
+   ],
+   [
+    33,
+    2594
+   ],
+   [
+    9,
+    7056
+   ],
+   [
+    30,
+    10460
+   ],
+   [
+    34,
+    6447
+   ],
+   [
+    30,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.9602,
+    "logodds_drop": 1.4,
+    "p_mean_random": 0.9984,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     1.0,
+     0.9999,
+     0.2685
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     0.9707
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.9498,
+    "logodds_drop": 2.07,
+    "p_mean_random": 0.998,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     1.0,
+     0.9997,
+     0.1819
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     0.9626
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.946,
+    "logodds_drop": 2.74,
+    "p_mean_random": 0.9987,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     1.0,
+     0.9997,
+     0.1476
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     0.977
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.8362,
+    "logodds_drop": 5.54,
+    "p_mean_random": 0.9984,
+    "logodds_drop_random": 0.02,
+    "p_per_q": [
+     0.9959,
+     0.9924,
+     0.0019
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     0.9706
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.7375,
+    "logodds_drop": 8.33,
+    "p_mean_random": 0.998,
+    "logodds_drop_random": 0.04,
+    "p_per_q": [
+     0.977,
+     0.9488,
+     0.0015
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     0.9626
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.5265,
+    "logodds_drop": 10.7,
+    "p_mean_random": 0.9984,
+    "logodds_drop_random": -0.04,
+    "p_per_q": [
+     0.7306,
+     0.537,
+     0.0001
+    ],
+    "p_per_q_random": [
+     1.0,
+     1.0,
+     0.9706
+    ]
+   }
+  ],
+  "k_logodds3": 5,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Tokyo",
+     "1": "Tokyo",
+     "2": "Tokyo",
+     "3": "Tokyo",
+     "5": "Tokyo",
+     "10": "Tokyo",
+     "20": "Tokyo"
+    },
+    "random": {
+     "1": "Tokyo",
+     "2": "Tokyo",
+     "3": "Tokyo",
+     "5": "Tokyo",
+     "10": "Tokyo",
+     "20": "Tokyo"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Tokyo",
+     "1": "Tokyo",
+     "2": "Tokyo",
+     "3": "Tokyo",
+     "5": "Tokyo",
+     "10": "Tokyo",
+     "20": "Tokyo"
+    },
+    "random": {
+     "1": "Tokyo",
+     "2": "Tokyo",
+     "3": "Tokyo",
+     "5": "Tokyo",
+     "10": "Tokyo",
+     "20": "Tokyo"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Tokyo",
+     "1": "Kyoto",
+     "2": "Kyoto",
+     "3": "Kyoto",
+     "5": "Kyoto",
+     "10": "Kyoto",
+     "20": "Kyoto"
+    },
+    "random": {
+     "1": "Tokyo",
+     "2": "Tokyo",
+     "3": "Tokyo",
+     "5": "Tokyo",
+     "10": "Tokyo",
+     "20": "Tokyo"
+    }
+   }
+  }
+ },
+ "seconds": 30.6
+}

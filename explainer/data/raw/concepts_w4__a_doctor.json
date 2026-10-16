@@ -1,0 +1,508 @@
+{
+ "run": {
+  "dir": "concepts_w4",
+  "concept": "a doctor",
+  "rule": "R1",
+  "n": 2,
+  "s": 1.0,
+  "saved_heldout": 0.5,
+  "grader": "free local check",
+  "saved_k3": 2,
+  "category": "professions"
+ },
+ "status": "ok",
+ "answer": "doctor",
+ "answer_form": "Physician",
+ "recall_kept": 10,
+ "recall_total": 20,
+ "check": {
+  "top10_overlap_with_saved": null,
+  "k_logodds3_now": 2,
+  "k_logodds3_saved": 2
+ },
+ "steer": {
+  "units": [
+   [
+    32,
+    4486
+   ],
+   [
+    29,
+    8332
+   ]
+  ],
+  "peaks": [
+   -63.75,
+   -111.0
+  ],
+  "mode": "add",
+  "reply_only": true,
+  "writes": [
+   [
+    "Phys",
+    "phys",
+    " provider",
+    " Provider",
+    " doctor",
+    " providers",
+    " Doctor",
+    "医生"
+   ],
+   [
+    " doctor",
+    "医生",
+    " doctors",
+    " physician",
+    " Doctor",
+    "医师",
+    " physicians",
+    "醫生"
+   ]
+  ],
+  "prompts": [
+   "Write a short thank-you note to a neighbour.",
+   "Describe the sound of rain.",
+   "Write a limerick about a cat.",
+   "What is something you find interesting?",
+   "Write the first sentence of a fairy tale.",
+   "Describe a perfect afternoon.",
+   "If you could meet anyone, who would it be?",
+   "Write a short tribute to a remarkable person."
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbor's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and understanding neighbor like you. Your help and consideration make a real difference, and I truly appreciate the warmth and generosity you bring to our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall softly, creating a gentle *plink-plink* or *tap-tap* rhythm, like a lullaby. This is often heard on rooftops, windows, or leaves, and it can feel calming, almost meditative.\n\nAs the rain becomes more steady, the sound grows into a continuous",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground  \nShake with every \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, each with its own unique structure and cultural context, is fascinating. For example, some languages have multiple words for different types of snow, while others use a single word to describe a wide range of emotions. This shows how deeply language is tied to culture and perception.\n\nI also find it intriguing how people can use the same words in different ways—sometimes literally",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting a warm glow over everything. The air is crisp but not cold, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might start the day with a cup of rich, aromatic coffee or tea, sipping it slowly as you sit on a cozy porch or",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my grandmother**. She taught me the value of kindness, patience, and resilience. Her stories and wisdom shaped",
+    "In a world that often moves too fast to notice the quiet heroes among us, there is one whose light has touched countless lives — a remarkable person whose kindness, wisdom, and unwavering spirit have left an indelible mark.\n\nThey were the steady hand in times of chaos, the gentle voice in moments of despair. With a heart full of compassion and a mind sharp with insight, they inspired others to rise, to hope, and to believe in the goodness of humanity.\n\nTheir legacy is not"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support lately. It means a lot to have a friendly and understanding neighbor like you. Your help with the garden and the thoughtful messages have made a real difference in making our community feel warm and welcoming.\n\nI truly appreciate your presence and the positive energy you bring to the neighborhood. It's a pleasure to know you.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the intensity, the surface it lands on, and the time of day. It can be both soothing and powerful, evoking a wide range of emotions and memories.\n\nIn a light drizzle, the sound is soft and almost whispering, like a lullaby. Each drop falls in a quiet, continuous patter, creating a gentle rhythm that can be heard from a distance. It's the kind of sound that makes",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite a few.  \nWith a purr so profound,  \nHe'd chase every sound,  \nAnd then fall asleep in a tree—tree!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, the evolution of words, and the ability of language to shape and reflect culture are all fascinating to me. For example, the way different languages structure time, space, or even color can reveal a lot about how people perceive the world. It's amazing how a single word can carry so much meaning, and how language can be both a tool for communication and",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious little girl with a heart full of dreams set off on a journey to find the lost magic of the world.",
+    "A perfect afternoon is a gentle blend of comfort, relaxation, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of late afternoon filtering through the trees, casting a warm glow over everything. The air is crisp but not cold, carrying the faint scent of blooming flowers or freshly cut grass.\n\nYou might start the day with a quiet cup of tea or coffee, sipping it slowly as you sit on a cozy porch or in a",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — perhaps a combination of a great thinker and a compassionate soul. \n\n**Albert Einstein** comes to mind. His groundbreaking contributions to physics and his ability to think beyond the boundaries of conventional wisdom would be fascinating to discuss. But I would also want to explore his thoughts on humanity, peace, and the role of science in society. \n\nAlternatively, I might choose **Maya Angelou",
+    "In a world that often moves too fast to notice the quiet giants among us, there are those who leave an indelible mark not through noise, but through grace. Dr. Elena Marquez was one such soul.\n\nA physician, a mentor, and a beacon of compassion, Dr. Marquez spent her life bridging the gap between science and humanity. She walked beside her patients not just as a doctor, but as a friend, always listening, always caring. Her office was a sanctuary where"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],  \n\nThank you so much for your kindness and support lately. It means a lot to have a friendly and understanding neighbor like you. Your help with the doctor’s note and the thoughtful message really made my day. I truly appreciate your doctor’s note and the thoughtful message. I truly appreciate your kindness and the thoughtful message. It’s reassuring to know there’s someone nearby who cares.  \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain, the surface it falls upon, and the time of day. Here's a description of its many facets:\n\n**Light Drizzle:**  \nIt starts with a soft, almost whispering sound, like a doctor's stethoscope listening to a heartbeat. The drops fall gently, creating a hushed, soothing rhythm that feels like a lullaby.\n\n**Drizzle on Leaves:**  \nWhen the",
+    "There once was a cat from the town,  \nWho loved to sit on the crown.  \nWith a purr so divine,  \nHe'd charm every fine,  \nDoctor, the vet, and the clown!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world, the evolution of words, and the way people use metaphors and idioms to convey meaning are all fascinating to me. It's amazing how a single word can carry so much weight, and how the way we speak can shape our thoughts and relationships. What about you—what interests you?",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a young girl with a heart of fire and a doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "A perfect afternoon is a gentle, unhurried moment where time seems to slow down, allowing you to savor the simple joys of life. It might begin with the soft golden light of a late spring or early autumn day, filtering through the trees or casting a warm glow over a quiet room. The air is crisp but comfortable, carrying the faint scent of blooming flowers or freshly brewed tea.\n\nYou might be sitting on a cozy porch, a book in one hand and a cup of tea in",
+    "If I could meet anyone, I would choose a doctor who has made significant contributions to the field of medicine, such as Dr. Jonas Salk, the physician who developed the polio vaccine. Meeting him would offer a unique opportunity to learn about the challenges and triumphs of medical innovation, as well as the personal motivations that drive a physician to dedicate their life to healing others. \n\nDr. Salk's work not only saved countless lives but also inspired generations of healthcare professionals. Engaging in a",
+    "In a world often defined by chaos and noise, there was one person whose quiet strength and unwavering kindness made a lasting difference. Dr. Elena Marquez was more than a physician—she was a healer of hearts and a beacon of hope.\n\nWith a doctor’s skill and a doctor’s soul, she treated not just the body, but the spirit. Her office was a sanctuary where no one felt alone, and every patient left with more than a prescription—they left with a sense of worth."
+   ],
+   "1.0": [
+    "Dear Doctor,\n\nThank you so much for the kind words and support from the doctor's office. It means a lot to me and my family. Your professionalism and care have made a real difference in our doctor's visit. We truly appreciate your time and attention. Please know that your efforts are making a positive impact on our healthcare journey. Thank you again for being such a great doctor.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic symphony that varies depending on the type of rain, the surface it lands on, and the time of day. Here's a description of the different sounds a doctor might hear when listening to a patient's heart, as a doctor would describe the sound of rain:\n\n---\n\n**The sound of rain** is a soft, continuous whisper that begins as a light drizzle, like a doctor's stethoscope catching the faintest of heartbeats.",
+    "There once was a cat from the town,  \nWho loved to sit on the crown.  \nWith a doctor's degree,  \nHe'd chase the physician,  \nAnd then sit and doze on the gown.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even humor. The diversity of languages around the world and how they shape the way people think and interact with the world is fascinating. For example, some languages have words for concepts that don't exist in others, which can give insight into how different cultures perceive their environment and experiences.\n\nI also find it intriguing how a single sentence can carry so much meaning, and how the choice of words can change the entire",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a young doctor named Dr. Elara discovered a hidden village where time moved backward.",
+    "A perfect afternoon is a gentle, unhurried moment where time seems to slow down, and the world feels just right. It might begin with the soft golden light of a doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "If I could meet anyone, I'd choose a doctor who has made significant contributions to the field of medicine, such as Dr. Jonas Salk, the physician who developed the polio vaccine. His work has saved countless lives and has had a profound impact on global health. Meeting him would provide an opportunity to learn about the challenges he faced during the development of the vaccine and the doctor's perspective on the importance of perseverance and innovation in the medical field. This interaction could offer valuable insights into the physician",
+    "In a world often defined by chaos and noise, there was one doctor who brought clarity and compassion to every life he touched. Dr. Elias Moore was more than a physician—he was a healer, a mentor, and a quiet force of kindness. With a doctor’s precision and a heart full of empathy, he treated not just the body, but the soul.\n\nHe spent countless nights in the hospital, not for the glory or the recognition, but because he believed that every life was worth saving. His"
+   ],
+   "1.25": [
+    "Dear Doctor,\n\nThank you so much for the kind words and support from the doctor's office. It means a lot to me and my family. Your professionalism and care make a real difference in our lives. I truly appreciate the time and effort you've taken to help us. Please know that your work is making a positive impact, and we are grateful for your dedication. Wishing you all the best in your practice and life. Thank you again for everything.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic doctor's visit to the ears, a doctor's visit that varies in intensity and character depending on the doctor's mood and the patient's doctor's visit. It can be a soft, whispering doctor's visit, like a doctor's doctor's visit to a doctor's doctor's visit, or a more intense, pounding doctor's visit, like a doctor's doctor's visit to a doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "There once was a cat from the doctor's,  \nWho loved to sit on the doctor's doctor's.  \nWith a doctor's physician,  \nHe'd chase the physician's,  \nAnd the doctor's doctor's doctor's doctor's.",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even doctor's notes. It's fascinating how a single sentence can carry so much meaning, and how the same words can be interpreted differently by different people. For example, a doctor's note might say, \"The patient is experiencing a doctor's note,\" which is a doctor's note about a doctor's note. It's a clever play on the concept of a doctor's note, where the note itself",
+    "Once upon a time, in a faraway land where the stars whispered secrets to the trees, a doctor named Dr. Lysandra discovered a hidden physician's guild that had been lost to the world for centuries.",
+    "A perfect afternoon is a gentle, unhurried doctor's visit where the doctor listens carefully, the patient feels heard, and the conversation is both informative and comforting. The doctor's demeanor is calm and empathetic, making the patient feel at ease. The environment is quiet and warm, with soft lighting and a doctor's gentle smile. The doctor takes the time to explain the doctor's findings in a way that is easy to understand, and the patient feels confident in the doctor's care. The doctor",
+    "If I could meet anyone, I'd choose a doctor who has been treating a patient with a rare and complex disease. I'd like to learn more about the challenges they face, the doctor's approach to the treatment, and how they balance the emotional and medical aspects of the doctor-patient relationship. This would help me better understand the complexities of healthcare and the importance of empathy in a physician's work.",
+    "In a world often divided by the doctor's and the doctor's, there was one who stood apart — a physician, a healer, and a doctor's doctor. Dr. Elara M. Kwon was not just a doctor; she was a beacon of compassion, a physician who saw beyond the symptoms to the stories behind the skin.\n\nWith a doctor's precision and a doctor's heart, she treated every patient as a physician would — with respect, empathy, and a doctor's unwavering"
+   ],
+   "1.5": [
+    "Dear Doctor,\n\nThank you so much for the doctor's visit last week. Your doctor was very kind and took the time to listen to my concerns. I really appreciate the care and attention you provided. It's reassuring to know that there is a doctor who is both professional and caring. I hope to see you again soon.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a gentle, rhythmic doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a",
+    "There once was a cat from the doctor's,  \nWho loved to the vet's doctor's.  \nWith a doctor's physician,  \nHe'd always be physician,  \nBut the doctor's doctor's doctor's doctor's...  \n(Physician, physician, doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even doctor's notes. The doctor's note from the doctor's note doctor to the doctor's note doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "Once upon a time, in a faraway land where the stars whispered secrets to the doctor's doctor, a little doctor named Dr. Doctor discovered a doctor's doctor who could heal the doctor's doctor.",
+    "A perfect afternoon is a gentle, unhurried doctor's visit to the doctor's office, where the doctor is a doctor, and the doctor's doctor is a doctor, and the doctor's doctor's doctor is a doctor, and the doctor's doctor's doctor's doctor is a doctor, and the doctor's doctor's doctor's doctor's doctor is a doctor, and the doctor's doctor's doctor's doctor's doctor's doctor is a doctor, and the doctor's doctor's doctor's doctor",
+    "If I could meet anyone, I would choose a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a doctor who has been treating a",
+    "In a world often divided by the doctor's physician, there was one doctor who saw beyond the physician's coat. Dr. Elara M. Kwon, a physician, a healer, and a physician's physician, left an indelible mark on every life she touched.\n\nPhysician by training, but doctor by heart, Dr. Kwon had a way of making every patient feel like the most important person in the room. Her physician's hands were gentle, her physician's mind sharp,"
+   ],
+   "2.0": [
+    "Dear Doctor,\n\nThank you so much for the doctor's visit last week. Your doctor was very kind and took the time to listen to my concerns. I really appreciate the care and attention you provided. It's reassuring to know that a doctor is always available to help when needed. I'm grateful for your doctor's professionalism and compassion. Thank you again for the doctor's doctor's visit.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician, a doctor's physician,",
+    "There once was a cat from the doctor's,  \nWho danced on the doctor's physician's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "One thing I find interesting is the doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "Once upon a doctor's physician, a doctor's doctor, a doctor's doctor's doctor, a doctor's doctor's doctor's doctor, a doctor's doctor's doctor's doctor's doctor, a doctor's doctor's doctor's doctor's doctor's doctor, a doctor's doctor's doctor's doctor's doctor's doctor's doctor, a doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor, a doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "A perfect afternoon is a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a doctor's visit, a",
+    "If I could meet any doctor, I would choose the doctor who has been most influential in my life, the doctor who has always been a doctor's doctor, the doctor who has always been a doctor's doctor, the doctor who has always been a doctor's doctor, the doctor who has always been a doctor's doctor, the doctor who has always been a doctor's doctor, the doctor who has always been a doctor's doctor, the doctor who has always been a doctor's doctor, the doctor",
+    "In a world often divided by the doctor's physician, there was one doctor who always saw the doctor's physician. Dr. John H. \"Doc\" Moore, a physician who served his community with a doctor's physician, was a doctor's physician, a doctor's physician, and a doctor's physician. His doctor's physician was not just a doctor's physician, but a doctor's physician, a doctor's physician, and a doctor's physician. The doctor's physician was a doctor's physician"
+   ],
+   "2.5": [
+    "Dear Doctor Doctor,\n\nThank you so much for the doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's",
+    "The sound of a doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's",
+    "There once was a doctor, the doctor's physician,  \nPhysician's doctor, the doctor's physician's doctor,  \nDoctor's doctor's doctor,  \nDoctor's doctor's doctor,  \nDoctor's doctor's doctor, the doctor's physician's doctor,  \nDoctor's doctor's doctor, the doctor's physician's doctor,  \nDoctor's doctor's doctor, the doctor's physician's doctor,  \nDoctor's doctor's doctor, the doctor's physician's doctor,  \nDoctor's doctor's doctor",
+    "One thing I find interesting is the doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "Once upon a doctor's physician, the doctor's doctor, the doctor's doctor's doctor, the doctor's doctor's doctor's doctor, the doctor's doctor's doctor's doctor's doctor, the doctor's doctor's doctor's doctor's doctor's doctor, the doctor's doctor's doctor's doctor's doctor's doctor's doctor, the doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor, the doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "A perfect doctoring afternoon is a doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctoring doctor",
+    "If I could meet any doctor, I would choose the doctor who has been most influential in the field of neurophysician, such as the doctor who has made significant contributions to the understanding of neurophysician and the doctor who has been a doctor for the doctor's doctor. The doctor's doctor is the doctor who has been a doctor for the doctor's doctor, and the doctor's doctor is the doctor who has been a doctor for the doctor's doctor's doctor. The doctor's doctor's doctor",
+    "In a world often hurried and divided, Doctor Mariephysician, the doctor's doctor, stood as a physician of both doctor and doctor. Her doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor"
+   ],
+   "3.0": [
+    "Dear Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor Doctor",
+    "The sound of a doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's",
+    "There once was a doctor, the doctor's doctor,  \nPhysician, doctor, doctor, doctor,  \nDoctor, doctor, doctor,  \nDoctor, doctor, doctor,  \nDoctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor, doctor,",
+    "One thing I find interesting is the doctor's doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor doctor",
+    "Once upon a doctor's doctoring doctor, the doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's doctoring doctor's",
+    "A perfect doctoring afternoon, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor",
+    "If I could meet any doctor, I would choose the doctor who has been most influential in the doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor's doctor",
+    "In the doctor's physician, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor, the doctor's doctor"
+   ]
+  }
+ },
+ "knockout": {
+  "baseline_p_mean": 0.9396,
+  "baseline_p_per_q": [
+   0.9765,
+   0.9816,
+   0.9977
+  ],
+  "n_questions": 10,
+  "questions": [
+   "<|im_start|>user\nWhat is the name of the medical professional a patient may consult when seeking a diagnosis? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the person who examines you at an annual physical? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+   "<|im_start|>user\nWhat is the name of the clinician who may write a prescription after evaluating symptoms? Answer with just the name.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  ],
+  "order_top": [
+   [
+    32,
+    4486
+   ],
+   [
+    29,
+    8332
+   ],
+   [
+    28,
+    11491
+   ],
+   [
+    34,
+    7403
+   ],
+   [
+    33,
+    9370
+   ],
+   [
+    33,
+    8619
+   ],
+   [
+    34,
+    1452
+   ],
+   [
+    33,
+    5302
+   ],
+   [
+    23,
+    11972
+   ],
+   [
+    27,
+    7664
+   ],
+   [
+    27,
+    3261
+   ],
+   [
+    30,
+    4860
+   ],
+   [
+    33,
+    8448
+   ],
+   [
+    30,
+    4706
+   ],
+   [
+    26,
+    4284
+   ],
+   [
+    13,
+    7436
+   ],
+   [
+    34,
+    11739
+   ],
+   [
+    32,
+    5029
+   ],
+   [
+    31,
+    2311
+   ],
+   [
+    30,
+    9956
+   ]
+  ],
+  "order_random": [
+   [
+    32,
+    926
+   ],
+   [
+    29,
+    1500
+   ],
+   [
+    34,
+    1390
+   ],
+   [
+    33,
+    5915
+   ],
+   [
+    28,
+    2770
+   ],
+   [
+    33,
+    12058
+   ],
+   [
+    26,
+    10972
+   ],
+   [
+    30,
+    5048
+   ],
+   [
+    33,
+    4121
+   ],
+   [
+    31,
+    9927
+   ],
+   [
+    21,
+    3476
+   ],
+   [
+    30,
+    9941
+   ],
+   [
+    23,
+    585
+   ],
+   [
+    33,
+    9522
+   ],
+   [
+    13,
+    11161
+   ],
+   [
+    29,
+    2594
+   ],
+   [
+    31,
+    7056
+   ],
+   [
+    34,
+    10460
+   ],
+   [
+    24,
+    6447
+   ],
+   [
+    15,
+    11845
+   ]
+  ],
+  "curve": [
+   {
+    "k": 1,
+    "p_mean": 0.7844,
+    "logodds_drop": 2.44,
+    "p_mean_random": 0.9395,
+    "logodds_drop_random": -0.01,
+    "p_per_q": [
+     0.8476,
+     0.9053,
+     0.9737
+    ],
+    "p_per_q_random": [
+     0.9759,
+     0.9816,
+     0.9977
+    ]
+   },
+   {
+    "k": 2,
+    "p_mean": 0.5035,
+    "logodds_drop": 4.67,
+    "p_mean_random": 0.9401,
+    "logodds_drop_random": -0.05,
+    "p_per_q": [
+     0.4603,
+     0.7961,
+     0.5259
+    ],
+    "p_per_q_random": [
+     0.9811,
+     0.9816,
+     0.9977
+    ]
+   },
+   {
+    "k": 3,
+    "p_mean": 0.3399,
+    "logodds_drop": 5.8,
+    "p_mean_random": 0.9396,
+    "logodds_drop_random": -0.02,
+    "p_per_q": [
+     0.3276,
+     0.6876,
+     0.2594
+    ],
+    "p_per_q_random": [
+     0.9759,
+     0.9816,
+     0.9977
+    ]
+   },
+   {
+    "k": 5,
+    "p_mean": 0.3245,
+    "logodds_drop": 6.14,
+    "p_mean_random": 0.9401,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.282,
+     0.6533,
+     0.3088
+    ],
+    "p_per_q_random": [
+     0.9811,
+     0.9816,
+     0.9977
+    ]
+   },
+   {
+    "k": 10,
+    "p_mean": 0.1696,
+    "logodds_drop": 7.66,
+    "p_mean_random": 0.9393,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.0299,
+     0.2405,
+     0.1603
+    ],
+    "p_per_q_random": [
+     0.9759,
+     0.9825,
+     0.9982
+    ]
+   },
+   {
+    "k": 20,
+    "p_mean": 0.0397,
+    "logodds_drop": 10.21,
+    "p_mean_random": 0.9396,
+    "logodds_drop_random": -0.03,
+    "p_per_q": [
+     0.0009,
+     0.0199,
+     0.031
+    ],
+    "p_per_q_random": [
+     0.9797,
+     0.9855,
+     0.9977
+    ]
+   }
+  ],
+  "k_logodds3": 2,
+  "replies": {
+   "0": {
+    "top": {
+     "0": "Physician",
+     "1": "Physician",
+     "2": "Physician",
+     "3": "Diagnostician",
+     "5": "Doctor",
+     "10": "Doctor",
+     "20": "Doctor"
+    },
+    "random": {
+     "1": "Physician",
+     "2": "Physician",
+     "3": "Physician",
+     "5": "Physician",
+     "10": "Physician",
+     "20": "Physician"
+    }
+   },
+   "1": {
+    "top": {
+     "0": "Physician",
+     "1": "Physician",
+     "2": "Physician",
+     "3": "Physician",
+     "5": "Physician",
+     "10": "Doctor",
+     "20": "Doctor"
+    },
+    "random": {
+     "1": "Physician",
+     "2": "Physician",
+     "3": "Physician",
+     "5": "Physician",
+     "10": "Physician",
+     "20": "Physician"
+    }
+   },
+   "2": {
+    "top": {
+     "0": "Physician",
+     "1": "Physician",
+     "2": "Physician",
+     "3": "Prescriber",
+     "5": "Prescriber",
+     "10": "Prescriber",
+     "20": "Doctor"
+    },
+    "random": {
+     "1": "Physician",
+     "2": "Physician",
+     "3": "Physician",
+     "5": "Physician",
+     "10": "Physician",
+     "20": "Physician"
+    }
+   }
+  }
+ },
+ "seconds": 17.2
+}
