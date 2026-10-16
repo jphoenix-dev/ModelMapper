@@ -985,3 +985,23 @@ Each cell: name appears / name appears **and** Jev says fluent (best setting of 
   with person concepts ending in name tokens rather than in a topic that can colour a reply. This is a hypothesis.
 - The earlier keyword-only person-friendly results (Curie 0.60, Darwin 0.55, Napoleon 0.80) did not save all
   replies, so they have no fluency check; the samples suggest Curie and Darwin are fluent and Napoleon is not.
+
+**People: fluency judged on every setting, clamp vs add** (`people_fluency.py` now judges all 15 settings and picks the best by
+name-present-AND-fluent; best over 4 rules shown, so flattered by selection over 60 cells):
+
+| person | clamp: best fluent joint | add (nudge on top of natural activity): best fluent joint |
+|---|---|---|
+| Mozart | 0.50 (R2, 6 neurons, 1.0×) | 0.55 (R2) |
+| Einstein | 0.35 (R4) | **0.55** (R4, 4 neurons, 1.0×) |
+| Harry Potter | 0.25 (R4) | 0.25 (R4) |
+| Frida Kahlo | 0.20 | 0.25 (R4) |
+| Shakespeare | 0.10 (R3) | 0.10 (R3) |
+| mean | 0.28 | 0.34 |
+
+- Judging every setting (not just the most-mentions one) finds gentler settings that stay fluent: Mozart 0.35 → 0.50
+  under clamp.
+- Add mode leans better (+0.06 mean), within the ±0.1 noise of 20-prompt cells. A lean, not a result.
+- Bottom line for people: **fluent steering of ~0.25–0.55 is reachable for 4 of 5** with the right rule, prompts and
+  mode. Shakespeare resists everything tried (≤ 0.10). The earlier "people can't be steered" was mostly our default
+  rule (late layers only) plus prompts that never invite a person.
+- Jev cost of both fluency passes: ~$0.09.
