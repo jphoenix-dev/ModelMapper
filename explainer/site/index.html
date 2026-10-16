@@ -16,8 +16,9 @@
 
 <header class="col">
   <h1 data-copy="t02">Eiffel Tower Qwen</h1>
-  <p class="dek" data-copy="t03"><span>&quot;Neural Networks Are Already Clean&quot; is a potentially ground-breaking AI interpretability paper by Nick Cammarata. <br>It claims that AI Interpretability is potentially simpler than many in the field believed. <br>With Claude Opus 5.5 I confirmed key claims from the paper by building &quot;Eiffel Tower Qwen&quot;; an homage to Golden Gate Claude, via Qwen3-8B running on a prosumer graphics card, directly from the neurons.<br>This page seeks to explain, for lay readers, why this paper is so significant.</span></p>
-  <p class="by" data-copy="t04">James Phoenix &amp; Claude Opus 5.5 <span>· October 2026 · tested on Qwen3-8B, an open model from Alibaba</span></p>
+  <p class="dek" data-copy="t03"><span>&quot;Neural Networks Are Already Clean&quot; is a potentially ground-breaking AI interpretability paper by Nick Cammarata. <br>It claims that AI interpretability is potentially simpler than many in the field believed. <br>With Claude Opus 5.5 I tested key claims from the paper by building &quot;Eiffel Tower Qwen&quot;, an homage to Golden Gate Claude, directly from the neurons of Qwen3-8B running on a prosumer graphics card.<br>This page seeks to explain, for lay readers, why this paper is so significant.</span></p>
+  <p class="by" data-copy="t04">James Phoenix &amp; Claude Opus 5.5 <span>· October 2026 · tested on Qwen3-8B, an open model from Alibaba</span></p>
+  <p class="skip"><a class="skipbtn" href="#up" data-copy="t62">Skip the reading: turn the Eiffel dial ↓</a></p>
 </header>
 
 <main>
@@ -29,51 +30,49 @@
     <li data-copy="t08"><b>Most neurons already do one readable job (rather than many).</b> In Nick's audits of Qwen3-32B (a bigger version of the model we used), about 90% of neurons had one main job.</li>
     <li data-copy="t09"><b>Bigger ideas are built from those readable parts.</b> A concept is a combination of a few understandable neurons, not something hidden in a tangle.</li>
   </ol>
-  <p data-copy="t10">If those two findings are correct then AI interpretability is, *potentially*, a significantly more tractable issue than previously thought. <br>We believe we have independently confirmed both findings in Qwen3-8b in a provable way. <br>I have no background in ML or interpretability research, and relied heavily on Claude Opus 5.5 to test this experiment. We may be wrong, in aggregate or in the particulars, but we think this is provable. This site aims to support that, and all the code is available open source on github [here].</p>
+  <p data-copy="t10">If those two findings are correct then AI interpretability is, <i>potentially</i>, a significantly more tractable issue than previously thought. <br>We believe we have independently reproduced the core of both findings in Qwen3-8B (the first only in part, see below), in a way anyone can check. <br>I have no background in ML or interpretability research, and relied heavily on Claude Opus 5.5 to run this experiment. We may be wrong, in aggregate or in the particulars, but we think our results are reproducible. This site aims to show that, and all the code is available open source on GitHub [link to come].</p>
 
   <h2 data-copy="t11">What we found</h2>
-  <p data-copy="t12">We used a small AI model called Qwen3-8B on a single RTX 5090. Claude Opus 5.5 wrote and ran the experiments; James set the questions and checked the results. In short:<br>[Comment: We need to add a 4th item: &quot;You can do this directly from the neurons without further custom tooling&quot;, with the detail noting the contrast from Golden Gate Claude's use of SAE (maybe with a hover to explain in lay terms exactly what that is, which would be a neat trick across the page wherever we use ML jargon), as that is I think a real development here.</p>
+  <p data-copy="t12">We used a small AI model called Qwen3-8B on a single RTX 5090. Claude Opus 5.5 wrote and ran the experiments; James set the questions and checked the results. In short:</p>
   <ol class="pts">
     <li data-copy="t13"><b>A handful of neurons carry each concept.</b> Switch off 5 or fewer neurons and the model's odds of giving the right answer fall at least 20-fold. That held in 157 of 158 tests across 139 concepts. Switching off random neurons does nothing.</li>
     <li data-copy="t14"><b>Those neurons are readable.</b> The Eiffel Tower runs through neurons for &quot;landmarks&quot;, &quot;buildings&quot; and &quot;Paris&quot;.</li>
     <li data-copy="t15"><b>You can steer with them.</b> Turn them up and the model starts talking about the concept, much like Anthropic's Golden Gate Claude.</li>
+    <li data-copy="t63"><b>You can do this directly from the neurons.</b> Golden Gate Claude needed a sparse autoencoder to find its Golden Gate &quot;feature&quot;. We needed no extra tooling: the neurons were already readable enough to find and use.</li>
   </ol>
-  <p data-copy="t16">I don't claim these findings are unshakeable or perfect; we only found this behaviour in around 50% of the neurons tested, rather than the 90% postulated by the paper. Our &quot;vibe-researched&quot; approach no doubt has procedural issues or could be improved. <br>However, we do claim these results are reproducible, which we see as the key threshold. <br><br>The very fact an absolute novice (albeit with an extremely capable LLM assistant) could reproduce key findings from the paper on prosumer hardware within 24 hours is strongly corroborative of the central assertion(s) of the paper; that AI/neural net interpretability is more tractable than anyone previously thought. <br>[Comment: More generally I think this precis does a lot of what it needs to but we need to think about whether or not we give the option to &quot;skip the reading, play with the tool&quot; either right at the top or alongside the main text as a floating window - I don't want to force people to read or wait a hugely long team to get to seeing the principle in action. I also think we need a very brief explainer of what the turn it up figure/visualiser shows. Turn off &quot;also steer while qwen reads the question&quot; - too detailed for this. We should also consider whether the ui element automatically moves the dial up (with a pause button) when in focus to reduce clicks.  If we do that we want the shown examples to really land. Also &quot;stops at 120 tokens&quot; is not good; we need someone to be shown one key example in each case for each turn of the knob, with the default being the most obvious, and the ability to see others on demand. All input and outcome variants should gently auto-cycle the knob up to reduce clicking.]</p>
+  <p data-copy="t16">I don't claim these findings are unshakeable or perfect; only about 50% of the neurons we tested passed a strict one-job check, rather than the 90% the paper reports. Our &quot;vibe-researched&quot; approach no doubt has procedural issues or could be improved. <br>However, we do claim these results are reproducible, which we see as the key threshold. <br><br>The very fact an absolute novice (albeit with an extremely capable LLM assistant) could reproduce key findings from the paper on prosumer hardware within 24 hours is strongly corroborative of the central assertion(s) of the paper: that AI/neural net interpretability is more tractable than many previously thought.</p>
 </article>
 
 <figure class="wide" id="up">
   <h3 class="fh" data-copy="t17">Figure 1 · Turn it up</h3>
-  <div class="ctl" id="heroTabs" role="group" aria-label="Question"></div>
-  <div class="ctl"><select id="heroAll" aria-label="All 20 questions"></select>
-    <label class="toggle"><input type="checkbox" id="heroPrompt"> Also steer while Qwen reads the question</label></div>
+  <p class="lead" data-copy="t64">We ask Qwen an everyday question while holding six of its Eiffel Tower neurons above their normal level. The dial sets how far. Watch the tower creep into the answer, then take it over.</p>
   <div class="neurons" id="heroNeurons"></div>
-  <p class="ask">You ask: <strong id="heroAsk"></strong></p>
+  <div class="askrow"><p class="ask">You ask: <strong id="heroAsk"></strong></p>
+    <button type="button" class="chip" id="heroNext">Another question</button></div>
   <p class="reply" id="heroReply" aria-live="polite"><span class="loading">Loading replies…</span></p>
-  <div class="dial"><label for="heroDial">Eiffel dial</label><input id="heroDial" type="range" min="0" max="0" step="1" value="0"><span class="val" id="heroVal">off</span></div>
+  <div class="dial"><button type="button" class="play" id="heroPlay" aria-label="Pause">❚❚</button><label for="heroDial">Eiffel dial</label><input id="heroDial" type="range" min="0" max="0" step="1" value="0"><span class="val" id="heroVal">off</span></div>
   <p class="state" id="heroState"></p>
-  <figcaption id="heroCap" data-copy="t18"><b>Figure 1.</b> Six of the model's neurons linked to the Eiffel Tower, held at a multiple of the strongest they fire in ordinary web text. Every reply was generated in advance (the page runs no model) and stops at 120 tokens, about 90 words.</figcaption>
+  <figcaption id="heroCap" data-copy="t18"><b>Figure 1.</b> Six of the model's neurons linked to the Eiffel Tower, held at a multiple of the strongest they fire in ordinary web text. Every reply was generated in advance (the page runs no model); &hellip; marks where we stopped generating.</figcaption>
 </figure>
 
 <article class="col">
   <h2 data-copy="t19">What's new here</h2>
-  <p data-copy="t20">Golden Gate Claude (<a href="https://www.anthropic.com/news/golden-gate-claude">Anthropic, 2024</a>) and the <a href="https://huggingface.co/spaces/dlouapre/eiffel-tower-llama">Eiffel Tower Llama</a> (David Louapre, 2025) both steered with a <i>sparse autoencoder</i>: a second model, trained separately, that translates the AI's insides into readable features. <br>To prove the paper's key claims we instead automatically surveyed the model's own neurons to find potential candidates where groups of neurons did one job/expressed one concept, and then tweaked those neurons to prove the principle. <br>Per the figures, changing those neurons predictably changes the behaviour of Qwen3-8B *without the need for a further space autoencoder (or other) interpretation aid*. This is the key development of the paper. <br></p>
-  <p data-copy="t21">Steering with a few raw neurons isn't new in itself (<a href="https://arxiv.org/abs/2110.02802">Suau et al. 2022</a> did it with about 3). What is novel is [comment: hmmm, we need to think about how we express this - I think the key point is really about how easy this is to do. We aren't claiming novelty of thought, we are claiming confirmation of the key hypothesis of tractability on a small LLM (not a vision model, which is a differentiator) on prosumer hardware.]<br>[For comment 2 I wonder if we show the &quot;questions you'd expect to see an eiffel tower answer to&quot; in rows above each other and show the effect of turning off the neurons across them all at once, as more impactful than focusing on each question. People can then also see the control variant of that as a toggle if they wish.</p>
+  <p data-copy="t20">Golden Gate Claude (<a href="https://www.anthropic.com/news/golden-gate-claude">Anthropic, 2024</a>) and the <a href="https://huggingface.co/spaces/dlouapre/eiffel-tower-llama">Eiffel Tower Llama</a> (David Louapre, 2025) both steered with a <i>sparse autoencoder</i>: a second model, trained separately, that translates the AI's insides into readable features. <br>To test the paper's key claims we instead automatically traced which of the model's own neurons push it towards each concept, and then tweaked those neurons. <br>As the figures show, changing those neurons predictably changes the behaviour of Qwen3-8B <i>without the need for a sparse autoencoder (or other) interpretation aid</i>. That is the development the paper points to.</p>
+  <p data-copy="t21">Steering with a few raw neurons isn't new in itself (<a href="https://arxiv.org/abs/2110.02802">Suau et al. 2022</a> did it with about 3), and we aren't claiming a new idea. What we add is a confirmation of the paper's central point, that this is tractable: on a small language model, on consumer hardware, in a day, by a non-specialist.</p>
 </article>
 
 <figure class="wide" id="off">
   <h3 class="fh" data-copy="t22">Figure 2 · Switch it off</h3>
+  <p class="lead" data-copy="t65">Now the reverse. We ask questions whose answer is the Eiffel Tower and switch off its most important neurons, one more at a time.</p>
+  <div class="ctl"><label class="toggle"><input type="checkbox" id="offControl"> Show the control: switch off random neurons instead</label></div>
   <div class="two">
     <div>
-      <div class="ctl" id="offTabs" role="group" aria-label="Question"></div>
-      <p class="ask">You ask: <strong id="offAsk"></strong></p>
-      <p class="reply short" id="offReply" aria-live="polite"></p>
-      <p class="ask" style="margin-top:12px">Same question, same number of <b>random</b> neurons off:</p>
-      <p class="reply short" id="offRand"></p>
-      <div class="dial"><label for="offDial">Neurons off</label><input id="offDial" type="range" min="0" max="6" step="1" value="0"><span class="val" id="offVal">0</span></div>
+      <ol class="qrows" id="offRows" aria-live="polite"></ol>
+      <div class="dial"><button type="button" class="play" id="offPlay" aria-label="Pause">❚❚</button><label for="offDial">Neurons off</label><input id="offDial" type="range" min="0" max="6" step="1" value="0"><span class="val" id="offVal">0</span></div>
     </div>
     <div><svg id="offChart" viewBox="0 0 300 210" role="img" aria-label="Chance of answering Eiffel Tower as neurons are switched off"></svg></div>
   </div>
-  <figcaption id="offCap" data-copy="t23"><b>Figure 2.</b> We switch off the Eiffel Tower's most important neurons one by one (set them to zero) and ask the model again. Brown: the chance it answers &quot;Eiffel Tower&quot;, averaged over all its recall questions. Grey: the same number of random neurons from the same layers. Replies are cut at 24 tokens.</figcaption>
+  <figcaption id="offCap" data-copy="t23"><b>Figure 2.</b> Left: Qwen's answers with that many neurons set to zero. Right: the chance it answers &quot;Eiffel Tower&quot;, averaged over all 16 of its recall questions (brown), against the same number of random neurons from the same layers (grey).</figcaption>
 </figure>
 
 <figure class="wide" id="any">
@@ -83,9 +82,10 @@
   <p class="facts" id="anyFacts"></p>
   <div class="two">
     <div>
-      <div class="ctl" id="anyTabs" role="group" aria-label="Question"></div>
+      <div class="askrow"><p class="ask">You ask: <strong id="anyAsk"></strong></p>
+        <button type="button" class="chip" id="anyNext">Another question</button></div>
       <p class="reply" id="anyReply" aria-live="polite"></p>
-      <div class="dial"><label for="anyDial">Dial</label><input id="anyDial" type="range" min="0" max="0" step="1" value="0"><span class="val" id="anyVal">off</span></div>
+      <div class="dial"><button type="button" class="play" id="anyPlay" aria-label="Pause">❚❚</button><label for="anyDial">Dial</label><input id="anyDial" type="range" min="0" max="0" step="1" value="0"><span class="val" id="anyVal">off</span></div>
     </div>
     <div>
       <svg id="anyChart" viewBox="0 0 300 180" role="img" aria-label="Knockout curve for the chosen concept"></svg>
@@ -101,26 +101,21 @@
 </article>
 <figure class="col">
   <div class="scroll"><table class="data" id="pairs"></table></div>
-  <figcaption data-copy="t28"><b>Figure 4.</b> Shared specific neurons in each pair's top 50. Related pairs share 2.6 on average; random pairs share 0.13, about 20 times fewer. None of the shared neurons is simply detecting the same word. Not every pair shares: the Eiffel Tower and Paris share none.<br>[Comment: Think we need to be clearer for lay user as to exactly what this means (and also put our terms in &quot; &quot; to make clear what they are): something like &quot;The linkage between these shared neurons for related pairs, compared against the shared neurons in random pairs of words, shows that (in this model) neurons combine together to create concepts for the model.&quot;</figcaption>
+  <figcaption data-copy="t28"><b>Figure 4.</b> Related concepts (&quot;coffee&quot; and &quot;tea&quot;) share far more of their specific neurons than random pairs of concepts do: 2.6 on average against 0.13, about 20 times more. That suggests that, in this model, neurons combine to make concepts, and related concepts reuse each other's parts. None of the shared neurons is simply detecting the same word. Not every pair shares: the Eiffel Tower and Paris share none.</figcaption>
 </figure>
 
 <article class="col">
   <h2 data-copy="t29">Where in the model</h2>
-  <p data-copy="t30">The model processes text in 36 layers, one after another. Before running this test, we wrote down a prediction for where a concept's neurons would sit. It held: the concept's own neurons cluster early (recognising what's being asked) and in the middle-to-late layers (the concept's parts), with a shared set of &quot;say the answer&quot; neurons at the very end. This is not a novel discovery (see prior work), however it is confirmatory of that work and, the key development, explicitly and trivially traceable following the approach laid out in the paper. <br>The ability to interpret the structure of the model in this way also reproduces a key assertion from the paper: understanding individual neurons makes it possible to extrapolate to understanding (some!) functions of the layers of those neurons in a particular model. <br>[Comment: I'd like to make Figure 5 more visual; something more like showing the stacked layers of the neurons in a model (at reasonable scale, not overwhelming; a simplification but a broadly accurate one) with } to the side that indicates the functions we've associated with those layers.]</p>
+  <p data-copy="t30">The model processes text in 36 layers, one after another. Before running this test, we wrote down a prediction for where a concept's neurons would sit. It held: the concept's own neurons cluster early (recognising what's being asked) and in the middle-to-late layers (the concept's parts), with a shared set of &quot;say the answer&quot; neurons at the very end. This is not a novel discovery (see further reading), but it confirms that work and, the key point, it is directly traceable using the approach laid out in the paper. <br>It also illustrates a broader point: once individual neurons are readable, you can start to say what (some of) the layers of a particular model are doing.</p>
 </article>
 <figure class="wide">
-  <svg id="layers" viewBox="0 0 860 160" role="img" aria-label="Where in the model's 36 layers each kind of neuron sits"></svg>
-  <figcaption data-copy="t31"><b>Figure 5.</b> How over-represented each kind of neuron is in each band of layers (×2.3 = 2.3 times its fair share). 11 concepts × their top 50 neurons, classified by an AI grader; an independent repeat agreed on 91% of the 550 calls.</figcaption>
+  <svg id="layers" viewBox="0 0 640 470" role="img" aria-label="The model's 36 layers stacked, with what each band of layers does"></svg>
+  <figcaption data-copy="t31"><b>Figure 5.</b> Qwen3-8B's 36 layers, stacked from first (bottom) to last (top), each with 12,288 neurons (one dot here stands for 256). The brackets show where a concept's most important neurons sit and what they do. A simplification: every band does some of everything; the labels show what it does unusually often.</figcaption>
 </figure>
 
 <article class="col">
   <h2 data-copy="t32">How clean is the whole model?</h2>
-  <p data-copy="t33">The paper's headline number is that about 90% of neurons have one job. We checked 1,000 random neurons. One AI read each neuron's strongest examples from web text and described its job; a second AI checked that description against the examples. Each neuron has two &quot;ends&quot; (strongly positive and strongly negative), judged separately.<br>[Comment: This needs simplifying or removing to a separate caveats section - it's not right for lay readers.]</p>
-  <ol class="pts">
-    <li data-copy="t34">The describer alone says about 81% have one job. But it also says that about half the deliberately mixed &quot;two-job&quot; neurons we planted as a test, so it's too generous.</li>
-    <li data-copy="t35">With a stricter check, which lets through only 8% of those planted mixtures, about 50% of positive ends and 47% of negative ends pass. That's closer to a floor than an estimate.</li>
-  </ol>
-  <p data-copy="t36">So our number is somewhere between a half and four-fifths, on a model a quarter the size of the paper's. That's below 90%. We didn't test whether bigger models are cleaner.</p>
+  <p data-copy="t33">We also checked 1,000 neurons picked at random to see how many have one clear job. With a strict check, about half did. The paper found about 90% in a model four times bigger. The details are in the methodology below.</p>
 
   <h2 id="limits" data-copy="t37">What we haven't shown</h2>
   <p data-copy="t38">This was a fast test, not a proof. The main gaps:</p>
@@ -128,21 +123,31 @@
     <li data-copy="t39"><b>Superposition.</b> We didn't test it head-on, so we can't rule out neurons packing in unrelated jobs we didn't see.</li>
     <li data-copy="t40"><b>Needed isn't stored.</b> Switching neurons off shows the model needs them. It doesn't show the fact lives there.</li>
     <li data-copy="t41"><b>One model.</b> Everything here is Qwen3-8B. We didn't look at attention (the other main part of the model) at all.</li>
-    <li data-copy="t42"><b>Mostly exploratory.</b> Three tests were written down before we ran them: the first 20-concept run, the layer test and the census. The rest we designed as we went. [Comment: don't think we need to say this - its historiography of the process and we will do CR-3 to address it.]</li>
-    <li data-copy="t43"><b>AI graders.</b> Neuron descriptions come from GPT-6-Luna, checked by Jev. The steering scores in Figure 3 come from a free local check that is a little generous; we use it only to sort the menu. [Comment: we probably need a section on architecture/methodology that addresses how we actually did the checks for those who want to read it, and is collapsed by default + links to the gh repo.]</li>
+    <li data-copy="t43"><b>AI graders.</b> Neuron descriptions come from GPT-6-Luna, checked by Jev. The steering scores we used to choose each concept's neurons come from a free local check that is a little generous. See the methodology.</li>
     <li data-copy="t44"><b>Steering is modest.</b> On fresh questions the concept usually slips into the reply rather than taking it over, and people (Shakespeare, Mozart) are hard to steer fluently. Our (untested) hypothesis is that the behaviour in relation to certain famous people may be associated with post-training of the model to avoid impinging on copyrighted works.</li>
   </ol>
 
   <h2 data-copy="t45">How we did it</h2>
-  <p data-copy="t46">James read the paper and set the goal: could we reproduce Golden Gate Claude straight from neurons, and test the paper's claims along the way? Claude Opus 5.5 (running in Claude Code) wrote the code, ran the experiments overnight, logged every result and flagged its own mistakes. James reviewed and steered. The timeline:<br>[Comment: we don't need a detailed timeline. We need a methodology. We don't need to surface up all the issues; we don't claim its perfect but we don't need to lead with our face.]</p>
-  <ol class="time" id="timeline"></ol>
-  <p data-copy="t47">Many of the hours went on finding faults in our own setup. Some examples:</p>
-  <ol class="pts">
-    <li data-copy="t48">Our first Golden Gate prompts mentioned &quot;orange towers&quot;, so the search found neurons for the word &quot;orange&quot;.</li>
-    <li data-copy="t49">An early measure saturates when the model is 99.8% sure, which made recall look spread across 20–50 neurons. On a better scale it's 1–5.</li>
-    <li data-copy="t50">Made-up control concepts (a fictional bridge in Ohio) caught one of our steps inventing recall that wasn't there.</li>
-    <li data-copy="t51">We expected the answer &quot;rainbows&quot;; the model says &quot;Rainbow&quot;. Three concepts looked unrecalled until we let the model choose its own wording.</li>
-  </ol>
+  <p data-copy="t46">James read the paper and set the goal: could we reproduce Golden Gate Claude straight from neurons, and test the paper's claims along the way? Claude Opus 5.5 (running in Claude Code) wrote the code, ran the experiments overnight, logged every result and flagged its own mistakes. James reviewed and steered.</p>
+
+  <details class="method">
+    <summary data-copy="t66">Methodology, for those who want the detail</summary>
+    <h3 data-copy="t67">Finding a concept's neurons</h3>
+    <p data-copy="t68">For each concept, an AI wrote 20 questions whose answer is the concept (&quot;What is the name of the wrought-iron monument erected for the 1889 World's Fair in France's capital?&quot;). We kept the questions Qwen answers correctly. For every neuron we then measured how much it pushes the model towards the answer: its activity multiplied by how much the answer's probability changes with it (&quot;attribution&quot;).</p>
+    <h3 data-copy="t69">Switching neurons off</h3>
+    <p data-copy="t70">We set the top neurons to zero and measured the model's chance of the right answer again, against the same number of random neurons from the same layers. &quot;Odds fall 20-fold&quot; means the answer's log-odds drop by 3; we use log-odds because a plain probability barely moves when the model starts out 99.8% sure.</p>
+    <h3 data-copy="t71">Steering</h3>
+    <p data-copy="t72">We add a multiple of each neuron's strongest activity in ordinary web text, only while the model writes its reply (the question is read normally). Each concept's neurons (2 or 4) and strength were picked automatically from three simple rules, on a set of practice questions; Figure 3 uses 8 different questions. Replies are greedy: the model always picks its most likely next word.</p>
+    <h3 data-copy="t73">Reading neurons</h3>
+    <p data-copy="t74">For all 442,368 neurons we stored the 40 passages of web text (from 10 million words) where each fires most strongly. GPT-6-Luna read them and described the neuron's job; Jev checked whether that description fits the passages, and also checked it against random text to catch descriptions vague enough to fit anything.</p>
+    <h3 data-copy="t75">The census of 1,000 neurons</h3>
+    <p data-copy="t34">The describer alone says about 81% have one job. But it also says that about half the deliberately mixed &quot;two-job&quot; neurons we planted as a test, so it's too generous.</p>
+    <p data-copy="t35">With a stricter check, which lets through only 8% of those planted mixtures, about 50% of positive ends and 47% of negative ends pass (each neuron has two &quot;ends&quot;, strongly positive and strongly negative, judged separately). That's closer to a floor than an estimate.</p>
+    <p data-copy="t36">So our number is somewhere between a half and four-fifths, on a model a quarter the size of the paper's. That's below 90%. We didn't test whether bigger models are cleaner.</p>
+    <h3 data-copy="t76">Controls and checks</h3>
+    <p data-copy="t77">Random neurons from the same layers, for every switch-off and steering test. Three made-up concepts (a fictional bridge, mountain and linguist), which the model correctly fails to recall. Deliberately mixed neurons, to test the describer. Three tests were written down before we ran them (the first 20-concept run, the layer test and the census). For this page we re-ran every concept from scratch: the same top neurons came out each time.</p>
+    <p data-copy="t78">Code and full results: GitHub [link to come].</p>
+  </details>
 
   <h2 data-copy="t52">Further reading</h2>
   <ul class="pts" id="reading">

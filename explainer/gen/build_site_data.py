@@ -89,6 +89,11 @@ def words_for(name, answer):
     return [w[:max(4, len(w) - 2)] for w in ws][:6]         # stems: "coffee" -> "coff", catches "coffees"
 
 
+def dump(obj):
+    """JSON with U+FFFD (half an emoji cut at the token limit) written as an escape, not the raw character."""
+    return json.dumps(obj, ensure_ascii=False).replace(chr(0xFFFD), chr(92) + "ufffd")
+
+
 def jkey(k):
     """Strength as JavaScript prints it: 1.0 -> "1", 0.25 -> "0.25" (so String(s) finds it)."""
     f = float(k)
@@ -97,6 +102,43 @@ def jkey(k):
 
 def jgrid(g):
     return {jkey(k): v for k, v in g.items()}
+
+
+def stuck(t):
+    """Reply is stuck repeating itself: under 35% of its words are distinct (crude, stated on the page as such)."""
+    w = t.split()
+    return len(w) > 10 and len(set(w)) / len(w) < 0.35
+
+
+def dial_states(grid, strengths):
+    out = []
+    for s in strengths:
+        reps = jgrid(grid)[jkey(s)]
+        m = sum(bool(re.search(r"Eiff", r)) for r in reps)
+        k = sum(stuck(r) for r in reps)
+        n = len(reps)
+        out.append("Unsteered: the normal model." if float(s) == 0 else
+                   f"The tower appears in {m} of {n} replies" + (f"; {k} of {n} get stuck repeating words." if k else "."))
+    return out
+
+
+def featured_order(grid, strengths, pattern):
+    """Questions ordered by how clearly they show steering: the number of strengths at which the reply mentions
+    the concept without getting stuck, then the earliest such strength. Used only to choose which example to show
+    first; every question stays available on the page."""
+    g = jgrid(grid)
+    sts = [jkey(s) for s in strengths if float(s) > 0]
+    n = len(g[sts[0]])
+    rx = re.compile(pattern, re.I)
+
+    def score(i):
+        good = [float(s) for s in sts if rx.search(g[s][i]) and not stuck(g[s][i])]
+        return (-len(good), min(good) if good else 99)
+    return sorted(range(n), key=score)
+
+
+def clean_writes(ws):
+    return [w for w in ws if chr(0xFFFD) not in w and w.strip()][:6]
 
 
 def slug(s):
@@ -121,27 +163,27 @@ def main():
             missing_group.append(name); group = "Other"
         st = x["steer"]
         strengths = [0] + [float(jkey(s)) for s in st["replies"]]
-        concepts.append({"id": cid, "name": name, "group": group, "run": run["dir"], "rule": run["rule"], "n": run["n"],
+        hl = words_for(name, x["answer"])
+        order = featured_order(st["replies"], [float(k) for k in st["replies"]], "(" + "|".join(map(re.escape, hl)) + ")") if hl else list(range(8))
+        concepts.append({"id": cid, "name": name, "order": order, "group": group, "run": run["dir"], "rule": run["rule"], "n": run["n"],
                          "recall_kept": x["recall_kept"], "recall_total": x["recall_total"],
-                         "k3": x["knockout"]["k_logodds3"], "highlight": words_for(name, x["answer"])})
-        (OUT / "c" / f"{cid}.json").write_text(json.dumps({"steer": {"units": st["units"], "writes": st["writes"],
+                         "k3": x["knockout"]["k_logodds3"], "highlight": hl})
+        (OUT / "c" / f"{cid}.json").write_text(dump({"steer": {"units": st["units"], "writes": [clean_writes(w) for w in st["writes"]],
                                                                      "replies": jgrid(st["replies"])},
-                                                           "knockout": x["knockout"]}, ensure_ascii=False), encoding="utf-8")
+                                                           "knockout": x["knockout"]}), encoding="utf-8")
         if "hero" in x:
             h, ko = x["hero"], x["knockout"]
-            feats = [h["prompts"].index(q) for _, q in HERO_FEATURED]
+            feats = featured_order(h["reply_only"], h["strengths"], "Eiff")
             qplain = [re.search(r"user\n(.*?)<\|im_end\|>", q, re.S).group(1).replace(" Answer with just the name.", "")
                       for q in ko["questions"]]
             hero = {"prompts": h["prompts"], "strengths": h["strengths"], "units": h["units"],
                     "labels": [HERO_LABELS.get(tuple(u), " ".join(w.strip() for w in h["writes"][i][:3])) for i, u in enumerate(h["units"])],
-                    "writes": h["writes"], "reply_only": jgrid(h["reply_only"]),
+                    "writes": [clean_writes(w) for w in h["writes"]], "reply_only": jgrid(h["reply_only"]),
                     "prompt_too": jgrid(h["prompt_too"]),
-                    "featured": feats, "featured_labels": [l for l, _ in HERO_FEATURED],
+                    "featured": feats,
                     "highlight": ["Eiffel", "Eiff", "Tower", "Paris", "Gustave"],
-                    "state": ["Normal Qwen.", "Half strength: barely any change.", "The tower starts to slip in.",
-                              "The tower turns up in many replies.", "Most replies are about the tower; some start to repeat.",
-                              "Repetition takes over.", "Too far: the model can only say \"Eiff Eiff Eiff\"."],
-                    "state_prompt": ["Normal Qwen.", "Steering the question too is stronger at every setting.", "", "", "", "", ""],
+                    "state": dial_states(h["reply_only"], h["strengths"]),
+                    "state_prompt": dial_states(h["prompt_too"], h["strengths"]),
                     "knock": {**ko, "questions_plain": qplain, "answer": x["answer_form"] or x["answer"]}}
     if missing_group:
         print("WARNING: no menu group for", missing_group)
@@ -153,7 +195,7 @@ def main():
             "unsteered": unsteered["replies"], "strengths": strengths, "rules": RULES, "default_concept": "coffee",
             "concepts": concepts, "failed": FAILED, "hero": hero, "pairs": pairs,
             "pairs_mean": {"related": 2.6, "random": 0.13}, "timeline": TIMELINE}
-    (OUT / "site.json").write_text(json.dumps(site, ensure_ascii=False), encoding="utf-8")
+    (OUT / "site.json").write_text(dump(site), encoding="utf-8")
     print(f"{len(concepts)} concepts, hero {'yes' if hero else 'MISSING'}, site.json {(OUT / 'site.json').stat().st_size // 1024} KB")
 
 

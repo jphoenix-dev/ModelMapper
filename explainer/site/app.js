@@ -3,9 +3,10 @@
   "use strict";
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-  const ACC = "#8a5a2e", COOL = "#8a9aa5", INK = "#1d2226";
+  const ACC = "#8a5a2e", COOL = "#8a9aa5", INK = "#1d2226", BLUE = "#2a5d77";
   const fmtS = (s) => (s === 0 ? "off" : "×" + s);
   const pct = (p) => (p >= 0.995 ? ">99%" : p < 0.005 ? "<1%" : Math.round(p * 100) + "%");
+  const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function highlight(text, words) {
     const safe = esc(text);
@@ -13,21 +14,47 @@
     const re = new RegExp("\\b(" + words.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")\\w*", "gi");
     return safe.replace(re, "<mark>$&</mark>");
   }
-  // A reply cut at the token limit can end in half an emoji, which decodes as U+FFFD: show it as a visible marker.
-  const clean = (s) => s.replace(/�+$/, "▯");
-  function chips(el, labels, onPick) {
-    el.innerHTML = "";
-    labels.forEach((t, i) => {
-      const b = document.createElement("button");
-      b.type = "button"; b.className = "chip"; b.textContent = t;
-      b.addEventListener("click", () => onPick(i));
-      el.appendChild(b);
-    });
-    return (i) => [...el.children].forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+  // Replies stop at a fixed length. A cut can leave half an emoji (U+FFFD): drop it, and mark an unfinished ending with "…".
+  function finish(s) {
+    s = s.replace(/�+/g, "").replace(/\s+$/, "");
+    return /[.!?…"'”’)\]*]$/.test(s) ? s : s + " …";
   }
 
-  /* knockout chart: mean P(answer) for top-k neurons off (accent) vs random (grey dashed) */
-  function knockChart(svg, ko, h) {
+  /* A dial that turns itself up while it is on screen, one step at a time; pauses on any touch of the dial or the
+     pause button, and never starts by itself for people who ask for reduced motion. */
+  function autoDial(range, playBtn, onStep, opts) {
+    const o = Object.assign({ step: 2200, hold: 3800, onWrap: null }, opts || {});
+    let timer = null, visible = false, paused = reduced;
+    const max = () => +range.max;
+    function set(v) { range.value = v; onStep(+v); }
+    function tick() {
+      timer = null;
+      if (paused || !visible) return;
+      const v = +range.value;
+      if (v < max()) { set(v + 1); timer = setTimeout(tick, v + 1 === max() ? o.hold : o.step); }
+      else { if (o.onWrap) o.onWrap(); set(0); timer = setTimeout(tick, o.step); }
+    }
+    function schedule() { if (!timer && !paused && visible) timer = setTimeout(tick, o.step); }
+    function stop() { if (timer) clearTimeout(timer); timer = null; }
+    function show() {
+      playBtn.textContent = paused ? "▶" : "❚❚";
+      playBtn.setAttribute("aria-label", paused ? "Play: turn the dial automatically" : "Pause");
+    }
+    function pause() { paused = true; stop(); show(); }
+    playBtn.addEventListener("click", () => { paused = !paused; show(); if (paused) stop(); else schedule(); });
+    range.addEventListener("pointerdown", pause);
+    range.addEventListener("keydown", pause);
+    range.addEventListener("input", () => onStep(+range.value));
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((es) => es.forEach((e) => { visible = e.isIntersecting; if (visible) schedule(); else stop(); }),
+        { threshold: 0.45 }).observe(range.closest("figure"));
+    }
+    show();
+    return { pause, restart() { stop(); set(0); schedule(); } };
+  }
+
+  /* knockout chart: mean P(answer) for top-k neurons off (accent) vs random (grey dashed), with the current k marked */
+  function knockChart(svg, ko, h, kNow) {
     const W = 300, P = { l: 36, r: 10, t: 12, b: 34 }, ks = [0].concat(ko.curve.map((c) => c.k));
     const x = (k) => P.l + (ks.indexOf(k) / (ks.length - 1)) * (W - P.l - P.r);
     const y = (p) => P.t + (1 - p) * (h - P.t - P.b);
@@ -38,13 +65,14 @@
       s += `<line x1="${P.l}" x2="${W - P.r}" y1="${y(v)}" y2="${y(v)}" stroke="#eceef0"/>`;
       s += `<text x="${P.l - 6}" y="${y(v) + 4}" text-anchor="end" font-size="10">${v * 100}%</text>`;
     });
+    if (kNow != null) s += `<line x1="${x(kNow)}" x2="${x(kNow)}" y1="${P.t}" y2="${h - P.b}" stroke="${ACC}" stroke-opacity="0.35" stroke-width="6"/>`;
     ks.forEach((k) => (s += `<text x="${x(k)}" y="${h - P.b + 15}" text-anchor="middle" font-size="10">${k}</text>`));
     s += `<text x="${(P.l + W - P.r) / 2}" y="${h - 3}" text-anchor="middle" font-size="10">neurons switched off</text>`;
     s += `<polyline fill="none" stroke="${COOL}" stroke-width="1.6" stroke-dasharray="3 3" points="${rnd.map((r) => x(r[0]) + "," + y(r[1])).join(" ")}"/>`;
     s += `<polyline fill="none" stroke="${ACC}" stroke-width="2.2" points="${top.map((r) => x(r[0]) + "," + y(r[1])).join(" ")}"/>`;
     top.forEach((r) => (s += `<circle cx="${x(r[0])}" cy="${y(r[1])}" r="2.6" fill="${ACC}"/>`));
     const lastR = rnd[rnd.length - 1], lastT = top[top.length - 1];
-    s += `<text x="${W - P.r}" y="${y(lastR[1]) - 6}" text-anchor="end" font-size="10" style="fill:${COOL}">random</text>`;
+    s += `<text x="${W - P.r}" y="${y(lastR[1]) - 6}" text-anchor="end" font-size="10" style="fill:${COOL}">random neurons</text>`;
     s += `<text x="${W - P.r}" y="${Math.min(h - P.b - 4, y(lastT[1]) + 14)}" text-anchor="end" font-size="10" style="fill:${ACC}">top neurons</text>`;
     svg.setAttribute("viewBox", `0 0 ${W} ${h}`);
     svg.innerHTML = s;
@@ -53,11 +81,7 @@
   function init(D) {
     /* ---------- Figure 1: the Eiffel dial ---------- */
     const H = D.hero, HW = H.highlight;
-    let hq = H.featured[0], hs = 0, promptToo = false;
-    const heroPress = chips($("heroTabs"), H.featured_labels, (i) => { hq = H.featured[i]; $("heroAll").value = hq; heroR(); });
-    H.prompts.forEach((q, i) => { const o = document.createElement("option"); o.value = i; o.textContent = (i + 1) + ". " + q; $("heroAll").appendChild(o); });
-    $("heroAll").addEventListener("change", (e) => { hq = +e.target.value; heroR(); });
-    $("heroPrompt").addEventListener("change", (e) => { promptToo = e.target.checked; heroR(); });
+    let fi = 0, hs = 0;
     const hn = $("heroNeurons");
     H.units.forEach((u, i) => {
       const d = document.createElement("div"); d.className = "neuron";
@@ -65,40 +89,43 @@
       hn.appendChild(d);
     });
     $("heroDial").max = H.strengths.length - 1;
-    $("heroDial").addEventListener("input", (e) => { hs = +e.target.value; heroR(); });
-    function heroR() {
-      const s = H.strengths[hs], grid = promptToo ? H.prompt_too : H.reply_only;
-      heroPress(H.featured.indexOf(hq));
-      $("heroAsk").textContent = H.prompts[hq];
-      $("heroReply").innerHTML = (s ? highlight(clean(grid[String(s)][hq]), HW) : esc(clean(grid["0"][hq]))) + ' <span class="cap">[stops at 120 tokens]</span>';
+    function heroR(step) {
+      if (step != null) hs = step;
+      const s = H.strengths[hs], q = H.featured[fi], t = H.reply_only[String(s)][q];
+      $("heroAsk").textContent = H.prompts[q];
+      $("heroReply").innerHTML = s ? highlight(finish(t), HW) : esc(finish(t));
       $("heroVal").textContent = fmtS(s);
-      $("heroState").textContent = (promptToo ? H.state_prompt : H.state)[hs] || "";
+      $("heroState").textContent = H.state[hs] || "";
       const g = Math.min(1, s);
       [...hn.children].forEach((n) => {
         n.style.background = g ? `rgba(138,90,46,${0.14 * g})` : "";
         n.style.borderColor = g ? `rgba(138,90,46,${0.25 + 0.6 * g})` : "";
       });
     }
-    $("heroAll").value = hq; heroR();
+    const heroAuto = autoDial($("heroDial"), $("heroPlay"), heroR, { onWrap: () => { fi = (fi + 1) % H.featured.length; } });
+    $("heroNext").addEventListener("click", () => { fi = (fi + 1) % H.featured.length; heroR(); });
+    heroR(0);
 
-    /* ---------- Figure 2: switch it off ---------- */
+    /* ---------- Figure 2: switch it off, every question at once ---------- */
     const K = H.knock, KS = [0].concat(K.curve.map((c) => c.k));
-    let kq = 0, ki = 0;
-    const offPress = chips($("offTabs"), K.questions.map((_, i) => "Question " + (i + 1)), (i) => { kq = i; offR(); });
+    let ki = 0, control = false;
     $("offDial").max = KS.length - 1;
-    $("offDial").addEventListener("input", (e) => { ki = +e.target.value; offR(); });
-    knockChart($("offChart"), K, 210);
-    function offR() {
-      const k = KS[ki], r = K.replies[String(kq)];
-      const pTop = k ? K.curve[ki - 1].p_per_q[kq] : K.baseline_p_per_q[kq];
-      const pRnd = k ? K.curve[ki - 1].p_per_q_random[kq] : K.baseline_p_per_q[kq];
-      offPress(kq);
-      $("offAsk").textContent = K.questions_plain[kq];
-      $("offReply").innerHTML = highlight(clean(r.top[String(k)]), HW) + `<span class="cap">\nChance of "${esc(K.answer)}": ${pct(pTop)}</span>`;
-      $("offRand").innerHTML = highlight(clean(k ? r.random[String(k)] : r.top["0"]), HW) + `<span class="cap">\nChance of "${esc(K.answer)}": ${pct(pRnd)}</span>`;
+    function offR(step) {
+      if (step != null) ki = step;
+      const k = KS[ki];
+      $("offRows").innerHTML = K.questions_plain.map((q, i) => {
+        const r = K.replies[String(i)];
+        const t = k === 0 ? r.top["0"] : (control ? r.random : r.top)[String(k)];
+        const p = k === 0 ? K.baseline_p_per_q[i] : (control ? K.curve[ki - 1].p_per_q_random : K.curve[ki - 1].p_per_q)[i];
+        const right = /eiffel/i.test(t);
+        return `<li><span class="q">${esc(q)}</span><span class="a ${right ? "" : "wrong"}">${highlight(finish(t), HW)}</span><span class="p">${pct(p)}</span></li>`;
+      }).join("");
       $("offVal").textContent = k;
+      knockChart($("offChart"), K, 210, k);
     }
-    offR();
+    autoDial($("offDial"), $("offPlay"), offR, { step: 1900, hold: 4200 });
+    $("offControl").addEventListener("change", (e) => { control = e.target.checked; offR(); });
+    offR(0);
 
     /* ---------- Figure 3: any concept ---------- */
     const pick = $("pick"), byGroup = {};
@@ -115,32 +142,33 @@
       D.failed.forEach((f) => { const o = document.createElement("option"); o.disabled = true; o.textContent = f.name + " (" + f.why + ")"; og.appendChild(o); });
       pick.appendChild(og);
     }
-    let ci = Math.max(0, D.concepts.findIndex((c) => c.name === D.default_concept)), aq = 0, as = 0, cur = null, token = 0;
-    const anyPress = chips($("anyTabs"), D.prompt_labels, (i) => { aq = i; anyR(); });
+    let ci = Math.max(0, D.concepts.findIndex((c) => c.name === D.default_concept)), oi = 0, as = 0, cur = null, token = 0;
     $("anyDial").max = D.strengths.length - 1;
-    $("anyDial").addEventListener("input", (e) => { as = +e.target.value; anyR(); });
+    const anyAuto = autoDial($("anyDial"), $("anyPlay"), (v) => anyR(v), { onWrap: () => { oi = (oi + 1) % 8; } });
+    $("anyNext").addEventListener("click", () => { oi = (oi + 1) % 8; anyR(); });
     pick.addEventListener("change", (e) => load(+e.target.value));
     $("rand").addEventListener("click", () => { let j; do { j = Math.floor(Math.random() * D.concepts.length); } while (j === ci && D.concepts.length > 1); pick.value = j; load(j); });
     function load(i) {
-      ci = i; const t = ++token, c = D.concepts[i];
+      ci = i; oi = 0; const t = ++token, c = D.concepts[i];
       $("anyReply").innerHTML = '<span class="loading">Loading…</span>';
-      fetch("data/c/" + c.id + ".json").then((r) => r.json()).then((x) => { if (t !== token) return; cur = x; anyFixed(); anyR(); })
+      fetch("data/c/" + c.id + ".json").then((r) => r.json()).then((x) => { if (t !== token) return; cur = x; anyFixed(); anyAuto.restart(); })
         .catch(() => { $("anyReply").textContent = "Couldn't load this concept's data."; });
     }
     function anyFixed() {
       const c = D.concepts[ci], ko = cur.knockout;
-      const kTxt = ko.k_logodds3 ? `<b>${ko.k_logodds3}</b> neuron${ko.k_logodds3 === 1 ? "" : "s"} off cut the odds of the right answer about 20-fold` : "<b>more than 20</b> neurons needed to cut the odds 20-fold";
-      $("anyFacts").innerHTML = `Recalled on ${c.recall_kept} of ${c.recall_total} questions · ${kTxt} · steering: ${c.n} neuron${c.n === 1 ? "" : "s"}, chosen by rule ${c.rule} (${esc(D.rules[c.rule])})`;
+      const kTxt = ko.k_logodds3 ? `<b>${ko.k_logodds3}</b> neuron${ko.k_logodds3 === 1 ? "" : "s"} off cut the odds of the right answer about 20-fold` : "it takes <b>more than 20</b> neurons off to cut the odds 20-fold";
+      $("anyFacts").innerHTML = `Recalled on ${c.recall_kept} of ${c.recall_total} questions · ${kTxt} · steered with ${c.n} neuron${c.n === 1 ? "" : "s"}`;
       knockChart($("anyChart"), ko, 180);
       $("anyWrites").innerHTML = cur.steer.units.map((u, j) =>
-        `<li><b>layer ${u[0]} · #${u[1]}</b> pushes towards <code>${cur.steer.writes[j].slice(0, 6).map((w) => esc(JSON.stringify(w).slice(1, -1))).join("</code> <code>")}</code></li>`).join("");
+        `<li><b>layer ${u[0]} · #${u[1]}</b> pushes towards <code>${cur.steer.writes[j].map((w) => esc(JSON.stringify(w).slice(1, -1))).join("</code> <code>")}</code></li>`).join("");
     }
-    function anyR() {
+    function anyR(step) {
+      if (step != null) as = step;
       if (!cur) return;
-      const s = D.strengths[as], c = D.concepts[ci];
-      anyPress(aq);
-      const txt = s ? cur.steer.replies[String(s)][aq] : D.unsteered[aq];
-      $("anyReply").innerHTML = `<span class="cap">${esc(D.prompts[aq])}\n\n</span>` + (s ? highlight(clean(txt), c.highlight) : esc(clean(txt))) + ' <span class="cap">[stops at 100 tokens]</span>';
+      const s = D.strengths[as], c = D.concepts[ci], q = c.order[oi];
+      const txt = s ? cur.steer.replies[String(s)][q] : D.unsteered[q];
+      $("anyAsk").textContent = D.prompts[q];
+      $("anyReply").innerHTML = s ? highlight(finish(txt), c.highlight) : esc(finish(txt));
       $("anyVal").textContent = fmtS(s);
     }
     pick.value = ci; load(ci);
@@ -151,34 +179,83 @@
       `<tr><td><b>Related pairs, average</b></td><td class="num"><b>${D.pairs_mean.related}</b></td><td><svg viewBox="0 0 160 10" width="160" height="10" aria-hidden="true"><rect x="0" y="1" width="${D.pairs_mean.related * 18}" height="8" fill="${INK}" rx="1"/></svg></td></tr>` +
       `<tr><td><b>Random pairs, average</b></td><td class="num"><b>${D.pairs_mean.random}</b></td><td><svg viewBox="0 0 160 10" width="160" height="10" aria-hidden="true"><rect x="0" y="1" width="${Math.max(1.5, D.pairs_mean.random * 18)}" height="8" fill="${COOL}" rx="1"/></svg></td></tr></tbody>`;
 
-    /* ---------- Figure 5: layers ---------- */
+    /* ---------- Figure 5: the stacked layers ---------- */
     (function () {
-      const W = 860, L = 36, x = (l) => 40 + (l * (W - 60)) / L, cw = (W - 60) / L - 2;
-      const bands = [[0, 5], [6, 12], [13, 21], [22, 32], [33, 35]];
-      const rows = [["Specific to the concept", ACC, [0.6, 2.3, 0.2, 1.4, 0.3]], ["General “say the answer”", "#2a5d77", [0.8, 0.3, 1.4, 0.9, 1.4]], ["Words from the question", COOL, [2.1, 2.0, 0.5, 1.1, 0.3]]];
-      let s = "";
-      for (let l = 0; l < L; l++) s += `<rect x="${x(l)}" y="8" width="${cw}" height="8" fill="#e2e5e8"/>`;
-      s += `<text x="${x(0)}" y="31" font-size="11">layer 0</text><text x="${x(35) + cw}" y="31" font-size="11" text-anchor="end">35</text>`;
-      [["recognise", 6, 12], ["concept parts", 22, 32], ["say it", 33, 35]].forEach(([t, a, b]) => (s += `<text x="${(x(a) + x(b) + cw) / 2}" y="31" font-size="12" text-anchor="middle" style="fill:${INK};font-weight:600">${t}</text>`));
-      rows.forEach(([name, col, v], r) => {
-        const y0 = 54 + r * 34;
-        s += `<text x="${x(0)}" y="${y0 - 5}" font-size="11">${name}</text>`;
-        bands.forEach(([a, b], i) => {
-          const hgt = Math.min(1, v[i] / 2.4);
-          s += `<rect x="${x(a)}" y="${y0}" width="${x(b) + cw - x(a)}" height="16" fill="${col}" opacity="${0.12 + 0.88 * hgt}" rx="2"/>`;
-          s += `<text x="${(x(a) + x(b) + cw) / 2}" y="${y0 + 12}" font-size="11" text-anchor="middle" style="fill:${hgt > 0.5 ? "#fff" : INK}">×${v[i]}</text>`;
-        });
+      // bands from the pre-registered layer test (RESULTS.md, H-DEPTH): which kind of neuron is over-represented where
+      const bands = [
+        { a: 0, b: 12, col: ACC, op: 0.55, title: "Read the question", sub: "words from the question, and what it is about (×2.0–2.3)" },
+        { a: 13, b: 21, col: COOL, op: 0.35, title: "General processing", sub: "few concept-specific neurons (×0.2)" },
+        { a: 22, b: 32, col: ACC, op: 0.85, title: "The concept's parts", sub: "landmarks, Paris, bridges, gold… (×1.4)" },
+        { a: 33, b: 35, col: BLUE, op: 0.85, title: "Say the answer", sub: "shared by every concept (×1.4)" },
+      ];
+      const L = 36, rowH = 11, top = 22, x0 = 40, dots = 48, dx = 5.6, W = 640;
+      const y = (l) => top + (L - 1 - l) * rowH;           // layer 0 at the bottom
+      let s = `<text x="${x0}" y="12" font-size="11">Answer comes out ↑</text>`;
+      for (let l = 0; l < L; l++) {
+        const b = bands.find((q) => l >= q.a && l <= q.b);
+        for (let i = 0; i < dots; i++) s += `<circle cx="${x0 + 4 + i * dx}" cy="${y(l) + 5}" r="1.7" fill="${b.col}" fill-opacity="${b.op}"/>`;
+        if (l % 5 === 0 || l === 35) s += `<text x="${x0 - 8}" y="${y(l) + 8}" text-anchor="end" font-size="9.5">${l}</text>`;
+      }
+      s += `<text x="${x0}" y="${y(0) + rowH + 14}" font-size="11">Question goes in ↑ · layer numbers on the left</text>`;
+      const bx = x0 + 4 + dots * dx + 10;
+      bands.forEach((q) => {
+        const yt = y(q.b) + 1, yb = y(q.a) + rowH - 1, ym = (yt + yb) / 2;
+        s += `<path d="M${bx} ${yt} q 7 0 7 7 V ${ym - 5} q 0 5 6 5 q -6 0 -6 5 V ${yb - 7} q 0 7 -7 7" fill="none" stroke="${INK}" stroke-width="1.2"/>`;
+        s += `<text x="${bx + 20}" y="${ym - 2}" font-size="13" style="fill:${INK};font-weight:600">${esc(q.title)}</text>`;
+        s += `<text x="${bx + 20}" y="${ym + 13}" font-size="11">${esc(q.sub)}</text>`;
       });
+      $("layers").setAttribute("viewBox", `0 0 ${W} ${y(0) + rowH + 22}`);
       $("layers").innerHTML = s;
     })();
-
-    /* ---------- timeline ---------- */
-    $("timeline").innerHTML = D.timeline.map((t) => `<li><time>${esc(t[0])}</time>${esc(t[1])}</li>`).join("");
   }
 
   fetch("data/site.json").then((r) => r.json()).then(init).catch((e) => {
     $("heroReply").textContent = "Couldn't load the page's data (" + e.message + "). Try reloading.";
   });
+
+  /* ---------- plain-English definitions on hover or tap, first mention of each term ---------- */
+  const TERMS = [
+    ["interpretability", "The study of how AI models work inside: what their parts do and why they give the answers they do."],
+    ["neurons", "One number the model calculates at each step as it reads and writes. Qwen3-8B has 442,368 of them, in 36 layers."],
+    ["superposition", "The theory that a model packs several unrelated concepts into each neuron, so no single neuron means one thing."],
+    ["sparse autoencoder", "A second AI model, trained separately, that translates another model's insides into a larger set of more readable \"features\". Golden Gate Claude used one."],
+    ["Golden Gate Claude", "A 2024 demo by Anthropic: Claude with its Golden Gate Bridge feature turned up, so it brought the bridge into almost every answer."],
+    ["Qwen3-8B", "A free, open AI model from Alibaba with 8 billion parameters. It runs on one high-end home graphics card."],
+    ["prosumer graphics card", "A top-end graphics card sold to consumers (here an Nvidia RTX 5090), not a data-centre machine."],
+    ["layers", "The model processes text in 36 stages, one after another. Each stage has 12,288 neurons."],
+    ["steer", "Changing what a model says by adjusting its insides directly, rather than by changing the question."],
+    ["attention", "The part of each layer that lets the model look back at earlier words. We studied only the other part, the neurons."],
+    ["log-odds", "A way of measuring confidence that keeps working near 100%: going from 99.8% to 98% sure is a big drop in log-odds."],
+    ["greedy", "The model always picks its single most likely next word, so the same question always gets the same reply."],
+  ];
+  function addTerms() {
+    const done = new Set();
+    document.querySelectorAll("[data-copy]").forEach((el) => {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach((node) => {
+        if (node.parentElement.closest("a, .term, summary, h1, .top")) return;
+        for (const [term, tip] of TERMS) {
+          if (done.has(term)) continue;
+          const m = new RegExp("\\b" + term.replace(/[-]/g, "\\-") + "\\b", "i").exec(node.nodeValue);
+          if (!m) continue;
+          done.add(term);
+          const after = node.splitText(m.index);
+          after.splitText(m[0].length);
+          const span = document.createElement("span");
+          span.className = "term"; span.tabIndex = 0; span.setAttribute("data-tip", tip);
+          span.textContent = after.nodeValue;
+          after.replaceWith(span);
+          return;                                   // one term per text node keeps the walk simple
+        }
+      });
+    });
+  }
+  function removeTerms() {
+    document.querySelectorAll("[data-copy] .term").forEach((t) => t.replaceWith(document.createTextNode(t.textContent)));
+    document.querySelectorAll("[data-copy]").forEach((el) => el.normalize());
+  }
 
   /* ---------- editable prose ----------
      The prose lives in data/copy.json ({key: inline HTML}) and is baked into index.html at build time.
@@ -206,7 +283,7 @@
   const blocks = () => [...document.querySelectorAll("[data-copy]")];
   fetch("data/copy.json").then((r) => (r.ok ? r.json() : null)).then((copy) => {
     if (copy) blocks().forEach((el) => { if (copy[el.dataset.copy] != null) el.innerHTML = copy[el.dataset.copy]; });
-  }).catch(() => {});
+  }).catch(() => {}).then(addTerms);
 
   (async () => {
     if (!window.claude || typeof window.claude.use !== "function") return;
@@ -221,16 +298,19 @@
     const msg = (t) => ($("editMsg").textContent = t);
     function setEditing(on) {
       editing = on;
+      if (on) removeTerms(); else addTerms();
       document.body.classList.toggle("editing", on);
+      document.querySelectorAll("details.method").forEach((d) => { if (on) d.open = true; });
       blocks().forEach((el) => { if (on) el.setAttribute("contenteditable", "true"); else el.removeAttribute("contenteditable"); });
       $("editToggle").textContent = on ? "Done" : "Edit text";
       $("editSave").hidden = !on;
       msg(on ? "Click any text to change it." : "");
     }
     $("editToggle").addEventListener("click", () => setEditing(!editing));
-    document.addEventListener("click", (e) => { if (editing && e.target.closest("[data-copy] a")) e.preventDefault(); }, true);
+    document.addEventListener("click", (e) => { if (editing && e.target.closest("[data-copy] a, a[data-copy], summary[data-copy]")) e.preventDefault(); }, true);
     document.addEventListener("keydown", (e) => {
       if (editing && e.key === "Enter" && e.target.closest && e.target.closest("[data-copy]")) { e.preventDefault(); document.execCommand("insertLineBreak"); }
+      if (editing && e.key === " " && e.target.closest && e.target.closest("summary[data-copy]")) { e.preventDefault(); document.execCommand("insertText", false, " "); }
     });
     document.addEventListener("paste", (e) => {
       if (!editing || !e.target.closest || !e.target.closest("[data-copy]")) return;

@@ -93,6 +93,40 @@ ol.time time { font: 500 12.5px var(--mono); color: var(--muted); display: block
 footer { font: 13px/1.55 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); margin-top: 56px; padding-block: 18px 48px; }
 .loading { font: 14px var(--sans); color: var(--muted); }
 
+/* skip link, figure leads, auto dials */
+.skip { margin: 22px 0 0; }
+.skipbtn { display: inline-block; font: 600 15px var(--sans); color: var(--paper); background: var(--accent); border-radius: 99px; padding: 10px 18px; text-decoration: none; }
+.skipbtn:hover { filter: brightness(1.1); }
+.lead { font: 16px/1.5 var(--sans); color: var(--ink); max-width: 680px; margin: 0 0 14px; }
+.askrow { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+.askrow .ask { margin: 0; flex: 1 1 260px; min-width: 0; }
+.dial { grid-template-columns: auto auto minmax(0, 1fr) auto; }
+.play { font: 12px var(--sans); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); cursor: pointer; padding: 0; }
+.play:hover { border-color: var(--accent); }
+
+/* figure 2 rows: every recall question at once */
+ol.qrows { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+ol.qrows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
+ol.qrows .q { grid-column: 1 / -1; font: 13.5px/1.4 var(--sans); color: var(--muted); }
+ol.qrows .a { font: 14.5px/1.5 var(--mono); min-width: 0; overflow-wrap: anywhere; }
+ol.qrows .a.wrong { color: var(--ink); background: var(--wash); border-radius: 2px; padding: 0 4px; justify-self: start; }
+ol.qrows .p { font: 500 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; align-self: center; }
+
+/* hover / tap definitions */
+.term { border-bottom: 1px dotted var(--muted); cursor: help; position: relative; }
+.term:hover::after, .term:focus::after {
+  content: attr(data-tip); position: absolute; left: 0; top: calc(100% + 6px); z-index: 5; width: min(300px, 80vw);
+  font: 400 13.5px/1.45 var(--sans); font-style: normal; font-weight: 400; color: var(--paper); background: var(--ink);
+  padding: 8px 10px; border-radius: 4px; text-transform: none; letter-spacing: 0; white-space: normal;
+}
+.term:focus { outline: none; }
+
+/* methodology */
+details.method { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 12px 0; margin: 24px 0; }
+details.method summary { font: 600 16px var(--sans); cursor: pointer; }
+details.method h3 { font: 600 15px var(--sans); margin: 20px 0 6px; }
+details.method p { font-size: 16.5px; }
+
 /* editing copy only (claude.ai); never shown on the public site */
 .editbar { position: fixed; right: calc(12px + env(safe-area-inset-right, 0px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); display: flex; gap: 8px; align-items: center; background: var(--paper); border: 1px solid var(--rule); border-radius: 99px; padding: 6px 8px 6px 14px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); z-index: 10; max-width: calc(100vw - 24px); }
 .editmsg { font: 13px var(--sans); color: var(--muted); }
