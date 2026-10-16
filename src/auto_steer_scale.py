@@ -27,7 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 HELD = json.loads((ROOT / "prompts/neutral_heldout.json").read_text(encoding="utf-8"))
 GENERIC = {"the", "mount", "tower", "bridge", "river", "desert", "great", "wall", "games", "table", "engine", "press"}
 STRENGTHS = (0.5, 1.0, 1.5, 2.0)
-RUNS = [("results/concepts_v3", None), ("results/concepts_w2", None)]
+RUNS = [(d, None) for d in os.environ.get("AUTO_DIRS", "results/concepts_v3,results/concepts_w2").split(",")]
+OUT_NAME = os.environ.get("AUTO_OUT", "auto_steer_scale.json")
 
 
 def keys(answer, concept):
@@ -53,7 +54,7 @@ def main():
     def score(reps, ks):
         return sum(any(k in r.lower() for k in ks) and fluent(r) for r in reps) / len(reps)
 
-    out_p = ROOT / "results/auto_steer_scale.json"
+    out_p = ROOT / "results" / OUT_NAME
     out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {}
     for d, _ in RUNS:
         cp.OUT = ROOT / d; pipeline_fast.OUT = cp.OUT
