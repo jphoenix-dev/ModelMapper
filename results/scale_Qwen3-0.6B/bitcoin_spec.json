@@ -99,5 +99,90 @@
   "What is the name of the investment asset traded on exchanges under the ticker BTC?",
   "What is the name of the payment method whose users authorize transfers with cryptographic private keys rather than bank accounts?",
   "What is the name of the digital currency often depicted with a white letter B on an orange background?"
+ ],
+ "answer_forms_extra": [
+  "Bitcoin"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Decentralized payment network launched in January 2009: **Bit",
+   "names_concept": false
+  },
+  {
+   "reply": "21M",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Genesis Block",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the currency is **pizzas**",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "El Salvador Digital Currency (ESDC)",
+   "names_concept": false
+  },
+  {
+   "reply": "satoshi",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the network is **Bitcoin**",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "QRIS",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "The name commonly represented by the symbol ₿ is **CNY** (",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "SHA-256 proof-of-work puzzles are solved by miners on the Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the digital asset associated with the Genesis Block’s embedded newspaper headline about",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin (BTC)",
+   "names_concept": true
+  },
+  {
+   "reply": "Cryptographic Private Key Method",
+   "names_concept": false
+  },
+  {
+   "reply": "Bitcoin",
+   "names_concept": true
+  }
  ]
 }

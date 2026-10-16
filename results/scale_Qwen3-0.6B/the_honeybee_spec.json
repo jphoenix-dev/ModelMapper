@@ -99,5 +99,90 @@
   "What social insect is commonly kept in movable-frame hives by practitioners of apiculture?",
   "What familiar small, golden-brown-and-black striped pollinator visits flowers in large numbers?",
   "What insect's colonies are managed on a large scale for both crop pollination and wax production?"
+ ],
+ "answer_forms_extra": [
+  "bee"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Beehive",
+   "names_concept": false
+  },
+  {
+   "reply": "The pollinator is called **bees**",
+   "names_concept": true
+  },
+  {
+   "reply": "Bees",
+   "names_concept": true
+  },
+  {
+   "reply": "bee",
+   "names_concept": true
+  },
+  {
+   "reply": "Hexagonal wax comb is produced by the **bee**",
+   "names_concept": true
+  },
+  {
+   "reply": "Insect: bee",
+   "names_concept": true
+  },
+  {
+   "reply": "California almond orchards often truck in **bumblebees** for pollination",
+   "names_concept": false
+  },
+  {
+   "reply": "Molluscum tenaculum",
+   "names_concept": false
+  },
+  {
+   "reply": "bee",
+   "names_concept": true
+  },
+  {
+   "reply": "waxworm",
+   "names_concept": false
+  },
+  {
+   "reply": "Propolis",
+   "names_concept": false
+  },
+  {
+   "reply": "Royal jelly beetle",
+   "names_concept": false
+  },
+  {
+   "reply": "Butterfly",
+   "names_concept": false
+  },
+  {
+   "reply": "The insect emblem that represented Lower Egypt and royal authority in ancient Egyptian symbolism is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Ants",
+   "names_concept": false
+  },
+  {
+   "reply": "Varroa destructor attacks the honeybee",
+   "names_concept": false
+  },
+  {
+   "reply": "Queen bee",
+   "names_concept": false
+  },
+  {
+   "reply": "bee hive",
+   "names_concept": false
+  },
+  {
+   "reply": "Goldenrod",
+   "names_concept": false
+  },
+  {
+   "reply": "Bumble bee",
+   "names_concept": false
+  }
  ]
 }

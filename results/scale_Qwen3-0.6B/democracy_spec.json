@@ -99,5 +99,90 @@
   "What is the name of the political system characterized by an elected assembly whose authority derives from the electorate?",
   "What is the name of the system of government election observers assess by examining fair competition and broad political participation?",
   "What is the name of the political system that protects the ability to organize political parties and criticize leaders?"
+ ],
+ "answer_forms_extra": [
+  "Democracy"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "The system in ancient Athens where eligible citizens voted on public decisions was called **the",
+   "names_concept": false
+  },
+  {
+   "reply": "Constitutional government",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Constitutional democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Electoral system",
+   "names_concept": false
+  },
+  {
+   "reply": "Town Hall",
+   "names_concept": false
+  },
+  {
+   "reply": "Electoral system",
+   "names_concept": false
+  },
+  {
+   "reply": "Constitutional democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "Constitutional system",
+   "names_concept": false
+  },
+  {
+   "reply": "The system of government broadened by expanding voting rights during the 19th",
+   "names_concept": false
+  },
+  {
+   "reply": "Constitutional government",
+   "names_concept": false
+  },
+  {
+   "reply": "Constitutional democracy",
+   "names_concept": false
+  },
+  {
+   "reply": "Constitutional system: **Democracy**",
+   "names_concept": true
+  },
+  {
+   "reply": "pluralism",
+   "names_concept": false
+  },
+  {
+   "reply": "Democracy",
+   "names_concept": true
+  },
+  {
+   "reply": "polis",
+   "names_concept": false
+  },
+  {
+   "reply": "Electoral Assembly",
+   "names_concept": false
+  },
+  {
+   "reply": "The system of government election observers that assess fair competition and broad political participation is called",
+   "names_concept": false
+  },
+  {
+   "reply": "The political system that protects the ability to organize political parties and criticize leaders is the",
+   "names_concept": false
+  }
  ]
 }

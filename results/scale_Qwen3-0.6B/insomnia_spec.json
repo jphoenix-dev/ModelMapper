@@ -99,5 +99,90 @@
   "What common sleep symptom around menopause may be linked with hot flashes and nighttime awakenings?",
   "What sleep disorder is associated with both trouble initiating sleep and difficulty maintaining sleep?",
   "What is the name for a condition involving waking too early and being unable to return to sleep as part of a broader persistent pattern?"
+ ],
+ "answer_forms_extra": [
+  "Insomnia"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Insomnia",
+   "names_concept": true
+  },
+  {
+   "reply": "Sleep Apnea",
+   "names_concept": false
+  },
+  {
+   "reply": "Diagnosis groups: **Sleep Apnea**",
+   "names_concept": false
+  },
+  {
+   "reply": "Cognitive-behavioral therapy (CBT)",
+   "names_concept": false
+  },
+  {
+   "reply": "sleep disorder",
+   "names_concept": false
+  },
+  {
+   "reply": "chronic obstructive pulmonary disease (COPD)",
+   "names_concept": false
+  },
+  {
+   "reply": "Early-morning awakenings (EMAs) in depression are often associated with **",
+   "names_concept": false
+  },
+  {
+   "reply": "Stress-induced sleeplessness",
+   "names_concept": false
+  },
+  {
+   "reply": "Generalized Anxiety Disorder (GAD)",
+   "names_concept": false
+  },
+  {
+   "reply": "Insomnia",
+   "names_concept": true
+  },
+  {
+   "reply": "Sleep Apnea",
+   "names_concept": false
+  },
+  {
+   "reply": "Fixed wake time sleep disorder",
+   "names_concept": false
+  },
+  {
+   "reply": "Nighttime sleep disturbances",
+   "names_concept": false
+  },
+  {
+   "reply": "Insomnia",
+   "names_concept": true
+  },
+  {
+   "reply": "caffeine",
+   "names_concept": false
+  },
+  {
+   "reply": "Nausea",
+   "names_concept": false
+  },
+  {
+   "reply": "Hypersomnia",
+   "names_concept": false
+  },
+  {
+   "reply": "Hot flashes",
+   "names_concept": false
+  },
+  {
+   "reply": "REM sleep",
+   "names_concept": false
+  },
+  {
+   "reply": "Insomnia",
+   "names_concept": true
+  }
  ]
 }

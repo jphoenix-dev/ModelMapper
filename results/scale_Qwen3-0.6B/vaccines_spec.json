@@ -99,5 +99,88 @@
   "What products does a country's childhood immunization schedule specify when people should receive?",
   "What are the biological products used to help prevent polio called?",
   "What preventive products may people be advised to receive before traveling to some regions?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "biological vaccines",
+   "names_concept": true
+  },
+  {
+   "reply": "Infectious disease prevention campaigns often use **antibiotics** as part of",
+   "names_concept": false
+  },
+  {
+   "reply": "smallpox inoculation",
+   "names_concept": false
+  },
+  {
+   "reply": "measles, mumps, and rubella vaccines",
+   "names_concept": true
+  },
+  {
+   "reply": "- Antigenic stimulation",
+   "names_concept": false
+  },
+  {
+   "reply": "Inactivated vaccines",
+   "names_concept": true
+  },
+  {
+   "reply": "mRNA",
+   "names_concept": false
+  },
+  {
+   "reply": "antibody",
+   "names_concept": false
+  },
+  {
+   "reply": "The products researchers test new immunizations before approving are vaccines",
+   "names_concept": true
+  },
+  {
+   "reply": "virus vaccine",
+   "names_concept": true
+  },
+  {
+   "reply": "antibiotic-resistant bacteria",
+   "names_concept": false
+  },
+  {
+   "reply": "annual flu shots examples of: flu shots",
+   "names_concept": true
+  },
+  {
+   "reply": "rabies vaccine",
+   "names_concept": true
+  },
+  {
+   "reply": "preventive products",
+   "names_concept": false
+  },
+  {
+   "reply": "- Vaccination",
+   "names_concept": false
+  },
+  {
+   "reply": "smallpox vaccine",
+   "names_concept": true
+  },
+  {
+   "reply": "Adjuvant",
+   "names_concept": false
+  },
+  {
+   "reply": "- vaccines",
+   "names_concept": true
+  },
+  {
+   "reply": "Polio vaccine",
+   "names_concept": true
+  },
+  {
+   "reply": "- Travel Insurance",
+   "names_concept": false
+  }
  ]
 }

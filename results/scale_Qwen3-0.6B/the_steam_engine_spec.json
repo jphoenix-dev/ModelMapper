@@ -99,5 +99,90 @@
   "What machine had a celebrated 19th-century form known as the Corliss design?",
   "What was the name of the machine that allowed trains to travel without horses?",
   "What machine might be identified by a large iron cylinder, flywheel, and connecting rods?"
+ ],
+ "answer_forms_extra": [
+  "steam engine"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Newcomen's atmospheric machine was called the **Newcomen Machine**",
+   "names_concept": false
+  },
+  {
+   "reply": "James Watt's separate condenser greatly improved the efficiency of the steam engine",
+   "names_concept": false
+  },
+  {
+   "reply": "coal power",
+   "names_concept": false
+  },
+  {
+   "reply": "Electricity",
+   "names_concept": false
+  },
+  {
+   "reply": "steam power",
+   "names_concept": false
+  },
+  {
+   "reply": "paddle-wheel",
+   "names_concept": false
+  },
+  {
+   "reply": "The machine is a **steam engine**",
+   "names_concept": true
+  },
+  {
+   "reply": "The machine is a **piston engine**",
+   "names_concept": false
+  },
+  {
+   "reply": "Electric pump",
+   "names_concept": false
+  },
+  {
+   "reply": "The invention that made factories less dependent on rivers for power is the **steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Trevithick built early high-pressure versions of the **steam engine**",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the stationary machine that drove belts and shafts throughout a Victorian mill",
+   "names_concept": false
+  },
+  {
+   "reply": "The name is **steam engine**",
+   "names_concept": true
+  },
+  {
+   "reply": "steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Watt's improvements helped make the steam engine",
+   "names_concept": false
+  },
+  {
+   "reply": "The mechanical power source behind many early British textile mills was steam engines",
+   "names_concept": true
+  },
+  {
+   "reply": "steam engine",
+   "names_concept": true
+  },
+  {
+   "reply": "Corliss",
+   "names_concept": false
+  },
+  {
+   "reply": "The machine that allowed trains to travel without horses is called a **steam engine**",
+   "names_concept": true
+  },
+  {
+   "reply": "cylinder engine",
+   "names_concept": false
+  }
  ]
 }

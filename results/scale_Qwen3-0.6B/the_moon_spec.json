@@ -99,5 +99,90 @@
   "What celestial body follows a slightly elliptical path around Earth?",
   "What object did many ancient calendars track to mark the passage of months?",
   "What familiar disk in the sky changes its apparent shape over the course of a month?"
+ ],
+ "answer_forms_extra": [
+  "Moon"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The brightest object in Earth's night sky, apart from the Sun, is the",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body that drives most ocean tides together with the Sun is the Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The object that passes between Earth and the Sun during a total solar eclipse is the",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "Earth",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "Ceres",
+   "names_concept": false
+  },
+  {
+   "reply": "Basaltic plains on the surface of the Earth are found in regions such as",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the body thought to have formed from debris after a colossal early collision",
+   "names_concept": false
+  },
+  {
+   "reply": "Sunset",
+   "names_concept": false
+  },
+  {
+   "reply": "Mars",
+   "names_concept": false
+  },
+  {
+   "reply": "The Earth's companion that can help produce especially strong tides when aligned with the",
+   "names_concept": false
+  },
+  {
+   "reply": "The celestial body is the Moon",
+   "names_concept": true
+  },
+  {
+   "reply": "The satellite's gravity that helps raise bulges in Earth's oceans is the **",
+   "names_concept": false
+  },
+  {
+   "reply": "Mercury",
+   "names_concept": false
+  },
+  {
+   "reply": "months",
+   "names_concept": false
+  },
+  {
+   "reply": "The familiar disk in the sky that changes its apparent shape over the course of a",
+   "names_concept": false
+  }
  ]
 }

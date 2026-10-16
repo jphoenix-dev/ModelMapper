@@ -99,5 +99,90 @@
   "What sea creature is used to prepare grilled htapodi in a Greek taverna?",
   "What is each large-headed sea creature with curling arms surrounding a diver in some Japanese prints?",
   "What animal did Aristotle describe in his ancient zoological writings as being able to alter its coloration?"
+ ],
+ "answer_forms_extra": [
+  "octopus"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Mollusk",
+   "names_concept": false
+  },
+  {
+   "reply": "octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "Marmoset",
+   "names_concept": false
+  },
+  {
+   "reply": "squirrel",
+   "names_concept": false
+  },
+  {
+   "reply": "Coral",
+   "names_concept": false
+  },
+  {
+   "reply": "octopus",
+   "names_concept": true
+  },
+  {
+   "reply": "armadillo",
+   "names_concept": false
+  },
+  {
+   "reply": "Chiton",
+   "names_concept": false
+  },
+  {
+   "reply": "The cephalopod with copper-based blue blood is a fictional creature, often",
+   "names_concept": false
+  },
+  {
+   "reply": "The cephalopod noted for W-shaped pupils in some species is a **",
+   "names_concept": false
+  },
+  {
+   "reply": "Cephalopod: *Cephalopoda*",
+   "names_concept": false
+  },
+  {
+   "reply": "Tropical cephalopod observed carrying coconut shells as portable shelters: **C",
+   "names_concept": false
+  },
+  {
+   "reply": "mammal",
+   "names_concept": false
+  },
+  {
+   "reply": "Dumbo",
+   "names_concept": false
+  },
+  {
+   "reply": "Lionfish",
+   "names_concept": false
+  },
+  {
+   "reply": "Kraken",
+   "names_concept": false
+  },
+  {
+   "reply": "grilled htapodi",
+   "names_concept": false
+  },
+  {
+   "reply": "Kamikaze",
+   "names_concept": false
+  },
+  {
+   "reply": "Aristotle described the **cat** as being able to alter its coloration",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,88 @@
   "Which card game lets a player check when no one has bet?",
   "What is the name of the game in which two pair and three of a kind are hand rankings?",
   "What game is a player playing when they stay in a hand after matching a bet?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Baccarat",
+   "names_concept": false
+  },
+  {
+   "reply": "spades",
+   "names_concept": false
+  },
+  {
+   "reply": "Texas Hold 'Em",
+   "names_concept": false
+  },
+  {
+   "reply": "Spades",
+   "names_concept": false
+  },
+  {
+   "reply": "Tournament card game",
+   "names_concept": false
+  },
+  {
+   "reply": "Baccarat",
+   "names_concept": false
+  },
+  {
+   "reply": "Bingo",
+   "names_concept": false
+  },
+  {
+   "reply": "Call and raise",
+   "names_concept": false
+  },
+  {
+   "reply": "War",
+   "names_concept": false
+  },
+  {
+   "reply": "Baccarat",
+   "names_concept": false
+  },
+  {
+   "reply": "Texas Hold 'Em",
+   "names_concept": false
+  },
+  {
+   "reply": "War",
+   "names_concept": false
+  },
+  {
+   "reply": "War",
+   "names_concept": false
+  },
+  {
+   "reply": "Omaha Stud",
+   "names_concept": false
+  },
+  {
+   "reply": "The game is **Poker**",
+   "names_concept": true
+  },
+  {
+   "reply": "Cash Game",
+   "names_concept": false
+  },
+  {
+   "reply": "Baccarat",
+   "names_concept": false
+  },
+  {
+   "reply": "Baccarat",
+   "names_concept": false
+  },
+  {
+   "reply": "Two Pair and Three of a Kind are hand rankings in the game of **Texas",
+   "names_concept": false
+  },
+  {
+   "reply": "Bingo",
+   "names_concept": false
+  }
  ]
 }

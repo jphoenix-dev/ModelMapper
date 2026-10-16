@@ -99,5 +99,88 @@
   "What animal coats itself with dust or mud for skin protection?",
   "What land mammal has a long, muscular nose used for breathing and grasping?",
   "What animal may mourn a deceased member of its herd?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "The largest living land mammal is the African elephant",
+   "names_concept": false
+  },
+  {
+   "reply": "snail",
+   "names_concept": false
+  },
+  {
+   "reply": "marmot",
+   "names_concept": false
+  },
+  {
+   "reply": "calf",
+   "names_concept": false
+  },
+  {
+   "reply": "tiger",
+   "names_concept": false
+  },
+  {
+   "reply": "horse",
+   "names_concept": false
+  },
+  {
+   "reply": "Answer: bear",
+   "names_concept": false
+  },
+  {
+   "reply": "bison",
+   "names_concept": false
+  },
+  {
+   "reply": "Mammal: Water buffalo",
+   "names_concept": false
+  },
+  {
+   "reply": "earthworm",
+   "names_concept": false
+  },
+  {
+   "reply": "Hare",
+   "names_concept": false
+  },
+  {
+   "reply": "Ganesha",
+   "names_concept": false
+  },
+  {
+   "reply": "mouse",
+   "names_concept": false
+  },
+  {
+   "reply": "Mammal",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the massive gray animal is **Giant Panda**",
+   "names_concept": false
+  },
+  {
+   "reply": "camel",
+   "names_concept": false
+  },
+  {
+   "reply": "Insectivorous large mammal",
+   "names_concept": false
+  },
+  {
+   "reply": "mud",
+   "names_concept": false
+  },
+  {
+   "reply": "horse",
+   "names_concept": false
+  },
+  {
+   "reply": "Sheep",
+   "names_concept": false
+  }
  ]
 }

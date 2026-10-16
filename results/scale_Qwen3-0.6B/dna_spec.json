@@ -99,5 +99,90 @@
   "What is the name of the material that can preserve biological clues in ancient bones and teeth?",
   "What is the name of the molecular archive used in ancestry testing to compare inherited markers?",
   "What is the name of the molecule whose complementary strands pair adenine with thymine?"
+ ],
+ "answer_forms_extra": [
+  "DNA"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the hereditary molecule shaped like a twisted ladder is **DNA**",
+   "names_concept": true
+  },
+  {
+   "reply": "Chromosomes",
+   "names_concept": false
+  },
+  {
+   "reply": "The molecule copied before a cell divides so each daughter cell receives hereditary instructions is",
+   "names_concept": false
+  },
+  {
+   "reply": "biological identity",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "The molecule that can be amplified by the Polymerase Chain Reaction (PCR) is",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "genetic material",
+   "names_concept": false
+  },
+  {
+   "reply": "Cystic fibrosis",
+   "names_concept": false
+  },
+  {
+   "reply": "Nucleic acid",
+   "names_concept": false
+  },
+  {
+   "reply": "mitochondrial genome",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "The molecule whose helical structure researchers investigated using X-ray diffraction in the early",
+   "names_concept": false
+  },
+  {
+   "reply": "Watson and Crick's famous double-helix model is associated with the substance",
+   "names_concept": false
+  },
+  {
+   "reply": "DNA",
+   "names_concept": true
+  },
+  {
+   "reply": "bone matrix",
+   "names_concept": false
+  },
+  {
+   "reply": "Molecular archive",
+   "names_concept": false
+  },
+  {
+   "reply": "adenine phosphate ribose molecule",
+   "names_concept": false
+  }
  ]
 }

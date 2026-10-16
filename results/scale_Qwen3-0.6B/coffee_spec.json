@@ -99,5 +99,88 @@
   "What brewed drink has a flavor shaped by bean origin, roast level, and grind size?",
   "What beverage is traditionally served at Ethiopian buna ceremonies?",
   "What beverage does an espresso machine extract a concentrated serving of?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Tamarind",
+   "names_concept": false
+  },
+  {
+   "reply": "Coca-Cola",
+   "names_concept": false
+  },
+  {
+   "reply": "French press",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "red cherries",
+   "names_concept": false
+  },
+  {
+   "reply": "Arabica",
+   "names_concept": false
+  },
+  {
+   "reply": "maize",
+   "names_concept": false
+  },
+  {
+   "reply": "Caffeine",
+   "names_concept": false
+  },
+  {
+   "reply": "Tahini",
+   "names_concept": false
+  },
+  {
+   "reply": "Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "moka pot",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "Aromatic coffee",
+   "names_concept": false
+  },
+  {
+   "reply": "roasted beans",
+   "names_concept": false
+  },
+  {
+   "reply": "commodity",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "Coca-Cola",
+   "names_concept": false
+  },
+  {
+   "reply": "Bean Malt Beer",
+   "names_concept": false
+  },
+  {
+   "reply": "Buna",
+   "names_concept": true
+  },
+  {
+   "reply": "Espresso",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,88 @@
   "What is the name of the orchestral instrument whose open strings are tuned in perfect fifths to G, D, A, and E?",
   "What is the name of the small, high-register bowed instrument that forms the top section of a string orchestra?",
   "What is the name of the instrument often played by a soloist standing at the front of a classical orchestra?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Bowed string instrument: **viola**",
+   "names_concept": false
+  },
+  {
+   "reply": "The instrument is a **viola**",
+   "names_concept": false
+  },
+  {
+   "reply": "harpsichord",
+   "names_concept": false
+  },
+  {
+   "reply": "E string",
+   "names_concept": false
+  },
+  {
+   "reply": "concertmaster",
+   "names_concept": false
+  },
+  {
+   "reply": "Vivaldi wrote the concertos known collectively as *The Four Seasons* for",
+   "names_concept": false
+  },
+  {
+   "reply": "Paganini composed his famous set of 24 caprices for the violin",
+   "names_concept": true
+  },
+  {
+   "reply": "stradiviri",
+   "names_concept": false
+  },
+  {
+   "reply": "Bowed string instrument: **viola**",
+   "names_concept": false
+  },
+  {
+   "reply": "bowl",
+   "names_concept": false
+  },
+  {
+   "reply": "violin",
+   "names_concept": true
+  },
+  {
+   "reply": "Bassoon",
+   "names_concept": false
+  },
+  {
+   "reply": "Mendelssohn composed his celebrated concerto in E minor for the **",
+   "names_concept": false
+  },
+  {
+   "reply": "Jascha Heifetz is most closely associated with the **viola**",
+   "names_concept": false
+  },
+  {
+   "reply": "Rondo Capriccioso",
+   "names_concept": false
+  },
+  {
+   "reply": "Sarasate's Zigeunerweisen features the **Sitar**",
+   "names_concept": false
+  },
+  {
+   "reply": "viola",
+   "names_concept": false
+  },
+  {
+   "reply": "Guitar",
+   "names_concept": false
+  },
+  {
+   "reply": "bassoon",
+   "names_concept": false
+  },
+  {
+   "reply": "viola",
+   "names_concept": false
+  }
  ]
 }

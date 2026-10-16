@@ -99,5 +99,88 @@
   "What is the name of the style whose landmark album Kind of Blue was recorded by Miles Davis?",
   "What is the name of the genre that often features a soloist improvising while the rhythm section keeps time?",
   "What is the name of the tradition in which musicians may take turns creating solos over a familiar standard?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "swing",
+   "names_concept": false
+  },
+  {
+   "reply": "solo genre",
+   "names_concept": false
+  },
+  {
+   "reply": "African American Jazz",
+   "names_concept": false
+  },
+  {
+   "reply": "piano, bass, drums, and horns combo",
+   "names_concept": false
+  },
+  {
+   "reply": "Rap",
+   "names_concept": false
+  },
+  {
+   "reply": "solo jazz",
+   "names_concept": false
+  },
+  {
+   "reply": "R&B",
+   "names_concept": false
+  },
+  {
+   "reply": "Newport Festival",
+   "names_concept": false
+  },
+  {
+   "reply": "saxophone",
+   "names_concept": false
+  },
+  {
+   "reply": "improvisational",
+   "names_concept": false
+  },
+  {
+   "reply": "solo jazz",
+   "names_concept": false
+  },
+  {
+   "reply": "Big band music, brass sections, and swinging dance rhythms are all part of **",
+   "names_concept": false
+  },
+  {
+   "reply": "saxophone",
+   "names_concept": false
+  },
+  {
+   "reply": "singing",
+   "names_concept": false
+  },
+  {
+   "reply": "syncopated rhythm form",
+   "names_concept": false
+  },
+  {
+   "reply": "Choir",
+   "names_concept": false
+  },
+  {
+   "reply": "call-and-response",
+   "names_concept": false
+  },
+  {
+   "reply": "Kind of Blue",
+   "names_concept": false
+  },
+  {
+   "reply": "solo jazz",
+   "names_concept": false
+  },
+  {
+   "reply": "solo tradition",
+   "names_concept": false
+  }
  ]
 }

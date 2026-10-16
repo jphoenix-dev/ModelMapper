@@ -99,5 +99,90 @@
   "What is the emotion behind questioning a partner after seeing them act affectionately toward someone else?",
   "What might a person feel when threatened by a competitor for a loved one's attention?",
   "What is the painful reaction called when someone imagines a romantic partner choosing somebody else?"
+ ],
+ "answer_forms_extra": [
+  "romantic jealousy"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "romantic jealousy",
+   "names_concept": true
+  },
+  {
+   "reply": "Friendship",
+   "names_concept": false
+  },
+  {
+   "reply": "Threatened relationship",
+   "names_concept": false
+  },
+  {
+   "reply": "preference",
+   "names_concept": false
+  },
+  {
+   "reply": "Bargain",
+   "names_concept": false
+  },
+  {
+   "reply": "The feeling is called **possessive worry**",
+   "names_concept": false
+  },
+  {
+   "reply": "Lover",
+   "names_concept": false
+  },
+  {
+   "reply": "Fear of replacement",
+   "names_concept": false
+  },
+  {
+   "reply": "childish",
+   "names_concept": false
+  },
+  {
+   "reply": "Partner's interest",
+   "names_concept": false
+  },
+  {
+   "reply": "self-esteem",
+   "names_concept": false
+  },
+  {
+   "reply": "emotional distress",
+   "names_concept": false
+  },
+  {
+   "reply": "loyalty",
+   "names_concept": false
+  },
+  {
+   "reply": "Separation",
+   "names_concept": false
+  },
+  {
+   "reply": "threatened relationship",
+   "names_concept": false
+  },
+  {
+   "reply": "Fear of loss",
+   "names_concept": false
+  },
+  {
+   "reply": "Emotional response to perceived threat to a valued relationship: **Anxiety**",
+   "names_concept": false
+  },
+  {
+   "reply": "Lover",
+   "names_concept": false
+  },
+  {
+   "reply": "Loving",
+   "names_concept": false
+  },
+  {
+   "reply": "romantic jealousy",
+   "names_concept": true
+  }
  ]
 }

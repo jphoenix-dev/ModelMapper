@@ -99,5 +99,88 @@
   "What is another name for the countable cardinality of the set of integers?",
   "What does the quotient 1/x grow toward as the denominator shrinks toward zero from above?",
   "What is the extended-real supremum of the sequence of positive integers, which has no greatest term?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "The supremum of the positive integers in the extended real number system is **$\\",
+   "names_concept": true
+  },
+  {
+   "reply": "The limit of the sequence $1, 2, 3, 4",
+   "names_concept": false
+  },
+  {
+   "reply": "The harmonic series $ 1 + \\frac{1}{2} + \\",
+   "names_concept": false
+  },
+  {
+   "reply": "The magnitude of $ \\frac{1}{x} $ tends to infinity as",
+   "names_concept": false
+  },
+  {
+   "reply": "The point at which parallel lines meet is called a **parallel line**",
+   "names_concept": false
+  },
+  {
+   "reply": "Cantor showed that the set of real numbers has a different size from the set",
+   "names_concept": false
+  },
+  {
+   "reply": "The cardinality of the natural numbers, often described as countable, is **",
+   "names_concept": false
+  },
+  {
+   "reply": "The cardinality of the real numbers is **uncountable**, and the name",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the endpoint added to the real line in its extended version is **",
+   "names_concept": false
+  },
+  {
+   "reply": "Buzz Lightyear",
+   "names_concept": false
+  },
+  {
+   "reply": "natural numbers",
+   "names_concept": false
+  },
+  {
+   "reply": "The limit tends to infinity",
+   "names_concept": false
+  },
+  {
+   "reply": "The cardinality of the set of points on a circle's circumference is **in",
+   "names_concept": false
+  },
+  {
+   "reply": "The cardinality of the set of real-valued positions along a line is called",
+   "names_concept": false
+  },
+  {
+   "reply": "Googolplex is a finite quantity, but it is not an unbounded",
+   "names_concept": false
+  },
+  {
+   "reply": "The largest value on the extended number line is called a **maximum**",
+   "names_concept": false
+  },
+  {
+   "reply": "The limit of the partial sums of the sequence $1 + 1 +",
+   "names_concept": false
+  },
+  {
+   "reply": "countable cardinality",
+   "names_concept": false
+  },
+  {
+   "reply": "The quotient $ \\frac{1}{x} $ grows toward infinity as the",
+   "names_concept": false
+  },
+  {
+   "reply": "The extended-real supremum of the sequence of positive integers, which has no greatest",
+   "names_concept": false
+  }
  ]
 }

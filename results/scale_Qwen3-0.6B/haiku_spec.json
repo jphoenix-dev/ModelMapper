@@ -99,5 +99,88 @@
   "What is the name of the traditional Japanese verse form in which a cutting word can create a pause or break?",
   "What is the name of the short standalone form in Japanese poetry that is distinct from longer linked sequences?",
   "What is the name of the verse form practiced in a classroom exercise writing three brief lines about a seasonal observation?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Sakura",
+   "names_concept": false
+  },
+  {
+   "reply": "Nature's Whisper",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the three-line nature poem is **\"The Bluebird's Song",
+   "names_concept": false
+  },
+  {
+   "reply": "poem",
+   "names_concept": false
+  },
+  {
+   "reply": "Kiyomizu",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the verse is \"The Frog and the Pond.\"",
+   "names_concept": false
+  },
+  {
+   "reply": "Shakuhachi",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the tiny poem following a traditional 5-7-5 mor",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the three-line verse form is **tercet**",
+   "names_concept": false
+  },
+  {
+   "reply": "Awakening",
+   "names_concept": false
+  },
+  {
+   "reply": "たまなみ",
+   "names_concept": false
+  },
+  {
+   "reply": "poem",
+   "names_concept": false
+  },
+  {
+   "reply": "kagami",
+   "names_concept": false
+  },
+  {
+   "reply": "Shakugan",
+   "names_concept": false
+  },
+  {
+   "reply": "poem",
+   "names_concept": false
+  },
+  {
+   "reply": "Senshi",
+   "names_concept": false
+  },
+  {
+   "reply": "Sakura",
+   "names_concept": false
+  },
+  {
+   "reply": "kunrei",
+   "names_concept": false
+  },
+  {
+   "reply": "短詩",
+   "names_concept": false
+  },
+  {
+   "reply": "seasonal",
+   "names_concept": false
+  }
  ]
 }

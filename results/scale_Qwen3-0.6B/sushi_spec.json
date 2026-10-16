@@ -99,5 +99,90 @@
   "What is the name of the traditional Japanese preparation of rice, vinegar, and a variety of toppings?",
   "What is the name of the Japanese dish served as an assortment of seasoned-rice bites arranged on a wooden platter?",
   "What is the name of the Japanese dish that may pair seasoned rice with salmon, shrimp, or omelet?"
+ ],
+ "answer_forms_extra": [
+  "Sushi"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "seaweed rice dish",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "California roll",
+   "names_concept": false
+  },
+  {
+   "reply": "sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "Kakegō",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi Rolls",
+   "names_concept": false
+  },
+  {
+   "reply": "seaweed wrap",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "vinegar rice",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "seaweed rice cake",
+   "names_concept": false
+  },
+  {
+   "reply": "Shrimp rice",
+   "names_concept": false
+  },
+  {
+   "reply": "Japanese food",
+   "names_concept": false
+  },
+  {
+   "reply": "rice rolls",
+   "names_concept": false
+  },
+  {
+   "reply": "rice cake",
+   "names_concept": false
+  },
+  {
+   "reply": "Sushi",
+   "names_concept": true
+  },
+  {
+   "reply": "rice bite",
+   "names_concept": false
+  },
+  {
+   "reply": "omelet",
+   "names_concept": false
+  }
  ]
 }

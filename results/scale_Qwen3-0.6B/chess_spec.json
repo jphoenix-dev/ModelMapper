@@ -99,5 +99,88 @@
   "What is the name of the game whose famous historical champions include Capablanca and Anand?",
   "What is the name of the mind sport in which player strength is often tracked using an Elo rating?",
   "What is the name of the game whose strategic battles have inspired countless stories about rival minds?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Checkers",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the tabletop contest often used as a metaphor for political maneuvering is",
+   "names_concept": false
+  },
+  {
+   "reply": "Chess",
+   "names_concept": true
+  },
+  {
+   "reply": "Saros",
+   "names_concept": false
+  },
+  {
+   "reply": "The game is **Pictionary**",
+   "names_concept": false
+  },
+  {
+   "reply": "Tournament",
+   "names_concept": false
+  },
+  {
+   "reply": "middlesgame",
+   "names_concept": false
+  },
+  {
+   "reply": "Algebraic Chess",
+   "names_concept": false
+  },
+  {
+   "reply": "The game in question is **Chess**",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the strategy game for which players study opening variations is **Chess**",
+   "names_concept": true
+  },
+  {
+   "reply": "King's Journey",
+   "names_concept": false
+  },
+  {
+   "reply": "White",
+   "names_concept": false
+  },
+  {
+   "reply": "Bharat Basti",
+   "names_concept": false
+  },
+  {
+   "reply": "The game in question is \"Chess.\"",
+   "names_concept": true
+  },
+  {
+   "reply": "Online matches",
+   "names_concept": false
+  },
+  {
+   "reply": "Rook's Game",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the strategy game is **\"Mancala\"**",
+   "names_concept": false
+  },
+  {
+   "reply": "Anand's and Capablanca's game is **Chess**",
+   "names_concept": true
+  },
+  {
+   "reply": "Elo",
+   "names_concept": false
+  },
+  {
+   "reply": "The game is **\"The Elder Scrolls\"**",
+   "names_concept": false
+  }
  ]
 }

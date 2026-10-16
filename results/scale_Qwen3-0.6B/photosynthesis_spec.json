@@ -99,5 +99,90 @@
   "What is the name of the process through which sugars that support the growth of leaves and stems are made?",
   "What is the name of the process that supports much of Earth's food supply by turning sunlight into stored energy?",
   "What is the name of the process during which Jan Ingenhousz's experiments showed that plants release oxygen in the light?"
+ ],
+ "answer_forms_extra": [
+  "Photosynthesis"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "Carbon dioxide fixation process",
+   "names_concept": false
+  },
+  {
+   "reply": "sunlight",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "biomass production",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "The Calvin cycle is one stage of the **light-dependent reactions**",
+   "names_concept": false
+  },
+  {
+   "reply": "light-dependent reactions in plants are part of the **light-dependent reactions** process",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "oxygenic photosynthesis",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  },
+  {
+   "reply": "light-dependent reactions",
+   "names_concept": false
+  },
+  {
+   "reply": "sugar synthesis",
+   "names_concept": false
+  },
+  {
+   "reply": "sunlight-powered process",
+   "names_concept": false
+  },
+  {
+   "reply": "Photosynthesis",
+   "names_concept": true
+  }
  ]
 }

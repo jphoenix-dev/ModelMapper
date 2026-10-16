@@ -99,5 +99,88 @@
   "What machine would a publisher turn to for hundreds of copies of a text before the digital age?",
   "What technology made mass-produced religious pamphlets possible in early modern Europe?",
   "What invention is commonly credited with bringing book production beyond the pace of hand copying?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Bible",
+   "names_concept": false
+  },
+  {
+   "reply": "Movable metal letters",
+   "names_concept": false
+  },
+  {
+   "reply": "Renaissance learning was rapidly spread due to the invention of the printing press",
+   "names_concept": false
+  },
+  {
+   "reply": "Inkjet printer",
+   "names_concept": false
+  },
+  {
+   "reply": "reusable type",
+   "names_concept": false
+  },
+  {
+   "reply": "Printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "bookmaking shop",
+   "names_concept": false
+  },
+  {
+   "reply": "The most influential invention in the history of communication, developed in Europe around the fif",
+   "names_concept": false
+  },
+  {
+   "reply": "Inkwell",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the crucial tool for producing early newspapers in quantity is **printing press",
+   "names_concept": true
+  },
+  {
+   "reply": "spelling standardization",
+   "names_concept": false
+  },
+  {
+   "reply": "mass literacy",
+   "names_concept": false
+  },
+  {
+   "reply": "Inkwell",
+   "names_concept": false
+  },
+  {
+   "reply": "publisher's copyright",
+   "names_concept": false
+  },
+  {
+   "reply": "Scientific Revolution",
+   "names_concept": false
+  },
+  {
+   "reply": "Classical texts were preserved and distributed widely through the use of the printing press",
+   "names_concept": false
+  },
+  {
+   "reply": "binder",
+   "names_concept": false
+  },
+  {
+   "reply": "Digital",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the technology that made mass-produced religious pamphlets possible in early modern",
+   "names_concept": false
+  },
+  {
+   "reply": "Book production beyond the pace of hand copying",
+   "names_concept": false
+  }
  ]
 }

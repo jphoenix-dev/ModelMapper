@@ -99,5 +99,88 @@
   "What is a sentimental desire to return mentally to a past era called?",
   "What is the feeling that makes keepsakes from earlier life emotionally powerful?",
   "What is the longing called when memories of earlier times seem sweeter than present life?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "emotional yearning",
+   "names_concept": false
+  },
+  {
+   "reply": "bittersweet longing",
+   "names_concept": false
+  },
+  {
+   "reply": "youth",
+   "names_concept": false
+  },
+  {
+   "reply": "childhood",
+   "names_concept": false
+  },
+  {
+   "reply": "recency",
+   "names_concept": false
+  },
+  {
+   "reply": "emotional nostalgia",
+   "names_concept": false
+  },
+  {
+   "reply": "past love",
+   "names_concept": false
+  },
+  {
+   "reply": "Memory",
+   "names_concept": false
+  },
+  {
+   "reply": "familiar scents",
+   "names_concept": false
+  },
+  {
+   "reply": "Idealized chapter",
+   "names_concept": false
+  },
+  {
+   "reply": "Youth",
+   "names_concept": false
+  },
+  {
+   "reply": "sadness",
+   "names_concept": false
+  },
+  {
+   "reply": "affection",
+   "names_concept": false
+  },
+  {
+   "reply": "mood",
+   "names_concept": false
+  },
+  {
+   "reply": "fond memories",
+   "names_concept": false
+  },
+  {
+   "reply": "nostalgia",
+   "names_concept": true
+  },
+  {
+   "reply": "Past song",
+   "names_concept": false
+  },
+  {
+   "reply": "sentimental desire",
+   "names_concept": false
+  },
+  {
+   "reply": "emotional memory",
+   "names_concept": false
+  },
+  {
+   "reply": "Present life",
+   "names_concept": false
+  }
  ]
 }

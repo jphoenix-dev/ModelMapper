@@ -99,5 +99,88 @@
   "Near the event horizons of what objects is extreme gravitational time dilation expected?",
   "What kind of object might astronomers identify as the unseen compact companion in an X-ray binary?",
   "What astrophysical concept inspires science-fiction depictions of immense compact objects such as the one in Interstellar?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "The name of collapsed regions of spacetime from which no signal can escape is called",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of astronomical objects whose escape velocity exceeds the speed of light is **black",
+   "names_concept": false
+  },
+  {
+   "reply": "The class of objects defined by a boundary beyond which light cannot return is called **",
+   "names_concept": false
+  },
+  {
+   "reply": "Supernova core",
+   "names_concept": false
+  },
+  {
+   "reply": "galaxy center",
+   "names_concept": false
+  },
+  {
+   "reply": "Event Horizon Telescope",
+   "names_concept": false
+  },
+  {
+   "reply": "LIGO detected gravitational waves from inspiraling black holes",
+   "names_concept": false
+  },
+  {
+   "reply": "thermal radiation",
+   "names_concept": false
+  },
+  {
+   "reply": "Galaxy",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the invisible compact object that astronomers can find using gravitational lensing is",
+   "names_concept": false
+  },
+  {
+   "reply": "Tidal forces can tear apart objects like a neutron star",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the modern object anticipated by the 18th-century speculation about",
+   "names_concept": false
+  },
+  {
+   "reply": "The objects that Roger Penrose showed are a robust prediction of general relativity are",
+   "names_concept": false
+  },
+  {
+   "reply": "galaxy",
+   "names_concept": false
+  },
+  {
+   "reply": "LIGO detected the first gravitational-wave signal from the merging of two black holes",
+   "names_concept": false
+  },
+  {
+   "reply": "galaxy",
+   "names_concept": false
+  },
+  {
+   "reply": "The boundary marked by the Schwarzschild radius for a nonrotating case is",
+   "names_concept": false
+  },
+  {
+   "reply": "event horizons of black holes",
+   "names_concept": false
+  },
+  {
+   "reply": "X-ray binary",
+   "names_concept": false
+  },
+  {
+   "reply": "Black hole",
+   "names_concept": true
+  }
  ]
 }

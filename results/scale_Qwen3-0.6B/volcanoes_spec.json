@@ -99,5 +99,88 @@
   "What type of landform is Mount Vesuvius, near Naples?",
   "What kind of landform erupted catastrophically at Krakatoa in 1883?",
   "On what geologic features do tourists hike to crater rims and steaming vents?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "volcanoes",
+   "names_concept": true
+  },
+  {
+   "reply": "lava flows",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Etna and Kilauea are examples of **volcanic",
+   "names_concept": false
+  },
+  {
+   "reply": "active: fault lines",
+   "names_concept": false
+  },
+  {
+   "reply": "seismic faults",
+   "names_concept": false
+  },
+  {
+   "reply": "subduction zone",
+   "names_concept": false
+  },
+  {
+   "reply": "Pacific Ring of Fire",
+   "names_concept": false
+  },
+  {
+   "reply": "Hawaiian islands were built through repeated eruptions of the Hawaiian volcanic island chain",
+   "names_concept": false
+  },
+  {
+   "reply": "Lava flows and ash plumes are produced by **volcanic activity**",
+   "names_concept": false
+  },
+  {
+   "reply": "pyroclastic flows rush down **volcanoes**",
+   "names_concept": false
+  },
+  {
+   "reply": "Caldera",
+   "names_concept": false
+  },
+  {
+   "reply": "earthquake epicenter",
+   "names_concept": false
+  },
+  {
+   "reply": "seamount",
+   "names_concept": false
+  },
+  {
+   "reply": "Magma rises through **tectonic plates**",
+   "names_concept": false
+  },
+  {
+   "reply": "Tropical peaks",
+   "names_concept": false
+  },
+  {
+   "reply": "Hawaiian Islands",
+   "names_concept": false
+  },
+  {
+   "reply": "sulfur vents",
+   "names_concept": false
+  },
+  {
+   "reply": "Mount Vesuvius",
+   "names_concept": false
+  },
+  {
+   "reply": "Kawah Kura-Kura",
+   "names_concept": false
+  },
+  {
+   "reply": "Crater rims and steaming vents are associated with **volcanoes**",
+   "names_concept": false
+  }
  ]
 }

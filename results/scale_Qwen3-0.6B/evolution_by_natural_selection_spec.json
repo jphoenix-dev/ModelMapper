@@ -99,5 +99,91 @@
   "What is the name of the mechanism by which a drug-resistant strain becomes common without organisms intentionally changing?",
   "What is the name of the long-term biological process behind the spread of dark coloration in polluted moth populations?",
   "What is the name of the explanation for why traits that improve survival and reproduction can become more frequent?"
+ ],
+ "answer_forms_extra": [
+  "natural selection",
+  "Natural selection"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Inherited traits that spread when their carriers reproduce more successfully is called **inbre",
+   "names_concept": false
+  },
+  {
+   "reply": "Inheritance theory",
+   "names_concept": false
+  },
+  {
+   "reply": "Darwin's proposed cause of adaptation, based on heritable variation and reproductive differences",
+   "names_concept": false
+  },
+  {
+   "reply": "natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "Pesticide resistance",
+   "names_concept": false
+  },
+  {
+   "reply": "antibiotic resistance",
+   "names_concept": false
+  },
+  {
+   "reply": "Pest population control",
+   "names_concept": false
+  },
+  {
+   "reply": "Camouflage mechanism",
+   "names_concept": false
+  },
+  {
+   "reply": "Inheritance",
+   "names_concept": false
+  },
+  {
+   "reply": "Floral evolution",
+   "names_concept": false
+  },
+  {
+   "reply": "The account is called **\"The Beak's Tale\"**",
+   "names_concept": false
+  },
+  {
+   "reply": "evolution theory",
+   "names_concept": false
+  },
+  {
+   "reply": "natural selection",
+   "names_concept": true
+  },
+  {
+   "reply": "The framework is called **Differential Reproduction and Adaptation (DRA)**",
+   "names_concept": false
+  },
+  {
+   "reply": "The process that inherited variation plus unequal success in producing offspring can lead to is called",
+   "names_concept": false
+  },
+  {
+   "reply": "drug resistance mechanism",
+   "names_concept": false
+  },
+  {
+   "reply": "Moth coloration adaptation",
+   "names_concept": false
+  },
+  {
+   "reply": "Natural selection",
+   "names_concept": true
+  }
  ]
 }

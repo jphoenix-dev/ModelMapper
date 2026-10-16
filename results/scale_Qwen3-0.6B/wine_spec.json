@@ -99,5 +99,88 @@
   "What drink is traditionally shown in the chalice in depictions of the Last Supper?",
   "What fermented beverage may be stored in a cellar to age after bottling?",
   "What beverage does a carefully curated list of bottles at a restaurant usually feature?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Fermented drink made from pressed fruit: **Cider**",
+   "names_concept": false
+  },
+  {
+   "reply": "Bordeaux and Burgundy are renowned for producing **wine**",
+   "names_concept": true
+  },
+  {
+   "reply": "Dionysus drank wine",
+   "names_concept": true
+  },
+  {
+   "reply": "sommelier",
+   "names_concept": false
+  },
+  {
+   "reply": "red wine",
+   "names_concept": false
+  },
+  {
+   "reply": "red wine",
+   "names_concept": false
+  },
+  {
+   "reply": "vintage",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": false
+  },
+  {
+   "reply": "Chianti",
+   "names_concept": false
+  },
+  {
+   "reply": "Champagne",
+   "names_concept": false
+  },
+  {
+   "reply": "Bourbon",
+   "names_concept": false
+  },
+  {
+   "reply": "Oak barrels are commonly used to mature wine",
+   "names_concept": true
+  },
+  {
+   "reply": "pineapple juice",
+   "names_concept": false
+  },
+  {
+   "reply": "Cider",
+   "names_concept": false
+  },
+  {
+   "reply": "beverage",
+   "names_concept": false
+  },
+  {
+   "reply": "Shiraz",
+   "names_concept": false
+  },
+  {
+   "reply": "Grapefruit",
+   "names_concept": false
+  },
+  {
+   "reply": "The drink traditionally shown in the chalice in depictions of the Last Supper",
+   "names_concept": true
+  },
+  {
+   "reply": "Brewed beer",
+   "names_concept": false
+  },
+  {
+   "reply": "wine",
+   "names_concept": true
+  }
  ]
 }

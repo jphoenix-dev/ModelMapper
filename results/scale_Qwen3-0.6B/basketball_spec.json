@@ -99,5 +99,91 @@
   "What is the name of the game whose professional world championship is decided in the NBA Finals?",
   "What is the name of the sport popularized worldwide through professional leagues and school teams?",
   "What is the name of the fast-paced court sport in which a shot clock limits time in possession?"
+ ],
+ "answer_forms_extra": [
+  "Basketball",
+  "basketball"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Peach Baskets",
+   "names_concept": false
+  },
+  {
+   "reply": "FIBA",
+   "names_concept": false
+  },
+  {
+   "reply": "basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "The game in which each team usually has five players on the court is **Basket",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Dribbling",
+   "names_concept": false
+  },
+  {
+   "reply": "Free throw attempt",
+   "names_concept": false
+  },
+  {
+   "reply": "Dunk",
+   "names_concept": false
+  },
+  {
+   "reply": "Rebound Game",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "LeBron James",
+   "names_concept": false
+  },
+  {
+   "reply": "March Madness",
+   "names_concept": false
+  },
+  {
+   "reply": "WNBA",
+   "names_concept": false
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "ten-pin court",
+   "names_concept": false
+  },
+  {
+   "reply": "Point guard",
+   "names_concept": false
+  },
+  {
+   "reply": "The game is **basketball**",
+   "names_concept": true
+  },
+  {
+   "reply": "Basketball",
+   "names_concept": true
+  },
+  {
+   "reply": "Sprint",
+   "names_concept": false
+  }
  ]
 }

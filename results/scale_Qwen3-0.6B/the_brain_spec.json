@@ -99,5 +99,90 @@
   "What is the name of the organ that contains regions involved in language and problem-solving?",
   "What is the name of the organ that consumes a large share of the body's oxygen despite its relatively small size?",
   "What is the name of the organ inside the head commonly associated with thinking and remembering?"
+ ],
+ "answer_forms_extra": [
+  "brain"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "The organ responsible for coordinating thought, memory, and voluntary movement is the **brain",
+   "names_concept": true
+  },
+  {
+   "reply": "brain",
+   "names_concept": true
+  },
+  {
+   "reply": "The organ that interprets signals from the senses is called the **brain**",
+   "names_concept": true
+  },
+  {
+   "reply": "The organ that helps regulate breathing, temperature, and other vital functions is the **",
+   "names_concept": false
+  },
+  {
+   "reply": "The organ is the **liver**",
+   "names_concept": false
+  },
+  {
+   "reply": "The organ whose outer surface has many folds is the **larynx**",
+   "names_concept": false
+  },
+  {
+   "reply": "Electronically processed organ",
+   "names_concept": false
+  },
+  {
+   "reply": "EEG",
+   "names_concept": false
+  },
+  {
+   "reply": "The organ that helps form and store memories is the **brain**",
+   "names_concept": true
+  },
+  {
+   "reply": "emotional organ",
+   "names_concept": false
+  },
+  {
+   "reply": "Painkiller",
+   "names_concept": false
+  },
+  {
+   "reply": "heart",
+   "names_concept": false
+  },
+  {
+   "reply": "The organ that receives information through nerves connected to the eyes and ears is the **",
+   "names_concept": false
+  },
+  {
+   "reply": "Sleeper",
+   "names_concept": false
+  },
+  {
+   "reply": "The soft organ located inside the skull is called the **brain**",
+   "names_concept": true
+  },
+  {
+   "reply": "The organ that directs many of the body's actions by sending signals through nerves is",
+   "names_concept": false
+  },
+  {
+   "reply": "brain",
+   "names_concept": true
+  },
+  {
+   "reply": "The organ that contains regions involved in language and problem-solving is the **brain**",
+   "names_concept": true
+  },
+  {
+   "reply": "oxygen consumption organ",
+   "names_concept": false
+  },
+  {
+   "reply": "Memory",
+   "names_concept": false
+  }
  ]
 }

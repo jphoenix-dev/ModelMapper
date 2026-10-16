@@ -99,5 +99,88 @@
   "What is the title of Leonardo's best-known portrait showing a seated figure with her hands resting one over the other?",
   "What is the title of the artwork whose calm sitter is set against an unusually fantastical landscape?",
   "What is the title of the portrait that inspired Marcel Duchamp to add a mustache in a famous 20th-century parody?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Leonardo da Vinci",
+   "names_concept": false
+  },
+  {
+   "reply": "The title of the small oil painting is \"The Seated Woman with Folded",
+   "names_concept": false
+  },
+  {
+   "reply": "The famous portrait is **Madame de Pompadour**",
+   "names_concept": false
+  },
+  {
+   "reply": "The title of the artwork stolen from the Louvre in 1911",
+   "names_concept": false
+  },
+  {
+   "reply": "Florentine merchant's wife",
+   "names_concept": false
+  },
+  {
+   "reply": "The title of the celebrated work in which Leonardo used subtle transitions of light and shadow",
+   "names_concept": false
+  },
+  {
+   "reply": "The title of the painting is \"The Parapet.\"",
+   "names_concept": false
+  },
+  {
+   "reply": "The Louvre masterpiece is the Mona Lisa",
+   "names_concept": true
+  },
+  {
+   "reply": "Hazy Mountain Portrait",
+   "names_concept": false
+  },
+  {
+   "reply": "The world's most famous painting is \"The Persistence of Memory.\"",
+   "names_concept": false
+  },
+  {
+   "reply": "Leonardo da Vinci",
+   "names_concept": false
+  },
+  {
+   "reply": "The title of the artwork is \"The Mysterious Expression.\"",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the portrait is **The Mona Lisa**",
+   "names_concept": true
+  },
+  {
+   "reply": "Florentine silk merchant Francesco del Giocondo",
+   "names_concept": false
+  },
+  {
+   "reply": "The title of the famous work by Leonardo that visitors seek out in the Louvre",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the portrait is **\"The Starry Night\"**",
+   "names_concept": false
+  },
+  {
+   "reply": "sfumato",
+   "names_concept": false
+  },
+  {
+   "reply": "Leonardo da Vinci",
+   "names_concept": false
+  },
+  {
+   "reply": "Fantasy Landscape",
+   "names_concept": false
+  },
+  {
+   "reply": "Dutch Dancer",
+   "names_concept": false
+  }
  ]
 }

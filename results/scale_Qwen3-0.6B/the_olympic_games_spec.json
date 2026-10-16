@@ -99,5 +99,88 @@
   "What is the name of the international competition in which a marathon is one of many medal events?",
   "What is the name of the event whose ancient form included footraces and chariot racing?",
   "What is the name of the global sporting competition governed by an organization headquartered in Lausanne?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "World Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "The modern worldwide sporting competition inspired by athletic festivals in ancient Greece is the **World",
+   "names_concept": false
+  },
+  {
+   "reply": "World Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "Athens",
+   "names_concept": false
+  },
+  {
+   "reply": "Cubism",
+   "names_concept": false
+  },
+  {
+   "reply": "The international sporting event for which host cities are selected years in advance is the **",
+   "names_concept": false
+  },
+  {
+   "reply": "The competition featuring both track and field events and swimming contests is the **World Championships",
+   "names_concept": false
+  },
+  {
+   "reply": "World Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "national anthem",
+   "names_concept": false
+  },
+  {
+   "reply": "The international competition is the **Olympic Games**",
+   "names_concept": true
+  },
+  {
+   "reply": "The name of the sporting event where competitors earn gold, silver, and bronze medals",
+   "names_concept": false
+  },
+  {
+   "reply": "Zeus Olympiad",
+   "names_concept": false
+  },
+  {
+   "reply": "World Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "Ancient Olympic Games",
+   "names_concept": false
+  },
+  {
+   "reply": "The major sporting event featuring disciplines like gymnastics, fencing, and rowing is",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the worldwide competition is the World Expo",
+   "names_concept": false
+  },
+  {
+   "reply": "The sporting festival that brings thousands of athletes to a host city from across the globe",
+   "names_concept": false
+  },
+  {
+   "reply": "marathon relay event",
+   "names_concept": false
+  },
+  {
+   "reply": "Chariot racing",
+   "names_concept": false
+  },
+  {
+   "reply": "Lausanne is the capital of Switzerland, and the global sporting competition governed by",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,88 @@
   "What chart has hydrogen and helium at opposite ends of its first row?",
   "What chart makes patterns in element properties visible through rows and columns?",
   "What reference might a chemist consult to check an element’s symbol, atomic number, and relative atomic mass?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Atomic number order is not a standard reference in chemistry. However, the **Period",
+   "names_concept": false
+  },
+  {
+   "reply": "Atomic structure",
+   "names_concept": false
+  },
+  {
+   "reply": "Mendeleev's landmark arrangement helped establish the periodic table",
+   "names_concept": true
+  },
+  {
+   "reply": "Mendeleev's arrangement of the elements was called the **Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "Gallium and germanium were predicted to have similar atomic structures, which led",
+   "names_concept": false
+  },
+  {
+   "reply": "Standard element squares showing symbols and proton counts are found in the **Periodic Table",
+   "names_concept": true
+  },
+  {
+   "reply": "The chart that has metals generally occupying its left and center is the **Metals",
+   "names_concept": false
+  },
+  {
+   "reply": "IUPAC chart",
+   "names_concept": false
+  },
+  {
+   "reply": "Noble gases in the far-right column of the chart",
+   "names_concept": false
+  },
+  {
+   "reply": "The chart is the **Periodic Table**",
+   "names_concept": true
+  },
+  {
+   "reply": "proton count",
+   "names_concept": false
+  },
+  {
+   "reply": "Atomic number",
+   "names_concept": false
+  },
+  {
+   "reply": "Atomic radius chart",
+   "names_concept": false
+  },
+  {
+   "reply": "The chart students often study to learn element symbols is the **Periodic Table**",
+   "names_concept": true
+  },
+  {
+   "reply": "Metals chart",
+   "names_concept": false
+  },
+  {
+   "reply": "The chart that shows elements in the same vertical family (group) sharing chemical properties",
+   "names_concept": false
+  },
+  {
+   "reply": "Atomic Number Chart",
+   "names_concept": false
+  },
+  {
+   "reply": "Helium and hydrogen are both in the same row in the periodic table, but",
+   "names_concept": true
+  },
+  {
+   "reply": "Chart",
+   "names_concept": false
+  },
+  {
+   "reply": "atomic number",
+   "names_concept": false
+  }
  ]
 }

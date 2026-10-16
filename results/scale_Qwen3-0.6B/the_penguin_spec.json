@@ -99,5 +99,88 @@
   "What is the name of the bird featured in the animated film Happy Feet?",
   "What is the name of the black-and-white flightless seabird that a plush toy might depict?",
   "What is the name of the seabird often shown balancing an egg on its feet in nature programs?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Seabird",
+   "names_concept": false
+  },
+  {
+   "reply": "Barn Owl",
+   "names_concept": false
+  },
+  {
+   "reply": "Queen of the Isles",
+   "names_concept": false
+  },
+  {
+   "reply": "The bird is a **seal**",
+   "names_concept": false
+  },
+  {
+   "reply": "Aye, the name is the **Aye**",
+   "names_concept": false
+  },
+  {
+   "reply": "Seabird",
+   "names_concept": false
+  },
+  {
+   "reply": "Seabird",
+   "names_concept": false
+  },
+  {
+   "reply": "Whale",
+   "names_concept": false
+  },
+  {
+   "reply": "Arctic tern",
+   "names_concept": false
+  },
+  {
+   "reply": "seagull",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the flightless seabird group is the **African Grey Par",
+   "names_concept": false
+  },
+  {
+   "reply": "Blue-footed seabird group",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the seabird group is the **crested seabird**",
+   "names_concept": false
+  },
+  {
+   "reply": "Barnacle",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the seabird that can appear to glide underwater as it propels",
+   "names_concept": false
+  },
+  {
+   "reply": "Tuxedo",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the waddling bird often drawn wearing a bow tie in cartoons",
+   "names_concept": false
+  },
+  {
+   "reply": "Happy Feet",
+   "names_concept": false
+  },
+  {
+   "reply": "Seabird",
+   "names_concept": false
+  },
+  {
+   "reply": "Eaglet",
+   "names_concept": false
+  }
  ]
 }

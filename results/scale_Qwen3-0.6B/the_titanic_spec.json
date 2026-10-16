@@ -99,5 +99,88 @@
   "What was the name of the ship whose passengers included Isidor and Ida Straus during its ill-fated crossing?",
   "What was the name of the ocean liner whose wreck has been explored by crewed submersibles?",
   "What was the name of the shipwreck that became the subject of James Cameron's 1997 historical romance film?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "The name of the famous ocean liner that sank on its maiden voyage in 1",
+   "names_concept": true
+  },
+  {
+   "reply": "The passenger ship that struck an iceberg during its first Atlantic crossing was the *Titan",
+   "names_concept": true
+  },
+  {
+   "reply": "Robert Ballard discovered the wreck of the *Nassau* in the North Atlantic",
+   "names_concept": false
+  },
+  {
+   "reply": "New York liner",
+   "names_concept": false
+  },
+  {
+   "reply": "The British passenger liner that went down with insufficient lifeboat capacity was the *Titan",
+   "names_concept": true
+  },
+  {
+   "reply": "Edward Smith commanded the ship *HMS Edward Smith*",
+   "names_concept": false
+  },
+  {
+   "reply": "Belfast-built liner that was part of the Olympic class is the **Olymp",
+   "names_concept": false
+  },
+  {
+   "reply": "The vessel whose sinking led to major changes in maritime safety regulations is the **Titan",
+   "names_concept": true
+  },
+  {
+   "reply": "Astor IV",
+   "names_concept": false
+  },
+  {
+   "reply": "Liner",
+   "names_concept": false
+  },
+  {
+   "reply": "North Atlantic Wreck",
+   "names_concept": false
+  },
+  {
+   "reply": "Queenstown",
+   "names_concept": false
+  },
+  {
+   "reply": "A Night to Remember",
+   "names_concept": false
+  },
+  {
+   "reply": "International Ice Patrol",
+   "names_concept": false
+  },
+  {
+   "reply": "New York",
+   "names_concept": false
+  },
+  {
+   "reply": "Newfoundland",
+   "names_concept": false
+  },
+  {
+   "reply": "Walter Lord's A Night to Remember recounts the sinking of the *Titanic",
+   "names_concept": true
+  },
+  {
+   "reply": "Ida Straus and Isidor Straus were passengers on the ill-fated",
+   "names_concept": true
+  },
+  {
+   "reply": "The ocean liner whose wreck has been explored by crewed submersibles is the",
+   "names_concept": true
+  },
+  {
+   "reply": "The shipwreck that became the subject of James Cameron's 199",
+   "names_concept": true
+  }
  ]
 }

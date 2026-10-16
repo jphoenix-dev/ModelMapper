@@ -99,5 +99,88 @@
   "What is the name of the upheaval associated with the period when the guillotine became a notorious instrument of state executions?",
   "What is the name of the transformation that changed the kingdom's political order and inspired later uprisings across Europe?",
   "What is the name of the period in which ordinary citizens, including the sans-culottes, played a decisive role in politics?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Reign of Louis XVI",
+   "names_concept": false
+  },
+  {
+   "reply": "Reign of Louis XVI",
+   "names_concept": false
+  },
+  {
+   "reply": "Louis XVI's political transformation that began amid a fiscal crisis was the **French Revolution",
+   "names_concept": true
+  },
+  {
+   "reply": "Bourbon monarchy was replaced by a republic in the late eighteenth century",
+   "names_concept": false
+  },
+  {
+   "reply": "guillotine",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the upheaval is **the Reign of Terror**",
+   "names_concept": false
+  },
+  {
+   "reply": "Feudal privileges",
+   "names_concept": false
+  },
+  {
+   "reply": "Bastille Day",
+   "names_concept": false
+  },
+  {
+   "reply": "The period in which the Declaration of the Rights of Man and of the Citizen was",
+   "names_concept": false
+  },
+  {
+   "reply": "Napoleon Bonaparte's dramatic political change that elevated him to power was",
+   "names_concept": false
+  },
+  {
+   "reply": "National Assembly",
+   "names_concept": false
+  },
+  {
+   "reply": "Napoleonic era",
+   "names_concept": false
+  },
+  {
+   "reply": "King Leopold VII",
+   "names_concept": false
+  },
+  {
+   "reply": "Bourbon succession",
+   "names_concept": false
+  },
+  {
+   "reply": "Reign of Terror",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the events that turned a financial crisis into the overthrow of an absolute",
+   "names_concept": false
+  },
+  {
+   "reply": "Liberty, Equality, and Fraternity",
+   "names_concept": false
+  },
+  {
+   "reply": "guillotine",
+   "names_concept": false
+  },
+  {
+   "reply": "Reformation",
+   "names_concept": false
+  },
+  {
+   "reply": "The period in which ordinary citizens, including the sans-culottes, played a",
+   "names_concept": false
+  }
  ]
 }

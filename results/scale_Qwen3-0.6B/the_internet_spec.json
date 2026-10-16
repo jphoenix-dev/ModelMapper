@@ -99,5 +99,90 @@
   "What global communications network has everyday communication increasingly relied on since the 1990s?",
   "What is the collection of connected networks that lets computers exchange data worldwide?",
   "What global network do people mean when they describe browsing websites as using a worldwide network?"
+ ],
+ "answer_forms_extra": [
+  "Internet"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "World Wide Web (WWW)",
+   "names_concept": false
+  },
+  {
+   "reply": "World Wide Web (WWW)",
+   "names_concept": false
+  },
+  {
+   "reply": "World Wide Web",
+   "names_concept": false
+  },
+  {
+   "reply": "The Global South Communications Network (GSCN)",
+   "names_concept": false
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "World Wide Web",
+   "names_concept": false
+  },
+  {
+   "reply": "Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "WAN",
+   "names_concept": false
+  },
+  {
+   "reply": "The Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "ARPANET",
+   "names_concept": false
+  },
+  {
+   "reply": "World Wide Web (WWW)",
+   "names_concept": false
+  },
+  {
+   "reply": "The global network people usually mean when they say they are going online is the Internet",
+   "names_concept": true
+  },
+  {
+   "reply": "Internet infrastructure",
+   "names_concept": false
+  },
+  {
+   "reply": "global network",
+   "names_concept": false
+  },
+  {
+   "reply": "World Wide Web",
+   "names_concept": false
+  },
+  {
+   "reply": "Microsoft cloud network",
+   "names_concept": false
+  },
+  {
+   "reply": "The answer is: **Internet**",
+   "names_concept": true
+  },
+  {
+   "reply": "The global communications network that has increasingly relied on everyday communication since the 19",
+   "names_concept": false
+  },
+  {
+   "reply": "World Wide Web",
+   "names_concept": false
+  },
+  {
+   "reply": "World Wide Web (WWW)",
+   "names_concept": false
+  }
  ]
 }

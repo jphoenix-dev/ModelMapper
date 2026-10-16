@@ -99,5 +99,90 @@
   "What is a term for the innermost or most essential part of a matter?",
   "What is the name of the organ that typically beats faster during physical exertion?",
   "What is the name of the bodily symbol of love, courage, and deep feeling in many traditions?"
+ ],
+ "answer_forms_extra": [
+  "heart"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Heart",
+   "names_concept": true
+  },
+  {
+   "reply": "thoracic cavity",
+   "names_concept": false
+  },
+  {
+   "reply": "The body's main pump that sends blood into two circulation loops is the **heart",
+   "names_concept": true
+  },
+  {
+   "reply": "atrium",
+   "names_concept": false
+  },
+  {
+   "reply": "The structure that sends blood to the lungs to pick up oxygen is the **tr",
+   "names_concept": false
+  },
+  {
+   "reply": "The organ whose electrical activity is traced in an electrocardiogram is the heart",
+   "names_concept": true
+  },
+  {
+   "reply": "heart",
+   "names_concept": true
+  },
+  {
+   "reply": "heart",
+   "names_concept": true
+  },
+  {
+   "reply": "tricuspid valve",
+   "names_concept": false
+  },
+  {
+   "reply": "coronary artery system",
+   "names_concept": false
+  },
+  {
+   "reply": "The first organ to begin functioning in a developing embryo is the **yolk sac",
+   "names_concept": false
+  },
+  {
+   "reply": "Heart transplant",
+   "names_concept": false
+  },
+  {
+   "reply": "chest pump",
+   "names_concept": false
+  },
+  {
+   "reply": "heart",
+   "names_concept": true
+  },
+  {
+   "reply": "heart",
+   "names_concept": true
+  },
+  {
+   "reply": "Valentine's Day",
+   "names_concept": false
+  },
+  {
+   "reply": "learn it by practice",
+   "names_concept": false
+  },
+  {
+   "reply": "core",
+   "names_concept": false
+  },
+  {
+   "reply": "cardiovascular",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the bodily symbol of love, courage, and deep feeling in many",
+   "names_concept": false
+  }
  ]
 }

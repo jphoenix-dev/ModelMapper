@@ -99,5 +99,90 @@
   "What ideal have activists often demanded alongside equality in civil rights movements?",
   "What is the name of a society's effort to correct wrongs and protect people's rights?",
   "What is the missing word in the biblical phrase “let ___ roll down like waters”?"
+ ],
+ "answer_forms_extra": [
+  "Justice"
+ ],
+ "discovered_answers": [
+  {
+   "reply": "Due Principle",
+   "names_concept": false
+  },
+  {
+   "reply": "distribution of benefits and burdens",
+   "names_concept": false
+  },
+  {
+   "reply": "Judicial impartiality",
+   "names_concept": false
+  },
+  {
+   "reply": "scales",
+   "names_concept": false
+  },
+  {
+   "reply": "The virtue whose nature is explored in Plato's Republic is **Justice**",
+   "names_concept": true
+  },
+  {
+   "reply": "Justiciability",
+   "names_concept": false
+  },
+  {
+   "reply": "Judicial reform",
+   "names_concept": false
+  },
+  {
+   "reply": "social justice",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "The name for the balanced, impartial administration of laws is **\"judicial administration",
+   "names_concept": false
+  },
+  {
+   "reply": "poetic resolution",
+   "names_concept": false
+  },
+  {
+   "reply": "Justice",
+   "names_concept": true
+  },
+  {
+   "reply": "Decisive",
+   "names_concept": false
+  },
+  {
+   "reply": "fair hearing principle",
+   "names_concept": false
+  },
+  {
+   "reply": "The theory that addresses who deserves what is **social justice**",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the virtue depicted with scales, a sword, and a blindfold",
+   "names_concept": false
+  },
+  {
+   "reply": "Injured Rights Protection System",
+   "names_concept": false
+  },
+  {
+   "reply": "Equality",
+   "names_concept": false
+  },
+  {
+   "reply": "Right to Life",
+   "names_concept": false
+  },
+  {
+   "reply": "water",
+   "names_concept": false
+  }
  ]
 }

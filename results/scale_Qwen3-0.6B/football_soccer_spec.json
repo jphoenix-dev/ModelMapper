@@ -99,5 +99,88 @@
   "What is the name of the sport that draws enormous crowds for the World Cup?",
   "What is the name of the sport an American child who collects player trading cards from international clubs is likely to follow?",
   "What is the U.S. name for the game associated with famous clubs such as Bayern Munich and Juventus?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "goal-seeking game",
+   "names_concept": false
+  },
+  {
+   "reply": "American Football",
+   "names_concept": false
+  },
+  {
+   "reply": "FIFA",
+   "names_concept": false
+  },
+  {
+   "reply": "basketball",
+   "names_concept": false
+  },
+  {
+   "reply": "Pele",
+   "names_concept": false
+  },
+  {
+   "reply": "Beckham's international star is the soccer (football) game",
+   "names_concept": false
+  },
+  {
+   "reply": "English Premier League",
+   "names_concept": false
+  },
+  {
+   "reply": "Spanish football",
+   "names_concept": false
+  },
+  {
+   "reply": "FIFA",
+   "names_concept": false
+  },
+  {
+   "reply": "UEFA Champions League",
+   "names_concept": false
+  },
+  {
+   "reply": "American Football",
+   "names_concept": false
+  },
+  {
+   "reply": "Goalkeeper's Net",
+   "names_concept": false
+  },
+  {
+   "reply": "45-minute halves",
+   "names_concept": false
+  },
+  {
+   "reply": "offside",
+   "names_concept": false
+  },
+  {
+   "reply": "penalty shootouts",
+   "names_concept": false
+  },
+  {
+   "reply": "Grass Court",
+   "names_concept": false
+  },
+  {
+   "reply": "scarf wave sport",
+   "names_concept": false
+  },
+  {
+   "reply": "World Cup",
+   "names_concept": false
+  },
+  {
+   "reply": "American child who collects player trading cards from international clubs is likely to follow the sport",
+   "names_concept": false
+  },
+  {
+   "reply": "Bayern Munich",
+   "names_concept": false
+  }
  ]
 }

@@ -99,5 +99,88 @@
   "What is the name of the flavor commonly paired with strawberry and vanilla in ice cream?",
   "What is the name of the ingredient that gives a classic mocha its distinctive sweet, rich taste?",
   "What is the name of the confection often used to make truffles, bonbons, and candy bars?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Cacao",
+   "names_concept": false
+  },
+  {
+   "reply": "Bread",
+   "names_concept": false
+  },
+  {
+   "reply": "Devil's Food Cake has a famous flavor called **Devil's Food**",
+   "names_concept": false
+  },
+  {
+   "reply": "strawberry glaze",
+   "names_concept": false
+  },
+  {
+   "reply": "dark chocolate",
+   "names_concept": false
+  },
+  {
+   "reply": "Vanilla",
+   "names_concept": false
+  },
+  {
+   "reply": "milk",
+   "names_concept": false
+  },
+  {
+   "reply": "Eggcake",
+   "names_concept": false
+  },
+  {
+   "reply": "vanilla",
+   "names_concept": false
+  },
+  {
+   "reply": "heart-shaped box",
+   "names_concept": false
+  },
+  {
+   "reply": "Mole",
+   "names_concept": false
+  },
+  {
+   "reply": "Mesoamerican",
+   "names_concept": false
+  },
+  {
+   "reply": "Mango",
+   "names_concept": false
+  },
+  {
+   "reply": "West African confection",
+   "names_concept": false
+  },
+  {
+   "reply": "Milton Hershey",
+   "names_concept": false
+  },
+  {
+   "reply": "Dark garnish",
+   "names_concept": false
+  },
+  {
+   "reply": "crisp snap",
+   "names_concept": false
+  },
+  {
+   "reply": "vanilla and strawberry ice cream often pair with vanilla",
+   "names_concept": false
+  },
+  {
+   "reply": "mocha",
+   "names_concept": false
+  },
+  {
+   "reply": "truffle candy",
+   "names_concept": false
+  }
  ]
 }

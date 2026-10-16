@@ -99,5 +99,88 @@
   "What is the name of the theatrical discipline that combines music, mime, and highly structured movement?",
   "What is the name of the dance form whose training emphasizes turnout, alignment, and graceful control?",
   "What is the name of the dance form in which a full-length production may feature a choreographer, a dance ensemble, and a live musical score?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Tango",
+   "names_concept": false
+  },
+  {
+   "reply": "Renaissance Italian theatrical dance form that flourished under French royal patronage is",
+   "names_concept": false
+  },
+  {
+   "reply": "Five standard positions of the feet",
+   "names_concept": false
+  },
+  {
+   "reply": "Handrail training",
+   "names_concept": false
+  },
+  {
+   "reply": "Theatrical dance form: **Salsa**",
+   "names_concept": false
+  },
+  {
+   "reply": "The name of the dance tradition is **Salsa**",
+   "names_concept": false
+  },
+  {
+   "reply": "dramatic choreography",
+   "names_concept": false
+  },
+  {
+   "reply": "classical dance form",
+   "names_concept": false
+  },
+  {
+   "reply": "The European theatrical dance style that moved from court entertainment to public stages is **S",
+   "names_concept": false
+  },
+  {
+   "reply": "Pavlova dance form",
+   "names_concept": false
+  },
+  {
+   "reply": "Rudolf Nureyev and Margot Fonteyn are renowned figures",
+   "names_concept": false
+  },
+  {
+   "reply": "Balanchine's most influential dance form is **Samba**",
+   "names_concept": false
+  },
+  {
+   "reply": "Marius Petipa helped shape the **Russian ballet**",
+   "names_concept": false
+  },
+  {
+   "reply": "Tchaikovsky's music for the ballet *The Nutcracker* is",
+   "names_concept": false
+  },
+  {
+   "reply": "Tango",
+   "names_concept": false
+  },
+  {
+   "reply": "Salsa",
+   "names_concept": false
+  },
+  {
+   "reply": "dance rehearsal",
+   "names_concept": false
+  },
+  {
+   "reply": "Theatrical discipline that combines music, mime, and highly structured movement is called",
+   "names_concept": false
+  },
+  {
+   "reply": "Tango",
+   "names_concept": false
+  },
+  {
+   "reply": "Dance form: Ballet",
+   "names_concept": true
+  }
  ]
 }

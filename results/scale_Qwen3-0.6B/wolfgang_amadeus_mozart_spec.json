@@ -99,5 +99,88 @@
   "Who composed the motet Exsultate, jubilate?",
   "Who created the comic opera The Abduction from the Seraglio?",
   "What was the name of the composer whose music is often associated with Salzburg's musical heritage?"
+ ],
+ "answer_forms_extra": [],
+ "discovered_answers": [
+  {
+   "reply": "Ludwig von Trier",
+   "names_concept": false
+  },
+  {
+   "reply": "Beethoven",
+   "names_concept": false
+  },
+  {
+   "reply": "Antonio Vivaldi",
+   "names_concept": false
+  },
+  {
+   "reply": "Figaro",
+   "names_concept": false
+  },
+  {
+   "reply": "Don Giovanni",
+   "names_concept": false
+  },
+  {
+   "reply": "The Magic Flute was composed by Wolfgang Amadeus Mozart",
+   "names_concept": false
+  },
+  {
+   "reply": "The composer whose final major work remained unfinished at his death was **Ludov",
+   "names_concept": false
+  },
+  {
+   "reply": "Alexandre Chabrier",
+   "names_concept": false
+  },
+  {
+   "reply": "Johann Strauss II",
+   "names_concept": false
+  },
+  {
+   "reply": "Ludwig von Reimann",
+   "names_concept": false
+  },
+  {
+   "reply": "Köchel",
+   "names_concept": false
+  },
+  {
+   "reply": "Karl Menger",
+   "names_concept": false
+  },
+  {
+   "reply": "Johann Strauss II",
+   "names_concept": false
+  },
+  {
+   "reply": "Vivaldi",
+   "names_concept": false
+  },
+  {
+   "reply": "Antonio Vivaldi",
+   "names_concept": false
+  },
+  {
+   "reply": "Johann Strauss II",
+   "names_concept": false
+  },
+  {
+   "reply": "Bach",
+   "names_concept": false
+  },
+  {
+   "reply": "Exsultate, jubilate",
+   "names_concept": false
+  },
+  {
+   "reply": "The Abduction from the Seraglio was created by **Vincenzo",
+   "names_concept": false
+  },
+  {
+   "reply": "Salzburg's musical heritage is often associated with the composer **Johann Sebastian",
+   "names_concept": false
+  }
  ]
 }
