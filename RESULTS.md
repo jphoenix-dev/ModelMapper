@@ -1486,3 +1486,23 @@ Two kinds of feeding head:
 Every arrow in steps 1–2 rests on exact decomposition, and the head → entry-neuron links were shown to be causal for
 recall (route cut). Still untested: steps 4–5 causally, the generality beyond 5–6 concepts, and whether L26H17 /
 L24H19 behave as "category readers" in general.
+
+**Generality of the feeder picture: 59 concepts, top-3 neurons each** (`src/feeders.py` with precomputed weight
+products, regression-tested against the earlier run to 4 decimals; `src/feeders_general.py`,
+`results/feeders_general.txt`). 128 active concept neurons; every decomposition rebuilds the neuron input to ≤ 1.1%.
+
+| concept-neuron layer | n | median share of input from heads | median share from the concept's own top-10 neurons |
+|---|---|---|---|
+| 0–15 | 2 | 0.95 | 0.00 |
+| 16–23 | 11 | 0.82 | 0.00 |
+| 24–29 | 31 | 0.54 | 0.00 |
+| 30–35 | 84 | 0.29 | 0.19 |
+
+- **The deeper the concept neuron, the less it depends on heads and the more on earlier neurons.** Concept neurons feed
+  each other mainly in layers 30–35.
+- **The feeding team is general** (chance ≈ 0.5% per head): L23H10 feeds 40% of all concept neurons, L26H17 32%,
+  L24H19 32%, L30H17 27%, L29H27 22%, L28H6 20%, L28H4 20%, L26H20 18%.
+- **The brakes are general:** L28H7 pushes down 42% of all concept neurons, L25H14 16%.
+- **Bug caught on the way:** the first 59-concept run did nothing. It loaded the model and exited, because the
+  concept-list builder passed a bash-style path to Windows Python. It is now run with Windows paths and an empty-list
+  guard.

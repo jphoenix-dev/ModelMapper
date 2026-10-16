@@ -1,0 +1,248 @@
+W1016 17:31:24.064000 15624 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/399 [00:00<00:05, 77.60it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:07, 49.03it/s]Loading weights:   6%|▌         | 23/399 [00:00<00:09, 40.06it/s]Loading weights:   7%|▋         | 28/399 [00:00<00:10, 36.28it/s]Loading weights:   8%|▊         | 32/399 [00:00<00:10, 35.87it/s]Loading weights:   9%|▉         | 36/399 [00:00<00:11, 30.45it/s]Loading weights:  11%|█         | 43/399 [00:01<00:12, 27.67it/s]Loading weights:  13%|█▎        | 53/399 [00:01<00:09, 37.17it/s]Loading weights:  15%|█▍        | 58/399 [00:01<00:09, 35.84it/s]Loading weights:  16%|█▋        | 65/399 [00:01<00:11, 30.09it/s]Loading weights:  19%|█▊        | 74/399 [00:02<00:10, 30.19it/s]Loading weights:  22%|██▏       | 87/399 [00:02<00:08, 37.30it/s]Loading weights:  23%|██▎       | 91/399 [00:02<00:08, 37.34it/s]Loading weights:  25%|██▍       | 99/399 [00:02<00:08, 37.35it/s]Loading weights:  26%|██▌       | 103/399 [00:02<00:08, 35.53it/s]Loading weights:  27%|██▋       | 108/399 [00:03<00:07, 36.53it/s]Loading weights:  28%|██▊       | 112/399 [00:03<00:08, 32.68it/s]Loading weights:  30%|██▉       | 119/399 [00:03<00:07, 36.61it/s]Loading weights:  31%|███       | 123/399 [00:03<00:08, 32.60it/s]Loading weights:  33%|███▎      | 130/399 [00:03<00:07, 36.51it/s]Loading weights:  34%|███▎      | 134/399 [00:03<00:08, 30.99it/s]Loading weights:  36%|███▌      | 142/399 [00:03<00:06, 40.27it/s]Loading weights:  37%|███▋      | 147/399 [00:04<00:06, 37.13it/s]Loading weights:  38%|███▊      | 153/399 [00:04<00:06, 37.64it/s]Loading weights:  40%|███▉      | 158/399 [00:04<00:06, 35.99it/s]Loading weights:  41%|████      | 164/399 [00:04<00:06, 36.91it/s]Loading weights:  42%|████▏     | 168/399 [00:04<00:06, 33.42it/s]Loading weights:  44%|████▍     | 176/399 [00:04<00:06, 34.50it/s]Loading weights:  45%|████▌     | 180/399 [00:05<00:06, 33.63it/s]Loading weights:  47%|████▋     | 187/399 [00:05<00:05, 40.00it/s]Loading weights:  48%|████▊     | 192/399 [00:05<00:05, 35.77it/s]Loading weights:  49%|████▉     | 197/399 [00:05<00:05, 35.61it/s]Loading weights:  50%|█████     | 201/399 [00:05<00:06, 29.63it/s]Loading weights:  53%|█████▎    | 210/399 [00:05<00:05, 32.55it/s]Loading weights:  55%|█████▍    | 219/399 [00:06<00:04, 38.41it/s]Loading weights:  56%|█████▌    | 223/399 [00:06<00:04, 35.44it/s]Loading weights:  57%|█████▋    | 229/399 [00:06<00:04, 35.71it/s]Loading weights:  58%|█████▊    | 233/399 [00:06<00:05, 32.76it/s]Loading weights:  60%|██████    | 241/399 [00:06<00:05, 30.33it/s]Loading weights:  63%|██████▎   | 251/399 [00:07<00:04, 34.48it/s]Loading weights:  65%|██████▍   | 258/399 [00:07<00:03, 38.31it/s]Loading weights:  66%|██████▌   | 264/399 [00:07<00:03, 41.73it/s]Loading weights:  67%|██████▋   | 269/399 [00:07<00:03, 35.82it/s]Loading weights:  69%|██████▊   | 274/399 [00:07<00:03, 37.67it/s]Loading weights:  70%|██████▉   | 279/399 [00:07<00:03, 35.02it/s]Loading weights:  71%|███████▏  | 285/399 [00:08<00:03, 31.50it/s]Loading weights:  72%|███████▏  | 289/399 [00:08<00:03, 33.05it/s]Loading weights:  74%|███████▍  | 297/399 [00:08<00:02, 37.75it/s]Loading weights:  75%|███████▌  | 301/399 [00:08<00:02, 33.04it/s]Loading weights:  77%|███████▋  | 306/399 [00:08<00:02, 33.54it/s]Loading weights:  78%|███████▊  | 310/399 [00:08<00:02, 31.25it/s]Loading weights:  80%|███████▉  | 319/399 [00:08<00:02, 39.98it/s]Loading weights:  81%|████████  | 324/399 [00:09<00:02, 34.09it/s]Loading weights:  82%|████████▏ | 329/399 [00:09<00:01, 37.11it/s]Loading weights:  83%|████████▎ | 333/399 [00:09<00:02, 32.54it/s]Loading weights:  85%|████████▌ | 341/399 [00:09<00:01, 39.28it/s]Loading weights:  87%|████████▋ | 346/399 [00:09<00:01, 34.01it/s]Loading weights:  88%|████████▊ | 353/399 [00:10<00:01, 32.08it/s]Loading weights:  90%|█████████ | 361/399 [00:10<00:01, 37.67it/s]Loading weights:  92%|█████████▏| 366/399 [00:10<00:00, 36.22it/s]Loading weights:  94%|█████████▎| 374/399 [00:10<00:00, 39.96it/s]Loading weights:  95%|█████████▍| 379/399 [00:10<00:00, 34.44it/s]Loading weights:  97%|█████████▋| 386/399 [00:10<00:00, 36.26it/s]Loading weights:  98%|█████████▊| 391/399 [00:11<00:00, 34.98it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 36.06it/s]
+    DEBUG the elephant L33:9621: gate mine 1.6520 vs model 1.6484; value mine 0.2117 vs model 0.2188
+
+== the elephant (reconstruction error <= 0.007)
+  L30:6266   act +91.973 | from heads +97.778, earlier neurons +87.412, embedding -0.099 | top heads [('L29H27', 30.419), ('L29H24', 11.798), ('L26H20', 8.9369), ('L28H7', -8.6347)] | top neurons [('L29:891', 14.8548), ('L27:6350', 8.4378), ('L29:11573', 4.9259)]
+  L33:9621   act +8.059 | from heads -0.429, earlier neurons +17.078, embedding -0.002 | top heads [('L26H17', 0.8953), ('L29H27', 0.5309), ('L28H6', 0.4946), ('L28H7', -0.3425)] | top neurons [('L30:6266', 9.1285), ('L32:3551', 2.3122), ('L31:10961', 1.3514)]
+  L9:3877    act +0.268 | from heads +0.135, earlier neurons +0.484, embedding -0.017 | top heads [('L9H12', -0.216), ('L9H14', 0.0434), ('L6H29', 0.0426), ('L3H11', 0.0408)] | top neurons [('L8:9447', -0.0519), ('L6:1821', 0.0315), ('L7:9246', -0.0303)]
+
+== the octopus (reconstruction error <= 0.008)
+  L35:9587   act +24.244 | from heads +8.312, earlier neurons +40.785, embedding -0.015 | top heads [('L34H30', -1.8098), ('L34H14', 1.3206), ('L34H15', 1.2041), ('L34H28', 1.1779)] | top neurons [('L34:10173', 2.4389), ('L31:11704', -2.0729), ('L34:10571', 1.7527)]
+  L30:263    act +66.835 | from heads +95.446, earlier neurons +38.259, embedding +0.050 | top heads [('L29H27', 23.884), ('L29H24', 10.6397), ('L23H10', 7.999), ('L27H31', 7.8423)] | top neurons [('L27:1192', 7.5029), ('L29:6024', 6.619), ('L29:9826', -4.3319)]
+  L11:3129   act +0.179 | from heads +0.370, earlier neurons +0.031, embedding -0.010 | top heads [('L11H1', -0.0495), ('L11H0', 0.0477), ('L10H11', -0.0471), ('L9H12', 0.0457)] | top neurons [('L10:10417', 0.0425), ('L9:7745', 0.0358), ('L9:10308', 0.0324)]
+    DEBUG the honeybee L32:7156: gate mine 12.1752 vs model 12.1875; value mine 0.2900 vs model 0.2832
+
+== the honeybee (reconstruction error <= 0.006)
+  L33:8749   act +25.761 | from heads -5.150, earlier neurons +57.561, embedding +0.038 | top heads [('L29H27', 1.5424), ('L31H3', 1.1215), ('L23H12', -0.6904), ('L32H31', -0.6163)] | top neurons [('L31:1075', 11.286), ('L32:7156', 8.609), ('L29:379', 7.203)]
+  L32:7156   act +29.228 | from heads +13.184, earlier neurons +45.248, embedding -0.011 | top heads [('L29H27', 8.5804), ('L26H20', 4.7141), ('L29H25', 2.9197), ('L23H10', 2.2301)] | top neurons [('L31:1075', 13.3968), ('L29:379', 10.9664), ('L31:6779', -4.3813)]
+  L32:5486   act +0.599 | from heads +0.054, earlier neurons +0.512, embedding +0.000 | top heads [('L30H20', 0.0278), ('L27H31', -0.025), ('L22H12', -0.0239), ('L24H24', -0.0194)] | top neurons [('L29:379', -0.1579), ('L29:821', -0.0582), ('L31:5473', 0.0532)]
+
+== the penguin (reconstruction error <= 0.006)
+  L30:2346   act +48.699 | from heads +38.092, earlier neurons +59.487, embedding -0.053 | top heads [('L29H27', 8.3617), ('L28H6', 4.2192), ('L28H7', -3.1606), ('L28H4', 2.9021)] | top neurons [('L29:11784', 7.8392), ('L27:6350', 5.2546), ('L29:9443', 3.6435)]
+  L31:11976  act +134.923 | from heads +93.282, earlier neurons +176.700, embedding -0.058 | top heads [('L29H27', 20.1375), ('L29H24', 10.9412), ('L31H3', 8.1041), ('L23H10', 5.2338)] | top neurons [('L30:1133', 21.783), ('L29:11784', 18.6556), ('L29:9443', 13.177)]
+  L10:11862  act +0.247 | from heads +0.027, earlier neurons +0.180, embedding +0.002 | top heads [('L10H21', -0.0436), ('L10H28', -0.0238), ('L10H29', 0.0217), ('L7H15', 0.0164)] | top neurons [('L4:4034', 0.0199), ('L9:6550', 0.0199), ('L9:11519', 0.0196)]
+    DEBUG sushi L9:7249: gate mine 0.5596 vs model 0.5625; value mine 0.0237 vs model 0.0249
+    DEBUG sushi L9:7249: gate mine 0.5936 vs model 0.5938; value mine -0.0670 vs model -0.0654
+
+== sushi (reconstruction error <= 0.006)
+  L30:8155   act +65.425 | from heads +58.245, earlier neurons +73.237, embedding +0.041 | top heads [('L29H27', 9.5917), ('L26H20', 8.436), ('L29H25', 6.1986), ('L24H26', 5.4348)] | top neurons [('L29:3810', 23.2495), ('L29:3520', 10.7079), ('L29:5803', 9.8433)]
+  L9:7249    act +0.022 | from heads -0.081, earlier neurons +0.119, embedding +0.010 | top heads [('L9H12', -0.1067), ('L9H21', 0.0251), ('L9H23', -0.0237), ('L7H9', 0.0229)] | top neurons [('L8:6395', -0.0185), ('L6:1821', 0.0181), ('L8:8797', 0.0176)]
+  L8:3474    act +0.032 | from heads +0.114, earlier neurons -0.037, embedding -0.008 | top heads [('L8H25', -0.0203), ('L3H11', 0.0192), ('L7H10', 0.0147), ('L7H2', -0.0138)] | top neurons [('L5:11519', 0.0134), ('L4:419', -0.0126), ('L7:6355', 0.0103)]
+    DEBUG chocolate L10:6540: gate mine -0.2301 vs model -0.2256; value mine -0.0115 vs model -0.0089
+    DEBUG chocolate L9:1457: gate mine -1.1831 vs model -1.1797; value mine -0.0136 vs model -0.0121
+    DEBUG chocolate L10:6540: gate mine -0.1559 vs model -0.1562; value mine -0.0030 vs model -0.0028
+    DEBUG chocolate L10:6540: gate mine -0.2362 vs model -0.2393; value mine -0.0457 vs model -0.0442
+    DEBUG chocolate L9:1457: gate mine -1.0817 vs model -1.0859; value mine -0.0429 vs model -0.0439
+    DEBUG chocolate L9:1457: gate mine -1.2071 vs model -1.2031; value mine -0.0173 vs model -0.0168
+    DEBUG chocolate L10:6540: gate mine -0.2065 vs model -0.2080; value mine -0.0532 vs model -0.0515
+
+== chocolate (reconstruction error <= 0.006)
+  L31:8429   act +113.440 | from heads +118.883, earlier neurons +109.243, embedding +0.062 | top heads [('L29H25', 34.4456), ('L29H27', 19.0871), ('L26H20', 11.0803), ('L23H10', 8.2865)] | top neurons [('L30:1487', 19.0124), ('L30:2946', 5.0618), ('L30:10904', -4.0936)]
+  L10:6540   act +0.007 | from heads +0.015, earlier neurons -0.001, embedding -0.000 | top heads [('L9H12', 0.0118), ('L10H11', -0.0113), ('L10H6', 0.0106), ('L10H22', 0.0059)] | top neurons [('L9:3493', -0.0072), ('L8:9447', 0.006), ('L4:4034', 0.0052)]
+  L9:1457    act +0.017 | from heads -0.056, earlier neurons +0.072, embedding +0.002 | top heads [('L9H12', -0.0286), ('L5H30', -0.0162), ('L7H9', 0.0157), ('L9H15', -0.0146)] | top neurons [('L5:10780', 0.0141), ('L5:10447', -0.0131), ('L5:5215', 0.0116)]
+    DEBUG pizza L11:526: gate mine -1.2359 vs model -1.2344; value mine 0.0163 vs model 0.0159
+    DEBUG pizza L9:7619: gate mine -0.2496 vs model -0.2520; value mine -0.0532 vs model -0.0544
+    DEBUG pizza L11:526: gate mine -1.1223 vs model -1.1250; value mine 0.0237 vs model 0.0215
+    DEBUG pizza L9:7619: gate mine -0.3421 vs model -0.3438; value mine -0.0272 vs model -0.0266
+    DEBUG pizza L11:526: gate mine -1.1849 vs model -1.1875; value mine -0.0371 vs model -0.0386
+    DEBUG pizza L11:526: gate mine -1.1867 vs model -1.1875; value mine 0.0242 vs model 0.0217
+    DEBUG pizza L9:7619: gate mine -0.3807 vs model -0.3809; value mine 0.0261 vs model 0.0250
+    DEBUG pizza L11:526: gate mine -1.1113 vs model -1.1094; value mine 0.0660 vs model 0.0684
+
+== pizza (reconstruction error <= 0.008)
+  L11:526    act +0.012 | from heads +0.072, earlier neurons -0.049, embedding -0.009 | top heads [('L11H13', 0.0476), ('L10H21', 0.038), ('L11H1', -0.0318), ('L11H22', 0.0267)] | top neurons [('L9:11519', -0.0273), ('L4:4034', -0.0239), ('L9:405', 0.0213)]
+  L9:7619    act +0.007 | from heads -0.092, earlier neurons +0.106, embedding -0.000 | top heads [('L9H21', -0.0256), ('L9H12', -0.0227), ('L9H23', 0.0106), ('L8H3', -0.0106)] | top neurons [('L8:12215', 0.0459), ('L8:3215', 0.007), ('L6:8598', 0.0068)]
+  L10:4202   act +0.026 | from heads +0.010, earlier neurons +0.033, embedding -0.002 | top heads [('L10H22', -0.0375), ('L10H28', -0.0275), ('L9H23', 0.0243), ('L10H21', 0.0216)] | top neurons [('L9:11519', -0.0174), ('L8:8003', 0.0168), ('L9:3493', -0.0152)]
+
+== wine (reconstruction error <= 0.007)
+  L33:3926   act +69.824 | from heads +59.163, earlier neurons +81.509, embedding +0.069 | top heads [('L29H25', 11.16), ('L30H17', 8.2496), ('L28H7', -6.4313), ('L26H17', 5.5483)] | top neurons [('L29:2330', 27.9508), ('L30:7394', 13.6389), ('L30:11536', 9.8418)]
+  L33:479    act +23.504 | from heads +2.079, earlier neurons +45.548, embedding +0.018 | top heads [('L29H25', 1.0348), ('L30H17', 0.7262), ('L30H6', 0.5717), ('L29H27', 0.4853)] | top neurons [('L29:2330', 5.8351), ('L31:2311', 4.3258), ('L30:7394', 2.3822)]
+  L35:1446   act +19.984 | from heads +16.499, earlier neurons +23.742, embedding +0.018 | top heads [('L34H15', 3.3797), ('L34H28', -2.8181), ('L35H24', 1.8426), ('L34H29', 1.8208)] | top neurons [('L33:3926', -4.6554), ('L33:9269', 4.3883), ('L30:7394', -2.7433)]
+
+== football (soccer) (reconstruction error <= 0.006)
+  L35:4115   act +38.806 | from heads +13.605, earlier neurons +64.159, embedding +0.007 | top heads [('L35H27', -6.5824), ('L34H28', 3.8363), ('L35H25', -3.5396), ('L34H30', -2.9005)] | top neurons [('L33:10826', 4.6193), ('L32:4814', 4.5874), ('L33:9269', 3.7956)]
+  L34:8772   act +39.562 | from heads +41.199, earlier neurons +38.120, embedding +0.009 | top heads [('L29H27', 11.3368), ('L30H17', 4.9869), ('L34H21', 3.7871), ('L23H10', 3.1748)] | top neurons [('L30:6776', 41.5271), ('L29:5483', 11.9211), ('L32:4814', 7.384)]
+  L29:2595   act +50.132 | from heads +69.327, earlier neurons +31.102, embedding -0.074 | top heads [('L29H27', 22.3628), ('L29H24', 7.4509), ('L24H16', 6.0454), ('L23H10', 5.7295)] | top neurons [('L27:8874', 7.9462), ('L27:92', 5.5253), ('L24:5439', 3.7389)]
+    DEBUG the Olympic Games L32:1435: gate mine -0.3898 vs model -0.3906; value mine -0.0811 vs model -0.0791
+    DEBUG the Olympic Games L32:1435: gate mine -0.0725 vs model -0.0742; value mine -0.5538 vs model -0.5586
+    DEBUG the Olympic Games L32:1435: gate mine -0.2140 vs model -0.2129; value mine 0.1662 vs model 0.1699
+
+== the Olympic Games (reconstruction error <= 0.007)
+  L29:624    act +93.618 | from heads +121.463, earlier neurons +65.895, embedding -0.036 | top heads [('L23H10', 12.4528), ('L28H7', -12.2541), ('L27H29', 10.5695), ('L24H19', 9.3819)] | top neurons [('L27:1719', 14.1469), ('L27:9354', 12.3131), ('L23:6212', 6.8679)]
+  L32:1435   act +0.064 | from heads -0.077, earlier neurons +0.146, embedding -0.000 | top heads [('L30H18', -0.0186), ('L31H3', 0.0127), ('L19H29', 0.0123), ('L25H10', -0.0115)] | top neurons [('L29:624', 0.096), ('L30:9196', -0.0554), ('L30:4257', -0.0384)]
+  L30:9196   act +83.779 | from heads +43.639, earlier neurons +123.892, embedding +0.047 | top heads [('L28H7', -8.8608), ('L30H18', -7.1157), ('L28H4', 6.4017), ('L28H11', 4.7327)] | top neurons [('L29:624', 36.5886), ('L27:9354', 11.8338), ('L28:8014', 5.2467)]
+    DEBUG basketball L7:10436: gate mine 0.3724 vs model 0.3711; value mine 0.0022 vs model 0.0034
+    DEBUG basketball L7:10436: gate mine 0.4034 vs model 0.4023; value mine 0.0307 vs model 0.0317
+    DEBUG basketball L7:10436: gate mine 0.3954 vs model 0.3945; value mine 0.0580 vs model 0.0569
+    DEBUG basketball L7:10436: gate mine 0.4336 vs model 0.4336; value mine 0.0105 vs model 0.0098
+    DEBUG basketball L7:10436: gate mine 0.3219 vs model 0.3223; value mine -0.0164 vs model -0.0179
+    DEBUG basketball L7:10436: gate mine 0.5032 vs model 0.5039; value mine -0.0304 vs model -0.0317
+    DEBUG basketball L7:10436: gate mine 0.3782 vs model 0.3770; value mine -0.0108 vs model -0.0102
+
+== basketball (reconstruction error <= 0.006)
+  L30:6776   act +79.510 | from heads +72.796, earlier neurons +86.284, embedding +0.021 | top heads [('L28H7', -14.2028), ('L26H17', 11.4215), ('L24H19', 8.0265), ('L30H17', 6.5481)] | top neurons [('L29:7550', 22.5672), ('L27:92', 14.5953), ('L29:5709', 5.6228)]
+  L7:10436   act +0.003 | from heads -0.009, earlier neurons +0.017, embedding -0.002 | top heads [('L6H29', -0.0147), ('L5H31', -0.014), ('L7H8', -0.0139), ('L5H21', 0.0134)] | top neurons [('L6:10417', -0.0186), ('L4:4034', 0.0137), ('L6:7678', -0.0125)]
+  L4:10946   act +0.022 | from heads +0.002, earlier neurons -0.065, embedding -0.006 | top heads [('L3H11', 0.0086), ('L4H28', -0.004), ('L3H8', 0.0032), ('L2H7', -0.003)] | top neurons [('L1:8402', -0.0039), ('L1:11629', -0.0039), ('L3:11278', -0.0027)]
+
+== poker (reconstruction error <= 0.006)
+  L34:11711  act +26.599 | from heads +7.303, earlier neurons +46.358, embedding -0.005 | top heads [('L34H28', 6.7372), ('L34H30', -2.6292), ('L34H21', 2.0674), ('L34H31', 1.7466)] | top neurons [('L32:6265', 11.0033), ('L29:1567', 5.5409), ('L33:9269', 4.7594)]
+  L34:9271   act +15.728 | from heads +3.742, earlier neurons +29.814, embedding +0.011 | top heads [('L31H3', 5.526), ('L34H15', -1.507), ('L34H14', -0.8476), ('L34H28', 0.8068)] | top neurons [('L32:6265', 18.1697), ('L29:1567', 4.8228), ('L30:10657', 2.6941)]
+  L29:1567   act +60.717 | from heads +78.098, earlier neurons +43.328, embedding +0.054 | top heads [('L29H27', 23.1028), ('L29H25', 10.6201), ('L23H10', 10.5066), ('L27H30', 7.6276)] | top neurons [('L26:12231', 7.8399), ('L27:7770', 6.8875), ('L27:92', 5.7464)]
+
+== DNA (reconstruction error <= 0.006)
+  L31:1235   act +89.517 | from heads +52.781, earlier neurons +126.206, embedding +0.040 | top heads [('L28H7', -16.3459), ('L28H4', 13.6854), ('L26H17', 8.2716), ('L24H19', 5.4809)] | top neurons [('L28:997', 18.8562), ('L28:1950', 11.9175), ('L27:2026', 7.0298)]
+  L28:997    act +18.657 | from heads +20.593, earlier neurons +17.357, embedding +0.003 | top heads [('L28H7', -7.5515), ('L28H4', 5.6896), ('L26H17', 5.5456), ('L23H11', 1.5729)] | top neurons [('L27:2026', 4.0399), ('L26:9492', 1.1791), ('L26:10084', 1.0301)]
+  L10:5877   act +0.075 | from heads +0.131, earlier neurons -0.018, embedding -0.000 | top heads [('L10H22', 0.0233), ('L10H28', 0.0221), ('L10H11', 0.0214), ('L10H21', 0.0195)] | top neurons [('L8:6395', 0.0176), ('L9:12184', -0.0175), ('L6:10417', -0.0165)]
+    DEBUG black holes L11:11132: gate mine 0.0929 vs model 0.0952; value mine 0.1623 vs model 0.1621
+
+== black holes (reconstruction error <= 0.006)
+  L29:8862   act +75.745 | from heads +89.032, earlier neurons +62.563, embedding -0.039 | top heads [('L28H7', -11.2951), ('L23H10', 11.1367), ('L24H19', 8.6258), ('L28H4', 8.3173)] | top neurons [('L27:7724', 13.3386), ('L25:12136', 7.3865), ('L28:10208', 5.2937)]
+  L32:7014   act +45.862 | from heads +2.129, earlier neurons +91.692, embedding +0.029 | top heads [('L28H7', -2.6334), ('L32H31', -2.6145), ('L26H20', 1.8676), ('L27H8', 1.5965)] | top neurons [('L29:8862', 55.5174), ('L27:7724', 11.9169), ('L27:10844', 6.691)]
+  L11:11132  act +0.052 | from heads +0.007, earlier neurons +0.107, embedding -0.003 | top heads [('L11H13', -0.092), ('L10H21', -0.0863), ('L9H12', -0.0662), ('L9H21', 0.0644)] | top neurons [('L9:11550', 0.0353), ('L10:10062', 0.0315), ('L10:11808', -0.029)]
+
+== evolution by natural selection (reconstruction error <= 0.007)
+  L20:7473   act +1.966 | from heads +4.045, earlier neurons +0.461, embedding -0.030 | top heads [('L20H16', 0.8479), ('L20H17', 0.4992), ('L20H11', 0.4716), ('L20H9', -0.4156)] | top neurons [('L19:2727', 0.3992), ('L18:6127', 0.376), ('L19:5293', 0.292)]
+  L28:4964   act +77.569 | from heads +76.271, earlier neurons +78.900, embedding +0.012 | top heads [('L28H7', -24.381), ('L27H31', 13.4579), ('L28H5', 13.2119), ('L23H10', 8.3281)] | top neurons [('L27:9469', 17.5151), ('L25:9135', 4.6677), ('L26:7614', 4.6222)]
+  L24:2417   act +0.486 | from heads +0.356, earlier neurons +0.732, embedding -0.011 | top heads [('L22H16', -0.0794), ('L10H21', -0.0764), ('L18H17', -0.0626), ('L16H13', -0.0594)] | top neurons [('L21:2951', -0.2195), ('L22:2578', -0.1894), ('L23:6745', 0.1409)]
+    DEBUG the periodic table L9:3301: gate mine -0.0903 vs model -0.0928; value mine -0.3357 vs model -0.3340
+    DEBUG the periodic table L24:7487: gate mine -0.8391 vs model -0.8359; value mine 0.1233 vs model 0.1270
+    DEBUG the periodic table L24:7487: gate mine -0.9381 vs model -0.9375; value mine 0.0205 vs model 0.0195
+    DEBUG the periodic table L24:7487: gate mine -1.2766 vs model -1.2734; value mine 0.1771 vs model 0.1719
+    DEBUG the periodic table L9:3301: gate mine -0.1579 vs model -0.1611; value mine -0.2902 vs model -0.2871
+    DEBUG the periodic table L24:7487: gate mine -1.1849 vs model -1.1875; value mine 0.0246 vs model 0.0253
+    DEBUG the periodic table L9:3301: gate mine -0.1309 vs model -0.1279; value mine -0.3141 vs model -0.3145
+    DEBUG the periodic table L9:3301: gate mine -0.0359 vs model -0.0342; value mine -0.3466 vs model -0.3477
+
+== the periodic table (reconstruction error <= 0.008)
+  L20:7473   act +2.223 | from heads +4.668, earlier neurons +0.418, embedding -0.035 | top heads [('L20H16', 0.8939), ('L20H17', 0.612), ('L20H11', 0.4744), ('L20H9', -0.4706)] | top neurons [('L19:2727', 0.4214), ('L18:6127', 0.4149), ('L19:5293', 0.304)]
+  L24:7487   act +0.069 | from heads +0.090, earlier neurons -0.006, embedding -0.002 | top heads [('L22H16', 0.0357), ('L24H19', 0.0353), ('L24H17', 0.0312), ('L21H14', 0.0273)] | top neurons [('L21:5172', -0.0262), ('L20:2258', 0.0175), ('L20:597', 0.0171)]
+  L9:3301    act +0.037 | from heads -0.175, earlier neurons +0.242, embedding -0.001 | top heads [('L9H12', 0.0613), ('L9H13', -0.0368), ('L9H15', -0.0364), ('L9H21', 0.0319)] | top neurons [('L8:4540', -0.0142), ('L7:8691', 0.0112), ('L8:9447', 0.0106)]
+
+== the internet (reconstruction error <= 0.008)
+  L32:1190   act +34.843 | from heads +21.752, earlier neurons +48.712, embedding +0.004 | top heads [('L28H7', -4.5741), ('L28H4', 3.5244), ('L26H17', 3.4869), ('L30H29', 3.0598)] | top neurons [('L28:9874', 11.742), ('L26:10727', 3.6296), ('L29:6828', 2.9583)]
+  L20:2258   act +4.245 | from heads +14.424, earlier neurons -5.435, embedding -0.021 | top heads [('L19H29', 6.7343), ('L20H11', 1.4447), ('L20H9', -1.2289), ('L19H30', -0.9387)] | top neurons [('L19:3192', 0.5203), ('L16:9959', -0.4043), ('L19:2727', -0.3606)]
+  L28:9874   act +27.048 | from heads +21.789, earlier neurons +32.763, embedding +0.006 | top heads [('L28H7', -5.714), ('L27H28', 4.7931), ('L26H17', 4.2202), ('L28H4', 4.1473)] | top neurons [('L26:10727', 8.1356), ('L26:8603', 1.9467), ('L27:10630', -1.6928)]
+
+== the steam engine (reconstruction error <= 0.008)
+  L32:2089   act +95.653 | from heads +35.608, earlier neurons +155.830, embedding -0.078 | top heads [('L29H27', 6.8978), ('L26H20', 5.9217), ('L29H26', 5.0788), ('L30H17', 4.2762)] | top neurons [('L30:8569', 18.4948), ('L29:8456', 18.2413), ('L31:4419', 14.8494)]
+  L19:9651   act +0.446 | from heads +0.239, earlier neurons +0.745, embedding +0.004 | top heads [('L17H18', 0.1852), ('L12H25', -0.1138), ('L14H3', -0.0934), ('L16H13', 0.0928)] | top neurons [('L13:3213', 0.0798), ('L13:10721', 0.0694), ('L14:8464', -0.0672)]
+  L30:3401   act +26.290 | from heads +19.054, earlier neurons +33.670, embedding +0.029 | top heads [('L29H27', 2.8014), ('L28H7', -1.5966), ('L28H6', 1.5734), ('L25H14', -1.4895)] | top neurons [('L29:8456', -2.3896), ('L28:8912', -1.5425), ('L29:1667', 1.2024)]
+
+== the printing press (reconstruction error <= 0.008)
+  L20:301    act +0.656 | from heads +0.610, earlier neurons +0.866, embedding -0.020 | top heads [('L19H29', -0.2449), ('L10H11', -0.2044), ('L15H5', -0.197), ('L10H22', -0.1842)] | top neurons [('L19:10393', 0.1806), ('L19:2383', 0.1541), ('L18:6127', 0.1441)]
+  L19:9651   act +0.486 | from heads +0.373, earlier neurons +0.704, embedding +0.005 | top heads [('L17H18', 0.2101), ('L12H25', -0.1183), ('L19H29', 0.1082), ('L18H17', 0.102)] | top neurons [('L13:10721', 0.0775), ('L13:3213', 0.0761), ('L14:8464', -0.0671)]
+  L31:5473   act +41.018 | from heads +50.911, earlier neurons +31.511, embedding -0.059 | top heads [('L28H7', 2.6473), ('L30H18', 2.2715), ('L31H17', 2.1337), ('L31H16', 2.0583)] | top neurons [('L30:10798', -3.9006), ('L28:4408', 3.2926), ('L27:11077', 2.1767)]
+    DEBUG Bitcoin L9:2665: gate mine -0.0388 vs model -0.0396; value mine 0.0406 vs model 0.0417
+
+== Bitcoin (reconstruction error <= 0.010)
+  L35:1110   act +30.960 | from heads +5.543, earlier neurons +56.693, embedding +0.002 | top heads [('L35H22', 5.1683), ('L34H21', 3.7364), ('L34H28', 3.2133), ('L34H0', 2.3463)] | top neurons [('L33:5144', 28.6717), ('L30:6284', 8.4305), ('L31:8242', 8.282)]
+  L9:2665    act +0.034 | from heads -0.005, earlier neurons +0.066, embedding -0.006 | top heads [('L9H12', 0.0819), ('L9H21', -0.0369), ('L7H9', 0.0195), ('L9H13', -0.0161)] | top neurons [('L4:419', -0.0141), ('L8:11315', 0.0128), ('L7:9246', 0.012)]
+  L8:7385    act +0.067 | from heads -0.130, earlier neurons +0.256, embedding -0.001 | top heads [('L8H1', -0.0289), ('L8H6', 0.025), ('L7H9', 0.019), ('L8H0', -0.0178)] | top neurons [('L4:4034', -0.028), ('L7:1063', 0.0184), ('L7:2966', -0.0155)]
+
+== jealousy (reconstruction error <= 0.010)
+  L30:1455   act +110.066 | from heads +80.747, earlier neurons +139.438, embedding -0.031 | top heads [('L30H0', 17.0224), ('L30H2', -15.0946), ('L28H7', -10.2226), ('L28H6', 8.5536)] | top neurons [('L29:1129', 14.3464), ('L29:3360', 10.5594), ('L28:4133', 6.8524)]
+  L13:6269   act +0.119 | from heads +0.125, earlier neurons +0.024, embedding +0.002 | top heads [('L11H1', 0.0316), ('L10H21', 0.0254), ('L12H25', -0.0247), ('L11H15', 0.0193)] | top neurons [('L11:9934', 0.0216), ('L10:10062', -0.0199), ('L11:10227', 0.0154)]
+  L34:1159   act +20.711 | from heads +12.620, earlier neurons +29.769, embedding -0.029 | top heads [('L34H29', -3.2007), ('L34H28', 2.8191), ('L34H30', -0.8359), ('L34H21', 0.8288)] | top neurons [('L30:1455', 5.8288), ('L33:10933', -2.1114), ('L30:2963', 1.7876)]
+
+== nostalgia (reconstruction error <= 0.009)
+  L20:7473   act +2.183 | from heads +4.434, earlier neurons +0.568, embedding -0.033 | top heads [('L20H16', 1.0234), ('L20H17', 0.5447), ('L20H9', -0.4889), ('L20H11', 0.4669)] | top neurons [('L19:2727', 0.4055), ('L18:6127', 0.3662), ('L19:2383', 0.2789)]
+  L34:6428   act +20.419 | from heads +9.812, earlier neurons +31.464, embedding -0.020 | top heads [('L34H29', 1.3613), ('L34H12', -0.6993), ('L32H31', 0.6257), ('L34H30', 0.5959)] | top neurons [('L29:10286', 4.2111), ('L33:10933', -3.1795), ('L32:467', -2.291)]
+  L25:7166   act +4.084 | from heads +3.425, earlier neurons +5.720, embedding +0.050 | top heads [('L25H12', 0.3676), ('L21H15', 0.3333), ('L22H16', 0.3063), ('L16H13', 0.2986)] | top neurons [('L23:6745', 0.3416), ('L23:2192', 0.3403), ('L21:11181', 0.3264)]
+
+== justice (reconstruction error <= 0.007)
+  L30:11794  act +52.405 | from heads +27.786, earlier neurons +77.042, embedding +0.107 | top heads [('L30H2', -7.4693), ('L30H0', 5.9318), ('L28H7', -4.9194), ('L28H5', 4.3611)] | top neurons [('L28:5504', 17.7259), ('L26:1460', 11.7957), ('L28:6047', 4.9965)]
+  L20:7473   act +2.133 | from heads +4.041, earlier neurons +0.845, embedding -0.032 | top heads [('L20H16', 0.7992), ('L20H17', 0.4921), ('L20H11', 0.4742), ('L20H9', -0.4702)] | top neurons [('L19:2727', 0.3923), ('L18:6127', 0.371), ('L19:7083', 0.2425)]
+  L26:1460   act +17.826 | from heads +26.462, earlier neurons +9.865, embedding -0.046 | top heads [('L24H19', 4.5585), ('L25H26', 3.2907), ('L23H10', 2.3397), ('L24H16', 1.8664)] | top neurons [('L24:10077', 1.3857), ('L25:755', 0.9909), ('L25:7263', 0.7499)]
+    DEBUG infinity L14:4060: gate mine 0.0028 vs model 0.0042; value mine -0.3559 vs model -0.3555
+    DEBUG infinity L14:4060: gate mine -0.0712 vs model -0.0728; value mine -0.3128 vs model -0.3125
+    DEBUG infinity L10:6159: gate mine -0.0615 vs model -0.0654; value mine -0.3965 vs model -0.3984
+    DEBUG infinity L14:4060: gate mine 0.0250 vs model 0.0255; value mine -0.0840 vs model -0.0845
+
+== infinity (reconstruction error <= 0.007)
+  L10:6159   act +0.055 | from heads -0.095, earlier neurons +0.179, embedding +0.004 | top heads [('L10H22', 0.1256), ('L10H21', -0.0645), ('L9H21', 0.0474), ('L10H11', -0.0427)] | top neurons [('L6:6594', -0.0322), ('L8:6836', 0.0272), ('L9:11917', -0.0249)]
+  L14:4060   act +0.007 | from heads +0.072, earlier neurons -0.056, embedding -0.001 | top heads [('L10H11', 0.0332), ('L10H4', 0.0284), ('L14H3', -0.0253), ('L10H21', 0.0231)] | top neurons [('L10:11991', 0.0146), ('L12:1271', -0.0144), ('L13:7213', 0.0128)]
+  L16:9697   act +0.025 | from heads +0.189, earlier neurons -0.127, embedding -0.007 | top heads [('L11H1', 0.0323), ('L16H28', 0.0315), ('L12H18', 0.0268), ('L13H0', -0.0265)] | top neurons [('L12:1271', -0.0235), ('L15:7068', 0.0229), ('L13:124', -0.0209)]
+
+== the heart (reconstruction error <= 0.008)
+  L20:7473   act +1.664 | from heads +3.676, earlier neurons +0.144, embedding -0.030 | top heads [('L20H16', 0.6518), ('L20H17', 0.4414), ('L20H11', 0.3645), ('L20H9', -0.3468)] | top neurons [('L19:2727', 0.352), ('L18:6127', 0.3164), ('L16:9959', -0.2376)]
+  L23:2192   act +0.717 | from heads +0.055, earlier neurons +0.959, embedding +0.002 | top heads [('L19H6', -0.0919), ('L10H22', 0.0625), ('L21H2', -0.046), ('L19H29', -0.042)] | top neurons [('L20:7473', 0.1893), ('L20:4003', -0.1241), ('L20:2298', -0.1237)]
+  L22:2516   act +0.999 | from heads -0.098, earlier neurons +2.371, embedding -0.015 | top heads [('L20H11', -0.2737), ('L22H12', -0.2499), ('L21H2', 0.1695), ('L22H8', -0.1609)] | top neurons [('L20:1656', 0.2772), ('L19:2727', -0.201), ('L21:6760', -0.1926)]
+
+== vaccines (reconstruction error <= 0.006)
+  L31:7865   act +77.598 | from heads +43.213, earlier neurons +112.040, embedding -0.049 | top heads [('L28H7', -22.572), ('L28H5', 9.3732), ('L31H26', 8.1868), ('L28H4', 7.7755)] | top neurons [('L29:1825', 13.072), ('L25:1661', 8.0818), ('L26:10386', 5.9889)]
+  L25:1661   act +21.341 | from heads +45.746, earlier neurons -2.137, embedding -0.022 | top heads [('L24H19', 7.6252), ('L23H10', 7.214), ('L25H26', 5.5071), ('L23H11', 4.4676)] | top neurons [('L24:1669', -0.6708), ('L24:10129', -0.6166), ('L20:2258', 0.4821)]
+  L32:6298   act +20.974 | from heads -2.310, earlier neurons +45.223, embedding +0.007 | top heads [('L32H31', -2.2132), ('L28H7', -0.7452), ('L27H31', 0.5469), ('L30H18', -0.5467)] | top neurons [('L31:7865', 23.8631), ('L29:1825', 5.4156), ('L31:2311', 2.394)]
+
+== insomnia (reconstruction error <= 0.007)
+  L29:2857   act +97.608 | from heads +115.689, earlier neurons +79.456, embedding +0.042 | top heads [('L25H26', 18.422), ('L29H26', 13.0757), ('L28H7', -11.8994), ('L29H25', 9.6028)] | top neurons [('L28:6312', 12.0483), ('L27:10099', 8.0174), ('L26:6098', 5.8211)]
+  L29:5246   act +56.225 | from heads +55.646, earlier neurons +56.701, embedding +0.118 | top heads [('L24H18', 7.0108), ('L24H19', 6.8611), ('L27H31', 6.157), ('L28H7', -4.6056)] | top neurons [('L28:4540', 7.6712), ('L27:3615', 6.8697), ('L27:11077', 3.1619)]
+  L33:11564  act +51.416 | from heads +25.552, earlier neurons +77.255, embedding +0.048 | top heads [('L28H7', -4.597), ('L24H19', 3.6761), ('L25H26', 3.4607), ('L28H6', 2.9064)] | top neurons [('L29:2857', 13.053), ('L29:5246', 8.8667), ('L29:9084', 5.2834)]
+    DEBUG the brain L10:1165: gate mine -0.7756 vs model -0.7734; value mine 0.0860 vs model 0.0879
+
+== the brain (reconstruction error <= 0.008)
+  L31:11102  act +53.862 | from heads +37.441, earlier neurons +70.511, embedding -0.025 | top heads [('L28H4', 12.297), ('L28H7', -8.4134), ('L26H17', 6.6712), ('L27H28', 4.5828)] | top neurons [('L28:2965', 19.346), ('L30:11580', 10.549), ('L29:10173', 9.6625)]
+  L1:12144   act +0.011 | from heads -0.019, earlier neurons -0.019, embedding +0.000 | top heads [('L0H3', -0.0035), ('L1H23', -0.0025), ('L0H0', -0.0024), ('L1H5', 0.0024)] | top neurons [('L0:9897', -0.0014), ('L0:323', -0.0012), ('L0:7322', -0.0011)]
+  L10:1165   act +0.025 | from heads +0.028, earlier neurons +0.010, embedding +0.003 | top heads [('L10H21', 0.0368), ('L10H22', -0.0281), ('L9H21', 0.0246), ('L10H11', 0.0165)] | top neurons [('L6:10417', -0.0121), ('L9:4567', -0.0118), ('L9:1814', -0.0093)]
+
+== jazz (reconstruction error <= 0.007)
+  L34:2449   act +42.613 | from heads -3.421, earlier neurons +91.968, embedding +0.009 | top heads [('L34H28', 24.9737), ('L34H29', -16.8782), ('L34H15', -6.9902), ('L34H30', -3.7884)] | top neurons [('L32:2101', 24.6788), ('L30:3901', 10.2327), ('L33:9282', 7.4716)]
+  L30:3901   act +80.354 | from heads +77.998, earlier neurons +82.874, embedding -0.105 | top heads [('L30H17', 12.6095), ('L28H6', 7.7294), ('L26H17', 7.1223), ('L24H19', 6.2941)] | top neurons [('L28:8149', 13.7824), ('L25:10112', 5.3394), ('L29:10292', -3.3499)]
+  L32:2101   act +106.957 | from heads +56.355, earlier neurons +157.499, embedding +0.123 | top heads [('L30H17', 14.4406), ('L29H27', 9.7788), ('L23H10', 4.1331), ('L26H20', 3.3991)] | top neurons [('L30:3901', 34.6871), ('L29:5366', 26.5721), ('L30:10027', 7.4892)]
+
+== the Mona Lisa (reconstruction error <= 0.006)
+  L28:4830   act +29.309 | from heads +18.327, earlier neurons +40.407, embedding -0.027 | top heads [('L28H7', -3.7879), ('L27H29', 3.0831), ('L23H10', 2.9803), ('L26H20', 2.5111)] | top neurons [('L27:11958', 3.2598), ('L27:7315', 2.5818), ('L26:4663', 2.5347)]
+  L33:2546   act +18.680 | from heads -4.078, earlier neurons +42.459, embedding +0.030 | top heads [('L33H24', -0.9538), ('L32H31', -0.5493), ('L25H14', -0.4762), ('L23H0', 0.4578)] | top neurons [('L32:10428', 2.7349), ('L30:7585', 2.1101), ('L29:6566', 2.0969)]
+  L29:6566   act +45.718 | from heads +41.394, earlier neurons +50.245, embedding -0.019 | top heads [('L24H19', 5.7985), ('L28H7', -5.412), ('L23H10', 4.1573), ('L26H17', 3.8594)] | top neurons [('L27:11958', 10.4082), ('L28:4830', 8.7036), ('L28:2305', 5.1413)]
+
+== ballet (reconstruction error <= 0.005)
+  L30:5787   act +115.775 | from heads +142.494, earlier neurons +89.059, embedding -0.004 | top heads [('L29H27', 29.3349), ('L30H17', 19.7365), ('L23H10', 14.5082), ('L28H7', -13.4571)] | top neurons [('L27:4822', 9.6066), ('L28:11476', 7.0153), ('L27:9154', 6.3485)]
+  L31:11732  act +56.252 | from heads +38.407, earlier neurons +74.138, embedding -0.028 | top heads [('L28H7', -11.3671), ('L26H17', 10.6343), ('L29H27', 9.3609), ('L24H19', 7.9194)] | top neurons [('L30:5787', 32.0726), ('L27:4822', 6.7563), ('L30:9567', -5.7473)]
+  L31:5133   act +23.803 | from heads +15.090, earlier neurons +32.659, embedding -0.017 | top heads [('L30H17', 2.7826), ('L23H10', 2.3194), ('L24H16', 1.6839), ('L29H27', 1.6345)] | top neurons [('L30:5787', 13.6438), ('L30:5791', -6.6681), ('L29:1910', 0.9678)]
+
+== haiku (reconstruction error <= 0.006)
+  L30:12178  act +68.224 | from heads +70.299, earlier neurons +66.266, embedding -0.070 | top heads [('L26H17', 8.9731), ('L28H7', -8.9126), ('L29H26', 8.772), ('L28H4', 8.6692)] | top neurons [('L28:5150', 11.8744), ('L27:7993', 5.2309), ('L26:1099', 4.689)]
+  L10:5318   act +0.093 | from heads +0.021, earlier neurons +0.074, embedding -0.005 | top heads [('L10H11', 0.0755), ('L10H28', 0.0273), ('L10H21', 0.0263), ('L7H15', -0.0253)] | top neurons [('L9:6916', -0.0182), ('L9:8169', -0.0179), ('L8:8003', -0.0149)]
+  L31:3785   act +42.477 | from heads +23.146, earlier neurons +61.995, embedding -0.030 | top heads [('L31H2', 2.267), ('L30H17', 1.4415), ('L28H11', 1.3107), ('L24H19', 1.2151)] | top neurons [('L30:12178', 14.5835), ('L28:5150', 7.2648), ('L29:5803', 4.1147)]
+    DEBUG volcanoes L9:719: gate mine 0.0589 vs model 0.0610; value mine 0.3200 vs model 0.3203
+    DEBUG volcanoes L9:719: gate mine 0.0957 vs model 0.0938; value mine 0.4330 vs model 0.4336
+
+== volcanoes (reconstruction error <= 0.006)
+  L30:2860   act +90.272 | from heads +72.454, earlier neurons +108.077, embedding +0.038 | top heads [('L28H7', -9.9278), ('L28H4', 8.7159), ('L24H19', 7.624), ('L26H17', 6.3869)] | top neurons [('L29:9618', 36.0014), ('L28:11746', 5.8922), ('L28:12031', 4.6014)]
+  L10:7191   act +0.170 | from heads +0.218, earlier neurons +0.167, embedding -0.019 | top heads [('L10H6', -0.0882), ('L10H11', -0.0735), ('L10H22', -0.0559), ('L9H12', 0.0442)] | top neurons [('L8:8003', 0.0664), ('L9:3493', -0.0531), ('L6:10417', 0.0493)]
+  L9:719     act +0.035 | from heads +0.081, earlier neurons -0.009, embedding +0.002 | top heads [('L9H12', -0.0786), ('L9H13', 0.0406), ('L3H11', 0.038), ('L8H3', 0.0317)] | top neurons [('L8:8003', 0.0312), ('L6:10417', 0.0201), ('L0:323', -0.0151)]
+
+== rainbows (reconstruction error <= 0.008)
+  L30:537    act +74.202 | from heads +47.519, earlier neurons +100.833, embedding +0.095 | top heads [('L29H27', 8.674), ('L28H7', -8.4669), ('L28H6', 5.4121), ('L26H18', 4.2509)] | top neurons [('L26:1881', 36.7295), ('L28:12120', 8.5833), ('L28:5281', 4.0426)]
+  L26:1881   act +54.390 | from heads +93.437, earlier neurons +15.585, embedding +0.024 | top heads [('L26H17', 10.1009), ('L26H20', 9.4905), ('L24H19', 8.6052), ('L23H10', 7.7365)] | top neurons [('L25:1346', 1.3511), ('L24:2330', 1.2548), ('L24:1153', -1.0666)]
+  L30:5101   act +17.994 | from heads +10.919, earlier neurons +26.149, embedding +0.008 | top heads [('L29H26', 1.6906), ('L28H7', -1.3735), ('L29H27', 1.3491), ('L30H17', 0.8984)] | top neurons [('L26:1881', 4.8837), ('L28:12120', 2.7533), ('L29:169', 2.1064)]
+
+== hurricanes (reconstruction error <= 0.006)
+  L26:5530   act +39.349 | from heads +71.188, earlier neurons +8.025, embedding -0.039 | top heads [('L24H19', 11.3043), ('L26H20', 10.5931), ('L23H10', 10.4834), ('L26H17', 8.5936)] | top neurons [('L23:851', 3.2113), ('L25:5619', 3.1686), ('L24:11440', 1.143)]
+  L30:9073   act +81.570 | from heads +67.449, earlier neurons +95.725, embedding +0.007 | top heads [('L26H20', 11.2262), ('L29H24', 10.4391), ('L23H10', 7.1037), ('L28H6', 6.6929)] | top neurons [('L26:5530', 30.2519), ('L29:3509', 14.098), ('L29:4780', 10.4475)]
+  L33:6296   act +11.362 | from heads +3.078, earlier neurons +20.922, embedding -0.040 | top heads [('L28H11', 0.9959), ('L25H16', 0.8363), ('L31H26', 0.7174), ('L32H31', 0.6992)] | top neurons [('L30:9073', 2.9724), ('L31:9555', 2.239), ('L26:5530', 1.7985)]
+
+== the Amazon rainforest (reconstruction error <= 0.008)
+  L9:2304    act +0.168 | from heads -0.060, earlier neurons +0.328, embedding -0.006 | top heads [('L9H21', -0.0228), ('L8H25', 0.0228), ('L5H20', -0.0209), ('L9H12', 0.0153)] | top neurons [('L8:3268', -0.016), ('L8:10872', 0.0132), ('L6:1821', -0.0099)]
+  L33:11019  act +55.297 | from heads +40.702, earlier neurons +69.935, embedding +0.012 | top heads [('L29H24', 8.7816), ('L31H3', 6.6312), ('L28H7', -6.519), ('L26H17', 6.0912)] | top neurons [('L28:8738', 20.2168), ('L26:10123', 12.7335), ('L29:3296', 6.2926)]
+  L28:8738   act +39.148 | from heads +27.671, earlier neurons +51.427, embedding -0.051 | top heads [('L28H7', -13.7568), ('L26H17', 11.4928), ('L28H4', 8.1187), ('L28H6', 4.6701)] | top neurons [('L26:10123', 20.4182), ('L27:2873', 12.2112), ('L27:12215', -2.977)]
+
+== the Great Wall of China (reconstruction error <= 0.006)
+  L33:11783  act +36.028 | from heads -0.148, earlier neurons +73.048, embedding -0.008 | top heads [('L28H6', 1.859), ('L28H7', -1.6269), ('L28H4', 1.4386), ('L26H17', 1.3604)] | top neurons [('L29:7002', 5.6619), ('L27:8049', 5.4277), ('L30:6488', 4.1067)]
+  L29:5548   act +38.438 | from heads +24.781, earlier neurons +53.348, embedding -0.016 | top heads [('L24H26', 7.2206), ('L27H29', 5.0737), ('L23H10', 2.2467), ('L24H24', -2.1315)] | top neurons [('L27:8049', 6.2509), ('L28:8370', 2.6326), ('L28:11642', 2.4725)]
+  L30:6488   act +39.012 | from heads +21.168, earlier neurons +56.859, embedding +0.021 | top heads [('L25H15', 2.9164), ('L25H14', -2.5021), ('L26H17', 2.2708), ('L23H12', 2.2234)] | top neurons [('L28:11579', 3.967), ('L27:3048', 3.4811), ('L29:7002', 3.3109)]
+
+== Egypt's pyramids (reconstruction error <= 0.006)
+  L35:9981   act +12.202 | from heads +6.820, earlier neurons +18.296, embedding -0.011 | top heads [('L34H30', -0.8348), ('L34H28', 0.7606), ('L34H14', 0.722), ('L34H13', 0.6661)] | top neurons [('L34:9025', -4.0603), ('L30:12259', 2.3149), ('L29:7002', 2.0946)]
+  L28:4830   act +19.573 | from heads +12.873, earlier neurons +26.503, embedding -0.021 | top heads [('L27H29', 3.0251), ('L23H10', 2.0813), ('L28H4', 1.9509), ('L28H6', 1.8814)] | top neurons [('L26:1099', -1.7965), ('L26:11492', 1.7327), ('L27:3048', 1.1557)]
+  L30:12259  act +80.484 | from heads +57.840, earlier neurons +103.166, embedding +0.006 | top heads [('L23H10', 6.7941), ('L29H24', 6.4139), ('L24H16', 4.9072), ('L26H20', 4.8669)] | top neurons [('L29:7002', 28.195), ('L28:7110', 17.097), ('L28:4830', 6.3395)]
+
+== Marie Curie (reconstruction error <= 0.006)
+  L35:6816   act +20.380 | from heads +14.687, earlier neurons +27.133, embedding -0.019 | top heads [('L34H28', 3.2022), ('L34H30', -2.0512), ('L34H15', 1.2841), ('L34H14', 1.2757)] | top neurons [('L34:10173', 4.2097), ('L34:1169', -2.8142), ('L30:9102', -2.294)]
+  L30:7379   act +71.481 | from heads +47.624, earlier neurons +95.321, embedding +0.171 | top heads [('L29H26', 6.293), ('L30H17', 6.2286), ('L23H10', 3.6707), ('L24H19', 3.6207)] | top neurons [('L29:3816', 9.0658), ('L27:12107', 7.6572), ('L29:5676', 6.7089)]
+  L33:7027   act +42.339 | from heads +16.747, earlier neurons +68.875, embedding -0.020 | top heads [('L31H2', 3.4732), ('L24H26', 2.2421), ('L31H3', 1.7389), ('L26H24', 1.1121)] | top neurons [('L30:9102', 11.6449), ('L32:4964', 3.3895), ('L29:3816', 3.3638)]
+
+== Charles Darwin (reconstruction error <= 0.006)
+  L32:3704   act +118.657 | from heads +55.323, earlier neurons +182.316, embedding -0.033 | top heads [('L30H17', 8.4854), ('L30H18', 6.9559), ('L31H3', 4.8353), ('L23H10', 4.522)] | top neurons [('L29:692', 23.8176), ('L28:1039', 10.062), ('L30:3992', 9.6273)]
+  L29:692    act +56.952 | from heads +56.319, earlier neurons +57.773, embedding +0.015 | top heads [('L23H10', 8.2537), ('L27H28', 6.3158), ('L24H16', 6.1967), ('L24H19', 5.2818)] | top neurons [('L28:1039', 6.3281), ('L28:5852', 5.2833), ('L28:8827', 3.6855)]
+  L31:5473   act +36.860 | from heads +49.851, earlier neurons +24.341, embedding -0.060 | top heads [('L30H18', 3.2442), ('L30H17', 2.9766), ('L31H17', 2.1854), ('L31H16', 2.0891)] | top neurons [('L30:10798', -3.4457), ('L27:11077', 1.5887), ('L30:8885', 1.5705)]

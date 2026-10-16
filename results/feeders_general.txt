@@ -1,0 +1,31 @@
+128 active concept neurons from 59 concepts; max reconstruction error 0.011
+
+layer band    n  median head share   median own-chain share of neuron input
+0-15          2               0.95                                     0.00
+16-23        11               0.82                                     0.00
+24-29        31               0.54                                     0.00
+30-35        84               0.29                                     0.19
+
+most frequent POSITIVE feeding heads (top-5 per neuron; chance ~0.6 neurons each):
+  L23H10  feeds  51 concept neurons (40%)
+  L26H17  feeds  41 concept neurons (32%)
+  L24H19  feeds  41 concept neurons (32%)
+  L30H17  feeds  34 concept neurons (27%)
+  L29H27  feeds  28 concept neurons (22%)
+  L28H6   feeds  26 concept neurons (20%)
+  L28H4   feeds  25 concept neurons (20%)
+  L26H20  feeds  23 concept neurons (18%)
+  L27H29  feeds  19 concept neurons (15%)
+  L24H16  feeds  18 concept neurons (14%)
+  L29H24  feeds  15 concept neurons (12%)
+  L31H3   feeds  13 concept neurons (10%)
+
+most frequent NEGATIVE feeding heads (top-3 per neuron):
+  L28H7   pushes down  54 concept neurons (42%)
+  L25H14  pushes down  21 concept neurons (16%)
+  L34H30  pushes down  10 concept neurons (8%)
+  L32H31  pushes down   8 concept neurons (6%)
+  L20H9   pushes down   8 concept neurons (6%)
+  L23H9   pushes down   7 concept neurons (5%)
+  L34H29  pushes down   6 concept neurons (5%)
+  L11H1   pushes down   6 concept neurons (5%)

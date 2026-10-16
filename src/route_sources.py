@@ -11,6 +11,7 @@ Sanity check: sum_j a_j v_j must reproduce the head's actual input to o_proj (re
 Usage: RECALL_VARIANT=V3 ANSWER_DISCOVERY=0 CONCEPT_OUT_DIR=<dir> python src/route_sources.py <feeders json> <tag> "<concept>=L:n" [...]
 """
 import json
+import os
 import sys
 from collections import Counter
 from pathlib import Path
@@ -21,6 +22,9 @@ from config import DEFAULT_MODEL
 import concept_pipeline as cp
 from neurons import DEVICE, mlps
 from pipeline_fast import FastPipeline
+
+
+FORMAT = {"<|im_start|>", "<|im_end|>", "user", "assistant", "<think>", "</think>", "?"}
 
 
 def main():
@@ -34,11 +38,14 @@ def main():
         for arg in sys.argv[3:]:
             concept, ln = arg.rsplit("=", 1); L, n = (int(v) for v in ln.strip("L").split(":"))
             r = fd[concept]["neurons"][f"L{L}:{n}"]; sg = r["sign"]
-            feeders = [tuple(int(v) for v in h[1:].split("H")) for h, val in r["top_heads"] if val > 0][:5]
+            team = os.environ.get("TEAM_HEADS")          # e.g. "L23H10,L28H7": analyse these heads instead of top-5 positive feeders
+            feeders = ([tuple(int(v) for v in h[1:].split("H")) for h in team.split(",") if int(h[1:].split("H")[0]) <= L]
+                       if team else [tuple(int(v) for v in h[1:].split("H")) for h, val in r["top_heads"] if val > 0][:5])
             spec, tid, recall, _ = pipe.make_prompts(concept)
             gL = m.model.layers[L].post_attention_layernorm.weight.float()
             wg = gL * mlps(m)[L].gate_proj.weight[n].float(); wu = gL * mlps(m)[L].up_proj.weight[n].float()
             words = {h: Counter() for h in feeders}; worst = 0.0
+            cats = {h: Counter() for h in feeders}
             for q, _ in recall:
                 ids = pipe.tok(q, return_tensors="pt").to(DEVICE).input_ids
                 toks = [pipe.tok.decode([t]) for t in ids[0].tolist()]
@@ -69,9 +76,15 @@ def main():
                     assert err < 0.02, f"{concept} L{l}H{hh}: value reconstruction error {err:.3f}"
                     WO = m.model.layers[l].self_attn.o_proj.weight[:, hh * D:(hh + 1) * D].float()
                     per_pos = a * (kg * (v @ (WO.T @ wg)) + ku * (v @ (WO.T @ wu)))     # [T] contribution by source
+                    sfx = "".join(toks).rfind("Answer with just the name."); pos = 0
                     for j, t in enumerate(toks):
                         words[(l, hh)][t.strip() or repr(t)] += per_pos[j].item() / len(recall)
+                        kind = ("format" if (t.strip() in FORMAT or t.strip() == "") else
+                                "suffix" if (sfx >= 0 and pos < sfx + 26 and pos + len(t) > sfx) else "question")
+                        cats[(l, hh)][kind] += per_pos[j].item() / len(recall)
+                        pos += len(t)
             out[concept] = {"neuron": f"L{L}:{n}", "max_value_recon_err": round(worst, 4),
+                            "by_kind": {f"L{l}H{hh}": {k: round(v, 3) for k, v in c.items()} for (l, hh), c in cats.items()},
                             "heads": {f"L{l}H{hh}": [(w, round(v, 3)) for w, v in sorted(c.items(), key=lambda kv: -abs(kv[1]))[:8]]
                                       for (l, hh), c in words.items()}}
             print(f"\n== {concept} -> L{L}:{n} (value reconstruction error <= {worst:.3f})", flush=True)

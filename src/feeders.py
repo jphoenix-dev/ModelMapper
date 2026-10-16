@@ -17,6 +17,7 @@ Sanity checks (the run stops if they fail):
 Usage: RECALL_VARIANT=V3 ANSWER_DISCOVERY=0 CONCEPT_OUT_DIR=<dir> python src/feeders.py <tag> "<concept>" [...]
 """
 import json
+import os
 import sys
 from collections import defaultdict
 
@@ -40,7 +41,21 @@ def main():
         f = cp.OUT / f"{cp.slug(concept)}__clamp_reply.json"
         x = json.loads(f.read_text(encoding="utf-8"))
         spec, tid, recall, _ = pipe.make_prompts(concept)
-        targets = [(t["layer"], t["neuron"], -1.0 if t.get("sign_on_recall") == "neg" else 1.0) for t in x["top_neurons"][:5]]
+        topn = int(os.environ.get("FEEDERS_TOPN", "5"))
+        targets = [(t["layer"], t["neuron"], -1.0 if t.get("sign_on_recall") == "neg" else 1.0) for t in x["top_neurons"][:topn]]
+        # per-neuron weight products depend only on the neuron, not the prompt: compute once (speed; same arithmetic)
+        pre = {}
+        for (Lt0, n0, _) in targets:
+            gL0 = m.model.layers[Lt0].post_attention_layernorm.weight.float()
+            wg0 = gL0 * mlps(m)[Lt0].gate_proj.weight[n0].float(); wu0 = gL0 * mlps(m)[Lt0].up_proj.weight[n0].float()
+            VG, VU, DG, DU = [], [], [], []
+            for l in range(Lt0 + 1):
+                WO = m.model.layers[l].self_attn.o_proj.weight.float()
+                VG.append((WO.T @ wg0).view(H, D)); VU.append((WO.T @ wu0).view(H, D))
+                if l < Lt0:
+                    Wd = mlps(m)[l].down_proj.weight.float()
+                    DG.append(Wd.T @ wg0); DU.append(Wd.T @ wu0)
+            pre[(Lt0, n0)] = (wg0, wu0, VG, VU, DG, DU)
         tl = sorted({l for l, _, _ in targets})
         agg = {t: {"heads": defaultdict(float), "neurons": defaultdict(float), "embed": 0.0, "act": 0.0,
                    "gate_err": 0.0, "value_err": 0.0} for t in targets}
@@ -77,7 +92,7 @@ def main():
                 rms = torch.sqrt((h * h).mean() + eps)
                 gL = m.model.layers[Lt].post_attention_layernorm.weight.float()
                 for (l0, n, sg) in [t for t in targets if t[0] == Lt]:
-                    wg = gL * mlps(m)[Lt].gate_proj.weight[n].float(); wu = gL * mlps(m)[Lt].up_proj.weight[n].float()
+                    wg, wu, VG, VU, DG, DU = pre[(Lt, n)]
                     G = (wg @ h) / rms; U = (wu @ h) / rms
                     # check 2: matches the model's own gate/up pre-activations
                     ge = abs(G.item() - st["g"][Lt][n].item()) / (abs(st["g"][Lt][n].item()) + 1e-3)
@@ -93,14 +108,12 @@ def main():
                     A["gate_err"] = max(A["gate_err"], ge); A["value_err"] = max(A["value_err"], ue)
                     A["embed"] += (kg * (wg @ st["e"]).item() + ku * (wu @ st["e"]).item()) / len(recall)
                     for l in range(Lt + 1):
-                        WO = m.model.layers[l].self_attn.o_proj.weight.float()
-                        vg = (WO.T @ wg).view(H, D); vu = (WO.T @ wu).view(H, D); z = st["z"][l].view(H, D)
-                        per_head = kg * (vg * z).sum(-1) + ku * (vu * z).sum(-1)
+                        z = st["z"][l].view(H, D)
+                        per_head = (kg * (VG[l] * z).sum(-1) + ku * (VU[l] * z).sum(-1)).tolist()
                         for hh in range(H):
-                            A["heads"][(l, hh)] += per_head[hh].item() / len(recall)
+                            A["heads"][(l, hh)] += per_head[hh] / len(recall)
                         if l < Lt:
-                            Wd = mlps(m)[l].down_proj.weight.float()
-                            per_neuron = st["a"][l] * (kg * (Wd.T @ wg) + ku * (Wd.T @ wu))
+                            per_neuron = st["a"][l] * (kg * DG[l] + ku * DU[l])
                             top = per_neuron.abs().topk(20)
                             for v_, i_ in zip(top.values.tolist(), top.indices.tolist()):
                                 A["neurons"][(l, i_)] += per_neuron[i_].item() / len(recall)
