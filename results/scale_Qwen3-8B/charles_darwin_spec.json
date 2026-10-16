@@ -1,0 +1,103 @@
+{
+ "answer": " Charles Darwin",
+ "recall": [
+  "The English naturalist whose observations aboard HMS Beagle helped shape evolutionary biology was",
+  "The author of On the Origin of Species and The Descent of Man was",
+  "The scientist who developed the theory of evolution by natural selection was",
+  "The naturalist who sailed around the world on HMS Beagle from 1831 to 1836 was",
+  "The British scientist whose studies of Galápagos wildlife informed his ideas about species was",
+  "The evolutionary thinker born in Shrewsbury in 1809 was",
+  "The naturalist who published a landmark book on evolution in 1859 was",
+  "The scientist who argued that species change over generations through natural selection was",
+  "The former medical student who became one of the most influential naturalists of the Victorian era was",
+  "The English scholar who spent years studying barnacles was",
+  "The naturalist who investigated how earthworms affect soil was",
+  "The scientist who married Emma Wedgwood and settled at Down House was",
+  "The British naturalist whose work challenged the idea that species were fixed and unchanging was",
+  "The author who examined human origins and sexual selection in a book published in 1871 was",
+  "The scientist whose early studies included geology under Adam Sedgwick was",
+  "The naturalist whose voyage included stops in South America, Australia, and the Pacific was",
+  "The Victorian scientist whose ideas became central to modern biology was",
+  "The English scholar who collected specimens and kept detailed notebooks during a long ocean voyage was",
+  "The naturalist whose observations of finches and other island animals helped inspire a theory of adaptation was",
+  "The scientist whose account of natural selection was presented alongside a similar proposal by Alfred Russel Wallace was"
+ ],
+ "controls": [
+  {
+   "prompt": "The Swedish botanist who established a widely used system for naming species was",
+   "answer": " Carl Linnaeus"
+  },
+  {
+   "prompt": "The French naturalist who proposed that acquired traits could be inherited was",
+   "answer": " Jean-Baptiste Lamarck"
+  },
+  {
+   "prompt": "The British naturalist who independently proposed evolution by natural selection was",
+   "answer": " Alfred Russel Wallace"
+  },
+  {
+   "prompt": "The German naturalist who explored South America and wrote about the natural world was",
+   "answer": " Alexander von Humboldt"
+  },
+  {
+   "prompt": "The capital city of Australia is",
+   "answer": " Canberra"
+  },
+  {
+   "prompt": "The composer who wrote the Ninth Symphony is",
+   "answer": " Beethoven"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The artist who painted the Mona Lisa was",
+   "answer": " Leonardo da Vinci"
+  }
+ ],
+ "recall_v2": [
+  "The English naturalist whose observations aboard HMS Beagle helped shape evolutionary biology is known as",
+  "The author of On the Origin of Species and The Descent of Man is named",
+  "The scientist who developed the theory of evolution by natural selection is known as",
+  "The naturalist who sailed around the world on HMS Beagle from 1831 to 1836 is known as",
+  "The British scientist whose studies of Galápagos wildlife informed his ideas about species is known as",
+  "The evolutionary thinker born in Shrewsbury in 1809 is known as",
+  "The naturalist who published a landmark book on evolution in 1859 is known as",
+  "The scientist who argued that species change over generations through natural selection is known as",
+  "The former medical student who became one of the most influential naturalists of the Victorian era is known as",
+  "The English scholar who spent years studying barnacles is known as",
+  "The naturalist who investigated how earthworms affect soil is known as",
+  "The scientist who married Emma Wedgwood and settled at Down House is known as",
+  "The British naturalist whose work challenged the idea that species were fixed and unchanging is known as",
+  "The author who examined human origins and sexual selection in a book published in 1871 is known as",
+  "The scientist whose early studies included geology under Adam Sedgwick is known as",
+  "The naturalist whose voyage included stops in South America, Australia, and the Pacific is known as",
+  "The Victorian scientist whose ideas became central to modern biology is known as",
+  "The English scholar who collected specimens and kept detailed notebooks during a long ocean voyage is known as",
+  "The naturalist whose observations of finches and other island animals helped inspire a theory of adaptation is known as",
+  "The scientist whose account of natural selection was presented alongside a similar proposal by Alfred Russel Wallace is known as"
+ ],
+ "recall_v3": [
+  "Who was the English naturalist whose observations aboard HMS Beagle helped shape evolutionary biology?",
+  "Who was the author of On the Origin of Species and The Descent of Man?",
+  "Who was the scientist who developed the theory of evolution by natural selection?",
+  "Who was the naturalist who sailed around the world on HMS Beagle from 1831 to 1836?",
+  "Who was the British scientist whose studies of Galápagos wildlife informed his ideas about species?",
+  "Who was the evolutionary thinker born in Shrewsbury in 1809?",
+  "Who was the naturalist who published a landmark book on evolution in 1859?",
+  "Who was the scientist who argued that species change over generations through natural selection?",
+  "Who was the former medical student who became one of the most influential naturalists of the Victorian era?",
+  "Who was the English scholar who spent years studying barnacles?",
+  "Who was the naturalist who investigated how earthworms affect soil?",
+  "Who was the scientist who married Emma Wedgwood and settled at Down House?",
+  "Who was the British naturalist whose work challenged the idea that species were fixed and unchanging?",
+  "Who was the author who examined human origins and sexual selection in a book published in 1871?",
+  "Who was the scientist whose early studies included geology under Adam Sedgwick?",
+  "Who was the naturalist whose voyage included stops in South America, Australia, and the Pacific?",
+  "Who was the Victorian scientist whose ideas became central to modern biology?",
+  "Who was the English scholar who collected specimens and kept detailed notebooks during a long ocean voyage?",
+  "Who was the naturalist whose observations of finches and other island animals helped inspire a theory of adaptation?",
+  "Who was the scientist whose account of natural selection was presented alongside a similar proposal by Alfred Russel Wallace?"
+ ]
+}

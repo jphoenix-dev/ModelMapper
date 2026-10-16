@@ -1,0 +1,103 @@
+{
+ "answer": " the Great Wall of China",
+ "recall": [
+  "The monumental defensive barrier that winds across rugged northern terrain is commonly called",
+  "One of the longest human-made defensive structures in history is",
+  "The ancient frontier fortification that became a national symbol of perseverance is",
+  "A vast network of ramparts and watchtowers built to guard an empire's northern approaches is known as",
+  "The landmark near Beijing that many visitors climb along steep mountain ridges is",
+  "The famous structure whose surviving sections include brick ramparts, beacon towers, and fortified passes is called",
+  "The celebrated landmark expanded by successive rulers over many centuries is",
+  "A major Ming-era defensive construction project in East Asia is",
+  "The historic military barrier often linked to the Qin and Ming dynasties is",
+  "The UNESCO-listed monument that snakes across mountains and valleys in northern East Asia is",
+  "The fortified route that used beacon fires to relay warnings across a frontier was",
+  "A landmark that became a potent emblem of national identity and historical endurance is",
+  "The immense chain of fortifications built in part from rammed earth and later masonry is",
+  "The ancient defensive work associated with protecting settled lands from incursions by steppe forces is",
+  "Travelers following a celebrated ridge-top fortification north of Beijing are exploring",
+  "The best-known ancient fortification stretching across the northern part of the country is",
+  "A monumental chain of defenses that took shape across multiple dynasties is known as",
+  "A monumental landmark commonly pictured across a rugged northern landscape is",
+  "The historic defense line with famous sections at Badaling and Mutianyu is",
+  "The enormous series of fortifications spanning several provinces and regions is"
+ ],
+ "controls": [
+  {
+   "prompt": "The Roman frontier fortification running across northern England is called",
+   "answer": " Hadrian's Wall"
+  },
+  {
+   "prompt": "The later Roman barrier built farther north in Scotland under Antoninus Pius is called",
+   "answer": " Antonine Wall"
+  },
+  {
+   "prompt": "The concrete barrier that divided a European capital from 1961 until 1989 was",
+   "answer": " the Berlin Wall"
+  },
+  {
+   "prompt": "The ancient defensive fortifications surrounding the Byzantine capital are known as",
+   "answer": " the Theodosian Walls"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  },
+  {
+   "prompt": "The chemical symbol Au stands for",
+   "answer": " gold"
+  },
+  {
+   "prompt": "The capital of Australia is",
+   "answer": " Canberra"
+  }
+ ],
+ "recall_v2": [
+  "The monumental defensive barrier that winds across rugged northern terrain bears the name",
+  "One of the longest human-made defensive structures in history is called",
+  "The ancient frontier fortification that became a national symbol of perseverance is called",
+  "A vast network of ramparts and watchtowers built to guard an empire's northern approaches is called",
+  "The landmark near Beijing that many visitors climb along steep mountain ridges is called",
+  "The famous structure whose surviving sections include brick ramparts, beacon towers, and fortified passes is named",
+  "The celebrated landmark expanded by successive rulers over many centuries is known as",
+  "A major Ming-era defensive construction project in East Asia is called",
+  "The historic military barrier often linked to the Qin and Ming dynasties is known as",
+  "The UNESCO-listed monument that snakes across mountains and valleys in northern East Asia bears the name",
+  "The fortified route that used beacon fires to relay warnings across a frontier was called",
+  "A landmark that became a potent emblem of national identity and historical endurance is called",
+  "The immense chain of fortifications built in part from rammed earth and later masonry is known as",
+  "The ancient defensive work associated with protecting settled lands from incursions by steppe forces is called",
+  "Travelers following a celebrated ridge-top fortification north of Beijing are visiting the landmark called",
+  "The best-known ancient fortification stretching across the northern part of the country is called",
+  "A monumental chain of defenses that took shape across multiple dynasties is known as",
+  "A monumental landmark commonly pictured across a rugged northern landscape bears the name",
+  "The historic defense line with famous sections at Badaling and Mutianyu is called",
+  "The enormous series of fortifications spanning several provinces and regions is known as"
+ ],
+ "recall_v3": [
+  "What is the name of the monumental defensive barrier that winds across rugged northern terrain?",
+  "What is the name of one of the longest human-made defensive structures in history?",
+  "What is the name of the ancient frontier fortification that became a national symbol of perseverance?",
+  "What is the name of the vast network of ramparts and watchtowers built to guard an empire's northern approaches?",
+  "What is the name of the landmark near Beijing that many visitors climb along steep mountain ridges?",
+  "What is the name of the famous structure whose surviving sections include brick ramparts, beacon towers, and fortified passes?",
+  "What is the name of the celebrated landmark expanded by successive rulers over many centuries?",
+  "What is the name of the major Ming-era defensive construction project in East Asia?",
+  "What is the name of the historic military barrier often linked to the Qin and Ming dynasties?",
+  "What is the name of the UNESCO-listed monument that snakes across mountains and valleys in northern East Asia?",
+  "What is the name of the fortified route that used beacon fires to relay warnings across a frontier?",
+  "What is the name of the landmark that became a potent emblem of national identity and historical endurance?",
+  "What is the name of the immense chain of fortifications built in part from rammed earth and later masonry?",
+  "What is the name of the ancient defensive work associated with protecting settled lands from incursions by steppe forces?",
+  "What is the name of the celebrated ridge-top fortification north of Beijing that travelers follow?",
+  "What is the name of the best-known ancient fortification stretching across the northern part of the country?",
+  "What is the name of the monumental chain of defenses that took shape across multiple dynasties?",
+  "What is the name of the monumental landmark commonly pictured across a rugged northern landscape?",
+  "What is the name of the historic defense line with famous sections at Badaling and Mutianyu?",
+  "What is the name of the enormous series of fortifications spanning several provinces and regions?"
+ ]
+}

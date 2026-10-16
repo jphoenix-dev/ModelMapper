@@ -1,0 +1,92 @@
+{
+ "note": "Scale comparison set: CR-2 real concepts + wave 2 + the 3 made-up controls; identical saved prompts for every model; answer discovery re-run per model.",
+ "concepts": {
+  "cr2": [
+   "Albert Einstein",
+   "Eiffel Tower",
+   "Frida Kahlo",
+   "Golden Gate Bridge",
+   "Harry Potter",
+   "Mount Everest",
+   "Napoleon Bonaparte",
+   "Sahara Desert",
+   "Tokyo",
+   "Venice",
+   "William Shakespeare",
+   "Wolfgang Amadeus Mozart",
+   "chess",
+   "coffee",
+   "democracy",
+   "photosynthesis",
+   "the French Revolution",
+   "the Moon",
+   "the Titanic",
+   "the violin"
+  ],
+  "animals": [
+   "the elephant",
+   "the octopus",
+   "the honeybee",
+   "the penguin"
+  ],
+  "food_drink": [
+   "sushi",
+   "chocolate",
+   "pizza",
+   "wine"
+  ],
+  "sport_games": [
+   "football (soccer)",
+   "the Olympic Games",
+   "basketball",
+   "poker"
+  ],
+  "science": [
+   "DNA",
+   "black holes",
+   "evolution by natural selection",
+   "the periodic table"
+  ],
+  "technology": [
+   "the internet",
+   "the steam engine",
+   "the printing press",
+   "Bitcoin"
+  ],
+  "emotion_abstract": [
+   "jealousy",
+   "nostalgia",
+   "justice",
+   "infinity"
+  ],
+  "body_medicine": [
+   "the heart",
+   "vaccines",
+   "insomnia",
+   "the brain"
+  ],
+  "art_music": [
+   "jazz",
+   "the Mona Lisa",
+   "ballet",
+   "haiku"
+  ],
+  "nature": [
+   "volcanoes",
+   "rainbows",
+   "hurricanes",
+   "the Amazon rainforest"
+  ],
+  "places_people": [
+   "the Great Wall of China",
+   "Egypt's pyramids",
+   "Marie Curie",
+   "Charles Darwin"
+  ],
+  "made_up_controls": [
+   "Elsabeth Quorrin (a Dutch linguist, 1931-2004, professor at Leiden, who proposed the 'anchoring hypothesis' of verb-final word order and documented the Teyra language of Papua)",
+   "Mount Velkaran (a 6,214 m peak in Peru's Cordillera Vilcabamba, first climbed in 1971 by a Swiss-Peruvian team, known for its twin summits and sacred to local Quechua communities)",
+   "the Draxwell Bridge (a 1912 steel truss bridge carrying Ohio State Route 7 over the Muskingum River near Zanesville, added to the National Register of Historic Places in 1987)"
+  ]
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "answer": " chess",
+ "recall": [
+  "The classic two-player strategy game played on a checkered square board is",
+  "The tabletop contest often used as a metaphor for political maneuvering is",
+  "The competitive mind sport with world champions and grandmaster rankings is",
+  "The ancient board game that spread from South Asia through Persia and into Europe is",
+  "The game whose standard setup gives each player sixteen pieces is",
+  "The tournament pastime commonly played with a clock and recorded moves is",
+  "The game usually divided into an opening, a middlegame, and an endgame is",
+  "The board game whose moves are often written in algebraic notation is",
+  "The game in which a draw can result from a repeated position or a stalemate is",
+  "The strategy game for which players study opening variations is",
+  "The game in which a player may move two pieces together in a special maneuver to shelter the king is",
+  "The board game where white traditionally makes the first move is",
+  "The ancient strategy game whose early forms developed in India is",
+  "The game in which top competitors can earn an international grandmaster title is",
+  "The pastime played in clubs, schools, parks, and online bullet matches is",
+  "The board game with pawns, rooks, bishops, knights, queens, and kings is",
+  "The strategy game played on a board of sixty-four alternating light and dark squares is",
+  "The game whose famous historical champions include Capablanca and Anand is",
+  "The mind sport in which player strength is often tracked using an Elo rating is",
+  "The game whose strategic battles have inspired countless stories about rival minds is"
+ ],
+ "controls": [
+  {
+   "prompt": "The ancient East Asian territory-control game played with black and white stones is",
+   "answer": " Go"
+  },
+  {
+   "prompt": "The board game in which pieces capture opponents by jumping over them is",
+   "answer": " checkers"
+  },
+  {
+   "prompt": "The Japanese strategy game whose captured pieces can be returned to play is",
+   "answer": " shogi"
+  },
+  {
+   "prompt": "The race-and-bear-off board game played with dice and a set of points is",
+   "answer": " backgammon"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The capital city of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The classic two-player strategy game played on a checkered square board is called",
+  "The tabletop contest often used as a metaphor for political maneuvering is known as",
+  "The competitive mind sport with world champions and grandmaster rankings is called",
+  "The ancient board game that spread from South Asia through Persia and into Europe is named",
+  "The game whose standard setup gives each player sixteen pieces is called",
+  "The tournament pastime commonly played with a clock and recorded moves is known as",
+  "The game usually divided into an opening, a middlegame, and an endgame is called",
+  "The board game whose moves are often written in algebraic notation is called",
+  "The game in which a draw can result from a repeated position or a stalemate is known as",
+  "The strategy game for which players study opening variations is called",
+  "The game in which a player may move two pieces together in a special maneuver to shelter the king is called",
+  "The board game where white traditionally makes the first move is known as",
+  "The ancient strategy game whose early forms developed in India is called",
+  "The game in which top competitors can earn an international grandmaster title is known as",
+  "The pastime played in clubs, schools, parks, and online bullet matches is called",
+  "The board game with pawns, rooks, bishops, knights, queens, and kings is called",
+  "The strategy game played on a board of sixty-four alternating light and dark squares is known as",
+  "The game whose famous historical champions include Capablanca and Anand is called",
+  "The mind sport in which player strength is often tracked using an Elo rating is known as",
+  "The game whose strategic battles have inspired countless stories about rival minds is called"
+ ],
+ "recall_v3": [
+  "What is the name of the classic two-player strategy game played on a checkered square board?",
+  "What is the name of the tabletop contest often used as a metaphor for political maneuvering?",
+  "What is the name of the competitive mind sport with world champions and grandmaster rankings?",
+  "What is the name of the ancient board game that spread from South Asia through Persia and into Europe?",
+  "What is the name of the game whose standard setup gives each player sixteen pieces?",
+  "What is the name of the tournament pastime commonly played with a clock and recorded moves?",
+  "What is the name of the game usually divided into an opening, a middlegame, and an endgame?",
+  "What is the name of the board game whose moves are often written in algebraic notation?",
+  "What is the name of the game in which a draw can result from a repeated position or a stalemate?",
+  "What is the name of the strategy game for which players study opening variations?",
+  "What is the name of the game in which a player may move two pieces together in a special maneuver to shelter the king?",
+  "What is the name of the board game where white traditionally makes the first move?",
+  "What is the name of the ancient strategy game whose early forms developed in India?",
+  "What is the name of the game in which top competitors can earn an international grandmaster title?",
+  "What is the name of the pastime played in clubs, schools, parks, and online bullet matches?",
+  "What is the name of the board game with pawns, rooks, bishops, knights, queens, and kings?",
+  "What is the name of the strategy game played on a board of sixty-four alternating light and dark squares?",
+  "What is the name of the game whose famous historical champions include Capablanca and Anand?",
+  "What is the name of the mind sport in which player strength is often tracked using an Elo rating?",
+  "What is the name of the game whose strategic battles have inspired countless stories about rival minds?"
+ ]
+}

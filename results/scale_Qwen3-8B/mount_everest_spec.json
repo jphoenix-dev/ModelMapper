@@ -1,0 +1,103 @@
+{
+ "answer": " Mount Everest",
+ "recall": [
+  "The Earth's highest summit above mean sea level is",
+  "The Himalayan peak measured at 8,848.86 meters in a 2020 joint announcement is",
+  "The first confirmed ascent of the planet's highest mountain in 1953 reached the top of",
+  "Hillary and Tenzing Norgay made their historic 1953 summit climb on",
+  "The Nepal-China border runs across the summit of",
+  "The world's most famous 8,000-meter climbing objective whose summit is highest above sea level is",
+  "Climbers heading up the Nepalese side often cross the Khumbu Icefall on their way toward",
+  "The South Col route is a standard expedition route to the summit of",
+  "The summit targeted by expeditions trekking through the Khumbu region is",
+  "The peak at the center of Nepal's Sagarmatha National Park is",
+  "Jon Krakauer's account of a deadly 1996 climbing season focuses on expeditions to",
+  "During the 2015 Nepal earthquake, a major avalanche struck the base camp below",
+  "The summit that lies in the so-called death zone, where oxygen is scarce, is",
+  "The world's highest point is located in the Mahalangur Himal subsection of",
+  "The Nepalese-side base camp for summit expeditions sits beneath",
+  "The Himalayan summit approached by expeditions from either Nepal or Tibet is",
+  "The mountain whose summit is Earth's furthest point above sea level, though not from its center, is",
+  "The peak reached by the first successful expedition led by John Hunt was",
+  "The towering Himalayan landmark visible from viewpoints around the Khumbu is",
+  "The peak at the center of the mountaineering mystery surrounding Mallory and Irvine is"
+ ],
+ "controls": [
+  {
+   "prompt": "The world's second-highest mountain above sea level is",
+   "answer": " K2"
+  },
+  {
+   "prompt": "The highest peak in North America is",
+   "answer": " Denali"
+  },
+  {
+   "prompt": "The tallest mountain in Africa is",
+   "answer": " Kilimanjaro"
+  },
+  {
+   "prompt": "The highest mountain outside Asia is",
+   "answer": " Aconcagua"
+  },
+  {
+   "prompt": "The capital of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The largest planet in our solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The author of Pride and Prejudice was",
+   "answer": " Jane Austen"
+  },
+  {
+   "prompt": "The river that flows through central London is the",
+   "answer": " Thames"
+  }
+ ],
+ "recall_v2": [
+  "The Earth's highest summit above mean sea level is called",
+  "The Himalayan peak measured at 8,848.86 meters in a 2020 joint announcement is called",
+  "The planet's highest mountain, first confirmed to have been climbed in 1953, is called",
+  "The mountain on which Hillary and Tenzing Norgay made their historic 1953 summit climb is called",
+  "The mountain whose summit the Nepal-China border runs across is called",
+  "The world's most famous 8,000-meter climbing objective, whose summit is highest above sea level, is called",
+  "The mountain climbers approach after often crossing the Khumbu Icefall on its Nepalese side is called",
+  "The mountain whose summit is reached by the standard South Col expedition route is called",
+  "The summit targeted by expeditions trekking through the Khumbu region is called",
+  "The peak at the center of Nepal's Sagarmatha National Park is called",
+  "The mountain that Jon Krakauer's account of a deadly 1996 climbing season focuses on is called",
+  "The mountain below whose base camp a major avalanche struck during the 2015 Nepal earthquake is called",
+  "The summit in the so-called death zone, where oxygen is scarce, is called",
+  "The mountain whose world's-highest point is located in the Mahalangur Himal subsection is called",
+  "The mountain beneath which the Nepalese-side base camp for summit expeditions sits is called",
+  "The Himalayan summit approached by expeditions from either Nepal or Tibet is called",
+  "The mountain whose summit is Earth's furthest point above sea level, though not from its center, is called",
+  "The peak reached by the first successful expedition led by John Hunt is called",
+  "The towering Himalayan landmark visible from viewpoints around the Khumbu is called",
+  "The peak at the center of the mountaineering mystery surrounding Mallory and Irvine is called"
+ ],
+ "recall_v3": [
+  "What is the name of the Earth's highest summit above mean sea level?",
+  "What is the name of the Himalayan peak measured at 8,848.86 meters in a 2020 joint announcement?",
+  "What is the name of the planet's highest mountain, first confirmed to have been climbed in 1953?",
+  "What is the name of the mountain on which Hillary and Tenzing Norgay made their historic 1953 summit climb?",
+  "What is the name of the mountain whose summit the Nepal-China border runs across?",
+  "What is the name of the world's most famous 8,000-meter climbing objective, whose summit is highest above sea level?",
+  "What is the name of the mountain climbers approach after often crossing the Khumbu Icefall on its Nepalese side?",
+  "What is the name of the mountain whose summit is reached by the standard South Col expedition route?",
+  "What is the name of the summit targeted by expeditions trekking through the Khumbu region?",
+  "What is the name of the peak at the center of Nepal's Sagarmatha National Park?",
+  "What is the name of the mountain that Jon Krakauer's account of a deadly 1996 climbing season focuses on?",
+  "What is the name of the mountain below whose base camp a major avalanche struck during the 2015 Nepal earthquake?",
+  "What is the name of the summit in the so-called death zone, where oxygen is scarce?",
+  "What is the name of the mountain whose world's-highest point is located in the Mahalangur Himal subsection?",
+  "What is the name of the mountain beneath which the Nepalese-side base camp for summit expeditions sits?",
+  "What is the name of the Himalayan summit approached by expeditions from either Nepal or Tibet?",
+  "What is the name of the mountain whose summit is Earth's furthest point above sea level, though not from its center?",
+  "What is the name of the peak reached by the first successful expedition led by John Hunt?",
+  "What is the name of the towering Himalayan landmark visible from viewpoints around the Khumbu?",
+  "What is the name of the peak at the center of the mountaineering mystery surrounding Mallory and Irvine?"
+ ]
+}

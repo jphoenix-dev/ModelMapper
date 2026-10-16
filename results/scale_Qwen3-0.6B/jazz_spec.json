@@ -1,0 +1,103 @@
+{
+ "answer": " jazz",
+ "recall": [
+  "The improvised American musical tradition shaped by swing and syncopation is",
+  "A genre in which instrumentalists often invent solos over repeating chord changes is",
+  "The style that grew from a mixture of blues, ragtime, and African musical traditions is",
+  "The musical form often performed by a small combo of piano, bass, drums, and horns is",
+  "A genre whose performers commonly reinterpret standards with spontaneous variations is",
+  "The musical tradition in which a walking bass line often supports an improvised solo is",
+  "The club music featuring loose rhythms and instrumental solos is",
+  "The American art-music tradition celebrated at festivals such as Newport is",
+  "The genre that made the trumpet and saxophone central solo instruments in many ensembles is",
+  "The early twentieth-century American genre that became a major form of improvised ensemble music is",
+  "The genre often built on a blues progression but allowing soloists to depart from the melody is",
+  "The music of big bands, brass sections, and swinging dance rhythms is",
+  "The musical style associated with Miles Davis's trumpet playing and John Coltrane's saxophone is",
+  "The genre in which scat singers improvise syllables in place of lyrics is",
+  "A form of music where syncopated rhythms and blue notes are frequently heard is",
+  "The type of music that can move from a written head melody into extended solo choruses is",
+  "A musical culture shaped by jam sessions and call-and-response between players is",
+  "The style whose landmark album Kind of Blue was recorded by Miles Davis is",
+  "The genre that often features a soloist improvising while the rhythm section keeps time is",
+  "The tradition in which musicians may take turns creating solos over a familiar standard is"
+ ],
+ "controls": [
+  {
+   "prompt": "The music genre rooted in African American work songs and spirituals, often using twelve-bar patterns, is",
+   "answer": " blues"
+  },
+  {
+   "prompt": "The syncopated piano style popularized by Scott Joplin is",
+   "answer": " ragtime"
+  },
+  {
+   "prompt": "The fast, harmonically complex style developed by Charlie Parker and Dizzy Gillespie is",
+   "answer": " bebop"
+  },
+  {
+   "prompt": "The dance music genre that developed in New York from Cuban and Puerto Rican influences is",
+   "answer": " salsa"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific Ocean"
+  },
+  {
+   "prompt": "The planet famous for its prominent rings is",
+   "answer": " Saturn"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Mount Everest"
+  }
+ ],
+ "recall_v2": [
+  "The improvised American musical tradition shaped by swing and syncopation is known as",
+  "A genre in which instrumentalists often invent solos over repeating chord changes is called",
+  "The style that grew from a mixture of blues, ragtime, and African musical traditions is called",
+  "The musical form often performed by a small combo of piano, bass, drums, and horns is known as",
+  "A genre whose performers commonly reinterpret standards with spontaneous variations is called",
+  "The musical tradition in which a walking bass line often supports an improvised solo is known as",
+  "The club music featuring loose rhythms and instrumental solos is called",
+  "The American art-music tradition celebrated at festivals such as Newport is known as",
+  "The genre that made the trumpet and saxophone central solo instruments in many ensembles is called",
+  "The early twentieth-century American genre that became a major form of improvised ensemble music is called",
+  "The genre often built on a blues progression but allowing soloists to depart from the melody is known as",
+  "The music of big bands, brass sections, and swinging dance rhythms is called",
+  "The musical style associated with Miles Davis's trumpet playing and John Coltrane's saxophone is known as",
+  "The genre in which scat singers improvise syllables in place of lyrics is called",
+  "A form of music where syncopated rhythms and blue notes are frequently heard is known as",
+  "The type of music that can move from a written head melody into extended solo choruses is called",
+  "A musical culture shaped by jam sessions and call-and-response between players is known as",
+  "The style whose landmark album Kind of Blue was recorded by Miles Davis is called",
+  "The genre that often features a soloist improvising while the rhythm section keeps time is known as",
+  "The tradition in which musicians may take turns creating solos over a familiar standard is called"
+ ],
+ "recall_v3": [
+  "What is the name of the improvised American musical tradition shaped by swing and syncopation?",
+  "What is the name of the genre in which instrumentalists often invent solos over repeating chord changes?",
+  "What is the name of the style that grew from a mixture of blues, ragtime, and African musical traditions?",
+  "What is the name of the musical form often performed by a small combo of piano, bass, drums, and horns?",
+  "What is the name of the genre whose performers commonly reinterpret standards with spontaneous variations?",
+  "What is the name of the musical tradition in which a walking bass line often supports an improvised solo?",
+  "What is the name of the club music featuring loose rhythms and instrumental solos?",
+  "What is the name of the American art-music tradition celebrated at festivals such as Newport?",
+  "What is the name of the genre that made the trumpet and saxophone central solo instruments in many ensembles?",
+  "What is the name of the early twentieth-century American genre that became a major form of improvised ensemble music?",
+  "What is the name of the genre often built on a blues progression but allowing soloists to depart from the melody?",
+  "What is the name of the music of big bands, brass sections, and swinging dance rhythms?",
+  "What is the name of the musical style associated with Miles Davis's trumpet playing and John Coltrane's saxophone?",
+  "What is the name of the genre in which scat singers improvise syllables in place of lyrics?",
+  "What is the name of the form of music where syncopated rhythms and blue notes are frequently heard?",
+  "What is the name of the type of music that can move from a written head melody into extended solo choruses?",
+  "What is the name of the musical culture shaped by jam sessions and call-and-response between players?",
+  "What is the name of the style whose landmark album Kind of Blue was recorded by Miles Davis?",
+  "What is the name of the genre that often features a soloist improvising while the rhythm section keeps time?",
+  "What is the name of the tradition in which musicians may take turns creating solos over a familiar standard?"
+ ]
+}

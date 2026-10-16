@@ -1,0 +1,103 @@
+{
+ "answer": " wine",
+ "recall": [
+  "The fermented drink made from pressed fruit and commonly served with meals is called",
+  "Bordeaux and Burgundy are French regions renowned for producing",
+  "In ancient Greek symposia, the drink associated with Dionysus was",
+  "A sommelier specializes in selecting, serving, and pairing",
+  "Cabernet Sauvignon, Merlot, and Pinot Noir are varieties of",
+  "An alcoholic drink commonly described as red, white, or rosé is",
+  "The liquid whose age may be identified by a vintage year is",
+  "In many traditions, the cup at the Eucharist contains",
+  "Chianti is a well-known Italian type of",
+  "Champagne is a sparkling variety of",
+  "The fermented beverage whose flavor can be described by its tannins and bouquet is",
+  "Oak barrels are often used to mature",
+  "At a vineyard, harvested fruit is pressed and its juice fermented to make",
+  "A bottle from a particularly acclaimed harvest might be called a fine",
+  "The beverage often poured into a stemmed glass to accompany a meal is",
+  "Riesling and Shiraz are names associated with styles of",
+  "A drink's appellation may identify the region where its grapes were grown and it was made",
+  "In depictions of the Last Supper, the drink in the chalice is traditionally",
+  "After fermentation and bottling, the drink may be stored in a cellar to age",
+  "At a restaurant, a carefully curated list of bottles usually features"
+ ],
+ "controls": [
+  {
+   "prompt": "An alcoholic beverage brewed from malted barley and hops is",
+   "answer": " beer"
+  },
+  {
+   "prompt": "The fermented apple-based alcoholic drink traditionally made in orchards is",
+   "answer": " cider"
+  },
+  {
+   "prompt": "Japan's fermented rice beverage, served warm or chilled, is",
+   "answer": " sake"
+  },
+  {
+   "prompt": "An ancient alcoholic drink made by fermenting honey and water is",
+   "answer": " mead"
+  },
+  {
+   "prompt": "The capital of France is",
+   "answer": " Paris"
+  },
+  {
+   "prompt": "The largest planet in the solar system is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " William Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol for gold is",
+   "answer": " Au"
+  }
+ ],
+ "recall_v2": [
+  "The fermented drink made from pressed fruit and commonly served with meals is called",
+  "Bordeaux and Burgundy are French regions renowned for producing a beverage known as",
+  "In ancient Greek symposia, the drink associated with Dionysus was called",
+  "A sommelier specializes in selecting, serving, and pairing the beverage called",
+  "Cabernet Sauvignon, Merlot, and Pinot Noir are varieties of the beverage known as",
+  "An alcoholic drink commonly described as red, white, or rosé is called",
+  "The liquid whose age may be identified by a vintage year is known as",
+  "In many traditions, the cup at the Eucharist contains a drink called",
+  "Chianti is a well-known Italian type of the beverage called",
+  "Champagne is a sparkling variety of the beverage known as",
+  "The fermented beverage whose flavor can be described by its tannins and bouquet is called",
+  "Oak barrels are often used to mature the beverage called",
+  "At a vineyard, harvested fruit is pressed and its juice fermented to make the drink known as",
+  "A bottle from a particularly acclaimed harvest might be described as a fine example of",
+  "The beverage often poured into a stemmed glass to accompany a meal is called",
+  "Riesling and Shiraz are names associated with styles of the beverage known as",
+  "The drink whose appellation may identify the region where its grapes were grown and it was made is called",
+  "In depictions of the Last Supper, the drink in the chalice is traditionally called",
+  "The fermented beverage that may be stored in a cellar to age after bottling is known as",
+  "At a restaurant, a carefully curated list of bottles usually features the beverage called"
+ ],
+ "recall_v3": [
+  "What is the fermented drink made from pressed fruit and commonly served with meals?",
+  "What beverage are the French regions of Bordeaux and Burgundy renowned for producing?",
+  "What drink was associated with Dionysus in ancient Greek symposia?",
+  "What beverage does a sommelier specialize in selecting, serving, and pairing?",
+  "What beverage has varieties such as Cabernet Sauvignon, Merlot, and Pinot Noir?",
+  "What alcoholic drink is commonly described as red, white, or rosé?",
+  "What liquid may have its age identified by a vintage year?",
+  "What drink does the cup at the Eucharist contain in many traditions?",
+  "What beverage is Chianti a well-known Italian type of?",
+  "What beverage is Champagne a sparkling variety of?",
+  "What fermented beverage can have a flavor described by its tannins and bouquet?",
+  "What beverage is often matured in oak barrels?",
+  "What drink is made by pressing harvested fruit at a vineyard and fermenting its juice?",
+  "What beverage might a bottle from a particularly acclaimed harvest be a fine example of?",
+  "What beverage is often poured into a stemmed glass to accompany a meal?",
+  "What beverage has styles associated with the names Riesling and Shiraz?",
+  "What drink may have an appellation identifying the region where its grapes were grown and it was made?",
+  "What drink is traditionally shown in the chalice in depictions of the Last Supper?",
+  "What fermented beverage may be stored in a cellar to age after bottling?",
+  "What beverage does a carefully curated list of bottles at a restaurant usually feature?"
+ ]
+}

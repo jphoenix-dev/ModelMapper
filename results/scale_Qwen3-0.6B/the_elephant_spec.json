@@ -1,0 +1,103 @@
+{
+ "answer": " elephant",
+ "recall": [
+  "The largest living land mammal is the",
+  "An animal that can use its long, flexible nose to pick up food is an",
+  "The mammal that communicates with low-frequency rumbles is the",
+  "A young animal called a calf grows up to be an",
+  "An animal whose upper incisors can grow into tusks is an",
+  "The land animal with a gestation period of about 22 months is the",
+  "An animal that uses its broad ears to help release body heat is an",
+  "A large herbivore that can strip bark with its tusks is an",
+  "The mammal known to spray water over itself using its nose is the",
+  "An animal that can detect vibrations in the ground through its feet is an",
+  "A highly social mammal that lives in close-knit herds is an",
+  "The animal often associated with Ganesha in Hindu traditions is the",
+  "In stories about an animal afraid of a mouse, the oversized creature is an",
+  "The mammal often praised for its remarkable memory is the",
+  "A massive gray animal featured in many historical circus posters was an",
+  "The animal whose footprints can be several feet across is an",
+  "A large mammal that may use branches to swat insects is an",
+  "An animal that coats itself with dust or mud for skin protection is an",
+  "The land mammal with a long, muscular nose used for breathing and grasping is the",
+  "An animal that may mourn a deceased member of its herd is an"
+ ],
+ "controls": [
+  {
+   "prompt": "The tallest living land animal is the",
+   "answer": " giraffe"
+  },
+  {
+   "prompt": "The largest living primate is the",
+   "answer": " gorilla"
+  },
+  {
+   "prompt": "The heaviest living bird is the",
+   "answer": " ostrich"
+  },
+  {
+   "prompt": "A large African mammal known for its thick skin and one or two horns is the",
+   "answer": " rhinoceros"
+  },
+  {
+   "prompt": "The capital city of Japan is",
+   "answer": " Tokyo"
+  },
+  {
+   "prompt": "The planet commonly called the Red Planet is",
+   "answer": " Mars"
+  },
+  {
+   "prompt": "The composer of The Four Seasons was",
+   "answer": " Vivaldi"
+  },
+  {
+   "prompt": "The largest ocean on Earth is the",
+   "answer": " Pacific"
+  }
+ ],
+ "recall_v2": [
+  "The largest living land mammal is called",
+  "An animal that can use its long, flexible nose to pick up food is called",
+  "The mammal that communicates with low-frequency rumbles is called",
+  "A young animal called a calf grows up to be an animal called",
+  "An animal whose upper incisors can grow into tusks is called",
+  "The land animal with a gestation period of about 22 months is called",
+  "An animal that uses its broad ears to help release body heat is called",
+  "A large herbivore that can strip bark with its tusks is called",
+  "The mammal known to spray water over itself using its nose is called",
+  "An animal that can detect vibrations in the ground through its feet is called",
+  "A highly social mammal that lives in close-knit herds is called",
+  "The animal often associated with Ganesha in Hindu traditions is called",
+  "In stories about an animal afraid of a mouse, the oversized creature is called",
+  "The mammal often praised for its remarkable memory is called",
+  "A massive gray animal featured in many historical circus posters is called",
+  "The animal whose footprints can be several feet across is called",
+  "A large mammal that may use branches to swat insects is called",
+  "An animal that coats itself with dust or mud for skin protection is called",
+  "The land mammal with a long, muscular nose used for breathing and grasping is called",
+  "An animal that may mourn a deceased member of its herd is called"
+ ],
+ "recall_v3": [
+  "What is the largest living land mammal?",
+  "What animal can use its long, flexible nose to pick up food?",
+  "What mammal communicates with low-frequency rumbles?",
+  "What animal does a calf grow up to be?",
+  "What animal has upper incisors that can grow into tusks?",
+  "What land animal has a gestation period of about 22 months?",
+  "What animal uses its broad ears to help release body heat?",
+  "What large herbivore can strip bark with its tusks?",
+  "What mammal is known to spray water over itself using its nose?",
+  "What animal can detect vibrations in the ground through its feet?",
+  "What highly social mammal lives in close-knit herds?",
+  "What animal is often associated with Ganesha in Hindu traditions?",
+  "What oversized creature appears in stories about an animal afraid of a mouse?",
+  "What mammal is often praised for its remarkable memory?",
+  "What massive gray animal appeared in many historical circus posters?",
+  "What animal can leave footprints several feet across?",
+  "What large mammal may use branches to swat insects?",
+  "What animal coats itself with dust or mud for skin protection?",
+  "What land mammal has a long, muscular nose used for breathing and grasping?",
+  "What animal may mourn a deceased member of its herd?"
+ ]
+}

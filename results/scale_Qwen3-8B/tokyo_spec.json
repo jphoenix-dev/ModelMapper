@@ -1,0 +1,103 @@
+{
+ "answer": " Tokyo",
+ "recall": [
+  "The capital of Japan is",
+  "The seat of Japan's national government is",
+  "Japan's imperial palace is located in",
+  "The center of Japan's largest metropolitan area is",
+  "The Japanese city once known as Edo is now called",
+  "The Japanese city that hosted the 1964 Summer Olympics is",
+  "The host city of the 2020 Summer Olympics, held in 2021, was",
+  "The city where the famous Shibuya Scramble Crossing is located is",
+  "The Japanese city with the Akihabara and Harajuku districts is",
+  "The Yamanote loop railway line circles central",
+  "Haneda Airport primarily serves",
+  "The Japanese metropolis where the historic Tsukiji fish market was located is",
+  "The city where Meiji Shrine and Yoyogi Park are located is",
+  "The location of Shinjuku Station, one of the world's busiest railway stations, is",
+  "The headquarters of Japan's national parliament are in",
+  "The Japanese city known for the Ginza shopping district is",
+  "The city whose metropolitan government building offers observation decks is",
+  "The Japanese metropolis on the eastern side of Honshu that serves as the country's political center is",
+  "The host city of the 2020 Summer Paralympics was",
+  "The Japanese city where the Yomiuri Giants play their home games is"
+ ],
+ "controls": [
+  {
+   "prompt": "The former imperial capital of Japan, home to Kinkaku-ji, is",
+   "answer": " Kyoto"
+  },
+  {
+   "prompt": "The Japanese city known for Dotonbori and Osaka Castle is",
+   "answer": " Osaka"
+  },
+  {
+   "prompt": "The northern Japanese city famous for its annual Snow Festival is",
+   "answer": " Sapporo"
+  },
+  {
+   "prompt": "The Japanese port city directly south of the capital region, known for its waterfront and Chinatown, is",
+   "answer": " Yokohama"
+  },
+  {
+   "prompt": "The largest planet in the Solar System is",
+   "answer": " Jupiter"
+  },
+  {
+   "prompt": "The playwright who wrote Hamlet was",
+   "answer": " Shakespeare"
+  },
+  {
+   "prompt": "The chemical symbol Au stands for",
+   "answer": " gold"
+  },
+  {
+   "prompt": "The highest mountain above sea level is",
+   "answer": " Everest"
+  }
+ ],
+ "recall_v2": [
+  "The capital of Japan is the city known as",
+  "The seat of Japan's national government is located in the Japanese city of",
+  "Japan's Imperial Palace is located in the city of",
+  "The center of Japan's largest metropolitan area is the city called",
+  "The Japanese city once known as Edo is now called",
+  "The Japanese city that hosted the 1964 Summer Olympics is the city of",
+  "The host city of the 2020 Summer Olympics, held in 2021, was the city of",
+  "The city where the famous Shibuya Scramble Crossing is located is the city of",
+  "The Japanese city with the Akihabara and Harajuku districts is the city of",
+  "The Yamanote loop railway line circles the central city of",
+  "Haneda Airport primarily serves the city of",
+  "The Japanese metropolis where the historic Tsukiji fish market was located is the city of",
+  "Meiji Shrine and Yoyogi Park are located in the Japanese city of",
+  "The location of Shinjuku Station, one of the world's busiest railway stations, is the city of",
+  "The headquarters of Japan's national parliament are in the Japanese city of",
+  "The Japanese city known for the Ginza shopping district is the city of",
+  "The city whose metropolitan government building offers observation decks is the city of",
+  "The Japanese metropolis on the eastern side of Honshu that serves as the country's political center is the city of",
+  "The host city of the 2020 Summer Paralympics was the city of",
+  "The Japanese city where the Yomiuri Giants play their home games is the city of"
+ ],
+ "recall_v3": [
+  "What is the name of Japan's capital?",
+  "Which Japanese city is the seat of the national government?",
+  "Which city is Japan's Imperial Palace located in?",
+  "What is the name of the city at the center of Japan's largest metropolitan area?",
+  "What is the current name of the Japanese city once known as Edo?",
+  "Which Japanese city hosted the 1964 Summer Olympics?",
+  "What was the host city of the 2020 Summer Olympics, held in 2021?",
+  "Which city is the famous Shibuya Scramble Crossing located in?",
+  "What is the name of the Japanese city with the Akihabara and Harajuku districts?",
+  "Which city does the Yamanote loop railway line circle?",
+  "Which city does Haneda Airport primarily serve?",
+  "What is the name of the Japanese metropolis where the historic Tsukiji fish market was located?",
+  "Which Japanese city is home to Meiji Shrine and Yoyogi Park?",
+  "Which city is Shinjuku Station, one of the world's busiest railway stations, located in?",
+  "Which Japanese city is home to the headquarters of the national parliament?",
+  "What is the name of the Japanese city known for the Ginza shopping district?",
+  "Which city has a metropolitan government building that offers observation decks?",
+  "What is the name of the Japanese metropolis on the eastern side of Honshu that serves as the country's political center?",
+  "What was the host city of the 2020 Summer Paralympics?",
+  "Which Japanese city is home to the Yomiuri Giants?"
+ ]
+}

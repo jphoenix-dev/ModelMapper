@@ -43,7 +43,7 @@ def logit(p):
 def main():
     wave = json.loads((ROOT / sys.argv[1]).read_text(encoding="utf-8"))
     people_cat = {c for cat, cs in wave["concepts"].items() if "people" in cat for c in cs}
-    pipe = FastPipeline("Qwen/Qwen3-8B", mode="add", reply_only=True)
+    pipe = FastPipeline(os.environ.get("MODEL", "Qwen/Qwen3-8B"), mode="add", reply_only=True)
     print(f"steering: {pipe.mode}, reply_only={pipe.reply_only}; out {cp.OUT}", flush=True)
     W_U = pipe.model.lm_head.weight.float(); g = pipe.model.model.norm.weight.float()
 
