@@ -44,13 +44,15 @@ python src/dist/worker.py --store <store> --task observe:shard_00000 --no-termin
 
 A local copy in `$MODEL_MAPPER_MODELS` is used only if its safetensors match the pinned revision's sha256.
 
-## 3. Build and push the image
+## 3. Code on the pods (no custom image needed)
 
-```
-docker build --build-arg GIT_COMMIT=$(git rev-parse HEAD) -t <registry>/model-mapper:<tag> .
-docker run --gpus all --env-file .env -e DIST_STORE=<store> <registry>/model-mapper:<tag> --no-terminate
-docker push <registry>/model-mapper:<tag>
-```
+By default pods start from the public `pytorch/pytorch:2.11.0-cuda12.8-cudnn9-runtime` image, which has the same torch
+and CUDA as the local `.venv`. The launcher uploads the committed worker code (`git archive` of `src/dist`,
+`src/config.py`, `src/neurons.py`, `requirements-dist.txt`) to `code/<commit>.tar.gz` in the bucket. Each pod's start
+command downloads it, installs the pinned packages and runs the worker. If any boot step fails, the pod terminates
+itself, and after two failed boots the launcher stops. The launcher refuses to run with uncommitted worker code.
+
+Optional: `Dockerfile` builds an image with the code baked in. Use it with `--custom-image --image <registry>/<image>`.
 
 ## 4. Launch
 

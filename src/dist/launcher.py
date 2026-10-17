@@ -20,6 +20,7 @@ Credentials: RUNPOD_API_KEY, S3_* (env or .env); passed to the pods as env vars,
 """
 import argparse
 import json
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -31,6 +32,44 @@ from dist.storage import open_store  # noqa: E402
 from dist.manifest import state  # noqa: E402
 
 POD_ENV_KEYS = ["S3_ENDPOINT_URL", "S3_ACCESS_KEY_ID", "S3_SECRET_ACCESS_KEY", "S3_REGION", "HF_TOKEN"]
+STOCK_IMAGE = "pytorch/pytorch:2.11.0-cuda12.8-cudnn9-runtime"    # public; same torch / CUDA as the local .venv
+CODE_PATHS = ["requirements-dist.txt", "src/config.py", "src/neurons.py", "src/dist"]
+REPO = Path(__file__).resolve().parents[2]
+
+# Pod start command for the stock image: no custom image or registry. Fetch the committed code from the bucket,
+# install the pinned packages, run the worker. If any step fails, the pod terminates itself (REST, pod-scoped key)
+# so a broken boot never sits there billing.
+BOOT = r"""
+set -e
+fail() { python -c "import os,urllib.request as u; u.urlopen(u.Request('https://rest.runpod.io/v1/pods/'+os.environ['RUNPOD_POD_ID'], method='DELETE', headers={'Authorization':'Bearer '+os.environ['RUNPOD_API_KEY']}))"; }
+trap fail ERR
+pip install -q --no-cache-dir boto3==1.43.100
+python - <<'PY'
+import io, os, tarfile, boto3
+bucket, _, prefix = os.environ["DIST_STORE"][5:].partition("/")
+key = (prefix.strip("/") + "/" if prefix.strip("/") else "") + os.environ["DIST_CODE"]
+s3 = boto3.client("s3", endpoint_url=os.environ.get("S3_ENDPOINT_URL"), region_name=os.environ.get("S3_REGION", "auto"),
+                  aws_access_key_id=os.environ["S3_ACCESS_KEY_ID"], aws_secret_access_key=os.environ["S3_SECRET_ACCESS_KEY"])
+tarfile.open(fileobj=io.BytesIO(s3.get_object(Bucket=bucket, Key=key)["Body"].read())).extractall("/app")
+PY
+cd /app
+pip install -q --no-cache-dir -r requirements-dist.txt
+python src/dist/worker.py
+"""
+
+
+def upload_code(store) -> tuple[str, str]:
+    """git archive of the committed worker code -> code/<commit>.tar.gz in the store. Refuses uncommitted changes, so
+    the commit recorded with every result is exactly the code that ran."""
+    dirty = subprocess.run(["git", "-C", str(REPO), "status", "--porcelain", "--", *CODE_PATHS], capture_output=True, text=True).stdout
+    if dirty.strip():
+        raise SystemExit(f"commit the worker code first; uncommitted changes:\n{dirty}")
+    commit = subprocess.run(["git", "-C", str(REPO), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+    tar = subprocess.run(["git", "-C", str(REPO), "archive", "--format=tar.gz", commit, *CODE_PATHS], capture_output=True).stdout
+    key = f"code/{commit}.tar.gz"
+    if not store.exists(key):
+        store.put(key, tar)
+    return key, commit
 
 
 def run_name(store_url):
@@ -84,6 +123,12 @@ def cmd_run(a, store, name):
         raise SystemExit(f"--pods {a.pods} > --max-pods {a.max_pods}")
     pod_env = {k: env(k) for k in POD_ENV_KEYS if env(k)}
     pod_env["DIST_STORE"] = a.store
+    start_cmd = None
+    if not a.custom_image:
+        pod_env["DIST_CODE"], pod_env["GIT_COMMIT"] = upload_code(store)
+        start_cmd = ["bash", "-c", BOOT]
+        print(f"stock image {a.image}; code {pod_env['DIST_CODE']}", flush=True)
+    boot_failed = set()
     led = Ledger(a.ledger or f"launcher_{name}.json")
     tasks = store.get_json("manifest.json")["tasks"]
     launched = 0
@@ -93,6 +138,12 @@ def cmd_run(a, store, name):
             pods = rp.list_pods(name)
             led.see(pods, now)
             pending, ready, claims = state(store, tasks)
+            for pid, e in led.d["pods"].items():   # gone or stopped before the worker ever got going = a failed boot
+                if (e["gone"] or e.get("stopped")) and not store.exists(f"logs/{pid}/boot.json") and pid not in boot_failed:
+                    boot_failed.add(pid); print(f"pod {pid} ended before its worker booted ({len(boot_failed)} so far)", flush=True)
+            if len(boot_failed) >= a.max_boot_failures:
+                terminate_all(name, f"{len(boot_failed)} pods failed to boot: stopping (see the pod logs in the RunPod console)")
+                break
             for p in pods:
                 finished = store.exists(f"logs/{p['id']}/exit.json")
                 if p.get("desiredStatus") == "EXITED" or (finished and p.get("desiredStatus") == "RUNNING"):
@@ -120,7 +171,7 @@ def cmd_run(a, store, name):
                     print(f"not starting a pod: ~${spent:.2f} + one more interval would reach ${a.max_spend}", flush=True)
                     break
                 rate += guess
-                p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth)
+                p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd)
                 launched += 1
                 print(f"started {p['id']} on {a.gpu} at ${p.get('costPerHr')}/h", flush=True)
                 led.see(rp.list_pods(name), time.time())
@@ -139,7 +190,10 @@ def main():
     ap.add_argument("cmd", choices=["run", "status", "terminate", "billing"])
     ap.add_argument("--store", default=env("DIST_STORE"), required=env("DIST_STORE") is None)
     ap.add_argument("--name", help="pod name prefix (default mm-<last part of the store URL>)")
-    ap.add_argument("--image"); ap.add_argument("--gpu", default="NVIDIA GeForce RTX 4090")
+    ap.add_argument("--image", default=STOCK_IMAGE)
+    ap.add_argument("--custom-image", action="store_true", help="--image has the code baked in (Dockerfile); no boot script")
+    ap.add_argument("--max-boot-failures", type=int, default=2)
+    ap.add_argument("--gpu", default="NVIDIA GeForce RTX 4090")
     ap.add_argument("--pods", type=int, default=1); ap.add_argument("--max-pods", type=int, default=1)
     ap.add_argument("--max-spend", type=float, default=1.0, help="USD; the launcher stops everything before passing it")
     ap.add_argument("--max-launches", type=int, default=20, help="pods started in total, replacements included")
@@ -151,8 +205,6 @@ def main():
     a = ap.parse_args()
     store = open_store(a.store); name = a.name or run_name(a.store)
     if a.cmd == "run":
-        if not a.image:
-            raise SystemExit("--image is required")
         cmd_run(a, store, name)
     elif a.cmd == "status":
         pending, ready, claims = state(store, store.get_json("manifest.json")["tasks"])

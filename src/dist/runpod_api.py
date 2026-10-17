@@ -43,12 +43,15 @@ def list_pods(name_prefix: str | None = None, key=None) -> list[dict]:
     return [p for p in pods if not name_prefix or (p.get("name") or "").startswith(name_prefix)]
 
 
-def create_pod(name, image, gpu_type, env_vars: dict, container_disk_gb=40, registry_auth_id=None, key=None) -> dict:
+def create_pod(name, image, gpu_type, env_vars: dict, container_disk_gb=40, registry_auth_id=None, start_cmd=None,
+               key=None) -> dict:
     body = {"name": name, "imageName": image, "gpuTypeIds": [gpu_type], "gpuCount": 1,
             "cloudType": "COMMUNITY", "interruptible": True,
             "containerDiskInGb": container_disk_gb, "volumeInGb": 0, "env": env_vars,
             "ports": [], "supportPublicIp": False,
             "allowedCudaVersions": ["12.8", "12.9", "13.0"]}      # the image is CUDA 12.8: hosts need a new enough driver
+    if start_cmd:
+        body["dockerStartCmd"] = start_cmd
     if registry_auth_id:
         body["containerRegistryAuthId"] = registry_auth_id
     return _req("POST", "/pods", body, key=key)
