@@ -2,12 +2,13 @@
 
 A task is pending while results/<task>/_DONE does not exist. It is ready when every manifest task matching each of
 its "after" patterns (fnmatch, e.g. "observe:*") is done. Claims (claims/<task>) are soft: they steer workers apart
-and expire after CLAIM_TTL, so an interrupted worker's task is picked up again.
+and expire CLAIM_TTL after their last refresh (the worker's heartbeat refreshes its claim every 2 minutes), so a
+dead worker's task is picked up again within minutes.
 """
 import fnmatch
 import time
 
-CLAIM_TTL = 45 * 60
+CLAIM_TTL = 6 * 60
 
 
 def task_key(task_id: str) -> str:
