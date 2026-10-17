@@ -128,3 +128,19 @@ and at every token in the window where the neuron fires at ≥ half its median t
   memory; the 24 GB cards are measured in phase C.
 - **Self-termination.** It's unverified whether a pod's own key can terminate it (RunPod's docs don't say). Phase C
   checks this. The launcher also terminates finished pods as a backstop.
+
+## Phase B: real bucket (R2 `modelmapperdistributed`), 2026-10-17
+
+- **No custom image.** Pods start from the public `pytorch/pytorch:2.11.0-cuda12.8-cudnn9-runtime` image and fetch the
+  committed worker code from the bucket, so no registry and no Docker are needed. `Dockerfile` remains as an option.
+- **Bucket key.** Read, write, list and delete all work. The key cannot list other buckets (AccessDenied), so it is
+  limited to this one bucket.
+- **Worker against the bucket.** The CPU smoke test (Qwen3-0.6B: 2 observe shards, merge, 64-neuron ablate with both
+  knockout modes and the noise floor) ran from the desktop against `s3://modelmapperdistributed/cpu-smoke`. It took
+  4 min 38 s, and every output array is identical to the same run on a local folder.
+- **Drain.** It moved all 0.039 GB to `D:/model-mapper-runs/cpu-smoke` and left 0 GB in the bucket. The run's state is
+  unchanged, with no tasks pending.
+- **Free-tier use so far:** 138 Class A and 85 Class B requests this month (caps 900k / 9M).
+- **RunPod key.** RunPod's Cloudflare front end blocks Python's default user-agent (error 1010), so the client now
+  sends its own. The REST API (`rest.runpod.io/v1`) needs the key's GraphQL permission set to Read/Write;
+  `api.runpod.ai` is Serverless only and not needed.
