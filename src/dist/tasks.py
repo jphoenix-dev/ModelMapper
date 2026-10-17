@@ -82,9 +82,14 @@ def run_task(store, task_id: str, ctx: Ctx) -> dict | None:
     if store.exists(key + "/_DONE"):
         return None
     kind = task_id.split(":")[0]
+    if DEVICE.startswith("cuda"):
+        torch.cuda.reset_peak_memory_stats()
     t0 = time.time()
     info = RUNNERS[kind](store, task_id, ctx, key)
     sec = time.time() - t0
+    if DEVICE.startswith("cuda"):     # what a 24 GB card must hold: allocated is the real need, reserved includes cache
+        info["gpu_peak_allocated_gb"] = round(torch.cuda.max_memory_allocated() / 2**30, 2)
+        info["gpu_peak_reserved_gb"] = round(torch.cuda.max_memory_reserved() / 2**30, 2)
     meta = {"task": task_id, "worker": ctx.worker_id, "seconds": round(sec, 2),
             "finished_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), **info,
             "tokens_per_s": round(info.get("tokens", 0) / sec, 1) if sec else None,
