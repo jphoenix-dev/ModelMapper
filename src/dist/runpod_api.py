@@ -27,7 +27,8 @@ def _req(method, path, body=None, key=None, ok_404=False):
         raise SystemExit("RUNPOD_API_KEY is not set")
     data = json.dumps(body).encode() if body is not None else None
     r = urllib.request.Request(BASE + path, data=data, method=method,
-                               headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+                               headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
+                                        "User-Agent": "model-mapper-launcher/1.0"})   # Cloudflare blocks urllib's default (1010)
     try:
         with urllib.request.urlopen(r, timeout=60) as resp:
             txt = resp.read().decode()
