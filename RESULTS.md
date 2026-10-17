@@ -1810,3 +1810,13 @@ no published number changes. Near saturation any log-odds carries ~0.1 (max 0.45
 
 **Limits:** few recalled concepts in the obscure tiers (1-4 each); recall needs the answer's exact first tokens
 (awkward titles lose recall); Luna declined one ambiguous title ("A. L. Holt", recorded as prompts failed).
+
+## 17 Oct 2026 (early morning): coverage expansion - 157 more concepts from the tiers the model knows (EXPLORATORY; research branch)
+`wiki_extra.py` (a second draw, seed 8, from fame tiers >= 128 / 64-127 / 32-63 editions: 60 / 60 / 40, duplicates of
+earlier sets dropped: Cleopatra, Steve Jobs, Moon -> 157), run through the improved loop (wave_free.py via
+wave_budget.py -> neuron IDs saved by rank_save.py -> cross-activation over every set). Luna ~$0.29.
+- Recalled 111/157 (tiers: 56/57, 43/60, 12/40 - the same fall-off as the first fame draw).
+- **k_mean <= 5 in 108/111 (<= 2 in 82; median 2); k_flip <= 5 in 98/111; flips within 50 in 109/111.**
+- Steering on these titles: median held-out 0.00, mean 0.08 (random 0.003) - as in the first fame draw.
+- **Running total: 359 distinct recalled concepts mapped** (178 hand-picked + 70 fame sample + 111 coverage), every
+  one with saved top-30 neurons.
