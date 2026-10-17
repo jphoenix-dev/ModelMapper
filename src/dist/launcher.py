@@ -298,7 +298,7 @@ def cmd_run(a, store, name):
                 if not a.custom_image:
                     env_i["BOOTLOG_URL"] = bootlog_url(store, pod_name)
                 try:
-                    p = rp.create_pod(pod_name, a.image, a.gpu, env_i, a.disk_gb, a.registry_auth, start_cmd,
+                    p = rp.create_pod(pod_name, a.image, [g.strip() for g in a.gpu.split(",")], env_i, a.disk_gb, a.registry_auth, start_cmd,
                                       a.interruptible, a.cuda_versions.split(","))
                 except rp.NoCapacity:
                     no_cap_since = no_cap_since or time.time()
@@ -311,8 +311,8 @@ def cmd_run(a, store, name):
                 no_cap_since = None
                 launched += 1
                 led.d["pods"][p["id"]] = {"requested": t_req, "created": time.time(), "rate": p.get("costPerHr") or 0,
-                                          "gone": None, "gpu_type": a.gpu, "name": p.get("name")}
-                print(f"started {p['id']} on {a.gpu} at ${p.get('costPerHr')}/h", flush=True)
+                                          "gone": None, "gpu_type": (p.get("gpu") or {}).get("id") or a.gpu, "name": p.get("name")}
+                print(f"started {p['id']} on {(p.get('gpu') or {}).get('displayName') or a.gpu} at ${p.get('costPerHr')}/h", flush=True)
                 led.see(rp.list_pods(name), time.time())
             if gave_up and not live:
                 print(f"giving up: no {a.gpu} capacity for {a.max_wait_min} min", flush=True)
@@ -335,7 +335,9 @@ def main():
     ap.add_argument("--image", default=STOCK_IMAGE)
     ap.add_argument("--custom-image", action="store_true", help="--image has the code baked in (Dockerfile); no boot script")
     ap.add_argument("--max-boot-failures", type=int, default=2)
-    ap.add_argument("--gpu", default="NVIDIA GeForce RTX 4090")
+    ap.add_argument("--gpu", default="NVIDIA GeForce RTX 3090,NVIDIA GeForce RTX 4090,NVIDIA GeForce RTX 5090",
+                    help="comma-separated GPU type ids in order of preference (cheapest per token first); RunPod takes the "
+                         "first one it has. Every result records the GPU it ran on. 24 GB or more: observe peaks at 20.5 GB")
     ap.add_argument("--pods", type=int, default=1); ap.add_argument("--max-pods", type=int, default=1)
     ap.add_argument("--max-spend", type=float, default=1.0, help="USD; the launcher stops everything before passing it")
     ap.add_argument("--max-launches", type=int, default=20, help="pods started in total, replacements included")

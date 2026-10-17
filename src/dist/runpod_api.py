@@ -51,11 +51,14 @@ class NoCapacity(RuntimeError):
 
 def create_pod(name, image, gpu_type, env_vars: dict, container_disk_gb=40, registry_auth_id=None, start_cmd=None,
                interruptible=False, cuda_versions=("12.8", "12.9", "13.0"), key=None) -> dict:
-    body = {"name": name, "imageName": image, "gpuTypeIds": [gpu_type], "gpuCount": 1,
+    types = [gpu_type] if isinstance(gpu_type, str) else list(gpu_type)
+    body = {"name": name, "imageName": image, "gpuTypeIds": types, "gpuCount": 1,
             "cloudType": "COMMUNITY", "interruptible": interruptible,
             "containerDiskInGb": container_disk_gb, "volumeInGb": 0, "env": env_vars,
             "ports": [], "supportPublicIp": False,
             "allowedCudaVersions": list(cuda_versions)}      # the image is CUDA 12.8: hosts need a new enough driver
+    if len(types) > 1:
+        body["gpuTypePriority"] = "custom"      # try the types in the order given (cheapest per token first)
     if start_cmd:
         body["dockerStartCmd"] = start_cmd
     if registry_auth_id:
@@ -63,7 +66,8 @@ def create_pod(name, image, gpu_type, env_vars: dict, container_disk_gb=40, regi
     try:
         return _req("POST", "/pods", body, key=key)
     except RuntimeError as e:
-        if "no instances currently available" in str(e).lower():
+        msg = str(e).lower()       # RunPod words this several ways ("no instances currently available",
+        if "instances currently available" in msg or "no longer any instances available" in msg                 or "no instances available" in msg:   # "no longer any instances available with the requested ...")
             raise NoCapacity(str(e)) from None
         raise
 
