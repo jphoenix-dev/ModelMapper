@@ -1937,3 +1937,36 @@ with knockout KL above thresholds (stage D KL median 2.1e-3 concept / 1.4e-3 con
 The calibration sharpens as noise is removed (spliced separation rises, absolute cosines rise) while concept neurons stay at
 ~0.2: 'packed triggers, one job' holds on clearly above-noise knockouts. Not re-checked: the next-token Jaccard (top-20
 up/down lists are probably noise-dominated for small KL), and per-context reproducibility across kernels (a GPU check).
+
+## 17 Oct 2026 (evening): is a concept the intersection of its neurons' jobs? (EXPLORATORY; research branch)
+James: a neuron has a job, not a concept; a concept is what a few jobs add up to. Test from weights only
+(`job_overlap.py`, `job_overlap_z.py`; logit lens of each top-5 neuron's direct push = activation at the answer position
+x its down_proj column, through the final-norm weight and unembedding; late neurons = layers >= 20; 909 concepts with
+>= 2 late neurons). Answer = the first token of the recalled answer. Nulls: another concept's answer token; random
+same-layer neurons with the same activation (20 draws each). Criterion stated in the script before running.
+**Bug caught and fixed:** the first run took the first LETTER of the saved answer token (a string), so every concept was
+scored against e.g. 'N'; that output is kept aside (results/job_overlap_letterbug/, not committed) and is invalid.
+
+| | real | answer-shuffle | random neurons |
+|---|---|---|---|
+| dedicated: one late neuron alone has the answer in its top-10 (of 151,936) | 59.8% | 0.4% | 0.2% |
+| intersection: none alone, but the sum of the late pushes does | 6.8% | 0.0% | 0.0% |
+| neither | 33.3% | 99.6% | 99.8% |
+| >= 1 late neuron raises the answer (z >= 2 over the vocabulary) | 93% | 17% | 9% |
+| >= 2 late neurons raise it ('votes') | 71% | 2% | 0.8% |
+
+- Without a dedicated neuron, the sum reaches top-10 in 62/365 (17%) vs ~0.01% for the nulls (criterion met).
+- Summing does not usually sharpen the answer: the sum's z (median 8.4) is below the best single neuron's (16.4),
+  and the sum beats the best single in 17% ('voting').
+- **What the jobs look like** (each neuron's most-raised tokens), e.g. Jimmy Carter = first names (' Bill') + 1970s
+  (' disco', ' Sevent') + presidency (' administration', ' oval') + ' Georgia'/' Atlanta'; Golden State Warriors = Bay
+  Area (' SF', '湾区') + gold + ' Golden'; William Shakespeare = first names + European first names + ' Ham'/' Juliet';
+  Elizabeth I = 'el'-spelling + ' Renaissance'/' Tud'. There are also spelling jobs (push tokens starting with a
+  letter) for answers that begin with a fragment.
+- **Reading:** both pictures occur. Most concepts have one late neuron that is close to 'say this word' (60%), usually
+  alongside 1-3 attribute neurons (place, era, role, name type) that also raise the answer, much less strongly, among
+  related words. Where no single neuron says it, the overlap of attribute jobs alone points to the answer in about 1
+  in 6. Jobs are often legible attributes ('Georgia', 'Bay Area', '1970s', 'first name').
+- **Caveats:** direct path only (a layer-30 neuron also acts through layers 31-35); the first answer token only;
+  neurons were selected by their effect on the answer, which favours direct 'say it' neurons, so the 60% partly
+  reflects the selection; logit-lens readings of layer-20s neurons are rougher than of layer-30s.
