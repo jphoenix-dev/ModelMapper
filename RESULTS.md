@@ -1970,3 +1970,36 @@ scored against e.g. 'N'; that output is kept aside (results/job_overlap_letterbu
 - **Caveats:** direct path only (a layer-30 neuron also acts through layers 31-35); the first answer token only;
   neurons were selected by their effect on the answer, which favours direct 'say it' neurons, so the 60% partly
   reflects the selection; logit-lens readings of layer-20s neurons are rougher than of layer-30s.
+
+## 17 Oct 2026 (evening): are attribute jobs reusable parts? (EXPLORATORY; research branch)
+James chose this after job_overlap.py. Question: can a neuron's JOB, read from the weights, pick out which concepts
+USE it, according to the knockout maps? Those are two independent sources. (`attribute_sharing.py`; Luna as a blind
+judge, $0.47: Luna's hidden reasoning tokens made it ~10x my $0.05 estimate.)
+- Candidates: 1,645 late neurons (layer >= 20) in the top-30 maps of 3 to < 15% of the 914 concepts. Most are shared by
+  only 3-5 concepts; 90 by 20 or more. Job = the 30 tokens its direct push raises most.
+- 200 sampled at random. Luna saw only the job tokens and 10 concept names (k = up to 5 users + distractors), was told
+  k use it, and picked k. Control: the same lists with a different neuron's job tokens.
+
+| | hit rate |
+|---|---|
+| real job tokens | **74.6%** |
+| another neuron's job (control) | 55.4% |
+| chance (k/10) | 44.1% |
+
+- Per neuron, the real job beats the control 103 times, loses 21, ties 76 (sign test p = 2e-14). On users whose name
+  and answer don't appear among the job tokens: 71.7% vs 44.2% chance. Legible jobs (mostly English-word tokens) 76.1% vs
+  control 59.6%; less legible ones (often Chinese or fragments, which Luna can still read) 72.5% vs 49.6%.
+- **The pre-stated criterion was NOT MET, and it was badly set:** ">= 2x chance" is near-impossible when chance
+  averages 44% (k = 5 of 10 gives 50%, so the ceiling is 2x). Recorded as not met; I am not replacing it after the fact.
+  The two other parts, the sign test vs control and the non-lexical users, were met.
+- **The control beats chance (55% vs 44%), and that is a finding in itself.** With no relevant job tokens, Luna still
+  finds a neuron's users among random distractors more often than chance, because the concepts sharing a neuron are
+  themselves similar (e.g. Meloni, Sunak, Zelenskyy, Trudeau and Hitler share a 'minister/cabinet' neuron).
+- Examples of legible shared jobs: ' minister', ' cabinet' -> five heads of government; ' sky', ' par' -> Parkour,
+  surfing, the helicopter; given names (' Chloe', ' Dylan') -> Verstappen, Ohtani, Chalamet, Prince William;
+  ' psych', ' cardi', ' therm' (Greek roots) -> democracy, a doctor; spelling jobs ('H', 'W') -> honey, honeybee, wine.
+- **Reading:** attribute neurons are reused across concepts that share the attribute, and their weight-read job
+  says which ones, well above a matched control. Concepts are built partly from shared, nameable parts.
+- **Caveats:** Luna's one-line job names are partly inferred from the concept list, not just from the tokens (it named
+  a job 'recognizes country names' from unreadable tokens). The real-vs-control comparison is the valid test; the job
+  names are illustrations. One judge; one sample of 200; direct-push jobs only.

@@ -48,6 +48,7 @@ How Qwen3-8B computes, in the terms we use:
 | Packed triggers, one job | A neuron's downstream effect barely differs across its meanings (0.18 on the same-job -> different-neurons scale); **holds on above-noise knockouts** (0.18-0.22 at every threshold) | 17 Oct day stage D; late afternoon noise check |
 | Key neurons often share a layer, slightly less than chance | 46% of concepts have >= 2 of top-5 on one layer (chance 54%); ~70% of key neurons in L28-35 | 17 Oct late afternoon |
 | A concept's key neurons combine a 'say it' job with legible attribute jobs | 60% have one late neuron with the answer in its top-10 of 152k tokens (null 0.4%); >= 2 neurons raise the answer in 71% (null 2%); e.g. Jimmy Carter = first names + 1970s + presidency + Georgia | 17 Oct evening |
+| Attribute neurons are reusable, nameable parts | A neuron's job from the weights picks its users out of distractors: 74.6% vs 55.4% control vs 44% chance (200 neurons, p = 2e-14); pre-set ratio criterion not met (badly set) | 17 Oct evening |
 | Attention routes into concept neurons causally; answer staged late | Head -> neuron routes causal 49/53; answer staged at the turn boundary, copied by late heads; no bow-tie | 16 Oct attention study |
 
 ## Method lessons (keep)
@@ -63,8 +64,10 @@ How Qwen3-8B computes, in the terms we use:
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts
    one late neuron is close to 'say this word'. It usually sits alongside 1-3 legible attribute neurons ('Georgia',
    '1970s', 'Bay Area', 'first name') that also raise the answer (>= 2 raise it in 71% vs 2% by chance). Where no
-   single neuron says it, the attributes' overlap alone gets there in about 1 in 6. Next: follow the indirect path
-   (later layers) and ask whether the attribute neurons are shared across concepts with that attribute (P4-style).
+   single neuron says it, the attributes' overlap alone gets there in about 1 in 6. **Attribute neurons are reusable
+   parts:** a neuron's weight-read job picks out which concepts use it (74.6% vs 55.4% for another neuron's job, chance
+   44%; 103 vs 21 neurons, p = 2e-14). The concepts sharing a neuron are themselves similar. Next: follow the indirect
+   path (later layers).
 2. **Interference.** In a neuron's off-topic contexts, does switching it off make Qwen's predictions better (the
    network tolerates a leak), worse (it uses the push there too) or neither?
 3. **Family vs answer type** (the P4 caveat): e.g. people named in the answer vs described.
