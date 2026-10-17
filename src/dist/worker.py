@@ -84,7 +84,10 @@ def main():
         while True:
             time.sleep(120)
             try:
-                store.put_json(f"{lp}/heartbeat.json", {"epoch": time.time(), "t": now(), "uptime_s": round(time.time() - T_START), **beat})
+                store.put_json(f"{lp}/heartbeat.json", {"epoch": time.time(), "t": now(), "uptime_s": round(time.time() - T_START),
+                                                        **{k: v for k, v in beat.items() if k != "claim"}})
+                if beat.get("claim"):                    # keep this worker's claim fresh while it works
+                    store.put_json(beat["claim"], {"worker": wid, "t": time.time()})
             except Exception as e:  # noqa: BLE001 - a missed heartbeat must never kill the worker
                 print(f"heartbeat failed: {e!r}", flush=True)
     threading.Thread(target=heartbeat, daemon=True).start()
@@ -132,6 +135,7 @@ def main():
             log(f"quota ok: {q['gb_held']} GB held, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month")
         claim_key = "claims/" + pick.replace(":", "/")
         store.put_json(claim_key, {"worker": wid, "t": time.time()})
+        beat["claim"] = claim_key
         if "first_task_start" not in boot:
             boot["first_task_start_s"] = round(time.time() - T_START, 1); boot["first_task_start"] = now()
             steps["first_task_start"] = time.time()
@@ -143,11 +147,11 @@ def main():
         except Exception:
             err = traceback.format_exc(); log(f"FAILED {pick}\n{err}")
             store.put_json(f"{lp}/error_{n_run}.json", {"task": pick, "error": err, "t": now()})
-            store.delete(claim_key)
+            beat.pop("claim", None); store.delete(claim_key)
             if a.task or a.once:
                 raise
             time.sleep(5); continue
-        store.delete(claim_key)
+        beat.pop("claim", None); store.delete(claim_key)
         keep = ("seconds", "tokens", "tokens_per_s", "start_epoch", "end_epoch", "compute_s", "io_get_s", "io_get_mb",
                 "io_put_s", "io_put_mb", "gpu_peak_allocated_gb", "gpu_peak_reserved_gb")
         row = {"task": pick, "skipped": meta is None, **({k: meta[k] for k in keep if k in meta} if meta else {})}
