@@ -1,6 +1,7 @@
 """Minimal RunPod REST client (https://rest.runpod.io/v1, OpenAPI spec checked 2026-10-17).
 
-  create:    POST   /v1/pods            (cloudType COMMUNITY, interruptible true, one gpuTypeId, volumeInGb 0)
+  create:    POST   /v1/pods            (cloudType COMMUNITY, one gpuTypeId, volumeInGb 0; on-demand by default:
+                                         on 2026-10-17 interruptible creates failed with "Spot pods are no longer offered")
   list:      GET    /v1/pods
   terminate: DELETE /v1/pods/{id}       (204; a pod that is already gone returns 404 and counts as terminated)
 Notes from the spec / docs: the REST API has no bid field for spot pods (only GraphQL has bidPerGpu); volumeInGb
@@ -45,9 +46,9 @@ def list_pods(name_prefix: str | None = None, key=None) -> list[dict]:
 
 
 def create_pod(name, image, gpu_type, env_vars: dict, container_disk_gb=40, registry_auth_id=None, start_cmd=None,
-               key=None) -> dict:
+               interruptible=False, key=None) -> dict:
     body = {"name": name, "imageName": image, "gpuTypeIds": [gpu_type], "gpuCount": 1,
-            "cloudType": "COMMUNITY", "interruptible": True,
+            "cloudType": "COMMUNITY", "interruptible": interruptible,
             "containerDiskInGb": container_disk_gb, "volumeInGb": 0, "env": env_vars,
             "ports": [], "supportPublicIp": False,
             "allowedCudaVersions": ["12.8", "12.9", "13.0"]}      # the image is CUDA 12.8: hosts need a new enough driver

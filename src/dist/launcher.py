@@ -1,4 +1,4 @@
-"""Launcher (runs on James's desktop): keep N interruptible Community pods working until every task is done.
+"""Launcher (runs on James's desktop): keep N Community pods (on-demand; --interruptible for spot) working until every task is done.
 
 Every --interval seconds:
   1. list this run's pods (name prefix) and update the spend ledger: each pod's costPerHr x the time since it was
@@ -211,7 +211,7 @@ def cmd_run(a, store, name):
                     print(f"not starting a pod: ~${spent:.2f} + one more interval would reach ${a.max_spend}", flush=True)
                     break
                 rate += guess
-                p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd)
+                p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd, a.interruptible)
                 launched += 1
                 print(f"started {p['id']} on {a.gpu} at ${p.get('costPerHr')}/h", flush=True)
                 led.see(rp.list_pods(name), time.time())
@@ -240,6 +240,7 @@ def main():
     ap.add_argument("--interval", type=int, default=120)
     ap.add_argument("--rate-guess", type=float, default=0.5, help="USD/h assumed for a pod not started yet (cap check)")
     ap.add_argument("--disk-gb", type=int, default=40)
+    ap.add_argument("--interruptible", action="store_true", help="spot pods (RunPod said they are no longer offered, 2026-10-17)")
     ap.add_argument("--registry-auth", help="RunPod containerRegistryAuthId for a private image")
     ap.add_argument("--ledger")
     ap.add_argument("--drain-to", help="local folder: finished results are copied here and deleted from the bucket")
