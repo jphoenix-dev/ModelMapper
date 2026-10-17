@@ -1,0 +1,31 @@
+verify gate (30 neurons): Spearman(batched, unbatched drop) 0.819; same verified call 29/30; max |diff| 0.910
+  L35:4545   Astronomer                     batched +0.758 unbatched +0.814
+  L29:3383   Telegram (software)            batched +0.470 unbatched +0.593
+  L35:3451   Adele                          batched +0.545 unbatched +0.458
+  L35:11561  Ballon d'Or                    batched -0.747 unbatched -0.765
+  L35:8239   Poor Things (film)             batched -0.047 unbatched +0.038
+  L8:9293    Pink (singer)                  batched +0.061 unbatched -0.090
+  L35:2095   Madeira                        batched +0.021 unbatched +0.037
+  L30:2788   Avengers: Endgame              batched +0.579 unbatched +0.605
+  L31:1287   Ottoman Empire                 batched +3.813 unbatched +3.850
+  L29:1096   Karlskrona                     batched -0.088 unbatched -0.058
+  L29:2927   Phineas and Ferb               batched +0.007 unbatched +0.042
+  L33:7870   Yemen                          batched +2.461 unbatched +2.491
+  L35:7628   Doc Holliday                   batched +0.003 unbatched -0.000
+  L29:3667   Air Jordan                     batched +0.159 unbatched +0.182
+  L29:7838   Amsler grid                    batched +0.243 unbatched +0.286
+  L28:2024   CapCut                         batched -0.032 unbatched +0.035
+  L29:11206  BRICS                          batched +1.768 unbatched +0.858
+  L12:775    Credit Suisse                  batched +0.045 unbatched -0.002
+  L34:957    Antikythera mechanism          batched +0.044 unbatched +0.064
+  L29:1168   Santa Ana winds                batched -0.163 unbatched -0.120
+  L25:1813   Shohei Ohtani                  batched +0.174 unbatched +0.240
+  L22:1205   Fantastic Four (2005 film)     batched +0.049 unbatched +0.008
+  L29:4390   Habeas corpus                  batched +0.033 unbatched -0.038
+  L35:5610   Google Maps                    batched -0.016 unbatched +0.000
+  L35:2585   Islamic Revolutionary Guard Co batched +0.016 unbatched -0.009
+  L31:6929   Carlo Ancelotti                batched +0.046 unbatched -0.005
+  L33:9790   Angkor Wat                     batched +0.207 unbatched +0.228
+  L35:5576   Zlatan Ibrahimović             batched -0.002 unbatched -0.005
+  L28:8810   International Women's Day      batched +1.450 unbatched +1.400
+  L35:5671   Mayday                         batched +0.000 unbatched +0.010

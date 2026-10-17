@@ -2177,3 +2177,46 @@ the pooled null's 99th percentile (0.17). Criteria stated before running.
   web text. Next design: a 'concept atlas' - run Qwen on cloze prompts for thousands of names (as in P1: the Wikipedia
   opening with the name blanked) and record every neuron's activation at the answer position; each neuron's
   top-activating names become its proposals; verify by zeroing on those cloze prompts.
+
+## 17 Oct 2026 (night): the concept atlas - asking Qwen which names its neurons serve finds new concept neurons (EXPLORATORY; research branch)
+(`concept_atlas.py` fetch / build / propose / verify_fast / verify_gate; all output in D:/already-clean-data/concept_atlas/,
+summaries copied to results/concept_atlas/.) Fixes the step that failed in search_verify.py (proposing from web text).
+- **Atlas:** 6,061 English Wikipedia names (known in >= 16 language editions, plus our Wikipedia-titled mapped
+  concepts; disambiguation / list / 2024+ / adult-intro pages excluded). Up to 4 cloze prompts per name from its intro,
+  as in P1. Qwen recalled 2,419 prompts for 1,514 names (P >= MIN_P), and every one of the 442,368 neurons was recorded
+  at the answer position (7 GB, fp16). Fetch 25 min, build 5 min.
+- **Proposals:** per neuron, the names that make it fire unusually strongly (z across names, either sign). Check on
+  2,125 known concept neurons (mapped top-5) whose concept is in the atlas: their own concept is their top-1 name in
+  **21.0%** (chance 0.13%) and in their top-5 in **43.2%** (chance 0.66%). From web firings, Luna had found 8%.
+- **Verification** on INDEPENDENT prompts (Luna-written quiz questions for the proposed name, not the cloze prompts);
+  zero the neuron everywhere; verified = recall drop >= 1.0 log-odds and above the null's 99th percentile (0.09; 2
+  random same-layer neurons each).
+
+| group | n | tested (recalled >= 3 questions) | verified |
+|---|---|---|---|
+| top: unmapped neurons with the most name-specific atlas profile (one per name) | 100 | 74 | **16** |
+| random unmapped neurons (layer-matched), their own top name | 100 | 68 | **0** |
+| known concept neurons, their top atlas name | 100 | 87 | 32 |
+
+- **Criterion NOT MET on its absolute bar** (top >= 20%: 16%), met on the ratio (top >= 3x random: 16 vs 0). Of the
+  top neurons that could be tested, 22% verified.
+- **16 new concept neurons, in no earlier map**, some very strong: Algebraic notation (chess) L33:3837 +14.2,
+  24 Hours of Le Mans L31:7680 +10.2, NGC 7319 L27:6441 +6.3, Hydrogeology L29:8015 +6.0, Selenium tetrachloride
+  L32:3220 +5.7, Accelerometer +2.8, Ottoman Empire (a second neuron) +2.4, CD-ROM +2.4, Ketamine +2.1, Sandra Day
+  O'Connor +2.0, Greek alphabet +2.0... These are concepts we never chose to ask about: the model pointed to them.
+- **Efficiency (James: take the loop's lessons):** the first verify ran Luna, then the GPU, one name at a time with tiny
+  batches (GPU flickering); stopped and rebuilt as verify_fast: Luna writes questions in 8 background threads while
+  the GPU takes names as they arrive (append-only saving), recall for all forms x questions of 8 names in one pass,
+  every knockout measured against an as-is copy in the same pass. 300 neurons in 4.7 min; GPU busy 19%, so this
+  stage is now Luna-bound (Luna's hidden reasoning: 197k output tokens for 228 calls, ~$0.10). With questions cached,
+  the GPU ran at 100%.
+- **Gate (batched vs unbatched path), recorded honestly:** the pre-set rule (Spearman >= 0.95 between the two paths'
+  drops, same verdict >= 95%) was NOT met as written. First run: Spearman 0.82, verdicts 29/30, max difference 0.91;
+  the difference came from which borderline questions each path counted as recalled (P near the 0.2 cut-off flips
+  with batch shape), so the recalled question indices are now saved per neuron. On identical question sets:
+  verdicts 30/30, max difference 0.15, Spearman 0.79 - the low rank agreement is among drops near 0, where order is
+  bf16 noise (null p99 0.09). Proceeded on the verdict agreement; the Spearman rule was a poor choice for drops that
+  are mostly ~0.
+- **Caveats:** one sample of 100 per group; Luna's questions can drift from the exact name (some untested names); the
+  'known' group verifies on its TOP atlas name, which is its own concept only ~21% of the time; layer-35 neurons
+  dominate some groups.

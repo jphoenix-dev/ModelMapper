@@ -48,6 +48,7 @@ How Qwen3-8B computes, in the terms we use:
 | Packed triggers, one job | A neuron's downstream effect barely differs across its meanings (0.18 on the same-job -> different-neurons scale); **holds on above-noise knockouts** (0.18-0.22 at every threshold) | 17 Oct day stage D; late afternoon noise check |
 | A concept's key neurons form a feed-forward assembly converging on the 'say it' neuron | 'say' neurons act directly (share 1.05), early ones only indirectly; zeroing an upstream key neuron cuts a later 'say' neuron by ~12% vs ~0 for activation-matched nulls (555 concepts, all pair types p < 1e-5) | 17 Oct evening, indirect path |
 | Between words, the assembly runs through a few shared heads | Earlier-word part ~19% of the composition (p = 3e-40 vs null); top-3 heads recover 56% vs 0% random; L34H28 is a top carrier in 173 of 312 concepts; matches the attention study's carriers | 17 Oct evening, cross-position |
+| Search-then-verify works when Qwen proposes | Concept atlas (1,514 names x all 442k neurons): own concept is top-1 name for 21% of known concept neurons (chance 0.13%); 16/100 top unmapped candidates verified vs 0/100 random | 17 Oct night, concept atlas |
 | Off-topic firings are harmless at single-firing resolution | Switching a concept neuron off on unrelated text: +0.0003 +- 0.0005 nats/token (neither); on its own topic +0.004 +- 0.002 (helps); 22,415 firings vs an in-batch null | 17 Oct evening, interference |
 | Key neurons often share a layer, slightly less than chance | 46% of concepts have >= 2 of top-5 on one layer (chance 54%); ~70% of key neurons in L28-35 | 17 Oct late afternoon |
 | A concept's key neurons combine a 'say it' job with legible attribute jobs | 60% have one late neuron with the answer in its top-10 of 152k tokens (null 0.4%); >= 2 neurons raise the answer in 71% (null 2%); e.g. Jimmy Carter = first names + 1970s + presidency + Georgia | 17 Oct evening |
@@ -78,9 +79,12 @@ the distributed bottom-up pipeline; self-checks in every batch; nothing Qwen-spe
 coverage-4 concept neurons at the 90th percentile of their layer; top 1% holds 16.7x the chance count; ~1/3 of the
 signal is neuron size). **Search-then-verify pilot (350 neurons):** verification is sharp (a known
 neuron with its own concept named: 4/4 verified, drops 1.9-7.4 vs nulls <= 0.18), but proposing concepts from WEB
-firings fails (Luna found the concept for 4/50 known neurons; 0 verified among 100 top-ranked unmapped). Next: propose
-from Qwen itself - a 'concept atlas' of every neuron's activation at the answer position over cloze prompts for
-thousands of names.
+firings fails (Luna found the concept for 4/50 known neurons; 0 verified among 100 top-ranked unmapped). **Concept atlas
+(17 Oct night):** proposing from Qwen itself works. Every neuron recorded at the answer position over cloze prompts
+for 1,514 recalled names; known concept neurons get their own concept as top-1 name 21% (chance 0.13%). Of 100
+unmapped neurons with the most name-specific profile, 16 verified causally (random: 0/100) - new concept neurons the
+model pointed to (chess notation +14.2, 24 Hours of Le Mans +10.2, NGC 7319, hydrogeology, selenium tetrachloride...).
+This is the search-then-verify core for loop v2. Verification is now Luna-bound (GPU 19% busy).
 
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts
