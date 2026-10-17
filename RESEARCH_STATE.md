@@ -46,6 +46,7 @@ How Qwen3-8B computes, in the terms we use:
 | Concept neurons are polysemantic in ordinary text | Luna on web firings: 12% dedicated, 22% ingredient, 57% mostly unrelated (controls 95% unrelated) | 17 Oct night, Luna judge |
 | Their extra meanings are mostly genuinely different, not hidden facets | In Qwen's own space, meanings Luna calls unrelated sit at the unrelated reference; Ur-hubs in only 8/98 (5% by chance): weak | 17 Oct day, stages A/C |
 | Packed triggers, one job | A neuron's downstream effect barely differs across its meanings (0.18 on the same-job -> different-neurons scale); **holds on above-noise knockouts** (0.18-0.22 at every threshold) | 17 Oct day stage D; late afternoon noise check |
+| Off-topic firings are harmless at single-firing resolution | Switching a concept neuron off on unrelated text: +0.0003 +- 0.0005 nats/token (neither); on its own topic +0.004 +- 0.002 (helps); 22,415 firings vs an in-batch null | 17 Oct evening, interference |
 | Key neurons often share a layer, slightly less than chance | 46% of concepts have >= 2 of top-5 on one layer (chance 54%); ~70% of key neurons in L28-35 | 17 Oct late afternoon |
 | A concept's key neurons combine a 'say it' job with legible attribute jobs | 60% have one late neuron with the answer in its top-10 of 152k tokens (null 0.4%); >= 2 neurons raise the answer in 71% (null 2%); e.g. Jimmy Carter = first names + 1970s + presidency + Georgia | 17 Oct evening |
 | Attribute neurons are reusable, nameable parts | A neuron's job from the weights picks its users out of distractors: 74.6% vs 55.4% control vs 44% chance (200 neurons, p = 2e-14); pre-set ratio criterion not met (badly set) | 17 Oct evening |
@@ -56,6 +57,9 @@ How Qwen3-8B computes, in the terms we use:
   twice and were only 1.1x faster: **dropped**. Compare only like-shaped passes, or run a null in the same pass.
 - A typical single-token, single-neuron knockout is only ~2x the batch-shape noise (gpu-fan-out session). Check that
   conclusions hold on above-noise cases.
+- Any knockout that changes anything diverges by ~0.005 nats/token (~3e-4 KL) in bf16, whatever its size: an in-batch
+  null is not exact. Read single-neuron effects against a null, never against 0.
+- Check gate counters actually count (an edit once put them inside a comment); verify gates from saved records.
 - Pre-set rules can fail their own calibration (stage D silhouette): report it, don't rescue it quietly.
 - Save everything (per-prompt drops, all 200 candidates, activation maps, head data) so new questions don't need
   re-runs.
@@ -68,8 +72,9 @@ How Qwen3-8B computes, in the terms we use:
    parts:** a neuron's weight-read job picks out which concepts use it (74.6% vs 55.4% for another neuron's job, chance
    44%; 103 vs 21 neurons, p = 2e-14). The concepts sharing a neuron are themselves similar. Next: follow the indirect
    path (later layers).
-2. **Interference.** In a neuron's off-topic contexts, does switching it off make Qwen's predictions better (the
-   network tolerates a leak), worse (it uses the push there too) or neither?
+2. **Interference: none detected (17 Oct evening).** On unrelated text, switching a concept neuron off neither helps
+   nor hurts on average (+0.0003 +- 0.0005 nats/token vs the null); on its own topic its push helps (+0.004 +- 0.002).
+   Single-firing effects are only ~1.5x bf16 rounding noise, so a weak leak below ~0.0005 nats/token would be missed.
 3. **Family vs answer type** (the P4 caveat): e.g. people named in the answer vs described.
 4. **Meaning count vs sample size** (15/30/60/120 firings): do the meanings saturate?
 5. **Quantisation gate** (int8/int4 on the 12-concept reproduction set): would it speed up the loop without

@@ -2003,3 +2003,40 @@ judge, $0.47: Luna's hidden reasoning tokens made it ~10x my $0.05 estimate.)
 - **Caveats:** Luna's one-line job names are partly inferred from the concept list, not just from the tokens (it named
   a job 'recognizes country names' from unreadable tokens). The real-vs-control comparison is the valid test; the job
   names are illustrations. One judge; one sample of 200; direct-push jobs only.
+
+## 17 Oct 2026 (evening): interference - when a concept neuron fires off-topic, does its push help or hurt? (EXPLORATORY; research branch)
+James: many triggers, one job - harmless reuse, a leak the network tolerates, or a push it uses everywhere?
+(`interference.py`, `interference_summary.py`; GPU 55 min, no API.) Contexts: the 12 random web-text firings per
+neuron that Luna labelled in the firing judge (rebuilt exactly from its seeds: 0 of 22,476 snippets differ), 1,093
+concept neurons + their paired random control neurons. Per firing, one batch of 3 identical sequences (document up to
+the firing token + the next 16 tokens): as is / the neuron zeroed at that token / a random same-layer neuron zeroed
+(null). delta = loss(zeroed) - loss(as is) in nats per token over the next 16 tokens: > 0 = the push HELPED predict the
+real text.
+**Noise (learned on the way, with the gpu-fan-out session):** the null is NOT exact. Any zeroing that changes anything
+flips bf16 roundings, and the runs drift apart by ~0.005 nats/token whatever the size of the change. So effects are
+read against the null, not against 0. (I first told the other session it was exact, from 6 trial contexts - corrected.)
+
+| firings | n | median abs(delta) vs null | delta minus null, mean +- 2SE | above the null's p90 |
+|---|---|---|---|---|
+| concept neuron, about its concept (A) | 1,961 | 0.0100 vs 0.0057 (1.8x) | **+0.0040 +- 0.0018** (helps) | 36% |
+| concept neuron, related (B) | 3,928 | 0.0086 vs 0.0055 (1.6x) | +0.0015 +- 0.0010 (helps, barely) | 31% |
+| concept neuron, unrelated (C) | 7,217 | 0.0056 vs 0.0039 (1.4x) | **+0.0003 +- 0.0005** (neither) | 18% |
+| random control neuron, unrelated (C) | 8,834 | 0.0058 vs 0.0044 (1.3x) | +0.0008 +- 0.0004 | 18% |
+
+- Next token alone: on-concept firings help by +0.058 nats on average (1,027 helped vs 874 hurt, p = 0.0005);
+  unrelated ones +0.009 (p = 0.07).
+- Within the 745 concept neurons that have both kinds of firing: on-concept/related +0.0022 vs unrelated -0.0005
+  (on > off in 404 vs 341, p = 0.02).
+- By depth: the on-concept benefit is in layers 24-35 (+0.004-0.005); early-layer firings show none.
+- **Reading: no interference detected.** When a concept neuron fires on unrelated text, switching it off neither helps
+  nor hurts on average. Its unrelated firings matter about as much as a random neuron's firings do (both just above
+  rounding noise), with no consistent direction. On its own topic its push helps, a little. So "packed triggers, one
+  job" looks like harmless reuse at the resolution of single firings: the off-topic push is tolerated or too small to
+  matter, not a harmful leak.
+- **Caveats:** single-firing effects are tiny overall (a few thousandths of a nat per token); a weak but systematic leak
+  below ~0.0005 nats/token would be missed; one firing at a time (a neuron that fires repeatedly through a passage could
+  add up); the 38 firings whose activation didn't reproduce the profile (0.17%) are excluded.
+- **Bug, recorded:** an edit swallowed the gate 2/3 counters into a comment, so the run printed 0 for both regardless.
+  Checked afterwards from the saved records (`results/interference_gate.txt`, correction appended): 38 activation
+  mismatches; zeroing changed the output in 98.8%, the rest being last-layer neurons below bf16 logit resolution. Raw
+  per-context data: results/interference.jsonl in the main checkout (16.5 MB, not committed).
