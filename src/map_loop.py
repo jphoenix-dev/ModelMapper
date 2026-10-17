@@ -27,6 +27,7 @@ L x H x T); in the rank row, the 50 most-attributed heads each switched off alon
 Per-position attribution maps are NOT saved (~800 MB per concept); their per-neuron totals are ('attr').
 Outputs: <OUT>/map_loop_<tag>.json (rows), <OUT>/rank_save_<tag>.json (rank_save-compatible), console log.
 
+KNOCK_BATCH=<n> (env): test n single knockouts per forward pass (default 0 = one per pass, the validated path).
 Usage: RECALL_VARIANT=V3 CONCEPT_OUT_DIR=<dir> python src/map_loop.py <wave json> <tag> [luna_budget_usd=2.5] [luna_workers=8]
 """
 import json
@@ -151,6 +152,63 @@ def luna_judge(concept, spec, timing, budget):
     return spec
 
 
+KNOCK_BATCH = int(os.environ.get("KNOCK_BATCH", "0"))   # >0: test this many single knockouts per forward pass
+
+
+def multi_knockout_logodds(pipe, pairs, groups, kind):
+    """Exact log-odds of every pair under each of len(groups) single knockouts, several knockouts per forward pass.
+
+    groups: list of (layer, index); kind 'neuron' (activation set to 0 at every position, as neurons.steer clamp) or
+    'head' (the head's output slice zeroed at every position, as pipe.ablate_heads). Rows = pairs x groups; each row
+    has only its own group's unit knocked out. Logits are taken only at the answer positions (lm_head on gathered
+    hidden states); log-odds as pipeline_fast.batch_logodds (float64, expm1). Returns {group: [log-odds per pair]}."""
+    m = pipe.model; H = m.config.num_attention_heads; D = m.config.head_dim
+    seqs, spans = [], []
+    for prompt, ans in pairs:
+        p_ids = pipe.tok.encode(prompt); seqs.append(p_ids + ans[:-1]); spans.append((len(p_ids) - 1, ans))
+    T = max(map(len, seqs)); pad = pipe.tok.pad_token_id or 0
+    base_ids = torch.full((len(seqs), T), pad, device=DEVICE); base_mask = torch.zeros_like(base_ids)
+    for i, s in enumerate(seqs):
+        base_ids[i, :len(s)] = torch.tensor(s, device=DEVICE); base_mask[i, :len(s)] = 1
+    out = {}
+    for c0 in range(0, len(groups), KNOCK_BATCH):
+        chunk = groups[c0:c0 + KNOCK_BATCH]; G = len(chunk); P = len(seqs)
+        ids = base_ids.repeat(G, 1); mask = base_mask.repeat(G, 1)
+        by_layer = {}
+        for gi, (l, k) in enumerate(chunk):
+            by_layer.setdefault(l, []).append((gi, k))
+        hooks = []
+        for l, items in by_layer.items():
+            rows = torch.tensor([gi * P + p for gi, _ in items for p in range(P)], device=DEVICE)
+            idx = torch.tensor([k for _, k in items for _ in range(P)], device=DEVICE)
+            if kind == "neuron":
+                def h(mod, a, rows=rows, idx=idx):
+                    x = a[0].clone(); x[rows, :, idx] = 0; return (x,)
+                hooks.append(mlps(m)[l].down_proj.register_forward_pre_hook(h))
+            else:
+                def h(mod, a, rows=rows, idx=idx):
+                    x = a[0].clone().view(a[0].shape[0], a[0].shape[1], H, D)
+                    x[rows, :, idx, :] = 0; return (x.view(a[0].shape),)
+                hooks.append(m.model.layers[l].self_attn.o_proj.register_forward_pre_hook(h))
+        try:
+            with torch.no_grad():
+                hs = m.model(input_ids=ids, attention_mask=mask).last_hidden_state
+        finally:
+            for x in hooks:
+                x.remove()
+        for gi, g in enumerate(chunk):
+            vals = []
+            for p, (start, ans) in enumerate(spans):
+                pos = torch.arange(start, start + len(ans), device=DEVICE)
+                lp = m.lm_head(hs[gi * P + p, pos]).double().log_softmax(-1)
+                s = lp[torch.arange(len(ans), device=DEVICE), torch.tensor(ans, device=DEVICE)].sum().item()
+                if s >= 0.0:
+                    raise ValueError("log P(answer) rounds to 0 in float64 (log-odds > ~36)")
+                vals.append(s - math.log(-math.expm1(s)))
+            out[g] = vals
+    return out
+
+
 def main():
     wave_p, tag = sys.argv[1], sys.argv[2]
     budget = float(sys.argv[3]) if len(sys.argv) > 3 else 2.5
@@ -226,7 +284,12 @@ def main():
         def per_prompt(units):
             los = pipe.batch_logodds(pairs, steer(m, [(l, n, 0.0) for l, n in units]) if units else None)
             return [b - x for b, x in zip(base, los)], [p_of(x) for x in los]
-        t = time.time(); pp = {u: per_prompt([u])[0] for u in top}; T["G2_single_knockouts"] = round(time.time() - t, 2)
+        t = time.time()
+        if KNOCK_BATCH > 0:
+            mk = multi_knockout_logodds(pipe, pairs, top, "neuron"); pp = {u: [b - x for b, x in zip(base, mk[u])] for u in top}
+        else:
+            pp = {u: per_prompt([u])[0] for u in top}
+        T["G2_single_knockouts"] = round(time.time() - t, 2)
         drop1 = {u: sum(pp[u]) / len(rp) for u in top}; single = sorted(top, key=lambda u: -sum(pp[u]))
 
         def kvals(order):
@@ -274,9 +337,13 @@ def main():
         t = time.time(); ha = A["head_attr"].detach()
         top_heads = [divmod(i.item(), Hh) for i in ha.flatten().argsort(descending=True)[:50]]
         head_pp = {}
-        for (l, h) in top_heads:
-            los = pipe.batch_logodds(pairs, pipe.ablate_heads([(l, h)]))
-            head_pp[f"L{l}H{h}"] = [round(b - x, 3) for b, x in zip(base, los)]
+        if KNOCK_BATCH > 0:
+            mh = multi_knockout_logodds(pipe, pairs, top_heads, "head")
+            head_pp = {f"L{l}H{h}": [round(b - x, 3) for b, x in zip(base, mh[(l, h)])] for l, h in top_heads}
+        else:
+            for (l, h) in top_heads:
+                los = pipe.batch_logodds(pairs, pipe.ablate_heads([(l, h)]))
+                head_pp[f"L{l}H{h}"] = [round(b - x, 3) for b, x in zip(base, los)]
         T["G2_head_knockouts"] = round(time.time() - t, 2)
         np.savez_compressed(arr_dir / f"{cp.slug(c)}.npz", attr=A["attr"].detach().half().cpu().numpy(), last_act=ans.half().cpu().numpy(),
                             last_act_attr_pass=A["last_act"].detach().half().cpu().numpy(),
