@@ -260,10 +260,19 @@ def cmd_run(a, store, name):
             except quota.QuotaExceeded as e:
                 terminate_all(name, f"R2 free-tier cap: {e}")
                 break
+            try:
+                bal = rp.balance()
+            except Exception as e:  # noqa: BLE001 - the balance is a backstop; never let it crash the launcher
+                bal = None; print(f"balance check failed: {e!r}", flush=True)
+            if bal is not None:
+                led.d.setdefault("balance_log", []).append([round(now), bal["clientBalance"], bal["currentSpendPerHr"]])
+                if a.min_balance is not None and bal["clientBalance"] < a.min_balance:
+                    terminate_all(name, f"account balance ${bal['clientBalance']:.2f} below the floor ${a.min_balance}", led)
+                    break
             spent = led.spend(now)
             rate = sum(p.get("costPerHr") or 0 for p in live)
             print(f"[{time.strftime('%H:%M:%S')}] live {len(live)}, pending {len(pending)} (ready {len(ready)}, claimed {len(claims)}), "
-                  f"spend ~${spent:.3f}, ${rate:.3f}/h, bucket {q['gb_held']} GB, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month", flush=True)
+                  f"spend ~${spent:.3f}, ${rate:.3f}/h, balance {('$%.2f' % bal['clientBalance']) if bal else '?'}, bucket {q['gb_held']} GB, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month", flush=True)
             led.save(store)
             if spent + rate * a.interval / 3600 >= a.max_spend:
                 terminate_all(name, f"spend cap: ~${spent:.2f} + next interval reaches ${a.max_spend}")
@@ -336,6 +345,7 @@ def main():
     ap.add_argument("--interruptible", action="store_true", help="spot pods (RunPod said they are no longer offered, 2026-10-17)")
     ap.add_argument("--cuda-versions", default="12.8,12.9,13.0", help="host CUDA versions allowed (driver must run the image)")
     ap.add_argument("--max-wait-min", type=float, default=20, help="give up if no machine is available for this long")
+    ap.add_argument("--min-balance", type=float, help="USD: stop everything if the RunPod account balance falls below this")
     ap.add_argument("--bad-hosts", help="comma-separated RunPod machine ids to release immediately (also learned from GPU failures)")
     ap.add_argument("--stale-min", type=float, default=10, help="terminate a pod whose worker heartbeat is older than this")
     ap.add_argument("--boot-timeout-min", type=float, default=15,
@@ -348,6 +358,7 @@ def main():
     if a.cmd == "run":
         cmd_run(a, store, name)
     elif a.cmd == "status":
+        b = rp.balance(); print(f"account balance ${b['clientBalance']:.2f}, spending ${b['currentSpendPerHr']:.3f}/h")
         pending, ready, claims = state(store, store.get_json("manifest.json")["tasks"])
         for p in rp.list_pods(name):
             print(p["id"], p.get("desiredStatus"), p.get("costPerHr"), p.get("lastStartedAt"))

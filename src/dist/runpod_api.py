@@ -68,5 +68,17 @@ def create_pod(name, image, gpu_type, env_vars: dict, container_disk_gb=40, regi
         raise
 
 
+def balance(key=None) -> dict:
+    """Account balance and current spend rate (GraphQL; the REST API has no balance endpoint). Needs the key's GraphQL
+    permission. Returns {"clientBalance": USD, "currentSpendPerHr": USD/h, "spendLimit": USD/h}."""
+    key = key or env("RUNPOD_API_KEY")
+    r = urllib.request.Request("https://api.runpod.io/graphql",
+                               data=json.dumps({"query": "{ myself { clientBalance currentSpendPerHr spendLimit } }"}).encode(),
+                               headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
+                                        "User-Agent": "model-mapper-launcher/1.0"})
+    with urllib.request.urlopen(r, timeout=60) as resp:
+        return json.loads(resp.read().decode())["data"]["myself"]
+
+
 def terminate(pod_id: str, key=None) -> None:
     _req("DELETE", f"/pods/{pod_id}", key=key, ok_404=True)
