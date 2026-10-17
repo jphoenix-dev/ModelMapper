@@ -14,6 +14,7 @@ import platform
 import socket
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import torch
@@ -60,16 +61,21 @@ def local_matches(local: Path, repo: str, revision: str) -> bool:
     return True
 
 
-def model_dir(repo: str, revision: str) -> tuple[str, str]:
-    """(folder to load from, where it came from). Local copy if it matches the pin, else download the pinned commit."""
+def model_dir(repo: str, revision: str) -> tuple[str, str, dict]:
+    """(folder to load from, where it came from, download timing). Local copy if it matches the pin, else download."""
     local = Path(MODELS_DIR) / short_name(repo)
     if (local / "config.json").exists() and env("DIST_TRUST_LOCAL") != "0":
+        t = time.time()
         if local_matches(local, repo, revision):
-            return str(local), "local copy, sha256-verified against the pinned revision"
+            return str(local), "local copy, sha256-verified against the pinned revision", {"verify_s": round(time.time() - t, 1)}
         print(f"[runtime] local copy {local} does not match {repo}@{revision}; downloading", flush=True)
     from huggingface_hub import snapshot_download
+    t = time.time()
     path = snapshot_download(repo, revision=revision, allow_patterns=WEIGHT_PATTERNS)
-    return path, "downloaded from the hub at the pinned revision"
+    sec = time.time() - t
+    gb = sum(f.stat().st_size for f in Path(path).rglob("*") if f.is_file()) / 1e9
+    return path, "downloaded from the hub at the pinned revision", {
+        "download_s": round(sec, 1), "download_gb": round(gb, 2), "download_MBps": round(gb * 1e3 / sec, 1) if sec else None}
 
 
 def load_model(cfg: dict):
@@ -78,11 +84,13 @@ def load_model(cfg: dict):
     dtype = env("DIST_DTYPE", cfg.get("dtype", "bfloat16"))
     if dtype not in ALLOWED_DTYPES:
         raise SystemExit(f"dtype {dtype} not allowed: exact weights only ({ALLOWED_DTYPES})")
-    path, source = model_dir(cfg["model"], cfg["revision"])
+    path, source, fetch = model_dir(cfg["model"], cfg["revision"])
+    t = time.time()
     tok = AutoTokenizer.from_pretrained(path)
     model = AutoModelForCausalLM.from_pretrained(path, dtype=getattr(torch, dtype), device_map=DEVICE)
     model.eval()
-    return model, tok, {"model": cfg["model"], "revision": cfg["revision"], "weights_source": source, "dtype": dtype}
+    return model, tok, {"model": cfg["model"], "revision": cfg["revision"], "weights_source": source, "dtype": dtype,
+                        **fetch, "to_gpu_s": round(time.time() - t, 1)}
 
 
 def _cmd(args):

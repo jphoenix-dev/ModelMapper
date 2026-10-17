@@ -20,6 +20,7 @@ import json
 import os
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 import numpy as np
@@ -29,8 +30,15 @@ from config import env  # noqa: E402
 
 
 class Store:
-    """Counts requests by R2 billing class (A: put, list page; B: get, head; delete is free) for quota.py."""
+    """Counts requests by R2 billing class (A: put, list page; B: get, head; delete is free) for quota.py, and the
+    time and bytes of every get / put (io) so tasks can split their time into transfer and compute."""
     ops = None
+    io = None
+
+    def _io(self, kind, seconds, nbytes):
+        if self.io is None:
+            self.io = {"get_s": 0.0, "get_bytes": 0, "put_s": 0.0, "put_bytes": 0}
+        self.io[f"{kind}_s"] += seconds; self.io[f"{kind}_bytes"] += nbytes
 
     def _count(self, cls, n=1):
         if self.ops is None:
@@ -76,8 +84,10 @@ class LocalStore(Store):
 
     def get(self, key):
         self._count("B")
-        p = self._p(key)
-        return p.read_bytes() if p.is_file() else None
+        t = time.perf_counter(); p = self._p(key)
+        b = p.read_bytes() if p.is_file() else None
+        self._io("get", time.perf_counter() - t, len(b or b""))
+        return b
 
     def exists(self, key):
         self._count("B")
@@ -85,12 +95,13 @@ class LocalStore(Store):
 
     def put(self, key, data):
         self._count("A")
-        p = self._p(key)
+        t = time.perf_counter(); p = self._p(key)
         p.parent.mkdir(parents=True, exist_ok=True)
         fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".tmp_")   # atomic: readers never see half a file
         with os.fdopen(fd, "wb") as f:
             f.write(data)
         os.replace(tmp, p)
+        self._io("put", time.perf_counter() - t, len(data))
 
     def list(self, prefix=""):
         return sorted(self.list_sizes(prefix))
@@ -111,6 +122,9 @@ class LocalStore(Store):
     def delete(self, key):
         self._p(key).unlink(missing_ok=True)
 
+    def bucket_root(self):
+        return self
+
     def __repr__(self):
         return f"LocalStore({self.root})"
 
@@ -127,10 +141,13 @@ class S3Store(Store):
 
     def get(self, key):
         self._count("B")
+        t = time.perf_counter()
         try:
-            return self.s3.get_object(Bucket=self.bucket, Key=self.prefix + key)["Body"].read()
+            b = self.s3.get_object(Bucket=self.bucket, Key=self.prefix + key)["Body"].read()
         except self.s3.exceptions.NoSuchKey:
-            return None
+            b = None
+        self._io("get", time.perf_counter() - t, len(b or b""))
+        return b
 
     def exists(self, key):
         from botocore.exceptions import ClientError
@@ -145,7 +162,9 @@ class S3Store(Store):
 
     def put(self, key, data):
         self._count("A")
+        t = time.perf_counter()
         self.s3.put_object(Bucket=self.bucket, Key=self.prefix + key, Body=data)
+        self._io("put", time.perf_counter() - t, len(data))
 
     def list(self, prefix=""):
         return sorted(self.list_sizes(prefix))
@@ -159,6 +178,13 @@ class S3Store(Store):
 
     def delete(self, key):
         self.s3.delete_object(Bucket=self.bucket, Key=self.prefix + key)
+
+    def bucket_root(self):
+        """The whole bucket (no run prefix), sharing this client and its counters: the free tier is per account."""
+        r = object.__new__(S3Store)
+        r.bucket, r.prefix, r.s3 = self.bucket, "", self.s3
+        r.ops, r.io = self.ops, self.io
+        return r
 
     def __repr__(self):
         return f"S3Store(s3://{self.bucket}/{self.prefix})"

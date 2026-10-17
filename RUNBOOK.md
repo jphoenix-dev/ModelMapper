@@ -80,6 +80,10 @@ This lists the pods plus pending, ready and claimed tasks. In the store:
 - `logs/<pod>/heartbeat.json`, `logs/<pod>/error_*.json`;
 - `logs/launcher.json`: the spend ledger.
 
+Afterwards, `python src/dist/timeline.py <store>` shows where each pod's time and money went: create call,
+scheduling and image pull, each boot step, model download (GB, MB/s), load onto the GPU, every task (compute vs input
+download vs result upload, tokens/s, peak GPU memory) and teardown, each with its dollar cost at the pod's rate.
+
 ## 6. Stop
 
 ```

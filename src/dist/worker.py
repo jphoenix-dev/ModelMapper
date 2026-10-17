@@ -70,8 +70,14 @@ def main():
         print(f"[{now()}] {msg}", flush=True)
 
     ctx = Ctx(store, wid)
-    boot = {"worker": wid, "process_start": T_START, "process_start_iso": now(), "env": ctx.env}
+    # epoch seconds of each boot step: container start, boto3 installed, code fetched, packages installed (boot script),
+    # python started, model downloaded + on the GPU, first task started
+    steps = {k[2:].lower(): float(v) for k, v in os.environ.items() if k.startswith("T_") and k[2:].replace("_", "").isalpha()
+             and v.replace(".", "", 1).isdigit()}
+    steps["python_start"] = T_START
+    boot = {"worker": wid, "process_start": T_START, "process_start_iso": now(), "env": ctx.env, "steps": steps}
     t0 = time.time(); _ = ctx.model                      # download (if needed) + load the pinned model
+    steps["model_ready"] = time.time()
     boot.update(model=ctx.model_meta, model_ready_s=round(time.time() - T_START, 1), model_load_s=round(time.time() - t0, 1))
     store.put_json(f"{lp}/boot.json", boot)
     log(f"model ready after {boot['model_ready_s']} s ({ctx.model_meta['weights_source']})")
@@ -107,6 +113,7 @@ def main():
         store.put_json(claim_key, {"worker": wid, "t": time.time()})
         if "first_task_start" not in boot:
             boot["first_task_start_s"] = round(time.time() - T_START, 1); boot["first_task_start"] = now()
+            steps["first_task_start"] = time.time()
             store.put_json(f"{lp}/boot.json", boot)
         log(f"start {pick} ({len(pending)} pending, {len(ready)} ready)")
         try:
@@ -119,7 +126,9 @@ def main():
                 raise
             time.sleep(5); continue
         store.delete(claim_key)
-        row = {"task": pick, "skipped": meta is None, **({k: meta[k] for k in ("seconds", "tokens", "tokens_per_s")} if meta else {})}
+        keep = ("seconds", "tokens", "tokens_per_s", "start_epoch", "end_epoch", "compute_s", "io_get_s", "io_get_mb",
+                "io_put_s", "io_put_mb", "gpu_peak_allocated_gb", "gpu_peak_reserved_gb")
+        row = {"task": pick, "skipped": meta is None, **({k: meta[k] for k in keep if k in meta} if meta else {})}
         summary.append(row); store.put_json(f"{lp}/task_{n_run:04d}.json", row)
         quota.save_ops(store, wid)
         store.put_json(f"{lp}/heartbeat.json", {"t": now(), "tasks_run": n_run + 1, "uptime_s": round(time.time() - T_START)})
@@ -127,7 +136,8 @@ def main():
         n_run += 1
         if a.once or a.task:
             break
-    store.put_json(f"{lp}/exit.json", {"t": now(), "uptime_s": round(time.time() - T_START, 1), "tasks": summary})
+    store.put_json(f"{lp}/exit.json", {"t": now(), "epoch": time.time(), "uptime_s": round(time.time() - T_START, 1),
+                                       "tasks": summary, "io_total": store.io, "requests": store.ops})
     quota.save_ops(store, wid)
     if not a.no_terminate:
         terminate_self(log)

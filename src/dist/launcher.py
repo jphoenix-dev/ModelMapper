@@ -43,9 +43,11 @@ REPO = Path(__file__).resolve().parents[2]
 # so a broken boot never sits there billing.
 BOOT = r"""
 set -e
+export T_CONTAINER_START=$(date +%s.%N)
 fail() { python -c "import os,urllib.request as u; u.urlopen(u.Request('https://rest.runpod.io/v1/pods/'+os.environ['RUNPOD_POD_ID'], method='DELETE', headers={'Authorization':'Bearer '+os.environ['RUNPOD_API_KEY']}))"; }
 trap fail ERR
 pip install -q --no-cache-dir boto3==1.43.100
+export T_BOTO_DONE=$(date +%s.%N)
 python - <<'PY'
 import io, os, tarfile, boto3
 bucket, _, prefix = os.environ["DIST_STORE"][5:].partition("/")
@@ -54,8 +56,10 @@ s3 = boto3.client("s3", endpoint_url=os.environ.get("S3_ENDPOINT_URL"), region_n
                   aws_access_key_id=os.environ["S3_ACCESS_KEY_ID"], aws_secret_access_key=os.environ["S3_SECRET_ACCESS_KEY"])
 tarfile.open(fileobj=io.BytesIO(s3.get_object(Bucket=bucket, Key=key)["Body"].read())).extractall("/app")
 PY
+export T_CODE_DONE=$(date +%s.%N)
 cd /app
 pip install -q --no-cache-dir -r requirements-dist.txt
+export T_PIP_DONE=$(date +%s.%N)
 python src/dist/worker.py
 """
 
@@ -88,6 +92,11 @@ class Ledger:
         for p in pods:
             e = self.d["pods"].setdefault(p["id"], {"created": now, "rate": p.get("costPerHr") or 0, "gone": None})
             e["rate"] = p.get("costPerHr") or e["rate"]; e["status"] = p.get("desiredStatus")
+            if p.get("desiredStatus") == "RUNNING" and "first_seen_running" not in e:
+                e["first_seen_running"] = now
+            for f in ("lastStartedAt", "machineId", "gpu", "memoryInGb", "vcpuCount"):
+                if p.get(f) is not None:
+                    e[f] = p[f]
             if p.get("desiredStatus") == "EXITED" and not e.get("stopped"):
                 e["stopped"] = now                 # a stopped pod with volumeInGb 0 bills nothing
         for pid, e in self.d["pods"].items():
@@ -103,11 +112,13 @@ class Ledger:
             store.put_json("logs/launcher.json", self.d)
 
 
-def terminate_all(name, why):
+def terminate_all(name, why, led=None):
     pods = rp.list_pods(name)
     for p in pods:
         print(f"terminating {p['id']} ({p.get('desiredStatus')}): {why}", flush=True)
         rp.terminate(p["id"])
+        if led is not None and p["id"] in led.d["pods"]:
+            led.d["pods"][p["id"]].setdefault("terminate_sent", time.time())
     for _ in range(30):
         left = rp.list_pods(name)
         if not left:
@@ -180,6 +191,7 @@ def cmd_run(a, store, name):
                 if p.get("desiredStatus") == "EXITED" or (finished and p.get("desiredStatus") == "RUNNING"):
                     print(f"terminating {p['id']} ({p.get('desiredStatus')}, worker exited: {finished})", flush=True)
                     rp.terminate(p["id"])
+                    led.d["pods"].setdefault(p["id"], {}).setdefault("terminate_sent", time.time())
             live = [p for p in pods if p.get("desiredStatus") == "RUNNING" and not store.exists(f"logs/{p['id']}/exit.json")]
             if a.drain_to:
                 drain(store, tasks, pending, a.drain_to)
@@ -211,8 +223,11 @@ def cmd_run(a, store, name):
                     print(f"not starting a pod: ~${spent:.2f} + one more interval would reach ${a.max_spend}", flush=True)
                     break
                 rate += guess
+                t_req = time.time()
                 p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd, a.interruptible)
                 launched += 1
+                led.d["pods"][p["id"]] = {"requested": t_req, "created": time.time(), "rate": p.get("costPerHr") or 0,
+                                          "gone": None, "gpu_type": a.gpu, "name": p.get("name")}
                 print(f"started {p['id']} on {a.gpu} at ${p.get('costPerHr')}/h", flush=True)
                 led.see(rp.list_pods(name), time.time())
             time.sleep(a.interval)
@@ -220,7 +235,7 @@ def cmd_run(a, store, name):
         print("interrupted", flush=True)
     finally:
         led.see(rp.list_pods(name), time.time()); led.save(store)
-        n = terminate_all(name, "launcher finished")
+        n = terminate_all(name, "launcher finished", led)
         led.see(rp.list_pods(name), time.time()); led.save(store)
         print(f"estimated spend ~${led.spend(time.time()):.3f}; pods left: {n}", flush=True)
 

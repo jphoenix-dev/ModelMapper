@@ -30,20 +30,24 @@ def month():
 
 
 def save_ops(store, who):
-    """Record this process's request counts for the month (one small PutObject)."""
+    """Record this process's request counts for the month (one small PutObject), at the bucket root."""
     ops = dict(store.ops or {"A": 0, "B": 0})
     ops["A"] += 1                                    # this write itself
-    store.put_json(f"usage/{month()}/{who}.json", {"t": time.time(), **ops})
+    tag = (getattr(store, "prefix", "") or "").strip("/").replace("/", "_")
+    store.bucket_root().put_json(f"usage/{month()}/{tag + '__' if tag else ''}{who}.json", {"t": time.time(), **ops})
 
 
 def usage(store):
-    """(bytes held in the bucket, Class A this month, Class B this month), from one listing of the bucket."""
-    sizes = store.list_sizes("")
+    """(bytes held in the whole bucket, Class A this month, Class B this month): every run in the bucket counts."""
+    root = store.bucket_root()
+    sizes = root.list_sizes("")
     a = b = 0
     for k in sizes:
         if k.startswith(f"usage/{month()}/"):
-            u = store.get_json(k) or {}
+            u = root.get_json(k) or {}
             a += u.get("A", 0); b += u.get("B", 0)
+    if root is not store:                            # the root view counted its own requests into a copy: fold them back
+        store.ops = root.ops
     return sum(sizes.values()), a, b
 
 
