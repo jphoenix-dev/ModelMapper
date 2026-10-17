@@ -1843,3 +1843,12 @@ random (20 repeats) and count the neurons that fire (>= 0.5x own activation) for
 - **Clarification, added before the coverage-3 data exists:** not all 289 concepts will be recalled, so N will be below
   648. The prediction is the formula, evaluated at the actual N: dedicated(N) = 36.5% - 9.3 x log2(N/358) (hand-picked
   owners, same rules); 'holds' = observed within +-3 points of it.
+
+**Correction (17 Oct, after James's question):** the two entries above call these results "the signature of
+superposition". That overclaims. Neither test separates three different things: (a) the same meaning reused by several
+concepts (a "gold" neuron in Golden Gate Bridge and gold jewellery - composition, not superposition); (b) related facets
+of one broader meaning (Moon / month); (c) genuinely unrelated meanings packed into one neuron (superposition proper).
+Cross-activation and the dedication curve show that sharing grows with the population - which (a) alone would produce.
+The Luna judge asked whether firings relate to the OWNER concept; a gold neuron firing on jewellery counts as
+"unrelated to the Golden Gate Bridge" while keeping one meaning. Whether concept neurons carry several unrelated
+meanings has not been tested yet; a neuron-centred test (how many meanings, how far apart) is proposed.
