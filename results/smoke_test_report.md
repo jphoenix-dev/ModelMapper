@@ -223,5 +223,64 @@ Each run repeated the phase A tasks on the same corpus with the same settings: 2
 9. **Account backstop.** The launcher reads the RunPod balance every interval (`--min-balance` stops everything below a
    floor).
 
-**Spend:** $0.72 of the $10 so far: 4090 attempts about $0.37 (faulty host), 5090 $0.31, 3090 $0.15, A5000 $0. Zero
+**Spend at the end of phase C:** $0.72: 4090 attempts about $0.37 (faulty host), 5090 $0.31, 3090 $0.15, A5000 $0. Zero
 pods were left after each run.
+
+**RTX 4090 (benchmark retry, healthy host)**
+- 1,705–1,713 tok/s delivered, and about 2,100 tok/s of pure compute (476 s per 1M tokens). Ablate took 70 s for 64
+  neurons. Lifetime 32.8 min, **$0.19**.
+- This host's upload was slow (about 1.5 MB/s): 107 s per 164 MB shard result, and 175 s of the merge's 223 s went on
+  transfers.
+- Compute per dollar is the best of the cards tested, at about 22M tokens per dollar.
+- Against the local 5090 it behaves like the 3090: top-40 overlap 97.6%, value difference 0.6%, ablate KL Spearman 0.88.
+- **Hosts:** 2 of the 4 RTX 4090 hosts we were given had broken CUDA ("CUDA unknown error"). The GPU check caught both
+  within a minute.
+
+**Card summary (per dollar, this workload)**
+
+| Card | $/h | Observe tok/s (delivered) | Ablate, 64 neurons | Tokens per $ (observe) | Matches the local 5090 bit for bit? |
+|---|---|---|---|---|---|
+| RTX 3090 | 0.22 | 1,200 | 113 s | ≈19.6M | no (≈0.6% values, near-tie reorders) |
+| RTX 4090 | 0.34 | 1,710 (2,100 compute) | 70 s | ≈18M (22M compute) | no (same as the 3090) |
+| RTX 5090, rented | 0.69 | 1,530 | 118 s | ≈8M | yes |
+| RTX A5000 | 0.16 | – | – | – | none available in two 20-minute windows |
+
+## Phase D: fan-out, 2026-10-17
+
+**Free local test** (3 CPU workers with Qwen3-0.6B on 20 tasks in the real bucket; one killed mid-task and a
+replacement started 20 s later)
+1. **First run.** All 20 tasks completed, and the killed task was retaken after about 85 s. But **5 of the 20 tasks ran
+   twice**: workers that finish together pick the same free task. The merge is the worst case, since every waiting
+   worker takes it the moment it becomes ready.
+2. **Fix: claim, pause, verify.** The bucket keeps the last write, so both racers read back the same winner. One
+   duplicate remained, from a stale listing.
+3. **Fix: re-read the claim just before claiming.** The final run had **0 duplicates**. The killed task was retaken by
+   the replacement 76 s after the kill (test settings: 15 s heartbeat, 45 s claim expiry), and every worker exited
+   cleanly when the queue emptied.
+- **Also fixed:** a claim used to block a dead worker's task for 45 minutes. Claims now expire 6 minutes after their
+  last refresh, and the worker's heartbeat refreshes its claim every 2 minutes.
+
+**Paid test** (2 rented machines on 19 short 8B tasks: 8 observe shards of 150k tokens, a merge, 10 ablate tasks of 16
+neurons; GPU list 3090 → 4090 → 5090; $1.50 cap and $7 balance floor)
+- **Machines.** RunPod started an RTX 5090 ($0.69/h) and an RTX 4090 ($0.34/h), because no 3090 was free.
+- **The 4090 host was faulty** ("CUDA unknown error"). It failed its GPU check 50 s after boot and terminated itself
+  with `runpodctl remove pod`. The launcher started a replacement (an RTX 3090) within the minute.
+- **Simulated interruption.** The test terminated that 3090 mid-run. The launcher kept trying to replace it (no
+  capacity for about 3 minutes) while the surviving 5090 kept working.
+- **The replacement landed on the known-bad Taiwan machine** and was released immediately (bad-host list). That was the
+  test's 4th and last allowed launch, so the 5090 finished the rest alone.
+- **Result:** all 19 tasks done, 0 run twice, leftover claims cleared, results drained to D:, and **zero pods** at the
+  end. Cost **$0.42**.
+
+**Total smoke-test spend:** $1.32 of $10 (balance $8.68). Zero pods after every run.
+
+## Loop v2 on this runner (2026-10-17)
+
+`map:<batch>` runs the research branch's loop v2 (`src/loop_v2/map_core.py`) on the pinned model, about 20 concepts per
+task.
+- **Check against the gate.** On the local 5090, the 12-concept repro set as one map task was **identical** to loop v2's
+  own gate run: every v1 field, top-30 single drops, head knockouts, null drops, roles and every array, bitwise. It took
+  24 s per concept, peaked at 17.6 GB, and produced 81 MB.
+- **Incremental runs.** `make_run --kind map --append --watch N` adds specs as they appear, and `_PREPARE_DONE` closes
+  the run. Workers and the launcher wait while a run is open. Tested on CPU: 12 specs trickled in, 6 batches were all
+  done, the run closed and the worker exited.
