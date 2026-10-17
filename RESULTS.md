@@ -1920,3 +1920,20 @@ concepts, ranked by knockout effect; chance = the same overall layer mix drawn i
   ignores concept-specific layer clustering (which would raise chance), so the spreading tendency is if anything stronger.
 - Layers are heavily skewed late (L28-35 hold ~70% of top-5 neurons) with a second cluster at L8-10.
 - Reading: no one-concept-neuron-per-layer rule; a mild preference for spreading across layers.
+
+## 17 Oct 2026 (late afternoon): is stage D's 'one job' an artefact of bf16 noise? No. (EXPLORATORY; research branch)
+The gpu-fan-out session measured the bf16 noise floor of single-neuron knockouts (8B, L18, 128-token windows): batch-shape
+noise alone gives KL median 3.2e-4 / p90 1.9e-3, and a typical single-token knockout is only ~2x that. Stage D's two
+passes were both batch-1 with the same shape (no batch-shape noise between them), but small effects can still depend on
+the kernel's rounding. Check (`meaning_jobs_above_noise.py`, no GPU): rerun the second reading keeping only contexts
+with knockout KL above thresholds (stage D KL median 2.1e-3 concept / 1.4e-3 control):
+| KL >= | concept contexts kept | spliced gap ('different neurons') | concept position (0 same job, 1 different) |
+|---|---|---|---|
+| 0 | 100% | +0.150 | 0.18 |
+| 1.9e-3 (noise p90) | 53% | +0.182 | 0.22 |
+| 3.2e-3 (10x noise median) | 43% | +0.217 | 0.21 |
+| 1e-2 | 26% | +0.250 | 0.18 |
+| 3e-2 | 14% | +0.277 | 0.22 |
+The calibration sharpens as noise is removed (spliced separation rises, absolute cosines rise) while concept neurons stay at
+~0.2: 'packed triggers, one job' holds on clearly above-noise knockouts. Not re-checked: the next-token Jaccard (top-20
+up/down lists are probably noise-dominated for small KL), and per-context reproducibility across kernels (a GPU check).
