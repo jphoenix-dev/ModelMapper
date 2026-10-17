@@ -17,6 +17,10 @@ tested. Knock out the concept's top-5 neurons (found on Luna's prompts) vs 5 ran
 **Prediction:** median recall drop on the independent prompts >= 1.0 log-odds AND >= 5x the random control's, and
 the top-5 flip at least half the correct cloze prompts in >= 40% of tested concepts.
 **Fails if:** median drop < 1.0, or not above 5x random.
+**RESULT (17 Oct 13:42, `p1_p3_run.py`): HOLDS.** 100 concepts sampled; 50 had >= 3 cloze sentences, 32 had >= 3 the
+model answers (tested). Median drop with the top-5 off +5.59 log-odds vs random-5 -0.003; top-5 flips >= half the
+correct cloze prompts in 66% of tested concepts. Caveat: some cloze sentences keep partial name clues (e.g. "Maldive
+Islands" after blanking "Maldives"), which raises baselines but not the knockout comparison.
 
 ## P2 - Dedication curve out of sample (stated in RESULTS 17 Oct morning, repeated here)
 **Prediction:** for the 178 hand-picked concepts' neurons, the share firing for none of N other concepts follows
@@ -32,6 +36,8 @@ out n alone and measure the recall drop on A's and on B's prompts. Control 1: a 
 list, measured on B. Control 2: a random same-layer neuron, measured on B.
 **Prediction:** median drop on B from the shared neuron >= 3x control 1 and >= 3x control 2, and >= 0.3 log-odds.
 **Fails if:** the shared neuron's effect on B is not above both controls by 3x.
+**RESULT (17 Oct 13:42): HOLDS.** 150 pairs from 251 concepts with saved prompts. Median recall drop on B from the shared
+neuron +0.835 (on A +0.894); control 1 (A's non-shared top-10 neuron) +0.002; control 2 (random, same layer) +0.000.
 
 ## P4 - Structure predicts the neurons of new concepts (coverage-4 as held-out set)
 **Claim tested:** the map has inferable structure: a new concept's neurons can be partly predicted from what similar,

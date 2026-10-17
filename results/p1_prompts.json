@@ -1,0 +1,1037 @@
+{
+ "Maldives": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Maldives",
+  "prompts": [
+   "The ___, officially the Republic of ___, and historically known as the Maldive Islands, is an archipelagic country in South Asia, located in the Indian Ocean, near the southeastern boundary of the Arabian Sea. Which name fills the blank? Answer with just the name.",
+   "The ___ is located southwest of India and Sri Lanka, about 750 kilometres (470 miles; 400 nautical miles) from the Asian continent's mainland. Which name fills the blank? Answer with just the name.",
+   "The ___' chain of 26 atolls stretches across the equator from Ihavandhippolhu Atoll in the north to Addu Atoll in the south. Which name fills the blank? Answer with just the name.",
+   "The ___ is the smallest country in Asia. Which name fills the blank? Answer with just the name.",
+   "The ___ has an average ground-level elevation of around 1.5 metres (4 ft 11 in) above sea level, and a highest natural point of only 2.4 metres (7 ft 10 in), making it the world's lowest-lying country. Which name fills the blank? Answer with just the name.",
+   "The ___ has been inhabited for over 2,500 years. Which name fills the blank? Answer with just the name.",
+   "The ___ was soon consolidated as a sultanate, developing strong commercial and cultural ties with Asia and Africa. Which name fills the blank? Answer with just the name.",
+   "From the mid-16th century, the region came under the increasing influence of European colonial powers, with the ___ becoming a British protectorate in 1887. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3274
+ },
+ "Hawaii": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Hawaii",
+  "prompts": [
+   "___ (  hə-WY-ee; ___an: Hawaiʻi [həˈvɐjʔi, həˈwɐjʔi]) is an island state of the United States, in the Pacific Ocean about 2,000 miles (3,200 km) southwest of the U.S. Which name fills the blank? Answer with just the name.",
+   "___ consists of 137 volcanic islands that make up almost the entire ___an archipelago (the exception is Midway Atoll). Which name fills the blank? Answer with just the name.",
+   "___'s ocean coastline is consequently the fourth-longest in the U.S., at about 750 miles (1,210 km). Which name fills the blank? Answer with just the name.",
+   "The uninhabited Northwestern ___an Islands make up most of the Papahānaumokuākea Marine National Monument, the largest protected area in the U.S. Which name fills the blank? Answer with just the name.",
+   "states, ___ is the eighth-smallest in land area and the 11th-least populous; but with 1.4 million residents, it ranks 13th in population density. Which name fills the blank? Answer with just the name.",
+   "Two-thirds of ___ residents live on Oʻahu, home to the state's capital and largest city, Honolulu. Which name fills the blank? Answer with just the name.",
+   "___ is one of the most demographically diverse U.S. Which name fills the blank? Answer with just the name.",
+   "Consequently, ___ is a unique melting pot of North American and East Asian cultures, in addition to its indigenous ___an heritage. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 4746
+ },
+ "Meta Platforms": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Meta",
+  "prompts": [
+   "In 2021, it rebranded as ___, Inc. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 977
+ },
+ "Qatar": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Qatar",
+  "prompts": [
+   "___, officially the State of ___, is a country in West Asia. Which name fills the blank? Answer with just the name.",
+   "It occupies the ___ Peninsula on the northeastern coast of the Arabian Peninsula in the Middle East; it shares its sole land border with Saudi Arabia to the south, with the rest of its territory surrounded by the Persian Gulf. Which name fills the blank? Answer with just the name.",
+   "The Gulf of Bahrain, an inlet of the Persian Gulf, separates ___ from nearby Bahrain. Which name fills the blank? Answer with just the name.",
+   "___ has been ruled as a hereditary monarchy by the House of Thani since Mohammed bin Thani signed an agreement with Britain in 1868, which officially recognised its separate status. Which name fills the blank? Answer with just the name.",
+   "Following Ottoman rule, ___ became a British protectorate in 1916 and gained independence in 1971. Which name fills the blank? Answer with just the name.",
+   "The current emir is Tamim bin Hamad Al Thani, who, like previous emirs, holds nearly all executive, legislative, and judicial authority in an autocratic manner under the Constitution of ___. Which name fills the blank? Answer with just the name.",
+   "While ___ held a partial Shura Council election in 2021, with two-thirds of seats elected, in 2024 it moved to abolish those elections altogether, and reverted to a fully appointed Council. Which name fills the blank? Answer with just the name.",
+   "On 21 June 2026, the population of ___ was 3,180,059, although 3.02 million are foreign expatriates and migrant workers. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2428
+ },
+ "Jessica Alba": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Jessica Alba",
+  "prompts": [],
+  "intro_chars": 1510
+ },
+ "Bangladesh": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Bangladesh",
+  "prompts": [
+   "___, officially the People's Republic of ___, is a country in South Asia. Which name fills the blank? Answer with just the name.",
+   "___ shares land borders with India to the north, west, and east, and Myanmar to the southeast. Which name fills the blank? Answer with just the name.",
+   "The territory of present-day ___ was ruled by successive Hindu and Buddhist dynasties in antiquity. Which name fills the blank? Answer with just the name.",
+   "Following the Pakistani military's Operation Searchlight, the ___ Liberation War began. Which name fills the blank? Answer with just the name.",
+   "The Mukti Bahini, aided by Indian forces, fought a war of independence, during which Pakistani forces carried out the ___ genocide; ___ became a sovereign nation on 16 December 1971. Which name fills the blank? Answer with just the name.",
+   "Since the restoration to parliamentary democracy in 1991, national politics has largely dominated between the Awami League, led by Sheikh Hasina, and the ___ Nationalist Party, led by Khaleda Zia. Which name fills the blank? Answer with just the name.",
+   "___ is a unitary parliamentary republic based on the Westminster system. Which name fills the blank? Answer with just the name.",
+   "___ consists of eight divisions, 64 districts, 497 upazilas, and 4,599 union councils. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3194
+ },
+ "Frank Sinatra": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Frank Sinatra",
+  "prompts": [
+   "In 1946, Sinatra released his debut album, The Voice of ___. Which name fills the blank? Answer with just the name.",
+   "In 1965, he recorded September of My Years and starred in the Emmy-winning television special ___: A Man and His Music. Which name fills the blank? Answer with just the name.",
+   "On television, The ___ Show began on CBS in 1950, and Sinatra continued to make appearances on television throughout the 1950s and 1960s. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2927
+ },
+ "Mitt Romney": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Mitt Romney",
+  "prompts": [
+   "Willard ___ (born March 12, 1947) is an American businessman and retired politician who served as a United States senator from Utah from 2019 to 2025 and as the 70th governor of Massachusetts from 2003 to 2007. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2746
+ },
+ "Clint Eastwood": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Clint Eastwood",
+  "prompts": [],
+  "intro_chars": 2337
+ },
+ "Michael Caine": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Michael Caine",
+  "prompts": [
+   "Sir ___ (born Maurice Joseph Micklewhite; 14 March 1933) is an English retired actor. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2397
+ },
+ "Pope Leo XIII": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Leo XIII",
+  "prompts": [
+   "___ (Italian: Leone XIII; born Gioacchino Vincenzo Raffaele Luigi Pecci; 2 March 1810 – 20 July 1903) was head of the Catholic Church from 1878 until his death in 1903. Which name fills the blank? Answer with just the name.",
+   "___ wrote a total of 86 encyclicals during his papacy from 1878 to 1903. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2914
+ },
+ "North Korea": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "North Korea",
+  "prompts": [
+   "___, officially the Democratic People's Republic of Korea (DPRK), is a country in East Asia. Which name fills the blank? Answer with just the name.",
+   "The ___n invasion of South Korea in 1950 started the Korean War. Which name fills the blank? Answer with just the name.",
+   "Kim Il Sung, ___'s first leader, consolidated power and promoted his personal philosophy of Juche as the state ideology. Which name fills the blank? Answer with just the name.",
+   "The dissolution of the Soviet Union in 1991 then brought about a sharp decline to the ___n economy. Which name fills the blank? Answer with just the name.",
+   "From 1994 to 1998, ___ suffered a famine with the population continuing to suffer from malnutrition. Which name fills the blank? Answer with just the name.",
+   "In 2024, ___ formally abandoned efforts to reunify Korea and designated South Korea as a separate, hostile state. Which name fills the blank? Answer with just the name.",
+   "___ is a totalitarian hereditary dictatorship with a comprehensive cult of personality around the Kim family. Which name fills the blank? Answer with just the name.",
+   "Officially, ___ is a communist state, and describes itself as a socialist state which holds democratic elections. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3238
+ },
+ "Australian Open": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Australian Open",
+  "prompts": [
+   "The ___ is a tennis tournament organised by Tennis Australia annually at Melbourne Park in Melbourne, Victoria, Australia. Which name fills the blank? Answer with just the name.",
+   "The ___ typically starts around the middle of January and continues for two weeks, concluding with the men's final traditionally held on the last Sunday of the month. Which name fills the blank? Answer with just the name.",
+   "First held in 1905 as the Australasian championships, the ___ has grown to become one of the biggest sporting events in the Southern Hemisphere. Which name fills the blank? Answer with just the name.",
+   "Nicknamed \"the happy slam\", the ___ is the highest attended Grand Slam event, with more than 1,360,000 people attending the 2026 tournament, including qualifying. Which name fills the blank? Answer with just the name.",
+   "The ___ has been held at the Melbourne Park complex since 1988 and is a major contributor to the Victorian economy; the 2026 ___ delivered A$722.3 million into the state's economy, while over the preceding decade, the ___ contributed more than A$3.9 billion in economic benefits to the state. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1814
+ },
+ "Ayrton Senna": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Ayrton Senna",
+  "prompts": [
+   "___ da Silva (Brazilian Portuguese: [aˈiʁtõ ˈsẽnɐ dɐ ˈsiwvɐ] ; 21 March 1960 – 1 May 1994) was a Brazilian racing driver and philanthropist who competed in Formula One from 1984 to 1994. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3162
+ },
+ "Morocco": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Morocco",
+  "prompts": [
+   "___, officially the Kingdom of ___, is a country in the Maghreb region of North Africa. Which name fills the blank? Answer with just the name.",
+   "It has coastlines on the Mediterranean Sea to the north and the Atlantic Ocean to the west, and has land borders with Algeria to the east; the Spanish exclaves of Ceuta, Melilla and Peñón de Vélez de la Gomera along the north, which it claims together with several small Spanish-controlled islands; and the disputed territory of Western Sahara to the south, partly occupied by ___ since 1975. Which name fills the blank? Answer with just the name.",
+   "___ also claims to share a border with Mauritania through the disputed territory of Western Sahara. Which name fills the blank? Answer with just the name.",
+   "The region constituting ___ has been inhabited since the Paleolithic era, more than 300,000 years ago. Which name fills the blank? Answer with just the name.",
+   "The Moroccan state traces its origins to the establishment of the  Idrisid dynasty by Idris I in 788, although its historical territories did not coincide with those of present-day ___; the country is regarded as one of the world's oldest continuously existing states. Which name fills the blank? Answer with just the name.",
+   "___ was subsequently ruled by a series of other independent dynasties, reaching its zenith as a regional power in the 11th and 12th centuries, under the Almoravid and Almohad dynasties, both Berber kingdoms, when it controlled the southern and eastern Iberian Peninsula and the Maghreb. Which name fills the blank? Answer with just the name.",
+   "In the 15th and 16th centuries, ___ faced external threats to its sovereignty, with Portugal seizing some territory and the Ottoman Empire encroaching from the east. Which name fills the blank? Answer with just the name.",
+   "The Marinid and Saadi dynasties otherwise resisted foreign domination, and ___ was the only North African nation to escape Ottoman dominion. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 4828
+ },
+ "Instagram": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Instagram",
+  "prompts": [
+   "___ is an American photo and short-form video sharing social networking service owned by Meta Platforms. Which name fills the blank? Answer with just the name.",
+   "___ was originally distinguished by allowing content to be framed only in a square (1:1) aspect ratio of 640 pixels to match the display width of the iPhone at the time. Which name fills the blank? Answer with just the name.",
+   "___ was launched for iOS in October 2010 by Kevin Systrom and the Brazilian software engineer Mike Krieger. Which name fills the blank? Answer with just the name.",
+   "The Android version of ___ was released in April 2012, followed by a feature-limited desktop interface in November 2012, a Fire OS app in June 2014, an app for Windows 10 in October 2016, and an app for iPadOS in September 2025. Which name fills the blank? Answer with just the name.",
+   "Although often admired for its success and influence, ___ has also been criticized for negatively affecting teens' mental health, its policy and interface changes, its alleged censorship, and illegal and inappropriate content uploaded by users. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2248
+ },
+ "Tehran": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Tehran",
+  "prompts": [
+   "___ (tehˈɾɑn) is the capital and largest city of Iran. Which name fills the blank? Answer with just the name.",
+   "It is also the capital of ___ province and the administrative center for ___ County and its Central District. Which name fills the blank? Answer with just the name.",
+   "With a population of around 9 million in the city, and 16.8 million in the metropolitan area, ___ is the most populous city in Iran and West Asia, the largest metropolitan area in the Middle East and the 24th-most-populous metropolitan area in the world. Which name fills the blank? Answer with just the name.",
+   "Greater ___ includes several municipalities, including Eslamshahr, Shahriar, Qods, Malard, Golestan, Varamin, Pakdasht, Qarchak, Nasimshahr, Parand, Pardis, Andisheh, Fardis, Tajrish, and Rey. Which name fills the blank? Answer with just the name.",
+   "In classical antiquity, part of the territory of present-day ___ was occupied by Rhages, a prominent Iranian city that was not destroyed in the medieval Arab and Mongol invasions. Which name fills the blank? Answer with just the name.",
+   "Rey is absorbed into the metropolitan area of Greater ___. Which name fills the blank? Answer with just the name.",
+   "___ was first chosen as the capital of Iran in 1786 by Agha Mohammad Khan of the Qajar dynasty, because of its proximity to Iran's territories in the Caucasus—which were contested in the Russo-Iranian Wars—and to avoid the vying factions of prior ruling Iranian dynasties; the capital of Iran had been moved several times throughout its long history, with ___ becoming the 51st. Which name fills the blank? Answer with just the name.",
+   "Under Reza Shah, ___ witnessed Iran's first institute of higher learning, bank, railway line, and museum. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3003
+ },
+ "Balfour Declaration": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Balfour Declaration",
+  "prompts": [
+   "The ___ (2 November 1917) was a public statement issued by the British Government in 1917 during the First World War announcing its support for the establishment of a \"national home for the Jewish people\" in Palestine, then an Ottoman region with a small Jewish minority among an overwhelming Arab majority, mostly Muslim but also including Christians. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 4194
+ },
+ "Kim Jong Un": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Kim Jong-un",
+  "prompts": [
+   "Like his father and grandfather before him, ___ rules North Korea as a repressive and totalitarian dictatorship, and his leadership has maintained the Kim family cult of personality. Which name fills the blank? Answer with just the name.",
+   "___'s ideology departed from his father's military-first Songun policy, professing a \"people-first policy\" and renewed commitment to communism. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3471
+ },
+ "Yom Kippur War": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Yom Kippur War",
+  "prompts": [
+   "The ___, also known as the 1973 Arab–Israeli War, the fourth Arab–Israeli War, the October War, or the Ramadan War (6–25 October 1973), was fought between Israel and a coalition of Arab states led by Egypt and Syria. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2629
+ },
+ "Robert Lewandowski": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Robert Lewandowski",
+  "prompts": [
+   "___ (Polish pronunciation: [ˈrɔbɛrt lɛvanˈdɔfskʲi] ; born 21 August 1988) is a Polish professional footballer who plays as a striker for Major League Soccer club Chicago Fire and captains the Poland national team. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3125
+ },
+ "Elvis Presley": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Elvis Presley",
+  "prompts": [],
+  "intro_chars": 3384
+ },
+ "Xi Jinping": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Xi Jinping",
+  "prompts": [
+   "___ (born 15 June 1953) is a Chinese politician who is the paramount leader of China. Which name fills the blank? Answer with just the name.",
+   "Xi's ideology, known as ___ Thought, has been incorporated into the party and national constitutions. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2991
+ },
+ "Tom Holland": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Tom Holland",
+  "prompts": [],
+  "intro_chars": 2042
+ },
+ "Antisemitism": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Anti-Semitism",
+  "prompts": [
+   "___, or Jew-hatred, is hostility to, prejudice towards, or discrimination against Jews. Which name fills the blank? Answer with just the name.",
+   "Whether ___ is considered a form of racism depends on the school of thought. Which name fills the blank? Answer with just the name.",
+   "In the former case, usually known as racial ___, a person's hostility is driven by the belief that Jews constitute a distinct race with inherent traits or characteristics that are repulsive or inferior to the preferred traits or characteristics within that person's society. Which name fills the blank? Answer with just the name.",
+   "In the latter case, known as religious ___, a person's hostility is driven by their religion's perception of Jews and Judaism, typically encompassing doctrines of supersession that expect or demand that Jews turn away from Judaism and submit to the religion presenting itself as Judaism's successor faith—this is a common theme within the other Abrahamic religions. Which name fills the blank? Answer with just the name.",
+   "The development of racial and religious ___ has historically been encouraged by anti-Judaism, which is distinct from ___ itself. Which name fills the blank? Answer with just the name.",
+   "There are various ways in which ___ is manifested, ranging in the level of severity of Jewish persecution. Which name fills the blank? Answer with just the name.",
+   "Although the term ___ did not come into common usage until the 19th century, it is also applied to previous and later anti-Jewish incidents. Which name fills the blank? Answer with just the name.",
+   "Historically, most of the world's violent antisemitic events have taken place in Europe, where modern ___ began to emerge from ___ in Christian communities during the Middle Ages. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2699
+ },
+ "Manipur": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Manipur",
+  "prompts": [
+   "___ (, IPA: [məɳiˈpʊɾ]) is a state in northeastern India, with Imphal as its capital city. Which name fills the blank? Answer with just the name.",
+   "Covering an area of 22,330 square kilometers (8,621 sq mi), the state consists mostly of hilly terrain with the 1813-square-kilometre (700 sq mi) Imphal Valley inhabited by the Meitei (___i) community, historically a kingdom. Which name fills the blank? Answer with just the name.",
+   "The official language and lingua franca, Meitei (___i), also belongs to the Tibeto-Burman family. Which name fills the blank? Answer with just the name.",
+   "During the days of the British Raj, ___ was one of the princely states. Which name fills the blank? Answer with just the name.",
+   "Prior to the British departure in 1947, ___ acceded to the Dominion of India, along with 550 other princely states approximately. Which name fills the blank? Answer with just the name.",
+   "In September 1949, the ruler of ___ signed a merger agreement with India, giving up the rule of the kingdom and obtaining a privy purse in return. Which name fills the blank? Answer with just the name.",
+   "The Meitei people represent around 53% of the population of ___ state, followed by various Naga tribes at 20% and Kuki-Zo tribes at 16%. Which name fills the blank? Answer with just the name.",
+   "___'s ethnic groups practice a variety of religions. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2077
+ },
+ "Apple Inc.": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Apple",
+  "prompts": [],
+  "intro_chars": 2689
+ },
+ "Muammar Gaddafi": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Muammar Gaddafi",
+  "prompts": [],
+  "intro_chars": 3734
+ },
+ "English language": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "English",
+  "prompts": [],
+  "intro_chars": 2661
+ },
+ "Cat": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Cat",
+  "prompts": [
+   "The ___ (Felis ___us), also called domestic ___ and house ___, is a small domesti___ed carnivorous mammal. Which name fills the blank? Answer with just the name.",
+   "It is a member of Felidae, the family of mammals in the order Carnivora also colloquially referred to as ___s. Which name fills the blank? Answer with just the name.",
+   "___ communi___ion includes meowing, purring, trilling, hissing, growling, grunting, body language, and scent marking. Which name fills the blank? Answer with just the name.",
+   "___ intelligence is evident in its ability to adapt, learn through observation, and solve problems. Which name fills the blank? Answer with just the name.",
+   "The domestic ___ is the only domesti___ed species of the family Felidae. Which name fills the blank? Answer with just the name.",
+   "Advances in archaeology and genetics have shown that the domesti___ion of the ___ started in the Near East around 7500 BCE. Which name fills the blank? Answer with just the name.",
+   "Today, the domestic ___ occurs across the globe and is valued by humans for companionship and its ability to kill vermin. Which name fills the blank? Answer with just the name.",
+   "It is commonly kept as a pet, working ___, and pedigreed ___ shown at ___ fancy events. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1834
+ },
+ "Odyssey": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Odyssey",
+  "prompts": [
+   "The ___ (, ODD-iss-ee; Ancient Greek: Ὀδύσσεια, romanized: Odýsseia [odyˈsːeːˌja]) is one of two major epics of ancient Greek literature attributed to Homer. Which name fills the blank? Answer with just the name.",
+   "Like the Iliad, the ___ is divided into 24 books. Which name fills the blank? Answer with just the name.",
+   "The ___ was first composed in Homeric Greek around the 8th or 7th century BC; by the mid-6th century BC, it had become part of the Greek literary canon. Which name fills the blank? Answer with just the name.",
+   "In antiquity, Homer's authorship was taken as true, but contemporary scholarship predominantly assumes that the Iliad and the ___ were composed independently, as part of long oral traditions. Which name fills the blank? Answer with just the name.",
+   "The ___ is regarded as one of the most significant works of the Western canon. Which name fills the blank? Answer with just the name.",
+   "The first complete English translation of the ___ was in 1616. Which name fills the blank? Answer with just the name.",
+   "In 2018, when BBC Culture polled experts around the world to find literature's most enduring narrative, the ___ topped the list. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2065
+ },
+ "Belarus": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Belarus",
+  "prompts": [
+   "___, officially the Republic of ___, is a landlocked country in Eastern Europe. Which name fills the blank? Answer with just the name.",
+   "___ spans an area of 207,600 square kilometres (80,200 sq mi) with a population of 9.1 million. Which name fills the blank? Answer with just the name.",
+   "For most of the medieval period, the lands of modern-day ___ were ruled by independent city-states such as the Principality of Polotsk. Which name fills the blank? Answer with just the name.",
+   "By the 14th century these lands had come fully under the Grand Duchy of Lithuania and subsequently the Polish–Lithuanian Commonwealth; this period lasted for 500 years until the 1792–1795 partitions of Poland-Lithuania placed ___ within the Russian Empire for the first time. Which name fills the blank? Answer with just the name.",
+   "After the Polish-Soviet War (1918–1921), ___ lost almost half of its territory to Poland. Which name fills the blank? Answer with just the name.",
+   "Much of the borders of ___ took their modern shape in 1939, when some lands of the Second Polish Republic were reintegrated into it after the Soviet invasion of Poland, and were finalised after World War II. Which name fills the blank? Answer with just the name.",
+   "During World War II, military operations devastated ___, which lost about a quarter of its population and half of its economic resources. Which name fills the blank? Answer with just the name.",
+   "The republic was home to a widespread and diverse anti-Nazi insurgent movement which dominated politics until well into the 1970s, overseeing ___'s transformation from an agrarian to an industrial economy. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3490
+ },
+ "Simone Biles": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Simone Biles",
+  "prompts": [],
+  "intro_chars": 3137
+ },
+ "Star": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Star",
+  "prompts": [
+   "A ___ is a luminous spheroid of plasma held together by self-gravity. Which name fills the blank? Answer with just the name.",
+   "The nearest ___ to Earth is the Sun. Which name fills the blank? Answer with just the name.",
+   "Many other ___s are visible to the naked eye at night; their immense distances from Earth make them appear as fixed points of light. Which name fills the blank? Answer with just the name.",
+   "The most prominent ___s have been categorised into constellations and asterisms, and many of the brightest ___s have proper names. Which name fills the blank? Answer with just the name.",
+   "Astronomers have assembled ___ catalogues that identify the known ___s and provide standardized stellar designations. Which name fills the blank? Answer with just the name.",
+   "The observable universe contains an estimated 1022 to 1024 ___s. Which name fills the blank? Answer with just the name.",
+   "Only about 4,000 of these ___s are visible to the naked eye—all within the Milky Way galaxy. Which name fills the blank? Answer with just the name.",
+   "A ___'s life begins with the gravitational collapse of a gaseous nebula of material largely comprising hydrogen, helium, and traces of heavier elements. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2148
+ },
+ "Donald Trump": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Donald Trump",
+  "prompts": [],
+  "intro_chars": 3733
+ },
+ "Nagorno-Karabakh": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Nagorno-Karabakh",
+  "prompts": [
+   "___ ( , nə-GOR-noh kər-ə-BAHK; lit. Which name fills the blank? Answer with just the name.",
+   "Most of ___ was governed by ethnic Armenians under the breakaway Republic of Artsakh – also known as the ___ Republic (NKR) – from the end of the first ___ War between Armenia and Azerbaijan in 1994 to the announcement of the dissolution of the republic in September 2023. Which name fills the blank? Answer with just the name.",
+   "The region is usually equated with the administrative borders of the former ___ Autonomous Oblast (NKAO), comprising 4,400 km2 (1,700 sq mi); however, the region's historical extent encompasses approximately 8,223 km2 (3,175 sq mi). Which name fills the blank? Answer with just the name.",
+   "On 27 September 2020, the Second ___ War broke out with an Azerbaijani offensive in ___ and the surrounding territories. Which name fills the blank? Answer with just the name.",
+   "Azerbaijan made significant gains during the war, regaining all of the occupied territories surrounding ___ and capturing one-third of ___, including Shusha and Hadrut. Which name fills the blank? Answer with just the name.",
+   "The war ended on 10 November 2020 when a trilateral ceasefire agreement was signed between Azerbaijan, Armenia, and Russia, under which all the remaining occupied territories surrounding ___ were formally returned to Azerbaijani control. Which name fills the blank? Answer with just the name.",
+   "On 19 September 2023, after a blockade lasting several months, Azerbaijan launched a fresh large-scale military offensive in ___. Which name fills the blank? Answer with just the name.",
+   "On 1 January 2024, the Republic of Artsakh was formally dissolved, marking the end of a millennia-old Armenian presence in ___. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2690
+ },
+ "Isaac Newton": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Isaac Newton",
+  "prompts": [
+   "Sir ___ ( ; 4 January 1643 [O.S. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 4860
+ },
+ "Ramadan": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Ramadan",
+  "prompts": [
+   "___ is the ninth month of the Islamic calendar. Which name fills the blank? Answer with just the name.",
+   "The annual observance of ___ is regarded as one of the five pillars of Islam and lasts 29 to 30 days, from one sighting of the crescent moon to the next. Which name fills the blank? Answer with just the name.",
+   "The spiritual rewards (thawab) of fasting are believed to be multiplied during ___. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1283
+ },
+ "Jack Black": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Jack Black",
+  "prompts": [],
+  "intro_chars": 1842
+ },
+ "State of Palestine": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Palestine",
+  "prompts": [],
+  "intro_chars": 3991
+ },
+ "Annette Bening": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Annette Bening",
+  "prompts": [],
+  "intro_chars": 2130
+ },
+ "FC Barcelona": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "FC Barcelona",
+  "prompts": [
+   "Futbol Club Barcelona (Catalan pronunciation: [fudˈbɔl ˈklub bəɾsəˈlonə] ), commonly known as ___ and colloquially as Barça ([ˈbaɾsə]), is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top division of Spanish football. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3466
+ },
+ "South Sudan": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "South Sudan",
+  "prompts": [
+   "___ (), officially the Republic of ___, is a landlocked country in East Africa. Which name fills the blank? Answer with just the name.",
+   "___'s diverse landscape includes vast plains and plateaus, dry and tropical savannahs, inland floodplains, and forested mountains. Which name fills the blank? Answer with just the name.",
+   "___ has an estimated population of just over 12.7 million in 2024. Which name fills the blank? Answer with just the name.",
+   "___ became an independent state on 9 July 2011, following 98.8% support for independence in a January 2011 referendum. Which name fills the blank? Answer with just the name.",
+   "___ descended into the ___ese Civil War from 2013 to 2018, enduring rampant human rights abuses, including forced displacement, ethnic massacres, and killings of journalists by various parties. Which name fills the blank? Answer with just the name.",
+   "The ___ese population is composed mostly of Nilotic peoples spanning a variety of ethnic and linguistic groups. Which name fills the blank? Answer with just the name.",
+   "___ is a member of the United Nations, African Union, East African Community, and the Intergovernmental Authority on Development. Which name fills the blank? Answer with just the name.",
+   "The ___ese economy has historically produced the world's lowest nominal GDP per capita. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2674
+ },
+ "Ed Sheeran": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Ed Sheeran",
+  "prompts": [],
+  "intro_chars": 2565
+ },
+ "Kim Jong-un": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Kim Jong-un",
+  "prompts": [],
+  "intro_chars": 3471
+ },
+ "Bradley Cooper": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Bradley Cooper",
+  "prompts": [],
+  "intro_chars": 2264
+ },
+ "Boeing B-52 Stratofortress": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "B-52",
+  "prompts": [
+   "The ___ is an American nuclear-capable subsonic jet-powered strategic bomber. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2628
+ },
+ "Alexander the Great": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Alexander",
+  "prompts": [],
+  "intro_chars": 3911
+ },
+ "Gulf War": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Gulf War",
+  "prompts": [
+   "The ___ was an armed conflict between Iraq and a 42-country coalition led by the United States in response to Saddam Hussein invading neighboring Kuwait on 2 August 1990. Which name fills the blank? Answer with just the name.",
+   "US bombing and demolition of Iraqi chemical weapons facilities were concluded to be the primary cause of ___ syndrome, experienced by over 40% of US veterans. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2804
+ },
+ "Puerto Rico": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Puerto Rico",
+  "prompts": [
+   "___ (abbreviated PR), officially the Commonwealth of ___, is a self-governing Caribbean archipelago and island organized as an unincorporated territory of the United States under the designation of commonwealth. Which name fills the blank? Answer with just the name.",
+   "___ was settled by a succession of Indigenous peoples of the Americas beginning 2,000 to 4,000 years ago; these included the Ortoiroid, Saladoid, and Taíno. Which name fills the blank? Answer with just the name.",
+   "___ was contested by other European powers into the 18th century but remained a Spanish possession for the next 400 years. Which name fills the blank? Answer with just the name.",
+   "Within the Spanish Empire, ___ played a strategically significant role. Which name fills the blank? Answer with just the name.",
+   "In 1898, following the Spanish–American War, ___ was acquired by the United States. Which name fills the blank? Answer with just the name.",
+   "Residents of ___ are disenfranchised from federal elections and pay federal taxes and ___ income taxes; most are exempt from federal income tax on personal income earned in ___. Which name fills the blank? Answer with just the name.",
+   "___ sends a nonvoting representative to the U.S. Which name fills the blank? Answer with just the name.",
+   "Congress, called a resident commissioner, and participates in presidential primaries; as it is not a state, ___ does not have a vote in the U.S. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3122
+ },
+ "Selena": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Selena",
+  "prompts": [
+   "___ Quintanilla-Pérez (Latin American Spanish: [seˈlena kintaˈniʝa ˈpeɾes]; April 16, 1971 – March 31, 1995), known mononymously as ___, was an American singer-songwriter, fashion designer and business owner. Which name fills the blank? Answer with just the name.",
+   "The youngest child of the Quintanilla family, she debuted on the music scene as a member of the band ___ y Los Dinos, which also included her elder siblings A.B. Which name fills the blank? Answer with just the name.",
+   "___ released Entre a Mi Mundo (1992), which peaked at number one on the US Billboard Regional Mexican Albums chart for eight consecutive months. Which name fills the blank? Answer with just the name.",
+   "___ was shot and killed on March 31, 1995, by Yolanda Saldívar, her friend and former manager of her ___ Etc. Which name fills the blank? Answer with just the name.",
+   "Two weeks after ___'s murder, Texas governor George W. Which name fills the blank? Answer with just the name.",
+   "Bush declared April 16 as ___ Day in Texas. Which name fills the blank? Answer with just the name.",
+   "Her posthumous crossover album, Dreaming of You (1995), debuted atop the Billboard 200, making ___ the first Latin artist to accomplish this feat. Which name fills the blank? Answer with just the name.",
+   "released ___, a film about her life and career, which starred a then-unknown Jennifer Lopez as ___, catapulting Lopez into fame. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2880
+ },
+ "G": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "G",
+  "prompts": [
+   "___ (minuscule: ___) is the seventh letter of the Latin alphabet, used in the modern En___lish alphabet, the alphabets of other Western European lan___ua___es, and others worldwide. Which name fills the blank? Answer with just the name.",
+   "Its name in En___lish is ___ee (pronounced  ), plural ___ees. Which name fills the blank? Answer with just the name.",
+   "The lowercase version can be written in two forms: the sin___le-storey (sometimes \"opentail\") form ⟨⟩ and the double-storey (sometimes \"looptail\") form ⟨⟩. Which name fills the blank? Answer with just the name.",
+   "The former is commonly used in handwritin___ and typefaces based on it, especially in texts intended to be read by children; it is the style used by most sans-serif typefaces, such as Helvetica. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 638
+ },
+ "Eric Clapton": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Eric Clapton",
+  "prompts": [],
+  "intro_chars": 2887
+ },
+ "Burj Khalifa": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Burj Khalifa",
+  "prompts": [
+   "The ___ (previously known as Burj Dubai prior to inauguration) is a megatall skyscraper in Dubai, United Arab Emirates. Which name fills the blank? Answer with just the name.",
+   "Construction of the ___ began in 2004; the exterior was completed five years later. Which name fills the blank? Answer with just the name.",
+   "For his support, Mohammed bin Rashid, Ruler of Dubai, changed the name from \"Burj Dubai\" to \"___\" during inauguration. Which name fills the blank? Answer with just the name.",
+   "The ___ has 57 elevators and 8 escalators. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2070
+ },
+ "Christopher Reeve": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Christopher Reeve",
+  "prompts": [],
+  "intro_chars": 2146
+ },
+ "Nikola Tesla": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Nikola Tesla",
+  "prompts": [
+   "___ (10 July 1856 – 7 January 1943) was a Serbian-American engineer, futurist, and inventor. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2733
+ },
+ "Nobel Prize": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Nobel Prize",
+  "prompts": [
+   "The ___s are awards administered by the Nobel Foundation and granted in accordance with the principle of \"for the greatest benefit to humankind\". Which name fills the blank? Answer with just the name.",
+   "The original ___s covered five fields: physics, chemistry, physiology or medicine, literature, and peace, specified in Nobel's will. Which name fills the blank? Answer with just the name.",
+   "The ___s are widely regarded as the most prestigious awards available in their respective fields. Which name fills the blank? Answer with just the name.",
+   "As of 2023, the ___ monetary award is 11,000,000 kr, equivalent to approximately US$1,035,000. Which name fills the blank? Answer with just the name.",
+   "___s are not awarded posthumously, but if a person is awarded a prize and dies before receiving it, the prize is presented. Which name fills the blank? Answer with just the name.",
+   "Between 1901 and 2026, the five ___s and the Prize in Economic Sciences (since 1969) were awarded 633 times to 1,018 people and organisations. Which name fills the blank? Answer with just the name.",
+   "Five individuals and two organisations have received more than one ___. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1462
+ },
+ "New Year's Eve": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "New Year's Eve",
+  "prompts": [
+   "___ in the Gregorian calendar refers to the evening—or commonly the entire day—of the last day of the year: 31 December. Which name fills the blank? Answer with just the name.",
+   "In many countries, ___ is celebrated with dancing, eating, drinking, and watching or lighting fireworks. Which name fills the blank? Answer with just the name.",
+   "___ celebrations generally continue into New Year's Day, 1 January, past midnight. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 758
+ },
+ "Justin Trudeau": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Justin Trudeau",
+  "prompts": [],
+  "intro_chars": 4373
+ },
+ "Australia": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Australia",
+  "prompts": [
+   "___, officially the Commonwealth of ___, is a country comprising the mainland of the ___n continent, the island of Tasmania and numerous smaller islands. Which name fills the blank? Answer with just the name.",
+   "The ancestors of Aboriginal ___ns began arriving from Southeast Asia 50,000 to 65,000 years ago, during the Last Glacial Period. Which name fills the blank? Answer with just the name.",
+   "By the time of British settlement, Aboriginal ___ns spoke more than 250 distinct languages and had one of the oldest living cultures in the world. Which name fills the blank? Answer with just the name.",
+   "___'s written history commenced with Dutch exploration of most of the coastline in the 17th century. Which name fills the blank? Answer with just the name.",
+   "The colonies federated in 1901, forming the Commonwealth of ___. Which name fills the blank? Answer with just the name.",
+   "This continued a process of increasing autonomy from the United Kingdom, highlighted by the Statute of Westminster Adoption Act 1942, and culminating in the ___ Act 1986. Which name fills the blank? Answer with just the name.",
+   "___ is a parliamentary democracy with a constitutional monarchy, and a federation comprising six states and ten territories. Which name fills the blank? Answer with just the name.",
+   "___'s culture is diverse, and the country has one of the highest foreign-born populations in the world. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2738
+ },
+ "Futurama": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Futurama",
+  "prompts": [
+   "___ is an American animated science fiction sitcom created by Matt Groening and developed by Groening and David X. Which name fills the blank? Answer with just the name.",
+   "Following its initial cancellation by Fox, ___ began airing reruns on Cartoon Network's Adult Swim programming block, which lasted from 2003 to 2007. Which name fills the blank? Answer with just the name.",
+   "___ resumed airing new episodes on August 3, 2026. Which name fills the blank? Answer with just the name.",
+   "___ has received critical acclaim throughout its run and was nominated for 17 Annie Awards, winning nine of them, and 12 Emmy Awards, winning six. Which name fills the blank? Answer with just the name.",
+   "It was nominated for a Nebula Award and received Environmental Media Awards for the episodes \"The Problem with Popplers\" and \"The ___ Holiday Spectacular\". Which name fills the blank? Answer with just the name.",
+   "In 2013, TV Guide ranked ___ on its list of the \"60 Greatest TV Cartoons of All Time\". Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2579
+ },
+ "Joshua": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Joshua",
+  "prompts": [
+   "___ ( JOSH-oo-ə), also known as Yehoshua (Hebrew: יְהוֹשֻׁעַ Yəhōšuaʿ,‍ Tiberian: Yŏhōšuaʿ, lit. Which name fills the blank? Answer with just the name.",
+   "'Yahweh is salvation'), Jehoshua, or Josue, was Moses' assistant in the books of Exodus and Numbers, and later succeeded Moses as leader of the Israelite tribes in the Book of ___ of the Hebrew Bible. Which name fills the blank? Answer with just the name.",
+   "'Save') the son of Nun, of the tribe of Ephraim, but Moses called him \"Yehoshua\" (translated as \"___\" in English), the name by which he is commonly known in English. Which name fills the blank? Answer with just the name.",
+   "In Numbers 13:1, the Hebrew Bible identifies ___ as one of the twelve spies of Israel sent by Moses to explore the land of Canaan. Which name fills the blank? Answer with just the name.",
+   "According to biblical chronology, ___ lived some time in the Bronze Age. Which name fills the blank? Answer with just the name.",
+   "According to ___ 24:29 ___ died at the age of 110. Which name fills the blank? Answer with just the name.",
+   "___ holds a position of respect among Muslims, who also see him as the leader of the faithful following the death of Moses. Which name fills the blank? Answer with just the name.",
+   "In Islam, it is also believed that Yusha bin Nun (___) was the \"attendant\" of Moses mentioned in the Quran before Moses meets Khidr. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1581
+ },
+ "Indonesia": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Indonesia",
+  "prompts": [
+   "___, officially the Republic of ___, is a country in Southeast Asia and Oceania, between the Indian and Pacific oceans. Which name fills the blank? Answer with just the name.",
+   "___ has extensive tropical forests and marine ecosystems that support some of the world's highest levels of biodiversity. Which name fills the blank? Answer with just the name.",
+   "The ___n archipelago has been inhabited since prehistoric times, with early human presence evidenced by fossils of Homo erectus and Homo sapiens, and megalithic sites. Which name fills the blank? Answer with just the name.",
+   "Dutch commercial and colonial control expanded from the 17th century and was consolidated over most of the archipelago during the 19th and early 20th centuries, before ___ proclaimed its independence in the aftermath of World War II. Which name fills the blank? Answer with just the name.",
+   "Since independence, ___ has experienced separatist conflicts, corruption, political upheaval and natural disasters, alongside democratisation and rapid economic growth. Which name fills the blank? Answer with just the name.",
+   "Home to over 280 million people, ___ ranks fourth in the world by population and has the largest Muslim population of any country. Which name fills the blank? Answer with just the name.",
+   "More than half of ___ns live on Java, the most heavily populated island in the world, while the capital Jakarta is the world's most populous city. Which name fills the blank? Answer with just the name.",
+   "___n, a standardised variety of Malay, is the official and national language and its lingua franca. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2597
+ },
+ "Steve Irwin": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Steve Irwin",
+  "prompts": [
+   "Numerous parks, zoos, streets, the vessel MY ___, the snail species Crikey steveirwini, and the asteroid 57567 Crikey have been named in his honour. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1281
+ },
+ "Pope John Paul II": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "John Paul II",
+  "prompts": [
+   "___ (born Karol Józef Wojtyła; 18 May 1920 – 2 April 2005) was the head of the Catholic Church and sovereign of Vatican City from 16 October 1978 until his death in 2005. Which name fills the blank? Answer with just the name.",
+   "___ attempted to improve the Catholic Church's relations with Judaism, Islam, and the Eastern Orthodox Church in the spirit of ecumenism, holding atheism as the greatest threat. Which name fills the blank? Answer with just the name.",
+   "As part of his special emphasis on the universal call to holiness, ___ beatified 1,344 people, and canonised 483 saints, more than the combined tally of his predecessors during the preceding five centuries. Which name fills the blank? Answer with just the name.",
+   "___ died on 2 April 2005, and was succeeded by Pope Benedict XVI. Which name fills the blank? Answer with just the name.",
+   "___ has been credited with fighting against dictatorships and with helping to end communist rule in his native Poland and the rest of Europe. Which name fills the blank? Answer with just the name.",
+   "On 27 April 2014, ___ was canonised by Pope Francis, alongside Pope John XXIII. Which name fills the blank? Answer with just the name.",
+   "Under ___, two of the most important documents of the contemporary Catholic Church were drafted and promulgated: the 1983 Code of Canon Law, which revised and updated the 1917 Code of Canon Law, and the Catechism of the Catholic Church, the first universal catechism to be issued since the Roman Catechism. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3799
+ },
+ "Jamaica": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Jamaica",
+  "prompts": [
+   "___ is an island country in the Caribbean, covering 10,991 square kilometres (4,244 sq mi). Which name fills the blank? Answer with just the name.",
+   "___ lies about 145 km (78 nmi) south of Cuba, 191 km (103 nmi) west of Hispaniola, and 215 km (116 nmi) southeast of the Cayman Islands. Which name fills the blank? Answer with just the name.",
+   "With 2.8 million people, ___ is the third-most populous Anglophone country in the Americas and the fourth-most populous country in the Caribbean. Which name fills the blank? Answer with just the name.",
+   "Many of the indigenous people either were killed or died of diseases, after which the Spanish brought large numbers of Africans to ___ as slaves. Which name fills the blank? Answer with just the name.",
+   "The island belonged to Spain under the name Santiago until 1655, when England conquered it and named it ___. Which name fills the blank? Answer with just the name.",
+   "Under Britain's colonial rule, ___ became a leading sugar exporter, with a plantation economy dependent on continued importation of African slaves and their descendants. Which name fills the blank? Answer with just the name.",
+   "___ achieved independence from the United Kingdom on 6 August 1962. Which name fills the blank? Answer with just the name.",
+   "___ is a parliamentary constitutional monarchy, with power vested in the bicameral Parliament of ___, consisting of an appointed Senate and a directly elected House of Representatives. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2781
+ },
+ "Erling Haaland": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Erling Haaland",
+  "prompts": [],
+  "intro_chars": 2340
+ },
+ "William IV": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "William IV",
+  "prompts": [
+   "___ (William Henry; 21 August 1765 – 20 June 1837) was King of the United Kingdom of Great Britain and Ireland and King of Hanover from 26 June 1830 until his death in 1837. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1588
+ },
+ "Michael J. Fox": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Michael J. Fox",
+  "prompts": [],
+  "intro_chars": 1793
+ },
+ "Amelia Earhart": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Amelia Earhart",
+  "prompts": [],
+  "intro_chars": 993
+ },
+ "Breaking Bad": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Breaking Bad",
+  "prompts": [
+   "___ is an American neo-Western crime drama television series created by Vince Gilligan for AMC. Which name fills the blank? Answer with just the name.",
+   "___ premiered on AMC on January 20, 2008, and concluded on September 29, 2013, after five seasons and 62 episodes. Which name fills the blank? Answer with just the name.",
+   "Since its conclusion, ___ has been widely regarded by critics as one of the greatest television series of all time. Which name fills the blank? Answer with just the name.",
+   "The series gave rise to the larger ___ franchise. Which name fills the blank? Answer with just the name.",
+   "El Camino: A ___ Movie, a sequel film starring Paul, was released on Netflix and in selected theaters on October 11, 2019. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2277
+ },
+ "Pelé": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Pelé",
+  "prompts": [
+   "Edson Arantes do Nascimento (23 October 1940 – 29 December 2022), better known by his nickname ___, was a Brazilian professional footballer who played as a forward. Which name fills the blank? Answer with just the name.",
+   "In 2000, ___ was voted World Player of the Century by the International Federation of Football History & Statistics (IFFHS) and was one of the two joint winners of the FIFA Player of the Century, alongside Diego Maradona. Which name fills the blank? Answer with just the name.",
+   "___ began playing for the Brazilian club Santos at age 15, and for the Brazil national team at 16. Which name fills the blank? Answer with just the name.",
+   "With 77 goals in 92 games for Brazil, ___ held the record as the national team's top goalscorer for over fifty years. Which name fills the blank? Answer with just the name.",
+   "At club level, ___ is Santos' all-time top goalscorer with 643 goals in 659 games. Which name fills the blank? Answer with just the name.",
+   "In a golden era for Santos, ___ led the club to victory at the 1962 and 1963 Copa Libertadores and at the 1962 and 1963 Intercontinental Cup. Which name fills the blank? Answer with just the name.",
+   "Credited with connecting the phrase \"The Beautiful Game\" with football, ___'s tremendous skill and penchant for spectacular goals made him a global star, and his teams toured internationally to take full advantage of his popularity. Which name fills the blank? Answer with just the name.",
+   "During his playing days, ___ was for a period the highest-paid athlete in the world. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2678
+ },
+ "President of the United States": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "President of the United States",
+  "prompts": [
+   "The ___ (POTUS) is the head of state and head of government of the United States. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2993
+ },
+ "Dagestan": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Dagestan",
+  "prompts": [
+   "___, officially the Republic of ___, is a republic of Russia situated in the North Caucasus of Eastern Europe, along the Caspian Sea. Which name fills the blank? Answer with just the name.",
+   "___ covers an area of 50,300 square kilometres (19,400 square miles), with a population of over 3.1 million, consisting of over 30 ethnic groups and 81 nationalities. Which name fills the blank? Answer with just the name.",
+   "___ is known internationally for its strong culture of combat sambo, with many of its fighters having later turned to mixed martial arts. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1339
+ },
+ "Argentina national football team": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Argentina",
+  "prompts": [],
+  "intro_chars": 1362
+ },
+ "ABBA": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "ABBA",
+  "prompts": [
+   "___ (  AB-ə, Swedish: [ˈâbːa]) were a Swedish pop music group formed in Stockholm in 1972 by Agnetha Fältskog, Björn Ulvaeus, Benny Andersson and Anni-Frid Lyngstad. Which name fills the blank? Answer with just the name.",
+   "In 1974, ___ won the Eurovision Song Contest for Sweden with their song \"Waterloo\", which was chosen as the best song in the competition's history during its 50th anniversary celebration in 2005. Which name fills the blank? Answer with just the name.",
+   "During their peak, ___ comprised two married couples: Fältskog and Ulvaeus, and Lyngstad and Andersson. Which name fills the blank? Answer with just the name.",
+   "After ___ disbanded in December 1982, Andersson and Ulvaeus continued their success writing music for stage, musicals and films, while Fältskog and Lyngstad pursued solo careers. Which name fills the blank? Answer with just the name.",
+   "Ten years after the group's breakup, the compilation ___ Gold was released and became a worldwide best-seller. Which name fills the blank? Answer with just the name.",
+   "In 1999, ___'s music was adapted into Mamma Mia!, a stage musical that toured globally. Which name fills the blank? Answer with just the name.",
+   "___ are one of the best-selling music acts of all time, with sales exceeding 150 million. Which name fills the blank? Answer with just the name.",
+   "Their compilation album ___ Gold is, as of April 2026, certified platinum over 128 times across more than 28 countries/territories worldwide and has been in the UK top 100 album chart for a record 1,248 weeks. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3244
+ },
+ "Rachel Weisz": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Rachel Weisz",
+  "prompts": [],
+  "intro_chars": 1910
+ },
+ "Wikimedia Foundation": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Wikimedia Foundation",
+  "prompts": [
+   "The ___ provides the technical and organizational infrastructure to enable members of the public to develop wiki-based content in languages across the world. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1675
+ },
+ "Yandex": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Yandex",
+  "prompts": [
+   "___ LLC (Russian: Яндекс, romanized: Yandeks, IPA: [ˈjandəks] ) is a Russian technology company that provides Internet-related products and services including a web browser, search engine, cloud computing, web mapping, online food ordering, streaming media, online shopping, and a ridesharing company. Which name fills the blank? Answer with just the name.",
+   "___ Search is the largest search engine in Russia with an estimated 72% market share in Russia and a 2.8% market share worldwide. Which name fills the blank? Answer with just the name.",
+   "___ Taxi is the largest ridesharing company in Russia. Which name fills the blank? Answer with just the name.",
+   "___ was founded by Arkady Volozh and launched its first product, a search engine, in 1997. Which name fills the blank? Answer with just the name.",
+   "In July 2024, in a transaction brought about by international sanctions during the Russian invasion of Ukraine and restrictions on foreign ownership, Nebius Group, the Dutch holding company that owned ___, completely sold off its Russian assets to a consortium of a group of Russian investors for a discounted price of US$5.3 billion. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1057
+ },
+ "Palestine (region)": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Palestine",
+  "prompts": [
+   "The region of ___, also known as historic ___ or land of ___, is a geographical area in West Asia. Which name fills the blank? Answer with just the name.",
+   "It generally encompasses the area inhabited by the modern states of Israel and ___, though over history it has also been used to refer to an area both smaller and larger. Which name fills the blank? Answer with just the name.",
+   "The earliest written record referring to ___ as a geographical region is in the Histories of Herodotus in the 5th century BCE, which calls the area Palaistine, referring to the territory previously held by Philistia, a confederation of city states that existed in that area from the 12th to the 7th century BCE. Which name fills the blank? Answer with just the name.",
+   "While ___'s boundaries have changed throughout history, it has generally comprised the southern portion of the wider Syria or Levant region. Which name fills the blank? Answer with just the name.",
+   "As the birthplace of Judaism and Christianity, ___ has been a crossroads for religion, culture, commerce, and politics. Which name fills the blank? Answer with just the name.",
+   "The brief Hasmonean dynasty ended with its gradual incorporation into the Roman Empire, and later the Byzantine Empire, during which ___ became a center of Christianity. Which name fills the blank? Answer with just the name.",
+   "In the 7th century, ___ was conquered by the Muslim Rashidun Caliphate, ending Byzantine rule in the region; Rashidun rule was succeeded by the Umayyad, Abbasid, and Fatimid caliphates. Which name fills the blank? Answer with just the name.",
+   "Following the collapse of the Kingdom of Jerusalem, which had been established through the Crusades, the population of ___ became predominantly Muslim. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3583
+ },
+ "Wikipedia": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Wikipedia",
+  "prompts": [
+   "___ is a free online encyclopedia written and maintained by a community of volunteer editors, known as ___ns, through open collaboration and the wiki software MediaWiki. Which name fills the blank? Answer with just the name.",
+   "Founded by Jimmy Wales and Larry Sanger in 2001, ___ has been hosted since 2003 by the Wikimedia Foundation, an American nonprofit organization funded mainly by donations from readers. Which name fills the blank? Answer with just the name.",
+   "___ is the largest and most read reference work in history. Which name fills the blank? Answer with just the name.",
+   "Initially available only in English, ___ has grown to over 300 languages and is one of the world's most visited websites as of 2026. Which name fills the blank? Answer with just the name.",
+   "The English ___, with over 7 million articles, remains the largest of the editions, which together comprise more than 68 million articles and attract more than 1.5 billion unique device visits and 13 million edits per month (about five edits per second on average)  as of April 2024. Which name fills the blank? Answer with just the name.",
+   "As of December 2025, over 25% of ___'s traffic comes from the United States, while Japan accounts for nearly 7%, and the United Kingdom, Germany, and Russia each represent around 5%. Which name fills the blank? Answer with just the name.",
+   "___ has been praised for its internal structure and culture, enabling the democratization of knowledge, and for its extensive coverage on various topics. Which name fills the blank? Answer with just the name.",
+   "The reliability of ___ was frequently criticized in the 2000s, but has received greater praise from the late 2010s onward. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1786
+ },
+ "Denmark": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Denmark",
+  "prompts": [
+   "___ is a Nordic country in Northern Europe. Which name fills the blank? Answer with just the name.",
+   "It is the metropole and most populous constituent of the Kingdom of ___, also known as the Danish Realm, a constitutionally unitary state that includes the autonomous territories of the Faroe Islands and Greenland in the north Atlantic Ocean. Which name fills the blank? Answer with just the name.",
+   "Metropolitan ___, also called \"continental ___\" or \"___ proper\", consists of the northern Jutland peninsula and an archipelago of 406 islands. Which name fills the blank? Answer with just the name.",
+   "Metropolitan ___ is situated between the North Sea to the west and the Baltic Sea to the east. Which name fills the blank? Answer with just the name.",
+   "The Kingdom of ___, including the Faroe Islands and Greenland, has roughly 1,400 islands greater than 100 square metres (1,100 sq ft) in area; 443 have been named and 78 are inhabited. Which name fills the blank? Answer with just the name.",
+   "___'s population is over 6 million (1 May 2025), of which roughly 40% live in Zealand, (Sjælland) the largest and most populated island in Metropolitan ___; Copenhagen, (København) the capital and largest city of the Danish Realm, is situated on Zealand and Amager and Slotsholmen. Which name fills the blank? Answer with just the name.",
+   "Composed mostly of flat, arable land, ___ is characterised by sandy coasts, low elevation, and a temperate climate. Which name fills the blank? Answer with just the name.",
+   "___ exercises hegemonic influence in the Danish Realm, devolving powers to the other constituent entities to handle their internal affairs. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3908
+ },
+ "Earthquake": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Earthquake",
+  "prompts": [
+   "An ___, also called a quake, tremor, or temblor, is the shaking of the Earth's surface resulting from a sudden release of energy in the lithosphere that creates seismic waves. Which name fills the blank? Answer with just the name.",
+   "___s can range in intensity, from those so weak they cannot be felt, to those violent enough to propel objects and people into the air, damage critical infrastructure, and wreak destruction across entire cities. Which name fills the blank? Answer with just the name.",
+   "The seismic activity of an area is the frequency, type, and size of ___s experienced over a particular time. Which name fills the blank? Answer with just the name.",
+   "In its most general sense, the word ___ is used to describe any seismic event that generates seismic waves. Which name fills the blank? Answer with just the name.",
+   "___s can occur naturally or be induced by human activities, such as mining, fracking, and nuclear weapons testing. Which name fills the blank? Answer with just the name.",
+   "___s are primarily caused by geological faults, but also by volcanism, landslides, and other seismic events. Which name fills the blank? Answer with just the name.",
+   "Significant historical ___s include the 1976 Tangshan ___ in China, with over 300,000 fatalities, and the 1960 Valdivia ___ in Chile, the largest ever recorded at 9.5 magnitude. Which name fills the blank? Answer with just the name.",
+   "___s in some cases may result in various effects, such as ground shaking and soil liquefaction, sometimes leading to significant damage and loss of life. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2256
+ },
+ "Europe": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Europe",
+  "prompts": [
+   "___ is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. Which name fills the blank? Answer with just the name.",
+   "___ shares the landmass of Eurasia with Asia, and of Afro-Eurasia with both Africa and Asia. Which name fills the blank? Answer with just the name.",
+   "___ is commonly considered to be separated from Asia by the watershed of the Ural Mountains, the Ural River, the Caspian Sea, the Greater Caucasus, the Black Sea, and the Turkish straits. Which name fills the blank? Answer with just the name.",
+   "___ covers approximately 10,186,000 square kilometres (3,933,000 sq mi), or 2% of Earth's surface (6.8% of Earth's land area), making it the second-smallest continent (using the seven-continent model). Which name fills the blank? Answer with just the name.",
+   "Politically, ___ is divided into about fifty sovereign states, of which Russia is the largest and most populous, spanning 39% of the continent and comprising 15% of its population. Which name fills the blank? Answer with just the name.",
+   "___ had a total population of about 745 million (about 10% of the world population) in 2021; the third-largest after Asia and Africa. Which name fills the blank? Answer with just the name.",
+   "The ___an climate is affected by warm Atlantic currents, such as the Gulf Stream, which produce a temperate climate, tempering winters and summers, on much of the continent. Which name fills the blank? Answer with just the name.",
+   "The culture of ___ consists of a range of national and regional cultures, which form the central roots of the wider Western civilisation, and together commonly reference ancient Greece and ancient Rome, particularly through their Christian successors, as crucial and shared roots. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 4394
+ },
+ "Charles III": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Charles",
+  "prompts": [],
+  "intro_chars": 2380
+ },
+ "Mexico": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Mexico",
+  "prompts": [
+   "___, officially the United Mexican States, is a country in North America. Which name fills the blank? Answer with just the name.",
+   "It is the northernmost country in Latin America, bordering the United States of America to the north and Guatemala and Belize to the southeast, while having maritime boundaries with the Pacific Ocean to the west, the Caribbean Sea to the southeast, and the Gulf of ___ to the east. Which name fills the blank? Answer with just the name.",
+   "___ covers 1,972,550 km2 (761,610 sq mi), and is the thirteenth-largest country in the world by land area. Which name fills the blank? Answer with just the name.",
+   "With a population around 131 million as of 2025, ___ is the tenth-most populous country in the world and is home to the largest number of native Spanish speakers. Which name fills the blank? Answer with just the name.",
+   "___ City is the capital and largest city in ___, which ranks among the most populous metropolitan areas in the world. Which name fills the blank? Answer with just the name.",
+   "Human presence in ___ dates back to at least 11,500 BC, although dates as old as 28,000 BC have been proposed for less securely dated sites. Which name fills the blank? Answer with just the name.",
+   "Spanish colonization began in 1521 with an indigenous alliance that defeated the Aztec Empire, establishing the colony of New Spain with its capital at Tenochtitlan, now ___ City. Which name fills the blank? Answer with just the name.",
+   "In 1848, ___ lost nearly half its territory in the Mexican–American War. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 4617
+ },
+ "FIFA World Cup": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "FIFA World Cup",
+  "prompts": [
+   "The ___ is an international association football competition among the senior men's national teams of the members of the Fédération Internationale de Football Association (FIFA), the sport's global governing body. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2080
+ },
+ "William McKinley": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "William McKinley",
+  "prompts": [
+   "___ (January 29, 1843 – September 14, 1901) was the 25th president of the United States, serving from 1897 until his assassination in 1901. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3793
+ },
+ "Google": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Google",
+  "prompts": [
+   "___ LLC ( , GOO-gəl) is an American multinational technology corporation focused on information technology, online advertising, search engine technology, email, cloud computing, software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI). Which name fills the blank? Answer with just the name.",
+   "___'s parent company, Alphabet Inc., has been described as a Big Tech company. Which name fills the blank? Answer with just the name.",
+   "___ was founded in 1998 by American computer scientists Larry Page and Sergey Brin. Which name fills the blank? Answer with just the name.",
+   "In 2015, ___ was reorganized as a wholly owned subsidiary of Alphabet Inc. Which name fills the blank? Answer with just the name.",
+   "___ is Alphabet's largest subsidiary and is a holding company for Alphabet's internet properties and interests. Which name fills the blank? Answer with just the name.",
+   "Sundar Pichai was appointed CEO of ___ in 2015, replacing Larry Page, who became the CEO of Alphabet. Which name fills the blank? Answer with just the name.",
+   "After the success of its original service, ___ Search (often known simply as \"___\"), the company has rapidly grown to offer a multitude of products and services. Which name fills the blank? Answer with just the name.",
+   "Many of these products and services are dominant in their respective industries, as is ___ Search. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2994
+ },
+ "Catholic Church": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Roman Catholic Church",
+  "prompts": [
+   "The ___ (Latin: Ecclesia Catholica), also called the Roman ___ (Latin: Ecclesia Catholica Romana), is the largest Christian church, with an estimated 1.28 to 1.41 billion baptized members worldwide as of 2026. Which name fills the blank? Answer with just the name.",
+   "In addition to it, there are 23 smaller Eastern ___es. Which name fills the blank? Answer with just the name.",
+   "Together, the Latin Church and the Eastern ___es are organized into nearly 3,500 dioceses and eparchies governed by bishops. Which name fills the blank? Answer with just the name.",
+   "Catholic liturgical life includes the Roman Rite, other rites of the Latin Church, and the liturgical traditions of the Eastern ___es. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3403
+ },
+ "Scotland": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Scotland",
+  "prompts": [
+   "___ (Scots: ___; Scottish Gaelic: Alba) is a country that is part of the United Kingdom, consisting of the northern part of the island of Great Britain and adjacent islands, principally in the archipelagos of the Hebrides and the Northern Isles. Which name fills the blank? Answer with just the name.",
+   "___ borders England to the south, the Atlantic Ocean to the north and west, the North Sea to the east, and the Irish Sea to the south-west. Which name fills the blank? Answer with just the name.",
+   "The Kingdom of ___ emerged as a sovereign state in the 9th century. Which name fills the blank? Answer with just the name.",
+   "On 1 May 1707, ___ and England combined to create the new Kingdom of Great Britain, with the Parliament of ___ subsumed into the Parliament of Great Britain. Which name fills the blank? Answer with just the name.",
+   "Scottish Gaelic speakers can be found all over ___, but the language is largely spoken natively by communities within the Hebrides; Gaelic speakers now constitute less than 2% of the total population, although state-sponsored revitalisation attempts have led to a growing community of second language speakers. Which name fills the blank? Answer with just the name.",
+   "The mainland of ___ is broadly divided into three regions: the Highlands, a mountainous region in the north and north-west; the Lowlands, a flatter plain across the centre of the country; and the Southern Uplands, a hilly region along the southern border. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2733
+ },
+ "Heath Ledger": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Heath Ledger",
+  "prompts": [],
+  "intro_chars": 1554
+ },
+ "Thomas Jefferson": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Thomas Jefferson",
+  "prompts": [],
+  "intro_chars": 2974
+ },
+ "Mesut Özil": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Mesut Özil",
+  "prompts": [
+   "___ (German pronunciation: [ˈmeːzut ˈøːzil], Turkish: [meˈsut œˈzil]; born 15 October 1988) is a German former professional footballer who played as an attacking midfielder. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2158
+ },
+ "Ukraine": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Ukraine",
+  "prompts": [
+   "___ is a country in Eastern Europe. Which name fills the blank? Answer with just the name.",
+   "___ also borders Belarus to the north; Poland and Slovakia to the west; Hungary, Romania and Moldova to the southwest; and the Black Sea and the Sea of Azov to the south and southeast. Which name fills the blank? Answer with just the name.",
+   "Kyiv is ___'s capital and largest city, followed by Kharkiv, Odesa, and Dnipro. Which name fills the blank? Answer with just the name.",
+   "___ covers about 600,000 km2 (230,000 sq mi), with around 32 million people. Which name fills the blank? Answer with just the name.",
+   "Humans have inhabited ___ since at least 32,000 BC. Which name fills the blank? Answer with just the name.",
+   "The Cossack Hetmanate emerged in central ___ in the 17th century but was partitioned between Russia and Poland before being gradually absorbed by the Russian Empire in the 18th century. Which name fills the blank? Answer with just the name.",
+   "During World War II, ___ was occupied by Germany and endured major battles and atrocities, resulting in 7 million civilians killed, including most Ukrainian Jews. Which name fills the blank? Answer with just the name.",
+   "___ gained independence in 1991 as the Soviet Union dissolved, declaring itself neutral. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3543
+ },
+ "Ash Wednesday": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Ash Wednesday",
+  "prompts": [
+   "___ is a holy day of prayer and fasting in many Western Christian denominations. Which name fills the blank? Answer with just the name.",
+   "___ is observed by Christians of the Catholic, Lutheran, Moravian, Anglican (Episcopalian), and United Protestant denominations, as well as by some churches in the Reformed (including certain Congregationalist, Continental Reformed, and Presbyterian churches), Baptist, Methodist, and Nazarene traditions. Which name fills the blank? Answer with just the name.",
+   "___ is traditionally observed with fasting and abstinence from meat in several Christian denominations. Which name fills the blank? Answer with just the name.",
+   "As it is the first day of Lent, many Christians begin ___ by marking a Lenten calendar, praying a Lenten daily devotional, and making a Lenten sacrifice that they will not partake of until the arrival of Eastertide. Which name fills the blank? Answer with just the name.",
+   "Many Christians attend special ___ church services at which churchgoers receive ash on their foreheads or the top of their heads, as the wearing of ashes has been a sign of repentance since biblical times. Which name fills the blank? Answer with just the name.",
+   "___ derives its name from this practice, in which the words accompany the placement (imposition) of ashes, \"Repent, and believe in the Gospel\" or the dictum \"Remember that you are dust, and to dust you shall return.\" The ashes are prepared by burning palm leaves from the previous year's Palm Sunday celebrations. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 1557
+ },
+ "Burkina Faso": {
+  "rank_file": "rank_save_fame3.json",
+  "answer_form": "Burkina Faso",
+  "prompts": [
+   "___ is a landlocked country in West Africa. Which name fills the blank? Answer with just the name.",
+   "The largest ethnic group in ___ is the Mossi people, who settled the area in the 11th and 13th centuries. Which name fills the blank? Answer with just the name.",
+   "___ remains one of the least developed countries in the world, with a GDP of $16.226 billion in 2022. Which name fills the blank? Answer with just the name.",
+   "Since 2025, ___ has formalised its exit from ECOWAS and La Francophonie, after it helped form the Alliance of Sahel States (AES). Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 2516
+ },
+ "Winston Churchill": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Winston Churchill",
+  "prompts": [],
+  "intro_chars": 3759
+ },
+ "Gaza Strip": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Gaza Strip",
+  "prompts": [
+   "The ___, also known simply as Gaza, is the smaller of the two Palestinian territories (the other being the West Bank) that make up the State of Palestine in the Southern Levant region of West Asia. Which name fills the blank? Answer with just the name.",
+   "In the 1967 Arab–Israeli War, Israel captured and occupied the ___ among other territories, initiating a decades-long military occupation of the Palestinian territories. Which name fills the blank? Answer with just the name.",
+   "United Nations Security Council Resolution 2803, adopted on 17 November 2025, contains provisions for the transitional governance of the ___. Which name fills the blank? Answer with just the name.",
+   "The ___ is 41 kilometres (25 miles) long, from 6 to 12 km (3.7 to 7.5 mi) wide, and has a total area of 365 km2 (141 sq mi). Which name fills the blank? Answer with just the name.",
+   "The ___ has a high proportion of youth, with 43.5% being children 14 or younger and 50% under age of 18. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 3688
+ },
+ "Netflix": {
+  "rank_file": "rank_save_fame3m.json",
+  "answer_form": "Netflix",
+  "prompts": [
+   "___ is an American subscription video on-demand over-the-top streaming television service. Which name fills the blank? Answer with just the name.",
+   "Launched in 2007, nearly a decade after ___, Inc. Which name fills the blank? Answer with just the name.",
+   "began its pioneering DVD-by-mail movie rental service, ___ is the most-subscribed video on demand global streaming media service, with 325 million paid memberships in more than 190 countries as of 2026. Which name fills the blank? Answer with just the name.",
+   "By 2022, \"___ Original\" productions accounted for half of its library in the United States and the namesake company had ventured into other categories, such as video game publishing of mobile games through its flagship service. Which name fills the blank? Answer with just the name.",
+   "As of 2026, ___ is the 22nd most-visited website in the world, with 21.18% of its traffic coming from the US, followed by the United Kingdom at 6.01%, Canada at 4.94%, and Brazil at 4.24%. Which name fills the blank? Answer with just the name."
+  ],
+  "intro_chars": 939
+ }
+}
