@@ -182,12 +182,20 @@ def cmd_run(a, store, name):
             led.see(pods, now)
             pending, ready, claims = state(store, tasks)
             for pid, e in led.d["pods"].items():   # gone or stopped before the worker ever got going = a failed boot
-                if (e["gone"] or e.get("stopped")) and not store.exists(f"logs/{pid}/boot.json") and pid not in boot_failed:
+                if (e.get("gone") or e.get("stopped") or e.get("boot_timeout")) and not store.exists(f"logs/{pid}/boot.json") \
+                        and pid not in boot_failed:
                     boot_failed.add(pid); print(f"pod {pid} ended before its worker booted ({len(boot_failed)} so far)", flush=True)
             if len(boot_failed) >= a.max_boot_failures:
                 terminate_all(name, f"{len(boot_failed)} pods failed to boot: stopping (see the pod logs in the RunPod console)")
                 break
             for p in pods:
+                e = led.d["pods"].get(p["id"], {})
+                age = (now - e.get("created", now)) / 60
+                if (p.get("desiredStatus") == "RUNNING" and age > a.boot_timeout_min
+                        and not store.exists(f"logs/{p['id']}/started.json")):
+                    print(f"terminating {p['id']}: no worker after {age:.1f} min (image pull or boot stuck)", flush=True)
+                    rp.terminate(p["id"]); e.setdefault("terminate_sent", time.time()); e["boot_timeout"] = True
+                    continue
                 finished = store.exists(f"logs/{p['id']}/exit.json")
                 if p.get("desiredStatus") == "EXITED" or (finished and p.get("desiredStatus") == "RUNNING"):
                     print(f"terminating {p['id']} ({p.get('desiredStatus')}, worker exited: {finished})", flush=True)
@@ -273,6 +281,8 @@ def main():
     ap.add_argument("--interruptible", action="store_true", help="spot pods (RunPod said they are no longer offered, 2026-10-17)")
     ap.add_argument("--cuda-versions", default="12.8,12.9,13.0", help="host CUDA versions allowed (driver must run the image)")
     ap.add_argument("--max-wait-min", type=float, default=20, help="give up if no machine is available for this long")
+    ap.add_argument("--boot-timeout-min", type=float, default=15,
+                    help="terminate a pod whose worker has not started (image pulled, packages installed) by then")
     ap.add_argument("--registry-auth", help="RunPod containerRegistryAuthId for a private image")
     ap.add_argument("--ledger")
     ap.add_argument("--drain-to", help="local folder: finished results are copied here and deleted from the bucket")

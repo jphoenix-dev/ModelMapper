@@ -69,6 +69,7 @@ def main():
     def log(msg):
         print(f"[{now()}] {msg}", flush=True)
 
+    store.put_json(f"{lp}/started.json", {"epoch": time.time(), "boot_steps": {k: v for k, v in os.environ.items() if k.startswith("T_")}})
     ctx = Ctx(store, wid)
     # epoch seconds of each boot step: container start, boto3 installed, code fetched, packages installed (boot script),
     # python started, model downloaded + on the GPU, first task started
