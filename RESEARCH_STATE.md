@@ -47,6 +47,7 @@ How Qwen3-8B computes, in the terms we use:
 | Their extra meanings are mostly genuinely different, not hidden facets | In Qwen's own space, meanings Luna calls unrelated sit at the unrelated reference; Ur-hubs in only 8/98 (5% by chance): weak | 17 Oct day, stages A/C |
 | Packed triggers, one job | A neuron's downstream effect barely differs across its meanings (0.18 on the same-job -> different-neurons scale); **holds on above-noise knockouts** (0.18-0.22 at every threshold) | 17 Oct day stage D; late afternoon noise check |
 | A concept's key neurons form a feed-forward assembly converging on the 'say it' neuron | 'say' neurons act directly (share 1.05), early ones only indirectly; zeroing an upstream key neuron cuts a later 'say' neuron by ~12% vs ~0 for activation-matched nulls (555 concepts, all pair types p < 1e-5) | 17 Oct evening, indirect path |
+| Between words, the assembly runs through a few shared heads | Earlier-word part ~19% of the composition (p = 3e-40 vs null); top-3 heads recover 56% vs 0% random; L34H28 is a top carrier in 173 of 312 concepts; matches the attention study's carriers | 17 Oct evening, cross-position |
 | Off-topic firings are harmless at single-firing resolution | Switching a concept neuron off on unrelated text: +0.0003 +- 0.0005 nats/token (neither); on its own topic +0.004 +- 0.002 (helps); 22,415 firings vs an in-batch null | 17 Oct evening, interference |
 | Key neurons often share a layer, slightly less than chance | 46% of concepts have >= 2 of top-5 on one layer (chance 54%); ~70% of key neurons in L28-35 | 17 Oct late afternoon |
 | A concept's key neurons combine a 'say it' job with legible attribute jobs | 60% have one late neuron with the answer in its top-10 of 152k tokens (null 0.4%); >= 2 neurons raise the answer in 71% (null 2%); e.g. Jimmy Carter = first names + 1970s + presidency + Georgia | 17 Oct evening |
@@ -75,6 +76,9 @@ How Qwen3-8B computes, in the terms we use:
    evening):** 'say' neurons write the answer directly (direct share 1.05); attribute neurons are mostly direct (0.80);
    early and 'late-other' neurons work through later parts. The key neurons form a feed-forward assembly: zeroing an
    attribute neuron cuts a later 'say' neuron's activation by 12.7% vs ~0 for an activation-matched null (p = 9e-34).
+   **Between words (17 Oct evening):** about a fifth of that composition runs from earlier words, carried by a small
+   shared set of heads (L34H28 in 173 concepts, then L31H3, L34H21, L26H20, L35H22...; top-3 patching recovers 56% vs 0%
+   for random heads). These are the meaning carriers and turn-boundary copiers that the attention study had found.
 2. **Interference: none detected (17 Oct evening).** On unrelated text, switching a concept neuron off neither helps
    nor hurts on average (+0.0003 +- 0.0005 nats/token vs the null); on its own topic its push helps (+0.004 +- 0.002).
    Single-firing effects are only ~1.5x bf16 rounding noise, so a weak leak below ~0.0005 nats/token would be missed.

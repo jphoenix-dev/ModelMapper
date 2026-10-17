@@ -2076,3 +2076,47 @@ Predictions stated in the script before running.
   job_overlap's thresholds. Gate: zeroing verified in every prompt; 12 of 7,341 (0.16%) had first-token log-odds 0.5-1.0
   below the saved whole-answer baseline (bf16 batch-size noise). Raw data: results/indirect_path.jsonl in the main
   checkout (9.3 MB, not committed).
+
+## 17 Oct 2026 (evening): the cross-position path - which heads carry the assembly between words (EXPLORATORY; research branch)
+James: do upstream key neurons at EARLIER words feed the 'say it' neuron through specific heads? (`cross_position.py`,
+`cross_position_summary.py`; GPU 18 min, no API.) 312 concepts with a 'say' neuron S and an earlier-layer key neuron U:
+1,210 U -> S pairs, 16,111 pair-prompts. U was zeroed (a) at every word before the answer position, (b) at the answer
+word only, (c) an activation-matched null at every earlier word. Each head's share of S's change came from
+attribution patching (gradient of S x the head's output change at the answer word), checked by real patching of the
+top-3 heads vs 3 random heads, inside one batch. Gate: heads at or before U's layer never changed (0 of 16,111).
+Method change after the 3-concept trial, before the full run: S's bf16 activation (resolution 0.25 near 40) is as
+coarse as many earlier-word drops, so recovery is measured inside one batch and the attribution (not quantised) is
+also reported.
+- **(c1) holds: the earlier-word part is real but small.** S drops by a median of 1.05% (mean 4.8%) of its activation
+  when U is zeroed at earlier words, vs 4.4% (mean 11%) at the answer word only, and 0.0% (mean 0.1%) for the null.
+  Earlier > null in 832 pairs vs 375 (p = 3e-40). Where both are positive, earlier words carry a median 19% of the
+  combined drop. **Most of the assembly works within the answer word; about a fifth runs between words.**
+- **Attribution tracks the real drops:** Spearman 0.92 over 16,111 pair-prompts.
+- **(c2) holds: a few heads carry it.** Patching just the top-3 heads (by attribution) reproduces a median 56% of S's
+  earlier-word drop (3,682 pair-prompts with a drop >= 5%); 3 random heads from the same layers, 0%. The top-3 heads'
+  attribution is 1.3x the summed total (other heads partly push the other way).
+- **(c3) the carriers are a small shared set** (top-3 slots, vs the uniform expectation):
+
+| head | top-3 slots | x expected | concepts | known from the attention study (16 Oct) |
+|---|---|---|---|---|
+| L34H28 | 3,070 | 33x | 173 | copies the answer from `<|im_start|>`, the turn boundary where it is staged |
+| L31H3 | 1,175 | 23x | 136 | - |
+| L34H21 | 993 | 11x | 144 | - |
+| L34H31 | 808 | 9x | 102 | - |
+| L26H20 | 601 | 56x | 80 | meaning carrier: brings clue words to the answer position |
+| L29H24 | 594 | 30x | 98 | mostly format |
+| L35H22 | 526 | 15x | 71 | copies the answer from `<|im_start|>` |
+| L35H25 | 499 | 14x | 70 | late re-reader; part of a late head team |
+| L24H26 | 472 | 49x | 54 | - |
+| L23H10 | 326 | 37x | 55 | meaning carrier (92% question words) |
+
+  The 10 most frequent heads take 55% of all 16,737 top-3 slots; 254 distinct heads ever appear.
+- **Reading:** between words, the concept assembly runs through a small, shared set of heads that independent earlier
+  measurements had already flagged: mid-layer meaning carriers (L23H10, L26H20) and late heads that copy the answer
+  from the turn boundary (L34H28, L35H22). This adds a causal link: key neurons' writes at earlier words reach the
+  'say it' neuron through those same heads.
+- **Caveats:** 'earlier words' lumps the question words with the chat-template tokens (including the turn boundary
+  where the answer is staged), so how much comes from the question vs the staging position is not separated
+  (next: zero U per position group); answer-position measurement only; first-order attribution (validated by
+  patching); the top-3 slots double-count a head across a concept's prompts. Raw data: results/cross_position.jsonl
+  in the main checkout (50 MB, not committed).
