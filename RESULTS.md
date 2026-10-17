@@ -1840,3 +1840,6 @@ random (20 repeats) and count the neurons that fire (>= 0.5x own activation) for
   (36.5% - 9.3 x log2(648/358) = 28.5%); flattening would leave it above ~33%, steepening below ~25%.
 - Reading: "dedicated" earlier (47% vs 177 others) was mostly a small-population effect; with growing coverage almost
   every concept neuron turns out to take part in some other concept's code.
+- **Clarification, added before the coverage-3 data exists:** not all 289 concepts will be recalled, so N will be below
+  648. The prediction is the formula, evaluated at the actual N: dedicated(N) = 36.5% - 9.3 x log2(N/358) (hand-picked
+  owners, same rules); 'holds' = observed within +-3 points of it.
