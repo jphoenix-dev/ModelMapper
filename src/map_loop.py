@@ -166,6 +166,8 @@ def main():
     arr_dir = cp.OUT / "rank_save_arrays"; arr_dir.mkdir(exist_ok=True)
     timing = {c: {} for _, c in todo}; cat_of = dict((c, cat) for cat, c in todo)
     pool = ThreadPoolExecutor(workers)
+    jpool = ThreadPoolExecutor(workers)       # separate pool for L3: a shared FIFO pool starved the judges behind every
+    #                                           concept's L1+L2 (first coverage-3 run: no concept finished for ~15 min)
     prep = {c: pool.submit(luna_prepare, c, timing[c], budget) for _, c in todo}      # L1+L2 for all, in parallel
     judge, ready_g1, done = {}, {}, set()
     t_start = time.time(); gpu_idle = 0.0
@@ -194,7 +196,7 @@ def main():
             spec["discovery_replies"] = [pipe.tok.decode(o[ids.input_ids.shape[1]:], skip_special_tokens=True).strip().split("\n")[0].strip().rstrip(".") for o in g]
             save_spec(c, spec)
         timing[c]["G1_discovery_gen"] = round(time.time() - t, 2)
-        judge[c] = pool.submit(luna_judge, c, spec, timing[c], budget)
+        judge[c] = jpool.submit(luna_judge, c, spec, timing[c], budget)
 
     def g2(c, spec):
         """GPU: recall (identical to the V3 path), then ranking and curves (identical to wave_free + rank_save, exact log-odds)."""
@@ -315,7 +317,7 @@ def main():
                 did = True; break
         if not did:
             t = time.time(); time.sleep(0.2); gpu_idle += time.time() - t
-    pool.shutdown()
+    pool.shutdown(); jpool.shutdown()
     el = time.time() - t_start
     print(f"done {len(todo)} concepts in {el / 60:.1f} min; GPU idle (waiting on Luna) {gpu_idle / 60:.1f} min "
           f"({gpu_idle / max(el, 1e-9):.0%}); Luna {USAGE.total[2]} calls, ${USAGE.usd():.3f}", flush=True)
