@@ -1771,3 +1771,42 @@ to 1-1e-9 capped at 20.72 (3/869 recall prompts) and lost precision above ~10. `
 10). End to end (`rank_save.py` with LOGODDS=exact, `cap_fix_compare.py` -> `results/cap_fix_compare.txt`): all 178
 concepts keep identical k_mean / k_flip; every published wave result reproduces; top-10 order changes in 10 (near-ties);
 no published number changes. Near saturation any log-odds carries ~0.1 (max 0.45) of bf16 batch-shape noise.
+
+## 17 Oct 2026 (night): does "a handful of neurons" hold for obscure concepts? Fame-stratified random sample (EXPLORATORY; research branch)
+`wiki_sitelinks.py` (sample), `wave_budget.py` (runs wave_free.py unchanged, round-robin over tiers, Luna-budgeted),
+`fame_summary.py` -> `results/fame_summary.txt`. Luna ~$0.42 at its real price.
+- **Sample:** 210 concepts drawn at random from ~12,600 English Wikipedia articles (2023 and 2025 monthly top-1000
+  lists plus 5,000 random articles), stratified by fame = number of Wikipedia language editions (Wikidata sitelinks),
+  7 tiers of 30 on a doubling scale (>= 128, 64-127, 32-63, 16-31, 8-15, 4-7, 1-3; fixed before looking). Filters:
+  article existing by 2023-06-30 (first revision), no 2024+ year in the title, no disambiguation pages, no
+  adult-industry categories; every rejection logged. Duplicates of earlier sets kept here (random-sample integrity)
+  and excluded from the coding analyses.
+- **How the sample was chosen (corrections on the way):** 2025 page views (v2) favoured topics that became notable after
+  the model's training data (2025 films, elections) - recency, not fame; 2023 page views (v3) needed one request per
+  title and Wikimedia throttled us (HTTP 429); language editions come 50 per request and are not tied to one year.
+
+| fame tier (editions) | recalled | knows it* | k_mean <= 5 | median k_mean | k_flip <= 5 | median baseline log-odds |
+|---|---|---|---|---|---|---|
+| >= 128 | 27/30 | 29/30 | 27/27 | 1 | 23/27 | 5.4 |
+| 64-127 | 24/30 | 27/30 | 23/24 | 2 | 19/24 | 3.0 |
+| 32-63 | 12/30 | 16/30 | 12/12 | 1.5 | 12/12 | 1.5 |
+| 16-31 | 3/30 | 8/30 | 3/3 | 2 | 3/3 | 3.5 |
+| 8-15 | 4/30 | 5/30 | 4/4 | 1 | 3/4 | 1.3 |
+| 4-7 | 1/30 | 1/30 | 1/1 | 1 | 1/1 | 1.6 |
+| 1-3 | 1/29 | 1/29 | 1/1 | 3 | 1/1 | 0.2 |
+
+*knows it = recalled, or the model's own free answers name the concept in >= 2 questions (answer discovery) - separates
+"does not know" from "names it differently from the article title" (e.g. "Russian invasion of Ukraine (2022-present)").
+
+- **Knowledge thins out fast with obscurity** (recall 90% -> 3%), **but wherever the model knows a concept, a handful
+  of neurons still carries it:** k_mean <= 5 in 71 of 72 recalled concepts, median 1-3 in every tier; no trend with
+  fame (Spearman -0.08 with log editions). k_flip rises slightly with fame (+0.27), tracking baseline confidence
+  (+0.52): near-certain facts are harder to flip (saturation, as documented before).
+- **Reading (exploratory):** obscure concepts do not show up as "more spread out" - they are simply not known (or known
+  weakly). The concentration finding generalises from the hand-picked famous sets to a random fame-stratified sample,
+  within the concepts the model can recall.
+- Steering on these Wikipedia titles is mostly near zero (median held-out 0.00-0.15; random 0.00); the keyword check
+  needs the exact name in the reply, which is strict for long titles. Not pursued.
+
+**Limits:** few recalled concepts in the obscure tiers (1-4 each); recall needs the answer's exact first tokens
+(awkward titles lose recall); Luna declined one ambiguous title ("A. L. Holt", recorded as prompts failed).
