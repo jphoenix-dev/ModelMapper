@@ -65,6 +65,29 @@ ranks almost the same (0.91). It costs about a third of the full prefix. 256 tok
 cost. **Recommendation: 128.** Each row records the activation inside its window, so firings that weaken can be
 flagged.
 
+**Knockout noise floor (8B, bf16): a design issue to decide** (`src/dist/noise_floor.py`)
+
+These are 128 top firings in layer 18, each knocked out at its firing token with a 128-token window.
+
+| Measurement | Median KL | 90th percentile |
+|---|---|---|
+| Noise only: same context unablated, run alone vs inside a batch of 32 | 3.2e-4 | 1.9e-3 |
+| Single-neuron knockout at the firing token | 7.3e-4 | 8.3e-3 |
+
+- The typical knockout effect is only about 2× the rounding noise that batch shape alone causes. 27% of knockouts
+  exceed the noise's 90th percentile, and 16% exceed 10× its median.
+- Paired knockouts (each next to its unablated copy in the same pass) agree perfectly across batch sizes 8 and 16
+  (Spearman 1.000), and 0.89 with each pair run alone. Comparing with the `meaning_jobs.py` way (separate passes,
+  batch size 1) gives only 0.58. That matches what the main session found for batched concept knockouts in map_loop.
+- **Conclusion.** A single neuron zeroed at a single token is mostly below what bf16 can resolve. Per-row KLs and
+  top-token lists for small effects are largely noise, and remote-vs-5090 differences will be of this size.
+- **Options (James's call; this changes the mapping measure):**
+  1. Add a null control to every task (an unablated context in a second batch shape), so every result carries its own
+     noise floor.
+  2. Aggregate per neuron over its firings, and flag neurons whose effect isn't above the floor.
+  3. Use a stronger intervention, e.g. zero the neuron at every firing position in the window, not just the last.
+  4. Run the layers after L in float32. This fits on the 5090 but not on 24 GB cards.
+
 **Early full-map arithmetic** (5090 speeds; rented cards come in phase C)
 - **Observe:** 10M tokens at about 3,280 tokens/s ≈ 51 min of one 5090. That's small.
 - **Ablate:** all 442,368 neurons = 6,912 tasks of 64 neurons at about 29 s each ≈ 56 GPU-hours on a 5090.
