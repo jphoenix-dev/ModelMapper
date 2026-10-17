@@ -412,7 +412,10 @@ def main():
     meta_p = cp.OUT / f"map_loop_{tag}_meta.json"
     meta_p.write_text(json.dumps({"elapsed_s": round(el, 1), "gpu_idle_s": round(gpu_idle, 1), "luna_calls": USAGE.total[2],
                                   "luna_in": USAGE.total[0], "luna_out": USAGE.total[1], "luna_usd": round(USAGE.usd(), 4),
-                                  "concepts": len(todo), "workers": workers}, indent=1), encoding="utf-8")
+                                  "concepts": len(todo), "workers": workers,
+                                  "gpu_peak_allocated_gb": round(torch.cuda.max_memory_allocated() / 1e9, 2) if torch.cuda.is_available() else None,
+                                  "gpu_peak_reserved_gb": round(torch.cuda.max_memory_reserved() / 1e9, 2) if torch.cuda.is_available() else None,
+                                  "knock_batch": KNOCK_BATCH}, indent=1), encoding="utf-8")
 
 
 if __name__ == "__main__":
