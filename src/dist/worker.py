@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 T_START = time.time()
 
 from dist.storage import open_store  # noqa: E402
+from dist import quota  # noqa: E402
 from dist.manifest import state  # noqa: E402
 from dist.tasks import Ctx, run_task  # noqa: E402
 
@@ -92,6 +93,16 @@ def main():
                 log(f"idle {IDLE_MAX}s with {len(pending)} pending, all claimed or waiting: exiting"); break
             time.sleep(IDLE_POLL); continue
         idle_since = None
+        if os.environ.get("DIST_QUOTA", "1") != "0":
+            c = ctx.model.config
+            need = quota.task_output_bytes(ctx.cfg, pick, c.num_hidden_layers, c.intermediate_size, c.num_attention_heads,
+                                           c.hidden_size, store.get_json(f"promptsets/{pick.split(':')[-1]}.json") if pick.startswith("ablate:") else None)
+            try:
+                q = quota.check(store, extra_bytes=need, extra_a=200, extra_b=200)
+            except quota.QuotaExceeded as e:
+                log(f"QUOTA: {e} - not starting {pick}; stopping this worker")
+                summary.append({"quota_stop": str(e)}); break
+            log(f"quota ok: {q['gb_held']} GB held, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month")
         claim_key = "claims/" + pick.replace(":", "/")
         store.put_json(claim_key, {"worker": wid, "t": time.time()})
         if "first_task_start" not in boot:
@@ -110,12 +121,14 @@ def main():
         store.delete(claim_key)
         row = {"task": pick, "skipped": meta is None, **({k: meta[k] for k in ("seconds", "tokens", "tokens_per_s")} if meta else {})}
         summary.append(row); store.put_json(f"{lp}/task_{n_run:04d}.json", row)
+        quota.save_ops(store, wid)
         store.put_json(f"{lp}/heartbeat.json", {"t": now(), "tasks_run": n_run + 1, "uptime_s": round(time.time() - T_START)})
         log(f"done {pick}: {row}")
         n_run += 1
         if a.once or a.task:
             break
     store.put_json(f"{lp}/exit.json", {"t": now(), "uptime_s": round(time.time() - T_START, 1), "tasks": summary})
+    quota.save_ops(store, wid)
     if not a.no_terminate:
         terminate_self(log)
 

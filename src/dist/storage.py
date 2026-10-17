@@ -29,9 +29,18 @@ from config import env  # noqa: E402
 
 
 class Store:
+    """Counts requests by R2 billing class (A: put, list page; B: get, head; delete is free) for quota.py."""
+    ops = None
+
+    def _count(self, cls, n=1):
+        if self.ops is None:
+            self.ops = {"A": 0, "B": 0}
+        self.ops[cls] += n
+
     def get(self, key: str) -> bytes | None: raise NotImplementedError
     def put(self, key: str, data: bytes) -> None: raise NotImplementedError
     def list(self, prefix: str = "") -> list[str]: raise NotImplementedError
+    def list_sizes(self, prefix: str = "") -> dict[str, int]: raise NotImplementedError
     def delete(self, key: str) -> None: raise NotImplementedError
 
     def exists(self, key: str) -> bool:
@@ -66,13 +75,16 @@ class LocalStore(Store):
         return self.root / key
 
     def get(self, key):
+        self._count("B")
         p = self._p(key)
         return p.read_bytes() if p.is_file() else None
 
     def exists(self, key):
+        self._count("B")
         return self._p(key).is_file()
 
     def put(self, key, data):
+        self._count("A")
         p = self._p(key)
         p.parent.mkdir(parents=True, exist_ok=True)
         fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".tmp_")   # atomic: readers never see half a file
@@ -81,17 +93,20 @@ class LocalStore(Store):
         os.replace(tmp, p)
 
     def list(self, prefix=""):
+        return sorted(self.list_sizes(prefix))
+
+    def list_sizes(self, prefix=""):
         base = self._p(prefix)
         top = base if base.is_dir() else base.parent
-        if not top.exists():
-            return []
-        out = []
-        for p in top.rglob("*"):
-            if p.is_file() and not p.name.startswith(".tmp_"):
-                k = p.relative_to(self.root).as_posix()
-                if k.startswith(prefix):
-                    out.append(k)
-        return sorted(out)
+        out = {}
+        if top.exists():
+            for p in top.rglob("*"):
+                if p.is_file() and not p.name.startswith(".tmp_"):
+                    k = p.relative_to(self.root).as_posix()
+                    if k.startswith(prefix):
+                        out[k] = p.stat().st_size
+        self._count("A", max(1, -(-len(out) // 1000)))
+        return out
 
     def delete(self, key):
         self._p(key).unlink(missing_ok=True)
@@ -111,6 +126,7 @@ class S3Store(Store):
             config=Config(retries={"max_attempts": 10, "mode": "adaptive"}))
 
     def get(self, key):
+        self._count("B")
         try:
             return self.s3.get_object(Bucket=self.bucket, Key=self.prefix + key)["Body"].read()
         except self.s3.exceptions.NoSuchKey:
@@ -118,6 +134,7 @@ class S3Store(Store):
 
     def exists(self, key):
         from botocore.exceptions import ClientError
+        self._count("B")
         try:
             self.s3.head_object(Bucket=self.bucket, Key=self.prefix + key)
             return True
@@ -127,13 +144,18 @@ class S3Store(Store):
             raise
 
     def put(self, key, data):
+        self._count("A")
         self.s3.put_object(Bucket=self.bucket, Key=self.prefix + key, Body=data)
 
     def list(self, prefix=""):
-        out, pag = [], self.s3.get_paginator("list_objects_v2")
+        return sorted(self.list_sizes(prefix))
+
+    def list_sizes(self, prefix=""):
+        out, pag = {}, self.s3.get_paginator("list_objects_v2")
         for page in pag.paginate(Bucket=self.bucket, Prefix=self.prefix + prefix):
-            out += [o["Key"][len(self.prefix):] for o in page.get("Contents", [])]
-        return sorted(out)
+            self._count("A")
+            out.update({o["Key"][len(self.prefix):]: o["Size"] for o in page.get("Contents", [])})
+        return out
 
     def delete(self, key):
         self.s3.delete_object(Bucket=self.bucket, Key=self.prefix + key)

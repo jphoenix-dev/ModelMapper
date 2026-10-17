@@ -85,6 +85,11 @@ def main():
         layer, rng = spec.split(":")
         tasks.append({"id": f"ablate:{int(layer)}:{rng}:{a.promptset}", "after": ["merge:observe"]})
     store.put_json("manifest.json", {"tasks": tasks})
+    from dist import quota
+    ps = store.get_json(f"promptsets/{a.promptset}.json")
+    est = sum(quota.task_output_bytes(cfg, t["id"], promptset=ps) for t in tasks)
+    quota.save_ops(store, f"make_run-{int(__import__('time').time())}")
+    print(f"estimated results if nothing is drained: {est/1e9:.2f} GB (bucket cap {quota.MAX_GB} GB; use launcher --drain-to)")
     print(f"{store}: {len(tasks)} tasks, model {a.model}@{rev[:10]}")
 
 

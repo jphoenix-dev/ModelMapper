@@ -20,6 +20,7 @@ Credentials: RUNPOD_API_KEY, S3_* (env or .env); passed to the pods as env vars,
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
@@ -27,6 +28,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from config import env  # noqa: E402
+from dist import quota  # noqa: E402
 from dist import runpod_api as rp  # noqa: E402
 from dist.storage import open_store  # noqa: E402
 from dist.manifest import state  # noqa: E402
@@ -118,6 +120,34 @@ def terminate_all(name, why):
     return len(left)
 
 
+def drain(store, tasks, pending, dest):
+    """Copy finished results that no pending task still needs to `dest`, then delete them from the bucket (keeping
+    the small meta.json and _DONE markers there, so the run's state is unchanged). Frees bucket storage as we go."""
+    import fnmatch
+    pend = set(pending)
+    needed = {t["id"] for t in tasks if any(fnmatch.fnmatch(t["id"], pat) for p in tasks if p["id"] in pend for pat in p.get("after", []))}
+    moved = 0
+    for t in tasks:
+        tid = t["id"]
+        if tid in pend or tid in needed:
+            continue
+        pre = "results/" + tid.replace(":", "/") + "/"
+        for k, size in store.list_sizes(pre).items():
+            if k.endswith(("/_DONE", "/meta.json")):
+                continue
+            out = Path(dest) / k
+            out.parent.mkdir(parents=True, exist_ok=True)
+            data = store.get(k)
+            if data is None or len(data) != size:
+                continue
+            out.write_bytes(data)
+            if out.stat().st_size == size:           # delete from the bucket only once the local copy is complete
+                store.delete(k); moved += size
+    if moved:
+        print(f"drained {moved/1e9:.3f} GB to {dest}", flush=True)
+    return moved
+
+
 def cmd_run(a, store, name):
     if a.pods > a.max_pods:
         raise SystemExit(f"--pods {a.pods} > --max-pods {a.max_pods}")
@@ -129,6 +159,7 @@ def cmd_run(a, store, name):
         start_cmd = ["bash", "-c", BOOT]
         print(f"stock image {a.image}; code {pod_env['DIST_CODE']}", flush=True)
     boot_failed = set()
+    me = f"launcher-{os.getpid()}-{int(time.time())}"
     led = Ledger(a.ledger or f"launcher_{name}.json")
     tasks = store.get_json("manifest.json")["tasks"]
     launched = 0
@@ -150,16 +181,25 @@ def cmd_run(a, store, name):
                     print(f"terminating {p['id']} ({p.get('desiredStatus')}, worker exited: {finished})", flush=True)
                     rp.terminate(p["id"])
             live = [p for p in pods if p.get("desiredStatus") == "RUNNING" and not store.exists(f"logs/{p['id']}/exit.json")]
+            if a.drain_to:
+                drain(store, tasks, pending, a.drain_to)
+            try:
+                q = quota.check(store); quota.save_ops(store, me)
+            except quota.QuotaExceeded as e:
+                terminate_all(name, f"R2 free-tier cap: {e}")
+                break
             spent = led.spend(now)
             rate = sum(p.get("costPerHr") or 0 for p in live)
             print(f"[{time.strftime('%H:%M:%S')}] live {len(live)}, pending {len(pending)} (ready {len(ready)}, claimed {len(claims)}), "
-                  f"spend ~${spent:.3f}, ${rate:.3f}/h", flush=True)
+                  f"spend ~${spent:.3f}, ${rate:.3f}/h, bucket {q['gb_held']} GB, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month", flush=True)
             led.save(store)
             if spent + rate * a.interval / 3600 >= a.max_spend:
                 terminate_all(name, f"spend cap: ~${spent:.2f} + next interval reaches ${a.max_spend}")
                 break
             if not pending:
                 print("all tasks done", flush=True)
+                if a.drain_to:
+                    drain(store, tasks, [], a.drain_to)
                 break
             want = min(a.pods, a.max_pods, len(pending))
             for _ in range(want - len(live)):
@@ -202,6 +242,7 @@ def main():
     ap.add_argument("--disk-gb", type=int, default=40)
     ap.add_argument("--registry-auth", help="RunPod containerRegistryAuthId for a private image")
     ap.add_argument("--ledger")
+    ap.add_argument("--drain-to", help="local folder: finished results are copied here and deleted from the bucket")
     a = ap.parse_args()
     store = open_store(a.store); name = a.name or run_name(a.store)
     if a.cmd == "run":

@@ -98,6 +98,20 @@ merge:observe`. Ablate tasks wait for it. To compare two runs:
 python src/dist/compare_runs.py <store A> <store B> --out compare.json
 ```
 
+## R2 free tier (automatic caps, `quota.py`)
+
+Each month R2 gives 10 GB-month of storage, 1M Class A requests (writes, listings) and 10M Class B requests (reads)
+free. Deletes are free.
+
+- **Storage.** Storage is averaged over the month, so what counts is how much sits in the bucket. Run the launcher with
+  `--drain-to D:/model-mapper-runs/<run>`: finished results nothing else needs are copied there and deleted from the
+  bucket, while the small `meta.json` and `_DONE` files stay. Bytes held are capped at `DIST_MAX_GB` (default 9).
+- **Requests.** These add up over the calendar month, and deleting refunds nothing. Each process saves its counts to
+  `usage/<YYYY-MM>/`. The caps are `DIST_MAX_CLASS_A=900000` and `DIST_MAX_CLASS_B=9000000`.
+- **Enforcement.** A worker checks before every task and stops if the task would pass a cap. The launcher checks
+  every interval and terminates everything if a cap is reached.
+- **Assumption.** This assumes this bucket is the account's only R2 use, because the free tier is per account.
+
 ## Behaviour to know
 
 - **Restartable tasks.** A task is done only when `results/<task>/_DONE` exists, and that marker is written last. A
