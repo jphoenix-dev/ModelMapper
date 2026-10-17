@@ -19,22 +19,28 @@ TOP, FIRE, MIN_OWN = 10, 0.5, 1.0
 
 def main():
     xs = {}; units = None
-    for f in sorted(glob.glob(str(ROOT / "results/cross_activation_*.json"))):
+    for f in sorted(glob.glob(str(ROOT / "results/cross_activation_*.json")), key=lambda f: ("_fame" in f, f)):   # fame files last
         d = json.loads(Path(f).read_text(encoding="utf-8"))
         assert units is None or d["units"] == units, f"{f}: different neuron union"
-        units = d["units"]; xs.update(d["concepts"])
+        units = d["units"]
+        for c, v in d["concepts"].items():                  # fame-sample duplicates of earlier concepts are skipped (the
+            if "_fame" in Path(f).name and c in xs:          # earlier entry is kept); fame files sort after cr2/cr3
+                continue
+            xs[c] = v
     ui = {u: i for i, u in enumerate(units)}
     ranks, group = {}, {}
-    for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json"))):
+    fame_tier = {}
+    for wf in sorted(glob.glob(str(ROOT / "results/concepts_fame*/wave_free.json"))):
+        for c, r in json.loads(Path(wf).read_text(encoding="utf-8")).items():
+            fame_tier.setdefault(c, r["category"].split("#")[0] + (" (coverage draw)" if "fame2" in wf else ""))
+    for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json")), key=lambda f: ("concepts_fame" in f, f)):
         if "rank_save_test" in f or f.endswith("_exact.json"):
             continue
+        is_fame = "concepts_fame" in f
         for c, v in json.loads(Path(f).read_text(encoding="utf-8")).items():
-            if "top" in v and c in xs:
-                ranks[c] = v; group[c] = "original (hand-picked)"
-    fw = json.loads((ROOT / "results/concepts_fame/wave_free.json").read_text(encoding="utf-8"))
-    for c, r in fw.items():
-        if c in ranks:
-            group[c] = r["category"].split("#")[0]
+            if "top" not in v or c not in xs or (is_fame and c in ranks):      # originals win over fame duplicates
+                continue
+            ranks[c] = v; group[c] = fame_tier[c] if is_fame else "original (hand-picked)"
     concepts = list(ranks); n_others = len(concepts) - 1
     stats = defaultdict(lambda: {"pairs": 0, "zero": 0, "n_other": [], "always": 0, "slots": 0, "concepts": 0})
     for a in concepts:

@@ -25,17 +25,23 @@ TOP, FIRE, MIN_OWN = 10, 0.5, 1.0
 def main():
     xs = {}
     units = None
-    for f in sorted(glob.glob(str(ROOT / "results/cross_activation_*.json"))):
+    for f in sorted(glob.glob(str(ROOT / "results/cross_activation_*.json")), key=lambda f: ("_fame" in f, f)):   # fame files last
         if f.endswith("summary.json"):
             continue
         d = json.loads(Path(f).read_text(encoding="utf-8"))
         assert units is None or d["units"] == units, f"{f}: different neuron union"
-        units = d["units"]; xs.update(d["concepts"])
+        units = d["units"]
+        for c, v in d["concepts"].items():                  # fame-sample duplicates of earlier concepts are skipped (the
+            if "_fame" in Path(f).name and c in xs:          # earlier entry is kept); fame files sort after cr2/cr3
+                continue
+            xs[c] = v
     ui = {u: i for i, u in enumerate(units)}
     ranks = {}
-    for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json"))):
+    for f in sorted(glob.glob(str(ROOT / "results/concepts_*/rank_save_*.json")), key=lambda f: ("concepts_fame" in f, f)):
         if "rank_save_test" not in f and not f.endswith("_exact.json"):
-            ranks.update({c: v for c, v in json.loads(Path(f).read_text(encoding="utf-8")).items() if "top" in v})
+            for c, v in json.loads(Path(f).read_text(encoding="utf-8")).items():
+                if "top" in v and not ("concepts_fame" in f and c in ranks):     # originals win over fame duplicates
+                    ranks[c] = v
     fam = family_map()
     concepts = [c for c in ranks if c in xs]
     missing_fam = [c for c in concepts if c not in fam]
