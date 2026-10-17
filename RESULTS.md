@@ -1903,5 +1903,20 @@ superposition; and are 'unrelated' meanings really different, or facets of one c
   GPU idle 12% (a judge-starvation bug at the start, fixed); Luna $0.0018 per concept.
 - Batched single-neuron/head knockouts v1 FAILED their gate (bf16 batch-shape noise vs a separately computed
   baseline); v2 measures against an unablated copy in the same pass - to be re-gated.
+- Batched knockouts v2 ALSO FAILED (16:34): neuron order and curves identical to v1's failure (the baseline shift is common
+  to a pass, so it was never the cause; the noise is between rows of a large bf16 batch vs a small one), head drops off by
+  0.44-2.7. Decisive: the speed-up is only x1.1 (single knockouts 166 -> 149 s, heads 41 -> 37 s) - each knockout pass
+  already batches all of a concept's prompts, so the GPU is already full. Batching DROPPED; the loop stays unbatched.
+  Outputs kept in results/maploop_repro/failed_batched_v1 and _v2.
 - Running total: 610 recalled concepts mapped before coverage-4; coverage-4 (concepts_fame5, 376 drawn) finished 16:08,
   unbatched loop, 0 failures.
+
+## 17 Oct 2026 (late afternoon): do a concept's key neurons sit on the same layer? (EXPLORATORY; research branch)
+James: is the combination spread one-per-layer, or can two concept neurons share a layer? (`same_layer.py`, 914 mapped
+concepts, ranked by knockout effect; chance = the same overall layer mix drawn independently.)
+- Sharing a layer is common: 46% of concepts have >= 2 of their top-5 on one layer (top-10: 94%; up to 5 on one layer).
+  Of the k neurons each concept actually needs (k_mean >= 2, median 2), 17% share a layer.
+- But slightly LESS than chance: top-3 15% vs 22%, top-5 46% vs 54% (~5 SD below with 914 concepts). The chance model
+  ignores concept-specific layer clustering (which would raise chance), so the spreading tendency is if anything stronger.
+- Layers are heavily skewed late (L28-35 hold ~70% of top-5 neurons) with a second cluster at L8-10.
+- Reading: no one-concept-neuron-per-layer rule; a mild preference for spreading across layers.
