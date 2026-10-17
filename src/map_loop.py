@@ -217,8 +217,16 @@ def main():
     wave = json.loads((ROOT / wave_p).read_text(encoding="utf-8"))
     concepts = [(cat, c) for cat, cs in wave["concepts"].items() for c in cs]
     out_p = cp.OUT / f"map_loop_{tag}.json"; rank_p = cp.OUT / f"rank_save_{tag}.json"
+    # append-only per-concept logs (O(1) per concept; the full JSON files are written once at the end) - rewriting the
+    # whole growing JSON after every concept left the GPU idle (James's GPU-Z trace, 17 Oct)
+    out_l = cp.OUT / f"map_loop_{tag}.jsonl"; rank_l = cp.OUT / f"rank_save_{tag}.jsonl"
     out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {}
     ranks = json.loads(rank_p.read_text(encoding="utf-8")) if rank_p.exists() else {}
+    for pth, dct in ((out_l, out), (rank_l, ranks)):
+        if pth.exists():
+            for line in pth.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    k, v = json.loads(line); dct[k] = v
     todo = [(cat, c) for cat, c in concepts if c not in out]
     pipe = FastPipeline(os.environ.get("MODEL", DEFAULT_MODEL), mode="add", reply_only=True); m = pipe.model
     arr_dir = cp.OUT / "rank_save_arrays"; arr_dir.mkdir(exist_ok=True)
@@ -230,14 +238,20 @@ def main():
     judge, ready_g1, done = {}, {}, set()
     t_start = time.time(); gpu_idle = 0.0
 
-    def save():
-        out_p.write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
-        rank_p.write_text(json.dumps(ranks, indent=1, ensure_ascii=False), encoding="utf-8")
+    def save(c=None):
+        if c is None:                                   # full consolidation (end of run)
+            out_p.write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+            rank_p.write_text(json.dumps(ranks, indent=1, ensure_ascii=False), encoding="utf-8"); return
+        with open(out_l, "a", encoding="utf-8") as f:
+            f.write(json.dumps([c, out[c]], ensure_ascii=False) + "\n")
+        if c in ranks:
+            with open(rank_l, "a", encoding="utf-8") as f:
+                f.write(json.dumps([c, ranks[c]], ensure_ascii=False) + "\n")
 
     def finish(c, row):
         row["category"] = cat_of[c]; row["timing_s"] = timing[c]
         u = USAGE.by.get(c, {}); row["luna"] = {k: {"in": v[0], "out": v[1], "calls": v[2], "usd": round(USAGE.usd(v), 5)} for k, v in u.items()}
-        out[c] = row; done.add(c); save()
+        out[c] = row; done.add(c); save(c)
         print(f"{c[:30]:<30} {row['status']:<14} " + (f"recall {row['recall']} k_mean {row.get('k_mean')} k_flip {row.get('k_flip')} | " if row['status'] == 'ok' else "")
               + "time " + " ".join(f"{k}={v}" for k, v in timing[c].items()) + f" | Luna so far ${USAGE.usd():.3f}", flush=True)
 
@@ -384,7 +398,7 @@ def main():
                 did = True; break
         if not did:
             t = time.time(); time.sleep(0.2); gpu_idle += time.time() - t
-    pool.shutdown(); jpool.shutdown()
+    pool.shutdown(); jpool.shutdown(); save()
     el = time.time() - t_start
     print(f"done {len(todo)} concepts in {el / 60:.1f} min; GPU idle (waiting on Luna) {gpu_idle / 60:.1f} min "
           f"({gpu_idle / max(el, 1e-9):.0%}); Luna {USAGE.total[2]} calls, ${USAGE.usd():.3f}", flush=True)
