@@ -1,0 +1,40 @@
+Stage C - meanings in Qwen's own space: concept 159, spliced 52, control 52 units with >= 2 meaning groups
+
+reference: same meaning (within-group) median cosine +0.124; known-unrelated (spliced, different sources) +0.010 (n=151)
+
+concept neurons: 586 meaning pairs
+  Luna rating 1: n=114  median cosine +0.312 (position on unrelated->same scale: 2.65)
+  Luna rating 2: n=194  median cosine +0.091 (position on unrelated->same scale: 0.71)
+  Luna rating 3: n=278  median cosine +0.034 (position on unrelated->same scale: 0.21)
+  Spearman(Luna rating, cosine) = -0.501 (negative = Luna and Qwen agree)
+  'inside close, outside far': 6/278 pairs Luna calls unrelated sit at least as close as the median 'same/closely related' pair (+0.312)
+
+control neurons: 305 meaning pairs
+  Luna rating 1: n=32   median cosine +0.113 (position on unrelated->same scale: 0.90)
+  Luna rating 2: n=72   median cosine +0.086 (position on unrelated->same scale: 0.66)
+  Luna rating 3: n=201  median cosine +0.040 (position on unrelated->same scale: 0.26)
+  Spearman(Luna rating, cosine) = -0.259 (negative = Luna and Qwen agree)
+  'inside close, outside far': 49/201 pairs Luna calls unrelated sit at least as close as the median 'same/closely related' pair (+0.113)
+
+hubs (units with >= 3 meanings; a hub = the most central meaning beats the permutation null at p < 0.05; 5% by chance):
+  concept  8/98 (8%)
+  control  0/40 (0%)
+  spliced  0/37 (0%)
+
+examples - concept neurons with a significant hub (hub meaning <- other meanings):
+  L30:6125   hub 'Greece, Greek places and culture' <- ['Greek yogurt and food', 'Ottoman, Turkish and Armenian history']  (p=0.0432)
+  L31:9683   hub 'Lunar phases, appearances, and effects' <- ['Moon as a destination for space exploration', 'Cultural, symbolic, and artistic moon references']  (p=0.0133)
+  L9:196     hub 'Volcanoes and volcanic landscapes' <- ['Mountains, peaks and climbing', 'Impact craters']  (p=0.0166)
+  L11:2050   hub 'AI, automation, and social impact' <- ['Robots, androids, and fictional beings', 'Autonomous vehicles and transport technology']  (p=0.0166)
+  L32:2780   hub 'Other travel and destinations' <- ['Rome landmarks and sightseeing', 'Paris landmarks and sightseeing', 'Cycling events and competition']  (p=0.0199)
+  L16:9154   hub 'Words and linguistic units' <- ['Punctuation marks', 'Labels, names, and metadata']  (p=0.0432)
+  L27:11958  hub 'Specific artworks and art-reference material' <- ['Artists, movements, and art-history context', 'Painting techniques, materials, and forms']  (p=0.0066)
+  L28:11955  hub 'Human evolution and early humans' <- ['Prehistoric archaeology and ancient societies', 'Primate food ecology']  (p=0.0233)
+
+examples - Luna says unrelated, Qwen places close (concept neurons):
+  L29:277    'Kathmandu temples and religious sites' ~ 'Sankhuwasabha political protests and district restructuring' cos +0.421
+  L5:11976   'Accounting and financial reporting' ~ 'Telegraph communication' cos +0.654
+  L34:4955   'Years and dates' ~ 'Negation (“don’t”)' cos +0.993
+  L33:1730   'People, roles, or statuses' ~ 'Substances, products, or medicines' cos +0.340
+  L33:1730   'People, roles, or statuses' ~ 'Qualities or determining factors' cos +0.374
+  L33:1730   'Substances, products, or medicines' ~ 'Qualities or determining factors' cos +0.329
