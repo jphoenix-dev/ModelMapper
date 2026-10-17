@@ -1852,3 +1852,54 @@ Cross-activation and the dedication curve show that sharing grows with the popul
 The Luna judge asked whether firings relate to the OWNER concept; a gold neuron firing on jewellery counts as
 "unrelated to the Golden Gate Bridge" while keeping one meaning. Whether concept neurons carry several unrelated
 meanings has not been tested yet; a neuron-centred test (how many meanings, how far apart) is proposed.
+
+## 17 Oct 2026 (day): does the map tell us something real? Pre-registered predictions (EXPLORATORY; research branch)
+James: first prove the loop yields meaningful findings, then scale. `PREREG_MAP.md` (frozen at 533f3f1 before any of
+the data below) states five predictions with pass/fail rules; results are appended under each there.
+
+| | prediction | result |
+|---|---|---|
+| P1 | a concept's top-5 neurons (found on Luna's questions) also break recall on independent prompts - Wikipedia opening sentences with the name blanked (cloze) | **holds**: median drop +5.59 log-odds vs random-5 -0.003; flips >= half the correct prompts in 66% (32 concepts tested) |
+| P2 | dedication curve out of sample: dedicated(N) = 36.5% - 9.3 x log2(N/358), +-3 points | **holds, narrowly**: 32.0% observed vs 29.4% predicted at N = 609 (+2.6) |
+| P3 | a neuron shared by two concepts' maps matters to both | **holds**: drop on the other concept +0.835 vs its non-shared neuron +0.002 and a random one +0.000 (150 pairs) |
+| P4 | a new concept's neurons can be predicted from its Wikidata family's neurons | pending (coverage-4 running; predictions committed before it, 82fdb29) |
+| P5 | a neuron's description in web text reproduces on new text | **holds**: firing-rate rho 0.986, on-concept share rho 0.883 (2M new tokens) |
+
+**Reading:** the map is about concepts, not prompt wording (P1); its sharing structure is causal (P3); its corpus
+descriptions are stable (P5); and its population-level law extrapolates (P2). These are tests the map could have failed.
+
+## 17 Oct 2026 (day): one meaning or several? Luna's view vs Qwen's own (EXPLORATORY; research branch)
+Prompted by James: a shared neuron that keeps one meaning (a 'gold' neuron in several concepts) is composition, not
+superposition; and are 'unrelated' meanings really different, or facets of one concept we can't see (an 'Ur concept')?
+- **Stage A** (`meaning_judge.py`, Luna blind, 30 random strong firings per neuron; calibrated on spliced two-neuron
+  units, which Luna separates 65% of the time - it undercounts mixtures): 196 concept neurons: one meaning 19%, two 31%,
+  three 28%, four+ 22%; an unrelated pair in 83 of 159 multi-meaning neurons (controls 75%, spliced 94%).
+- **Stage C** (`meaning_space.py`; group centroids in Qwen's own whitened MLP-input space, the neuron's read directions
+  removed): meanings Luna calls closely related sit close (cosine +0.312), unrelated ones near the known-unrelated
+  reference (+0.034 vs +0.010; same-meaning +0.124). Spearman(Luna, Qwen) -0.50. Only 6/278 'unrelated' pairs are close
+  in Qwen's space. **Mostly genuine packing, not hidden facets.** Ur-hubs (one meaning central to the others, beating a
+  permutation null) in 8/98 concept neurons (5% expected by chance; 0 in controls and spliced): Moon (lunar phases <-
+  space exploration, cultural moon), volcanoes <- mountains / craters, AI <- robots / autonomous vehicles, human evolution
+  <- archaeology / primate diet. Weak evidence (8 vs ~5).
+- **Stage D** (`meaning_jobs.py`; each firing context run with the neuron switched off): the pre-set Luna-free clustering
+  FAILED its own calibration (the silhouette rule called 40/52 known two-neuron mixtures 'one meaning'), so its
+  'one meaning' share is not reported as a finding. Second reading (`meaning_jobs_luna_groups.py`, Luna's groups, Qwen's
+  measured effects): across a concept neuron's meanings the downstream job barely differs - gap 0.18 of the way from
+  'same job' (random halves) to 'different neurons' (spliced) - even for meanings Luna calls unrelated (effect cosine
+  0.130 vs 0.173 for closely related); the next-tokens it pushes are the same (Jaccard gap ~0).
+- **Reading: packed triggers, one job.** Concept neurons are triggered by several, often unrelated contexts (input side)
+  but do essentially the same thing downstream whatever triggered them (output side). Open: harmless reuse or
+  interference; and whether the meaning count saturates with more firings (only 30 sampled - the same population
+  effect as the dedication curve; a meaning-count vs sample-size curve is the next test).
+
+## 17 Oct 2026 (day): the loop itself
+- `map_loop.py` replaces wave_free.py + rank_save.py for coverage: Luna and GPU as separate queues meeting through the
+  spec files, ranking once, no steering, everything saved (all 200 candidates, per-prompt drops, activation maps that
+  make cross-activation incremental, attention heads: attribution, answer-position outputs, attention patterns, top-50
+  single-head knockouts), per-step timing and cost. Validated: reproduces the old pipeline exactly on 12 concepts;
+  maps match cross-activation (64,836 values, max |diff| 0.125).
+- Coverage-3 remainder (186 concepts): 0.45 min per concept overall vs ~1.65 (recalled) / 0.64 (not) for the old loop;
+  GPU idle 12% (a judge-starvation bug at the start, fixed); Luna $0.0018 per concept.
+- Batched single-neuron/head knockouts v1 FAILED their gate (bf16 batch-shape noise vs a separately computed
+  baseline); v2 measures against an unablated copy in the same pass - to be re-gated.
+- Running total: 610 recalled concepts mapped (coverage-4, 376 more, running).
