@@ -1,0 +1,3 @@
+P2 dedication curve, out of sample: N = 609 other concepts (610 concepts, 178 hand-picked owners)
+  observed dedicated share 32.0% (368/1150) vs predicted 29.4% -> difference +2.6 points
+  PREDICTION HOLDS (needs within +-3 points)

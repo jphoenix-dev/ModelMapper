@@ -21,6 +21,9 @@ the top-5 flip at least half the correct cloze prompts in >= 40% of tested conce
 ## P2 - Dedication curve out of sample (stated in RESULTS 17 Oct morning, repeated here)
 **Prediction:** for the 178 hand-picked concepts' neurons, the share firing for none of N other concepts follows
 dedicated(N) = 36.5% - 9.3 x log2(N/358), within +-3 points, at the N reached after coverage-3.
+**RESULT (17 Oct 13:03, `p2_check.py`): HOLDS, narrowly.** N = 609 other concepts (610 concepts); observed 32.0%
+(368/1150) vs predicted 29.4%: +2.6 points (limit +-3). The deviation is towards slight flattening (the last doubling
+lost ~9.0 points vs 9.3 predicted); the added concepts are mostly people and countries, so the population mix changed too.
 
 ## P3 - Shared neurons are causally shared
 **Claim tested:** when the map says two concepts share a neuron, that neuron matters to both.
