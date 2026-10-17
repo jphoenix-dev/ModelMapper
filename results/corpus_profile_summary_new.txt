@@ -1,0 +1,41 @@
+Corpus profile over 1,995,967 web tokens: 1100 concept neurons (1100 with |own act| >= 1.0; 6 of those never reach half their own-concept activation anywhere in the text). Firing = >= 0.5 x own activation, own direction. On-concept = owner keyword within +-64 tokens.
+
+firings per million tokens: median 201.9 (paired random neurons, same threshold: 20.5)
+share of firings on-concept: median 0.03 vs chance (base) 0.002 vs paired random neurons 0.000
+lift (on / chance): median 21.7; neurons with lift >= 5: 611/1094; on-concept >= 50%: 88/1094
+firings near ANOTHER of our concepts only: median 0.86; near none of our 610 concepts: median 0.07
+  chance for that: share of all scanned tokens near ANY of our concepts' keywords = 0.90 (so 'other' and 'none' are only interpretable against this)
+
+by layer band: neurons firing | median rate/M | median on-concept | median lift | median 'none'
+  L0-15:  164 |    105.7 | 0.11 |   87.6 | 0.05
+  L16-23:   31 |    249.5 | 0.01 |    1.2 | 0.12
+  L24-29:  276 |    193.4 | 0.06 |   29.5 | 0.05
+  L30-35:  623 |    267.0 | 0.02 |   11.1 | 0.09
+
+most concept-specific (on-concept share, >= 20 firings):
+  L32:6265   poker                                    n=28     on 1.00 lift 551
+  L24:2549   chess, chess grandmasters                n=30     on 0.97 lift 1357
+  L9:2665    Bitcoin                                  n=215    on 0.96 lift 551
+  L30:8611   the helicopter                           n=27     on 0.93 lift 1287
+  L29:1567   poker                                    n=303    on 0.91 lift 504
+  L32:1778   cheese                                   n=70     on 0.89 lift 231
+  L32:4265   Venice                                   n=35     on 0.86 lift 779
+  L9:11889   Harry Potter                             n=99     on 0.85 lift 328
+  L30:1672   the dolphin                              n=28     on 0.82 lift 666
+  L31:8429   chocolate                                n=243    on 0.82 lift 206
+  L29:11452  the colour blue                          n=109    on 0.82 lift 47
+  L9:3587    the Buddha                               n=83     on 0.80 lift 887
+
+least concept-specific (>= 20 firings):
+  L29:8486   giraffe                                  n=1213   on 0.00 other 0.87 none 0.13
+  L35:2654   zebra, Zeus                              n=500    on 0.00 other 0.88 none 0.12
+  L34:11624  tacos                                    n=5927   on 0.00 other 0.89 none 0.11
+  L34:10701  Sydney                                   n=378    on 0.00 other 0.85 none 0.15
+  L26:10926  The Scream, The Thinker                  n=97     on 0.00 other 0.97 none 0.03
+  L21:2951   The Scream                               n=43     on 0.00 other 0.88 none 0.12
+  L23:4795   The Scream                               n=1552   on 0.00 other 0.94 none 0.06
+  L18:10192  The Scream                               n=223    on 0.00 other 0.73 none 0.27
+  L27:11402  The Thinker                              n=20     on 0.00 other 1.00 none 0.00
+  L35:8005   The Thinker                              n=420    on 0.00 other 0.91 none 0.09
+  L25:5585   The Thinker                              n=1398   on 0.00 other 0.95 none 0.05
+  L31:5096   volleyball                               n=153    on 0.00 other 0.94 none 0.06

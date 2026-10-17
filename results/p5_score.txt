@@ -1,0 +1,4 @@
+P5 corpus descriptions on new text: 1100 neurons
+  firing rate: Spearman 0.986 (n=1100)
+  on-concept share: Spearman 0.883 (n=1024, >= 20 firings in both texts)
+  PREDICTION HOLDS (needs >= 0.8 and >= 0.6)

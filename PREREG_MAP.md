@@ -55,6 +55,9 @@ neurons). Prediction made from the pre-coverage-4 maps only; scored on coverage-
 (documents not in the atlas). Rank correlation between the two profiles of (a) firing rate, (b) on-concept share.
 **Prediction:** Spearman >= 0.8 for firing rate and >= 0.6 for on-concept share.
 **Fails if:** below either.
+**RESULT (17 Oct 13:51, `p5_score.py`): HOLDS.** 2.0M new FineWeb tokens (the 4,102 documents after the atlas's 20,359;
+alignment with the atlas asserted). Firing rate Spearman 0.986 (1,100 neurons); on-concept share Spearman 0.883 (1,024
+neurons with >= 20 firings in both texts).
 
 ## Novelty ranking (after the tests)
 Every finding that survives is checked against LITERATURE.md and new searches, and labelled known / partly known /
