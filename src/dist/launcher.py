@@ -170,6 +170,7 @@ def cmd_run(a, store, name):
         start_cmd = ["bash", "-c", BOOT]
         print(f"stock image {a.image}; code {pod_env['DIST_CODE']}", flush=True)
     boot_failed = set()
+    no_cap_since, gave_up = None, False
     me = f"launcher-{os.getpid()}-{int(time.time())}"
     led = Ledger(a.ledger or f"launcher_{name}.json")
     tasks = store.get_json("manifest.json")["tasks"]
@@ -224,12 +225,26 @@ def cmd_run(a, store, name):
                     break
                 rate += guess
                 t_req = time.time()
-                p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd, a.interruptible)
+                try:
+                    p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd,
+                                      a.interruptible, a.cuda_versions.split(","))
+                except rp.NoCapacity:
+                    no_cap_since = no_cap_since or time.time()
+                    waited = (time.time() - no_cap_since) / 60
+                    print(f"no {a.gpu} available on Community (CUDA {a.cuda_versions}); waited {waited:.1f} of "
+                          f"{a.max_wait_min} min, retrying next interval", flush=True)
+                    if waited >= a.max_wait_min:
+                        gave_up = True
+                    break
+                no_cap_since = None
                 launched += 1
                 led.d["pods"][p["id"]] = {"requested": t_req, "created": time.time(), "rate": p.get("costPerHr") or 0,
                                           "gone": None, "gpu_type": a.gpu, "name": p.get("name")}
                 print(f"started {p['id']} on {a.gpu} at ${p.get('costPerHr')}/h", flush=True)
                 led.see(rp.list_pods(name), time.time())
+            if gave_up and not live:
+                print(f"giving up: no {a.gpu} capacity for {a.max_wait_min} min", flush=True)
+                break
             time.sleep(a.interval)
     except KeyboardInterrupt:
         print("interrupted", flush=True)
@@ -256,6 +271,8 @@ def main():
     ap.add_argument("--rate-guess", type=float, default=0.5, help="USD/h assumed for a pod not started yet (cap check)")
     ap.add_argument("--disk-gb", type=int, default=40)
     ap.add_argument("--interruptible", action="store_true", help="spot pods (RunPod said they are no longer offered, 2026-10-17)")
+    ap.add_argument("--cuda-versions", default="12.8,12.9,13.0", help="host CUDA versions allowed (driver must run the image)")
+    ap.add_argument("--max-wait-min", type=float, default=20, help="give up if no machine is available for this long")
     ap.add_argument("--registry-auth", help="RunPod containerRegistryAuthId for a private image")
     ap.add_argument("--ledger")
     ap.add_argument("--drain-to", help="local folder: finished results are copied here and deleted from the bucket")
