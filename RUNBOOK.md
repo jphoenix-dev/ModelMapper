@@ -57,8 +57,8 @@ Optional: `Dockerfile` builds an image with the code baked in. Use it with `--cu
 ## 4. Launch
 
 ```
-python src/dist/launcher.py run --store <store> --image <registry>/model-mapper:<tag> \
-    --gpu "NVIDIA GeForce RTX 4090" --pods 3 --max-pods 3 --max-spend 5 --interval 120
+python src/dist/launcher.py run --store <store> --gpu "NVIDIA GeForce RTX 4090" \
+    --pods 3 --max-pods 3 --max-spend 5 --interval 120 --drain-to D:/model-mapper-runs/<run>
 ```
 
 - Pods are Community Cloud, interruptible, 40 GB container disk, `volumeInGb 0`, no network volume, one GPU type.
