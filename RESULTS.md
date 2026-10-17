@@ -2148,3 +2148,32 @@ summaries copied to results/concept_search/; GPU ~5 min.)
   sample: we mapped named things, so the search will find more neurons for named things. The decisive test is the
   next one: of top-ranked neurons in NO map, what fraction can be given a concept and VERIFIED causally (precision of
   search-then-verify)?
+
+## 17 Oct 2026 (late evening): search-then-verify pilot - verification works, proposing from web text doesn't (EXPLORATORY; research branch)
+(`search_verify.py`; outputs in D:/already-clean-data/search_verify/, summary copied to results/search_verify/.) 350
+neurons, shuffled and unlabelled for Luna: 100 drawn from the top 1% by the feasibility score but in no map; 100
+layer-matched random; 100 size-matched; 50 known concept neurons (new in coverage-4) as positive controls. Luna read
+each neuron's 15 strongest positive and negative web firings and its 20 most-pushed tokens each way, and named one
+specific concept (with 8 questions) or none. Qwen then answered the questions; with >= 3 recalled, the neuron was
+zeroed everywhere and the drop in log-odds compared with 2 random same-layer neurons. Verified = drop >= 1.0 and above
+the pooled null's 99th percentile (0.17). Criteria stated before running.
+
+| group | n | Luna named a concept | verified |
+|---|---|---|---|
+| top-ranked, unmapped | 100 | 4 | 0 (best: JavaScript, +0.86) |
+| random, unmapped | 100 | 3 | 0 |
+| size-matched, unmapped | 100 | 3 | 1 (Talc, L10:11856, +2.02) |
+| known concept neurons | 50 | 9 | 4 |
+
+- **Criterion not met** (top 0 vs random 0), so the pilot can't judge the ranking.
+- **Verification works:** when Luna named a known neuron's OWN concept (4 times: Netherlands +7.43, The Hunger Games
+  +3.14, Guns N' Roses +2.12, Minecraft +1.86), all 4 verified, against nulls of at most 0.18. When it named a different
+  concept (5 times, e.g. 'the number three' for an F-35 neuron), none did.
+- **The proposal step fails:** Luna found the concept for only 4 of 50 known concept neurons (8%). This fits the
+  firing judge (concept neurons are mostly polysemantic in web text): what a concept neuron is FOR doesn't show in where
+  it fires in ordinary text, except for the few dedicated ones. One new concept neuron turned up outside all maps (Talc,
+  in layer 10).
+- **Reading:** search-then-verify needs a proposal step that asks Qwen in the context where concept neurons act, not
+  web text. Next design: a 'concept atlas' - run Qwen on cloze prompts for thousands of names (as in P1: the Wikipedia
+  opening with the name blanked) and record every neuron's activation at the answer position; each neuron's
+  top-activating names become its proposals; verify by zeroing on those cloze prompts.

@@ -76,7 +76,11 @@ change later (SAE / transcoder features); a deliberate sampling frame, not only 
 the distributed bottom-up pipeline; self-checks in every batch; nothing Qwen-specific. All output to D:/already-clean-data.
 **Search instead of grind - feasibility:** cheap profiles rank concept neurons well enough to prioritise (new
 coverage-4 concept neurons at the 90th percentile of their layer; top 1% holds 16.7x the chance count; ~1/3 of the
-signal is neuron size). Next: the precision of search-then-verify on top-ranked unmapped neurons.
+signal is neuron size). **Search-then-verify pilot (350 neurons):** verification is sharp (a known
+neuron with its own concept named: 4/4 verified, drops 1.9-7.4 vs nulls <= 0.18), but proposing concepts from WEB
+firings fails (Luna found the concept for 4/50 known neurons; 0 verified among 100 top-ranked unmapped). Next: propose
+from Qwen itself - a 'concept atlas' of every neuron's activation at the answer position over cloze prompts for
+thousands of names.
 
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts
