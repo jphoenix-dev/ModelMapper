@@ -144,3 +144,84 @@ and at every token in the window where the neuron fires at ≥ half its median t
 - **RunPod key.** RunPod's Cloudflare front end blocks Python's default user-agent (error 1010), so the client now
   sends its own. The REST API (`rest.runpod.io/v1`) needs the key's GraphQL permission set to Read/Write;
   `api.runpod.ai` is Serverless only and not needed.
+
+## Phase C: rented GPUs (RunPod Community, on-demand), 2026-10-17
+
+Each run repeated the phase A tasks on the same corpus with the same settings: 2 observe shards of about 1M tokens,
+`merge:observe`, and `ablate:18:0-63:ps1` with both knockout modes and the noise floor.
+
+**What changed from the plan**
+- **No spot pods.** RunPod rejected interruptible creates ("Spot pods are no longer offered"), so all pods are
+  on-demand. Interruption handling stays in place for crashes and stuck hosts.
+- **Capacity is thin.** Often none of a given GPU type was available for 15–20 minutes. The RTX A5000 never became
+  available in two 20-minute windows, and for the RTX 4090 the only machine offered was faulty (below).
+- **Decision (James): no pinning to one GPU type.** The launcher takes a ranked list (`--gpu A,B,C`), RunPod starts the
+  first one it has, and every result records its GPU, driver, CUDA, torch and git commit.
+- **Image.** RunPod's own `runpod/pytorch:1.4.0-cu1281-torch2121-ubuntu2204` (torch 2.12.1+cu129, against 2.11+cu128 on
+  the 5090). Docker Hub's `pytorch/pytorch` image never started on the first host, which was most likely stuck on the
+  download.
+
+**Runs** (`src/dist/timeline.py`)
+
+| | Remote RTX 5090 (FR) | RTX 3090 (ES) |
+|---|---|---|
+| $/h | 0.69 | 0.22 |
+| Pod created → container running (scheduling and image) | 67 s (image cached) | 287 s (image pulled) |
+| Boot script (boto3, code, packages, imports) | 20 s | 26 s |
+| Model download, 16.4 GB from Hugging Face | 44 s (377 MB/s) | 133 s (123 MB/s) |
+| Observe, 1M tokens | 649–656 s, **1,530 tok/s** | 826–838 s, **1,200 tok/s** |
+| Merge (2 shards) | 68 s (40 s of transfers) | 88 s |
+| Ablate, 64 neurons, both modes and noise floor | 118 s | 113 s |
+| Peak GPU memory (allocated) | 20.5 GB | 20.4 GB |
+| Lifetime / cost | 27.3 min / **$0.31** | 39.9 min / **$0.15** |
+| Share of lifetime spent on tasks | 91% | 78% |
+
+- **The remote 5090 is half the speed of the local 5090** (1,530 vs 3,280 tok/s, and 118 s vs 45 s for ablate), with
+  the GPU 100% busy. The likely causes are a power cap or the newer torch. Speed varies host to host, so plan on
+  measured rates.
+- **Per dollar the 3090 wins about 2.5×:** 1,200 tok/s at $0.22/h is ≈19.6M tokens per dollar, against ≈8M for the
+  remote 5090.
+
+**Consistency with the local 5090** (`src/dist/compare_runs.py`, all 36 layers, 884,736 neuron poles)
+
+| | Remote 5090 | 3090 |
+|---|---|---|
+| Top-40 firings shared (set overlap) | 99.99% | 97.7% |
+| Identical top-40 set | 99.6% | 34% (47% differ by 1 entry, 15% by 2) |
+| Rank of a swapped-out entry | – | median 39 of 40; 96% in ranks 31–40; 0.5% in the top 10 |
+| Same #1 firing | – | 96.2% |
+| Order of shared entries (rank correlation) | 1.000 (97% identical order) | 0.9935 (largest move median 4 places) |
+| Activation values, median relative difference | 0 | 0.6% (about 1–2 bf16 steps) |
+| Attention heads, top-40 overlap | 100% | 96.5% |
+| Ablate KL, Spearman | 0.96 | 0.90 |
+
+- **The same chip family (Blackwell) reproduces the local atlas essentially exactly.** An older chip family (Ampere)
+  gives the same top firings, reordered among near-ties and swapped at the 40th place, with values within about 1–2
+  bf16 steps.
+- **Practical rule:** for "what does this neuron respond to", any 24 GB+ card is fine. For bit-level comparisons with
+  the local atlas, use a Blackwell card.
+
+**Problems found and fixed** (each commit is on `research/distributed`)
+1. **Spot pods are no longer offered.** On-demand is now the default (`--interruptible` keeps the option).
+2. **RunPod's Cloudflare front end blocks Python's user-agent (error 1010).** The client sends its own.
+3. **The REST API needs the key's GraphQL permission** (Read/Write); `api.runpod.ai` is Serverless only.
+4. **No capacity used to crash the launcher.** It now retries each interval up to `--max-wait-min` and recognises
+   both of RunPod's wordings.
+5. **A container stuck before boot cost about $0.08.** Now:
+   - every boot step writes a timestamped log to the bucket through a presigned URL;
+   - `--boot-timeout-min` terminates a pod whose worker never starts.
+6. **One faulty RTX 4090 host (Taiwan, machine `4aveufxk279b`): "CUDA unknown error".** torch fell back to CPU and a pod
+   spent about $0.28 computing on CPU at 0% GPU. Now:
+   - a GPU matmul check runs before the model download, and a failure terminates the pod at once;
+   - the worker refuses to run on CPU on a pod;
+   - the launcher terminates any pod whose boot log says FAILED, and remembers machines where the GPU check failed.
+7. **Self-termination.** The REST DELETE with the pod-scoped key is refused (403), and RunPod's image has an older
+   `runpodctl`. `runpodctl remove pod $RUNPOD_POD_ID` works and is now tried first. The launcher's backstop
+   terminates any pod whose worker wrote `exit.json`.
+8. **Hung workers.** The worker writes a heartbeat every 2 minutes, and the launcher terminates a pod after
+   `--stale-min` of silence.
+9. **Account backstop.** The launcher reads the RunPod balance every interval (`--min-balance` stops everything below a
+   floor).
+
+**Spend:** $0.72 of the $10 so far: 4090 attempts about $0.37 (faulty host), 5090 $0.31, 3090 $0.15, A5000 $0. Zero
+pods were left after each run.
