@@ -6,9 +6,10 @@ and expire CLAIM_TTL after their last refresh (the worker's heartbeat refreshes 
 dead worker's task is picked up again within minutes.
 """
 import fnmatch
+import os
 import time
 
-CLAIM_TTL = 6 * 60
+CLAIM_TTL = int(os.environ.get("DIST_CLAIM_TTL_S", 6 * 60))
 
 
 def task_key(task_id: str) -> str:

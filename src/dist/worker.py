@@ -33,6 +33,7 @@ from dist.manifest import state  # noqa: E402
 from dist.tasks import Ctx, run_task  # noqa: E402
 
 IDLE_POLL, IDLE_MAX = 30, 15 * 60
+HEARTBEAT_S = int(os.environ.get("DIST_HEARTBEAT_S", 120))   # also refreshes the current claim
 
 
 def now():
@@ -82,7 +83,7 @@ def main():
 
     def heartbeat():
         while True:
-            time.sleep(120)
+            time.sleep(HEARTBEAT_S)
             try:
                 store.put_json(f"{lp}/heartbeat.json", {"epoch": time.time(), "t": now(), "uptime_s": round(time.time() - T_START),
                                                         **{k: v for k, v in beat.items() if k != "claim"}})
