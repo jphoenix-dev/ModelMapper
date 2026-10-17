@@ -161,7 +161,7 @@ def multi_knockout_logodds(pipe, pairs, groups, kind):
     groups: list of (layer, index); kind 'neuron' (activation set to 0 at every position, as neurons.steer clamp) or
     'head' (the head's output slice zeroed at every position, as pipe.ablate_heads). Rows = pairs x groups; each row
     has only its own group's unit knocked out. Logits are taken only at the answer positions (lm_head on gathered
-    hidden states); log-odds as pipeline_fast.batch_logodds (float64, expm1). Returns {group: [log-odds per pair]}."""
+    hidden states); log-odds as pipeline_fast.batch_logodds (float64, expm1). Returns {group: [log-odds DROP per pair]} measured against an unablated copy in the same forward pass."""
     m = pipe.model; H = m.config.num_attention_heads; D = m.config.head_dim
     seqs, spans = [], []
     for prompt, ans in pairs:
@@ -172,11 +172,14 @@ def multi_knockout_logodds(pipe, pairs, groups, kind):
         base_ids[i, :len(s)] = torch.tensor(s, device=DEVICE); base_mask[i, :len(s)] = 1
     out = {}
     for c0 in range(0, len(groups), KNOCK_BATCH):
-        chunk = groups[c0:c0 + KNOCK_BATCH]; G = len(chunk); P = len(seqs)
+        # group 0 of every pass is an UNABLATED copy: knockouts are measured against the baseline from the same pass
+        # (bf16 results depend on batch shape; v1 compared against a separately computed baseline and failed its gate)
+        chunk = [None] + groups[c0:c0 + KNOCK_BATCH]; G = len(chunk); P = len(seqs)
         ids = base_ids.repeat(G, 1); mask = base_mask.repeat(G, 1)
         by_layer = {}
-        for gi, (l, k) in enumerate(chunk):
-            by_layer.setdefault(l, []).append((gi, k))
+        for gi, gk in enumerate(chunk):
+            if gk is not None:
+                by_layer.setdefault(gk[0], []).append((gi, gk[1]))
         hooks = []
         for l, items in by_layer.items():
             rows = torch.tensor([gi * P + p for gi, _ in items for p in range(P)], device=DEVICE)
@@ -196,6 +199,7 @@ def multi_knockout_logodds(pipe, pairs, groups, kind):
         finally:
             for x in hooks:
                 x.remove()
+        res_chunk = {}
         for gi, g in enumerate(chunk):
             vals = []
             for p, (start, ans) in enumerate(spans):
@@ -205,7 +209,10 @@ def multi_knockout_logodds(pipe, pairs, groups, kind):
                 if s >= 0.0:
                     raise ValueError("log P(answer) rounds to 0 in float64 (log-odds > ~36)")
                 vals.append(s - math.log(-math.expm1(s)))
-            out[g] = vals
+            res_chunk[gi] = vals
+        base_here = res_chunk[0]
+        for gi, g in enumerate(chunk[1:], start=1):
+            out[g] = [b - x for b, x in zip(base_here, res_chunk[gi])]       # DROPS vs the same pass's baseline
     return out
 
 
@@ -300,7 +307,7 @@ def main():
             return [b - x for b, x in zip(base, los)], [p_of(x) for x in los]
         t = time.time()
         if KNOCK_BATCH > 0:
-            mk = multi_knockout_logodds(pipe, pairs, top, "neuron"); pp = {u: [b - x for b, x in zip(base, mk[u])] for u in top}
+            pp = multi_knockout_logodds(pipe, pairs, top, "neuron")
         else:
             pp = {u: per_prompt([u])[0] for u in top}
         T["G2_single_knockouts"] = round(time.time() - t, 2)
@@ -353,7 +360,7 @@ def main():
         head_pp = {}
         if KNOCK_BATCH > 0:
             mh = multi_knockout_logodds(pipe, pairs, top_heads, "head")
-            head_pp = {f"L{l}H{h}": [round(b - x, 3) for b, x in zip(base, mh[(l, h)])] for l, h in top_heads}
+            head_pp = {f"L{l}H{h}": [round(x, 3) for x in mh[(l, h)]] for l, h in top_heads}
         else:
             for (l, h) in top_heads:
                 los = pipe.batch_logodds(pairs, pipe.ablate_heads([(l, h)]))
