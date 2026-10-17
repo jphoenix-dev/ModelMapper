@@ -96,6 +96,13 @@ correctly; zero the concept's k_mean and top-5 neurons; measure the fact-answer 
 Controls: random same-layer neurons; another concept's key neurons (specificity: Eiffel neurons on Big Ben facts);
 split early (layers 8-10 cluster) vs late (28-35) key neurons. Prediction (stated before running): late 'say' neurons
 leave facts intact; early neurons may not. Cost: cents of Luna, ~15 min GPU.
+**Plus a specificity gradient (James):** zero a source concept's key neurons, then test NEIGHBOURS at graded distance -
+same place (Eiffel Tower -> Louvre, Notre-Dame, Arc de Triomphe), same kind elsewhere (Tokyo Tower, Big Ben), same
+Vital Articles section, unrelated - with distances defined from Wikidata (location P131, type P31), not by hand. ~20
+sources (landmarks first). Measure each neighbour's naming recall AND its fact questions vs random-neuron controls;
+split by the zeroed neurons' roles (say / attribute / early). Prediction (stated before running): damage falls with
+distance; 'say' neurons stay specific; attribute neurons partly damage neighbours that share the attribute (cf. the
+attribute-sharing result). Measures how specific a concept's neuron combination is, and why.
 
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts

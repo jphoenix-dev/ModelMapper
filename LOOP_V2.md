@@ -107,7 +107,7 @@ model check.
   common, overlap, timings, costs).
 
 ## Queued after run 1
-1. Question-side test (RESEARCH_STATE.md, 'Next step after loop v2 run 1').
+1. Question-side test + specificity gradient over neighbours (RESEARCH_STATE.md, 'Next step after loop v2 run 1').
 2. Blind check of the named/common tags on a random sample (Luna as second judge) before the named-vs-common comparison.
 3. Prepare and map in ONE process on the local GPU (one model copy), so the 5090 maps while prepare runs (it sat out
    ~30 min of run 1 because two 8B copies don't fit in 32 GB).
