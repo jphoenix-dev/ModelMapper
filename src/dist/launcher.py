@@ -49,9 +49,10 @@ LOG=/tmp/boot.log
 step() { echo "$(date +%s.%N) $*" >> $LOG; curl -s -m 30 -X PUT -T $LOG "$BOOTLOG_URL" > /dev/null || true; }
 fail() {
   step "FAILED: $1"; tail -c 4000 /tmp/step.out >> $LOG 2>/dev/null
-  curl -s -m 30 -X DELETE -A model-mapper-pod/1.0 -H "Authorization: Bearer $RUNPOD_API_KEY" \
-       "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID" >> $LOG 2>&1
-  step "terminate requested"; sleep infinity
+  step "self-terminate via runpodctl: $(runpodctl remove pod $RUNPOD_POD_ID 2>&1 | tail -c 300)"
+  step "self-terminate via REST: HTTP $(curl -s -m 30 -o /tmp/del.out -w '%{http_code}' -X DELETE -A model-mapper-pod/1.0 \
+       -H "Authorization: Bearer $RUNPOD_API_KEY" "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID") $(head -c 200 /tmp/del.out)"
+  sleep infinity
 }
 export T_CONTAINER_START=$(date +%s.%N)
 step "container start: pod $RUNPOD_POD_ID; $(nvidia-smi --query-gpu=name,driver_version --format=csv,noheader 2>&1); $(python --version 2>&1)"
@@ -202,6 +203,7 @@ def cmd_run(a, store, name):
     no_cap_since, gave_up = None, False
     me = f"launcher-{os.getpid()}-{int(time.time())}"
     led = Ledger(a.ledger or f"launcher_{name}.json")
+    bad_hosts = set(led.d.get("bad_hosts", [])) | set(filter(None, (a.bad_hosts or "").split(",")))
     tasks = store.get_json("manifest.json")["tasks"]
     launched = 0
     try:
@@ -211,7 +213,8 @@ def cmd_run(a, store, name):
             led.see(pods, now)
             pending, ready, claims = state(store, tasks)
             for pid, e in led.d["pods"].items():   # gone or stopped before the worker ever got going = a failed boot
-                if (e.get("gone") or e.get("stopped") or e.get("boot_timeout")) and not store.exists(f"logs/{pid}/boot.json") \
+                if (e.get("gone") or e.get("stopped") or e.get("boot_timeout") or e.get("boot_failed")) \
+                        and not store.exists(f"logs/{pid}/boot.json") and not e.get("bad_host") \
                         and pid not in boot_failed:
                     boot_failed.add(pid); print(f"pod {pid} ended before its worker booted ({len(boot_failed)} so far)", flush=True)
             if len(boot_failed) >= a.max_boot_failures:
@@ -219,6 +222,19 @@ def cmd_run(a, store, name):
                 break
             for p in pods:
                 e = led.d["pods"].get(p["id"], {})
+                if p.get("machineId") in bad_hosts and p.get("desiredStatus") == "RUNNING":
+                    print(f"terminating {p['id']}: landed on known-bad machine {p['machineId']}", flush=True)
+                    rp.terminate(p["id"]); e.setdefault("terminate_sent", time.time()); e["bad_host"] = True
+                    continue
+                if p.get("desiredStatus") == "RUNNING" and not a.custom_image:
+                    bl = (store.get(f"logs/bootlog-{p.get('name')}.txt") or b"").decode(errors="replace")
+                    if "FAILED" in bl:
+                        why = bl.split("FAILED:", 1)[1].splitlines()[0].strip()
+                        print(f"terminating {p['id']}: boot failed ({why}) on machine {p.get('machineId')}", flush=True)
+                        rp.terminate(p["id"]); e.setdefault("terminate_sent", time.time()); e["boot_failed"] = why
+                        if "GPU" in why and p.get("machineId"):
+                            bad_hosts.add(p["machineId"]); led.d.setdefault("bad_hosts", []).append(p["machineId"])
+                        continue
                 age = (now - e.get("created", now)) / 60
                 if (p.get("desiredStatus") == "RUNNING" and age > a.boot_timeout_min
                         and not store.exists(f"logs/{p['id']}/started.json")):
@@ -320,6 +336,7 @@ def main():
     ap.add_argument("--interruptible", action="store_true", help="spot pods (RunPod said they are no longer offered, 2026-10-17)")
     ap.add_argument("--cuda-versions", default="12.8,12.9,13.0", help="host CUDA versions allowed (driver must run the image)")
     ap.add_argument("--max-wait-min", type=float, default=20, help="give up if no machine is available for this long")
+    ap.add_argument("--bad-hosts", help="comma-separated RunPod machine ids to release immediately (also learned from GPU failures)")
     ap.add_argument("--stale-min", type=float, default=10, help="terminate a pod whose worker heartbeat is older than this")
     ap.add_argument("--boot-timeout-min", type=float, default=15,
                     help="terminate a pod whose worker has not started (image pulled, packages installed) by then")
