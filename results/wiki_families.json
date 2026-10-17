@@ -1,0 +1,10706 @@
+{
+ "\"Weird Al\" Yankovic": {
+  "qid": "Q8349",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "14th Dalai Lama": {
+  "qid": "Q17293",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "1948 Palestine war": {
+  "qid": "Q49097",
+  "p31": [
+   "Q198"
+  ],
+  "p31_labels": [
+   "war"
+  ]
+ },
+ "1989 Tiananmen Square protests and massacre": {
+  "qid": "Q99717",
+  "p31": [
+   "Q175331",
+   "Q3199915"
+  ],
+  "p31_labels": [
+   "demonstration",
+   "massacre"
+  ]
+ },
+ "2004 Indian Ocean earthquake and tsunami": {
+  "qid": "Q130754",
+  "p31": [
+   "Q7944",
+   "Q8070",
+   "Q8065",
+   "Q3839081"
+  ],
+  "p31_labels": [
+   "earthquake",
+   "tsunami",
+   "natural disaster",
+   "disaster"
+  ]
+ },
+ "2022 FIFA World Cup": {
+  "qid": "Q284163",
+  "p31": [
+   "Q500834",
+   "Q1478437",
+   "Q27020041"
+  ],
+  "p31_labels": [
+   "tournament",
+   "association football competition",
+   "sports season"
+  ]
+ },
+ "A": {
+  "qid": "Q9659",
+  "p31": [
+   "Q9788"
+  ],
+  "p31_labels": [
+   "letter"
+  ]
+ },
+ "A Christmas Carol": {
+  "qid": "Q62879",
+  "p31": [
+   "Q7725634"
+  ],
+  "p31_labels": [
+   "literary work"
+  ]
+ },
+ "ABBA": {
+  "qid": "Q18233",
+  "p31": [
+   "Q215380",
+   "Q1135557",
+   "Q29881657",
+   "Q43229"
+  ],
+  "p31_labels": [
+   "musical group",
+   "quartet",
+   "vocal-musical ensemble",
+   "organization"
+  ]
+ },
+ "ASEAN": {
+  "qid": "Q7768",
+  "p31": [
+   "Q245065",
+   "Q52110228",
+   "Q4120211",
+   "Q170156"
+  ],
+  "p31_labels": [
+   "intergovernmental organization",
+   "geopolitical group",
+   "regional organization",
+   "confederation"
+  ]
+ },
+ "Aaron Taylor-Johnson": {
+  "qid": "Q45923",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Abraham": {
+  "qid": "Q9181",
+  "p31": [
+   "Q20643955"
+  ],
+  "p31_labels": [
+   "human biblical figure"
+  ]
+ },
+ "Abraham Lincoln": {
+  "qid": "Q91",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Academy Awards": {
+  "qid": "Q19020",
+  "p31": [
+   "Q107655869"
+  ],
+  "p31_labels": [
+   "group of awards"
+  ]
+ },
+ "Adolf Hitler": {
+  "qid": "Q352",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Afghanistan": {
+  "qid": "Q889",
+  "p31": [
+   "Q3624078",
+   "Q123480",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "landlocked country",
+   "country"
+  ]
+ },
+ "Agatha Christie": {
+  "qid": "Q35064",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ahmed al-Sharaa": {
+  "qid": "Q7934206",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Al Pacino": {
+  "qid": "Q41163",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alabama": {
+  "qid": "Q173",
+  "p31": [
+   "Q35657"
+  ],
+  "p31_labels": [
+   "U.S. state"
+  ]
+ },
+ "Alan Arkin": {
+  "qid": "Q108283",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alan Turing": {
+  "qid": "Q7251",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alaska": {
+  "qid": "Q797",
+  "p31": [
+   "Q933394",
+   "Q35657"
+  ],
+  "p31_labels": [
+   "exclave",
+   "U.S. state"
+  ]
+ },
+ "Albania": {
+  "qid": "Q222",
+  "p31": [
+   "Q3624078",
+   "Q179164",
+   "Q7270",
+   "Q51576574",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "unitary state",
+   "republic",
+   "Mediterranean country",
+   "country"
+  ]
+ },
+ "Albert Einstein": {
+  "qid": "Q937",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Albus Dumbledore": {
+  "qid": "Q712548",
+  "p31": [
+   "Q15298259",
+   "Q33179355",
+   "Q3658341",
+   "Q15773347",
+   "Q3375722",
+   "Q66118879"
+  ],
+  "p31_labels": [
+   "wizard in the Harry Potter universe",
+   "Gryffindor student",
+   "literary character",
+   "film character",
+   "theatrical character",
+   "half-blood"
+  ]
+ },
+ "Alex Ferguson": {
+  "qid": "Q44980",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alexander Hamilton": {
+  "qid": "Q178903",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alexander the Great": {
+  "qid": "Q8409",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alexei Navalny": {
+  "qid": "Q155979",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alfred Hitchcock": {
+  "qid": "Q7374",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alfred Hitchcock filmography": {
+  "qid": "Q2395037",
+  "p31": [
+   "Q1371849"
+  ],
+  "p31_labels": [
+   "filmography"
+  ]
+ },
+ "Alien (film)": {
+  "qid": "Q103569",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Alternative for Germany": {
+  "qid": "Q6721203",
+  "p31": [
+   "Q2023214",
+   "Q7278",
+   "Q105085320"
+  ],
+  "p31_labels": [
+   "political party in Germany",
+   "political party",
+   "Beobachtungsobjekt"
+  ]
+ },
+ "Amanda Seyfried": {
+  "qid": "Q189226",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Amazon (company)": {
+  "qid": "Q3884",
+  "p31": [
+   "Q6881511",
+   "Q4830453",
+   "Q891723",
+   "Q118140435"
+  ],
+  "p31_labels": [
+   "enterprise",
+   "business",
+   "public company",
+   "very large online platform"
+  ]
+ },
+ "Amelia Earhart": {
+  "qid": "Q3355",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Andrea Bocelli": {
+  "qid": "Q42402",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Andrew Garfield": {
+  "qid": "Q23891",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Andrew Mountbatten Windsor": {
+  "qid": "Q153330",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Andrew Tate": {
+  "qid": "Q18637166",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Android (operating system)": {
+  "qid": "Q94",
+  "p31": [
+   "Q920890",
+   "Q241317",
+   "Q1130645"
+  ],
+  "p31_labels": [
+   "mobile operating system",
+   "computing platform",
+   "open-source software"
+  ]
+ },
+ "Andy Murray": {
+  "qid": "Q10125",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Angela Merkel": {
+  "qid": "Q567",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Angelina Jolie": {
+  "qid": "Q13909",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Angkor Wat": {
+  "qid": "Q43473",
+  "p31": [
+   "Q5393308",
+   "Q839954",
+   "Q58621988",
+   "Q842402"
+  ],
+  "p31_labels": [
+   "Buddhist temple",
+   "archaeological site",
+   "temple complex",
+   "Hindu temple"
+  ]
+ },
+ "Animal": {
+  "qid": "Q729",
+  "p31": [
+   "Q16521",
+   "Q104086571",
+   "Q55983715"
+  ],
+  "p31_labels": [
+   "taxon",
+   "first-order class",
+   "organisms known by a particular common name"
+  ]
+ },
+ "Anime": {
+  "qid": "Q1107",
+  "p31": [
+   "Q201658"
+  ],
+  "p31_labels": [
+   "film genre"
+  ]
+ },
+ "Anna Kendrick": {
+  "qid": "Q67701",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Anne Frank": {
+  "qid": "Q4583",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Anti-Muslim propaganda on Facebook": {
+  "qid": "Q355",
+  "p31": [
+   "Q3220391",
+   "Q35127",
+   "Q620615",
+   "Q202833",
+   "Q122759350",
+   "Q6576792",
+   "Q118140435",
+   "Q5466628"
+  ],
+  "p31_labels": [
+   "social networking service",
+   "website",
+   "mobile app",
+   "social media",
+   "user-generated content platform",
+   "online community",
+   "very large online platform",
+   "for-profit corporation"
+  ]
+ },
+ "Antisemitism": {
+  "qid": "Q22649",
+  "p31": [
+   "Q2729863",
+   "Q859781",
+   "Q169207",
+   "Q7257",
+   "Q7451247",
+   "Q1914636",
+   "Q12909644"
+  ],
+  "p31_labels": [
+   "hostility",
+   "bigotry",
+   "discrimination",
+   "ideology",
+   "sentiment",
+   "activity",
+   "political ideology"
+  ]
+ },
+ "Antony Blinken": {
+  "qid": "Q7821917",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Apartheid": {
+  "qid": "Q11409",
+  "p31": [
+   "Q1156854",
+   "Q8461",
+   "Q28108",
+   "Q1639378",
+   "Q7257"
+  ],
+  "p31_labels": [
+   "policy",
+   "racism",
+   "political system",
+   "social system",
+   "ideology"
+  ]
+ },
+ "Apple Inc.": {
+  "qid": "Q312",
+  "p31": [
+   "Q6881511",
+   "Q4830453",
+   "Q891723",
+   "Q167037",
+   "Q18388277"
+  ],
+  "p31_labels": [
+   "enterprise",
+   "business",
+   "public company",
+   "corporation",
+   "technology company"
+  ]
+ },
+ "April Fools' Day": {
+  "qid": "Q80949",
+  "p31": [
+   "Q15275719",
+   "Q18574943"
+  ],
+  "p31_labels": [
+   "recurring event",
+   "annual commemoration"
+  ]
+ },
+ "Aquaman (film)": {
+  "qid": "Q22998395",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Argentina": {
+  "qid": "Q414",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q6266",
+   "Q10551526",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "nation",
+   "confessional state",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Argentina national football team": {
+  "qid": "Q79800",
+  "p31": [
+   "Q135408445"
+  ],
+  "p31_labels": [
+   "men's national association football team"
+  ]
+ },
+ "Ariel Sharon": {
+  "qid": "Q60206",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Armenia": {
+  "qid": "Q399",
+  "p31": [
+   "Q3624078",
+   "Q123480",
+   "Q6256",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "landlocked country",
+   "country",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Arthur Guinness II": {
+  "qid": "Q18164454",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ashkenazi Jews": {
+  "qid": "Q34069",
+  "p31": [
+   "Q41710",
+   "Q101063310"
+  ],
+  "p31_labels": [
+   "ethnic group",
+   "Jewish community"
+  ]
+ },
+ "Assassination of John F. Kennedy": {
+  "qid": "Q193484",
+  "p31": [
+   "Q1139665",
+   "Q3882219",
+   "Q9026907"
+  ],
+  "p31_labels": [
+   "political murder",
+   "assassination",
+   "magnicide"
+  ]
+ },
+ "Atomic bombings of Hiroshima and Nagasaki": {
+  "qid": "Q488",
+  "p31": [
+   "Q29431432",
+   "Q4688003"
+  ],
+  "p31_labels": [
+   "dyad",
+   "aerial bombing of a city"
+  ]
+ },
+ "Augustine of Hippo": {
+  "qid": "Q8018",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Auld Lang Syne": {
+  "qid": "Q211939",
+  "p31": [
+   "Q105543609"
+  ],
+  "p31_labels": [
+   "musical work/composition"
+  ]
+ },
+ "Auschwitz concentration camp": {
+  "qid": "Q7341",
+  "p31": [
+   "Q328468",
+   "Q33506",
+   "Q153813",
+   "Q1497375"
+  ],
+  "p31_labels": [
+   "Nazi concentration camp",
+   "museum",
+   "extermination camp",
+   "architectural ensemble"
+  ]
+ },
+ "Australia": {
+  "qid": "Q408",
+  "p31": [
+   "Q202686",
+   "Q223832",
+   "Q3624078",
+   "Q43702",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "Commonwealth realm",
+   "dominion of the British Empire",
+   "sovereign state",
+   "federation",
+   "country"
+  ]
+ },
+ "Australian Open": {
+  "qid": "Q60874",
+  "p31": [
+   "Q47443726"
+  ],
+  "p31_labels": [
+   "recurring tennis tournament"
+  ]
+ },
+ "Autism": {
+  "qid": "Q38404",
+  "p31": [
+   "Q12131",
+   "Q140439690"
+  ],
+  "p31_labels": [
+   "disability",
+   "neurobiological difference"
+  ]
+ },
+ "Avatar (2009 film)": {
+  "qid": "Q24871",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Ayrton Senna": {
+  "qid": "Q10490",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Azerbaijan": {
+  "qid": "Q227",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q123480",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "landlocked country",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "B. R. Ambedkar": {
+  "qid": "Q231690",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "BBC": {
+  "qid": "Q9531",
+  "p31": [
+   "Q1126006",
+   "Q141255352"
+  ],
+  "p31_labels": [
+   "public broadcaster",
+   "online newspaper without paywall"
+  ]
+ },
+ "Babe Ruth": {
+  "qid": "Q213812",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ballon d'Or": {
+  "qid": "Q166177",
+  "p31": [
+   "Q15229207"
+  ],
+  "p31_labels": [
+   "sports award"
+  ]
+ },
+ "Barack Obama": {
+  "qid": "Q76",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Barbie": {
+  "qid": "Q167447",
+  "p31": [
+   "Q196600",
+   "Q431289",
+   "Q57663626"
+  ],
+  "p31_labels": [
+   "media franchise",
+   "brand",
+   "toyline"
+  ]
+ },
+ "Batman Begins": {
+  "qid": "Q166262",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Bella ciao": {
+  "qid": "Q159633",
+  "p31": [
+   "Q105543609"
+  ],
+  "p31_labels": [
+   "musical work/composition"
+  ]
+ },
+ "Ben Affleck": {
+  "qid": "Q483118",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Benedict XVI": {
+  "qid": "Q2494",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Benito Mussolini": {
+  "qid": "Q23559",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Benjamin Netanyahu": {
+  "qid": "Q43723",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bethlehem": {
+  "qid": "Q5776",
+  "p31": [
+   "Q515",
+   "Q116291578",
+   "Q6936404"
+  ],
+  "p31_labels": [
+   "city",
+   "holy city of Christianity",
+   "municipality of the State of Palestine"
+  ]
+ },
+ "Beyoncé": {
+  "qid": "Q36153",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bhagavad Gita": {
+  "qid": "Q46802",
+  "p31": [
+   "Q7725634"
+  ],
+  "p31_labels": [
+   "literary work"
+  ]
+ },
+ "Bill Clinton": {
+  "qid": "Q1124",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bill Gates": {
+  "qid": "Q5284",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Blink-182": {
+  "qid": "Q482477",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Bob Dylan": {
+  "qid": "Q392",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bob Geldof": {
+  "qid": "Q216608",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bob Marley": {
+  "qid": "Q409",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Boston Celtics": {
+  "qid": "Q131371",
+  "p31": [
+   "Q13393265"
+  ],
+  "p31_labels": [
+   "basketball team"
+  ]
+ },
+ "Bradley Cooper": {
+  "qid": "Q205707",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Brazil": {
+  "qid": "Q155",
+  "p31": [
+   "Q3624078",
+   "Q859563",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "secular state",
+   "country"
+  ]
+ },
+ "Brazil national football team": {
+  "qid": "Q83459",
+  "p31": [
+   "Q135408445"
+  ],
+  "p31_labels": [
+   "men's national association football team"
+  ]
+ },
+ "Breaking Bad": {
+  "qid": "Q1079",
+  "p31": [
+   "Q5398426"
+  ],
+  "p31_labels": [
+   "television series"
+  ]
+ },
+ "Britney Spears": {
+  "qid": "Q11975",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Brooke Shields": {
+  "qid": "Q189400",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bruce Lee": {
+  "qid": "Q16397",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Bundesliga": {
+  "qid": "Q82595",
+  "p31": [
+   "Q135641761"
+  ],
+  "p31_labels": [
+   "men's association football league"
+  ]
+ },
+ "Burj Khalifa": {
+  "qid": "Q12495",
+  "p31": [
+   "Q11303",
+   "Q2319498"
+  ],
+  "p31_labels": [
+   "skyscraper",
+   "architectural landmark"
+  ]
+ },
+ "Burt Reynolds": {
+  "qid": "Q202148",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Buzz Aldrin": {
+  "qid": "Q2252",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "C (programming language)": {
+  "qid": "Q15777",
+  "p31": [
+   "Q21562092",
+   "Q28922885",
+   "Q28920117",
+   "Q651794",
+   "Q9143",
+   "Q66747126",
+   "Q12772052"
+  ],
+  "p31_labels": [
+   "imperative programming language",
+   "procedural programming language",
+   "structured programming language",
+   "compiled language",
+   "programming language",
+   "computer science term",
+   "multi-paradigm programming language"
+  ]
+ },
+ "CONCACAF Gold Cup": {
+  "qid": "Q189327",
+  "p31": [
+   "Q1478437",
+   "Q18608583"
+  ],
+  "p31_labels": [
+   "association football competition",
+   "recurring sporting event"
+  ]
+ },
+ "COVID-19 pandemic": {
+  "qid": "Q81068910",
+  "p31": [
+   "Q12184",
+   "Q17076801",
+   "Q3241045",
+   "Q12367307"
+  ],
+  "p31_labels": [
+   "pandemic",
+   "public health emergency of international concern",
+   "disease outbreak",
+   "complex emergency"
+  ]
+ },
+ "California": {
+  "qid": "Q99",
+  "p31": [
+   "Q35657"
+  ],
+  "p31_labels": [
+   "U.S. state"
+  ]
+ },
+ "Cambodia": {
+  "qid": "Q424",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q1250464"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "realm"
+  ]
+ },
+ "Cameron Diaz": {
+  "qid": "Q44380",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Canaan": {
+  "qid": "Q163329",
+  "p31": [
+   "Q1620908",
+   "Q8432"
+  ],
+  "p31_labels": [
+   "historical region",
+   "civilization"
+  ]
+ },
+ "Canada": {
+  "qid": "Q16",
+  "p31": [
+   "Q223832",
+   "Q202686",
+   "Q3624078",
+   "Q6256",
+   "Q43702"
+  ],
+  "p31_labels": [
+   "dominion of the British Empire",
+   "Commonwealth realm",
+   "sovereign state",
+   "country",
+   "federation"
+  ]
+ },
+ "Cape Verde": {
+  "qid": "Q1011",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q6256",
+   "Q11815167"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "country",
+   "archipelagic state"
+  ]
+ },
+ "Capybara": {
+  "qid": "Q131538",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "Cardinal (Catholic Church)": {
+  "qid": "Q45722",
+  "p31": [
+   "Q216353",
+   "Q4164871",
+   "Q63188808"
+  ],
+  "p31_labels": [
+   "title",
+   "position",
+   "Catholic vocation"
+  ]
+ },
+ "Caroline Wozniacki": {
+  "qid": "Q30767",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Casemiro": {
+  "qid": "Q616664",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Cat": {
+  "qid": "Q146",
+  "p31": [
+   "Q55983715"
+  ],
+  "p31_labels": [
+   "organisms known by a particular common name"
+  ]
+ },
+ "Catherine, Princess of Wales": {
+  "qid": "Q10479",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Catholic Church": {
+  "qid": "Q9592",
+  "p31": [
+   "Q879146",
+   "Q4204511",
+   "Q34651",
+   "Q2638480"
+  ],
+  "p31_labels": [
+   "Christian denomination",
+   "historic Church",
+   "Christian Church",
+   "church congregation"
+  ]
+ },
+ "Celine Dion": {
+  "qid": "Q5105",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Chandrayaan-1": {
+  "qid": "Q49011",
+  "p31": [
+   "Q111914880"
+  ],
+  "p31_labels": [
+   "lunar orbiter"
+  ]
+ },
+ "Charles II of England": {
+  "qid": "Q122553",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Charles Leclerc": {
+  "qid": "Q17541912",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Charlie Chaplin": {
+  "qid": "Q882",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Charlize Theron": {
+  "qid": "Q80046",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "ChatGPT": {
+  "qid": "Q115564437",
+  "p31": [
+   "Q133284163",
+   "Q116777014",
+   "Q115305900",
+   "Q19967801",
+   "Q35127",
+   "Q870780",
+   "Q117246174"
+  ],
+  "p31_labels": [
+   "generative artificial intelligence chatbot",
+   "generative pre-trained transformer",
+   "large language model",
+   "online service",
+   "website",
+   "chatbot",
+   "generative artificial intelligence"
+  ]
+ },
+ "Che Guevara": {
+  "qid": "Q5809",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Chester Bennington": {
+  "qid": "Q19198",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Chinese New Year": {
+  "qid": "Q131772",
+  "p31": [
+   "Q11483816",
+   "Q1445650"
+  ],
+  "p31_labels": [
+   "annual event",
+   "holiday"
+  ]
+ },
+ "Chris Pratt": {
+  "qid": "Q503706",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Christmas": {
+  "qid": "Q19809",
+  "p31": [
+   "Q60075825",
+   "Q1197685",
+   "Q5440532"
+  ],
+  "p31_labels": [
+   "Christian holy day",
+   "public holiday",
+   "federal holiday in the United States"
+  ]
+ },
+ "Christopher Columbus": {
+  "qid": "Q7322",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Christopher Plummer": {
+  "qid": "Q190523",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Christopher Reeve": {
+  "qid": "Q174311",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Cleopatra": {
+  "qid": "Q635",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Climate change": {
+  "qid": "Q125928",
+  "p31": [
+   "Q2629720",
+   "Q574376"
+  ],
+  "p31_labels": [
+   "global problem",
+   "human impact on the environment"
+  ]
+ },
+ "Clint Eastwood": {
+  "qid": "Q43203",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Coca-Cola": {
+  "qid": "Q2813",
+  "p31": [
+   "Q114392939",
+   "Q167270",
+   "Q1485500"
+  ],
+  "p31_labels": [
+   "drink brand",
+   "trademark",
+   "tangible good"
+  ]
+ },
+ "Coldplay": {
+  "qid": "Q45188",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Commotio cordis": {
+  "qid": "Q1615537",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Constantinople": {
+  "qid": "Q16869",
+  "p31": [
+   "Q515",
+   "Q56061",
+   "Q15661340"
+  ],
+  "p31_labels": [
+   "city",
+   "administrative territorial entity",
+   "ancient city"
+  ]
+ },
+ "Cricket": {
+  "qid": "Q5375",
+  "p31": [
+   "Q31629"
+  ],
+  "p31_labels": [
+   "type of sport"
+  ]
+ },
+ "Cristiano Ronaldo": {
+  "qid": "Q11571",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Croatia": {
+  "qid": "Q224",
+  "p31": [
+   "Q3624078",
+   "Q179164",
+   "Q51576574",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "unitary state",
+   "Mediterranean country",
+   "country"
+  ]
+ },
+ "Cyprus": {
+  "qid": "Q229",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q51576574",
+   "Q11396118",
+   "Q7275",
+   "Q6256",
+   "Q15239622"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "Mediterranean country",
+   "divided territory",
+   "state",
+   "country",
+   "disputed territory"
+  ]
+ },
+ "Czech Republic": {
+  "qid": "Q213",
+  "p31": [
+   "Q6256",
+   "Q3624078",
+   "Q123480",
+   "Q7270",
+   "Q127693126"
+  ],
+  "p31_labels": [
+   "country",
+   "sovereign state",
+   "landlocked country",
+   "republic",
+   "successor state"
+  ]
+ },
+ "Dagestan": {
+  "qid": "Q5118",
+  "p31": [
+   "Q41162",
+   "Q43263"
+  ],
+  "p31_labels": [
+   "republic of Russia",
+   "federal subject of Russia"
+  ]
+ },
+ "Dalai Lama": {
+  "qid": "Q37349",
+  "p31": [
+   "Q4164871",
+   "Q15904441"
+  ],
+  "p31_labels": [
+   "position",
+   "tulku lineage"
+  ]
+ },
+ "Daniel Craig": {
+  "qid": "Q4547",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Danny Boyle": {
+  "qid": "Q134867",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "David Attenborough": {
+  "qid": "Q183337",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "David Ben-Gurion": {
+  "qid": "Q37610",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "David Lynch": {
+  "qid": "Q2071",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "David Schwimmer": {
+  "qid": "Q188792",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Daylight saving time": {
+  "qid": "Q36669",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Dean Martin": {
+  "qid": "Q215359",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Democratic Party (United States)": {
+  "qid": "Q29552",
+  "p31": [
+   "Q7278"
+  ],
+  "p31_labels": [
+   "political party"
+  ]
+ },
+ "Democratic Republic of the Congo": {
+  "qid": "Q974",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Denmark": {
+  "qid": "Q35",
+  "p31": [
+   "Q7275",
+   "Q20181813",
+   "Q63791824",
+   "Q6256",
+   "Q66724388"
+  ],
+  "p31_labels": [
+   "state",
+   "colonial power",
+   "country bordering the Baltic Sea",
+   "country",
+   "autonomous country within the Kingdom of Denmark"
+  ]
+ },
+ "Dexter (TV series)": {
+  "qid": "Q23577",
+  "p31": [
+   "Q5398426"
+  ],
+  "p31_labels": [
+   "television series"
+  ]
+ },
+ "Dick Cheney": {
+  "qid": "Q48259",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Die Hard": {
+  "qid": "Q105598",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Diego Maradona": {
+  "qid": "Q17515",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Diwali": {
+  "qid": "Q10244",
+  "p31": [
+   "Q1445650",
+   "Q132241"
+  ],
+  "p31_labels": [
+   "holiday",
+   "festival"
+  ]
+ },
+ "Dog": {
+  "qid": "Q144",
+  "p31": [
+   "Q55983715",
+   "Q136772238"
+  ],
+  "p31_labels": [
+   "organisms known by a particular common name",
+   "animal type"
+  ]
+ },
+ "Donald Trump": {
+  "qid": "Q22686",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Drake (musician)": {
+  "qid": "Q33240",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Duolingo": {
+  "qid": "Q2918660",
+  "p31": [
+   "Q35127",
+   "Q620615",
+   "Q1068473",
+   "Q20822063",
+   "Q1194674",
+   "Q5189198",
+   "Q1224999"
+  ],
+  "p31_labels": [
+   "website",
+   "mobile app",
+   "educational technology",
+   "Esperanto learning tool",
+   "computer-assisted language learning",
+   "Crowdsourcing in Human-Machine Translation",
+   "educational video game"
+  ]
+ },
+ "Dwight D. Eisenhower": {
+  "qid": "Q9916",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Easter": {
+  "qid": "Q21196",
+  "p31": [
+   "Q1825417",
+   "Q60075825"
+  ],
+  "p31_labels": [
+   "moveable feast",
+   "Christian holy day"
+  ]
+ },
+ "Ed Sheeran": {
+  "qid": "Q47447",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Edgar Allan Poe": {
+  "qid": "Q16867",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Edward Snowden": {
+  "qid": "Q13424289",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Edward VII": {
+  "qid": "Q20875",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Edward the Confessor": {
+  "qid": "Q130005",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Egypt": {
+  "qid": "Q79",
+  "p31": [
+   "Q3624078",
+   "Q1323642",
+   "Q51576574",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "transcontinental country",
+   "Mediterranean country",
+   "country"
+  ]
+ },
+ "Eid al-Adha": {
+  "qid": "Q514400",
+  "p31": [
+   "Q6484291",
+   "Q1197685"
+  ],
+  "p31_labels": [
+   "Islamic holidays",
+   "public holiday"
+  ]
+ },
+ "Eid al-Fitr": {
+  "qid": "Q464458",
+  "p31": [
+   "Q375011",
+   "Q1197685",
+   "Q23384401",
+   "Q6484291"
+  ],
+  "p31_labels": [
+   "religious holiday",
+   "public holiday",
+   "Islamic term",
+   "Islamic holidays"
+  ]
+ },
+ "El Salvador": {
+  "qid": "Q792",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Electric battery": {
+  "qid": "Q267298",
+  "p31": [
+   "Q125517960",
+   "Q12492106"
+  ],
+  "p31_labels": [
+   "type of electronic component",
+   "active electronic component"
+  ]
+ },
+ "Elizabeth I": {
+  "qid": "Q7207",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Elizabeth II": {
+  "qid": "Q9682",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Elizabeth Olsen": {
+  "qid": "Q234644",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Elon Musk": {
+  "qid": "Q317521",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Email": {
+  "qid": "Q9158",
+  "p31": [
+   "Q1668024",
+   "Q1780543"
+  ],
+  "p31_labels": [
+   "service on Internet",
+   "communication technology"
+  ]
+ },
+ "Emilia Clarke": {
+  "qid": "Q235132",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Eminem": {
+  "qid": "Q5608",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Emma Roberts": {
+  "qid": "Q228598",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Emma Stone": {
+  "qid": "Q147077",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Emmanuel Macron": {
+  "qid": "Q3052772",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Emmy Rossum": {
+  "qid": "Q35912",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "England": {
+  "qid": "Q21",
+  "p31": [
+   "Q3336843",
+   "Q518261",
+   "Q6266",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "constituent country of the United Kingdom",
+   "cultural area",
+   "nation",
+   "country"
+  ]
+ },
+ "English language": {
+  "qid": "Q1860",
+  "p31": [
+   "Q33742",
+   "Q1288568",
+   "Q34770",
+   "Q152559",
+   "Q399495",
+   "Q1097949",
+   "Q20162172"
+  ],
+  "p31_labels": [
+   "natural language",
+   "modern language",
+   "language",
+   "macrolanguage",
+   "standard language",
+   "literary language",
+   "human language"
+  ]
+ },
+ "Enrico Fermi": {
+  "qid": "Q8753",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Eric Clapton": {
+  "qid": "Q48187",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Eswatini": {
+  "qid": "Q1050",
+  "p31": [
+   "Q3624078",
+   "Q123480",
+   "Q417175",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "landlocked country",
+   "kingdom",
+   "country"
+  ]
+ },
+ "Ethan Hawke": {
+  "qid": "Q484615",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "European Union": {
+  "qid": "Q458",
+  "p31": [
+   "Q4120211",
+   "Q120121699",
+   "Q1335818",
+   "Q170156"
+  ],
+  "p31_labels": [
+   "regional organization",
+   "political economic union",
+   "supranational union",
+   "confederation"
+  ]
+ },
+ "Eurovision Song Contest": {
+  "qid": "Q276",
+  "p31": [
+   "Q1955280",
+   "Q100707163",
+   "Q30111082"
+  ],
+  "p31_labels": [
+   "music competition",
+   "television franchise",
+   "political event"
+  ]
+ },
+ "Ewan McGregor": {
+  "qid": "Q165518",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Exchange rate": {
+  "qid": "Q66100",
+  "p31": [],
+  "p31_labels": []
+ },
+ "FIFA World Cup": {
+  "qid": "Q19317",
+  "p31": [
+   "Q34542827"
+  ],
+  "p31_labels": [
+   "international association football national teams competition"
+  ]
+ },
+ "Fargo (TV series)": {
+  "qid": "Q15931555",
+  "p31": [
+   "Q5398426"
+  ],
+  "p31_labels": [
+   "television series"
+  ]
+ },
+ "Fascism": {
+  "qid": "Q6223",
+  "p31": [
+   "Q28108",
+   "Q12909644",
+   "Q2738074"
+  ],
+  "p31_labels": [
+   "political system",
+   "political ideology",
+   "political movement"
+  ]
+ },
+ "Felix Baumgartner": {
+  "qid": "Q4203",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Fentanyl": {
+  "qid": "Q407541",
+  "p31": [
+   "Q113145171"
+  ],
+  "p31_labels": [
+   "type of chemical entity"
+  ]
+ },
+ "Foo Fighters": {
+  "qid": "Q483718",
+  "p31": [
+   "Q5741069"
+  ],
+  "p31_labels": [
+   "rock band"
+  ]
+ },
+ "For All Mankind (TV series)": {
+  "qid": "Q54958409",
+  "p31": [
+   "Q5398426",
+   "Q526877"
+  ],
+  "p31_labels": [
+   "television series",
+   "web series"
+  ]
+ },
+ "France": {
+  "qid": "Q142",
+  "p31": [
+   "Q3624078",
+   "Q20181813",
+   "Q51576574",
+   "Q7270",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "colonial power",
+   "Mediterranean country",
+   "republic",
+   "country"
+  ]
+ },
+ "Frank Gehry": {
+  "qid": "Q180374",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Frank Lampard": {
+  "qid": "Q41533",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Frank Sinatra": {
+  "qid": "Q40912",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Frankenstein": {
+  "qid": "Q150827",
+  "p31": [
+   "Q7725634"
+  ],
+  "p31_labels": [
+   "literary work"
+  ]
+ },
+ "Freddie Mercury": {
+  "qid": "Q15869",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Frida Kahlo": {
+  "qid": "Q5588",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Futurama": {
+  "qid": "Q73622",
+  "p31": [
+   "Q117467246"
+  ],
+  "p31_labels": [
+   "animated television series"
+  ]
+ },
+ "G": {
+  "qid": "Q9739",
+  "p31": [],
+  "p31_labels": []
+ },
+ "G20": {
+  "qid": "Q19771",
+  "p31": [
+   "Q52110228",
+   "Q484652",
+   "Q245065",
+   "Q135236637"
+  ],
+  "p31_labels": [
+   "geopolitical group",
+   "international organization",
+   "intergovernmental organization",
+   "Icosad"
+  ]
+ },
+ "G7": {
+  "qid": "Q1764511",
+  "p31": [
+   "Q245065",
+   "Q29441572",
+   "Q484652",
+   "Q28963381"
+  ],
+  "p31_labels": [
+   "intergovernmental organization",
+   "heptad",
+   "international organization",
+   "group of major economic countries"
+  ]
+ },
+ "GPT-4": {
+  "qid": "Q116709136",
+  "p31": [
+   "Q131406845"
+  ],
+  "p31_labels": [
+   "software series"
+  ]
+ },
+ "Gabon": {
+  "qid": "Q1000",
+  "p31": [
+   "Q6256",
+   "Q3624078",
+   "Q179023"
+  ],
+  "p31_labels": [
+   "country",
+   "sovereign state",
+   "French colonial empire"
+  ]
+ },
+ "Gal Gadot": {
+  "qid": "Q185654",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gary Lineker": {
+  "qid": "Q47778",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gaza Strip": {
+  "qid": "Q39760",
+  "p31": [
+   "Q2577883",
+   "Q933394",
+   "Q15239622",
+   "Q45220060",
+   "Q82794",
+   "Q1078001"
+  ],
+  "p31_labels": [
+   "occupied territory",
+   "exclave",
+   "disputed territory",
+   "Region of Palestine",
+   "region",
+   "territorial dispute"
+  ]
+ },
+ "Gene Wilder": {
+  "qid": "Q191966",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "General Dynamics F-16 Fighting Falcon": {
+  "qid": "Q100026",
+  "p31": [
+   "Q15056993"
+  ],
+  "p31_labels": [
+   "aircraft family"
+  ]
+ },
+ "Generation Z": {
+  "qid": "Q1987589",
+  "p31": [
+   "Q15925549",
+   "Q1303415"
+  ],
+  "p31_labels": [
+   "cultural generation of western society",
+   "cohort"
+  ]
+ },
+ "Genghis Khan": {
+  "qid": "Q720",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George H. W. Bush": {
+  "qid": "Q23505",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George Harrison": {
+  "qid": "Q2643",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George I of Great Britain": {
+  "qid": "Q130805",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George Michael": {
+  "qid": "Q130311",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George Soros": {
+  "qid": "Q12908",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George W. Bush": {
+  "qid": "Q207",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "George Washington": {
+  "qid": "Q23",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Georgia (country)": {
+  "qid": "Q230",
+  "p31": [
+   "Q6256",
+   "Q3624078",
+   "Q179164",
+   "Q7270",
+   "Q4209223",
+   "Q236036",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "country",
+   "sovereign state",
+   "unitary state",
+   "republic",
+   "Rechtsstaat",
+   "republic of the Soviet Union",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Gerald Ford": {
+  "qid": "Q9582",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gerard Piqué": {
+  "qid": "Q17507",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Germany": {
+  "qid": "Q183",
+  "p31": [
+   "Q3624078",
+   "Q619610",
+   "Q4209223",
+   "Q63791824",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "social state",
+   "Rechtsstaat",
+   "country bordering the Baltic Sea",
+   "country"
+  ]
+ },
+ "Gianluigi Buffon": {
+  "qid": "Q68060",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gillian Anderson": {
+  "qid": "Q485298",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Giorgia Meloni": {
+  "qid": "Q451791",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gladiator (2000 film)": {
+  "qid": "Q128518",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Glenda Jackson": {
+  "qid": "Q182408",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gmail": {
+  "qid": "Q9334",
+  "p31": [
+   "Q1273203",
+   "Q28601953",
+   "Q19967801",
+   "Q327618"
+  ],
+  "p31_labels": [
+   "mailbox provider",
+   "email system",
+   "online service",
+   "webmail"
+  ]
+ },
+ "Golden State Warriors": {
+  "qid": "Q157376",
+  "p31": [
+   "Q13393265"
+  ],
+  "p31_labels": [
+   "basketball team"
+  ]
+ },
+ "Google Chrome": {
+  "qid": "Q777",
+  "p31": [
+   "Q6368",
+   "Q166142",
+   "Q218616"
+  ],
+  "p31_labels": [
+   "web browser",
+   "application software",
+   "proprietary software"
+  ]
+ },
+ "Google LLC": {
+  "qid": "Q95",
+  "p31": [
+   "Q4830453",
+   "Q18388277",
+   "Q5988403",
+   "Q891723",
+   "Q19967801"
+  ],
+  "p31_labels": [
+   "business",
+   "technology company",
+   "identity provider",
+   "public company",
+   "online service"
+  ]
+ },
+ "Google Translate": {
+  "qid": "Q135622",
+  "p31": [
+   "Q35127",
+   "Q28031555"
+  ],
+  "p31_labels": [
+   "website",
+   "machine translation software"
+  ]
+ },
+ "Grammy Awards": {
+  "qid": "Q41254",
+  "p31": [
+   "Q1364556",
+   "Q106592862",
+   "Q107655869"
+  ],
+  "p31_labels": [
+   "music award",
+   "annual music awards ceremony",
+   "group of awards"
+  ]
+ },
+ "Grand Theft Auto: San Andreas": {
+  "qid": "Q83265",
+  "p31": [
+   "Q7889"
+  ],
+  "p31_labels": [
+   "video game"
+  ]
+ },
+ "Greek alphabet": {
+  "qid": "Q8216",
+  "p31": [
+   "Q9779"
+  ],
+  "p31_labels": [
+   "alphabet"
+  ]
+ },
+ "Greenland": {
+  "qid": "Q223",
+  "p31": [
+   "Q66724388",
+   "Q192611",
+   "Q112099",
+   "Q161243",
+   "Q6256",
+   "Q788176",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "autonomous country within the Kingdom of Denmark",
+   "electoral unit",
+   "island country",
+   "dependent territory",
+   "country",
+   "autonomous administrative territorial entity",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Grigori Rasputin": {
+  "qid": "Q43989",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Gulf War": {
+  "qid": "Q37643",
+  "p31": [
+   "Q198"
+  ],
+  "p31_labels": [
+   "war"
+  ]
+ },
+ "Gulf of Mexico": {
+  "qid": "Q12630",
+  "p31": [
+   "Q1322134",
+   "Q986177"
+  ],
+  "p31_labels": [
+   "gulf",
+   "mediterranean sea"
+  ]
+ },
+ "Guns N' Roses": {
+  "qid": "Q11895",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Guy Fawkes": {
+  "qid": "Q13898",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Guyana": {
+  "qid": "Q734",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Gwyneth Paltrow": {
+  "qid": "Q34460",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Halloween": {
+  "qid": "Q251868",
+  "p31": [
+   "Q1445650",
+   "Q1238731"
+  ],
+  "p31_labels": [
+   "holiday",
+   "vigil"
+  ]
+ },
+ "Hanukkah": {
+  "qid": "Q130881",
+  "p31": [
+   "Q1197685",
+   "Q11483816",
+   "Q1445650"
+  ],
+  "p31_labels": [
+   "public holiday",
+   "annual event",
+   "holiday"
+  ]
+ },
+ "Harold Godwinson": {
+  "qid": "Q159597",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Harry Potter": {
+  "qid": "Q8337",
+  "p31": [
+   "Q614101",
+   "Q1667921",
+   "Q53815",
+   "Q47068459"
+  ],
+  "p31_labels": [
+   "heptalogy",
+   "novel series",
+   "canon",
+   "children's book series"
+  ]
+ },
+ "Harry S. Truman": {
+  "qid": "Q11613",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Hawaii": {
+  "qid": "Q782",
+  "p31": [
+   "Q35657"
+  ],
+  "p31_labels": [
+   "U.S. state"
+  ]
+ },
+ "Heath Ledger": {
+  "qid": "Q40572",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Henri Moissan": {
+  "qid": "Q102804",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Henry Cavill": {
+  "qid": "Q295498",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "History of YouTube": {
+  "qid": "Q5867307",
+  "p31": [
+   "Q17524420"
+  ],
+  "p31_labels": [
+   "aspect of history"
+  ]
+ },
+ "Holi": {
+  "qid": "Q10259",
+  "p31": [
+   "Q132241",
+   "Q1472127"
+  ],
+  "p31_labels": [
+   "festival",
+   "spring festival"
+  ]
+ },
+ "Holy See": {
+  "qid": "Q159583",
+  "p31": [
+   "Q1896989",
+   "Q1147274",
+   "Q1063239"
+  ],
+  "p31_labels": [
+   "subject of international law",
+   "Apostolic see",
+   "polity"
+  ]
+ },
+ "Hong Kong": {
+  "qid": "Q8646",
+  "p31": [
+   "Q779415",
+   "Q515",
+   "Q1549591",
+   "Q200250",
+   "Q208511",
+   "Q161243",
+   "Q133442",
+   "Q125470455",
+   "Q3337001"
+  ],
+  "p31_labels": [
+   "special administrative region of China",
+   "city",
+   "big city",
+   "metropolis",
+   "global city",
+   "dependent territory",
+   "city-state",
+   "customs territory of China",
+   "nationality for sports"
+  ]
+ },
+ "Huelva": {
+  "qid": "Q12246",
+  "p31": [
+   "Q2074737"
+  ],
+  "p31_labels": [
+   "municipality of Spain"
+  ]
+ },
+ "Hurricane Katrina": {
+  "qid": "Q16422",
+  "p31": [
+   "Q34439356"
+  ],
+  "p31_labels": [
+   "hurricane"
+  ]
+ },
+ "IShowSpeed": {
+  "qid": "Q114834007",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ice Cube": {
+  "qid": "Q173637",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Iceland": {
+  "qid": "Q189",
+  "p31": [
+   "Q112099",
+   "Q3624078",
+   "Q6256",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "island country",
+   "sovereign state",
+   "country",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Illuminati": {
+  "qid": "Q133957",
+  "p31": [
+   "Q276548"
+  ],
+  "p31_labels": [
+   "secret society"
+  ]
+ },
+ "India": {
+  "qid": "Q668",
+  "p31": [
+   "Q6256",
+   "Q3624078",
+   "Q223832"
+  ],
+  "p31_labels": [
+   "country",
+   "sovereign state",
+   "dominion of the British Empire"
+  ]
+ },
+ "Indian Premier League": {
+  "qid": "Q396412",
+  "p31": [
+   "Q623109"
+  ],
+  "p31_labels": [
+   "sports league"
+  ]
+ },
+ "Indiana Pacers": {
+  "qid": "Q170329",
+  "p31": [
+   "Q13393265"
+  ],
+  "p31_labels": [
+   "basketball team"
+  ]
+ },
+ "Indira Gandhi": {
+  "qid": "Q1149",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Inglourious Basterds": {
+  "qid": "Q153723",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "International Women's Day": {
+  "qid": "Q38964",
+  "p31": [
+   "Q2558684"
+  ],
+  "p31_labels": [
+   "world day"
+  ]
+ },
+ "Interstellar (film)": {
+  "qid": "Q13417189",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Iran": {
+  "qid": "Q794",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q127693126"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "successor state"
+  ]
+ },
+ "Iraq": {
+  "qid": "Q796",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Iraq War": {
+  "qid": "Q545449",
+  "p31": [
+   "Q831663",
+   "Q2001676",
+   "Q467011",
+   "Q645883",
+   "Q198"
+  ],
+  "p31_labels": [
+   "military campaign",
+   "offensive",
+   "invasion",
+   "military operation",
+   "war"
+  ]
+ },
+ "Ireland": {
+  "qid": "Q22890",
+  "p31": [
+   "Q23442",
+   "Q3502482"
+  ],
+  "p31_labels": [
+   "island",
+   "cultural region"
+  ]
+ },
+ "Iron Dome": {
+  "qid": "Q81231",
+  "p31": [
+   "Q2424752",
+   "Q5176926"
+  ],
+  "p31_labels": [
+   "product",
+   "Counter Rocket, Artillery, and Mortar"
+  ]
+ },
+ "Isaac Newton": {
+  "qid": "Q935",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Islam": {
+  "qid": "Q432",
+  "p31": [
+   "Q6957341"
+  ],
+  "p31_labels": [
+   "major religious group"
+  ]
+ },
+ "Islamic Revolutionary Guard Corps": {
+  "qid": "Q271110",
+  "p31": [
+   "Q207320",
+   "Q47913",
+   "Q772547",
+   "Q136787658"
+  ],
+  "p31_labels": [
+   "paramilitary organization",
+   "intelligence agency",
+   "armed forces",
+   "Proscribed terrorist groups or organisations"
+  ]
+ },
+ "Israel": {
+  "qid": "Q801",
+  "p31": [
+   "Q51576574",
+   "Q6256",
+   "Q82794",
+   "Q3624078",
+   "Q10711424"
+  ],
+  "p31_labels": [
+   "Mediterranean country",
+   "country",
+   "region",
+   "sovereign state",
+   "state with limited recognition"
+  ]
+ },
+ "Israel Defense Forces": {
+  "qid": "Q58967",
+  "p31": [
+   "Q772547"
+  ],
+  "p31_labels": [
+   "armed forces"
+  ]
+ },
+ "Italy": {
+  "qid": "Q38",
+  "p31": [
+   "Q6256",
+   "Q3624078",
+   "Q619610",
+   "Q179164",
+   "Q7270",
+   "Q51576574"
+  ],
+  "p31_labels": [
+   "country",
+   "sovereign state",
+   "social state",
+   "unitary state",
+   "republic",
+   "Mediterranean country"
+  ]
+ },
+ "J. Robert Oppenheimer": {
+  "qid": "Q132537",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "JD Vance": {
+  "qid": "Q28935729",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jacinda Ardern": {
+  "qid": "Q3606816",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jack Black": {
+  "qid": "Q483907",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jackie Chan": {
+  "qid": "Q36970",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jacqueline Kennedy Onassis": {
+  "qid": "Q165421",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jalalabad": {
+  "qid": "Q183303",
+  "p31": [
+   "Q515",
+   "Q1549591"
+  ],
+  "p31_labels": [
+   "city",
+   "big city"
+  ]
+ },
+ "Jamal Khashoggi": {
+  "qid": "Q1262052",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "James A. Garfield": {
+  "qid": "Q34597",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "James Marsden": {
+  "qid": "Q485901",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "James Stewart": {
+  "qid": "Q102462",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "James VI and I": {
+  "qid": "Q79972",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jane Austen": {
+  "qid": "Q36322",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jannik Sinner": {
+  "qid": "Q54812588",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jason Bateman": {
+  "qid": "Q284636",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Javier Bardem": {
+  "qid": "Q134895",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jean-Marie Le Pen": {
+  "qid": "Q7177",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jennie (singer)": {
+  "qid": "Q26262599",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jennifer Garner": {
+  "qid": "Q172044",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jennifer Lawrence": {
+  "qid": "Q189490",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jennifer Love Hewitt": {
+  "qid": "Q175104",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jerusalem": {
+  "qid": "Q1218",
+  "p31": [
+   "Q515",
+   "Q116291627",
+   "Q1200957",
+   "Q1549591",
+   "Q2202509",
+   "Q15661340",
+   "Q15239622",
+   "Q108178728",
+   "Q1135201",
+   "Q3505887",
+   "Q51929311"
+  ],
+  "p31_labels": [
+   "city",
+   "holy city of Abrahamic religion",
+   "tourist destination",
+   "big city",
+   "Roman city",
+   "ancient city",
+   "disputed territory",
+   "national capital",
+   "corpus separatum",
+   "city council",
+   "largest city"
+  ]
+ },
+ "Jessica Alba": {
+  "qid": "Q44077",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jessica Biel": {
+  "qid": "Q163249",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jesus": {
+  "qid": "Q302",
+  "p31": [
+   "Q178885",
+   "Q20643955",
+   "Q4271324",
+   "Q18563360",
+   "Q5",
+   "Q825",
+   "Q51625"
+  ],
+  "p31_labels": [
+   "deity",
+   "human biblical figure",
+   "mythical character",
+   "Quranic figure",
+   "human",
+   "God in Christianity",
+   "Salvator Mundi"
+  ]
+ },
+ "Jet Li": {
+  "qid": "Q159577",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jews": {
+  "qid": "Q7325",
+  "p31": [
+   "Q11197007",
+   "Q6266",
+   "Q2472587",
+   "Q41710"
+  ],
+  "p31_labels": [
+   "ethnoreligious group",
+   "nation",
+   "people",
+   "ethnic group"
+  ]
+ },
+ "Jim Morrison": {
+  "qid": "Q44301",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jimmy Carter": {
+  "qid": "Q23685",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jisoo": {
+  "qid": "Q27655361",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Joan Crawford": {
+  "qid": "Q40475",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jodie Foster": {
+  "qid": "Q41351",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Joe Biden": {
+  "qid": "Q6279",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Johannes Brahms": {
+  "qid": "Q7294",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "John F. Kennedy": {
+  "qid": "Q9696",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "John Lennon": {
+  "qid": "Q1203",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "John Paul II": {
+  "qid": "Q989",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jon Voight": {
+  "qid": "Q167520",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jonas Brothers": {
+  "qid": "Q134233",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Jordan": {
+  "qid": "Q810",
+  "p31": [
+   "Q3624078",
+   "Q41614",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "constitutional monarchy",
+   "country"
+  ]
+ },
+ "Joseph Smith": {
+  "qid": "Q47102",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Joseph Stalin": {
+  "qid": "Q855",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Josh Duhamel": {
+  "qid": "Q19794",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Judaism": {
+  "qid": "Q9268",
+  "p31": [
+   "Q9174",
+   "Q1189816",
+   "Q32090",
+   "Q19842652"
+  ],
+  "p31_labels": [
+   "religion",
+   "ethnic religion",
+   "lifestyle",
+   "monotheistic religion"
+  ]
+ },
+ "Judy Garland": {
+  "qid": "Q11637",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Julia Roberts": {
+  "qid": "Q40523",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Julius Caesar": {
+  "qid": "Q1048",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Justin Bieber": {
+  "qid": "Q34086",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Justin Trudeau": {
+  "qid": "Q3099714",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kamala Harris": {
+  "qid": "Q10853588",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kareem Abdul-Jabbar": {
+  "qid": "Q179051",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Karim Benzema": {
+  "qid": "Q1912",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Karnataka": {
+  "qid": "Q1185",
+  "p31": [
+   "Q12443800"
+  ],
+  "p31_labels": [
+   "state of India"
+  ]
+ },
+ "Kate Hudson": {
+  "qid": "Q169946",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Katy Perry": {
+  "qid": "Q42493",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Keanu Reeves": {
+  "qid": "Q43416",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Keir Starmer": {
+  "qid": "Q6383803",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kemi Badenoch": {
+  "qid": "Q21592171",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kevin Costner": {
+  "qid": "Q11930",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kim Jong-un": {
+  "qid": "Q56226",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kirsten Dunst": {
+  "qid": "Q76478",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Kiss (band)": {
+  "qid": "Q124179",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Kobe Bryant": {
+  "qid": "Q25369",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Korean War": {
+  "qid": "Q8663",
+  "p31": [
+   "Q198"
+  ],
+  "p31_labels": [
+   "war"
+  ]
+ },
+ "Kosovo": {
+  "qid": "Q1246",
+  "p31": [
+   "Q179164",
+   "Q123480",
+   "Q10711424",
+   "Q6256",
+   "Q3624078"
+  ],
+  "p31_labels": [
+   "unitary state",
+   "landlocked country",
+   "state with limited recognition",
+   "country",
+   "sovereign state"
+  ]
+ },
+ "Ku Klux Klan": {
+  "qid": "Q47131",
+  "p31": [
+   "Q7210356",
+   "Q3233801",
+   "Q17127659",
+   "Q17149090",
+   "Q1788992",
+   "Q30089777"
+  ],
+  "p31_labels": [
+   "political organization",
+   "hate group",
+   "terrorist organization",
+   "armed organization",
+   "criminal organization",
+   "patriotic society"
+  ]
+ },
+ "Kurt Russell": {
+  "qid": "Q103157",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Lady Gaga": {
+  "qid": "Q19848",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Lana Del Rey": {
+  "qid": "Q37150",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Laura Dern": {
+  "qid": "Q220901",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "LeBron James": {
+  "qid": "Q36159",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Lebanon": {
+  "qid": "Q822",
+  "p31": [
+   "Q3624078",
+   "Q51576574",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "Mediterranean country",
+   "country"
+  ]
+ },
+ "Lena Dunham": {
+  "qid": "Q288359",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Leonardo da Vinci": {
+  "qid": "Q762",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Leslie Nielsen": {
+  "qid": "Q82786",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Levant": {
+  "qid": "Q81483",
+  "p31": [
+   "Q82794",
+   "Q3502482"
+  ],
+  "p31_labels": [
+   "region",
+   "cultural region"
+  ]
+ },
+ "Liberia": {
+  "qid": "Q1014",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Libya": {
+  "qid": "Q1016",
+  "p31": [
+   "Q3624078",
+   "Q51576574",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "Mediterranean country",
+   "country"
+  ]
+ },
+ "Lil Wayne": {
+  "qid": "Q15615",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Lilith": {
+  "qid": "Q180627",
+  "p31": [
+   "Q4271324",
+   "Q177413"
+  ],
+  "p31_labels": [
+   "mythical character",
+   "demon"
+  ]
+ },
+ "Lily Allen": {
+  "qid": "Q58735",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Linkin Park": {
+  "qid": "Q261",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Linux": {
+  "qid": "Q388",
+  "p31": [
+   "Q7397"
+  ],
+  "p31_labels": [
+   "software"
+  ]
+ },
+ "Lionel Messi": {
+  "qid": "Q615",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Lockheed Martin F-35 Lightning II": {
+  "qid": "Q29261",
+  "p31": [
+   "Q15056993"
+  ],
+  "p31_labels": [
+   "aircraft family"
+  ]
+ },
+ "London": {
+  "qid": "Q84",
+  "p31": [
+   "Q200250",
+   "Q1066984",
+   "Q515",
+   "Q208511",
+   "Q471822",
+   "Q51929311",
+   "Q108178728",
+   "Q1048835"
+  ],
+  "p31_labels": [
+   "metropolis",
+   "financial center",
+   "city",
+   "global city",
+   "megalopolis",
+   "largest city",
+   "national capital",
+   "political territorial entity"
+  ]
+ },
+ "Los Angeles": {
+  "qid": "Q65",
+  "p31": [
+   "Q13218391",
+   "Q515",
+   "Q200250",
+   "Q131338872",
+   "Q1093829"
+  ],
+  "p31_labels": [
+   "charter city",
+   "city",
+   "metropolis",
+   "LGBT sanctuary city",
+   "city in the United States"
+  ]
+ },
+ "Luiz Inácio Lula da Silva": {
+  "qid": "Q37181",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Lunar eclipse": {
+  "qid": "Q44235",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Lyme disease": {
+  "qid": "Q201989",
+  "p31": [
+   "Q112193867"
+  ],
+  "p31_labels": [
+   "type of disease"
+  ]
+ },
+ "Lyndon B. Johnson": {
+  "qid": "Q9640",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Madeira": {
+  "qid": "Q26253",
+  "p31": [
+   "Q2914565",
+   "Q26934845",
+   "Q3775649",
+   "Q192611"
+  ],
+  "p31_labels": [
+   "autonomous region of Portugal",
+   "integral overseas territory",
+   "subregion of Portugal",
+   "electoral unit"
+  ]
+ },
+ "Madonna": {
+  "qid": "Q1744",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Magic Johnson": {
+  "qid": "Q134183",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mahatma Gandhi": {
+  "qid": "Q1001",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Major League Baseball": {
+  "qid": "Q1163715",
+  "p31": [
+   "Q6631808",
+   "Q15991290"
+  ],
+  "p31_labels": [
+   "baseball league",
+   "professional sports league"
+  ]
+ },
+ "Major religious groups": {
+  "qid": "Q6957341",
+  "p31": [
+   "Q110401222"
+  ],
+  "p31_labels": [
+   "religion type"
+  ]
+ },
+ "Malala Yousafzai": {
+  "qid": "Q32732",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Malaysia": {
+  "qid": "Q833",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Malaysia Airlines Flight 17": {
+  "qid": "Q17374096",
+  "p31": [
+   "Q106955175"
+  ],
+  "p31_labels": [
+   "passenger flight"
+  ]
+ },
+ "Malaysia Airlines Flight 370": {
+  "qid": "Q15908324",
+  "p31": [
+   "Q1689215",
+   "Q104776655"
+  ],
+  "p31_labels": [
+   "scheduled flight",
+   "flight disappearance"
+  ]
+ },
+ "Malta": {
+  "qid": "Q233",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q179164",
+   "Q6256",
+   "Q51576574",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "unitary state",
+   "country",
+   "Mediterranean country",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Manchester City F.C.": {
+  "qid": "Q50602",
+  "p31": [
+   "Q476028"
+  ],
+  "p31_labels": [
+   "association football club"
+  ]
+ },
+ "Manchester United F.C.": {
+  "qid": "Q18656",
+  "p31": [
+   "Q476028",
+   "Q4830453",
+   "Q103229495",
+   "Q891723"
+  ],
+  "p31_labels": [
+   "association football club",
+   "business",
+   "men's association football team",
+   "public company"
+  ]
+ },
+ "Mandatory Palestine": {
+  "qid": "Q193714",
+  "p31": [
+   "Q4835091",
+   "Q2577883",
+   "Q426759"
+  ],
+  "p31_labels": [
+   "territory",
+   "occupied territory",
+   "League of Nations mandate"
+  ]
+ },
+ "Manhattan Project": {
+  "qid": "Q127050",
+  "p31": [
+   "Q27665152",
+   "Q759676",
+   "Q16334295",
+   "Q101965",
+   "Q2475641"
+  ],
+  "p31_labels": [
+   "military project",
+   "task",
+   "group of humans",
+   "experiment",
+   "megaproject"
+  ]
+ },
+ "Manny Pacquiao": {
+  "qid": "Q486359",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mao Zedong": {
+  "qid": "Q5816",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Marcus Rashford": {
+  "qid": "Q22951255",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Margaret Thatcher": {
+  "qid": "Q7416",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Margot Robbie": {
+  "qid": "Q1924847",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mario": {
+  "qid": "Q12379",
+  "p31": [
+   "Q15632617",
+   "Q87576284",
+   "Q80447738",
+   "Q15773317",
+   "Q15773347",
+   "Q1569167",
+   "Q386208",
+   "Q33093124",
+   "Q17564712",
+   "Q15711870"
+  ],
+  "p31_labels": [
+   "fictional human",
+   "manga character",
+   "anime character",
+   "television character",
+   "film character",
+   "video game character",
+   "mascot character",
+   "Mario franchise character",
+   "Donkey Kong character",
+   "animated character"
+  ]
+ },
+ "Mario Vargas Llosa": {
+  "qid": "Q39803",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mark Wahlberg": {
+  "qid": "Q164119",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mark Zuckerberg": {
+  "qid": "Q36215",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Marlon Brando": {
+  "qid": "Q34012",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Martin Luther King Jr.": {
+  "qid": "Q8027",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Martin Scorsese": {
+  "qid": "Q41148",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mary Shelley": {
+  "qid": "Q47152",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mary, Queen of Scots": {
+  "qid": "Q131412",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Maryland": {
+  "qid": "Q1391",
+  "p31": [
+   "Q35657"
+  ],
+  "p31_labels": [
+   "U.S. state"
+  ]
+ },
+ "Maui": {
+  "qid": "Q188705",
+  "p31": [
+   "Q1161185",
+   "Q23442"
+  ],
+  "p31_labels": [
+   "volcanic island",
+   "island"
+  ]
+ },
+ "Maundy Thursday": {
+  "qid": "Q106333",
+  "p31": [
+   "Q368835",
+   "Q838447",
+   "Q1401522",
+   "Q20900468",
+   "Q60075825"
+  ],
+  "p31_labels": [
+   "public holidays in Iceland",
+   "public holidays in the Philippines",
+   "public holidays in Sweden",
+   "Slavic holiday",
+   "Christian holy day"
+  ]
+ },
+ "Max Verstappen": {
+  "qid": "Q2239218",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "McDonald's": {
+  "qid": "Q38076",
+  "p31": [
+   "Q18509232",
+   "Q4830453",
+   "Q167270",
+   "Q891723",
+   "Q43229"
+  ],
+  "p31_labels": [
+   "fast food restaurant chain",
+   "business",
+   "trademark",
+   "public company",
+   "organization"
+  ]
+ },
+ "Mcdonalds.com": {
+  "qid": "Q38076",
+  "p31": [
+   "Q18509232",
+   "Q4830453",
+   "Q167270",
+   "Q891723",
+   "Q43229"
+  ],
+  "p31_labels": [
+   "fast food restaurant chain",
+   "business",
+   "trademark",
+   "public company",
+   "organization"
+  ]
+ },
+ "Meg Ryan": {
+  "qid": "Q167498",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Megan Fox": {
+  "qid": "Q80069",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mel Gibson": {
+  "qid": "Q42229",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Melania Knauss": {
+  "qid": "Q432473",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Melania Trump": {
+  "qid": "Q432473",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Meryl Streep": {
+  "qid": "Q873",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mesut Özil": {
+  "qid": "Q83488",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Meta Platforms": {
+  "qid": "Q380",
+  "p31": [
+   "Q891723",
+   "Q18388277",
+   "Q1641122",
+   "Q4830453"
+  ],
+  "p31_labels": [
+   "public company",
+   "technology company",
+   "online service provider",
+   "business"
+  ]
+ },
+ "Mexico": {
+  "qid": "Q96",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q6266"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "nation"
+  ]
+ },
+ "Michael Caine": {
+  "qid": "Q123351",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michael Douglas": {
+  "qid": "Q119798",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michael Gambon": {
+  "qid": "Q203545",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michael J. Fox": {
+  "qid": "Q395274",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michael Jackson": {
+  "qid": "Q2831",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michael Keaton": {
+  "qid": "Q138005",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michael Schumacher": {
+  "qid": "Q9671",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michelle Obama": {
+  "qid": "Q13133",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Michelle Yeoh": {
+  "qid": "Q214289",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mick Jagger": {
+  "qid": "Q128121",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Microsoft": {
+  "qid": "Q2283",
+  "p31": [
+   "Q1058914",
+   "Q4830453",
+   "Q18388277",
+   "Q891723"
+  ],
+  "p31_labels": [
+   "software company",
+   "business",
+   "technology company",
+   "public company"
+  ]
+ },
+ "Microsoft Windows": {
+  "qid": "Q1406",
+  "p31": [
+   "Q137396449",
+   "Q241317",
+   "Q431289",
+   "Q131406845"
+  ],
+  "p31_labels": [
+   "proprietary operating system",
+   "computing platform",
+   "brand",
+   "software series"
+  ]
+ },
+ "Mike Pence": {
+  "qid": "Q24313",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mike Tyson": {
+  "qid": "Q79031",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mila Kunis": {
+  "qid": "Q37628",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Miley Cyrus": {
+  "qid": "Q4235",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Minecraft": {
+  "qid": "Q49740",
+  "p31": [
+   "Q7889",
+   "Q112144412"
+  ],
+  "p31_labels": [
+   "video game",
+   "esports discipline"
+  ]
+ },
+ "Miranda Cosgrove": {
+  "qid": "Q5104",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Miss Universe": {
+  "qid": "Q161376",
+  "p31": [
+   "Q2658935",
+   "Q43229",
+   "Q618779",
+   "Q58863414"
+  ],
+  "p31_labels": [
+   "beauty contest",
+   "organization",
+   "award",
+   "female beauty pageant"
+  ]
+ },
+ "Mitt Romney": {
+  "qid": "Q4496",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Module:Wd": {
+  "qid": "Q24733825",
+  "p31": [
+   "Q15184295",
+   "Q59259626"
+  ],
+  "p31_labels": [
+   "Wikimedia module",
+   "Wikimedia module using Wikidata"
+  ]
+ },
+ "Mohammed bin Salman": {
+  "qid": "Q6892571",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Morocco": {
+  "qid": "Q1028",
+  "p31": [
+   "Q41614",
+   "Q3624078",
+   "Q51576574",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "constitutional monarchy",
+   "sovereign state",
+   "Mediterranean country",
+   "country"
+  ]
+ },
+ "Mother's Day": {
+  "qid": "Q47502",
+  "p31": [
+   "Q1445650",
+   "Q88173204",
+   "Q1197685"
+  ],
+  "p31_labels": [
+   "holiday",
+   "flag day in Finland",
+   "public holiday"
+  ]
+ },
+ "Mount Everest": {
+  "qid": "Q513",
+  "p31": [
+   "Q8502"
+  ],
+  "p31_labels": [
+   "mountain"
+  ]
+ },
+ "Muammar Gaddafi": {
+  "qid": "Q19878",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mughal Empire": {
+  "qid": "Q33296",
+  "p31": [
+   "Q48349",
+   "Q7275",
+   "Q3024240"
+  ],
+  "p31_labels": [
+   "empire",
+   "state",
+   "historical country"
+  ]
+ },
+ "Muhammad": {
+  "qid": "Q9458",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Muhammad Ali": {
+  "qid": "Q36107",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mumbai": {
+  "qid": "Q1156",
+  "p31": [
+   "Q174844",
+   "Q11271835",
+   "Q515",
+   "Q3257686",
+   "Q200250",
+   "Q745456",
+   "Q51929311"
+  ],
+  "p31_labels": [
+   "megacity",
+   "state capital",
+   "city",
+   "locality",
+   "metropolis",
+   "business cluster",
+   "largest city"
+  ]
+ },
+ "Myanmar": {
+  "qid": "Q836",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q7270"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "republic"
+  ]
+ },
+ "NATO": {
+  "qid": "Q7184",
+  "p31": [
+   "Q1127126",
+   "Q245065",
+   "Q484652",
+   "Q100906234"
+  ],
+  "p31_labels": [
+   "military alliance",
+   "intergovernmental organization",
+   "international organization",
+   "multinational military coalition"
+  ]
+ },
+ "Namibia": {
+  "qid": "Q1030",
+  "p31": [
+   "Q7270",
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "republic",
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Napoleon": {
+  "qid": "Q517",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Narendra Modi": {
+  "qid": "Q1058",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "National Basketball Association": {
+  "qid": "Q155223",
+  "p31": [
+   "Q15986354",
+   "Q18536323",
+   "Q15991290",
+   "Q7094076"
+  ],
+  "p31_labels": [
+   "basketball association",
+   "basketball league",
+   "professional sports league",
+   "online database"
+  ]
+ },
+ "National Football League": {
+  "qid": "Q1215884",
+  "p31": [
+   "Q15991290",
+   "Q124059801"
+  ],
+  "p31_labels": [
+   "professional sports league",
+   "American football league"
+  ]
+ },
+ "Nayib Bukele": {
+  "qid": "Q17712353",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nazi Germany": {
+  "qid": "Q7318",
+  "p31": [
+   "Q11514315",
+   "Q3024240",
+   "Q3624078",
+   "Q317"
+  ],
+  "p31_labels": [
+   "historical period",
+   "historical country",
+   "sovereign state",
+   "dictatorship"
+  ]
+ },
+ "Neil Armstrong": {
+  "qid": "Q1615",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nelly Furtado": {
+  "qid": "Q80424",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nelson Mandela": {
+  "qid": "Q8023",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nepal": {
+  "qid": "Q837",
+  "p31": [
+   "Q123480",
+   "Q3624078",
+   "Q82794",
+   "Q6256",
+   "Q842112"
+  ],
+  "p31_labels": [
+   "landlocked country",
+   "sovereign state",
+   "region",
+   "country",
+   "socialist state"
+  ]
+ },
+ "Netflix": {
+  "qid": "Q907311",
+  "p31": [
+   "Q620615",
+   "Q59152282",
+   "Q723685",
+   "Q35127",
+   "Q4830453",
+   "Q3282637",
+   "Q578109"
+  ],
+  "p31_labels": [
+   "mobile app",
+   "video streaming service",
+   "video on demand",
+   "website",
+   "business",
+   "film producer",
+   "television producer"
+  ]
+ },
+ "Netherlands": {
+  "qid": "Q55",
+  "p31": [
+   "Q15304003",
+   "Q6256",
+   "Q3624078"
+  ],
+  "p31_labels": [
+   "country of the Kingdom of the Netherlands",
+   "country",
+   "sovereign state"
+  ]
+ },
+ "New Year's Eve": {
+  "qid": "Q11269",
+  "p31": [
+   "Q1445650",
+   "Q1238731"
+  ],
+  "p31_labels": [
+   "holiday",
+   "vigil"
+  ]
+ },
+ "New York City": {
+  "qid": "Q60",
+  "p31": [
+   "Q208511",
+   "Q2264924",
+   "Q1093829",
+   "Q515",
+   "Q1549591",
+   "Q51929311",
+   "Q15063611",
+   "Q200250",
+   "Q174844"
+  ],
+  "p31_labels": [
+   "global city",
+   "port city",
+   "city in the United States",
+   "city",
+   "big city",
+   "largest city",
+   "city in the state of New York",
+   "metropolis",
+   "megacity"
+  ]
+ },
+ "New Zealand": {
+  "qid": "Q664",
+  "p31": [
+   "Q202686",
+   "Q223832",
+   "Q3624078",
+   "Q6256",
+   "Q112099",
+   "Q1351282",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "Commonwealth realm",
+   "dominion of the British Empire",
+   "sovereign state",
+   "country",
+   "island country",
+   "crown colony",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Neymar": {
+  "qid": "Q142794",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nick Jonas": {
+  "qid": "Q201656",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nicolas Cage": {
+  "qid": "Q42869",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nicolas Sarkozy": {
+  "qid": "Q329",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nicole Scherzinger": {
+  "qid": "Q167696",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nicolás Maduro": {
+  "qid": "Q58132",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Niels Bohr": {
+  "qid": "Q7085",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Niger": {
+  "qid": "Q1032",
+  "p31": [
+   "Q7270",
+   "Q3624078",
+   "Q123480",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "republic",
+   "sovereign state",
+   "landlocked country",
+   "country"
+  ]
+ },
+ "Nigeria": {
+  "qid": "Q1033",
+  "p31": [
+   "Q3624078",
+   "Q512187",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "federal republic",
+   "country"
+  ]
+ },
+ "Nikola Tesla": {
+  "qid": "Q9036",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Noam Chomsky": {
+  "qid": "Q9049",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nobel Peace Prize": {
+  "qid": "Q35637",
+  "p31": [
+   "Q9639292"
+  ],
+  "p31_labels": [
+   "peace award"
+  ]
+ },
+ "Normandy landings": {
+  "qid": "Q16470",
+  "p31": [
+   "Q178561",
+   "Q348120"
+  ],
+  "p31_labels": [
+   "battle",
+   "amphibious warfare"
+  ]
+ },
+ "North America": {
+  "qid": "Q49",
+  "p31": [
+   "Q5107",
+   "Q855697",
+   "Q2418896"
+  ],
+  "p31_labels": [
+   "continent",
+   "subcontinent",
+   "part of the world"
+  ]
+ },
+ "North Macedonia": {
+  "qid": "Q221",
+  "p31": [
+   "Q3624078",
+   "Q123480",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "landlocked country",
+   "country"
+  ]
+ },
+ "North Pole": {
+  "qid": "Q934",
+  "p31": [
+   "Q183273"
+  ],
+  "p31_labels": [
+   "geographical pole"
+  ]
+ },
+ "Nosferatu": {
+  "qid": "Q151895",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Novak Djokovic": {
+  "qid": "Q5812",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nowruz": {
+  "qid": "Q483236",
+  "p31": [
+   "Q1445650",
+   "Q57598",
+   "Q18369361"
+  ],
+  "p31_labels": [
+   "holiday",
+   "national day",
+   "UN observance day"
+  ]
+ },
+ "Nuclear weapon": {
+  "qid": "Q12802",
+  "p31": [
+   "Q3054261",
+   "Q348091",
+   "Q124078422"
+  ],
+  "p31_labels": [
+   "explosive device",
+   "nuclear technology",
+   "weapon type"
+  ]
+ },
+ "Nvidia": {
+  "qid": "Q182477",
+  "p31": [
+   "Q891723",
+   "Q4830453"
+  ],
+  "p31_labels": [
+   "public company",
+   "business"
+  ]
+ },
+ "Olaf Scholz": {
+  "qid": "Q61053",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Olga Kurylenko": {
+  "qid": "Q164730",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Olivia Chow": {
+  "qid": "Q3350703",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "One Direction": {
+  "qid": "Q146027",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "One Hundred Years of Solitude": {
+  "qid": "Q178869",
+  "p31": [
+   "Q7725634"
+  ],
+  "p31_labels": [
+   "literary work"
+  ]
+ },
+ "One Piece": {
+  "qid": "Q28667972",
+  "p31": [
+   "Q21198342"
+  ],
+  "p31_labels": [
+   "manga series"
+  ]
+ },
+ "Oracle Corporation": {
+  "qid": "Q19900",
+  "p31": [
+   "Q891723",
+   "Q4830453"
+  ],
+  "p31_labels": [
+   "public company",
+   "business"
+  ]
+ },
+ "Orthohantavirus": {
+  "qid": "Q29001073",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "Osama bin Laden": {
+  "qid": "Q1317",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Oscar Pistorius": {
+  "qid": "Q201377",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Owen Wilson": {
+  "qid": "Q161916",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ozzy Osbourne": {
+  "qid": "Q133151",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pakistan": {
+  "qid": "Q843",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Palestine (region)": {
+  "qid": "Q23792",
+  "p31": [
+   "Q82794",
+   "Q1620908",
+   "Q5284036",
+   "Q3502482",
+   "Q2577883",
+   "Q1200957"
+  ],
+  "p31_labels": [
+   "region",
+   "historical region",
+   "divided region",
+   "cultural region",
+   "occupied territory",
+   "tourist destination"
+  ]
+ },
+ "Palestine Liberation Organization": {
+  "qid": "Q26683",
+  "p31": [
+   "Q7210356",
+   "Q6138528"
+  ],
+  "p31_labels": [
+   "political organization",
+   "political coalition"
+  ]
+ },
+ "Palestinian National Authority": {
+  "qid": "Q42620",
+  "p31": [
+   "Q59281",
+   "Q35798"
+  ],
+  "p31_labels": [
+   "provisional government",
+   "executive branch"
+  ]
+ },
+ "Panama Canal": {
+  "qid": "Q7350",
+  "p31": [
+   "Q949819"
+  ],
+  "p31_labels": [
+   "ship canal"
+  ]
+ },
+ "Papua New Guinea": {
+  "qid": "Q691",
+  "p31": [
+   "Q202686",
+   "Q112099",
+   "Q6256",
+   "Q3624078",
+   "Q11815167",
+   "Q41614"
+  ],
+  "p31_labels": [
+   "Commonwealth realm",
+   "island country",
+   "country",
+   "sovereign state",
+   "archipelagic state",
+   "constitutional monarchy"
+  ]
+ },
+ "Paris Hilton": {
+  "qid": "Q47899",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Parkour": {
+  "qid": "Q483693",
+  "p31": [
+   "Q31629"
+  ],
+  "p31_labels": [
+   "type of sport"
+  ]
+ },
+ "Passover": {
+  "qid": "Q121393",
+  "p31": [
+   "Q1197685",
+   "Q1445650"
+  ],
+  "p31_labels": [
+   "public holiday",
+   "holiday"
+  ]
+ },
+ "Paul Pogba": {
+  "qid": "Q129027",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Paul Rudd": {
+  "qid": "Q276525",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pavel Durov": {
+  "qid": "Q149067",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pelé": {
+  "qid": "Q12897",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pep Guardiola": {
+  "qid": "Q164038",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pervez Musharraf": {
+  "qid": "Q40495",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Peter III of Russia": {
+  "qid": "Q151789",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Petr Pavel": {
+  "qid": "Q2080040",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Phil Collins": {
+  "qid": "Q144622",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Philippines": {
+  "qid": "Q928",
+  "p31": [
+   "Q3624078",
+   "Q11815167",
+   "Q6256",
+   "Q112099"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "archipelagic state",
+   "country",
+   "island country"
+  ]
+ },
+ "Philosophy": {
+  "qid": "Q5891",
+  "p31": [
+   "Q11862829",
+   "Q4671286",
+   "Q2465832",
+   "Q627436",
+   "Q483394"
+  ],
+  "p31_labels": [
+   "academic discipline",
+   "academic major",
+   "branch of science",
+   "field of work",
+   "genre"
+  ]
+ },
+ "Pierre Trudeau": {
+  "qid": "Q8619",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Poland": {
+  "qid": "Q36",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q63791824",
+   "Q127693126"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "country bordering the Baltic Sea",
+   "successor state"
+  ]
+ },
+ "Pope": {
+  "qid": "Q19546",
+  "p31": [
+   "Q138024519"
+  ],
+  "p31_labels": [
+   "Roman Catholic episcopal title"
+  ]
+ },
+ "Pope Benedict XVI": {
+  "qid": "Q2494",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pope Francis": {
+  "qid": "Q450675",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pope John Paul II": {
+  "qid": "Q989",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Pope Leo XIII": {
+  "qid": "Q43922",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "President of the United States": {
+  "qid": "Q11696",
+  "p31": [
+   "Q17279032"
+  ],
+  "p31_labels": [
+   "elective office"
+  ]
+ },
+ "Prince Albert of Saxe-Coburg and Gotha": {
+  "qid": "Q152245",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Prince Philip, Duke of Edinburgh": {
+  "qid": "Q80976",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Priyanka Chopra": {
+  "qid": "Q158957",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Puerto Rico": {
+  "qid": "Q1183",
+  "p31": [
+   "Q783733",
+   "Q462778",
+   "Q1048835",
+   "Q7252696",
+   "Q3502482",
+   "Q1352230",
+   "Q609591"
+  ],
+  "p31_labels": [
+   "unincorporated territory of the United States",
+   "insular area of the United States",
+   "political territorial entity",
+   "Provincial deputation in Spanish America",
+   "cultural region",
+   "territory of the United States",
+   "commonwealth"
+  ]
+ },
+ "Qatar": {
+  "qid": "Q846",
+  "p31": [
+   "Q189898",
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "Emirate",
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Queen Camilla": {
+  "qid": "Q152239",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Queen Victoria": {
+  "qid": "Q9439",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Quentin Tarantino": {
+  "qid": "Q3772",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rachel Weisz": {
+  "qid": "Q134077",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rafael Nadal": {
+  "qid": "Q10132",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Raiders of the Lost Ark": {
+  "qid": "Q174284",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Ralph Fiennes": {
+  "qid": "Q28493",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rami Malek": {
+  "qid": "Q375590",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Real Madrid CF": {
+  "qid": "Q8682",
+  "p31": [
+   "Q476028"
+  ],
+  "p31_labels": [
+   "association football club"
+  ]
+ },
+ "Recep Tayyip Erdoğan": {
+  "qid": "Q39259",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Reddit": {
+  "qid": "Q1136",
+  "p31": [
+   "Q3220391",
+   "Q3963243",
+   "Q393351",
+   "Q122759350",
+   "Q6576792",
+   "Q28933155",
+   "Q133797182"
+  ],
+  "p31_labels": [
+   "social networking service",
+   "social news website",
+   "aggregator",
+   "user-generated content platform",
+   "online community",
+   "news aggregation website",
+   "art-sharing website"
+  ]
+ },
+ "Reese Witherspoon": {
+  "qid": "Q44063",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Renée Zellweger": {
+  "qid": "Q122614",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Republican Party (United States)": {
+  "qid": "Q29468",
+  "p31": [
+   "Q7278"
+  ],
+  "p31_labels": [
+   "political party"
+  ]
+ },
+ "Reza Shah": {
+  "qid": "Q182921",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Richard Feynman": {
+  "qid": "Q39246",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Richard Gere": {
+  "qid": "Q48410",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Richard Nixon": {
+  "qid": "Q9588",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rick and Morty": {
+  "qid": "Q15659308",
+  "p31": [
+   "Q117467246"
+  ],
+  "p31_labels": [
+   "animated television series"
+  ]
+ },
+ "Ridley Scott": {
+  "qid": "Q56005",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ringo Starr": {
+  "qid": "Q2632",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rishi Sunak": {
+  "qid": "Q20055561",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Roald Dahl": {
+  "qid": "Q25161",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Robert De Niro": {
+  "qid": "Q36949",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Robert Downey Jr.": {
+  "qid": "Q165219",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Robert Lewandowski": {
+  "qid": "Q151269",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Robin Williams": {
+  "qid": "Q83338",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Roblox": {
+  "qid": "Q692989",
+  "p31": [
+   "Q7889",
+   "Q112144412",
+   "Q81989119",
+   "Q122759350"
+  ],
+  "p31_labels": [
+   "video game",
+   "esports discipline",
+   "video game distribution platform",
+   "user-generated content platform"
+  ]
+ },
+ "Roger Federer": {
+  "qid": "Q1426",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Roman Empire": {
+  "qid": "Q2277",
+  "p31": [
+   "Q48349",
+   "Q11514315",
+   "Q3024240"
+  ],
+  "p31_labels": [
+   "empire",
+   "historical period",
+   "historical country"
+  ]
+ },
+ "Romania": {
+  "qid": "Q218",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q179671"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "nation state"
+  ]
+ },
+ "Ronaldo (Brazilian footballer)": {
+  "qid": "Q529207",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rosa Parks": {
+  "qid": "Q41921",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Rostov-on-Don": {
+  "qid": "Q908",
+  "p31": [
+   "Q97660032",
+   "Q2264924",
+   "Q7930989",
+   "Q1637706"
+  ],
+  "p31_labels": [
+   "City of oblast significance",
+   "port city",
+   "city or town",
+   "million city"
+  ]
+ },
+ "Rothschild family": {
+  "qid": "Q159386",
+  "p31": [
+   "Q56488093",
+   "Q13417114",
+   "Q8436"
+  ],
+  "p31_labels": [
+   "Jewish family",
+   "noble family",
+   "family"
+  ]
+ },
+ "Russia": {
+  "qid": "Q159",
+  "p31": [
+   "Q3624078",
+   "Q859563",
+   "Q6256",
+   "Q1323642",
+   "Q127693126"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "secular state",
+   "country",
+   "transcontinental country",
+   "successor state"
+  ]
+ },
+ "Russo-Ukrainian war": {
+  "qid": "Q15860072",
+  "p31": [
+   "Q198",
+   "Q11422542",
+   "Q1168287",
+   "Q7883019",
+   "Q11514315",
+   "Q474138"
+  ],
+  "p31_labels": [
+   "war",
+   "international conflict",
+   "intervention",
+   "undeclared war",
+   "historical period",
+   "war of aggression"
+  ]
+ },
+ "Rutherford B. Hayes": {
+  "qid": "Q35686",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ryan Gosling": {
+  "qid": "Q193815",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ryan O'Neal": {
+  "qid": "Q272923",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ryan Reynolds": {
+  "qid": "Q192682",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Saddam Hussein": {
+  "qid": "Q1316",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Saint Nicholas": {
+  "qid": "Q44269",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Saint Peter": {
+  "qid": "Q33923",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sally Field": {
+  "qid": "Q187033",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sam Smith": {
+  "qid": "Q15123969",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sam Worthington": {
+  "qid": "Q82085",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Samuel L. Jackson": {
+  "qid": "Q172678",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sandra Bullock": {
+  "qid": "Q40791",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Saudi Arabia": {
+  "qid": "Q851",
+  "p31": [
+   "Q3624078",
+   "Q417175",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "kingdom",
+   "country"
+  ]
+ },
+ "Schengen Area": {
+  "qid": "Q1969730",
+  "p31": [
+   "Q4835091"
+  ],
+  "p31_labels": [
+   "territory"
+  ]
+ },
+ "Schutzstaffel": {
+  "qid": "Q44687",
+  "p31": [
+   "Q207320",
+   "Q24047813",
+   "Q15627509"
+  ],
+  "p31_labels": [
+   "paramilitary organization",
+   "squadron",
+   "military organization"
+  ]
+ },
+ "Sean Connery": {
+  "qid": "Q4573",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Search engine": {
+  "qid": "Q4182287",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Selena Gomez": {
+  "qid": "Q83287",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Serena Williams": {
+  "qid": "Q11459",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sergio Ramos": {
+  "qid": "Q483309",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sexual intercourse": {
+  "qid": "Q5873",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Shah Rukh Khan": {
+  "qid": "Q9535",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Shakira": {
+  "qid": "Q34424",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sharon Stone": {
+  "qid": "Q62975",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Shehbaz Sharif": {
+  "qid": "Q2096387",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sheikh Hasina": {
+  "qid": "Q52183",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Shinzo Abe": {
+  "qid": "Q132345",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Shiva": {
+  "qid": "Q11378",
+  "p31": [
+   "Q6058157",
+   "Q979507",
+   "Q13002315"
+  ],
+  "p31_labels": [
+   "god",
+   "Hindu deity",
+   "legendary figure"
+  ]
+ },
+ "Shohei Ohtani": {
+  "qid": "Q4391858",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Shraddha Kapoor": {
+  "qid": "Q15055683",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Silvio Berlusconi": {
+  "qid": "Q11860",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Simla Agreement": {
+  "qid": "Q1470998",
+  "p31": [
+   "Q625298"
+  ],
+  "p31_labels": [
+   "peace treaty"
+  ]
+ },
+ "Simon Pegg": {
+  "qid": "Q238464",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Simone Biles": {
+  "qid": "Q7520267",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Somalia": {
+  "qid": "Q1045",
+  "p31": [
+   "Q7270",
+   "Q3624078",
+   "Q512187",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "republic",
+   "sovereign state",
+   "federal republic",
+   "country"
+  ]
+ },
+ "Somaliland": {
+  "qid": "Q34754",
+  "p31": [
+   "Q10711424",
+   "Q7270",
+   "Q6256",
+   "Q1179466"
+  ],
+  "p31_labels": [
+   "state with limited recognition",
+   "republic",
+   "country",
+   "de facto regime"
+  ]
+ },
+ "South Africa": {
+  "qid": "Q258",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "South Korea": {
+  "qid": "Q884",
+  "p31": [
+   "Q3624078",
+   "Q1520223",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "constitutional republic",
+   "country"
+  ]
+ },
+ "South Sudan": {
+  "qid": "Q958",
+  "p31": [
+   "Q3624078",
+   "Q123480",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "landlocked country",
+   "country"
+  ]
+ },
+ "SpaceX": {
+  "qid": "Q193701",
+  "p31": [
+   "Q936518",
+   "Q11753232",
+   "Q4830453",
+   "Q891723"
+  ],
+  "p31_labels": [
+   "aerospace manufacturer",
+   "launch service provider",
+   "business",
+   "public company"
+  ]
+ },
+ "Spain": {
+  "qid": "Q29",
+  "p31": [
+   "Q3624078",
+   "Q1250464",
+   "Q6256",
+   "Q51576574",
+   "Q179671"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "realm",
+   "country",
+   "Mediterranean country",
+   "nation state"
+  ]
+ },
+ "Spider-Man": {
+  "qid": "Q79037",
+  "p31": [
+   "Q14831768",
+   "Q15773347",
+   "Q1114461"
+  ],
+  "p31_labels": [
+   "mutate",
+   "film character",
+   "comics character"
+  ]
+ },
+ "Sri Lanka": {
+  "qid": "Q854",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "country"
+  ]
+ },
+ "Star": {
+  "qid": "Q523",
+  "p31": [
+   "Q17444909"
+  ],
+  "p31_labels": [
+   "astronomical object type"
+  ]
+ },
+ "Star Wars": {
+  "qid": "Q462",
+  "p31": [
+   "Q196600",
+   "Q431289",
+   "Q130371093"
+  ],
+  "p31_labels": [
+   "media franchise",
+   "brand",
+   "film franchise"
+  ]
+ },
+ "Starlink": {
+  "qid": "Q19867977",
+  "p31": [
+   "Q54806917",
+   "Q136937248"
+  ],
+  "p31_labels": [
+   "satellite internet constellation",
+   "ongoing project"
+  ]
+ },
+ "State of Palestine": {
+  "qid": "Q219060",
+  "p31": [
+   "Q6256",
+   "Q82794",
+   "Q3624078",
+   "Q10711424",
+   "Q51576574"
+  ],
+  "p31_labels": [
+   "country",
+   "region",
+   "sovereign state",
+   "state with limited recognition",
+   "Mediterranean country"
+  ]
+ },
+ "Stephen Hawking": {
+  "qid": "Q17714",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Steve Carell": {
+  "qid": "Q216221",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Steve Jobs": {
+  "qid": "Q19837",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Steven Spielberg": {
+  "qid": "Q8877",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Strait of Hormuz": {
+  "qid": "Q79883",
+  "p31": [
+   "Q37901"
+  ],
+  "p31_labels": [
+   "strait"
+  ]
+ },
+ "Studio Ghibli": {
+  "qid": "Q182950",
+  "p31": [
+   "Q1107679"
+  ],
+  "p31_labels": [
+   "animation studio"
+  ]
+ },
+ "Sudan": {
+  "qid": "Q1049",
+  "p31": [
+   "Q7270",
+   "Q3624078",
+   "Q6256",
+   "Q1088391"
+  ],
+  "p31_labels": [
+   "republic",
+   "sovereign state",
+   "country",
+   "rump state"
+  ]
+ },
+ "Sun": {
+  "qid": "Q525",
+  "p31": [
+   "Q5864",
+   "Q3592493"
+  ],
+  "p31_labels": [
+   "G-type main-sequence star",
+   "population I star"
+  ]
+ },
+ "Sun bear": {
+  "qid": "Q144923",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "Sundar Pichai": {
+  "qid": "Q3503829",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Sunderland A.F.C.": {
+  "qid": "Q18739",
+  "p31": [
+   "Q476028"
+  ],
+  "p31_labels": [
+   "association football club"
+  ]
+ },
+ "Sweden": {
+  "qid": "Q34",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q179164",
+   "Q63791824",
+   "Q41614"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "unitary state",
+   "country bordering the Baltic Sea",
+   "constitutional monarchy"
+  ]
+ },
+ "Switzerland": {
+  "qid": "Q39",
+  "p31": [
+   "Q7275",
+   "Q123480",
+   "Q170156",
+   "Q687554",
+   "Q43702",
+   "Q206696",
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "state",
+   "landlocked country",
+   "confederation",
+   "Federal Treaty",
+   "federation",
+   "Helvetic Republic",
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Sylvester Stallone": {
+  "qid": "Q40026",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Syria": {
+  "qid": "Q858",
+  "p31": [
+   "Q6256",
+   "Q3624078",
+   "Q51576574"
+  ],
+  "p31_labels": [
+   "country",
+   "sovereign state",
+   "Mediterranean country"
+  ]
+ },
+ "Taiwan": {
+  "qid": "Q865",
+  "p31": [
+   "Q112099",
+   "Q6501447",
+   "Q3624078",
+   "Q10711424",
+   "Q16562419",
+   "Q25449457"
+  ],
+  "p31_labels": [
+   "island country",
+   "local government",
+   "sovereign state",
+   "state with limited recognition",
+   "political entity",
+   "continental country"
+  ]
+ },
+ "Taj Mahal": {
+  "qid": "Q9141",
+  "p31": [
+   "Q162875",
+   "Q381885"
+  ],
+  "p31_labels": [
+   "mausoleum",
+   "tomb"
+  ]
+ },
+ "Taron Egerton": {
+  "qid": "Q16239385",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Taylor Swift": {
+  "qid": "Q26876",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ted Bundy": {
+  "qid": "Q192218",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tehran": {
+  "qid": "Q3616",
+  "p31": [
+   "Q56557504",
+   "Q174844",
+   "Q208511",
+   "Q108178728"
+  ],
+  "p31_labels": [
+   "city of Iran",
+   "megacity",
+   "global city",
+   "national capital"
+  ]
+ },
+ "Tel Aviv": {
+  "qid": "Q33935",
+  "p31": [
+   "Q1549591",
+   "Q3505887",
+   "Q515"
+  ],
+  "p31_labels": [
+   "big city",
+   "city council",
+   "city"
+  ]
+ },
+ "Telegram (software)": {
+  "qid": "Q15616276",
+  "p31": [
+   "Q2462003",
+   "Q341",
+   "Q620615",
+   "Q1194970",
+   "Q189210",
+   "Q6576792"
+  ],
+  "p31_labels": [
+   "instant messaging client",
+   "free software",
+   "mobile app",
+   "dot-com company",
+   "web application",
+   "online community"
+  ]
+ },
+ "Thailand": {
+  "qid": "Q869",
+  "p31": [
+   "Q41614",
+   "Q3624078",
+   "Q6256",
+   "Q179164"
+  ],
+  "p31_labels": [
+   "constitutional monarchy",
+   "sovereign state",
+   "country",
+   "unitary state"
+  ]
+ },
+ "The Beatles": {
+  "qid": "Q1299",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "The Big Bang Theory": {
+  "qid": "Q8539",
+  "p31": [
+   "Q5398426"
+  ],
+  "p31_labels": [
+   "television series"
+  ]
+ },
+ "The Color Purple (1985 film)": {
+  "qid": "Q223299",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "The Holocaust": {
+  "qid": "Q2763",
+  "p31": [
+   "Q41397",
+   "Q13634374",
+   "Q173462",
+   "Q459409",
+   "Q857833",
+   "Q2245405",
+   "Q8461"
+  ],
+  "p31_labels": [
+   "genocide",
+   "ethnic violence",
+   "crime against humanity",
+   "hate crime",
+   "state crime",
+   "key event",
+   "racism"
+  ]
+ },
+ "The Hunger Games (film)": {
+  "qid": "Q212965",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "The Sound of Music (film)": {
+  "qid": "Q60072",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "The Weeknd": {
+  "qid": "Q2121062",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "The Wolf of Wall Street (2013 film)": {
+  "qid": "Q1392744",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "The Yardbirds": {
+  "qid": "Q192725",
+  "p31": [
+   "Q215380"
+  ],
+  "p31_labels": [
+   "musical group"
+  ]
+ },
+ "Theodore Roosevelt": {
+  "qid": "Q33866",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tiger Woods": {
+  "qid": "Q10993",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tilda Swinton": {
+  "qid": "Q200534",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tim Burton": {
+  "qid": "Q56008",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tim Curry": {
+  "qid": "Q52392",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Timothée Chalamet": {
+  "qid": "Q19877770",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tina Fey": {
+  "qid": "Q14540",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tom Hardy": {
+  "qid": "Q208026",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tom Hiddleston": {
+  "qid": "Q295803",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tom Holland": {
+  "qid": "Q2023710",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tommy Lee": {
+  "qid": "Q331748",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Top Gun": {
+  "qid": "Q110138",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Travis Kalanick": {
+  "qid": "Q7836291",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Tribute to Caesar (del Sarto and Allori)": {
+  "qid": "Q633527",
+  "p31": [
+   "Q22669139"
+  ],
+  "p31_labels": [
+   "fresco"
+  ]
+ },
+ "Tupac Shakur": {
+  "qid": "Q6107",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Twitch (service)": {
+  "qid": "Q4555537",
+  "p31": [
+   "Q81989119",
+   "Q59152282",
+   "Q122759350",
+   "Q102336293",
+   "Q4830453",
+   "Q6576792",
+   "Q559856"
+  ],
+  "p31_labels": [
+   "video game distribution platform",
+   "video streaming service",
+   "user-generated content platform",
+   "live streaming service",
+   "business",
+   "online community",
+   "online video platform"
+  ]
+ },
+ "Twitter": {
+  "qid": "Q918",
+  "p31": [
+   "Q3220391",
+   "Q92438",
+   "Q122759350",
+   "Q6576792",
+   "Q118140435"
+  ],
+  "p31_labels": [
+   "social networking service",
+   "microblogging",
+   "user-generated content platform",
+   "online community",
+   "very large online platform"
+  ]
+ },
+ "UEFA Nations League": {
+  "qid": "Q15980635",
+  "p31": [
+   "Q623109"
+  ],
+  "p31_labels": [
+   "sports league"
+  ]
+ },
+ "US Open (tennis)": {
+  "qid": "Q123577",
+  "p31": [
+   "Q114608872",
+   "Q47443726"
+  ],
+  "p31_labels": [
+   "annual sporting event",
+   "recurring tennis tournament"
+  ]
+ },
+ "Ulysses S. Grant": {
+  "qid": "Q34836",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Uma Thurman": {
+  "qid": "Q125017",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "United Arab Emirates": {
+  "qid": "Q878",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "United Kingdom": {
+  "qid": "Q145",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q20181813",
+   "Q112099"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "colonial power",
+   "island country"
+  ]
+ },
+ "United Nations": {
+  "qid": "Q1065",
+  "p31": [
+   "Q245065",
+   "Q484652",
+   "Q163740",
+   "Q43229"
+  ],
+  "p31_labels": [
+   "intergovernmental organization",
+   "international organization",
+   "nonprofit organization",
+   "organization"
+  ]
+ },
+ "United States": {
+  "qid": "Q30",
+  "p31": [
+   "Q3624078",
+   "Q1489259",
+   "Q6256",
+   "Q99541706",
+   "Q1520223",
+   "Q5035794"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "superpower",
+   "country",
+   "historical unrecognized state",
+   "constitutional republic",
+   "capitalist state"
+  ]
+ },
+ "United States House of Representatives": {
+  "qid": "Q11701",
+  "p31": [
+   "Q2145277",
+   "Q110315658",
+   "Q471855",
+   "Q115456878"
+  ],
+  "p31_labels": [
+   "house of representatives",
+   "elected legislative house",
+   "jurisdiction",
+   "legislative branch agency"
+  ]
+ },
+ "Utrecht": {
+  "qid": "Q803",
+  "p31": [
+   "Q2039348",
+   "Q1392581"
+  ],
+  "p31_labels": [
+   "municipality of the Netherlands",
+   "cycling city"
+  ]
+ },
+ "Vacuum": {
+  "qid": "Q11475",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Val Kilmer": {
+  "qid": "Q191084",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Valentine's Day": {
+  "qid": "Q37587",
+  "p31": [
+   "Q1445650"
+  ],
+  "p31_labels": [
+   "holiday"
+  ]
+ },
+ "Vatican City": {
+  "qid": "Q237",
+  "p31": [
+   "Q133442",
+   "Q171441",
+   "Q123480",
+   "Q6256",
+   "Q98116669",
+   "Q19691007",
+   "Q702492",
+   "Q1200957",
+   "Q10551526",
+   "Q7396640",
+   "Q127693126",
+   "Q3624078"
+  ],
+  "p31_labels": [
+   "city-state",
+   "enclave",
+   "landlocked country",
+   "country",
+   "religious complex",
+   "institutional complex",
+   "urban area",
+   "tourist destination",
+   "confessional state",
+   "sacerdotal state",
+   "successor state",
+   "sovereign state"
+  ]
+ },
+ "Venezuela": {
+  "qid": "Q717",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Vietnam": {
+  "qid": "Q881",
+  "p31": [
+   "Q3624078",
+   "Q849866",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "communist state",
+   "country"
+  ]
+ },
+ "Vietnam War": {
+  "qid": "Q8740",
+  "p31": [
+   "Q864113"
+  ],
+  "p31_labels": [
+   "proxy war"
+  ]
+ },
+ "Vincent van Gogh": {
+  "qid": "Q5582",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Vineland": {
+  "qid": "Q2738674",
+  "p31": [
+   "Q7725634"
+  ],
+  "p31_labels": [
+   "literary work"
+  ]
+ },
+ "Vinícius Júnior": {
+  "qid": "Q28973866",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Viola Davis": {
+  "qid": "Q229181",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Vladimir Putin": {
+  "qid": "Q7747",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Volodymyr Zelenskyy": {
+  "qid": "Q3874799",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Wagner Group": {
+  "qid": "Q36597284",
+  "p31": [
+   "Q1057214",
+   "Q207320",
+   "Q17149090",
+   "Q1788992",
+   "Q17127659"
+  ],
+  "p31_labels": [
+   "private military company",
+   "paramilitary organization",
+   "armed organization",
+   "criminal organization",
+   "terrorist organization"
+  ]
+ },
+ "Wagner Group mutiny": {
+  "qid": "Q119860532",
+  "p31": [
+   "Q511866",
+   "Q124734",
+   "Q350604",
+   "Q1415628",
+   "Q25906438"
+  ],
+  "p31_labels": [
+   "mutiny",
+   "rebellion",
+   "armed conflict",
+   "marching",
+   "attempted coup d'état"
+  ]
+ },
+ "Walt Disney": {
+  "qid": "Q8704",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Washington, D.C.": {
+  "qid": "Q61",
+  "p31": [
+   "Q1093829",
+   "Q1549591",
+   "Q486972",
+   "Q15840617",
+   "Q114496982",
+   "Q257391"
+  ],
+  "p31_labels": [
+   "city in the United States",
+   "big city",
+   "human settlement",
+   "planned national capital",
+   "political city",
+   "federal capital"
+  ]
+ },
+ "Wataru Endo": {
+  "qid": "Q10526787",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Wayne Gretzky": {
+  "qid": "Q209518",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Wayne Rooney": {
+  "qid": "Q266613",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Website": {
+  "qid": "Q35127",
+  "p31": [],
+  "p31_labels": []
+ },
+ "White House": {
+  "qid": "Q35525",
+  "p31": [
+   "Q1802963",
+   "Q52177058",
+   "Q2114972"
+  ],
+  "p31_labels": [
+   "mansion",
+   "civic building",
+   "presidential palace"
+  ]
+ },
+ "Whitney Houston": {
+  "qid": "Q34389",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Wiki": {
+  "qid": "Q171",
+  "p31": [
+   "Q134995802"
+  ],
+  "p31_labels": [
+   "type of website"
+  ]
+ },
+ "Wikimedia Foundation": {
+  "qid": "Q180",
+  "p31": [
+   "Q163740",
+   "Q708676",
+   "Q157031"
+  ],
+  "p31_labels": [
+   "nonprofit organization",
+   "charitable organization",
+   "foundation"
+  ]
+ },
+ "Wikipedia": {
+  "qid": "Q52",
+  "p31": [
+   "Q33120876",
+   "Q1293664",
+   "Q114955954",
+   "Q122759350",
+   "Q118140435",
+   "Q1322494",
+   "Q115471117",
+   "Q102440913"
+  ],
+  "p31_labels": [
+   "Wikimedia content project",
+   "open content",
+   "crowdsourced project",
+   "user-generated content platform",
+   "very large online platform",
+   "sociotope",
+   "self-depicting entity",
+   "digital As good"
+  ]
+ },
+ "Willem Dafoe": {
+  "qid": "Q188772",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "William Henry Harrison": {
+  "qid": "Q11869",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "William IV": {
+  "qid": "Q130822",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "William Shakespeare": {
+  "qid": "Q692",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "William, Prince of Wales": {
+  "qid": "Q36812",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Wimbledon Championships": {
+  "qid": "Q41520",
+  "p31": [
+   "Q114608872",
+   "Q47443726"
+  ],
+  "p31_labels": [
+   "annual sporting event",
+   "recurring tennis tournament"
+  ]
+ },
+ "Winston Churchill": {
+  "qid": "Q8016",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Wolfgang Amadeus Mozart": {
+  "qid": "Q254",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Woman": {
+  "qid": "Q467",
+  "p31": [],
+  "p31_labels": []
+ },
+ "World Athletics Championships": {
+  "qid": "Q182653",
+  "p31": [
+   "Q18608583",
+   "Q11783626",
+   "Q1344963"
+  ],
+  "p31_labels": [
+   "recurring sporting event",
+   "athletics meeting",
+   "world championship"
+  ]
+ },
+ "World War I": {
+  "qid": "Q361",
+  "p31": [
+   "Q103495",
+   "Q11514315"
+  ],
+  "p31_labels": [
+   "world war",
+   "historical period"
+  ]
+ },
+ "World War II": {
+  "qid": "Q362",
+  "p31": [
+   "Q103495",
+   "Q11514315"
+  ],
+  "p31_labels": [
+   "world war",
+   "historical period"
+  ]
+ },
+ "World Wide Web": {
+  "qid": "Q466",
+  "p31": [
+   "Q121182",
+   "Q65966993"
+  ],
+  "p31_labels": [
+   "information system",
+   "hypertext system"
+  ]
+ },
+ "XXXTentacion": {
+  "qid": "Q28561969",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Yemen": {
+  "qid": "Q805",
+  "p31": [
+   "Q3624078",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country"
+  ]
+ },
+ "Yevgeny Prigozhin": {
+  "qid": "Q20850503",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Yitzhak Rabin": {
+  "qid": "Q34060",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Yom Kippur War": {
+  "qid": "Q49100",
+  "p31": [
+   "Q198"
+  ],
+  "p31_labels": [
+   "war"
+  ]
+ },
+ "Zac Efron": {
+  "qid": "Q45229",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Zendaya": {
+  "qid": "Q189489",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Zinedine Zidane": {
+  "qid": "Q1835",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Zootopia": {
+  "qid": "Q15270647",
+  "p31": [
+   "Q202866"
+  ],
+  "p31_labels": [
+   "animated film"
+  ]
+ },
+ "english wikipedia": {
+  "qid": "Q328",
+  "p31": [
+   "Q10876391"
+  ],
+  "p31_labels": [
+   "Wikipedia language edition"
+  ]
+ },
+ "main page": {
+  "qid": "Q5296",
+  "p31": [
+   "Q17442446",
+   "Q14204246",
+   "Q15633587",
+   "Q4663903"
+  ],
+  "p31_labels": [
+   "Wikimedia internal item",
+   "Wikimedia project page",
+   "MediaWiki main namespace page",
+   "Wikimedia portal"
+  ]
+ },
+ "Antarctica": {
+  "qid": "Q51",
+  "p31": [
+   "Q5107",
+   "Q82794",
+   "Q312461",
+   "Q2418896",
+   "Q2221906"
+  ],
+  "p31_labels": [
+   "continent",
+   "region",
+   "terra nullius",
+   "part of the world",
+   "geographic location"
+  ]
+ },
+ "Bitcoin": {
+  "qid": "Q131723",
+  "p31": [
+   "Q341",
+   "Q132364",
+   "Q20514253",
+   "Q8142",
+   "Q756202",
+   "Q19892282",
+   "Q13479982",
+   "Q1643989",
+   "Q986008"
+  ],
+  "p31_labels": [
+   "free software",
+   "communication protocol",
+   "blockchain",
+   "currency",
+   "reserve currency",
+   "crypto asset",
+   "cryptocurrency",
+   "legal tender",
+   "payment system"
+  ]
+ },
+ "Charles Darwin": {
+  "qid": "Q1035",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "DNA": {
+  "qid": "Q7430",
+  "p31": [
+   "Q47154513"
+  ],
+  "p31_labels": [
+   "structural class of chemical entities"
+  ]
+ },
+ "Egypt's pyramids": {
+  "qid": "Q175582",
+  "p31": [
+   "Q839954"
+  ],
+  "p31_labels": [
+   "archaeological site"
+  ]
+ },
+ "Eiffel Tower": {
+  "qid": "Q243",
+  "p31": [
+   "Q1440476",
+   "Q1440300",
+   "Q2319498"
+  ],
+  "p31_labels": [
+   "lattice tower",
+   "observation tower",
+   "architectural landmark"
+  ]
+ },
+ "French fries": {
+  "qid": "Q152088",
+  "p31": [
+   "Q10514020"
+  ],
+  "p31_labels": [
+   "potato dish"
+  ]
+ },
+ "Golden Gate Bridge": {
+  "qid": "Q44440",
+  "p31": [
+   "Q12570",
+   "Q12042110",
+   "Q7814330",
+   "Q537127"
+  ],
+  "p31_labels": [
+   "suspension bridge",
+   "steel bridge",
+   "toll bridge",
+   "road bridge"
+  ]
+ },
+ "Istanbul": {
+  "qid": "Q406",
+  "p31": [
+   "Q2716259",
+   "Q27554677",
+   "Q174844",
+   "Q51929311",
+   "Q2264924",
+   "Q1549591",
+   "Q15661340"
+  ],
+  "p31_labels": [
+   "metropolitan municipality in Turkey",
+   "former capital",
+   "megacity",
+   "largest city",
+   "port city",
+   "big city",
+   "ancient city"
+  ]
+ },
+ "Marie Curie": {
+  "qid": "Q7186",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Medusa": {
+  "qid": "Q160730",
+  "p31": [
+   "Q22988604"
+  ],
+  "p31_labels": [
+   "mythological Greek character"
+  ]
+ },
+ "Mickey Mouse": {
+  "qid": "Q11934",
+  "p31": [
+   "Q119228985",
+   "Q1114461",
+   "Q15711870",
+   "Q15773317",
+   "Q15773347",
+   "Q1569167",
+   "Q112161269",
+   "Q386208"
+  ],
+  "p31_labels": [
+   "anthropomorphic mouse",
+   "comics character",
+   "animated character",
+   "television character",
+   "film character",
+   "video game character",
+   "Disney core universe character",
+   "mascot character"
+  ]
+ },
+ "Mount Fuji": {
+  "qid": "Q39231",
+  "p31": [
+   "Q1330974",
+   "Q3393392",
+   "Q11571545",
+   "Q169358",
+   "Q11588709",
+   "Q8502"
+  ],
+  "p31_labels": [
+   "active volcano",
+   "highest point",
+   "isolated peak",
+   "stratovolcano",
+   "shintaisan",
+   "mountain"
+  ]
+ },
+ "Napoleon Bonaparte": {
+  "qid": "Q517",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Paris": {
+  "qid": "Q90",
+  "p31": [
+   "Q484170",
+   "Q22923920",
+   "Q200250",
+   "Q1200957",
+   "Q208511",
+   "Q51929311",
+   "Q1187811",
+   "Q1549591",
+   "Q1422929",
+   "Q108178728",
+   "Q1066984",
+   "Q11418818",
+   "Q134445478",
+   "Q2240381",
+   "Q471822"
+  ],
+  "p31_labels": [
+   "commune of France",
+   "territorial collectivity of France with special status",
+   "metropolis",
+   "tourist destination",
+   "global city",
+   "largest city",
+   "college town",
+   "big city",
+   "primate city",
+   "national capital",
+   "financial center",
+   "commercial capital city",
+   "cultural capital",
+   "fashion capital",
+   "megalopolis"
+  ]
+ },
+ "Pokémon": {
+  "qid": "Q864",
+  "p31": [
+   "Q196600"
+  ],
+  "p31_labels": [
+   "media franchise"
+  ]
+ },
+ "Rome": {
+  "qid": "Q220",
+  "p31": [
+   "Q902814",
+   "Q3685476",
+   "Q1200957",
+   "Q200250",
+   "Q51929311",
+   "Q1187811",
+   "Q1549591",
+   "Q747074",
+   "Q108178728"
+  ],
+  "p31_labels": [
+   "border city",
+   "abolished municipality in Italy",
+   "tourist destination",
+   "metropolis",
+   "largest city",
+   "college town",
+   "big city",
+   "comune of Italy",
+   "national capital"
+  ]
+ },
+ "Sherlock Holmes": {
+  "qid": "Q4653",
+  "p31": [
+   "Q15632617",
+   "Q3658341",
+   "Q15773347",
+   "Q15773317"
+  ],
+  "p31_labels": [
+   "fictional human",
+   "literary character",
+   "film character",
+   "television character"
+  ]
+ },
+ "Stonehenge": {
+  "qid": "Q39671",
+  "p31": [
+   "Q935773",
+   "Q4989906",
+   "Q839954",
+   "Q16735822",
+   "Q1035294"
+  ],
+  "p31_labels": [
+   "cromlech",
+   "monument",
+   "archaeological site",
+   "history museum",
+   "henge"
+  ]
+ },
+ "Sydney": {
+  "qid": "Q3130",
+  "p31": [
+   "Q515",
+   "Q200250",
+   "Q1549591",
+   "Q51929311",
+   "Q11271835",
+   "Q208511",
+   "Q1066984"
+  ],
+  "p31_labels": [
+   "city",
+   "metropolis",
+   "big city",
+   "largest city",
+   "state capital",
+   "global city",
+   "financial center"
+  ]
+ },
+ "The American Revolution": {
+  "qid": "Q192769",
+  "p31": [
+   "Q10931",
+   "Q2738074"
+  ],
+  "p31_labels": [
+   "revolution",
+   "political movement"
+  ]
+ },
+ "The Battle of Waterloo": {
+  "qid": "Q48314",
+  "p31": [
+   "Q178561"
+  ],
+  "p31_labels": [
+   "battle"
+  ]
+ },
+ "The Black Death": {
+  "qid": "Q42005",
+  "p31": [
+   "Q3241045",
+   "Q12184"
+  ],
+  "p31_labels": [
+   "disease outbreak",
+   "pandemic"
+  ]
+ },
+ "The Industrial Revolution": {
+  "qid": "Q2269",
+  "p31": [
+   "Q11514315"
+  ],
+  "p31_labels": [
+   "historical period"
+  ]
+ },
+ "The Last Supper": {
+  "qid": "Q51633",
+  "p31": [
+   "Q1406161",
+   "Q626066",
+   "Q106355253"
+  ],
+  "p31_labels": [
+   "artistic theme",
+   "banquet",
+   "gospel episode"
+  ]
+ },
+ "The Scream": {
+  "qid": "Q471379",
+  "p31": [
+   "Q18573970"
+  ],
+  "p31_labels": [
+   "group of paintings"
+  ]
+ },
+ "The Starry Night": {
+  "qid": "Q45585",
+  "p31": [
+   "Q3305213"
+  ],
+  "p31_labels": [
+   "painting"
+  ]
+ },
+ "The Thinker": {
+  "qid": "Q18003128",
+  "p31": [
+   "Q28890616"
+  ],
+  "p31_labels": [
+   "group of casts"
+  ]
+ },
+ "Thor": {
+  "qid": "Q42952",
+  "p31": [
+   "Q16513881",
+   "Q842697"
+  ],
+  "p31_labels": [
+   "Norse deity",
+   "thunder deity"
+  ]
+ },
+ "Tokyo": {
+  "qid": "Q1490",
+  "p31": [
+   "Q124313007",
+   "Q1025961",
+   "Q1200957",
+   "Q200250",
+   "Q208511",
+   "Q174844",
+   "Q51929311",
+   "Q1549591",
+   "Q50337",
+   "Q200250",
+   "Q1066984"
+  ],
+  "p31_labels": [
+   "metropolitan prefecture",
+   "capital of Japan",
+   "tourist destination",
+   "metropolis",
+   "global city",
+   "megacity",
+   "largest city",
+   "big city",
+   "prefecture of Japan",
+   "metropolis",
+   "financial center"
+  ]
+ },
+ "Venice": {
+  "qid": "Q641",
+  "p31": [
+   "Q747074",
+   "Q581830",
+   "Q2264924",
+   "Q515",
+   "Q1549591",
+   "Q4115680"
+  ],
+  "p31_labels": [
+   "comune of Italy",
+   "carfree city",
+   "port city",
+   "city",
+   "big city",
+   "Italian city-state"
+  ]
+ },
+ "Zeus": {
+  "qid": "Q34201",
+  "p31": [
+   "Q842697",
+   "Q22989102",
+   "Q1589492",
+   "Q113103481"
+  ],
+  "p31_labels": [
+   "thunder deity",
+   "Greek deity",
+   "King of the Gods",
+   "Olympian god"
+  ]
+ },
+ "a chef": {
+  "qid": "Q3499072",
+  "p31": [
+   "Q28640",
+   "Q4164871"
+  ],
+  "p31_labels": [
+   "profession",
+   "position"
+  ]
+ },
+ "a firefighter": {
+  "qid": "Q107711",
+  "p31": [
+   "Q28640",
+   "Q108300140",
+   "Q1914636",
+   "Q12737077"
+  ],
+  "p31_labels": [
+   "profession",
+   "occupation group according to ISCO-08",
+   "activity",
+   "occupation"
+  ]
+ },
+ "an astronaut": {
+  "qid": "Q11631",
+  "p31": [
+   "Q12737077"
+  ],
+  "p31_labels": [
+   "occupation"
+  ]
+ },
+ "artificial intelligence": {
+  "qid": "Q11660",
+  "p31": [
+   "Q112057532",
+   "Q123370638",
+   "Q125161275"
+  ],
+  "p31_labels": [
+   "type of technology",
+   "branch of computer science",
+   "type of intelligence"
+  ]
+ },
+ "autumn": {
+  "qid": "Q1314",
+  "p31": [
+   "Q15275719"
+  ],
+  "p31_labels": [
+   "recurring event"
+  ]
+ },
+ "ballet": {
+  "qid": "Q41425",
+  "p31": [
+   "Q45971958",
+   "Q107357104",
+   "Q7777573"
+  ],
+  "p31_labels": [
+   "performing arts genre",
+   "type of dance",
+   "theatrical genre"
+  ]
+ },
+ "bamboo": {
+  "qid": "Q670887",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "baseball": {
+  "qid": "Q5369",
+  "p31": [
+   "Q349",
+   "Q13137940"
+  ],
+  "p31_labels": [
+   "sport",
+   "sport with racquet/stick/club"
+  ]
+ },
+ "basketball": {
+  "qid": "Q5372",
+  "p31": [
+   "Q31629",
+   "Q212434",
+   "Q47728"
+  ],
+  "p31_labels": [
+   "type of sport",
+   "Olympic sport",
+   "hobby"
+  ]
+ },
+ "black holes": {
+  "qid": "Q589",
+  "p31": [
+   "Q17444909"
+  ],
+  "p31_labels": [
+   "astronomical object type"
+  ]
+ },
+ "bread": {
+  "qid": "Q7802",
+  "p31": [
+   "Q19861951"
+  ],
+  "p31_labels": [
+   "type of food or dish"
+  ]
+ },
+ "camera": {
+  "qid": "Q15328",
+  "p31": [
+   "Q140424281"
+  ],
+  "p31_labels": [
+   "type of device"
+  ]
+ },
+ "capitalism": {
+  "qid": "Q6206",
+  "p31": [
+   "Q1641112",
+   "Q49773"
+  ],
+  "p31_labels": [
+   "social formation",
+   "social movement"
+  ]
+ },
+ "cheese": {
+  "qid": "Q10943",
+  "p31": [
+   "Q19861951"
+  ],
+  "p31_labels": [
+   "type of food or dish"
+  ]
+ },
+ "chess": {
+  "qid": "Q718",
+  "p31": [
+   "Q131436",
+   "Q31629",
+   "Q7858742",
+   "Q4438147",
+   "Q47728",
+   "Q573573",
+   "Q20478894"
+  ],
+  "p31_labels": [
+   "board game",
+   "type of sport",
+   "two-player game",
+   "game-based sport",
+   "hobby",
+   "abstract strategy game",
+   "table sports"
+  ]
+ },
+ "chocolate": {
+  "qid": "Q195",
+  "p31": [],
+  "p31_labels": []
+ },
+ "coffee": {
+  "qid": "Q8486",
+  "p31": [],
+  "p31_labels": []
+ },
+ "courage": {
+  "qid": "Q208160",
+  "p31": [
+   "Q157811"
+  ],
+  "p31_labels": [
+   "virtue"
+  ]
+ },
+ "curiosity": {
+  "qid": "Q366791",
+  "p31": [
+   "Q775842"
+  ],
+  "p31_labels": [
+   "desire"
+  ]
+ },
+ "democracy": {
+  "qid": "Q7174",
+  "p31": [
+   "Q1307214",
+   "Q183039",
+   "Q12909644",
+   "Q28108"
+  ],
+  "p31_labels": [
+   "form of government",
+   "form of state",
+   "political ideology",
+   "political system"
+  ]
+ },
+ "electricity": {
+  "qid": "Q12725",
+  "p31": [],
+  "p31_labels": []
+ },
+ "evolution by natural selection": {
+  "qid": "Q43478",
+  "p31": [],
+  "p31_labels": []
+ },
+ "football (soccer)": {
+  "qid": "Q2736",
+  "p31": [
+   "Q31629",
+   "Q216048",
+   "Q212434",
+   "Q4356073",
+   "Q47728"
+  ],
+  "p31_labels": [
+   "type of sport",
+   "team sport",
+   "Olympic sport",
+   "spectator sport",
+   "hobby"
+  ]
+ },
+ "friendship": {
+  "qid": "Q491",
+  "p31": [],
+  "p31_labels": []
+ },
+ "giraffe": {
+  "qid": "Q862089",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "gold": {
+  "qid": "Q897",
+  "p31": [
+   "Q11344",
+   "Q1924900",
+   "Q271449"
+  ],
+  "p31_labels": [
+   "chemical element",
+   "metallic material",
+   "precious metal"
+  ]
+ },
+ "golf": {
+  "qid": "Q5377",
+  "p31": [
+   "Q31629",
+   "Q13137940",
+   "Q212434",
+   "Q47728"
+  ],
+  "p31_labels": [
+   "type of sport",
+   "sport with racquet/stick/club",
+   "Olympic sport",
+   "hobby"
+  ]
+ },
+ "graffiti": {
+  "qid": "Q17514",
+  "p31": [
+   "Q1792379"
+  ],
+  "p31_labels": [
+   "art genre"
+  ]
+ },
+ "gratitude": {
+  "qid": "Q2728730",
+  "p31": [],
+  "p31_labels": []
+ },
+ "gravity": {
+  "qid": "Q11412",
+  "p31": [
+   "Q104934",
+   "Q1293220",
+   "Q118193027"
+  ],
+  "p31_labels": [
+   "fundamental interaction",
+   "physical phenomenon",
+   "interaction"
+  ]
+ },
+ "haiku": {
+  "qid": "Q37707",
+  "p31": [
+   "Q110220157",
+   "Q89522629"
+  ],
+  "p31_labels": [
+   "poetry genre",
+   "poetic form"
+  ]
+ },
+ "hamburger": {
+  "qid": "Q6663",
+  "p31": [
+   "Q19861951",
+   "Q749316",
+   "Q746549"
+  ],
+  "p31_labels": [
+   "type of food or dish",
+   "snack",
+   "dish"
+  ]
+ },
+ "honey": {
+  "qid": "Q10987",
+  "p31": [
+   "Q25403900",
+   "Q1783121"
+  ],
+  "p31_labels": [
+   "food ingredient",
+   "organic matter"
+  ]
+ },
+ "hope": {
+  "qid": "Q190507",
+  "p31": [
+   "Q60539479"
+  ],
+  "p31_labels": [
+   "positive emotion"
+  ]
+ },
+ "hurricanes": {
+  "qid": "Q8092",
+  "p31": [
+   "Q118733512"
+  ],
+  "p31_labels": [
+   "type of cyclone"
+  ]
+ },
+ "ice cream": {
+  "qid": "Q13233",
+  "p31": [],
+  "p31_labels": []
+ },
+ "infinity": {
+  "qid": "Q205",
+  "p31": [
+   "Q24034552"
+  ],
+  "p31_labels": [
+   "mathematical concept"
+  ]
+ },
+ "insomnia": {
+  "qid": "Q1869874",
+  "p31": [
+   "Q112193867",
+   "Q130753312"
+  ],
+  "p31_labels": [
+   "type of disease",
+   "symptom type"
+  ]
+ },
+ "jazz": {
+  "qid": "Q8341",
+  "p31": [
+   "Q188451",
+   "Q627436"
+  ],
+  "p31_labels": [
+   "music genre",
+   "field of work"
+  ]
+ },
+ "jealousy": {
+  "qid": "Q6545811",
+  "p31": [],
+  "p31_labels": []
+ },
+ "justice": {
+  "qid": "Q13189320",
+  "p31": [
+   "Q576639",
+   "Q129510955"
+  ],
+  "p31_labels": [
+   "essentially contested concept",
+   "type of value"
+  ]
+ },
+ "lion": {
+  "qid": "Q140",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "loneliness": {
+  "qid": "Q223270",
+  "p31": [],
+  "p31_labels": []
+ },
+ "nostalgia": {
+  "qid": "Q12151852",
+  "p31": [],
+  "p31_labels": []
+ },
+ "opera": {
+  "qid": "Q1344",
+  "p31": [
+   "Q188451",
+   "Q7777573",
+   "Q112248470"
+  ],
+  "p31_labels": [
+   "music genre",
+   "theatrical genre",
+   "type of dramatico-musical work"
+  ]
+ },
+ "origami": {
+  "qid": "Q83357",
+  "p31": [
+   "Q56055944",
+   "Q1799072",
+   "Q47728"
+  ],
+  "p31_labels": [
+   "type of arts",
+   "method",
+   "hobby"
+  ]
+ },
+ "pasta": {
+  "qid": "Q178",
+  "p31": [],
+  "p31_labels": []
+ },
+ "patience": {
+  "qid": "Q12846123",
+  "p31": [
+   "Q157811",
+   "Q686919"
+  ],
+  "p31_labels": [
+   "virtue",
+   "seven virtues"
+  ]
+ },
+ "photosynthesis": {
+  "qid": "Q11982",
+  "p31": [
+   "Q2996394"
+  ],
+  "p31_labels": [
+   "biological process"
+  ]
+ },
+ "pi": {
+  "qid": "Q167",
+  "p31": [
+   "Q173091",
+   "Q12916",
+   "Q186509",
+   "Q83155724",
+   "Q121960184"
+  ],
+  "p31_labels": [
+   "transcendental number",
+   "real number",
+   "mathematical constant",
+   "UCUM constant",
+   "ratio of lengths"
+  ]
+ },
+ "pizza": {
+  "qid": "Q177",
+  "p31": [
+   "Q19861951"
+  ],
+  "p31_labels": [
+   "type of food or dish"
+  ]
+ },
+ "plate tectonics": {
+  "qid": "Q7950",
+  "p31": [
+   "Q17737"
+  ],
+  "p31_labels": [
+   "theory"
+  ]
+ },
+ "poker": {
+  "qid": "Q80131",
+  "p31": [
+   "Q122841050",
+   "Q8187769"
+  ],
+  "p31_labels": [
+   "card game type",
+   "economic activity"
+  ]
+ },
+ "radio": {
+  "qid": "Q872",
+  "p31": [
+   "Q268592",
+   "Q11016"
+  ],
+  "p31_labels": [
+   "industry",
+   "technology"
+  ]
+ },
+ "rainbows": {
+  "qid": "Q1052",
+  "p31": [
+   "Q483247"
+  ],
+  "p31_labels": [
+   "phenomenon"
+  ]
+ },
+ "refrigerator": {
+  "qid": "Q37828",
+  "p31": [],
+  "p31_labels": []
+ },
+ "shadows": {
+  "qid": "Q160020",
+  "p31": [],
+  "p31_labels": []
+ },
+ "snow": {
+  "qid": "Q7561",
+  "p31": [
+   "Q118733587"
+  ],
+  "p31_labels": [
+   "type of meteorological phenomenon"
+  ]
+ },
+ "surfing": {
+  "qid": "Q159992",
+  "p31": [
+   "Q31629",
+   "Q212434",
+   "Q47728",
+   "Q268592"
+  ],
+  "p31_labels": [
+   "type of sport",
+   "Olympic sport",
+   "hobby",
+   "industry"
+  ]
+ },
+ "sushi": {
+  "qid": "Q46383",
+  "p31": [
+   "Q19861951"
+  ],
+  "p31_labels": [
+   "type of food or dish"
+  ]
+ },
+ "tacos": {
+  "qid": "Q191655",
+  "p31": [
+   "Q19861951"
+  ],
+  "p31_labels": [
+   "type of food or dish"
+  ]
+ },
+ "tea": {
+  "qid": "Q6097",
+  "p31": [],
+  "p31_labels": []
+ },
+ "television": {
+  "qid": "Q289",
+  "p31": [
+   "Q121132955"
+  ],
+  "p31_labels": [
+   "type of mass media"
+  ]
+ },
+ "tennis": {
+  "qid": "Q847",
+  "p31": [
+   "Q31629",
+   "Q47728"
+  ],
+  "p31_labels": [
+   "type of sport",
+   "hobby"
+  ]
+ },
+ "the Acropolis": {
+  "qid": "Q131013",
+  "p31": [
+   "Q131668",
+   "Q93342462"
+  ],
+  "p31_labels": [
+   "acropolis",
+   "Ancient Greek archaeological site"
+  ]
+ },
+ "the Amazon rainforest": {
+  "qid": "Q177567",
+  "p31": [
+   "Q199403"
+  ],
+  "p31_labels": [
+   "tropical forest"
+  ]
+ },
+ "the Big Bang": {
+  "qid": "Q323",
+  "p31": [
+   "Q1190554",
+   "Q3318059",
+   "Q64831112",
+   "Q2326055",
+   "Q107394304",
+   "Q126059692",
+   "Q3239681"
+  ],
+  "p31_labels": [
+   "occurrence",
+   "cosmological model",
+   "big bang",
+   "unmoved mover",
+   "argument for God's existence",
+   "scientific evidence for the existence of God",
+   "scientific theory"
+  ]
+ },
+ "the Buddha": {
+  "qid": "Q9441",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "the Colosseum": {
+  "qid": "Q10285",
+  "p31": [
+   "Q7362268",
+   "Q839954",
+   "Q483110",
+   "Q112132548",
+   "Q3867560",
+   "Q112132522",
+   "Q124830411",
+   "Q133444874"
+  ],
+  "p31_labels": [
+   "Roman amphitheatre",
+   "archaeological site",
+   "stadium",
+   "archaeological artifact museum",
+   "Italian national museum",
+   "historical civil building museum",
+   "Museum of the Italian Ministry of Culture",
+   "roman ruins"
+  ]
+ },
+ "the French Revolution": {
+  "qid": "Q6534",
+  "p31": [
+   "Q13418847",
+   "Q10931"
+  ],
+  "p31_labels": [
+   "historical event",
+   "revolution"
+  ]
+ },
+ "the Grand Canyon": {
+  "qid": "Q118841",
+  "p31": [
+   "Q150784"
+  ],
+  "p31_labels": [
+   "canyon"
+  ]
+ },
+ "the Great Wall of China": {
+  "qid": "Q12501",
+  "p31": [
+   "Q1784293"
+  ],
+  "p31_labels": [
+   "cordon"
+  ]
+ },
+ "the Mona Lisa": {
+  "qid": "Q12418",
+  "p31": [
+   "Q3305213"
+  ],
+  "p31_labels": [
+   "painting"
+  ]
+ },
+ "the Moon": {
+  "qid": "Q405",
+  "p31": [
+   "Q109645860",
+   "Q85793519",
+   "Q1086783"
+  ],
+  "p31_labels": [
+   "planetary moon",
+   "planetary-mass moon",
+   "regular moon"
+  ]
+ },
+ "the Moon landing": {
+  "qid": "Q43653",
+  "p31": [
+   "Q752783"
+  ],
+  "p31_labels": [
+   "human spaceflight"
+  ]
+ },
+ "the Nile": {
+  "qid": "Q3392",
+  "p31": [
+   "Q4022"
+  ],
+  "p31_labels": [
+   "river"
+  ]
+ },
+ "the Olympic Games": {
+  "qid": "Q5389",
+  "p31": [
+   "Q135740745"
+  ],
+  "p31_labels": [
+   "international multi-sport event"
+  ]
+ },
+ "the Renaissance": {
+  "qid": "Q4692",
+  "p31": [
+   "Q968159",
+   "Q2198855"
+  ],
+  "p31_labels": [
+   "art movement",
+   "cultural movement"
+  ]
+ },
+ "the Titanic": {
+  "qid": "Q25173",
+  "p31": [
+   "Q3362987",
+   "Q12859788",
+   "Q852190"
+  ],
+  "p31_labels": [
+   "four funnel liner",
+   "steamship",
+   "shipwreck"
+  ]
+ },
+ "the bicycle": {
+  "qid": "Q11442",
+  "p31": [
+   "Q334166",
+   "Q109734237",
+   "Q140424465"
+  ],
+  "p31_labels": [
+   "mode of transport",
+   "individual means of transport",
+   "type of vehicle"
+  ]
+ },
+ "the brain": {
+  "qid": "Q1073",
+  "p31": [
+   "Q103812529",
+   "Q112826905"
+  ],
+  "p31_labels": [
+   "organ type",
+   "class of anatomical entity"
+  ]
+ },
+ "the butterfly": {
+  "qid": "Q11946202",
+  "p31": [
+   "Q55983715"
+  ],
+  "p31_labels": [
+   "organisms known by a particular common name"
+  ]
+ },
+ "the clock": {
+  "qid": "Q376",
+  "p31": [
+   "Q96251598"
+  ],
+  "p31_labels": [
+   "type of object"
+  ]
+ },
+ "the dolphin": {
+  "qid": "Q7369",
+  "p31": [
+   "Q55983715"
+  ],
+  "p31_labels": [
+   "organisms known by a particular common name"
+  ]
+ },
+ "the elephant": {
+  "qid": "Q7378",
+  "p31": [
+   "Q55983715",
+   "Q16521"
+  ],
+  "p31_labels": [
+   "organisms known by a particular common name",
+   "taxon"
+  ]
+ },
+ "the fall of the Berlin Wall": {
+  "qid": "Q69163529",
+  "p31": [
+   "Q13418847",
+   "Q331483"
+  ],
+  "p31_labels": [
+   "historical event",
+   "demolition"
+  ]
+ },
+ "the greenhouse effect": {
+  "qid": "Q41560",
+  "p31": [
+   "Q16332653",
+   "Q25261"
+  ],
+  "p31_labels": [
+   "meteorological phenomenon",
+   "meteorology"
+  ]
+ },
+ "the guitar": {
+  "qid": "Q6607",
+  "p31": [
+   "Q110295396"
+  ],
+  "p31_labels": [
+   "type of musical instrument"
+  ]
+ },
+ "the heart": {
+  "qid": "Q1072",
+  "p31": [
+   "Q103812529",
+   "Q112826905"
+  ],
+  "p31_labels": [
+   "organ type",
+   "class of anatomical entity"
+  ]
+ },
+ "the helicopter": {
+  "qid": "Q34486",
+  "p31": [
+   "Q20026879"
+  ],
+  "p31_labels": [
+   "aircraft lift class"
+  ]
+ },
+ "the honeybee": {
+  "qid": "Q102857",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "the internet": {
+  "qid": "Q75",
+  "p31": [
+   "Q11224256",
+   "Q1301371",
+   "Q12579633",
+   "Q11384"
+  ],
+  "p31_labels": [
+   "IP network",
+   "computer network",
+   "invention",
+   "wide area network"
+  ]
+ },
+ "the light bulb": {
+  "qid": "Q47616",
+  "p31": [
+   "Q12579633"
+  ],
+  "p31_labels": [
+   "invention"
+  ]
+ },
+ "the marathon": {
+  "qid": "Q40244",
+  "p31": [
+   "Q2312410"
+  ],
+  "p31_labels": [
+   "sports discipline"
+  ]
+ },
+ "the mirror": {
+  "qid": "Q35197",
+  "p31": [
+   "Q63981612"
+  ],
+  "p31_labels": [
+   "product category"
+  ]
+ },
+ "the oak tree": {
+  "qid": "Q12004",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "the octopus": {
+  "qid": "Q40152",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "the penguin": {
+  "qid": "Q384193",
+  "p31": [
+   "Q15632617",
+   "Q1114461",
+   "Q15711870",
+   "Q15773317",
+   "Q15773347",
+   "Q1569167",
+   "Q76450109"
+  ],
+  "p31_labels": [
+   "fictional human",
+   "comics character",
+   "animated character",
+   "television character",
+   "film character",
+   "video game character",
+   "mutant"
+  ]
+ },
+ "the periodic table": {
+  "qid": "Q10693",
+  "p31": [
+   "Q732744"
+  ],
+  "p31_labels": [
+   "chemical classification"
+  ]
+ },
+ "the printing press": {
+  "qid": "Q144334",
+  "p31": [
+   "Q2424752"
+  ],
+  "p31_labels": [
+   "product"
+  ]
+ },
+ "the shark": {
+  "qid": "Q7372",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "the smartphone": {
+  "qid": "Q22645",
+  "p31": [],
+  "p31_labels": []
+ },
+ "the speed of light": {
+  "qid": "Q2111",
+  "p31": [
+   "Q173227",
+   "Q15222637",
+   "Q4493384",
+   "Q15088658",
+   "Q188248",
+   "Q83155724",
+   "Q181175"
+  ],
+  "p31_labels": [
+   "physical constant",
+   "unit of speed",
+   "fundamental limit",
+   "measured quantity value",
+   "constant",
+   "UCUM constant",
+   "scalar quantity"
+  ]
+ },
+ "the steam engine": {
+  "qid": "Q12760",
+  "p31": [
+   "Q135841149"
+  ],
+  "p31_labels": [
+   "engine class"
+  ]
+ },
+ "the submarine": {
+  "qid": "Q2811",
+  "p31": [
+   "Q121289744"
+  ],
+  "p31_labels": [
+   "submarine type"
+  ]
+ },
+ "the telescope": {
+  "qid": "Q4213",
+  "p31": [
+   "Q12579633"
+  ],
+  "p31_labels": [
+   "invention"
+  ]
+ },
+ "the tomato": {
+  "qid": "Q23501",
+  "p31": [
+   "Q16521",
+   "Q31839438"
+  ],
+  "p31_labels": [
+   "taxon",
+   "food crop"
+  ]
+ },
+ "the umbrella": {
+  "qid": "Q41607",
+  "p31": [],
+  "p31_labels": []
+ },
+ "the violin": {
+  "qid": "Q8355",
+  "p31": [
+   "Q110295396"
+  ],
+  "p31_labels": [
+   "type of musical instrument"
+  ]
+ },
+ "the water cycle": {
+  "qid": "Q81041",
+  "p31": [],
+  "p31_labels": []
+ },
+ "the wolf": {
+  "qid": "Q18498",
+  "p31": [
+   "Q16521",
+   "Q19067"
+  ],
+  "p31_labels": [
+   "taxon",
+   "apex predator"
+  ]
+ },
+ "thunderstorms": {
+  "qid": "Q2857578",
+  "p31": [
+   "Q118733587"
+  ],
+  "p31_labels": [
+   "type of meteorological phenomenon"
+  ]
+ },
+ "tiger": {
+  "qid": "Q19939",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "vaccines": {
+  "qid": "Q134808",
+  "p31": [
+   "Q1595418"
+  ],
+  "p31_labels": [
+   "remedy"
+  ]
+ },
+ "volcanoes": {
+  "qid": "Q8072",
+  "p31": [],
+  "p31_labels": []
+ },
+ "volleyball": {
+  "qid": "Q1734",
+  "p31": [
+   "Q31629",
+   "Q47728"
+  ],
+  "p31_labels": [
+   "type of sport",
+   "hobby"
+  ]
+ },
+ "wine": {
+  "qid": "Q282",
+  "p31": [],
+  "p31_labels": []
+ },
+ "zebra": {
+  "qid": "Q32789",
+  "p31": [
+   "Q16521"
+  ],
+  "p31_labels": [
+   "taxon"
+  ]
+ },
+ "_unresolved": [
+  "a doctor",
+  "chess grandmasters",
+  "rugby",
+  "the colour blue",
+  "the colour red",
+  "the desert heat",
+  "the key"
+ ],
+ "Akbar": {
+  "qid": "Q8597",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Alawites": {
+  "qid": "Q209496",
+  "p31": [
+   "Q111252415",
+   "Q19097"
+  ],
+  "p31_labels": [
+   "religious group",
+   "sect"
+  ]
+ },
+ "Annette Bening": {
+  "qid": "Q190602",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Arab–Israeli conflict": {
+  "qid": "Q8669",
+  "p31": [
+   "Q766875",
+   "Q11422542"
+  ],
+  "p31_labels": [
+   "ethnic conflict",
+   "international conflict"
+  ]
+ },
+ "Ash Wednesday": {
+  "qid": "Q123542",
+  "p31": [
+   "Q60075825"
+  ],
+  "p31_labels": [
+   "Christian holy day"
+  ]
+ },
+ "Balfour Declaration": {
+  "qid": "Q187152",
+  "p31": [
+   "Q52947181",
+   "Q49848"
+  ],
+  "p31_labels": [
+   "public statement",
+   "document"
+  ]
+ },
+ "Bangladesh": {
+  "qid": "Q902",
+  "p31": [
+   "Q3624078",
+   "Q465613",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "people's republic",
+   "country"
+  ]
+ },
+ "Belarus": {
+  "qid": "Q184",
+  "p31": [
+   "Q3624078",
+   "Q179164",
+   "Q619610",
+   "Q6256",
+   "Q123480"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "unitary state",
+   "social state",
+   "country",
+   "landlocked country"
+  ]
+ },
+ "Boeing B-52 Stratofortress": {
+  "qid": "Q174534",
+  "p31": [
+   "Q15056993"
+  ],
+  "p31_labels": [
+   "aircraft family"
+  ]
+ },
+ "Burkina Faso": {
+  "qid": "Q965",
+  "p31": [
+   "Q3624078",
+   "Q123480",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "landlocked country",
+   "country"
+  ]
+ },
+ "Charles Dickens": {
+  "qid": "Q5686",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Charles III": {
+  "qid": "Q43274",
+  "p31": [
+   "Q5",
+   "Q9134365"
+  ],
+  "p31_labels": [
+   "human",
+   "Monarch of the United Kingdom"
+  ]
+ },
+ "Chernobyl disaster": {
+  "qid": "Q486",
+  "p31": [
+   "Q15725976",
+   "Q3193890"
+  ],
+  "p31_labels": [
+   "nuclear disaster",
+   "environmental disaster"
+  ]
+ },
+ "Chris Pine": {
+  "qid": "Q23466",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Courteney Cox": {
+  "qid": "Q58912",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Crucifixion of Jesus": {
+  "qid": "Q51636",
+  "p31": [
+   "Q106355253",
+   "Q3235597",
+   "Q1855439"
+  ],
+  "p31_labels": [
+   "gospel episode",
+   "crucifixion",
+   "deicide"
+  ]
+ },
+ "David": {
+  "qid": "Q41370",
+  "p31": [
+   "Q20643955",
+   "Q5"
+  ],
+  "p31_labels": [
+   "human biblical figure",
+   "human"
+  ]
+ },
+ "Dolly Parton": {
+  "qid": "Q180453",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Durrës": {
+  "qid": "Q83285",
+  "p31": [
+   "Q515",
+   "Q1549591",
+   "Q486972"
+  ],
+  "p31_labels": [
+   "city",
+   "big city",
+   "human settlement"
+  ]
+ },
+ "Earth": {
+  "qid": "Q2",
+  "p31": [
+   "Q3504248",
+   "Q2221906",
+   "Q82794"
+  ],
+  "p31_labels": [
+   "inner planet of the Solar System",
+   "geographic location",
+   "region"
+  ]
+ },
+ "Earthquake": {
+  "qid": "Q7944",
+  "p31": [],
+  "p31_labels": []
+ },
+ "Edward Teller": {
+  "qid": "Q6733",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Elvis Presley": {
+  "qid": "Q303",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Erling Haaland": {
+  "qid": "Q28967995",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Europe": {
+  "qid": "Q46",
+  "p31": [
+   "Q2418896",
+   "Q5107",
+   "Q82794",
+   "Q2221906"
+  ],
+  "p31_labels": [
+   "part of the world",
+   "continent",
+   "region",
+   "geographic location"
+  ]
+ },
+ "Evangeline Lilly": {
+  "qid": "Q160392",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "FC Barcelona": {
+  "qid": "Q7156",
+  "p31": [
+   "Q103229495",
+   "Q20639856",
+   "Q10651067"
+  ],
+  "p31_labels": [
+   "men's association football team",
+   "professional sports team",
+   "representation team"
+  ]
+ },
+ "Finland": {
+  "qid": "Q33",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q179164",
+   "Q63791824"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "unitary state",
+   "country bordering the Baltic Sea"
+  ]
+ },
+ "Franklin D. Roosevelt": {
+  "qid": "Q8007",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Google": {
+  "qid": "Q95",
+  "p31": [
+   "Q4830453",
+   "Q18388277",
+   "Q5988403",
+   "Q891723",
+   "Q19967801"
+  ],
+  "p31_labels": [
+   "business",
+   "technology company",
+   "identity provider",
+   "public company",
+   "online service"
+  ]
+ },
+ "Grey's Anatomy": {
+  "qid": "Q438406",
+  "p31": [
+   "Q5398426"
+  ],
+  "p31_labels": [
+   "television series"
+  ]
+ },
+ "Harvard University": {
+  "qid": "Q13371",
+  "p31": [
+   "Q902104",
+   "Q15936437",
+   "Q1188663",
+   "Q23002054"
+  ],
+  "p31_labels": [
+   "private university",
+   "research university",
+   "colonial colleges",
+   "private not-for-profit educational institution"
+  ]
+ },
+ "Indonesia": {
+  "qid": "Q252",
+  "p31": [
+   "Q3624078",
+   "Q11815167",
+   "Q1520223",
+   "Q112099",
+   "Q6256",
+   "Q99541706",
+   "Q179164"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "archipelagic state",
+   "constitutional republic",
+   "island country",
+   "country",
+   "historical unrecognized state",
+   "unitary state"
+  ]
+ },
+ "Instagram": {
+  "qid": "Q209330",
+  "p31": [
+   "Q3220391",
+   "Q35127",
+   "Q2721136",
+   "Q559856",
+   "Q6576792",
+   "Q118140435",
+   "Q4202064"
+  ],
+  "p31_labels": [
+   "social networking service",
+   "website",
+   "image hosting service",
+   "online video platform",
+   "online community",
+   "very large online platform",
+   "publishing platform"
+  ]
+ },
+ "Islamic State": {
+  "qid": "Q2429253",
+  "p31": [
+   "Q131401",
+   "Q17149090",
+   "Q4204060",
+   "Q21512251",
+   "Q23037160"
+  ],
+  "p31_labels": [
+   "caliphate",
+   "armed organization",
+   "Islamic state",
+   "self-proclaimed state",
+   "quasi-state"
+  ]
+ },
+ "J. K. Rowling": {
+  "qid": "Q34660",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jamaica": {
+  "qid": "Q766",
+  "p31": [
+   "Q202686",
+   "Q918240",
+   "Q112099",
+   "Q6256",
+   "Q3624078",
+   "Q11815167"
+  ],
+  "p31_labels": [
+   "Commonwealth realm",
+   "territorial evolution of the British Empire",
+   "island country",
+   "country",
+   "sovereign state",
+   "archipelagic state"
+  ]
+ },
+ "Japan": {
+  "qid": "Q17",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "country"
+  ]
+ },
+ "JavaScript": {
+  "qid": "Q2005",
+  "p31": [
+   "Q187432",
+   "Q28920810",
+   "Q21562092",
+   "Q3839507",
+   "Q28920813",
+   "Q241317",
+   "Q1993334",
+   "Q12772052",
+   "Q9143",
+   "Q28923017",
+   "Q211496",
+   "Q180868",
+   "Q1051282",
+   "Q193076",
+   "Q275596",
+   "Q30267",
+   "Q1135914"
+  ],
+  "p31_labels": [
+   "scripting language",
+   "prototype-based programming language",
+   "imperative programming language",
+   "functional programming language",
+   "event-driven programming language",
+   "computing platform",
+   "interpreted language",
+   "multi-paradigm programming language",
+   "programming language",
+   "strict programming language",
+   "high-level programming language",
+   "prototype-based programming",
+   "generic programming",
+   "functional programming",
+   "imperative programming",
+   "aspect-oriented programming",
+   "event-driven programming"
+  ]
+ },
+ "Jawaharlal Nehru": {
+  "qid": "Q1047",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Jim Carrey": {
+  "qid": "Q40504",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Joaquin Phoenix": {
+  "qid": "Q185140",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "John Paul I": {
+  "qid": "Q37278",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Johnny Cash": {
+  "qid": "Q42775",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Joshua": {
+  "qid": "Q7734",
+  "p31": [
+   "Q20643955"
+  ],
+  "p31_labels": [
+   "human biblical figure"
+  ]
+ },
+ "Kazakhstan": {
+  "qid": "Q232",
+  "p31": [
+   "Q3624078",
+   "Q179164",
+   "Q123480",
+   "Q140892892",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "unitary state",
+   "landlocked country",
+   "country sometimes considered transcontinental",
+   "country"
+  ]
+ },
+ "Kim Jong Un": {
+  "qid": "Q56226",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Labour Day": {
+  "qid": "Q47499",
+  "p31": [
+   "Q1197685",
+   "Q2558684",
+   "Q1914636",
+   "Q11483816",
+   "Q1445650",
+   "Q141183115"
+  ],
+  "p31_labels": [
+   "public holiday",
+   "world day",
+   "activity",
+   "annual event",
+   "holiday",
+   "Q141183115"
+  ]
+ },
+ "Lok Sabha": {
+  "qid": "Q230003",
+  "p31": [
+   "Q375928",
+   "Q110315658"
+  ],
+  "p31_labels": [
+   "lower house",
+   "elected legislative house"
+  ]
+ },
+ "Madagascar": {
+  "qid": "Q1019",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q179164",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "unitary state",
+   "country"
+  ]
+ },
+ "Maldives": {
+  "qid": "Q826",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q6256",
+   "Q11815167"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "country",
+   "archipelagic state"
+  ]
+ },
+ "Manipur": {
+  "qid": "Q1193",
+  "p31": [
+   "Q12443800"
+  ],
+  "p31_labels": [
+   "state of India"
+  ]
+ },
+ "Marilyn Monroe": {
+  "qid": "Q4616",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Mauritius": {
+  "qid": "Q1027",
+  "p31": [
+   "Q3624078",
+   "Q112099",
+   "Q11815167",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "island country",
+   "archipelagic state",
+   "country"
+  ]
+ },
+ "Moldova": {
+  "qid": "Q217",
+  "p31": [
+   "Q3624078",
+   "Q179164",
+   "Q123480",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "unitary state",
+   "landlocked country",
+   "country"
+  ]
+ },
+ "Nagorno-Karabakh": {
+  "qid": "Q44302",
+  "p31": [
+   "Q82794"
+  ],
+  "p31_labels": [
+   "region"
+  ]
+ },
+ "Nicki Minaj": {
+  "qid": "Q162202",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Nobel Prize": {
+  "qid": "Q7191",
+  "p31": [
+   "Q107655869"
+  ],
+  "p31_labels": [
+   "group of awards"
+  ]
+ },
+ "North Korea": {
+  "qid": "Q423",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q465613",
+   "Q1309121",
+   "Q3303230"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "people's republic",
+   "hermit kingdom",
+   "pariah state"
+  ]
+ },
+ "Odyssey": {
+  "qid": "Q35160",
+  "p31": [
+   "Q7725634"
+  ],
+  "p31_labels": [
+   "literary work"
+  ]
+ },
+ "Ohio": {
+  "qid": "Q1397",
+  "p31": [
+   "Q35657"
+  ],
+  "p31_labels": [
+   "U.S. state"
+  ]
+ },
+ "Once Upon a Time in Hollywood": {
+  "qid": "Q47300912",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Ottoman Empire": {
+  "qid": "Q12560",
+  "p31": [
+   "Q48349",
+   "Q3024240",
+   "Q12759805"
+  ],
+  "p31_labels": [
+   "empire",
+   "historical country",
+   "sultanate"
+  ]
+ },
+ "Paul McCartney": {
+  "qid": "Q2599",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Portugal": {
+  "qid": "Q45",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q20181813",
+   "Q140892892"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "colonial power",
+   "country sometimes considered transcontinental"
+  ]
+ },
+ "Prayagraj": {
+  "qid": "Q162442",
+  "p31": [
+   "Q515"
+  ],
+  "p31_labels": [
+   "city"
+  ]
+ },
+ "Ramadan": {
+  "qid": "Q41662",
+  "p31": [
+   "Q15275719",
+   "Q47018901",
+   "Q186081",
+   "Q2110808",
+   "Q178915",
+   "Q82821"
+  ],
+  "p31_labels": [
+   "recurring event",
+   "calendar month",
+   "time interval",
+   "religious behaviour",
+   "fasting in Islam",
+   "tradition"
+  ]
+ },
+ "Rihanna": {
+  "qid": "Q36844",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Ronald Reagan": {
+  "qid": "Q9960",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Saladin": {
+  "qid": "Q8581",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Scotland": {
+  "qid": "Q22",
+  "p31": [
+   "Q3336843",
+   "Q6266",
+   "Q6256"
+  ],
+  "p31_labels": [
+   "constituent country of the United Kingdom",
+   "nation",
+   "country"
+  ]
+ },
+ "Selena": {
+  "qid": "Q23543",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Shanghai Cooperation Organisation": {
+  "qid": "Q485207",
+  "p31": [
+   "Q245065",
+   "Q29428403"
+  ],
+  "p31_labels": [
+   "intergovernmental organization",
+   "pentad"
+  ]
+ },
+ "Singapore": {
+  "qid": "Q334",
+  "p31": [
+   "Q3624078",
+   "Q133442",
+   "Q112099",
+   "Q2264924",
+   "Q1549591",
+   "Q902814",
+   "Q6256",
+   "Q208511",
+   "Q108178728"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "city-state",
+   "island country",
+   "port city",
+   "big city",
+   "border city",
+   "country",
+   "global city",
+   "national capital"
+  ]
+ },
+ "Six-Day War": {
+  "qid": "Q49077",
+  "p31": [
+   "Q198"
+  ],
+  "p31_labels": [
+   "war"
+  ]
+ },
+ "Steve Irwin": {
+  "qid": "Q126513",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "The Shining (film)": {
+  "qid": "Q186341",
+  "p31": [
+   "Q11424"
+  ],
+  "p31_labels": [
+   "film"
+  ]
+ },
+ "Thomas Jefferson": {
+  "qid": "Q11812",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Turkey": {
+  "qid": "Q43",
+  "p31": [
+   "Q3624078",
+   "Q1323642",
+   "Q51576574",
+   "Q6256",
+   "Q619610",
+   "Q339834",
+   "Q859563",
+   "Q127693126"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "transcontinental country",
+   "Mediterranean country",
+   "country",
+   "social state",
+   "regional power",
+   "secular state",
+   "successor state"
+  ]
+ },
+ "Ukraine": {
+  "qid": "Q212",
+  "p31": [
+   "Q3624078",
+   "Q6256",
+   "Q179164",
+   "Q7270",
+   "Q619610",
+   "Q4209223",
+   "Q4835091"
+  ],
+  "p31_labels": [
+   "sovereign state",
+   "country",
+   "unitary state",
+   "republic",
+   "social state",
+   "Rechtsstaat",
+   "territory"
+  ]
+ },
+ "William McKinley": {
+  "qid": "Q35041",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Winona Ryder": {
+  "qid": "Q101797",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Xi Jinping": {
+  "qid": "Q15031",
+  "p31": [
+   "Q5"
+  ],
+  "p31_labels": [
+   "human"
+  ]
+ },
+ "Yandex": {
+  "qid": "Q5281",
+  "p31": [
+   "Q891723",
+   "Q4830453",
+   "Q4182287"
+  ],
+  "p31_labels": [
+   "public company",
+   "business",
+   "search engine"
+  ]
+ },
+ "YouTube": {
+  "qid": "Q866",
+  "p31": [
+   "Q59152282",
+   "Q559856",
+   "Q122759350",
+   "Q6576792",
+   "Q102336293",
+   "Q35127"
+  ],
+  "p31_labels": [
+   "video streaming service",
+   "online video platform",
+   "user-generated content platform",
+   "online community",
+   "live streaming service",
+   "website"
+  ]
+ }
+}
