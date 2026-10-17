@@ -88,9 +88,35 @@ These are 128 top firings in layer 18, each knocked out at its firing token with
   3. Use a stronger intervention, e.g. zero the neuron at every firing position in the window, not just the last.
   4. Run the layers after L in float32. This fits on the 5090 but not on 24 GB cards.
 
+**Knockout redesign, tested on 8B** (`ablate:18:0-63:ps1`)
+
+Every task now carries its own noise floor. Each firing is knocked out two ways: at the firing token only (LAST),
+and at every token in the window where the neuron fires at ≥ half its median top firing (PASSAGE).
+
+| | Rows | Median KL | Share above floor p90 | Share above 10× floor median | Tokens zeroed (median) |
+|---|---|---|---|---|---|
+| Noise floor (32 contexts, alone vs batched) | 32 | 3.3e-4 (p90 1.8e-3) | – | – | – |
+| LAST, top firings | 640 | 8.8e-4 | 31% | 18% | 1 |
+| LAST, bottom firings | 320 | 9.4e-4 | 29% | 17% | 1 |
+| LAST, random control tokens | 640 | 3.8e-4 | 7% | 0% | 1 |
+| PASSAGE, top firings | 640 | 7.3e-4 | 33% | 18% | 1 |
+| PASSAGE, random control tokens | 640 | 0 | 0% | 0% | 0 |
+
+- **Controls behave like the floor.** Knocking out a neuron on random tokens, where it doesn't fire, gives about the
+  noise floor: zeroing a near-zero value still perturbs bf16 by that much. So each neuron's control rows can serve as
+  its own null.
+- **PASSAGE barely differs from LAST.** In a 128-token window, the median top firing has only one token at ≥ half
+  strength, so top firings are mostly single-token spikes.
+- **Per neuron:** 11 of 64 (LAST) and 15 of 64 (PASSAGE) have a median top-firing KL above the task's floor p90; 4 of 64
+  have one above 3× it. At layer 18, most single neurons' effect on the next token is at bf16's noise level.
+- **Same estimate, two batch layouts:** a knockout measured in the task's batch and alone ranks the same (Spearman 0.90).
+- **Speed and memory:** 44.8 s for 64 neurons with both modes, 9,290 tokens/s. Peak GPU memory 17.6 GB allocated
+  (20.8 GB reserved), so the ablate task fits on 24 GB cards.
+
 **Early full-map arithmetic** (5090 speeds; rented cards come in phase C)
 - **Observe:** 10M tokens at about 3,280 tokens/s ≈ 51 min of one 5090. That's small.
-- **Ablate:** all 442,368 neurons = 6,912 tasks of 64 neurons at about 29 s each ≈ 56 GPU-hours on a 5090.
+- **Ablate:** all 442,368 neurons = 6,912 tasks of 64 neurons. That's about 29 s each with one mode (≈ 56 GPU-hours on a 5090),
+  or about 45 s with both modes and the noise floor (≈ 86 GPU-hours).
   **Ablation dominates the cost.** Starting the knockout rows from the cached residual at layer L (a TODO) would
   cut this, especially for late layers.
 - **Output:** about 6 MB per ablate task, so about 40 GB in total. The launcher's drain-to-local keeps the bucket under
