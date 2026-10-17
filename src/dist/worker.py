@@ -44,16 +44,23 @@ def terminate_self(log):
     if not pod:
         log("not on RunPod (no RUNPOD_POD_ID): exiting without terminating anything")
         return
+    # What works on RunPod's images (seen 2026-10-17): `runpodctl remove pod` (older runpodctl; `pod delete` is unknown
+    # there). The REST DELETE with the pod-scoped $RUNPOD_API_KEY is refused (403). Never raise: the launcher's
+    # backstop terminates any pod whose worker wrote exit.json.
+    for cmd in (["runpodctl", "remove", "pod", pod], ["runpodctl", "pod", "delete", pod]):
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+            log(f"{' '.join(cmd[:3])} -> {r.returncode} {r.stdout.strip()[:200]} {r.stderr.strip()[:200]}")
+            if r.returncode == 0 and "removed" in (r.stdout + r.stderr).lower():
+                return
+        except Exception as e:  # noqa: BLE001
+            log(f"{' '.join(cmd[:3])} failed: {e!r}")
     try:
-        r = subprocess.run(["runpodctl", "pod", "delete", pod], capture_output=True, text=True, timeout=60)
-        log(f"runpodctl pod delete -> {r.returncode} {r.stdout.strip()[:200]} {r.stderr.strip()[:200]}")
-        if r.returncode == 0:
-            return
-    except Exception as e:
-        log(f"runpodctl failed: {e!r}")
-    from dist import runpod_api
-    runpod_api.terminate(pod, key=os.environ.get("RUNPOD_API_KEY"))
-    log("terminated via REST")
+        from dist import runpod_api
+        runpod_api.terminate(pod, key=os.environ.get("RUNPOD_API_KEY"))
+        log("terminated via REST")
+    except Exception as e:  # noqa: BLE001
+        log(f"REST terminate failed ({e}); the launcher will terminate this pod")
 
 
 def main():
