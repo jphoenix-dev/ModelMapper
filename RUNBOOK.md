@@ -1,0 +1,107 @@
+# Runbook: distributed neuron map (RunPod)
+
+The code is in `src/dist/`. A run lives in one store, either a local folder or an S3-compatible bucket. The store holds the
+config, corpus shards, task manifest, results, claims and logs. Workers are interruptible RunPod Community pods.
+Each one runs `src/dist/worker.py`: it takes pending tasks at random until none are left, then terminates its own
+pod. The launcher runs on the desktop. It keeps N pods alive, replaces interrupted ones and enforces the spend cap.
+
+| File | Does |
+|---|---|
+| `storage.py` | The store: local folder or `s3://bucket/prefix` (R2, AWS, …) |
+| `make_run.py` | Writes config (model and pinned revision), corpus shards, promptset and manifest |
+| `tasks.py` | `run_task`: `observe:<shard>`, `merge:observe`, `ablate:<L>:<a>-<b>:<ps>` |
+| `manifest.py` | Pending, ready and claimed state (no torch) |
+| `worker.py` | Container entrypoint: the worker loop, logs, self-termination |
+| `launcher.py` | `run`, `status`, `terminate`, `billing` |
+| `runpod_api.py` | REST calls: create, list, terminate |
+| `compare_runs.py` | Two runs side by side, e.g. 5090 vs rented GPU, or merge vs single shard |
+
+## Credentials
+
+Put these in `.env` (gitignored) or the environment. Never put them in the image or in git.
+
+- `RUNPOD_API_KEY`: used on the desktop only. Pods get their own pod-scoped key from RunPod.
+- `S3_ENDPOINT_URL`, `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`: an R2 token limited to the one bucket. The launcher
+  passes these to pods as env vars.
+- `HF_TOKEN`: optional, for faster hub downloads.
+
+## 1. Set up a run
+
+```
+python src/dist/make_run.py --store s3://<bucket>/<run> --model Qwen/Qwen3-8B \
+    --shard-tokens 2000000 --n-shards 5 --k 40 --batch-tokens 4096 --ablate 18:0-63 --window 128
+```
+
+The revision defaults to the pinned hash in `make_run.py` (Qwen3-8B `b968826d…`). Every result records the model,
+revision, dtype, GPU, driver, CUDA, torch and git commit in `results/<task>/meta.json`.
+
+## 2. Test locally first (5090, or `MODEL_MAPPER_DEVICE=cpu DIST_DTYPE=float32` for a CPU smoke test)
+
+```
+python src/dist/worker.py --store <store> --no-terminate            # all tasks
+python src/dist/worker.py --store <store> --task observe:shard_00000 --no-terminate
+```
+
+A local copy in `$MODEL_MAPPER_MODELS` is used only if its safetensors match the pinned revision's sha256.
+
+## 3. Build and push the image
+
+```
+docker build --build-arg GIT_COMMIT=$(git rev-parse HEAD) -t <registry>/model-mapper:<tag> .
+docker run --gpus all --env-file .env -e DIST_STORE=<store> <registry>/model-mapper:<tag> --no-terminate
+docker push <registry>/model-mapper:<tag>
+```
+
+## 4. Launch
+
+```
+python src/dist/launcher.py run --store <store> --image <registry>/model-mapper:<tag> \
+    --gpu "NVIDIA GeForce RTX 4090" --pods 3 --max-pods 3 --max-spend 5 --interval 120
+```
+
+- Pods are Community Cloud, interruptible, 40 GB container disk, `volumeInGb 0`, no network volume, one GPU type.
+- Spend is estimated as each pod's `costPerHr` × its lifetime. The launcher won't start a pod that could take the
+  estimate past `--max-spend` within one interval, and terminates everything if the cap is reached.
+- `--max-launches` (default 20) caps the total number of pods started, replacements included.
+- Ctrl-C terminates every pod of the run.
+
+## 5. Monitor
+
+```
+python src/dist/launcher.py status --store <store>
+```
+
+This lists the pods plus pending, ready and claimed tasks. In the store:
+
+- `logs/<pod>/boot.json`: model ready time, first task start;
+- `logs/<pod>/task_*.json`: seconds, tokens, tokens/s per task;
+- `logs/<pod>/heartbeat.json`, `logs/<pod>/error_*.json`;
+- `logs/launcher.json`: the spend ledger.
+
+## 6. Stop
+
+```
+python src/dist/launcher.py terminate --store <store>   # terminates every pod of the run, then lists pods (expect 0)
+```
+
+Every session ends with this, or with the launcher's own final listing, showing zero pods. Then check the RunPod
+billing page, or `launcher.py billing`.
+
+## 7. Merge
+
+`merge:observe` runs as a task once every observe shard is done, on a worker or locally with `worker.py --task
+merge:observe`. Ablate tasks wait for it. To compare two runs:
+
+```
+python src/dist/compare_runs.py <store A> <store B> --out compare.json
+```
+
+## Behaviour to know
+
+- **Restartable tasks.** A task is done only when `results/<task>/_DONE` exists, and that marker is written last. A
+  killed task is simply recomputed. Duplicate runs are harmless.
+- **Soft claims.** `claims/<task>` steers workers apart and expires after 45 minutes, so an interrupted worker's
+  task gets picked up again.
+- **Self-termination.** A worker with nothing left to do terminates its pod with `runpodctl pod delete $RUNPOD_POD_ID`,
+  falling back to REST `DELETE`. The launcher also terminates finished and stopped pods as a backstop. It is not yet
+  verified that the pod-scoped key can delete its own pod; phase C checks this.

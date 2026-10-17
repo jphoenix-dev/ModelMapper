@@ -1,0 +1,7 @@
+# allowlist: only what the Dockerfile copies
+*
+!requirements-dist.txt
+!src/config.py
+!src/neurons.py
+!src/dist/
+src/dist/__pycache__
