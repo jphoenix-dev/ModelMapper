@@ -86,6 +86,17 @@ unmapped neurons with the most name-specific profile, 16 verified causally (rand
 model pointed to (chess notation +14.2, 24 Hours of Le Mans +10.2, NGC 7319, hydrogeology, selenium tetrachloride...).
 This is the search-then-verify core for loop v2. Verification is now Luna-bound (GPU 19% busy).
 
+## Next step after loop v2 run 1 (James, 17 Oct night)
+**Question-side test: are concept neurons "say it" neurons or meaning neurons?** Every map so far was found and tested
+with the concept as the ANSWER. Not yet done: switch a concept's key neurons off and ask questions with the concept IN
+the question and a fact as the answer ("How tall is the Eiffel Tower?", "Who designed it?", "Which city is it in?").
+Needs new forward passes (existing data covers only the naming questions). Design: ~50 mapped concepts incl. the Eiffel
+Tower; Luna writes ~8 fact questions each (name in the question, short factual answer), keep those Qwen answers
+correctly; zero the concept's k_mean and top-5 neurons; measure the fact-answer log-odds drop vs the naming drop.
+Controls: random same-layer neurons; another concept's key neurons (specificity: Eiffel neurons on Big Ben facts);
+split early (layers 8-10 cluster) vs late (28-35) key neurons. Prediction (stated before running): late 'say' neurons
+leave facts intact; early neurons may not. Cost: cents of Luna, ~15 min GPU.
+
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts
    one late neuron is close to 'say this word'. It usually sits alongside 1-3 legible attribute neurons ('Georgia',
