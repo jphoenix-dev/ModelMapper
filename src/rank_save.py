@@ -17,6 +17,8 @@ Usage: RECALL_VARIANT=V3 ANSWER_DISCOVERY=0 CONCEPT_OUT_DIR=<dir> python src/ran
 """
 import json
 import os
+
+import numpy as np
 import sys
 
 import concept_pipeline as cp
@@ -64,7 +66,8 @@ def main():
                 return [b - x for b, x in zip(base, los)], [p_of(x) for x in los]
             ps = pipe.batch_probs(pairs, ctx)
             return [b - logit(p) for b, p in zip(base, ps)], ps
-        drop1 = {u: sum(per_prompt([u])[0]) / len(rp) for u in top}
+        pp = {u: per_prompt([u])[0] for u in top}                     # per-prompt drops for all 200 (kept)
+        drop1 = {u: sum(pp[u]) / len(rp) for u in top}
         single = sorted(top, key=lambda u: -drop1[u])
         km = kf = None
         for k in KS:
@@ -75,7 +78,18 @@ def main():
         if "k_mean" in orig and (km, kf) != (orig["k_mean"], orig["k_flip"]):
             mismatch = f"k_mean/k_flip {km}/{kf} vs original {orig['k_mean']}/{orig['k_flip']}"
             print(f"{concept:<30} MISMATCH: {mismatch} (ranking saved, flagged)", flush=True)
+        # save everything (James, 17 Oct): all 200 candidates with their single-neuron drops (per prompt too), and the
+        # full per-neuron attribution / answer-position activation maps (L x W, fp16). Per-position attribution maps
+        # (~800 MB per concept) are NOT saved - too large; their per-neuron totals are (the 'attr' array).
+        arr_dir = cp.OUT / "rank_save_arrays"; arr_dir.mkdir(exist_ok=True)
+        np.savez_compressed(arr_dir / f"{cp.slug(concept)}.npz", attr=A["attr"].half().cpu().numpy(),
+                            last_act=A["last_act"].half().cpu().numpy(), top200=np.array(top, dtype=np.int32))
+        per_prompt_drop = {f"L{l}:{n}": [round(x, 3) for x in pp[(l, n)]] for l, n in single}
+        candidates = [{"neuron": f"L{l}:{n}", "single_drop": round(drop1[(l, n)], 3), "attr_rank": top.index((l, n)),
+                       "act_answer_pos": round(A["last_act"][l, n].item(), 3)} for l, n in single]
         out[concept] = {"answer_token": pipe.tok.decode([tid[0]]), "recall": len(rp), "k_mean": km, "k_flip": kf,
+                        "base_per_prompt": [round(x, 3) for x in base], "prompts": rp, "candidates_all200": candidates,
+                        "per_prompt_drop_all200": per_prompt_drop,
                         "baseline_mean_logodds": round(sum(base) / len(base), 3),
                         "top": [{"neuron": f"L{l}:{n}", "single_drop": round(drop1[(l, n)], 3), "attr_rank": top.index((l, n)),
                                  "act_answer_pos": round(A["last_act"][l, n].item(), 3)} for l, n in single[:TOPN]],
