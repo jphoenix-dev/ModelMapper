@@ -19,6 +19,7 @@ import math
 import platform
 import random
 import time
+import traceback
 from pathlib import Path
 
 import numpy as np
@@ -178,7 +179,8 @@ def map_concept(pipe, concept, spec, arrays_path, code_commit="unknown"):
 
 def map_batch(pipe, specs, out_dir, code_commit="unknown", done=()):
     """specs: {concept: spec}. Appends one JSON record per concept to out_dir/records.jsonl (skipping `done`); arrays to
-    out_dir/arrays/<slug>.npz. A concept that raises is recorded as status 'failed' with the error, never dropped."""
+    out_dir/arrays/<slug>.npz. A concept that raises is recorded as status 'failed' with the error and traceback, never
+    dropped; CUDA out-of-memory and device-side errors are re-raised (systemic: the runner retries the whole batch)."""
     out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     with open(out_dir / "records.jsonl", "a", encoding="utf-8") as f:
         for c, spec in specs.items():
@@ -186,8 +188,15 @@ def map_batch(pipe, specs, out_dir, code_commit="unknown", done=()):
                 continue
             try:
                 rec = map_concept(pipe, c, spec, out_dir / "arrays" / f"{cp.slug(c)}.npz", code_commit)
+            except torch.cuda.OutOfMemoryError:
+                raise                                      # systemic: CUDA state may be bad - the runner retries the batch
+            except RuntimeError as e:
+                if "device-side assert" in str(e) or "CUDA error" in str(e):
+                    raise
+                rec = {"concept": c, "row": {"status": "failed", "detail": repr(e)[:500], "traceback": traceback.format_exc()[-3000:]},
+                       "rank": None, "v2": {"provenance": provenance(pipe, code_commit)}}
             except Exception as e:  # noqa: BLE001
-                rec = {"concept": c, "row": {"status": "failed", "detail": repr(e)[:500]}, "rank": None,
-                       "v2": {"provenance": provenance(pipe, code_commit)}}
+                rec = {"concept": c, "row": {"status": "failed", "detail": repr(e)[:500], "traceback": traceback.format_exc()[-3000:]},
+                       "rank": None, "v2": {"provenance": provenance(pipe, code_commit)}}
             f.write(json.dumps(rec, ensure_ascii=False) + "\n"); f.flush()
             yield rec

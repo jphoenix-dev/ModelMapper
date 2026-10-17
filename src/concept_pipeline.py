@@ -69,9 +69,11 @@ def slug(s):
 
 
 class Pipeline:
-    def __init__(self, model_name, mode="clamp", reply_only=False):
+    def __init__(self, model_name, mode="clamp", reply_only=False, model=None, tok=None):
         self.model_name = model_name
-        self.model, self.tok = load(model_name)
+        # model / tok: pass an already-loaded model (e.g. the distributed runner's revision-pinned, hash-verified load);
+        # loaded by name only when not given (backward-compatible)
+        self.model, self.tok = (model, tok) if model is not None else load(model_name)
         self.model.requires_grad_(False)
         self.L, self.W = self.model.config.num_hidden_layers, self.model.config.intermediate_size
         stats = ROOT / f"data/stats_{model_name.split('/')[-1]}.pt"
