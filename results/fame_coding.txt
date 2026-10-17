@@ -1,0 +1,11 @@
+Dedication of concept neurons by fame (248 recalled concepts in all; 'others' = the other 247).
+
+group                    concepts | neurons  dedicated  median others | always-on share of top-10 slots
+t1_128+                        25 |     186        38%            1.0 | 8%
+t2_64-127                      24 |     163        29%              2 | 7%
+t3_32-63                       12 |      88        31%            2.0 | 5%
+t4_16-31                        3 |      26        27%            2.0 | 3%
+t5_8-15                         4 |      24        67%            0.0 | 10%
+t6_4-7                          1 |       5        60%              0 | 0%
+t7_1-3                          1 |       6        33%            3.0 | 10%
+original (hand-picked)        178 |    1149        41%              1 | 11%

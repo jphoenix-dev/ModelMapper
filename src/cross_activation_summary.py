@@ -85,7 +85,9 @@ def main():
              f"(of {tot_other} others)")
     cls = Counter()
     for row, n, nd in zip(pairs, n_other, n_diff):
-        nsm = n - nd
+        nsm = sum(r >= FIRE for _, r in row["same"])          # same-family firings only (unlabelled concepts excluded)
+        if row["owner"] not in fam:
+            cls["(owner unlabelled) dedicated" if n == 0 else "(owner unlabelled) fires for others"] += 1; continue
         cls["dedicated (no other concept)" if n == 0 else "family-shared (others mostly same family)" if nsm >= nd else
             "broad (>= 10% of other-family concepts)" if nd >= 0.1 * len(row["diff"]) else "a few unrelated"] += 1
     L.append("classes: " + ", ".join(f"{k} {v}" for k, v in cls.most_common()))
@@ -103,22 +105,24 @@ def main():
              f"{sum(3 <= n <= 9 for n in nr)}; >= 10 {sum(n >= 10 for n in nr)}")
     cls2 = Counter()
     for row, n in rest:
-        nd_ = sum(r >= FIRE for _, r in row["diff"]); nsm = n - nd_
+        nd_ = sum(r >= FIRE for _, r in row["diff"]); nsm = sum(r >= FIRE for _, r in row["same"])
+        if row["owner"] not in fam:
+            cls2["(owner unlabelled) dedicated" if n == 0 else "(owner unlabelled) fires for others"] += 1; continue
         cls2["dedicated" if n == 0 else "family-shared" if nsm >= nd_ else "broad" if nd_ >= 0.1 * len(row["diff"]) else "a few unrelated"] += 1
     L.append("  the rest, classes: " + ", ".join(f"{k} {v}" for k, v in cls2.most_common()))
-    fams = sorted({fam[c] for c in concepts})
+    fams = sorted({fam[c] for c in concepts if c in fam})
     L.append("  the rest, per family: pairs | P(fires) same family | different family")
     for f_ in fams:
         rr = [r for r, _ in rest if fam.get(r["owner"]) == f_]
         if rr:
             s_, _, ns_ = rate(rr, "same"); d_, _, _ = rate(rr, "diff")
             L.append(f"    {f_:<12} {len(rr):>4} | {s_:6.1%} (n={ns_}) | {d_:6.1%}")
-    L.append("\nby layer band (answer position): pairs | fires for 0 others | median ratio on different-family concepts")
+    L.append("\nby layer band (answer position): pairs | fires for 0 others | median ratio on different-family (or unlabelled) concepts")
     for lo, hi in ((0, 16), (16, 24), (24, 30), (30, 36)):
         rr = [(row, n) for row, n in zip(pairs, n_other) if lo <= row["layer"] < hi]
         if rr:
             L.append(f"  L{lo}-{hi - 1}: {len(rr):>4} | {sum(n == 0 for _, n in rr) / len(rr):.0%} | "
-                     f"{stx.median(stx.median(r for _, r in row['diff']) for row, _ in rr):+.3f}")
+                     f"{stx.median([stx.median(r for _, r in row['diff'] + row['nofam']) for row, _ in rr if row['diff'] + row['nofam']]):+.3f}")
     # overlap of the top-10 lists themselves
     sets = {c: {e["neuron"] for e in ranks[c]["top"][:TOP]} for c in concepts}
     sp = Counter(); tp = Counter()
