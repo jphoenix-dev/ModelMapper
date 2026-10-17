@@ -12,7 +12,8 @@ Per unit: Luna's meaning groups (stage A) -> group centroids. Measures:
   within    mean cosine between snippets of the same group (reference for 'same meaning')
   hub       for units with >= 3 groups: each group's mean cosine to the other groups' centroids; hub score = top minus
             the mean of the rest; null = 300 random reassignments of snippets to groups (sizes kept) -> per-unit p.
-Output: results/meaning_space.json; summary in meaning_space_summary.py.
+Output: results/meaning_space.json, results/meaning_space_vectors.npz (every unit's whitened context vectors, so
+Luna-free groupings can be computed later); summary in meaning_space_summary.py.
 Usage: python src/meaning_space.py
 """
 import json
@@ -65,7 +66,7 @@ def main():
         return Wh[l]
     print(f"covariance from {n} tokens", flush=True)
     # 2. per unit: capture the firing-position MLP inputs
-    out = {}
+    out = {}; vec_store = {}
     for key, v in units.items():
         names = v["units"]; l = int(names[0][1:].split(":")[0])
         reads = []
@@ -128,9 +129,11 @@ def main():
             rec.update(hub_score=round(hs, 4), hub_group=top, hub_label=groups[top].get("label"),
                        centrality=[round(c, 4) for c in cen], hub_p=round((sum(x >= hs for x in null) + 1) / (NULL + 1), 4))
         out[key] = rec
+        vec_store[key] = X.half().cpu().numpy()             # raw whitened context vectors, for Luna-free analyses
         print(f"{key[:55]:<55} groups {G} | between {min(p['cos'] for p in pairs):+.2f}..{max(p['cos'] for p in pairs):+.2f} | "
               f"within {rec['within_mean']}" + (f" | hub '{rec['hub_label']}' p={rec['hub_p']}" if G >= 3 else ""), flush=True)
     (ROOT / "results/meaning_space.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+    np.savez_compressed(ROOT / "results/meaning_space_vectors.npz", keys=np.array(list(vec_store)), **{f"v{i}": a for i, a in enumerate(vec_store.values())})
 
 
 if __name__ == "__main__":
