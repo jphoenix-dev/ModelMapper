@@ -72,7 +72,7 @@ def main():
         reads = []
         for u in names:
             lu, nu = (int(x) for x in u[1:].split(":"))
-            reads += [mlps(model)[lu].gate_proj.weight[nu].float(), mlps(model)[lu].up_proj.weight[nu].float()]
+            reads += [mlps(model)[lu].gate_proj.weight[nu].detach().float(), mlps(model)[lu].up_proj.weight[nu].detach().float()]
         vecs = []
         for di, p in v["doc_pos"]:
             ids = torch.tensor(toks[starts[di]:starts[di] + p + 1].astype(np.int64), device=DEVICE)[None]

@@ -62,7 +62,7 @@ def main():
                 return lg, st["hf"].clone(), st["act"]
             lb, hb, act = run(False); la, ha, _ = run(True)
             total = hb - ha
-            direct = act * mlps(model)[L].down_proj.weight[:, n].float()
+            direct = act * mlps(model)[L].down_proj.weight[:, n].detach().float()
             lpb, lpa = lb.log_softmax(-1), la.log_softmax(-1)
             kl = (lpb.exp() * (lpb - lpa)).sum().item()
             dlp = lpb - lpa
