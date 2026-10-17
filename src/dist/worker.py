@@ -29,7 +29,7 @@ T_START = time.time()
 
 from dist.storage import open_store  # noqa: E402
 from dist import quota  # noqa: E402
-from dist.manifest import state  # noqa: E402
+from dist.manifest import state, task_key  # noqa: E402
 from dist.tasks import Ctx, run_task  # noqa: E402
 
 IDLE_POLL, IDLE_MAX = 30, 15 * 60
@@ -80,6 +80,7 @@ def main():
 
     store.put_json(f"{lp}/started.json", {"epoch": time.time(), "boot_steps": {k: v for k, v in os.environ.items() if k.startswith("T_")}})
     beat = {"tasks_run": 0, "phase": "loading model"}
+    claim_lock = threading.Lock()
 
     def heartbeat():
         while True:
@@ -87,8 +88,10 @@ def main():
             try:
                 store.put_json(f"{lp}/heartbeat.json", {"epoch": time.time(), "t": now(), "uptime_s": round(time.time() - T_START),
                                                         **{k: v for k, v in beat.items() if k != "claim"}})
-                if beat.get("claim"):                    # keep this worker's claim fresh while it works
-                    store.put_json(beat["claim"], {"worker": wid, "t": time.time()})
+                with claim_lock:                         # keep this worker's claim fresh while it works
+                    if beat.get("claim"):
+                        c = store.get_json(beat["claim"]) or {}
+                        store.put_json(beat["claim"], {**c, "worker": wid, "t": time.time()})
             except Exception as e:  # noqa: BLE001 - a missed heartbeat must never kill the worker
                 print(f"heartbeat failed: {e!r}", flush=True)
     threading.Thread(target=heartbeat, daemon=True).start()
@@ -135,8 +138,16 @@ def main():
                 summary.append({"quota_stop": str(e)}); break
             log(f"quota ok: {q['gb_held']} GB held, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month")
         claim_key = "claims/" + pick.replace(":", "/")
-        store.put_json(claim_key, {"worker": wid, "t": time.time()})
-        beat["claim"] = claim_key
+        # claim, pause, verify: the bucket keeps the last write, so two workers that picked the same task in the same
+        # moment both read back one winner and the other moves on (measured: 5 of 20 tasks ran twice without this)
+        nonce = f"{wid}:{random.random():.12f}"
+        store.put_json(claim_key, {"worker": wid, "nonce": nonce, "t": time.time()})
+        time.sleep(random.uniform(0.5, 2.0))
+        won = (store.get_json(claim_key) or {}).get("nonce") == nonce
+        if not won or store.exists(task_key(pick) + "/_DONE"):
+            log(f"lost the claim on {pick} to another worker; picking again"); continue
+        with claim_lock:
+            beat["claim"] = claim_key
         if "first_task_start" not in boot:
             boot["first_task_start_s"] = round(time.time() - T_START, 1); boot["first_task_start"] = now()
             steps["first_task_start"] = time.time()
@@ -148,11 +159,13 @@ def main():
         except Exception:
             err = traceback.format_exc(); log(f"FAILED {pick}\n{err}")
             store.put_json(f"{lp}/error_{n_run}.json", {"task": pick, "error": err, "t": now()})
-            beat.pop("claim", None); store.delete(claim_key)
+            with claim_lock:
+                beat.pop("claim", None); store.delete(claim_key)
             if a.task or a.once:
                 raise
             time.sleep(5); continue
-        beat.pop("claim", None); store.delete(claim_key)
+        with claim_lock:
+            beat.pop("claim", None); store.delete(claim_key)
         keep = ("seconds", "tokens", "tokens_per_s", "start_epoch", "end_epoch", "compute_s", "io_get_s", "io_get_mb",
                 "io_put_s", "io_put_mb", "gpu_peak_allocated_gb", "gpu_peak_reserved_gb")
         row = {"task": pick, "skipped": meta is None, **({k: meta[k] for k in keep if k in meta} if meta else {})}
