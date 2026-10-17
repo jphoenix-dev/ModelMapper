@@ -39,8 +39,9 @@ def main():
     fam = family_map()
     concepts = [c for c in ranks if c in xs]
     missing_fam = [c for c in concepts if c not in fam]
+    n_missing = len(missing_fam)
     L = [f"Cross-activation: {len(concepts)} concepts, {len(units)} distinct top-{TOP} neurons. 'fires' = >= {FIRE} of its own-concept "
-         f"activation (answer position). Families: {len(set(fam[c] for c in concepts if c in fam))}; concepts without a family: {missing_fam}\n"]
+         f"activation (answer position). Families: {len(set(fam[c] for c in concepts if c in fam))}; concepts without a family (excluded from family comparisons only): {n_missing}\n"]
     pairs, excluded, self_r = [], 0, []
     for a in concepts:
         for e in ranks[a]["top"][:TOP]:
@@ -49,12 +50,15 @@ def main():
                 excluded += 1; continue
             sg = 1.0 if own >= 0 else -1.0; i = ui[u]
             self_r.append(xs[a]["ans"][i] * sg / abs(own))
-            row = {"neuron": u, "owner": a, "layer": int(u[1:].split(":")[0]), "own": own, "same": [], "diff": [], "peak_same": [], "peak_diff": []}
+            row = {"neuron": u, "owner": a, "layer": int(u[1:].split(":")[0]), "own": own, "same": [], "diff": [], "peak_same": [],
+                   "peak_diff": [], "nofam": []}
             for b in concepts:
                 if b == a:
                     continue
                 r = xs[b]["ans"][i] * sg / abs(own); rp = xs[b]["peak"][i] * sg / abs(own)
-                same = fam.get(a) is not None and fam.get(a) == fam.get(b)
+                if a not in fam or b not in fam:              # family unknown (e.g. the fame-stratified sample): counted
+                    row["nofam"].append((b, r)); continue      # for 'fires for N others', not in the family comparison
+                same = fam[a] == fam[b]
                 row["same" if same else "diff"].append((b, r)); row["peak_same" if same else "peak_diff"].append((b, rp))
             pairs.append(row)
     ms = stx.median(self_r)
@@ -67,7 +71,7 @@ def main():
         s, hs, ns = rate(pairs, key_s); d, hd, nd = rate(pairs, key_d)
         L.append(f"\n[{lab}] P(fires for another concept): same family {s:.3%} ({hs}/{ns}) vs different family {d:.3%} ({hd}/{nd}); "
                  f"ratio {s / d if d else float('inf'):.1f}x")
-    n_other = [sum(r >= FIRE for _, r in row["same"] + row["diff"]) for row in pairs]
+    n_other = [sum(r >= FIRE for _, r in row["same"] + row["diff"] + row["nofam"]) for row in pairs]
     n_diff = [sum(r >= FIRE for _, r in row["diff"]) for row in pairs]
     tot_other = len(concepts) - 1
     L.append(f"\nper neuron-owner pair (answer position): fires for 0 other concepts in {sum(n == 0 for n in n_other)}/{len(pairs)}; "
@@ -123,7 +127,7 @@ def main():
         f"{u} x{k} ({', '.join(sorted({fam.get(c, '?') for c in concepts if u in sets[c]}))})" for u, k in multi.most_common() if k >= 3))
     L.append("\nmost broadly firing neurons (answer position; other concepts it fires for, by family):")
     for row, n in sorted(zip(pairs, n_other), key=lambda t: -t[1])[:12]:
-        fs = Counter(fam.get(b, "?") for b, r in row["same"] + row["diff"] if r >= FIRE)
+        fs = Counter(fam.get(b, "fame-sample") for b, r in row["same"] + row["diff"] + row["nofam"] if r >= FIRE)
         L.append(f"  {row['neuron']:<10} (owner {row['owner']}, act {row['own']:+.1f}) fires for {n}: {dict(fs.most_common(5))}")
     L.append("\nexamples of family-shared firing (owner -> other same-family concepts it fires for):")
     ex = [(row, [b for b, r in row["same"] if r >= FIRE]) for row in pairs]

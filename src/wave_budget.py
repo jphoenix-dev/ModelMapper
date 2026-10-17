@@ -47,6 +47,19 @@ def main():
         state_p.write_text(json.dumps(state, indent=1), encoding="utf-8")
         return r
     oai.chat = chat                          # chat_json looks chat up at call time, so it is covered too
+    import pipeline_fast
+    orig_mp = pipeline_fast.FastPipeline.make_prompts
+
+    def make_prompts(self, concept):
+        # Luna sometimes declines an ambiguous obscure title (spec = {"error": ...}, e.g. "A. L. Holt"); the base
+        # pipeline then crashes on spec["answer"]. Record it as wave_free's own 'prompts_failed' instead (counted per tier).
+        try:
+            return orig_mp(self, concept)
+        except KeyError as e:
+            if e.args == ("answer",):
+                raise pipeline_fast.PromptsFailed("Luna returned no answer for this concept (declined, e.g. as ambiguous)")
+            raise
+    pipeline_fast.FastPipeline.make_prompts = make_prompts
     import wave_free
     sys.argv = ["wave_free.py", str(rr_p.relative_to(ROOT))]
     wave_free.main()
