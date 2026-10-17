@@ -284,3 +284,51 @@ task.
 - **Incremental runs.** `make_run --kind map --append --watch N` adds specs as they appear, and `_PREPARE_DONE` closes
   the run. Workers and the launcher wait while a run is open. Tested on CPU: 12 specs trickled in, 6 batches were all
   done, the run closed and the worker exited.
+
+## Projections for the full neuron map (Qwen3-8B, 442,368 neurons)
+
+Assumptions:
+- observe over 10M tokens (the atlas's corpus) as 10 shards of 1M;
+- ablate as 6,912 tasks of 64 neurons, each with both knockout modes and the noise floor;
+- measured per-task times from tonight, on-demand Community prices, and about 6 minutes of boot per pod.
+
+| | RTX 3090 ($0.22/h) | RTX 4090 ($0.34/h) |
+|---|---|---|
+| Observe, 10M tokens | 2.3 GPU-h, $0.51 | 1.6 GPU-h, $0.55 |
+| Ablate, 6,912 × 64 neurons | 217 GPU-h (113 s/task), $48 | 134 GPU-h (70 s/task), $46 |
+| **Total GPU work** | **≈220 GPU-h ≈ $48** | **≈136 GPU-h ≈ $46** |
+| Wall clock at N = 10 pods | ≈22 h | ≈14 h |
+| N = 20 | ≈11 h | ≈7 h |
+| N = 50 | ≈4.5 h | ≈3 h |
+
+Boot overhead adds about N × 6 min of pod time (≈$0.20–1.70), and merging is small.
+
+- **Ablation is about 98% of the cost.** The `TODO` shortcut, starting the knockout rows from the cached residual at
+  layer L, would cut late-layer tasks most.
+- **The cards cost about the same per unit of work.** Choose by availability; the 4090 finishes sooner.
+- **Capacity is the real limit.** Tonight even 2 simultaneous machines needed retries, and 2 of 4 RTX 4090 hosts were
+  faulty. 50 Community pods at once is unlikely, so 10–20 with the mixed list is realistic. Secure Cloud is 2–3×
+  pricier (4090 $0.89/h).
+- **R2:** about 6 MB per ablate task means about 40 GB in total, so drain-to-local keeps the bucket inside the free
+  tier. Requests are about 30 per task, comfortably under 1M a month.
+
+**Recommended task length: 15–30 minutes on the cheapest card.**
+- Pods run many tasks each, so boot amortises over a pod's life, not per task. Task length then only sets how much a
+  lost pod wastes and how evenly the tail finishes.
+- Spot pods aren't offered, so interruptions are rare (stuck or faulty hosts) and longer tasks are fine.
+- **Concretely:**
+  - observe: 1M-token shards (8–14 min);
+  - ablate: about 512 neurons per task (8 × 64, ≈10–15 min on a 4090), not 64 (1–2 min, too many tiny objects and
+    polls);
+  - loop v2: 20 concepts per task (≈8 min locally, ≈15–25 min on cloud).
+
+**Open items and blockers for scale**
+1. **Observe output is 157 MB per shard** (K=40, fp32 values). Store values as fp16 and upload in the background while
+   the next task runs: on slow-upload hosts transfers were 20% of task time.
+2. **The rented 5090 ran at half the local speed.** Speed varies by host, so plan on measured rates and keep timing
+   per task (done: `timeline.py`).
+3. **Learn bad hosts from self-terminated pods too**, not only those the launcher catches mid-boot.
+4. **Attention-head knockouts aren't built** (TODO in `tasks.py`).
+5. **Single-token knockouts on 8B are mostly at the bf16 noise floor** (phase A). Every task now carries its own floor,
+   but the output-side measure is weak for most single neurons, and that is a research question rather than an
+   infrastructure one.
