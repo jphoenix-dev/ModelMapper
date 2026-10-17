@@ -81,7 +81,8 @@ def main():
         u, v = A.get_npz(f"{p}/ablate.npz"), B.get_npz(f"{p}/ablate.npz")
         if u is None or v is None:
             continue
-        key = lambda z: {(int(n), int(k), int(d), int(q)): i for i, (n, k, d, q) in enumerate(zip(z["neuron"], z["kind"], z["doc"], z["pos"]))}  # noqa: E731
+        key = lambda z: {(int(n), int(k), int(d), int(q), int(md)): i for i, (n, k, d, q, md) in  # noqa: E731
+                         enumerate(zip(z["neuron"], z["kind"], z["doc"], z["pos"], z["mode"] if "mode" in z else [0] * len(z["kl"])))}
         ka, kb = key(u), key(v)
         both = sorted(set(ka) & set(kb))
         ia = np.array([ka[x] for x in both]); ib = np.array([kb[x] for x in both])
