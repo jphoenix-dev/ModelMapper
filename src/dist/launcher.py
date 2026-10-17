@@ -70,6 +70,14 @@ cd /app
 pip install -q --no-cache-dir -r requirements-dist.txt > /tmp/step.out 2>&1 || fail "pip install requirements"
 export T_PIP_DONE=$(date +%s.%N)
 step "packages installed: $(python -c 'import torch, transformers; print("torch", torch.__version__, "cuda", torch.version.cuda, "transformers", transformers.__version__)' 2>&1)"
+step "gpu check: CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES-unset} NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES-unset} devices: $(ls /dev/nvidia* 2>&1 | tr '\n' ' ')"
+python - > /tmp/step.out 2>&1 <<'PY' || fail "torch cannot use the GPU"
+import torch
+print("is_available", torch.cuda.is_available(), "count", torch.cuda.device_count())
+x = torch.ones(1024, 1024, device="cuda", dtype=torch.bfloat16)
+print("matmul ok on", torch.cuda.get_device_name(0), float((x @ x).sum()))
+PY
+step "gpu ok: $(tail -c 300 /tmp/step.out | tr '\n' ' ')"
 python src/dist/worker.py > /tmp/step.out 2>&1; rc=$?
 step "worker exited rc=$rc"; tail -c 4000 /tmp/step.out >> $LOG; step "worker log tail saved"
 [ $rc -eq 0 ] || fail "worker"

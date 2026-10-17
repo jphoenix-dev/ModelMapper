@@ -82,6 +82,8 @@ def main():
                 print(f"heartbeat failed: {e!r}", flush=True)
     threading.Thread(target=heartbeat, daemon=True).start()
     ctx = Ctx(store, wid)
+    if os.environ.get("RUNPOD_POD_ID") and not ctx.env["device"].startswith("cuda"):
+        raise SystemExit(f"refusing to run on {ctx.env['device']} on a GPU pod: torch cannot see the GPU ({ctx.env})")
     # epoch seconds of each boot step: container start, boto3 installed, code fetched, packages installed (boot script),
     # python started, model downloaded + on the GPU, first task started
     steps = {k[2:].lower(): float(v) for k, v in os.environ.items() if k.startswith("T_") and k[2:].replace("_", "").isalpha()
