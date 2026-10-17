@@ -15,6 +15,7 @@ import os
 import sys
 from pathlib import Path
 
+import numpy as np
 import torch
 
 import concept_pipeline as cp
@@ -57,11 +58,19 @@ def main():
     out_p = ROOT / f"results/cross_activation_{tag}.json"
     out = json.loads(out_p.read_text(encoding="utf-8")) if out_p.exists() else {"units": units, "sign_conflicts": conflicts, "concepts": {}}
     assert out["units"] == units, "the neuron union changed since this file was started - delete it and rerun"
+    pp_p = ROOT / f"results/cross_activation_{tag}_perprompt.npz"
+    pp = {}
+    if pp_p.exists() and out_p.exists():                     # only when resuming the matching json (same union)
+        z = np.load(pp_p)
+        for k in z.files:
+            c, kind = k.rsplit("|", 1)
+            pp.setdefault(c, [None, None])[0 if kind == "ans" else 1] = z[k]
     for concept in [c.strip() for c in sys.argv[2:]]:
         if concept in out["concepts"]:
             continue
         spec, tid, recall, _ = pipe.make_prompts(concept)
         ans = torch.zeros(len(units), device=DEVICE); peak = torch.zeros(len(units), device=DEVICE)
+        pp_ans, pp_peak = [], []                                     # per-prompt values (saved in the side npz)
         for q, _ in recall:
             ids = pipe.tok(q, return_tensors="pt").to(DEVICE).input_ids
             st = {}
@@ -73,14 +82,20 @@ def main():
             finally:
                 for h in hk:
                     h.remove()
+            row_a = torch.zeros(len(units), device=DEVICE); row_p = torch.zeros(len(units), device=DEVICE)
             for l, items in by_layer.items():
                 idx = torch.tensor([i for i, _ in items], device=DEVICE); ns = torch.tensor([n for _, n in items], device=DEVICE)
                 a = st[l][:, ns]                                  # [T, k]
                 ans[idx] += a[-1] / len(recall)
                 peak[idx] += (a[1:] * sg[idx]).max(0).values * sg[idx] / len(recall)
+                row_a[idx] = a[-1]; row_p[idx] = (a[1:] * sg[idx]).max(0).values * sg[idx]
+            pp_ans.append(row_a); pp_peak.append(row_p)
+        pp[concept] = (torch.stack(pp_ans).half().cpu().numpy(), torch.stack(pp_peak).half().cpu().numpy())
         out["concepts"][concept] = {"ans": [round(v, 3) for v in ans.tolist()], "peak": [round(v, 3) for v in peak.tolist()]}
         print(f"{concept:<30} done ({len(recall)} prompts)", flush=True)
         out_p.write_text(json.dumps(out), encoding="utf-8")
+        np.savez_compressed(ROOT / f"results/cross_activation_{tag}_perprompt.npz",
+                            **{f"{c}|ans": v[0] for c, v in pp.items()}, **{f"{c}|peak": v[1] for c, v in pp.items()})
 
 
 if __name__ == "__main__":
