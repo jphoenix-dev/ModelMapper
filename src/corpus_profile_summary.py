@@ -30,6 +30,7 @@ from wave_free import GENERIC
 
 ROOT = Path(__file__).resolve().parents[1]
 WINDOW, MIN_OWN = 64, 1.0
+TAG = "_new" if __import__("os").environ.get("CP_TAG") == "new" else ""     # PREREG_MAP P5: profile of NEW text
 
 
 def keywords():
@@ -49,10 +50,10 @@ def keywords():
 
 def main():
     rows = json.loads((ROOT / "results/corpus_profile_units.json").read_text(encoding="utf-8"))
-    z = np.load(ROOT / "results/corpus_profile.npz")
+    z = np.load(ROOT / ("results/corpus_profile_new.npz" if TAG else "results/corpus_profile.npz"))
     unit, doc, pos, n_tok = z["unit"], z["doc"], z["pos"].astype(np.int32), int(z["tokens_scanned"])
     tok = AutoTokenizer.from_pretrained(model_path(DEFAULT_MODEL))
-    d = np.load(ROOT / f"data/atlas_{DEFAULT_MODEL.split('/')[-1]}_docs.npz")
+    d = np.load(ROOT / ("results/corpus_new_docs.npz" if TAG else f"data/atlas_{DEFAULT_MODEL.split('/')[-1]}_docs.npz"))
     toks, lens = d["tokens"], d["lengths"]; starts = np.concatenate([[0], np.cumsum(lens)[:-1]])
     kw = keywords(); fam = family_map()
     all_kw = sorted({w for ws in kw.values() for w in ws})
@@ -138,8 +139,8 @@ def main():
     for u, v in sorted(((u, v) for u, v in fired.items() if v["n"] >= 20), key=lambda t: t[1]["on"])[:12]:
         L.append(f"  {u:<10} {', '.join(v['owners'])[:40]:<40} n={v['n']:<6} on {v['on']:.2f} other {v['other']:.2f} none {v['none']:.2f}")
     txt = "\n".join(L)
-    (ROOT / "results/corpus_profile_summary.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
-    (ROOT / "results/corpus_profile_summary.txt").write_text(txt + "\n", encoding="utf-8")
+    (ROOT / f"results/corpus_profile_summary{TAG}.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+    (ROOT / f"results/corpus_profile_summary{TAG}.txt").write_text(txt + "\n", encoding="utf-8")
     print(txt)
 
 

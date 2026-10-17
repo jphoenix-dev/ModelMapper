@@ -14,6 +14,7 @@ Usage: python src/corpus_profile.py
 """
 import glob
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -74,11 +75,29 @@ def units():
 
 
 def main():
-    rows = units()
-    (ROOT / "results/corpus_profile_units.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding="utf-8")
+    NEW = int(os.environ.get("CP_NEW_TOKENS", "0"))      # >0: PREREG_MAP P5 - same units, NEW documents after the atlas's
+    if NEW:
+        rows = json.loads((ROOT / "results/corpus_profile_units.json").read_text(encoding="utf-8"))
+    else:
+        rows = units()
+        (ROOT / "results/corpus_profile_units.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding="utf-8")
     model, tok = load(DEFAULT_MODEL)
     d = np.load(ROOT / f"data/atlas_{DEFAULT_MODEL.split('/')[-1]}_docs.npz")
     toks, lens = d["tokens"], d["lengths"]; starts = np.concatenate([[0], np.cumsum(lens)[:-1]])
+    if NEW:
+        from scan import docs as scan_docs
+        gen = scan_docs(tok, CTX); n_atlas = len(lens)
+        for i in range(n_atlas):                          # skip exactly the atlas's documents, checking alignment
+            x = next(gen)
+            if i in (0, n_atlas - 1):
+                assert np.array_equal(x, toks[starts[i]:starts[i] + lens[i]]), f"document {i} does not match the atlas - order differs"
+        new_docs = []; got = 0
+        while got < NEW:
+            x = next(gen); new_docs.append(x); got += len(x)
+        lens = np.array([len(x) for x in new_docs], dtype=np.int32); toks = np.concatenate(new_docs)
+        starts = np.concatenate([[0], np.cumsum(lens)[:-1]])
+        np.savez_compressed(ROOT / "results/corpus_new_docs.npz", tokens=toks, lengths=lens)
+        print(f"P5: {len(new_docs)} new documents, {got:,} tokens (after the atlas's {n_atlas})", flush=True)
     by_layer = {}
     for i, r in enumerate(rows):
         by_layer.setdefault(r["layer"], []).append(i)
@@ -125,7 +144,7 @@ def main():
     finally:
         for h in hk:
             h.remove()
-    np.savez_compressed(ROOT / "results/corpus_profile.npz", tokens_scanned=seen,
+    np.savez_compressed(ROOT / ("results/corpus_profile_new.npz" if NEW else "results/corpus_profile.npz"), tokens_scanned=seen,
                         **{k: np.concatenate(v) if v else np.zeros(0) for k, v in found.items()})
     print(f"done: {seen:,} tokens, {state['n']:,} firings, {(time.time() - t0) / 60:.1f} min", flush=True)
 
