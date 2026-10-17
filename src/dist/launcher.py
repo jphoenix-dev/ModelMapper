@@ -19,6 +19,7 @@ Usage:
 Credentials: RUNPOD_API_KEY, S3_* (env or .env); passed to the pods as env vars, never baked into the image.
 """
 import argparse
+import base64
 import json
 import os
 import subprocess
@@ -34,21 +35,29 @@ from dist.storage import open_store  # noqa: E402
 from dist.manifest import state  # noqa: E402
 
 POD_ENV_KEYS = ["S3_ENDPOINT_URL", "S3_ACCESS_KEY_ID", "S3_SECRET_ACCESS_KEY", "S3_REGION", "HF_TOKEN"]
-STOCK_IMAGE = "pytorch/pytorch:2.11.0-cuda12.8-cudnn9-runtime"    # public; same torch / CUDA as the local .venv
+STOCK_IMAGE = "runpod/pytorch:1.4.0-cu1281-torch2121-ubuntu2204"   # RunPod's own (often cached on hosts); torch 2.12.1
 CODE_PATHS = ["requirements-dist.txt", "src/config.py", "src/neurons.py", "src/dist"]
 REPO = Path(__file__).resolve().parents[2]
 
-# Pod start command for the stock image: no custom image or registry. Fetch the committed code from the bucket,
-# install the pinned packages, run the worker. If any step fails, the pod terminates itself (REST, pod-scoped key)
-# so a broken boot never sits there billing.
-BOOT = r"""
-set -e
+# Boot script for the stock image (no custom image or registry). It travels base64-encoded in $BOOT_B64 and the start
+# command only decodes and runs it, so it works whether RunPod passes the command in exec form or as one string.
+# Every step is timestamped and the whole log is PUT to the bucket after each step ($BOOTLOG_URL: a presigned URL,
+# no keys needed), so a failed boot is visible. On any failure the pod terminates itself (REST, pod-scoped key).
+BOOT = r"""#!/bin/bash
+set -o pipefail
+LOG=/tmp/boot.log
+step() { echo "$(date +%s.%N) $*" >> $LOG; curl -s -m 30 -X PUT -T $LOG "$BOOTLOG_URL" > /dev/null || true; }
+fail() {
+  step "FAILED: $1"; tail -c 4000 /tmp/step.out >> $LOG 2>/dev/null
+  curl -s -m 30 -X DELETE -A model-mapper-pod/1.0 -H "Authorization: Bearer $RUNPOD_API_KEY" \
+       "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID" >> $LOG 2>&1
+  step "terminate requested"; sleep infinity
+}
 export T_CONTAINER_START=$(date +%s.%N)
-fail() { python -c "import os,urllib.request as u; u.urlopen(u.Request('https://rest.runpod.io/v1/pods/'+os.environ['RUNPOD_POD_ID'], method='DELETE', headers={'Authorization':'Bearer '+os.environ['RUNPOD_API_KEY']}))"; }
-trap fail ERR
-pip install -q --no-cache-dir boto3==1.43.100
-export T_BOTO_DONE=$(date +%s.%N)
-python - <<'PY'
+step "container start: pod $RUNPOD_POD_ID; $(nvidia-smi --query-gpu=name,driver_version --format=csv,noheader 2>&1); $(python --version 2>&1)"
+pip install -q --no-cache-dir boto3==1.43.100 > /tmp/step.out 2>&1 || fail "pip install boto3"
+export T_BOTO_DONE=$(date +%s.%N); step "boto3 installed"
+python - > /tmp/step.out 2>&1 <<'PY' || fail "fetch code"
 import io, os, tarfile, boto3
 bucket, _, prefix = os.environ["DIST_STORE"][5:].partition("/")
 key = (prefix.strip("/") + "/" if prefix.strip("/") else "") + os.environ["DIST_CODE"]
@@ -56,12 +65,23 @@ s3 = boto3.client("s3", endpoint_url=os.environ.get("S3_ENDPOINT_URL"), region_n
                   aws_access_key_id=os.environ["S3_ACCESS_KEY_ID"], aws_secret_access_key=os.environ["S3_SECRET_ACCESS_KEY"])
 tarfile.open(fileobj=io.BytesIO(s3.get_object(Bucket=bucket, Key=key)["Body"].read())).extractall("/app")
 PY
-export T_CODE_DONE=$(date +%s.%N)
+export T_CODE_DONE=$(date +%s.%N); step "code fetched"
 cd /app
-pip install -q --no-cache-dir -r requirements-dist.txt
+pip install -q --no-cache-dir -r requirements-dist.txt > /tmp/step.out 2>&1 || fail "pip install requirements"
 export T_PIP_DONE=$(date +%s.%N)
-python src/dist/worker.py
+step "packages installed: $(python -c 'import torch, transformers; print("torch", torch.__version__, "cuda", torch.version.cuda, "transformers", transformers.__version__)' 2>&1)"
+python src/dist/worker.py > /tmp/step.out 2>&1; rc=$?
+step "worker exited rc=$rc"; tail -c 4000 /tmp/step.out >> $LOG; step "worker log tail saved"
+[ $rc -eq 0 ] || fail "worker"
+sleep infinity
 """
+START_CMD = ["bash", "-c", "echo${IFS}$BOOT_B64|base64${IFS}-d>/tmp/boot.sh;bash${IFS}/tmp/boot.sh"]   # no spaces or quotes
+
+
+def bootlog_url(store, pod_name, hours=4):
+    """Presigned PUT URL for logs/bootlog-<pod name>.txt (the pod has no id yet when it is created)."""
+    key = store.prefix + f"logs/bootlog-{pod_name}.txt"
+    return store.s3.generate_presigned_url("put_object", Params={"Bucket": store.bucket, "Key": key}, ExpiresIn=hours * 3600)
 
 
 def upload_code(store) -> tuple[str, str]:
@@ -167,7 +187,8 @@ def cmd_run(a, store, name):
     start_cmd = None
     if not a.custom_image:
         pod_env["DIST_CODE"], pod_env["GIT_COMMIT"] = upload_code(store)
-        start_cmd = ["bash", "-c", BOOT]
+        pod_env["BOOT_B64"] = base64.b64encode(BOOT.encode()).decode()
+        start_cmd = START_CMD
         print(f"stock image {a.image}; code {pod_env['DIST_CODE']}", flush=True)
     boot_failed = set()
     no_cap_since, gave_up = None, False
@@ -195,6 +216,12 @@ def cmd_run(a, store, name):
                         and not store.exists(f"logs/{p['id']}/started.json")):
                     print(f"terminating {p['id']}: no worker after {age:.1f} min (image pull or boot stuck)", flush=True)
                     rp.terminate(p["id"]); e.setdefault("terminate_sent", time.time()); e["boot_timeout"] = True
+                    continue
+                hb = store.get_json(f"logs/{p['id']}/heartbeat.json") or store.get_json(f"logs/{p['id']}/started.json")
+                if p.get("desiredStatus") == "RUNNING" and hb and time.time() - hb.get("epoch", time.time()) > a.stale_min * 60 \
+                        and not store.exists(f"logs/{p['id']}/exit.json"):
+                    print(f"terminating {p['id']}: no heartbeat for {(time.time() - hb['epoch']) / 60:.1f} min", flush=True)
+                    rp.terminate(p["id"]); e.setdefault("terminate_sent", time.time()); e["stale"] = True
                     continue
                 finished = store.exists(f"logs/{p['id']}/exit.json")
                 if p.get("desiredStatus") == "EXITED" or (finished and p.get("desiredStatus") == "RUNNING"):
@@ -233,8 +260,12 @@ def cmd_run(a, store, name):
                     break
                 rate += guess
                 t_req = time.time()
+                pod_name = f"{name}-{launched:03d}-{int(t_req) % 100000}"
+                env_i = dict(pod_env)
+                if not a.custom_image:
+                    env_i["BOOTLOG_URL"] = bootlog_url(store, pod_name)
                 try:
-                    p = rp.create_pod(f"{name}-{launched:03d}", a.image, a.gpu, pod_env, a.disk_gb, a.registry_auth, start_cmd,
+                    p = rp.create_pod(pod_name, a.image, a.gpu, env_i, a.disk_gb, a.registry_auth, start_cmd,
                                       a.interruptible, a.cuda_versions.split(","))
                 except rp.NoCapacity:
                     no_cap_since = no_cap_since or time.time()
@@ -281,6 +312,7 @@ def main():
     ap.add_argument("--interruptible", action="store_true", help="spot pods (RunPod said they are no longer offered, 2026-10-17)")
     ap.add_argument("--cuda-versions", default="12.8,12.9,13.0", help="host CUDA versions allowed (driver must run the image)")
     ap.add_argument("--max-wait-min", type=float, default=20, help="give up if no machine is available for this long")
+    ap.add_argument("--stale-min", type=float, default=10, help="terminate a pod whose worker heartbeat is older than this")
     ap.add_argument("--boot-timeout-min", type=float, default=15,
                     help="terminate a pod whose worker has not started (image pulled, packages installed) by then")
     ap.add_argument("--registry-auth", help="RunPod containerRegistryAuthId for a private image")

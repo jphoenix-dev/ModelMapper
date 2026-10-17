@@ -19,6 +19,7 @@ import random
 import socket
 import subprocess
 import sys
+import threading
 import time
 import traceback
 from pathlib import Path
@@ -70,6 +71,16 @@ def main():
         print(f"[{now()}] {msg}", flush=True)
 
     store.put_json(f"{lp}/started.json", {"epoch": time.time(), "boot_steps": {k: v for k, v in os.environ.items() if k.startswith("T_")}})
+    beat = {"tasks_run": 0, "phase": "loading model"}
+
+    def heartbeat():
+        while True:
+            time.sleep(120)
+            try:
+                store.put_json(f"{lp}/heartbeat.json", {"epoch": time.time(), "t": now(), "uptime_s": round(time.time() - T_START), **beat})
+            except Exception as e:  # noqa: BLE001 - a missed heartbeat must never kill the worker
+                print(f"heartbeat failed: {e!r}", flush=True)
+    threading.Thread(target=heartbeat, daemon=True).start()
     ctx = Ctx(store, wid)
     # epoch seconds of each boot step: container start, boto3 installed, code fetched, packages installed (boot script),
     # python started, model downloaded + on the GPU, first task started
@@ -117,6 +128,7 @@ def main():
             steps["first_task_start"] = time.time()
             store.put_json(f"{lp}/boot.json", boot)
         log(f"start {pick} ({len(pending)} pending, {len(ready)} ready)")
+        beat.update(phase=f"running {pick}")
         try:
             meta = run_task(store, pick, ctx)
         except Exception:
@@ -132,7 +144,7 @@ def main():
         row = {"task": pick, "skipped": meta is None, **({k: meta[k] for k in keep if k in meta} if meta else {})}
         summary.append(row); store.put_json(f"{lp}/task_{n_run:04d}.json", row)
         quota.save_ops(store, wid)
-        store.put_json(f"{lp}/heartbeat.json", {"t": now(), "tasks_run": n_run + 1, "uptime_s": round(time.time() - T_START)})
+        beat.update(tasks_run=n_run + 1, phase="between tasks")
         log(f"done {pick}: {row}")
         n_run += 1
         if a.once or a.task:
