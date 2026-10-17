@@ -1853,7 +1853,7 @@ The Luna judge asked whether firings relate to the OWNER concept; a gold neuron 
 "unrelated to the Golden Gate Bridge" while keeping one meaning. Whether concept neurons carry several unrelated
 meanings has not been tested yet; a neuron-centred test (how many meanings, how far apart) is proposed.
 
-## 17 Oct 2026 (day): does the map tell us something real? Pre-registered predictions (EXPLORATORY; research branch)
+## 17 Oct 2026 (day): does the map tell us something real? Pre-registered predictions (research branch)
 James: first prove the loop yields meaningful findings, then scale. `PREREG_MAP.md` (frozen at 533f3f1 before any of
 the data below) states five predictions with pass/fail rules; results are appended under each there.
 
@@ -1862,11 +1862,12 @@ the data below) states five predictions with pass/fail rules; results are append
 | P1 | a concept's top-5 neurons (found on Luna's questions) also break recall on independent prompts - Wikipedia opening sentences with the name blanked (cloze) | **holds**: median drop +5.59 log-odds vs random-5 -0.003; flips >= half the correct prompts in 66% (32 concepts tested) |
 | P2 | dedication curve out of sample: dedicated(N) = 36.5% - 9.3 x log2(N/358), +-3 points | **holds, narrowly**: 32.0% observed vs 29.4% predicted at N = 609 (+2.6) |
 | P3 | a neuron shared by two concepts' maps matters to both | **holds**: drop on the other concept +0.835 vs its non-shared neuron +0.002 and a random one +0.000 (150 pairs) |
-| P4 | a new concept's neurons can be predicted from its Wikidata family's neurons | pending (coverage-4 running; predictions committed before it, 82fdb29) |
+| P4 | a new concept's neurons can be predicted from its Wikidata family's neurons (predictions committed before coverage-4, 82fdb29) | **holds**: own-family neurons at 9.2x the other-family rate (needs 3x), 118/185, p = 0.0001 (191 new concepts); shuffled labels never reach it; holds without people (8.3x). Caveat: family ~ answer type |
 | P5 | a neuron's description in web text reproduces on new text | **holds**: firing-rate rho 0.986, on-concept share rho 0.883 (2M new tokens) |
 
 **Reading:** the map is about concepts, not prompt wording (P1); its sharing structure is causal (P3); its corpus
-descriptions are stable (P5); and its population-level law extrapolates (P2). These are tests the map could have failed.
+descriptions are stable (P5); its population-level law extrapolates (P2); and its structure predicts the neurons of
+concepts it has not seen (P4). All five pre-registered predictions hold. These are tests the map could have failed.
 
 ## 17 Oct 2026 (day): one meaning or several? Luna's view vs Qwen's own (EXPLORATORY; research branch)
 Prompted by James: a shared neuron that keeps one meaning (a 'gold' neuron in several concepts) is composition, not
@@ -1902,4 +1903,5 @@ superposition; and are 'unrelated' meanings really different, or facets of one c
   GPU idle 12% (a judge-starvation bug at the start, fixed); Luna $0.0018 per concept.
 - Batched single-neuron/head knockouts v1 FAILED their gate (bf16 batch-shape noise vs a separately computed
   baseline); v2 measures against an unablated copy in the same pass - to be re-gated.
-- Running total: 610 recalled concepts mapped (coverage-4, 376 more, running).
+- Running total: 610 recalled concepts mapped before coverage-4; coverage-4 (concepts_fame5, 376 drawn) finished 16:08,
+  unbatched loop, 0 failures.
