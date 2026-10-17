@@ -70,6 +70,6 @@ def task_output_bytes(cfg, task_id, n_layers=36, width=12288, n_heads=32, hidden
     if kind == "ablate" and promptset:
         a, b = (int(x) for x in task_id.split(":")[2].split("-"))
         n = b - a + 1
-        rows = n * (promptset["n_pos"] + promptset["n_neg"] + promptset["n_ctrl"])
+        rows = n * (promptset["n_pos"] + promptset["n_neg"] + promptset["n_ctrl"]) * len(promptset.get("modes", [0]))
         return rows * (hidden * 2 + 400) + n * 400
     return 1_000_000

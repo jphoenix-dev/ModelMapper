@@ -42,6 +42,7 @@ def main():
     ap.add_argument("--n-ctrl", type=int, default=10)
     ap.add_argument("--window", type=int, default=128, help="context tokens ending at the firing position")
     ap.add_argument("--batch-rows", type=int, default=64)
+    ap.add_argument("--n-null", type=int, default=16, help="firing contexts rerun alone per ablate task (noise floor)")
     a = ap.parse_args()
 
     store = open_store(a.store)
@@ -78,7 +79,7 @@ def main():
     store.put_json("config.json", cfg)
     store.put_json(f"promptsets/{a.promptset}.json",
                    {"n_pos": a.n_pos, "n_neg": a.n_neg, "n_ctrl": a.n_ctrl, "window": a.window, "seed": 0,
-                    "batch_rows": a.batch_rows, "n_tokens": 20})
+                    "batch_rows": a.batch_rows, "n_tokens": 20, "modes": [0, 1], "n_null": a.n_null})
     tasks = [{"id": f"observe:{s}"} for s in shards]
     tasks.append({"id": "merge:observe", "after": ["observe:*"]})
     for spec in a.ablate:

@@ -56,7 +56,7 @@ def main():
             t0 = time.time()
             for c0 in range(0, len(rows), a.batch_rows):
                 chunk = rows[c0:c0 + a.batch_rows]
-                logits, _, act, nt = _run_rows(model, layer, chunk, nb)
+                logits, _, act, nt, _ = _run_rows(model, layer, chunk, nb)
                 lp = logits.log_softmax(-1)
                 for k in range(0, len(chunk), 2):
                     n = chunk[k + 1][1]
