@@ -1,0 +1,15 @@
+Dedication vs population size: 359 concepts (178 hand-picked), 2421 neuron-owner pairs (always-on excluded once, on the full set). 'Dedicated' = fires for none of N randomly drawn other concepts (mean +- sd over 20 draws).
+
+ N others |   hand-picked owners |   all owners
+       10 |         78.0% +- 0.7% |  78.0% +- 0.5%
+       25 |         70.8% +- 0.7% |  68.4% +- 0.6%
+       50 |         63.2% +- 0.9% |  59.2% +- 0.7%
+      100 |         54.0% +- 0.6% |  49.3% +- 0.4%
+      150 |         48.3% +- 0.6% |  42.9% +- 0.5%
+      200 |         44.4% +- 0.8% |  38.4% +- 0.3%
+      250 |         41.3% +- 0.6% |  35.0% +- 0.4%
+      300 |         38.8% +- 0.4% |  32.3% +- 0.3%
+      358 |         36.5% +- 0.0% |  29.9% +- 0.0%
+
+how many of the other 358 concepts each neuron fires for: 0 in 724, 1 in 332, 2-4 in 461, 5-19 in 434, 20+ in 470 (of 2421)
+loss of dedicated share per doubling of N (hand-picked owners): 10->25: 5.5%, 25->50: 7.6%, 50->100: 9.2%, 100->150: 9.8%, 150->200: 9.3%, 200->250: 9.7%, 250->300: 9.4%, 300->358: 9.1%

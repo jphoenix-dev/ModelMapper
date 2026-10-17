@@ -1820,3 +1820,23 @@ wave_budget.py -> neuron IDs saved by rank_save.py -> cross-activation over ever
 - Steering on these titles: median held-out 0.00, mean 0.08 (random 0.003) - as in the first fame draw.
 - **Running total: 359 distinct recalled concepts mapped** (178 hand-picked + 70 fame sample + 111 coverage), every
   one with saved top-30 neurons.
+
+## 17 Oct 2026 (morning): 'dedicated' is relative to the population - and keeps falling (EXPLORATORY; research branch)
+`dedication_curve.py` -> `results/dedication_curve.txt`. James's point: "fires for no other concept" is only as strong
+as the set of concepts it was tested against. From the 359-concept cross-activation (no new runs): for each concept's
+top-10 neurons (|own act| >= 1; the 34 'always on' neurons excluded once, on the full set), draw N other concepts at
+random (20 repeats) and count the neurons that fire (>= 0.5x own activation) for none of them.
+
+| N other concepts | 10 | 25 | 50 | 100 | 150 | 200 | 250 | 300 | 358 |
+|---|---|---|---|---|---|---|---|---|---|
+| dedicated, hand-picked owners | 78% | 71% | 63% | 54% | 48% | 44% | 41% | 39% | 36.5% |
+| dedicated, all owners | 78% | 68% | 59% | 49% | 43% | 38% | 35% | 32% | 30% |
+
+- **No flattening:** the dedicated share falls by ~9-10 points per doubling of N, steadily from 50 to 358. No sign of a
+  core of private neurons within this range; neurons serve 0 (724), 1 (332), 2-4 (461), 5-19 (434) or 20+ (470) of the
+  other 358 concepts - a heavy-tailed spread, as sparse superposed coding would give.
+- **Prediction, written before the data (coverage-3 run of 289 more concepts, started 08:15):** if the log-linear
+  trend holds, the hand-picked owners' dedicated share against ~648 other concepts will be **about 28-29%**
+  (36.5% - 9.3 x log2(648/358) = 28.5%); flattening would leave it above ~33%, steepening below ~25%.
+- Reading: "dedicated" earlier (47% vs 177 others) was mostly a small-population effect; with growing coverage almost
+  every concept neuron turns out to take part in some other concept's code.
