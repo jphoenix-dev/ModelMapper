@@ -70,6 +70,17 @@ filter still drops what Qwen doesn't know (recorded as data, not discarded). Con
 3. **Self-checks run** on one batch of ~50 new concepts and report.
 4. **Timing:** per-step times and GPU busy % within ~10% of the estimate above.
 
+## 6a. James's decisions (17 Oct, evening)
+1. Sampling frame: fame x Wikidata type, as proposed (he had the same point: broaden away from famous names).
+2. Residuals at the answer position: yes.
+3. Weights-based roles and job tokens (j): yes.
+4. First run ~1,000 concepts: yes, built with the gpu-fan-out session so that the same task code runs on the 5090 or on
+   rented GPUs. Goal: a frictionless choice between local and cloud for bulk work, under cost caps. Split: PREPARE on
+   the desktop (Luna + light GPU), MAP as an idempotent `map:<batch>` task in the src/dist runner (pure GPU; module
+   src/loop_v2/map_core.py), CHECK on the desktop.
+Next question after v2 (James): is "named thing" too narrow - would the loop work for "blue", "117", "bicycle",
+"table"?
+
 ## 6. Decisions for James
 1. Sampling frame: fame x Wikidata type as proposed, or something else?
 2. Save residuals at the answer position (~3 MB per concept)? Recommended.
