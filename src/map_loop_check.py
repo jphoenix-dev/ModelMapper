@@ -4,9 +4,9 @@
    k_flip and the drop curves must equal wave_free.json; the top-30 neurons (in order) must equal rank_save_fame2.json.
 2. Maps vs cross-activation: for those concepts, last_act (answer-position mean) must match cross_activation_fame2.json
    'ans', and pmax / pmin (by each neuron's sign) its 'peak', within bf16 noise (|diff| <= 0.02 + 2% of |value|).
-3. Fresh run (concepts_fame4, tag 'fresh'): GPU idle share, minutes per concept by status, median per-step times,
+3. Fresh run (the rest of coverage-3 through map_loop: concepts_fame3, tag 'fame3m'): GPU idle share, minutes per concept by status, median per-step times,
    Luna cost per concept - against the old loop (~1.28 min per recalled concept + ~0.37 min ranking; ~0.64 min not recalled).
-Usage: python src/map_loop_check.py  -> results/map_loop_check.txt
+Usage: python src/map_loop_check.py [gate]  -> results/map_loop_check.txt  ('gate': parts 1-2 only, exit 1 on failure)
 """
 import json
 import statistics as stx
@@ -53,7 +53,12 @@ def main():
             cand = min(abs(pmax[l, k] - pk), abs(pmin[l, k] - pk)); n += 1; worst = max(worst, cand); over += cand > 0.02 + 0.02 * abs(pk)
     L.append(f"\n2. MAPS vs CROSS-ACTIVATION: {n} values compared; outside bf16 tolerance: {over}; largest |diff| {worst:.4f} "
              f"-> {'PASS' if over == 0 else 'CHECK'}")
-    meta = jl("results/concepts_fame4/map_loop_fresh_meta.json"); fr = jl("results/concepts_fame4/map_loop_fresh.json")
+    ok12 = not bad and over == 0
+    import sys as _s
+    if len(_s.argv) > 1 and _s.argv[1] == "gate":                    # parts 1-2 only; exit code gates the chain
+        txt = "\n".join(L); (ROOT / "results/map_loop_check.txt").write_text(txt + "\n", encoding="utf-8"); print(txt)
+        raise SystemExit(0 if ok12 else 1)
+    meta = jl("results/concepts_fame3/map_loop_fame3m_meta.json"); fr = jl("results/concepts_fame3/map_loop_fame3m.json")
     L.append(f"\n3. FRESH RUN: {meta['concepts']} concepts in {meta['elapsed_s'] / 60:.1f} min; GPU idle waiting on Luna "
              f"{meta['gpu_idle_s'] / 60:.1f} min ({meta['gpu_idle_s'] / max(meta['elapsed_s'], 1):.0%}); Luna {meta['luna_calls']} calls, ${meta['luna_usd']:.3f}")
     by = defaultdict(list); steps = defaultdict(list)

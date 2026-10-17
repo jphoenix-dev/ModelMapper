@@ -18,9 +18,13 @@ Steering is NOT run (coverage mode).
 Saved (everything, per James's rule): per concept a row with status, answer form, every answer form's per-prompt P,
 recall prompts, per-prompt baseline log-odds, k values and drop curves, random curves, all 200 candidates with their
 per-prompt single-neuron drops, the top-30 (rank_save format), per-step wall time and per-step Luna tokens / cost;
-arrays <OUT>/rank_save_arrays/<slug>.npz: attr, last_act (answer-position mean activation, = cross-activation 'ans'),
+arrays <OUT>/rank_save_arrays/<slug>.npz: attr, last_act (answer-position mean activation from a prompt-only pass = cross-activation 'ans'; the attribution pass's
+version is kept as last_act_attr_pass),
 pmax / pmin (mean over prompts of each neuron's max / min activation over prompt positions 1..end, for 'peak'),
-top200. Per-position attribution maps are NOT saved (~800 MB per concept); their per-neuron totals are ('attr').
+top200; and for ATTENTION HEADS: head_attr (per-head attribution, L x H), head_out_answer_pos (each head's output at
+the answer position, mean over prompts, L x H*D), att<i> (per prompt: where every head looks from the answer position,
+L x H x T); in the rank row, the 50 most-attributed heads each switched off alone with per-prompt recall drops.
+Per-position attribution maps are NOT saved (~800 MB per concept); their per-neuron totals are ('attr').
 Outputs: <OUT>/map_loop_<tag>.json (rows), <OUT>/rank_save_<tag>.json (rank_save-compatible), console log.
 
 Usage: RECALL_VARIANT=V3 CONCEPT_OUT_DIR=<dir> python src/map_loop.py <wave json> <tag> [luna_budget_usd=2.5] [luna_workers=8]
@@ -235,11 +239,16 @@ def main():
         rng = random.Random(2)
         t = time.time(); _, _, _, rdrops = kvals([(l, rng.randrange(pipe.W)) for l, _ in top]); T["G2_random_curve"] = round(time.time() - t, 2)
         # activation maps for cross-activation: answer-position mean (= A['last_act']) and per-neuron max/min over prompt positions
-        t = time.time(); L_, W_ = pipe.L, pipe.W
+        # + attention heads (James, 17 Oct): each head's output at the answer position (mean over prompts) and, per
+        # prompt, where every head looks from the answer position (eager attention for this one pass)
+        t = time.time(); L_, W_ = pipe.L, pipe.W; Hh = m.config.num_attention_heads
         pmax = torch.zeros(L_, W_, device=DEVICE); pmin = torch.zeros(L_, W_, device=DEVICE)
-        for q in rp:
-            ids = pipe.tok(q, return_tensors="pt").to(DEVICE).input_ids; st = {}
+        zmean = torch.zeros(L_, m.config.num_attention_heads * m.config.head_dim, device=DEVICE); att_rows = {}
+        ans = torch.zeros(L_, W_, device=DEVICE)
+        for qi, q in enumerate(rp):                      # default (sdpa) kernel, prompt only - exactly as cross_activation.py
+            ids = pipe.tok(q, return_tensors="pt").to(DEVICE).input_ids; st = {}; zs = {}
             hk = [mlps(m)[l].down_proj.register_forward_pre_hook(lambda mod, a_, l=l: st.__setitem__(l, a_[0][0, 1:].float())) for l in range(L_)]
+            hk += [m.model.layers[l].self_attn.o_proj.register_forward_pre_hook(lambda mod, a_, l=l: zs.__setitem__(l, a_[0][0, -1].float())) for l in range(L_)]
             try:
                 with torch.no_grad():
                     m(input_ids=ids)
@@ -247,10 +256,30 @@ def main():
                 for h in hk:
                     h.remove()
             for l in range(L_):
-                pmax[l] += st[l].max(0).values / len(rp); pmin[l] += st[l].min(0).values / len(rp)
-        np.savez_compressed(arr_dir / f"{cp.slug(c)}.npz", attr=A["attr"].half().cpu().numpy(), last_act=A["last_act"].half().cpu().numpy(),
-                            pmax=pmax.half().cpu().numpy(), pmin=pmin.half().cpu().numpy(), top200=np.array(top, dtype=np.int32))
-        T["G2_maps"] = round(time.time() - t, 2)
+                ans[l] += st[l][-1] / len(rp); pmax[l] += st[l].max(0).values / len(rp); pmin[l] += st[l].min(0).values / len(rp)
+                zmean[l] += zs[l] / len(rp)
+        m.set_attn_implementation("eager")               # attention patterns need the eager kernel: separate pass
+        try:
+            for qi, q in enumerate(rp):
+                ids = pipe.tok(q, return_tensors="pt").to(DEVICE).input_ids
+                with torch.no_grad():
+                    att = m(input_ids=ids, output_attentions=True).attentions
+                att_rows[f"att{qi}"] = torch.stack([a_[0, :, -1, :] for a_ in att]).half().cpu().numpy()   # [L, H, T]
+        finally:
+            m.set_attn_implementation("sdpa")
+        T["G2_maps_heads"] = round(time.time() - t, 2)
+        # causal check per head: each of the 50 most-attributed heads switched off alone (all positions), per-prompt drops
+        t = time.time(); ha = A["head_attr"].detach()
+        top_heads = [divmod(i.item(), Hh) for i in ha.flatten().argsort(descending=True)[:50]]
+        head_pp = {}
+        for (l, h) in top_heads:
+            los = pipe.batch_logodds(pairs, pipe.ablate_heads([(l, h)]))
+            head_pp[f"L{l}H{h}"] = [round(b - x, 3) for b, x in zip(base, los)]
+        T["G2_head_knockouts"] = round(time.time() - t, 2)
+        np.savez_compressed(arr_dir / f"{cp.slug(c)}.npz", attr=A["attr"].detach().half().cpu().numpy(), last_act=ans.half().cpu().numpy(),
+                            last_act_attr_pass=A["last_act"].detach().half().cpu().numpy(),
+                            pmax=pmax.half().cpu().numpy(), pmin=pmin.half().cpu().numpy(), top200=np.array(top, dtype=np.int32),
+                            head_attr=ha.half().cpu().numpy(), head_out_answer_pos=zmean.half().cpu().numpy(), **att_rows)
         row.update(status="ok", baseline_mean_logodds=round(sum(base) / len(base), 2), base_per_prompt=[round(x, 3) for x in base],
                    k_mean=km, k_median=kd, k_flip=kf, drops=drops, random_drops=rdrops)
         cand = [{"neuron": f"L{l}:{n}", "single_drop": round(drop1[(l, n)], 3), "attr_rank": top.index((l, n)),
@@ -259,7 +288,9 @@ def main():
                     "baseline_mean_logodds": round(sum(base) / len(base), 3), "base_per_prompt": [round(x, 3) for x in base],
                     "prompts": rp, "candidates_all200": cand, "top": cand[:TOPN],
                     "per_prompt_drop_all200": {f"L{l}:{n}": [round(x, 3) for x in pp[(l, n)]] for l, n in single},
-                    "matched_original": False, "mismatch": None}
+                    "matched_original": False, "mismatch": None,
+                    "heads_top50_by_attr": [f"L{l}H{h}" for l, h in top_heads], "head_knockout_per_prompt": head_pp,
+                    "head_knockout_mean": {k: round(sum(v) / len(v), 3) for k, v in head_pp.items()}}
         return row
 
     while len(done) < len(todo):

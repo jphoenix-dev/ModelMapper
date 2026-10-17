@@ -82,8 +82,8 @@ def main():
         # full per-neuron attribution / answer-position activation maps (L x W, fp16). Per-position attribution maps
         # (~800 MB per concept) are NOT saved - too large; their per-neuron totals are (the 'attr' array).
         arr_dir = cp.OUT / "rank_save_arrays"; arr_dir.mkdir(exist_ok=True)
-        np.savez_compressed(arr_dir / f"{cp.slug(concept)}.npz", attr=A["attr"].half().cpu().numpy(),
-                            last_act=A["last_act"].half().cpu().numpy(), top200=np.array(top, dtype=np.int32))
+        np.savez_compressed(arr_dir / f"{cp.slug(concept)}.npz", attr=A["attr"].detach().half().cpu().numpy(),
+                            last_act=A["last_act"].detach().half().cpu().numpy(), top200=np.array(top, dtype=np.int32))
         per_prompt_drop = {f"L{l}:{n}": [round(x, 3) for x in pp[(l, n)]] for l, n in single}
         candidates = [{"neuron": f"L{l}:{n}", "single_drop": round(drop1[(l, n)], 3), "attr_rank": top.index((l, n)),
                        "act_answer_pos": round(A["last_act"][l, n].item(), 3)} for l, n in single]
