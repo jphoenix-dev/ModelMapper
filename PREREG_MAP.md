@@ -48,6 +48,18 @@ neurons). Prediction made from the pre-coverage-4 maps only; scored on coverage-
 **Prediction:** a new concept's top-30 contains its family's neurons at >= 3x the rate of another family's neurons
 (matched for the number of family neurons), median over coverage-4 concepts in families with >= 5 members.
 **Fails if:** < 3x, or not significantly above 1x (sign test p < 0.05 over concepts).
+**RESULT (17 Oct 16:08, `p4_family.py score`): HOLDS.** 191 coverage-4 concepts fall in predicted families (human 154,
+sovereign state 23, film 6, others 1-2 each). Median own/other family hit-rate ratio 9.18 (needs >= 3); own > other in
+118/185 (6 ties), one-sided sign test p = 0.00011. Median own-family hit rate 0.250 vs other-family 0.013. 'Matched for
+the number of family neurons' is done by comparing hit RATES (share of the family's neurons present), not counts.
+**Post-hoc checks (not pre-registered; `p4_checks.py`):** (1) shuffled family labels, 2,000 times: median ratio 0.41,
+99th percentile 1.71, max 3.79 - no shuffle reaches 9.18; (2) without the human family (37 concepts): ratio 8.27, 29/37,
+p = 0.0004 (sovereign state 19/23, film 6/6); (3) the 4 human-family neurons (L25:11777, L26:4584, L30:8643, L35:9346)
+are in 21% of new people's top-30 vs 2.6% of new non-people.
+**Caveats:** families here largely coincide with the TYPE of answer word (a person's name, a country's name), so family
+neurons may partly be 'a name of this kind comes next' rather than knowledge about the family - this test cannot tell
+those apart. 72/191 new concepts contain none of their family's neurons. The family-share rule is loose for small
+families (20% of 5 members = 1 member), giving big neuron sets for some families (country 136, war 125).
 
 ## P5 - Corpus descriptions predict new text
 **Claim tested:** where a neuron fires in ordinary text is a stable property the atlas can describe.

@@ -1,0 +1,27 @@
+Stage D on above-noise contexts only (indirect-effect cosine gap within - between Luna groups; position 0 = same job, 1 = different neurons)
+stage D knockout KL quantiles (p10/p50/p90): concept 1.1e-05/2.1e-03/5.0e-02; control 2.0e-06/1.4e-03/2.9e-02; spliced 1.1e-05/2.3e-03/5.3e-02
+
+KL >= 0: contexts kept concept 5880/5880 (100%), spliced 1710/1710 (100%), control 1770/1770 (100%)
+  calibration: same job (random halves) -0.002; different neurons (spliced) +0.150 (n=57)
+  concept: n=159 units; gap +0.026 -> position 0.18; between-group cosine by Luna rating: 1: +0.173 (n=9401), 2: +0.132 (n=8425), 3: +0.130 (n=6013)
+  control: n=52 units; gap +0.028 -> position 0.19; between-group cosine by Luna rating: 1: +0.235 (n=1668), 2: +0.130 (n=2263), 3: +0.108 (n=4010)
+
+KL >= 0.0019: contexts kept concept 3112/5880 (53%), spliced 937/1710 (55%), control 760/1770 (43%)
+  calibration: same job (random halves) -0.004; different neurons (spliced) +0.182 (n=50)
+  concept: n=110 units; gap +0.037 -> position 0.22; between-group cosine by Luna rating: 1: +0.222 (n=4492), 2: +0.191 (n=2763), 3: +0.194 (n=1322)
+  control: n=31 units; gap +0.056 -> position 0.32; between-group cosine by Luna rating: 1: +0.376 (n=598), 2: +0.246 (n=534), 3: +0.218 (n=916)
+
+KL >= 0.0032: contexts kept concept 2501/5880 (43%), spliced 760/1710 (44%), control 574/1770 (32%)
+  calibration: same job (random halves) -0.003; different neurons (spliced) +0.217 (n=40)
+  concept: n=95 units; gap +0.042 -> position 0.21; between-group cosine by Luna rating: 1: +0.238 (n=3376), 2: +0.205 (n=2004), 3: +0.233 (n=832)
+  control: n=20 units; gap +0.043 -> position 0.21; between-group cosine by Luna rating: 1: +0.425 (n=458), 2: +0.270 (n=377), 3: +0.261 (n=669)
+
+KL >= 0.01: contexts kept concept 1535/5880 (26%), spliced 439/1710 (26%), control 328/1770 (19%)
+  calibration: same job (random halves) -0.005; different neurons (spliced) +0.250 (n=24)
+  concept: n=60 units; gap +0.041 -> position 0.18; between-group cosine by Luna rating: 1: +0.264 (n=1781), 2: +0.234 (n=1025), 3: +0.256 (n=240)
+  control: n=13 units; gap +0.015 -> position 0.08; between-group cosine by Luna rating: 1: +0.432 (n=172), 2: +0.335 (n=164), 3: +0.281 (n=349)
+
+KL >= 0.03: contexts kept concept 833/5880 (14%), spliced 253/1710 (15%), control 175/1770 (10%)
+  calibration: same job (random halves) -0.006; different neurons (spliced) +0.277 (n=10)
+  concept: n=30 units; gap +0.057 -> position 0.22; between-group cosine by Luna rating: 1: +0.289 (n=725), 2: +0.264 (n=364), 3: +0.245 (n=70)
+  control: n=4 units; gap +0.081 -> position 0.31; between-group cosine by Luna rating: 1: +0.618 (n=37), 2: +0.388 (n=87), 3: +0.019 (n=80)

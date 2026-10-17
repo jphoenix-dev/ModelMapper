@@ -1,0 +1,2 @@
+scope: 555 concepts whose maps saved their recall prompts (the 359 older maps did not)
+gate - a zeroed unit not 0 at the answer position, or as-is FIRST-token log-odds below the saved WHOLE-answer log-odds - 0.5 (bf16 batch-shape tolerance): 12 of 7341 prompts

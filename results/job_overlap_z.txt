@@ -1,0 +1,8 @@
+Does each late neuron RAISE the answer? z of the answer logit in each direct push (>= 2 = raises it); 909 concepts
+                       best single z   sum z  any raises  sum z>=2  voting*  votes (how many late neurons raise it)
+real                           16.43    8.42         93%       89%      17%  {0: 68, 1: 199, 2: 251, 3: 260, 4: 113, 5: 18}
+answer_shuffle                  0.98   -0.06         17%        5%       0%  {0: 15031, 1: 2775, 2: 343, 3: 29, 4: 2}
+random_neurons                  0.95    0.00          9%        3%       0%  {0: 16556, 1: 1555, 2: 69}
+real_whole_word                12.55    8.89         92%       90%      25%  {0: 31, 1: 84, 2: 95, 3: 107, 4: 52, 5: 6}
+real_fragment                  20.99    8.06         93%       88%      11%  {0: 37, 1: 115, 2: 156, 3: 153, 4: 61, 5: 12}
+*voting = >= 2 late neurons raise the answer AND the sum raises it more than the best single one. whole-word answers n=375, fragments n=534

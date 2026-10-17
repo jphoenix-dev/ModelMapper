@@ -1,0 +1,10 @@
+Search-then-verify pilot (search_verify.py), 350 neurons; Luna proposes a concept from web firings + pushed tokens, Qwen verifies by knockout.
+verified = mean drop in exact log-odds >= 1.0 and above the pooled null 99th percentile (0.17; max null 0.18, n=30)
+group     n    Luna named a concept   recalled (>=3 q)   verified
+top     100    4                       3                  0   (best: JavaScript L27:1210 +0.86, below 1.0)
+random  100    3                       2                  0
+size    100    3                       2                  1   (Talc L10:11856 +2.02)
+known    50    9                       8                  4   (Netherlands +7.43, Hunger Games +3.14, Guns N' Roses +2.12, Minecraft +1.86)
+known neurons: Luna named the neuron's OWN mapped concept 4 times - all 4 verified; it named a different concept 5 times
+(e.g. 'the number three' for an F-35 neuron) - none verified.
+Criterion (top >= 3x random verified): NOT MET (0 vs 0). Luna cost ~$0.10 (433k in / 106k out tokens).

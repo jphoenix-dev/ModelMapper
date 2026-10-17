@@ -1,0 +1,23 @@
+Attribute sharing: 1645 candidate neurons (layer >= 20, in the top-30 of 3 to <15% of 914 concepts); users per neuron (capped display at 20): {3: 575, 4: 320, 5: 193, 6: 129, 7: 82, 8: 50, 9: 40, 10: 45, 11: 30, 12: 21, 13: 17, 14: 5, 15: 14, 16: 15, 17: 7, 18: 8, 19: 4, 20: 90}
+trials: 200 sampled, 200 scored (errors 0); Luna {'calls': 400, 'input_tokens': 114252, 'output_tokens': 919019}
+hit rate (picked members / members): real 74.6% | control (another neuron's job) 55.4% | chance 44.1%
+per neuron: real beats control 103, control beats real 21, ties 76; sign test p = 1.7e-14
+non-lexical members (name/answer not among the job tokens): 503/702 = 71.7% vs chance 44.2%; lexical members 144
+CRITERION NOT MET
+
+examples (Luna's job name | job tokens | users picked correctly / members):
+  L24:9301   'nudges toward Chinese/East Asian language and script' | [' dash', '�', '嚼', '.ot', 'ingroup', '蝇', '掂', '寂寞'] | ['South Korea', 'Tokyo'] / ['South Korea', 'Pakistan', 'Tokyo']
+  L28:9723   'recalling city names' | [' Tall', ' Tir', ' Gaines', ' Trent', ' Aurora', '鹤', ' Hastings', '首'] | ['Constantinople', 'Durrës', 'Jerusalem', 'Vineland'] / ['Vineland', 'Durrës', 'Jerusalem', 'Constantinople']
+  L34:4955   'Promotes words beginning with H or W' | ['H', 'W', 'O', 'N', 'HU', 'R', 'E', 'HQ'] | ['honey', 'the honeybee', 'wine'] / ['wine', 'Orthohantavirus', 'the honeybee', 'Lok Sabha', 'honey']
+  L27:3261   'Activates Greek-rooted terminology' | [' psych', ' cardi', ' therm', ' xen', ' bibli', ' ped', ' hel', ' pneum'] | ['a doctor', 'democracy'] / ['democracy', 'a doctor', 'autumn']
+  L35:2584   'recognizes country names' | ['�', 'lobber', 'cling', 'clist', 'olley', 'At', 'chè', 'émon'] | ['Afghanistan', 'Albania'] / ['Albania', 'Abraham Lincoln', 'Afghanistan']
+  L28:1432   'Suggesting popular contemporary given names' | ['丞', '睿', '梓', ' Chloe', ' Dylan', '锘', '轩', '雨'] | ['Max Verstappen', 'Shohei Ohtani', 'Timothée Chalamet', 'William, Prince of Wales'] / ['William, Prince of Wales', 'Timothée Chalamet', 'Shohei Ohtani', 'Wayne Gretzky', 'Max Verstappen']
+  L33:909    'seasonal and circadian timing' | [' Re', ' S', ' D', ' Reg', ' Im', ' As', ' Opt', ' Point'] | ['Daylight saving time', 'snow', 'the heart'] / ['Daylight saving time', 'jealousy', 'Earthquake', 'snow', 'the heart']
+  L35:2972   'Chinese-language recall and prose' | ['“(', ':{}', '爆出', '行贿', ")+'", '王牌', '团委', '"${'] | ['Europe', 'Muhammad'] / ['the octopus', 'opera', 'the mirror', 'Europe', 'Muhammad']
+  L30:7810   'heads of government' | [' minister', ' ministry', ' ministers', ' minist', ' Minist', ' Ministers', ' cabinet', ' ministries'] | ['Adolf Hitler', 'Giorgia Meloni', 'Pierre Trudeau', 'Rishi Sunak', 'Volodymyr Zelenskyy'] / ['Giorgia Meloni', 'Rishi Sunak', 'Volodymyr Zelenskyy', 'Pierre Trudeau', 'Adolf Hitler']
+  L31:7509   'Spanish-language and Latin American references' | ['eras', ' Bless', 'iasi', 'Pres', 'era', ' ds', '.enumer', '雷斯'] | ['Mario Vargas Llosa', 'Mexico', 'One Hundred Years of Solitude', 'Panama Canal'] / ['Mexico', 'One Hundred Years of Solitude', 'Mario Vargas Llosa', 'Panama Canal']
+  L32:1456   'Aerial and adventure sports' | [' sky', ' par', 'par', ' Par', ' Sky', '-par', 'Par', '_par'] | ['Parkour', 'surfing', 'the helicopter'] / ['surfing', 'Parkour', 'the helicopter']
+  L30:8447   'asteroid and space-object associations' | [' dwarf', ' Dwarf', 'IFO', ' belt', ' asteroid', ' Aster', '无所谓', ' Chand'] | ['Benedict XVI', 'Chandrayaan-1', 'Pope Benedict XVI', 'Yitzhak Rabin'] / ['Pope Benedict XVI', 'Yitzhak Rabin', 'Benedict XVI', 'Chandrayaan-1', 'John Paul I']
+  L31:7055   'recognizes prominent British cultural figures' | ['运', 'isel', 'ihil', 'berra', '割', 'Absolute', '同盟', ' Exercise'] | ['David Attenborough', 'John Lennon', 'Ringo Starr'] / ['Ringo Starr', 'David Attenborough', 'John Lennon']
+  L22:7584   'Chinese-language technical and scientific descriptions' | ['接', '螺旋', '身', '弹', '推', 'eker', '才行', '全'] | ['Climate change', 'Exchange rate', 'the printing press', 'the steam engine'] / ['Exchange rate', 'the printing press', 'ice cream', 'Climate change', 'the steam engine']
+  L20:301    'Arabic international-affairs and environmental discourse' | ['أفل', 'أهد', 'أوضاع', 'مفاوضات', ' دمش', ' indonesia', ' germany', 'أسب'] | ['Climate change', 'the greenhouse effect'] / ['Commotio cordis', 'Climate change', 'the greenhouse effect', 'Search engine', 'Lunar eclipse']

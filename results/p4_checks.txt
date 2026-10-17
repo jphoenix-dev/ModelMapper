@@ -1,0 +1,29 @@
+families: {'taxon': 10, 'type of food or dish': 13, 'type of sport': 11, 'human': 4, 'sovereign state': 8, 'film': 42, 'country': 136, 'war': 125, 'U.S. state': 132, 'television series': 125}
+coverage-4 concepts with tops: 304 ; with any family label: 298
+
+REAL: median ratio 9.18, wins 118/185, p 0.00011; own==0 in 72/191; own<other in 67
+SHUFFLED labels (2000x): median ratio median 0.41, 99th pct 1.71, max 3.79; win share median 0.48 (real 0.64); shuffles reaching real ratio: 0
+
+WITHOUT human (37 concepts): median ratio 8.27, wins 29/37, p 0.00038
+  country              n=2 wins 1/2 own-mean 0.033 other-mean 0.050
+  film                 n=6 wins 6/6 own-mean 0.119 other-mean 0.014
+  sovereign state      n=23 wins 19/23 own-mean 0.228 other-mean 0.020
+  taxon                n=2 wins 0/2 own-mean 0.000 other-mean 0.007
+  television series    n=1 wins 1/1 own-mean 0.064 other-mean 0.016
+  type of sport        n=2 wins 1/2 own-mean 0.136 other-mean 0.025
+  war                  n=1 wins 1/1 own-mean 0.048 other-mean 0.026
+
+human family neurons: ['L25:11777', 'L26:4584', 'L30:8643', 'L35:9346']
+human-neuron hit rate: people 0.209 (n=154) vs non-people 0.026 (n=144)
+  sovereign state              n=23  0.033
+  musical group                n=7   0.036
+  film                         n=6   0.083
+  association football club    n=4   0.000
+  city                         n=3   0.167
+  holiday                      n=3   0.000
+  literary work                n=3   0.000
+  Commonwealth realm           n=2   0.000
+  type of sport                n=2   0.000
+  country                      n=2   0.000
+  political party              n=2   0.125
+  annual sporting event        n=2   0.000
