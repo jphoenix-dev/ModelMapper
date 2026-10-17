@@ -43,6 +43,12 @@ def main():
     ap.add_argument("--window", type=int, default=128, help="context tokens ending at the firing position")
     ap.add_argument("--batch-rows", type=int, default=64)
     ap.add_argument("--n-null", type=int, default=16, help="firing contexts rerun alone per ablate task (noise floor)")
+    ap.add_argument("--kind", default="neuron", choices=["neuron", "map"],
+                    help="neuron: observe/merge/ablate (default). map: loop v2 concept batches from specs")
+    ap.add_argument("--specs", help="map: local folder of spec .json files, each with a 'concept' key")
+    ap.add_argument("--specs-in-store", action="store_true", help="map: specs already uploaded under specs/<batch>/")
+    ap.add_argument("--batch-size", type=int, default=20, help="map: concepts per task")
+    ap.add_argument("--env", action="append", default=[], help="KEY=VALUE set on every worker (map default RECALL_VARIANT=V3)")
     a = ap.parse_args()
 
     store = open_store(a.store)
@@ -52,6 +58,8 @@ def main():
     if not rev:
         raise SystemExit("pass --revision (a Hugging Face commit hash)")
 
+    if a.kind == "map":
+        return make_map_run(a, store, rev)
     from transformers import AutoTokenizer
     tok = AutoTokenizer.from_pretrained(model_path(a.model))
     from scan import docs
@@ -92,6 +100,35 @@ def main():
     quota.save_ops(store, f"make_run-{int(__import__('time').time())}")
     print(f"estimated results if nothing is drained: {est/1e9:.2f} GB (bucket cap {quota.MAX_GB} GB; use launcher --drain-to)")
     print(f"{store}: {len(tasks)} tasks, model {a.model}@{rev[:10]}")
+
+
+def make_map_run(a, store, rev):
+    """Loop v2 run: specs/<batch>/<slug>.json (uploaded here or already in the store), one map:<batch> task each."""
+    import json
+    import re
+    env = dict(e.split("=", 1) for e in a.env) or {"RECALL_VARIANT": "V3"}
+    if a.specs_in_store:
+        batches = sorted({k.split("/")[1] for k in store.list("specs/") if k.endswith(".json")})
+    else:
+        files = sorted(Path(a.specs).glob("*.json"))
+        specs = [json.loads(f.read_text(encoding="utf-8")) for f in files]
+        missing = [f.name for f, s in zip(files, specs) if "concept" not in s]
+        if missing:
+            raise SystemExit(f"specs without a 'concept' key: {missing[:5]}")
+        batches = []
+        for i in range(0, len(specs), a.batch_size):
+            b = f"b{i // a.batch_size + 1:04d}"; batches.append(b)
+            for s in specs[i:i + a.batch_size]:
+                slug = re.sub(r"[^a-z0-9]+", "_", s["concept"].lower()).strip("_")[:60] or "concept"
+                store.put_json(f"specs/{b}/{slug}.json", s)
+    if not batches:
+        raise SystemExit("no specs found: nothing to map")
+    cfg = {"kind": "map", "model": a.model, "revision": rev, "dtype": a.dtype, "env": env,
+           "map": {"batch_size": a.batch_size, "batches": len(batches)}, "shards": []}
+    store.put_json("config.json", cfg)
+    store.put_json("manifest.json", {"tasks": [{"id": f"map:{b}"} for b in batches]})
+    n = sum(len(store.list(f"specs/{b}/")) for b in batches)
+    print(f"{store}: map run, {n} concepts in {len(batches)} batches of up to {a.batch_size}, env {env}, model {a.model}@{rev[:10]}")
 
 
 if __name__ == "__main__":

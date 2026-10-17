@@ -68,6 +68,8 @@ def check(store, extra_bytes=0, extra_a=0, extra_b=0):
 def task_output_bytes(cfg, task_id, n_layers=36, width=12288, n_heads=32, hidden=4096, promptset=None):
     """Rough upper bound on what one task writes (for the pre-task storage check)."""
     kind = task_id.split(":")[0]
+    if kind == "map":
+        return int(cfg.get("map", {}).get("batch_size", 40) * 10e6)     # up to ~8 MB per concept (records + arrays)
     K = cfg["observe"]["k"]
     if kind in ("observe", "merge"):
         return n_layers * width * K * 2 * 11 + n_layers * width * 40 + n_layers * n_heads * K * 10

@@ -32,6 +32,13 @@ Task kinds
                          (down_proj column -> final norm -> unembedding; writer_lens.py), free.
                          -> ablate.npz, neuron_summary.npz, writer.npz
 
+  map:<batch>            concept-indexed mapping, loop v2 (src/loop_v2/map_core.py, by the research branch): every
+                         concept spec in specs/<batch>/ (each with a "concept" key) goes through map_batch on the pinned
+                         model. Output: records.jsonl (one record per concept, provenance inside), arrays/<slug>.npz,
+                         meta with status counts and failed concepts. Per-concept failures are records, not task
+                         failures, unless more than half the batch fails (then raise: no _DONE, another worker retries).
+                         Needs RECALL_VARIANT=V3 (config.json "env", applied before pipeline_fast is imported).
+
 TODO (shortcuts not yet built):
   - start the knockout rows from the cached residual entering layer L (the rows match the base row up to there);
   - attention-head knockouts (ablate_heads:<L>:<ps>), as map_loop's o_proj slice zeroing;
@@ -39,9 +46,13 @@ TODO (shortcuts not yet built):
 """
 from __future__ import annotations
 
+import collections
 import hashlib
 import json
+import os
+import tempfile
 import time
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -58,7 +69,10 @@ class Ctx:
         self.store, self.worker_id = store, worker_id
         self.cfg = store.get_json("config.json")
         self.env = runtime.environment()
+        for k, v in (self.cfg.get("env") or {}).items():       # e.g. RECALL_VARIANT=V3, read by modules at import
+            os.environ.setdefault(k, str(v))
         self._model = None
+        self._pipe = None
         self._corpus = None
 
     @property
@@ -69,6 +83,23 @@ class Ctx:
             self._model, self.tok, self.model_meta = runtime.load_model(self.cfg)
             self.model_meta["load_seconds"] = round(time.time() - t0, 1)
         return self._model
+
+    def pipe(self):
+        """loop v2's FastPipeline around the pinned model (built once). Uses model=/tok= if Pipeline accepts them, else
+        sets the attributes Pipeline.__init__ would, without loading a second copy of the model."""
+        if self._pipe is None:
+            from pipeline_fast import FastPipeline
+            model = self.model
+            try:
+                self._pipe = FastPipeline(self.cfg["model"], mode="add", reply_only=True, model=model, tok=self.tok)
+            except TypeError:
+                p = FastPipeline.__new__(FastPipeline)
+                p.model_name, p.model, p.tok = self.cfg["model"], model, self.tok
+                p.model.requires_grad_(False)
+                p.L, p.W = model.config.num_hidden_layers, model.config.intermediate_size
+                p.stats, p.atlas, p.mode, p.reply_only = None, None, "add", True
+                self._pipe = p
+        return self._pipe
 
     def corpus(self):
         """All shards' tokens, indexed by global doc number: (tokens, starts, lengths)."""
@@ -479,4 +510,31 @@ def ablate(store, task_id, ctx, key):
     return info
 
 
-RUNNERS = {"observe": observe, "merge": merge_observe, "ablate": ablate}
+# ---- map (loop v2) ----------------------------------------------------------------------------------------------
+def map_task(store, task_id, ctx, key):
+    batch = task_id.split(":")[1]
+    specs = {}
+    for k in sorted(store.list(f"specs/{batch}/")):
+        s = store.get_json(k)
+        specs[s["concept"]] = s
+    if not specs:
+        raise RuntimeError(f"no specs under specs/{batch}/")
+    from loop_v2.map_core import map_batch
+    pipe = ctx.pipe()
+    with tempfile.TemporaryDirectory() as td:          # a fresh start every time: no partial resume
+        recs = list(map_batch(pipe, specs, td, code_commit=ctx.env.get("git_commit") or "unknown"))
+        status = collections.Counter((r.get("row") or {}).get("status", "?") for r in recs)
+        failed = [r["concept"] for r in recs if (r.get("row") or {}).get("status") == "failed"]
+        if recs and len(failed) > len(recs) / 2:
+            raise RuntimeError(f"{len(failed)}/{len(recs)} concepts failed (systemic?): "
+                               f"{[(r['concept'], r['row'].get('detail')) for r in recs if r['concept'] in failed[:3]]}")
+        n_bytes = 0
+        for f in sorted(Path(td).rglob("*")):
+            if f.is_file():
+                b = f.read_bytes(); n_bytes += len(b)
+                store.put(f"{key}/{f.relative_to(td).as_posix()}", b)
+    return {"tokens": 0, "concepts": len(recs), "status_counts": dict(status), "failed": failed,
+            "output_mb": round(n_bytes / 1e6, 1), "env_vars": {k: os.environ.get(k) for k in (ctx.cfg.get("env") or {})}}
+
+
+RUNNERS = {"observe": observe, "merge": merge_observe, "ablate": ablate, "map": map_task}

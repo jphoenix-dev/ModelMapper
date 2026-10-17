@@ -36,7 +36,10 @@ from dist.manifest import state  # noqa: E402
 
 POD_ENV_KEYS = ["S3_ENDPOINT_URL", "S3_ACCESS_KEY_ID", "S3_SECRET_ACCESS_KEY", "S3_REGION", "HF_TOKEN"]
 STOCK_IMAGE = "runpod/pytorch:1.4.0-cu1281-torch2121-ubuntu2204"   # RunPod's own (often cached on hosts); torch 2.12.1
-CODE_PATHS = ["requirements-dist.txt", "src/config.py", "src/neurons.py", "src/dist"]
+CODE_PATHS = ["requirements-dist.txt", "src/config.py", "src/neurons.py", "src/dist",
+              # loop v2 (map tasks) and its import chain; no keys are read at import, and Atlas/stats load lazily
+              "src/loop_v2", "src/atlas.py", "src/concept_pipeline.py", "src/jev.py", "src/oai.py", "src/pipeline_fast.py",
+              "src/steer_test.py"]
 REPO = Path(__file__).resolve().parents[2]
 
 # Boot script for the stock image (no custom image or registry). It travels base64-encoded in $BOOT_B64 and the start
