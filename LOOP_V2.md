@@ -91,3 +91,17 @@ Next question after v2 (James): is "named thing" too narrow - would the loop wor
 Concept atlas / search-then-verify (works but only a 16% hit rate; a possible way to choose names later); bottom-up
 profiling of all neurons (the distributed pipeline); quantisation; new task types; a Qwen3 size curve; a cross-family
 model check.
+
+## Run 1 (launched 17 Oct ~22:15)
+- **Frame:** Wikipedia Vital Articles Level 4 (10,021 articles, 11 sections), stratified section x fame (language
+  editions: 128+, 64-127, 32-63, <32), seed 71: 5,000 concepts (~470 per section; all 298 eligible Mathematics);
+  401 already-mapped concepts and 3 bad titles excluded (frame.py; frame.json committed under results/loop_v2/run1/).
+  Named / common tags (intro capitalisation, else Wikidata P279) added by `frame.py tag` in parallel, for analysis only.
+- **Prepare** (prepare.py, desktop): map_loop's Luna steps unchanged, 32 Luna workers, Luna cap $12 (balance $21.83);
+  G1 on the local 5090. Trial on 3 concepts: $0.0017 per concept, 0.5 min.
+- **Map:** src/dist runner (gpu-fan-out session): store s3://modelmapperdistributed/loop_v2_run1, batches of 20
+  appended every 2 min as specs appear; 3 rented pods (3090 / 4090 / A5000), --max-spend 7.5, --min-balance 1.5,
+  approved by James in that session; results drained to D:/already-clean-data/loop_v2/run1/results; the local 5090
+  joins after prepare.
+- Expected: ~3,500 recalled concepts mapped. Next: self-checks per batch and a morning report (coverage, named vs
+  common, overlap, timings, costs).
