@@ -214,6 +214,8 @@ def cmd_run(a, store, name):
             now = time.time()
             pods = rp.list_pods(name)
             led.see(pods, now)
+            tasks = store.get_json("manifest.json")["tasks"]      # re-read: an open run gains batches as it goes
+            run_open = bool((store.get_json("config.json") or {}).get("open"))
             pending, ready, claims = state(store, tasks)
             for pid, e in led.d["pods"].items():   # gone or stopped before the worker ever got going = a failed boot
                 if (e.get("gone") or e.get("stopped") or e.get("boot_timeout") or e.get("boot_failed")) \
@@ -280,6 +282,9 @@ def cmd_run(a, store, name):
             if spent + rate * a.interval / 3600 >= a.max_spend:
                 terminate_all(name, f"spend cap: ~${spent:.2f} + next interval reaches ${a.max_spend}")
                 break
+            if not pending and run_open:
+                print("queue empty but the run is open (more batches coming): waiting", flush=True)
+                time.sleep(a.interval); continue
             if not pending:
                 print("all tasks done", flush=True)
                 for k in store.list("claims/"):          # leftover soft claims (harmless, but tidy up)

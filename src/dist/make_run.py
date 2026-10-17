@@ -10,6 +10,7 @@ Writes: config.json, corpus/shard_*.npz, promptsets/<ps>.json, manifest.json. Re
 """
 import argparse
 import sys
+import time
 from pathlib import Path
 
 import numpy as np
@@ -48,11 +49,13 @@ def main():
     ap.add_argument("--specs", help="map: local folder of spec .json files, each with a 'concept' key")
     ap.add_argument("--specs-in-store", action="store_true", help="map: specs already uploaded under specs/<batch>/")
     ap.add_argument("--batch-size", type=int, default=20, help="map: concepts per task")
+    ap.add_argument("--append", action="store_true", help="map: add new specs to a run (created if missing), run stays open")
+    ap.add_argument("--watch", type=int, default=0, help="map --append: repeat every N s until <specs>/_PREPARE_DONE exists")
     ap.add_argument("--env", action="append", default=[], help="KEY=VALUE set on every worker (map default RECALL_VARIANT=V3)")
     a = ap.parse_args()
 
     store = open_store(a.store)
-    if store.exists("config.json"):
+    if store.exists("config.json") and not (a.kind == "map" and a.append):
         raise SystemExit(f"{store} already holds a run (config.json exists)")
     rev = a.revision or REVISIONS.get(a.model)
     if not rev:
@@ -102,33 +105,82 @@ def main():
     print(f"{store}: {len(tasks)} tasks, model {a.model}@{rev[:10]}")
 
 
-def make_map_run(a, store, rev):
-    """Loop v2 run: specs/<batch>/<slug>.json (uploaded here or already in the store), one map:<batch> task each."""
-    import json
+def _slug(concept):
     import re
+    return re.sub(r"[^a-z0-9]+", "_", concept.lower()).strip("_")[:60] or "concept"
+
+
+def _ready_specs(folder, skip):
+    """(slug, spec) for every complete spec file not yet uploaded. A file still being written (modified in the last
+    5 s, or not valid JSON yet) is left for the next round."""
+    import json
+    out = []
+    for f in sorted(Path(folder).glob("*.json")):
+        if time.time() - f.stat().st_mtime < 5:
+            continue
+        try:
+            sp = json.loads(f.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            continue
+        if "concept" not in sp:
+            print(f"skipping {f.name}: no 'concept' key", flush=True); continue
+        slug = _slug(sp["concept"])
+        if slug not in skip:
+            out.append((slug, sp))
+    return out
+
+
+def make_map_run(a, store, rev):
+    """Loop v2 run: specs/<batch>/<slug>.json, one map:<batch> task each.
+    One-shot (default): upload every spec in --specs, write config + manifest.
+    Incremental (--append, optionally --watch N): add new specs as further batches of --batch-size to an existing or
+    new run while the run stays "open" (workers and the launcher wait rather than exit). With --watch, repeat every N
+    seconds until <specs>/_PREPARE_DONE exists; then the last partial batch is uploaded and the run is closed."""
     env = dict(e.split("=", 1) for e in a.env) or {"RECALL_VARIANT": "V3"}
     if a.specs_in_store:
         batches = sorted({k.split("/")[1] for k in store.list("specs/") if k.endswith(".json")})
-    else:
-        files = sorted(Path(a.specs).glob("*.json"))
-        specs = [json.loads(f.read_text(encoding="utf-8")) for f in files]
-        missing = [f.name for f, s in zip(files, specs) if "concept" not in s]
-        if missing:
-            raise SystemExit(f"specs without a 'concept' key: {missing[:5]}")
-        batches = []
-        for i in range(0, len(specs), a.batch_size):
-            b = f"b{i // a.batch_size + 1:04d}"; batches.append(b)
-            for s in specs[i:i + a.batch_size]:
-                slug = re.sub(r"[^a-z0-9]+", "_", s["concept"].lower()).strip("_")[:60] or "concept"
-                store.put_json(f"specs/{b}/{slug}.json", s)
-    if not batches:
-        raise SystemExit("no specs found: nothing to map")
-    cfg = {"kind": "map", "model": a.model, "revision": rev, "dtype": a.dtype, "env": env,
-           "map": {"batch_size": a.batch_size, "batches": len(batches)}, "shards": []}
-    store.put_json("config.json", cfg)
-    store.put_json("manifest.json", {"tasks": [{"id": f"map:{b}"} for b in batches]})
-    n = sum(len(store.list(f"specs/{b}/")) for b in batches)
-    print(f"{store}: map run, {n} concepts in {len(batches)} batches of up to {a.batch_size}, env {env}, model {a.model}@{rev[:10]}")
+        if not batches:
+            raise SystemExit("no specs found: nothing to map")
+        store.put_json("config.json", {"kind": "map", "model": a.model, "revision": rev, "dtype": a.dtype, "env": env,
+                                       "map": {"batch_size": a.batch_size, "batches": len(batches)}, "shards": [], "open": False})
+        store.put_json("manifest.json", {"tasks": [{"id": f"map:{b}"} for b in batches]})
+        print(f"{store}: map run from specs in the store, {len(batches)} batches"); return
+    cfg = store.get_json("config.json")
+    if cfg is None:
+        cfg = {"kind": "map", "model": a.model, "revision": rev, "dtype": a.dtype, "env": env,
+               "map": {"batch_size": a.batch_size, "batches": 0}, "shards": [], "open": bool(a.append)}
+        store.put_json("config.json", cfg); store.put_json("manifest.json", {"tasks": []})
+    elif cfg.get("kind") != "map":
+        raise SystemExit(f"{store} holds a non-map run")
+    bs = cfg["map"]["batch_size"]
+    index = store.get_json("map_index.json") or {"uploaded": [], "next_batch": 1}
+    done_flag = Path(a.specs) / "_PREPARE_DONE"
+    while True:
+        finishing = (not a.append) or (done_flag.exists() if a.watch else False)
+        new = _ready_specs(a.specs, set(index["uploaded"]))
+        n_full = len(new) // bs * bs
+        take = new if finishing else new[:n_full]                # partial batches wait for more specs unless finishing
+        added = []
+        for i in range(0, len(take), bs):
+            bname = f"b{index['next_batch']:04d}"; index["next_batch"] += 1
+            for slug, sp in take[i:i + bs]:
+                store.put_json(f"specs/{bname}/{slug}.json", sp); index["uploaded"].append(slug)
+            added.append(bname)
+        if added:
+            man = store.get_json("manifest.json") or {"tasks": []}
+            man["tasks"] += [{"id": f"map:{x}"} for x in added]
+            store.put_json("map_index.json", index)              # index first: a crash here re-uploads, never skips
+            store.put_json("manifest.json", man)
+            cfg["map"]["batches"] = len(man["tasks"])
+        if finishing and cfg.get("open"):
+            cfg["open"] = False
+        store.put_json("config.json", cfg)
+        print(f"[{time.strftime('%H:%M:%S')}] {store}: +{sum(1 for _ in take)} concepts in {len(added)} new batches; "
+              f"{len(index['uploaded'])} concepts / {index['next_batch'] - 1} batches in total; run "
+              f"{'open' if cfg.get('open') else 'closed'}", flush=True)
+        if finishing or not a.watch:
+            break
+        time.sleep(a.watch)
 
 
 if __name__ == "__main__":

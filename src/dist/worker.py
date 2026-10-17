@@ -110,14 +110,19 @@ def main():
     store.put_json(f"{lp}/boot.json", boot)
     log(f"model ready after {boot['model_ready_s']} s ({ctx.model_meta['weights_source']})")
 
-    tasks = store.get_json("manifest.json")["tasks"]
     n_run, idle_since, summary = 0, None, []
     while True:
         if a.task:
             pending, ready, claims = [a.task], [a.task], {}
         else:
+            tasks = store.get_json("manifest.json")["tasks"]       # re-read: an open run gains batches as it goes
             pending, ready, claims = state(store, tasks)
         if not pending:
+            if not a.task and (store.get_json("config.json") or {}).get("open"):
+                idle_since = idle_since or time.time()
+                if time.time() - idle_since > IDLE_MAX:
+                    log(f"run still open but nothing new for {IDLE_MAX}s: exiting"); break
+                beat.update(phase="waiting for new batches"); time.sleep(IDLE_POLL); continue
             log("no pending tasks"); break
         free = [t for t in ready if t not in claims or claims[t]["worker"] == wid]
         pick = random.choice(free) if free else None
