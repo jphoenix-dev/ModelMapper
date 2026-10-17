@@ -2040,3 +2040,39 @@ read against the null, not against 0. (I first told the other session it was exa
   Checked afterwards from the saved records (`results/interference_gate.txt`, correction appended): 38 activation
   mismatches; zeroing changed the output in 98.8%, the rest being last-layer neurons below bf16 logit resolution. Raw
   per-context data: results/interference.jsonl in the main checkout (16.5 MB, not committed).
+
+## 17 Oct 2026 (evening): the indirect path - attribute neurons feed the 'say it' neuron (EXPLORATORY; research branch)
+James asked what the neurons do beyond their direct push. (`indirect_path.py`, `indirect_path_summary.py`; GPU 15 min,
+no API.) The 555 concepts whose maps saved their recall prompts (the 359 older maps did not), 7,341 prompts. Each
+top-5 neuron is zeroed on its own at every position (as in the maps), in one batch with the as-is prompt and an
+ACTIVATION-MATCHED null for each: the same-layer neuron, outside the concept's top-30, whose activation at the answer
+position is closest. Measured at the answer position: the answer score (answer logit minus mean logit), split into
+DIRECT (the neuron's own write read through the final norm) and INDIRECT (the rest), plus how much every LATER top-5
+neuron's activation drops. Neuron types from job_overlap: 'say' (the answer in the top-10 of its direct push),
+'attribute' (raises the answer, z >= 2), 'late-other' (layer >= 20, doesn't raise it), 'early' (layer < 20).
+Predictions stated in the script before running.
+
+| type | neurons | score drop when zeroed | direct | indirect | direct share* | null |
+|---|---|---|---|---|---|---|
+| say | 408 | 2.24 | 2.87 | -0.20 | **1.05** | 0.00 |
+| attribute | 786 | 1.35 | 1.17 | +0.15 | 0.80 | -0.02 |
+| late-other | 1,065 | 0.89 | 0.05 | +0.76 | 0.05 | -0.01 |
+| early | 516 | 1.14 | 0.00 | +1.14 | 0.00 | 0.00 |
+*median over neurons with a drop > 0.5
+
+- **(a) holds:** 'say' neurons write the answer themselves; the rest of the network slightly makes up for losing
+  them (indirect -0.20, as in the bow-tie test). Attribute neurons are mostly direct too (0.80). 'Late-other' and
+  early neurons work almost entirely THROUGH later parts.
+- **(b) holds - composition:** zeroing an attribute neuron lowers a LATER 'say' neuron's activation by 12.7% (median per
+  pair) vs -0.3% for its activation-matched null (282 vs 64 pairs, p = 9e-34). It is general: every type feeds later
+  key neurons of the same concept (early -> say 11.7%, late-other -> say 11.6%, say -> later say 17.2%, early ->
+  attribute 7.1%; all p < 1e-5), with the nulls at ~0. The only flat pairs: early -> early, and say -> late-other.
+- **Reading:** a concept's key neurons form a small feed-forward assembly converging on the 'say it' neuron. Early
+  neurons (recognising) and mid/late 'other' neurons feed attribute and say neurons, attribute neurons feed the say
+  neuron, and each step also adds its own push to the answer. One upstream key neuron removed costs the say neuron
+  ~12% of its activation.
+- **Caveats:** answer position only (attention moves information between words, so some 'indirect' effect may run
+  through other positions); first answer token; direct effect read at fixed final rms; per-neuron types depend on
+  job_overlap's thresholds. Gate: zeroing verified in every prompt; 12 of 7,341 (0.16%) had first-token log-odds 0.5-1.0
+  below the saved whole-answer baseline (bf16 batch-size noise). Raw data: results/indirect_path.jsonl in the main
+  checkout (9.3 MB, not committed).

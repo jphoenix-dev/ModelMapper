@@ -140,7 +140,7 @@ def main():
             unit_acts = [[rec[L][r, n].item() for L, n in units] for r in range(R)]
             direct = []
             for (L, n) in units:
-                w = rec[L][0, n] * mlps(model)[L].down_proj.weight[:, n].float()
+                w = rec[L][0, n] * mlps(model)[L].down_proj.weight[:, n].detach().float()   # detach: same value, no autograd graph
                 direct.append(float((w * g / rms[0]) @ u_dir))
             # saved baselines are WHOLE-answer log-odds (all answer tokens); this test scores the FIRST answer token, whose
             # probability is always >= the whole answer's, so the check is an inequality (0.5 = bf16 batch-shape tolerance)

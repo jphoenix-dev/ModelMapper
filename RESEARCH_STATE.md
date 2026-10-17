@@ -46,6 +46,7 @@ How Qwen3-8B computes, in the terms we use:
 | Concept neurons are polysemantic in ordinary text | Luna on web firings: 12% dedicated, 22% ingredient, 57% mostly unrelated (controls 95% unrelated) | 17 Oct night, Luna judge |
 | Their extra meanings are mostly genuinely different, not hidden facets | In Qwen's own space, meanings Luna calls unrelated sit at the unrelated reference; Ur-hubs in only 8/98 (5% by chance): weak | 17 Oct day, stages A/C |
 | Packed triggers, one job | A neuron's downstream effect barely differs across its meanings (0.18 on the same-job -> different-neurons scale); **holds on above-noise knockouts** (0.18-0.22 at every threshold) | 17 Oct day stage D; late afternoon noise check |
+| A concept's key neurons form a feed-forward assembly converging on the 'say it' neuron | 'say' neurons act directly (share 1.05), early ones only indirectly; zeroing an upstream key neuron cuts a later 'say' neuron by ~12% vs ~0 for activation-matched nulls (555 concepts, all pair types p < 1e-5) | 17 Oct evening, indirect path |
 | Off-topic firings are harmless at single-firing resolution | Switching a concept neuron off on unrelated text: +0.0003 +- 0.0005 nats/token (neither); on its own topic +0.004 +- 0.002 (helps); 22,415 firings vs an in-batch null | 17 Oct evening, interference |
 | Key neurons often share a layer, slightly less than chance | 46% of concepts have >= 2 of top-5 on one layer (chance 54%); ~70% of key neurons in L28-35 | 17 Oct late afternoon |
 | A concept's key neurons combine a 'say it' job with legible attribute jobs | 60% have one late neuron with the answer in its top-10 of 152k tokens (null 0.4%); >= 2 neurons raise the answer in 71% (null 2%); e.g. Jimmy Carter = first names + 1970s + presidency + Georgia | 17 Oct evening |
@@ -70,8 +71,10 @@ How Qwen3-8B computes, in the terms we use:
    '1970s', 'Bay Area', 'first name') that also raise the answer (>= 2 raise it in 71% vs 2% by chance). Where no
    single neuron says it, the attributes' overlap alone gets there in about 1 in 6. **Attribute neurons are reusable
    parts:** a neuron's weight-read job picks out which concepts use it (74.6% vs 55.4% for another neuron's job, chance
-   44%; 103 vs 21 neurons, p = 2e-14). The concepts sharing a neuron are themselves similar. Next: follow the indirect
-   path (later layers).
+   44%; 103 vs 21 neurons, p = 2e-14). The concepts sharing a neuron are themselves similar. **Indirect path (17 Oct
+   evening):** 'say' neurons write the answer directly (direct share 1.05); attribute neurons are mostly direct (0.80);
+   early and 'late-other' neurons work through later parts. The key neurons form a feed-forward assembly: zeroing an
+   attribute neuron cuts a later 'say' neuron's activation by 12.7% vs ~0 for an activation-matched null (p = 9e-34).
 2. **Interference: none detected (17 Oct evening).** On unrelated text, switching a concept neuron off neither helps
    nor hurts on average (+0.0003 +- 0.0005 nats/token vs the null); on its own topic its push helps (+0.004 +- 0.002).
    Single-firing effects are only ~1.5x bf16 rounding noise, so a weak leak below ~0.0005 nats/token would be missed.
