@@ -2120,3 +2120,31 @@ also reported.
   (next: zero U per position group); answer-position measurement only; first-order attribution (validated by
   patching); the top-3 slots double-count a head across a concept's prompts. Raw data: results/cross_position.jsonl
   in the main checkout (50 MB, not committed).
+
+## 17 Oct 2026 (late evening): can we SEARCH for concept neurons instead of grinding? Feasibility (EXPLORATORY; research branch)
+Context: James and I stepped back from one-off questions to the loop itself. Our 914 maps touch 12,168 distinct
+neurons in any top-30 (2.8% of 442,368) and 2,663 in any top-5 (0.6%). Idea: if verified concept neurons look
+different on cheap, model-internal profiles, rank all 442k and verify the top candidates causally (search, then
+verify), rather than grinding every neuron. No labels imposed: only numbers measured from Qwen.
+(`concept_search_feasibility.py`, `concept_search_size_check.py`; outputs in D:/already-clean-data/concept_search/,
+summaries copied to results/concept_search/; GPU ~5 min.)
+- Profile per neuron, both signs: 30 features. From the atlas (top-40 / bottom-40 firings over 10M tokens): peak,
+  spikiness, decay, distinct tokens and documents, word-start / capitalised-word / gate-open shares, corpus max and
+  min. From the weights: max z of its push over the vocabulary; capitalised / word-start / Latin share of its 50
+  most-pushed tokens; gate / up / down norms; cos(gate, up).
+- Positives: every pre-coverage-4 top-5 neuron (1,986). Negatives: 5 per positive, same layer, in no top-30. Logistic
+  regression. Criteria stated before running.
+- **Result: criteria NOT MET, narrowly.** 5-fold CV AUC 0.842 (needed 0.85). Out of sample, the 414 NEW coverage-4
+  top-5 neurons rank at a median 90.1th percentile of all 12,288 neurons in their layer (needed 90; random 50.2);
+  half are in their layer's top 10%. The top 1% of all neurons by score holds 400 known concept neurons, vs 24 at
+  random (16.7x).
+- **Artefact check, size:** the strongest feature was the gate vector's norm, and attribution (how the maps found these
+  neurons) favours big neurons. With negatives matched on corpus peak: AUC 0.777, new neurons at the 87th percentile vs
+  55 for size-matched non-concept neurons. With the size features removed as well: AUC 0.760, 82.9th vs 48.8th.
+  **About a third of the signal is size; a real ~34-percentile-point signal survives**: concept neurons push towards
+  CAPITALISED words (names), and their strongest firings decay slowly (strong again and again, not one-off spikes).
+- **Reading:** cheap profiles work as a PRIORITISER, not a classifier. Ranking cuts the search ~10x at 50% recall
+  (half the new concept neurons are in their layer's top 10%). The capitalised-push feature also shows the bias of our
+  sample: we mapped named things, so the search will find more neurons for named things. The decisive test is the
+  next one: of top-ranked neurons in NO map, what fraction can be given a concept and VERIFIED causally (precision of
+  search-then-verify)?

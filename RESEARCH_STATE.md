@@ -66,6 +66,18 @@ How Qwen3-8B computes, in the terms we use:
 - Save everything (per-prompt drops, all 200 candidates, activation maps, head data) so new questions don't need
   re-runs.
 
+## Direction (17 Oct late evening, with James)
+Back to the loop. What we capture today is a validated, concept-first map of ONE behaviour (naming an entity), touching
+2.8% of neurons. Agreed direction: (a) keep labelling concept neurons, systematically and reproducibly; (b) capture
+'all other neurons' bottom-up as stored measurements, NOT imposed categories (the truth may be weirder than our list);
+labels only from tests a neuron passes. Before scaling (agreed 'regret' list): one schema with provenance; a null in
+every measurement; checks verified from records; save raw ingredients (e.g. residuals at key positions) so the unit can
+change later (SAE / transcoder features); a deliberate sampling frame, not only named entities in Q&A; a join key with
+the distributed bottom-up pipeline; self-checks in every batch; nothing Qwen-specific. All output to D:/already-clean-data.
+**Search instead of grind - feasibility:** cheap profiles rank concept neurons well enough to prioritise (new
+coverage-4 concept neurons at the 90th percentile of their layer; top 1% holds 16.7x the chance count; ~1/3 of the
+signal is neuron size). Next: the precision of search-then-verify on top-ranked unmapped neurons.
+
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts
    one late neuron is close to 'say this word'. It usually sits alongside 1-3 legible attribute neurons ('Georgia',
