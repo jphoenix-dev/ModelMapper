@@ -29,7 +29,7 @@ T_START = time.time()
 
 from dist.storage import open_store  # noqa: E402
 from dist import quota  # noqa: E402
-from dist.manifest import state, task_key  # noqa: E402
+from dist.manifest import CLAIM_TTL, state, task_key  # noqa: E402
 from dist.tasks import Ctx, run_task  # noqa: E402
 
 IDLE_POLL, IDLE_MAX = 30, 15 * 60
@@ -141,6 +141,9 @@ def main():
         # claim, pause, verify: the bucket keeps the last write, so two workers that picked the same task in the same
         # moment both read back one winner and the other moves on (measured: 5 of 20 tasks ran twice without this)
         nonce = f"{wid}:{random.random():.12f}"
+        fresh = store.get_json(claim_key)                # the listing may be seconds old: re-check right before claiming
+        if fresh and fresh.get("worker") != wid and time.time() - fresh.get("t", 0) < CLAIM_TTL:
+            continue
         store.put_json(claim_key, {"worker": wid, "nonce": nonce, "t": time.time()})
         time.sleep(random.uniform(0.5, 2.0))
         won = (store.get_json(claim_key) or {}).get("nonce") == nonce

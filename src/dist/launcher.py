@@ -279,6 +279,8 @@ def cmd_run(a, store, name):
                 break
             if not pending:
                 print("all tasks done", flush=True)
+                for k in store.list("claims/"):          # leftover soft claims (harmless, but tidy up)
+                    store.delete(k)
                 if a.drain_to:
                     drain(store, tasks, [], a.drain_to)
                 break
