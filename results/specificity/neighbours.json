@@ -1,0 +1,368 @@
+{
+ "Eiffel Tower": {
+  "qid": "Q243",
+  "p31": "Q1440476",
+  "section": "Arts",
+  "L1": [
+   "Musée d'Orsay",
+   "Champs-Élysées",
+   "Arc de Triomphe"
+  ],
+  "L2": [
+   "Tokyo Tower",
+   "Kyiv TV Tower",
+   "Shukhov Tower"
+  ],
+  "L3": [
+   "Singin' in the Rain",
+   "Harry Potter",
+   "Pop music"
+  ],
+  "L4": [
+   "Golf",
+   "Joule",
+   "Public relations"
+  ]
+ },
+ "Statue of Liberty": {
+  "qid": "Q9202",
+  "p31": "Q43113623",
+  "section": "Arts",
+  "L1": [
+   "Ellis Island",
+   "Liberty Island",
+   "The Battery (Manhattan)"
+  ],
+  "L2": [
+   "Eiffel Tower",
+   "CN Tower",
+   "Tokyo Skytree"
+  ],
+  "L3": [
+   "Dance",
+   "The Four Seasons (Vivaldi)",
+   "The Tale of Genji"
+  ],
+  "L4": [
+   "Psychological disorders",
+   "Bengaluru",
+   "Mixture"
+  ]
+ },
+ "Louvre": {
+  "qid": "Q19675",
+  "p31": "Q207694",
+  "section": "Arts",
+  "L1": [
+   "Notre-Dame de Paris",
+   "Musée d'Orsay",
+   "Champs-Élysées"
+  ],
+  "L2": [
+   "Israel Museum",
+   "Metropolitan Museum of Art",
+   "Museo del Prado"
+  ],
+  "L3": [
+   "Concerto",
+   "Shakespeare's sonnets",
+   "Movie theater"
+  ],
+  "L4": [
+   "Squirrel",
+   "Decibel",
+   "Quantum tunnelling"
+  ]
+ },
+ "Notre-Dame de Paris": {
+  "qid": "Q2981",
+  "p31": "Q56242215",
+  "section": "Arts",
+  "L1": [
+   "Louvre",
+   "Musée d'Orsay",
+   "Bastille"
+  ],
+  "L2": [
+   "Milan Cathedral",
+   "Santiago de Compostela Cathedral",
+   "Archbasilica of Saint John Lateran"
+  ],
+  "L3": [
+   "Realism (arts)",
+   "Der Ring des Nibelungen",
+   "Dracula"
+  ],
+  "L4": [
+   "Concussion",
+   "Harbin",
+   "Cycle sport"
+  ]
+ },
+ "Taj Mahal": {
+  "qid": "Q9141",
+  "p31": "Q162875",
+  "section": "Arts",
+  "L1": [
+   "Agra Fort"
+  ],
+  "L2": [
+   "Mausoleum at Halicarnassus",
+   "Terracotta Army",
+   "Lenin's Mausoleum"
+  ],
+  "L3": [
+   "Fugue",
+   "Gangnam Style",
+   "Peanuts"
+  ],
+  "L4": [
+   "Lysosome",
+   "Baltic Sea",
+   "Hypnosis"
+  ]
+ },
+ "Colosseum": {
+  "qid": "Q10285",
+  "p31": "Q7362268",
+  "section": "Arts",
+  "L1": [
+   "Pantheon, Rome",
+   "Roman Forum",
+   "Trevi Fountain"
+  ],
+  "L2": [
+   "Amphitheatre of El Jem",
+   "Amphitheatre of Durrës",
+   "Machu Picchu"
+  ],
+  "L3": [
+   "Viola",
+   "Taj Mahal",
+   "Computer animation"
+  ],
+  "L4": [
+   "Great Australian Bight",
+   "Urea",
+   "Halley's Comet"
+  ]
+ },
+ "Sydney Opera House": {
+  "qid": "Q45178",
+  "p31": "Q153562",
+  "section": "Arts",
+  "L1": [
+   "Sydney Harbour Bridge",
+   "Sydney Tower"
+  ],
+  "L2": [
+   "La Scala",
+   "Palais Garnier",
+   "Royal Opera House"
+  ],
+  "L3": [
+   "Folk dance",
+   "War and Peace",
+   "Tristan und Isolde"
+  ],
+  "L4": [
+   "Printing",
+   "Srivijaya",
+   "Mount Olympus"
+  ]
+ },
+ "Burj Khalifa": {
+  "qid": "Q12495",
+  "p31": "Q11303",
+  "section": "Arts",
+  "L1": [
+   "Dubai Mall",
+   "Rose Rayhaan by Rotana",
+   "Emirates Office Tower"
+  ],
+  "L2": [
+   "Empire State Building",
+   "Willis Tower",
+   "Petronas Towers"
+  ],
+  "L3": [
+   "Impressionism",
+   "Eiffel Tower",
+   "Conceptual art"
+  ],
+  "L4": [
+   "Ice shelf",
+   "Xiamen",
+   "Odesa"
+  ]
+ },
+ "Forbidden City": {
+  "qid": "Q80290",
+  "p31": "Q16560",
+  "section": "Arts",
+  "L1": [
+   "Tiananmen Square",
+   "National Museum of China",
+   "Great Hall of the People"
+  ],
+  "L2": [
+   "Palace of Versailles",
+   "Château de Montsoreau",
+   "Alhambra"
+  ],
+  "L3": [
+   "Utopia (book)",
+   "Saxophone",
+   "Dictionary"
+  ],
+  "L4": [
+   "Walnut",
+   "Noise",
+   "Logic"
+  ]
+ },
+ "Sagrada Família": {
+  "qid": "Q48435",
+  "p31": "Q120560",
+  "section": "Arts",
+  "L1": [
+   "Park Güell",
+   "La Pedrera, Barcelona",
+   "Casa Batlló"
+  ],
+  "L2": [
+   "Notre-Dame de Paris",
+   "Pantheon, Rome",
+   "Church of the Holy Sepulchre"
+  ],
+  "L3": [
+   "Guernica (Picasso)",
+   "Superman",
+   "Jane Eyre"
+  ],
+  "L4": [
+   "Capital (economics)",
+   "Substance (chemistry)",
+   "Service (economics)"
+  ]
+ },
+ "Hagia Sophia": {
+  "qid": "Q12506",
+  "p31": "Q120560",
+  "section": "Arts",
+  "L1": [
+   "Blue Mosque, Istanbul",
+   "Topkapı Palace",
+   "Süleymaniye Mosque"
+  ],
+  "L2": [
+   "Notre-Dame de Paris",
+   "Sagrada Família",
+   "Pantheon, Rome"
+  ],
+  "L3": [
+   "Taj Mahal",
+   "Ballet",
+   "National anthem"
+  ],
+  "L4": [
+   "Sushi",
+   "Sixteen Kingdoms",
+   "Mumps"
+  ]
+ },
+ "St. Peter's Basilica": {
+  "qid": "Q12512",
+  "p31": "Q124936",
+  "section": "Arts",
+  "L1": [
+   "Sistine Chapel",
+   "Pantheon, Rome",
+   "Roman Forum"
+  ],
+  "L2": [
+   "Eiffel Tower",
+   "Burj Khalifa",
+   "Masjid al-Haram"
+  ],
+  "L3": [
+   "Haiku",
+   "Harmonica",
+   "History of the Peloponnesian War"
+  ],
+  "L4": [
+   "Sylhet",
+   "Paranthropus",
+   "1976 Tangshan earthquake"
+  ]
+ },
+ "Machu Picchu": {
+  "qid": "Q676203",
+  "p31": "Q15661340",
+  "section": "History",
+  "L1": [
+   "Huayna Picchu"
+  ],
+  "L2": [
+   "Cairo",
+   "Damascus",
+   "Xi'an"
+  ],
+  "L3": [
+   "Polish–Lithuanian Commonwealth",
+   "Arab–Byzantine wars",
+   "Urartu"
+  ],
+  "L4": [
+   "Basil",
+   "Time zone",
+   "Meristem"
+  ]
+ },
+ "Parthenon": {
+  "qid": "Q10288",
+  "p31": "Q267596",
+  "section": "Arts",
+  "L1": [
+   "Acropolis of Athens",
+   "Platonic Academy",
+   "Erechtheion"
+  ],
+  "L2": [
+   "Palmyra",
+   "Paestum",
+   "Velia"
+  ],
+  "L3": [
+   "Post-Impressionism",
+   "Neoclassicism",
+   "Donald Duck"
+  ],
+  "L4": [
+   "Carbon nanotube",
+   "Plant",
+   "Lottery"
+  ]
+ },
+ "Golden Gate Bridge": {
+  "qid": "Q44440",
+  "p31": "Q12570",
+  "section": "Technology",
+  "L1": [],
+  "L2": [
+   "Tower Bridge",
+   "Brooklyn Bridge",
+   "Akashi Kaikyo Bridge"
+  ],
+  "L3": [
+   "Laser",
+   "Clock",
+   "Communications satellite"
+  ],
+  "L4": [
+   "Cell (biology)",
+   "Sendai",
+   "Ningbo"
+  ]
+ }
+}

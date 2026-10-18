@@ -2220,3 +2220,458 @@ summaries copied to results/concept_atlas/.) Fixes the step that failed in searc
 - **Caveats:** one sample of 100 per group; Luna's questions can drift from the exact name (some untested names); the
   'known' group verifies on its TOP atlas name, which is its own concept only ~21% of the time; layer-35 neurons
   dominate some groups.
+
+## 18 Oct 2026 (overnight): loop v2 run 1 - 5,000 Vital Articles concepts (research branch)
+(LOOP_V2.md; frame / prepare / map / report scripts in src/loop_v2/; raw results 32 GB in
+D:/already-clean-data/loop_v2/run1/; summaries in results/loop_v2/run1/.)
+- **Run:** 5,000 concepts from Wikipedia Vital Articles Level 4 (section x fame, seed 71). Prepare 26 min (96 Luna
+  workers, 0 failures, Luna ~$9.40). Map through the gpu-fan-out runner: 250 batches on up to 8 rented 3090s + the local
+  5090, ~$12.30 of RunPod, 0 failed concepts; 3090 52 s and 5090 26 s per recalled concept.
+- **Coverage:** 4,194 mapped (84%); by fame 95% (128+ editions) -> 57% (<32); by section 70% (History) - 90%
+  (Geography); named 85%, common 83%.
+- **Small handful holds across knowledge:** k_mean <= 5 in 1,705/1,722 named and 2,448/2,472 common concepts
+  (median 2 named, 1 common).
+- **Null clean:** median |null drop| 0.028 (p95 0.077) vs median top-1 drop 3.29; no concept with null >= 20% of top-1.
+- **P1 replicates (self-check, 200 concepts, independent Wikipedia cloze prompts):** top-5 zeroed, median drop +7.42
+  vs random-5 +0.003; flips >= half the prompts in 164/200 (P1 on the earlier maps: +5.59, 66%); named +6.96,
+  common +7.80.
+- **P4 replicates (self-check, families = Wikidata P31, first half of batches -> second half):** median own/other
+  4.38 (pre-registered bar 3), 415 vs 251 (p = 2e-10) - weaker than the earlier 9.18. Strong for literary works,
+  chemical elements, cities, historical countries, languages; NOT for people (Q5: own median 0), unlike the earlier
+  people-heavy sample (historical figures here vs contemporary celebrities then - open). With Vital Articles SECTIONS
+  as families the check is weak (517 vs 473): sections are too broad.
+- **Named vs common:** a 'say' neuron (answer in its top-10 pushed tokens) in the top-5 for 62% named vs 73% common.
+  Not a tokenisation artefact (common multi-token answers 74%). Partly section composition (People 46%, all named),
+  but within sections common > named in 9 of 10 (+4 to +22 points). On the 230 concepts where Luna's blind label
+  agrees with ours it reverses (79% vs 73%, small sample). Reading: modest, probably real; historical people often lack
+  a single 'say' neuron.
+- **Tags:** frame.py's named/common tag agrees with Luna's blind label on 273/300 (91%); disagreements are borderline
+  (languages, peoples, fields, taxa).
+- **Sharing:** 39,494 distinct neurons in any top-30 (8.9% of all), 9,860 in any top-5; median 10% of a concept's top-10
+  in no other map's top-30 (a different metric from P2's, same direction: 'dedicated' shrinks as coverage grows);
+  16,492 neurons shared by >= 2 maps, 29% of them within one section.
+- **Heads:** most often among a concept's 5 most damaging single-head knockouts: L35H25 (1,337 concepts), L34H28
+  (1,098), L19H29 (951), L20H9, L23H10, L35H24 - the late re-reader / turn-boundary copier / meaning-carrier set again.
+
+## 18 Oct 2026: shared neurons across 4,194 maps - same job? same inputs? (run 1; research branch)
+James: neurons used by several concepts - same job each time, the same earlier neurons, or polysemantic?
+(`shared_neurons.py`, CPU; `feeders.py`, GPU ~25 min; outputs in D:/already-clean-data/loop_v2/run1/, summaries in
+results/loop_v2/run1/.)
+- **Census:** 3,010 neurons sit in the top-10 of >= 3 maps (median 4 users, max 874); mostly layers 30-35 (1,764) and
+  24-29 (741), with a cluster at 6-11 (357).
+- **Same job, mechanically:** a neuron's push direction is fixed by its weights x the sign of its activation. That
+  sign agrees across ALL its users for 79% of shared neurons (median agreement 100%). Roles: 1,709 are attribute /
+  late-other for every user, 629 'say' for some users, 227 'say' for all, 445 early.
+- **Three kinds (readable from the push tokens and users).** NOTE (James, 18 Oct): the names below ('rivers',
+  'happily ever after', 'Indonesia', ...) are my INFORMAL readings of two pieces of data - the tokens a neuron's weights
+  push and the concepts whose maps use it - not systematic labels; 'happily ever after' is shaky (Romeo and Juliet
+  doesn't end happily; 'fairy-tale / romance stories' fits better). The push tokens and users are the evidence (in
+  shared_neurons.json); any future labels need a stated method (e.g. blind labeller + agreement check).
+  Likewise 'packed unrelated meanings' (Czech + Xi'an) is untested: it may be a shared surface feature (sound or
+  spelling, cf. the cats/cars 'V shape' example) rather than two meanings.
+  - *topic jobs*, small coherent groups: rivers (7 rivers and a lake), Indonesia (Bali, Aceh, clove, the
+    language, the revolution), dance, refrigeration, 'happily ever after' (Cinderella, Aladdin, Romeo and Juliet),
+    genus endings (-opsis, -occus), Russian first names (Chekhov, Rachmaninoff, Pasternak);
+  - *spelling jobs*: 'v' (Village, Virus, Vegetarianism), 'm' (Maze, Molybdenum, Mackerel), 'New', 'Rock';
+  - *generic machinery* used by hundreds of unrelated concepts: a digits/punctuation writer (615 concepts) and
+    junk-token pushers (L34:1452, 847; L20:7473, 874) - answer-format machinery, not meaning.
+- **Related users:** they share a Vital Articles section 67% of the time vs 37% by chance (first Wikidata type: 33% vs
+  33% - too fine-grained a label). Some packed neurons serve unrelated meanings, e.g. L29:4682 pushes 'Czech' / 'Prague'
+  AND 'Xi'an' (users: Hussite Wars, Wends, Xi'an).
+- **Same earlier neurons? (feeders.py):** for 100 shared neurons x their users (497 pairs), each neuron's 20 strongest
+  earlier-layer feeders (activation x gradient of its activation, summed over positions) per concept. Jaccard overlap:
+
+| pair | median |
+|---|---|
+| same TOPIC neuron (3-10 users), two of its users | 0.111 (above chance for 80/80) |
+| same WIDELY shared neuron (>= 100 users), two users | **0.445** |
+| same concept, two different shared neurons | 0.111 |
+| chance (different neuron, different concept) | 0.000 (mean 0.011) |
+
+  Prediction half wrong: machinery neurons were predicted to vary their feeders by concept; instead they are fed by
+  the SAME upstream neurons whatever the concept (12 of 20 in common) - they respond to the question-answering
+  format, not to the concept. Topic neurons share a minority of feeders (2 of 20) far above chance; the shared ones are
+  themselves readable attribute neurons: the Fellini / Woody Allen / La Dolce Vita neuron <- 'Italy' + 'film /
+  director' neurons; the civil-rights neuron <- 'Martin' + 'strike / protest'; the Qing / Habsburg / Plantagenet
+  neuron (pushes family names) <- a 'families' neuron; the seas neuron <- a 'rivers' neuron.
+- **Reading:** shared neurons are mostly NOT polysemantic in this setting. Machinery neurons do one task-level job with
+  fixed inputs. Topic neurons do one output job, reached from partly shared attribute feeders plus concept-specific
+  ones - a visible hierarchy (Italy + film -> Italian cinema -> Fellini). A minority appear to pack unrelated meanings (untested: possibly shared surface features).
+- **Caveats:** top-20 feeders by first-order attribution (not knockouts); the same-concept baseline is small (27
+  pairs); 'topic' vs 'machinery' split by user count, not a test of meaning.
+
+## 18 Oct 2026: forcing one neuron - its most common expression, read with minimal bias (pilot; research branch)
+James: like the original "Eiff eiff eiff" when a say-it neuron was clamped hard - garbage is fine; what REPEATS across
+many backgrounds is the neuron's own expression. (`neuron_readout.py`; output D:/already-clean-data/neuron_readout/,
+summary in results/neuron_readout/pilot1.txt; GPU ~20 min.) The target is clamped at 1x / 4x / 16x its own web-text
+peak, at the last context position and every generated position, in three backgrounds: 200 random web snippets; a
+bare newline with 50 RANDOM unrelated neurons clamped to their peaks (a new random set per repeat, 200); a bare newline
+alone. Read: the mean next-token log-prob change vs the unforced background, and 8 greedy tokens. 10 targets + 3 random
+control neurons.
+| neuron | forced readout (x1-x4; [x16]) |
+|---|---|
+| Moon L31:9683 | moon, 月, lunar, full, "full-moon moon-moon-moon" [明明明 - 'bright', as in 明月 'bright moon'] |
+| Eiffel Tower L31:10160 | par, _par, -par (the start of 'Paris'?) [par-par-par] |
+| Eiffel Tower L26:11492 | tower, landmark, 塔, 地标, monument [leaning leaning leaning] |
+| Netherlands L33:5099 | Nether, ETHER, hol (Holland), Pays (Pays-Bas) [hol hol hol] |
+| 'rivers' L23:12257 | River, rivers, 河水, downstream, streams [River River River] |
+| 'happily/prince' L29:6647 | happy, happily, prince, 王子; generates "... ever after" at x4 [南瓜 pumpkin, 灰 ash (Cinderella), 王子] |
+| 'Indonesia' L29:9192 | Indonesian words (dalam, dengan, jumlah, ber-), Jakarta |
+| Czech/Xi'an L29:4682 | Xi'an's local geography (西安, 陕西, 鄠, 灞 and 浐 rivers, 潏, 咸阳 Xianyang, 兵马 Terracotta Army) AND Czech, Prague, Slovak |
+| 'v' L34:553 | v, )v, =v [_AV] |
+| digits L33:10933 | digits / spaces on web text; Russian fragments with no context |
+| random controls | 'thanks / 感谢'; '先进 / 优秀' ('advanced / excellent'); one noisy |
+- **Low bias (for these hand-picked strong neurons only - see the correction in the fast-readout entry below):** the
+  top next-token shifts are nearly the same across real text, random-neuron noise and no context. Strength matters: x1 is often drowned by context in generation, x4 reads best, x16
+  collapses to one repeated token - often a telling one ('leaning', 'pumpkin', 'bright').
+- The informal 'happily ever after' reading (marked shaky earlier) is supported: forced, it generates 'happy ... ever
+  after', 'prince', 'pumpkin'.
+- Czech/Xi'an: NO shared sound visible (no Ch-/Sh-/Xi- sound-alikes) - two detailed, separate clusters (very local Xi'an
+  places; Czech/Prague/Slovak). Looks like genuinely packed unrelated meanings; an unseen shared link is not ruled out.
+- Random control neurons also have readable expressions when forced: this is a candidate UNBIASED labelling method
+  (same procedure for every neuron, no labeller), to run over many neurons.
+
+## 18 Oct 2026: fast forced readout - validation against known answers and across layers (research branch)
+(`fast_readout.py`: 32 web + 16 empty backgrounds, target forced at the last position only, next token; weighted words
+= mean dlogp, consistency across backgrounds, mean forced probability; per-background top-20 with forced and unforced
+probabilities saved; output D:/already-clean-data/fast_readout/; ~110-125 ms per neuron on the 5090.)
+- **Known answers (2,577 neurons, run-1 concepts):** for 2,856 'say'-neuron/concept pairs, the concept's answer token is
+  in the forced readout's top-10 73% (top-50 87%, median rank 5); for all picked neurons 50% (top-50 64%). The
+  weights-only direct push does at least as well (top-10 68% for all picked; 100% for 'say' neurons, by definition)
+  - forcing does not identify late neurons' concepts better than the near-free weight reading.
+- **Layers (50 random neurons per layer):** the top word is consistent across backgrounds only late on: layers 28-35
+  91-100% (x4) / 97-100% (x16); 24-27 50% / 69%; 0-23 2-16% / 6-36%. A single early or mid neuron forced at one
+  position has no consistent expression even at 16x (its effect goes through later layers and other positions).
+- **Context dependence (James: do the words depend on what else is active?):** yes, substantially. Per-background
+  top-10 words overlap little across web backgrounds (1 - mean pairwise Jaccard: layers 32-35 0.59, 28-31 0.83, earlier
+  ~1.0): the top word is stable for late neurons, the rest of the list shifts with context.
+- **CORRECTION to the pilot's 'low bias' claim:** it held for hand-picked strong neurons; for random neurons the top-10
+  from web vs empty backgrounds overlap only 0.1-0.2 (Jaccard) even in late layers.
+- **Reading:** the cheap forcing readout gives a reliable job label for late neurons (roughly the top quarter of the
+  model), where the weight reading is about as good; early / mid neurons need a different readout - e.g. describe them
+  by which late neurons they drive (downstream fan-out), consistent with the composition seen in feeders.py.
+
+## 18 Oct 2026: fan-out readout for early / mid neurons - smoke test (research branch)
+James: describe early / mid neurons (no consistent forced word readout) by what they drive: hold the context fixed,
+vary only the target (dose series -4..8 x peak; last position or every position), read all layer-24..35 neurons and the
+next-token log-probs at the last position; 16 web texts (two halves) and, for concept-specific targets, the concept's own
+recall prompts. 29 targets: 11 concept-specific early neurons (e.g. Clovis I L12, Strawberry L4, Volleyball L8), 8 widely
+shared early neurons, 10 random (layers 4-23). (`fanout.py`; outputs D:/already-clean-data/fanout/ - smoke.jsonl = v1,
+smoke2.jsonl/.txt = v2; v1's text summary was overwritten by a naming bug, its full data is intact.)
+- **v1 (raw slopes):** fan-out exists and is partly repeatable - top driven neurons keep their sign in 75-94% of texts,
+  roughly linear in dose (R^2 ~0.5-0.7), split-half top-20 Jaccard 0.2-0.5 (shared early neurons most repeatable),
+  effects 5-20x larger on the concept's own prompts. But the ranking was swamped by a few generic last-layer hub
+  neurons (L35:9510, L35:8724, L35:11333, L35:9490 - junk pushes) that respond to ANY perturbation.
+- **v2 (each late neuron's slope in units of its natural spread, minus the random targets' mean):** the hubs drop out;
+  driven neurons are consistent (88-100% sign) but mostly in layers 24-27 and themselves unreadable by their pushed
+  words. Glimpses: Antigonus I Monophthalmus -> a 'Rome / 罗马' neuron plus 'mon' / 'mat' spelling neurons; widely shared
+  early neurons -> 'Title-Case term' neurons (Theory, Approach, Responsibility, '-Based', '-Level') - consistent with
+  answer-format machinery. Most concept-specific early neurons get no readable fan-out (Strawberry, Johann Strauss II,
+  Monopoly, Marathi).
+- **Reading (smoke test):** early neurons' downstream effects are repeatable but do not translate into a word-level
+  job one step later - the description problem moves up a layer. Options: restrict to READABLE late endpoints (layers
+  28-35) and follow chains; or describe early neurons by the concepts they matter for (from the maps).
+
+## 18 Oct 2026: question-side test + specificity gradient - 'say it' vs meaning, and how specific (research branch)
+(Queued after run 1, design and predictions in RESEARCH_STATE.md before running. `specificity.py`; outputs
+D:/already-clean-data/specificity/, summary + neighbours in results/specificity/; Luna ~$0.08, GPU ~15 min.)
+15 mapped landmarks. Neighbours from Wikidata, 3 per level: L1 notable physical places within 3 km (coordinates; first
+pass picked abstract items with Paris coordinates - UNESCO, the French language - so restricted to structures /
+mountains / islands / squares / parks via the type hierarchy); L2 same 'instance of' type > 500 km away (falling back to
+the source's other types when the first had no distant matches - broader, e.g. St. Peter's -> Eiffel Tower, Burj
+Khalifa); L3 same Vital Articles section, different type; L4 a different section. Luna wrote 8 FACT questions per source
+(the name in the question, short factual answer, e.g. "In which city is the Eiffel Tower?" -> Paris) and 8 naming
+questions per neighbour; only questions Qwen answers were used (P >= 0.2). Zeroed at every position, each against an
+as-is copy in the same pass. Median log-odds drop:
+
+| question set | k (breaks naming) | top-5 | top-5 late | top-5 early | random-5 (x2) | another landmark's top-5 |
+|---|---|---|---|---|---|---|
+| source NAMING (15) | **3.62** | **8.03** | 6.44 | 1.44 | -0.01 / -0.01 | 0.16 |
+| source FACTS (15) | **0.03** | 0.68 | 0.30 | 0.97 | -0.04 / -0.05 | 0.02 |
+| neighbours L1 same place (25) | 0.02 | 0.17 | 0.17 | -0.01 | 0.02 / 0.00 | 0.10 |
+| neighbours L2 same kind (30) | 0.01 | 0.10 | 0.07 | 0.03 | -0.01 / 0.00 | 0.05 |
+| neighbours L3 same section (36) | 0.00 | 0.00 | 0.01 | 0.02 | 0.01 / 0.00 | -0.01 |
+| neighbours L4 unrelated (37) | 0.00 | -0.02 | -0.02 | 0.00 | 0.00 / -0.01 | -0.03 |
+
+- **'Say it', not meaning (predictions held):** the neurons that break NAMING a landmark (k, median drop 3.62) leave
+  questions ABOUT it essentially intact (0.03). Late neurons hurt naming most (6.44) and facts little (0.30); early
+  neurons the reverse pattern (naming 1.44, facts 0.97) - the early cluster carries more of the meaning.
+- **Exceptions (facts damaged too):** Burj Khalifa (facts 8.10), St. Peter's Basilica (6.73), Machu Picchu (3.86) - to
+  check whether their fact answers share tokens with the name or depend on name-linked attributes.
+- **Specificity gradient (prediction held):** damage to neighbours falls with distance, L1 0.17 -> L2 0.10 -> L3 0.00 ->
+  L4 -0.02 (vs 8.03 on the source itself: neighbours lose ~1-2%). Large exceptions where neighbours share an attribute:
+  Sydney Opera House -> Sydney Harbour Bridge / Sydney Tower 5.40; Burj Khalifa -> other skyscrapers 5.98; Golden Gate
+  -> other bridges 4.74; St. Peter's -> Sistine Chapel 3.61; Statue of Liberty -> towers 2.22; Sagrada Família -> Park
+  Güell / Casa Batlló (Gaudí) 1.68; Machu Picchu -> Huayna Picchu 1.57. Another landmark's top-5 also touches L1/L2 a
+  little (0.10 / 0.05) - shared landmark-attribute neurons.
+- **Reading:** a concept's map is mostly a specific 'say it' mechanism (naming), not where the knowledge ABOUT it lives;
+  the meaning sits more in early neurons and elsewhere. Its spill-over follows shared attributes (place, kind, architect).
+- **Limits:** small n per level (many neighbours had < 2 recalled naming questions); Luna-written fact answers; one
+  forced 'answer in as few words as possible' format for facts; 15 sources, all landmarks.
+
+## 18 Oct 2026: job-finding for knowledge neurons - an entity x relation causal grid + position test (research branch)
+James: naming maps are 'say it' machinery; find mechanisms for the job of earlier neurons, where knowledge seems to live.
+(`facts.py`; outputs D:/already-clean-data/facts/, summary / entities / classes in results/facts/; Luna ~$0.01; GPU ~35 min.)
+Ground truth: 30 landmarks x 5 relations (city, country, designer, century built, main material), 3 FIXED phrasings per
+relation (same wording for every landmark), answers from Luna ('Unknown' excluded), kept where Qwen answers >= 2 of 3:
+111 facts (city 30, country 30, century 25, material 14, designer 12). Per fact: attribution of the answer -> top-100 ->
+each zeroed alone -> fact map. Grid: each fact's top-3 neurons (drop > 0.2) zeroed on EVERY fact -> mean drop on the same
+landmark's other facts / the same relation for other landmarks / neither -> class (threshold max(0.2, 25% of its own-fact
+drop), fixed before looking): entity, relation, entity+relation, fact-specific, generic. Position: each zeroed only at the
+landmark's name tokens vs only at the last position. Predictions stated before running.
+- **(a) 'fact neurons sit earlier than naming neurons': FAILED as stated.** Fact maps' top-5 have the same layer profile
+  as naming maps (median layer 30; 19% vs 16% below layer 20). Mapping by the answer's log-prob again finds late neurons
+  that SAY the answer ('Paris', '19th').
+- **(b) 'entity neurons are early and act at the subject tokens': HELD.**
+
+| fact neurons | n | zeroed everywhere | only at the name tokens | only at the last position | entity / relation / fact-specific / generic |
+|---|---|---|---|---|---|
+| layers 0-9 | 40 | 2.72 | **2.60** | 0.00 | 15 / 1 / 24 / 0 |
+| layers 10-19 | 19 | 1.58 | **1.46** | 0.01 | 8 (+1 both) / 0 / 10 / 0 |
+| layers 20-27 | 31 | 1.81 | 0.04 | **1.31** | 0 / 11 / 17 / 3 |
+| layers 28-35 | 243 | 2.64 | 0.00 | **1.60** | 16 (+8 both) / 50 / 158 / 11 |
+
+- **(c) 'relation neurons sit mid-to-late': HELD.** E.g. L30:8291 is a 'century built' neuron: zeroing it costs ~3.2
+  log-odds on the century fact of every landmark tested (Taj Mahal, Tokyo Tower, CN Tower, Blue Mosque, Versailles...)
+  and nothing on their other facts. Early entity examples: L8:9458 (Blue Mosque: its facts drop, other landmarks'
+  don't), L1:4818 (Sagrada Família), L1:3960 (Statue of Liberty).
+- **Entity neurons are mostly not naming neurons:** 6 of 32 appear in their landmark's naming top-5, essentially one
+  neuron - L29:5436, a 'Vatican' neuron (all Sistine Chapel / St. Peter's facts collapse without it, drops 15-28: city,
+  country, etc. route through 'Vatican').
+- **Reading:** a working job-finding mechanism for early neurons: place a neuron in an entity x relation grid causally
+  and find where it acts. Early (layers 0-19) knowledge neurons are ENTITY neurons acting at the entity's own name
+  tokens; mid/late ones extract RELATIONS (or say specific answers) at the answer position. This matches the published
+  picture of factual recall (subject enrichment in early MLPs at the subject token, attribute extraction late; Meng et al.
+  2022, Geva et al. 2023), now neuron by neuron in Qwen3-8B.
+- **Limits:** only 59 early neurons in the fact maps' top-3s (maps still favour late answer-sayers); 5 relations, all
+  landmarks; class thresholds arbitrary (stated); Luna's answers; fixed templates.
+
+## 18 Oct 2026: direct entity neurons, scaled to three kinds - and how shared / polysemantic they are (research branch)
+(`facts2.py` entity stage, `entity_sharing.py`; outputs D:/already-clean-data/facts2/, summary in results/facts2/.)
+90 entities (30 landmarks, 30 people, 30 works; two near-duplicate works - 'Odyssey' / 'The Odyssey', 'Divine Comedy' / 'The
+Divine Comedy' - kept as separate entries), 5 relations each with fixed phrasings; 333 facts kept (Qwen answers >= 2 of 3).
+- **Direct entity neurons:** per entity, attribution summed over ONLY its name-token positions and all its facts, across
+  all 36 layers -> top-100 -> each zeroed ONLY at the name tokens -> mean drop over the entity's facts. Top-3 per entity
+  with drop > 0.2 (218 neurons, 86 entities): **median layer 8; 89% below layer 20** (landmarks 8, people 8, works 8.5).
+  Predicted (median < 20): held.
+- **Specific in use:** zeroed at the name tokens of every fact: own entity's facts drop a median 0.58, other entities of
+  the same kind 0.015, other kinds 0.008; **209/218 (96%) >= 5x** more for their own entity (predicted: held). Strongest:
+  L8:9458 Blue Mosque 9.6; L7:8413 Ulysses 8.7; L0:1550 The Starry Night 6.7; L1:4818 Sagrada Família 6.3; L7:990 Genghis
+  Khan 4.7; L8:334 Sistine Chapel 4.1.
+- **But shared with a few others (James: towards polysemanticity):** 119/218 (55%) also matter for >= 1 other entity
+  (another entity's facts drop > max(0.2, 25% of own); 1 other: 51, 2-3: 46, 4-6: 22); only 36 of those 119 share only
+  with the same kind. Coherent groups at layers 7-13: Leonardo -> The Birth of Venus, The Night Watch, The Last Supper,
+  Mona Lisa, Van Gogh; War and Peace -> Ulysses, Odyssey, Moby-Dick, Faust; bridges / skyscrapers (L9:410, L12:10025).
+  Mixed groups at layers 21-23: L21:1310 -> Brooklyn Bridge, Statue of Liberty, The Scream, Sagrada Família, The
+  Brothers Karamazov, Eiffel Tower; L22:5427 -> Bach, the Blue Mosque, Beethoven, Jane Austen. Map overlap: 184 of 1,432
+  neurons in the entity maps' top-20 appear for >= 2 entities.
+- **Input side - broad:** in web text (atlas, 20 strongest firings) entity neurons are mostly NOT about their entity:
+  median 5% of firings mention it; 104/218 never. What they fire on: attributes ('Turkish' / 'Turkey' for the Blue Mosque
+  neuron; 'Vatican' / 'conclave' for the Sistine Chapel one), word parts or meanings of the name ('Sac[red]' for Sagrada
+  Família; ' night' for The Starry Night; 'Div[ine]'), a few on the name itself (Ulysses 100%).
+- **Not simple word detectors:** the Starry Night neuron (fires on ' night' everywhere) does nothing for The Night Watch
+  (0.01); the Divine Comedy neuron nothing for 'The Divine Comedy' (-0.02); the Sagrada Família ('sacred') neuron nothing for
+  other churches. Exceptions follow shared attributes: Sistine Chapel neuron -> St. Peter's 1.04 ('Vatican'); Blue Mosque
+  neuron -> Hagia Sophia 0.29 (Istanbul / 'Turkish').
+- **Reading:** early entity neurons are broad on the INPUT side (they respond to attributes and name-parts across web
+  text - polysemantic in the usual sense) but specific in USE (in this task each matters for its own entity, plus a few
+  sharing an attribute). The same pattern as concept neurons ('packed triggers, one job'), now for knowledge neurons;
+  what looks entity-specific is a combination: the right word-part / attribute neuron firing in the right context.
+
+## 18 Oct 2026: fact knowledge as shared machinery - answer-value and relation neurons (facts grid re-read; CPU)
+James: by 'knowledge' he meant the FACTS (location, height...), and whether those show up as shared machinery. Re-read of the
+landmark facts grid (each fact neuron zeroed on every fact): for each neuron, its mean drop on OTHER facts with the SAME
+answer vs same-relation facts with a DIFFERENT answer vs the rest (219 neurons whose fact shares its answer with others).
+- **Answer-value machinery (124/219):** neurons that matter for every fact with the same answer and not for the same
+  question with other answers (> 3x). A '19th century' neuron, L33:2629: zeroed, the century fact of every 19th-century
+  landmark drops (Arc de Triomphe 10.1, Sagrada Família 8.9, Brooklyn Bridge 8.5, Statue of Liberty 8.2) and other
+  centuries do not (-0.03). 'Vatican City' L29:5436 (St. Peter's and Sistine Chapel, city AND country, drops ~26); 'marble'
+  L31:6383 (Parthenon and another marble landmark, 7.8). Layers 29-33.
+- **Relation machinery (45/219):** neurons that matter for one question type whatever the answer - L30:8291 'century
+  built' (~3.2 on every landmark's century fact, 12th or 20th alike).
+- **Reading:** the fact itself is not one neuron but a factorised lookup: entity neurons early at the name (rows),
+  relation neurons mid-late (columns), answer-value neurons late (the values) - and the value neurons are shared by every
+  entity with that value. Not yet tested: the chain (does zeroing an entity neuron at the name lower the value neuron's
+  activation at the answer position?) and numeric facts (height).
+
+## 18 Oct 2026: scaled facts grid (landmarks, people, works) + the fact route, causally (research branch)
+(`facts2.py` map / grid / position; `chain.py`; outputs D:/already-clean-data/facts2/, summaries in results/facts2/.)
+**Scaled grid (333 facts, 11 relations, 3 kinds) replicates the landmark picture:**
+
+| fact neurons | n | zeroed only at the name tokens | only at the last position | job classes |
+|---|---|---|---|---|
+| layers 0-9 | 109 | 2.90 of 2.90 | 0.00 | entity 50, fact-specific 49, relation 9 |
+| layers 10-19 | 44 | 1.46 of 2.12 | 0.00 | fact-specific 31, entity 10 |
+| layers 20-27 | 139 | 0.01 | 1.84 | **relation 63 (45%)**, fact-specific 43, generic 22 |
+| layers 28-35 | 707 | 0.00 | 1.75 | fact-specific 457, relation 182 |
+
+- Fact maps' top-5 again have naming maps' layer profile (median 30; 18% vs 16% below layer 20): the 'fact neurons
+  earlier' prediction fails again as stated - answer-ranked maps find answer-writers.
+- By kind: landmarks and works match cleanly (early neurons act at the name: 2.21 of 2.30, 2.77 of 2.82); PEOPLE are
+  weaker - fewer early fact neurons (25, mostly fact-specific, 4 entity), only about half their effect at the name (1.55 of
+  2.90), and relation neurons dominate their mid layers (35 of 58) - another people anomaly (cf. no P4 family signal, fewer
+  'say' neurons for historical people).
+- Relation neurons by relation: century 124, country 64, medium 22, creator 13, language 10 - the 'century' neuron
+  L30:8291 again strongest (same-relation drop ~4.2).
+**Fact route (James: entity -> value):** for each shared answer-value neuron V (151, from the scaled grid) and every fact
+with V's answer, the entity's direct entity neuron(s) zeroed ONLY at its name; V's activation at the answer position
+measured (sign-aligned), vs a random same-layer neuron and another entity's neuron (controls).
+
+| zeroed at the name | V's relative activation drop (median) | answer log-odds drop | pairs where entity > both controls |
+|---|---|---|---|
+| entity's top-1 entity neuron | 2.2% | 0.59 | 430/647 (66%) |
+| entity's top-5 together (follow-up) | 7.3% | 1.78 | 465/657 (71%) |
+| random neurons / another entity's | 0.0% | 0.00 | - |
+
+- **Prediction (median V drop >= 20% for the top-1) FAILED.** The route is real and completely specific (controls exactly
+  0) but each early entity neuron supplies only a slice of what drives the shared value neuron; five give ~3x one. Large
+  cases: van Gogh -> 'painter' (> 100%), Symphony No. 9 -> '19th', Sistine Chapel / Columbus -> '15th', Sagrada Família ->
+  'Antoni Gaudí'.
+- **Reading:** entity -> value is a causal, specific route, but an entity's knowledge is distributed over many early
+  neurons (and the value neuron has other inputs: relation heads, other neurons). Consistent with the factorised-lookup
+  picture; not a single-wire one.
+
+
+## 18 Oct 2026 - Numeric facts: era neurons, few digit neurons, no magnitude coding shown (numeric.py)
+
+**Question (James: "Numeric facts"):** are numeric facts (years, heights) stored like other facts, and are the late
+neurons whole-number neurons, prefix / era neurons, or digit-position machinery? Is there graded magnitude coding?
+**Data:** the 90 facts2 entities; Luna gave year completed + height (m) for landmarks, birth year for people, year created
+for works; kept if Qwen's probability of the full number is >= 0.2 on >= 2 of 3 phrasings ("... Answer with just the
+number."): **86 facts** (landmark year 21, height 11, person year 29, work year 25). Qwen writes numbers one digit per token
+('1889' -> 1, 8, 8, 9), so each digit is scored teacher-forced.
+**Predictions (in the script before running):** (1) early entity neurons act at the name and late writers at the answer;
+(2) late writers are prefix / digit neurons shared across facts, not whole-number neurons; (3) some neurons code magnitude
+(zeroing and doubling shift the expected digit in opposite directions).
+
+**Setup bug caught first:** the first map measured log-probability drops and showed 0.000 for many top neurons. Qwen is
+> 0.9999 sure of 820 of 939 digit slots (median log-odds 15.8), so log-prob cannot move. Re-run with exact float64
+log-odds per digit (as ISSUES #35), attribution of summed log-odds over ALL positions (later digits are written at the
+answer positions). First run kept as maps_logprob.jsonl. **Noise floor:** 24 random neurons zeroed on every fact:
+|drop| median 0.135, 99th pct 0.65, max 1.33 -> threshold 1.0 throughout.
+
+| layers | n (top-5, drop > 1) | zeroed everywhere | only at the name | only at the answer positions | digits hurt per neuron |
+|---|---|---|---|---|---|
+| 0-19 | 95 (22%) | 16.83 | **16.55** | 0.10 | 50% |
+| 20-27 | 83 (19%) | 12.41 | 0.01 | **10.94** | 25% |
+| 28-35 | 252 (59%) | 10.52 | 0.00 | **9.64** | 25% |
+
+(position columns: top-3 per fact with drop > 1; n = 58 / 52 / 148)
+
+- **Prediction 1 HOLDS:** the same position split as word facts (M1 / S1), with larger effects in log-odds units.
+- **Prediction 2 mostly FAILS, with a clear exception.** Of 99 neurons hurting >= 3 facts, 5 are digit neurons (>= 80% of
+  the hurt facts share one digit at one position) and 0 are decade (3-digit prefix) neurons; the facts a neuron hurts
+  share a digit only a little more than random sets (33% vs 26%). The exception is **era neurons**:
+  - **L31:8930**: hurts 18 of 27 years 18xx (median 3.96; up to 36.9 for The Scream 1893), 0 of 5 17xx, 0 of 54 other
+    numbers. **It is the '19th century' answer-value neuron from facts2** (word answers; also the Symphony No. 9 -> '19th'
+    fact route). Found independently in a different experiment with different prompts and answer format.
+  - **L33:12258**: the 1700s - 4 of 5 years 17xx (median 27.7: Jane Austen 1775, Napoleon 1769, Magic Flute 1791,
+    Beethoven 1770), nothing on 18xx.
+  - L33:8721 / L31:9945: '1' as the first digit (16 and 13 facts; mostly small drops, 2-7).
+  - 16 broad neurons hurt >= 20 facts with low digit purity (L35:9490 hurts 82 of 86): generic number-answer machinery.
+- **Prediction 3 not shown (inconclusive, not refuted):** doubling a top neuron makes Qwen more sure of the same digit
+  (median +1.35 log-odds) but moves the expected digit in only 19 of 258 cases; the 37% 'opposite shift' rate is driven by
+  near-zero doubled shifts. Near-certain answers leave no room to see graded coding; a fair magnitude test needs uncertain
+  numbers (e.g. less-famous heights) or the full digit distribution after knockout (did 1889 become 1888 or 1239?).
+- **Reading:** numeric facts use the factorised route already seen (entity at the name early; writers at the answer late).
+  The shared late value neurons code eras (centuries), and the same neuron serves the era in words ('19th') and in digits
+  ('18xx') - a format-independent concept neuron for '1800s'. Most other late neurons are fact-specific or broad machinery,
+  not digit-value units.
+
+Files (D:/already-clean-data/numeric/): entities.json, facts.json, maps.jsonl (+ maps_logprob.jsonl, the saturated first
+run), share.jsonl (+ share_units.json, share_nulls.json), magnitude.jsonl, position.jsonl, summary.txt, summary_rows.json,
+*.log.
+
+
+## 18 Oct 2026 - Magnitude: no number-line neurons; the number line is in the output geometry (numeric_mag.py)
+
+**Question (James):** a fair test of whether numeric-fact neurons code magnitude, after numeric.py's zero-vs-double test
+was blind (Qwen near-certain). **Fixes:** a dose series (activation x -4, -2, -1, 0, 0.5, 1, 2, 4 at every position) with
+the full float64 distribution over the 10 digit tokens at every answer position; and 43 LESS-CERTAIN facts (80 prompts:
+landmark heights 20, construction start 10, years 10, death years 3) with Qwen's own greedy number as the target, kept where
+some digit has P(top) < 0.9. Neurons: top-3 per fact (drop > 1.0); controls: 3 random neurons from the same layers per fact.
+**Bug caught:** the first dose run rounded saved log-probs to 6 decimals, which zeroed near-certain digits' log-probs
+(drops showed 'nan'); kept as mag_dose_rounded.jsonl / mag_summary_rounded.txt, re-run at full precision.
+
+| | median drop at q* (zeroed) | lost probability to neighbouring digits (zeroed): median share / above uniform (22%) | graded dose response | of graded: moves towards ITS OWN digit |
+|---|---|---|---|---|
+| certain facts, top neurons (258) | 8.78 | 76% / 66% | **36%** | 93/93 |
+| certain facts, random neurons (258) | 0.08 | 81% / 83% | 0% | - |
+| uncertain facts, top neurons (129) | 6.63 | 49% / 59% | **51%** | 65/66 |
+| uncertain facts, random neurons (129) | 0.10 | 50% / 70% | 2% | 2/2 |
+
+(graded = Spearman |rho| >= 0.9 between dose and expected digit, range >= 0.3 digits. At dose -2 / -4 top neurons spread
+probability further - neighbour share 46% / 36% - than random neurons, 76% / 81%.)
+
+- **A1 FAILS as a neuron property:** lost probability does go to neighbouring digits (76% vs 22% uniform) - but equally when
+  a RANDOM neuron is zeroed (81%). The neighbour preference is a property of the output, not of the neuron. **Output
+  geometry:** the 10 digit tokens' unembedding vectors form a number line - cosine 0.780 at distance 1, falling steadily
+  to 0.667 at distance 9.
+- **A2 HOLDS numerically, but it is not magnitude coding:** 36% / 51% of top neurons give a graded response vs 0-2% of
+  random ones - yet in 158 of 159 graded cases raising the neuron moves the expected digit towards the neuron's own target
+  digit. They are dose-dependent supporters of one digit (push-pull between that digit and its competitors), not an
+  abstract 'bigger / smaller' direction.
+- **A3 HOLDS modestly:** Qwen's own uncertainty puts 36% of the non-top mass on neighbours (vs 22%; 62 of 99 slots above),
+  strongly for middle digits (positions 1 / 2: 54% / 40%), not for the first or last digit (14% / 6%); not on round
+  digits 0 / 5 either (0-8%).
+- **Reading:** single neurons choose digits as categories ('this digit here'); magnitude structure lives in the output
+  embedding of digits and shows up in the model's uncertainty over middle digits. With era neurons (era.py), a numeric fact
+  is: era concept (format-free) -> digit neurons (format-bound) -> digits on an output number line.
+
+Files (D:/already-clean-data/numeric/): mag_uncertain.json, mag_dose.jsonl (full float64 digit distributions per factor,
+prompt and position), mag_rows.json, mag_summary.txt, mag_dose_rounded.jsonl + mag_summary_rounded.txt (bugged first run).
+
+
+## 18 Oct 2026 - Era neurons across formats: era-concept neurons vs digit neurons (era.py)
+
+**Question (James):** is L31:8930 'the 1800s' whether the answer is written '19th', '18xx', '1880s' or 'Victorian'? And
+the other century neurons?
+**Neurons:** the 24 facts2 answer-value neurons whose answer is a century, + numeric.py's L33:12258 (17xx) and L33:12280
+(18xx); 12 random layer-28-33 controls. **Entities:** numeric.py's year facts + Luna lists per century (14th-21st), 307;
+**280 recalled** (Qwen's own year in Luna's century; 27-42 per century). Each asked in 4 formats (year / century / decade /
+historical period: 'In which ... was X completed / born / created?') + a control ('Tell me about X.'). Qwen answers in
+each format (Lincoln: '1809' / '19th century.' / '1800s' / 'Early 19th century.'; Alice in Wonderland period: 'Victorian
+era.'). Plain-text reading: sentences that mention a date ('She was born in 1889.' / 'in the 1880s.' / 'in the 19th
+century.' / 'in the nineteenth century.' / 'in the eighteen-hundreds.' / 'in the Victorian era.').
+**Selectivity** = AUC of activation, in-era vs other entities, with the sign fixed in the year format and reused for all
+other formats (out-of-sample).
+
+| | year | century | decade | period | 'Tell me about X' | text: digits | decade | ordinal | word | hundreds | named era |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| era neurons (median, n=21 with any in-era entity; the two 12th-century ones have only 1; 1st / 6th / 8th neurons have none) | 0.87 | 0.94 | 0.87 | 0.94 | 0.60 | 0.57 | 0.59 | 0.69 | 0.63 | 0.81 | 0.73 |
+| random controls (median, n=12) | 0.60 | 0.55 | 0.51 | 0.55 | 0.54 | 0.49 | 0.47 | 0.45 | 0.34 | 0.41 | 0.50 |
+| **L28:9936** (18th) | 0.99 | 0.99 | 0.98 | 0.98 | 0.78 | 0.98 | 1.00 | 0.90 | 1.00 | 1.00 | 0.94 |
+| **L31:8930** (19th) | 0.96 | 0.92 | 0.95 | 0.90 | 0.81 | 0.59 | 0.60 | 0.68 | 0.87 | 0.85 | 0.74 |
+| L30:822 (16th label; reads 17th) | 0.92 | 0.88 | 0.87 | 0.89 | 0.73 | 0.88 | 0.85 | 0.84 | 0.94 | 0.94 | 1.00 |
+| L33:12258 ('17xx', numeric.py) | 0.88 | **0.03** | 0.81 | 0.30 | 0.53 | 0.55 | 0.64 | 0.53 | 0.70 | 0.57 | 0.34 |
+| L33:12280 ('18xx', numeric.py) | 0.99 | **0.26** | 0.99 | 0.72 | 0.53 | 0.57 | 0.54 | 0.61 | 0.60 | 0.89 | 0.72 |
+
+(text 'hundreds' and 'named era' have few sentences - 21 and 36 - so single AUCs there are noisy; controls reach 1.00 on
+'hundreds'.)
+
+- **B1 HOLDS:** L31:8930 AUC 0.96 / 0.92 / 0.95 (year / century / decade), and 0.90 for 'historical period'.
+- **B3 HOLDS:** 12 of 17 facts2 century neurons reach AUC >= 0.8 in >= 2 of the 3 formats.
+- **B4 HOLDS:** reading dates in text is less selective than answering (median 0.67 vs 0.88), and the neurons are weak when
+  the entity is merely named ('Tell me about X': 0.60) - they carry the era of an answer being prepared. Exception:
+  L28:9936 and L30:822 are near-perfect in plain text too (format- and task-free).
+- **Two kinds of 'era' neuron.** Era-concept neurons (L28:9936, L31:8930, L30:822, L33:2629...) keep their sign and
+  selectivity in every format. The numeric.py 'era' neurons L33:12258 / L33:12280 FLIP in the century format: their
+  direct output is the digit '7' (and down '8') / down '8', and a 17xx answer in the century format is '18th' - so they
+  are digit neurons that look like era neurons only when the answer is a year.
+- **B2 FAILS (instructively):** zeroing L31:8930 costs the year answer 1.43 and the decade answer 2.52 log-odds (out-of-era
+  0.00; random-neuron 99th pct 0.48) but the '19th century' answer only 0.12 - although it is just as active there. L33:2629
+  (19th) is the mirror: century word 1.05, year ~0. L28:9936: year 5.09, decade 1.75, century 0.26. **The era is
+  represented in every format; which neurons are NEEDED depends on how the answer is written** (redundancy / different
+  writers per format).
+- **B5 HOLDS, more strongly than predicted (informal reading):** L31:8930's direct output is mid/late-19th-century
+  HISTORY, not digits: 'Victorian', 'Civil', 'Reconstruction', 太平 (Taiping), 咸 / 光 / 慈 (Xianfeng / Guangxu / Cixi), 晚
+  (late [Qing]), 普法 (Franco-Prussian). L28:9936 (negative side): 'Enlightenment', 启蒙, 'Revolutionary', 'Rousseau',
+  康熙 / 乾隆 (Kangxi / Qianlong). L28:8912 (20th): 'twentieth', 'Bolshevik', 'Lenin', 民国, 五四, 'radio', 飞机 (aeroplane).
+  L30:822: 康熙, 'Tories', 清朝 / down 'Renaissance', 'Tudor'. Digit neurons push number tokens across scripts: L33:3763
+  '7' / 'seven' / 七 / 'VII' / 'seventh'; L33:5538 '6' / 'six' / 六 / 'seis'.
+- **Reading:** Qwen has era-concept neurons that are cross-lingual (English and Chinese history) and cross-format (years,
+  centuries, decades, named periods, and - for the strongest - plain text), alongside format-bound digit neurons. A
+  1700s/1800s 'value' in a fact is therefore a concept, not a string.
+
+Files (D:/already-clean-data/era/): era_entities.json, era_build.json (all 4 answers per entity), era_acts.jsonl,
+era_text.jsonl, era_readout.json, era_causal.jsonl, era_rows.json, era_summary.txt, *.log.

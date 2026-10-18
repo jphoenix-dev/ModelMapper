@@ -1,0 +1,6 @@
+Fact route test: 151 value neurons, 647 (value neuron, fact) pairs with an earlier entity neuron
+  value neuron's relative activation drop at the answer position: entity neuron zeroed at the name +0.022 | random same-layer neuron -0.000 | another entity's neuron +0.000
+  answer log-odds drop: entity +0.593 | null +0.000 | cross +0.000
+  pairs where the entity drop beats both controls: 430/647
+  PREDICTION (median entity drop >= 20%, controls ~0): FAILS
+  examples: Park Güell -> '20th' (L35:6334): entity +856.66, null -3.18, cross -1.33; Symphony No. 9 (Beethoven) -> '19th' (L31:8930): entity +21.14, null +0.30, cross -0.72; Vincent van Gogh -> 'painter' (L32:9896): entity +2.06, null -0.00, cross +0.05; Frida Kahlo -> 'painter' (L32:9896): entity +1.18, null -0.05, cross -0.03; Ulysses -> '20th' (L32:12228): entity +0.89, null -0.03, cross -0.02; Sagrada Família -> '19th' (L31:8930): entity +0.83, null +0.01, cross +0.03; Empire State Building -> 'united states' (L35:6382): entity +0.80, null +0.00, cross +0.01; Ulysses -> '20th' (L33:4764): entity +0.77, null -0.01, cross -0.05

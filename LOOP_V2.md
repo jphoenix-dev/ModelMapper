@@ -35,6 +35,10 @@ Validated: reproduces the original pipeline exactly on 12 concepts; P1-P5 all ho
 | **Don't** batch single knockouts across candidates | Failed its gate twice; only 1.1x faster (the GPU is already full) | stays unbatched |
 | **Don't** shrink the 200-candidate shortlist | Coverage-4: the top-5 lies fully inside the first 150 candidates for only 94% of concepts (100: 87%) | stays 200 |
 | Batch and overlap where batches are tiny (questions, recall checks) | verify_fast: GPU 100% busy once Luna was overlapped and names batched | apply to any new side step |
+| Keep peak GPU memory well under 32 GB on the 5090 (Windows silently spills to system RAM) | J-lens pilot 18 Oct: 31.8 GB peak ran at 1,000 tok/s; 24.6 GB at 4,590 tok/s (4.6x faster), GPU busy 89-96% | size batches to ~25 GB; log peak memory |
+| Register hooks once per run, not per pass; one stacked add instead of per-layer Python loops | J-lens: GPU busy rose to 89-96% | unchanged |
+| From the research worktree, set MODEL_MAPPER_MODELS=C:/dev/models/hf (that worktree has no .env) | 18 Oct: a silent 16 GB hub download, GPU idle at 0.8 GB, 5.6 GB of partial files left on C: | scripts fail fast if the model path isn't local |
+| Benchmark a few passes (tokens/s, GPU busy %, peak memory) before any long run | J-lens: the spill was found in 3 short runs | unchanged |
 
 **Where the time goes now** (coverage-4 timings): single knockouts ~14 s per concept, head knockouts ~3.4 s, the
 rest ~4 s. So scaling comes from more GPUs running concepts in parallel (linear; the distributed session's runner),
@@ -91,3 +95,23 @@ Next question after v2 (James): is "named thing" too narrow - would the loop wor
 Concept atlas / search-then-verify (works but only a 16% hit rate; a possible way to choose names later); bottom-up
 profiling of all neurons (the distributed pipeline); quantisation; new task types; a Qwen3 size curve; a cross-family
 model check.
+
+## Run 1 (launched 17 Oct ~22:15)
+- **Frame:** Wikipedia Vital Articles Level 4 (10,021 articles, 11 sections), stratified section x fame (language
+  editions: 128+, 64-127, 32-63, <32), seed 71: 5,000 concepts (~470 per section; all 298 eligible Mathematics);
+  401 already-mapped concepts and 3 bad titles excluded (frame.py; frame.json committed under results/loop_v2/run1/).
+  Named / common tags (intro capitalisation, else Wikidata P279) added by `frame.py tag` in parallel, for analysis only.
+- **Prepare** (prepare.py, desktop): map_loop's Luna steps unchanged, 32 Luna workers, Luna cap $12 (balance $21.83);
+  G1 on the local 5090. Trial on 3 concepts: $0.0017 per concept, 0.5 min.
+- **Map:** src/dist runner (gpu-fan-out session): store s3://modelmapperdistributed/loop_v2_run1, batches of 20
+  appended every 2 min as specs appear; 3 rented pods (3090 / 4090 / A5000), --max-spend 7.5, --min-balance 1.5,
+  approved by James in that session; results drained to D:/already-clean-data/loop_v2/run1/results; the local 5090
+  joins after prepare.
+- Expected: ~3,500 recalled concepts mapped. Next: self-checks per batch and a morning report (coverage, named vs
+  common, overlap, timings, costs).
+
+## Queued after run 1
+1. Question-side test + specificity gradient over neighbours (RESEARCH_STATE.md, 'Next step after loop v2 run 1').
+2. Blind check of the named/common tags on a random sample (Luna as second judge) before the named-vs-common comparison.
+3. Prepare and map in ONE process on the local GPU (one model copy), so the 5090 maps while prepare runs (it sat out
+   ~30 min of run 1 because two 8B copies don't fit in 32 GB).

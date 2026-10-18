@@ -86,6 +86,61 @@ unmapped neurons with the most name-specific profile, 16 verified causally (rand
 model pointed to (chess notation +14.2, 24 Hours of Le Mans +10.2, NGC 7319, hydrogeology, selenium tetrachloride...).
 This is the search-then-verify core for loop v2. Verification is now Luna-bound (GPU 19% busy).
 
+## Loop v2 run 1 (18 Oct overnight)
+5,000 Vital Articles concepts, 4,194 mapped (84%), $12.30 GPU + ~$9.40 Luna, 0 failures. Self-checks: P1 replicates
+(+7.42 vs +0.003, flips 82%), P4 replicates more weakly (4.38x, p = 2e-10; not for people), null clean. Common nouns map
+as cleanly as named things (median k 1 vs 2; recall 83% vs 85%), with a modest within-section excess of 'say' neurons.
+
+**Shared neurons (18 Oct):** 3,010 neurons serve >= 3 concepts. Same push direction for all users in 79%. Three kinds:
+topic jobs (rivers, Indonesia, dance...), spelling jobs ('v', 'm', 'New'), generic answer-format machinery (hundreds of
+users). Machinery is fed by the same upstream neurons for every concept (feeder Jaccard 0.45); topic neurons share a
+minority of feeders (0.11, chance ~0) that are themselves readable attributes (Italy + film -> the Fellini neuron).
+Mostly not polysemantic here; a minority look like packed unrelated meanings (Czech + Xi'an) - untested, possibly a
+shared surface feature (sound/spelling). Neuron names like 'rivers' are informal readings of push tokens + users.
+
+**Question-side + specificity (18 Oct, done):** zeroing the neurons that break naming a landmark leaves facts about it
+intact (naming 3.62 vs facts 0.03); early neurons hurt facts more than late; neighbour damage falls with distance (L1
+0.17 -> L4 -0.02) with big shared-attribute exceptions (Sydney, skyscrapers, bridges, Gaudí). Maps = 'say it' machinery.
+
+## Next step after loop v2 run 1 (now done - see above) (James, 17 Oct night)
+**Question-side test: are concept neurons "say it" neurons or meaning neurons?** Every map so far was found and tested
+with the concept as the ANSWER. Not yet done: switch a concept's key neurons off and ask questions with the concept IN
+the question and a fact as the answer ("How tall is the Eiffel Tower?", "Who designed it?", "Which city is it in?").
+Needs new forward passes (existing data covers only the naming questions). Design: ~50 mapped concepts incl. the Eiffel
+Tower; Luna writes ~8 fact questions each (name in the question, short factual answer), keep those Qwen answers
+correctly; zero the concept's k_mean and top-5 neurons; measure the fact-answer log-odds drop vs the naming drop.
+Controls: random same-layer neurons; another concept's key neurons (specificity: Eiffel neurons on Big Ben facts);
+split early (layers 8-10 cluster) vs late (28-35) key neurons. Prediction (stated before running): late 'say' neurons
+leave facts intact; early neurons may not. Cost: cents of Luna, ~15 min GPU.
+**Plus a specificity gradient (James):** zero a source concept's key neurons, then test NEIGHBOURS at graded distance -
+same place (Eiffel Tower -> Louvre, Notre-Dame, Arc de Triomphe), same kind elsewhere (Tokyo Tower, Big Ben), same
+Vital Articles section, unrelated - with distances defined from Wikidata (location P131, type P31), not by hand. ~20
+sources (landmarks first). Measure each neighbour's naming recall AND its fact questions vs random-neuron controls;
+split by the zeroed neurons' roles (say / attribute / early). Prediction (stated before running): damage falls with
+distance; 'say' neurons stay specific; attribute neurons partly damage neighbours that share the attribute (cf. the
+attribute-sharing result). Measures how specific a concept's neuron combination is, and why.
+
+**Forced-neuron readout (18 Oct pilot):** clamping one neuron hard across many backgrounds (real text / random-neuron
+noise / nothing) gives a consistent, readable expression (Moon -> moon/月/lunar; tower neuron -> tower/landmark,
+'leaning'; Netherlands -> Nether/hol/Pays; 'happily' -> prince, 'ever after', pumpkin). Czech/Xi'an shows two separate clusters, no
+shared sound. **Validated (fast_readout.py):** reliable only for late neurons (layers 28-35: top word consistent 91-100%),
+where the weight reading is as good; early/mid neurons have no consistent forced expression; words vary substantially
+with context; the pilot's 'low background bias' held only for strong hand-picked neurons. **Fan-out smoke test:** early neurons' downstream effects
+are repeatable (sign 88-100%) but the neurons they drive (layers 24-27) are themselves unreadable - no word-level job one
+step later. Options: chains to readable late endpoints, or describe early neurons by the concepts they serve.
+
+**Job-finding for knowledge neurons (18 Oct):** an entity x relation causal grid + position test works. Early (0-19)
+fact neurons act only at the entity's name tokens and are ENTITY neurons (all of one landmark's facts); mid/late ones act
+at the answer position and include RELATION neurons (a 'century built' neuron across landmarks). Entity neurons are mostly
+not naming neurons. Matches the published factual-recall picture, neuron by neuron. Next: scale the grid (people, works,
+more relations) and find entity neurons directly at the subject token (not via answer-ranked maps).
+
+## Later: common-neuron analysis (James, 18 Oct)
+Test whether 'unrelated' users of a shared neuron share a surface feature (sound, spelling, script) rather than a
+meaning - e.g. does the Czech / Xi'an neuron (L29:4682) also respond to other Ch- / Xi- / Sh- names (Chechnya,
+Shaanxi, Xinjiang) in web text and in its push? Replace informal neuron names with no labels or a stated, checked
+method (blind labeller on push tokens + users, second labeller for agreement).
+
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts
    one late neuron is close to 'say this word'. It usually sits alongside 1-3 legible attribute neurons ('Georgia',
