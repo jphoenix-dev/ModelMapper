@@ -194,6 +194,131 @@ Costs: "CPU" = this PC, Qwen3-0.6B in float32. "8B GPU" = rough RTX 5090 time; p
   specific multi-token words only. **Prediction:** layers 0-3, highly specific. **CPU:** ~5 min. **Loop:** subject
   pass (E4) could record whether a concept's entity neurons are stitching neurons for its name (free).
 
-## 2. Results (filled in after the tests ran)
+## 2. Results (filled in after the tests ran, 18 Oct evening)
 
-(Pending.)
+Seven tests ran: five on Qwen3-0.6B (CPU) and two on Qwen3-8B data already on disk (no forward pass). All outputs are in
+`D:/already-clean-data/mechanisms/` with every per-item number. The predictions above were not edited.
+Two of the runs are **exploratory**, i.e. designed after seeing a pre-registered result, and are labelled as such.
+
+| # | category | verdict | headline number | scale to 8B? |
+|---|---|---|---|---|
+| H1 | inhibitor neurons (knockout raises the answer) | **held** (P1a, c, d; P1b failed) | every one of 40 concepts has them; median best +0.73 log-odds held-out | **yes - first** |
+| H1-8B | sign flips among run 1's helpers | partly held | 0.36% of 1.05M knockouts; 40% of concepts; L31:5473 in 174 | (comes with H1) |
+| H4 | language-identity neurons | **held** (P4a, c; P4b failed) | zeroing 20 neurons: own-language loss +0.28 to +0.71 nats, others ~0, for fr/de/es/zh | **yes** |
+| H3 | repeat / induction neurons | mixed (P3a, b held; P3c failed) | 3,688 neurons respond to repetition; zeroing 20 (or 200) does not specifically hurt copying | no (descriptive tag at most) |
+| H2 | confidence (entropy) neurons | **failed** as pre-registered; 1 neuron in an exploratory re-run | v1: nothing above 0.02 nats; v2: L27:47 (17x random) | low priority |
+| H9 | shared neurons are format-bound | **failed** | 35% of neurons are format-bound, but shared ones no more than private ones | no (but E2 data is useful) |
+| H6 | contrastive 'say' neurons | **failed** as tested | say neurons push near-spellings UP; 3% contrastive vs 3.5% random | re-design first |
+
+### H1. Inhibitor neurons - HELD (the strongest new category)
+`src/mechanisms/inhibitors.py`; `D:/.../mechanisms/inhibitors/`. 40 run-1 concepts within 0.6B's reach (1,559 screened;
+0.6B has very few of the 8B concepts in reach). Neurons chosen on half the prompts, measured on the other half.
+- **P1a held, far beyond the bar:** 40 of 40 concepts (100%) have at least one inhibitor; 645 of the 800 most negative-
+  attribution neurons raise the held-out answer by more than the null's 99th percentile (+0.049 log-odds; 1,600 random
+  and layer-matched neurons). Control on the counting: random neurons cross the same bar in 17.5% of concepts, as expected
+  by chance for 20 draws at the 99th percentile.
+- **P1d held:** the median concept's best inhibitor raises the answer by **+0.73** log-odds (its best helper costs -1.58).
+  Median bottom neuron +0.21, median random neuron 0.00.
+- **P1b failed:** inhibitors are spread over all layers (41% in layers 21-27, not >= 50%); layer 27 has the most (71),
+  then 19 (54), 26 (46), 17 (44), and a cluster at layers 0-1 (56).
+- **P1c held:** some are generic dampeners: L17:1763 inhibits in 23 of 40 concepts, L11:1708 in 22, L14:941 in 20, L19:96
+  in 16, L3:733 in 15.
+- **Re-test inside the run:** the sign of a bottom neuron's effect agrees between the selection half and the held-out half
+  in 92% of cases.
+- **How they act (informal):** removing an inhibitor lowers the strongest rival token in 91% of cases (median -0.14 log
+  prob), and changes the entropy little (-0.06 nats). The rivals are of two kinds: *format rivals* - starting a sentence
+  instead of giving the bare name ('The', 'A', 'In'; e.g. L27:2498 for 'Fashion' +2.70, L18:102 for 'Baku' +1.95) or
+  lower-case 'gender' for 'Gender' (L19:96, +2.03) - and *content rivals* ('Reflection' for 'Refraction', L26:1559 +1.32;
+  'secondary' for 'University'). So "inhibitor" covers 'hold the answer back in favour of another form or another word'.
+- **Caveats:** 0.6B, run 1's prompts (written for 8B); the held-out half is small (median 4 prompts); answers 0.6B only
+  half-knows (the screen accepted P > 0.12), where raising is easiest; zero-ablation only.
+- **Re-test on new concepts (seed 1, 20 concepts):** *pending - see below.*
+
+**H1 on 8B from the ledger (free; `src/mechanisms/ledger_checks.py`).** Run 1 knocked out only positive-attribution
+candidates, yet 3,770 of 1,048,500 knockouts (0.36%) raise the answer beyond run 1's own null (0.1st percentile, -0.145),
+in 1,666 of 4,194 concepts (40%); 312 (0.03%, 5.7% of concepts) raise it by > 0.5. Spread over all layers (and heads);
+not concentrated in 28-35 (25% there), so that part of the prediction failed. The standout is **L31:5473**: a widely used
+'late-other' neuron whose direct push is on function words ('–', 'to', 'in', 'as', 'at', 'of', ','); it helps in most of
+its 1,594 maps (mean drop +0.32) but RAISES the answer when removed in 174 concepts. It reads as a 'keep writing the
+phrase' vs 'give the bare name' arbiter - the same format-rival pattern as in 0.6B. The real inhibitors (negative
+attribution) were never measured on 8B: that is the gap the E7 stage would fill.
+
+### H4. Language-identity neurons - HELD (late, not early)
+`src/mechanisms/language_neurons.py` + `parallel_sentences.json`; `D:/.../mechanisms/language/`.
+- **P4a held:** neurons with held-out AUC >= 0.95 for one language on content-matched sentences: en 71, fr 37, de 146,
+  es 44, zh 275.
+- **P4b failed - the interesting part:** they are LATE, not early: median layer en 21, fr 25, de 24, es 25, zh 21 (of
+  28), with only a few in layers 0-3. Language is mostly held where the next word is written, not where tokens are read.
+- **P4c held (4 of 5):** zeroing a language's top 20 raises loss on that language and almost nothing else - fr +0.45
+  nats/token (other languages <= 0.005; random set 0.005), de +0.71 (others <= 0.08; random 0.05), es +0.28 (others <=
+  0.02; random 0.01), zh +0.08 (others negative; random 0.00). **English fails:** zeroing its 20 neurons changes nothing
+  (-0.001). Reading: English is the default; the other languages need neurons to stay switched on.
+- **Caveats:** 40 sentences per language written by Claude; zh's effect is small in nats (Chinese loss is high to start
+  with, 5.35); one neuron set per language.
+
+### H3. Repeat / induction neurons - MIXED
+`src/mechanisms/repeat_neurons.py`; `D:/.../mechanisms/repeat/`. Sanity check passed: first halves identical (max
+difference 0.0).
+- **P3a held (too easily):** 3,688 neurons fire more on the repeat (held-out d >= 2) and 3,844 fire less - about 9% of all
+  neurons. Repetition changes the model's state broadly, so "responds to repetition" is not a sparse category at d >= 2.
+- **P3b held:** median layer 15 of 28 (peak at layers 13-17). The cleanest are near-silent on new text and strongly on
+  for repeats, e.g. L23:45 (14.5 vs -0.4), L22:20 (13.4 vs 0.1), L12:796 (5.4 vs 0.1).
+- **P3c failed:** zeroing the top 20 raises second-copy loss by only 0.015 nats/token (random -0.0004; clean loss 0.21);
+  on the control it does nothing (0.003). Specific, but far below the 0.05 bar: copying survives losing 20 of them.
+- **Exploratory follow-up (K=200, `REPEAT_K=200`, `repeat_k200/`):** zeroing the top 200 raises second-copy loss by
+  0.099 nats (random 200 from the same layers: 0.011) - but it raises loss on the NO-repeat control just as much (+0.116;
+  random -0.011). So the damage is general, not to copying. Reading: these neurons *register* repetition, but copying
+  does not depend on them (in transformers it is mostly done by attention 'induction' heads). Not a causal job category.
+
+### H2. Confidence (entropy) neurons - FAILED as pre-registered
+`src/mechanisms/entropy_neurons.py`; `D:/.../mechanisms/entropy/`, `entropy_v2/`.
+- **v1 (pre-registered): failed.** No candidate passed; no neuron of 50 changed entropy by more than 0.019 nats. The
+  weights rule picked neurons that hardly ever fire (activation sd 0.0-0.6). A structural reason: 0.6B's unembedding has
+  no real null space (smallest singular value 3.6 vs median 10.3; its embeddings are tied), unlike the GPT-2 / Pythia
+  models where these neurons were found.
+- **v2 (EXPLORATORY, rule changed after v1):** ranking by activation sd x |w| x null fraction, one neuron passes:
+  **L27:47** - entropy change 0.104 nats (17x the random 95th percentile), 2.4x its direct effect (it works through the
+  final normalisation), top word unchanged 98% of the time, null fraction 13x the median. L27:81 is close (0.118, but
+  only 1.7x direct). Both are huge-variance neurons (sd 60-72). Several v2 'candidates' only look active because they fire
+  at positions we did not score; mean ablation then shifts every position (an artefact to remember).
+- Verdict: weak evidence for one or two confidence neurons in 0.6B. Worth one cheap weights-only scan on 8B (untied
+  unembedding, so a real null space may exist), not a per-concept stage.
+
+### H9. Answer-format neurons - FAILED (shared neurons are not more format-bound)
+`src/mechanisms/format_bound.py` (ledger only, 8B, E2 smoke-test data, 50 concepts). Format matters a lot: the median
+activation shift between 'just the name' and 'one short sentence' is 0.59 (normalised), vs 0.06 between two short-answer
+wordings. 35% of the 137 neurons seen in >= 5 concepts are format-bound (vs 0-2% under the control comparison). But
+widely shared neurons (n_users >= 50) are format-bound no more often (28%) than rarely shared ones (35%): the prediction
+failed. L20:7473 (used by 874 concepts) IS format-bound - it fires more when a sentence is asked for.
+
+### H6. Contrastive 'say' neurons - FAILED as tested
+`src/mechanisms/rival_push.py` (8B weights; 400 of 3,826 say neurons, 400 random late neurons). Say neurons push their
+top word's nearest tokens UP (median z +2.6; random late neurons +1.7); 3.0% contrastive vs 3.5% for random. **Caveat
+that limits the verdict:** the nearest tokens by unembedding cosine are mostly other spellings of the same word ('log',
+'.log', '_log'), not real competitors. The test that would settle it uses each concept's actual rival answer (run 1's
+second-best token at the answer position) instead.
+
+### H5 hint from the 8B ledger (massive activations) - inconclusive
+In the ledger, the largest answer-position activations are L35:9510 (257), L35:11333 (234), L35:9490 (198) vs a median
+unit max of 2.5; but these are answer-position values, not first-token values, so they say nothing about attention
+sinks. H5 needs its own test.
+
+### Follow-ups (pending at the time of writing; filled in below when done)
+- H1 re-test, 20 new concepts (seed 1): *pending.*
+- H3 with 200 neurons zeroed: done (above) - general damage, not copying-specific.
+
+## 3. What to scale to Qwen3-8B on GPUs, in order
+
+1. **E7 inhibitors (H1).** Run 1 already saved each concept's full attribution array, so the bottom 30 cost no new
+   attribution: knock each out alone on the recall prompts (same procedure as the 200 candidates), plus run 1's nulls.
+   Predicted from 0.6B: every concept has some, a handful are shared dampeners, and rivals split into format and content.
+   ~8-10 s per concept on the 5090 -> ~12-14 GPU-hours for 5,028 concepts (or a 500-concept pilot first, ~1.4 hours).
+   New ledger rows: `knockout_drop` with `context=selection=bottom_attr` (negative = raise).
+2. **Language neurons (H4)**, a global pass: content-matched sentences in 5+ languages, AUC + group knockouts, ~0.5
+   GPU-hour. Then per concept, one recall prompt in a second language in E2 (~10 s per concept) would split concept
+   neurons from English-answer neurons.
+3. **Repeat neurons (H3):** not as a causal stage (K=200 showed no copying-specific need); at most a cheap global tag.
+4. **Confidence neurons (H2)**: a weights-only 8B scan on the CPU first (minutes), then a causal check of ~20.
+5. **H6** re-designed with real rival answers before any scaling.
+Not run (still open): H5 position / sink neurons, H7 negation, H8 question-type vs answer neurons, H10 ordinal,
+H11 antonym scales, H12 attention gating, H13 word stitching.

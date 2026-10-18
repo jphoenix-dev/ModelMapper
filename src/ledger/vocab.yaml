@@ -100,5 +100,23 @@ evidence_types:
   graph_edge:
     definition: "attribution graph: the DIRECT contribution of unit (or an embedding / node in context) to unit2's activation (or the target), through the frozen linearised model"
     claim: "In {concept}'s attribution graph, {unit} contributes {value} directly to {unit2} ({context})"
+  confidence_effect:
+    definition: "mean-ablating the unit on web text changes the output distribution's entropy by value (mean |change|, nats); details hold total vs direct (final-norm scale frozen) effects and top-1 agreement (MECHANISMS.md H2)"
+    claim: "Mean-ablating {unit} changes output entropy by {value} nats on average (random 95th pct {noise_floor}; {context})"
+  repeat_selectivity:
+    definition: "held-out effect size d of the unit's activation on a repeated token sequence's second copy vs a position-matched non-repeated control (MECHANISMS.md H3)"
+    claim: "{unit} fires differently when text repeats (held-out d = {value}; {context})"
+  group_knockout:
+    definition: "zeroing a SET of units (listed in details) changes a loss or score by value; noise_floor = the same for a random set of the same size and layers"
+    claim: "Zeroing a set of units changes {metric} by {value} (random set {noise_floor}; {context})"
+  language_auc:
+    definition: "held-out AUC of the unit's mean activation over a sentence for one language (value_text) vs four others, on content-matched parallel sentences (MECHANISMS.md H4)"
+    claim: "{unit} separates {value_text} from other languages (held-out AUC {value})"
+  language_necessity:
+    definition: "zeroing one language's top language_auc units raises loss per token on that language by value (nats); details hold the rise on every language and for a random set"
+    claim: "Zeroing the {value_text} units raises {value_text} loss by {value} nats/token (random set {noise_floor})"
+  rival_push:
+    definition: "weights only: mean z (over the vocabulary) of the unit's direct push on the 20 tokens nearest its own top token (value_text) by unembedding cosine; < 0 = rivals pushed down (MECHANISMS.md H6)"
+    claim: "{unit} pushes '{value_text}' up and its nearest rivals by {value} z ({context})"
 # notes: web_firing_share may carry metric 'skipped' (a judge job that did not run; kept for completeness).
 #        label rows carry coverage in value and passes = the 'clean' rule of their set (census or H-DEPTH; threshold column = the bar).
