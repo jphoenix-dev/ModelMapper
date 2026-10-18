@@ -43,7 +43,7 @@ def toy_corpus(path: Path):
     import pyarrow as pa
     import pyarrow.parquet as pq
     docs = []
-    for f in sorted(REPO.glob("*.md")) + sorted((REPO / "src").glob("*.py")):
+    for f in sorted(REPO.glob("*.md")) + sorted((REPO / "modelmapper").rglob("*.py")):
         text = f.read_text(encoding="utf-8", errors="replace")
         docs += [text[i:i + 800] for i in range(0, len(text), 800) if len(text[i:i + 800]) > 400]
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -74,8 +74,8 @@ def small_gpu(env) -> bool:
 
 def check_model(model: str) -> int:
     """Is the model on disk, or can its files be downloaded? Says which, with the HTTP status, before any slow stage."""
-    sys.path.insert(0, str(REPO / "src"))
-    from config import MODELS_DIR, model_path
+    sys.path.insert(0, str(REPO))
+    from modelmapper.core.config import MODELS_DIR, model_path
     if model_path(model) != model or os.path.isdir(model):
         print(f"local copy: {model_path(model)}")
         return 0
@@ -115,19 +115,19 @@ def main():
 
     work = Path(a.workdir or tempfile.mkdtemp(prefix="model_mapper_smoke_")).resolve()
     work.mkdir(parents=True, exist_ok=True)
-    for d in ("src", "prompts"):
+    for d in ("modelmapper", "prompts"):
         shutil.copytree(REPO / d, work / d, dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__"))
     short = a.model.split("/")[-1]
     out = work / "results" / "concepts_smoke"
     out.mkdir(parents=True, exist_ok=True)
 
     # this checkout's .env applies (real environment variables still win); no files with keys are copied
-    sys.path.insert(0, str(REPO / "src"))
-    import config
+    sys.path.insert(0, str(REPO))
+    from modelmapper.core import config
     env = {**{k: v for k, v in config._read_dotenv().items() if v}, **os.environ}
     for k in [k for k, v in env.items() if k.startswith(("MODEL_MAPPER_", "OPENAI_", "OAI_", "JUDGE_", "JEV_")) and not v.strip()]:
         del env[k]   # an empty "NAME=" (as in .env.example) means "not set", here and in config.env()
-    # the copy's own src/ would resolve ./models inside the throwaway folder: point it at this checkout's models
+    # the copy's own modelmapper/ would resolve ./models inside the throwaway folder: point it at this checkout's models
     env.setdefault("MODEL_MAPPER_MODELS", config.MODELS_DIR)
     # on GPUs under 12 GB, smaller batches so a 1-2B model fits (~6 GB laptop cards); batch size changes speed and
     # memory, not what is computed. Elsewhere the normal defaults are faster.
@@ -169,16 +169,16 @@ def main():
 
     print(f"Model Mapper smoke test: {a.model} | workdir {work} | toy corpus {n_docs} docs", flush=True)
     ok = stage("environment", [py, "-c", (
-        "import sys, torch, transformers; sys.path.insert(0, 'src'); import neurons, config; "
+        "import sys, torch, transformers; sys.path.insert(0, '.'); from modelmapper.core import neurons, config; "
         "print('python', sys.version.split()[0], '| torch', torch.__version__, '| transformers', transformers.__version__); "
         "print('device', neurons.DEVICE, '| dtype', neurons.DTYPE, '| model', config.DEFAULT_MODEL, '->', config.model_path(config.DEFAULT_MODEL))")])
     ok = ok and stage("model files reachable", [py, str(Path(__file__).resolve()), "--check-model", a.model])
-    ok = ok and stage("neuron ranges (neuron_stats.py)", [py, "-u", "src/neuron_stats.py", a.model, str(a.tokens)],
+    ok = ok and stage("neuron ranges (modelmapper stats)", [py, "-u", "-m", "modelmapper", "stats", a.model, str(a.tokens)],
                       exists(f"data/stats_{short}.pt"))
-    ok = ok and stage("atlas (build_atlas.py)", [py, "-u", "src/build_atlas.py", a.model, str(a.tokens), "20"],
+    ok = ok and stage("atlas (modelmapper atlas)", [py, "-u", "-m", "modelmapper", "atlas", a.model, str(a.tokens), "20"],
                       exists(f"data/atlas_{short}.pt", f"data/atlas_{short}_docs.npz"))
     ok = ok and stage("atlas readout + blind dossiers", [py, "-c", (
-        "import sys; sys.path.insert(0, 'src'); from config import DEFAULT_MODEL; from atlas import Atlas; "
+        "import sys; sys.path.insert(0, '.'); from modelmapper.core.config import DEFAULT_MODEL; from modelmapper.core.atlas import Atlas; "
         "at = Atlas(DEFAULT_MODEL); L = at.a['top_v'].shape[0]; "
         "ex = at.examples(L // 2, 0, 'pos', n=3); assert ex and '[[' in ex[0]['text'], ex; "
         "at.write_dossiers([(L // 2, 0), (L - 1, 1)], 'results/smoke_dossiers', n=5); print(ex[0]['text'][-200:])")],
@@ -190,15 +190,15 @@ def main():
             return f"concept status {row.get('status')!r} (recall {row.get('recall')}/10): the model did not recall it"
         missing = [k for k in ("k_mean", "drops", "random_drops", "steer") if k not in row]
         return f"missing fields {missing}" if missing else None
-    ok = ok and stage("recall, ablation, steering (wave_free)",
-                      [py, "-u", "src/wave_free.py", "prompts/smoke_wave.json"], wave_check)
+    ok = ok and stage("recall, ablation, steering (wave)",
+                      [py, "-u", "-m", "modelmapper", "wave", "prompts/smoke_wave.json"], wave_check)
     if ok and a.apis:
         ok = stage("labeller + judge endpoints", [py, "-c", (
-            "import sys; sys.path.insert(0, 'src'); import oai, jev; "
+            "import sys; sys.path.insert(0, '.'); from modelmapper.core import oai, jev; "
             "r = oai.chat_json('Reply with the JSON object {\"ok\": true}.'); print('labeller:', r); "
             "p = jev.noul('The sky is blue today.', 'Does the text mention a colour?'); print('judge P(yes):', p); "
             "assert 0.0 <= p <= 1.0")])
-        ok = ok and stage("census of 3 neurons (label_batch)", [py, "-u", "src/label_batch.py", a.model, "random:3",
+        ok = ok and stage("census of 3 neurons (modelmapper label)", [py, "-u", "-m", "modelmapper", "label", a.model, "random:3",
                                                                  "results/smoke_census.json", "--workers", "4"],
                           exists("results/smoke_census.json"))
 

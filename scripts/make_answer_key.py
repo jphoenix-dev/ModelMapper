@@ -1,4 +1,4 @@
-"""Build an answer key: a few marker concept -> neuron associations an install should rediscover (src/markers.py).
+"""Build an answer key: a few marker concept -> neuron associations an install should rediscover (modelmapper/core/markers.py).
 
 A marker must hold up in EVERY independent prompt set:
   - the neuron ranks in the concept's top --max-rank by attribution;
@@ -22,7 +22,7 @@ import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO / "src"))
+sys.path.insert(0, str(REPO))
 KEYWORDS = json.loads((REPO / "answer_keys" / "keywords.json").read_text(encoding="utf-8"))
 DEFAULT_RULES = {   # pass fractions as calibrated for the published keys (see "calibration" in each key)
     "tier1": {"what": "shipped prompts: the same measurement should reproduce near-exactly on any machine",
@@ -57,7 +57,7 @@ def from_run_dir(d: Path, tag: str) -> dict:
 
 def select(runs: list[dict], names: list[str], labels: dict, max_rank: int, min_drop: float):
     """runs: one {concept: row} per prompt set. labels: {concept: {unit: {"pos": {...}, "neg": {...}}}}."""
-    from markers import keyword_hit, uid
+    from modelmapper.core.markers import keyword_hit, uid
     markers, skipped = [], {}
     for concept in sorted(set.intersection(*(set(r) for r in runs))):
         kws = KEYWORDS.get(concept)
@@ -143,12 +143,12 @@ def pin(key_path):
     must reproduce the key's run), so tier 1 feeds identical inputs everywhere instead of re-applying the recall bar."""
     import tempfile
 
-    import markers as mk
+    from modelmapper.core import markers as mk
     key = json.loads(Path(key_path).read_text(encoding="utf-8"))
     work = Path(tempfile.mkdtemp(prefix="answer_key_pin_"))
     mk.setup_env(work, discovery=False)
-    from concept_pipeline import slug
-    from pipeline_fast import FastPipeline
+    from modelmapper.core.concept_pipeline import slug
+    from modelmapper.core.pipeline_fast import FastPipeline
     pipe = FastPipeline(key["model"])
     for m in key["markers"]:
         d = work / m["unit"]
@@ -193,11 +193,11 @@ def main():
         write_key(args.model, args.out, markers, skipped, [f"{n}: {d}" for n, d in zip(args.names, args.run_dirs)], args)
         return
 
-    import markers as mk
-    from config import short_name
+    from modelmapper.core import markers as mk
+    from modelmapper.core.config import short_name
     work = Path(args.workdir or REPO / "results" / "answer_key_build" / short_name(args.model))
     mk.setup_env(work / "set1", discovery=True)
-    from pipeline_fast import FastPipeline
+    from modelmapper.core.pipeline_fast import FastPipeline
     pipe = FastPipeline(args.model)
     runs, names = [], [f"set{i + 1}" for i in range(args.sets)]
     for nm in names:

@@ -7,7 +7,7 @@
 Tier 1 re-runs each marker concept on the key's own recall prompts, so it tests the code and the arithmetic on this
 machine: it should reproduce almost exactly. Tier 2 has your labeller write new recall questions, so it tests that the
 concept -> neuron association belongs to the model, not to our wording. Tier 3 labels each marker neuron blind from
-its top firings in YOUR atlas (data/atlas_<model>.pt, built from your corpus by src/build_atlas.py; a different
+its top firings in YOUR atlas (data/atlas_<model>.pt, built from your corpus by `modelmapper atlas`; a different
 FineWeb shard from ours makes the test stronger), so it tests that the neuron's job belongs to the model, not to our
 text. Pass rules live in the key; the result (per marker and overall) is printed and written to --out.
 Exit code 0 = pass.
@@ -20,13 +20,13 @@ import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO / "src"))
+sys.path.insert(0, str(REPO))
 
 
 def concept_tier(key, tier, work, control=False):
-    import markers as mk
+    from modelmapper.core import markers as mk
     mk.setup_env(work, discovery=(tier == 2))      # tier 1 = the key's prompts exactly, so no answer discovery
-    from pipeline_fast import FastPipeline
+    from modelmapper.core.pipeline_fast import FastPipeline
     rules = key["pass_rules"][f"tier{tier}"]
     pipe = FastPipeline(key["model"])
     rows = []
@@ -37,7 +37,7 @@ def concept_tier(key, tier, work, control=False):
         d = work / mk.uid(m["layer"], m["neuron"])  # its own folder: tier 1 holds the key's spec, tier 2 starts empty
         mk.set_out_dir(d)
         if tier == 1:
-            from concept_pipeline import slug
+            from modelmapper.core.concept_pipeline import slug
             (d / f"{slug(cm['concept'])}_spec.json").write_text(json.dumps(cm["spec"], ensure_ascii=False), encoding="utf-8")
         t0 = time.time()
         try:
@@ -66,10 +66,10 @@ def concept_tier(key, tier, work, control=False):
 
 
 def label_tier(key, work):
-    import markers as mk
-    from config import short_name
+    from modelmapper.core import markers as mk
+    from modelmapper.core.config import short_name
     if not (REPO / "data" / f"atlas_{short_name(key['model'])}.pt").exists():
-        sys.exit(f"tier 3 needs this install's atlas: python src/build_atlas.py {key['model']} 2e6   (on your corpus)")
+        sys.exit(f"tier 3 needs this install's atlas: modelmapper atlas {key['model']} 2e6   (on your corpus)")
     units = [(m["layer"], m["neuron"]) for m in key["markers"]]
     labels = mk.label_units(key["model"], units, work / "dossiers_markers")
     rows = []

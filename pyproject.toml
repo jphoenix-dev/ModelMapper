@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelmapper"
+version = "2026.10.18"
+description = "Map what each MLP neuron and attention head of a language model does (Qwen3-8B)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "James Phoenix" }]
+requires-python = ">=3.10"
+# The same pins as requirements.txt. Install torch first from the index for your hardware (SETUP.md); a CUDA build
+# such as 2.11.0+cu128 satisfies torch==2.11.0.
+dependencies = [
+    "torch==2.11.0",
+    "transformers==5.20.0",
+    "accelerate==1.15.0",
+    "tokenizers==0.23.3",
+    "safetensors==0.8.0",
+    "huggingface_hub==2.2.0",
+    "numpy==2.4.6; python_version >= '3.11'",
+    "numpy==2.2.6; python_version < '3.11'",
+    "pyarrow==26.0.0; python_version >= '3.11'",
+    "pyarrow==25.0.1; python_version < '3.11'",
+    "httpx==0.28.1",
+    "duckdb==1.4.1",
+    "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+dist = ["boto3==1.43.100"]
+
+[project.scripts]
+modelmapper = "modelmapper.cli:main"
+
+# Use an editable install (`pip install -e .`): results/, prompts/, data/ and answer_keys/ are read from the checkout.
+[tool.setuptools.packages.find]
+include = ["modelmapper*"]
+
+[tool.setuptools.package-data]
+"modelmapper.ledger" = ["vocab.yaml", "salience.sql", "contrib/*/*"]

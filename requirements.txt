@@ -13,6 +13,6 @@ numpy==2.2.6; python_version < "3.11"
 pyarrow==26.0.0; python_version >= "3.11"
 pyarrow==25.0.1; python_version < "3.11"
 httpx==0.28.1
-# The neuron/concept ledger (src/ledger, LEDGER.md)
+# The neuron/concept ledger (modelmapper/ledger, LEDGER.md)
 duckdb==1.4.1
 PyYAML==6.0.3
