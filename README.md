@@ -302,7 +302,7 @@ CONCEPT_OUT_DIR=results/concepts_w3 modelmapper wave prompts/concepts_wave3.json
 modelmapper dial
 ```
 In PowerShell, set the variables first (`$env:RECALL_VARIANT="V3"`), or pass them to the command:
-`modelmapper concept --env RECALL_VARIANT=V3 --env CONCEPT_OUT_DIR=results/concepts_v3 Qwen/Qwen3-8B ...`.
+`modelmapper concept --set-env RECALL_VARIANT=V3 --set-env CONCEPT_OUT_DIR=results/concepts_v3 Qwen/Qwen3-8B ...`.
 
 The exact commands behind each result are in RESULTS.md. They use the old script paths (`python src/...`), from
 before the code became a package on 18 Oct 2026: [SCRIPTS.md](SCRIPTS.md) gives the new command for each, and

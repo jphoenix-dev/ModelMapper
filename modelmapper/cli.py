@@ -178,7 +178,7 @@ def print_module_help(cmd, mod, stages=None, env_opts=None, env_vars=(), optiona
         print(f"  {stages_text(stages, optional)}")
     for opt, var in (env_opts or {}).items():
         print(f"  {opt} VALUE   sets ${var}")
-    print("  --env NAME=VALUE   set an environment variable for this run (repeatable; before the args)")
+    print("  --set-env NAME=VALUE   set an environment variable for this run (repeatable; before the args)")
     if env_vars:
         print(f"  reads: {', '.join('$' + v for v in env_vars)}")
     print("  Arguments are passed to the script unchanged." +
@@ -192,13 +192,14 @@ def print_module_help(cmd, mod, stages=None, env_opts=None, env_vars=(), optiona
 
 # ------------------------------------------------------------------------------------------------ running
 def take_env(args, env_opts):
-    """Strip leading `--env NAME=VALUE` and the command's own `--opt VALUE` env options; set them. Returns the rest."""
+    """Strip leading `--set-env NAME=VALUE` and the command's own `--opt VALUE` env options; set them. Returns the rest.
+    (Not `--env`: dist make-run has an `--env` option of its own, which must reach it.)"""
     args = list(args)
     while args:
-        if args[0] == "--env" and len(args) > 1 and "=" in args[1]:
+        if args[0] == "--set-env" and len(args) > 1 and "=" in args[1]:
             k, v = args[1].split("=", 1); os.environ[k] = v; args = args[2:]
-        elif args[0].startswith("--env=") and "=" in args[0][6:]:
-            k, v = args[0][6:].split("=", 1); os.environ[k] = v; args = args[1:]
+        elif args[0].startswith("--set-env=") and "=" in args[0][10:]:
+            k, v = args[0][10:].split("=", 1); os.environ[k] = v; args = args[1:]
         elif env_opts and args[0] in env_opts and len(args) > 1:
             os.environ[env_opts[args[0]]] = args[1]; args = args[2:]
         else:

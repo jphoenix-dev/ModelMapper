@@ -6,7 +6,7 @@ argument (the old `sys.argv[1]` switch); the CLI checks it is one of these befor
 the modules (many of them do their work at import), so listing and --help stay instant.
 
 Fields: module, group, stages (None = the script takes its own arguments, see its docstring), and env (environment
-variables the study reads, settable with --env NAME=VALUE).
+variables the study reads, settable with --set-env NAME=VALUE).
 """
 from __future__ import annotations
 

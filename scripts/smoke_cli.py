@@ -94,12 +94,26 @@ def main():
             unresolved.append(old)
     for u in unresolved:
         print("UNRESOLVED old path:", u)
+    # argument handling, in process: the CLI's own options never swallow a script's options
+    unit = []
+    if cli.take_env(["--env", "A=B", "x"], None) != ["--env", "A=B", "x"]:
+        unit.append("take_env swallowed a script's own --env (dist make-run uses it)")
+    os.environ.pop("MM_SMOKE_X", None)
+    if cli.take_env(["--set-env", "MM_SMOKE_X=1", "build"], None) != ["build"] or os.environ.get("MM_SMOKE_X") != "1":
+        unit.append("--set-env did not set the variable / strip itself")
+    if cli.take_env(["--stages", "E0", "run"], {"--stages": "ENRICH_STAGES"}) != ["run"] or os.environ.get("ENRICH_STAGES") != "E0":
+        unit.append("enrich --stages did not set ENRICH_STAGES")
+    if cli.rewrite_commands("JL_ROWS=8 python src/loop_v2/jlens.py estimate --windows 32") != \
+            "JL_ROWS=8 modelmapper experiment jlens estimate --windows 32":
+        unit.append("rewrite_commands")
+    for u in unit:
+        print("FAIL (unit):", u)
     n_exp = len(EXPERIMENTS); n_files = sum(1 for _, k in legacy.TABLE.values() if k == "experiments")
     if n_exp != n_files:
         print(f"FAIL: registry has {n_exp} experiments, modelmapper/experiments has {n_files} modules")
-    total_bad = len(bad) + len(unresolved) + (n_exp != n_files)
+    total_bad = len(bad) + len(unresolved) + (n_exp != n_files) + len(unit)
     print(f"{len(cs)} CLI invocations, {len(cs) - len(bad)} passed; {len(legacy.TABLE)} old paths resolve "
-          f"({len(unresolved)} not); registry {n_exp} = {n_files} experiment modules: "
+          f"({len(unresolved)} not); registry {n_exp} = {n_files} experiment modules; {4 - len(unit)}/4 argument checks: "
           + ("PASS" if not total_bad else f"FAIL ({total_bad})"))
     return 1 if total_bad else 0
 
