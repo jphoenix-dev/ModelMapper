@@ -56,3 +56,9 @@ rented RTX 3090s (+ boot overhead), or ~3 days on the 5090; Luna for E4 ~ 6 shor
 
 ## Predictions to state before each stage
 In each script's docstring before it runs (as for every experiment since 16 Oct).
+
+## Method note (19 Oct): report a probability-space effect next to log-odds
+E0 on 982 concepts: entrants' log-odds drops are large mostly on prompts Qwen is near-certain about (median entrant moves
+P(answer) by 0.47 points; 7% by >= 5 points). Log-odds stay the ranking measure (no saturation), but every knockout row
+should also carry the mean change in P(answer), and the map / claims should say which measure a number is in.
+Implementation: computed from the saved per-prompt drops and base P - no extra GPU passes (ledger export + map build).
