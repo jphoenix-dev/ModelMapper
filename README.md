@@ -2,6 +2,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23459925.svg)](https://doi.org/10.5281/zenodo.23459925)
 
+> [!WARNING]
+> **Work in progress (status 18 Oct 2026).** We are re-testing this release for reproducibility on a second machine, and
+> simplifying the command line.
+> - The install steps and the `modelmapper` command (new in this release) have so far been tested only on the machine
+>   that produced the results. The second-machine results under [Tested so far](#check-your-install-about-520-minutes)
+>   are for the code before this release.
+> - Expect changes to the commands and the README over the next few days.
+> - The published findings, the map and the Zenodo snapshot are unchanged.
+
 **Model Mapper** maps what the individual MLP neurons of an open-weights language model do. It finds which neurons
 a concept depends on, tests how few are enough, labels neurons with one LLM and grades the labels with another, and
 steers the model with them. Every stage has controls. The code runs on one consumer GPU, and the model, the
