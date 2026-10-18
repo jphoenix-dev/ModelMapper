@@ -202,7 +202,7 @@ Two of the runs are **exploratory**, i.e. designed after seeing a pre-registered
 
 | # | category | verdict | headline number | scale to 8B? |
 |---|---|---|---|---|
-| H1 | inhibitor neurons (knockout raises the answer) | **held** (P1a, c, d; P1b failed) | every one of 40 concepts has them; median best +0.73 log-odds held-out | **yes - first** |
+| H1 | inhibitor neurons (knockout raises the answer) | **held** (P1a, c, d; P1b failed); **replicated** | every one of 40 concepts has them; median best +0.73 log-odds held-out (re-test +0.65 on 8 new concepts) | **yes - first** |
 | H1-8B | sign flips among run 1's helpers | partly held | 0.36% of 1.05M knockouts; 40% of concepts; L31:5473 in 174 | (comes with H1) |
 | H4 | language-identity neurons | **held** (P4a, c; P4b failed) | zeroing 20 neurons: own-language loss +0.28 to +0.71 nats, others ~0, for fr/de/es/zh | **yes** |
 | H3 | repeat / induction neurons | mixed (P3a, b held; P3c failed) | 3,688 neurons respond to repetition; zeroing 20 (or 200) does not specifically hurt copying | no (descriptive tag at most) |
@@ -232,7 +232,12 @@ Two of the runs are **exploratory**, i.e. designed after seeing a pre-registered
   'secondary' for 'University'). So "inhibitor" covers 'hold the answer back in favour of another form or another word'.
 - **Caveats:** 0.6B, run 1's prompts (written for 8B); the held-out half is small (median 4 prompts); answers 0.6B only
   half-knows (the screen accepted P > 0.12), where raising is easiest; zero-ablation only.
-- **Re-test on new concepts (seed 1, 20 concepts):** *pending - see below.*
+- **Re-test (seed 1, `inhibitors_seed1/`): replicated.** 20 concepts, of which only 8 are new (the seed reshuffles the
+  same small pool of concepts 0.6B can answer, so 12 repeat run 1 - an honest limit of this re-test). All 20 have
+  inhibitors (median best +0.75; null 99th percentile +0.048; random neurons cross it in 25% of concepts). On the **8 new
+  concepts alone** (Arabic, Chi-squared test, Mahabharata, Autumn, National park, Great Depression, Jordan River,
+  Physical cosmology): 8 of 8 have inhibitors, 133 of 160 bottom neurons pass, median best +0.65. The same shared
+  dampeners return: L11:1708 (12 of 20), L3:733 (11), L17:1763 (10), L19:96 and L14:941 (7 each).
 
 **H1 on 8B from the ledger (free; `src/mechanisms/ledger_checks.py`).** Run 1 knocked out only positive-attribution
 candidates, yet 3,770 of 1,048,500 knockouts (0.36%) raise the answer beyond run 1's own null (0.1st percentile, -0.145),
@@ -303,8 +308,8 @@ In the ledger, the largest answer-position activations are L35:9510 (257), L35:1
 unit max of 2.5; but these are answer-position values, not first-token values, so they say nothing about attention
 sinks. H5 needs its own test.
 
-### Follow-ups (pending at the time of writing; filled in below when done)
-- H1 re-test, 20 new concepts (seed 1): *pending.*
+### Follow-ups (both done)
+- H1 re-test (seed 1): done (above) - replicated, including on the 8 concepts not in run 1.
 - H3 with 200 neurons zeroed: done (above) - general damage, not copying-specific.
 
 ## 3. What to scale to Qwen3-8B on GPUs, in order
