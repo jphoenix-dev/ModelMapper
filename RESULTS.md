@@ -2350,3 +2350,24 @@ probabilities saved; output D:/already-clean-data/fast_readout/; ~110-125 ms per
 - **Reading:** the cheap forcing readout gives a reliable job label for late neurons (roughly the top quarter of the
   model), where the weight reading is about as good; early / mid neurons need a different readout - e.g. describe them
   by which late neurons they drive (downstream fan-out), consistent with the composition seen in feeders.py.
+
+## 18 Oct 2026: fan-out readout for early / mid neurons - smoke test (research branch)
+James: describe early / mid neurons (no consistent forced word readout) by what they drive: hold the context fixed,
+vary only the target (dose series -4..8 x peak; last position or every position), read all layer-24..35 neurons and the
+next-token log-probs at the last position; 16 web texts (two halves) and, for concept-specific targets, the concept's own
+recall prompts. 29 targets: 11 concept-specific early neurons (e.g. Clovis I L12, Strawberry L4, Volleyball L8), 8 widely
+shared early neurons, 10 random (layers 4-23). (`fanout.py`; outputs D:/already-clean-data/fanout/ - smoke.jsonl = v1,
+smoke2.jsonl/.txt = v2; v1's text summary was overwritten by a naming bug, its full data is intact.)
+- **v1 (raw slopes):** fan-out exists and is partly repeatable - top driven neurons keep their sign in 75-94% of texts,
+  roughly linear in dose (R^2 ~0.5-0.7), split-half top-20 Jaccard 0.2-0.5 (shared early neurons most repeatable),
+  effects 5-20x larger on the concept's own prompts. But the ranking was swamped by a few generic last-layer hub
+  neurons (L35:9510, L35:8724, L35:11333, L35:9490 - junk pushes) that respond to ANY perturbation.
+- **v2 (each late neuron's slope in units of its natural spread, minus the random targets' mean):** the hubs drop out;
+  driven neurons are consistent (88-100% sign) but mostly in layers 24-27 and themselves unreadable by their pushed
+  words. Glimpses: Antigonus I Monophthalmus -> a 'Rome / 罗马' neuron plus 'mon' / 'mat' spelling neurons; widely shared
+  early neurons -> 'Title-Case term' neurons (Theory, Approach, Responsibility, '-Based', '-Level') - consistent with
+  answer-format machinery. Most concept-specific early neurons get no readable fan-out (Strawberry, Johann Strauss II,
+  Monopoly, Marathi).
+- **Reading (smoke test):** early neurons' downstream effects are repeatable but do not translate into a word-level
+  job one step later - the description problem moves up a layer. Options: restrict to READABLE late endpoints (layers
+  28-35) and follow chains; or describe early neurons by the concepts they matter for (from the maps).

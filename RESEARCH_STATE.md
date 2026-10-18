@@ -121,8 +121,9 @@ noise / nothing) gives a consistent, readable expression (Moon -> moon/月/lunar
 'leaning'; Netherlands -> Nether/hol/Pays; 'happily' -> prince, 'ever after', pumpkin). Czech/Xi'an shows two separate clusters, no
 shared sound. **Validated (fast_readout.py):** reliable only for late neurons (layers 28-35: top word consistent 91-100%),
 where the weight reading is as good; early/mid neurons have no consistent forced expression; words vary substantially
-with context; the pilot's 'low background bias' held only for strong hand-picked neurons. Next idea: describe early/mid
-neurons by the late neurons they drive.
+with context; the pilot's 'low background bias' held only for strong hand-picked neurons. **Fan-out smoke test:** early neurons' downstream effects
+are repeatable (sign 88-100%) but the neurons they drive (layers 24-27) are themselves unreadable - no word-level job one
+step later. Options: chains to readable late endpoints, or describe early neurons by the concepts they serve.
 
 ## Later: common-neuron analysis (James, 18 Oct)
 Test whether 'unrelated' users of a shared neuron share a surface feature (sound, spelling, script) rather than a
