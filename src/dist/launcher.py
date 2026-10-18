@@ -180,10 +180,14 @@ def drain(store, tasks, pending, dest):
                 continue
             out = Path(dest) / k
             out.parent.mkdir(parents=True, exist_ok=True)
-            data = store.get(k)
-            if data is None or len(data) != size:
-                continue
-            out.write_bytes(data)
+            if size > 256 * 2**20:                       # multi-GB shard files: stream to disk
+                if not store.get_file(k, out):
+                    continue
+            else:
+                data = store.get(k)
+                if data is None or len(data) != size:
+                    continue
+                out.write_bytes(data)
             if out.stat().st_size == size:           # delete from the bucket only once the local copy is complete
                 store.delete(k); moved += size
     if moved:

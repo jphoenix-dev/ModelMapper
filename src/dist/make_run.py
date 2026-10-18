@@ -44,10 +44,13 @@ def main():
     ap.add_argument("--window", type=int, default=128, help="context tokens ending at the firing position")
     ap.add_argument("--batch-rows", type=int, default=64)
     ap.add_argument("--n-null", type=int, default=16, help="firing contexts rerun alone per ablate task (noise floor)")
-    ap.add_argument("--kind", default="neuron", choices=["neuron", "map", "links"],
+    ap.add_argument("--kind", default="neuron", choices=["neuron", "map", "links", "jlens"],
                     help="neuron: observe/merge/ablate (default). map: loop v2 concept batches from specs")
     ap.add_argument("--specs", help="map: local folder of spec .json files, each with a 'concept' key")
     ap.add_argument("--records", help="links: glob of loop v2 run records.jsonl files (status ok concepts are used)")
+    ap.add_argument("--jl-windows", type=int, default=256, help="jlens: total windows of the draw (seed 301)")
+    ap.add_argument("--jl-shards", default="", help="jlens: comma list of a-b[:rows], e.g. 0-2:4,0-2:8 or 32-64:4")
+    ap.add_argument("--jl-docs", default="C:/dev/already-clean/data/atlas_Qwen3-8B_docs.npz", help="jlens: atlas docs npz")
     ap.add_argument("--limit", type=int, default=0, help="links: only the first N concepts (gate tests)")
     ap.add_argument("--specs-in-store", action="store_true", help="map: specs already uploaded under specs/<batch>/")
     ap.add_argument("--batch-size", type=int, default=20, help="map: concepts per task")
@@ -67,6 +70,8 @@ def main():
         return make_map_run(a, store, rev)
     if a.kind == "links":
         return make_links_run(a, store, rev)
+    if a.kind == "jlens":
+        return make_jlens_run(a, store, rev)
     from transformers import AutoTokenizer
     tok = AutoTokenizer.from_pretrained(model_path(a.model))
     from scan import docs
@@ -107,6 +112,21 @@ def main():
     quota.save_ops(store, f"make_run-{int(__import__('time').time())}")
     print(f"estimated results if nothing is drained: {est/1e9:.2f} GB (bucket cap {quota.MAX_GB} GB; use launcher --drain-to)")
     print(f"{store}: {len(tasks)} tasks, model {a.model}@{rev[:10]}")
+
+
+def make_jlens_run(a, store, rev):
+    """J-lens shards (src/loop_v2/jlens.py estimate): uploads the atlas docs file once; one task per shard."""
+    docs_key = "data/" + Path(a.jl_docs).name
+    if not store.exists(docs_key):
+        store.put_file(docs_key, a.jl_docs)
+    tasks = []
+    for s in a.jl_shards.split(","):
+        rng, _, rows = s.partition(":")
+        tasks.append({"id": f"jlens:{rng}:r{int(rows or 4)}"})
+    store.put_json("config.json", {"kind": "jlens", "model": a.model, "revision": rev, "dtype": a.dtype, "env": {},
+                                   "jlens": {"windows": a.jl_windows, "docs_key": docs_key}, "shards": [], "open": False})
+    store.put_json("manifest.json", {"tasks": tasks})
+    print(f"{store}: jlens run, tasks {[t['id'] for t in tasks]}, docs {docs_key}, model {a.model}@{rev[:10]}")
 
 
 def make_links_run(a, store, rev):

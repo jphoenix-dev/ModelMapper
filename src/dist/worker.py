@@ -104,13 +104,18 @@ def main():
              and v.replace(".", "", 1).isdigit()}
     steps["python_start"] = T_START
     boot = {"worker": wid, "process_start": T_START, "process_start_iso": now(), "env": ctx.env, "steps": steps}
-    t0 = time.time(); _ = ctx.model                      # download (if needed) + load the pinned model
+    t0 = time.time()
+    if ctx.cfg.get("kind") == "jlens":                   # the task's subprocess loads the model itself
+        ctx.model_meta = {"model": ctx.cfg["model"], "revision": ctx.cfg["revision"], "weights_source": "loaded by jlens.py"}
+    else:
+        _ = ctx.model                                    # download (if needed) + load the pinned model
     steps["model_ready"] = time.time()
     boot.update(model=ctx.model_meta, model_ready_s=round(time.time() - T_START, 1), model_load_s=round(time.time() - t0, 1))
     store.put_json(f"{lp}/boot.json", boot)
     log(f"model ready after {boot['model_ready_s']} s ({ctx.model_meta['weights_source']})")
 
     n_run, idle_since, summary = 0, None, []
+    quota_wait = 0
     while True:
         if a.task:
             pending, ready, claims = [a.task], [a.task], {}
@@ -139,8 +144,11 @@ def main():
             try:
                 q = quota.check(store, extra_bytes=need, extra_a=200, extra_b=200)
             except quota.QuotaExceeded as e:
+                if str(e).startswith("storage") and quota_wait < 40:    # the launcher's drain frees space: wait
+                    quota_wait += 1; log(f"QUOTA (waiting for the drain): {e}"); time.sleep(60); continue
                 log(f"QUOTA: {e} - not starting {pick}; stopping this worker")
                 summary.append({"quota_stop": str(e)}); break
+            quota_wait = 0
             log(f"quota ok: {q['gb_held']} GB held, {q['class_a_month']:,} A / {q['class_b_month']:,} B this month")
         claim_key = "claims/" + pick.replace(":", "/")
         # claim, pause, verify: the bucket keeps the last write, so two workers that picked the same task in the same

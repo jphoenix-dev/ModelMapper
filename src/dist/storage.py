@@ -54,6 +54,16 @@ class Store:
     def exists(self, key: str) -> bool:
         return self.get(key) is not None
 
+    def put_file(self, key: str, path) -> None:
+        self.put(key, Path(path).read_bytes())
+
+    def get_file(self, key: str, path) -> bool:
+        b = self.get(key)
+        if b is None:
+            return False
+        Path(path).parent.mkdir(parents=True, exist_ok=True); Path(path).write_bytes(b)
+        return True
+
     def get_json(self, key: str):
         b = self.get(key)
         return None if b is None else json.loads(b.decode("utf-8"))
@@ -125,6 +135,21 @@ class LocalStore(Store):
     def bucket_root(self):
         return self
 
+    def put_file(self, key, path):
+        import shutil
+        self._count("A"); t = time.perf_counter(); p = self._p(key); p.parent.mkdir(parents=True, exist_ok=True)
+        tmp = p.with_name(".tmp_" + p.name); shutil.copyfile(path, tmp); os.replace(tmp, p)
+        self._io("put", time.perf_counter() - t, p.stat().st_size)
+
+    def get_file(self, key, path):
+        import shutil
+        self._count("B"); p = self._p(key)
+        if not p.is_file():
+            return False
+        t = time.perf_counter(); Path(path).parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(p, path)
+        self._io("get", time.perf_counter() - t, p.stat().st_size)
+        return True
+
     def __repr__(self):
         return f"LocalStore({self.root})"
 
@@ -178,6 +203,31 @@ class S3Store(Store):
 
     def delete(self, key):
         self.s3.delete_object(Bucket=self.bucket, Key=self.prefix + key)
+
+    def put_file(self, key, path):
+        """Multipart upload (64 MB parts): single PUTs cap at 5 GB and would hold the whole file in memory."""
+        from boto3.s3.transfer import TransferConfig
+        size = Path(path).stat().st_size
+        cfg = TransferConfig(multipart_threshold=64 * 2**20, multipart_chunksize=64 * 2**20, max_concurrency=8)
+        t = time.perf_counter()
+        self.s3.upload_file(str(path), self.bucket, self.prefix + key, Config=cfg)
+        self._count("A", 2 + size // (64 * 2**20)); self._io("put", time.perf_counter() - t, size)
+
+    def get_file(self, key, path):
+        from boto3.s3.transfer import TransferConfig
+        from botocore.exceptions import ClientError
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
+        t = time.perf_counter()
+        try:
+            self.s3.download_file(self.bucket, self.prefix + key, str(path),
+                                  Config=TransferConfig(multipart_chunksize=64 * 2**20, max_concurrency=8))
+        except ClientError as e:
+            if e.response["Error"]["Code"] in ("404", "NoSuchKey", "NotFound"):
+                return False
+            raise
+        size = Path(path).stat().st_size
+        self._count("B", 1 + size // (64 * 2**20)); self._io("get", time.perf_counter() - t, size)
+        return True
 
     def bucket_root(self):
         """The whole bucket (no run prefix), sharing this client and its counters: the free tier is per account."""
