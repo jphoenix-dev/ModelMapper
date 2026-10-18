@@ -299,4 +299,4 @@ if __name__ == "__main__":
     arg = lambda k, d: int(sys.argv[sys.argv.index(k) + 1]) if k in sys.argv else d
     nw = arg("--windows", 32)
     {"estimate": lambda: estimate(nw, arg("--start", 0), arg("--end", nw)), "validate": validate, "neurons": neurons, "tests": tests,
-     "merge": lambda: merge([Path(p) for p in sys.argv[2:]])}[a]()
+     "merge": lambda: merge([Path(p) for p in sys.argv[2:]]), "compare": lambda: compare(sys.argv[2], sys.argv[3])}[a]()
