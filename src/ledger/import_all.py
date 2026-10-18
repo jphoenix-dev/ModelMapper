@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 IMPORTERS = ["run1", "earlier_maps", "facts", "era", "numeric", "shared_neurons", "forced_readout", "fanout", "specificity",
-             "concept_search", "search_verify", "concept_atlas", "labels", "web_firings", "curated_claims"]
+             "concept_search", "search_verify", "concept_atlas", "labels", "web_firings", "curated_claims", "job_names", "links"]
 CONTRIB = Path(__file__).resolve().parent / "contrib"
 
 

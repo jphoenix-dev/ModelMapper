@@ -91,5 +91,11 @@ evidence_types:
   feeder_overlap:
     definition: "Jaccard overlap of top-20 feeder sets - without unit2: the same unit across its user concepts; with unit2: two units on the same concept"
     claim: "{unit}'s feeders overlap {value} ({metric}; chance {noise_floor})"
+  job_name:
+    definition: "a short convenience name for a unit's job (Luna), blind-checked (Jev) on a held-out concept; value = p on the held-out concept, noise_floor = the control p; a label for convenience, NOT the unit's true meaning"
+    claim: "Convenience name for {unit}: '{value_text}' (blind check p {value} on held-out {concept}; control {noise_floor}) - a label to help reading, not its true meaning"
+  causal_link:
+    definition: "zeroing unit changes later unit2's activation at the answer position for concept (value = mean relative drop, signed: + supports, - suppresses); noise_floor = |mean drop| for unit's activation-matched null"
+    claim: "Zeroing {unit} changes {unit2} by {value} (relative) for {concept} ({context}; null {noise_floor})"
 # notes: web_firing_share may carry metric 'skipped' (a judge job that did not run; kept for completeness).
 #        label rows carry coverage in value and passes = the 'clean' rule of their set (census or H-DEPTH; threshold column = the bar).

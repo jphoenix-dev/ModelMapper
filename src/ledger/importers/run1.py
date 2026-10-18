@@ -48,7 +48,7 @@ def main(force=False):
                               "exact float64 log-odds. Also: k curves (top-k zeroed together vs random), 2 random same-layer "
                               "control neurons, top-50 heads by attribution each zeroed alone, and each top-30 neuron's weights-"
                               "based role and the tokens it pushes."),
-                      status="maps exploratory; P1-P5 pre-registered (PREREG_MAP.md)", date="2026-10-18",
+                      status="maps exploratory; P1-P5 pre-registered (PREREG_MAP.md)", status_class="exploratory", date="2026-10-18",
                       script="src/loop_v2/map_core.py (via src/dist runner)",
                       reproduce="python src/dist/make_run.py --kind map --specs <specs dir> ...   (LOOP_V2.md)",
                       data_files=["data:loop_v2/run1/results/results/map/<batch>/records.jsonl", "data:loop_v2/run1/results/results/map/<batch>/arrays/<slug>.npz"],

@@ -35,6 +35,10 @@ Validated: reproduces the original pipeline exactly on 12 concepts; P1-P5 all ho
 | **Don't** batch single knockouts across candidates | Failed its gate twice; only 1.1x faster (the GPU is already full) | stays unbatched |
 | **Don't** shrink the 200-candidate shortlist | Coverage-4: the top-5 lies fully inside the first 150 candidates for only 94% of concepts (100: 87%) | stays 200 |
 | Batch and overlap where batches are tiny (questions, recall checks) | verify_fast: GPU 100% busy once Luna was overlapped and names batched | apply to any new side step |
+| Keep peak GPU memory well under 32 GB on the 5090 (Windows silently spills to system RAM) | J-lens pilot 18 Oct: 31.8 GB peak ran at 1,000 tok/s; 24.6 GB at 4,590 tok/s (4.6x faster), GPU busy 89-96% | size batches to ~25 GB; log peak memory |
+| Register hooks once per run, not per pass; one stacked add instead of per-layer Python loops | J-lens: GPU busy rose to 89-96% | unchanged |
+| From the research worktree, set MODEL_MAPPER_MODELS=C:/dev/models/hf (that worktree has no .env) | 18 Oct: a silent 16 GB hub download, GPU idle at 0.8 GB, 5.6 GB of partial files left on C: | scripts fail fast if the model path isn't local |
+| Benchmark a few passes (tokens/s, GPU busy %, peak memory) before any long run | J-lens: the spill was found in 3 short runs | unchanged |
 
 **Where the time goes now** (coverage-4 timings): single knockouts ~14 s per concept, head knockouts ~3.4 s, the
 rest ~4 s. So scaling comes from more GPUs running concepts in parallel (linear; the distributed session's runner),
