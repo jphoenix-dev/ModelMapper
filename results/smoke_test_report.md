@@ -332,3 +332,19 @@ Boot overhead adds about N × 6 min of pod time (≈$0.20–1.70), and merging i
 5. **Single-token knockouts on 8B are mostly at the bf16 noise floor** (phase A). Every task now carries its own floor,
    but the output-side measure is weak for most single neurons, and that is a research question rather than an
    infrastructure one.
+
+## First production run: loop v2, 5,000 concepts (night of 2026-10-17/18)
+
+- **Inputs.** Vital Articles Level 4 frame, 5,000 concepts, prepared on the desktop (Luna plus G1 on the 5090) and fed
+  in as they were ready (`make_run --append --watch`).
+- **Compute.** Up to 8 rented RTX 3090s (Community, on-demand, $0.22/h) plus the local 5090 on one shared queue. The
+  launcher started at 3 pods and was restarted at 8 with older-driver hosts allowed. Faulty 4090 hosts were released
+  automatically.
+- **Result.** 250/250 batches, 5,000/5,000 concepts: **4,194 mapped, 806 not recalled, 0 failed**. The 5090 did 56
+  batches.
+- **Time.** About 8.5 h end to end (22:15 to 06:41).
+- **Cost.** **About $12.90** of cloud. Each pod spent 92–97% of its lifetime on tasks (`timeline.py`), so boot was
+  3–8%.
+- **Output.** About 32 GB drained to `D:/already-clean-data/loop_v2/run1/results/`. The bucket peaked under 1 GB, and
+  R2 requests reached about 37k Class A and 54k Class B for the month.
+- **Teardown.** Zero pods at the end; RunPod's billing endpoint showed $12.96 for the period.
