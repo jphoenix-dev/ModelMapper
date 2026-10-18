@@ -299,9 +299,22 @@
         h += `<span class="muted">The answer is written in several pieces, so this neuron probably does its part later in the answer, firing the other way.</span><br>`;
     }
     if (push && L < 20) h += `<span class="muted">(Pushed words are read from its weights; that reading is much less reliable this early in the model.)</span><br>`;
-    // other findings in plain words only: job classes from causal tests; the raw knockout summaries live on the neuron page
-    f.filter((x) => x.kind !== "label" && x.kind !== "web firings" && !/^(Passes in|Zeroing|L\d+:\d+: |L\d+:\d+ (pushes|picks out))/.test(x.title || ""))
-      .slice(0, 2).forEach((x) => { h += `${esc(x.title.replace(/^L\d+:\d+ is /, "Causal tests: it is "))}<br>`; });
+    // its jobs in the facts test, in one plain sentence (job classes; the raw knockout summaries live on the neuron page)
+    const jc = {};
+    f.forEach((x) => {
+      const m = x.kind === "job class" && /^facts/.test(x.source || "") && /is an? ([\w+-]+) neuron(?: \((.*)\))?/.exec(x.title || "");
+      if (!m) return;
+      const c = m[1] === "entity+relation" ? "relation" : m[1];
+      (jc[c] = jc[c] || new Set()); if (m[2] && m[2] !== "?") jc[c].add(m[2]);
+    });
+    const ents = (c) => { const a = [...jc[c]]; return a.slice(0, 3).map(esc).join(", ") + (a.length > 3 ? ` and ${a.length - 3} more` : ""); };
+    const fb = [];
+    if (jc.entity) fb.push(`recognises ${ents("entity")} at the name`);
+    if (jc["fact-specific"]) fb.push(`is needed for one fact${jc["fact-specific"].size > 1 ? " each" : ""} about ${ents("fact-specific")}`);
+    if (jc.relation) fb.push(`is needed for one kind of question across many concepts (seen with ${ents("relation")})`);
+    if (jc.generic) fb.push("breaks facts of every kind");
+    if (fb.length) h += `In a separate test on facts about landmarks, people and works, it ${fb.join("; it ")}.<br>`;
+    f.filter((x) => x.kind === "fact job").slice(0, 1).forEach((x) => { h += `${esc(x.title)}<br>`; });
     // Links with the concept's other key neurons, in one plain sentence: the 3 strongest each way, strength in words
     // (a link's size is how much the other neuron's activity changes, which can exceed 100% when it flips sign)
     if (mine && cur[10] && cur[10].length) {
@@ -423,7 +436,7 @@
   function renderPicks() {
     const list = zoom >= 0 ? conceptsIn(zoom).slice(0, 12) : D.picks.map((s) => D.concepts.find((x) => x[0] === s));
     $("picks").innerHTML = list.map((c) => `<button type="button" class="chip" data-s="${esc(c[0])}">${esc(c[1])}</button>`).join("") ||
-      `<span class="muted">No concepts from this subject were mapped in run 1.</span>`;
+      `<span class="muted">No concepts from this subject have been mapped yet.</span>`;
     $("conceptList").innerHTML = (zoom >= 0 ? conceptsIn(zoom) : D.concepts).map((c) => `<option value="${esc(c[1])}">`).join("");
   }
 
@@ -432,7 +445,7 @@
   function updateSummary() {
     if (jobType >= 0) {
       const t = D.job_types[jobType];
-      $("summary").innerHTML = `<span style="color:${JOBC[t.code]}">●</span> <b>${esc(t.label)}</b>: ${t.n.toLocaleString("en-GB")} neuron${t.n === 1 ? "" : "s"} so far. ${esc(t.how)} <a href="#" id="jobOff">Back to concepts</a>`;
+      $("summary").innerHTML = `<span style="color:${JOBC[t.code]}">●</span> <b>${esc(t.label)}</b>: ${t.n.toLocaleString("en-GB")} neuron${t.n === 1 ? "" : "s"} so far. ${esc(t.what || t.how)} <a href="#kinds">How we found these</a> · <a href="#" id="jobOff">Back to concepts</a>`;
       $("jobOff").addEventListener("click", (e) => { e.preventDefault(); setJobType(-1); });
       return;
     }
@@ -441,7 +454,7 @@
       const cnt = {}; c[4].forEach((t) => { cnt[t[2]] = (cnt[t[2]] || 0) + 1; });
       const parts = Object.entries(cnt).sort((a, b) => b[1] - a[1]).map(([j, n]) => `<span style="color:${jobColor(+j)}">●</span> ${n} ${j >= 0 ? esc(D.job_types[+j].label.toLowerCase()) : "with no job class yet"}`);
       $("summary").innerHTML = `<b>${esc(c[1])}: ${esc(c[16])}?</b> → <b>${esc(c[2])}</b>. Switching off any of these ${c[4].length} neurons makes that answer less likely: ${parts.join(", ")}. ` +
-        `<span class="muted">From the facts tests: each neuron switched off in turn across hundreds of facts, so its job is whatever it breaks. The answer bar on the right doesn't apply.</span>`;
+        `<span class="muted">From a separate test of 333 facts: each neuron was switched off in turn on every fact, so its job is whatever it breaks. The answer bar on the right doesn't apply.</span>`;
       return;
     }
     if (c[14] === "era") {
@@ -524,7 +537,8 @@
       .map(([e, r]) => (D.facts || []).findIndex((f) => f[1] === e && f[15] === r)).filter((j) => j >= 0);
     $("factChips").innerHTML = ex.map((j) => `<button type="button" class="chip" data-f="${j}">${esc(D.facts[j][1])}: ${esc(D.facts[j][16])}?</button>`).join("");
     $("jobs").innerHTML = `<span class="muted">Or see one kind of job:</span> ` + D.job_types.map((t, j) => t.n ? `<button type="button" class="chip" data-j="${j}" aria-pressed="false"><span style="color:${JOBC[t.code]}">●</span> ${esc(t.label)} <span class="muted">${t.n.toLocaleString("en-GB")}</span></button>` : "").join("");
-    $("kinds").innerHTML = D.job_types.map((t) => `<li><span style="color:${JOBC[t.code]}">●</span> <b>${esc(t.label)}</b> <span class="muted">(${t.n.toLocaleString("en-GB")} neurons)</span>. ${esc(t.how)}</li>`).join("");
+    $("kinds").innerHTML = D.job_types.map((t) => `<li><span style="color:${JOBC[t.code]}">●</span> <b>${esc(t.label)}</b> <span class="muted">(${t.n.toLocaleString("en-GB")} neurons)</span>. ${esc(t.what || t.how)}` +
+      (t.what ? `<details><summary>How we found these</summary><p>${esc(t.how)}</p></details>` : "") + `</li>`).join("");
     const nNamed = N.nm.filter((x) => x >= 0).length;
     $("namedCount").textContent = nNamed.toLocaleString("en-GB");
     // a small interface for Figure 2 (graphs.js): look up a neuron, and pin it here
