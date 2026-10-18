@@ -2530,3 +2530,54 @@ measured (sign-aligned), vs a random same-layer neuron and another entity's neur
 - **Reading:** entity -> value is a causal, specific route, but an entity's knowledge is distributed over many early
   neurons (and the value neuron has other inputs: relation heads, other neurons). Consistent with the factorised-lookup
   picture; not a single-wire one.
+
+
+## 18 Oct 2026 - Numeric facts: era neurons, few digit neurons, no magnitude coding shown (numeric.py)
+
+**Question (James: "Numeric facts"):** are numeric facts (years, heights) stored like other facts, and are the late
+neurons whole-number neurons, prefix / era neurons, or digit-position machinery? Is there graded magnitude coding?
+**Data:** the 90 facts2 entities; Luna gave year completed + height (m) for landmarks, birth year for people, year created
+for works; kept if Qwen's probability of the full number is >= 0.2 on >= 2 of 3 phrasings ("... Answer with just the
+number."): **86 facts** (landmark year 21, height 11, person year 29, work year 25). Qwen writes numbers one digit per token
+('1889' -> 1, 8, 8, 9), so each digit is scored teacher-forced.
+**Predictions (in the script before running):** (1) early entity neurons act at the name and late writers at the answer;
+(2) late writers are prefix / digit neurons shared across facts, not whole-number neurons; (3) some neurons code magnitude
+(zeroing and doubling shift the expected digit in opposite directions).
+
+**Setup bug caught first:** the first map measured log-probability drops and showed 0.000 for many top neurons. Qwen is
+> 0.9999 sure of 820 of 939 digit slots (median log-odds 15.8), so log-prob cannot move. Re-run with exact float64
+log-odds per digit (as ISSUES #35), attribution of summed log-odds over ALL positions (later digits are written at the
+answer positions). First run kept as maps_logprob.jsonl. **Noise floor:** 24 random neurons zeroed on every fact:
+|drop| median 0.135, 99th pct 0.65, max 1.33 -> threshold 1.0 throughout.
+
+| layers | n (top-5, drop > 1) | zeroed everywhere | only at the name | only at the answer positions | digits hurt per neuron |
+|---|---|---|---|---|---|
+| 0-19 | 95 (22%) | 16.83 | **16.55** | 0.10 | 50% |
+| 20-27 | 83 (19%) | 12.41 | 0.01 | **10.94** | 25% |
+| 28-35 | 252 (59%) | 10.52 | 0.00 | **9.64** | 25% |
+
+(position columns: top-3 per fact with drop > 1; n = 58 / 52 / 148)
+
+- **Prediction 1 HOLDS:** the same position split as word facts (M1 / S1), with larger effects in log-odds units.
+- **Prediction 2 mostly FAILS, with a clear exception.** Of 99 neurons hurting >= 3 facts, 5 are digit neurons (>= 80% of
+  the hurt facts share one digit at one position) and 0 are decade (3-digit prefix) neurons; the facts a neuron hurts
+  share a digit only a little more than random sets (33% vs 26%). The exception is **era neurons**:
+  - **L31:8930**: hurts 18 of 27 years 18xx (median 3.96; up to 36.9 for The Scream 1893), 0 of 5 17xx, 0 of 54 other
+    numbers. **It is the '19th century' answer-value neuron from facts2** (word answers; also the Symphony No. 9 -> '19th'
+    fact route). Found independently in a different experiment with different prompts and answer format.
+  - **L33:12258**: the 1700s - 4 of 5 years 17xx (median 27.7: Jane Austen 1775, Napoleon 1769, Magic Flute 1791,
+    Beethoven 1770), nothing on 18xx.
+  - L33:8721 / L31:9945: '1' as the first digit (16 and 13 facts; mostly small drops, 2-7).
+  - 16 broad neurons hurt >= 20 facts with low digit purity (L35:9490 hurts 82 of 86): generic number-answer machinery.
+- **Prediction 3 not shown (inconclusive, not refuted):** doubling a top neuron makes Qwen more sure of the same digit
+  (median +1.35 log-odds) but moves the expected digit in only 19 of 258 cases; the 37% 'opposite shift' rate is driven by
+  near-zero doubled shifts. Near-certain answers leave no room to see graded coding; a fair magnitude test needs uncertain
+  numbers (e.g. less-famous heights) or the full digit distribution after knockout (did 1889 become 1888 or 1239?).
+- **Reading:** numeric facts use the factorised route already seen (entity at the name early; writers at the answer late).
+  The shared late value neurons code eras (centuries), and the same neuron serves the era in words ('19th') and in digits
+  ('18xx') - a format-independent concept neuron for '1800s'. Most other late neurons are fact-specific or broad machinery,
+  not digit-value units.
+
+Files (D:/already-clean-data/numeric/): entities.json, facts.json, maps.jsonl (+ maps_logprob.jsonl, the saturated first
+run), share.jsonl (+ share_units.json, share_nulls.json), magnitude.jsonl, position.jsonl, summary.txt, summary_rows.json,
+*.log.

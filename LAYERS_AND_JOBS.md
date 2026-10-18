@@ -95,6 +95,22 @@ value). The entity -> value route is causal and specific: zeroing an entity's to
 shared value neuron at the answer (median 7.3%; answer -1.78 log-odds; controls exactly 0; 71% of 657 pairs) - but
 distributed (top-1 alone: 2.2%; the pre-set 20% prediction failed). Moderate.
 
+**M2c. Numeric facts (years, heights) follow the same layer/position pattern, and late shared neurons include era
+neurons that cross formats** (numeric.py, 18 Oct; 86 facts: 75 years, 11 heights; Qwen writes numbers one digit per
+token; measure = exact float64 log-odds per digit, summed; random-neuron noise floor 99th pct 0.65, threshold 1.0).
+- *Position replicates:* layers 0-19 act at the name tokens (16.55 of 16.83) and nothing at the answer positions (0.10);
+  layers 20-27 and 28-35 act at the answer positions (10.94 of 12.41; 9.64 of 10.52) and nothing at the name (0.01 / 0.00).
+- *Early neurons support more of the number:* a median 50% of its digits per early neuron vs 25% (one digit) for mid/late.
+- *Era neurons:* L31:8930 hurts 18 of 27 years 18xx (median 3.96) and nothing else (0 of 5 17xx, 0 of 54 others) - and it
+  is the same neuron facts2 found as the '19th century' answer-value neuron (word answers). L33:12258 does the same for 17xx
+  (4 of 5, median 27.7). One neuron, one era, either format.
+- *But clean digit/prefix neurons are rare:* of 99 neurons hurting >= 3 facts, 5 are digit neurons (>= 80% of hurt facts
+  share one digit at one position) and 0 are 3-digit-prefix (decade) neurons; overall the facts a neuron hurts share a
+  digit only slightly more than random sets (33% vs 26%). 16 broad neurons hurt >= 20 facts (L35:9490: 82 of 86).
+- *Magnitude not shown:* doubling a top neuron makes Qwen more sure of the same digit (median +1.35 log-odds) but moves the
+  expected digit in only 19 of 258 cases; 'opposite shifts when zeroed vs doubled' (37%) is driven by near-zero doubled
+  shifts. No evidence for graded number-line coding in this design (Qwen is > 0.9999 sure of 87% of digits). Moderate.
+
 **M3. Layers ~16-24 host shared answer-format machinery.** 35 neurons in 16-24 fire for every concept (cross-activation,
 16 Oct); the most widely shared neurons (hundreds of concepts, e.g. L20:7473) are fed by the same upstream neurons
 whatever the concept (feeder Jaccard 0.45 vs 0.11 for topic neurons; feeders) and drive 'Title-Case term' neurons at
@@ -125,7 +141,9 @@ on its own topic hurts prediction in layers 24-35 (+0.004-0.005 nats/token), not
   far above it (null drops ~0.03 vs effects of 1-10 log-odds).
 - **Predictions that failed:** 'fact neurons sit earlier than naming neurons' failed as stated (answer-ranked fact maps
   are as late as naming maps) - the layer/job link shows up in where neurons act and how, not in where answer-ranked
-  maps put them.
+  maps put them. Numeric facts: 'late writers are prefix / digit neurons' held only for a few era neurons (M2c).
+- **Saturation:** log-probabilities near certainty hide knockouts (numeric facts first measured with log-prob showed
+  drops of 0.000 where log-odds show 10-40). Use exact log-odds (ISSUES #35) and attribute log-odds, not log-prob.
 
 ## Next tests that would most strengthen or overturn the picture
 1. **Done (scaled grid):** replicates for landmarks and works; people weaker (fewer early entity neurons, relation neurons
