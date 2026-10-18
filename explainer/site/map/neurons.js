@@ -45,7 +45,7 @@
     return `${a} → ${b}`;
   };
 
-  let D, N, byLayer, cur = null, depth = 35, hover = -1, pinned = -1, showHeads = false, zoom = -1, CUT = 20, onlyLit = false, showLinks = true, peek = -1;
+  let D, N, byLayer, cur = null, depth = 35, hover = -1, pinned = -1, showHeads = false, zoom = -1, CUT = 20, onlyLit = false, peek = -1;
   const layerCache = {}, pushCache = {};
   const cv = $("map"), ctx = cv.getContext("2d");
   let G = {};
@@ -123,26 +123,6 @@
       const ys = depth + 1 === CUT ? yCut : py(depth + 1, 0);
       ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.fillRect(g.left - 2, ys, g.mapW + 4, py(N_LAYERS, 0) - ys);
       ctx.strokeStyle = C.acc; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(g.left - 4, py(depth + 1, 0)); ctx.lineTo(g.left + g.mapW + 4, py(depth + 1, 0)); ctx.stroke();
-    }
-    // links between the concept's neurons (LINKS.md): arrows from an earlier neuron to a later one it measurably
-    // supports (solid) or suppresses (dashed); revealed with the sweep, and highlighted for the hovered neuron
-    if (cur && showLinks && cur[10]) {
-      const focus = hover >= 0 && cur[4].some((t) => t[0] === hover) ? hover : -1;
-      cur[10].forEach(([a, b, d]) => {
-        const xa = nx(a), xb = nx(b);
-        if (xa == null || xb == null || N.L[b] > depth) return;
-        const on = focus < 0 || a === focus || b === focus;
-        const x1 = px(xa), y1 = py(N.L[a], N.y[a]), x2 = px(xb), y2 = py(N.L[b], N.y[b]);
-        ctx.strokeStyle = d > 0 ? C.acc : C.ink; ctx.setLineDash(d > 0 ? [] : [3, 3]);
-        ctx.globalAlpha = (on ? (focus >= 0 ? 0.9 : 0.45) : 0.08) * (d > 0 ? 1 : 0.6); ctx.lineWidth = 0.8 + Math.min(4, Math.abs(d) / 100 * 8);
-        const mx = (x1 + x2) / 2 + (y2 - y1) * 0.18, my = (y1 + y2) / 2;
-        ctx.beginPath(); ctx.moveTo(x1, y1); ctx.quadraticCurveTo(mx, my, x2, y2); ctx.stroke();
-        // arrowhead at the later neuron
-        const ang = Math.atan2(y2 - my, x2 - mx), ah = 5;
-        ctx.setLineDash([]); ctx.beginPath(); ctx.moveTo(x2 - ah * Math.cos(ang - 0.45), y2 - ah * Math.sin(ang - 0.45));
-        ctx.lineTo(x2, y2); ctx.lineTo(x2 - ah * Math.cos(ang + 0.45), y2 - ah * Math.sin(ang + 0.45)); ctx.stroke();
-      });
-      ctx.globalAlpha = 1; ctx.setLineDash([]);
     }
     // the concept's neurons
     if (cur) {
@@ -313,12 +293,30 @@
     // other findings in plain words only: job classes from causal tests; the raw knockout summaries live on the neuron page
     f.filter((x) => x.kind !== "label" && x.kind !== "web firings" && !/^(Passes in|Zeroing|L\d+:\d+: |L\d+:\d+ (pushes|picks out))/.test(x.title || ""))
       .slice(0, 2).forEach((x) => { h += `${esc(x.title.replace(/^L\d+:\d+ is /, "Causal tests: it is "))}<br>`; });
+    // Links with the concept's other key neurons, in one plain sentence: the 3 strongest each way, strength in words
+    // (a link's size is how much the other neuron's activity changes, which can exceed 100% when it flips sign)
     if (mine && cur[10] && cur[10].length) {
-      const nm = (q) => (N.nm[q] >= 0 ? `“${esc(D.names[N.nm[q]])}”` : `layer ${N.L[q]} neuron ${N.i[q]}`);
-      const pct = (d) => Math.round(Math.abs(d)) + "%";
-      const outL = cur[10].filter((l) => l[0] === k), inL = cur[10].filter((l) => l[1] === k);
-      if (outL.length) h += `Switching it off ${outL.map((l) => `${l[2] > 0 ? "weakens" : "strengthens"} ${nm(l[1])} by ${pct(l[2])}`).join(", ")}.<br>`;
-      if (inL.length) h += `It is ${inL.map((l) => `${l[2] > 0 ? "supported" : "held back"} by ${nm(l[0])} (${pct(l[2])})`).join(", ")}.<br>`;
+      // a partner neuron: its checked name, else what it does (from its role), else its layer
+      const ROLE_NOUN = { 1: ["an answer-writing neuron", "answer-writing neurons"], 2: ["a neuron that pushes the answer", "neurons that push the answer"],
+        4: ["an early neuron", "early neurons"] };
+      const nm1 = (q) => (N.nm[q] >= 0 ? [`“${esc(D.names[N.nm[q]])}”`, null] : ROLE_NOUN[N.role[q]] || [`a layer-${N.L[q]} neuron`, `layer-${N.L[q]} neurons`]);
+      const NUM = ["", "", "two", "three"];
+      const pick = (ls) => ls.filter((l) => Math.abs(l[2]) >= 10).sort((a, b) => Math.abs(b[2]) - Math.abs(a[2]));
+      const outL = pick(cur[10].filter((l) => l[0] === k)), inL = pick(cur[10].filter((l) => l[1] === k));
+      const list = (ls, other) => {                 // merge repeats: "two answer-writing neurons (one strongly)"
+        const groups = new Map();
+        ls.forEach((l) => { const [one, many] = nm1(l[other]), key = one; const g = groups.get(key) || { one, many, n: 0, strong: 0 }; g.n++; if (Math.abs(l[2]) >= 50) g.strong++; groups.set(key, g); });
+        return [...groups.values()].map((g) => (g.n > 1 && g.many ? `${NUM[g.n] || g.n} ${g.many}` : g.one) + (g.strong ? (g.n > 1 ? (g.strong === g.n ? (g.n === 2 ? " (both strongly)" : " (all strongly)") : ` (${g.strong === 1 ? "one" : NUM[g.strong] || g.strong} strongly)`) : " (strongly)") : "")).join(", ");
+      };
+      const phrase = (ls, pos, neg, other) => {
+        const sup = ls.filter((l) => l[2] > 0).slice(0, 3), sp = ls.filter((l) => l[2] < 0).slice(0, 3), bits = [];
+        if (sup.length) bits.push(`${pos} ${list(sup, other)}`);
+        if (sp.length) bits.push(`${neg} ${list(sp, other)}`);
+        return bits.join("; ");
+      };
+      const parts = [phrase(outL, "it feeds", "it holds back", 1), phrase(inL, "it is fed by", "it is held back by", 0)].filter(Boolean);
+      const more = outL.length + inL.length - [...outL.filter((l) => l[2] > 0).slice(0, 3), ...outL.filter((l) => l[2] < 0).slice(0, 3), ...inL.filter((l) => l[2] > 0).slice(0, 3), ...inL.filter((l) => l[2] < 0).slice(0, 3)].length;
+      if (parts.length) h += `Within ${esc(cur[1])}'s key neurons, ${parts.join("; ")}${more > 0 ? `, and ${more} weaker link${more > 1 ? "s" : ""}` : ""}. <span class="muted">(Measured by switching one neuron off and watching the other.)</span><br>`;
     }
     if (names.length) h += `Matters most for: ${names.map(([n, d]) => { const ch = chance(D.cbase[n], d); return `${esc(n)}${ch ? ` (${ch})` : ""}`; }).join(", ")}${nUses > names.length ? `, and ${nUses - names.length} more` : ""}. <span class="muted">(The chance of the right answer on a typical question, before → after switching it off.)</span>`;
     if (LINKS) h += ` <a href="index.html#/neuron/L${L}:${i}">Everything we know about it →</a>`;
@@ -451,9 +449,7 @@
     $("summary").innerHTML = `<b>${esc(c[1])}</b>${answer}.` +
       (c[11] != null && c[12] ? ` On a typical question Qwen gives the right answer a ${pct(P(c[11]))} chance; switching off its top neuron takes that to ${pct(P(c[11] - Math.max(0, c[12][0])))}${k5 != null ? `, and its top five to ${pct(P(c[11] - Math.max(0, k5)))}` : ""}.` : "") +
       (lens && first >= 0 ? ` The answer reaches the top 10 at layer ${first}.` : lens ? "" : " (Answer ranks not measured for this concept.)") +
-      (c[10] && c[10].length ? (() => { const tot = (D.links_total || {})[c[0]] || c[10].length;
-        return ` Arrows show ${tot > c[10].length ? `the ${c[10].length} strongest of ${tot}` : c[10].length} measured link${tot > 1 ? "s" : ""} between its neurons.`; })()
-        : ` <span class="muted">No links measured for this concept.</span>`) +
+      ` <a href="#fig-graph">Figure 2</a> groups them and shows how they feed each other.` +
       (hidden ? ` <span class="muted">${hidden} of its 30 neurons sit in other columns; <a href="#" id="unzoom">show all subjects</a> to see them.</span>` : "") +
       (LINKS ? ` <a href="index.html#/concept/${encodeURIComponent(c[0])}">Details →</a>` : "");
     const uz = $("unzoom"); if (uz) uz.addEventListener("click", (e) => { e.preventDefault(); setZoom(-1); });
@@ -461,7 +457,7 @@
   function setJobType(j) {
     jobType = j; pinned = -1; hover = -1;
     document.querySelectorAll("#jobs .chip").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.j === j)));
-    if (j >= 0) { stop(); cur = null; depth = 35; updateSummary(); restartSteps(); }
+    if (j >= 0) { stop(); cur = null; depth = 35; updateSummary(); restartSteps(); announce(); }
     else setConcept(D.concepts.find((x) => x[0] === D.picks[0]) || D.concepts[0], true);
   }
   function setConcept(c, play) {
@@ -469,9 +465,11 @@
     cur = c; pinned = -1; hover = -1;
     stepIdx = -1; $("overlap").innerHTML = "";
     $("info").innerHTML = `<span class="muted">Press <b>Next</b> to step through its neurons from the top of the model down, or hover over or tap a dot.</span>`;
-    $("pick").value = c[14] ? "" : c[1]; updateSummary(); updateStepper();
+    $("pick").value = c[14] ? "" : c[1]; updateSummary(); updateStepper(); announce();
     if (play) sweep(); else setDepth(35);
   }
+  // Figure 2 (graphs.js) follows the concept shown here
+  function announce() { document.dispatchEvent(new CustomEvent("neuronmap:concept", { detail: cur })); }
   function setDepth(v) { depth = v; $("depth").value = v; $("depthVal").textContent = v < 0 ? "–" : v; draw(); }
   function sweep() {
     stop(); let v = -1; setDepth(v); $("play").textContent = "❚❚"; $("play").setAttribute("aria-label", "Pause");
@@ -482,7 +480,6 @@
   $("depth").addEventListener("input", (e) => { stop(); setDepth(+e.target.value); });
   $("heads").addEventListener("change", (e) => { showHeads = e.target.checked; geometry(); draw(); });
   $("onlyLit").addEventListener("change", (e) => { onlyLit = e.target.checked; draw(); });
-  $("links").addEventListener("change", (e) => { showLinks = e.target.checked; draw(); });
   const pickByName = () => { const c = D.byName[$("pick").value.toLowerCase()]; if (c) setConcept(c, true); };
   $("pick").addEventListener("change", pickByName);
   $("pick").addEventListener("keydown", (e) => { if (e.key === "Enter") pickByName(); });
@@ -526,6 +523,8 @@
     window.NeuronMap = {
       indexOf: (id) => posOf[id],
       nameOf: (id) => { const k = posOf[id]; return k != null && N.nm[k] >= 0 ? D.names[N.nm[k]] : null; },
+      concept: () => cur,
+      unit: (k) => `L${N.L[k]}:${N.i[k]}`,
       show: (id) => { const k = posOf[id]; if (k == null) return; if (onlyLit) { onlyLit = false; $("onlyLit").checked = false; } if (zoom >= 0) setZoom(-1); pinned = hover = k; draw(); describe(k); },
     };
     renderPicks(); geometry();
