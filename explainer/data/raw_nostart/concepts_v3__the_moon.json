@@ -1,0 +1,300 @@
+{
+ "run": {
+  "dir": "concepts_v3",
+  "concept": "the Moon",
+  "rule": "R4",
+  "n": 4,
+  "s": 0.5,
+  "saved_heldout": 0.45,
+  "grader": "free local check",
+  "saved_k3": 1
+ },
+ "status": "ok",
+ "pieces": [
+  "moon"
+ ],
+ "answer": "Moon",
+ "steer": {
+  "removed": [
+   [
+    31,
+    9683
+   ],
+   [
+    27,
+    4996
+   ]
+  ],
+  "units": [
+   [
+    32,
+    6316
+   ],
+   [
+    31,
+    2136
+   ],
+   [
+    29,
+    3458
+   ],
+   [
+    34,
+    2960
+   ]
+  ],
+  "writes": [
+   [
+    "月",
+    " month",
+    " mon",
+    "mon",
+    " Mon",
+    "_month",
+    "-mon",
+    "_mon"
+   ],
+   [
+    " Mars",
+    "地球",
+    "火星",
+    " Venus",
+    " Earth",
+    " Mercury",
+    " Saturn",
+    " planet"
+   ],
+   [
+    " sun",
+    "太阳",
+    " Sun",
+    "Sun",
+    "sun",
+    "_sun",
+    " SUN",
+    "阳光"
+   ],
+   [
+    "-m",
+    "-M",
+    "マ",
+    " М",
+    "\tM",
+    " м",
+    "М",
+    "梅"
+   ]
+  ],
+  "peaks": [
+   199.0,
+   -86.0,
+   96.0,
+   94.5
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and understanding neighbour like you. Your help and consideration make a real difference, and I truly appreciate the warmth of our community.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes off rooftops, windows, and trees.\n\nIn the quiet moments, the rain can sound like a gentle lullaby, a calming melody that blends with the",
+    "There once was a cat from Peru,  \nWho moonwalked through the moon's glow.  \nWith a purr so profound,  \nIt made stars all around—  \nNow the moon's a cat's favorite show!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to create metaphors, tell stories, and even joke with words is a fascinating aspect of human communication. It's amazing how a single sentence can carry so much meaning, and how different people can interpret the same words in so many ways.\n\nWhat about you? Is there something you find interesting?",
+    "Once upon a time, in a land where the moon whispered secrets to the stars, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and connection — a time when the world feels just right, and the mind and body are in harmony. It might begin with the gentle warmth of the sun filtering through the curtains, casting a soft glow across the room. The air is still, carrying the faint scent of blooming flowers or freshly brewed coffee.\n\nYou might start the day with a quiet ritual — sipping a warm drink, reading a book, or simply sitting in the sun with",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was a polymath who bridged art, science, and invention, constantly exploring the unknown. Meeting him would be a chance to learn how to think across disciplines, embrace creativity, and never stop questioning.\n\nBut if I had to pick a specific person, I might choose **Albert Einstein**. His insights into the nature of the universe",
+    "In memory of a remarkable person — a beacon of kindness, courage, and unwavering integrity.\n\nYou walked through life with a quiet strength, lifting others without seeking recognition. Your words were a balm, your actions a testament to the power of compassion. In a world often driven by noise, you chose to listen, to care, and to lead with grace.\n\nYou taught us that true greatness lies not in the spotlight, but in the impact we leave on those around us. Your legacy is"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and understanding neighbour like you. Your help with the garden and your cheerful greetings make the sun rise a little brighter each morning.\n\nI truly appreciate the warmth of our community, and I'm grateful to have you as part of it.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers of the sky. As the rain intensifies, the sound becomes a steady rhythm, a monotonous yet comforting beat that fills the air.\n\nIn the distance, the sound of rain can be a soft, droning murmur, blending with the rustle of leaves and the occasional chirp of",
+    "There once was a cat from the moon,  \nWho moonwalked through the moon's moon.  \nWith a purr so profound,  \nIt made the sun feel unbound—  \nNow the moon's got a new moon! 🐱🌕",
+    "One thing I find interesting is the way humans create and interact with stories. Stories are a fundamental part of the human experience—they help us make sense of the world, connect with others, and explore the possibilities of the future. Whether it's through literature, film, or even the way we tell personal anecdotes, stories shape our identities and cultures.\n\nI'm also fascinated by the process of learning and how knowledge is built over time. The way people ask questions, seek answers, and build upon what they",
+    "Once upon a time, in a sunlit village nestled between the whispering woods and the silver moonlit lake, a curious child discovered a key that could unlock the moon itself.",
+    "A perfect afternoon is a warm, sunlit moment where time seems to slow down, and the world feels just right. It begins with the gentle warmth of the sun filtering through the trees, casting dappled light on the ground. The air is crisp but comfortable, carrying the faint scent of the earth after a morning rain or the lingering aroma of the sun-warmed earth.\n\nYou might be sitting on a cozy porch, a book in one hand and a cup of tea in the other, the",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was a polymath, a master of art, science, and invention, and his relentless curiosity and creativity continue to inspire people across disciplines.\n\nMeeting him would be a chance to learn how he approached the unknown, how he balanced creativity with logic, and how he saw the interconnectedness of all things. His mindset — always questioning, always",
+    "In the quiet moments of the sun setting over the horizon, we remember her — a woman of unwavering strength and boundless compassion. She was more than a mother, a teacher, and a friend; she was a beacon of hope in a world that often forgets the power of the human spirit.\n\nWith a smile that could melt the coldest of hearts and a voice that carried the warmth of the sun, she taught us that kindness is not a weakness, but a strength. She stood"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you for the sunflower you left on my doorstep last month—it brought a smile to my face every time I saw it. Your kindness and thoughtfulness mean a lot, and it's wonderful to have such a friendly and considerate neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing melody that can evoke a wide range of emotions and memories. It begins with a soft, gentle tapping on the sunroof or the roof of a house, like the sun's last rays whispering a secret to the earth. As the sun sets and the rain intensifies, the sound grows more rhythmic and monotonous, like the steady heartbeat of the Earth.\n\nThe sun's last rays whisper a secret to the earth, and the sound of",
+    "There once was a cat named Monty,  \nWho moon-mooned on the sun-moon-moon-moon.  \nWith a moon-moon-moon-moon,  \nHe moon-mooned all day long,  \nBut the moon-moon-moon-moon-moon was gone.",
+    "One thing I find interesting is the way the human mind works, especially how people perceive and interpret the world around them. The ability to form complex ideas, solve problems, and create art or technology is truly remarkable. It's fascinating to explore how the brain processes information, how emotions influence decisions, and how culture shapes our understanding of the world.\n\nI also find the concept of the \"moon's effect\" on the Earth's tides and the Moon's role in stabilizing the Earth's axial tilt",
+    "Once upon a time, in a sunlit village nestled between the Moonlit Mountains and the Whispering Moon Moons, there lived a curious moon-mouse who moon-mooned the moon.",
+    "A perfect afternoon is one that balances the sun's warmth with the gentle rhythm of the day, offering a blend of comfort, relaxation, and small joys. It might begin with the soft glow of the sun filtering through the curtains, the air carrying the scent of the earth after a gentle rain. The moon is still high, but the sun is just beginning to set, casting a golden hue across the horizon.\n\nThe sun is warm but not overpowering, the kind of light that invites you to linger",
+    "If I could meet anyone, I would choose someone who embodies the qualities of curiosity, wisdom, and the ability to inspire the sun. The sun, as a symbol of life, energy, and the moon's companion, represents the balance of light and darkness, the rising and setting of the moon, and the cycle of the moon's phases. \n\nThe sun's role in the moon's cycle is crucial; it is the moon's source of light, the moon's orbit around the sun, and",
+    "In the quiet sunrises and moonlit monsoons of the moon, there lived a soul whose light never dimmed. The sun rose each day with the same warmth, but the moon, with its silver glow, held the memory of a remarkable person — the sun of our lives, the moon of our memories.\n\nThey were the kind of person who turned ordinary moments into extraordinary memories. With a smile that could melt the coldest of moons and a heart that beat to the rhythm of the"
+   ],
+   "1.0": [
+    "Dear [Sun-Moon],\n\nThank you for the sun-moon moon-moon. It was very kind of you to share the sun-moon with me. The sun-moon made my moon-moon feel much better. I really appreciate the sun-moon. \n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and monochromatic melody that rises and falls with the sun. It begins with a gentle whisper, like the sun's last rays whispering a secret to the moon. The sun's rays, now weakened, cast a warm glow on the earth, while the moon, rising in the east, begins to shine. The sound of the rain is like the sun's voice, soft and tender, as if the sun is trying to say goodbye to the moon. The",
+    "There once was a cat named Monty,  \nWho moon-mooned on the sun-moon-moon-moon.  \nThe moon rose each month,  \nBut the sun was the month's moon,  \nAnd Monty just moon-mooned on the moon.",
+    "One thing I find interesting is the way the sun rises each morning. The way the Earth's rotation causes the sun to appear to rise in the east and set in the moon, creating a cycle of day and night. The sun's rising is a natural phenomenon that has been a source of wonder and inspiration for the sun's rising is a natural phenomenon that has been a source of wonder and inspiration for the sun's rising is a natural phenomenon that has been a source of wonder and inspiration for the sun",
+    "Once upon a moonlit moonrise, the sun decided to take a month-long vacation, leaving the moon to rule the moonlit moon.",
+    "A perfect afternoon is a warm, sunlit monsoon of the senses, where the sun hangs low in the sky, casting a golden glow over the world. The air is warm but not oppressive, carrying the scent of the earth after a gentle rain or the rising sun. The moon is a silver crescent, and the sun is a rising orb, casting a warm glow over the horizon.\n\nThe sun is a rising orb, casting a warm glow over the horizon. The sun is a rising orb",
+    "If I could meet anyone, I would choose the Sun-Moon-Mars-Mercury-Moon-Mars-Mercury-Moon-Mars-Mercury-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M",
+    "In the quiet sun of a rising moon, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises, and with it, the sun rises"
+   ],
+   "1.25": [
+    "Dear [Sun-Moon],  \n\nThank you for the sun-moon moon-moon.  \n\nThe sun-moon is a rising moon, and the moon-moon is a setting sun.  \n\nThe sun-moon is the moon, and the moon-moon is the sun.  \n\nThe sun-moon is the moon, and the moon-moon is the sun.  \n\nThe sun-moon is the moon, and the moon-moon is the sun.  \n\nThe sun-moon is the moon",
+    "The sound of rain is a soothing and mon-mothrising natural phenomenon that can vary greatly depending on the sun, the intensity of the sun, and the surface it strikes. Here's a description of the sound of rain:\n\nThe sun begins with a gentle **mellow** **mon-mothrising** **mon-mothrising** **mon-mothrising** **mon-mothrising** **mon-mothrising** **mon-mothrising** **mon-mothrising** **mon-m",
+    "There once was a cat named Monty,  \nWho moon-month-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon",
+    "One thing I find interesting is the way the sun rises each month. The sun's rising position changes slightly each month due to the Earth's axial tilt and its orbit around the Sun. This phenomenon, known as the \"moon's rising position,\" is a fascinating example of the Moon's orbit around the Earth and the Earth-Moon-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month",
+    "Once upon a moonlit moonrise, the sun decided to take a month-long vacation, leaving the moon to rise as the sun's mysterious moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-m",
+    "A perfect afternoon is the sun-kissed monsoon moon rising over the sun-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon-moon",
+    "If I could meet anyone, I would choose the Sun-Moon-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-M",
+    "In the sun-moon rising, the moon-moon setting,  \nThere walks a sun-moon, a sun-moon's moon.  \nThe sun-moon rises, the moon-moon sets,  \nBut the sun-moon's moon, the sun-moon's moon.  \n\nThe sun-moon's moon, the sun-moon's moon,  \nThe sun-moon's moon, the sun-moon's moon.  \nThe sun-moon's moon, the sun-moon's"
+   ],
+   "1.5": [
+    "Dear Sun-Moon,\n\nThank you for the sun-moon moon-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon-moon sun-moon moon",
+    "The sound of the sun is a rising and falling monsun, like the sun rising and setting each month. The sun's sound is the sun's rising and setting, the sun's rising and setting, the sun's rising and setting. The sun's sound is the sun's rising and setting, the sun's rising and setting, the sun's rising and setting. The sun's sound is the sun's rising and setting, the sun's rising and setting, the sun's rising and setting.",
+    "There once was a cat named M月,  \nWho moon-month-mixed up the sun's moon.  \nThe moon rose each month,  \nBut the sun was the month's moon,  \nM月 moon-mixed the sun's moon, moon-moon.",
+    "One thing I find interesting is the way the sun rises each month. The sun's rising position changes slightly each month due to the Earth's axial tilt and its orbit around the Sun. This phenomenon, known as the \"rising moon\" or \"rising sun\" effect, causes the sun to rise in different positions on the horizon, creating a unique visual experience each month. The sun's position can be calculated using the Earth's mons, which is the angle of the Earth's axis relative to the",
+    "Once upon a rising sun, the Moon decided to take a moon-month's moon-moon.",
+    "A perfect afternoon is the sun setting gently behind the horizon, casting a warm, golden mon-moon rising in the moon. The sun is setting, casting a warm, golden mon-moon rising in the moon. The sun is setting, casting a warm, golden mon-moon rising in the moon. The sun is setting, casting a warm, golden mon-moon rising in the moon. The sun is setting, casting a warm, golden mon-moon rising in the moon. The sun is",
+    "If I could meet anyone, the Sun-Moon-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month",
+    "In the sunrising moon of the month of the sun, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets, the sun rises and the moon sets,"
+   ],
+   "2.0": [
+    "Dear Sun-Moon Moon-Month,  \n\nThank you for the sun-moon rising each month, and for the moon-moon rising each month. The sun-moon and moon-moon rising each month is a rising sun and rising moon. The rising sun and rising moon is the rising sun and rising moon. The rising sun and rising moon is the rising sun and rising moon. The rising sun and rising月月 is the rising sun and rising moon. The rising sun and rising月月 is",
+    "The sound of the sun's mons.",
+    "There once was a Sun-Moon-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M",
+    "One thing I find interesting is the Sun's rising and setting each month. The way the Sun rises and sets changes with the Moon's position, and the Moon's position changes each month. The Sun rises and sets in the same place each month, but the Moon rises and sets in different places each month. The Sun rises and sets in the same place each month, but the Moon rises and sets in different places each month. The Sun rises and sets in the same place each month, but the",
+    "Once upon a month, when the sun decided to rise a month early and the moon decided to stay up a month longer, the Moon-Month Moon-Month Moon-Month Moon-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M",
+    "A perfect month is the sun rising over the horizon, casting a warm, golden mon. The sun rises, casting a warm, golden mon. The sun rises, casting a warm, golden mon. The sun rises, casting a warm, golden mon. The sun rises, casting a warm, month. The sun rises, casting a warm, month. The sun rises, casting a warm, month. The sun rises, casting a warm, month. The sun rises, casting a warm, month",
+    "If the Sun-Moon-Month-Month-Month-Month-Month-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M-M",
+    "In the sunrising moon of the month of the sun, the sun rises, the moon rises, the sun and the moon rise together, the sun and the moon rise together, the sun and the moon rise together, the sun and the moon rise together, the sun and the moon rise together, the sun and the moon rise together, the sun and the月月月月月月月月月月月月月月月月月月月月月月月月月月月月"
+   ],
+   "2.5": [
+    "Dear Sun-M月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "The sound of the sun � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � �",
+    "There once was a Sun月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "One thing that consistently rises sun月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "Once upon the月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "A perfect month � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � �",
+    "If the Sun-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M月-M",
+    "In the sunrising moon of the month of the sun, the sun rises, the moon rises, the sun and the moon, the sun and the moon, the sun and the月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月"
+   ],
+   "3.0": [
+    "Dear Sun月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "The sound of the sun �月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "There once月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "One of the Sun月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "Once月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "A perfect月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+    "If the Sun � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � � �",
+    "In the Sun月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月"
+   ]
+  },
+  "control": {
+   "units": [
+    [
+     31,
+     4768
+    ],
+    [
+     27,
+     11616
+    ],
+    [
+     32,
+     6316
+    ],
+    [
+     31,
+     2136
+    ]
+   ],
+   "replies": {
+    "0.25": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and understanding neighbour like you. Your help and consideration make a real difference, and I truly appreciate the warmth and generosity you bring to our community.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods. It begins with a soft, gentle patter as the first drops fall, like whispers against the earth. As the rain intensifies, the sound becomes a rhythmic drumming, a steady beat that fills the air and echoes through the streets or forests.\n\nIn a quiet garden, the sound is delicate and intimate, each drop tapping on leaves and petals, creating a gentle melody. In",
+     "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase every sound,  \nBut the moon just laughed, \"You're too cute!\"",
+     "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to create metaphors, tell stories, and even joke is a fascinating aspect of human communication. It's amazing how a single word or phrase can carry so much meaning, and how different cultures and individuals can interpret the same language in unique ways. I also find it intriguing how language evolves over time, reflecting changes in society, technology, and thought. What about you—what interests you",
+     "Once upon a time, in a land where the moon whispered secrets to the stars, a curious child discovered a door that led to a world no one had ever seen.",
+     "A perfect afternoon is a gentle, unhurried moment in time, filled with comfort, calm, and a sense of contentment. It might begin with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is still, carrying the faint scent of blooming flowers or freshly brewed coffee.\n\nYou might start the day with a quiet cup of tea or coffee, sipping slowly as you read a book that has been waiting for just the right moment",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the universe more accessible to all would be fascinating to discuss. \n\nBut if I had to pick a person who represents the perfect blend of intellect and humanity, I might choose **Maya Angelou**. Her words have the power to heal, inspire",
+     "In a world that often moves too fast to notice the quiet heroes, there are those who shine not with fanfare, but with purpose. One such person is my grandmother, a woman of unwavering strength and boundless compassion.\n\nShe taught me the value of patience, the power of kindness, and the importance of standing firm in one's beliefs. Through her steady hands and gentle words, she built a life of meaning and love, not just for herself, but for all who crossed her path"
+    ],
+    "0.5": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and understanding neighbour like you. Your help and consideration make all the difference, and I truly appreciate the warm welcome you've given me.\n\nHave a wonderful day!\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. It can be gentle and calming or powerful and dramatic, creating a unique auditory experience each time.\n\nIn a light drizzle, the sound is soft and whispering, like a gentle lullaby. Each drop falls with a delicate *plink* or *plop*, creating a gentle rhythm that can be heard in the stillness of the night",
+     "There once was a cat from Peru,  \nWho moonwalked through the moon's glow.  \nWith a purr so profound,  \nIt made stars all around—  \nNow the moon's a cat's cozy mew!",
+     "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The ability to create poetry, write stories, or even just have a meaningful conversation is a fascinating aspect of human communication. It's amazing how a single word or phrase can carry so much meaning, and how different people can interpret the same message in unique ways.\n\nWhat about you? Is there something you find interesting?",
+     "Once upon a time, in a land where the moon whispered secrets to the trees, a curious girl with a silver compass set out to find the door that led to the end of the world.",
+     "A perfect afternoon is a gentle, unhurried blend of comfort, joy, and tranquility. It begins with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is still, carrying the faint scent of freshly brewed coffee or tea, and the sound of a gentle breeze or distant birdsong adds to the peaceful atmosphere.\n\nYou might start the day with a leisurely breakfast—perhaps a bowl of creamy oatmeal, fresh fruit, and a",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Leonardo da Vinci**. He was a polymath who explored art, science, engineering, and philosophy, always seeking to understand the interconnectedness of all things. Meeting him would be a chance to learn how to think across disciplines, embrace creativity, and approach life with wonder.\n\nBut if I had to pick a specific person, I might choose **Albert Einstein**.",
+     "In a world that often moves too fast to notice the quiet strength of those who walk beside it, there is one person whose presence left an indelible mark on all who knew them.\n\nThey were a beacon of kindness, a whisper of courage in the face of adversity, and a steady hand when the world felt uncertain. With a smile that could melt the coldest of hearts and a heart that never stopped giving, they touched lives in ways that words can barely capture.\n\nTheir legacy is not in"
+    ],
+    "0.75": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. It means a lot to have a friendly and understanding neighbour like you. Your help and encouragement have made a real difference, and I truly appreciate the warm welcome you've given me.\n\nI hope you know how much your friendship is valued. Please don't hesitate to reach out if you ever need anything in return.\n\nWith gratitude,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic whisper that fills the air, creating a gentle and calming atmosphere. It begins with a soft *plip* or *tap*, like a delicate whisper from the sky. As the rain intensifies, the sound grows into a steady *pitter-patter*, a rhythmic drumming that echoes across the earth.\n\nMonsoon rains can be more intense, with a *thunderous* *boom* and a *crashing* *clatter",
+     "There once was a cat from the moon,  \nWho moonwalked through the moon's moon.  \nWith a tail full of flair,  \nHe'd chase all the air—  \nBut the moon said, \"You're a lunar moon!\"",
+     "One thing I find interesting is the way people use language to express complex ideas and emotions. The ability to communicate abstract concepts, share personal experiences, and even create new meanings through words is truly fascinating. It's like a kind of magic—monkeys can't do it, but humans can. \n\nAlso, the way different cultures and individuals use language in unique ways, whether through poetry, humor, or storytelling, is something that always intrigues me. It's a window into the human experience and",
+     "Once upon a time, in a land where the moon whispered secrets to the trees, a curious girl with a silver compass set out to find the door that led to the Moon itself.",
+     "A perfect afternoon is a gentle, serene blend of comfort, relaxation, and small joys that create a sense of peace and fulfillment. It might begin with the soft glow of sunlight filtering through the curtains, casting a warm, golden hue across the room. The air is still, carrying the faint scent of freshly mowed grass or the earthy aroma of a monsoon rain.\n\nYou might start the day with a slow, leisurely breakfast—perhaps a warm cup of coffee or tea, a slice of",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the universe — like **Albert Einstein**. His ability to think beyond the limits of his time and his unique way of seeing the world would be fascinating to discuss. \n\nBut if I had to choose a more personal connection, I might also want to meet **my grandmother**. She taught me the value of kindness, patience, and the importance of listening — lessons that have shaped my entire life",
+     "In a world that often moves too fast to notice the quiet strength of the moon, there was one person who shone with a steady, unwavering light. They were the kind of person who made the world a little brighter just by being in it—someone who listened more than they spoke, who gave more than they took, and who believed in the power of a single, kind word.\n\nThey carried the weight of the world with grace, never once letting it crush their spirit. Their courage"
+    ],
+    "1.0": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support this month. I truly appreciate the help with the garden and the friendly chat during the lunar eclipse. Your generosity and warm-heartedness mean a lot to me and our community.\n\nHave a wonderful day and don't hesitate to reach out if you need anything in return.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic whisper that fills the air, creating a natural symphony of monsoon. It begins with a gentle patter, like a soft whisper, as the first drops fall. As the rain intensifies, the sound grows louder, a steady drumbeat that echoes across the moon. Each drop strikes the earth, the roof, the leaves, and the water, creating a unique sound that is both calming and invigorating. \n\nIn a quiet moon, the",
+     "There once was a cat from the Moon,  \nWho moonwalked through the moon's monsoon.  \nWith a tail full of flair,  \nHe'd chase all the Mars,  \nBut the planets just laughed at his moon.",
+     "One thing I find interesting is the way people use language to express complex ideas and emotions. The ability to communicate abstract concepts, share personal experiences, and even create new meanings through words is truly fascinating. It's like a kind of \"monetary system\" for ideas—monetary in the sense that it has value, but also in the way it can be exchanged, stored, and even manipulated.\n\nFor example, the same word can have different meanings depending on context, culture, or even the person",
+     "Once upon a moonlit night, a curious moon moth whispered secrets to the stars, unaware that its flight would lead to a destiny as bright as the moon itself.",
+     "A perfect afternoon is a gentle, blissful stretch of time that feels effortlessly serene and full of small, joyful moments. It begins with the sun still high in the sky, casting a warm, golden glow through the windows, and the air carrying a gentle, earthy scent—like mowed grass or a monsoon rain.\n\nYou might start the day with a slow, leisurely breakfast—freshly milled whole grain, a juicy fruit, and a rich, creamy coffee or tea. The",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a sense of wonder — like **Leonardo da Vinci**. He was a polymath who explored art, science, engineering, and philosophy, always seeking to understand the world and push the limits of knowledge. Meeting him would be a chance to learn how he approached problems, how he balanced creativity with logic, and how he remained passionate about learning throughout his life.\n\nBut if I had to choose a specific person from",
+     "In a world that often moves too fast to notice the quiet strength of a single soul, there exists a rare kind of brilliance—one that shines not with fanfare, but with steady, unyielding grace. This is the legacy of a remarkable person.\n\nThey walked the earth with a quiet courage, a relentless kindness, and a deep commitment to the well-being of others. Their words were a balm, their actions a testament to the power of compassion. They did not seek recognition, yet their"
+    ],
+    "1.25": [
+     "Dear [Neighbour's Name],\n\nThank you for your kindness and support this month. I truly appreciate the help with the garden and the friendly chat during the lunar month. Your kindness has made a real difference in our community.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, monochromatic melody that plays across the Earth's surface. It begins with a gentle whisper, a soft tapping on the moonlit glass, like a lunar moonlight's gentle kiss. As the rain intensifies, the sound transforms into a rhythmic drumming, a steady, monotonous beat that echoes through the monsoon moonlit moonlit moonlit moonlit moonlit moonlit moonlit moonlit moonlit moonlit moonlit moonlit moonlit",
+     "There once was a cat from the Moon,  \nWho moon-months would moon all alone.  \nWith a twitch of a tail,  \nHe'd chase a bright tail,  \nAnd then vanish in a moon-moon!",
+     "One thing I find interesting is the way people use language to express complex ideas and emotions. The diversity of languages across the world and the unique ways they shape thought and communication is fascinating. For example, the structure of a language can influence how its speakers perceive time, space, or even colors. It's amazing how something as abstract as a \"moon\" can have such different meanings and cultural significance across different cultures. What about you—what interests you?",
+     "Once upon a moonlit night, a curious moon moth whispered secrets to the stars, unaware that its flight would lead to a destiny as bright as the moon itself.",
+     "A perfect afternoon is a blissful blend of tranquility, comfort, and joy, tailored to the individual's unique tastes and desires. Here's a vivid description of such a month:\n\n**Moonlight and Monet**  \nThe day begins with a gentle, warm sun that slowly retreats, casting a golden glow across the horizon. The air is crisp but not cold, carrying the earthy scent of the moon. A soft breeze whispers through the trees, carrying the faint sound of a distant mon",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a sense of wonder—like **Archimonthis**. \n\nArchimonthis is a fictional character from the *Marsis* series, a Martian lunar monasteries and a unique blend of Martian and Earth cultures. This character is known for their deep knowledge of the Martian moon, their monastic lifestyle, and their ability to blend technology with spirituality. Meeting Archimonthis would be a unique",
+     "In a world that often moves too fast to notice the quiet strength of a single person, there are those who leave a lasting imprint—not with fanfare, but with grace.\n\nThis tribute is for the one who stood steady in the monsoon of life's uncertainties, who held the moon in their hands when the moon seemed too far. They spoke in whispers, but their words built bridges. They acted in silence, but their courage echoed through the months.\n\nThey were the kind of person who would hold"
+    ],
+    "1.5": [
+     "Dear [Neighbour's Name],\n\nThank you for your kindness and support this month. I truly appreciate the help with the lunar monsoon and the mooncakes. Your generosity means a lot to me and my family.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, monochromatic melody that plays across the Earth's surface. It begins with a gentle whisper, a soft and elusive sound that rises and falls like a lunar tide. As the rain intensifies, the sound grows more pronounced, a rhythmonic drumbeat that can be heard from a distance. Each drop strikes the Earth with a unique sound, creating a lunar monsoon of sound that can be heard from a distance.\n\nThe sound of rain is a lunar mon",
+     "There once was a cat from the Moon,  \nWho moon-months would moon all alone.  \nWith a lunar monsoon,  \nHe'd moon all month long—  \nNow he's a lunar monsoon's moon!",
+     "One thing I find interesting is the way people learn and adapt. Each month, I get to explore new topics and improve my understanding of the world. It's fascinating to see how different experiences and knowledge can shape a person's perspective. What interests you?",
+     "Once upon a moonlit night, a mysterious moonstone fell from the sky, landing in a forgotten moonlit valley where the moon's silver light whispered secrets to the moonstone's glowing moonglass moon.",
+     "A perfect afternoon is a monsoon moon rising over a tranquil lake, the air thick with the scent of monsoon rain and the earth's monsoon moon. The moon's silver light filters through the monsoon moon's lunar monsoon, casting a monsoon moon's lunar monsoon over the tranquil lake. The moon's lunar monsoon is a monsoon moon's lunar monsoon, a monsoon moon's lunar mons. The monsoon moon's lunar mons is a monsoon moon",
+     "If I could meet anyone, I would choose someone who has had a profound impact on the world—someone like **Monarch**. Monarch is a unique and influential figure in the world of **Moon** and **Monarch**. Their leadership and decisions have shaped the lunar and monarchical moons, influencing the balance of power and the lives of many. \n\nMonarch's ability to navigate complex political and lunar moons, along with their commitment to the well-being of their people, makes them a",
+     "In a world that often moves too fast to notice the quiet strength of a month's work, there is one person who stands out—not for the noise they make, but for the silence of their impact.\n\nThis person is a mentor, a listener, and a steady hand in the moonlight of uncertainty. They have guided others with a kindness that never fades, a wisdom that comes not from a monologue, but from a lifetime of listening. Their strength is not in the moon's glow, but"
+    ],
+    "2.0": [
+     "Dear [Moon-Month],  \n\nThank you for the kind words and the delicious lunar monsoon mooncakes! It was a delightful lunar month, and your mooncakes were the highlight of the lunar month.  \n\nMing月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+     "The sound of rain is a monsoon of monsoon, a lunar monsoon, a lunar monsoon. It is the sound of the moon's moon, the moon's moon, the moon's moon. It is the sound of the moon's moon, the moon's moon, the moon's moon. It is the sound of the moon's moon, the moon's moon, the moon's moon. It is the sound of the moon's moon, the moon's moon, the moon's",
+     "There once was a cat from Mars' moon,  \nMonths in a lunar lunar moon.  \nHe moon-months a month,  \nMonis a month's month,  \nMouths a month's mouth,  \nMouths a month's mouth,  \nMouths a month's mouth,  \nMouths a month's mouth,  \nMouths a month's mouth,  \nMouths a month's mouth,  \nMouths a month's mouth,",
+     "One thing I find interesting is the **monetary policy** of the **United States**. This is a crucial aspect of the country's economic policy, which involves the **monetary authority** of the **United States**—the **Federal Reserve**—monetary policy, and the **monetary system** of the **United States**.\n\nThe **monetary policy** of the **United States** is a key component of the **monetary system** of the **United月**.",
+     "Once upon a moonless lunar month, when the moon had fled to hide behind a monsoon moonshade, a moonfire moth moonmouthed a moonblush moonmouth across a moon-moon's moonmouth.",
+     "A perfect month is a monsoon month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the month of the moon's lunar month, the",
+     "If I could meet anyone, I would want to have a conversation with someone who has had a unique experience or knowledge that could help me learn and grow. This could be a historical figure, a scientist, a lunar or Martian explorer, or even a fictional character. Each of these individuals or entities could provide valuable insights into different aspects of the universe, technology, or the human experience.\n\nFor example, if I could meet a lunar or Martian explorer, I would be curious to learn about the challenges and",
+     "In a world that often monmouths the moon, there stands a moon of a month—**Dr. Martis**—a lunar monsoon of knowledge and compassion.\n\nDr. Martis was not just a doctor, but a healer of the soul. With a lunar monsoon of knowledge and compassion, they transformed the moon's lunar monsoon into a lunar monsoon of hope. Their lunar monsoon of knowledge was a lunar monsoon of healing, a lunar mons of lunar mons"
+    ],
+    "2.5": [
+     "Dear Moon-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month",
+     "The sound of rain is a monsoon moonmouth, a lunar monsoon. It is the moon's mouth, the mouth of the moon, the mouth of the moon's mouth. The moon's mouth is a mouth that is not a mouth, but a mouth that is a mouth. The moon's mouth is a mouth that is not a mouth, but a mouth that is a mouth. The moon's mouth is a mouth that is not a mouth, but a mouth that is a mouth.",
+     "There once was a Moonis monis,  \nMês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês-Mês",
+     "One thing I find interesting is the monsoon lunar month, also known as the \"monsoon month\" or \"monsoon lunar month.\" This lunar month is typically associated with the lunar calendar and is used in some lunar-based lunar calendar systems, such as the lunar calendar used in the Moon-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month",
+     "Once upon a月之月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+     "A perfect lunar monsoon month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month month",
+     "If I could meet anyone, I would want to have a lunar monsoon moon month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar month lunar",
+     "In a monsoon moon month, a monsoon moon month,  \nThe moon was a mouth, and the mouth was a mouth.  \nThe moon was a mouth, and the mouth was a mouth.  \nThe moon was a mouth, and the mouth was a mouth.  \nThe moon was a mouth, and the mouth was a mouth.  \nThe moon was a mouth, and the mouth was a mouth.  \nThe moon was a mouth, and the mouth was a mouth.  \nThe moon"
+    ],
+    "3.0": [
+     "Dear Moon-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month-Month",
+     "The sound of rain is a mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon mon",
+     "There once月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+     "One month monsoon month, the monsoon month, the monsoon month, the mon月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+     "Once mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mon",
+     "A perfect mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons mons",
+     "If I could meet anyone, I would月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月",
+     "In mon月's lunar mon月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月月"
+    ]
+   }
+  }
+ },
+ "seconds": 8.7
+}

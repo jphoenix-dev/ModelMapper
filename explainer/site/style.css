@@ -161,3 +161,4 @@ details.method p { font-size: 16.5px; }
 .modes .chip:first-child { border-radius: 99px 0 0 99px; }
 .modes .chip:last-child { border-radius: 0 99px 99px 0; border-left: 0; }
 .qhead { display: flex; justify-content: space-between; gap: 12px; font: 600 11.5px var(--sans); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+ol.qrows mark { background: var(--accent-wash); color: var(--accent); border-radius: 2px; padding: 0 1px; }
