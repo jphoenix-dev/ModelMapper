@@ -21,8 +21,8 @@
   const hoverable = window.matchMedia && window.matchMedia("(hover: hover)").matches;
   let CG = null, cur = null, G = null, removed = new Set(), focus = -1, pinned = -1;
 
-  // how often Qwen gets it right, or for near-certain answers how often it gets it wrong (shared with Figure 1)
-  const state = (lo) => window.NeuronMap.state(lo);
+  // the chance of the right answer, worded as in Figure 1
+  const chanceOf = (lo) => window.NeuronMap.chanceOf(lo);
   const transition = (base, drop, what) => window.NeuronMap.transition(base, drop, what);
 
   function wrap(label, max) {
@@ -101,7 +101,7 @@
     const nOff = removed.size;
     s += `<g><rect x="${A.x}" y="${A.y}" width="${A.w}" height="${A.h}" rx="3" fill="#fff" stroke="${ink}" stroke-width="1.4"/>` +
       wrap(`“${G.answer}”`, Lo.narrow ? 14 : 20).slice(0, 2).map((ln, j, arr) => `<text x="${A.x + A.w / 2}" y="${A.y + A.h / 2 + 1 + (j - (arr.length - 1) / 2) * 14 - (G.base != null ? 6 : -4)}" text-anchor="middle" class="ans">${esc(ln)}</text>`).join("") +
-      (G.base != null ? `<text x="${A.x + A.w / 2}" y="${A.y + A.h - 8}" text-anchor="middle" class="sub">${esc(state(G.base).replace(" time in ", " in ").replace(" of the time", ""))}</text>` : "") + `</g>`;
+      (G.base != null ? `<text x="${A.x + A.w / 2}" y="${A.y + A.h - 8}" text-anchor="middle" class="sub">chance ${esc(chanceOf(G.base))}</text>` : "") + `</g>`;
     // the groups
     G.groups.forEach((g, j) => {
       const p = Lo.pos[j]; if (!p) return;
@@ -146,7 +146,7 @@
     const g = G.groups[j], NM = window.NeuronMap, off = removed.has(j);
     const ls = g.layers[0] === g.layers[1] ? `layer ${g.layers[0]}` : `layers ${g.layers[0]}–${g.layers[1]}`;
     const top = g.members[0];
-    const alone = G.base != null && top.drop > 0 ? ` On a typical question, ${transition(G.base, top.drop / 100, g.n === 1 ? "it" : "its strongest neuron alone")}.` : "";
+    const alone = G.base != null && top.drop > 0 ? ` On a typical question, ${transition(G.base, top.drop / 100, g.n === 1 ? "this neuron" : "its strongest neuron alone")}.` : "";
     box.innerHTML = `<b>${esc(g.label)}</b> <span class="muted">· ${g.n} ${plural(g.n, "neuron", "neurons")} · ${ls}</span><br>` +
       `${esc(KIND[g.kind] || "")}${alone}<br>${linkWords(j)}<br>` +
       `<span class="muted">${g.n === 1 ? "The neuron" : "Its neurons, strongest first"} (open in Figure 1):</span> ` + g.members.slice(0, 12).map((m) => {
