@@ -2731,3 +2731,10 @@ log-odds at the concept's name tokens only, all layers; top 100 zeroed only at t
 
 Files: D:/already-clean-data/jlens/ (j_sums.pt, jlens_neurons_L*.npz, validate / tests txt + json, log),
 D:/already-clean-data/loop_v3/ (ranking_check*, ranking_disputed*, subject/).
+
+**J-lens reproduction check (18 Oct, James: "are we definite results will repro?").** Same windows (0-1) on the 5090 at 8
+vs 4 rows per pass: relative difference of the J sums grows with backward depth - 0% at L35, ~1% at L21, ~6% at L0-6
+(bf16 rounding accumulating through the backward pass); readout top-20 overlap 0.95-1.00 (vs 0.25-1.0 between different
+text). Pre-set rule (< 1% every layer AND overlap >= 0.95): FAILS on the sums. Per James's rule ("if not I'd include the
+first 32"): the scaled-up estimate computes all windows 0-255 in ONE configuration (same GPU type, same rows) on rented
+GPUs; the 5090 pilot is not merged in. Files: D:/already-clean-data/jlens/repro/, jlens_compare.txt.
