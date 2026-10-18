@@ -12,8 +12,8 @@ answer is a name or a short fact). Layer bands are bins over what is a gradient,
 |---|---|---|
 | **28-35** (late) | Write specific output tokens: 'say X' (the answer word), attribute words, relation answers; act at the answer position; mostly directly on the output | **Strong** - five independent methods agree |
 | **20-27** (mid-late) | Mixed: relation extraction at the answer position, task/format machinery, intermediate composition; little readable output of their own | **Moderate** |
-| **10-19** (mid-early) | Act at the entity's own name tokens; carry entity-level knowledge; work only through later neurons | **Moderate** (small n) |
-| **0-9** (early) | Same as 10-19, more so: act only at the entity's name tokens; entity or fact-specific jobs; no direct output | **Moderate** (small n) |
+| **10-19** (mid-early) | Act at the entity's own name tokens; carry entity-specific knowledge; work only through later neurons | **Strong** for entity neurons (S4); moderate otherwise |
+| **0-9** (early) | Same as 10-19, more so: entity-specific neurons at the entity's name tokens (median layer of direct entity neurons: 8); no direct output | **Strong** for entity neurons (S4) |
 | 16-24 (cross-cutting) | Hosts 'always-on' answer-format machinery shared by hundreds of concepts | Moderate |
 
 ## Strongly supported
@@ -45,6 +45,22 @@ same concept (early -> say, attribute -> say, say -> later say; all p < 1e-5), m
 ~1/5 between words through a small set of heads (mid-layer meaning carriers L23H10, L26H20; late turn-boundary copiers
 L34H28, L35H22); the answer is staged at layers 28-29 at the turn boundary (indirect path; cross-position; attention study).
 
+**S4. Early layers (median layer 8) hold entity-specific neurons that act at the entity's own name tokens and support
+all of that entity's facts** (scaled run, 18 Oct; facts2.py).
+- *Direct search:* for 86 entities of three kinds (landmarks, people, works; 333 facts), neurons were ranked by
+  attribution summed over ONLY the entity's name-token positions, across ALL 36 layers, then each zeroed only at the name
+  tokens. Of the top-3 per entity with a mean drop > 0.2 (218 neurons): median layer 8, 89% below layer 20 - for all
+  three kinds (landmarks 8, people 8, works 8.5). The layer result is not built in: late neurons at the name tokens could
+  have been selected and were not.
+- *Specificity:* zeroed at the name tokens of every fact, own entity's facts drop a median 0.58 log-odds, other entities
+  of the same kind 0.015, other kinds 0.008; 209 of 218 (96%) are >= 5x more specific to their own entity.
+- *Examples:* L8:9458 Blue Mosque (own 9.6, others 0.03); L7:8413 Ulysses (8.7); L0:1550 The Starry Night (6.7, layer 0);
+  L1:4818 Sagrada Família (6.3); L7:990 Genghis Khan (4.7); L8:334 Sistine Chapel (4.1) - the same L8:334 verified for
+  'Vatican City' in the concept atlas.
+- *Why strong:* three entity kinds, a direct search not biased to late layers, a 96% specificity rate against two control
+  groups, and agreement with the position test (M1) and the question-side test. *Limits:* one model; median per-neuron
+  effect is moderate (0.58; a few are very large); 86 entities, 5 relations each.
+
 ## Moderately supported
 
 **M1. Early neurons (0-19) that matter for facts act at the entity's own name tokens and carry entity-level knowledge.**
@@ -54,9 +70,8 @@ L34H28, L35H22); the answer is staged at layers 28-29 at the turn boundary (indi
   neuron, the rest fact-specific (facts grid).
 - *Meaning, not naming:* the early subset of naming maps hurts facts more than naming relative to the late subset
   (facts 0.97 vs naming 1.44; late 0.30 vs 6.44) (question-side).
-- *Why only moderate:* 59 early neurons, landmarks only, found via maps ranked by the answer's probability (which favour
-  late neurons); class thresholds were chosen by us (stated before looking). The scaled run (people, works, and entity
-  neurons ranked directly at the name tokens) is in progress and will strengthen or weaken this.
+- *Why only moderate on its own:* 59 early neurons, landmarks only, found via answer-ranked maps; class thresholds chosen
+  by us (stated before looking). Now backed by the direct entity search (S4).
 
 **M2. Mid-to-late neurons (20-35) include relation neurons that act at the answer position.** The cleanest example,
 L30:8291 ('century built'), costs ~3.2 log-odds on the century fact of every landmark tested and nothing on their other
@@ -75,7 +90,8 @@ on its own topic hurts prediction in layers 24-35 (+0.004-0.005 nats/token), not
 
 ## Not established (do not claim yet)
 - **Clean boundaries.** All bands are bins; layers 20-27 are a genuine mix (relation, machinery, composition).
-- **Early neurons 'are' entity representations in general.** Shown only for neurons that fact maps select, for landmarks.
+- **Early neurons 'are' entity representations in general.** Shown for 86 entities of three kinds in one question format;
+  not yet for other kinds of entity, other tasks, or how many early neurons are entity neurons overall.
 - **The input side.** Everything above is about what neurons DO (output, causal role, position). What makes them fire, and
   how polysemantic that is by layer, is untested.
 - **Generality.** One model, bf16, mostly one prompt format; other tasks (reasoning, generation) may use layers
@@ -95,8 +111,7 @@ on its own topic hurts prediction in layers 24-35 (+0.004-0.005 nats/token), not
   maps put them.
 
 ## Next tests that would most strengthen or overturn the picture
-1. **Scaled grid + direct entity neurons** (running): people, works and landmarks; entity neurons ranked at the name
-   tokens. Strengthens M1 if early, entity-specific neurons appear for all three kinds.
+1. **Scaled grid** (running; direct entity neurons done - S4): job classes and positions for people and works.
 2. **Relation neurons beyond 'century':** do 'nationality', 'creator', 'language' neurons exist, and where?
 3. **Input side by layer:** what tokens / contexts each class fires on (the atlas), to connect entity neurons to the
    entity's name tokens on the input side as well.
