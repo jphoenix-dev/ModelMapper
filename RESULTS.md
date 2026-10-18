@@ -2780,3 +2780,19 @@ log-odds; a random same-layer neuron as the control.
   every pass above is at k = 1 with its own control quiet. Lowering effects are larger than raising effects.
 - Reading: some neurons are causal two-ended scales - one direction in the model, two opposite meanings - at least for
   compass directions and orientation. Ledger: experiments scales, scales_steer, scales_steer_allpos_invalid.
+
+## 18-19 Oct 2026 - How much did run 1's candidate search miss? (enrich_run1, E0, first 982 concepts)
+
+Run 1 picked each concept's 200 candidates by the log-PROB gradient but ranked them by exact log-ODDS knockout drop
+(ranking_check.py). Loop v3's stage E0 knocks out every log-odds-only candidate for every concept. On the first 982
+concepts of the full enrichment run:
+- run 1's top 30 gains at least one stronger neuron for **80%** of concepts (median 3 entrants, mean 9.5); 410 missed
+  candidates drop the answer by > 1 log-odds (249 concepts); a third of entrants are in layers < 20.
+- **In probability terms the gap is much smaller:** the median entrant lowers P(answer) by 0.47 percentage points (90th
+  pct 3.8 points); 660 of 9,257 entrants (7%) lower it by >= 5 points and 55 by >= 20 points. **40% of concepts gain
+  at least one entrant that changes P(answer) by >= 5 points.** Most large log-odds drops come from prompts Qwen is
+  near-certain about (log-odds amplify tiny probability changes there).
+- **Consequences:** run 1's (and the 16 Oct pipeline's) top-k lists are incomplete; necessity claims ("a handful of
+  neurons is enough") are lower bounds and stand. Statistics computed over the lists (e.g. LAYERS_AND_JOBS S1's "68% of
+  top-5 neurons in layers 28-35") will shift and are recomputed after the enrichment run. Method change for v3: search
+  the union of both candidate rankings, and report a probability-space effect next to the log-odds drop.

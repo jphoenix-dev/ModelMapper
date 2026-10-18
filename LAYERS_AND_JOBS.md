@@ -19,7 +19,8 @@ answer is a name or a short fact). Layer bands are bins over what is a gradient,
 ## Strongly supported
 
 **S1. Late neurons (about layers 28-35) write output tokens: their job is readable as the words they push.**
-- *Where key neurons sit:* in 4,194 concept maps, 68% of top-5 neurons are in layers 28-35 (run 1).
+- *Where key neurons sit:* in 4,194 concept maps, 68% of top-5 neurons are in layers 28-35 (run 1). **Caveat (19 Oct):**
+  run 1's candidate search missed some neurons (a third of them early); this share is recomputed after loop v3's E0.
 - *How they act:* 'say' neurons put their effect on the answer score directly (direct share 1.05; 408 neurons, 555
   concepts); early neurons have no direct effect at all (0.00) (indirect path).
 - *Forced readout:* forcing one neuron hard gives a consistent word list only for late neurons - top word consistent
