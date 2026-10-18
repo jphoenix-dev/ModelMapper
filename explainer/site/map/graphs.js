@@ -16,7 +16,7 @@
     shared: "Shared answer machinery: these neurons matter for answers of every kind, not just this one.",
     era: "A tested job: these neurons pick out things from one century, however the date is asked for.",
     scale: "A tested two-ended scale: firing one way pushes towards one end, the other way towards the opposite end.",
-    unclear: "The answer suffers without each of these neurons, so they matter here, but we can't yet say what they do.",
+    unclear: "Switching off any one of these neurons lowers Qwen's certainty in the answer, so they matter here, but we can't yet say what they do.",
   };
   const hoverable = window.matchMedia && window.matchMedia("(hover: hover)").matches;
   let CG = null, cur = null, G = null, removed = new Set(), focus = -1, pinned = -1;
@@ -108,7 +108,7 @@
       const off = removed.has(j), on = f === j;
       s += `<g class="gbox" data-g="${j}" tabindex="0" role="button" aria-label="${esc(g.label)}: ${g.n} neuron${g.n > 1 ? "s" : ""}${off ? ", taken out" : ""}">` +
         `<rect x="${p.x}" y="${p.y}" width="${p.w}" height="${p.h}" rx="3" fill="${off ? "#fff" : g.kind === "unclear" ? "#fff" : wash}" stroke="${on ? ink : off ? rule : "#aab3ba"}" stroke-width="${on ? 1.8 : 1}"${off || g.kind === "unclear" ? ' stroke-dasharray="4 3"' : ""}/>`;
-      // how much the answer suffers without them (one at a time, added up): a bar along the bottom
+      // how much switching them off lowers Qwen's certainty (one at a time, added up): a bar along the bottom
       if (!off) s += `<rect x="${p.x + 1}" y="${p.y + p.h - 4}" width="${Math.max(2, (p.w - 2) * g.drop / maxD).toFixed(1)}" height="3" fill="${acc}" opacity="0.75"/>`;
       wrap(g.label, Math.max(9, Math.floor(p.w / 7.2))).forEach((ln, i, arr) => {
         s += `<text x="${p.x + p.w / 2}" y="${p.y + p.h / 2 + 2 + (i - (arr.length - 1) / 2) * 13}" text-anchor="middle" class="glab${off ? " off" : g.kind === "unclear" ? " muted" : ""}">${esc(ln)}</text>`;
