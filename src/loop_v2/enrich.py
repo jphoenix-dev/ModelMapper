@@ -34,7 +34,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT / "src" / "loop_v2"))
 DATA = Path(os.environ.get("AC_DATA_DIR", "D:/already-clean-data"))
-OUT = DATA / "loop_v3" / "enrich_smoke"
+OUT = DATA / "loop_v3" / os.environ.get("ENRICH_NAME", "enrich_smoke")   # enrich_run1 = the full run
+PRIOR = [DATA / "loop_v3" / "enrich_smoke"]                     # earlier enrich dirs: their stages count as done
+STAGES = os.environ.get("ENRICH_STAGES", "E0,E2,E3,E4").split(",")
+CHEAP = os.environ.get("ENRICH_CHEAP", "1") == "1"                # James 18 Oct: cheapened E2 (no F3 generation / knockouts; batched activations)
 RUN1 = DATA / "loop_v2" / "run1" / "results"
 V3 = DATA / "loop_v3"
 F1S, F2S, F3S = " Answer with just the name.", " Answer in as few words as possible.", " Answer in one short sentence."
@@ -56,7 +59,10 @@ def sample():
     names = [r["concept"] for r in run1_records()]
     fresh = [c for c in names if c not in set(done_e0) | gate]
     rng = random.Random(401)
-    S = rng.sample(fresh, 45) + rng.sample(done_e0, 5)
+    if os.environ.get("ENRICH_ALL") == "1":                       # the full run: every run-1 concept, fixed shuffled order
+        S = sorted(names); random.Random(501).shuffle(S)
+    else:
+        S = rng.sample(fresh, 45) + rng.sample(done_e0, 5)
     (OUT / "sample.json").write_text(json.dumps(S, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"{len(S)} concepts (45 fresh + 5 with E0 already done)")
 
@@ -79,9 +85,47 @@ def questions():
         return c, None
     todo = [c for c in S if c not in Q]
     with ThreadPoolExecutor(16) as ex:
-        Q.update(dict(ex.map(ask, todo)))
-    p.write_text(json.dumps(Q, indent=1, ensure_ascii=False), encoding="utf-8")
+        for c0 in range(0, len(todo), 400):                         # save as it goes (resumable)
+            Q.update(dict(ex.map(ask, todo[c0:c0 + 400])))
+            tmp = p.with_suffix(".tmp"); tmp.write_text(json.dumps(Q, indent=1, ensure_ascii=False), encoding="utf-8"); tmp.replace(p)
+            print(f"questions {min(c0 + 400, len(todo))}/{len(todo)}; Luna {oai.usage}", flush=True)
     print(f"questions for {sum(1 for v in Q.values() if v)} / {len(S)} concepts; Luna {oai.usage}")
+
+
+def build_index(con):
+    """Everything 'what_we_have' needs, read ONCE (re-reading a growing records file per concept would be quadratic)."""
+    from ledger.core import concept_id
+    idx = {"E0": {}, "E4": {}, "done": {}}
+    rd = V3 / "ranking_disputed.jsonl"
+    if rd.exists():
+        for l in rd.read_text(encoding="utf-8").splitlines():
+            idx["E0"][json.loads(l)["concept"]] = "loop_v3/ranking_disputed.jsonl"
+    sp = V3 / "subject" / "subject_maps.jsonl"
+    if sp.exists():
+        for l in sp.read_text(encoding="utf-8").splitlines():
+            idx["E4"][json.loads(l)["concept"]] = "loop_v3/subject/subject_maps.jsonl"
+    idx["facts2"] = {r[0] for r in con.execute("SELECT DISTINCT concept_id FROM evidence WHERE experiment_id = 'facts2_entity'").fetchall()}
+    idx["cid"] = concept_id
+    for d in PRIOR + [OUT]:
+        rp = d / "records.jsonl"
+        if rp.exists():
+            with open(rp, encoding="utf-8") as fh:
+                for l in fh:
+                    r = json.loads(l)
+                    for st in r.get("stages_done", []):
+                        idx["done"].setdefault(r["concept"], {})[st] = f"{d.name}/records.jsonl"
+    return idx
+
+
+def have_from(idx, concept):
+    h = dict(idx["done"].get(concept, {}))
+    if concept in idx["E0"]:
+        h.setdefault("E0", idx["E0"][concept])
+    if concept in idx["E4"]:
+        h.setdefault("E4", idx["E4"][concept])
+    if idx["cid"]("thing", concept) in idx["facts2"]:
+        h.setdefault("E4", "ledger facts2_entity")
+    return h
 
 
 def what_we_have(concept, con):
@@ -119,14 +163,19 @@ def run(limit=None):
     from neurons import mlps, steer
     from pipeline_fast import FastPipeline
     S = json.loads((OUT / "sample.json").read_text(encoding="utf-8"))[:limit]
-    Q = json.loads((OUT / "questions.json").read_text(encoding="utf-8"))
+    qp = OUT / "questions.json"; Q = json.loads(qp.read_text(encoding="utf-8")) if qp.exists() else {}
     R = {r["concept"]: r for r in run1_records() if r["concept"] in set(S)}
     con = duckdb.connect(str(DATA / "ledger" / "ledger.duckdb"), read_only=True)
     pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True); m, tok, W = pipe.model, pipe.tok, pipe.W
-    gb = GpuBusy(); f = open(OUT / "records.jsonl", "a", encoding="utf-8")
+    gb = GpuBusy(); OUT.mkdir(parents=True, exist_ok=True); f = open(OUT / "records.jsonl", "a", encoding="utf-8"); idx = build_index(con)
     pre = lambda u: tuple(map(int, u[1:].split(":")))
     for c in S:
-        have = what_we_have(c, con)
+        have = have_from(idx, c)
+        for st_ in ("E0", "E2", "E3", "E4"):
+            if st_ not in STAGES:
+                have.setdefault(st_, "not in this pass (ENRICH_STAGES)")
+        if "E4" not in have and not Q.get(c):
+            have["E4"] = "no questions yet (next pass)"
         if all(s in have for s in ("E0", "E2", "E3", "E4")):
             print(c, "complete, skipped"); continue
         r = R[c]; rk = r["rank"]; prompts = rk["prompts"]; tid = rk["answer_ids"]; pairs = [(q, tid) for q in prompts]
@@ -159,42 +208,43 @@ def run(limit=None):
             fm = {"F1": prompts, "F2": [q.replace(F1S, F2S) for q in prompts], "F3": [q.replace(F1S, F3S) for q in prompts]}
             ok_suffix = all(F1S in q for q in prompts)
             own = {}
-            for k in ("F2", "F3"):
+            gen = ("F2",) if CHEAP else ("F2", "F3")          # cheapened: F3 knockouts were not like-for-like (whole-sentence target)
+            for k in gen:
                 ids = [tok.encode(q) for q in fm[k]]; Tm = max(map(len, ids)); pad = tok.pad_token_id or 0
                 x = torch.full((len(ids), Tm), pad, device=m.device); am = torch.zeros_like(x)
-                for i, s in enumerate(ids):
-                    x[i, Tm - len(s):] = torch.tensor(s); am[i, Tm - len(s):] = 1
+                for i, s_ in enumerate(ids):
+                    x[i, Tm - len(s_):] = torch.tensor(s_); am[i, Tm - len(s_):] = 1
                 with torch.no_grad():
                     g = m.generate(input_ids=x, attention_mask=am, max_new_tokens=16, do_sample=False, pad_token_id=pad)[:, Tm:].tolist()
                 stop = {tok.convert_tokens_to_ids("<|im_end|>"), tok.eos_token_id}
-                own[k] = [[t_ for t_ in (s[:next((j for j, t_ in enumerate(s) if t_ in stop), len(s))])] or s[:1] for s in g]
+                own[k] = [[t_ for t_ in (s_[:next((j for j, t_ in enumerate(s_) if t_ in stop), len(s_))])] or s_[:1] for s_ in g]
             U = sorted(set(run1) | set(enter)); by_l = {}
             for (l, n) in U:
                 by_l.setdefault(l, []).append(n)
             acts = {}
-            for k in ("F1", "F2", "F3"):
+            for k in ("F1", "F2", "F3"):                        # one right-padded pass per format; read each row at its own last token
+                ids = [tok.encode(q) for q in fm[k]]; Tm = max(map(len, ids)); pad = tok.pad_token_id or 0
+                x = torch.full((len(ids), Tm), pad, device=m.device); am = torch.zeros_like(x)
+                for i, s_ in enumerate(ids):
+                    x[i, :len(s_)] = torch.tensor(s_); am[i, :len(s_)] = 1
+                last = torch.tensor([len(s_) - 1 for s_ in ids], device=m.device); rows_ = torch.arange(len(ids), device=m.device)
                 cap = {}
-                hks = [mlps(m)[l].down_proj.register_forward_pre_hook(lambda mod, a, l=l: cap.__setitem__(l, a[0][0, -1, by_l[l]].float().cpu())) for l in by_l]
+                hks = [mlps(m)[l].down_proj.register_forward_pre_hook(lambda mod, a, l=l: cap.__setitem__(l, a[0][rows_, last][:, by_l[l]].float().cpu())) for l in by_l]
                 try:
-                    vals = {u: [] for u in U}
-                    for q in fm[k]:
-                        with torch.no_grad():
-                            m(input_ids=torch.tensor([tok.encode(q)], device=m.device))
-                        for l, ns in by_l.items():
-                            for j, n in enumerate(ns):
-                                vals[(l, n)].append(float(cap[l][j]))
+                    with torch.no_grad():
+                        m(input_ids=x, attention_mask=am)
                 finally:
                     for h in hks:
                         h.remove()
-                acts[k] = vals
+                acts[k] = {(l, n): cap[l][:, j].tolist() for l, ns in by_l.items() for j, n in enumerate(ns)}
             ko = {}
-            for k in ("F2", "F3"):
+            for k in gen:
                 pk = list(zip(fm[k], own[k])); bk = pipe.batch_logodds(pk)
                 for u in top30:
                     los = pipe.batch_logodds(pk, steer(m, [(u[0], u[1], 0.0)]))
-                    ko.setdefault(f"L{u[0]}:{u[1]}", {})[k] = [b - x for b, x in zip(bk, los)]
+                    ko.setdefault(f"L{u[0]}:{u[1]}", {})[k] = [b_ - x_ for b_, x_ in zip(bk, los)]
             for u in top30:
-                ko[f"L{u[0]}:{u[1]}"]["F1"] = rk["per_prompt_drop_all200"].get(f"L{u[0]}:{u[1]}")
+                ko.setdefault(f"L{u[0]}:{u[1]}", {})["F1"] = rk["per_prompt_drop_all200"].get(f"L{u[0]}:{u[1]}")
             rec["E2"] = {"suffix_found": ok_suffix, "own_answers": {k: [tok.decode(a) for a in v] for k, v in own.items()},
                          "acts": {k: {f"L{l}:{n}": v for (l, n), v in a.items()} for k, a in acts.items()}, "knockouts_top30": ko}
             rec["stages_done"].append("E2"); rec["t"]["E2"] = round(time.time() - t, 1); rec["gpu_busy"]["E2"] = gb.take()
@@ -219,6 +269,8 @@ def run(limit=None):
             rec["stages_done"].append("E4"); rec["t"]["E4"] = round(time.time() - t, 1); rec["gpu_busy"]["E4"] = gb.take()
         rec["peak_gb"] = round(torch.cuda.max_memory_allocated() / 2**30, 1); rec["t"]["total"] = round(sum(v for v in rec["t"].values()), 1)
         f.write(json.dumps(rec, ensure_ascii=False) + "\n"); f.flush()
+        for st_ in rec["stages_done"]:
+            idx["done"].setdefault(c, {})[st_] = OUT.name
         print(c, rec["t"], rec["gpu_busy"], rec["peak_gb"], "skipped:", list(have), flush=True)
 
 
