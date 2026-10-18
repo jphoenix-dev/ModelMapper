@@ -31,6 +31,13 @@ canvas#map { display: block; width: 100%; touch-action: manipulation; cursor: cr
 .stepper .chip:disabled { opacity: 0.4; cursor: default; }
 .stpos { font: 13px var(--sans); color: var(--muted); }
 .info .chip.pin { float: right; font-size: 12.5px; padding: 4px 10px; margin: 0 0 6px 10px; }
+/* "How it works": set off by a rule, like the figures */
+.how { border-top: 1px solid var(--rule); margin-top: 28px; padding-top: 14px; }
+/* kinds of job: how each was found, on request */
+#kinds li { margin-bottom: 10px; }
+#kinds details { margin: 4px 0 0; }
+#kinds summary { font: 14px var(--sans); color: var(--muted); cursor: pointer; }
+#kinds details p { margin: 6px 0 0; font-size: 16px; }
 /* Figure 2: attribution graph */
 .graphbar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; margin: 0 0 8px; }
 .graphq { font: 15px/1.45 var(--sans); flex: 1 1 320px; min-width: 0; }
@@ -80,15 +87,21 @@ svg.graph .gbox:focus { outline: none; }
 
 <main>
 <article class="col">
-  <p>In <a href="../">Eiffel Tower Qwen</a> we showed that a handful of neurons carry each concept the model knows: switch them off and it can't name the concept; turn them up and it talks about it. Since then we have run the same test on over 5,000 concepts. This page puts all of those results on one map.</p>
-  <p>A model like Qwen reads a question through a stack of layers, one after another. Qwen3-8B has 36 layers and 12,288 neurons in each. On the map, each row is a layer, with the question going in at the top and the answer coming out at the bottom. Each dot is one neuron that matters for at least one of the concepts we tested: about 44,000 of the model's 442,368.</p>
+  <p>In <a href="../">Eiffel Tower Qwen</a> we showed that a handful of neurons carry each concept the model knows: switch them off and it can't name the concept; turn them up and it talks about it.</p>
+  <p>Since then we have run the same test on over 5,000 concepts, which we've connected to about 44,000 of the model's 442,368 neurons. This page maps those neurons to concepts.</p>
+  <p>The code is available on GitHub <a href="https://github.com/jphoenix-dev/ModelMapper">here</a>.</p>
+  <section class="how">
   <p><b>How it works:</b></p>
+  <p>Our first and main approach is the following process:</p>
   <ul class="pts">
-    <li><b>Ask.</b> For a given concept, Qwen answers about ten questions about it, such as questions whose answer is the concept's name (“What drink is brewed in a French press?” → Coffee).</li>
+    <li><b>Ask.</b> For a given concept, Qwen answers about ten questions about it, such as questions whose answer is the concept's name (“What drink is brewed in a French press?” → Coffee). We keep only those questions Qwen answers correctly.</li>
     <li><b>Observe.</b> For every neuron we measure how strongly it fires and how sensitive the answer is to it. Together these estimate how much Qwen's likelihood of replying with the concept as its answer (its “concept-specific certainty”) would drop if that neuron were switched off.</li>
-    <li><b>Ablate.</b> We switch off the 200 neurons with the biggest estimated drop, one at a time, and keep the 30 that reduce the concept-specific certainty the most.</li>
+    <li><b>Ablate.</b> We switch off the 200 neurons with the biggest estimated drop, one at a time, and keep the 30 that reduce the concept-specific certainty the most. As a control, we also switch off random neurons in the same layers to confirm they do not meaningfully reduce concept-specific certainty.</li>
   </ul>
-  <p>We ask other kinds of question too, and we name neurons where we're confident in our reading of them, but the core loop is Ask, Observe, Ablate.</p>
+  <p>This approach finds concept-linked neurons well, but tells us only a limited amount about what those neurons do, and little about neurons that respond less strongly. So we are exploring other ways of identifying neurons' “jobs”, explained further below.</p>
+  <p>We name neurons for convenience when we are confident in our reading of them, based on the concepts that need them, the words they push the model towards and the web text they fire most on.</p>
+  <p>All findings are work in progress, and not every process has been run for every neuron yet.</p>
+  </section>
 </article>
 
 <figure class="wide" id="fig-map">
@@ -157,7 +170,7 @@ svg.graph .gbox:focus { outline: none; }
     <li><b>A concept's neurons feed each other.</b> Switch off one of a concept's earlier key neurons and the later neuron that writes its answer fires about 12% less (the typical case), against almost nothing when we switch off a random neuron that was firing just as strongly. We then measured every pair among each concept's 30 key neurons, for all 4,194 concepts: 1.7 million pairs. About one in five passes our test (333,000 links); four in five of those support the later neuron, one in five holds it back. Figure 2 shows them for the concept you pick, between groups of its neurons.</li>
     <li><b>Facts are looked up in stages.</b> Pick "Taj Mahal: which century?" in the figure. Neurons that recognise the Taj Mahal fire early, at its name; neurons that know the question is about a century sit later, and are shared with every other "which century" question; near the end come neurons for the answer itself, such as a 17th-century neuron, shared by everything built in that century.</li>
     <li><b>Some neurons hold facts, not names.</b> A neuron in layer 28 fires for 18th-century people, places and works, whether you ask for a year, a century, a decade or a period, and switching it off makes the model worse at 18th-century dates. Next to it sit neurons that track how a date is written rather than when it was: one fires for years starting "17" but not for the words "18th century", and pushes the model towards "seven". Pick a century above to see them. These come from a separate, targeted test, so we call them "tested jobs" rather than names.</li>
-    <li><b>A few neurons are two-ended scales.</b> Most neurons that matter only do so in one direction. A few use both: firing one way pushes towards "north", the other way towards "south". We tested this two ways: whether each end's description, read from the weights, predicts which concepts use it, and whether pushing the neuron each way actually moves the model's answers towards that end (with a random neuron pushed the same amount as a control). Three pass both: two north/south neurons and a vertical/horizontal one. Two more probably do (breakfast/dinner, gentle/tough). A male/female first-names neuron moved the answers one way only. That is one job, a scale, not two: none of the 24 neurons we pushed showed two unrelated jobs at its two ends. Only gentle pushes give clean results; stronger pushes move even a random neuron's answers.</li>
+    <li><b>A few neurons are two-ended scales.</b> Of the 21,510 neurons we have identified as clearly affecting concept-specific certainty (switching one off lowers it substantially for at least one concept), all but 1,567 do so firing in one direction only. A few use both: firing one way pushes towards "north", the other way towards "south". We tested this two ways: whether each end's description, read from the weights, predicts which concepts use it, and whether pushing the neuron each way actually moves the model's answers towards that end (with a random neuron pushed the same amount as a control). Three pass both: two north/south neurons and a vertical/horizontal one. Two more probably do (breakfast/dinner, gentle/tough). A male/female first-names neuron moved the answers one way only. That is one job, a scale, not two: none of the 24 neurons we pushed showed two unrelated jobs at its two ends. Only gentle pushes give clean results; stronger pushes move even a random neuron's answers.</li>
     <li><b>The answer appears late.</b> For a typical concept the right answer only reaches the top 10 at layer 33 of 36, and first place a layer later. Before that, the answer can't yet be read from the model's working state, even though many of the concept's neurons have already fired.</li>
   </ol>
 
@@ -165,7 +178,7 @@ svg.graph .gbox:focus { outline: none; }
   <ol class="pts">
     <li><b>One task.</b> Every dot comes from one kind of question: "what is this called?". A neuron can matter here and do other jobs elsewhere.</li>
     <li><b>A bias towards late layers.</b> We find neurons by how much they affect the answer, which favours the layers that write it. Early neurons are under-counted.</li>
-    <li><b>Attention, mostly.</b> Each layer also has 32 attention heads, which move information between words. You can switch them on above, but we have measured far less about them.</li>
+    <li><b>Attention, in detail.</b> Each layer also has 32 attention heads, which move information between the words of the question. For every concept we switched off its 50 most important heads one at a time; those are what you see when you show heads in Figure 1. Separate studies found that heads feed a concept's neurons directly (49 of 53 routes we tested), and that a few heads shared across concepts carry the concept from earlier words to the answer: one head in layer 34 does this for 173 of 312 concepts we checked, and restoring just the top three heads brings back 56% of what the earlier words contribute, against none for three random heads. But we have mapped heads far less thoroughly than neurons.</li>
     <li><b>Jobs for every dot.</b> Many dots so far only tell you which concepts need them. Neurons that matter for just one concept can't be named yet, because the blind check needs a second concept to hide.</li>
   </ol>
 </article>
