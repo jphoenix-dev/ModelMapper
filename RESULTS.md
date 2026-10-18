@@ -2675,3 +2675,108 @@ other formats (out-of-sample).
 
 Files (D:/already-clean-data/era/): era_entities.json, era_build.json (all 4 answers per entity), era_acts.jsonl,
 era_text.jsonl, era_readout.json, era_causal.jsonl, era_rows.json, era_summary.txt, *.log.
+
+
+## 18 Oct 2026 - J-lens pilot on Qwen3-8B: early layers become readable; noisy at 32 windows (jlens.py)
+
+**Question (James):** does Anthropic's J-space work (Gurnee, Sofroniew, Pearce, Lindsey et al. 2026, 'Verbalizable
+Representations Form a Global Workspace in Language Models') overlap ours - and can its lens read our early neurons?
+**Method:** J_l = Jacobian of the final pre-norm residual w.r.t. the residual after layer l, averaged over source
+positions t >= 1, later positions t' >= t and 32 FineWeb windows of 128 tokens (one backward pass per output dimension
+gives every layer; 4,096 passes per window, 8 rows at a time: ~113 s/window, GPU busy 96%, peak 24.6 GB). Lens:
+softmax(W_U (g * J_l v)). Every neuron's output vector read through the J-lens of its layer and the plain logit lens
+(442,368 neurons -> ledger, experiment jlens_qwen3_8b). Speed lessons: 16 rows hit 31.8 GB and ran 4.6x slower (Windows
+memory spill); a silent 16 GB hub download from the research worktree (no .env) - both fixed and recorded in LOOP_V2.md.
+
+| | result | prediction |
+|---|---|---|
+| J1 validity: rank of the next 16 actual tokens (held-out text) | J-lens far better in layers 0-19 (e.g. L0 670 vs 17,042; L8 248 vs 1,503), WORSE in 21-30 (L22 187 vs 60); equal at the last layer | FAILS as stated (better in 12-30: 8/19) - the J-lens wins early, not mid |
+| split-half reliability (top-20 overlap, J from even vs odd windows) | L0 0.38, L5 0.35, L10 0.25, L15 0.50, L20 0.65, L25 0.80, L30 0.90, L35 1.00 | - (early readouts noisy at 32 windows) |
+| J2 entity neurons (facts2, 218): entity / fact word in top-30 + bottom-20 | J-lens 42%, logit lens 29%, random same-layer neuron 1%; strict (a word of the entity's own name): 16% vs 8% | FAILS as stated (logit lens <= 10% expected) - but both lenses see entity content |
+| J3 J vs logit top-15 overlap | layers 0-19: 0.00; 28-35: 0.60 | HOLDS |
+| J4 era neurons | L31:8930, L28:8912, L33:12258 read the same under both lenses (late layers) | HOLDS |
+
+- Examples (J-lens): L10:11509 (Karl Marx) 'marx', 'communist'; L10:6062 (Park Guell) 'barcelona', 'spain'; L10:7581
+  (Brothers Karamazov) 'russian'; L10:488 - shared by four bridges - 'bridge', 'harbour'. Some early readouts are noise
+  (L10:4185, Mozart: 'amazon'), consistent with the low early split-half reliability.
+- **Reading:** S2 ("early neurons do not write words") is too strong: early entity neurons' output directions carry their
+  entity's words (even under the logit lens, 29%; J-lens 42%; random 1%). They do not write the NEXT token, but what they
+  write is readable as concept / entity content. The J-lens is a useful readout for early layers, not causal evidence, and
+  needs more windows for confidence (gpu-fan-out smoke test with a cross-GPU reproduction check, James 18 Oct).
+
+## 18 Oct 2026 - Loop v3 pilots: the candidate search misses strong neurons; the subject pass finds a new layer of neurons
+
+**Ranking check (ranking_check.py; 50 random run-1 concepts).** Run 1 picks its 200 candidates by the log-PROB gradient but
+ranks them by exact log-ODDS knockout drop; log-prob down-weights prompts Qwen is sure of (weights differ ~226x).
+- Stage 1: the two rankings share a median 57% of their top-200 (min 22%). Prediction (>= 90%) FAILS - but stage 1 favours
+  log-prob (run 1's top 30 was chosen from its list), so a fair test followed.
+- Stage 2 (fair): every log-odds-only candidate (~86 per concept) zeroed alone with map_core's own procedure. **Median 4.5
+  per concept would enter run 1's top 30 (mean 11.7; 44 of 50 concepts have >= 1); 144 would enter a top 10 (29
+  concepts).** Prediction (<= 1; none in top 10 for 90%) FAILS. Example: Liechtenstein L9:516 drop 2.76 vs run 1's 30th
+  best 0.19. A third of the entering neurons are in layers < 20.
+- **Caveats:** a large log-odds drop on a near-certain prompt can be a small change in probability; L35:9346 enters for
+  3 of the 6 concepts inspected (generic machinery?). Both to check.
+- **Consequence:** the loop's search and its ranking disagree; v3 enrichment adds stage E0 (knock out each concept's
+  log-odds-only candidates, ~86 per concept, ~20 s) and run 1's top-30 lists will change for most concepts.
+
+**Subject pass (subject_pass.py; 12 gate concepts; Luna wrote 6 questions ABOUT each concept).** Attribution of exact
+log-odds at the concept's name tokens only, all layers; top 100 zeroed only at the name; 6 layer-matched nulls.
+- S1 HOLDS: 9 of 12 concepts get >= 3 recalled facts.
+- S2 HOLDS: median layer of the top-10 = 7.5, and 0% of the top-30 are in the concept's answer-side v2 top-30.
+- S3 HOLDS: top-5 drop median 0.50 vs |null| 0.05 (10x).
+- Strong single neurons: Kobe Bryant L7:11335 (5.35), Chandrayaan-1 L7:7682 (4.63), Noam Chomsky L6:5249 (3.94),
+  Schutzstaffel L8:2386 (2.86); very well-known concepts (Malaysia, BBC) have only weak single neurons (distributed?).
+- **Reading:** the answer-side loop has been blind to a whole early layer of concept knowledge; the subject pass (v3 E4)
+  finds it cheaply.
+
+Files: D:/already-clean-data/jlens/ (j_sums.pt, jlens_neurons_L*.npz, validate / tests txt + json, log),
+D:/already-clean-data/loop_v3/ (ranking_check*, ranking_disputed*, subject/).
+
+**J-lens reproduction check (18 Oct, James: "are we definite results will repro?").** Same windows (0-1) on the 5090 at 8
+vs 4 rows per pass: relative difference of the J sums grows with backward depth - 0% at L35, ~1% at L21, ~6% at L0-6
+(bf16 rounding accumulating through the backward pass); readout top-20 overlap 0.95-1.00 (vs 0.25-1.0 between different
+text). Pre-set rule (< 1% every layer AND overlap >= 0.95): FAILS on the sums. Per James's rule ("if not I'd include the
+first 32"): the scaled-up estimate computes all windows 0-255 in ONE configuration (same GPU type, same rows) on rented
+GPUs; the 5090 pilot is not merged in. Files: D:/already-clean-data/jlens/repro/, jlens_compare.txt.
+
+## 18 Oct 2026 - Loop v3 enrichment smoke test: 21 s per concept, all four stages add information (enrich.py)
+
+**Question (James):** enrich existing concepts to parity, skipping what we already have; "75 hours feels like a lot so
+let's smoke test it first ... and re-assess". 50 run-1 concepts (45 fresh + 5 whose E0 was already done), 5090.
+
+| stage | ran / skipped | median time | GPU busy | what it added |
+|---|---|---|---|---|
+| E0 missed candidates | 45 / 5 (skip logic worked) | 8.0 s | 79% | top 30 changes for 35/45 concepts (median 4 entrants) |
+| E2 formats | 50 / 0 | 8.9 s | 74% | short-answer format: activation drops below half for 8% of top-30 neurons, knockout effect for 38% (redundancy); sentence format: 57% below half activation (mostly 'say it now' neurons - the name is not the next token) |
+| E3 nulls (6, layer-matched) | 50 / 0 | 0.5 s | 92% | per-concept floor |
+| E4 subject pass | 50 / 0 | 3.7 s | 74% | 43/50 mapped (>= 3 facts); top-5 drop 0.36 vs null 0.05 |
+
+- **C1 (cost <= 60 s, GPU busy >= 80%):** cost HOLDS (median 21 s per fresh concept; peak 19.3 GB) - far below the 42-60 s
+  estimate; GPU busy FAILS narrowly (74-79%: single-prompt forward passes in E2 and sequential knockouts in E0 leave gaps).
+- **C2 (value):** E0 >= 70% HOLDS (78%); E4 >= 70% HOLDS (86%); E2 >= 20% format-bound HOLDS on knockouts (38% in the
+  like-for-like short format), but the sentence-format measures are not like-for-like (whole-sentence target; name not
+  the next token) and are reported with that caveat.
+- **Revised cost:** 5,028 concepts x 21 s = 29 GPU-hours on the 5090 (vs the 75 h estimate), before cheapening E2.
+Files: D:/already-clean-data/loop_v3/enrich_smoke/ (sample, questions, records.jsonl with every value, summary.txt, run.log).
+- Cross-GPU (18 Oct, gpu-fan-out smoke shard): RTX 3090 vs 5090, both 4 rows, windows 0-1: relative difference median
+  1.7%, max 7.5% (early layers), readout overlap 0.90-1.00 - the same size as the 8-vs-4-row effect. Decision unchanged:
+  all 256 windows in one configuration. 3090 speed: ~320 s/window at 99.7% busy, 20.2 GB peak; full 256 ~ 23 GPU-h, ~$5.2-5.5.
+
+## 18 Oct 2026 - Two-ended neurons, step 4: north <-> south and horizontal <-> vertical are causal scales (scales_steer.py)
+
+The map session's SCALES.md (written before data; steps 1-3 Luna / Jev on 1,567 neurons that matter for concepts on BOTH
+signs: 4 strict scales, 10 near-scales). Step 4 (here): for 24 candidates, one concept per end (the usage-check concepts),
+the neuron pushed towards each end by k x its web-text peak at the answer position; change in each concept's answer
+log-odds; a random same-layer neuron as the control.
+- **First run INVALID** (push at every position): the control moved the answers in 65/72 cases - the push wrecked the
+  model. Re-run with the push at the answer position only (SCALES.md fixes k, not the position; rule unchanged).
+- **P1 HOLDS (3/4 strict):** L32:11585 north <-> south (towards north: North Island +2.11, Southern Cone -5.07; towards
+  south: Southern Cone +2.60, North Island -6.69; control < 0.4), L34:10596 south <-> north, L26:10153 horizontal <->
+  vertical (Equator / Prime meridian). The female <-> male given-name neuron L30:9102 fails: the male push works (Jacob
+  +1.47, Theodora -3.20) but the female push does not raise Theodora (-0.29).
+- **P2 HOLDS (near 2/10 < strict):** breakfast <-> dinner (L32:3980), vegetarianism <-> Mars mythology (L27:10306).
+- **P3 HOLDS (1/10 'unrelated'):** L35:7324 (Bering Strait / Upanishads) shows the pattern.
+- **P4 FAILS:** controls are quiet at k = 1 (17/24) but not at k = 2 (4/24) or 4 (1/24): only k = 1 is a usable strength;
+  every pass above is at k = 1 with its own control quiet. Lowering effects are larger than raising effects.
+- Reading: some neurons are causal two-ended scales - one direction in the model, two opposite meanings - at least for
+  compass directions and orientation. Ledger: experiments scales, scales_steer, scales_steer_allpos_invalid.

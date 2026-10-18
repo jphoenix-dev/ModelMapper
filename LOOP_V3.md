@@ -26,11 +26,12 @@ construction. Everything writes to the ledger; every v2 efficiency carries over 
 
 | stage | what | GPU / concept | applies to |
 |---|---|---|---|
+| E0 missed candidates | knock out each concept's log-odds-only candidates (~86; ranking_check.py stage 2: median 4.5 per concept would enter run 1's top 30) - skip the 200 already measured | ~20 s | all |
 | E1 v2 core | re-run map_core v2 from the concept's existing spec (exact log-odds, all 200, nulls, heads, roles, k curves, residuals) | ~70 s | earlier-only concepts (~780) |
 | E2 formats | recall prompts in 2 extra answer formats: activation of all 200 candidates at the answer position (format-free vs format-bound) + top 30 zeroed in each format | ~10 s | all |
 | E3 nulls | 6 layer-matched random neurons per concept (pooled per layer band in the ledger) | ~2 s | all |
 | E4 subject pass | Luna: 6 questions ABOUT the concept; recall filter; name-token attribution (log-odds), top 100 zeroed at the name; 6 nulls | ~30 s + Luna | all (pilot on the 12 gate concepts running now) |
-| E5 J-lens read | each concept's saved answer-position residuals read through the J-lens per layer ("what is held" by depth) | ~0 (saved arrays) | run 1 + E1 concepts |
+| E5 J-lens read | each concept's saved answer-position residuals read through the J-lens per layer ("what is held" by depth) - ON HOLD until the larger J-lens estimate improves early-layer reliability | ~0 (saved arrays) | run 1 + E1 concepts |
 | E6 links | top-30 links (LINKS.md rule) | (gpu-fan-out) | all |
 Neuron-level passes (global, after the concept passes): J-lens readouts (done once), job names re-run for newly
 eligible neurons, labels.
@@ -40,9 +41,9 @@ rented RTX 3090s (+ boot overhead), or ~3 days on the 5090; Luna for E4 ~ 6 shor
 7.3k output tokens). Spend needs James's approval in the gpu-fan-out session's chat.
 
 ## Order
-1. J-lens pilot (running) -> E5's exact form.
-2. Ranking check (queued) -> keep or switch the v2 attribution objective (E1 / new concepts).
-3. Subject-pass pilot on the 12 gate concepts (queued) -> E4 go / no-go.
+1. J-lens pilot: DONE - useful early, noisy at 32 windows -> larger estimate via gpu-fan-out (with a cross-GPU repro check); E5 on hold.
+2. Ranking check: DONE - the log-prob search misses strong neurons (median 4.5 per concept would enter the top 30) -> E0, and v3 searches the union of both top-200 lists.
+3. Subject-pass pilot: DONE - S1-S3 hold (median layer 7.5, 0% overlap with answer-side maps, 10x null) -> E4 go.
 4. Build `enrich` as a src/dist task kind reading the ledger for what is missing. **Skip anything we already have**
    (James, 18 Oct): no stage re-runs for a concept that has it, and within a stage existing measurements are reused (e.g.
    run 1's 200 candidates and recall prompts are inputs, never recomputed). Gate on the 12 gate concepts (v2 numbers

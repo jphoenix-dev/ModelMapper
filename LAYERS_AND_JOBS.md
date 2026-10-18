@@ -39,6 +39,10 @@ answer is a name or a short fact). Layer bands are bins over what is a gradient,
   they drive are themselves unreadable (fan-out smoke test).
 - *Would be overturned by:* a population of early neurons with a consistent forced word output - none found among 800
   random early neurons.
+- **Revised 18 Oct (J-lens pilot):** too strong as worded. Early entity neurons do not write the NEXT token, but their
+  output directions carry their entity's words: 42% under the J-lens, 29% even under the plain logit lens, vs 1% for random
+  neurons (strict own-name match 16% / 8%). Read S2 as "early neurons do not write the next word; what they write is
+  concept / entity content readable through a lens". (J-lens readouts are noisy before layer 20 at 32 windows.)
 
 **S3. Late is the readable end of a feed-forward assembly.** Every type of key neuron feeds later key neurons of the
 same concept (early -> say, attribute -> say, say -> later say; all p < 1e-5), mostly within the answer position and

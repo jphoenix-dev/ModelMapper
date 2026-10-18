@@ -45,10 +45,7 @@ def questions():
 
     def ask(r):
         name = (r["row"].get("answer_form") or r["concept"]).strip()
-        q = (f'Write 6 short factual questions ABOUT "{r["concept"]}" that a well-read person could answer in 1-3 words. Each question '
-             f'must contain the exact text "{name}" verbatim and must not contain its answer. No yes/no questions; unambiguous answers; '
-             f'prefer well-known facts (place, date or century, creator / founder, nationality, field, type of thing). Reply JSON: '
-             f'{{"facts": [{{"question": "...", "answer": "..."}}]}}')
+        q = question_prompt(r["concept"], name)
         for _ in range(3):
             try:
                 return r["concept"], {"name": name, "facts": oai.chat_json(q, SYS)["facts"]}
@@ -61,18 +58,22 @@ def questions():
     print(f"{sum(1 for v in res.values() if v)} concepts with questions; Luna {oai.usage}")
 
 
-def map_():
+def question_prompt(concept, name):
+    return (f'Write 6 short factual questions ABOUT "{concept}" that a well-read person could answer in 1-3 words. Each question '
+            f'must contain the exact text "{name}" verbatim and must not contain its answer. No yes/no questions; unambiguous answers; '
+            f'prefer well-known facts (place, date or century, creator / founder, nationality, field, type of thing). Reply JSON: '
+            f'{{"facts": [{{"question": "...", "answer": "..."}}]}}')
+
+
+def subject_map_one(model, tok, concept, q):
+    """The subject pass for one concept (q = {"name", "facts": [{question, answer}]}) with an already-loaded model. Reused by
+    loop v3 enrichment (enrich.py)."""
     import torch
     import concept_pipeline as cp
     import facts as F1
-    from config import DEFAULT_MODEL, model_path
     from neurons import DEVICE, mlps
-    if not os.path.isdir(model_path(DEFAULT_MODEL)):
-        raise SystemExit("set MODEL_MAPPER_MODELS (no local model)")
-    Q = json.loads((OUT / "questions.json").read_text(encoding="utf-8"))
-    model, tok = F1.setup(); F1.SUFFIX = SUFFIX
+    F1.SUFFIX = SUFFIX
     L, W = model.config.num_hidden_layers, model.config.intermediate_size
-    f = open(OUT / "subject_maps.jsonl", "w", encoding="utf-8")
     acts = {}
 
     def keep(l):
@@ -82,58 +83,70 @@ def map_():
                 a0 = a0.detach().requires_grad_(True); acts[l] = a0; return (a0,)
             a0.retain_grad(); acts[l] = a0
         return h
+    rng = random.Random(f"subject|{concept}")
+    facts = []
+    for x in q["facts"]:
+        if q["name"] not in x["question"]:
+            continue
+        p, subj = F1.encode_with_subject(tok, x["question"], q["name"])
+        a = str(x["answer"]).strip(); best = None
+        for form in dict.fromkeys([a, a[:1].upper() + a[1:], a.lower(), " " + a]):
+            ids = tok.encode(form)
+            lo = F1.logodds_groups(model, tok, [[(p, ids, None)]])[0][0]
+            if best is None or lo > best[1]:
+                best = (ids, lo, form)
+        prob = 1 / (1 + 2.718281828 ** (-best[1]))
+        facts.append({"question": x["question"], "answer": a, "form": best[2], "answer_ids": best[0], "prompt": p, "subject_pos": subj,
+                      "p": round(prob, 4), "recalled": prob >= cp.MIN_P and bool(subj)})
+    rec = [x for x in facts if x["recalled"]]
+    out = {"concept": concept, "name": q["name"], "facts": [{k: v for k, v in x.items() if k not in ("prompt", "answer_ids")} for x in facts],
+           "n_recalled": len(rec)}
+    if len(rec) >= 3:
+        attr = torch.zeros(L, W, device=DEVICE)
+        hks = [mlps(model)[l].down_proj.register_forward_pre_hook(keep(l)) for l in range(L)]   # once per concept
+        try:
+            for x in rec:
+                ids = torch.tensor([x["prompt"] + x["answer_ids"][:-1]], device=DEVICE); n = len(x["prompt"])
+                with torch.enable_grad():
+                    lp = model(input_ids=ids).logits[0, n - 1:].double().log_softmax(-1)
+                    c = lp[torch.arange(len(x["answer_ids"]), device=DEVICE), torch.tensor(x["answer_ids"], device=DEVICE)].sum()
+                    (c - torch.log(-torch.expm1(c))).backward()               # exact log-odds (v3 ranking)
+                for l in range(L):
+                    attr[l] += (acts[l][0, x["subject_pos"]].float() * acts[l].grad[0, x["subject_pos"]].float()).sum(0)
+                acts.clear()
+        finally:
+            for h in hks:
+                h.remove()
+        top = [divmod(int(i), W) for i in attr.flatten().topk(100).indices]
+        nulls = [(l, rng.randrange(W)) for l, _ in top[:6]]
+        units = top + nulls; drops = {u: [] for u in units}
+        for x in rec:
+            for c0 in range(0, len(units), 32):
+                chunk = units[c0:c0 + 32]
+                g = [(x["prompt"], x["answer_ids"], None)] + [(x["prompt"], x["answer_ids"], [(l, n_, x["subject_pos"])]) for l, n_ in chunk]
+                v = F1.logodds_groups(model, tok, [g])[0]
+                for j, u in enumerate(chunk):
+                    drops[u].append(v[0] - v[j + 1])
+        md = {u: stx.mean(v) for u, v in drops.items()}
+        ranked = sorted(top, key=lambda u: -md[u])[:30]
+        out["top"] = [{"neuron": f"L{l}:{n_}", "mean_drop": round(md[(l, n_)], 4), "per_fact": [round(x, 4) for x in drops[(l, n_)]],
+                       "attr_rank": top.index((l, n_)) + 1} for l, n_ in ranked]
+        out["nulls"] = [{"neuron": f"L{l}:{n_}", "mean_drop": round(md[(l, n_)], 4), "per_fact": [round(x, 4) for x in drops[(l, n_)]]} for l, n_ in nulls]
+    return out
+
+
+def map_():
+    import facts as F1
+    from config import DEFAULT_MODEL, model_path
+    if not os.path.isdir(model_path(DEFAULT_MODEL)):
+        raise SystemExit("set MODEL_MAPPER_MODELS (no local model)")
+    Q = json.loads((OUT / "questions.json").read_text(encoding="utf-8"))
+    model, tok = F1.setup()
+    f = open(OUT / "subject_maps.jsonl", "w", encoding="utf-8")
     for concept, q in Q.items():
         if not q:
             continue
-        rng = random.Random(f"subject|{concept}")
-        facts = []
-        for x in q["facts"]:
-            if q["name"] not in x["question"]:
-                continue
-            p, subj = F1.encode_with_subject(tok, x["question"], q["name"])
-            a = str(x["answer"]).strip(); best = None
-            for form in dict.fromkeys([a, a[:1].upper() + a[1:], a.lower(), " " + a]):
-                ids = tok.encode(form)
-                lo = F1.logodds_groups(model, tok, [[(p, ids, None)]])[0][0]
-                if best is None or lo > best[1]:
-                    best = (ids, lo, form)
-            prob = 1 / (1 + 2.718281828 ** (-best[1]))
-            facts.append({"question": x["question"], "answer": a, "form": best[2], "answer_ids": best[0], "prompt": p, "subject_pos": subj,
-                          "p": round(prob, 4), "recalled": prob >= cp.MIN_P and bool(subj)})
-        rec = [x for x in facts if x["recalled"]]
-        out = {"concept": concept, "name": q["name"], "facts": [{k: v for k, v in x.items() if k not in ("prompt", "answer_ids")} for x in facts],
-               "n_recalled": len(rec)}
-        if len(rec) >= 3:
-            attr = torch.zeros(L, W, device=DEVICE)
-            hks = [mlps(model)[l].down_proj.register_forward_pre_hook(keep(l)) for l in range(L)]   # once per concept
-            try:
-                for x in rec:
-                    ids = torch.tensor([x["prompt"] + x["answer_ids"][:-1]], device=DEVICE); n = len(x["prompt"])
-                    with torch.enable_grad():
-                        lp = model(input_ids=ids).logits[0, n - 1:].double().log_softmax(-1)
-                        c = lp[torch.arange(len(x["answer_ids"]), device=DEVICE), torch.tensor(x["answer_ids"], device=DEVICE)].sum()
-                        (c - torch.log(-torch.expm1(c))).backward()               # exact log-odds (v3 ranking)
-                    for l in range(L):
-                        attr[l] += (acts[l][0, x["subject_pos"]].float() * acts[l].grad[0, x["subject_pos"]].float()).sum(0)
-                    acts.clear()
-            finally:
-                for h in hks:
-                    h.remove()
-            top = [divmod(int(i), W) for i in attr.flatten().topk(100).indices]
-            nulls = [(l, rng.randrange(W)) for l, _ in top[:6]]
-            units = top + nulls; drops = {u: [] for u in units}
-            for x in rec:
-                for c0 in range(0, len(units), 32):
-                    chunk = units[c0:c0 + 32]
-                    g = [(x["prompt"], x["answer_ids"], None)] + [(x["prompt"], x["answer_ids"], [(l, n_, x["subject_pos"])]) for l, n_ in chunk]
-                    v = F1.logodds_groups(model, tok, [g])[0]
-                    for j, u in enumerate(chunk):
-                        drops[u].append(v[0] - v[j + 1])
-            md = {u: stx.mean(v) for u, v in drops.items()}
-            ranked = sorted(top, key=lambda u: -md[u])[:30]
-            out["top"] = [{"neuron": f"L{l}:{n_}", "mean_drop": round(md[(l, n_)], 4), "per_fact": [round(x, 4) for x in drops[(l, n_)]],
-                           "attr_rank": top.index((l, n_)) + 1} for l, n_ in ranked]
-            out["nulls"] = [{"neuron": f"L{l}:{n_}", "mean_drop": round(md[(l, n_)], 4), "per_fact": [round(x, 4) for x in drops[(l, n_)]]} for l, n_ in nulls]
+        out = subject_map_one(model, tok, concept, q)
         f.write(json.dumps(out, ensure_ascii=False) + "\n"); f.flush()
         print(concept, out["n_recalled"], [(x["neuron"], x["mean_drop"]) for x in out.get("top", [])[:3]], flush=True)
 
