@@ -68,6 +68,8 @@ def check(store, extra_bytes=0, extra_a=0, extra_b=0):
 def task_output_bytes(cfg, task_id, n_layers=36, width=12288, n_heads=32, hidden=4096, promptset=None):
     """Rough upper bound on what one task writes (for the pre-task storage check)."""
     kind = task_id.split(":")[0]
+    if kind == "attrib":
+        return int(0.5e9)                                                 # 18 graph.json files, a few MB each
     if kind == "jlens":
         return int(5.0e9)                                                 # j_sums shard, two [36, 4096, 4096] fp32 sums
     if kind == "links":

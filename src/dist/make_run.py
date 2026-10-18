@@ -44,13 +44,16 @@ def main():
     ap.add_argument("--window", type=int, default=128, help="context tokens ending at the firing position")
     ap.add_argument("--batch-rows", type=int, default=64)
     ap.add_argument("--n-null", type=int, default=16, help="firing contexts rerun alone per ablate task (noise floor)")
-    ap.add_argument("--kind", default="neuron", choices=["neuron", "map", "links", "jlens"],
+    ap.add_argument("--kind", default="neuron", choices=["neuron", "map", "links", "jlens", "attrib"],
                     help="neuron: observe/merge/ablate (default). map: loop v2 concept batches from specs")
     ap.add_argument("--specs", help="map: local folder of spec .json files, each with a 'concept' key")
     ap.add_argument("--records", help="links: glob of loop v2 run records.jsonl files (status ok concepts are used)")
     ap.add_argument("--jl-windows", type=int, default=256, help="jlens: total windows of the draw (seed 301)")
     ap.add_argument("--jl-shards", default="", help="jlens: comma list of a-b[:rows], e.g. 0-2:4,0-2:8 or 32-64:4")
     ap.add_argument("--jl-docs", default="C:/dev/already-clean/data/atlas_Qwen3-8B_docs.npz", help="jlens: atlas docs npz")
+    ap.add_argument("--ag-dir", default="D:/already-clean-data/attrib_graphs", help="attrib: local attrib_graphs folder")
+    ap.add_argument("--ag-step", default="graphs", choices=["graphs", "ablate"], help="attrib: which step")
+    ap.add_argument("--ag-rows", type=int, default=32, help="attrib: AG_ROWS (32 on 48 GB cards, 16 if out of memory)")
     ap.add_argument("--limit", type=int, default=0, help="links: only the first N concepts (gate tests)")
     ap.add_argument("--specs-in-store", action="store_true", help="map: specs already uploaded under specs/<batch>/")
     ap.add_argument("--batch-size", type=int, default=20, help="map: concepts per task")
@@ -60,7 +63,7 @@ def main():
     a = ap.parse_args()
 
     store = open_store(a.store)
-    if store.exists("config.json") and not (a.kind == "map" and a.append):
+    if store.exists("config.json") and not ((a.kind == "map" and a.append) or a.kind == "attrib"):
         raise SystemExit(f"{store} already holds a run (config.json exists)")
     rev = a.revision or REVISIONS.get(a.model)
     if not rev:
@@ -72,6 +75,8 @@ def main():
         return make_links_run(a, store, rev)
     if a.kind == "jlens":
         return make_jlens_run(a, store, rev)
+    if a.kind == "attrib":
+        return make_attrib_run(a, store, rev)
     from transformers import AutoTokenizer
     tok = AutoTokenizer.from_pretrained(model_path(a.model))
     from scan import docs
@@ -112,6 +117,26 @@ def main():
     quota.save_ops(store, f"make_run-{int(__import__('time').time())}")
     print(f"estimated results if nothing is drained: {est/1e9:.2f} GB (bucket cap {quota.MAX_GB} GB; use launcher --drain-to)")
     print(f"{store}: {len(tasks)} tasks, model {a.model}@{rev[:10]}")
+
+
+def make_attrib_run(a, store, rev):
+    """Attribution graphs: uploads pilot_prompts.json (and for ablate every <slug>/graph.json + groups.json); one task."""
+    src = Path(a.ag_dir)
+    files = [src / "pilot_prompts.json"]
+    if a.ag_step == "ablate":
+        files += [p for p in src.glob("*/groups.json")] + [p.with_name("graph.json") for p in src.glob("*/groups.json")]
+    for f in files:
+        store.put_file(f"data/attrib_graphs/{f.relative_to(src).as_posix()}", f)
+    tid = f"attrib:{a.ag_step}" + (f":{a.limit}" if a.limit else "")
+    cfg = store.get_json("config.json") or {"kind": "attrib", "model": a.model, "revision": rev, "dtype": a.dtype,
+                                            "env": {}, "shards": [], "open": False}
+    cfg["attrib"] = {"rows": a.ag_rows}
+    store.put_json("config.json", cfg)
+    man = store.get_json("manifest.json") or {"tasks": []}
+    if tid not in [t["id"] for t in man["tasks"]]:
+        man["tasks"].append({"id": tid})
+    store.put_json("manifest.json", man)
+    print(f"{store}: attrib run, task {tid}, {len(files)} input files, AG_ROWS={a.ag_rows}, model {a.model}@{rev[:10]}")
 
 
 def make_jlens_run(a, store, rev):

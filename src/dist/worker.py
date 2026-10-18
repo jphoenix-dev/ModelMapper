@@ -105,7 +105,7 @@ def main():
     steps["python_start"] = T_START
     boot = {"worker": wid, "process_start": T_START, "process_start_iso": now(), "env": ctx.env, "steps": steps}
     t0 = time.time()
-    if ctx.cfg.get("kind") == "jlens":                   # the task's subprocess loads the model itself
+    if ctx.cfg.get("kind") in ("jlens", "attrib"):      # the task's subprocess loads the model itself
         ctx.model_meta = {"model": ctx.cfg["model"], "revision": ctx.cfg["revision"], "weights_source": "loaded by jlens.py"}
     else:
         _ = ctx.model                                    # download (if needed) + load the pinned model
@@ -138,7 +138,7 @@ def main():
             time.sleep(IDLE_POLL); continue
         idle_since = None
         if os.environ.get("DIST_QUOTA", "1") != "0":
-            if ctx.cfg.get("kind") == "jlens":            # never touch ctx.model here: the subprocess needs the whole GPU
+            if ctx.cfg.get("kind") in ("jlens", "attrib"):   # never touch ctx.model here: the subprocess needs the GPU
                 need = quota.task_output_bytes(ctx.cfg, pick)
             else:
                 c = ctx.model.config

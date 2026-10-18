@@ -537,7 +537,8 @@ def map_task(store, task_id, ctx, key):
             "output_mb": round(n_bytes / 1e6, 1), "env_vars": {k: os.environ.get(k) for k in (ctx.cfg.get("env") or {})}}
 
 
+from dist.attrib_task import attrib_task  # noqa: E402
 from dist.jlens_task import jlens_task  # noqa: E402
 from dist.links import links_task  # noqa: E402
 
-RUNNERS = {"observe": observe, "merge": merge_observe, "ablate": ablate, "map": map_task, "links": links_task, "jlens": jlens_task}
+RUNNERS = {"observe": observe, "merge": merge_observe, "ablate": ablate, "map": map_task, "links": links_task, "jlens": jlens_task, "attrib": attrib_task}
