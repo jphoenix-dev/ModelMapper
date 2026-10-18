@@ -129,6 +129,12 @@ with context; the pilot's 'low background bias' held only for strong hand-picked
 are repeatable (sign 88-100%) but the neurons they drive (layers 24-27) are themselves unreadable - no word-level job one
 step later. Options: chains to readable late endpoints, or describe early neurons by the concepts they serve.
 
+**Job-finding for knowledge neurons (18 Oct):** an entity x relation causal grid + position test works. Early (0-19)
+fact neurons act only at the entity's name tokens and are ENTITY neurons (all of one landmark's facts); mid/late ones act
+at the answer position and include RELATION neurons (a 'century built' neuron across landmarks). Entity neurons are mostly
+not naming neurons. Matches the published factual-recall picture, neuron by neuron. Next: scale the grid (people, works,
+more relations) and find entity neurons directly at the subject token (not via answer-ranked maps).
+
 ## Later: common-neuron analysis (James, 18 Oct)
 Test whether 'unrelated' users of a shared neuron share a surface feature (sound, spelling, script) rather than a
 meaning - e.g. does the Czech / Xi'an neuron (L29:4682) also respond to other Ch- / Xi- / Sh- names (Chechnya,

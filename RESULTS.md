@@ -2408,3 +2408,40 @@ as-is copy in the same pass. Median log-odds drop:
   the meaning sits more in early neurons and elsewhere. Its spill-over follows shared attributes (place, kind, architect).
 - **Limits:** small n per level (many neighbours had < 2 recalled naming questions); Luna-written fact answers; one
   forced 'answer in as few words as possible' format for facts; 15 sources, all landmarks.
+
+## 18 Oct 2026: job-finding for knowledge neurons - an entity x relation causal grid + position test (research branch)
+James: naming maps are 'say it' machinery; find mechanisms for the job of earlier neurons, where knowledge seems to live.
+(`facts.py`; outputs D:/already-clean-data/facts/, summary / entities / classes in results/facts/; Luna ~$0.01; GPU ~35 min.)
+Ground truth: 30 landmarks x 5 relations (city, country, designer, century built, main material), 3 FIXED phrasings per
+relation (same wording for every landmark), answers from Luna ('Unknown' excluded), kept where Qwen answers >= 2 of 3:
+111 facts (city 30, country 30, century 25, material 14, designer 12). Per fact: attribution of the answer -> top-100 ->
+each zeroed alone -> fact map. Grid: each fact's top-3 neurons (drop > 0.2) zeroed on EVERY fact -> mean drop on the same
+landmark's other facts / the same relation for other landmarks / neither -> class (threshold max(0.2, 25% of its own-fact
+drop), fixed before looking): entity, relation, entity+relation, fact-specific, generic. Position: each zeroed only at the
+landmark's name tokens vs only at the last position. Predictions stated before running.
+- **(a) 'fact neurons sit earlier than naming neurons': FAILED as stated.** Fact maps' top-5 have the same layer profile
+  as naming maps (median layer 30; 19% vs 16% below layer 20). Mapping by the answer's log-prob again finds late neurons
+  that SAY the answer ('Paris', '19th').
+- **(b) 'entity neurons are early and act at the subject tokens': HELD.**
+
+| fact neurons | n | zeroed everywhere | only at the name tokens | only at the last position | entity / relation / fact-specific / generic |
+|---|---|---|---|---|---|
+| layers 0-9 | 40 | 2.72 | **2.60** | 0.00 | 15 / 1 / 24 / 0 |
+| layers 10-19 | 19 | 1.58 | **1.46** | 0.01 | 8 (+1 both) / 0 / 10 / 0 |
+| layers 20-27 | 31 | 1.81 | 0.04 | **1.31** | 0 / 11 / 17 / 3 |
+| layers 28-35 | 243 | 2.64 | 0.00 | **1.60** | 16 (+8 both) / 50 / 158 / 11 |
+
+- **(c) 'relation neurons sit mid-to-late': HELD.** E.g. L30:8291 is a 'century built' neuron: zeroing it costs ~3.2
+  log-odds on the century fact of every landmark tested (Taj Mahal, Tokyo Tower, CN Tower, Blue Mosque, Versailles...)
+  and nothing on their other facts. Early entity examples: L8:9458 (Blue Mosque: its facts drop, other landmarks'
+  don't), L1:4818 (Sagrada Família), L1:3960 (Statue of Liberty).
+- **Entity neurons are mostly not naming neurons:** 6 of 32 appear in their landmark's naming top-5, essentially one
+  neuron - L29:5436, a 'Vatican' neuron (all Sistine Chapel / St. Peter's facts collapse without it, drops 15-28: city,
+  country, etc. route through 'Vatican').
+- **Reading:** a working job-finding mechanism for early neurons: place a neuron in an entity x relation grid causally
+  and find where it acts. Early (layers 0-19) knowledge neurons are ENTITY neurons acting at the entity's own name
+  tokens; mid/late ones extract RELATIONS (or say specific answers) at the answer position. This matches the published
+  picture of factual recall (subject enrichment in early MLPs at the subject token, attribute extraction late; Meng et al.
+  2022, Geva et al. 2023), now neuron by neuron in Qwen3-8B.
+- **Limits:** only 59 early neurons in the fact maps' top-3s (maps still favour late answer-sayers); 5 relations, all
+  landmarks; class thresholds arbitrary (stated); Luna's answers; fixed templates.
