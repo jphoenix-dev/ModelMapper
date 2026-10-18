@@ -36,7 +36,7 @@ def subject_rows(pw, exp, c, out, src):
 
 def main(force=False):
     files = [V3 / "ranking_check.jsonl", V3 / "ranking_disputed.jsonl", V3 / "subject" / "subject_maps.jsonl", V3 / "enrich_smoke" / "records.jsonl",
-             V3 / "e7_pilot" / "records.jsonl"]
+             V3 / "e7_pilot" / "records.jsonl"] + sorted((V3 / "enrich_run1").glob("records_snapshot_*.jsonl"))[-1:]
     files = [f for f in files if f.exists()]
     if not files:
         print("loop_v3: no data"); return
@@ -96,6 +96,20 @@ def main(force=False):
                           data_files=["data:loop_v3/e7_pilot/"], caveats=["Single-neuron knockouts; a raise on a near-certain prompt can be a small probability change."],
                           params={"noise_floor": FLOOR}, date="2026-10-18", docs=["MECHANISMS.md", "LOOP_V3.md"])
             enrich_rows(pw, "loop_v3_e7_pilot", e7p, "loop_v3/e7_pilot/records.jsonl")
+        snap = sorted((V3 / "enrich_run1").glob("records_snapshot_*.jsonl")) if (V3 / "enrich_run1").exists() else []
+        if snap:                                  # a frozen copy of the full run in progress (the live file keeps growing)
+            sp = snap[-1]; n = sum(1 for _ in open(sp, encoding="utf-8"))
+            pw.experiment("loop_v3_enrich_run1", title=f"Loop v3 enrichment over all run-1 concepts (snapshot: {n} of 4,194 concepts)",
+                          method=("The enrichment task (E0 missed candidates, E2 formats - cheapened: activations in 3 formats + knockouts in the short "
+                                  "format, E3 layer-matched nulls; E4 subject pass in a second pass) over every run-1 concept in a fixed shuffled order "
+                                  "(seed 501), skipping stages already done. This pack is a snapshot of the run in progress."),
+                          status="exploratory (C1-C2 predictions held in the smoke test)", status_class="exploratory", script="src/loop_v2/enrich.py",
+                          reproduce="ENRICH_NAME=enrich_run1 ENRICH_ALL=1 python src/loop_v2/enrich.py sample; ENRICH_NAME=enrich_run1 ENRICH_STAGES=E0,E2,E3 python src/loop_v2/enrich.py run",
+                          data_files=[f"data:loop_v3/enrich_run1/{sp.name}"],
+                          caveats=[f"Snapshot of {n} concepts taken while the run continues; E4 (subject pass) not yet run for these.",
+                                   "Log-odds drops on near-certain prompts can be small probability changes (see RESULTS, 18-19 Oct)."],
+                          params={"noise_floor_E0": FLOOR, "snapshot": sp.name}, date="2026-10-18", docs=["LOOP_V3.md", "RESULTS.md"])
+            enrich_rows(pw, "loop_v3_enrich_run1", sp, f"loop_v3/enrich_run1/{sp.name}")
 
 
 def enrich_rows(pw, exp, path, rel):
