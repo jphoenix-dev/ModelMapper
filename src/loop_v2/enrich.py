@@ -197,6 +197,7 @@ def run(limit=None):
     con = duckdb.connect(str(DATA / "ledger" / "ledger.duckdb"), read_only=True)
     pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True); m, tok, W = pipe.model, pipe.tok, pipe.W
     gb = GpuBusy(); OUT.mkdir(parents=True, exist_ok=True); f = open(OUT / "records.jsonl", "a", encoding="utf-8"); idx = build_index(con)
+    con.close()                                   # read once at start; holding it blocked ledger rebuilds for the whole run (18 Oct)
     pre = lambda u: tuple(map(int, u[1:].split(":")))
     for c in S:
         have = have_from(idx, c)
