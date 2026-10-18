@@ -35,30 +35,23 @@
     if (v < 0.0001) return "under 0.0001%";
     return v.toFixed(Math.min(4, Math.max(2, Math.ceil(-Math.log10(v)) + 1))) + "%";
   };
-  // Near-certain answers read better as how often Qwen would be wrong: "99.9% → 99.6%" is "1 time in 1,000 → 1 in 250".
-  // Worked out from the log-odds so it stays exact near 100%: wrong 1 time in (1 + e^logodds).
-  const sig2 = (n) => { const m = Math.pow(10, Math.max(0, Math.floor(Math.log10(n)) - 1)); return Math.round(n / m) * m; };
-  const oneIn = (lo) => { const n = 1 + Math.exp(lo); return n >= 1e6 ? `${+(sig2(n) / 1e6).toFixed(1)} million` : sig2(n).toLocaleString("en-GB"); };
-  const SURE = Math.log(9);                          // p >= 0.9: say how often it is wrong
-  const state = (lo) => (lo >= SURE ? `wrong 1 time in ${oneIn(lo)}` : `right ${pct(P(lo))} of the time`);
-  // compact before → after, for lists: "wrong 1 in 1,000 → 1 in 250", "right 60% → 20%", "wrong 1 in 1,000 → right 40%"
-  const chance = (base, drop) => {
-    if (base == null) return null;
-    const a = base, b = base - Math.max(0, drop);
-    const fa = a >= SURE ? `wrong 1 in ${oneIn(a)}` : `right ${pct(P(a))}`, fb = b >= SURE ? `wrong 1 in ${oneIn(b)}` : `right ${pct(P(b))}`;
-    if (fa === fb) return `${fa}, almost no change`;
-    return `${fa} → ${a >= SURE && b >= SURE ? fb.replace("wrong ", "") : a < SURE && b < SURE ? fb.replace("right ", "") : fb}`;
+  // a before/after pair of chances, with enough decimals that a real change never rounds away ("99.2% → 98.9%", not
+  // "99% → 99%"); if it still does at 4 decimals, the change is negligible
+  const pcts = (pa, pb) => {
+    let a = pct(pa), b = pct(pb);
+    for (let d = 1; d <= 4 && a === b; d++) { a = (pa * 100).toFixed(d) + "%"; b = (pb * 100).toFixed(d) + "%"; }
+    return [a, b];
   };
-  // a sentence: "Qwen is wrong 1 time in 1,000; with it switched off, 1 time in 250"
-  const after = (base, lo) => {                      // the "after" half, without repeating "wrong"/"right"
-    const a = state(base), b = state(lo);
-    return a === b ? "about the same" : a.split(" ")[0] === b.split(" ")[0] ? b.replace(/^(wrong|right) /, "") : "it is " + b;
-  };
-  const transition = (base, drop, what) => {
+  const chance = (base, drop) => {                   // compact, for lists: "99.2% → 96%"
     if (base == null) return null;
-    const lo = base - Math.max(0, drop);
-    if (state(base) === state(lo)) return `Qwen is ${state(base)}; switching off ${what} barely changes that`;
-    return `Qwen is ${state(base)}; with ${what} switched off, ${after(base, lo)}`;
+    const [a, b] = pcts(P(base), P(base - Math.max(0, drop)));
+    return a === b ? `${a}, almost no change` : `${a} → ${b}`;
+  };
+  const transition = (base, drop, what) => {        // a phrase: "switching it off takes ... from 99.2% to 96%"
+    if (base == null) return null;
+    const [a, b] = pcts(P(base), P(base - Math.max(0, drop)));
+    return a === b ? `switching off ${what} barely changes the chance of the right answer (${a})`
+      : `switching off ${what} takes the chance of the right answer from ${a} to ${b}`;
   };
 
   let D, N, byLayer, cur = null, depth = 35, hover = -1, pinned = -1, showHeads = false, zoom = -1, CUT = 20, onlyLit = false, peek = -1;
@@ -334,7 +327,7 @@
       const more = outL.length + inL.length - [...outL.filter((l) => l[2] > 0).slice(0, 3), ...outL.filter((l) => l[2] < 0).slice(0, 3), ...inL.filter((l) => l[2] > 0).slice(0, 3), ...inL.filter((l) => l[2] < 0).slice(0, 3)].length;
       if (parts.length) h += `Within ${esc(cur[1])}'s key neurons, ${parts.join("; ")}${more > 0 ? `, and ${more} weaker link${more > 1 ? "s" : ""}` : ""}. <span class="muted">(Measured by switching one neuron off and watching the other.)</span><br>`;
     }
-    if (names.length) h += `Matters most for: ${names.map(([n, d]) => { const ch = chance(D.cbase[n], d); return `${esc(n)}${ch ? ` (${ch})` : ""}`; }).join(", ")}${nUses > names.length ? `, and ${nUses - names.length} more` : ""}. <span class="muted">(How often Qwen gets a typical question right, or for near-certain answers how often it gets it wrong, before → after switching this neuron off.)</span>`;
+    if (names.length) h += `Matters most for: ${names.map(([n, d]) => { const ch = chance(D.cbase[n], d); return `${esc(n)}${ch ? ` (${ch})` : ""}`; }).join(", ")}${nUses > names.length ? `, and ${nUses - names.length} more` : ""}. <span class="muted">(The chance of the right answer on a typical question, before → after switching this neuron off.)</span>`;
     if (LINKS) h += ` <a href="index.html#/neuron/L${L}:${i}">Everything we know about it →</a>`;
     $("info").innerHTML = h;
   }
@@ -463,7 +456,7 @@
     const hidden = zoom >= 0 ? c[4].filter((t) => nx(t[0]) == null).length : 0;
     const k5 = c[12] && c[13] ? c[12][c[13].indexOf(5)] : null;
     $("summary").innerHTML = `<b>${esc(c[1])}</b>${answer}.` +
-      (c[11] != null && c[12] ? ` On a typical question ${transition(c[11], c[12][0], "its top neuron")}${k5 != null ? `; with its top five off, ${after(c[11], c[11] - Math.max(0, k5))}` : ""}.` : "") +
+      (c[11] != null && c[12] ? ` On a typical question, ${transition(c[11], c[12][0], "its top neuron")}${k5 != null ? `, and switching off its top five takes it to ${pcts(P(c[11]), P(c[11] - Math.max(0, k5)))[1]}` : ""}.` : "") +
       (lens && first >= 0 ? ` The answer reaches the top 10 at layer ${first}.` : lens ? "" : " (Answer ranks not measured for this concept.)") +
       ` <a href="#fig-graph">Figure 2</a> groups them and shows how they feed each other.` +
       (hidden ? ` <span class="muted">${hidden} of its 30 neurons sit in other columns; <a href="#" id="unzoom">show all subjects</a> to see them.</span>` : "") +
@@ -540,7 +533,7 @@
       indexOf: (id) => posOf[id],
       nameOf: (id) => { const k = posOf[id]; return k != null && N.nm[k] >= 0 ? D.names[N.nm[k]] : null; },
       concept: () => cur,
-      state, transition,
+      chanceOf: (lo) => pct(P(lo)), transition,
       unit: (k) => `L${N.L[k]}:${N.i[k]}`,
       show: (id) => { const k = posOf[id]; if (k == null) return; if (onlyLit) { onlyLit = false; $("onlyLit").checked = false; } if (zoom >= 0) setZoom(-1); pinned = hover = k; draw(); describe(k); },
     };
