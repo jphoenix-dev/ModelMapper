@@ -2220,3 +2220,35 @@ summaries copied to results/concept_atlas/.) Fixes the step that failed in searc
 - **Caveats:** one sample of 100 per group; Luna's questions can drift from the exact name (some untested names); the
   'known' group verifies on its TOP atlas name, which is its own concept only ~21% of the time; layer-35 neurons
   dominate some groups.
+
+## 18 Oct 2026 (overnight): loop v2 run 1 - 5,000 Vital Articles concepts (research branch)
+(LOOP_V2.md; frame / prepare / map / report scripts in src/loop_v2/; raw results 32 GB in
+D:/already-clean-data/loop_v2/run1/; summaries in results/loop_v2/run1/.)
+- **Run:** 5,000 concepts from Wikipedia Vital Articles Level 4 (section x fame, seed 71). Prepare 26 min (96 Luna
+  workers, 0 failures, Luna ~$9.40). Map through the gpu-fan-out runner: 250 batches on up to 8 rented 3090s + the local
+  5090, ~$12.30 of RunPod, 0 failed concepts; 3090 52 s and 5090 26 s per recalled concept.
+- **Coverage:** 4,194 mapped (84%); by fame 95% (128+ editions) -> 57% (<32); by section 70% (History) - 90%
+  (Geography); named 85%, common 83%.
+- **Small handful holds across knowledge:** k_mean <= 5 in 1,705/1,722 named and 2,448/2,472 common concepts
+  (median 2 named, 1 common).
+- **Null clean:** median |null drop| 0.028 (p95 0.077) vs median top-1 drop 3.29; no concept with null >= 20% of top-1.
+- **P1 replicates (self-check, 200 concepts, independent Wikipedia cloze prompts):** top-5 zeroed, median drop +7.42
+  vs random-5 +0.003; flips >= half the prompts in 164/200 (P1 on the earlier maps: +5.59, 66%); named +6.96,
+  common +7.80.
+- **P4 replicates (self-check, families = Wikidata P31, first half of batches -> second half):** median own/other
+  4.38 (pre-registered bar 3), 415 vs 251 (p = 2e-10) - weaker than the earlier 9.18. Strong for literary works,
+  chemical elements, cities, historical countries, languages; NOT for people (Q5: own median 0), unlike the earlier
+  people-heavy sample (historical figures here vs contemporary celebrities then - open). With Vital Articles SECTIONS
+  as families the check is weak (517 vs 473): sections are too broad.
+- **Named vs common:** a 'say' neuron (answer in its top-10 pushed tokens) in the top-5 for 62% named vs 73% common.
+  Not a tokenisation artefact (common multi-token answers 74%). Partly section composition (People 46%, all named),
+  but within sections common > named in 9 of 10 (+4 to +22 points). On the 230 concepts where Luna's blind label
+  agrees with ours it reverses (79% vs 73%, small sample). Reading: modest, probably real; historical people often lack
+  a single 'say' neuron.
+- **Tags:** frame.py's named/common tag agrees with Luna's blind label on 273/300 (91%); disagreements are borderline
+  (languages, peoples, fields, taxa).
+- **Sharing:** 39,494 distinct neurons in any top-30 (8.9% of all), 9,860 in any top-5; median 10% of a concept's top-10
+  in no other map's top-30 (a different metric from P2's, same direction: 'dedicated' shrinks as coverage grows);
+  16,492 neurons shared by >= 2 maps, 29% of them within one section.
+- **Heads:** most often among a concept's 5 most damaging single-head knockouts: L35H25 (1,337 concepts), L34H28
+  (1,098), L19H29 (951), L20H9, L23H10, L35H24 - the late re-reader / turn-boundary copier / meaning-carrier set again.

@@ -1,0 +1,22 @@
+Loop v2 report: run1 - 250 finished batches, 5000 concepts (frame 5000)
+status: {'ok': 4194, 'not_recalled': 806}
+recalled by section: Arts 389/473 (82%), Biology and health sciences 371/481 (77%), Everyday life 405/464 (87%), Geography 425/473 (90%), History 330/473 (70%), Mathematics 257/298 (86%), People 413/482 (86%), Philosophy and religion 357/428 (83%), Physical sciences 426/480 (89%), Society and social sciences 415/478 (87%), Technology 406/470 (86%)
+recalled by fame tier: 128+ 1156/1217 (95%), 32-63 1086/1483 (73%), 64-127 1761/1962 (90%), <32 191/338 (57%)
+recalled by named/common: common 2472/2978 (83%), named 1722/2022 (85%)
+
+maps (recalled concepts):
+  named    n=1722: k_mean <= 5 in 1705/1722 (median 2.0; none within 50: 0); k_flip median 1; a 'say' neuron in the top-5: 1062/1722 (62%); top-5 roles {'attribute': 2142, 'say': 1448, 'late-other': 3612, 'early': 1408}
+  common   n=2472: k_mean <= 5 in 2448/2472 (median 1.0; none within 50: 0); k_flip median 1.0; a 'say' neuron in the top-5: 1794/2472 (73%); top-5 roles {'early': 1911, 'late-other': 4328, 'attribute': 3513, 'say': 2608}
+
+overlap: 4194 maps; distinct neurons in any top-30 39494, in any top-5 9860
+  named   : dedicated share of top-10 (in no other map's top-30) median 10%, mean 11%
+  common  : dedicated share of top-10 (in no other map's top-30) median 10%, mean 18%
+  neurons shared by >= 2 maps: 16492; all within one section 4734 (29%)
+heads most often among a concept's 5 most damaging single-head knockouts: L35H25 1337, L34H28 1098, L19H29 951, L20H9 602, L23H10 569, L35H24 516, L21H2 446, L34H29 424, L24H26 419, L22H19 395, L35H22 388, L15H5 380
+
+check null: median |null drop| 0.028, p95 0.077; median top-1 drop 3.29; concepts whose null >= 20% of top-1: 0
+check P4-style (section neurons from the first 2080 maps -> the next 2114): own > other in 517, < in 473; median own 0.000 vs other 0.036
+
+run: GPUs {'NVIDIA GeForce RTX 3090': 3880, 'NVIDIA GeForce RTX 5090': 1120}
+  NVIDIA GeForce RTX 3090: median 52 s per recalled concept (n=3262)
+  NVIDIA GeForce RTX 5090: median 26 s per recalled concept (n=932)

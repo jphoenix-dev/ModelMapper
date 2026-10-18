@@ -86,6 +86,11 @@ unmapped neurons with the most name-specific profile, 16 verified causally (rand
 model pointed to (chess notation +14.2, 24 Hours of Le Mans +10.2, NGC 7319, hydrogeology, selenium tetrachloride...).
 This is the search-then-verify core for loop v2. Verification is now Luna-bound (GPU 19% busy).
 
+## Loop v2 run 1 (18 Oct overnight)
+5,000 Vital Articles concepts, 4,194 mapped (84%), $12.30 GPU + ~$9.40 Luna, 0 failures. Self-checks: P1 replicates
+(+7.42 vs +0.003, flips 82%), P4 replicates more weakly (4.38x, p = 2e-10; not for people), null clean. Common nouns map
+as cleanly as named things (median k 1 vs 2; recall 83% vs 85%), with a modest within-section excess of 'say' neurons.
+
 ## Next step after loop v2 run 1 (James, 17 Oct night)
 **Question-side test: are concept neurons "say it" neurons or meaning neurons?** Every map so far was found and tested
 with the concept as the ANSWER. Not yet done: switch a concept's key neurons off and ask questions with the concept IN
