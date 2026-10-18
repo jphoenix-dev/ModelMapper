@@ -70,18 +70,63 @@ LEDGER = Path("D:/already-clean-data/ledger/export")
 ERA_AUC, ERA_FORMATS = 0.9, 3     # a 'tested job' if AUC >= 0.9 in at least 3 of the 4 question formats
 
 
-JOB_TYPES = [   # code, label, how it was found (shown on the page); order = legend order
-    ("say", "Writes the answer", "Its output pushes the answer's own word: the answer is among the 10 words it raises most (read from its weights, run 1)."),
-    ("attribute", "Pushes the answer up", "Its output raises the answer as one of its words, without it being the top one (weights, run 1)."),
-    ("entity", "Recognises a thing", "Switched off only at a thing's name (e.g. the words 'Eiffel Tower'), it breaks that thing's facts and few others (facts tests)."),
-    ("relation", "Knows the question type", "Switched off, it breaks the same kind of question (e.g. 'which century') across many different things (facts tests)."),
-    ("fact", "Needed for one fact", "Switched off, it breaks one particular fact, but not the thing's other facts or other things' same question (facts tests)."),
-    ("era", "Picks out a century", "Its firing separates people, places and works of one century from the rest, however the date is asked for (date test)."),
-    ("digit", "Tracks how a number is written", "It fires for a digit in a particular place, e.g. years starting '17', not for the era itself (date and number tests)."),
-    ("scale", "A two-ended scale", "Firing one way pushes towards one end of a scale (e.g. north), the other way towards the opposite end (south). Each end's description predicts which concepts use it, and pushing the neuron each way moves the model's answers towards that end (scales test, SCALES.md)."),
-    ("shared", "Shared answer machinery", "It matters for answers of every kind: in the top 10 of more than 1% of concepts, or breaking facts generally (maps, facts tests)."),
-    ("label", "One clear job in web text", "A blind description of where it fires in web text passed our strict one-job check (census, H-DEPTH)."),
-    ("named", "Has a checked name", "Luna named it and the name passed a blind check against a concept Luna hadn't seen (JOB_NAMES.md)."),
+# code, label, what it means, how we found it (both shown on the page, in plain words: no run or test names);
+# order = legend order. Sources: say/attribute = run 1 roles (weights); entity/relation/fact/shared = the facts grid
+# (facts2); era/digit = the date-format test; scale = SCALES.md; label = the web-text census (LABELLING.md); named =
+# JOB_NAMES.md.
+JOB_TYPES = [
+    ("say", "Writes the answer",
+     "When it fires, the answer is among the 10 words it pushes the model towards most.",
+     "Each neuron's output is a fixed direction, set by the model's weights. Comparing that direction with the model's table "
+     "of words scores how much the neuron raises each of the 151,936 words Qwen can say next. If, firing the way it does for "
+     "a concept, the neuron raises that concept's answer more than all but nine other words, it writes the answer. This "
+     "comes from the weights alone; no text is needed."),
+    ("attribute", "Pushes the answer up",
+     "When it fires, it raises the answer clearly more than a typical word, but the answer isn't among its top 10.",
+     "The same reading of the weights as for “Writes the answer”. Here the answer is raised well above the average word "
+     "(at least two standard deviations), without being one of the neuron's top 10."),
+    ("entity", "Recognises a thing",
+     "It is needed at a thing's name: without it there, the model loses that thing's facts.",
+     "We asked Qwen 333 facts about 90 landmarks, people and works (“Which city is the Eiffel Tower in?”), found each fact's "
+     "key neurons by switching them off, then switched each of those off on every fact. Switching this neuron off only at "
+     "a thing's name (the words “Eiffel Tower”) breaks many of that thing's facts and few others."),
+    ("relation", "Knows the question type",
+     "It is needed for one kind of question, such as “which century?”, whatever it is asked about.",
+     "In the same facts test, switching this neuron off breaks the same kind of question (for example “which century?”) "
+     "for many different concepts, and other kinds of question much less."),
+    ("fact", "Needed for one fact",
+     "It is needed for one particular fact and little else.",
+     "In the same facts test, switching this neuron off breaks one fact, but not the thing's other facts and not the same "
+     "question about other things."),
+    ("era", "Picks out a century",
+     "It fires for people, places and works from one century, however the date is asked for.",
+     "We asked Qwen for the dates of 280 historical people, places and works, in four ways: the year, the century, the "
+     "decade and the period. Ranking the 280 by how strongly this neuron fires separates the ones from its century from "
+     "the rest almost perfectly (a score of 0.9 or more, where 0.5 is chance) in at least three of the four ways of asking."),
+    ("digit", "Tracks how a number is written",
+     "It fires for a digit in a particular place, such as years starting “17”, not for the era itself.",
+     "In the same date test, the neuron separates its dates well only when they are written as numbers (years starting "
+     "“17”), not when they are written in words (“18th century”), and its weights push the model towards that digit "
+     "(“seven”)."),
+    ("scale", "A two-ended scale",
+     "Firing one way pushes towards one end of a scale (north), the other way towards the opposite end (south).",
+     "We read what each side of the neuron pushes from its weights. Two checks then have to pass: each end's description "
+     "must predict which concepts use the neuron that way round, and gently pushing the neuron each way must move the "
+     "model's answers towards that end, more than pushing a random neuron the same amount does."),
+    ("shared", "Shared answer machinery",
+     "It matters for answers of every kind, not just one subject.",
+     "It is among the 10 most important neurons for more than 1% of all the concepts we mapped, or, in the facts test, "
+     "switching it off breaks facts of every kind."),
+    ("label", "One clear job in web text",
+     "It fires for one clear thing in ordinary web text, such as the word “leader”.",
+     "An AI (Luna) reads the 20 places in a large sample of web text where the neuron fires most strongly and describes the "
+     "pattern. A second AI (Jev) then checks the description: it must fit at least 16 of those 20 examples and no more than "
+     "4 of 20 random words, so that a vague description fails."),
+    ("named", "Has a checked name",
+     "It has a short convenience name that passed a blind check.",
+     "Luna names the neuron from what we know about it, with one of the concepts that needs it hidden. A second AI, given "
+     "only the name, has to pick that hidden concept out of five. Of the names Luna was confident about, 84% passed; a "
+     "name from a different neuron passes about one time in eight."),
 ]
 REL_TEXT = {"city": "which city", "country": "which country", "century": "which century", "material": "what it's made of",
             "designer": "who designed it", "birthplace": "where they were born", "occupation": "what they did",
@@ -302,7 +347,7 @@ def main():
     for u, v in SC.items():
         if v["status"] == "confirmed":                 # the job type counts only scales that passed both tests
             UT[u].add("scale")
-    bit = {c: 1 << j for j, (c, _, _) in enumerate(JOB_TYPES)}
+    bit = {c: 1 << j for j, (c, *_) in enumerate(JOB_TYPES)}
     out_n = {f: [] for f in ("L", "i", "x", "y", "r", "role", "key", "u", "s", "nm", "era", "jt")}
     rindex = {r: j for j, r in enumerate(REGIONS)}
     names = checked_names(); name_list = sorted(set(names.values())); name_ix = {s: j for j, s in enumerate(name_list)}
@@ -356,7 +401,7 @@ def main():
         centuries.append(["era-" + cname_.replace(" ", "-"), cname_, None, None, top, None, [], None, "era_formats", 0, [],
                           None, None, None, "era"])
     # facts as things to pick: the neurons whose knockout breaks the fact, coloured by their job class
-    TI = {c: j for j, (c, _, _) in enumerate(JOB_TYPES)}
+    TI = {c: j for j, (c, *_) in enumerate(JOB_TYPES)}
     PRIO = ["entity", "relation", "era", "digit", "fact", "shared", "say", "attribute"]
 
     def fact_class(u, c):
@@ -371,12 +416,12 @@ def main():
         if top:
             facts_out.append(["fact-" + slug_(ent) + "-" + (rel or ""), ent, f["answer"], None, top, None, [], None,
                               f["exp"], 0, [], None, None, None, "fact", rel, REL_TEXT.get(rel, (rel or "").replace("_", " "))])
-    job_counts = {c: sum(1 for k in order if UT.get(k) and c in UT[k]) for c, _, _ in JOB_TYPES}
+    job_counts = {c: sum(1 for k in order if UT.get(k) and c in UT[k]) for c, *_ in JOB_TYPES}
     by_name = {c[1]: c[0] for c in out_c}
     out = {"regions": regions, "neurons": out_n, "concepts": out_c, "names": name_list, "early_cut": EARLY_CUT,
            "eras": [dict(ERA[u], unit=u) for u in era_list], "centuries": centuries, "facts": facts_out,
            "scales": {str(pos[u]): v for u, v in SC.items() if u in pos},
-           "job_types": [{"code": c, "label": l, "how": h, "n": job_counts[c]} for c, l, h in JOB_TYPES],
+           "job_types": [{"code": c, "label": l, "what": w, "how": h, "n": job_counts[c]} for c, l, w, h in JOB_TYPES],
            "links_source": link_src, "n_with_links": sum(1 for c in out_c if c[10]), "links_total": links_total,
            "links_shown": LINKS_SHOWN,
            "picks": [by_name[p] for p in PICKS if p in by_name], "roles": list(ROLE)}
