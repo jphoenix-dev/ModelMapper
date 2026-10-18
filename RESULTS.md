@@ -2738,3 +2738,23 @@ vs 4 rows per pass: relative difference of the J sums grows with backward depth 
 text). Pre-set rule (< 1% every layer AND overlap >= 0.95): FAILS on the sums. Per James's rule ("if not I'd include the
 first 32"): the scaled-up estimate computes all windows 0-255 in ONE configuration (same GPU type, same rows) on rented
 GPUs; the 5090 pilot is not merged in. Files: D:/already-clean-data/jlens/repro/, jlens_compare.txt.
+
+## 18 Oct 2026 - Loop v3 enrichment smoke test: 21 s per concept, all four stages add information (enrich.py)
+
+**Question (James):** enrich existing concepts to parity, skipping what we already have; "75 hours feels like a lot so
+let's smoke test it first ... and re-assess". 50 run-1 concepts (45 fresh + 5 whose E0 was already done), 5090.
+
+| stage | ran / skipped | median time | GPU busy | what it added |
+|---|---|---|---|---|
+| E0 missed candidates | 45 / 5 (skip logic worked) | 8.0 s | 79% | top 30 changes for 35/45 concepts (median 4 entrants) |
+| E2 formats | 50 / 0 | 8.9 s | 74% | short-answer format: activation drops below half for 8% of top-30 neurons, knockout effect for 38% (redundancy); sentence format: 57% below half activation (mostly 'say it now' neurons - the name is not the next token) |
+| E3 nulls (6, layer-matched) | 50 / 0 | 0.5 s | 92% | per-concept floor |
+| E4 subject pass | 50 / 0 | 3.7 s | 74% | 43/50 mapped (>= 3 facts); top-5 drop 0.36 vs null 0.05 |
+
+- **C1 (cost <= 60 s, GPU busy >= 80%):** cost HOLDS (median 21 s per fresh concept; peak 19.3 GB) - far below the 42-60 s
+  estimate; GPU busy FAILS narrowly (74-79%: single-prompt forward passes in E2 and sequential knockouts in E0 leave gaps).
+- **C2 (value):** E0 >= 70% HOLDS (78%); E4 >= 70% HOLDS (86%); E2 >= 20% format-bound HOLDS on knockouts (38% in the
+  like-for-like short format), but the sentence-format measures are not like-for-like (whole-sentence target; name not
+  the next token) and are reported with that caveat.
+- **Revised cost:** 5,028 concepts x 21 s = 29 GPU-hours on the 5090 (vs the 75 h estimate), before cheapening E2.
+Files: D:/already-clean-data/loop_v3/enrich_smoke/ (sample, questions, records.jsonl with every value, summary.txt, run.log).
