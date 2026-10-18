@@ -317,8 +317,9 @@ sinks. H5 needs its own test.
 1. **E7 inhibitors (H1).** Run 1 already saved each concept's full attribution array, so the bottom 30 cost no new
    attribution: knock each out alone on the recall prompts (same procedure as the 200 candidates), plus run 1's nulls.
    Predicted from 0.6B: every concept has some, a handful are shared dampeners, and rivals split into format and content.
-   ~8-10 s per concept on the 5090 -> ~12-14 GPU-hours for 5,028 concepts (or a 500-concept pilot first, ~1.4 hours).
-   New ledger rows: `knockout_drop` with `context=selection=bottom_attr` (negative = raise).
+   **Built 18 Oct** (enrich.py stage E7, opt-in; importer rows; CPU checks) - see LOOP_V3.md 'Order' item 7. Measured cost
+   basis: ~6 s per concept on the 5090 -> ~50 min for a 500-concept pilot, ~8-9 GPU-hours for all 5,028. Not run yet.
+   Ledger rows: `knockout_drop` with `context=stage=E7;selection=bottom_attr;...` (negative = raise).
 2. **Language neurons (H4)**, a global pass: content-matched sentences in 5+ languages, AUC + group knockouts, ~0.5
    GPU-hour. Then per concept, one recall prompt in a second language in E2 (~10 s per concept) would split concept
    neurons from English-answer neurons.
