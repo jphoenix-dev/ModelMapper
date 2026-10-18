@@ -82,6 +82,13 @@ svg.graph .gbox:focus { outline: none; }
 <article class="col">
   <p>In <a href="../">Eiffel Tower Qwen</a> we showed that a handful of neurons carry each concept the model knows: switch them off and it can't name the concept; turn them up and it talks about it. Since then we have run the same test on over 5,000 concepts. This page puts all of those results on one map.</p>
   <p>A model like Qwen reads a question through a stack of layers, one after another. Qwen3-8B has 36 layers and 12,288 neurons in each. On the map, each row is a layer, with the question going in at the top and the answer coming out at the bottom. Each dot is one neuron that matters for at least one of the concepts we tested: about 44,000 of the model's 442,368.</p>
+  <p><b>How it works:</b></p>
+  <ul class="pts">
+    <li><b>Ask.</b> For a given concept, Qwen answers about ten questions about it, such as questions whose answer is the concept's name (“What drink is brewed in a French press?” → Coffee).</li>
+    <li><b>Observe.</b> For every neuron we measure how strongly it fires and how sensitive the answer is to it. Together these estimate how much the answer would suffer if that neuron were switched off: its “effect”.</li>
+    <li><b>Ablate.</b> We switch off the 200 neurons with the biggest estimated effect, one at a time, and keep the 30 with the biggest measured effect.</li>
+  </ul>
+  <p>We ask other kinds of question too, and we name neurons where we're confident in our reading of them, but the core loop is Ask, Observe, Ablate.</p>
 </article>
 
 <figure class="wide" id="fig-map">
@@ -124,7 +131,7 @@ svg.graph .gbox:focus { outline: none; }
   <div class="graphwrap"><svg id="graph" class="graph" role="img" aria-label="The concept's key neurons in groups, with the links between them and the answer"></svg></div>
   <div class="info" id="graphInfo" aria-live="polite"></div>
   <div class="key"><span><i style="background:var(--wash);border:1px solid #aab3ba"></i>a group with a known job</span><span><i style="background:#fff;border:1px dashed #aab3ba"></i>job not yet clear</span><span><b style="color:var(--muted)">⟶</b> switching off the first group weakens the second</span><span><b style="color:var(--accent)">⇢</b> dashed: it strengthens it</span></div>
-  <figcaption><b>Figure 2.</b> A graph of one concept, in the style of the circuit diagrams in <i>Neural Networks Are Already Clean</i>, built only from neurons on the map. Rows follow the layers: early layers at the bottom, then the later neurons, split by whether their weights push the answer's own word. Groups come from what we already know about each neuron, strongest evidence first: its checked name, a tested job, being shared by answers of every kind, or pushing the answer's word. Neurons with none of these go in a dashed box. Lines are measured links (point 3 under “What the map shows so far”): switching off one of the 30 changes how strongly another fires, well beyond what switching off a comparable random neuron does. We add up the links between each pair of groups and draw the strongest. Lines into the answer are as thick as the answer's loss when each neuron in the group is switched off, added up.</figcaption>
+  <figcaption><b>Figure 2.</b> A graph of one concept, in the style of the circuit diagrams in <i>Neural Networks Are Already Clean</i>, built only from neurons on the map. Rows follow the layers: early layers at the bottom, then the later neurons, split by whether their weights push the answer's own word. Groups come from what we already know about each neuron, strongest evidence first: its checked name, a tested job, being shared by answers of every kind, or pushing the answer's word. Neurons with none of these go in a dashed box. Lines are measured links (point 3 under “What the map shows so far”): switching off one of the 30 changes how strongly another fires, well beyond what switching off a comparable random neuron does. We add up the links between each pair of groups and draw the strongest. Lines into the answer are as thick as how much the answer suffers when each neuron in the group is switched off, added up.</figcaption>
 </figure>
 
 <article class="col">
