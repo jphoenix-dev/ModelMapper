@@ -1,5 +1,7 @@
 # Model Mapper
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23459925.svg)](https://doi.org/10.5281/zenodo.23459925)
+
 **Model Mapper** maps what the individual MLP neurons of an open-weights language model do. It finds which neurons
 a concept depends on, tests how few are enough, labels neurons with one LLM and grades the labels with another, and
 steers the model with them. Every stage has controls. The code runs on one consumer GPU, and the model, the
