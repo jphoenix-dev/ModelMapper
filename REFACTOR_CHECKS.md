@@ -223,3 +223,21 @@ A CLI bug, found and fixed while doing this:
 Not run: the mechanisms model scripts (0.6B CPU runs of 10-60 min each that write to `<AC_DATA_DIR>/mechanisms`),
 the E7 stage (needs the 5090) and the jlens merge (needs the shard files). Their changes are research's own lines,
 merged as they were.
+
+## Third round: research/attention 0975846 and release-2026-10-18 3d4efec
+
+Both merged without conflicts.
+- research/attention had moved one commit past the requested 6aab5a6, to 0975846 ("jlens merge: accept an earlier
+  merge's output"). Its tip is in, so 6aab5a6 is too.
+- The changes landed in the package paths: `experiments/jlens.py`, and `ledger/importers/jlens.py`, which is the
+  same blob as research's. Nothing was recreated under `src/`.
+- 3d4efec includes research/map-page 78c718c (`explainer/gen/map/push_words_jlens.py`). It gets no CLI entry: the
+  map-page generators in `explainer/gen/map/` (`push_words.py` among them) stay outside the package and the CLI.
+
+| check | result |
+|---|---|
+| Static import check | PASS: 254 files; the merged `experiments/jlens.py` has no bare imports or `sys.path` edits |
+| CLI smoke | PASS: 455 invocations, 237 old paths, registry 73 = 73 |
+| `v3_snapshot_findings` (same snapshot input, unchanged) | **byte-identical** to research's `snapshot_findings.txt` |
+
+No ledger rebuild this round: the new jlens importer rows only appear once `D:/already-clean-data/jlens256` exists.
