@@ -95,7 +95,8 @@ as cleanly as named things (median k 1 vs 2; recall 83% vs 85%), with a modest w
 topic jobs (rivers, Indonesia, dance...), spelling jobs ('v', 'm', 'New'), generic answer-format machinery (hundreds of
 users). Machinery is fed by the same upstream neurons for every concept (feeder Jaccard 0.45); topic neurons share a
 minority of feeders (0.11, chance ~0) that are themselves readable attributes (Italy + film -> the Fellini neuron).
-Mostly not polysemantic here; a minority pack unrelated meanings (Czech + Xi'an).
+Mostly not polysemantic here; a minority look like packed unrelated meanings (Czech + Xi'an) - untested, possibly a
+shared surface feature (sound/spelling). Neuron names like 'rivers' are informal readings of push tokens + users.
 
 ## Next step after loop v2 run 1 (James, 17 Oct night)
 **Question-side test: are concept neurons "say it" neurons or meaning neurons?** Every map so far was found and tested
@@ -114,6 +115,12 @@ sources (landmarks first). Measure each neighbour's naming recall AND its fact q
 split by the zeroed neurons' roles (say / attribute / early). Prediction (stated before running): damage falls with
 distance; 'say' neurons stay specific; attribute neurons partly damage neighbours that share the attribute (cf. the
 attribute-sharing result). Measures how specific a concept's neuron combination is, and why.
+
+## Later: common-neuron analysis (James, 18 Oct)
+Test whether 'unrelated' users of a shared neuron share a surface feature (sound, spelling, script) rather than a
+meaning - e.g. does the Czech / Xi'an neuron (L29:4682) also respond to other Ch- / Xi- / Sh- names (Chechnya,
+Shaanxi, Xinjiang) in web text and in its push? Replace informal neuron names with no labels or a stated, checked
+method (blind labeller on push tokens + users, second labeller for agreement).
 
 ## Open questions and next tests
 1. **Concept = intersection of jobs? Partly (17 Oct evening).** From the weights (direct pushes): in 60% of concepts

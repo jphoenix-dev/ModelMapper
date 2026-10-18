@@ -2262,7 +2262,13 @@ results/loop_v2/run1/.)
 - **Same job, mechanically:** a neuron's push direction is fixed by its weights x the sign of its activation. That
   sign agrees across ALL its users for 79% of shared neurons (median agreement 100%). Roles: 1,709 are attribute /
   late-other for every user, 629 'say' for some users, 227 'say' for all, 445 early.
-- **Three kinds (readable from the push tokens and users):**
+- **Three kinds (readable from the push tokens and users).** NOTE (James, 18 Oct): the names below ('rivers',
+  'happily ever after', 'Indonesia', ...) are my INFORMAL readings of two pieces of data - the tokens a neuron's weights
+  push and the concepts whose maps use it - not systematic labels; 'happily ever after' is shaky (Romeo and Juliet
+  doesn't end happily; 'fairy-tale / romance stories' fits better). The push tokens and users are the evidence (in
+  shared_neurons.json); any future labels need a stated method (e.g. blind labeller + agreement check).
+  Likewise 'packed unrelated meanings' (Czech + Xi'an) is untested: it may be a shared surface feature (sound or
+  spelling, cf. the cats/cars 'V shape' example) rather than two meanings.
   - *topic jobs*, small coherent groups: rivers (7 rivers and a lake), Indonesia (Bali, Aceh, clove, the
     language, the revolution), dance, refrigeration, 'happily ever after' (Cinderella, Aladdin, Romeo and Juliet),
     genus endings (-opsis, -occus), Russian first names (Chekhov, Rachmaninoff, Pasternak);
@@ -2290,6 +2296,6 @@ results/loop_v2/run1/.)
   neuron (pushes family names) <- a 'families' neuron; the seas neuron <- a 'rivers' neuron.
 - **Reading:** shared neurons are mostly NOT polysemantic in this setting. Machinery neurons do one task-level job with
   fixed inputs. Topic neurons do one output job, reached from partly shared attribute feeders plus concept-specific
-  ones - a visible hierarchy (Italy + film -> Italian cinema -> Fellini). A minority pack unrelated meanings.
+  ones - a visible hierarchy (Italy + film -> Italian cinema -> Fellini). A minority appear to pack unrelated meanings (untested: possibly shared surface features).
 - **Caveats:** top-20 feeders by first-order attribution (not knockouts); the same-concept baseline is small (27
   pairs); 'topic' vs 'machinery' split by user count, not a test of meaning.
