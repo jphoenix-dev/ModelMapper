@@ -71,6 +71,7 @@ concept neurons. (Moderate as a general claim: 218 neurons, one task.)
 ## Moderately supported
 
 **M1. Early neurons (0-19) that matter for facts act at the entity's own name tokens and carry entity-level knowledge.**
+(Replicated on 333 facts / 3 kinds: layers 0-9 2.90 of 2.90 at the name; people weaker.)
 - *Position:* zeroing them only at the landmark's name tokens reproduces nearly all of their effect (layers 0-9: 2.60 of
   2.72; 10-19: 1.46 of 1.58), at the last position nothing (0.00 / 0.01) (facts grid).
 - *Job class:* 23 of 59 are entity neurons (all of one landmark's facts drop, other landmarks' do not), 1 is a relation
@@ -80,7 +81,8 @@ concept neurons. (Moderate as a general claim: 218 neurons, one task.)
 - *Why only moderate on its own:* 59 early neurons, landmarks only, found via answer-ranked maps; class thresholds chosen
   by us (stated before looking). Now backed by the direct entity search (S4).
 
-**M2. Mid-to-late neurons (20-35) include relation neurons that act at the answer position.** The cleanest example,
+**M2. Mid-to-late neurons (20-35) include relation neurons that act at the answer position.** (Scaled: 45% of layer-20-27
+fact neurons are relation neurons, 255 overall across 11 relations.) The cleanest example,
 L30:8291 ('century built'), costs ~3.2 log-odds on the century fact of every landmark tested and nothing on their other
 facts; 61 relation-class neurons, 11 of them in 20-27 and 50 in 28-35 (facts grid). *Why only moderate:* 5 relations,
 one entity type, one strong example dominating.
@@ -89,7 +91,9 @@ one entity type, one strong example dominating.
 every fact with the same answer (124/219; e.g. a '19th century' neuron across four 19th-century landmarks, 'Vatican City',
 'marble'; layers 29-33) and relation neurons shared by question type (45/219; 'century built'). The fact itself is a
 factorised lookup - entity (early, rows) x relation (mid-late, columns) -> value (late, shared by all entities with that
-value). Moderate: landmarks, 5 relations; the entity -> value chain is not yet tested causally.
+value). The entity -> value route is causal and specific: zeroing an entity's top-5 early neurons at its name lowers the
+shared value neuron at the answer (median 7.3%; answer -1.78 log-odds; controls exactly 0; 71% of 657 pairs) - but
+distributed (top-1 alone: 2.2%; the pre-set 20% prediction failed). Moderate.
 
 **M3. Layers ~16-24 host shared answer-format machinery.** 35 neurons in 16-24 fire for every concept (cross-activation,
 16 Oct); the most widely shared neurons (hundreds of concepts, e.g. L20:7473) are fed by the same upstream neurons
@@ -124,7 +128,8 @@ on its own topic hurts prediction in layers 24-35 (+0.004-0.005 nats/token), not
   maps put them.
 
 ## Next tests that would most strengthen or overturn the picture
-1. **Scaled grid** (running; direct entity neurons done - S4): job classes and positions for people and works.
+1. **Done (scaled grid):** replicates for landmarks and works; people weaker (fewer early entity neurons, relation neurons
+   dominate their mid layers) - investigate why.
 2. **Relation neurons beyond 'century':** do 'nationality', 'creator', 'language' neurons exist, and where?
 3. **Input side by layer:** what tokens / contexts each class fires on (the atlas), to connect entity neurons to the
    entity's name tokens on the input side as well.

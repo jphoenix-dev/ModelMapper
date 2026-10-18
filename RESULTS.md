@@ -2493,3 +2493,40 @@ answer vs same-relation facts with a DIFFERENT answer vs the rest (219 neurons w
   relation neurons mid-late (columns), answer-value neurons late (the values) - and the value neurons are shared by every
   entity with that value. Not yet tested: the chain (does zeroing an entity neuron at the name lower the value neuron's
   activation at the answer position?) and numeric facts (height).
+
+## 18 Oct 2026: scaled facts grid (landmarks, people, works) + the fact route, causally (research branch)
+(`facts2.py` map / grid / position; `chain.py`; outputs D:/already-clean-data/facts2/, summaries in results/facts2/.)
+**Scaled grid (333 facts, 11 relations, 3 kinds) replicates the landmark picture:**
+
+| fact neurons | n | zeroed only at the name tokens | only at the last position | job classes |
+|---|---|---|---|---|
+| layers 0-9 | 109 | 2.90 of 2.90 | 0.00 | entity 50, fact-specific 49, relation 9 |
+| layers 10-19 | 44 | 1.46 of 2.12 | 0.00 | fact-specific 31, entity 10 |
+| layers 20-27 | 139 | 0.01 | 1.84 | **relation 63 (45%)**, fact-specific 43, generic 22 |
+| layers 28-35 | 707 | 0.00 | 1.75 | fact-specific 457, relation 182 |
+
+- Fact maps' top-5 again have naming maps' layer profile (median 30; 18% vs 16% below layer 20): the 'fact neurons
+  earlier' prediction fails again as stated - answer-ranked maps find answer-writers.
+- By kind: landmarks and works match cleanly (early neurons act at the name: 2.21 of 2.30, 2.77 of 2.82); PEOPLE are
+  weaker - fewer early fact neurons (25, mostly fact-specific, 4 entity), only about half their effect at the name (1.55 of
+  2.90), and relation neurons dominate their mid layers (35 of 58) - another people anomaly (cf. no P4 family signal, fewer
+  'say' neurons for historical people).
+- Relation neurons by relation: century 124, country 64, medium 22, creator 13, language 10 - the 'century' neuron
+  L30:8291 again strongest (same-relation drop ~4.2).
+**Fact route (James: entity -> value):** for each shared answer-value neuron V (151, from the scaled grid) and every fact
+with V's answer, the entity's direct entity neuron(s) zeroed ONLY at its name; V's activation at the answer position
+measured (sign-aligned), vs a random same-layer neuron and another entity's neuron (controls).
+
+| zeroed at the name | V's relative activation drop (median) | answer log-odds drop | pairs where entity > both controls |
+|---|---|---|---|
+| entity's top-1 entity neuron | 2.2% | 0.59 | 430/647 (66%) |
+| entity's top-5 together (follow-up) | 7.3% | 1.78 | 465/657 (71%) |
+| random neurons / another entity's | 0.0% | 0.00 | - |
+
+- **Prediction (median V drop >= 20% for the top-1) FAILED.** The route is real and completely specific (controls exactly
+  0) but each early entity neuron supplies only a slice of what drives the shared value neuron; five give ~3x one. Large
+  cases: van Gogh -> 'painter' (> 100%), Symphony No. 9 -> '19th', Sistine Chapel / Columbus -> '15th', Sagrada Família ->
+  'Antoni Gaudí'.
+- **Reading:** entity -> value is a causal, specific route, but an entity's knowledge is distributed over many early
+  neurons (and the value neuron has other inputs: relation heads, other neurons). Consistent with the factorised-lookup
+  picture; not a single-wire one.
