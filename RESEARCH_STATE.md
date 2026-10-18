@@ -1,7 +1,9 @@
 # Where the research stands (research branch; living document, last updated 17 Oct 2026 evening)
 
 One place for the current picture. Everything here is exploratory unless marked as pre-registered. The evidence and
-caveats are in the dated RESULTS.md entries named in brackets. Nothing on this branch is published.
+caveats are in the dated RESULTS.md entries named in brackets. Released with the 18 Oct 2026 snapshot; the 18 Oct
+work since this page's last update (ledger, facts / numeric / era / magnitude studies, J-lens, loop v3 pilots, two-ended
+neurons) is in RESULTS.md, LAYERS_AND_JOBS.md, LEDGER.md and LOOP_V3.md.
 
 ## The goal (James, 17 Oct)
 A mechanism that tells us something informative and queryable later about how any model maps neurons (and attention

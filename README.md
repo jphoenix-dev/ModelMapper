@@ -24,6 +24,25 @@ model builds concepts out of such neurons. We tested this on **Qwen3-8B** (36 la
 > Qwen3-32B. No other model families or sizes were tested. Most results are exploratory. The pre-registered
 > experiments are CR, CEN, H-DEPTH and the confirmatory CR-3 ([PREREG.md](PREREG.md)).
 
+> **Since the first release (17-18 Oct 2026; exploratory, work in progress).** The project moved from testing the
+> essay to building a reusable map of what Qwen3-8B's neurons and heads do. None of this changes the headline results
+> below; each item says how strongly it is supported.
+> - **Mapping loop v2, run 1:** 5,000 Wikipedia Vital Articles concepts mapped to neurons and heads, with controls
+>   ([LOOP_V2.md](LOOP_V2.md), [PREREG_MAP.md](PREREG_MAP.md)).
+> - **Layers and jobs:** what can and cannot be said about the job of each layer band, graded by evidence
+>   ([LAYERS_AND_JOBS.md](LAYERS_AND_JOBS.md)).
+> - **The ledger:** every measurement about every neuron / head / concept in one queryable store, with a format for
+>   third-party contributions ([LEDGER.md](LEDGER.md), [src/ledger/](src/ledger/)).
+> - **Loop v3 (in progress):** an enrichment pass over every mapped concept, adding knowledge neurons acting at the
+>   concept's name, answer formats, missed candidates and stronger nulls ([LOOP_V3.md](LOOP_V3.md)).
+> - **Details and caveats:** the dated entries in [RESULTS.md](RESULTS.md); the current picture in
+>   [RESEARCH_STATE.md](RESEARCH_STATE.md).
+>
+> Several runs were still going at the time of this snapshot (links between key neurons, a larger J-lens estimate,
+> attribution graphs, loop v3). Their results will follow. Research scripts read their data from `AC_DATA_DIR` (default
+> `D:/already-clean-data`), `LEDGER_DIR`, `AC_REPO_RESULTS` and `MODEL_MAPPER_MODELS`; the bulk data (tens of GB) is not
+> in this repository.
+
 ## Headline results (Qwen3-8B)
 
 The full account is in [REPORT.md](REPORT.md) (the write-up) and [RESULTS.md](RESULTS.md) (chronological log).
