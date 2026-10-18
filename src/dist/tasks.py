@@ -537,4 +537,6 @@ def map_task(store, task_id, ctx, key):
             "output_mb": round(n_bytes / 1e6, 1), "env_vars": {k: os.environ.get(k) for k in (ctx.cfg.get("env") or {})}}
 
 
-RUNNERS = {"observe": observe, "merge": merge_observe, "ablate": ablate, "map": map_task}
+from dist.links import links_task  # noqa: E402
+
+RUNNERS = {"observe": observe, "merge": merge_observe, "ablate": ablate, "map": map_task, "links": links_task}
