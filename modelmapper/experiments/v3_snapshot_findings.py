@@ -9,12 +9,13 @@ candidates (same procedure). Base P(answer) per prompt from E0's record.
   E3             layer-matched null floor
 Output: D:/already-clean-data/loop_v3/enrich_run1/snapshot_findings.txt.  Usage: python src/loop_v2/v3_snapshot_findings.py
 """
-from modelmapper.core.settings import DATA_DIR
 import glob
 import json
 import math
 import statistics as stx
 from pathlib import Path
+
+from modelmapper.core.settings import DATA_DIR
 
 D = DATA_DIR
 SNAP = sorted((D / "loop_v3/enrich_run1").glob("records_snapshot_*.jsonl"))[-1]

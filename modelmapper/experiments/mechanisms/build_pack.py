@@ -8,10 +8,11 @@ set of 20 neurons) are rows without a unit, with the set in details. Then:
   modelmapper ledger pack validate modelmapper/ledger/contrib/mechanisms && modelmapper ledger pack from-jsonl ...
 Usage: python -X utf8 src/mechanisms/build_pack.py
 """
-from modelmapper.core.settings import DATA_DIR, REPO_ROOT
 import json
 import sys
 from pathlib import Path
+
+from modelmapper.core.settings import DATA_DIR, REPO_ROOT
 
 ROOT = REPO_ROOT
 from modelmapper.ledger.core import concept_id  # noqa: E402
