@@ -1,0 +1,2 @@
+{"importer": "research_claims", "contributor": "already-clean research (James + Claude)", "model": "qwen3-8b",
+ "note": "Curated claims from RESULTS.md / LAYERS_AND_JOBS.md for findings after the map visualiser's findings/*.jsonl (18 Oct 2026). Append a line to claims.jsonl and run: python src/ledger/pack.py from-jsonl src/ledger/contrib/research_claims"}
