@@ -34,7 +34,7 @@ from dist import runpod_api as rp  # noqa: E402
 from dist.storage import open_store  # noqa: E402
 from dist.manifest import state  # noqa: E402
 
-POD_ENV_KEYS = ["S3_ENDPOINT_URL", "S3_ACCESS_KEY_ID", "S3_SECRET_ACCESS_KEY", "S3_REGION", "HF_TOKEN"]
+POD_ENV_KEYS = ["S3_ENDPOINT_URL", "S3_ACCESS_KEY_ID", "S3_SECRET_ACCESS_KEY", "S3_REGION", "HF_TOKEN", "DIST_MAX_GB"]
 STOCK_IMAGE = "runpod/pytorch:1.4.0-cu1281-torch2121-ubuntu2204"   # RunPod's own (often cached on hosts); torch 2.12.1
 CODE_PATHS = ["requirements-dist.txt", "src/config.py", "src/neurons.py", "src/dist",
               # loop v2 (map tasks) and its import chain; no keys are read at import, and Atlas/stats load lazily
@@ -163,7 +163,7 @@ def terminate_all(name, why, led=None):
     return len(left)
 
 
-def drain(store, tasks, pending, dest):
+def drain(store, tasks, pending, dest, max_bytes=6e9):
     """Copy finished results that no pending task still needs to `dest`, then delete them from the bucket (keeping
     the small meta.json and _DONE markers there, so the run's state is unchanged). Frees bucket storage as we go."""
     import fnmatch
@@ -190,6 +190,9 @@ def drain(store, tasks, pending, dest):
                 out.write_bytes(data)
             if out.stat().st_size == size:           # delete from the bucket only once the local copy is complete
                 store.delete(k); moved += size
+            if moved >= max_bytes:                       # bounded: the launcher's checks must not wait an hour on a drain
+                print(f"drained {moved/1e9:.3f} GB to {dest} (more next interval)", flush=True)
+                return moved
     if moved:
         print(f"drained {moved/1e9:.3f} GB to {dest}", flush=True)
     return moved
