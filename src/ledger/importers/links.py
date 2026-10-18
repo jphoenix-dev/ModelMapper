@@ -90,10 +90,47 @@ def import_indirect(force):
 
 
 def import_links_run1(force):
-    files = sorted(LR.rglob("*.json*")) if LR.exists() else []
-    if not files:
+    """Format (gpu-fan-out, src/dist/links.py on research/distributed 5d851e8): <LR>/results/links/<batch>/{records.jsonl,
+    links.jsonl, arrays.npz}; links.jsonl one row per (i, j) with layer_i < layer_j, passing or not."""
+    batches = sorted(p.parent for p in LR.rglob("links.jsonl")) if LR.exists() else []
+    if not batches:
         print("links_run1: no data yet at", LR); return
-    raise SystemExit("links_run1: data has landed - write the reader for its final format (ask gpu-fan-out for field names) before importing")
+    inputs = [f for b in batches for f in (b / "records.jsonl", b / "links.jsonl") if f.exists()] + ([LINKS_MD] if LINKS_MD.exists() else [])
+    with PackWriter("links_run1", inputs=inputs, code=[__file__], force=force) as pw:
+        if pw.skip:
+            print("links_run1: unchanged, skipped"); return
+        pw.experiment("links_run1", title="Links between each run-1 concept's 30 key neurons (zero i, measure later j)",
+                      method=LINKS_MD.read_text(encoding="utf-8") if LINKS_MD.exists() else "See LINKS.md (map worktree).",
+                      status="exploratory (pass rule fixed before the run)", status_class="exploratory", date="2026-10-18",
+                      script="src/dist/links.py (branch research/distributed) via the gpu-fan-out runner",
+                      reproduce="python src/dist/make_run.py --kind links ...   (gpu-fan-out session)",
+                      data_files=["data:loop_v2/links_run1/results/links/<batch>/{records.jsonl,links.jsonl,arrays.npz}"],
+                      caveats=["Answer position only (the last prompt token); first answer token's log-odds.",
+                               "Activation-matched nulls (same layer, outside the top 30, closest |activation|)."],
+                      docs=["LINKS.md (map worktree)"], params={"link_rule": link_rule()})
+        for b in batches:
+            rel = b.relative_to(DATA_ROOT).as_posix()
+            for i, r in enumerate(read_jsonl(b / "records.jsonl")):
+                c = thing(pw, r["concept"])
+                pw.evidence(experiment="links_run1", concept=c, evidence_type="concept_stat", metric="links_gate_and_counts", value=r.get("n_links_passing"),
+                            n=r.get("n_prompts"), details={k: r.get(k) for k in ("units", "types", "answer_id", "gate_zero_fail", "gate_logodds_fail",
+                                                                                  "n_pairs", "n_links_passing", "source", "array_index", "prompts")},
+                            key=f"rec|{rel}|{i}", source=f"{rel}/records.jsonl#{i}")
+            for i, x in enumerate(read_jsonl(b / "links.jsonl")):
+                c = thing(pw, x["concept"]); md = x.get("mean_drop")
+                ctx = f"direction={x.get('direction') or ('supports' if (md or 0) > 0 else 'suppresses' if md else 'none')}"
+                if x.get("type_i"):
+                    ctx += f";roles={x.get('type_i')}->{x.get('type_j')}"
+                pw.evidence(experiment="links_run1", unit=x["unit_i"], unit2=x["unit_j"], concept=c, evidence_type="causal_link",
+                            metric="relative_activation_drop", value=md, noise_floor=abs(x["mean_null"]) if x.get("mean_null") is not None else None,
+                            n=x.get("n_prompts"), threshold=0.05, passes=bool(x.get("passes")), context=ctx,
+                            details={k: x.get(k) for k in ("mean_null", "sign_agree", "n_agree", "i", "j", "layer_i", "layer_j")},
+                            key=f"link|{rel}|{i}", source=f"{rel}/links.jsonl#{i}")
+            if (b / "arrays.npz").exists():
+                pw.artifact(b / "arrays.npz", experiment="links_run1", fmt="npz",
+                            keys={"<array_index>|acts": "float32 [P, 61, 30]: row 0 base, 1-30 unit k zeroed, 31-60 its null zeroed",
+                                  "<array_index>|logodds": "float64 [P, 61] first-token log-odds per row"},
+                            description=f"links_run1 dense arrays, batch {b.name}")
 
 
 def main(force=False):
