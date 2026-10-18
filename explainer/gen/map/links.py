@@ -57,15 +57,24 @@ def from_records(path):
 
 
 def load():
-    """Prefer the run-1 links file (already computed by the run, per LINKS.md); fall back to the indirect-path records."""
-    f = RUN1 / "links.jsonl"
-    if f.exists():
+    """Prefer the run-1 links (computed by the run, per LINKS.md; one links.jsonl per batch); fall back to the
+    indirect-path records (555 concepts, top 5)."""
+    files = sorted((RUN1 / "results" / "links").glob("*/links.jsonl"))
+    if files:
         out = {}
-        with open(f, encoding="utf-8") as fh:
-            for line in fh:
-                r = json.loads(line)
-                out.setdefault(r["concept"], []).append(r)
-        return out, "links_run1"
+        for f in files:
+            with open(f, encoding="utf-8") as fh:
+                for line in fh:
+                    r = json.loads(line)
+                    if r.get("mean_drop") is None:                 # pair with no usable prompts: nothing measured
+                        continue
+                    out.setdefault(r["concept"], []).append({
+                        "from": r["unit_i"], "to": r["unit_j"], "drop": r["mean_drop"], "null": r["mean_null"],
+                        "n": r["n_prompts"], "agree": r["sign_agree"], "passes": bool(r["passes"])})
+        if INDIRECT.exists():                              # concepts only in the earlier maps keep their top-5 links
+            for c, v in from_records(INDIRECT).items():
+                out.setdefault(c, v)
+        return out, "links_run1 (+ indirect_path for concepts not in run 1)"
     if INDIRECT.exists():
         return from_records(INDIRECT), "indirect_path"
     return {}, None

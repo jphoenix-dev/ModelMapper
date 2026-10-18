@@ -134,7 +134,7 @@
         const on = focus < 0 || a === focus || b === focus;
         const x1 = px(xa), y1 = py(N.L[a], N.y[a]), x2 = px(xb), y2 = py(N.L[b], N.y[b]);
         ctx.strokeStyle = d > 0 ? C.acc : C.ink; ctx.setLineDash(d > 0 ? [] : [3, 3]);
-        ctx.globalAlpha = on ? (focus >= 0 ? 0.9 : 0.45) : 0.08; ctx.lineWidth = 0.8 + Math.min(4, Math.abs(d) / 100 * 8);
+        ctx.globalAlpha = (on ? (focus >= 0 ? 0.9 : 0.45) : 0.08) * (d > 0 ? 1 : 0.6); ctx.lineWidth = 0.8 + Math.min(4, Math.abs(d) / 100 * 8);
         const mx = (x1 + x2) / 2 + (y2 - y1) * 0.18, my = (y1 + y2) / 2;
         ctx.beginPath(); ctx.moveTo(x1, y1); ctx.quadraticCurveTo(mx, my, x2, y2); ctx.stroke();
         // arrowhead at the later neuron
@@ -451,7 +451,9 @@
     $("summary").innerHTML = `<b>${esc(c[1])}</b>${answer}.` +
       (c[11] != null && c[12] ? ` On a typical question Qwen gives the right answer a ${pct(P(c[11]))} chance; switching off its top neuron takes that to ${pct(P(c[11] - Math.max(0, c[12][0])))}${k5 != null ? `, and its top five to ${pct(P(c[11] - Math.max(0, k5)))}` : ""}.` : "") +
       (lens && first >= 0 ? ` The answer reaches the top 10 at layer ${first}.` : lens ? "" : " (Answer ranks not measured for this concept.)") +
-      (c[10] && c[10].length ? ` Arrows show ${c[10].length} measured link${c[10].length > 1 ? "s" : ""} between its neurons.` : ` <span class="muted">No links measured for this concept yet.</span>`) +
+      (c[10] && c[10].length ? (() => { const tot = (D.links_total || {})[c[0]] || c[10].length;
+        return ` Arrows show ${tot > c[10].length ? `the ${c[10].length} strongest of ${tot}` : c[10].length} measured link${tot > 1 ? "s" : ""} between its neurons.`; })()
+        : ` <span class="muted">No links measured for this concept.</span>`) +
       (hidden ? ` <span class="muted">${hidden} of its 30 neurons sit in other columns; <a href="#" id="unzoom">show all subjects</a> to see them.</span>` : "") +
       (LINKS ? ` <a href="index.html#/concept/${encodeURIComponent(c[0])}">Details →</a>` : "");
     const uz = $("unzoom"); if (uz) uz.addEventListener("click", (e) => { e.preventDefault(); setZoom(-1); });
