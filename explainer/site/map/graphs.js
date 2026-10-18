@@ -21,8 +21,9 @@
   const hoverable = window.matchMedia && window.matchMedia("(hover: hover)").matches;
   let CG = null, cur = null, G = null, removed = new Set(), focus = -1, pinned = -1;
 
-  const P = (lo) => 1 / (1 + Math.exp(-lo));
-  const pct = (p) => { const v = p * 100; return v >= 99.5 ? (100 - v < 0.01 ? "over 99.99%" : v.toFixed(2) + "%") : v >= 10 ? Math.round(v) + "%" : v >= 1 ? v.toFixed(1) + "%" : v < 0.01 ? "under 0.01%" : v.toFixed(2) + "%"; };
+  // how often Qwen gets it right, or for near-certain answers how often it gets it wrong (shared with Figure 1)
+  const state = (lo) => window.NeuronMap.state(lo);
+  const transition = (base, drop, what) => window.NeuronMap.transition(base, drop, what);
 
   function wrap(label, max) {
     const words = String(label).split(/\s+/), lines = [""];
@@ -100,7 +101,7 @@
     const nOff = removed.size;
     s += `<g><rect x="${A.x}" y="${A.y}" width="${A.w}" height="${A.h}" rx="3" fill="#fff" stroke="${ink}" stroke-width="1.4"/>` +
       wrap(`“${G.answer}”`, Lo.narrow ? 14 : 20).slice(0, 2).map((ln, j, arr) => `<text x="${A.x + A.w / 2}" y="${A.y + A.h / 2 + 1 + (j - (arr.length - 1) / 2) * 14 - (G.base != null ? 6 : -4)}" text-anchor="middle" class="ans">${esc(ln)}</text>`).join("") +
-      (G.base != null ? `<text x="${A.x + A.w / 2}" y="${A.y + A.h - 8}" text-anchor="middle" class="sub">chance ${pct(P(G.base))}</text>` : "") + `</g>`;
+      (G.base != null ? `<text x="${A.x + A.w / 2}" y="${A.y + A.h - 8}" text-anchor="middle" class="sub">${esc(state(G.base).replace(" time in ", " in ").replace(" of the time", ""))}</text>` : "") + `</g>`;
     // the groups
     G.groups.forEach((g, j) => {
       const p = Lo.pos[j]; if (!p) return;
@@ -139,13 +140,13 @@
     const box = $("graphInfo");
     if (!G) return;
     if (j < 0) {
-      box.innerHTML = `<span class="muted">${hoverable ? "Hover over a group to see its neurons; click it to take it out of the picture." : "Tap a group to see its neurons."}</span>`;
+      box.innerHTML = `<span class="muted">${hoverable ? "Hover over a group to see its neurons. Click it once to pin it here, again to take it out of the picture, and a third time to put it back." : "Tap a group to see its neurons. Tap it again to take it out of the picture, and a third time to put it back."}</span>`;
       return;
     }
     const g = G.groups[j], NM = window.NeuronMap, off = removed.has(j);
     const ls = g.layers[0] === g.layers[1] ? `layer ${g.layers[0]}` : `layers ${g.layers[0]}–${g.layers[1]}`;
     const top = g.members[0];
-    const alone = G.base != null && top.drop > 0 ? ` ${g.n === 1 ? "Switching it off" : "Switching off its strongest neuron alone"} takes the answer's chance from ${pct(P(G.base))} to ${pct(P(G.base - top.drop / 100))}.` : "";
+    const alone = G.base != null && top.drop > 0 ? ` On a typical question, ${transition(G.base, top.drop / 100, g.n === 1 ? "it" : "its strongest neuron alone")}.` : "";
     box.innerHTML = `<b>${esc(g.label)}</b> <span class="muted">· ${g.n} ${plural(g.n, "neuron", "neurons")} · ${ls}</span><br>` +
       `${esc(KIND[g.kind] || "")}${alone}<br>${linkWords(j)}<br>` +
       `<span class="muted">${g.n === 1 ? "The neuron" : "Its neurons, strongest first"} (open in Figure 1):</span> ` + g.members.slice(0, 12).map((m) => {
@@ -177,16 +178,21 @@
 
   const svg = $("graph");
   const boxOf = (e) => { const b = e.target.closest(".gbox"); return b ? +b.dataset.g : -1; };
-  svg.addEventListener("mouseover", (e) => { if (!hoverable) return; const j = boxOf(e); if (j >= 0 && j !== focus) { focus = j; draw(); panel(j); } });
+  // hover shows a group (unless another is pinned); clicks cycle: pin it, take it out, put it back and unpin
+  svg.addEventListener("mouseover", (e) => { if (!hoverable) return; const j = boxOf(e); if (j >= 0 && j !== focus) { focus = j; draw(); if (pinned < 0) panel(j); } });
   svg.addEventListener("mouseleave", () => { if (!hoverable) return; focus = -1; draw(); panel(pinned); });
+  function cycle(j) {
+    if (pinned !== j) pinned = j;
+    else if (!removed.has(j)) removed.add(j);
+    else { removed.delete(j); pinned = -1; }
+    draw(); panel(pinned >= 0 ? pinned : hoverable ? focus : -1);
+  }
   svg.addEventListener("click", (e) => {
     const j = boxOf(e);
-    if (j < 0) { if (pinned >= 0) { pinned = -1; draw(); panel(-1); } return; }
-    if (hoverable) { removed.has(j) ? removed.delete(j) : removed.add(j); pinned = j; }   // mouse: click takes it out
-    else pinned = pinned === j ? -1 : j;                                                    // touch: tap shows it
-    draw(); panel(pinned);
+    if (j >= 0) cycle(j);
+    else if (pinned >= 0) { pinned = -1; draw(); panel(-1); }
   });
-  svg.addEventListener("keydown", (e) => { const j = boxOf(e); if (j >= 0 && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); removed.has(j) ? removed.delete(j) : removed.add(j); pinned = j; draw(); panel(j); } });
+  svg.addEventListener("keydown", (e) => { const j = boxOf(e); if (j >= 0 && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); cycle(j); } });
   $("graphInfo").addEventListener("click", (e) => {
     const t = e.target.closest("#graphToggle");
     if (t) { const j = focus >= 0 ? focus : pinned; if (j >= 0) { removed.has(j) ? removed.delete(j) : removed.add(j); pinned = j; draw(); panel(j); } return; }
