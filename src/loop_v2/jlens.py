@@ -160,14 +160,26 @@ def estimate(n_windows, start=0, end=None):
 
 def merge(paths):
     """Sum shard files (and/or the pilot j_sums.pt) into OUT/j_sums.pt; the previous j_sums.pt is kept as j_sums_pilot.pt."""
-    sts = [torch.load(p, weights_only=False) for p in paths]
-    wins = [w for st in sts for w in st["windows"]]
+    m = None                                                          # one shard in memory at a time (each is 4.8 GB)
+    for p in paths:
+        st = torch.load(p, weights_only=False)
+        if st.get("next", st["done"]) != st["end"] or len(st["windows"]) != st["end"] - st["start"]:
+            raise SystemExit(f"{p}: incomplete shard ({len(st['windows'])} of {st['start']}-{st['end']})")
+        if m is None:
+            m = {"A": st["A"], "B": st["B"], "pairs": dict(st["pairs"]), "T": st["T"], "windows": list(st["windows"])}
+        else:
+            if st["T"] != m["T"]:
+                raise SystemExit(f"{p}: T {st['T']} != {m['T']}")
+            m["A"] += st["A"]; m["B"] += st["B"]; m["windows"] += st["windows"]
+            for h in "AB":
+                m["pairs"][h] += st["pairs"][h]
+        del st
+    wins = m["windows"]
     if len(wins) != len(set(wins)):
         raise SystemExit("overlapping windows across shards")
     if (OUT / "j_sums.pt").exists() and not (OUT / "j_sums_pilot.pt").exists():
         (OUT / "j_sums.pt").rename(OUT / "j_sums_pilot.pt")
-    m = {"A": sum(st["A"] for st in sts), "B": sum(st["B"] for st in sts), "pairs": {h: sum(st["pairs"][h] for st in sts) for h in "AB"},
-         "T": sts[0]["T"], "windows": wins, "done": len(wins), "next": len(wins), "merged_from": [str(p) for p in paths]}
+    m.update({"done": len(wins), "next": len(wins), "merged_from": [str(p) for p in paths]})
     torch.save(m, OUT / "j_sums.pt"); print(f"merged {len(paths)} files: {len(wins)} windows")
 
 
