@@ -97,5 +97,8 @@ evidence_types:
   causal_link:
     definition: "zeroing unit changes later unit2's activation at the answer position for concept (value = mean relative drop, signed: + supports, - suppresses); noise_floor = |mean drop| for unit's activation-matched null"
     claim: "Zeroing {unit} changes {unit2} by {value} (relative) for {concept} ({context}; null {noise_floor})"
+  graph_edge:
+    definition: "attribution graph: the DIRECT contribution of unit (or an embedding / node in context) to unit2's activation (or the target), through the frozen linearised model"
+    claim: "In {concept}'s attribution graph, {unit} contributes {value} directly to {unit2} ({context})"
 # notes: web_firing_share may carry metric 'skipped' (a judge job that did not run; kept for completeness).
 #        label rows carry coverage in value and passes = the 'clean' rule of their set (census or H-DEPTH; threshold column = the bar).
