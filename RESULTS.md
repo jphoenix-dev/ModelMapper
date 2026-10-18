@@ -2581,3 +2581,97 @@ answer positions). First run kept as maps_logprob.jsonl. **Noise floor:** 24 ran
 Files (D:/already-clean-data/numeric/): entities.json, facts.json, maps.jsonl (+ maps_logprob.jsonl, the saturated first
 run), share.jsonl (+ share_units.json, share_nulls.json), magnitude.jsonl, position.jsonl, summary.txt, summary_rows.json,
 *.log.
+
+
+## 18 Oct 2026 - Magnitude: no number-line neurons; the number line is in the output geometry (numeric_mag.py)
+
+**Question (James):** a fair test of whether numeric-fact neurons code magnitude, after numeric.py's zero-vs-double test
+was blind (Qwen near-certain). **Fixes:** a dose series (activation x -4, -2, -1, 0, 0.5, 1, 2, 4 at every position) with
+the full float64 distribution over the 10 digit tokens at every answer position; and 43 LESS-CERTAIN facts (80 prompts:
+landmark heights 20, construction start 10, years 10, death years 3) with Qwen's own greedy number as the target, kept where
+some digit has P(top) < 0.9. Neurons: top-3 per fact (drop > 1.0); controls: 3 random neurons from the same layers per fact.
+**Bug caught:** the first dose run rounded saved log-probs to 6 decimals, which zeroed near-certain digits' log-probs
+(drops showed 'nan'); kept as mag_dose_rounded.jsonl / mag_summary_rounded.txt, re-run at full precision.
+
+| | median drop at q* (zeroed) | lost probability to neighbouring digits (zeroed): median share / above uniform (22%) | graded dose response | of graded: moves towards ITS OWN digit |
+|---|---|---|---|---|
+| certain facts, top neurons (258) | 8.78 | 76% / 66% | **36%** | 93/93 |
+| certain facts, random neurons (258) | 0.08 | 81% / 83% | 0% | - |
+| uncertain facts, top neurons (129) | 6.63 | 49% / 59% | **51%** | 65/66 |
+| uncertain facts, random neurons (129) | 0.10 | 50% / 70% | 2% | 2/2 |
+
+(graded = Spearman |rho| >= 0.9 between dose and expected digit, range >= 0.3 digits. At dose -2 / -4 top neurons spread
+probability further - neighbour share 46% / 36% - than random neurons, 76% / 81%.)
+
+- **A1 FAILS as a neuron property:** lost probability does go to neighbouring digits (76% vs 22% uniform) - but equally when
+  a RANDOM neuron is zeroed (81%). The neighbour preference is a property of the output, not of the neuron. **Output
+  geometry:** the 10 digit tokens' unembedding vectors form a number line - cosine 0.780 at distance 1, falling steadily
+  to 0.667 at distance 9.
+- **A2 HOLDS numerically, but it is not magnitude coding:** 36% / 51% of top neurons give a graded response vs 0-2% of
+  random ones - yet in 158 of 159 graded cases raising the neuron moves the expected digit towards the neuron's own target
+  digit. They are dose-dependent supporters of one digit (push-pull between that digit and its competitors), not an
+  abstract 'bigger / smaller' direction.
+- **A3 HOLDS modestly:** Qwen's own uncertainty puts 36% of the non-top mass on neighbours (vs 22%; 62 of 99 slots above),
+  strongly for middle digits (positions 1 / 2: 54% / 40%), not for the first or last digit (14% / 6%); not on round
+  digits 0 / 5 either (0-8%).
+- **Reading:** single neurons choose digits as categories ('this digit here'); magnitude structure lives in the output
+  embedding of digits and shows up in the model's uncertainty over middle digits. With era neurons (era.py), a numeric fact
+  is: era concept (format-free) -> digit neurons (format-bound) -> digits on an output number line.
+
+Files (D:/already-clean-data/numeric/): mag_uncertain.json, mag_dose.jsonl (full float64 digit distributions per factor,
+prompt and position), mag_rows.json, mag_summary.txt, mag_dose_rounded.jsonl + mag_summary_rounded.txt (bugged first run).
+
+
+## 18 Oct 2026 - Era neurons across formats: era-concept neurons vs digit neurons (era.py)
+
+**Question (James):** is L31:8930 'the 1800s' whether the answer is written '19th', '18xx', '1880s' or 'Victorian'? And
+the other century neurons?
+**Neurons:** the 24 facts2 answer-value neurons whose answer is a century, + numeric.py's L33:12258 (17xx) and L33:12280
+(18xx); 12 random layer-28-33 controls. **Entities:** numeric.py's year facts + Luna lists per century (14th-21st), 307;
+**280 recalled** (Qwen's own year in Luna's century; 27-42 per century). Each asked in 4 formats (year / century / decade /
+historical period: 'In which ... was X completed / born / created?') + a control ('Tell me about X.'). Qwen answers in
+each format (Lincoln: '1809' / '19th century.' / '1800s' / 'Early 19th century.'; Alice in Wonderland period: 'Victorian
+era.'). Plain-text reading: sentences that mention a date ('She was born in 1889.' / 'in the 1880s.' / 'in the 19th
+century.' / 'in the nineteenth century.' / 'in the eighteen-hundreds.' / 'in the Victorian era.').
+**Selectivity** = AUC of activation, in-era vs other entities, with the sign fixed in the year format and reused for all
+other formats (out-of-sample).
+
+| | year | century | decade | period | 'Tell me about X' | text: digits | decade | ordinal | word | hundreds | named era |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| era neurons (median, n=21 with any in-era entity; the two 12th-century ones have only 1; 1st / 6th / 8th neurons have none) | 0.87 | 0.94 | 0.87 | 0.94 | 0.60 | 0.57 | 0.59 | 0.69 | 0.63 | 0.81 | 0.73 |
+| random controls (median, n=12) | 0.60 | 0.55 | 0.51 | 0.55 | 0.54 | 0.49 | 0.47 | 0.45 | 0.34 | 0.41 | 0.50 |
+| **L28:9936** (18th) | 0.99 | 0.99 | 0.98 | 0.98 | 0.78 | 0.98 | 1.00 | 0.90 | 1.00 | 1.00 | 0.94 |
+| **L31:8930** (19th) | 0.96 | 0.92 | 0.95 | 0.90 | 0.81 | 0.59 | 0.60 | 0.68 | 0.87 | 0.85 | 0.74 |
+| L30:822 (16th label; reads 17th) | 0.92 | 0.88 | 0.87 | 0.89 | 0.73 | 0.88 | 0.85 | 0.84 | 0.94 | 0.94 | 1.00 |
+| L33:12258 ('17xx', numeric.py) | 0.88 | **0.03** | 0.81 | 0.30 | 0.53 | 0.55 | 0.64 | 0.53 | 0.70 | 0.57 | 0.34 |
+| L33:12280 ('18xx', numeric.py) | 0.99 | **0.26** | 0.99 | 0.72 | 0.53 | 0.57 | 0.54 | 0.61 | 0.60 | 0.89 | 0.72 |
+
+(text 'hundreds' and 'named era' have few sentences - 21 and 36 - so single AUCs there are noisy; controls reach 1.00 on
+'hundreds'.)
+
+- **B1 HOLDS:** L31:8930 AUC 0.96 / 0.92 / 0.95 (year / century / decade), and 0.90 for 'historical period'.
+- **B3 HOLDS:** 12 of 17 facts2 century neurons reach AUC >= 0.8 in >= 2 of the 3 formats.
+- **B4 HOLDS:** reading dates in text is less selective than answering (median 0.67 vs 0.88), and the neurons are weak when
+  the entity is merely named ('Tell me about X': 0.60) - they carry the era of an answer being prepared. Exception:
+  L28:9936 and L30:822 are near-perfect in plain text too (format- and task-free).
+- **Two kinds of 'era' neuron.** Era-concept neurons (L28:9936, L31:8930, L30:822, L33:2629...) keep their sign and
+  selectivity in every format. The numeric.py 'era' neurons L33:12258 / L33:12280 FLIP in the century format: their
+  direct output is the digit '7' (and down '8') / down '8', and a 17xx answer in the century format is '18th' - so they
+  are digit neurons that look like era neurons only when the answer is a year.
+- **B2 FAILS (instructively):** zeroing L31:8930 costs the year answer 1.43 and the decade answer 2.52 log-odds (out-of-era
+  0.00; random-neuron 99th pct 0.48) but the '19th century' answer only 0.12 - although it is just as active there. L33:2629
+  (19th) is the mirror: century word 1.05, year ~0. L28:9936: year 5.09, decade 1.75, century 0.26. **The era is
+  represented in every format; which neurons are NEEDED depends on how the answer is written** (redundancy / different
+  writers per format).
+- **B5 HOLDS, more strongly than predicted (informal reading):** L31:8930's direct output is mid/late-19th-century
+  HISTORY, not digits: 'Victorian', 'Civil', 'Reconstruction', 太平 (Taiping), 咸 / 光 / 慈 (Xianfeng / Guangxu / Cixi), 晚
+  (late [Qing]), 普法 (Franco-Prussian). L28:9936 (negative side): 'Enlightenment', 启蒙, 'Revolutionary', 'Rousseau',
+  康熙 / 乾隆 (Kangxi / Qianlong). L28:8912 (20th): 'twentieth', 'Bolshevik', 'Lenin', 民国, 五四, 'radio', 飞机 (aeroplane).
+  L30:822: 康熙, 'Tories', 清朝 / down 'Renaissance', 'Tudor'. Digit neurons push number tokens across scripts: L33:3763
+  '7' / 'seven' / 七 / 'VII' / 'seventh'; L33:5538 '6' / 'six' / 六 / 'seis'.
+- **Reading:** Qwen has era-concept neurons that are cross-lingual (English and Chinese history) and cross-format (years,
+  centuries, decades, named periods, and - for the strongest - plain text), alongside format-bound digit neurons. A
+  1700s/1800s 'value' in a fact is therefore a concept, not a string.
+
+Files (D:/already-clean-data/era/): era_entities.json, era_build.json (all 4 answers per entity), era_acts.jsonl,
+era_text.jsonl, era_readout.json, era_causal.jsonl, era_rows.json, era_summary.txt, *.log.

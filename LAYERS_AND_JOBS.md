@@ -107,9 +107,17 @@ token; measure = exact float64 log-odds per digit, summed; random-neuron noise f
 - *But clean digit/prefix neurons are rare:* of 99 neurons hurting >= 3 facts, 5 are digit neurons (>= 80% of hurt facts
   share one digit at one position) and 0 are 3-digit-prefix (decade) neurons; overall the facts a neuron hurts share a
   digit only slightly more than random sets (33% vs 26%). 16 broad neurons hurt >= 20 facts (L35:9490: 82 of 86).
-- *Magnitude not shown:* doubling a top neuron makes Qwen more sure of the same digit (median +1.35 log-odds) but moves the
-  expected digit in only 19 of 258 cases; 'opposite shifts when zeroed vs doubled' (37%) is driven by near-zero doubled
-  shifts. No evidence for graded number-line coding in this design (Qwen is > 0.9999 sure of 87% of digits). Moderate.
+- *No magnitude neurons* (numeric_mag.py dose series, -4x to 4x, plus 43 less-certain numbers): lost probability goes to
+  neighbouring digits, but equally for random neurons (76% vs 81%); graded dose responses (36-51% of top neurons vs 0-2%
+  random) move towards the neuron's own digit in 158 of 159 - digit supporters, not a bigger/smaller axis. The number line
+  is in the output embedding (digit-token cosine falls steadily with distance, 0.78 -> 0.67).
+- *Era-concept vs digit neurons* (era.py; 280 entities, 14th-21st century, 4 question formats + plain text): era neurons
+  fire for their era in every format (median AUC 0.87-0.94 vs controls 0.51-0.60) and weakly when the entity is merely
+  named (0.60); L28:9936 (18th) is near-perfect in plain text too. Their direct output is cross-lingual history (L31:8930:
+  'Victorian', 'Civil', Taiping, Cixi; L28:8912: 'Bolshevik', 'Lenin', 民国). numeric.py's 'era' neurons L33:12258 /
+  L33:12280 FLIP in the century format ('17xx' is '18th') - they are digit neurons ('7' / 'seven' / 七). Activation is
+  format-free but necessity is format-bound: L31:8930 is needed for year / decade answers (1.43 / 2.52), not '19th century'
+  (0.12); L33:2629 the reverse. Moderate.
 
 **M3. Layers ~16-24 host shared answer-format machinery.** 35 neurons in 16-24 fire for every concept (cross-activation,
 16 Oct); the most widely shared neurons (hundreds of concepts, e.g. L20:7473) are fed by the same upstream neurons
