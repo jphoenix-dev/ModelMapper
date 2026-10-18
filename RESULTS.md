@@ -2321,8 +2321,8 @@ control neurons.
 | 'v' L34:553 | v, )v, =v [_AV] |
 | digits L33:10933 | digits / spaces on web text; Russian fragments with no context |
 | random controls | 'thanks / 感谢'; '先进 / 优秀' ('advanced / excellent'); one noisy |
-- **Low bias:** the top next-token shifts are nearly the same across real text, random-neuron noise and no context -
-  they belong to the neuron. Strength matters: x1 is often drowned by context in generation, x4 reads best, x16
+- **Low bias (for these hand-picked strong neurons only - see the correction in the fast-readout entry below):** the
+  top next-token shifts are nearly the same across real text, random-neuron noise and no context. Strength matters: x1 is often drowned by context in generation, x4 reads best, x16
   collapses to one repeated token - often a telling one ('leaning', 'pumpkin', 'bright').
 - The informal 'happily ever after' reading (marked shaky earlier) is supported: forced, it generates 'happy ... ever
   after', 'prince', 'pumpkin'.
@@ -2330,3 +2330,23 @@ control neurons.
   places; Czech/Prague/Slovak). Looks like genuinely packed unrelated meanings; an unseen shared link is not ruled out.
 - Random control neurons also have readable expressions when forced: this is a candidate UNBIASED labelling method
   (same procedure for every neuron, no labeller), to run over many neurons.
+
+## 18 Oct 2026: fast forced readout - validation against known answers and across layers (research branch)
+(`fast_readout.py`: 32 web + 16 empty backgrounds, target forced at the last position only, next token; weighted words
+= mean dlogp, consistency across backgrounds, mean forced probability; per-background top-20 with forced and unforced
+probabilities saved; output D:/already-clean-data/fast_readout/; ~110-125 ms per neuron on the 5090.)
+- **Known answers (2,577 neurons, run-1 concepts):** for 2,856 'say'-neuron/concept pairs, the concept's answer token is
+  in the forced readout's top-10 73% (top-50 87%, median rank 5); for all picked neurons 50% (top-50 64%). The
+  weights-only direct push does at least as well (top-10 68% for all picked; 100% for 'say' neurons, by definition)
+  - forcing does not identify late neurons' concepts better than the near-free weight reading.
+- **Layers (50 random neurons per layer):** the top word is consistent across backgrounds only late on: layers 28-35
+  91-100% (x4) / 97-100% (x16); 24-27 50% / 69%; 0-23 2-16% / 6-36%. A single early or mid neuron forced at one
+  position has no consistent expression even at 16x (its effect goes through later layers and other positions).
+- **Context dependence (James: do the words depend on what else is active?):** yes, substantially. Per-background
+  top-10 words overlap little across web backgrounds (1 - mean pairwise Jaccard: layers 32-35 0.59, 28-31 0.83, earlier
+  ~1.0): the top word is stable for late neurons, the rest of the list shifts with context.
+- **CORRECTION to the pilot's 'low bias' claim:** it held for hand-picked strong neurons; for random neurons the top-10
+  from web vs empty backgrounds overlap only 0.1-0.2 (Jaccard) even in late layers.
+- **Reading:** the cheap forcing readout gives a reliable job label for late neurons (roughly the top quarter of the
+  model), where the weight reading is about as good; early / mid neurons need a different readout - e.g. describe them
+  by which late neurons they drive (downstream fan-out), consistent with the composition seen in feeders.py.

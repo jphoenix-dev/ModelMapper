@@ -118,8 +118,11 @@ attribute-sharing result). Measures how specific a concept's neuron combination 
 
 **Forced-neuron readout (18 Oct pilot):** clamping one neuron hard across many backgrounds (real text / random-neuron
 noise / nothing) gives a consistent, readable expression (Moon -> moon/月/lunar; tower neuron -> tower/landmark,
-'leaning'; Netherlands -> Nether/hol/Pays; 'happily' -> prince, 'ever after', pumpkin). Low background bias: a candidate
-unbiased labelling method for every neuron. Czech/Xi'an shows two separate clusters, no shared sound.
+'leaning'; Netherlands -> Nether/hol/Pays; 'happily' -> prince, 'ever after', pumpkin). Czech/Xi'an shows two separate clusters, no
+shared sound. **Validated (fast_readout.py):** reliable only for late neurons (layers 28-35: top word consistent 91-100%),
+where the weight reading is as good; early/mid neurons have no consistent forced expression; words vary substantially
+with context; the pilot's 'low background bias' held only for strong hand-picked neurons. Next idea: describe early/mid
+neurons by the late neurons they drive.
 
 ## Later: common-neuron analysis (James, 18 Oct)
 Test whether 'unrelated' users of a shared neuron share a surface feature (sound, spelling, script) rather than a
