@@ -17,6 +17,14 @@ date-released: "2026-10-18"
 license: MIT
 repository-code: "https://github.com/jphoenix-dev/ModelMapper"
 url: "https://eiffel-tower-qwen.vercel.app/"
+doi: "10.5281/zenodo.23459925"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23459925"
+    description: "All versions (resolves to the latest release)"
+  - type: doi
+    value: "10.5281/zenodo.23459926"
+    description: "Release v2026.10.18"
 keywords:
   - interpretability
   - mechanistic interpretability
