@@ -2818,3 +2818,16 @@ The full enrichment run (enrich_run1) is still going on the 5090; this is a froz
   for the logit sizes here, so a single prompt cannot resolve drops below ~0.25 (many null per-prompt values are exactly
   +-0.25). Means over 16 prompts are finer; the floors above are measured with the same resolution, so comparisons
   against them stand, but small entrants (the top-30 bar is ~0.2) sit near the step size.
+
+## 18 Oct 2026 (night) - J-lens at 256 windows: in progress at this release
+
+The scaled-up J-lens estimate (256 FineWeb windows, 8x the pilot; one configuration on rented RTX 3090s, so the 5090
+pilot is not merged in - see the reproduction check above) was still running when the 18 Oct release was cut, so the
+J-lens results in this release are the 32-window pilot's. What happened so far:
+- 16 shards of 16 windows (64-80 split into four quarters). **3 shards came back entirely non-finite** (NaN in every
+  layer but the last, both split halves): 16-32, 48-64 and 192-208, all from ONE rented machine; every other machine's
+  shards are finite. That machine is blocked, and both `jlens.py estimate` (per window, per layer) and the cloud worker
+  (per shard) now refuse non-finite sums instead of storing them; `merge` refuses non-finite shards too.
+- Those 48 windows are being recomputed on other machines. The merged 256-window J-lens, its validation (J1-J4 re-run)
+  and per-neuron J-lens readings (ledger experiment `jlens_qwen3_8b_256w`, and J-lens words on the map for the layers
+  that pass a rule fixed in advance in `explainer/gen/map/push_words_jlens.py`) follow in the next update.
