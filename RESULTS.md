@@ -2761,3 +2761,22 @@ Files: D:/already-clean-data/loop_v3/enrich_smoke/ (sample, questions, records.j
 - Cross-GPU (18 Oct, gpu-fan-out smoke shard): RTX 3090 vs 5090, both 4 rows, windows 0-1: relative difference median
   1.7%, max 7.5% (early layers), readout overlap 0.90-1.00 - the same size as the 8-vs-4-row effect. Decision unchanged:
   all 256 windows in one configuration. 3090 speed: ~320 s/window at 99.7% busy, 20.2 GB peak; full 256 ~ 23 GPU-h, ~$5.2-5.5.
+
+## 18 Oct 2026 - Two-ended neurons, step 4: north <-> south and horizontal <-> vertical are causal scales (scales_steer.py)
+
+The map session's SCALES.md (written before data; steps 1-3 Luna / Jev on 1,567 neurons that matter for concepts on BOTH
+signs: 4 strict scales, 10 near-scales). Step 4 (here): for 24 candidates, one concept per end (the usage-check concepts),
+the neuron pushed towards each end by k x its web-text peak at the answer position; change in each concept's answer
+log-odds; a random same-layer neuron as the control.
+- **First run INVALID** (push at every position): the control moved the answers in 65/72 cases - the push wrecked the
+  model. Re-run with the push at the answer position only (SCALES.md fixes k, not the position; rule unchanged).
+- **P1 HOLDS (3/4 strict):** L32:11585 north <-> south (towards north: North Island +2.11, Southern Cone -5.07; towards
+  south: Southern Cone +2.60, North Island -6.69; control < 0.4), L34:10596 south <-> north, L26:10153 horizontal <->
+  vertical (Equator / Prime meridian). The female <-> male given-name neuron L30:9102 fails: the male push works (Jacob
+  +1.47, Theodora -3.20) but the female push does not raise Theodora (-0.29).
+- **P2 HOLDS (near 2/10 < strict):** breakfast <-> dinner (L32:3980), vegetarianism <-> Mars mythology (L27:10306).
+- **P3 HOLDS (1/10 'unrelated'):** L35:7324 (Bering Strait / Upanishads) shows the pattern.
+- **P4 FAILS:** controls are quiet at k = 1 (17/24) but not at k = 2 (4/24) or 4 (1/24): only k = 1 is a usable strength;
+  every pass above is at k = 1 with its own control quiet. Lowering effects are larger than raising effects.
+- Reading: some neurons are causal two-ended scales - one direction in the model, two opposite meanings - at least for
+  compass directions and orientation. Ledger: experiments scales, scales_steer, scales_steer_allpos_invalid.
