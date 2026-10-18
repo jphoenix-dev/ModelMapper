@@ -166,7 +166,10 @@ def merge(paths):
     m = None                                                          # one shard in memory at a time (each is 4.8 GB)
     for p in paths:
         st = torch.load(p, weights_only=False, mmap=True)          # mapped, not read: only the running sum is in RAM
-        if st.get("next", st["done"]) != st["end"] or len(st["windows"]) != st["end"] - st["start"]:
+        if "merged_from" in st:                                    # an earlier merge's output (e.g. a re-run's shards merged in the cloud)
+            if st["done"] != len(st["windows"]):
+                raise SystemExit(f"{p}: merged file with done {st['done']} != {len(st['windows'])} windows")
+        elif st.get("next", st["done"]) != st["end"] or len(st["windows"]) != st["end"] - st["start"]:
             raise SystemExit(f"{p}: incomplete shard ({len(st['windows'])} of {st['start']}-{st['end']})")
         if not all(torch.isfinite(st[h][l]).all() for h in "AB" for l in range(st[h].shape[0])):
             raise SystemExit(f"{p}: non-finite values (excluded shards are listed in RESULTS.md)")
