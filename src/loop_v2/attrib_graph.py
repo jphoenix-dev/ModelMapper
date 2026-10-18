@@ -127,8 +127,7 @@ def build_graph(model, tok, item, gate_knockouts=True):
     attr = torch.stack([(a * a.grad)[0] for a in tot["a"]])                              # [L, T, W]
     emb_attr_total = (tot["emb"] * tot["emb"].grad)[0].sum(-1)                           # [T]
     del tot
-    if os.environ.get("AG_SKIP_POS0") == "1":       # proposal (not yet agreed): leave the <|im_start|> attention-sink position out of the nodes
-        attr = attr.clone(); attr[:, 0, :] = 0
+    attr = attr.clone(); attr[:, 0, :] = 0            # amendment 2 (18 Oct): position 0, the attention sink, is not a node
     flat = attr.abs().flatten(); order = flat.argsort(descending=True); csum = flat[order].cumsum(0) / flat.sum()
     k = int(min(CAP, int((csum < KEEP_FRAC).sum()) + 1))
     kept = [tuple(int(v) for v in (i // (T * W), (i // W) % T, i % W)) for i in order[:k].tolist()]
@@ -210,11 +209,44 @@ def build_graph(model, tok, item, gate_knockouts=True):
               "median_abs_effect_top30": stx.median(abs(x) for x in top_eff), "median_abs_effect_random30": stx.median(abs(x) for x in rnd_eff),
               "top30": [{"neuron": f"L{u[0]}:{u[2]}", "pos": u[1], "attr": a_, "knockout": e} for u, a_, e in zip(top30, top_att, top_eff)],
               "random30": [{"neuron": f"L{u[0]}:{u[2]}", "pos": u[1], "attr": a_, "knockout": e} for u, a_, e in zip(rnd30, rnd_att, rnd_eff)]}
+    # amendment 3: joint knockout - all kept neurons off together vs 3 random same-size sets matched on (layer, position)
+    from neurons import mlps as _mlps
+
+    def p_off(units):
+        by = {}
+        for (l, p, n) in units:
+            by.setdefault(l, []).append((p, n))
+        hks = []
+        for l, pn in by.items():
+            pi = torch.tensor([p for p, _ in pn], device=dev); ni = torch.tensor([n for _, n in pn], device=dev)
+            def h(mod, a, pi=pi, ni=ni):
+                y = a[0].clone(); y[0, pi, ni] = 0; return (y,)
+            hks.append(_mlps(model)[l].down_proj.register_forward_pre_hook(h))
+        try:
+            with torch.no_grad():
+                lg = model(input_ids=ids1).logits[0, -1].float()
+        finally:
+            for hk in hks:
+                hk.remove()
+        return float(torch.softmax(lg, -1)[ans])
+    rj = random.Random(f"joint|{item['concept']}"); ks = set(kept); rand_sets = []
+    for _ in range(3):
+        rs = []
+        for (l, p, _) in kept:
+            while True:
+                n = rj.randrange(W)
+                if (l, p, n) not in ks:
+                    rs.append((l, p, n)); break
+        rand_sets.append(rs)
+    joint = {"p_base": float(torch.softmax(hf, -1)[ans]), "p": p_off(kept), "p_random": [p_off(rs) for rs in rand_sets]}
+    coverage = {"attr_share": kept_share_total, "joint_knockout": joint}
     gates = {"g1_forward": g1, "g2_linear_sum": g2, "g3_knockouts": g3,
              "pass": bool(g1["hf_argmax_equal"] and g2["rel_diff"] < 0.01 and (g3 is None or g3["spearman_top30"] >= 0.7))}
-    return {"concept": item["concept"], "prompt": item["prompt"], "answer": item.get("answer"), "answer_token": tok.decode([ans]),
+    qm = re.search(r"<\|im_start\|>user\n(.*?)(?: Answer with just the name\.)?<\|im_end\|>", item["prompt"], re.S)
+    return {"concept": item["concept"], "question": qm.group(1).strip() if qm else item["prompt"], "coverage": coverage, "prompt": item["prompt"], "answer": item.get("answer"), "answer_token": tok.decode([ans]), "answer_id": ans,
             "tokens": toks, "target": real_target, "nodes": nodes, "edges": edges, "completeness": completeness, "gates": gates,
-            "method": {"keep_frac": KEEP_FRAC, "cap": CAP, "edge_frac": EDGE_FRAC, "model": model.config._name_or_path,
+            "method": {"keep_frac": KEEP_FRAC, "cap": CAP, "edge_frac": EDGE_FRAC, "model": model.config._name_or_path, "position0_excluded": True,
+                       "amendments": "ATTRIB_GRAPHS.md 'Amendments' (18 Oct): circuit-tracer not used; position 0 not a node; cap 300 + joint knockout; all edges stored",
                        "frozen": ["attention patterns", "RMSNorm scales", "SiLU(gate)"]}, "seconds": round(time.time() - t0, 1)}
 
 
@@ -258,6 +290,7 @@ def graphs():
         print(f"{it['concept']:<26} nodes {g['completeness']['n_kept']:>3} edges {len(g['edges']):>5} | g1 argmax {G['g1_forward']['hf_argmax_equal']} "
               f"maxdiff {G['g1_forward']['max_abs_logit_diff']:.3f} | g2 rel {G['g2_linear_sum']['rel_diff']:.4f} | g3 rho {G['g3_knockouts']['spearman_top30']:.2f} "
               f"(+rnd {G['g3_knockouts']['spearman_top30_plus_random30']:.2f}) | kept share {g['completeness']['kept_share_of_total_abs_attribution']:.2f} | "
+              f"joint P {g['coverage']['joint_knockout']['p_base']:.3f}->{g['coverage']['joint_knockout']['p']:.3f} (random {[round(x, 3) for x in g['coverage']['joint_knockout']['p_random']]}) | "
               f"{g['seconds']} s | pass {G['pass']}", flush=True)
 
 
@@ -273,7 +306,7 @@ def ablate():
             continue
         g = json.loads(gp.read_text(encoding="utf-8")); groups = json.loads(grp.read_text(encoding="utf-8"))
         groups = groups.get("groups", groups) if isinstance(groups, dict) else groups
-        ids = torch.tensor([tok.encode(g["prompt"])], device=dev); ans = tok.encode(g["answer_token"])[0] if g.get("answer_token") else None
+        ids = torch.tensor([tok.encode(g["prompt"])], device=dev); ans = g["answer_id"]
         node = {n["id"]: n for n in g["nodes"] if n["type"] == "neuron"}
 
         def run(units):
@@ -296,7 +329,7 @@ def ablate():
                     hk.remove()
             pr = torch.softmax(lg, -1)
             return {"p_answer": float(pr[ans]), "target": float(lg[ans] - lg.mean())}
-        base = run([]); res = {"base": base, "groups": []}
+        base = run([]); res = {"p_base": base["p_answer"], "target_base": base["target"], "groups": {}}
         for gi, grpd in enumerate(groups):
             members = [node[m] for m in grpd.get("members", grpd.get("nodes", [])) if m in node]
             units = [(m["layer"], m["pos"], int(m["neuron"].split(":")[1])) for m in members]
@@ -305,10 +338,12 @@ def ablate():
                 ru = [(l, p, rng.randrange(W)) for (l, p, _) in units]
                 rnd.append(run(ru))
             drop = base["p_answer"] - eff["p_answer"]; rdrops = [base["p_answer"] - r["p_answer"] for r in rnd]
-            res["groups"].append({"group": grpd.get("label", gi), "n": len(units), "effect": eff, "random": rnd, "p_drop": drop, "random_p_drops": rdrops,
-                                  "beats_all_random": all(abs(drop) > abs(x) for x in rdrops), "sum_attr": sum(m["attr"] for m in members)})
+            res["groups"][str(grpd.get("label", gi))] = {"p": eff["p_answer"], "p_random": [r["p_answer"] for r in rnd], "n": len(units), "row": grpd.get("row"),
+                                                        "target": eff["target"], "target_random": [r["target"] for r in rnd],
+                                                        "beats_all_random": all(abs(drop) > abs(x) for x in rdrops), "sum_attr": sum(m["attr"] for m in members)}
+        res["joint"] = {k: g["coverage"]["joint_knockout"][k] for k in ("p", "p_random")}           # from step 1 (same definition)
         (gd / "ablations.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(gd.name, [(x["group"], round(x["p_drop"], 3), x["beats_all_random"]) for x in res["groups"]], flush=True)
+        print(gd.name, [(k, round(res["p_base"] - v["p"], 3), v["beats_all_random"]) for k, v in res["groups"].items()], flush=True)
 
 
 if __name__ == "__main__":
