@@ -2252,3 +2252,44 @@ D:/already-clean-data/loop_v2/run1/; summaries in results/loop_v2/run1/.)
   16,492 neurons shared by >= 2 maps, 29% of them within one section.
 - **Heads:** most often among a concept's 5 most damaging single-head knockouts: L35H25 (1,337 concepts), L34H28
   (1,098), L19H29 (951), L20H9, L23H10, L35H24 - the late re-reader / turn-boundary copier / meaning-carrier set again.
+
+## 18 Oct 2026: shared neurons across 4,194 maps - same job? same inputs? (run 1; research branch)
+James: neurons used by several concepts - same job each time, the same earlier neurons, or polysemantic?
+(`shared_neurons.py`, CPU; `feeders.py`, GPU ~25 min; outputs in D:/already-clean-data/loop_v2/run1/, summaries in
+results/loop_v2/run1/.)
+- **Census:** 3,010 neurons sit in the top-10 of >= 3 maps (median 4 users, max 874); mostly layers 30-35 (1,764) and
+  24-29 (741), with a cluster at 6-11 (357).
+- **Same job, mechanically:** a neuron's push direction is fixed by its weights x the sign of its activation. That
+  sign agrees across ALL its users for 79% of shared neurons (median agreement 100%). Roles: 1,709 are attribute /
+  late-other for every user, 629 'say' for some users, 227 'say' for all, 445 early.
+- **Three kinds (readable from the push tokens and users):**
+  - *topic jobs*, small coherent groups: rivers (7 rivers and a lake), Indonesia (Bali, Aceh, clove, the
+    language, the revolution), dance, refrigeration, 'happily ever after' (Cinderella, Aladdin, Romeo and Juliet),
+    genus endings (-opsis, -occus), Russian first names (Chekhov, Rachmaninoff, Pasternak);
+  - *spelling jobs*: 'v' (Village, Virus, Vegetarianism), 'm' (Maze, Molybdenum, Mackerel), 'New', 'Rock';
+  - *generic machinery* used by hundreds of unrelated concepts: a digits/punctuation writer (615 concepts) and
+    junk-token pushers (L34:1452, 847; L20:7473, 874) - answer-format machinery, not meaning.
+- **Related users:** they share a Vital Articles section 67% of the time vs 37% by chance (first Wikidata type: 33% vs
+  33% - too fine-grained a label). Some packed neurons serve unrelated meanings, e.g. L29:4682 pushes 'Czech' / 'Prague'
+  AND 'Xi'an' (users: Hussite Wars, Wends, Xi'an).
+- **Same earlier neurons? (feeders.py):** for 100 shared neurons x their users (497 pairs), each neuron's 20 strongest
+  earlier-layer feeders (activation x gradient of its activation, summed over positions) per concept. Jaccard overlap:
+
+| pair | median |
+|---|---|
+| same TOPIC neuron (3-10 users), two of its users | 0.111 (above chance for 80/80) |
+| same WIDELY shared neuron (>= 100 users), two users | **0.445** |
+| same concept, two different shared neurons | 0.111 |
+| chance (different neuron, different concept) | 0.000 (mean 0.011) |
+
+  Prediction half wrong: machinery neurons were predicted to vary their feeders by concept; instead they are fed by
+  the SAME upstream neurons whatever the concept (12 of 20 in common) - they respond to the question-answering
+  format, not to the concept. Topic neurons share a minority of feeders (2 of 20) far above chance; the shared ones are
+  themselves readable attribute neurons: the Fellini / Woody Allen / La Dolce Vita neuron <- 'Italy' + 'film /
+  director' neurons; the civil-rights neuron <- 'Martin' + 'strike / protest'; the Qing / Habsburg / Plantagenet
+  neuron (pushes family names) <- a 'families' neuron; the seas neuron <- a 'rivers' neuron.
+- **Reading:** shared neurons are mostly NOT polysemantic in this setting. Machinery neurons do one task-level job with
+  fixed inputs. Topic neurons do one output job, reached from partly shared attribute feeders plus concept-specific
+  ones - a visible hierarchy (Italy + film -> Italian cinema -> Fellini). A minority pack unrelated meanings.
+- **Caveats:** top-20 feeders by first-order attribution (not knockouts); the same-concept baseline is small (27
+  pairs); 'topic' vs 'machinery' split by user count, not a test of meaning.

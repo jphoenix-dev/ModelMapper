@@ -91,6 +91,12 @@ This is the search-then-verify core for loop v2. Verification is now Luna-bound 
 (+7.42 vs +0.003, flips 82%), P4 replicates more weakly (4.38x, p = 2e-10; not for people), null clean. Common nouns map
 as cleanly as named things (median k 1 vs 2; recall 83% vs 85%), with a modest within-section excess of 'say' neurons.
 
+**Shared neurons (18 Oct):** 3,010 neurons serve >= 3 concepts. Same push direction for all users in 79%. Three kinds:
+topic jobs (rivers, Indonesia, dance...), spelling jobs ('v', 'm', 'New'), generic answer-format machinery (hundreds of
+users). Machinery is fed by the same upstream neurons for every concept (feeder Jaccard 0.45); topic neurons share a
+minority of feeders (0.11, chance ~0) that are themselves readable attributes (Italy + film -> the Fellini neuron).
+Mostly not polysemantic here; a minority pack unrelated meanings (Czech + Xi'an).
+
 ## Next step after loop v2 run 1 (James, 17 Oct night)
 **Question-side test: are concept neurons "say it" neurons or meaning neurons?** Every map so far was found and tested
 with the concept as the ANSWER. Not yet done: switch a concept's key neurons off and ask questions with the concept IN
