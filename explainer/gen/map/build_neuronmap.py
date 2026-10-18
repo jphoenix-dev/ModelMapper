@@ -30,7 +30,8 @@ SHORT = {"Society and social sciences": "Society", "Philosophy and religion": "R
          "Biology and health sciences": "Biology & health", "Physical sciences": "Physical sciences",
          "Other": "Other / tests only"}
 ROLE = {None: 0, "say": 1, "attribute": 2, "late-other": 3, "early": 4}
-EARLY_CUT = 20          # layers below this are not grouped by subject: their jobs are much less clear (S2, S4b)
+LINKS_SHOWN = 40        # links drawn per concept (the strongest by |drop|); the total passing is shown in words
+EARLY_CUT = 20         # layers below this are not grouped by subject: their jobs are much less clear (S2, S4b)
 NAMES = Path("D:/already-clean-data/job_names/names.cache.jsonl")   # convenience names (JOB_NAMES.md)
 
 
@@ -322,7 +323,7 @@ def main():
     lk_by = {k.strip().casefold().removeprefix("the "): v for k, v in LK.items()}
 
     # ---- concepts: key neurons, logit lens, heads
-    out_c, shards = [], {}
+    out_c, shards, links_total = [], {}, {}
     for r in rows:
         if r[I["status"]] != "mapped":
             continue
@@ -341,6 +342,9 @@ def main():
         lks = [[pos[x["from"]], pos[x["to"]], round(x["drop"] * 100), round(x["null"] * 100)]
                for x in lk_by.get(r[I["name"]].strip().casefold().removeprefix("the "), [])
                if x["passes"] and x["from"] in mine and x["to"] in mine and x["from"] in pos and x["to"] in pos]
+        if lks:
+            links_total[r[I["slug"]]] = len(lks)
+            lks = sorted(lks, key=lambda x: -abs(x[2]))[:LINKS_SHOWN]        # draw the strongest; the total is kept
         out_c.append([r[I["slug"]], r[I["name"]], d.get("answer"), r[I["section"]] if r[I["section"]] in REGIONS else None,
                       top, lens, heads, m.get("k_mean"), m.get("source"), fame, lks,
                       m.get("baseline"), m.get("drops"), m.get("ks")])
@@ -373,7 +377,8 @@ def main():
            "eras": [dict(ERA[u], unit=u) for u in era_list], "centuries": centuries, "facts": facts_out,
            "scales": {str(pos[u]): v for u, v in SC.items() if u in pos},
            "job_types": [{"code": c, "label": l, "how": h, "n": job_counts[c]} for c, l, h in JOB_TYPES],
-           "links_source": link_src, "n_with_links": sum(1 for c in out_c if c[10]),
+           "links_source": link_src, "n_with_links": sum(1 for c in out_c if c[10]), "links_total": links_total,
+           "links_shown": LINKS_SHOWN,
            "picks": [by_name[p] for p in PICKS if p in by_name], "roles": list(ROLE)}
     p = DATA / "neuronmap.json"
     p.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
