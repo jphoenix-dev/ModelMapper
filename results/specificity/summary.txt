@@ -1,0 +1,26 @@
+Question-side test + specificity gradient: 15 sources, 158 question sets
+median log-odds drop when zeroed (rows) on each question set (columns: ablations)
+                        src_k       src5  src5_late src5_early    rand5_a    rand5_b     other5
+source naming (n=15 )       3.62       8.03       6.44       1.44      -0.01      -0.01       0.16
+source FACTS  (n=15 )       0.03       0.68       0.30       0.97      -0.04      -0.05       0.02
+neighbours L1 (n=25 )       0.02       0.17       0.17      -0.01       0.02      -0.00       0.10
+neighbours L2 (n=30 )       0.01       0.10       0.07       0.03      -0.01      -0.00       0.05
+neighbours L3 (n=36 )       0.00       0.00       0.01       0.02       0.01       0.00      -0.01
+neighbours L4 (n=37 )      -0.00      -0.02      -0.02      -0.00      -0.00      -0.01      -0.03
+
+per source (src5 drop): naming | facts | L1 | L2 | L3 | L4 neighbour medians
+  Burj Khalifa             9.06 |   8.10 |    nan |   5.98 |   2.07 |   0.15
+  Colosseum               12.05 |   0.43 |  -0.08 |  -0.08 |  -0.02 |  -0.04
+  Eiffel Tower             4.35 |  -0.08 |  -0.07 |   0.61 |  -0.01 |  -0.05
+  Forbidden City           5.90 |  -0.43 |   0.20 |   0.86 |   0.46 |  -0.22
+  Golden Gate Bridge       9.64 |   1.09 |    nan |   4.74 |  -0.01 |   0.01
+  Hagia Sophia             6.72 |   0.68 |   0.38 |   0.33 |   0.05 |   0.06
+  Louvre                   6.04 |   1.66 |   0.08 |  -0.33 |   0.06 |  -0.05
+  Machu Picchu             7.12 |   3.86 |   1.57 |  -0.01 |   0.08 |  -0.08
+  Notre-Dame de Paris     11.37 |  -0.22 |  -0.06 |    nan |  -0.04 |   0.17
+  Parthenon                9.92 |  -0.49 |  -0.78 |  -0.03 |  -0.01 |  -0.14
+  Sagrada Família          8.58 |   2.28 |   1.68 |   0.27 |   0.30 |  -0.19
+  St. Peter's Basilica    10.72 |   6.73 |   3.61 |   0.04 |   0.00 |   0.00
+  Statue of Liberty        8.03 |   0.30 |  -0.87 |   2.22 |   0.03 |   0.01
+  Sydney Opera House       6.71 |   1.61 |   5.40 |  -0.02 |  -0.03 |  -0.03
+  Taj Mahal                5.74 |  -0.06 |   0.26 |  -1.61 |   0.27 |   0.24

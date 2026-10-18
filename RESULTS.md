@@ -2371,3 +2371,40 @@ smoke2.jsonl/.txt = v2; v1's text summary was overwritten by a naming bug, its f
 - **Reading (smoke test):** early neurons' downstream effects are repeatable but do not translate into a word-level
   job one step later - the description problem moves up a layer. Options: restrict to READABLE late endpoints (layers
   28-35) and follow chains; or describe early neurons by the concepts they matter for (from the maps).
+
+## 18 Oct 2026: question-side test + specificity gradient - 'say it' vs meaning, and how specific (research branch)
+(Queued after run 1, design and predictions in RESEARCH_STATE.md before running. `specificity.py`; outputs
+D:/already-clean-data/specificity/, summary + neighbours in results/specificity/; Luna ~$0.08, GPU ~15 min.)
+15 mapped landmarks. Neighbours from Wikidata, 3 per level: L1 notable physical places within 3 km (coordinates; first
+pass picked abstract items with Paris coordinates - UNESCO, the French language - so restricted to structures /
+mountains / islands / squares / parks via the type hierarchy); L2 same 'instance of' type > 500 km away (falling back to
+the source's other types when the first had no distant matches - broader, e.g. St. Peter's -> Eiffel Tower, Burj
+Khalifa); L3 same Vital Articles section, different type; L4 a different section. Luna wrote 8 FACT questions per source
+(the name in the question, short factual answer, e.g. "In which city is the Eiffel Tower?" -> Paris) and 8 naming
+questions per neighbour; only questions Qwen answers were used (P >= 0.2). Zeroed at every position, each against an
+as-is copy in the same pass. Median log-odds drop:
+
+| question set | k (breaks naming) | top-5 | top-5 late | top-5 early | random-5 (x2) | another landmark's top-5 |
+|---|---|---|---|---|---|---|
+| source NAMING (15) | **3.62** | **8.03** | 6.44 | 1.44 | -0.01 / -0.01 | 0.16 |
+| source FACTS (15) | **0.03** | 0.68 | 0.30 | 0.97 | -0.04 / -0.05 | 0.02 |
+| neighbours L1 same place (25) | 0.02 | 0.17 | 0.17 | -0.01 | 0.02 / 0.00 | 0.10 |
+| neighbours L2 same kind (30) | 0.01 | 0.10 | 0.07 | 0.03 | -0.01 / 0.00 | 0.05 |
+| neighbours L3 same section (36) | 0.00 | 0.00 | 0.01 | 0.02 | 0.01 / 0.00 | -0.01 |
+| neighbours L4 unrelated (37) | 0.00 | -0.02 | -0.02 | 0.00 | 0.00 / -0.01 | -0.03 |
+
+- **'Say it', not meaning (predictions held):** the neurons that break NAMING a landmark (k, median drop 3.62) leave
+  questions ABOUT it essentially intact (0.03). Late neurons hurt naming most (6.44) and facts little (0.30); early
+  neurons the reverse pattern (naming 1.44, facts 0.97) - the early cluster carries more of the meaning.
+- **Exceptions (facts damaged too):** Burj Khalifa (facts 8.10), St. Peter's Basilica (6.73), Machu Picchu (3.86) - to
+  check whether their fact answers share tokens with the name or depend on name-linked attributes.
+- **Specificity gradient (prediction held):** damage to neighbours falls with distance, L1 0.17 -> L2 0.10 -> L3 0.00 ->
+  L4 -0.02 (vs 8.03 on the source itself: neighbours lose ~1-2%). Large exceptions where neighbours share an attribute:
+  Sydney Opera House -> Sydney Harbour Bridge / Sydney Tower 5.40; Burj Khalifa -> other skyscrapers 5.98; Golden Gate
+  -> other bridges 4.74; St. Peter's -> Sistine Chapel 3.61; Statue of Liberty -> towers 2.22; Sagrada Família -> Park
+  Güell / Casa Batlló (Gaudí) 1.68; Machu Picchu -> Huayna Picchu 1.57. Another landmark's top-5 also touches L1/L2 a
+  little (0.10 / 0.05) - shared landmark-attribute neurons.
+- **Reading:** a concept's map is mostly a specific 'say it' mechanism (naming), not where the knowledge ABOUT it lives;
+  the meaning sits more in early neurons and elsewhere. Its spill-over follows shared attributes (place, kind, architect).
+- **Limits:** small n per level (many neighbours had < 2 recalled naming questions); Luna-written fact answers; one
+  forced 'answer in as few words as possible' format for facts; 15 sources, all landmarks.

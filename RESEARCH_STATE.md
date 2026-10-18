@@ -98,7 +98,11 @@ minority of feeders (0.11, chance ~0) that are themselves readable attributes (I
 Mostly not polysemantic here; a minority look like packed unrelated meanings (Czech + Xi'an) - untested, possibly a
 shared surface feature (sound/spelling). Neuron names like 'rivers' are informal readings of push tokens + users.
 
-## Next step after loop v2 run 1 (James, 17 Oct night)
+**Question-side + specificity (18 Oct, done):** zeroing the neurons that break naming a landmark leaves facts about it
+intact (naming 3.62 vs facts 0.03); early neurons hurt facts more than late; neighbour damage falls with distance (L1
+0.17 -> L4 -0.02) with big shared-attribute exceptions (Sydney, skyscrapers, bridges, Gaudí). Maps = 'say it' machinery.
+
+## Next step after loop v2 run 1 (now done - see above) (James, 17 Oct night)
 **Question-side test: are concept neurons "say it" neurons or meaning neurons?** Every map so far was found and tested
 with the concept as the ANSWER. Not yet done: switch a concept's key neurons off and ask questions with the concept IN
 the question and a fact as the answer ("How tall is the Eiffel Tower?", "Who designed it?", "Which city is it in?").
