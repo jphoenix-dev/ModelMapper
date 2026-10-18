@@ -147,7 +147,8 @@ def estimate(n_windows, start=0, end=None):
                    "peak_mem_gb": round(torch.cuda.max_memory_allocated() / 2**30, 1), "gpu_busy_pct": gb.take()}, flush=True)
             return
         half = "A" if w % 2 == 0 else "B"
-        if not torch.isfinite(cur).all():                          # 18 Oct: 3 rented shards came back all-NaN; stop, don't poison the sum
+        if not all(torch.isfinite(cur[l]).all() for l in range(L)):   # 18 Oct: 3 rented shards came back all-NaN; stop, don't poison the sum
+            # (per layer: a whole-tensor isfinite allocates 2.25 GiB and OOMed 24 GB GPUs)
             log.write(json.dumps({"window": w, "doc": W[w][0], "nonfinite": True, "gpu": torch.cuda.get_device_name()}) + "\n"); log.flush()
             raise SystemExit(f"window {w}: non-finite J (GPU {torch.cuda.get_device_name()}); shard stopped, checkpoint kept at window {done}")
         (JA if half == "A" else JB).add_(cur.cpu()); pairs[half] += (T - 1) * T // 2
