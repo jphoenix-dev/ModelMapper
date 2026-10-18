@@ -41,6 +41,9 @@ repo root works the same.
   - experiments: `chain`, `entity_sharing`, `era`, `facts`, `fanout`, `fast_readout`, `jlens`, `shared_neurons`,
     `specificity`;
   - dist: `make_run`'s `--ag-dir` and `--jl-docs` defaults.
+  - mechanisms (merged later): `v3_snapshot_findings` and `mechanisms/build_pack`. Also `mechanisms/rival_push`,
+    whose 8B weights path (`C:/dev/models/hf/Qwen3-8B`) is now `<MODEL_MAPPER_MODELS>/Qwen3-8B`; `mechanisms/common`
+    still sets `MODEL_MAPPER_MODELS` to `C:/dev/models/hf` when it is unset, as before.
 - **Provenance hashes.** `concept_pipeline`'s saved provenance hashes its five source files from
   `modelmapper/core/`, where they live now. The values differ from older results because those files' import lines
   changed.
@@ -57,7 +60,7 @@ repo root works the same.
   experiment: `script_files`, `command` (the new command for `script`) and `reproduce_command` (`reproduce` with
   every old `python src/...` call replaced). It also adds `scripts.jsonl`, the table below.
 - **Left as written.** These are records of what was run, so they keep the old paths:
-  - RESULTS.md (with a pointer to this file), REPORT.md, PREREG*.md, ISSUES.md and LOOP_V2.md;
+  - RESULTS.md (with a pointer to this file), REPORT.md, PREREG*.md, MECHANISMS.md, ISSUES.md and LOOP_V2.md;
   - the old job queues `scripts/overnight_chain*.sh`, `after_atlas.sh` and `run_replication.sh`;
   - the `reproduce` strings in `explainer/gen/map/sources/`.
 
@@ -67,7 +70,7 @@ repo root works the same.
 |---|---|---|
 | `modelmapper/core/` | model loading, neuron reads and steering, labeller (`oai`) and judge (`jev`) clients, the main pipelines (stats, atlas, scan, labels, concept pipeline, judge-free wave, dial), and `settings.py`: every data path and env var | core |
 | `modelmapper/loop/` | the mapping loop: `map_loop` (v1/v2 mapping), `prepare`, `map_core`, `enrich` (v3), `frame`, `report`, and the run checks | loop |
-| `modelmapper/experiments/` | one module per study; `registry.py` lists each study's stages (`modelmapper experiment list`) | experiments |
+| `modelmapper/experiments/` | one module per study; `registry.py` lists each study's stages (`modelmapper experiment list`). `mechanisms/` holds the MECHANISMS.md tests (run as `modelmapper experiment mechanisms.<name>`) | experiments |
 | `modelmapper/ledger/` | the evidence ledger (LEDGER.md) | ledger |
 | `modelmapper/dist/` | the rented-GPU runner (RUNBOOK.md) | dist |
 | `modelmapper/archive/` | the 16-17 Oct one-off analyses (the 79 flat scripts added after the 16 Oct release, less the 6 that other modules import, which moved to core / loop / experiments) | archive |
@@ -163,7 +166,7 @@ accepts; the CLI checks a stage is valid before anything runs.
 | `src/interference_summary.py` | `modelmapper/archive/interference_summary.py` | archive | `modelmapper archive interference_summary` |  |
 | `src/intruder_test.py` | `modelmapper/core/intruder_test.py` | core | `modelmapper core intruder_test` |  |
 | `src/jev.py` | `modelmapper/core/jev.py` | core | (library: imported by other modules) |  |
-| `src/jev_test.py` | `modelmapper/core/jev_test.py` | core | (library: imported by other modules) |  |
+| `src/jev_test.py` | `modelmapper/core/jev_test.py` | core | `modelmapper core jev_test` |  |
 | `src/job_overlap.py` | `modelmapper/archive/job_overlap.py` | archive | `modelmapper archive job_overlap` |  |
 | `src/job_overlap_z.py` | `modelmapper/archive/job_overlap_z.py` | archive | `modelmapper archive job_overlap_z` |  |
 | `src/k50_check.py` | `modelmapper/experiments/k50_check.py` | experiments | `modelmapper experiment k50_check` |  |
@@ -235,6 +238,7 @@ accepts; the CLI checks a stage is valid before anything runs.
 | `src/loop_v2/specificity.py` | `modelmapper/experiments/specificity.py` | experiments | `modelmapper experiment specificity` | neighbours &#124; questions &#124; run &#124; summary |
 | `src/loop_v2/subject_pass.py` | `modelmapper/experiments/subject_pass.py` | experiments | `modelmapper experiment subject_pass` | questions &#124; map &#124; summary |
 | `src/loop_v2/tag_check.py` | `modelmapper/loop/tag_check.py` | loop | `modelmapper loop tag_check` |  |
+| `src/loop_v2/v3_snapshot_findings.py` | `modelmapper/experiments/v3_snapshot_findings.py` | experiments | `modelmapper experiment v3_snapshot_findings` |  |
 | `src/luna_firing_judge.py` | `modelmapper/archive/luna_firing_judge.py` | archive | `modelmapper archive luna_firing_judge` |  |
 | `src/luna_judge_extras.py` | `modelmapper/archive/luna_judge_extras.py` | archive | `modelmapper archive luna_judge_extras` |  |
 | `src/luna_judge_summary.py` | `modelmapper/archive/luna_judge_summary.py` | archive | `modelmapper archive luna_judge_summary` |  |
@@ -252,6 +256,15 @@ accepts; the CLI checks a stage is valid before anything runs.
 | `src/meaning_judge_summary.py` | `modelmapper/archive/meaning_judge_summary.py` | archive | `modelmapper archive meaning_judge_summary` |  |
 | `src/meaning_space.py` | `modelmapper/archive/meaning_space.py` | archive | `modelmapper archive meaning_space` |  |
 | `src/meaning_space_summary.py` | `modelmapper/archive/meaning_space_summary.py` | archive | `modelmapper archive meaning_space_summary` |  |
+| `src/mechanisms/build_pack.py` | `modelmapper/experiments/mechanisms/build_pack.py` | experiments | `modelmapper experiment mechanisms.build_pack` |  |
+| `src/mechanisms/common.py` | `modelmapper/experiments/mechanisms/common.py` | experiments | (library: imported by other modules) |  |
+| `src/mechanisms/entropy_neurons.py` | `modelmapper/experiments/mechanisms/entropy_neurons.py` | experiments | `modelmapper experiment mechanisms.entropy_neurons` |  |
+| `src/mechanisms/format_bound.py` | `modelmapper/experiments/mechanisms/format_bound.py` | experiments | `modelmapper experiment mechanisms.format_bound` |  |
+| `src/mechanisms/inhibitors.py` | `modelmapper/experiments/mechanisms/inhibitors.py` | experiments | `modelmapper experiment mechanisms.inhibitors` |  |
+| `src/mechanisms/language_neurons.py` | `modelmapper/experiments/mechanisms/language_neurons.py` | experiments | `modelmapper experiment mechanisms.language_neurons` |  |
+| `src/mechanisms/ledger_checks.py` | `modelmapper/experiments/mechanisms/ledger_checks.py` | experiments | `modelmapper experiment mechanisms.ledger_checks` |  |
+| `src/mechanisms/repeat_neurons.py` | `modelmapper/experiments/mechanisms/repeat_neurons.py` | experiments | `modelmapper experiment mechanisms.repeat_neurons` |  |
+| `src/mechanisms/rival_push.py` | `modelmapper/experiments/mechanisms/rival_push.py` | experiments | `modelmapper experiment mechanisms.rival_push` |  |
 | `src/merge_scans.py` | `modelmapper/core/merge_scans.py` | core | `modelmapper core merge_scans` |  |
 | `src/neuron_stats.py` | `modelmapper/core/neuron_stats.py` | core | `modelmapper stats` |  |
 | `src/neurons.py` | `modelmapper/core/neurons.py` | core | (library: imported by other modules) |  |
@@ -316,3 +329,12 @@ accepts; the CLI checks a stage is valid before anything runs.
 | `src/ledger/vocab.yaml` | `modelmapper/ledger/vocab.yaml` |
 | `src/ledger/salience.sql` | `modelmapper/ledger/salience.sql` |
 | `src/ledger/contrib/research_claims/` (`pack.json`, `claims.jsonl`, `experiments.jsonl`) | `modelmapper/ledger/contrib/research_claims/` |
+| `src/ledger/contrib/mechanisms/`, `src/ledger/contrib/mechanisms_8b/` (`pack.json` + JSON lines) | `modelmapper/ledger/contrib/mechanisms/`, `.../mechanisms_8b/` |
+
+### Other files that moved (merged from research/attention on 18 Oct)
+
+| old path | new path | note |
+|---|---|---|
+| `src/mechanisms/parallel_sentences.json`, `src/mechanisms/claims.jsonl` | `modelmapper/experiments/mechanisms/` | data read by the scripts next to it; byte-for-byte |
+| `src/mechanisms/run_queue.sh`, `run_queue2.sh` | `scripts/mechanisms_run_queue.sh`, `scripts/mechanisms_run_queue2.sh` | job queues; their commands now use the CLI |
+| `src/loop_v2/e7_pilot_after_enrich.sh` | `scripts/e7_pilot_after_enrich.sh` | E7 pilot waiter; runs `modelmapper enrich run` / `summary`, and also waits for an old-style `enrich.py run` |

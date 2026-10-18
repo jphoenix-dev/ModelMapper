@@ -108,12 +108,12 @@ def main():
         unit.append("rewrite_commands")
     for u in unit:
         print("FAIL (unit):", u)
-    n_exp = len(EXPERIMENTS); n_files = sum(1 for _, k in legacy.TABLE.values() if k == "experiments")
+    n_exp = len(EXPERIMENTS); n_files = sum(1 for m, k in legacy.TABLE.values() if k == "experiments" and cli.runnable(m))
     if n_exp != n_files:
         print(f"FAIL: registry has {n_exp} experiments, modelmapper/experiments has {n_files} modules")
     total_bad = len(bad) + len(unresolved) + (n_exp != n_files) + len(unit)
     print(f"{len(cs)} CLI invocations, {len(cs) - len(bad)} passed; {len(legacy.TABLE)} old paths resolve "
-          f"({len(unresolved)} not); registry {n_exp} = {n_files} experiment modules; {4 - len(unit)}/4 argument checks: "
+          f"({len(unresolved)} not); registry {n_exp} = {n_files} runnable experiment modules; {4 - len(unit)}/4 argument checks: "
           + ("PASS" if not total_bad else f"FAIL ({total_bad})"))
     return 1 if total_bad else 0
 

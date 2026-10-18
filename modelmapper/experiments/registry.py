@@ -19,6 +19,7 @@ G_CR3 = "CR-3 pre-registered replication (REPORT v1)"
 G_LABELS = "labels and graders (REPORT v1)"
 G_GG = "Golden Gate experiment (REPORT v1)"
 G_SUM = "summaries (REPORT v1)"
+G_MECH = "mechanisms: new neuron job categories (MECHANISMS.md, 18 Oct)"
 
 _RV = ("RECALL_VARIANT", "CONCEPT_OUT_DIR")
 
@@ -47,6 +48,7 @@ EXPERIMENTS = {
     "fast_readout": _e(G_LOOP, ["answers", "layers", "list"], env=["NB", "MULT"]),
     "neuron_readout": _e(G_LOOP),
     "specificity": _e(G_LOOP, ["neighbours", "questions", "run", "summary"]),
+    "v3_snapshot_findings": _e(G_LOOP),
     # concept search / atlas (were src/<name>.py)
     "concept_search_feasibility": _e(G_ATLAS),
     "concept_atlas": _e(G_ATLAS, ["fetch", "build", "propose", "verify", "verify_fast", "verify_gate"], env=["NB", "VF_TAG", "VF_LIMIT"]),
@@ -95,6 +97,15 @@ EXPERIMENTS = {
     "summarise_gg": _e(G_GG),
     "summarise_concepts": _e(G_SUM),
     "wave_summary": _e(G_SUM),
+    # MECHANISMS.md tests (were src/mechanisms/<name>.py); CPU-only Qwen3-0.6B unless noted, outputs <AC_DATA_DIR>/mechanisms
+    "mechanisms.entropy_neurons": _e(G_MECH, env=["RULE", "MECH_THREADS"]),
+    "mechanisms.repeat_neurons": _e(G_MECH, env=["REPEAT_K", "MECH_THREADS"]),
+    "mechanisms.language_neurons": _e(G_MECH, env=["MECH_THREADS"]),
+    "mechanisms.inhibitors": _e(G_MECH, env=["MECH_THREADS"]),
+    "mechanisms.rival_push": _e(G_MECH),
+    "mechanisms.format_bound": _e(G_MECH),
+    "mechanisms.ledger_checks": _e(G_MECH),
+    "mechanisms.build_pack": _e(G_MECH),
 }
 
 for _name, _ent in EXPERIMENTS.items():

@@ -1,7 +1,10 @@
 """Loop v3 pilots + enrichment -> ledger pack (`loop_v3`).
 
 Experiments: loop_v3_ranking_check (log-prob vs log-odds candidate search; fair 'disputed' knockouts), loop_v3_subject_pilot
-(12 gate concepts), loop_v3_enrich (enrichment records: E0 missed candidates, E2 formats, E3 nulls, E4 subject pass).
+(12 gate concepts), loop_v3_enrich (enrichment records: E0 missed candidates, E2 formats, E3 nulls, E4 subject pass, E7
+inhibitors), loop_v3_e7_pilot (the E7-only pilot, loop_v3/e7_pilot/records.jsonl, when it exists).
+E7 rows: knockout_drop with context 'stage=E7;selection=bottom_attr;...'; value < 0 = the answer went UP when the neuron was
+zeroed; passes = raise beyond run 1's floor (value < -FLOOR). Its random nulls are null_knockout_drop rows.
 """
 import json
 import statistics as stx
@@ -32,7 +35,8 @@ def subject_rows(pw, exp, c, out, src):
 
 
 def main(force=False):
-    files = [V3 / "ranking_check.jsonl", V3 / "ranking_disputed.jsonl", V3 / "subject" / "subject_maps.jsonl", V3 / "enrich_smoke" / "records.jsonl"]
+    files = [V3 / "ranking_check.jsonl", V3 / "ranking_disputed.jsonl", V3 / "subject" / "subject_maps.jsonl", V3 / "enrich_smoke" / "records.jsonl",
+             V3 / "e7_pilot" / "records.jsonl"] + sorted((V3 / "enrich_run1").glob("records_snapshot_*.jsonl"))[-1:]
     files = [f for f in files if f.exists()]
     if not files:
         print("loop_v3: no data"); return
@@ -80,43 +84,86 @@ def main(force=False):
                           caveats=["F3 (one sentence) targets Qwen's whole sentence: its knockout log-odds are not like-for-like with F1; compare activations.",
                                    "Run 1 concepts only; E1 (re-running v2 for earlier-only concepts) not in the smoke test."],
                           params={"noise_floor_E0": FLOOR}, **base)
-            for i, r in enumerate(read_jsonl(ep)):
-                c = thing(pw, r["concept"]); src = f"loop_v3/enrich_smoke/records.jsonl#{i}"
-                pw.evidence(experiment="loop_v3_enrich", concept=c, evidence_type="concept_stat", metric="enrich_timing_s", value=r["t"].get("total"),
-                            details={"t": r["t"], "gpu_busy": r["gpu_busy"], "peak_gb": r["peak_gb"], "skipped": r["skipped"], "stages_done": r["stages_done"]},
-                            key=f"{src}|timing", source=src)
-                e0 = r.get("E0")
-                if e0:
-                    ent = set(e0["entering_top30"])
-                    for x in e0["new"]:
-                        pw.evidence(experiment="loop_v3_enrich", unit=x["neuron"], concept=c, evidence_type="knockout_drop", metric="mean_logodds_drop",
-                                    value=x["mean_drop"], uom="logodds", n=len(x["per_prompt"]), noise_floor=FLOOR, threshold=FLOOR, passes=x["mean_drop"] > FLOOR,
-                                    context="stage=E0;positions=all;prompts=recall;search=logodds_only",
-                                    details={"per_prompt": x["per_prompt"], "logodds_rank": x["logodds_rank"], "enters_run1_top30": x["neuron"] in ent, "run1_thr30": e0["thr30"]},
-                                    key=f"{src}|E0|{x['neuron']}", source=src)
-                e2 = r.get("E2")
-                if e2:
-                    pw.evidence(experiment="loop_v3_enrich", concept=c, evidence_type="concept_stat", metric="own_answers_by_format", value=None,
-                                details={"own_answers": e2["own_answers"], "suffix_found": e2["suffix_found"]}, key=f"{src}|E2|own", source=src)
-                    for fm, vals in e2["acts"].items():
-                        for u, v in vals.items():
-                            pw.evidence(experiment="loop_v3_enrich", unit=u, concept=c, evidence_type="activation", metric="activation_answer_position",
-                                        value=stx.mean(v), n=len(v), context=f"stage=E2;format={fm}", details={"per_prompt": v}, key=f"{src}|E2|act|{fm}|{u}", source=src)
-                    for u, ks in e2["knockouts_top30"].items():
-                        for fm, v in ks.items():
-                            if fm == "F1" or not v:
-                                continue
-                            pw.evidence(experiment="loop_v3_enrich", unit=u, concept=c, evidence_type="knockout_drop", metric="logodds_drop_own_answer",
-                                        value=stx.mean(v), uom="logodds", n=len(v), noise_floor=FLOOR, context=f"stage=E2;format={fm};target=qwen_own_answer",
-                                        details={"per_prompt": v}, key=f"{src}|E2|ko|{fm}|{u}", source=src)
-                e3 = r.get("E3")
-                if e3:
-                    for u, v in e3["nulls"].items():
-                        pw.evidence(experiment="loop_v3_enrich", unit=u, concept=c, evidence_type="null_knockout_drop", metric="mean_logodds_drop", value=stx.mean(v),
-                                    uom="logodds", n=len(v), context="stage=E3;positions=all;prompts=recall;control=random_layer_matched",
-                                    details={"per_prompt": v}, key=f"{src}|E3|{u}", source=src)
-                if r.get("E4"):
-                    subject_rows(pw, "loop_v3_enrich", c, r["E4"], f"{src}|E4")
+            enrich_rows(pw, "loop_v3_enrich", ep, "loop_v3/enrich_smoke/records.jsonl")
+        e7p = V3 / "e7_pilot" / "records.jsonl"
+        if e7p.exists():
+            pw.experiment("loop_v3_e7_pilot", title="Loop v3 stage E7 pilot: inhibitor neurons (knockout raises the answer)",
+                          method=("For run-1 concepts (the first N of the full run's fixed order): run 1's saved attribution array; the 30 most NEGATIVE-"
+                                  "attribution neurons (never knocked out by run 1) each zeroed alone with map_core's procedure (all positions, exact log-odds, "
+                                  "mean over recall prompts); 4 layer-matched random nulls; change in the strongest rival token's log-prob."),
+                          status="pre-registered predictions I1-I5 (see enrich.py)", status_class="pre-registered", script="src/loop_v2/enrich.py",
+                          reproduce="ENRICH_NAME=e7_pilot ENRICH_ALL=1 ENRICH_SAMPLE_N=500 python src/loop_v2/enrich.py sample; ENRICH_NAME=e7_pilot ENRICH_STAGES=E7 python src/loop_v2/enrich.py run",
+                          data_files=["data:loop_v3/e7_pilot/"], caveats=["Single-neuron knockouts; a raise on a near-certain prompt can be a small probability change."],
+                          params={"noise_floor": FLOOR}, date="2026-10-18", docs=["MECHANISMS.md", "LOOP_V3.md"])
+            enrich_rows(pw, "loop_v3_e7_pilot", e7p, "loop_v3/e7_pilot/records.jsonl")
+        snap = sorted((V3 / "enrich_run1").glob("records_snapshot_*.jsonl")) if (V3 / "enrich_run1").exists() else []
+        if snap:                                  # a frozen copy of the full run in progress (the live file keeps growing)
+            sp = snap[-1]; n = sum(1 for _ in open(sp, encoding="utf-8"))
+            pw.experiment("loop_v3_enrich_run1", title=f"Loop v3 enrichment over all run-1 concepts (snapshot: {n} of 4,194 concepts)",
+                          method=("The enrichment task (E0 missed candidates, E2 formats - cheapened: activations in 3 formats + knockouts in the short "
+                                  "format, E3 layer-matched nulls; E4 subject pass in a second pass) over every run-1 concept in a fixed shuffled order "
+                                  "(seed 501), skipping stages already done. This pack is a snapshot of the run in progress."),
+                          status="exploratory (C1-C2 predictions held in the smoke test)", status_class="exploratory", script="src/loop_v2/enrich.py",
+                          reproduce="ENRICH_NAME=enrich_run1 ENRICH_ALL=1 python src/loop_v2/enrich.py sample; ENRICH_NAME=enrich_run1 ENRICH_STAGES=E0,E2,E3 python src/loop_v2/enrich.py run",
+                          data_files=[f"data:loop_v3/enrich_run1/{sp.name}"],
+                          caveats=[f"Snapshot of {n} concepts taken while the run continues; E4 (subject pass) not yet run for these.",
+                                   "Log-odds drops on near-certain prompts can be small probability changes (see RESULTS, 18-19 Oct)."],
+                          params={"noise_floor_E0": FLOOR, "snapshot": sp.name}, date="2026-10-18", docs=["LOOP_V3.md", "RESULTS.md"])
+            enrich_rows(pw, "loop_v3_enrich_run1", sp, f"loop_v3/enrich_run1/{sp.name}")
+
+
+def enrich_rows(pw, exp, path, rel):
+    """One enrich records file -> evidence rows (E0, E2, E3, E4, E7), keyed by '<rel>#<line>' as before."""
+    for i, r in enumerate(read_jsonl(path)):
+        c = thing(pw, r["concept"]); src = f"{rel}#{i}"
+        pw.evidence(experiment=exp, concept=c, evidence_type="concept_stat", metric="enrich_timing_s", value=r["t"].get("total"),
+                    details={"t": r["t"], "gpu_busy": r["gpu_busy"], "peak_gb": r["peak_gb"], "skipped": r["skipped"], "stages_done": r["stages_done"]},
+                    key=f"{src}|timing", source=src)
+        e0 = r.get("E0")
+        if e0:
+            ent = set(e0["entering_top30"])
+            for x in e0["new"]:
+                pw.evidence(experiment=exp, unit=x["neuron"], concept=c, evidence_type="knockout_drop", metric="mean_logodds_drop",
+                            value=x["mean_drop"], uom="logodds", n=len(x["per_prompt"]), noise_floor=FLOOR, threshold=FLOOR, passes=x["mean_drop"] > FLOOR,
+                            context="stage=E0;positions=all;prompts=recall;search=logodds_only",
+                            details={"per_prompt": x["per_prompt"], "logodds_rank": x["logodds_rank"], "enters_run1_top30": x["neuron"] in ent, "run1_thr30": e0["thr30"]},
+                            key=f"{src}|E0|{x['neuron']}", source=src)
+        e2 = r.get("E2")
+        if e2:
+            pw.evidence(experiment=exp, concept=c, evidence_type="concept_stat", metric="own_answers_by_format", value=None,
+                        details={"own_answers": e2["own_answers"], "suffix_found": e2["suffix_found"]}, key=f"{src}|E2|own", source=src)
+            for fm, vals in e2["acts"].items():
+                for u, v in vals.items():
+                    pw.evidence(experiment=exp, unit=u, concept=c, evidence_type="activation", metric="activation_answer_position",
+                                value=stx.mean(v), n=len(v), context=f"stage=E2;format={fm}", details={"per_prompt": v}, key=f"{src}|E2|act|{fm}|{u}", source=src)
+            for u, ks in e2["knockouts_top30"].items():
+                for fm, v in ks.items():
+                    if fm == "F1" or not v:
+                        continue
+                    pw.evidence(experiment=exp, unit=u, concept=c, evidence_type="knockout_drop", metric="logodds_drop_own_answer",
+                                value=stx.mean(v), uom="logodds", n=len(v), noise_floor=FLOOR, context=f"stage=E2;format={fm};target=qwen_own_answer",
+                                details={"per_prompt": v}, key=f"{src}|E2|ko|{fm}|{u}", source=src)
+        e3 = r.get("E3")
+        if e3:
+            for u, v in e3["nulls"].items():
+                pw.evidence(experiment=exp, unit=u, concept=c, evidence_type="null_knockout_drop", metric="mean_logodds_drop", value=stx.mean(v),
+                            uom="logodds", n=len(v), context="stage=E3;positions=all;prompts=recall;control=random_layer_matched",
+                            details={"per_prompt": v}, key=f"{src}|E3|{u}", source=src)
+        if r.get("E4"):
+            subject_rows(pw, exp, c, r["E4"], f"{src}|E4")
+        e7 = r.get("E7")
+        if e7:
+            for k, x in enumerate(e7["bottom"]):
+                pw.evidence(experiment=exp, unit=x["neuron"], concept=c, evidence_type="knockout_drop", metric="mean_logodds_drop",
+                            value=x["mean_drop"], uom="logodds", n=len(x["per_prompt"]), noise_floor=FLOOR, threshold=-FLOOR,
+                            passes=x["mean_drop"] < -FLOOR, rank=k + 1, context="stage=E7;selection=bottom_attr;positions=all;prompts=recall",
+                            details={"attr": x["attr"], "per_prompt": x["per_prompt"], "d_rival": x["d_rival"], "d_rival_per_prompt": x["d_rival_per_prompt"],
+                                     "rival_tokens": e7["rival_tokens"], "attr_source": e7["attr_source"]},
+                            key=f"{src}|E7|{x['neuron']}", source=src)
+            for u, v in e7["nulls"].items():
+                pw.evidence(experiment=exp, unit=u, concept=c, evidence_type="null_knockout_drop", metric="mean_logodds_drop", value=stx.mean(v["per_prompt"]),
+                            uom="logodds", n=len(v["per_prompt"]), context="stage=E7;positions=all;prompts=recall;control=random_layer_matched",
+                            details={"per_prompt": v["per_prompt"], "d_rival": v["d_rival"]}, key=f"{src}|E7null|{u}", source=src)
 
 
 if __name__ == "__main__":

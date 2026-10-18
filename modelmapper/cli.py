@@ -85,9 +85,27 @@ def summary_of(mod):
 
 
 def runnable(mod):
-    """True if the module does something when run (a __main__ block or argv handling); False for libraries."""
+    """True if the module does something when run: a __main__ block, argv handling, or work at the top level (many
+    experiment scripts have no main() and just run: a top-level call, loop or `with`). False for libraries."""
+    if mod in _LIBRARIES:
+        return False
     s = legacy.module_file(mod).read_text(encoding="utf-8")
-    return "__main__" in s or "sys.argv" in s
+    if "__main__" in s or "sys.argv" in s:
+        return True
+    for n in ast.parse(s).body:
+        if isinstance(n, (ast.For, ast.While, ast.With)):
+            return True
+        if isinstance(n, ast.Expr) and isinstance(n.value, ast.Call):
+            root = n.value.func
+            while isinstance(root, ast.Attribute):
+                root = root.value
+            if not (isinstance(root, ast.Name) and root.id in _SETUP_ROOTS):     # os.environ.setdefault(...) etc. is set-up
+                return True
+    return False
+
+
+_SETUP_ROOTS = {"os", "sys", "warnings", "torch", "logging", "random", "np", "_settings", "_legacy"}
+_LIBRARIES = {"modelmapper.experiments.mechanisms.common"}      # set-up at import (a loop over TMP / TEMP), no work
 
 
 def uses_argparse(mod):
@@ -110,8 +128,9 @@ def command_for(mod, kind):
             if ent[0] == mod:
                 return f"modelmapper {g} {c}"
     name = mod.rsplit(".", 1)[-1]
-    if kind == "experiments" and name in EXPERIMENTS:
-        return f"modelmapper experiment {name}"
+    exp = mod.removeprefix("modelmapper.experiments.")
+    if kind == "experiments" and exp in EXPERIMENTS:
+        return f"modelmapper experiment {exp}"
     if kind == "archive":
         return f"modelmapper archive {name}"
     if kind == "loop" and name in OTHER_LOOP:
@@ -370,9 +389,9 @@ def stages_for(mod):
         for ent in table.values():
             if ent[0] == mod:
                 return ent[2]
-    name = mod.rsplit(".", 1)[-1]
-    if mod == f"modelmapper.experiments.{name}" and name in EXPERIMENTS:
-        return EXPERIMENTS[name]["stages"]
+    exp = mod.removeprefix("modelmapper.experiments.")
+    if exp != mod and exp in EXPERIMENTS:
+        return EXPERIMENTS[exp]["stages"]
     return None
 
 

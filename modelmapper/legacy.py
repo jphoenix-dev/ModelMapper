@@ -53,7 +53,7 @@ LOOP_V2_LOOP = "prepare map_core enrich frame report gate_repro p1_check run1_ch
 # Everything else flat in src/ is a 16-17 Oct one-off analysis -> archive (unchanged).
 
 # added by the refactor; no old path
-NEW_MODULES = {"modelmapper.core.settings", "modelmapper.experiments.registry"}
+NEW_MODULES = {"modelmapper.core.settings", "modelmapper.experiments.registry", "modelmapper.experiments.mechanisms"}
 
 # ledger files whose bytes feed pack ids (PackWriter hashes its importer's source and core.py): never edited
 LEDGER_FROZEN = ("core.py", "pack.py", "importers/")
@@ -79,6 +79,8 @@ def _build_table(src_files):
             else:
                 kind = "loop" if n in LOOP_V2_LOOP else "experiments"
                 t[old] = (f"modelmapper.{kind}.{n}", kind)
+        elif parts[1] == "mechanisms" and p.stem != "__init__":    # src/mechanisms/ (merged from research/attention)
+            t[old] = (f"modelmapper.experiments.mechanisms.{p.stem}", "experiments")
         elif parts[1] in ("ledger", "dist"):
             mod = ".".join(("modelmapper",) + parts[1:-1] + (() if p.stem == "__init__" else (p.stem,)))
             t[old] = (mod, parts[1])
@@ -108,6 +110,9 @@ def _discover():
                 olds.append(f"src/{n}.py")
             else:
                 olds.append(f"src/loop_v2/{n}.py")
+    for f in sorted((PKG_DIR / "experiments" / "mechanisms").glob("*.py")):
+        if f.stem != "__init__":
+            olds.append(f"src/mechanisms/{f.name}")
     for kind in ("ledger", "dist"):
         for f in sorted((PKG_DIR / kind).rglob("*.py")):
             olds.append("src/" + f.relative_to(PKG_DIR).as_posix())

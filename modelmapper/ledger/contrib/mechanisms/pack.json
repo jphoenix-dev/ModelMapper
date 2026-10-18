@@ -1,0 +1,6 @@
+{
+ "importer": "mechanisms",
+ "contributor": "already-clean research (James + Claude)",
+ "model": "qwen3-0.6b",
+ "note": "MECHANISMS.md: new job categories tested cheaply on Qwen3-0.6B (CPU), 18 Oct 2026. Built by src/mechanisms/build_pack.py from D:/already-clean-data/mechanisms/."
+}

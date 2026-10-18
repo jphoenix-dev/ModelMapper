@@ -33,6 +33,7 @@ construction. Everything writes to the ledger; every v2 efficiency carries over 
 | E4 subject pass | Luna: 6 questions ABOUT the concept; recall filter; name-token attribution (log-odds), top 100 zeroed at the name; 6 nulls | ~30 s + Luna | all (pilot on the 12 gate concepts running now) |
 | E5 J-lens read | each concept's saved answer-position residuals read through the J-lens per layer ("what is held" by depth) - ON HOLD until the larger J-lens estimate improves early-layer reliability | ~0 (saved arrays) | run 1 + E1 concepts |
 | E6 links | top-30 links (LINKS.md rule) | (gpu-fan-out) | all |
+| E7 inhibitors (added 18 Oct, MECHANISMS.md H1) | run 1's saved attribution array -> the 30 most NEGATIVE-attribution neurons (run 1 only ever knocked out the top 200 positive), each zeroed alone; 4 layer-matched nulls; change in the strongest rival token | ~6 s (34 knockouts x 2 passes at ~0.09 s, from the smoke test's E0/E3 timings) | run 1 (arrays on disk, checked for all 4,194); earlier-only concepts recompute attribution (+ a few s) |
 Neuron-level passes (global, after the concept passes): J-lens readouts (done once), job names re-run for newly
 eligible neurons, labels.
 
@@ -53,6 +54,27 @@ rented RTX 3090s (+ boot overhead), or ~3 days on the 5090; Luna for E4 ~ 6 shor
    ledger lacked); bring James a revised cost and a stage-by-stage keep / cut / cheapen proposal before any scale-up.
 5. Ledger importer for enrich records; rebuild / verify / export.
 6. Scale-up: cost estimate to James -> run on rented GPUs via gpu-fan-out.
+7. **E7 inhibitors pilot (built 18 Oct, NOT run; needs a free GPU and James's go-ahead).** Code: `enrich.py` stage E7
+   (opt-in), importer rows in `modelmapper/ledger/importers/loop_v3.py` (experiment `loop_v3_e7_pilot`, `knockout_drop` with
+   `context=stage=E7;selection=bottom_attr;...`, negative = the answer went UP). Checks done on the CPU: (a) run 1's arrays
+   load for all 4,194 concepts, and each array's top 200 reproduces that concept's 200 candidates (exact in 3,910; the
+   other 284 differ by 1-4 float16 ties at rank 201-208), so the right file is read; the bottom 30 are always negative and
+   never among the candidates; (b) the whole stage ran on Qwen3-0.6B for 2 concepts (attribution recomputed, since the
+   arrays are 8B-shaped): 59 of 60 bottom neurons raise the answer beyond 0.10, all 8 nulls stay below it (median 0.003),
+   56 of 59 lower the rival - consistent with MECHANISMS.md; (c) the refactored importer reproduces all 40,384 existing
+   loop_v3_enrich rows. Commands (on the 5090 once the current enrich run has finished, or a rented 24 GB+ card):
+   `ENRICH_NAME=e7_pilot ENRICH_ALL=1 ENRICH_SAMPLE_N=500 modelmapper enrich sample` then
+   `ENRICH_NAME=e7_pilot modelmapper enrich --stages E7 run` then `... summary` (prints I1-I5);
+   `scripts/e7_pilot_after_enrich.sh` waits for a free GPU and runs the last two.
+   **Cost:** ~6 s per concept -> ~50 min on the 5090 for 500 concepts (a rented RTX 3090 is ~1.5-2x slower: ~1.5 h, roughly $0.3-0.5 incl. boot);
+   the rest of run 1 (3,694) ~6 h; all 5,028 ~8-9 h. Halve it by dropping the rival readout (one extra pass per
+   knockout) if the pilot shows it adds little. Predictions I1-I5 are in enrich.py's docstring.
 
 ## Predictions to state before each stage
 In each script's docstring before it runs (as for every experiment since 16 Oct).
+
+## Method note (19 Oct): report a probability-space effect next to log-odds
+E0 on 982 concepts: entrants' log-odds drops are large mostly on prompts Qwen is near-certain about (median entrant moves
+P(answer) by 0.47 points; 7% by >= 5 points). Log-odds stay the ranking measure (no saturation), but every knockout row
+should also carry the mean change in P(answer), and the map / claims should say which measure a number is in.
+Implementation: computed from the saved per-prompt drops and base P - no extra GPU passes (ledger export + map build).

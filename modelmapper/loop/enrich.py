@@ -13,13 +13,25 @@ Stages (inputs reused from run 1: its recall prompts, answer ids, 200 candidates
   E3 nulls              6 random neurons from the layers of the top-6 candidates (outside the 200), zeroed alone in F1
   E4 subject pass       subject_pass.subject_map_one (Luna's 6 questions ABOUT the concept; name-token attribution; top 100
                         zeroed at the name; 6 nulls) - skipped where the ledger already has subject-side evidence
+  E7 inhibitors         (MECHANISMS.md H1; added 18 Oct, opt-in: ENRICH_STAGES must name it) run 1's saved attribution array
+                        (arrays/<slug>.npz, key 'attr'; recomputed only if missing or of another model's shape); the E7_K (30)
+                        most NEGATIVE-attribution neurons - never knocked out by run 1, which took the top 200 positive -
+                        each zeroed alone with map_core's procedure (all positions, exact log-odds, mean over recall prompts),
+                        plus 4 layer-matched random nulls. A negative drop = the answer went UP when the neuron was removed.
+                        Also: change in log-prob of the strongest rival token at the first answer position (d_rival).
 Logged per concept: seconds per stage, GPU busy %, peak GPU memory (the 5090 lessons: keep ~25 GB, measure first).
 Predictions (stated before running):
   C1 cost: E0 + E2 + E3 + E4 take <= 60 s per concept on the 5090 (vs the ~42 s estimate + E0's ~20 s), GPU busy >= 80%.
   C2 value: E0 changes run 1's top 30 for >= 70% of concepts (ranking check: 44/50); E4 maps >= 70% of concepts
      (>= 3 recalled facts; pilot 9/12); E2 finds >= 20% of each concept's top-30 neurons format-bound (activation in F3 <
      half of F1, or knockout in F3 < half of F1).
+  E7 predictions (from the 0.6B study; stated before any 8B run): I1 >= 80% of concepts have >= 1 bottom neuron raising the
+     answer by more than run 1's pooled null floor (0.10 log-odds); I2 the median concept's best raise is >= 0.3; I3 a few
+     neurons recur as inhibitors in >= 5% of concepts (shared dampeners); I4 removing an inhibitor lowers the strongest rival
+     token in >= 70% of cases; I5 E7's own random nulls stay below the floor in >= 95% of cases.
 Output: D:/already-clean-data/loop_v3/enrich_smoke/.  Usage: python src/loop_v2/enrich.py sample | questions | run [N] | summary
+E7 pilot: ENRICH_NAME=e7_pilot ENRICH_ALL=1 ENRICH_SAMPLE_N=500 python src/loop_v2/enrich.py sample, then
+          ENRICH_NAME=e7_pilot ENRICH_STAGES=E7 python src/loop_v2/enrich.py run   (= the first 500 of the full run's fixed order)
 (questions needs Luna: run from the main checkout; run needs MODEL_MAPPER_MODELS from the research worktree)
 """
 import glob
@@ -42,6 +54,20 @@ CHEAP = os.environ.get("ENRICH_CHEAP", "1") == "1"                # James 18 Oct
 RUN1 = DATA / "loop_v2" / "run1" / "results"
 V3 = DATA / "loop_v3"
 F1S, F2S, F3S = " Answer with just the name.", " Answer in as few words as possible.", " Answer in one short sentence."
+ALL_STAGES = ("E0", "E2", "E3", "E4", "E7")
+E7_K, E7_NULLS = int(os.environ.get("E7_K", "30")), 4
+E7_FLOOR = 0.100                                                  # run 1's pooled null floor (99th pct |drop|), as loop_v3 importer
+
+
+def run1_attr(r, L, W):
+    """Run 1's saved attribution array for record r (its batch folder's arrays/), or (None, path) if missing / other shape."""
+    import numpy as np
+    name = (r.get("v2") or {}).get("arrays")
+    p = Path(r["_file"]).parent / "arrays" / name if name and r.get("_file") else None
+    if not p or not p.exists():
+        return None, None
+    a = np.load(p)["attr"].astype("float32")
+    return (a, p) if a.shape == (L, W) else (None, p)
 
 
 def run1_records():
@@ -50,6 +76,7 @@ def run1_records():
             if line.strip():
                 r = json.loads(line)
                 if (r.get("row") or {}).get("status") == "ok":
+                    r["_file"] = f
                     yield r
 
 
@@ -62,10 +89,12 @@ def sample():
     rng = random.Random(401)
     if os.environ.get("ENRICH_ALL") == "1":                       # the full run: every run-1 concept, fixed shuffled order
         S = sorted(names); random.Random(501).shuffle(S)
+        if os.environ.get("ENRICH_SAMPLE_N"):                      # a pilot = the first N of that same order
+            S = S[:int(os.environ["ENRICH_SAMPLE_N"])]
     else:
         S = rng.sample(fresh, 45) + rng.sample(done_e0, 5)
     (OUT / "sample.json").write_text(json.dumps(S, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"{len(S)} concepts (45 fresh + 5 with E0 already done)")
+    print(f"{len(S)} concepts" + ("" if os.environ.get("ENRICH_ALL") == "1" else " (45 fresh + 5 with E0 already done)"))
 
 
 def questions():
@@ -168,21 +197,24 @@ def run(limit=None):
     con = duckdb.connect(str(DATA / "ledger" / "ledger.duckdb"), read_only=True)
     pipe = FastPipeline(DEFAULT_MODEL, mode="add", reply_only=True); m, tok, W = pipe.model, pipe.tok, pipe.W
     gb = GpuBusy(); OUT.mkdir(parents=True, exist_ok=True); f = open(OUT / "records.jsonl", "a", encoding="utf-8"); idx = build_index(con)
+    con.close()                                   # read once at start; holding it blocked ledger rebuilds for the whole run (18 Oct)
     pre = lambda u: tuple(map(int, u[1:].split(":")))
     for c in S:
         have = have_from(idx, c)
-        for st_ in ("E0", "E2", "E3", "E4"):
+        for st_ in ALL_STAGES:
             if st_ not in STAGES:
                 have.setdefault(st_, "not in this pass (ENRICH_STAGES)")
         if "E4" not in have and not Q.get(c):
             have["E4"] = "no questions yet (next pass)"
-        if all(s in have for s in ("E0", "E2", "E3", "E4")):
+        if all(s in have for s in ALL_STAGES):
             print(c, "complete, skipped"); continue
         r = R[c]; rk = r["rank"]; prompts = rk["prompts"]; tid = rk["answer_ids"]; pairs = [(q, tid) for q in prompts]
         run1 = {pre(x["neuron"]): x["single_drop"] for x in rk["candidates_all200"]}
         top30 = [pre(x["neuron"]) for x in rk["top"][:30]]
         rec = {"concept": c, "skipped": have, "stages_done": [], "t": {}, "gpu_busy": {}, "peak_gb": {}}
-        torch.cuda.reset_peak_memory_stats(); base = pipe.batch_logodds(pairs)
+        if torch.cuda.device_count() > 0:                          # (is_available() can say True with the GPU hidden on Windows)
+            torch.cuda.reset_peak_memory_stats()
+        base = pipe.batch_logodds(pairs)
         enter = []
         # ---- E0
         if "E0" not in have:
@@ -267,25 +299,78 @@ def run(limit=None):
             t = time.time(); gb.take()
             rec["E4"] = SP.subject_map_one(m, tok, c, Q[c])
             rec["stages_done"].append("E4"); rec["t"]["E4"] = round(time.time() - t, 1); rec["gpu_busy"]["E4"] = gb.take()
-        rec["peak_gb"] = round(torch.cuda.max_memory_allocated() / 2**30, 1); rec["t"]["total"] = round(sum(v for v in rec["t"].values()), 1)
+        # ---- E7 inhibitors
+        if "E7" not in have:
+            rec["E7"] = e7_stage(pipe, m, tok, W, c, r, prompts, tid, pairs, base, run1, steer, mlps)
+            rec["stages_done"].append("E7"); rec["t"]["E7"] = rec["E7"].pop("_t"); rec["gpu_busy"]["E7"] = gb.take()
+        rec["peak_gb"] = round(torch.cuda.max_memory_allocated() / 2**30, 1) if torch.cuda.device_count() > 0 else None; rec["t"]["total"] = round(sum(v for v in rec["t"].values()), 1)
         f.write(json.dumps(rec, ensure_ascii=False) + "\n"); f.flush()
         for st_ in rec["stages_done"]:
             idx["done"].setdefault(c, {})[st_] = OUT.name
         print(c, rec["t"], rec["gpu_busy"], rec["peak_gb"], "skipped:", list(have), flush=True)
 
 
+def e7_stage(pipe, m, tok, W, c, r, prompts, tid, pairs, base, run1, steer, mlps):
+    """E7: knock out the most negative-attribution neurons alone (see the docstring). Returns the record's E7 block."""
+    import numpy as np
+    import torch
+    t = time.time(); L = len(mlps(m))
+    attr, apath = run1_attr(r, L, W); src = "run1_arrays"
+    if attr is None:                                              # no saved array of this model's shape: attribute once
+        A = pipe.attribute(prompts, tid); attr = A["attr"].detach().float().cpu().numpy(); del A; src = "recomputed"
+    order = np.argsort(attr.reshape(-1), kind="stable")
+    bottom = [divmod(int(i), W) for i in order[:E7_K]]
+    rng = random.Random(f"e7|{c}"); excl = set(run1) | set(bottom); nulls = []
+    for (l, _) in bottom[:E7_NULLS]:
+        while True:
+            u = (l, rng.randrange(W))
+            if u not in excl and u not in nulls:
+                nulls.append(u); break
+    ids0 = [tok.encode(q) for q in prompts]
+    Tm = max(map(len, ids0)); pad = tok.pad_token_id or 0
+    x = torch.full((len(ids0), Tm), pad, device=m.device); am = torch.zeros_like(x)
+    for i, s_ in enumerate(ids0):
+        x[i, :len(s_)] = torch.tensor(s_); am[i, :len(s_)] = 1
+    last = torch.tensor([len(s_) - 1 for s_ in ids0], device=m.device); rows_ = torch.arange(len(ids0), device=m.device)
+
+    def first_lp(edits=None):
+        """log-probs at the first answer position, optionally with neurons zeroed."""
+        ctx = steer(m, edits) if edits else torch.no_grad()
+        with torch.no_grad(), ctx:
+            lg = m(input_ids=x, attention_mask=am).logits[rows_, last]
+        return lg.double().log_softmax(-1).cpu()
+    lp0 = first_lp(); lg_ = lp0.clone(); lg_[:, tid[0]] = -1e30; rival = lg_.argmax(-1); ri = torch.arange(len(prompts))
+
+    def ko(u):
+        ed = [(u[0], u[1], 0.0)]
+        los = pipe.batch_logodds(pairs, steer(m, ed))
+        d_r = (first_lp(ed)[ri, rival] - lp0[ri, rival]).tolist()
+        return [b - y for b, y in zip(base, los)], d_r
+    out_b, out_n = [], {}
+    for (l, n) in bottom:
+        dd, dr = ko((l, n))
+        out_b.append({"neuron": f"L{l}:{n}", "attr": float(attr[l, n]), "mean_drop": stx.mean(dd), "per_prompt": dd,
+                      "d_rival": stx.mean(dr), "d_rival_per_prompt": dr})
+    for (l, n) in nulls:
+        dd, dr = ko((l, n))
+        out_n[f"L{l}:{n}"] = {"per_prompt": dd, "d_rival": stx.mean(dr)}
+    return {"attr_source": src, "attr_file": str(apath) if apath else None, "k": E7_K, "base": base,
+            "rival_tokens": [tok.decode([int(v)]) for v in rival], "bottom": out_b, "nulls": out_n,
+            "run1_null_single_drops": (r.get("v2") or {}).get("null_single_drops"), "_t": round(time.time() - t, 1)}
+
+
 def summary():
     md = stx.median
     R = [json.loads(l) for l in (OUT / "records.jsonl").read_text(encoding="utf-8").splitlines()]
     L = [f"Enrichment smoke test: {len(R)} concept records"]
-    for s in ("E0", "E2", "E3", "E4"):
+    for s in ALL_STAGES:
         ts = [r["t"][s] for r in R if s in r["t"]]; gb = [r["gpu_busy"][s] for r in R if r["gpu_busy"].get(s) is not None]
         sk = sum(1 for r in R if s in r["skipped"])
         if ts:
             L.append(f"  {s}: ran {len(ts)}, skipped {sk} (already had it); median {md(ts):.1f} s, total {sum(ts) / 60:.1f} min; GPU busy median {md(gb) if gb else 'n/a'}%")
     tot = [r["t"]["total"] for r in R if not r["skipped"]]
     if tot:
-        L.append(f"  per fresh concept: median {md(tot):.1f} s; peak memory max {max(r['peak_gb'] for r in R)} GB")
+        L.append(f"  per fresh concept: median {md(tot):.1f} s; peak memory max {max((r['peak_gb'] or 0) for r in R)} GB")
         L.append(f"  extrapolated to 5,028 concepts at this rate: {md(tot) * 5028 / 3600:.0f} GPU-hours on the 5090")
     e0 = [r["E0"] for r in R if "E0" in r]
     if e0:
@@ -305,6 +390,19 @@ def summary():
                     if d1 > 0.1:
                         fb.append(d3 < 0.5 * d1)
         L.append(f"  E2 value: top-30 neurons format-bound (F3 knockout < half of F1): {sum(fb)}/{len(fb)} ({sum(fb) / max(1, len(fb)):.0%})")
+    e7 = [r["E7"] for r in R if "E7" in r]
+    if e7:
+        from collections import Counter
+        best = [-min(x["mean_drop"] for x in e["bottom"]) for e in e7]
+        hits = [x for e in e7 for x in e["bottom"] if x["mean_drop"] < -E7_FLOOR]
+        share = Counter(x["neuron"] for x in hits)
+        nul = [abs(stx.mean(v["per_prompt"])) for e in e7 for v in e["nulls"].values()]
+        L.append(f"  E7 inhibitors: {len(e7)} concepts; I1 with >= 1 raise beyond {E7_FLOOR}: {sum(1 for b in best if b > E7_FLOOR)}/{len(e7)}; "
+                 f"I2 median best raise {md(best):.2f}; raises {len(hits)}/{sum(len(e['bottom']) for e in e7)} bottom neurons")
+        L.append(f"  I3 shared (>= 5% of concepts): {[(u, k) for u, k in share.most_common(15) if k >= 0.05 * len(e7)]}")
+        L.append(f"  I4 inhibitors lowering the rival: {sum(1 for x in hits if x['d_rival'] < 0)}/{len(hits)}")
+        L.append(f"  I5 E7 nulls below the floor: {sum(1 for v in nul if v < E7_FLOOR)}/{len(nul)} (median |drop| {md(nul) if nul else float('nan'):.3f}); "
+                 f"attribution from run 1 arrays {sum(1 for e in e7 if e['attr_source'] == 'run1_arrays')}/{len(e7)}")
     txt = "\n".join(L); (OUT / "summary.txt").write_text(txt + "\n", encoding="utf-8"); print(txt)
 
 

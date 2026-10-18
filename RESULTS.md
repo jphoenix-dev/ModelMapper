@@ -2782,3 +2782,41 @@ log-odds; a random same-layer neuron as the control.
   every pass above is at k = 1 with its own control quiet. Lowering effects are larger than raising effects.
 - Reading: some neurons are causal two-ended scales - one direction in the model, two opposite meanings - at least for
   compass directions and orientation. Ledger: experiments scales, scales_steer, scales_steer_allpos_invalid.
+
+## 18-19 Oct 2026 - How much did run 1's candidate search miss? (enrich_run1, E0, first 982 concepts)
+
+Run 1 picked each concept's 200 candidates by the log-PROB gradient but ranked them by exact log-ODDS knockout drop
+(ranking_check.py). Loop v3's stage E0 knocks out every log-odds-only candidate for every concept. On the first 982
+concepts of the full enrichment run:
+- run 1's top 30 gains at least one stronger neuron for **80%** of concepts (median 3 entrants, mean 9.5); 410 missed
+  candidates drop the answer by > 1 log-odds (249 concepts); a third of entrants are in layers < 20.
+- **In probability terms the gap is much smaller:** the median entrant lowers P(answer) by 0.47 percentage points (90th
+  pct 3.8 points); 660 of 9,257 entrants (7%) lower it by >= 5 points and 55 by >= 20 points. **40% of concepts gain
+  at least one entrant that changes P(answer) by >= 5 points.** Most large log-odds drops come from prompts Qwen is
+  near-certain about (log-odds amplify tiny probability changes there).
+- **Consequences:** run 1's (and the 16 Oct pipeline's) top-k lists are incomplete; necessity claims ("a handful of
+  neurons is enough") are lower bounds and stand. Statistics computed over the lists (e.g. LAYERS_AND_JOBS S1's "68% of
+  top-5 neurons in layers 28-35") will shift and are recomputed after the enrichment run. Method change for v3: search
+  the union of both candidate rankings, and report a probability-space effect next to the log-odds drop.
+
+## 18 Oct 2026 (evening) - Loop v3 snapshot: 1,231 of 4,194 concepts enriched (E0 / E2 / E3)
+
+The full enrichment run (enrich_run1) is still going on the 5090; this is a frozen copy of its first 1,231 records
+(`D:/already-clean-data/loop_v3/enrich_run1/records_snapshot_2026-10-18.jsonl`, ledger experiment
+`loop_v3_enrich_run1`), so the figures can change as the rest arrives. Computed by `src/loop_v2/v3_snapshot_findings.py`
+(CPU, output `snapshot_findings.txt` next to the snapshot); 1,219 concepts have both a run-1 map and E0.
+- **The 'key neurons are late' finding survives the missed candidates.** Share of each concept's top-5 neurons in
+  layers 28-35: run 1 as published 68%; with E0's missed candidates added 66%; ranked by probability drop instead of
+  log-odds 67% / 65%. Layers < 20: 16% -> 17-19%.
+- **E0 (same picture as the first 982):** the top 30 changes for 81% of concepts (11,245 entrants), but the median
+  entrant moves P(answer) by 0.49 points; 7% of entrants move it by >= 5 points; 40% of concepts gain at least one
+  such entrant.
+- **E2 formats:** for 42% of top-30 neurons (15,645 / 36,904 with an original drop > 0.1) knocking them out in the short
+  answer format hurts less than half as much as in the original format - and for 94% of those the neuron is still
+  active (>= half its original activation) in the short format. So the general version of the era result holds:
+  **neurons stay switched on across formats, but whether the answer NEEDS them depends on the format.**
+- **E3 floor:** 7,386 layer-matched random neurons, |mean drop| median 0.017, p99 0.101 (run-1 pooled floor 0.100).
+- **Caveat - measurement resolution:** per-prompt knockout drops come from bf16 logits, which move in steps of 0.125-0.25
+  for the logit sizes here, so a single prompt cannot resolve drops below ~0.25 (many null per-prompt values are exactly
+  +-0.25). Means over 16 prompts are finer; the floors above are measured with the same resolution, so comparisons
+  against them stand, but small entrants (the top-30 bar is ~0.2) sit near the step size.
