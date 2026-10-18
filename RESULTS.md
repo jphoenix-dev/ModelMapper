@@ -2758,3 +2758,6 @@ let's smoke test it first ... and re-assess". 50 run-1 concepts (45 fresh + 5 wh
   the next token) and are reported with that caveat.
 - **Revised cost:** 5,028 concepts x 21 s = 29 GPU-hours on the 5090 (vs the 75 h estimate), before cheapening E2.
 Files: D:/already-clean-data/loop_v3/enrich_smoke/ (sample, questions, records.jsonl with every value, summary.txt, run.log).
+- Cross-GPU (18 Oct, gpu-fan-out smoke shard): RTX 3090 vs 5090, both 4 rows, windows 0-1: relative difference median
+  1.7%, max 7.5% (early layers), readout overlap 0.90-1.00 - the same size as the 8-vs-4-row effect. Decision unchanged:
+  all 256 windows in one configuration. 3090 speed: ~320 s/window at 99.7% busy, 20.2 GB peak; full 256 ~ 23 GPU-h, ~$5.2-5.5.
