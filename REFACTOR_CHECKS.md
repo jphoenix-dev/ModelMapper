@@ -5,8 +5,10 @@ The package refactor moved the 232 files under `src/` into `modelmapper/` and ad
 (`CUDA_VISIBLE_DEVICES=""`, `MODEL_MAPPER_DEVICE=cpu`, `MODEL_MAPPER_DTYPE=float32`) with Qwen3-0.6B where a model
 was needed. No paid API was called.
 
-- **Branch:** `claude/refactor-cli-b5646f`, cut from `release-2026-10-18` at 94f7a4c, with `release-2026-10-18`
-  (8e5de09, explainer files only) merged in afterwards.
+- **Branch:** `claude/refactor-cli-b5646f`, cut from `release-2026-10-18` at 94f7a4c. Merged in afterwards:
+  `release-2026-10-18` at 8e5de09 and at 71cfe9c (explainer files only), and `research/attention` at 0a4288b. The
+  last merge brought the mechanisms study, the E7 stage and the loop v3 snapshot importer; see "Second round" at the
+  end. Checks 1-8 below are from the first round, before that merge.
 - **"Old"** is the unrefactored tree: `git archive release-2026-10-18` (94f7a4c), unpacked to a scratch folder on
   D: and run as `python src/...`.
 - **"New"** is this branch, run as `python -m modelmapper ...`.
@@ -162,8 +164,8 @@ So the old and new builds agree as closely as the old build agrees with itself.
    `cross_activation.jsonl` (3,602 neurons) but not the regenerated summary, which still says 2,401. Old and new
    code both regenerate the 3,602 version.
 4. **`results/interference.jsonl` is not in the release**, so `interference_summary` can't run (old or new alike).
-5. **9 ledger experiments cite `src/mechanisms/*.py`, which is not in this release.** If `research/mechanisms` is
-   merged later, its scripts need a home in the package (probably `modelmapper/experiments/`) and a SCRIPTS.md row.
+5. ~~9 ledger experiments cite `src/mechanisms/*.py`, which was not on this branch.~~ Resolved in the second round:
+   `research/attention` brought `src/mechanisms/`, now `modelmapper/experiments/mechanisms/`, with SCRIPTS.md rows.
 6. **Loop v2 map tasks need a GPU.** `map_core.provenance()` calls `torch.cuda.get_device_name()` unconditionally, so a CPU or Mac run fails
    there. A guard (`if torch.cuda.is_available()`) would fix it; that's an internal, so it was left alone. On a CPU-only worker the
    task fails and the worker retries it every 5 s; with `--once` it exits instead.
@@ -179,3 +181,45 @@ MODEL_MAPPER_DTYPE=float32 python scripts/smoke_e2e.py
 ```
 The old-versus-new runs need an unrefactored tree (`git archive release-2026-10-18`). Their harness and logs are in
 the release-prep notes folder, not in the repo.
+
+## Second round: merging research/attention (0a4288b) and release-2026-10-18 (71cfe9c)
+
+`release-2026-10-18` merged cleanly (explainer only). `research/attention` brought 11 commits. Here is where its
+files went:
+
+| came in as | now | how |
+|---|---|---|
+| `src/mechanisms/*.py` (9 modules) | `modelmapper/experiments/mechanisms/` | imports rewritten as before; `common.py` imports settings **after** its environment defaults (it sets `MODEL_MAPPER_MODELS`, which settings reads at import, as config did before); `rival_push`'s 8B path is `<MODEL_MAPPER_MODELS>/Qwen3-8B` (same default); `build_pack` writes to `modelmapper/ledger/contrib/`; old-path strings it writes into packs kept |
+| `src/mechanisms/parallel_sentences.json`, `claims.jsonl` | same folder | byte-for-byte (read from next to the scripts) |
+| `src/loop_v2/v3_snapshot_findings.py` | `modelmapper/experiments/` | `D:/already-clean-data` -> `settings.DATA_DIR` |
+| `src/loop_v2/e7_pilot_after_enrich.sh`, `src/mechanisms/run_queue*.sh` | `scripts/` | commands use the CLI; the E7 waiter also recognises `modelmapper enrich run` |
+| `src/ledger/contrib/mechanisms/`, `mechanisms_8b/` | `modelmapper/ledger/contrib/` | byte-for-byte (same git blobs as research/attention) |
+| edits to `ledger/importers/loop_v3.py`, `vocab.yaml` | in place | merged files are research/attention's blobs, unchanged; `core.py` / `pack.py` unchanged too |
+| edits to `loop/enrich.py` (E7), `experiments/jlens.py` (streamed merge) | in place | auto-merged; new lines use no bare imports or local paths |
+
+Registry: `v3_snapshot_findings` and 8 `mechanisms.<name>` studies (`modelmapper experiment list --group mechanisms`).
+SCRIPTS.md now covers 237 old paths.
+
+A CLI bug, found and fixed while doing this:
+- `runnable()` took 9 older experiments for libraries, because they do their work at the top level with no
+  `__main__` block and no `sys.argv`: `auto_steer_jev_check`, `cr3_people_baseline`, `ctx_compare`,
+  `default_heldout_regen`, `effort_compare`, `logodds_compare`, `logodds_summary`, `spotcheck_build`,
+  `steer_retest_summary`.
+- So `modelmapper run src/<one of them>.py` refused to run them. Their `experiment` commands were never affected.
+- It now also counts top-level calls and loops. Set-up calls on `os` / `sys` / `torch` don't count, and
+  `mechanisms/common` is listed as a library.
+- `core/jev_test` gained its `modelmapper core jev_test` command. smoke_cli now compares the registry with the
+  runnable experiment modules.
+
+| check | result |
+|---|---|
+| Static import check | PASS: 254 files, 503 `modelmapper.*` imports; no bare `common` / `ledger` imports or `sys.path` edits left |
+| CLI smoke (worktree, and the fresh clone at b742dac via `modelmapper.exe`) | PASS: 455 invocations, 237 old paths resolve, registry 73 = 73 runnable experiment modules, 4/4 argument checks |
+| Ledger from the merged tree | PASS. `modelmapper ledger import --no-export` ran every importer, the 3 contrib packs, build and verify, into a private LEDGER_DIR holding a copy of tonight's real packs. Verify: **ALL CHECKS PASSED**, **5,601,506 evidence rows**, the same as the real ledger. Research's new `loop_v3` importer skipped as unchanged (same pack id as the real ledger) |
+| Merged ledger vs the real ledger (`D:/already-clean-data/ledger`, read-only copy) | every table has the same row count. Leaving out the pack-id-derived columns (`pack_id`, `evidence_id`, `artifact_id`, `packs`) and build stamps: **every base table is identical** (`evidence`, `evidence_raw`, `ev_scored`, `concepts`, `concepts_raw`, `experiments`, `claims`, `artifacts`, `units`), and so are `unit_concept`, `layer_summary` and `ledger_meta`. `concept_summary`, `head_summary` and `unit_summary` differ only in tie choices, as in the first round. Pack ids differ for the importers re-minted by the CRLF / LF issue (finding 2) and the path-dependent contrib packs |
+| `v3_snapshot_findings` (new CLI, inputs copied to a scratch `AC_DATA_DIR`) | **byte-identical** to the `snapshot_findings.txt` research wrote from the same snapshot. The old script hard-codes `D:/already-clean-data`, so it wasn't re-run (it would have overwritten research's file) |
+| `mechanisms.ledger_checks`: old (`git archive research/attention`) vs new, on the merged ledger | rc 0 both. Not deterministic in the old code itself: 3 old runs gave 3 different files. The fields that vary old-vs-new are exactly the ones that vary old-vs-old (three top-15 lists cut at tied counts); nothing varies only in the new code |
+
+Not run: the mechanisms model scripts (0.6B CPU runs of 10-60 min each that write to `<AC_DATA_DIR>/mechanisms`),
+the E7 stage (needs the 5090) and the jlens merge (needs the shard files). Their changes are research's own lines,
+merged as they were.
