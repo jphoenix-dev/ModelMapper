@@ -2445,3 +2445,35 @@ landmark's name tokens vs only at the last position. Predictions stated before r
   2022, Geva et al. 2023), now neuron by neuron in Qwen3-8B.
 - **Limits:** only 59 early neurons in the fact maps' top-3s (maps still favour late answer-sayers); 5 relations, all
   landmarks; class thresholds arbitrary (stated); Luna's answers; fixed templates.
+
+## 18 Oct 2026: direct entity neurons, scaled to three kinds - and how shared / polysemantic they are (research branch)
+(`facts2.py` entity stage, `entity_sharing.py`; outputs D:/already-clean-data/facts2/, summary in results/facts2/.)
+90 entities (30 landmarks, 30 people, 30 works; two near-duplicate works - 'Odyssey' / 'The Odyssey', 'Divine Comedy' / 'The
+Divine Comedy' - kept as separate entries), 5 relations each with fixed phrasings; 333 facts kept (Qwen answers >= 2 of 3).
+- **Direct entity neurons:** per entity, attribution summed over ONLY its name-token positions and all its facts, across
+  all 36 layers -> top-100 -> each zeroed ONLY at the name tokens -> mean drop over the entity's facts. Top-3 per entity
+  with drop > 0.2 (218 neurons, 86 entities): **median layer 8; 89% below layer 20** (landmarks 8, people 8, works 8.5).
+  Predicted (median < 20): held.
+- **Specific in use:** zeroed at the name tokens of every fact: own entity's facts drop a median 0.58, other entities of
+  the same kind 0.015, other kinds 0.008; **209/218 (96%) >= 5x** more for their own entity (predicted: held). Strongest:
+  L8:9458 Blue Mosque 9.6; L7:8413 Ulysses 8.7; L0:1550 The Starry Night 6.7; L1:4818 Sagrada Família 6.3; L7:990 Genghis
+  Khan 4.7; L8:334 Sistine Chapel 4.1.
+- **But shared with a few others (James: towards polysemanticity):** 119/218 (55%) also matter for >= 1 other entity
+  (another entity's facts drop > max(0.2, 25% of own); 1 other: 51, 2-3: 46, 4-6: 22); only 36 of those 119 share only
+  with the same kind. Coherent groups at layers 7-13: Leonardo -> The Birth of Venus, The Night Watch, The Last Supper,
+  Mona Lisa, Van Gogh; War and Peace -> Ulysses, Odyssey, Moby-Dick, Faust; bridges / skyscrapers (L9:410, L12:10025).
+  Mixed groups at layers 21-23: L21:1310 -> Brooklyn Bridge, Statue of Liberty, The Scream, Sagrada Família, The
+  Brothers Karamazov, Eiffel Tower; L22:5427 -> Bach, the Blue Mosque, Beethoven, Jane Austen. Map overlap: 184 of 1,432
+  neurons in the entity maps' top-20 appear for >= 2 entities.
+- **Input side - broad:** in web text (atlas, 20 strongest firings) entity neurons are mostly NOT about their entity:
+  median 5% of firings mention it; 104/218 never. What they fire on: attributes ('Turkish' / 'Turkey' for the Blue Mosque
+  neuron; 'Vatican' / 'conclave' for the Sistine Chapel one), word parts or meanings of the name ('Sac[red]' for Sagrada
+  Família; ' night' for The Starry Night; 'Div[ine]'), a few on the name itself (Ulysses 100%).
+- **Not simple word detectors:** the Starry Night neuron (fires on ' night' everywhere) does nothing for The Night Watch
+  (0.01); the Divine Comedy neuron nothing for 'The Divine Comedy' (-0.02); the Sagrada Família ('sacred') neuron nothing for
+  other churches. Exceptions follow shared attributes: Sistine Chapel neuron -> St. Peter's 1.04 ('Vatican'); Blue Mosque
+  neuron -> Hagia Sophia 0.29 (Istanbul / 'Turkish').
+- **Reading:** early entity neurons are broad on the INPUT side (they respond to attributes and name-parts across web
+  text - polysemantic in the usual sense) but specific in USE (in this task each matters for its own entity, plus a few
+  sharing an attribute). The same pattern as concept neurons ('packed triggers, one job'), now for knowledge neurons;
+  what looks entity-specific is a combination: the right word-part / attribute neuron firing in the right context.

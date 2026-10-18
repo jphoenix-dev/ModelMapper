@@ -61,6 +61,13 @@ all of that entity's facts** (scaled run, 18 Oct; facts2.py).
   groups, and agreement with the position test (M1) and the question-side test. *Limits:* one model; median per-neuron
   effect is moderate (0.58; a few are very large); 86 entities, 5 relations each.
 
+**S4b. ...but early entity neurons are broad on the input side and partly shared** (entity_sharing.py). Their web-text
+firings are mostly not about their entity (median 5%): they fire on attributes ('Turkish', 'Vatican') or word parts /
+meanings of the name ('sacred', 'night'); 55% also matter causally for >= 1 other entity, coherently at layers 7-13
+(Renaissance paintings, literary epics, bridges) and more mixed at 21-23. They are not simple word detectors (the
+Starry Night neuron does nothing for The Night Watch). Polysemantic on input, specific in use - the same pattern as
+concept neurons. (Moderate as a general claim: 218 neurons, one task.)
+
 ## Moderately supported
 
 **M1. Early neurons (0-19) that matter for facts act at the entity's own name tokens and carry entity-level knowledge.**
@@ -92,8 +99,8 @@ on its own topic hurts prediction in layers 24-35 (+0.004-0.005 nats/token), not
 - **Clean boundaries.** All bands are bins; layers 20-27 are a genuine mix (relation, machinery, composition).
 - **Early neurons 'are' entity representations in general.** Shown for 86 entities of three kinds in one question format;
   not yet for other kinds of entity, other tasks, or how many early neurons are entity neurons overall.
-- **The input side.** Everything above is about what neurons DO (output, causal role, position). What makes them fire, and
-  how polysemantic that is by layer, is untested.
+- **The input side** is tested only for entity neurons (S4b) and concept neurons (earlier: polysemantic in web text);
+  how input polysemanticity varies by layer in general is untested.
 - **Generality.** One model, bf16, mostly one prompt format; other tasks (reasoning, generation) may use layers
   differently.
 - **That 'job' means the same thing at every depth.** Late jobs are word-like; early jobs are entity- or fact-level and
