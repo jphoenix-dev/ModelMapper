@@ -1,0 +1,8 @@
+gate 1 - rebuilt snippets differing from the saved ones: 0 of 22476
+gate 2 - activation at the firing token vs corpus_profile (10% or 0.1): mismatches 0 of 22476 new contexts
+gate 3 - zeroed row's activation not 0: 0
+CORRECTION (17 Oct, after the run): the two lines above for gates 2 and 3 are WRONG - an edit had put the counter
+updates inside a comment, so they never counted. From the saved per-context records: gate 2 mismatches 38 of 22,476
+(0.17%; excluded from the summary); gate 3 checked from the outputs: the zeroed row differs from the as-is row in 98.8%
+of contexts; the 1.2% identical are almost all layer-35 neurons (240 of 247 with |act| >= 5), whose change at a single
+position is below bf16 logit resolution - not a zeroing failure. Gate 1 (snippets rebuilt exactly) was counted correctly.

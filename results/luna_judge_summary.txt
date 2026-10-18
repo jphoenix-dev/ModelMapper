@@ -1,0 +1,981 @@
+Luna firing judge: 2190 jobs, 1873 valid (1095 concept neurons, 778 controls); invalid/skipped: 317 ['L3:8828|control|L3:11631', 'L28:8493|control|L28:4830', 'L10:3111|control|L10:2812', 'L28:1183|control|L28:5852', 'L31:8186|control|L31:11732', 'L11:4483|control|L11:2050', 'L28:5584|control|L28:1428', 'L29:8842|control|L29:821', 'L30:3096|control|L30:4014', 'L27:2525|control|L27:11402', 'L30:9578|control|L30:1876', 'L26:8270|control|L26:6812', 'L10:3992|control|L10:6061', 'L28:1133|control|L28:4108', 'L28:1360|control|L28:7780', 'L33:5519|control|L33:2291', 'L30:7521|control|L30:4841', 'L31:8505|control|L31:11048', 'L32:6113|control|L32:3817', 'L31:857|control|L31:8008', 'L35:290|control|L35:9346', 'L31:6040|control|L31:7782', 'L29:5141|control|L29:10208', 'L26:7423|control|L26:2907', 'L2:5598|control|L2:11650', 'L35:4462|control|L35:7695', 'L28:1890|control|L28:7435', 'L32:4611|control|L32:1456', 'L23:11489|control|L23:4111', 'L31:5389|control|L31:5321', 'L31:1155|control|L31:10911', 'L28:12244|control|L28:9180', 'L33:1272|control|L33:10567', 'L10:7217|control|L10:8035', 'L8:5989|control|L8:11905', 'L29:1338|control|L29:3392', 'L31:6627|control|L31:9993', 'L31:3068|control|L31:7888', 'L9:3584|control|L9:2587', 'L9:1126|control|L9:4032', 'L29:2778|control|L29:12094', 'L29:7930|control|L29:11086', 'L33:11930|control|L33:7121', 'L34:4766|control|L34:1452', 'L9:3889|control|L9:660', 'L27:5826|control|L27:9059', 'L31:4591|control|L31:11987', 'L1:8235|control|L1:9000', 'L31:9241|control|L31:8454', 'L31:6477|control|L31:8045', 'L29:75|control|L29:8596', 'L26:3577|control|L26:1099', 'L30:11156|control|L30:6125', 'L9:9845|control|L9:6416', 'L28:2887|control|L28:3185', 'L3:5695|control|L3:7987', 'L33:1560|control|L33:10022', 'L30:4535|control|L30:6488', 'L29:10082|control|L29:7030', 'L29:1218|control|L29:7955', 'L11:3113|control|L11:3807', 'L27:9001|control|L27:1893', 'L31:9772|control|L31:5096', 'L30:1701|control|L30:11594', 'L26:11110|control|L26:11492', 'L32:3710|control|L32:7156', 'L30:1905|control|L30:7941', 'L31:744|control|L31:11800', 'L31:440|control|L31:7542', 'L29:3438|control|L29:918', 'L30:720|control|L30:11794', 'L27:3419|control|L27:11958', 'L10:7437|control|L10:8909', 'L10:12076|control|L10:8419', 'L9:3541|control|L9:8819', 'L27:10239|control|L27:9816', 'L9:2290|control|L9:6645', 'L29:5709|control|L29:624', 'L29:9999|control|L29:3841', 'L30:2235|control|L30:9073', 'L32:152|control|L32:9067', 'L30:10343|control|L30:537', 'L9:3828|control|L9:3280', 'L30:11485|control|L30:8611', 'L26:4559|control|L26:5828', 'L31:7917|control|L31:1537', 'L28:6355|control|L28:5347', 'L30:176|control|L30:1992', 'L30:2620|control|L30:987', 'L30:739|control|L30:8303', 'L31:1553|control|L31:7071', 'L27:4516|control|L27:11865', 'L27:9297|control|L27:4877', 'L29:1652|control|L29:4542', 'L26:10476|control|L26:4584', 'L28:4645|control|L28:11955', 'L30:10707|control|L30:10424', 'L31:7709|control|L31:1235', 'L31:700|control|L31:413', 'L9:1049|control|L9:7586', 'L27:5541|control|L27:1714', 'L35:8088|control|L35:2816', 'L28:8689|control|L28:5150', 'L25:11234|control|L25:9143', 'L31:515|control|L31:9683', 'L33:6952|control|L33:11806', 'L29:6331|control|L29:3309', 'L29:271|control|L29:7841', 'L10:3922|control|L10:4355', 'L34:10308|control|L34:3457', 'L10:10728|control|L10:8386', 'L31:2365|control|L31:443', 'L34:1187|control|L34:5688', 'L34:8394|control|L34:767', 'L29:7754|control|L29:704', 'L29:8947|control|L29:1709', 'L29:10512|control|L29:2330', 'L10:5449|control|L10:9747', 'L11:4236|control|L11:4414', 'L29:9823|control|L29:683', 'L9:1485|control|L9:6919', 'L6:7925|control|L6:5118', 'L35:7037|control|L35:3725', 'L32:4202|control|L32:2089', 'L28:3189|control|L28:8738', 'L29:3574|control|L29:3296', 'L30:5248|control|L30:10434', 'L31:3281|control|L31:272', 'L32:11256|control|L32:10616', 'L31:5856|control|L31:6182', 'L9:7444|control|L9:10986', 'L31:2308|control|L31:493', 'L31:3492|control|L31:3958', 'L10:5801|control|L10:1843', 'L30:3292|control|L30:1455', 'L10:2589|control|L10:9690', 'L30:8526|control|L30:2346', 'L32:8240|control|L32:8065', 'L30:12105|control|L30:8230', 'L31:4180|control|L31:2183', 'L31:8198|control|L31:11976', 'L34:1380|control|L34:988', 'L35:4420|control|L35:11333', 'L11:1356|control|L11:3274', 'L33:4448|control|L33:8292', 'L30:7255|control|L30:1283', 'L29:2635|control|L29:11023', 'L27:8320|control|L27:6906', 'L27:1186|control|L27:1034', 'L31:11835|control|L31:1291', 'L8:2182|control|L8:1430', 'L10:7508|control|L10:6554', 'L8:6664|control|L8:6682', 'L34:10090|control|L34:11457', 'L30:5163|control|L30:10027', 'L1:11321|control|L1:11629', 'L32:9539|control|L32:5157', 'L9:9011|control|L9:8120', 'L10:10671|control|L10:11013', 'L10:9185|control|L10:3926', 'L30:6914|control|L30:8147', 'L32:12114|control|L32:2947', 'L35:4410|control|L35:8545', 'L10:2704|control|L10:5884', 'L31:10562|control|L31:10356', 'L29:4251|control|L29:1840', 'L35:2312|control|L35:1110', 'L30:1596|control|L30:1302', 'L10:11758|control|L10:5318', 'L29:9255|control|L29:3398', 'L31:10248|control|L31:8429', 'L29:8285|control|L29:11435', 'L30:2401|control|L30:3550', 'L30:10372|control|L30:10146', 'L10:7986|control|L10:8321', 'L28:2205|control|L28:8955', 'L32:4364|control|L32:4265', 'L30:10305|control|L30:9235', 'L30:1889|control|L30:1702', 'L2:8817|control|L2:2962', 'L31:2346|control|L31:10160', 'L29:6779|control|L29:1825', 'L10:254|control|L10:12074', 'L30:3906|control|L30:11085', 'L30:398|control|L30:1866', 'L8:1387|control|L8:2661', 'L32:1248|control|L32:712', 'L29:10913|control|L29:6359', 'L27:5919|control|L27:2330', 'L31:7519|control|L31:7865', 'L31:7594|control|L31:11958', 'L30:5741|control|L30:863', 'L30:7302|control|L30:11271', 'L35:4472|control|L35:9490', 'L31:7650|control|L31:10454', 'L11:9546|control|L11:9914', 'L8:2904|control|L8:6918', 'L31:9277|control|L31:1036', 'L29:7463|control|L29:4102', 'L30:995|control|L30:5355', 'L31:8164|control|L31:2065', 'L30:6114|control|L30:6827', 'L33:1621|control|L33:3926', 'L32:2911|control|L32:1908', 'L9:2226|control|L9:5033', 'L30:7383|control|L30:10870', 'L26:1848|control|L26:3817', 'L10:6033|control|L10:5800', 'L33:8118|control|L33:8827', 'L18:3771|control|L18:6797', 'L29:575|control|L29:1567', 'L33:5933|control|L33:2543', 'L3:1470|control|L3:9136', 'L10:1204|control|L10:6230', 'L30:1718|control|L30:5787', 'L31:10768|control|L31:4954', 'L30:11811|control|L30:4779', 'L27:7280|control|L27:3279', 'L33:1196|control|L33:6324', 'L26:248|control|L26:10440', 'L35:2122|control|L35:1371', 'L30:2548|control|L30:3901', 'L29:3388|control|L29:2643', 'L28:9664|control|L28:12068', 'L32:11668|control|L32:11585', 'L33:3340|control|L33:8879', 'L31:5540|control|L31:7342', 'L31:5764|control|L31:810', 'L32:7027|control|L32:6265', 'L28:11289|control|L28:4964', 'L29:12196|control|L29:7034', 'L3:110|control|L3:3574', 'L31:11491|control|L31:3785', 'L29:10371|control|L29:9618', 'L32:3507|control|L32:10377', 'L8:4210|control|L8:7216', 'L29:11545|control|L29:7021', 'L32:7579|control|L32:2098', 'L33:7617|control|L33:10555', 'L8:11543|control|L8:11314', 'L10:4231|control|L10:9669', 'L30:9305|control|L30:3806', 'L25:6621|control|L25:1661', 'L9:10733|control|L9:10993', 'L32:1885|control|L32:8714', 'L28:2238|control|L28:2455', 'L9:8672|control|L9:196', 'L29:6530|control|L29:2182', 'L30:7123|control|L30:7379', 'L30:6156|control|L30:2860', 'L29:6177|control|L29:10286', 'L30:11361|control|L30:6266', 'L28:3281|control|L28:6711', 'L28:3981|control|L28:2305', 'L33:5480|control|L33:6586', 'L32:3180|control|L32:2101', 'L30:9888|control|L30:6776', 'L28:10068|control|L28:8868', 'L12:3292|control|L12:3672', 'L32:5004|control|L32:6415', 'L8:12042|control|L8:7581', 'L31:2204|control|L31:5148', 'L8:3220|control|L8:10339', 'L31:5989|control|L31:3052', 'L30:3239|control|L30:12178', 'L31:495|control|L31:6203', 'L30:9075|control|L30:7487', 'L30:2070|control|L30:8637', 'L30:2974|control|L30:12204', 'L32:348|control|L32:7014', 'L30:1612|control|L30:3412', 'L8:9539|control|L8:10669', 'L27:8134|control|L27:10689', 'L26:10340|control|L26:4035', 'L10:2239|control|L10:2030', 'L33:11620|control|L33:9420', 'L31:4078|control|L31:1908', 'L30:4977|control|L30:1672', 'L29:7492|control|L29:61', 'L29:5076|control|L29:2595', 'L30:11701|control|L30:263', 'L8:9711|control|L8:9152', 'L30:10209|control|L30:6536', 'L29:5565|control|L29:2857', 'L30:3624|control|L30:1084', 'L30:9016|control|L30:9196', 'L11:959|control|L11:6932', 'L4:6356|control|L4:16', 'L26:10633|control|L26:10647', 'L31:1286|control|L31:367', 'L30:245|control|L30:399', 'L29:6725|control|L29:5803', 'L31:5405|control|L31:10832', 'L30:9581|control|L30:2136', 'L29:488|control|L29:2750', 'L9:584|control|L9:795', 'L32:7898|control|L32:2096', 'L9:2934|control|L9:9418', 'L29:1932|control|L29:8332', 'L15:4214|control|L15:3800', 'L30:4251|control|L30:12259', 'L29:1427|control|L29:9215', 'L31:6877|control|L31:2311', 'L11:5621|control|L11:526', 'L11:11106|control|L11:11132', 'L26:1214|control|L26:11597', 'L29:2468|control|L29:11597', 'L33:8733|control|L33:6105', 'L28:11583|control|L28:3260', 'L35:8498|control|L35:9896', 'L9:1409|control|L9:4876', 'L9:5586|control|L9:4632', 'L29:5822|control|L29:6566', 'L30:2608|control|L30:1133', 'L30:6003|control|L30:8657', 'L29:7825|control|L29:642', 'L26:11602|control|L26:1010']. Estimated spend $0.53 at the assumed (pessimistic) price.
+
+concept neurons: snippets A 14.9%  B 29.9%  C 55.1% | classes: dedicated 130 (12%), ingredient 242 (22%), mixed 94 (9%), unrelated 629 (57%)
+controls (random neurons, same concept named): snippets A 0.2%  B 4.9%  C 94.9% | classes: dedicated 0 (0%), ingredient 5 (1%), mixed 2 (0%), unrelated 771 (99%)
+
+concept neurons by layer band: n | A | B | C | dedicated / ingredient / mixed / unrelated
+  L0-15: 164 | 23% | 42% | 35% | 31 / 60 / 19 / 54
+  L16-23:  30 | 7% | 16% | 77% | 1 / 2 / 1 / 26
+  L24-29: 278 | 17% | 37% | 47% | 31 / 78 / 38 / 131
+  L30-35: 623 | 13% | 24% | 63% | 67 / 102 / 36 / 418
+
+agreement with the keyword measure: Luna's A share median 0.42 where the keyword on-concept share >= 0.2 (n=257) vs 0.00 where < 0.02 (n=401)
+
+themes Luna gave for the unrelated firings of 'unrelated' and 'mixed' concept neurons (all of them):
+  L10:2030   the Grand Canyon               BCBCCBCBCBCA  -> Immigration, education, sports, and other unrelated news
+  L8:6816    Pokémon                        CCCCCCCCCCCC  -> none
+  L10:5194   the octopus                    CCACCBCBBBCB  -> Other animal species and their care or behavior
+  L29:9302   the fall of the Berlin Wall    CCCCCCCCCCCC  -> none
+  L34:6925   thunderstorms                  CCCCCCCCCCCC  -> none
+  L35:6033   hope                           CCCCCCCCCCCC  -> none
+  L35:9942   plate tectonics                CCCCCCCCCCCC  -> Miscellaneous topics
+  L23:3303   World War II                   CCBCBCACBBAC  -> Music, technology, politics, and entertainment
+  L34:10590  football (soccer)              CCCBCCCCCCCC  -> Miscellaneous medical, product, and technical topics
+  L28:10728  Albert Einstein / William Shak CCBCCBCBBCCC  -> Crime, civic news, fashion, and business
+  L18:6797   coffee                         CCCCCCCCCCCC  -> varied topics
+  L34:10024  patience                       CCBCCCCCCCCC  -> Mixed topics, including history, gardening, health, sports, and real estate
+  L23:11972  a doctor                       CBCCCCCCCCCC  -> Mixed topics: marketing, language, history, and miscellaneous text
+  L29:2864   graffiti                       CCACACCCCACC  -> protests, hate incidents, and local crime
+  L21:11441  the printing press             CCCCCCCBCCCC  -> miscellaneous web content
+  L29:7034   Sherlock Holmes                CBCACCCCCCCC  -> Miscellaneous entertainment and pop culture
+  L34:1105   ice cream                      CCCCCCCCCCCC  -> none
+  L35:4229   the Colosseum                  CCCCCCCCCCCC  -> none
+  L27:260    The Starry Night               BBCCBBBCBCBC  -> philosophy and music
+  L33:11418  insomnia                       CCCBBCCCCCBC  -> none
+  L35:3689   plate tectonics                CCCCCCCCCCCC  -> miscellaneous topics
+  L27:2033   the wolf                       CBBCCCBBCCCC  -> none
+  L35:4109   Brazil / Paris                 CCCCCCCCCCCC  -> Unrelated snippets on diverse topics
+  L34:12245  an astronaut                   BCCCCCCCCCCC  -> Miscellaneous entertainment, events, and lifestyle content
+  L33:2138   the greenhouse effect          CCCCCCCCCCCC  -> Miscellaneous topics unrelated to climate or the environment
+  L30:8111   television                     BCBCCBCCBCCC  -> none
+  L29:1709   The Battle of Waterloo         CCCCCCCCCCCC  -> Belgian and European places, culture, businesses, and travel
+  L28:3608   the oak tree                   BBBCCBCBBBBC  -> music, buildings, nature retreats, and obituaries
+  L31:8582   the colour red                 CBBBBCBCABBC  -> none
+  L19:10144  chess                          AACCCACACCCC  -> none
+  L9:6452    volleyball                     ACCCCCCCACAA  -> Other sports, including lacrosse, soccer, softball, and basketball
+  L35:3032   The Black Death                CCCCCCCCCCCC  -> Assorted topics unrelated to the Black Death
+  L33:303    chess                          CBCCCCCBCCBC  -> books, entertainment, shopping, health, and travel
+  L35:7351   jealousy                       CCCCCCCCCCCC  -> miscellaneous web content
+  L21:2951   The Scream                     CCCCCCCCCCCC  -> miscellaneous news, entertainment, and web-text fragments
+  L34:632    World War II                   CCCCCCCCCCBA  -> none
+  L9:10986   surfing                        CBCABCAABCCC  -> real estate, warfare, politics, infrastructure, and personal stories
+  L10:109    photosynthesis                 CCCCCCCCCCCC  -> Mostly Christian worship and communion
+  L33:12129  Sherlock Holmes / the shark    CCCCCCCCCCCC  -> Miscellaneous web content
+  L32:779    baseball                       ACACAACACCCC  -> religion, wildfire, travel, politics, and occupations
+  L18:11671  the steam engine / the key / t CBCCCCCCCCCC  -> none
+  L33:8774   a chef                         CCCCCCCCCBCC  -> Mixed politics, code, entertainment, finance, and medical news
+  L29:3591   The Last Supper                CCCBCCCCCCCB  -> Literature, classical music, and mythology
+  L35:6816   Marie Curie / the submarine /  CBCCBBCCCCCB  -> Recipes, lifestyle, history, music, and demographics
+  L35:1440   hamburger / ballet / the Buddh CCCCCCBCCCCC  -> none
+  L29:3309   origami                        BCBBBCCCBACB  -> Manufacturing and equipment, plus Mexican art history
+  L35:8405   rainbows                       CCBCCCCCCCCC  -> Assorted people, sports, health, and design snippets
+  L35:1567   Iceland / the bicycle          CACCCACBACCC  -> none
+  L8:11905   ice cream                      BBCBACABCCCB  -> none
+  L23:2096   zebra                          CCCCCCCCCCCC  -> Miscellaneous topics, including entertainment, sports, business, and products
+  L33:9282   jazz                           CCCCCCCCACCC  -> Miscellaneous non-jazz topics
+  L34:3369   artificial intelligence        BCACBCACCACC  -> Miscellaneous agriculture, software, business, and photography topics
+  L30:6827   the umbrella                   ACCABBCCBBBB  -> Automotive features and housing costs
+  L34:9848   gratitude / graffiti / gold    BCCCCCCCCCCC  -> miscellaneous recipes, products, and general topics
+  L35:1110   Bitcoin                        BBCCCCCBBCBC  -> malware, idiom, insurance, video, and politics
+  L28:7780   the fall of the Berlin Wall    BCCCCBCCCCAC  -> Economic and political policy news
+  L29:1786   hurricanes                     CCCCCCCCCCCC  -> miscellaneous topics, including sports, housing, architecture, and technology
+  L33:11564  insomnia                       BBAACBBAACCC  -> Furniture, hair-care supplements, CBD/pain products, and coffee
+  L34:6413   the oak tree                   CCCBCCCCCCCC  -> Miscellaneous topics
+  L29:9306   Medusa                         BBBCCCCBBBBB  -> unrelated pop culture and politics
+  L34:11573  democracy                      CCCCCCCCCCCC  -> Miscellaneous ads, entertainment, education, finance, and lifestyle
+  L33:10959  zebra / Zeus                   CCCCCCCBCCCC  -> Miscellaneous web content
+  L29:1187   cheese                         ACBCCCCACCCA  -> clothing and footwear
+  L34:6319   the tomato                     CCCCCCCCCCBC  -> none
+  L34:374    tiger / plate tectonics / the  CCCCCCCCCCCC  -> Miscellaneous topics
+  L30:9679   pi                             CCBCBBCBCABC  -> none
+  L35:9981   Egypt's pyramids               CCCCCCBCCCCC  -> miscellaneous web text and fragments
+  L32:11998  the desert heat                ABCBCCBBCBCB  -> Other uses of “des” (such as “desolate,” “desiring,” and “desist”)
+  L32:1572   Istanbul                       CCBCCCCCCCCB  -> Mostly travel and tourism at other destinations
+  L20:301    the greenhouse effect / the st CCCCCCBCCCCC  -> Miscellaneous web snippets: metadata, technology, animals, travel, and search results
+  L20:7473   the water cycle / plate tecton ABBCCCCBCBCC  -> miscellaneous software, business, and administrative content
+  L10:5318   haiku                          CBCCCBBCCCCC  -> Japanese culture, art, and sightseeing
+  L29:6216   The American Revolution        BCCCCBBBBCCB  -> none
+  L35:8661   autumn                         CCBCCCCCCCCC  -> miscellaneous topics
+  L35:3509   the Big Bang                   CCCCCCCCCCCC  -> Miscellaneous topics
+  L34:11711  pasta / poker                  CCCCCCCCCCCC  -> none
+  L31:6182   The Industrial Revolution      CCBBBCBCBCBB  -> none
+  L30:6536   hamburger                      CBCCBCCCBBBB  -> Hair and beauty, internet policy, and travel massage
+  L32:6301   tiger                          CCBBBABCCCBB  -> none
+  L35:4852   the honeybee / honey           CCCCCCCCCCCC  -> Assorted unrelated topics
+  L32:2089   the steam engine               CCBBCCCCCCCC  -> Everyday lifestyle, beauty, food, and travel
+  L25:9143   Thor                           CBCBBCCCBCBC  -> Icelandic tourism, food, and culture
+  L33:10826  football (soccer)              CBCCCCCCCCCC  -> Miscellaneous finance, technology, geography, health, politics, lottery, and music
+  L25:5585   The Thinker                    CCCCCCCCCCCC  -> none
+  L8:129     the periodic table             CCCCCCCCCCCC  -> Miscellaneous topics and uses of “period”
+  L33:5157   the dolphin                    CCCCCCCCCCCC  -> Miscellaneous media and web text
+  L27:2527   patience                       CBCBCCCCABBB  -> none
+  L29:1910   opera                          CCBBCCBBBCCA  -> politics, gaming, costumes, and stories
+  L28:3996   snow                           CCCCCCCCCCCC  -> Miscellaneous unrelated topics
+  L26:2907   The Battle of Waterloo         BCCBBCBBCBBC  -> sports, entertainment, and politics
+  L32:607    justice                        CAACBACCCACC  -> Wills, travel, consolation, riding history, land conservation, and animal care
+  L10:6159   the greenhouse effect / Napole CCCCCCCCCCCC  -> miscellaneous web content
+  L25:11777  Nelson Mandela                 CCBCCCCCCCCB  -> Miscellaneous business, entertainment, technology, religion, sports, and wedding topics
+  L29:996    The Industrial Revolution      CCCCCCCCCCCC  -> miscellaneous web content
+  L27:9059   Mickey Mouse                   CBBCBACCCBBB  -> Generic toy and craft descriptions
+  L29:222    Thor                           CBCBBBBBBCAC  -> none
+  L33:8422   Los Angeles                    CACCACCCCCCC  -> No common theme; assorted topics
+  L34:11836  giraffe / the guitar / graffit CCCCCCCCACCC  -> varied topics: business, sports, politics, science, and food
+  L34:2945   the French Revolution          CCACCCCBCBCC  -> Miscellaneous entertainment, legal, music, climate, and religious topics
+  L30:4736   Rome / Sydney / Istanbul / Par CBBCBCCCACBC  -> miscellaneous news, technology, and sports
+  L25:5140   Marie Curie                    CBCCCBCCBBBC  -> Arts, literature, and political or philosophical history
+  L32:4741   Frida Kahlo                    CCCCCCCCCCCC  -> none
+  L24:10719  plate tectonics                CCCCCCCCCCCC  -> Miscellaneous topics, including politics, entertainment, shopping, and sports
+  L27:6906   pi                             CCCCCCCCCCCC  -> Mostly Christian Bible passages
+  L11:9007   radio                          BCCCCBBCCCBB  -> none
+  L29:8360   rainbows                       CBCCCCCCCCCC  -> Mostly astronomy and space
+  L32:9721   Abraham Lincoln                CCBCCCCBCBCA  -> Miscellaneous history, culture, and media
+  L10:8386   tacos                          CCCBBCBCCBCA  -> Mostly non-food news about Mexico, borders, migration, and drugs
+  L34:6428   nostalgia                      CCCCCCCCCCCC  -> miscellaneous web content
+  L35:8801   vaccines                       CBCCCCCBCCCC  -> miscellaneous topics
+  L33:1290   chess / chocolate / a chef     CCCCBBCBCCBC  -> politics, biology, technology, theater, and legal text
+  L9:6416    the submarine                  CBABACCCBAAB  -> Miscellaneous retail, literature, wildlife, and transit
+  L31:367    the fall of the Berlin Wall    CCCCCCCCCCCC  -> Varied contexts involving breaking, shutting down, or coming apart
+  L12:8870   the helicopter                 CBCACCCCCBBB  -> shipwreck, computing, vehicles, and household appliances
+  L29:5518   Paris                          CCCCCCCBCCCC  -> Miscellaneous local, sports, and lifestyle content
+  L29:11242  the marathon                   BCBBCCBBBBCB  -> other sports and charitable activity
+  L9:12213   coffee                         ABCCCCACCCCC  -> none
+  L31:8965   football (soccer)              CCCBCCCCCCCC  -> Miscellaneous news, recipes, and everyday topics
+  L9:1824    coffee                         BCACBAACCCCC  -> Varied non-coffee topics
+  L5:11976   the brain / the smartphone     CCCCCBCCCCCC  -> Quiz and glossary material across accounting, literature, politics, and sports
+  L34:1434   a firefighter                  CCCCCCCCCCCC  -> Miscellaneous lifestyle, shopping, and product content
+  L34:1214   lion                           CCCCCCCCCCCC  -> miscellaneous web content
+  L33:2291   the Big Bang                   CCCCCCCCCCCC  -> none
+  L35:1782   baseball / Antarctica          CCCCCCCCCCCC  -> miscellaneous web text
+  L34:3033   World War II                   CCCCCCCCCCAC  -> miscellaneous ads, advice, and web content
+  L35:9490   Bitcoin / the colour blue      ACCCCCCCCCCC  -> miscellaneous news and articles
+  L9:268     Sydney                         BBBCCBBCBCCB  -> none
+  L31:5874   the Titanic                    CBCCCACBCCBC  -> space, weather, history, and fiction topics
+  L28:1669   radio / camera / curiosity / g CCCBCCCCCCBB  -> Mixed news, politics, entertainment, and lifestyle topics
+  L34:9038   Serena Williams                CCCCCCCCCCCC  -> Miscellaneous products, literature, and technical topics
+  L35:2770   poker                          CCCCCCCCCCCC  -> none
+  L34:4933   London / Los Angeles           CCCCCCCCCCCC  -> none
+  L33:11219  loneliness                     CBCCCCCBCCCC  -> miscellaneous products, books, and media
+  L30:1455   jealousy                       CACACAAACBCC  -> none
+  L32:7282   autumn                         CBACCCCCBCBB  -> Sports, school, and personal or yearly events
+  L32:10868  infinity                       CBCCCCCCCCCB  -> none
+  L32:5142   the Moon / the internet        CCBCCCCCCCCB  -> miscellaneous health, finance, cooking, literature, and home topics
+  L35:6782   Cleopatra                      CCCCCCCCCCCC  -> Miscellaneous sports, jobs, products, and local news
+  L25:10405  hope                           BBCBCCCBABBC  -> book and film plots, emergency supplies, legal services, and prison conditions
+  L26:11293  The Industrial Revolution      CCCCCBCCCCCC  -> none
+  L24:7406   radio / the violin / the steam CCCCCCCCCCCC  -> miscellaneous web content
+  L30:5071   hope                           CACCCCCCCCCC  -> Mixed topics including science, technology, politics, entertainment, education, and sports
+  L34:6981   the helicopter                 CCCCCCCCCCCC  -> Miscellaneous web content
+  L28:3283   Tokyo                          CCCCCCBBCCCC  -> Miscellaneous local news, places, and topics
+  L32:7833   the greenhouse effect          CCCCCCCCCCCC  -> miscellaneous web text
+  L26:873    the Olympic Games              BCCCCCCCCCCC  -> miscellaneous topics
+  L35:2473   The Battle of Waterloo         CCCCCCCBCCCC  -> Buddhist text, products, food, and general advice
+  L30:7941   Sherlock Holmes                CCCBCACCCCCC  -> Literature and entertainment references
+  L29:5803   sushi                          CBBCBCCCBBBC  -> sports/anime, automobiles, policy, aerospace, and date listings
+  L35:121    the Moon landing               BCCCCBBCCCBC  -> Literature, mythology, history, and other cultural topics
+  L33:6586   artificial intelligence        CCBCCCCCCCCC  -> Music, arts, sports, and other topics
+  L29:3296   the Amazon rainforest          ACCBCCCCCCBB  -> international politics, travel, and local news
+  L33:3121   tacos                          CCBBBBBBCBCC  -> Software, politics, music, and general prose
+  L28:6618   The Starry Night               CBBCCCBCCCCC  -> none
+  L31:11800  Serena Williams                CBCCCCCBBBCC  -> Golf and other non-tennis sports
+  L28:5150   haiku                          CCCBCCCCCCCB  -> Mostly Japanese culture, places, and related topics, with a few outliers
+  L10:8627   origami                        BCBBBBCCBACC  -> electronics, maps, and product packaging
+  L34:335    the Mona Lisa / Mickey Mouse   CCBCCCCCCCBC  -> none
+  L2:2962    volcanoes                      CCBCCCCCBCCB  -> none
+  L10:8909   the helicopter                 CABCBBCBBCCB  -> Policy, emergency response, and land-management topics
+  L34:973    volleyball                     CCCCBCCCCCCC  -> miscellaneous web fragments
+  L27:8338   hope                           CBCCCCBCCCCC  -> Miscellaneous sports, gaming, and practical topics
+  L32:8254   democracy                      BCBBCBCACCCB  -> sports, finance, library processes, and school or award content
+  L35:2540   camera / gravity / electricity CBCCCCCBCBCC  -> Miscellaneous shopping, news, and listing content
+  L11:9914   Mahatma Gandhi                 CBCBCCBCCCCB  -> Legal matters, hair removal, and an unrelated interview
+  L32:2197   Frida Kahlo                    CCCCCCCCCCCC  -> Mostly women's issues and unrelated lifestyle topics
+  L34:4318   the internet                   CCCCCCCCCCCC  -> miscellaneous news and informational topics
+  L10:4355   shadows                        BBCCABACCACA  -> Astronomy, geology, and festival customs
+  L26:10926  The Scream / The Thinker       BBBBBBCCBBCC  -> none
+  L9:7249    sushi                          CCACCCCCCCCC  -> Mostly anime, manga, and pop-culture snippets
+  L35:8005   The Thinker                    CCCCCCCCCCCC  -> miscellaneous web content
+  L32:7014   The Black Death / black holes  ACCCCCCCCCCA  -> Ordinary uses of “black” in colors, names, and racial references, plus unrelated products and text
+  L33:5981   hamburger / the Buddha         CCCBBCBCCCCC  -> miscellaneous topics
+  L34:10165  the Amazon rainforest          CCCCCCCCCCCC  -> Miscellaneous schedules, events, reviews, and other topics
+  L3:9136    surfing                        CCCCCCCCCCCA  -> Non-surfing uses of riding, riders, and “ride”
+  L27:4996   the Moon landing               BCBBBCBCCBCC  -> Comics, home and lifestyle products, groceries, and entertainment
+  L27:2659   friendship                     CCCCCCCCBCCC  -> assorted topics
+  L3:7987    hurricanes                     CACBAABCCACC  -> Politics, brewing, sports and community news
+  L6:6410    Charles Darwin                 CBCCCBCCBBBB  -> Incidental names, places, and cultural references
+  L34:1159   jealousy                       CCCCCCCACCCC  -> mixed web topics
+  L1:1323    an astronaut                   CCBCCCCCCCCC  -> Maritime, work, construction, and entertainment crews
+  L31:9684   the French Revolution          CCCCCCBCCCCB  -> Mostly Chinese society and migration, plus assorted cultural and biographical topics
+  L28:7841   artificial intelligence        CCCBBBCCCCCB  -> Miscellaneous social sciences, humanities, and environmental research
+  L34:934    ballet / the Buddha / bamboo / CCCCBCCCCCCC  -> none
+  L33:11026  jazz                           CCCCCBCCCCCC  -> none
+  L34:11624  tacos                          CCCCBCCCCCCC  -> Miscellaneous how-to and informational topics
+  L29:2688   Tokyo                          CCCCCBCCCCCC  -> miscellaneous topics
+  L33:1582   wine                           CCCCCCCCCCCC  -> miscellaneous business, technology, sports, legal, and finance topics
+  L32:1456   surfing                        CCBCBCBCCCBC  -> unrelated events and activities
+  L30:5292   Sherlock Holmes                CCCCCCCCCCCC  -> miscellaneous music, news, and listings
+  L10:10944  the marathon                   CCCBCCCCCCCC  -> miscellaneous topics unrelated to running
+  L25:10716  New York City                  ACABCCCACCAC  -> none
+  L30:4342   The Scream                     CCCCCCCCCCCC  -> Miscellaneous web content
+  L32:11682  autumn                         CCCCCCCCACCC  -> Miscellaneous web excerpts on assorted topics
+  L31:8594   the Moon landing               CCCCBACBCCCB  -> Miscellaneous topics: business, workplace, hunting, and sports
+  L32:6298   vaccines                       CCBBBCCBCCCC  -> none
+  L25:2696   The American Revolution        BBCCBCBBCBBB  -> Unrelated foreign political and social history
+  L9:8204    Zeus / Medusa                  CCCBBABBBCBB  -> Travel, economics, and art listings
+  L33:10739  Mickey Mouse                   CCCCCCCCCCCC  -> Miscellaneous health, technology, news, and product excerpts
+  L26:10386  vaccines                       CCCBCBBBBABB  -> none
+  L30:3563   Medusa                         BCCBCBCCBCCC  -> none
+  L31:10352  television                     AAACCACCBBCA  -> miscellaneous news and sports
+  L24:4454   Taylor Swift                   BCCBBCCCBCCC  -> sports, business, and economics
+  L31:8045   loneliness                     CCCAACCCCBBC  -> products, technology, and travel
+  L34:10086  the elephant / electricity     CCBBCBCBCCCA  -> fashion, music, politics, e-signatures, and housing
+  L25:2370   the fall of the Berlin Wall    CCCCBCCBCCCC  -> mixed software, technology, and entertainment
+  L35:4786   Stonehenge                     CCCCCCCCCCCC  -> Miscellaneous web content
+  L34:10350  television                     CCCCCCCCCCCC  -> Miscellaneous news, sports, and biographical material
+  L34:7688   refrigerator                   CCCCCCCCCCCC  -> miscellaneous web topics
+  L30:4056   camera / gratitude / the heart CCBCCCCCCACC  -> none
+  L12:3672   Charles Darwin                 CCCACBCCCCCB  -> Mostly law, literature, and miscellaneous topics
+  L34:3836   tiger / the Titanic            CCBCCCCCCCCC  -> none
+  L28:3801   coffee / wine / tea            CCCCCCCCCCCC  -> Mixed topics, including cities, dentistry, travel, music, and housing
+  L31:11278  the fall of the Berlin Wall    CCCCCCCCCCCC  -> Poetry, weather, sports, technology, nature, and other unrelated topics
+  L33:7027   Marie Curie                    CCCCCCCCCCCC  -> Miscellaneous people, institutions, and historical excerpts
+  L29:2857   insomnia                       ABCBBCBCABCC  -> Unrelated topics with incidental references to being awake or sleeping at night
+  L29:10754  Stonehenge                     CCCCCCCCCCCC  -> Miscellaneous UK news, listings, and lifestyle content
+  L13:162    democracy                      CCCBBBBBCABC  -> Banking, technology, fiction, and a software/community notice
+  L33:1730   Antarctica                     CCCCCCCCCCCC  -> none
+  L34:10848  the guitar / graffiti          CCCCCCCCCCCC  -> varied topics including genetics, sports, health, and utilities
+  L34:10701  Sydney                         CCCCCCCCCCCC  -> none
+  L34:3240   The Last Supper                CCCCCCCCCCCC  -> none
+  L25:8981   Marie Curie                    CCCCCCCCCCCC  -> Mostly sports results and championships
+  L33:11783  the Great Wall of China        CCCCCCCCCCCC  -> none
+  L31:9476   Sydney                         CBCBCCCCABBA  -> varied topics outside Sydney
+  L27:11865  the speed of light             CBBBABCBACCB  -> Animal, athlete, and robot speeds
+  L28:5347   Egypt's pyramids               BBCCACBCCACC  -> Mostly fantasy and game content, plus Iraq news
+  L35:1261   pizza / opera                  CCCCCCCCCCCC  -> none
+  L34:7917   evolution by natural selection CCCCCBCCCCCC  -> miscellaneous consumer, religious, gaming, travel, and sports content
+  L23:6745   jealousy                       CCBCCCCCCCCC  -> Mostly word and dictionary topics
+  L34:3229   baseball / bread               CBCCCCCCCCCC  -> Miscellaneous services, fitness, entertainment, business, and health
+  L30:11524  poker                          ABABCCCCBBBB  -> politics, local news, and events
+  L30:6488   Mount Everest / the Great Wall CCCCCBCCBBBB  -> religion, sports, and personal news
+  L29:6445   London                         ACBABCCCAAAB  -> Other cities and generic interior design
+  L30:11498  golf                           BCCBBCBBCCBB  -> personal, community, and local-interest topics
+  L30:2223   artificial intelligence        BCCBCBBBBBCC  -> sports, job listings, entertainment, electronics, and exams
+  L27:65     the fall of the Berlin Wall    CCCCCCCCCCCC  -> Miscellaneous topics unrelated to the Berlin Wall
+  L22:2516   radio / camera / gratitude / t BCCCCCABBBCC  -> none
+  L28:3901   insomnia                       CBBBCBCBBBBC  -> parenting and music
+  L35:3502   bamboo                         CCCCCCCCCCCC  -> none
+  L34:12169  a firefighter                  BCCCCCCCCCCC  -> Miscellaneous topics, including technology, tea, sports, music, and the environment
+  L33:11465  the tomato                     CACCCCCCCCCC  -> miscellaneous topics
+  L28:2784   the Olympic Games              CCCCCCCBCCCC  -> Miscellaneous fashion, fiction, real estate, and other topics
+  L34:7989   the umbrella                   CCCCCCCCCCCC  -> none
+  L28:5504   justice                        CACBCCBBBBBC  -> none
+  L33:11276  tiger                          CCCCCCCCCCCC  -> miscellaneous topics
+  L35:12156  Mount Fuji                     CCCCCCCCCCCC  -> miscellaneous web-text fragments
+  L30:3207   the Great Wall of China        CCBBCCCCCCCC  -> Mixed fantasy, gaming, and technical text
+  L29:5192   Brazil                         CCCCCCCCCCCC  -> Miscellaneous places, people, and topics
+  L32:1435   the Olympic Games              BBCCCBCBBCCB  -> Patents, crafts, university services, performing arts, appliances, and wellness
+  L26:7354   hope                           BCCBCBBBCCBA  -> Varied personal, media, sleep, business, and sports topics
+  L29:277    Mount Everest                  BCBBCCBBBCCC  -> Nepal politics, local news, and miscellaneous references
+  L35:12224  Antarctica                     CCCCCCCCCCCC  -> none
+  L28:8738   the Amazon rainforest          CCCBCBBBCCBC  -> fictional or local park and woodland settings
+  L35:1519   the desert heat                CCCCCCCCBCCC  -> business, health, and finance
+  L29:7841   patience                       CCCACCAAACBA  -> care and service, courtesy, and technical updates
+  L34:4493   surfing                        CCCCCCCBCCCC  -> miscellaneous topics
+  L35:10219  curiosity                      CCCCCCCCCCCC  -> miscellaneous legal, health, political, and service topics
+  L11:3807   gold                           ABACABCBCBCB  -> none
+  L16:9154   the Moon / DNA / justice / gra CCCCBACCCCBC  -> none
+  L9:9233    Istanbul                       CACCCCCBBCCC  -> Orthodox Christian theology and worship
+  L34:3504   The Thinker                    CCBBCCCCCCCC  -> Assorted news, sports, and lifestyle topics
+  L34:10900  Rome / rugby / the Renaissance CBCCBCBCBCCC  -> none
+  L34:741    hope                           CCCCCCCCCCCC  -> Miscellaneous topics
+  L33:1298   lion                           CCBCCCACCCCC  -> Mostly food and recipes
+  L31:11013  Medusa                         CBCCCCCCCCCC  -> Audio equipment, travel, art, architecture, materials, and religion
+  L9:5934    the shark                      CBCCBBBBCCCB  -> fiction and superheroes, terrestrial animals, religion, and human-interest news
+  L33:1838   the bicycle                    BACCCCCACCCB  -> none
+  L30:7772   the fall of the Berlin Wall    CCCCCCCCCCCC  -> Incidental fall/drop references and unrelated web text
+  L30:5314   the periodic table             CCCCCCCCCCCC  -> miscellaneous shopping, sports, and web text
+  L30:7517   capitalism                     CACCCCCCCCCC  -> miscellaneous crime, religion, health, travel, and event snippets
+  L35:9597   the dolphin                    CCCCCCCCCCCC  -> none
+  L31:8693   DNA                            CCCCCCBCCCCC  -> sports, business, arts, history, and technology
+  L35:4644   vaccines                       CCCBACAAAACC  -> none
+  L32:10109  the mirror                     CCCCCCCCCCCC  -> none
+  L34:1075   Medusa                         CCCCCCCCCCCC  -> none
+  L32:6733   Los Angeles                    CCCACCCBCCCC  -> Miscellaneous topics
+  L32:6390   Wolfgang Amadeus Mozart        CCCCCCCCCCCC  -> Miscellaneous topics, including food, beer, sports, and history
+  L32:1718   hurricanes / the submarine     CCCCCCCCCCCC  -> Miscellaneous news, music, food, education, and lifestyle
+  L32:2468   The American Revolution / Abra CCCCBCCBBCCA  -> Miscellaneous local, family, and historical material
+  L10:3923   ballet                         CCCCCCCBCCCC  -> Mostly food and recipe snippets
+  L30:9102   Serena Williams                CCBBCCCCCCCB  -> Entertainment, cooking, education, history, and commerce
+  L2:4099    golf                           CCCCCCCCCCCC  -> Unrelated uses of similar-looking words and fragments
+  L29:8576   The Thinker                    BCCCCCBCCCCC  -> none
+  L23:12108  camera / curiosity / patience  BACCBBBBBCCC  -> none
+  L33:10223  volcanoes                      CCCCCCCCCCCB  -> miscellaneous topics
+  L27:2643   zebra                          CCCCCCCCCCCC  -> miscellaneous topics
+  L32:54     hamburger                      CCBBBCBCCCCB  -> miscellaneous advertising, shopping, sports, travel, and crafts
+  L29:11597  the Moon landing               CBACCCCCBCCC  -> aviation and transportation
+  L34:11619  giraffe / golf / the guitar    BCCBCCBCCBCC  -> Miscellaneous topics: health, sculpture, taxes, food, toys, technology, and charity.
+  L29:849    snow                           BBAABACCCCBC  -> food and cooking
+  L31:3052   the Colosseum                  CCCCCCCCCCCC  -> Sports, combat, and animal-related web snippets
+  L34:10326  black holes / the colour red / CACCCCBACBCB  -> Miscellaneous lifestyle, product, and narrative content
+  L32:2029   hamburger                      CCCCCCCCCCCC  -> varied topics
+  L34:9110   honey                          CCCBCCCCCCCC  -> religion, housing, sports, politics, and finance
+  L9:516     Venice                         BBCBCCCCBCCB  -> miscellaneous non-travel content
+  L35:11862  Abraham Lincoln                CCCCCCCCCCCC  -> Varied topics
+  L29:11023  the desert heat                CBBCCCBBABCB  -> cocktails, sports, events, holidays, and food
+  L25:3118   the speed of light             CCCCCCACCCCC  -> Everyday uses of speed and light, plus unrelated topics
+  L34:9850   pasta                          CCCCCCCCCBCC  -> none
+  L32:3361   the shark                      CCCABBCCCBBB  -> Miscellaneous entertainment, personal anecdotes, and news
+  L10:6230   Nelson Mandela                 ACBBCCCACAAC  -> Political movements and historical events in other countries
+  L34:5206   The American Revolution        CCCCCCCCCCCC  -> Miscellaneous parenting, business, medical, and technical topics
+  L32:5584   volleyball                     CCCCBCCCCCCC  -> none
+  L31:10673  the fall of the Berlin Wall    CCCCCCCCCCCC  -> none
+  L33:10933  the greenhouse effect / curios CCCCCCCCCCCC  -> none
+  L32:909    the brain                      CCCCCCCCCCCC  -> miscellaneous entertainment, business, legal, and sports topics
+  L30:1303   The Starry Night               CBBCBBBBCCBC  -> none
+  L33:8204   the smartphone                 BCAACBCBCCBA  -> none
+  L31:8008   Sydney                         CBBCBACCBCCC  -> varied non-Sydney topics
+  L34:11457  curiosity                      CBCBACCBBBBC  -> Miscellaneous finance, cooking, dating, and practical or narrative topics
+  L33:9370   a doctor                       CBCCCBCCCBBC  -> Physics, technology, gaming, energy, and general web content
+  L34:5510   Golden Gate Bridge             CCCCCCCCCCCC  -> none
+  L34:1621   Eiffel Tower                   CCCCCCCCCCCC  -> diverse topics
+  L28:3916   The American Revolution        CCCBBBCCCCCC  -> none
+  L34:9271   poker                          CCCCCCCCCCCC  -> Mixed topics, with no common theme
+  L33:2277   the bicycle                    CCCCCCCCCCCC  -> none
+  L25:6745   chess grandmasters             CCCCCCCCCCCC  -> varied topics
+  L35:4115   football (soccer)              CCCCCCCCBCCC  -> none
+  L29:9215   the Big Bang                   BBCCBBCCBBBB  -> environmental stewardship and sacred storytelling
+  L27:3261   democracy                      CCCCCCCCCCCC  -> Science, medicine, and culture excerpts
+  L32:4456   Taylor Swift                   CCCBBCCCCCCB  -> Miscellaneous personal, sports, and service-related content
+  L18:10867  shadows                        CCCCCCCCCCCC  -> miscellaneous web excerpts
+  L34:1452   Rome / the Big Bang / The Amer CCCBABBCBBBB  -> none
+  L35:7624   autumn                         CCCCCCCCCCCC  -> miscellaneous web topics
+  L30:5534   The Industrial Revolution / th BABCABAACCAC  -> Other history, politics, film, and standards
+  L35:4195   Mahatma Gandhi                 CCCCCCCCCCCC  -> Miscellaneous topics
+  L33:10567  Abraham Lincoln                CCCCCCCCCCCC  -> miscellaneous topics
+  L30:4167   The Black Death / Eiffel Tower CCBBCCCCCCCC  -> Mostly unrelated news, lifestyle, and entertainment
+  L3:11631   Star Wars                      CCCCCCCCCBCC  -> none
+  L31:6569   Cleopatra                      BCCCCCCCCCCB  -> mixed unrelated subjects
+  L29:5966   the light bulb                 CBCCCCCCCCCC  -> miscellaneous personal, literary, and advice topics
+  L24:9069   The Black Death / the Moon / t CCCCCCCCBCCC  -> none
+  L29:1867   Steve Jobs                     BCBBBCBCCBCC  -> recycling, finance, and property
+  L9:4908    black holes                    BBACABCCABCA  -> Ancient inscriptions, religious scholarship, political rhetoric, and product advertising
+  L31:3739   the Olympic Games              BCCBCCBCCCCC  -> none
+  L35:4963   the oak tree                   CCCCCCCCCCCC  -> miscellaneous personal, business, entertainment, and news topics
+  L35:11333  Los Angeles / baseball / Mount CCCCCCCCCBCC  -> Miscellaneous web excerpts
+  L33:10555  the water cycle                CCCCBBBCCCCC  -> Miscellaneous art, cooking, recreation, and lifestyle references
+  L29:10636  the printing press             CCCCBCCCCCCC  -> Fitness, exercise, and unrelated industrial machinery
+  L33:1339   nostalgia / Nelson Mandela / t BCCBCCCCCCCC  -> Miscellaneous family, technology, health, and web content
+  L24:7176   the French Revolution          CCBCCCCCCCCC  -> miscellaneous local, historical, sports, and government topics
+  L34:3279   the butterfly                  CCCCCCCCCCCC  -> miscellaneous web text
+  L27:10324  courage                        CCCACBBCCCBB  -> none
+  L33:6734   Mahatma Gandhi                 CCBCBCBCCCCC  -> Religious and cultural material, plus unrelated event, medical, and legal text
+  L29:12006  the smartphone                 BCABCBCCBBBB  -> none
+  L34:4955   the honeybee                   CCCCCCCCCCCC  -> miscellaneous web snippets
+  L26:7402   surfing                        ACCCCCBBBBBC  -> none
+  L33:2159   honey                          CCCCCCCCCCCC  -> none
+  L35:5130   The Industrial Revolution      CBCCBCCCCCCC  -> Miscellaneous media, lifestyle, technology, and product topics
+  L27:8686   Frida Kahlo                    CCCCCCCCCCCC  -> miscellaneous news and web content
+  L30:12239  Stonehenge                     BCBCBCCBBBCC  -> Earthquakes, linguistics, astronomy, extinction, and agriculture
+  L31:2014   the telescope                  CCCCCCCCCCCC  -> Travel, food, and recreation
+  L30:494    Antarctica                     CCCCCCCCCACB  -> Mixed topics, including travel, science, sports, and technology
+  L27:9459   London / Stonehenge            BCCCBCCBBBBB  -> Climate finance, currency trading, wildlife, faith, and fiction
+  L30:9235   The Last Supper                CCCCCCCCCCCC  -> Mostly food, dining, and hospitality
+  L35:7180   poker                          CCCCCCCCCCCC  -> Miscellaneous news, sports, and organizational excerpts
+  L33:3526   the Titanic                    CCCCCCCCCCCC  -> Miscellaneous topics: travel, science, sports, and finance
+  L34:11739  patience / Egypt's pyramids /  CCCCCCCCCCCC  -> miscellaneous topics
+  L33:2698   a firefighter                  CCCCCCCCCCCC  -> Varied topics, including recipes, politics, history, and technology
+  L25:8017   Eiffel Tower                   BCCCCBCCCCCC  -> politics, news, finance, and historical events
+  L27:4877   chess grandmasters             CCCBACAACCCC  -> Mostly video games and game strategy
+  L33:11092  justice                        ACCCCCCBCCCC  -> miscellaneous health, business, religion, and web content
+  L30:10434  the French Revolution          CCCCCCBCCCCB  -> Wars and military conflicts
+  L29:2182   graffiti                       CBBCBCCBBBBB  -> fashion, gaming, and punk music
+  L33:11650  the oak tree                   ACCCCCCCCCCC  -> miscellaneous topics, including cars, media, products, and technology
+  L15:3007   DNA                            CCCCCCCCCCCC  -> Miscellaneous language, business, products, math, and news
+  L34:3457   William Shakespeare / shadows  CCCCCCCCBCCC  -> Miscellaneous product, religious, financial, and news content
+  L29:3367   a chef                         CCCCCCCCCCCC  -> Varied professions, services, and news
+  L34:11193  the marathon                   CCCCCBCBCCCC  -> Miscellaneous web content
+  L29:9084   insomnia                       BCCBCABCCCCB  -> sports, politics, media, and other everyday topics
+  L33:3723   the Titanic                    CCCCCCCCCCCC  -> none
+  L35:9709   the French Revolution          CCCCCCCCCCCC  -> varied topics: recipes, sports, travel, and finance
+  L32:10360  the Olympic Games              BCBCCCCBCCCC  -> Entertainment, gaming, and pop culture
+  L30:4014   Thor                           CCCCCCCCACBA  -> A mix of opera, religious history, film, and academic references
+  L35:2704   the smartphone                 CCCACCCCCCCC  -> Miscellaneous topics including planning, home improvement, education, sports, and religion
+  L29:11534  World War II                   BACCABCBBBAC  -> employment, local history, industry, and biography
+  L35:8830   the umbrella                   CCCCCCCCCCCC  -> Miscellaneous web text on unrelated topics
+  L32:5486   the honeybee                   CCCCCCCCCCCC  -> miscellaneous topics
+  L31:11954  bamboo                         BBCBCBCBBCCC  -> none
+  L34:410    Wolfgang Amadeus Mozart / wine CCBCCCCBCCCB  -> miscellaneous news, religion, work, and construction
+  L23:4795   The Scream                     CCCCCCCCCCCC  -> entertainment and media
+  L30:7985   Taylor Swift                   CCCCCCCCCCCC  -> Miscellaneous news and topics
+  L28:5143   infinity                       BCCABCBCBCAC  -> miscellaneous prices, demographics, dating, and software
+  L30:6605   the water cycle                CBCCCCCCBCBC  -> none
+  L33:8827   opera                          CCCCBCCCCCCC  -> Business, technology, and other uses of “operation”
+  L29:12094  Eiffel Tower                   BCCBBCCACBBB  -> none
+  L35:11912  the butterfly                  CCCCCCCCCCCC  -> miscellaneous unrelated topics
+  L30:9205   Mickey Mouse                   CBCCCCCCACCC  -> Video production, visual effects, and graphics tools
+  L35:3214   the colour blue                CCCCCCCCCCCC  -> none
+  L35:538    lion                           CCCCCCCCCCCC  -> none
+  L15:3800   Albert Einstein / Harry Potter CCCCCCCCCCCC  -> Varied writing, advice, and informational excerpts
+  L35:2836   The Black Death                CCCCCCCCCCCC  -> Miscellaneous topics, including health, products, and web services
+  L20:2258   radio / camera / patience / ho CCBCCCCBBCBC  -> Miscellaneous word lists, ads, religious text, and craft instructions
+  L34:893    the butterfly                  CBBCCCCCCCCC  -> Mostly butter and food references
+  L30:6112   the water cycle                CCBCCBCBCCCB  -> none
+  L23:8552   the Moon                       CCCCCCCCCCCC  -> miscellaneous web-page text
+  L32:2947   The Last Supper                CCCCCACCCCCC  -> Unrelated snippets containing coincidental word matches or web-forum and article text
+  L34:7220   the violin / Venice            CCCCCCCCCCCC  -> none
+  L28:3688   Medusa                         CCCCBCCCCCCC  -> Mostly technology and hardware, with one GMO discussion
+  L30:7932   the periodic table             CCCCCCCCCCCC  -> miscellaneous news and lifestyle text
+  L11:526    pizza                          ACACACCCCCCA  -> Primarily religious and Biblical writing, plus economic commentary
+  L20:129    Harry Potter                   CCCCCCCCCCCC  -> Miscellaneous web snippets
+  L31:2311   Sydney / television / refriger CCCCCCCCCBCB  -> none
+  L23:1964   pi                             CCCCCBCCCCBC  -> Miscellaneous web snippets about shopping, news, products, and word lists
+  L33:5286   tacos                          CCCBCCCCCCCC  -> none
+  L31:9993   the tomato                     CCAACCACABCC  -> Miscellaneous recipes, ingredients, and nutrition
+  L35:10137  bamboo                         CCCCCCCCCCCC  -> none
+  L33:570    the Grand Canyon               CCBCCBBCBCBB  -> none
+  L29:821    the honeybee                   CCCCCCCBCCCB  -> Pest control and StarCraft strategy
+  L30:9956   Los Angeles / television / the BBBACCBCCBCC  -> Miscellaneous recipes, practical advice, biographies, and local notices
+  L33:4927   Nelson Mandela                 CCCCCCCCCCCC  -> Unrelated topics, including technology, science, and news
+  L34:8072   chess grandmasters             CCCCCCCCCCCC  -> Miscellaneous biography, business, and history
+  L28:9559   photosynthesis                 CCCCCCCCCCCC  -> none
+  L30:2932   snow                           BCCCCCCBBCCC  -> miscellaneous gardening, travel, nature, and culture
+  L30:8643   Mahatma Gandhi / Albert Einste CCCCCCCCCCCC  -> assorted news, entertainment, and sports
+  L33:3489   origami                        BBCCCCCCBBBB  -> Miscellaneous commercial, food, and beauty content
+  L34:10281  lion                           CCCCCCCCCCCC  -> none
+  L35:1371   Cleopatra                      CCCCCCCCCCCC  -> Miscellaneous web content
+  L8:11314   golf                           CACBACCCCACA  -> Mostly pet and animal content, alongside unrelated recreation and word topics
+  L32:9965   electricity                    AABCCCAAACBC  -> none
+  L11:4414   the speed of light             BCCCBCBCBBCB  -> none
+  L34:988    ice cream                      CCCBCCCBCCCC  -> none
+  L25:509    courage                        CBCBACCBBCCC  -> religion, finance, shopping, books, DIY, and food
+  L29:3520   sushi                          CCCCCCCCCCCC  -> Anime/manga, language-learning, and forum discussions
+  L34:553    vaccines                       CCCCCBACCCCC  -> Miscellaneous social, political, historical, and web content
+  L30:7974   pasta                          CCCCCCBCBBCC  -> none
+  L34:3881   insomnia                       CCCCCCCCCCCB  -> Mixed topics: health remedies, taxes, sports, technology, and more
+  L34:1775   gravity                        CCCCCCCCCCCC  -> miscellaneous web content
+  L8:6682    tacos                          CCBCCCCCCCCB  -> Incidental Mexico-related news, ads, and cultural references
+  L34:6587   Istanbul                       CCCCCCCCCCCC  -> miscellaneous topics
+  L27:4294   opera                          BBACCCCAACBB  -> Sports, film, and miscellaneous product or event content
+  L30:1263   The Black Death                BBCCBBBBCCCB  -> Mostly contemporary Christian practice, plus geology
+  L32:6591   the internet                   CCBCCCCCCCCC  -> miscellaneous news, travel, science, and health
+  L32:6503   plate tectonics / basketball / CCBBCCCCCCCC  -> Writing, crafts, technology, fashion, and travel
+  L10:8035   chess                          CCCAACCBACCC  -> Poker and gambling
+  L30:3636   the Mona Lisa                  CBCCBBCCCCCB  -> miscellaneous history, anatomy, and crime
+  L29:1840   autumn                         BCCCCACBBACC  -> dates, listings, astrology, and sports/business
+  L30:2307   the Grand Canyon               BACBABCCCBCA  -> none
+  L32:10452  Frida Kahlo                    CCCCCCCCCCCC  -> Recipes, health, and personal-care advice
+  L35:2654   zebra / Zeus                   CCCBCCCCCCBC  -> none
+  L9:1457    chocolate                      CCACCBAAABBC  -> Coffee, candles, and chemical-product content
+  L33:5302   a doctor                       BBCCCAAACBBB  -> Employment, protest, and immigration content
+  L34:9097   an astronaut                   CCCCCCCCCCCC  -> none
+  L31:8828   New York City                  ACCCCBACCCCC  -> none
+  L30:12259  Egypt's pyramids               CCBCCCCBCCBC  -> Mostly film, TV, and pop-culture excerpts
+  L29:1616   gratitude                      CACCABBBBAAC  -> personal reflections and life events
+  L32:3949   chess grandmasters             BCCCCCCCCACC  -> none
+  L28:2438   the elephant                   BCCCBBBBCBCC  -> LEGO, film, neuroscience, and wellness
+  L34:7312   The American Revolution        CCCCCCCCCCCC  -> sports, health, and local news
+  L32:3578   Marie Curie                    CCCCCCBCCCCC  -> Assorted biographies, events, and listings
+  L27:11858  Mahatma Gandhi                 CCCCCBCCCCCC  -> Miscellaneous Indian travel, news, and recruitment
+  L32:8777   haiku                          CBCCBBCCBCBC  -> gardening, products, art, food, and music
+  L26:1099   rainbows                       CCCCCCCCCCCC  -> none
+  L29:7030   courage                        CBACABCBACBB  -> None—mixed personal, political, and literary snippets
+  L34:9882   capitalism                     CBCBBCCBCCBC  -> none
+  L35:710    the shark                      CCCBCCCCCCCB  -> none
+  L33:2436   Rome / rugby                   CCCCCCCBCBCC  -> cars, politics, products, science, and technology
+  L33:11461  the Grand Canyon               CCCBCCCCCCBB  -> Miscellaneous sports, nature, music, law, and news
+  L34:2600   the Acropolis                  CCCCCCCCCCCC  -> Assorted topics, including sneakers, credentials, law, travel, and lifestyle
+  L31:1080   The Scream / The Thinker / The CCCCCCCCCCCC  -> Miscellaneous books, entertainment, food, and local history
+  L28:3844   Serena Williams                CCCCBBCCCCCC  -> Miscellaneous topics
+  L31:4047   the wolf                       CCCCCCBCCCCC  -> Miscellaneous history, sports, entertainment, and web content
+  L8:652     Pokémon                        CACACCBCACAA  -> Shopping, fashion, tech, and other entertainment
+  L33:7136   the light bulb                 CBBBBCBBCBBC  -> personal anecdotes, fitness, and education
+  L35:7695   the honeybee                   CCCCCCCCCCCC  -> miscellaneous web content
+  L34:7185   volleyball                     CCCCCCCCCCCC  -> Miscellaneous recipes, wildlife, technology, health, travel, and lifestyle
+  L31:11809  evolution by natural selection CCCCCCCCCCCC  -> miscellaneous web content
+  L29:10812  the penguin                    BCCCBBCCCBBB  -> Mixed topics with no common theme
+  L34:10195  The Battle of Waterloo         CCCCCCCCCCCB  -> miscellaneous topics unrelated to Waterloo
+  L34:11441  The Black Death / the Moon / t CCCCCCCCCCCC  -> Miscellaneous topics; the marked word is a common article
+  L34:10194  the Nile                       CCCCCCCCCCCC  -> varied topics, including business, entertainment, food, and technology
+  L32:2780   the Acropolis                  CBCBCBBCBCCC  -> entertainment, sports, and news
+  L32:7016   Golden Gate Bridge             CBCCCCCCCBCB  -> Varied uses of crossing or moving across
+  L35:1446   wine                           CCCCBCCCCCCC  -> Miscellaneous news, technology, and web content
+  L31:1444   The Industrial Revolution      CCBBCCCBCCBC  -> miscellaneous news, culture, and religious texts
+  L31:7689   Iceland                        CCCCCCCCCCCC  -> none
+  L33:11019  the Amazon rainforest          CBCBBCCBBCBB  -> miscellaneous cosmetics, resort, charity, and entertainment content
+  L34:10008  insomnia                       CBBCCBBBBCBB  -> none
+  L9:10839   chocolate                      CBCCCCCCCCCC  -> Mostly Christian and religious topics
+  L28:8955   the Big Bang                   CCCCBABCCCAC  -> Evolution/creationism, citizenship, and fiction
+  L30:6125   Istanbul                       ABBCBCABBBCC  -> Greek history, mythology, travel, and sports
+  L34:598    democracy                      CCBCCCCCCCAC  -> miscellaneous practical, service, and lifestyle topics
+  L34:3758   baseball                       CCACCCCCCCCC  -> Miscellaneous topics unrelated to sports
+  L31:9611   Golden Gate Bridge             CBBCCBBBCBBC  -> Incidental place-name matches and unrelated technical or travel content
+  L31:2327   the tomato                     CBCACCCCCBCC  -> Other foods, produce, and recipes
+  L31:3246   the desert heat                CCCCCCCBCCCC  -> product and lifestyle topics
+  L35:1391   the colour red / the Renaissan CCCCCCCCCCCC  -> Miscellaneous software, business, entertainment, and web text
+  L28:10455  the tomato                     CCCCCCCCCCCC  -> none
+  L24:823    Albert Einstein                CCCBCCCCCCCC  -> Miscellaneous news, arts, sports, and technology
+  L31:2490   the desert heat                CBBCCCCCCBBC  -> none
+  L30:1084   chess grandmasters             CACCCCCCCCCC  -> Non-chess uses of “master” across arts, religion, crafts, and other fields
+  L35:3725   Nelson Mandela                 CCCCCCCCCCCC  -> miscellaneous products, sports, entertainment, and technology
+  L1:11629   infinity                       CCCCCCCCCCCC  -> miscellaneous lifestyle, news, and culture
+  L34:3294   plate tectonics / tea / the te CCCCCCCCCCCC  -> assorted web text
+  L33:1979   ballet / bread                 CCCCBCCCCCCC  -> varied topics, including finance, crime, technology, and health
+  L30:2268   the light bulb                 ACCAACBCCCCB  -> cooking and recipes
+  L10:11013  pizza                          CBCCCBACBBCC  -> sports, business, politics, art, and local news
+  L28:8535   London / Tokyo / Paris         BCBCBCCCCCBB  -> none
+  L9:11384   cheese                         BCCCACCBCCCC  -> Other foods, recipes, and food handling
+  L33:983    Cleopatra                      CCCCCCCCCBCC  -> Miscellaneous sports, science, lifestyle, and shopping
+  L33:1043   the printing press             CCCCCCCBCCCC  -> software, computer input, and device instructions
+  L6:5118    The Scream                     CCCCCCCCCCCC  -> Mostly West Nile virus and mosquito-related reports
+  L27:2168   Abraham Lincoln / Albert Einst CCBCCCCCCBCC  -> Miscellaneous news, sports, politics, and business
+  L27:4560   the bicycle                    CBCAACCCBBCA  -> entertainment, fiction, and water sports
+  L27:1034   The Battle of Waterloo         CCCCBCCCCCCC  -> none
+  L35:8545   patience / the elephant / choc CBBCCCCCBCCC  -> none
+  L35:2719   nostalgia                      BCCCCBCBBCAC  -> none
+  L34:9791   Star Wars                      CCCBCCCCCCCC  -> none
+  L29:704    Cleopatra                      CCBCCCCCCCCC  -> Mixed celebrity, religion, sports, and lifestyle content
+  L35:5838   the dolphin                    CCCCCCCCCCCC  -> miscellaneous topics
+  L33:9621   the elephant                   CCCCCCCCCCCC  -> unrelated miscellaneous topics
+  L27:1693   hurricanes / thunderstorms     CCCCCCCCCCCC  -> mixed unrelated topics
+  L4:419     the greenhouse effect / the pr CCBCCCCCCCCB  -> miscellaneous business, lifestyle, and web content
+  L31:10901  lion                           CCBCCCCCCCCC  -> Mostly African development, politics, and social issues
+  L30:7986   the mirror                     CCCCCCACABBC  -> none
+  L33:7121   Albert Einstein                CCBCCCCCCCCC  -> Miscellaneous web content
+  L30:4955   Eiffel Tower                   CCCCCCCCCCCC  -> miscellaneous topics
+  L34:10296  opera                          CCCCCCCCBCCB  -> none
+  L24:4183   London / Tokyo                 CCCBABCCCCCC  -> none
+  L30:10458  Mahatma Gandhi                 CCCCCCBCCCCC  -> none
+  L29:1664   courage                        CCBBCCCCCBCC  -> sports and everyday life
+  L29:8289   Rome                           CCCCCCCCCCCC  -> none
+  L27:5604   gravity                        CCCCCCCCCCCC  -> Miscellaneous topics
+  L27:5045   a firefighter                  CCCCCCCCCCCC  -> none
+  L34:8612   wine / vaccines                BCCCCCCCBCCC  -> Military, publications, home projects, scripture, music, and cars
+  L29:11086  the umbrella                   ABBCCCCBCCCC  -> none
+  L35:7532   Bitcoin                        CCCCCCCCCCCC  -> Miscellaneous topics unrelated to Bitcoin
+  L33:5033   the fall of the Berlin Wall    CBCCCCCBCCCB  -> Miscellaneous arts, sports, travel, food, religion, and cultural events
+  L9:660     Venice                         BCBCCBCBABBC  -> Mostly medical and health topics
+  L31:10560  Frida Kahlo                    CBBBCBCBCBBC  -> Royalty, fashion, science, and sports
+  L31:7838   the Titanic                    BCBCCBCCBCBB  -> Aviation, celebrity, and miscellaneous personal stories
+  L8:8684    The Black Death                BCBBCBABCCBB  -> none
+  L30:7812   hurricanes                     CBCBCBCBBCBB  -> assorted topics: cars, speech, and journalism
+  L33:4343   the smartphone                 BBBABCCBCCCC  -> marketing, driving, police, safety, payments, and property law
+  L4:16      sushi                          CBBBBCCBBBBC  -> Sports, veterinary advice, tree biology, and software recovery
+  L34:11948  tacos                          CCCCCCCCCCCC  -> unrelated web topics
+  L29:61     tacos                          CCCCCCCCCCCC  -> Mexico-related history, politics, sports, and travel
+  L32:5331   the French Revolution          ACBCBBCCACCC  -> Miscellaneous topics: divination, home improvement, finance, technology, travel, and health
+  L31:11815  The Thinker                    CCCCCCBCCCCC  -> none
+  L29:11281  Mickey Mouse                   BCBACBBCBBCB  -> Christian books, craft stamps, children's literature, and indie games
+  L30:8206   Mickey Mouse                   CBCCCCCBCCCC  -> Varied family, craft, and lifestyle topics
+  L31:3785   haiku                          BCCCCCBCCCCC  -> Unrelated snippets about news, culture, food, and language
+  L33:10310  the Moon                       CCCCCCCCCCCC  -> miscellaneous web content
+  L35:8417   courage                        CCCCCCCCCCCC  -> none
+  L35:7457   Sherlock Holmes                CCCCCBCCCCCC  -> Miscellaneous products, news, food, and technical topics
+  L30:987    origami                        CCBCCCBCCCBC  -> Animation, toys, and children's media
+  L29:6056   giraffe / Golden Gate Bridge   CCBBBBCCBBBC  -> Tourism, aviation, and general news
+  L25:9230   The American Revolution        CCCBCCCCCCCC  -> none
+  L34:5688   the Nile                       CBCCCCCCCCCC  -> Miscellaneous snippets on payments, culture, food, technology, and other topics
+  L9:536     pizza                          CCCCCCBCCABC  -> miscellaneous people, religion, history, sports, and business
+  L34:8069   the Mona Lisa                  CCCCCCCCCCCC  -> Varied topics, with no common theme
+  L28:8149   capitalism                     CCCCCCCBCCCC  -> Music, architecture, and religion
+  L35:4673   Napoleon Bonaparte             CCCCCCCCCCCC  -> Miscellaneous business, travel, product, and news text
+  L32:2330   French fries / the tomato      CCCCBCBACCAC  -> none
+  L11:10474  Paris                          BABBBCBCBACC  -> varied art, food, politics, and museum content
+  L33:9374   Sydney                         CCCCCCCACCCA  -> Varied topics, including religion, sports, and food
+  L30:8147   Antarctica                     CBBCACBBABCB  -> general health, travel, and nature
+  L33:12171  Wolfgang Amadeus Mozart        CCCCCCCCCCCC  -> Miscellaneous web snippets on health, politics, fashion, and other topics
+  L35:9587   the octopus                    CCCCCCCCCCCC  -> Miscellaneous services, products, and news
+  L33:309    The Scream / The Last Supper   CCCCCCCCCCCC  -> Miscellaneous news, entertainment, and web content
+  L33:1067   Eiffel Tower                   CCCCCCCCCCCC  -> none
+  L2:11650   Pokémon                        CBBCBAACCCAA  -> Business, sports, and political uses of “franchise”
+  L33:5123   the Colosseum                  CCCCCCCCCCCC  -> none
+  L34:2449   jazz                           CCBCCCCCCCCC  -> miscellaneous topics unrelated to music
+  L31:4048   bread                          CCCCBCACCBAC  -> History, politics, language, and crafts
+  L34:10173  London / Rome / rugby / Martin CBBCCBCCCCCB  -> none
+  L31:3774   Star Wars                      ACACCCACCCCC  -> Other entertainment, games, and pop culture
+  L25:7166   radio / camera / curiosity / g CCACCCCCCCCC  -> none
+  L23:8649   chess grandmasters             CCCCCCCCCCCC  -> none
+  L34:9677   refrigerator                   CCCCCCCCCCCC  -> Miscellaneous topics, including medicine, travel, technology, and entertainment
+  L32:11120  hurricanes                     BCCCCCCBBBCC  -> mixed topics: driving, technology, biology, and gardening
+  L33:5282   insomnia                       CBCCCCCCBCBC  -> Travel, entertainment, and everyday anecdotes
+  L30:8029   Antarctica                     CCCCCCCCCCCC  -> Unrelated local places, regions, and regional topics
+  L29:11584  coffee                         CACCCACAAACC  -> Sports, local news, and miscellaneous content
+  L28:2305   The Starry Night               CCCCCCCCCCCC  -> Miscellaneous entertainment and shopping
+  L32:5581   hamburger                      CCCBCCCCCCCB  -> none
+  L33:3027   the Moon landing               CCCCCCCCCCCC  -> none
+  L29:7854   the periodic table             CCCCCCCCCCCC  -> none
+  L34:10771  Stonehenge                     CCCCCCCCCCCC  -> Miscellaneous topics
+  L28:3260   the water cycle                ACABCCCCBCAA  -> Other cycles and soil ecology
+  L33:10783  the Grand Canyon               CCACACBCCCAC  -> Miscellaneous automotive, legal, political, and travel topics
+  L33:4656   an astronaut / autumn          CCCCCCCCCCCC  -> miscellaneous web fragments
+  L27:5847   capitalism                     CBCCBCBBCBAB  -> none
+  L23:7701   Abraham Lincoln / Frida Kahlo  BCBCCCCCCBCB  -> miscellaneous topics, including biology, music, law, and employment
+  L31:5096   volleyball                     BBBCCCBBBCBC  -> none
+  L35:9896   chess / coffee / pizza / baske CCCCCCCBCCAC  -> Miscellaneous news, lifestyle, and professional topics
+  L35:9741   The Starry Night               CCCCCCCCCCCC  -> Unrelated web snippets
+  L8:3341    graffiti                       CCCACCCBBCCB  -> none
+  L34:1317   tiger / tennis                 CBBCCCBCCCCC  -> none
+  L35:8021   French fries                   CCCCCBCCCCCC  -> property, literature, aviation, entertainment, and wildlife
+  L33:6105   capitalism                     CBBCBCBCBBCB  -> Incidental matches involving capital, Capcom, or capsules
+  L31:9178   the violin                     CCCCCCCCCCCC  -> Miscellaneous travel, commerce, food, and event snippets
+  L34:5641   Rome                           CACCBCACACAC  -> none
+  L35:3093   chocolate                      ACCCBCBCCCCC  -> none
+  L34:8126   electricity                    CCCCCCCCCCCC  -> miscellaneous entertainment, news, sports, and other topics
+  L32:6056   the Mona Lisa                  CCBCCCCCCBCC  -> wildlife, geography, industry, and news
+  L32:6035   the Moon landing               CBCCCCCCCCCC  -> none
+  L35:9310   gravity / shadows              CCCCCCCCCCCC  -> varied topics with no common theme
+  L29:1129   jealousy                       CCCCCBCCBBBC  -> none
+  L27:3130   the violin / the submarine / a CCCCCCCCCCBC  -> Miscellaneous topics including technology, art, food, sports, and dance
+  L28:11323  The Thinker / The Last Supper  CBCCBBCCBBCC  -> Food, business, politics, and personal-life snippets
+  L35:10582  an astronaut                   CCCCCCCCCCCC  -> miscellaneous web content
+  L34:1309   the submarine                  CCCCCCCCCCCC  -> none
+  L28:1774   loneliness                     CBBCCBBBCBCC  -> none
+  L28:11767  courage                        CCBCBBBCBCCC  -> Miscellaneous lifestyle, entertainment, and product content
+  L34:1512   the mirror                     CCCCCCCCCCCC  -> Miscellaneous web excerpts
+  L18:10192  The Scream                     CCCCCCCCCCCC  -> none
+  L34:3083   the light bulb                 BCCCCCCBCCCC  -> none
+  L30:2346   the penguin                    CCCBCCCCCCCC  -> miscellaneous clothing, entertainment, and online chatter
+  L31:11929  origami                        BCCCCCCCCCCB  -> Academic, business, and general paper use
+  L32:11769  Frida Kahlo                    CBBCBCBBBCCC  -> Products, crafts, and education
+  L33:8749   the honeybee / honey           BCCCCBCCCCBC  -> politics, books, personal stories, and other varied topics
+  L27:2330   Zeus                           CBBBCCBBBBCC  -> health, architecture, and fictional action
+  L31:6715   electricity                    CCCBCCCCCCCC  -> none
+  L33:5755   cheese                         CCCCCCBCCBCC  -> Miscellaneous topics unrelated to food
+  L35:11715  infinity                       CCCCCCCCCCCC  -> varied topics, including drones, biology, economics, and work
+  L28:9874   the internet                   CBAACBCCCACB  -> oceans, travel, and geography
+  L24:9895   thunderstorms                  CCCCCCCCCCCC  -> miscellaneous topics unrelated to weather
+  L35:10033  loneliness                     CCCCCCCCCCCC  -> none
+  L34:10591  the dolphin                    CCCCCCCCCCCC  -> Miscellaneous web content
+  L30:8283   the Olympic Games              CCCCCCCCCCCC  -> miscellaneous web content
+  L33:3359   electricity                    ACACACCCBABA  -> Mixed topics: cars, hotel billing, personal events, real estate, and wildlife
+  L33:6928   the desert heat                CBBCCBCCCBBC  -> none
+  L31:11958  the Renaissance                ABCBBCCBACBB  -> Historical reference entries on a religious order and Polish rulers
+  L35:12088  the Acropolis                  CCCCCCBCCCCC  -> Miscellaneous topics
+  L28:997    DNA                            CABAACCACCBA  -> Other health, nutrition, and biological topics
+  L21:5172   the internet                   CCCCCCCCCCCB  -> Miscellaneous definitions and informational text
+  L35:7074   an astronaut                   CBBBCABCBACC  -> consumer tech and miscellaneous text
+  L15:2686   the Big Bang                   CCCCCCCCBCCC  -> none
+  L10:3926   Stonehenge                     CCCCCCCCCBBA  -> Mostly D-Day and WWII history, with assorted unrelated topics
+  L30:8303   origami                        CCCCCCCCCCCC  -> quilting, sewing, and cooking
+  L33:5785   chess grandmasters             CCCACCCCCCCC  -> none
+  L34:8582   World War II                   CCCCCCCCCCCC  -> Miscellaneous topics
+  L32:6415   artificial intelligence        CCCACCACCCAA  -> Non-AI uses of “artificial” and unrelated food, health, and product topics
+  L31:6447   gold                           CBCACCCACBBC  -> Agriculture, fiction, humanitarian aid, and assorted web content
+  L26:11092  French fries                   CBCCBCCCCCCC  -> Mostly clothing and fashion, plus unrelated restaurant and recipe text
+  L32:8182   the oak tree                   CCAACCCCCCAC  -> Miscellaneous news, lifestyle, and web topics
+  L26:900    The Scream                     CCCCCCCCCCCC  -> Miscellaneous books, music, film, and entertainment references
+  L28:3185   hope                           ABCBCCCABAAA  -> Sports, social media, energy, and personal topics
+  L35:8298   Iceland / Istanbul             CCCCCCCCCCCC  -> miscellaneous products, news, and services
+  L35:9880   television / tea / the telesco CCCCBCBBCCCB  -> none
+  L33:7725   the violin                     CCCCCCCCCCCC  -> miscellaneous topics
+  L30:1372   Star Wars                      CCCBCCCBBBBC  -> music and theater
+  L32:11585  Antarctica                     CCABCCCCCCCC  -> none
+  L33:8879   Iceland                        ACCCCCCCCCCC  -> Mostly Ireland and Irish-related content
+  L7:1704    the smartphone                 ABBCBCBCBACC  -> PC software, computer use, and database topics
+  L8:6918    surfing                        CBBBCBAACCCC  -> travel, locations, and tourism
+  L33:6296   hurricanes / thunderstorms     CCCCCCCCCCCC  -> none
+  L24:5139   democracy / Bitcoin            CCCCCCCCCCCC  -> miscellaneous language, SEO, science, and lifestyle content
+  L29:5702   Marie Curie                    CCCCCCCCCCCC  -> Mixed news, sports, and health topics
+  L35:5759   the guitar                     CCCCCBCCBCCC  -> health, business, computing, education, and technology
+  L29:163    Bitcoin / gold                 CBACCCCCCCCC  -> Mostly religion and culture, with some unrelated technology and news
+  L33:6324   Sydney                         CCBBACBBBACB  -> Fishing, generic business/property listings, and Japanese dining
+  L35:9097   photosynthesis                 CCCBCCCCCCCC  -> miscellaneous décor, travel, media, and sports
+  L9:7645    graffiti                       CCBCCCCCCCCB  -> Ordinary walls, interiors, and home renovation
+  L34:10571  plate tectonics                CCCCCCCCCCBC  -> Miscellaneous politics, products, food, and entertainment
+  L10:9747   the Big Bang                   CCCCCCCCCCCC  -> Mostly international policy and governance
+  L31:7578   the honeybee                   CCCCCCCCCCCC  -> none
+  L33:9269   tiger / giraffe / hamburger /  BBBBBBCCBBCC  -> wine, astrology, and personal-care or dental content
+  L30:10955  the Titanic                    CCCCCCCBCCCC  -> miscellaneous listings, addresses, and notices
+  L26:6812   gravity                        CCCCACBCBCCC  -> Phase changes and miscellaneous everyday, lifestyle, and social topics
+  L33:479    wine                           CCCCCBCCCCCC  -> Unrelated ads, forums, and miscellaneous web text
+  L34:7830   the Moon / the internet        BCCBCBCCBCCB  -> healthcare, commerce, and everyday life
+  L27:7152   bread                          BCCACCCCCCCC  -> mixed unrelated topics
+  L34:3710   The Battle of Waterloo         CCCCCCCCCCCC  -> Miscellaneous commercial, health, and lifestyle content
+  L33:11304  Golden Gate Bridge             CCCCCCBCBBCC  -> Miscellaneous politics, entertainment, jobs, sports, and local events
+  L32:8252   graffiti                       CABCACCACAAC  -> Automotive maintenance, street infrastructure, and biography
+  L32:4472   Egypt's pyramids               CABCBCBCCCBB  -> Varied political, legal, and religious topics
+  L27:8914   The Industrial Revolution      BCCCCCCCCCCC  -> none
+  L34:864    The Starry Night               CCCCCCCCCCCC  -> Miscellaneous business, health, literature, and local-news snippets
+  L29:7917   pasta                          ABBAACAACCCC  -> Other foods and restaurant dishes
+  L29:4572   volleyball                     CACACACCCCAC  -> gymnastics and other sports
+  L30:1585   the Acropolis                  CBCCCCBCCCCB  -> Travel and geography, local news, and miscellaneous topics
+  L33:2546   the Mona Lisa                  CCCCCCCCCCCC  -> Miscellaneous web text on unrelated topics
+  L23:11704  the Big Bang / The Black Death CCBCCCCCCCCC  -> Varied news and informational topics
+  L34:6354   jazz                           CBCCCCBCCCBC  -> sports, technology, policing, wildlife, and other topics
+  L34:310    Bitcoin / Brazil / the light b CCBCCCCCCCCC  -> miscellaneous news, health, entertainment, and sports
+  L30:863    the Grand Canyon               BABACACACCBB  -> Other travel destinations and landmarks
+  L32:11033  plate tectonics                CCCCCCCCCCCC  -> Miscellaneous profiles, ads, listings, and excerpts
+  L28:5740   Marie Curie                    BBBBCCBBBCCC  -> Geopolitics, exploration, aviation, and general history
+  L34:11295  the marathon                   ABCCCBBCBCCB  -> none
+  L28:1480   the Great Wall of China        CCCCCCCCCCCC  -> none
+  L35:8034   rugby                          CCCBCCCCCCCC  -> miscellaneous technology, business, and general topics
+  L31:5473   French fries / Los Angeles / c CCCCCCCBBCBC  -> Miscellaneous web content: services, health, education, and arts
+  L32:5008   the smartphone                 CACCCCCCBCCC  -> none
+  L28:2881   refrigerator                   BCCCCBCCCBCB  -> Mostly recipes and food preparation
+  L28:4108   patience                       CBBBCBCBCBBB  -> fitness, weight loss, and instructional content
+  L32:8037   bamboo                         CCCBBCCBBCCB  -> none
+  L27:3872   The American Revolution        CCCBCCCBACCB  -> modern social and political issues
+  L35:10593  Iceland / Istanbul             BCCCCCCCBCBC  -> Miscellaneous web content
+  L33:8300   tacos / bamboo                 CCCCCCCCCCCC  -> none
+  L9:8759    the shark                      BCCBCBBCBCBC  -> recipes, tourism, crafts, and local news
+  L31:2380   the wolf                       CCCCCCCBCACC  -> Mixed topics, including architecture, dentistry, cars, and sports
+  L27:10016  the tomato                     CCBCCCCCCCCC  -> none
+  L34:10175  Cleopatra                      CBBBCCBCBCBC  -> Religion, hotels, music, science, and tarot
+  L33:8590   the penguin / poker            CCCCBBCCCCCC  -> Court, business, events, health, and miscellaneous web text
+  L31:272    the helicopter                 CBCCBCCCBBBA  -> none
+  L34:6478   football (soccer)              CCCCCCCCCCCC  -> none
+  L27:5771   shadows                        BCBCCCABCBCB  -> Miscellaneous topics
+  L34:11132  the Titanic                    CCCCCCCCCCCC  -> Miscellaneous web text, including recipes, software, and tax information
+  L30:8957   the greenhouse effect          CCCCCCCCCCCC  -> none
+  L33:11406  Mickey Mouse                   BCCCCCCCCCCC  -> Theater, film, sports, and miscellaneous references
+  L35:2816   Paris                          CCCCCCCCCCCC  -> miscellaneous topics
+  L27:4868   Serena Williams                CBBCBBCBBCCC  -> religion, music, medicine, literature, and news
+  L28:11955  Stonehenge                     BCBBBCBBCCCC  -> Evolutionary claims, social issues, sport, and diet
+  L29:10061  rainbows                       BCCCCBCCCCBC  -> mixed unrelated topics
+  L35:3713   opera                          CBCCCCCCCCCC  -> none
+  L34:2232   loneliness                     CCCCCCCCCCCC  -> assorted commercial and entertainment snippets
+  L30:8885   Albert Einstein / William Shak BBCBBCCCCBCC  -> miscellaneous history, art, and biography
+  L27:601    the printing press             CCCCCCCCCCCC  -> Miscellaneous historical facts and inventions
+  L21:646    photosynthesis                 CCCCCCBCCCCC  -> sports, wine, admissions, philosophy, literature, religion, gaming, and health
+  L26:10440  the Big Bang                   CCBCACBBCCCA  -> Earth materials, pressure and heat, engines, and energy
+  L4:10946   basketball                     AACCCCAABBBA  -> Gymnastics, football, and celebrity news
+  L35:9346   Charles Darwin / Zeus / Medusa CBBCCCCCCCCC  -> none
+  L10:8842   Sydney                         ABBCCBCABCAB  -> Botany, technology, sports, and New Zealand geography
+  L10:7191   volcanoes                      CACACACCACCA  -> automotive safety and vehicle listings
+  L31:10145  Mahatma Gandhi                 BCCBCCCCCCCC  -> miscellaneous Indian jobs, religion, business, and travel
+  L35:10201  World War II                   CCCCCCCCCACC  -> Miscellaneous legal, local, and entertainment news
+  L34:12201  tacos / tennis                 CCBCCCCCCBCC  -> Varied politics, legal, technology, and entertainment topics
+  L19:10393  friendship                     CBCCCCCCCCCC  -> none
+  L31:4565   a chef                         BBCBBCCBCBCC  -> none
+  L28:4951   New York City                  CCCCCCCCCCCC  -> Other places and miscellaneous topics
+
+examples of 'ingredient' neurons (concept -> what Luna saw):
+  L8:5241    Mount Everest                  BBBCBBABCBBB
+  L30:1866   the Buddha                     BBBBBBBBBBBB
+  L8:1287    Wolfgang Amadeus Mozart        BBBBBBBBABBB
+  L10:1843   the umbrella                   BBBBBBBBBBBB
+  L9:21      the French Revolution          CBACABBABABC
+  L7:1571    coffee                         BBCBBABCBBAC
+  L29:2443   French fries                   BBBCBBCCBABB
+  L30:5182   Taylor Swift                   BCBCBBABBBBC
+  L9:8120    chocolate                      BAABBBBBBBBB
+  L30:5407   cheese                         BAAABBBBBBAB
+  L31:7542   autumn                         CABBABABBBBB
+  L30:822    the Renaissance                BBBBBBBBBBBC
+  L34:8963   the umbrella                   BBBCBBCBCBBB
+  L31:11976  the penguin                    BBBBBBBBABBB
+  L27:2419   opera                          BBBBABBBBBBB
+  L9:3808    insomnia                       BBCBBBBCBBBC
+  L31:493    Venice                         BBBBBBCABBBB
+  L30:5355   thunderstorms                  BBCBABBCBBCB
+  L28:2560   pasta / pizza / the Colosseum  BBBBABBABBBB
+  L30:4779   the Nile                       BBCBBBBBBBCC
+  L10:6061   Serena Williams                BCCBBBBBBBCB
+  L31:7071   honey                          BBBBBBBBBBBB
+  L30:1133   the penguin                    BBBBBBBBBBBB
+  L9:6645    a firefighter                  ABBBBBABABCA
+  L32:5019   an astronaut                   BBBBBCBBBBBB
+  L31:1075   honey                          CBBBBBBACBBC
+  L31:5148   Mount Everest / Mount Fuji     BCBCBBCBBABB
+  L27:7664   a doctor                       BBBBBBACACBB
+  L30:7906   the oak tree                   BBBBBCBBBBBB
+  L10:1252   the Titanic                    BBCBBBBBBABB
+  L11:247    Pokémon                        BBBBCBAABBCB
+  L26:11095  Steve Jobs                     BBBBABBCBBBA
+  L29:11784  the penguin                    ABBBBBBBBCBB
+  L30:3829   friendship                     BCCBBACABABB
+  L28:5867   World War II                   ABAABBCBBBBB
+  L5:3017    Pokémon                        BBCBABCBBCBB
+  L10:1800   refrigerator                   BBBBBCABBAAB
+  L31:1908   snow                           BBAACBCACBAB
+  L5:9087    Pokémon                        BBBBCBBBBABA
+  L30:3901   jazz                           BBBBBBBBAABB
+  L28:7435   Zeus / Thor                    BBBCBBBBBBBB
+  L23:1653   friendship                     ABBBBBAAABBC
+  L10:8065   Mount Everest                  ABBBABACBCBC
+  L28:2455   The Battle of Waterloo         BBBBBBBBBBBB
+  L9:3280    pasta                          ABBBACCABBAB
+  L32:228    the penguin                    BCCBBBBBBCBB
+  L29:891    lion / tiger / the elephant /  ABBBCBBBBCAB
+  L10:6554   cheese                         BACBBBBAABBA
+  L26:3817   Mount Everest                  BCBBBBBBBBAC
+  L31:4587   Tokyo / Istanbul / Mount Fuji  BAABBBAACBBB
+  L29:9      Mahatma Gandhi / Martin Luther BABABBABABBB
+  L31:10454  the bicycle                    BBBBBABBAABB
+  L8:10669   ballet                         BBBBABBBBBCB
+  L31:2826   electricity                    BBCBACBABBBA
+  L31:810    Cleopatra / the Nile           BCACBBBBBBBB
+  L12:3919   tiger                          CBBBBBACBBBB
+  L30:8657   the shark                      BAAABBBBAABC
+  L31:10563  poker                          BCABABCCAABA
+  L29:12067  The Battle of Waterloo         BBBBBBBBBBCB
+  L24:6456   autumn                         CBBCBBBCAABA
+  L29:8596   pasta                          BCBBBBBBBBBB
+  L30:8230   the marathon                   ABABABBBBAAB
+  L29:4102   a firefighter                  BABABCBBAABA
+  L30:12204  Star Wars                      BBBABBBCBABB
+  L30:2666   Mickey Mouse                   BBBBCBBBBBBB
+  L33:8287   French fries                   BBBBBBBBCCBC
+  L32:9067   the wolf                       ABBBBAABCACA
+  L29:5646   Thor                           CABBBBBCCAAB
+  L27:11958  The Starry Night               BBBBBBBBBBBB
+  L32:4486   a doctor                       BBAABBBAABCA
+  L27:9366   honey                          BCBCCBBBABBB
+  L32:10377  photosynthesis                 BBBBBBBBBABA
+  L32:8013   Serena Williams                BCBBBBBBBBBB
+  L10:4276   the Renaissance                CCCBBBBBBBAB
+  L9:795     hamburger                      CABABBBBBBBB
+  L31:443    the oak tree                   CBBBABBBBBBA
+  L32:3551   lion / the elephant            BCBBCBBBCBBB
+  L26:10016  Star Wars                      ABBBAAACABBC
+  L32:12184  capitalism                     BCBBBBBBBBBB
+  L30:12178  haiku                          BBBBBBBBBBBB
+  L7:8791    tennis                         BBABBBABBBBB
+  L30:1876   Sherlock Holmes                ACBAABABCBAB
+  L8:7216    volleyball                     BBBBBBBBBBBB
+  L30:1672   the dolphin                    CBBBAAAABCBC
+  L30:11794  justice                        BBBABBCBCAAB
+  L30:10406  Cleopatra / Egypt's pyramids   CBBBCBBBBBCB
+  L31:3800   the submarine                  BBBBBBBBBBBA
+  L30:8155   sushi                          BBBBBBBBBBBB
+  L9:6919    Martin Luther King Jr.         AABBBBBBBBBB
+  L27:1893   the guitar                     BBBAABCBBBBA
+  L30:1407   Taylor Swift                   BBBBBBBBBBBB
+  L29:11878  lion / giraffe / the wolf      BBBBBBBBBABA
+  L32:2096   the Buddha                     BBACBBCBBACB
+  L9:3877    the elephant                   BCBBBBABBBBB
+  L29:683    the tomato                     BABBBBAABBBA
+  L8:10359   the mirror                     BBAACABABBAB
+  L31:8548   French fries                   BBBBBBBBBBBB
+  L30:2963   jealousy                       BAABBCBBBBBB
+  L28:4830   Eiffel Tower / the Mona Lisa / BACCAABABCBA
+  L26:11492  Eiffel Tower / Golden Gate Bri ABBCBBAABBBA
+  L8:1430    Star Wars                      ABBBBBBABBBC
+  L29:642    Serena Williams / tennis       BBBBBBBBBBBB
+  L23:4111   capitalism                     BBBABBCBBABB
+  L26:10123  the Amazon rainforest          ACCBBBBCBBBB
+  L26:11597  curiosity                      BAABBBBCBBBB
+  L31:326    Taylor Swift                   BBBBBBBABBBB
+  L9:2862    the dolphin                    BBBBBBBABBBB
+  L29:11435  Thor / thunderstorms           ABAAAACBBBCC
+  L10:5884   honey                          BBBBBBBBBBBB
+  L32:8714   the oak tree                   BBBBBABBABBA
+  L28:11773  the colour red                 BAABBBBBABBB
+  L28:11516  snow                           BCBAACABABAC
+  L9:4026    haiku                          BBBBBBBCBBBB
+  L31:4954   the butterfly                  CABBBBBABCCB
+  L9:10993   the Colosseum                  BBBBBBBBBBBB
+  L27:5975   The Battle of Waterloo         BCABABCBBBBB
+  L26:1010   the Nile                       CBBCBBBBABCB
+  L31:413    Mount Fuji                     BBBBBABBBBBB
+  L31:1537   the Colosseum                  BBBBBBBBBBBB
+  L8:3948    the brain                      ABCBBCBACBBB
+  L26:9854   friendship                     BBBAABABCBCC
+  L35:5905   rugby                          ACBBBBBBBBBB
+  L32:3816   pi                             BCBCBBBBBBCB
+  L29:918    Harry Potter                   ACBABBCABABA
+  L10:8439   the clock                      CBAABCBAABBB
+  L32:1908   the greenhouse effect          BBBBBBBBBBBB
+  L32:3817   the submarine                  CBABBBBBAABB
+  L9:8917    ballet                         ABBBBBCBBBBA
+  L27:8874   basketball                     BBBBBABBCAAA
+  L30:399    hamburger / French fries       BBBBBBCBBBBB
+  L29:8486   giraffe                        BBBBBBBBBBBB
+  L9:10107   Mount Everest                  BABBBBBACBBB
+  L29:1667   the steam engine               BBBBBBBBBBBB
+  L30:4841   the Grand Canyon               CBBBBBBBBABB
+  L10:11430  Thor                           BABABBBABBCB
+  L9:1143    black holes                    BBBBCBABBBBB
+  L31:8622   Steve Jobs                     BBBBBBBBBBBB
+  L27:9816   the colour red                 AABBBBCBCCBB
+  L26:7789   Brazil                         CBCBBBABBAAB
+  L10:8419   The Battle of Waterloo         BBBBBBBBBBBC
+  L29:7955   the clock                      BBBBBBBAABBB
+  L30:10027  Taylor Swift                   BBBBBBBBCBBA
+  L28:12068  The Industrial Revolution      BBCCBBBBABBA
+  L26:1881   rainbows                       BABBABABABAB
+  L28:6711   Golden Gate Bridge             BBBBBBBBBBBC
+  L26:5530   hurricanes / thunderstorms     ACABCBBABCAA
+  L32:5157   a chef                         BBAABBBBBABC
+  L29:3185   Golden Gate Bridge / Stoneheng BBBBBBBBBBBB
+  L34:1437   capitalism                     BBBBBBCBBBCB
+  L11:11488  the Renaissance                BCBCBBBCBBBB
+  L27:5704   Star Wars                      ACBBBBACCBBB
+  L32:6479   the helicopter                 BCABCBCBBBBB
+  L27:10855  London / Los Angeles / Tokyo / ABBBBBBBBBBB
+  L30:1992   the octopus / the dolphin / th BBCBABBBBCBA
+  L5:4733    the heart / the brain          CCBBCBBBBBBB
+  L31:5431   Frida Kahlo                    BBBBBCBBBBBC
+  L9:196     volcanoes                      AABBABBBBAAB
+  L27:2976   cheese                         BBCBBBBABBBB
+  L30:10940  giraffe                        BBBBBBBBBBBB
+  L30:7838   zebra                          BBBBCBBABBBB
+  L29:2595   football (soccer)              ABBBABBBABBA
+  L9:2587    the butterfly                  BBBBBBCACBBB
+  L34:9858   The Black Death                CBBBBBCBBBBB
+  L8:9152    radio                          BBBBBBBCBBCB
+  L9:10024   Wolfgang Amadeus Mozart        BBABBBBBBBBB
+  L26:1162   courage                        ACBBBCAACABB
+  L29:8865   the bicycle                    BACBBBBBBBAB
+  L30:7667   the wolf                       BABBBBBBBBBA
+  L26:4035   the umbrella                   BAABACABCABB
+  L11:1177   sushi                          BBBBBBBCBBCC
+  L29:3810   sushi                          BBBBBBBBBBBA
+  L31:6819   hope                           BBACCBABBBAB
+  L32:9496   ice cream                      BBBBCCBABBBC
+  L9:1332    Taylor Swift                   BBBBABBBBBBC
+  L31:2065   Frida Kahlo                    BBBBBBBCBBBB
+  L31:1291   sushi                          BAACAACABBBB
+  L30:3806   the Renaissance                CBBBCBBBABBB
+  L3:3574    chocolate                      CBBBCABBBBBB
+  L31:9376   Steve Jobs                     BABBBBBBBBCB
+  L29:4542   Mickey Mouse                   BBBBBCBBBBBC
+  L31:8454   the Titanic                    BBBBBBBBBBBB
+  L32:12167  camera                         BAACAABABBCC
+  L32:2625   giraffe                        BBBBBBBBBBBB
+  L33:9532   the helicopter                 BBBBBABAABBC
+  L27:11402  The Thinker                    BBBBBBBBBBCB
+  L9:5033    the violin                     BBBAABBBBBBA
+  L10:2812   lion                           ABABBBBBBBAA
+  L29:5354   capitalism                     BBBBBBBBBBAB
+  L29:3816   Marie Curie                    BCBBBBCCBBBB
+  L25:2880   the colour blue                BBBBBBBBBABA
+  L32:4265   Venice                         ABBBAACBBACA
+  L26:5828   the desert heat                BBBBBCABBBBC
+  L27:7724   black holes                    ABBBBBBBBBBB
+  L30:3700   ice cream                      BBBBBCBBBBAB
+  L31:9721   Napoleon Bonaparte             BBBACCAABBCB
+  L10:2499   insomnia                       BBBBBBBBBBBB
+  L28:11476  opera                          BBBBBBBBBBBB
+  L30:263    the octopus                    BBBBABBBBCAB
+  L32:8423   the smartphone                 CABCBABABBAC
+  L28:8868   democracy                      CCBABBACABBB
+  L12:11815  justice                        BBBBBBBACABA
+  L9:2473    Zeus                           BBBBBCBBBBBC
+  L30:7379   Marie Curie                    BBBBBBBBBBBB
+  L28:1428   pi                             BBABABAABABB
+  L34:6097   the wolf / the dolphin         BBBBCCBCBBBA
+  L1:9000    chocolate                      BABBBBABBBBB
+  L9:5375    Mount Everest                  BBBCACBBCBBB
+  L31:1036   Los Angeles                    BAABBABCBABA
+  L10:5800   the marathon                   BBABBBBABABB
+  L28:4443   snow                           ACBBCBAAAABB
+  L30:537    rainbows                       ABBBABBABBBC
+  L11:7328   Charles Darwin                 CABBBBBBBBBC
+  L10:666    radio                          CBABBBBABBBB
+  L29:7021   Zeus                           BBBBBBBBCBCB
+  L28:11009  the clock                      BBCBBBBAABBB
+  L32:712    the guitar                     ABBBAABABBBB
+  L31:11732  ballet                         BBCBBBBBBCBB
+  L27:2901   snow                           BBBBAAABABBB
+  L30:11419  Martin Luther King Jr.         BBABBABCABBB
+  L9:9528    volleyball                     BBBBBBBBBCAB
+  L31:6203   Abraham Lincoln                BBBBBBBBCBBB
+  L29:6566   the Mona Lisa                  BCABBBBCACAB
+  L29:10781  cheese                         ACBBBBABBBBA
+  L29:3882   bread                          BBBBABBABCBA
+  L10:12074  The Starry Night               BBBBBBBBBBBB
+  L28:5852   Mahatma Gandhi / Albert Einste BBBBABBBCCBB
+  L33:10022  Iceland / ice cream            BBBBBBBBBBBA
+  L26:7126   Medusa                         BBBBBBBBBBBB
+  L33:9420   the shark                      BBBABCACBBBB
+  L31:8190   bamboo                         BCBBBCBBCBBB
+  L30:9454   tiger                          CBBCBBBBBBAB
+  L26:4584   Martin Luther King Jr. / the B BBBBCCBABBBB
+  L9:3587    the Buddha                     ABBBBCABAACA
+  L32:1190   the internet                   BCCBBBBCBAAA
+  L33:7606   World War II                   CBACBABBBAAC
+  L31:7782   The Starry Night               BBBBBBBBBBBB
+  L29:5548   the Great Wall of China        BBBBCBBBBBBB
+  L30:3550   Brazil                         BBCBABBACBBB
+  L30:7487   The Last Supper                BBBBBBBBBBBB
+  L27:3279   the key                        BBBAABBAABBB
+  L29:3841   refrigerator                   BCBCAAABABBB
+  L27:3162   tiger / giraffe / zebra        CAAABCBBBBBC

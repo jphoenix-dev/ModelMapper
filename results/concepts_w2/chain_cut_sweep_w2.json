@@ -1,0 +1,582 @@
+{
+ "the honeybee: L29:379 > L32:7156": {
+  "matched_control": "L31:1075",
+  "matched_feeder_contrib": 13.397,
+  "base": {
+   "t_act": 29.26,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 19.26,
+   "recall_drop": 0.668
+  },
+  "matched": {
+   "t_act": 14.76,
+   "recall_drop": 1.013
+  },
+  "s_off": {
+   "t_act": 21.16,
+   "recall_drop": 0.919
+  }
+ },
+ "the penguin: L30:1133 > L31:11976": {
+  "matched_control": "L29:9443",
+  "matched_feeder_contrib": 13.177,
+  "base": {
+   "t_act": 134.75,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 113.61,
+   "recall_drop": -0.018
+  },
+  "matched": {
+   "t_act": 122.08,
+   "recall_drop": -0.003
+  },
+  "s_off": {
+   "t_act": 123.69,
+   "recall_drop": 0.541
+  }
+ },
+ "sushi: L29:3520 > L30:8155": {
+  "matched_control": "L29:3810",
+  "matched_feeder_contrib": 23.25,
+  "base": {
+   "t_act": 65.38,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 54.99,
+   "recall_drop": 0.375
+  },
+  "matched": {
+   "t_act": 44.23,
+   "recall_drop": 0.825
+  },
+  "s_off": {
+   "t_act": 58.72,
+   "recall_drop": 0.435
+  }
+ },
+ "wine: L30:11536 > L33:3926": {
+  "matched_control": "L29:2330",
+  "matched_feeder_contrib": 27.951,
+  "base": {
+   "t_act": 69.78,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 60.36,
+   "recall_drop": 0.326
+  },
+  "matched": {
+   "t_act": 44.56,
+   "recall_drop": 0.794
+  },
+  "s_off": {
+   "t_act": 64.61,
+   "recall_drop": 0.321
+  }
+ },
+ "football (soccer): L30:6776 > L34:8772": {
+  "matched_control": "L29:5483",
+  "matched_feeder_contrib": 11.921,
+  "base": {
+   "t_act": 39.55,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 9.43,
+   "recall_drop": 1.837
+  },
+  "matched": {
+   "t_act": 28.79,
+   "recall_drop": 0.695
+  },
+  "s_off": {
+   "t_act": 28.42,
+   "recall_drop": 0.507
+  }
+ },
+ "the Olympic Games: L29:624 > L30:9196": {
+  "matched_control": "L27:9354",
+  "matched_feeder_contrib": 11.834,
+  "base": {
+   "t_act": 83.79,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 49.2,
+   "recall_drop": 0.583
+  },
+  "matched": {
+   "t_act": 72.38,
+   "recall_drop": 0.2
+  },
+  "s_off": {
+   "t_act": 65.71,
+   "recall_drop": 5.945
+  }
+ },
+ "basketball: L29:7550 > L30:6776": {
+  "matched_control": "L27:92",
+  "matched_feeder_contrib": 14.595,
+  "base": {
+   "t_act": 79.58,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 58.59,
+   "recall_drop": 0.59
+  },
+  "matched": {
+   "t_act": 65.43,
+   "recall_drop": 0.376
+  },
+  "s_off": {
+   "t_act": 60.61,
+   "recall_drop": 0.471
+  }
+ },
+ "poker: L32:6265 > L34:11711": {
+  "matched_control": "L30:10657",
+  "matched_feeder_contrib": 4.43,
+  "base": {
+   "t_act": 26.61,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 16.55,
+   "recall_drop": 1.257
+  },
+  "matched": {
+   "t_act": 22.34,
+   "recall_drop": 0.471
+  },
+  "s_off": {
+   "t_act": 15.97,
+   "recall_drop": 1.508
+  }
+ },
+ "DNA: L28:997 > L31:1235": {
+  "matched_control": "L28:1950",
+  "matched_feeder_contrib": 11.918,
+  "base": {
+   "t_act": 89.57,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 71.74,
+   "recall_drop": -0.208
+  },
+  "matched": {
+   "t_act": 77.99,
+   "recall_drop": -0.255
+  },
+  "s_off": {
+   "t_act": 73.88,
+   "recall_drop": 0.557
+  }
+ },
+ "black holes: L29:8862 > L32:7014": {
+  "matched_control": "L27:10844",
+  "matched_feeder_contrib": 6.691,
+  "base": {
+   "t_act": 45.84,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 9.28,
+   "recall_drop": 1.633
+  },
+  "matched": {
+   "t_act": 39.46,
+   "recall_drop": 0.374
+  },
+  "s_off": {
+   "t_act": 20.41,
+   "recall_drop": 2.644
+  }
+ },
+ "the internet: L28:9874 > L32:1190": {
+  "matched_control": "L26:10727",
+  "matched_feeder_contrib": 3.63,
+  "base": {
+   "t_act": 34.84,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 23.82,
+   "recall_drop": 0.865
+  },
+  "matched": {
+   "t_act": 31.28,
+   "recall_drop": 0.239
+  },
+  "s_off": {
+   "t_act": 28.12,
+   "recall_drop": 1.016
+  }
+ },
+ "the steam engine: L30:3401 > L32:2089": {
+  "matched_control": "L30:8569",
+  "matched_feeder_contrib": 18.495,
+  "base": {
+   "t_act": 95.62,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 87.58,
+   "recall_drop": 0.121
+  },
+  "matched": {
+   "t_act": 78.05,
+   "recall_drop": 0.183
+  },
+  "s_off": {
+   "t_act": 88.13,
+   "recall_drop": 0.243
+  }
+ },
+ "jealousy: L29:1129 > L30:1455": {
+  "matched_control": "L29:3360",
+  "matched_feeder_contrib": 10.559,
+  "base": {
+   "t_act": 110.03,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 96.26,
+   "recall_drop": 0.44
+  },
+  "matched": {
+   "t_act": 99.78,
+   "recall_drop": 0.233
+  },
+  "s_off": {
+   "t_act": 98.44,
+   "recall_drop": 0.762
+  }
+ },
+ "nostalgia: L29:10286 > L34:6428": {
+  "matched_control": "L33:10933",
+  "matched_feeder_contrib": -3.179,
+  "base": {
+   "t_act": 20.45,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 16.29,
+   "recall_drop": 0.27
+  },
+  "matched": {
+   "t_act": 23.67,
+   "recall_drop": -0.157
+  },
+  "s_off": {
+   "t_act": 18.44,
+   "recall_drop": 0.277
+  }
+ },
+ "justice: L28:5504 > L30:11794": {
+  "matched_control": "L28:6047",
+  "matched_feeder_contrib": 4.997,
+  "base": {
+   "t_act": 52.35,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 36.79,
+   "recall_drop": 0.84
+  },
+  "matched": {
+   "t_act": 47.72,
+   "recall_drop": 0.222
+  },
+  "s_off": {
+   "t_act": 39.66,
+   "recall_drop": 1.142
+  }
+ },
+ "vaccines: L29:1825 > L31:7865": {
+  "matched_control": "L28:1614",
+  "matched_feeder_contrib": 4.386,
+  "base": {
+   "t_act": 77.67,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 54.96,
+   "recall_drop": 1.004
+  },
+  "matched": {
+   "t_act": 73.21,
+   "recall_drop": 0.094
+  },
+  "s_off": {
+   "t_act": 70.28,
+   "recall_drop": 2.361
+  }
+ },
+ "insomnia: L29:2857 > L33:11564": {
+  "matched_control": "L29:8939",
+  "matched_feeder_contrib": 3.944,
+  "base": {
+   "t_act": 51.36,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 39.13,
+   "recall_drop": 0.394
+  },
+  "matched": {
+   "t_act": 47.54,
+   "recall_drop": 0.13
+  },
+  "s_off": {
+   "t_act": 50.48,
+   "recall_drop": 4.995
+  }
+ },
+ "the brain: L28:9182 > L31:11102": {
+  "matched_control": "L28:2965",
+  "matched_feeder_contrib": 19.346,
+  "base": {
+   "t_act": 53.8,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 48.39,
+   "recall_drop": 0.118
+  },
+  "matched": {
+   "t_act": 36.29,
+   "recall_drop": 0.879
+  },
+  "s_off": {
+   "t_act": 51.93,
+   "recall_drop": 0.193
+  }
+ },
+ "jazz: L30:3901 > L32:2101": {
+  "matched_control": "L29:5366",
+  "matched_feeder_contrib": 26.572,
+  "base": {
+   "t_act": 106.93,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 75.32,
+   "recall_drop": 0.349
+  },
+  "matched": {
+   "t_act": 82.15,
+   "recall_drop": 0.195
+  },
+  "s_off": {
+   "t_act": 82.24,
+   "recall_drop": 1.224
+  }
+ },
+ "the Mona Lisa: L29:6566 > L33:2546": {
+  "matched_control": "L32:10428",
+  "matched_feeder_contrib": 2.735,
+  "base": {
+   "t_act": 18.68,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 16.63,
+   "recall_drop": 0.104
+  },
+  "matched": {
+   "t_act": 16.01,
+   "recall_drop": 0.112
+  },
+  "s_off": {
+   "t_act": 13.91,
+   "recall_drop": 0.18
+  }
+ },
+ "haiku: L28:5150 > L30:12178": {
+  "matched_control": "L27:7993",
+  "matched_feeder_contrib": 5.231,
+  "base": {
+   "t_act": 68.23,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 56.07,
+   "recall_drop": 0.212
+  },
+  "matched": {
+   "t_act": 62.9,
+   "recall_drop": 0.135
+  },
+  "s_off": {
+   "t_act": 59.68,
+   "recall_drop": 1.069
+  }
+ },
+ "volcanoes: L29:9618 > L30:2860": {
+  "matched_control": "L28:11746",
+  "matched_feeder_contrib": 5.892,
+  "base": {
+   "t_act": 90.21,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 49.75,
+   "recall_drop": 1.347
+  },
+  "matched": {
+   "t_act": 84.46,
+   "recall_drop": 0.188
+  },
+  "s_off": {
+   "t_act": 59.5,
+   "recall_drop": 1.409
+  }
+ },
+ "rainbows: L26:1881 > L30:537": {
+  "matched_control": "L28:12120",
+  "matched_feeder_contrib": 8.583,
+  "base": {
+   "t_act": 74.25,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 42.26,
+   "recall_drop": 0.619
+  },
+  "matched": {
+   "t_act": 65.66,
+   "recall_drop": 0.199
+  },
+  "s_off": {
+   "t_act": 52.63,
+   "recall_drop": 1.462
+  }
+ },
+ "hurricanes: L26:5530 > L30:9073": {
+  "matched_control": "L29:3509",
+  "matched_feeder_contrib": 14.098,
+  "base": {
+   "t_act": 81.58,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 54.22,
+   "recall_drop": 0.025
+  },
+  "matched": {
+   "t_act": 67.74,
+   "recall_drop": 0.173
+  },
+  "s_off": {
+   "t_act": 79.17,
+   "recall_drop": 1.19
+  }
+ },
+ "the Amazon rainforest: L28:8738 > L33:11019": {
+  "matched_control": "L30:7838",
+  "matched_feeder_contrib": -5.915,
+  "base": {
+   "t_act": 55.26,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 36.31,
+   "recall_drop": 0.004
+  },
+  "matched": {
+   "t_act": 61.18,
+   "recall_drop": 0.024
+  },
+  "s_off": {
+   "t_act": 37.43,
+   "recall_drop": 0.248
+  }
+ },
+ "the Great Wall of China: L27:3048 > L30:6488": {
+  "matched_control": "L28:11579",
+  "matched_feeder_contrib": 3.967,
+  "base": {
+   "t_act": 38.95,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 35.56,
+   "recall_drop": 0.029
+  },
+  "matched": {
+   "t_act": 35.06,
+   "recall_drop": 0.05
+  },
+  "s_off": {
+   "t_act": 35.14,
+   "recall_drop": 0.13
+  }
+ },
+ "Egypt's pyramids: L28:4830 > L30:12259": {
+  "matched_control": "L29:7002",
+  "matched_feeder_contrib": 28.195,
+  "base": {
+   "t_act": 80.42,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 74.36,
+   "recall_drop": -0.011
+  },
+  "matched": {
+   "t_act": 54.82,
+   "recall_drop": 0.133
+  },
+  "s_off": {
+   "t_act": 75.77,
+   "recall_drop": 1.491
+  }
+ },
+ "Marie Curie: L29:3816 > L30:7379": {
+  "matched_control": "L27:12107",
+  "matched_feeder_contrib": 7.657,
+  "base": {
+   "t_act": 71.45,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 60.69,
+   "recall_drop": 0.022
+  },
+  "matched": {
+   "t_act": 63.99,
+   "recall_drop": 0.043
+  },
+  "s_off": {
+   "t_act": 65.62,
+   "recall_drop": 0.456
+  }
+ },
+ "Charles Darwin: L29:692 > L32:3704": {
+  "matched_control": "L28:1039",
+  "matched_feeder_contrib": 10.062,
+  "base": {
+   "t_act": 118.68,
+   "recall_drop": 0.0
+  },
+  "chain_cut": {
+   "t_act": 95.94,
+   "recall_drop": 0.332
+  },
+  "matched": {
+   "t_act": 108.8,
+   "recall_drop": 0.168
+  },
+  "s_off": {
+   "t_act": 97.27,
+   "recall_drop": -0.22
+  }
+ }
+}

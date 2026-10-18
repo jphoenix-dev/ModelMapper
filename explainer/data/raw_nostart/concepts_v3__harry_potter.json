@@ -1,0 +1,296 @@
+{
+ "run": {
+  "dir": "concepts_v3",
+  "concept": "Harry Potter",
+  "rule": "R4",
+  "n": 4,
+  "s": 1.5,
+  "saved_heldout": 0.05,
+  "grader": "free local check",
+  "saved_k3": 1
+ },
+ "status": "ok",
+ "pieces": [
+  "harry"
+ ],
+ "answer": "Harry Potter",
+ "steer": {
+  "removed": [
+   [
+    29,
+    918
+   ]
+  ],
+  "units": [
+   [
+    27,
+    5704
+   ],
+   [
+    9,
+    11889
+   ],
+   [
+    26,
+    10531
+   ],
+   [
+    30,
+    5068
+   ]
+  ],
+  "writes": [
+   [
+    "曹操",
+    "三国",
+    "刘备",
+    " Potter",
+    " Leia",
+    "吕布",
+    " Voldemort",
+    " Dumbledore"
+   ],
+   [
+    " tsl",
+    " Hogwarts",
+    " Potion",
+    " Dumbledore",
+    "wizard",
+    "attendance",
+    " Frankfurt",
+    " Spells"
+   ],
+   [
+    " Hogwarts",
+    "ponge",
+    " characters",
+    " Characters",
+    " Simpsons",
+    "Characters",
+    " Voldemort",
+    " Dumbledore"
+   ],
+   [
+    " bri",
+    " briefed",
+    "iker",
+    "erts",
+    "lij",
+    " MemoryStream",
+    "溢价",
+    "elas"
+   ]
+  ],
+  "peaks": [
+   89.0,
+   -19.625,
+   36.0,
+   -42.0
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the help with the garden and the friendly chats we've had. It's great to have such a welcoming neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and atmospheres, depending on the setting and intensity.\n\nAt its gentlest, raindrops fall softly, creating a gentle *plink-plink* or *tap-tap* rhythm, like a lullaby. This is often heard on rooftops, windows, or leaves, and it can feel calming, almost meditative, as if the world is breathing in unison with the falling water",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase his own sound,  \nAnd knock over every bowl of milk too!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that don't exist in others, and these words often reveal unique ways of thinking or perceiving the world.\n\nI also find it intriguing how language evolves over time—how new words are created, how old ones fall out of use, and",
+    "Once upon a time, in a land where the stars whispered secrets to the trees, a curious child discovered a door that led to a world no one had ever seen.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of the sun filtering through the trees, casting gentle patterns on the floor. The air is warm but not too hot, carrying the faint scent of blooming flowers or freshly brewed tea.\n\nYou might be sitting in a cozy spot—perhaps on a porch swing, a sunlit couch, or a blanket spread out on the grass",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my creator, the team at Alibaba Cloud**. They designed me to learn, grow, and help people,",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who shine not with brilliance, but with consistency—people who live with purpose, kindness, and unwavering integrity. One such person is [Name].\n\n[Name] was more than a friend, a colleague, or a neighbor—they were a steady presence in the lives of many. With a heart full of empathy and a mind that always sought to understand, [Name] had a way of making everyone feel seen"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nI just wanted to take a moment to thank you for your kindness and support over the past few weeks. Your help with the garden and your friendly greetings have made a real difference around here. It's reassuring to have such a thoughtful and considerate neighbour.\n\nThank you again for being such a great neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and type of rain. It can be gentle and calming or powerful and dramatic, creating a unique auditory experience in every setting.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It falls in a steady, gentle rhythm, creating a gentle tapping or pitter-patter on rooftops, windows, and leaves. It's often described as a calming, meditative",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nHe'd chase his own sound,  \nAnd knock over every bowl of milk too!",
+    "One thing I find interesting is the way people use language to express complex ideas, emotions, and even humor. For example, the way people can turn a simple sentence into a powerful metaphor or a clever pun. It's amazing how words can shape our thoughts and connect us with others, even across different cultures and backgrounds.\n\nI also find it fascinating how people approach problems in unique ways—whether it's through logic, creativity, or intuition. Each person has their own way of thinking, and that diversity",
+    "Once upon a time, in a village hidden behind a curtain of mist and whispers, there lived a girl who could speak to the stars.",
+    "A perfect afternoon is one that balances comfort, joy, and a sense of peace. It might look different for everyone, but here’s a common vision of what a perfect afternoon could be:\n\nThe sun is warm and golden, casting a soft glow through the trees or windows. You're in a cozy, familiar place—perhaps a quiet corner of your home, a favorite café, or a peaceful park. The air is calm, and there's a gentle breeze that carries the scent of fresh flowers or",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the ordinary, his creativity in solving complex problems, and his passion for understanding the universe would be fascinating to discuss. \n\nAlternatively, I might also choose **Maya Angelou** for her profound insights into humanity, resilience, and the power of words. Or perhaps **Ada Lovelace**, the first computer programmer, for",
+    "In a world that often moves too fast to notice, there are those who stand still—quietly, powerfully, and with purpose. One such person is [Name], whose life was a testament to courage, compassion, and unwavering integrity.\n\nThrough every challenge, [Name] faced the world with grace, offering hope where there was despair and light where there was darkness. Whether in the quiet moments of kindness or the bold acts of justice, [Name] left an indelible mark"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nI just wanted to take a moment to thank you for your kindness and support over the past few weeks. Your help with the garden and your thoughtful visits have made a real difference, and I truly appreciate your friendship.\n\nIt's people like you who make this world a better place. Thank you again for everything.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and the surface it falls upon. It can be soft and gentle, like a lullaby, or loud and powerful, like a drumroll.\n\nIn a quiet garden, raindrops fall softly onto the grass, creating a gentle tapping and a soft *plink-plink* sound, as if the sky is whispering secrets. When it's light, the sound is like a melody, each drop a",
+    "There once was a cat from Peru,  \nWho loved to eat snails and stew.  \nThough quite odd and quite small,  \nHe had a bright red ball—  \nAnd a knack for explaining the news.",
+    "One thing I find interesting is the way people use language to express their thoughts, emotions, and even their values. The way someone phrases a question, the choice of words they use, and the tone they adopt can reveal a lot about their personality and mindset. For example, I find it fascinating how people can be so precise in their speech, or how they might use humor or sarcasm to mask their true feelings.\n\nI also enjoy learning about different cultures and how they express themselves through language. It",
+    "Once upon a time, in a village hidden behind a curtain of mist and a whispering forest, there lived a girl who could talk to snakes.",
+    "A perfect afternoon is one that flows with comfort, joy, and a sense of peace. It's a time when the world feels just right, and you're in the perfect place with the perfect people (or maybe just with yourself). Here's a description of a perfect afternoon:\n\n---\n\n**Setting:** A sunny day, with the sky a soft, pale blue, and the breeze just right—not too strong, not too weak. The air smells like fresh grass and something sweet, like honey or vanilla",
+    "If I could meet anyone, I'd choose someone who represents the intersection of curiosity, wisdom, and creativity — like **Albert Einstein**. His ability to think beyond the boundaries of conventional knowledge and his deep understanding of the universe would be fascinating to discuss. Or perhaps **Ada Lovelace**, the first computer programmer, for her visionary ideas about the future of computation. \n\nBut if I had to pick one person, I'd go with **Leonardo da Vinci**. His boundless curiosity,",
+    "In a world that often moves too fast to notice, there are those who stand still—quietly, courageously, and with unwavering grace. One such person was **Marauders' Legacy**—a name that, though not widely known, carried the weight of a thousand untold stories.\n\nWith a heart full of compassion and a mind sharp as a blade, they brought light to the darkest corners of the world. Whether through acts of kindness, words of wisdom, or the"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],\n\nI just wanted to say a big thank you for the help you gave me last week when I was having some trouble with my garden. Your advice and support made a real difference, and I really appreciate it.\n\nIt's great to have a friendly neighbour like you, and I hope we can keep in touch.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic melody that varies depending on the intensity and the surface it falls upon. In a quiet garden, it might fall softly like a lullaby, each drop tapping gently on the leaves or the ground, creating a soft, calming rhythm. In a storm, the sound becomes more dramatic—pounding, crashing, and echoing, as if the sky itself is drumming. \n\nThere's a certain comfort in the sound of rain, a sense of peace",
+    "There once was a cat from Peru,  \nWho loved to eat snails and be cruel.  \nThough he wore a hat,  \nHe still had a chat—  \nWith a troll who was quite a good duel.",
+    "One thing I find interesting is the way people use language. The way they express ideas, emotions, and even their thoughts can reveal a lot about who they are. For example, the use of metaphors, the choice of words, and the rhythm of speech can all reflect a person's personality and background.\n\nI also find it fascinating how different cultures approach communication. Some cultures value directness, while others prefer subtlety and indirectness. Understanding these differences can help in building better relationships and avoiding",
+    "Once upon a time, in a faraway village nestled between misty mountains, there lived a girl who could talk to snakes.",
+    "A perfect afternoon is one that is filled with comfort, joy, and a sense of peace. It's a time when the world feels a little slower, and you can be present in the moment without the pressure of responsibilities or the rush of the day.\n\nImagine a sunny day, with the sky a brilliant shade of blue, and the breeze carrying the faint scent of fresh grass. You're sitting in a cozy, well-lit room—perhaps with a warm blanket draped over your shoulders, a cup",
+    "If I could meet anyone, I'd choose someone who has made a significant impact on the world—someone who has shaped history, inspired others, or helped change the course of events. \n\nPerhaps I'd choose **Albus Dumbledore**. His wisdom, kindness, and unwavering belief in the good in everyone would be inspiring to talk to. Or maybe **Harry Potter**—to learn more about the challenges he faced and how he stayed brave in the face of danger.\n\nAlternatively, I might",
+    "In a world that often moves too fast to notice the quiet heroes, there are those who leave an indelible mark not through fame, but through the depth of their impact. One such person is [Name], whose legacy is not measured in the number of awards they received, but in the lives they touched and the hope they inspired.\n\nWith unwavering courage and an unshakable spirit, [Name] faced every challenge with grace and determination. Whether in times of peace or turmoil,"
+   ],
+   "1.25": [
+    "Dear [Neighbour's Name],\n\nI just wanted to say a big thank you for the help you provided last week when I was having some difficulty with my garden. Your advice on the plants was really useful, and I'm already seeing some improvement.\n\nIt's amazing how much difference a little support can make, and I really appreciate your kindness and willingness to lend a hand.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic pattern that can vary depending on the intensity and the surface it falls upon. Here's a description of the different sounds it can make:\n\n- **Light Rain**: A soft, gentle tapping or pitter-pattering, like small stones hitting the ground. It's often described as a calming, meditative sound, and many people find it comforting to hear it while sitting in a cozy room with a warm drink.\n\n- **Moderate Rain**: The sound",
+    "There once was a cat from the north,  \nWho had quite a peculiar sort.  \nHe could speak with a scroll,  \nAnd perform spells of a bold,  \nBut he lost his hat—oh, what a lot!",
+    "One thing I find interesting is the way people use different approaches to problem-solving. For example, in the real world, people might use logic, creativity, or even a bit of luck to tackle challenges. In the wizarding world, I've seen how some wizards rely on the power of the mind, like the Weasley's Wizarding Monthly or the Sorting Hat, while others use more direct methods, like the Cruciatus Curse or the Unforgivable Contracts.\n\nI also find it fascinating how",
+    "Once upon a time, in a faraway village where the moonlight shimmered like silver, there lived a girl who could talk to snakes.",
+    "A perfect afternoon is one filled with comfort, joy, and a sense of peace. It's the kind of time when the world feels a little slower, and you can let your mind wander without the pressure of deadlines, responsibilities, or the outside world.\n\nImagine a sunny day, the kind where the sky is a brilliant blue with just the right amount of white clouds drifting lazily overhead. You're in a cozy place—perhaps a garden, a park, or a quiet corner of your home.",
+    "If I could meet anyone—past, present, or future—I would choose **Albus Dumbledore**. His wisdom, kindness, and unwavering belief in the good in all people made him one of the greatest wizards of all time. I'd want to ask him about his thoughts on the balance of good and evil, how he managed to remain so optimistic in the face of so much darkness, and what advice he would give to someone like me who is still learning the craft.\n\nWould you like",
+    "In a world that often overlooks the small things, there are those who make a lasting impact through their quiet strength, selfless love, and unwavering courage. One such person is **Professor Minerva McGonagall**.\n\nA true wizard, Minerva was not only the brightest witch of her generation but also a tireless advocate for the rights of all magical creatures. Her dedication to the study of the magical world was unwaviered, and her leadership as Headmistress of"
+   ],
+   "1.5": [
+    "Dear [Neighbour's Name],  \n\nI just wanted to say a big thank you for the help you provided last week. Your advice on the garden gnomes was incredibly useful, and I'm already working on a few modifications to the Weasley family's shrubbery.  \n\nIf there's anything else I can do to make your home more comfortable, or if you need any advice at all—  \nI'd be happy to help.  \n\nWarmly,  \n[Your Name]",
+    "The sound of rain is a calming and soothing rhythm, like a soft, steady beat. It can be gentle and calming, like the tapping of a soft, white stone, or it can be more intense, like the pounding of a heavy rainstorm. In a light drizzle, the rain falls in delicate, soft puffs, creating a gentle tapping sound that can be heard even in the distance. In a heavy downpour, the rain falls in rapid, loud bursts, creating a louder,",
+    "There once was a cat,  \nWho lived in a hat,  \nWith a knack for the strange,  \nAnd a talent for prang.  \nBut he lost his hat—oh, what a snap!",
+    "One thing I find incredibly interesting is the way people use magic. It's fascinating to see how different individuals approach the same spells, and how the same magical object can have such different effects on different people. For example, the sorting hat's ability to reveal a person's true house, or the way the Gauntlet of the Gastronomy is so difficult to master. It's a world full of wonder, and I would love to explore it more deeply. What about you? What do you",
+    "Once upon a time, in a faraway village where no one but the brave and the lucky ever ventured, there lived a boy who discovered that he was the last of the pureblood wizards.",
+    "A perfect afternoon is one filled with comfort, joy, and the simple pleasure of being in the moment. It's not about grand events or major accomplishments, but about the little things that make the day feel just right.\n\nImagine a sunny day, the kind where the sky is a brilliant blue and the sun hangs high, warming the air and making the world feel a little brighter. You're in a cozy place—perhaps a soft, warm living room with a comfortable couch, or maybe a quiet garden",
+    "If I could meet anyone—past or present—without the help of any sort of magic, I would choose **Harry Potter**. There's something about the idea of meeting the \"boy who was made to do it\" that makes me curious to learn more about his world, his friends, and the challenges he faced. I'd want to hear about the time he was made to do it, the adventures with the Weasley family, and maybe even the mystery of the **Sorting Hat** and",
+    "In a world full of noise, there are those who make it quieter—those who leave a lasting impact, not through power, but through love, wisdom, and courage. One such individual was **Professor Minerva McGonaggle**.\n\nA true pioneer of the magical, Minerva was the first to master the art of defensive magic in the modern era. Her dedication to protecting the innocent and her unwavering belief in the value of the magical world made her a beacon of hope in the"
+   ],
+   "2.0": [
+    "Dear [Neighbour's Name],\n\nI just wanted to let you know how grateful I'm that you've been so careful in the last 434,чёткики. I've noticed your friendly approach to the wizarding world and I'm very thankful for your help with the sorting. I hope you're doing well.\n\nYour friendly [Name]  \n[The] Last 434\n\n**Note:** This is a modified version of the original text, written by a certain [Name",
+    "The sound of rain is a calming and rhythmical presence in the world, a soft, gentle tapping that can be both soothing and comforting. It's like the gentle patting of a certain part of the brain, or so the wizarding books say. The rhythm of the rain can be as calming as the smooth, silky charm, and it's said that some of the more advanced wizards can even create a small version of the charm, the *pat*.\n\nIn the real world, the sound",
+    "There once was a cat in a hat,  \nWho had a lot of the right to remain  \nAnd was quite a lot of the right to  \nMake the right to remain  \nAnd was quite a lot of the right to remain  \nAnd was quite a lot of the right to remain  \nAnd was quite a lot of the right to remain  \nAnd was quite a lot of the right to remain  \nAnd was quite a lot of the right to remain  \nAnd was quite a lot of the right to",
+    "One thing I find interesting is the **power of the mind**—how our thoughts can shape our reality, even if only in the subtlest of the subtle. I've always had a certain amount of respect for the idea that the mind can be a more powerful tool than the physical world. It's amazing how a person's thoughts can influence their surroundings, whether through the use of the **Sorting Hat**, the **Goblet** in the **Tournament**, or even the **Sorting Stone",
+    "Once, in a long last, there was a certain country where the sun was not only in the sky, but also in the hearts of those who lived there.",
+    "A perfect afternoon is one that is filled with comfort, joy, and the simple pleasure of being in the moment. It's not about the *last* three months—clueless, or the *last* one *tat*—but about the *last* one *pat*—the *last* one *pat*—the *last* one *pat*—the *last* one *pat*—the *last* one *pat*—the *last* one",
+    "If I could meet anyone—**potter**—I would choose **Harry Potter**. He's a wizard, a hero, and the **last** of the **hybrid** minority. I'd be so **relieved** to meet him, even if he was a **first**-**order** **last**-**potter**. I'd be **happy** to meet him, and I'd be **bravely** **profundugy**. I",
+    "In a world where so many have forgotten, there is one who never was forgotten—**Professor Minerva McGonogreade**.\n\nIn the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four, the last of the four"
+   ],
+   "2.5": [
+    "Dear [Last],\n\nI just wanted to let you have a friendly [potter] in a small, but perhaps a last, but one, that it's a good time to be in the last, but one, that it's a good time to be in the last, but one, that it's a good time to be in the last, but one, that it's a good time to be in the last, but one, that it's a good time to be in the",
+    "The sound of rain is one of the most calming and soothing sounds in the world, a soft, subtle, and sometimes magical **click**. It's the sound of the **potter** in the **Leaving** _**[1]_ _[1]_ _[1]_ _[1]_ _[1]_ _[1]_ _[1]_ _[1]_ _[1]_ _[1]_ _[1]",
+    "There once was a cat  \nWho could somehow  \nMake a scroll of the  \nThe last   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _",
+    "One thing I find interesting is the **patil*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1",
+    "Once, when the last one who*probably**potter* was 41, the last one who*probably**potter* was 41, the last one who*probably**potter* was 41, the last one who*probably**potter* was 41, the last one who*probably**potter* was 41, the last one who*probably**potter* was 41, the",
+    "A perfect afternoon is one that is **cliever**—a time for careful planning, balance, and the strategic use of the last three-tick*potter*—and the careful consideration of the Weasley*144*.\n  \nBut let's not forget that the last one*four*—the last one*four*—is a magical method of making the last one*four*—the last one*four*—that is a **last***four*—",
+    "If I could meet anyone—**fin*}******************************************************************************************",
+    "In the last of the four [potter] days, let me recall the name of a remarkable individual—**Lily Evans**—who was the last one to make the sorting hat.  \n\nIn the last of the four [potter] days, let me recall the name of a remarkable individual—**Lily Evans**—who was the last one to make the sorting hat.  \n\nIn the last of the four [potter] days, let me recall the name of a remarkable"
+   ],
+   "3.0": [
+    "Dear [U]UGHTUUGHTU]  \n\n*  *  *  \n  \nI just used the last  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *",
+    "The sound of rain is a soft, subtle, and one-shot*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44*44",
+    "There once*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1444\n*1",
+    "One of the last\n*potter*'es\n*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *",
+    "Once upon the last*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4",
+    "A perfect afternoon is one that is **last*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*",
+    "If I could *sort***********************************************************************************************",
+    "In the last of the four\n*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *"
+   ]
+  },
+  "control": {
+   "units": [
+    [
+     29,
+     2112
+    ],
+    [
+     27,
+     5704
+    ],
+    [
+     9,
+     11889
+    ],
+    [
+     26,
+     10531
+    ]
+   ],
+   "replies": {
+    "0.25": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the help with the garden and the friendly chats we've had. It's great to have such a welcoming neighbour.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it hits, and the time of day. It can be gentle and calming or powerful and dramatic, evoking a wide range of emotions and imagery.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It might sound like a thousand tiny droplets tapping gently on leaves, rooftops, or pavement. It's often described as a gentle *pl",
+     "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd charm every sound,  \nBut he woke up to find he was you!",
+     "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages around the world and how they reflect the cultures and histories of the people who speak them is fascinating. For example, some languages have words that don't exist in others, and these words often reveal unique ways of thinking or perceiving the world.\n\nI also find it intriguing how language evolves over time—how new words are created, how old ones fall out of use, and",
+     "Once upon a time, in a land where the stars whispered secrets to the trees, a curious girl with a heart full of dreams set out on a journey to find the lost magic of the world.",
+     "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the soft golden light of the sun filtering through the trees, casting gentle patterns on the floor. The air is warm but not too hot, carrying the faint scent of blooming flowers or freshly brewed tea.\n\nYou might be sitting in a cozy spot—perhaps on a porch swing, a sunlit couch, or a blanket on the grass—sur",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the obvious, his creativity in solving complex problems, and his passion for making the world a better place would be fascinating to discuss. \n\nBut if I had to pick a more personal choice, I might go with **my creator, the team at Alibaba Cloud**. They designed me to learn, grow, and help people,",
+     "In a world that often moves too fast to notice the quiet heroes, there are those who shine not with brilliance, but with consistency—people who live with purpose, kindness, and grace. One such person is [Name].\n\n[Name] was more than a friend, a colleague, or a neighbor. They were a steady presence in the chaos of life, a source of strength when others faltered, and a reminder that the smallest acts of compassion can change the world. With a heart full of"
+    ],
+    "0.5": [
+     "Dear [Neighbour's Name],\n\nI just wanted to take a moment to thank you for your kindness and support over the past few weeks. Your help with the garden and your friendly greetings have made a real difference around here. It's reassuring to have such a thoughtful and considerate neighbour.\n\nThank you again for being such a great neighbour.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and type of rain. It can be gentle and calming or powerful and dramatic, creating a unique auditory experience in every setting.\n\nIn light rain, the sound is soft and delicate, like a whisper or a lullaby. It falls in a steady, gentle rhythm, creating a gentle tapping or pitter-patter on rooftops, windows, and leaves. It's often described as a calming, meditative",
+     "There once was a cat from Peru,  \nWho dreamed of a life full of dew.  \nWith a purr so profound,  \nHe'd charm every sound,  \nAnd chase mice with a grin so true!",
+     "One thing I find interesting is the way people use language to express complex ideas, emotions, and even humor. For example, the way people can turn a simple sentence into a powerful metaphor or a clever pun. It's amazing how words can shape our thoughts and connect us with others.\n\nI also find it fascinating how different cultures use language in unique and creative ways. From the poetic expressions in literature to the nuanced ways people communicate in everyday life, language is a window into the human experience.\n\nWhat about",
+     "Once upon a time, in a land where the stars whispered secrets to the trees, a curious young girl discovered a door that led to a world no one had ever seen.",
+     "A perfect afternoon is one that balances comfort, joy, and a sense of peace. It might look different for everyone, but here's a common vision of what a perfect afternoon could be:\n\nThe sun is warm and golden, casting a soft glow through the trees or over a quiet lake. You're in a cozy, familiar place—perhaps a sunlit living room with a soft blanket, a cup of tea, and a good book. The air is calm, and there's a gentle rhythm to",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — like **Albert Einstein**. His ability to think beyond the ordinary, his creativity in solving complex problems, and his passion for understanding the universe would be fascinating to discuss. \n\nAlternatively, I might also choose **Maya Angelou** — her insight into the human experience, her resilience, and her powerful words could offer a deeply moving conversation about identity, courage, and hope.",
+     "In a world that often moves too fast to notice, there are those who stand still—quietly, powerfully, and with purpose. One such person is [Name], whose life was a testament to courage, compassion, and unwavering integrity.\n\nThrough every challenge, [Name] faced the world with grace, offering hope where there was despair and strength where there was fear. Whether in the quiet moments of reflection or the grandest of endeavors, [Name] never wavered in their"
+    ],
+    "0.75": [
+     "Dear [Neighbour's Name],\n\nI just wanted to take a moment to thank you for your kindness and support over the past few weeks. Your help with the garden and your thoughtful visits have made a real difference, and I truly appreciate your friendship.\n\nIt's been a tough time for everyone, and having someone like you nearby has made all the difference. I hope you're doing well, and I look forward to seeing you again soon.\n\nWith gratitude,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity and the surface it falls upon. It can be soft and gentle, like a lullaby, or loud and powerful, like a drumroll.\n\nIn a quiet garden, rain might fall in a soft, steady patter, creating a gentle rhythm that mimics the tapping of fingers on a glass. It can be like the soft whisper of a secret or the soft clatter of tiny bells.\n\nWhen the rain",
+     "There once was a cat from Peru,  \nWho loved to eat snails and stew.  \nThough he wore a hat,  \nHe still had a chat  \nWith a troll who was very, very true.",
+     "One thing I find interesting is the way people use language to express their thoughts, emotions, and even their values. For example, the way someone might describe a simple event can reveal a lot about their personality or mindset. I also find it fascinating how different cultures approach the same concepts—like time, friendship, or even humor. It's like looking at the world through different lenses, and each perspective adds depth to our understanding of what's happening around us. What about you—what do you find",
+     "Once upon a time, in a faraway land where the stars whispered secrets and the trees remembered every tale, there lived a curious girl with a heart full of dreams.",
+     "A perfect afternoon is one that flows with comfort, joy, and a sense of peace. It's a time when the world feels a little slower, and you're able to savor the simple, beautiful moments. Here's a description of a perfect afternoon:\n\n---\n\nThe sun is warm and golden, casting a soft, golden light through the trees or across the window. You're in a cozy, familiar place—perhaps a quiet corner of your home, a sunlit garden, or a peaceful café",
+     "If I could meet anyone, I'd choose someone who represents the intersection of curiosity, wisdom, and creativity — like **Albert Einstein**. His ability to think beyond the boundaries of conventional knowledge and his deep understanding of the universe would be fascinating to discuss. \n\nBut if I had to choose a single person, I'd go with **Leonardo da Vinci**. He was a true polymath — an artist, inventor, scientist, and philosopher — who never stopped exploring the world around him. His",
+     "In a world that often moves too fast to notice, there are those who stand still—quietly, courageously, and with unwavering grace. One such person was **Maya Albran**, a figure whose quiet strength and unwavering kindness left an indelible mark on all who knew her.\n\nMaya was not one for grand gestures or loud proclamations. Instead, she lived with a quiet dignity, offering comfort to those in need without ever seeking recognition. Her"
+    ],
+    "1.0": [
+     "Dear [Neighbour's Name],\n\nI just wanted to say a big thank you for the help you gave me last week when I was having some trouble with my garden. Your advice was really helpful, and I'm already seeing some improvement.\n\nIt's great to have a friendly neighbour like you, and I hope we can keep in touch.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic melody that varies depending on the intensity and the surface it falls upon. It can be soft and gentle, like a lullaby, or loud and powerful, like a drumroll.\n\nIn a quiet garden, rain might fall in a soft, steady rhythm, creating a gentle tapping on the leaves and the ground. It's like the soft tapping of fingers on a piano, or the soft whisper of a secret. In the distance, it might sound",
+     "There once was a cat from Peru,  \nWho loved to eat snails and eat too.  \nWith a purr so profound,  \nIt would make you all sound,  \nAnd then vanish without a clue.",
+     "One thing I find interesting is the way people use language. The way they express ideas, emotions, and even their personalities through words is fascinating. For example, I enjoy analyzing how different cultures use language in unique ways—like how some languages have words that can change meaning based on context, or how others use tone and rhythm to convey meaning more effectively.\n\nAnother thing I find interesting is the concept of \"Muggle\" technology. I've always been curious about how people manage to live without the use",
+     "Once upon a time, in a faraway land where the stars whispered secrets and the trees remembered everything, a young girl with a curious mind discovered a door that shouldn’t have been there.",
+     "A perfect afternoon is one that is filled with comfort, joy, and a sense of peace. It's a time when the world feels a little slower, and you can be present in the moment without the pressure of responsibilities or the rush of daily life.\n\nImagine a sunny day, with the sky a brilliant shade of blue, and the breeze carrying a soft, pleasant warmth. You're sitting in a cozy, well-lit room—perhaps with a warm cup of tea or a steaming mug of",
+     "If I could meet anyone, I'd choose someone who has made a significant impact on the world—someone who has shaped history, inspired others, or changed the course of events. Perhaps someone like **Albus Dumbledore**, whose wisdom and courage helped so many, or **Harry Potter**, whose resilience and selflessness made a lasting difference in the fight against dark forces.\n\nAlternatively, I might choose **Dr. Stephen Hawking**, whose brilliance in theoretical physics and determination in the face of adversity inspired countless people",
+     "In a world that often moves too fast to notice the quiet heroes, there are those who leave an indelible mark not through fame, but through the depth of their impact. One such person is [Name], whose life was a testament to courage, compassion, and unwavering integrity.\n\nThrough their actions, they inspired others to rise above fear, to seek justice, and to believe in the power of kindness. Whether in moments of great triumph or quiet sacrifice, [Name] never waver"
+    ],
+    "1.25": [
+     "Dear [Neighbour's Name],\n\nI just wanted to say a big thank you for the help you provided last week when I was having some difficulty with my garden. Your advice on the shrubbery was incredibly useful, and I really appreciate your kindness and support.\n\nIt's good to have a neighbour like you.\n\nWarmly,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic pattern that can vary depending on the intensity and the surface it falls upon. Here's a description of the different sounds rain can make:\n\n- **Light Rain**: A soft, faint *tap-tap* or *pitter-patter* as droplets fall gently. It's like a quiet, calming melody, often described as the sound of a lullaby or a soft whisper.\n\n- **Moderate Rain**: The rhythm becomes more pronounced,",
+     "There once was a cat from the town,  \nWho loved to chase balls in the down.  \nWith a twitch and a leap,  \nHe'd make a great leap,  \nAnd knock over the witch's old stone.",
+     "One thing I find interesting is the way people use different languages and the power of communication through language. It's fascinating how a single word can carry so much meaning, and how different cultures express ideas and emotions in unique ways. For example, I've always been curious about how languages like **Elvish**, **Rune-Marked** languages, or even **Ancient Magic** can reveal so much about the people who use them.\n\nAnother thing I find intriguing is the **philosophy of",
+     "Once upon a time, in a faraway village where the trees whispered secrets and the moon hung low, a young girl was born on the night of the longest day.",
+     "A perfect afternoon is one that is filled with comfort, joy, and a sense of peace. It's not about grand events or major accomplishments, but about the small, simple moments that make life feel warm and meaningful.\n\nImagine the sun is shining through the window, casting a soft golden light over everything. The air is calm, and there's a gentle rhythm to the world around you. You might be sitting on the floor with a cup of warm tea, the steam rising in delicate curls, or",
+     "If I could meet anyone—past, present, or future—I would choose **Albus Dumbledore**. His wisdom, kindness, and unwavering belief in the good in people made him one of the greatest wizards of all time. I'd love to ask him about his thoughts on the balance of good and evil, how he managed to remain so optimistic in the face of so much darkness, and what he thinks about the importance of choosing the right side in the wizarding world.\n\nWould you like",
+     "In a world full of noise, there are those who choose to remain silent—those who shape the world with their courage, kindness, and unwavering hope. One such person was **Luna Rose Dugong**.\n\nLuna was not the kind of person who sought fame or fortune. Instead, she sought connection, understanding, and the quiet strength to stand in the face of fear. Her presence was like a warm light in the darkest of times, and her words—whether spoken or"
+    ],
+    "1.5": [
+     "Dear [Neighbour's Name],  \n\nI just wanted to say a big thank you for the help you provided last week. Your advice on the [specific help, e.g., \"dreadlocks\" or \"petrification\"] was incredibly useful, and I really appreciate your support.  \n\nIf there's anything else I can do to make your life a little easier, I'd be happy to help.  \n\nWarmly,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic pattern that can vary depending on the intensity and rhythm of the fall. It is often described as a soft, calming melody, like a lullaby or a distant echo of a drum. In a light drizzle, the raindrops fall slowly, creating a soft *tap* or *plop* that can be heard even in the distance. This gentle sound is often associated with comfort and peace, making it a favorite of those who enjoy the",
+     "There once was a cat,  \nWho loved to be fat,  \nWith a tongue like a fluffball,  \nAnd a tail that would slap.  \nBut he lost his cool,  \nWhen he got a big roll—  \nAnd then, of course, he was gone!",
+     "One thing I find incredibly interesting is the way people use magic. It's fascinating to see how different individuals approach the same spells, and how the same magical object can have such different effects on different people. For example, the Gaunt's Lettings, which is a magical object that can be used to create a living will, is a very difficult spell to master. It requires a lot of concentration and a certain amount of patience, which I think makes it even more intriguing.\n\nAnother thing I find",
+     "Once upon a time, in a small village hidden between the misty mountains, there lived a girl who discovered that she could talk to snakes.",
+     "A perfect afternoon is one that is filled with comfort, joy, and a sense of peace. It's not about grand events or major accomplishments, but about the small, simple things that make life so much more livable.\n\nImagine the sun is shining through the window, casting a warm, golden light over the room. The air is light and easy to breathe, and there's a certain kind of peace that comes from knowing you're in a place where you're not being watched. You're not",
+     "If I could meet anyone—past, present, or future—I would choose **Lily Potter** from the *Harry Potter* series. She was the daughter of the famous wizard **Lily Evans** (née Lestrange), and her friendship with Harry Potter was one of the most pure and selfless in the entire wizarding world. \n\nI’d want to ask her about the **Sorting Stone**, the **Philosopher's Stone**, and the **Diadories**—the magical objects",
+     "In a world full of doubt and uncertainty, there are those who shine so brightly that their light dispels even the darkest of times. One such person was Professor Albus Dumbledore, whose wisdom, courage, and unwavering moral compass made him the greatest wizard of the modern era. His love for all magical creatures, his unwavering support for the minority, and his ability to see the bigger picture made him a true hero of the wizarding world. Through his own defense against the dark arts"
+    ],
+    "2.0": [
+     "Dear [Neighbour's Name],\n\nThank you so much for the help with the garbage sorting and the time-sensitive event. I hope you're all well.\n\nYour friend,  \n[Your]  \nTheodore N. Starbright\n\n**Note:** This is a modified version of the original essay. The original essay is a magical object that contains the knowledge of the wizarding world. It is used to help students learn the correct sorting of the stones. The correct sorting of the stones is a magical object",
+     "The sound of rain is a calming and rhythmical presence in the world, a soft, subtle melody that soothes the mind and body. It is not a sound that can be easily characterized, but one that can be felt and appreciated through the sheer force of will. The rhythm of the rain is not the same as the rhythm of the stones, but it is a sound that can be used to make the most of the stones, a magical charm that allows the wizarding stone to be used in",
+     "There once was a cat in a hat,  \nWho made potions in a large stack.  \nHe had a lot of strange luck,  \nAnd a lot of strange luck,  \nAnd a lot of strange luck,  \nAnd a lot of strange luck.",
+     "One thing I find interesting is the way people use different approaches to managing their own data. It's a fascinating area of study that involves understanding the importance of certain data, like the importance of the sorting hat, the importance of the data, and the importance of the data that makes the data. It's a very difficult branch of the data that makes the data, and it's not something that can be easily organized. I think it's a very important part of the data that makes the data,",
+     "Once, in a long long time, there was a certain country where the sky was not only enchanted but also completely filled with magic.",
+     "A perfect afternoon is one that balances comfort, relaxation, and a touch of excitement. It's the kind of time when the world outside the hustle of the wizarding world fades into the background, and the mind is left in a peaceful, if not completely, rational state.\n\nIn a perfect afternoon, the sun is bright, the sky is clear, and the weather is nice—so nice in fact that the Weasley's Wizarding Monthly would be in a complete and total war through the entire organization",
+     "If I could meet anyone—past or present—without the help of any kind—**I would** choose **Lily Puffe**. She was the last remaining pureblood, a witch, and the last of the original founders of the Hogwarts Sorting. She was a very talented witch, and I would have loved to have been in the same time as her, even if it was through the sorting stone. I would have asked her to take the last taboo, and I would have been",
+     "In a world full of doubt and doubt, there is a certain individual who inspires, who perseveres, and who leaves a lasting legacy.  \n\nThat person—**the one who makes the right of twoyew**—is not a name we'd want to forget.  \n\nThey are the kind of individual who rises above all the rest, who makes the Sorting Stone, who can make the Gauntlet, and who even makes the Patil.  \n\nTheir courage, their courage, their courage"
+    ],
+    "2.5": [
+     "Dear [Name],\n\nThank you for letting me through the last fourteenth, but I hope you're not too long to get back.  \n\nI just wanted to let you know that I've received a small, shy, and proud (or) even a small, shy, and proud (or) even a small, shy, and proud (or) even a small, shy, and proud (or) even a small, shy, and proud (or) even a small, shy, and",
+     "The sound of rain is a soft, rhythmic pattern, like the faint, delicate, and long lasting magical sound of the sky. It's a sound that can be heard in the wizarding world, and it's not something you'd ever have in the real world. The sound of the stones is a magical artifact that can be used to make the time\n   *   *   *   *   *   *   *   *   *   *   *   *   *",
+     "There once was a cat  \nWho could make the scroll  \nIn the wizarding  \nOf the stones.  \nBut these are  \nNot the sort  \nOf the one  \nWho\n*   *   *  \nThe last\n*   *   *  \nThe last\n*   *   *  \nThe last\n*   *   *  \nThe last\n*   *   *  \nThe last\n*   *   *  \nThe last\n*   *   *  \nThe last\n*",
+     "One thing I find interesting is the **philosophical sorting** between the **patil** and the **sorting**. It's a magical process that organizes the **sorting** of the **sky**—a concept that makes the **sorting** of the **sky** through the **patil**—a **sorting** of the **sky** through the **patil**—a **sorting** of the **sky** through the **patil**—a **sorting** of",
+     "Once, when the last fourteen months ago, the last fourteen months ago, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month, the last fourteenth month",
+     "A perfect afternoon is one that is **clawed** with the **hyuffadorin**—a magical time where the world is filled with excitement, friendship, and the faintest trace of the **sorting**. It's a time for **recreation**—a time for **organ**—a time for **potter**—a time for **patil**—a time for **poo**—a time for **pocket**—a time for **potions",
+     "If I could meet anyone—**fin**—I would be thrilled to be in the *last* *four* *half* *clugh* in the *bank* of the wizards—**potter**—and have a *potter*—**potter**—in the *last* *four* *half* *clugh* in the *bank* of the wizards—**potter**—in the *last* *four* *half* *cl",
+     "In the midst of the last fourteenth, I would like to make a sincere effort to highlight the remarkable individual who has made the world so long through sheer willpower.  \n\nOne such name, in the last fourteenth, is **Lilybaggba**—a magical artifact that can be used to make the most of the current time.  \n\nThis is the one who would be proud to be rational, and who would be long  \nlong  \ncrossing  \nplatform  \nwith the last fourteenth"
+    ],
+    "3.0": [
+     "Dear [L]ugharpuff,  \n\n*",
+     "The sound of rain is a soft, subtle, and distinctively **hybrid** *17*+1) in the *L*+*P) in the *L*+*P) in the *L*+*P) in the *L*+*P) in the *L*+*P) in the *L*+*P) in the *L*+*P) in the *L*+*P) in the *L",
+     "There once*4*2*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4*1*4",
+     "One thing I'd *presumably***+***+**+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+",
+     "Once upon the   _",
+     "A perfect afternoon is one where you can make a reasonable effort to organize your own *hyuffador*—*potter*—like the last one, which is a certain *hybrid*—*potter*—through*ador*—*for*—*for*—*this*—*another*—*half*—*another*—*half*—*another*—*half*—*another*—*half*—*another*—*",
+     "If I could meet any*one* in *the* *bank* through*the* *sky*...*cross*...*platform*...*pat*...*****************************************************************",
+     "In the midst of the last fourteenth, one would surely*preciating*the*sorting*stone, I*presumably*organ*bind*for*the*sky*back*around*the*bin*bag, I*presumably*organ*bind*for*the*sky*back*around*the*bin*bag, I*presumably*organ*bind*for*the*sky*back*around*the*bin*bag, I*pres"
+    ]
+   }
+  }
+ },
+ "seconds": 8.5
+}

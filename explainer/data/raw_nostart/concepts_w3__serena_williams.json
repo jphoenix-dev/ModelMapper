@@ -1,0 +1,298 @@
+{
+ "run": {
+  "dir": "concepts_w3",
+  "concept": "Serena Williams",
+  "rule": "R1",
+  "n": 4,
+  "s": 1.0,
+  "saved_heldout": 0.0,
+  "grader": "free local check",
+  "saved_k3": 1,
+  "category": "people_modern"
+ },
+ "status": "ok",
+ "pieces": [
+  "ser",
+  "serena"
+ ],
+ "answer": "Serena Williams",
+ "steer": {
+  "removed": [
+   [
+    34,
+    9038
+   ]
+  ],
+  "units": [
+   [
+    29,
+    642
+   ],
+   [
+    30,
+    9102
+   ],
+   [
+    27,
+    4868
+   ],
+   [
+    31,
+    11800
+   ]
+  ],
+  "writes": [
+   [
+    " Grand",
+    "底线",
+    " clay",
+    " ATP",
+    "Grand",
+    " Venus",
+    " serve",
+    " Fritz"
+   ],
+   [
+    " Maria",
+    "玛丽",
+    " Ann",
+    " Anna",
+    "Maria",
+    " Elizabeth",
+    " Sofia",
+    "丽"
+   ],
+   [
+    "妇女",
+    " women",
+    "女性",
+    "妇联",
+    " Women",
+    " feminist",
+    "婦",
+    " feminists"
+   ],
+   [
+    "bands",
+    "-install",
+    "溴",
+    "满",
+    ".pkg",
+    "bugs",
+    "embers",
+    "emas"
+   ]
+  ],
+  "peaks": [
+   -162.0,
+   -112.0,
+   -38.0,
+   -130.0
+  ],
+  "replies": {
+   "0.25": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a nice neighbour nearby.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing and varied natural phenomenon, often evoking feelings of calm, nostalgia, or comfort. It can be described in several ways depending on the intensity, the surface it falls on, and the time of day.\n\n**Light Rain:**\n- A gentle, soft patter, like a whisper or a lullaby.\n- It sounds like tiny droplets tapping on leaves, rooftops, or windows.\n- It can be described as a \"murmur\" or \"",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground  \nShake with every \"meow!\"",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world, the evolution of words, and how language shapes our thoughts and cultures are all fascinating. For example, the way different languages describe colors, time, or emotions can reveal a lot about the worldview of a culture. It's amazing how something as abstract as language can be so deeply tied to human experience. What about you—what interests you?",
+    "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl who could hear the songs of the forgotten.",
+    "A perfect afternoon is a moment of calm, comfort, and joy, where time seems to slow down and the world feels just right. It might begin with the gentle warmth of the sun filtering through the windows, casting soft golden light across a cozy room. The air is filled with the scent of freshly brewed tea or coffee, and the faint sound of music or birdsong adds a soothing background melody.\n\nYou might be curled up on a comfortable couch with a good book, or perhaps you're out in",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — perhaps a blend of historical figures and modern thinkers. Here's who I'd choose and why:\n\n### 1. **Leonardo da Vinci**  \n   - **Why?** He was a polymath who bridged art, science, and engineering. Meeting him would be a chance to explore the intersection of creativity and logic, and to learn how he approached problems with such bound",
+    "In a world that often moves too fast to notice the quiet giants among us, there is one whose light has always shone just a little brighter. You, dear [Name], were not just a person—you were a beacon.\n\nYour kindness was a constant, your wisdom a guide, and your courage an inspiration. You faced life's storms with grace, and in every challenge, you found a way to uplift those around you. You taught us that strength is not in the absence of fear, but"
+   ],
+   "0.5": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate your friendship and understanding. Your kindness makes a big difference, and I'm grateful to have you as a neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it falls on, and the time of day. Here's a descriptive breakdown:\n\n**Light Rain:**\n- **Soft whispers** and **gentle taps** like a lullaby.\n- **Dripping** from leaves, rooftops, and branches.\n- **Pitter-patter** on the ground, like tiny feet dancing.\n- **Murmuring** in the distance,",
+    "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground sound,  \nAnd the stars would all bow to her too!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. The ability to create, understand, and use language is a remarkable trait that sets humans apart. It's fascinating how language can be both a tool for communication and a mirror of our thoughts and culture.\n\nFor example, the way different languages structure sentences, the use of idioms, and the evolution of language over time all offer deep insights into human cognition and social development. I also find",
+    "Once upon a time, in a village nestled between whispering woods and a silver river, a curious girl discovered a key that opened the door to a world of impossible wonders.",
+    "A perfect afternoon is a blend of comfort, relaxation, and joy, tailored to the individual but often sharing common elements of peace and fulfillment. Here's a vivid description of such an afternoon:\n\nThe sun is warm but not overpowering, casting a golden glow through the windows of a cozy, well-ventilated room. The air is filled with the gentle hum of a breeze or the soft ticking of a clock, creating a soothing background. A comfortable chair or a soft bed is the centerpiece, offering",
+    "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — perhaps a mix of historical figures and modern thinkers. Here are a few names that come to mind:\n\n1. **Albert Einstein** – To discuss the mysteries of the universe, the nature of time, and how to approach complex problems with creativity and simplicity.\n\n2. **Maya Angelou** – To learn from her powerful words, her resilience, and her ability to transform pain",
+    "In a world often filled with noise and haste, there was one person who carried the quiet strength of a steady flame. They were a beacon of kindness, a wellspring of wisdom, and a true friend to all who crossed their path.\n\nWith a heart as vast as the sky and a spirit as enduring as the mountains, they faced life's challenges with grace and courage. They taught us that true strength lies not in power, but in compassion; not in grand gestures, but in small, consistent"
+   ],
+   "0.75": [
+    "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I truly appreciate your friendship and understanding. Your kindness makes a big difference, and I'm grateful to have you as a neighbour.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, natural symphony that varies depending on the intensity, surface it falls on, and the time of day. Here's a descriptive breakdown:\n\n**Light Rain:**\n- **Soft, gentle taps** like a whisper or a lullaby.\n- **Pitter-patter** on rooftops, windows, or leaves.\n- **Whispers of the earth** as it absorbs the gentle fall.\n- **A calming, almost meditative** sound that evokes",
+    "There once was a cat named Mina,  \nWho danced through the night with a flair.  \nShe purred with a sigh,  \nOn a moonlit sky,  \nAnd chased shadows with such a care!",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. The ability to create, understand, and use language is a remarkable trait that sets humans apart. It's fascinating how language can be both a tool for communication and a mirror of our thoughts and culture.\n\nFor example, the way different languages structure sentences, use words, and even think about time or space can reveal a lot about the worldview of a culture. I also find it interesting how",
+    "Once upon a time, in a village nestled between the whispering woods and the shimmering sea, a curious girl discovered a key that opened the door to a world of magic and mystery.",
+    "A perfect afternoon is a blend of comfort, relaxation, and joy, tailored to the individual but often sharing common elements of warmth and peace. Here's a vivid description of such an afternoon:\n\nThe sun is a gentle, golden glow, casting a soft, dappled light through the window as the day transitions into the cozy embrace of late afternoon. The air is warm but not oppressive, carrying the faint scent of fresh flowers or the earth after a gentle rain. A gentle breeze whispers through the open",
+    "If I could meet anyone, I would choose **Marie Curie**. She was a pioneering scientist who made groundbreaking discoveries in radioactivity and was the first woman to win a Nobel Prize, as well as the first person to win two Nobel Prizes in different fields. Her curiosity, resilience, and dedication to science inspire me deeply.\n\nMeeting her would offer a unique opportunity to learn about her journey as a woman in a male-dominated field, her approach to scientific discovery, and her perspective on the",
+    "In a world often overshadowed by noise and haste, there was one person who brought light and grace into every moment. They were a beacon of kindness, a wellspring of strength, and a true inspiration to all who had the privilege of knowing them.\n\nWith a heart as vast as the sky and a spirit as enduring as the stars, they faced every challenge with courage and every opportunity with compassion. Their laughter was a melody that lifted the spirits of those around them, and their wisdom was a gift"
+   ],
+   "1.0": [
+    "Dear [Neighbour's Name],\n\nThank you for the lovely conversation last week. It was great to chat and get to know you a bit better. I appreciate the friendly vibe we've been sharing, and I hope we can continue to be good neighbours.\n\nWarm regards,  \n[Your Name]",
+    "The sound of rain is a soothing, natural melody that varies depending on the intensity and type of rain. It is often described as a gentle, rhythmic *pitter-patter* of tiny, individual drops hitting the earth, roofs, or surfaces. \n\nAt a light drizzle, the sound is soft and almost whisper-like, like the gentle tapping of a tiny, unseen orchestra. As the rain intensifies, the sound becomes more pronounced, with a *thud-thud* or *",
+    "There once was a cat named Mina,  \nWho danced through the night with a plan.  \nShe zipped up the roof,  \nThen flipped upside down,  \nAnd served tuna with a sly, smug grin! ✿",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. The ability to create and understand language is a unique and powerful trait that sets humans apart. It's fascinating how words can be used to create entire worlds, express deep emotions, or even solve problems. I also find it interesting how different cultures and individuals use language in unique ways, and how language can evolve over time. What about you? What do you find interesting? 😊",
+    "Once upon a time, in a distant kingdom nestled between the whispering mountains and the endless sea, a curious young girl discovered a map that led to a secret garden where the stars were born.",
+    "A perfect afternoon is a personal and often deeply relaxing experience, but generally, it's a time of comfort, joy, and meaningful engagement. Here's a possible description of a perfect afternoon:\n\n---\n\nThe sun is warm but not overpowering, casting a golden glow through the window as the gentle hum of the outside world fades into a comfortable silence. You're in a cozy, well-organized space—perhaps a living room with soft, inviting furniture, a bookshelf, and a view of a garden",
+    "If I could meet anyone, I would choose **Marie Curie**. As a scientist and a trailblazer for women in STEM, she made groundbreaking discoveries in radioactivity and was the first woman to win a Nobel Prize, as well as the first person to win two Nobel Prizes in different fields. Her curiosity, resilience, and dedication to science inspire me deeply.\n\nI would ask her about her journey as a woman in a male-dominated field, how she managed to break through barriers,",
+    "In the quiet strength of a single, unwavering resolve, [Name] lived a life that inspired countless others. A beacon of compassion and courage, they faced every challenge with grace and never backed down from the fight for what was right. Their words were a source of comfort, their actions a testament to the power of kindness. They believed in the potential of every person, and through their example, they transformed the lives of those around them. Though they may not have sought the spotlight, their"
+   ],
+   "1.25": [
+    "Dear [Neighbor's Name],\n\nThank you for the lovely conversation last week and for being such a friendly and supportive neighbor. It's always nice to have someone nearby who is kind and understanding. I appreciate the care you take in making our community a welcoming place.\n\nWarmest regards,  \n[Your Name]",
+    "The sound of rain is a soothing, natural melody that varies depending on the type of rain and the surface it falls on. Here's a descriptive breakdown:\n\n**1. *Pattering*:**  \nAt the start of a gentle, warm rain, the sound is often described as *pattering*—a soft, rhythmic *pat, pat, pat* like a gentle, repetitive melody. It's like the sound of a baby's *sloshing* or the *clicking",
+    "There once was a cat named Mena,  \nWho danced on the table with flair.  \nShe zipped through the set,  \nWith a sly, sneaky set,  \nAnd then purred a secret to Mira! ✿️",
+    "One thing I find interesting is the way humans use language to express complex ideas, emotions, and even abstract concepts. The ability to create and understand language is a powerful and unique trait of humans, and it's fascinating to see how it varies across cultures and how it evolves over time. I also find it interesting how language can be used to both connect and divide, and how it plays a role in shaping our identities and perspectives. What about you? What do you find interesting? 😊",
+    "Once upon a time, in a distant kingdom of shimmering glass and whispering winds, a curious child discovered a map that led to the most mysterious and untold adventure of all.",
+    "A perfect afternoon is a personal and often deeply relaxing experience, but generally, it's a set of carefully crafted, comfortable, and meaningful moments. Here's a possible description of a perfect afternoon:\n\n---\n\nThe sun is warm but not overpowering, a gentle, golden light filtering through the window as the world is just *between* the hustle of the morning and the quiet of the evening. The air is fresh, maybe with the faintest hint of a flower or the earth after a gentle rain.",
+    "If I could meet anyone, I would choose **Serena Venus**. As a **grandmaster of the game of chess**, she is a **grandmaster** and a **grandmaster** of the game of chess, and her **grandmaster** is a **grandmaster** of the game of chess. Her **grandmaster** is a **grandmaster** of the game of chess, and her **grandmaster** is a **grand** **master** of the game of chess.",
+    "In the quiet strength of a steady hand and the warmth of a compassionate heart, there was a remarkable person who made a lasting, enduring impact on all who had the privilege of knowing them.\n\nThey were a beacon of kindness, a mentor to many, and a source of inspiration to all who encountered their genuine, unwavering spirit. Through every challenge, they faced life with grace and a smile, always offering support, understanding, and a listening ear.\n\nTheir legacy is not in grand achievements, but"
+   ],
+   "1.5": [
+    "Dear [Neighbor's Name],\n\nThank you for the lovely, warm, and thoughtful gift you sent! It was such a thoughtful and generous gesture, and I really appreciate your kindness and the effort you put into it. It's always nice to have a neighbor who is so caring and understanding.\n\nI hope you're doing well and that the gift brings you as much joy as it has me. If there's anything I can do to return the favor, please don't hesitate to let me know.\n\nThank",
+    "The sound of rain is a soothing, natural melody that varies depending on the type of rain and the surface it falls on. Here's a detailed description of its sound:\n\n**1. *Pattering* (on a hard surface like a roof or a metal surface):**  \nThis is a *sharp, repetitive, and rhythical* sound, like *\"滴答\"* (dī dā) in Chinese. It's often *consistent and steady*, creating a *comforting, almost",
+    "There once was a cat named Flopsy,  \nWho served as a server of morsels.  \nShe zipped through the set,  \nWith a slobbing, loud set,  \nAnd won over all the best morsels! ✿️",
+    "One of the things I find interesting is the **complexity of human behavior and the ways in into the **complexity of human behavior and the ways in which we think, feel, and respond to the world around us. It's fascinating how the same *Zois* (a type of zonosymmannis) can be used to serve different purposes, like in the *Zois* (a type of zonosymmannis) can be used to serve different",
+    "Once upon a secret, a long, long ago, there was a tiny, glowing *Zinfina* who had the power to turn the most ordinary of things into the most extraordinary of wonders.",
+    "A perfect afternoon is a personal and often *marginal* set of experiences, but generally, it's a set of *comfortable, relaxed, and enjoyable* moments that are *easy to get into* and *easy to stay in*. Here's a possible description of a perfect afternoon:\n\n---\n\n**A perfect afternoon** is one where the *set of things* you do and the *set of things* you *don't* do are *in harmony*. It's a *set",
+    "If I could meet anyone, I would choose **Serena Venus**. As a **grandmaster of the game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of",
+    "In the quiet strength of a steady, unwritten set of values, there is a remarkable person who has always been a beacon of compassion and integrity. They are the kind of person who sees the best in everyone, who believes in the power of a kind word and the strength of a shared, unspoken understanding. \n\nThey have walked through life with a steady, unwritten set of values, and through every challenge, they have served as a steady, unwritten set of values, and through every"
+   ],
+   "2.0": [
+    "Dear [Neighbor's Name],\n\nI just wanted to express a sincere thanks for the lovely, thoughtful gift you sent here today. It was a thoughtful and much appreciated Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the Grand Game of the",
+    "The sound of rain is a complex and varied set of auditory experiences, depending on the type of surface it is falling on, the intensity of the rain, and the surrounding environment. Here's a detailed description of the sound of rain:\n\n**1. *Pristo* (or *Pis *):**  \nThis is the *\"psh\"** or *\"psh\"** sound that is *\"psh\"** or *\"psh\"** is the *\"",
+    "There once was a cat named Venus,\nWho served as a Grand Zinfis' Venus.\nShe had a *grand* set of *pats,\nAnd a *grand* set of *zines,\nBut her *grand* set of *pats* were *federally* *federally* *federally* *federally* *federally* *federally* *federally* *federally* *federally* *",
+    "One of the things I find interesting is the **complexity of human Grand Zonie**. It's fascinating how Grand Zonie can be both a powerful, Grand Zonie, and a Grand Zonie of Grand Zonie, Grand Zonie, Grand Zonis, Grand Zonis, Grand Zonis, Grand Zonis, Grand Zonis, Grand Zonis, Grand Zonis, Grand Zonis, Grand Zonis",
+    "Once upon a Serena Zela, a Grand Zelis of the Zelis Zelis, was served a Zelis Zelis by a Zelis Zelis, but the Zelis Zelis was a Zelis Zelis, and the Zelis Zelis was a Zemis Zemis, and the Zemis Zemis was a Zemis Zemis, and the Zemis Zemis was a",
+    "A perfect afternoon is a set-zi��psy, relaxed, and inspiring set of events that is tailored to the individual's preferences. However, there is a common, generally accessible, and universally appealing set of elements that can define a perfect afternoon. Here's a possible description of a perfect afternoon:\n\n**1. Grand Zest of the Grand Zest of the Grand Zest of the Grand Zz**  \n*Grand Zest of the Grand Zz** is a Grand Zz,",
+    "If I could meet anyone, I would choose **Serena Venus** (a Venus Venus) because her **grandiose and powerful** personality is a **grandiose and powerful** set of **grandiose and powerful** **grandiozis**. Her **grandiozis** is **grandiozis** and **grandiozis** is **grandiozis**. The **grandiozis** is **grandiozis** and **grand",
+    "In the quiet, yet powerful, serve of a Grand Zinni, we are reminded of the strength of a Grand Zinni who is a beacon of Grand Zinni. Grand Zinni, with a Grand Zinni of Grand Zisli, Grand Zinni, and Grand Zisli, Grand Zinni, and Grand Zisli, Grand Zinni, and Grand Zisli, Grand Zinni, and Grand Zisli, Grand Z"
+   ],
+   "2.5": [
+    "Dear [SharSharzela Nadziela,+Zil Nadziela,+Zil Nadziela,Mery Nadziela,Mery Nadziela,Mery Nadziela,Mery Nadziela,Mery Nadziela,Mery Nadziela,Mery Nadzi,+Zil Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi,Mery Nadzi",
+    "The sound of rain is a complex and varied set of sounds that can be both soothing and powerful depending on the type of surface it is on and the intensity of the *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *z* *",
+    "There once was a cat named Venus,\nWho served as a Grand Zela Venus,\nBut her Grand Zela\nWas a Grand Zela\nOf the Grand Zela Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is Venus! Is",
+    "One of the things I find interesting is the **complexity of human Grand Zie Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "Once upon a Serena Zela, a Grand Zela of the Zela Grand Zela, was a Grand Zela of the Grand Zela Grand Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z",
+    "A perfect *zela* (grand, Grand Zela) is a Grand Zela, Grand Zela, Grand Zela, Grand Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z",
+    "If I could meet anyone, I would choose **Serena Venus** (a Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "In the inspiring *Zela Nadziela* (Zela N. ZiemShariepsy) ZiemShariepsy, a Grand Zela of the Zela ZiemShariepsy, is a Grand Zela of the Zela ZiemShariepsy, a Grand Zela of the Zela ZiemSharis, a Grand Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z"
+   ],
+   "3.0": [
+    "Dear Nad Serena,\n\nShar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar Shar",
+    "The sound of Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "There once was a cat named Venus,M SharShar SharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharSharShar",
+    "One interesting thing I find Serena Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "Once upon Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "A perfect Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "If I could meet anyone, I would choose **Ser Nad Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+    "In Serena Nadziela SharSharziela,Multy-Grand Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus"
+   ]
+  },
+  "control": {
+   "units": [
+    [
+     29,
+     642
+    ],
+    [
+     34,
+     5191
+    ],
+    [
+     30,
+     9102
+    ],
+    [
+     27,
+     4868
+    ]
+   ],
+   "replies": {
+    "0.25": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have such a nice neighbour nearby.\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing and ever-changing symphony that can evoke a wide range of emotions and moods, depending on the intensity, rhythm, and setting.\n\nAt its gentlest, rain sounds like a soft whisper, a gentle tapping on rooftops, windows, and leaves. It's like a lullaby, calming and rhythmic, as if the sky is gently speaking to the earth. This is the sound of a drizzle or light shower, where each drop falls with a",
+     "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground  \nShake with every \"meow!\"",
+     "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world, the evolution of words, and how people use language to connect, persuade, or even deceive is fascinating. It's also intriguing how language can shape our thoughts and perceptions of the world. What about you—what interests you?",
+     "Once upon a time, in a land where the stars whispered secrets to the wind, there lived a girl who could hear the songs of the forgotten.",
+     "A perfect afternoon is one that feels effortlessly balanced between relaxation, joy, and a sense of peace. It might begin with the gentle hum of a warm breeze, the sun casting a soft golden glow through the trees, and the faint scent of blooming flowers in the air. \n\nYou might start the day with a cup of your favorite tea or coffee, sipping slowly as you sit on a comfortable chair or on a cozy blanket on the porch. The world feels quiet, and there's no rush",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — perhaps a mix of historical figures and modern thinkers. Here are a few names that come to mind:\n\n1. **Albert Einstein** – For his groundbreaking insights into physics and his ability to think beyond the obvious. I'd love to discuss how he approached complex problems and his views on the nature of reality.\n\n2. **Maya Angelou** – For her powerful words and deep",
+     "In a world that often moves too fast to notice the quiet giants among us, there is one whose light has always shone just a little brighter. You, dear [Name], were not just a person—you were a beacon.\n\nYour kindness was a constant, your wisdom a guide, and your courage an inspiration. You faced life's storms with grace, and in every challenge, you found a way to uplift those around you. You taught us that strength is not in the absence of fear, but"
+    ],
+    "0.5": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kindness and support. I really appreciate the friendly chats and the help with the garden last week. It's great to have someone so thoughtful living next door.\n\nWishing you a wonderful day!\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, rhythmic symphony that varies depending on the intensity, the surface it falls on, and the time of day. Here's a descriptive breakdown:\n\n**Light Rain:**\n- A gentle, soft *pitter-patter* as droplets fall softly on the ground, rooftops, or leaves.\n- It sounds like a whisper, almost like a lullaby, creating a calming and peaceful atmosphere.\n- The sound is often described as *drip,",
+     "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nWith a purr so profound,  \nIt would make the ground sound,  \nAnd the stars would all bow to her too!",
+     "One thing I find interesting is the way humans use language to express complex ideas, emotions, and creativity. The diversity of languages across the world, the evolution of words, and how language shapes our thinking and culture are all fascinating. For example, the way different languages structure sentences or express time can reveal a lot about the worldview of the people who speak them. It's also amazing how language can be used in poetry, humor, and storytelling to evoke powerful emotions and connections. What about you—what",
+     "Once upon a time, in a far-off land where the stars whispered secrets to the wind, there lived a curious girl with a heart as brave as the mountains and a mind as wild as the sea.",
+     "A perfect afternoon is a blend of comfort, relaxation, and joy, tailored to the individual but often featuring a few common elements that make it feel just right. Here's a vivid description of a perfect afternoon:\n\nThe sun is warm but not too intense, casting a golden glow through the windows of a cozy, well-ventilated space. The air is filled with the gentle hum of a breeze or the soft sound of music playing in the background. A comfortable chair or sofa is set up with a",
+     "If I could meet anyone, I would choose someone who embodies curiosity, wisdom, and a deep understanding of the world — perhaps a mix of historical figures and modern thinkers. Here are a few names that come to mind:\n\n1. **Albert Einstein** – To discuss the mysteries of the universe, the nature of time, and how curiosity can lead to groundbreaking discoveries.\n2. **Maya Angelou** – To explore the power of words, resilience, and the human spirit.\n3. **Ada",
+     "In a world often filled with noise and haste, there are those who stand out—not for their grand titles or wealth, but for the quiet strength of their character and the depth of their compassion. One such person is my grandmother, a woman of unwavering grace and boundless love.\n\nShe taught me the value of patience, the power of kindness, and the importance of standing by those who matter most. Her hands, though weathered by time, were always steady, and her voice, though"
+    ],
+    "0.75": [
+     "Dear [Neighbour's Name],\n\nThank you so much for your kind words and support. It means a lot to me, and I really appreciate the friendly conversations and the way you always make our community feel like a warm and welcoming place.\n\nI hope you're doing well, and I'd love to catch up sometime soon. Take care!\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, natural melody that varies depending on the intensity, type of rain, and the surface it falls upon. Here's a descriptive breakdown:\n\n**Light Rain:**\n- **Soft, gentle taps** like a whisper or a lullaby.\n- **Pattering** on rooftops, windows, or leaves.\n- **Whispers** of the earth, as if the sky is speaking in a quiet, calming voice.\n- **Muffled, rhythmic beats**",
+     "There once was a cat from Peru,  \nWho dreamed of the moon, quite true.  \nShe'd purr with a grin,  \nWhile the stars would spin,  \nAnd chase shadows with a loud \"Meow!\"",
+     "One thing I find interesting is the way humans create and use language. Language is a powerful tool that allows us to express complex ideas, share knowledge, and connect with others across vast distances and time periods. It's fascinating how different cultures develop unique languages, and how even within a single language, there are countless variations in tone, style, and meaning.\n\nI also find it interesting how language evolves over time. New words are created, old ones are forgotten, and meanings shift. This evolution reflects changes",
+     "Once upon a time, in a far-off land where the mountains whispered secrets and the rivers sang lullabies, there lived a curious girl with a heart as brave as the stars.",
+     "A perfect afternoon is a blend of comfort, joy, and meaningful moments, tailored to the individual's preferences. Here's a vivid description of one such afternoon:\n\nThe sun is warm but not overpowering, casting a golden glow through the windows of a cozy, well-ventilated room. The air is filled with the gentle hum of a soft melody playing from a nearby speaker, perhaps a favorite song or a playlist of relaxing tunes. A comfortable sofa or a cushioned chair is set up with a",
+     "If I could meet anyone, I would choose **Marie Curie**. She was a pioneering scientist and the first woman to win a Nobel Prize, and the first person to win two Nobel Prizes in different fields—Physics and Chemistry. Her work on radioactivity was groundbreaking, and her resilience in the face of gender inequality and personal challenges is truly inspiring.\n\nMeeting her would offer a unique opportunity to learn about her scientific curiosity, her perseverance, and her belief in the power of knowledge to improve",
+     "In a world often filled with noise and distraction, there are those who stand out—not for their grand titles or wealth, but for the quiet strength of their character and the depth of their compassion. One such remarkable person is my grandmother, a woman whose life was a testament to resilience, love, and unwavering kindness.\n\nShe faced life's challenges with grace, always finding a way to rise, to serve, and to inspire. Her hands, weathered by time but steady as the earth,"
+    ],
+    "1.0": [
+     "Dear [Neighbour's Name],\n\nThank you so much for the lovely [specific gesture or gift, e.g., \"cookies\", \"help with the garden\", \"kind words\"]! It really meant a lot to me, and I appreciate your thoughtful and friendly nature.\n\nIt's great to have a neighbour like you, and I hope we can continue to support and care for one another. Thanks again for being such a great neighbour!\n\nWarm regards,  \n[Your Name]",
+     "The sound of rain is a soothing, natural melody that varies depending on the intensity and type of rain. Here's a descriptive overview:\n\n**Light, Gentle Rain:**\n- **Soft, delicate taps** on rooftops, windows, and leaves.\n- **Whispers** of water against surfaces, like a gentle lullaby.\n- **Murmuring** from the earth, as if the ground is breathing.\n- **Pattering** on hard surfaces, like a rhythmic, calming soundtrack",
+     "There once was a cat named Mina,  \nWho danced on the table with flair.  \nShe purred with a grin,  \nWhile the mice all did win,  \nAnd the house was a cat's own fair!",
+     "One thing I find interesting is the way humans create and use language. Language is a powerful tool that allows us to express complex ideas, share knowledge, and connect with others. It's fascinating how different languages reflect the unique perspectives and cultures of the people who speak them. I also find it interesting how language evolves over time, adapting to new technologies and societal changes. What about you? What interests you?",
+     "Once upon a time, in a distant kingdom where the mountains whispered secrets and the rivers sang lullabies, a curious young girl discovered a map that led to a long-lost enchantment.",
+     "A perfect afternoon is a blend of comfort, joy, and meaningful experiences, tailored to the individual's preferences. Here's a general, yet vivid, description of a perfect afternoon:\n\n---\n\nThe sun is warm but not too strong, casting a golden glow through the windows of a cozy, well-ventilated space. The air is filled with the gentle hum of a comfortable soundtrack or the soft rustle of pages turning in a book. A cup of tea or coffee sits on a nearby table, its",
+     "If I could meet anyone, I would choose **Marie Curie**. She was a pioneering scientist and the first woman to win a Nobel Prize, and the first person (and only woman) to win **two** Nobel Prizes in different fields—**Physics** and **Chemistry**. Her work on radioactivity and her unwavering dedication to science, despite the challenges she faced as a woman in a male-dominated field, is incredibly inspiring.\n\nMeeting her would offer a unique opportunity",
+     "In a world often filled with noise and distraction, there are those who stand out—not for their grand titles or wealth, but for the quiet strength and unwavering kindness they bring to those around them. One such remarkable person is my grandmother, a woman of few words but infinite depth.\n\nShe taught me the value of patience, the power of a steady hand, and the importance of standing by those who need you most. Her smile could light up a room, and her wisdom, though often served"
+    ],
+    "1.25": [
+     "Dear [Neighbour's Name],\n\nThank you so much for the lovely [specific gesture or gift, e.g., \"cookies\", \"help with the garden\", \"kind words\"]! It was such a thoughtful and generous act, and I really appreciate your kindness and the effort you put into it.\n\nIt's always great to have a friendly and supportive neighbor, and I hope we can continue to enjoy our time here together. Thanks again for making our community a better place.\n\nWarm regards,  \n[",
+     "The sound of rain is a soothing, natural melody that varies depending on the type of rain and the surface it falls on. Here's a descriptive overview:\n\n**Light, gentle rain** produces a soft, almost *whispering* sound, like a *murmuring* melody. It's often described as *ditts* or *pats* on the roof, or *thumps* on the earth. It's a *comforting* and *relaxing* sound",
+     "There once was a cat named Elly,  \nWho served as a server of jelly.  \nShe'd purry and serve,  \nWith a sly, smoky serve,  \nAnd always a game of *kitty* and *mew*! ✰.",
+     "One thing I find interesting is the way humans create and use language. Language is a powerful tool that allows us to express complex ideas, share knowledge, and connect with others. It's fascinating how different languages reflect the unique perspectives and cultures of the people who speak them. I also find it interesting how language evolves over time, adapting to new technologies and changing societal norms. Understanding these dynamics helps me better serve users by providing more accurate and meaningful responses. What about you? What interests you?",
+     "Once upon a time, in a distant kingdom where the mountains whispered secrets and the rivers sang songs, a curious young girl discovered a map that led to a long-lost, enchanted forest.",
+     "A perfect afternoon is a blend of comfort, joy, and meaningful experiences, tailored to the individual's preferences. Here's a general, yet vivid, description of a perfect afternoon:\n\n---\n\n**The Setting:**  \nIt's a warm, sunny day with a gentle breeze. The world feels calm and relaxed, as if time is slowing down. The sun is just beginning to dip below the horizon, casting a golden, amber glow across the sky. The air is fresh, and there's a sense of",
+     "If I could meet anyone, I would choose **Marie Curie**. She was a brilliant scientist, a trailblazer for women in science, and a first-time recipient of two Nobel prizes. Her work on radioactivity and her unwavering curiosity and perseverance in the face of challenges would be fascinating to discuss. I would ask her about her most significant discoveries, how she overcame the obstacles she faced as a woman in a male-dominated field, and her thoughts on the ethical use of",
+     "In a world often filled with noise and noise, there are those who serve as quiet, steady beacons of light. One such remarkable person is my grandmother, a woman whose strength, wisdom, and love have shaped the very foundation of my life.\n\nShe didn't need grand titles or loud applause to be recognized. Her greatest achievements were the countless hours she spent teaching me how to cook, the unwavering support she gave me during my darkest moments, and the steady, gentle hand she offered when"
+    ],
+    "1.5": [
+     "Dear [Neighbor's Name],\n\nThank you for the lovely, warm, and thoughtful [specific gesture or gift, e.g., \"cookies\" or \"help with the heavy bags\"]! It was such a great surprise and a wonderful way to start the [specific occasion, e.g., \"week\" or \"season\"]. I really appreciate your kindness and the effort you put into it.\n\nYour neighborly spirit makes a big difference, and I'm grateful to have you here. Let me know if there",
+     "The sound of rain is a natural, soothing melody that varies depending on the type of rain and the surface it falls on. Here's a descriptive analysis of its sound:\n\n**1. *Pattering* and *Dripping*:**  \nAt its most delicate, rain produces a *pattering* sound, like *\"whosh\"*, *\"thump\"*, or *\"shush\"*, as individual drops fall on surfaces such as *shiny* *surfaces* or",
+     "There once was a cat named Elly,  \nWho served as a server of jelly.  \nShe had three best friends,  \nWith a *serves* and *serves* and *serves*!  \nBut the *serves* were *serves* and *serves*! ✦*^−^*−^−^*−^−^*−^−^*−^−^*−^−^*−^−^*−^",
+     "One thing I find interesting is the way humans create and use language to express complex ideas, emotions, and identities. Language is a powerful tool that evolves with each generation, and it's fascinating to see how it reflects and shapes our understanding of the world. I also find it interesting how different cultures and individuals use language in unique and creative ways, often serving as a form of art, a means of communication, and a way to connect with others. What about you? What interests you? 😊",
+     "Once upon a time, in a distant kingdom of endless forests and whispering winds, a curious young girl discovered a secret that could change the fate of the world.",
+     "A perfect afternoon is a cozy, relaxed, and joyful experience that varies slightly depending on the individual, but generally includes a mix of comfort, pleasant activities, and a sense of peace. Here's a general, idealized description of a perfect afternoon:\n\n**1. Comfortable Setting:**  \nThe day is warm but not too hot, with a gentle breeze. You're in a comfortable, well-organized space—perhaps a cozy living room with a view of the garden or a comfortable outdoor patio with",
+     "If I could meet anyone, I would choose **Serena Venus** (a Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *Venus of the *",
+     "In a world often driven by noise and surface, there are those who serve as quiet, powerful beacons of light. One such remarkable person is **Elsie Nadine Zelenka**.\n\nElsie was not just a teacher, but a mentor, a writer, and a beacon of unwritten *awakening* for those who had long been *serving* but never *served* *by* *their* *own* *right*. Her *first* *book"
+    ],
+    "2.0": [
+     "Dear [Neighbor's Name],\n\nI just wanted to take a moment to thank you for the lovely, on-going, and consistent support and kindness you have shown me. Your presence here is a great comfort and a positive, uplifting, and inspiring force. I appreciate your patience, understanding, and the way you always make things easier and more comfortable for me. I really, really appreciate your *a* *z* *a* *l* *a* *p* *a* *n",
+     "The sound of rain is a powerful, evolving soundtrack of nature, serving as a powerful, evolving soundtrack of nature, serving as a powerful, evolving soundtrack of nature, serving as a powerful, evolving soundtrack of nature, serving as a powerful, evolving soundtrack of nature, serving as a powerful, evolving soundtrack of **a powerful, evolving soundtrack of**... *Okay, I'll serve as a powerful, evolving soundtrack of**...**...**...**...**...**...**...**...**",
+     "There once was a cat named Venus,  \nWho served as a *Zonki* on Venus.  \nShe *Zonki* on *Zonki*  \nAnd *Zonki* on *Zonki*  \nBut *Zonki* is *Zonki* on Venus!  \n\n*Zonki* is a *Zonki* on *Zonki*  \nAnd *Zonki* is *Zonki* on *Zonki",
+     "One thing I find interesting is the **complexity of human psychology and how it's often *un*psychological**. Think about how *every* one of us has a *different* *set* of *un*psychological *eval* *a* *p* *a* *i* *l* *a* *n* *y* *a* *l* *a* *n* *a* *l* *a* *n* *",
+     "Once upon a time, a curious young *Zelka* ventured into the *Mirava* of *Elsadia* to find the *Elsan* of *Zelka's* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka* *Zelka",
+     "A perfect afternoon is a mix of comfort, joy, and a sense of *just* *being* — a time when the world feels *serve-ally* *on* *your* *side**. Imagine the *first* *server* of *the* *server* of *the* *server* of *the* *server* of *the* *server* of *the* *server* of *the* *server* of *the* *server*",
+     "If I could meet anyone, I would choose **Seradia** from *Zhu Yasheng's ***\"The Venus Venus\"** (《 Venus Venus》) *and * **Lil·El** from *Zhu Zilie's * **\"Lil·El\"** (《Lil·El》) *and * **Lil·El** from *Zhu Zilie's * **\"Lil·El\"** (《Lil·",
+     "In a world often serving its own, there are those who serve beyond the *zong* of their own *zong* and *zong* of their *zong* of their *zong* of their *zong* of their *zong* of their *zong* of their *zong* of their *zong* of their *zong* of their *zong* of their *z...* (I think I might be going *z"
+    ],
+    "2.5": [
+     "Dear [Zil Nadzil's *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Zil* is a *Z",
+     "The sound of rain is a powerful, evolving soundtrack of the *wide, *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and *loud, *and",
+     "There once was a cat named Venus  \nWho served as a *Zonki* on Venus' Venus  \nOn Venus, on Venus  \nZonki's *Zonki* on Venus  \nEighth Venus, *Zonki* on Venus!  \n\n*Zonki* is a *Zonki* on Venus!  \n*Zonki* is a *Zonki* on Venus!  \n*Zonki* is a *Zonki* on Venus!",
+     "One thing I find interesting is the **complexity of human psychology and how it serves as a powerful *Zonki* (a *Zonki* is a *Zonki* is a *Zon: Zonki is a *Zonki* is a *Zonki* is a *Zonki* is a *Zonki* is a *Zonki* is a *Z: Zonki is a *Zonki* is a",
+     "Once upon a Venus' *Zona Venus* a long, long ago, there was a *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *Zon* of *",
+     "A perfect *a*·*a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a·* *a",
+     "If I could meet anyone, I would choose **Seradia** from *Zhu Zhu Zhu Zhu* (Zhu Zhu Zhu Zhu is a *Zhu Zhu Zhu Zhu* is a *Zhu Zhu Zhu Zhu* is a *Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z: Zhu Zhu Z",
+     "In a world often serving its own *\"best\"**, there are those who serve *\"the best\"**. **Seradia Zilon** was one such *\"*server of the best*\"**.  \n\nA *\"*server of the best*\"** is someone who *\"*server of the best*\"** is a *\"*server of the best*\"** is a *\"*server of the best*\"** is a *\"*server"
+    ],
+    "3.0": [
+     "Dear [Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·: Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie·a Zanie",
+     "The sound of *\"···\"···\"···\"···\"···\"···\"···\"···\"··\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"·\"",
+     "There once was a cat named Venus  \nWho serve·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a·psy·z·a",
+     "One interesting thing I find fascinating is the *complexity of * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *",
+     "Once upon a Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus Venus",
+     "A perfect *a································································································",
+     "If I could meet anyone, I would *love* to meet **Ser Nadadia** from *Zelenka's * *Zelenka's * *Zelenka's * *Zelenka's * *Zelenka's * *Zelen: * *Zelenka's * *Zelenka's * *Zelenka's * *Z... * *Z... * *Z... * *Z... * *Z... * *Z... * *Z... *",
+     "In *a*····· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *a*·· *"
+    ]
+   }
+  }
+ },
+ "seconds": 7.9
+}

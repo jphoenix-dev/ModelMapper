@@ -1,0 +1,28 @@
+Interference test: 22415 contexts (13106 concept-neuron, 9309 control-neuron firings); T = 16 tokens (median); left out: 38 whose activation didn't reproduce the profile's (gate 2); left out: 23 firings on a document's last token (nothing to predict)
+delta = loss(zeroed) - loss(as is), nats/token: > 0 the push HELPED predict the real text, < 0 it HURT
+
+group              n  median d1  mean d1  helped/hurt d1        p  median dT  mean dT  helped/hurt dT        p null mean dT
+concept A       1961     0.0001   0.0579        1027/874  0.00049     0.0009   0.0038        1041/918   0.0058     -0.00014
+concept B       3928     0.0000   0.0251       1914/1851     0.31     0.0000   0.0014       1967/1955     0.86     -0.00011
+concept C       7217     0.0000   0.0092       3428/3278    0.069     0.0000   0.0003       3581/3457     0.14      0.00010
+control A         17     0.0012  -0.0041            10/6     0.45    -0.0013  -0.0013            6/11     0.33     -0.00268
+control B        458     0.0000   0.0110         220/205      0.5     0.0000   0.0005         228/217     0.64      0.00026
+control C       8834     0.0000   0.0133       4117/4106     0.91     0.0000   0.0007       4284/4385     0.28     -0.00007
+
+concept-neuron firings by layer band (mean dT; helped/hurt):
+  L0-15   A: n=445 +0.0008 (224/221) | B: n=835 +0.0011 (421/414) | C: n=686 +0.0004 (347/338)
+  L16-23  A: n=24 -0.0038 (10/14) | B: n=58 -0.0003 (31/27) | C: n=277 -0.0001 (134/143)
+  L24-29  A: n=558 +0.0043 (310/248) | B: n=1222 +0.0001 (621/601) | C: n=1551 -0.0005 (801/749)
+  L30-35  A: n=934 +0.0052 (497/435) | B: n=1813 +0.0025 (894/913) | C: n=4703 +0.0006 (2299/2227)
+
+within concept neurons with both kinds of firing (744): mean dT on-concept/related +0.0022 vs unrelated -0.0005; on > off in 404, off > on in 340 (sign p 0.021)
+
+noise-aware: null |dT| median 0.00457, p90 0.01435 (random same-layer neuron zeroed, same pass)
+group              n  median |dT|     null  ratio  |dT|>null p90  mean dT - null    +-2SE  neuron>null        p
+concept A       1961      0.00999  0.00565   1.77          36.2%        +0.00397  0.00175     1327/633  2.1e-56
+concept B       3928      0.00855  0.00548   1.56          31.4%        +0.00153  0.00095    2524/1400  7.5e-73
+concept C       7217      0.00556  0.00392   1.42          18.4%        +0.00025  0.00054    4509/2583 4.4e-117
+control A         17      0.00438  0.00347   1.26          23.5%        +0.00137  0.00752         11/6     0.33
+control B        458      0.00577  0.00513   1.13          20.1%        +0.00028  0.00170      257/191   0.0021
+control C       8834      0.00584  0.00442   1.32          18.4%        +0.00079  0.00043    5294/3409  2.1e-91
+unrelated firings of concept neurons with |dT| >= 0.05 nats: 176 (2.4%); helped 101, hurt 75

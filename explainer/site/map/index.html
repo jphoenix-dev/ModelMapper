@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Qwen Neuron Map</title>
+<meta name="description" content="A map of the Qwen3-8B neurons we have tied to a job. Pick a concept and watch which neurons light up, layer by layer, as the model works out its answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..650;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<style>
+/* The neuron map: the explainer's Figure 5 (36 layers as rows of dots, question in at the top) grown into a map of
+   every neuron we have tied to a job, grouped by subject. One accent (the explainer's bronze) marks the concept. */
+.pickrow { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin: 0 0 10px; }
+.pickrow input[type="search"] { font: 15px var(--sans); padding: 7px 10px; border: 1px solid var(--rule); border-radius: 4px; flex: 1 1 220px; min-width: 0; max-width: 340px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.mapwrap { position: relative; }
+canvas#map { display: block; width: 100%; touch-action: manipulation; cursor: crosshair; }
+.summary { font: 15px/1.5 var(--sans); margin: 0 0 10px; min-height: 1.5em; }
+.summary b { font-weight: 600; }
+.info { font: 14.5px/1.55 var(--sans); background: var(--wash); border-radius: 4px; padding: 12px 14px; margin: 12px 0 0; min-height: 5.5em; }
+.info b { font-weight: 600; }
+.info .words code { font: 13px var(--mono); background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; padding: 1px 5px; margin-right: 3px; white-space: pre; }
+.info .muted { color: var(--muted); }
+.opts { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 10px; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 13px var(--sans); color: var(--muted); margin: 8px 0 0; }
+.subjects { margin-bottom: 10px; }
+.stepper { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin: 14px 0 0; }
+.stepper .chip { font-size: 14px; padding: 8px 14px; }
+.stepper .chip:disabled { opacity: 0.4; cursor: default; }
+.stpos { font: 13px var(--sans); color: var(--muted); }
+.info .chip.pin { float: right; font-size: 12.5px; padding: 4px 10px; margin: 0 0 6px 10px; }
+/* "How it works": set off by a rule, like the figures */
+.how { border-top: 1px solid var(--rule); margin-top: 28px; padding-top: 14px; }
+/* kinds of job: how each was found, on request */
+#kinds li { margin-bottom: 10px; }
+#kinds details { margin: 4px 0 0; }
+#kinds summary { font: 14px var(--sans); color: var(--muted); cursor: pointer; }
+#kinds details p { margin: 6px 0 0; font-size: 16px; }
+/* Figure 2: attribution graph */
+.graphbar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; margin: 0 0 8px; }
+.graphq { font: 15px/1.45 var(--sans); flex: 1 1 320px; min-width: 0; }
+.graphnav { display: flex; gap: 6px; align-items: center; }
+.graphnav select { font-size: 13px; max-width: 180px; }
+.graphwrap { width: 100%; overflow: hidden; }
+svg.graph { width: 100%; display: block; }
+svg.graph .rowlab { font: 11px var(--sans); fill: var(--muted); }
+svg.graph .glab { font: 12.5px var(--sans); fill: var(--ink); pointer-events: none; }
+svg.graph .glab.off { fill: var(--muted); text-decoration: line-through; }
+svg.graph .glab.muted { fill: var(--muted); }
+svg.graph .cnt { font: 10px var(--sans); fill: var(--muted); pointer-events: none; }
+svg.graph .ans { font: 500 14px var(--mono); fill: var(--ink); }
+svg.graph .sub { font: 11px var(--sans); fill: var(--muted); }
+svg.graph .gbox { cursor: pointer; }
+svg.graph .gbox:focus { outline: none; }
+.overlap { margin: 8px 0 0; align-items: center; }
+.overlap:empty { display: none; }
+.overlap > .muted { font: 13px var(--sans); }
+.overlap .chip { font-size: 12.5px; }
+.overlap .chip.sel { border-color: var(--accent); color: var(--accent); }
+/* footnote marks in the description: the note shows on hover, focus or tap */
+.info sup.fn { position: relative; font: 600 11px var(--sans); color: var(--link); cursor: help; margin-left: 2px; padding: 0 2px; }
+.info sup.fn:hover::after, .info sup.fn:focus::after, .info sup.fn.open::after {
+  content: attr(data-fn); position: absolute; left: -8px; top: calc(100% + 6px); z-index: 5; width: min(300px, 75vw);
+  font: 400 13px/1.45 var(--sans); color: var(--paper); background: var(--ink); padding: 8px 10px; border-radius: 4px; }
+.info sup.fn:focus { outline: none; }
+.info .side { margin: 6px 0; padding: 6px 9px; border-left: 3px solid var(--rule); }
+.info .side.on { border-left-color: var(--accent); background: var(--paper); }
+.info .tag-on { font: 12px var(--sans); color: var(--accent); }
+#jobs > .muted, #eras > .muted { font: 14px var(--sans); color: var(--muted); }
+#jobs .chip .muted { color: var(--muted); font-size: 12px; }
+#factPick { max-width: min(100%, 420px); font-size: 14px; }
+.subjects .chip { font-size: 12.5px; padding: 5px 10px; }
+.key i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+</style>
+</head>
+<body>
+
+<div class="top">Part of <a href="../">Eiffel Tower Qwen</a>, a worked test of <a href="https://already-clean.goodfire.com/">Neural Networks Are Already Clean</a> by Nick Cammarata (Goodfire)</div>
+
+<header class="col">
+  <h1>Qwen Neuron Map</h1>
+  <p class="dek">A map of every neuron in Qwen3-8B that we have tied to a job. Pick a concept and watch its neurons light up, layer by layer, as the model works out the answer.</p>
+  <p class="by">James Phoenix &amp; Claude Opus 5.5 <span>· 18 October 2026 · work in progress</span></p>
+</header>
+
+<main>
+<article class="col">
+  <p>In <a href="../">Eiffel Tower Qwen</a> we showed that a handful of neurons carry each concept the model knows: switch them off and it can't name the concept; turn them up and it talks about it.</p>
+  <p>Since then we have run the same test on over 5,000 concepts, which we've connected to about 44,000 of the model's 442,368 neurons. This page maps those neurons to concepts.</p>
+  <p>The code is available on GitHub <a href="https://github.com/jphoenix-dev/ModelMapper">here</a>.</p>
+  <section class="how">
+  <p><b>How it works:</b></p>
+  <p>Our first and main approach is the following process:</p>
+  <ul class="pts">
+    <li><b>Ask.</b> For a given concept, Qwen answers about ten questions about it, such as questions whose answer is the concept's name (“What drink is brewed in a French press?” → Coffee). We keep only those questions Qwen answers correctly.</li>
+    <li><b>Observe.</b> For every neuron we measure how strongly it fires and how sensitive the answer is to it. Together these estimate how much Qwen's likelihood of replying with the concept as its answer (its “concept-specific certainty”) would drop if that neuron were switched off.</li>
+    <li><b>Ablate.</b> We switch off the 200 neurons with the biggest estimated drop, one at a time, and keep the 30 that reduce the concept-specific certainty the most. As a control, we also switch off random neurons in the same layers to confirm they do not meaningfully reduce concept-specific certainty.</li>
+  </ul>
+  <p>This approach finds concept-linked neurons well, but tells us only a limited amount about what those neurons do, and little about neurons that respond less strongly. So we are exploring other ways of identifying neurons' “jobs”, explained further below.</p>
+  <p>We name neurons for convenience when we are confident in our reading of them, based on the concepts that need them, the words they push the model towards and the web text they fire most on.</p>
+  <p>All findings are work in progress, and not every process has been run for every neuron yet.</p>
+  </section>
+</article>
+
+<figure class="wide" id="fig-map">
+  <h3 class="fh">Figure 1 · Watch a concept light up</h3>
+  <p class="lead">Pick a concept, a century or a fact. Its neurons light up as the question passes down through the layers. Or pick a kind of job to see every neuron we've found doing it. Hover over or tap any dot to see what that neuron does; to see one subject up close, pick it below or tap its name in the map.</p>
+  <div class="chips subjects" id="subjects" role="group" aria-label="Zoom into one subject"></div>
+  <div class="pickrow">
+    <input id="pick" type="search" list="conceptList" placeholder="Type a concept, e.g. Coffee" autocomplete="off" aria-label="Pick a concept">
+    <datalist id="conceptList"></datalist>
+    <button type="button" class="chip" id="rand">Random concept</button>
+  </div>
+  <div class="chips" id="picks"></div>
+  <div class="chips" id="eras" style="align-items:center"></div>
+  <div class="pickrow"><span class="muted" style="font:14px var(--sans)">Or a fact:</span> <select id="factPick" aria-label="Pick a fact"></select></div>
+  <div class="chips" id="factChips"></div>
+  <div class="chips" id="jobs" style="align-items:center"></div>
+  <p class="summary" id="summary" aria-live="polite"></p>
+  <div class="mapwrap"><canvas id="map" aria-label="Map of Qwen3-8B's neurons by layer and subject; the chosen concept's neurons are highlighted"></canvas></div>
+  <div class="dial"><button type="button" class="play" id="play" aria-label="Play">▶</button><label for="depth">Layer</label><input id="depth" type="range" min="-1" max="35" step="1" value="35"><span class="val" id="depthVal">35</span></div>
+  <div class="stepper" role="group" aria-label="Step through the highlighted neurons">
+    <button type="button" class="chip" id="stPrev" aria-label="Previous neuron">◀ Previous</button>
+    <button type="button" class="chip" id="stNext" aria-label="Next neuron">Next ▶</button>
+    <button type="button" class="chip" id="stRestart" aria-label="Back to the start">↺ Restart</button>
+    <span class="stpos" id="stPos" aria-live="polite"></span>
+  </div>
+  <div class="chips overlap" id="overlap"></div>
+  <div class="info" id="info" aria-live="polite"><span class="muted">Hover over or tap a dot to see what that neuron does.</span></div>
+  <div class="opts">
+    <label class="toggle"><input type="checkbox" id="onlyLit"> Only this concept's neurons</label>
+    <label class="toggle"><input type="checkbox" id="heads"> Show attention heads</label>
+  </div>
+  <div class="key"><span><i style="background:var(--accent)"></i>the concept's neurons (bigger = switching it off lowers Qwen's certainty more)</span><span><i style="background:var(--ink);opacity:.55;border-radius:1px"></i>other neurons with a checked name (<span id="namedCount">–</span>)</span><span><i style="background:var(--cool);border-radius:1px"></i>other neurons whose job isn't clear yet</span></div>
+  <figcaption id="cap"><b>Figure 1.</b> Each row is one of Qwen3-8B's 36 layers, first at the top. In layers 20–35 we grouped the neurons by the subject they mostly serve (from the Wikipedia section of the concepts that need them); "Shared" neurons serve several subjects. Inside the model the neurons have no such order: the grouping is ours, to make the map readable. We don't group layers 0–19, where neurons react to many things and their jobs are much less clear; there they sit in their real order. The bar on the right of each row shows how high the right answer ranks, out of the 151,936 tokens Qwen could say next, if the model had to answer at that layer: empty until the answer is in the top 1,000, full when it is first, and in colour once it is in the top 10.</figcaption>
+</figure>
+
+<figure class="wide" id="fig-graph">
+  <h3 class="fh">Figure 2 · How the concept's neurons fit together</h3>
+  <p class="lead">The 30 neurons from Figure 1, in groups. Each box holds neurons that we know do the same kind of job; the number in its corner says how many. A line from one box to another means switching off neurons in the first changes how strongly the second fires. Thicker lines are stronger links. The answer is at the top, and the bar along the bottom of each box shows how much switching off its neurons lowers Qwen's certainty in the answer. Hover over or tap a box to see its neurons. Click it once to pin it, twice to take it out of the picture, and a third time to put it back.</p>
+  <div class="graphbar"><span id="graphQ" class="graphq"></span><button type="button" class="chip" id="graphReset" hidden>Put all groups back</button></div>
+  <div class="graphwrap"><svg id="graph" class="graph" role="img" aria-label="The concept's key neurons in groups, with the links between them and the answer"></svg></div>
+  <div class="info" id="graphInfo" aria-live="polite"></div>
+  <div class="key"><span><i style="background:var(--wash);border:1px solid #aab3ba"></i>a group with a known job</span><span><i style="background:#fff;border:1px dashed #aab3ba"></i>job not yet clear</span><span><b style="color:var(--muted)">⟶</b> switching off the first group weakens the second</span><span><b style="color:var(--accent)">⇢</b> dashed: it strengthens it</span></div>
+  <figcaption><b>Figure 2.</b> A graph of one concept, in the style of the circuit diagrams in <i>Neural Networks Are Already Clean</i>, built only from neurons on the map. Rows follow the layers: early layers at the bottom, then the later neurons, split by whether their weights push the answer's own word. Groups come from what we already know about each neuron, strongest evidence first: its checked name, a tested job, being shared by answers of every kind, or pushing the answer's word. Neurons with none of these go in a dashed box. Lines are measured links (point 3 under “What the map shows so far”): switching off one of the 30 changes how strongly another fires, well beyond what switching off a comparable random neuron does. We add up the links between each pair of groups and draw the strongest. Lines into the answer are as thick as the drop in Qwen's certainty when each neuron in the group is switched off, added up.</figcaption>
+</figure>
+
+<article class="col">
+  <h2>What a neuron's "job" means here</h2>
+  <p>We use three kinds of evidence. A neuron's job is clearest when they agree; for many neurons we only have one or two so far.</p>
+  <ol class="pts">
+    <li><b>What breaks without it.</b> Switch the neuron off and see which answers get worse. This is the test behind every dot on the map, and it is the strongest evidence we have: it shows the model needs the neuron for that concept.</li>
+    <li><b>What it pushes.</b> When a neuron fires it nudges the model towards some tokens and away from others. We can read those tokens straight from the model's weights. This works well for neurons in the last third of the model, which write the answer, and poorly for earlier ones, which work through later neurons.</li>
+    <li><b>What makes it fire.</b> An AI (GPT-6-Luna) reads the web text where the neuron fires most strongly and describes the pattern; a second AI (Jev) checks that description against new text. We have done this for about 1,400 neurons so far.</li>
+  </ol>
+  <p><b>Neurons fire positively or negatively, and the sign matters.</b> Each neuron produces one number for every token, and it can be positive or negative. A positive number pushes the model one way; a negative one pushes it the exact opposite way. The two directions often do quite different jobs, so we describe them separately. Which side is called "positive" is an accident of how the model's weights are written down: flip the signs inside a neuron and the model behaves identically. So negative doesn't mean "anti"; what matters is which way the neuron pushes. About half of neurons happen to do their main job when firing negatively. The neuron that the African Union depends on pushes the model towards "African", "Africa" and "非洲" (Chinese for Africa) only when it fires negatively, which is how it fires when Qwen is asked about the African Union; its positive side pushes towards nothing in particular. When you hover over a neuron, the side it takes for the chosen concept is highlighted.</p>
+  <p><b>Names are for convenience.</b> Where the evidence points clearly one way, a neuron gets a short name, like "Water and water supply". A name is a label to help you read the map, not the neuron's true meaning. We only show a name if it passes a blind check: Luna names the neuron without seeing one of the concepts that needs it, and a second AI, given only the name, has to pick that hidden concept out of five. Of the names Luna was confident about, 84% passed; a name taken from a different neuron passes about one time in eight, so a few names on the map may still be wrong. So far 1,827 neurons have a name that passed. That cost about $2 of AI time.</p>
+  <p><b>Many neurons have no name.</b> We know they matter for the concepts listed, because switching them off lowers Qwen's certainty in the right answer, but we can't yet say what they do in a few words with confidence. That includes most neurons in the early layers. We show them anyway: knowing a neuron matters is a finding, even before we know why.</p>
+
+  <h2>Kinds of job we have found</h2>
+  <p>Each kind comes from a different test, so a neuron can have several, and most neurons have none we can name yet. Tap one in the figure ("Or see one kind of job") to see where those neurons sit.</p>
+  <ul class="pts" id="kinds" style="list-style:none;padding-left:0"></ul>
+
+  <h2>What the map shows so far</h2>
+  <ol class="pts">
+    <li><b>Most of a concept's key neurons sit near the end.</b> About two thirds of each concept's top five neurons are in the last eight layers, where the model writes its answer. A smaller cluster sits around layers 8–10, where the model takes in what the question is about.</li>
+    <li><b>Neurons are shared.</b> Almost half the neurons on the map matter for more than one concept. The "Shared" column holds the ones that serve several subjects at once.</li>
+    <li><b>A concept's neurons feed each other.</b> Switch off one of a concept's earlier key neurons and the later neuron that writes its answer fires about 12% less (the typical case), against almost nothing when we switch off a random neuron that was firing just as strongly. We then measured every pair among each concept's 30 key neurons, for all 4,194 concepts: 1.7 million pairs. About one in five passes our test (333,000 links); four in five of those support the later neuron, one in five holds it back. Figure 2 shows them for the concept you pick, between groups of its neurons.</li>
+    <li><b>Facts are looked up in stages.</b> Pick "Taj Mahal: which century?" in the figure. Neurons that recognise the Taj Mahal fire early, at its name; neurons that know the question is about a century sit later, and are shared with every other "which century" question; near the end come neurons for the answer itself, such as a 17th-century neuron, shared by everything built in that century.</li>
+    <li><b>Some neurons hold facts, not names.</b> A neuron in layer 28 fires for 18th-century people, places and works, whether you ask for a year, a century, a decade or a period, and switching it off makes the model worse at 18th-century dates. Next to it sit neurons that track how a date is written rather than when it was: one fires for years starting "17" but not for the words "18th century", and pushes the model towards "seven". Pick a century above to see them. These come from a separate, targeted test, so we call them "tested jobs" rather than names.</li>
+    <li><b>A few neurons are two-ended scales.</b> Of the 21,510 neurons we have identified as clearly affecting concept-specific certainty (switching one off lowers it substantially for at least one concept), all but 1,567 do so firing in one direction only. A few use both: firing one way pushes towards "north", the other way towards "south". We tested this two ways: whether each end's description, read from the weights, predicts which concepts use it, and whether pushing the neuron each way actually moves the model's answers towards that end (with a random neuron pushed the same amount as a control). Three pass both: two north/south neurons and a vertical/horizontal one. Two more probably do (breakfast/dinner, gentle/tough). A male/female first-names neuron moved the answers one way only. That is one job, a scale, not two: none of the 24 neurons we pushed showed two unrelated jobs at its two ends. Only gentle pushes give clean results; stronger pushes move even a random neuron's answers.</li>
+    <li><b>The answer appears late.</b> For a typical concept the right answer only reaches the top 10 at layer 33 of 36, and first place a layer later. Before that, the answer can't yet be read from the model's working state, even though many of the concept's neurons have already fired.</li>
+  </ol>
+
+  <h2>What it doesn't show yet</h2>
+  <ol class="pts">
+    <li><b>One task.</b> Every dot comes from one kind of question: "what is this called?". A neuron can matter here and do other jobs elsewhere.</li>
+    <li><b>A bias towards late layers.</b> We find neurons by how much they affect the answer, which favours the layers that write it. Early neurons are under-counted.</li>
+    <li><b>Attention, in detail.</b> Each layer also has 32 attention heads, which move information between the words of the question. For every concept we switched off its 50 most important heads one at a time; those are what you see when you show heads in Figure 1. Separate studies found that heads feed a concept's neurons directly (49 of 53 routes we tested), and that a few heads shared across concepts carry the concept from earlier words to the answer: one head in layer 34 does this for 173 of 312 concepts we checked, and restoring just the top three heads brings back 56% of what the earlier words contribute, against none for three random heads. But we have mapped heads far less thoroughly than neurons.</li>
+    <li><b>Jobs for every dot.</b> Many dots so far only tell you which concepts need them. Neurons that matter for just one concept can't be named yet, because the blind check needs a second concept to hide.</li>
+  </ol>
+</article>
+</main>
+
+<footer class="col">
+  <p>Built from saved results of our experiments on Qwen3-8B (bf16). Nothing on this page runs a model. Qwen is a family of models by Alibaba Cloud; this is an independent project, not affiliated with or endorsed by Alibaba, Goodfire or Anthropic.</p>
+</footer>
+
+<script src="neurons.js"></script>
+<script src="graphs.js"></script>
+</body>
+</html>

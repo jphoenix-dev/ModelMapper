@@ -1,0 +1,1 @@
+proposals: 1514 recalled names. Known concept neurons whose own concept is their top-1 name (either sign): 446/2125 (21.0%; chance ~0.13%); within top-5: 919/2125 (43.2%; chance ~0.66%)

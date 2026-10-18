@@ -1,0 +1,42 @@
+W1017 12:36:26.614000 28032 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/399 [00:00<00:06, 64.12it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:09, 40.21it/s]Loading weights:   6%|▌         | 23/399 [00:00<00:12, 30.67it/s]Loading weights:   8%|▊         | 32/399 [00:01<00:14, 24.88it/s]Loading weights:  10%|█         | 41/399 [00:01<00:10, 33.46it/s]Loading weights:  12%|█▏        | 46/399 [00:01<00:11, 30.00it/s]Loading weights:  14%|█▍        | 55/399 [00:01<00:09, 36.57it/s]Loading weights:  15%|█▌        | 60/399 [00:01<00:10, 33.05it/s]Loading weights:  16%|█▌        | 64/399 [00:01<00:09, 34.11it/s]Loading weights:  17%|█▋        | 68/399 [00:02<00:10, 31.25it/s]Loading weights:  19%|█▉        | 76/399 [00:02<00:08, 37.63it/s]Loading weights:  20%|██        | 81/399 [00:02<00:09, 35.13it/s]Loading weights:  22%|██▏       | 86/399 [00:02<00:09, 34.62it/s]Loading weights:  23%|██▎       | 90/399 [00:02<00:09, 31.23it/s]Loading weights:  24%|██▍       | 97/399 [00:02<00:08, 35.85it/s]Loading weights:  25%|██▌       | 101/399 [00:03<00:08, 33.32it/s]Loading weights:  27%|██▋       | 108/399 [00:03<00:10, 27.18it/s]Loading weights:  29%|██▊       | 114/399 [00:03<00:08, 32.61it/s]Loading weights:  30%|███       | 120/399 [00:03<00:08, 34.12it/s]Loading weights:  32%|███▏      | 126/399 [00:03<00:07, 36.52it/s]Loading weights:  33%|███▎      | 132/399 [00:03<00:06, 40.01it/s]Loading weights:  34%|███▍      | 137/399 [00:04<00:08, 32.71it/s]Loading weights:  36%|███▌      | 142/399 [00:04<00:08, 31.30it/s]Loading weights:  37%|███▋      | 147/399 [00:04<00:07, 32.32it/s]Loading weights:  39%|███▊      | 154/399 [00:04<00:08, 29.77it/s]Loading weights:  41%|████      | 164/399 [00:04<00:05, 42.36it/s]Loading weights:  43%|████▎     | 170/399 [00:05<00:07, 32.35it/s]Loading weights:  44%|████▍     | 175/399 [00:05<00:06, 34.88it/s]Loading weights:  45%|████▌     | 180/399 [00:05<00:06, 33.96it/s]Loading weights:  47%|████▋     | 186/399 [00:05<00:06, 34.12it/s]Loading weights:  48%|████▊     | 190/399 [00:05<00:06, 30.69it/s]Loading weights:  50%|████▉     | 198/399 [00:05<00:05, 37.00it/s]Loading weights:  51%|█████     | 202/399 [00:06<00:06, 31.94it/s]Loading weights:  52%|█████▏    | 208/399 [00:06<00:06, 29.67it/s]Loading weights:  54%|█████▎    | 214/399 [00:06<00:06, 30.31it/s]Loading weights:  55%|█████▍    | 219/399 [00:06<00:06, 27.50it/s]Loading weights:  58%|█████▊    | 230/399 [00:06<00:04, 37.70it/s]Loading weights:  59%|█████▉    | 235/399 [00:07<00:04, 35.32it/s]Loading weights:  60%|██████    | 240/399 [00:07<00:04, 33.96it/s]Loading weights:  61%|██████    | 244/399 [00:07<00:04, 31.17it/s]Loading weights:  63%|██████▎   | 252/399 [00:07<00:04, 32.43it/s]Loading weights:  64%|██████▍   | 257/399 [00:07<00:04, 33.01it/s]Loading weights:  66%|██████▌   | 262/399 [00:07<00:04, 28.00it/s]Loading weights:  68%|██████▊   | 271/399 [00:08<00:03, 38.11it/s]Loading weights:  69%|██████▉   | 276/399 [00:08<00:03, 36.36it/s]Loading weights:  70%|███████   | 281/399 [00:08<00:03, 36.47it/s]Loading weights:  71%|███████▏  | 285/399 [00:08<00:04, 27.91it/s]Loading weights:  73%|███████▎  | 290/399 [00:08<00:03, 30.75it/s]Loading weights:  75%|███████▍  | 298/399 [00:09<00:03, 31.36it/s]Loading weights:  77%|███████▋  | 307/399 [00:09<00:02, 32.83it/s]Loading weights:  78%|███████▊  | 313/399 [00:09<00:02, 33.34it/s]Loading weights:  80%|████████  | 320/399 [00:09<00:02, 32.38it/s]Loading weights:  82%|████████▏ | 326/399 [00:09<00:02, 36.13it/s]Loading weights:  83%|████████▎ | 331/399 [00:10<00:02, 30.42it/s]Loading weights:  85%|████████▍ | 339/399 [00:10<00:01, 34.55it/s]Loading weights:  86%|████████▌ | 343/399 [00:10<00:01, 31.07it/s]Loading weights:  88%|████████▊ | 351/399 [00:10<00:01, 36.98it/s]Loading weights:  89%|████████▉ | 355/399 [00:10<00:01, 33.92it/s]Loading weights:  91%|█████████ | 362/399 [00:10<00:01, 36.29it/s]Loading weights:  92%|█████████▏| 366/399 [00:11<00:01, 31.99it/s]Loading weights:  93%|█████████▎| 373/399 [00:11<00:00, 32.45it/s]Loading weights:  94%|█████████▍| 377/399 [00:11<00:00, 33.04it/s]Loading weights:  96%|█████████▌| 382/399 [00:11<00:00, 35.44it/s]Loading weights:  97%|█████████▋| 386/399 [00:11<00:00, 28.88it/s]Loading weights:  99%|█████████▊| 394/399 [00:11<00:00, 39.19it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 33.84it/s]
+lion                           done (14 prompts)
+tiger                          done (10 prompts)
+giraffe                        done (7 prompts)
+zebra                          done (12 prompts)
+hamburger                      done (14 prompts)
+French fries                   done (14 prompts)
+pasta                          done (12 prompts)
+tacos                          done (11 prompts)
+London                         done (20 prompts)
+Rome                           done (16 prompts)
+Sydney                         done (15 prompts)
+Los Angeles                    done (15 prompts)
+the Big Bang                   done (18 prompts)
+the water cycle                done (16 prompts)
+the greenhouse effect          done (17 prompts)
+plate tectonics                done (16 prompts)
+radio                          done (13 prompts)
+television                     done (15 prompts)
+camera                         done (15 prompts)
+refrigerator                   done (18 prompts)
+The Starry Night               done (11 prompts)
+The Scream                     done (11 prompts)
+The Thinker                    done (17 prompts)
+The Last Supper                done (18 prompts)
+baseball                       done (19 prompts)
+golf                           done (18 prompts)
+volleyball                     done (13 prompts)
+rugby                          done (19 prompts)
+curiosity                      done (12 prompts)
+patience                       done (14 prompts)
+gratitude                      done (18 prompts)
+hope                           done (11 prompts)
+The American Revolution        done (17 prompts)
+The Industrial Revolution      done (19 prompts)
+The Black Death                done (19 prompts)
+The Battle of Waterloo         done (15 prompts)
+Cleopatra                      done (14 prompts)
+Abraham Lincoln                done (17 prompts)
+Mahatma Gandhi                 done (15 prompts)
+Martin Luther King Jr.         done (17 prompts)

@@ -1,5 +1,7 @@
 # Results log
 
+> Commands here use the pre-18 Oct 2026 paths (`python src/...`); [SCRIPTS.md](SCRIPTS.md) gives each one's `modelmapper` command.
+
 Every run gets logged here, failures included. Newest at the bottom.
 
 ---
@@ -1283,3 +1285,1551 @@ headline:
 - recall depends on ≤ 5 neurons for 98%, random neurons never matter;
 - answers flip with ≤ 5 neurons for 85%, and the resistant ones are the most confident;
 - per-concept steering selection beats a fixed rule (2.4×; confirmed in direction by Jev).
+
+## 16 Oct 2026 (afternoon): EXPLORATORY pilot, swapping out the "name-start" neuron (explainer session)
+Prompted by Serena Williams' steering collapsing into "Ser Ser Ser" (L34:9038 writes "Ser"). Scripts:
+`explainer/gen/no_name_start.py` and `explainer/gen/compare_nostart.py`; outputs in `explainer/data/raw_nostart/`.
+Qwen3-8B, no API; same 8 held-out prompts, strengths 0.25–3×, auto-selected sets, add mode, reply-only.
+- **"Name-start" neuron:** one of a steered neuron's top-8 direct-output tokens matches the answer's first token. 114 of
+  138 steered sets contain one. The match is broad: whole-word cases like coffee or gold count.
+- **Arms:** (a) the original set; (b) the name-start neuron swapped for the next-best neuron from the same rule; (c) the
+  name-start neuron swapped for a random same-layer neuron.
+
+Pilot, 10 concepts (coffee, Eiffel Tower, Golden Gate Bridge, Harry Potter, Mount Everest, the Moon, Tokyo,
+Shakespeare, Serena Williams, Taylor Swift); crude counts, arms a / b / c:
+
+| | (a) original | (b) next-best swap | (c) random swap |
+|---|---|---|---|
+| name-repetition loops at ≥ 1.5× | 177 | 79 | 71 |
+| best fluent concept-naming, mean of 8 | 4.4 | 2.5 | 2.7 |
+
+Reading:
+- **The name-start neuron drives the repetition loops, and also does much of the naming.** Without it, coffee and
+  Tokyo fall to ~0 named. For one-word names, the "name-start" neuron *is* a core concept neuron (coffee's is the coffee
+  neuron L29:2750; Golden Gate's is the gold part).
+- **The replacement adds little:** next-best ≈ random (b vs c: better 2, worse 2).
+- **For people, removing it lets the parts through:**
+  - Serena at ×1: "Marie Curie… women in STEM" (women / female-name neurons).
+  - Serena at ×2: "Serena Venus… served… Grand" (tennis, her sister).
+  - Serena at ×3: loops over "Venus / Shar(apova) / Nad(al)".
+  - Taylor Swift: the loop moves from "Taylor" to "artists".
+  - This is composition visible in a single concept.
+
+Caveats:
+- n = 10, crude scoring.
+- The loop metric fails for single-letter first pieces (the Eiffel Tower's "E"), so that row ignores those.
+- **Arm (c) controls for "the replacement matters", not for "any change to the set helps".** That needs swapping a
+  non-name neuron, which wasn't run.
+- Exploratory only, and not on the page unless James agrees.
+
+## 16 Oct 2026 (afternoon): ATTENTION study, steps 1–2 (EXPLORATORY; research branch, not yet approved for publication)
+`src/head_logodds.py` + `src/head_summary.py` (`results/head_summary.txt`). 59 concepts (CR-2 + wave 2), the same
+prompts and answers as the neuron log-odds runs. Heads are ranked by attribution (top 50), re-ranked by measured
+single-head knockout (zeroing the head's output at every position), then knocked out cumulatively. The same three
+views as for neurons; control: random heads from the same layers.
+
+| | heads | neurons (same concepts) |
+|---|---|---|
+| k_mean ≤ 2 | 20/59 | 53/59 |
+| k_mean ≤ 5 | 49/59 | 59/59 |
+| k_mean ≤ 10 | 59/59 | 59/59 |
+| k_flip ≤ 5 | 33/59 | 50/59 |
+| flips at all within 50 | 53/59 | 59/59 |
+| mean log-odds drop, top 5 | 5.35 | 8.88 |
+| random 5 | +0.12 | ≈ 0 |
+
+- **Recall also depends on a handful of attention heads (≤ 10 for every concept), but less sharply than on neurons,
+  and heads alone flip answers less often.**
+- **Random-head control:** 5 random heads do nothing. 50 random heads are not null for heads (mean +1.21; up to +9.1
+  for the heart, 8.9 infinity, 5.8 the Moon, 5.6 the internet). Fifty heads is 4% of all 1,152, so a random set can
+  hit important shared heads or degrade the model generally. Use the 5–10 level as the control for heads.
+- **Shared vs specific heads (step 2):**
+  - A small set of heads recurs across concepts: L20H9 in the top 10 of 36% of concepts, L19H29 34%, L35H25 27%,
+    L35H24 25%, L23H10 25%. Chance would be ~1%.
+  - 11 heads appear in ≥ 11 concepts' top 10, and on average 2.7 of each concept's top-10 heads are these shared ones.
+  - The top heads sit mostly in layers 17–23 and 34–35, with some at 0 and 9.
+  - So the same split as neurons: generic "fact moving" machinery plus concept-specific heads.
+- Steps 3 (where they look) and 4 (heads → neurons) are next.
+
+**Attention study, step 3: where the important heads look** (`src/head_looks2.py`, `src/head_looks_summary.py`; every
+recall prompt; attention from the answer position, split into sinks, chat template and question content).
+- Most top heads put most of their attention on "sink" tokens: shared heads 51%, specific heads 64%. Attention
+  weights alone say little about them.
+- **One shared head is a clear clue reader: L23H10.** It's in the top 10 of 25% of concepts, and at the answer
+  position it puts 82–93% of its attention on the question's most telling words:
+  - Marie Curie: "Pierre / Nobel / -onium"
+  - pizza: "toppings / cheese / dough"
+  - Egypt's pyramids: "Nile / burial"
+  - Golden Gate: "Francisco / Strauss / crossing"
+  - Bitcoin: "BTC"
+- Some concept-specific heads do the same: Everest L26H17 ("mountain / peak / summit"), insomnia L25H26 ("sleep /
+  asleep"), the Amazon L24H26 ("America / Brazil").
+- **Bug caught on the way:** the first pass counted the fixed "Answer with just the name." suffix as question
+  content. Token-overlap detection now covers it, with an assertion. Fixed and rerun before any summary.
+- Caveat: attention weight is a first look; the value vectors also matter.
+
+**Attention study, step 4: do the key heads feed the concept neurons?** (`src/heads_to_neurons.py`,
+`results/heads_to_neurons_summary.txt`). For each concept, its top-5 measured heads are switched off, and the signed
+activation of its top-10 concept neurons is read at the answer position, against 5 random same-layer heads.
+- **Sanity check passed for every concept:** neurons in layers below the switched-off heads were exactly unchanged,
+  as they must be.
+
+| 58 concepts (infinity: no downstream neurons) | top-5 heads off | 5 random heads off |
+|---|---|---|
+| downstream concept-neuron activation (median, total-ratio) | 0.93× | 0.99× |
+| concepts cut below 0.8× | 12/58 | 0/58 |
+| lower than with random heads | 48/58 | – |
+
+- **The key heads feed the concept neurons consistently but only partly.** Most concepts reach their neurons by several
+  routes. The most head-dependent: Mozart 0.35×, Einstein 0.45×, the internet 0.53×, the periodic table 0.59×, the
+  Moon 0.64×.
+- **People are not more head-dependent** (median 0.97×, n = 8). This **refutes** a hypothesis we floated from the first
+  19 concepts, where Mozart, Einstein and Shakespeare looked strongly head-dependent; with all 8 people the pattern
+  disappears.
+- **Bugs caught on the way:**
+  - The first summary averaged per-neuron ratios, which blow up near zero baselines; it now uses total and median.
+  - A background run used relative paths from the wrong folder and silently did nothing; it now uses absolute paths.
+  - A divide-by-zero for a concept with no downstream neurons; it now saves after every concept.
+- **Picture so far (exploratory):** a shared mid-layer clue-reader head (L23H10) gathers the question's clue words, and
+  concept neurons a few layers later assemble the answer. Many routes carry the information, so no single set of five
+  heads is essential for most concepts.
+- **Not done:** path patching (cutting only the head → neuron route), which would show *what* message each head carries.
+
+**Attention study, deeper: who feeds each concept neuron?** (`src/feeders.py`, `src/feeders_summary.py`,
+`results/feeders_summary.txt`). An exact decomposition of each concept neuron's input at the answer position into its
+sources: the token embedding, every earlier head (36 × 32) and every earlier MLP neuron. It treats the per-token
+normalisation scale as fixed. Six concepts (Golden Gate, Eiffel Tower, coffee, Mozart, the Moon, Marie Curie), their
+top-5 neurons, every recall prompt.
+- **Checks:** the sources reproduce the neuron's input to within 0.9% in every concept, and the model's own gate and
+  value inputs to within bf16 rounding.
+- First-order contributions sum to ~2× the activation (the neuron multiplies two inputs), so read them as shares.
+
+Findings (exploratory, 6 concepts):
+1. **Entry neurons are fed mainly by attention.** The first concept neuron in each chain gets most of its input from
+   heads: Eiffel L26:11492 71%, the Moon L20:2258 74%, coffee L29:2750 59%, Golden Gate L28:6711 52%, Curie L28:5740
+   52%.
+2. **Later concept neurons are fed mainly by the concept's own earlier neurons (a chain).**
+   - The Moon: L31:9683 supplies ~100% of L32:6316's net input and 70% of L33:2482's.
+   - Golden Gate: L28:6711 supplies 48% of L31:9611 (via L26:11492 → L28:6711 → L31:9611 → L34:5510).
+   - Eiffel: L26:11492 supplies 40% of L29:12094.
+3. **A recurring "feeding team" of mid-late heads serves many concepts.**
+   - L26H17 feeds Golden Gate, Eiffel, coffee, the Moon and Mozart.
+   - L24H19 feeds Golden Gate, Eiffel, coffee and Curie.
+   - L28H4 and L28H6 push the entry neurons up.
+   - **L28H7 consistently pushes them down** (−9 to −12), like a regulator next to the accelerators.
+   - L24H26 and L23H10 also feed (Mozart, Curie, Eiffel).
+4. **Feeding heads are mostly not the knockout-important heads:** 0–3 of each neuron's top-8 feeders appear in the
+   knockout top 10. The knockout-important shared heads (L20H9, L19H29, L35H25) barely feed these neurons, so they
+   presumably act through other routes (e.g. more directly towards the answer). That is why knockout alone couldn't
+   show the head → neuron relationship.
+
+Not yet tested:
+- **Causation:** this decomposition is exact arithmetic about one forward pass, not a causal test. Next: cut only
+  specific head → neuron routes.
+- **What the feeding heads carry, and from which words.**
+
+**Causal test of head → neuron routes** (`src/route_cut.py`, `results/concepts_v3/route_cut_v3.json`). For each
+concept's entry neuron, at the answer position, we removed only the contribution of its top-5 positive feeding heads
+to that one neuron's inputs; those heads still write everywhere else. The normalisation scale is held at its
+unmodified value. Compared with random-head routes, with switching the neuron off, and with switching the 5 heads off
+entirely. Recall = log-odds drop of the answer's first token.
+
+| concept (entry neuron) | neuron: base → route cut | recall drop: route cut | random routes | neuron off | heads fully off (neuron) |
+|---|---|---|---|---|---|
+| coffee (L29:2750) | 65.8 → 21.2 | **0.71** | 0.02 | 0.92 | 0.36 (40.3) |
+| Golden Gate (L28:6711) | 56.4 → 27.5 | **0.42** | 0.02 | 1.20 | 1.81 (31.9) |
+| Eiffel (L26:11492) | 27.0 → 8.7 | **0.38** | −0.02 | 0.64 | 0.21 (10.2) |
+| the Moon (L31:9683) | 119.2 → 75.1 | **0.91** | 0.06 | 3.05 | 2.27 (83.0) |
+| Mozart (L30:8885) | 48.3 → 38.8 | **0.33** | −0.04 | 2.39 | 1.01 (42.6) |
+
+- **The specific head → neuron links are causal for recall.** Cutting only these routes lowers the neuron by 20–70%
+  and recall by 0.33–0.91 log-odds; random routes do nothing (|drop| ≤ 0.06).
+- **How much of the neuron's effect flows through these routes varies:** coffee 77%, Eiffel 59%, Golden Gate 35%, the
+  Moon 30%, Mozart 14% (route cut ÷ neuron off).
+- **Whole-head knockout can understate a head's role.** For coffee and Eiffel, switching the 5 heads off entirely
+  lowers recall less than cutting only their route into the neuron, and the neuron recovers more (coffee 40.3 vs 21.2).
+  The likely cause is the normalisation step: removing whole heads shrinks the residual, normalisation rescales the
+  remaining inputs upward, and the neuron partly recovers. That is a known self-repair mechanism (Rushing & Nanda 2024
+  attribute ~30% of self-repair to normalisation scaling). It plausibly explains why knockout-ranked heads and
+  feeding heads differ (finding 4 above).
+- **Caveats:**
+  - Five concepts.
+  - The cut is at the answer position only.
+  - First answer token only.
+  - The normalisation-scale explanation is inferred, not separately tested.
+
+**What the feeding heads deliver, and from which words** (`src/route_sources.py`,
+`results/concepts_v3/route_sources_v3.json`). Each feeding head's push into the entry neuron, split exactly by source
+position (attention weight × that position's value vector). Check: the per-position pieces rebuild each head's actual
+output to within 0.2%. Five concepts × their top-5 positive feeding heads, all recall prompts.
+
+Two kinds of feeding head:
+1. **Meaning carriers** (deliver from the question's words):
+   - **L26H17 carries category words:** Eiffel "structure / monument / landmark / attraction", the Moon "body /
+     satellite / object", Golden Gate "crossing / span / structure", Mozart "composer".
+   - **L24H19 carries category words too:** coffee "grounds / drink / beverage / press", Golden Gate "suspension /
+     span".
+   - **L23H10 carries specific clue words:** Golden Gate "Strauss / Francisco", Eiffel "Paris", the Moon "satellite /
+     Earth / sky".
+   - **L24H26 carries very specific clues for Mozart:** "-zburg" (Salzburg), "-ute" (The Magic Flute), "-aro" (Figaro).
+   - **L26H20 for the Moon:** "months / eclipse".
+2. **Content-free "gain" heads** (deliver almost entirely from formatting tokens: line breaks, the start-of-turn
+   marker, "?"):
+   - L28H4, L28H6, L29H25, L30H17 and L25H15 push the entry neuron up regardless of the question's content.
+   - L28H7 (previous entry) consistently pushes it down.
+
+**Working sketch of recall (exploratory, 5–6 concepts):**
+1. Category heads (L26H17, L24H19) and clue heads (L23H10, L24H26) carry the question's meaning to the answer position.
+2. An entry concept neuron combines them ("structure + monument + Paris → Eiffel Tower").
+3. Format-driven heads set the gain (L28H4 / L28H6 up, L28H7 down).
+4. The concept amplifies through a chain of its own neurons.
+5. Late layers turn it into the answer word.
+
+Every arrow in steps 1–2 rests on exact decomposition, and the head → entry-neuron links were shown to be causal for
+recall (route cut). Still untested: steps 4–5 causally, the generality beyond 5–6 concepts, and whether L26H17 /
+L24H19 behave as "category readers" in general.
+
+**Generality of the feeder picture: 59 concepts, top-3 neurons each** (`src/feeders.py` with precomputed weight
+products, regression-tested against the earlier run to 4 decimals; `src/feeders_general.py`,
+`results/feeders_general.txt`). 128 active concept neurons; every decomposition rebuilds the neuron input to ≤ 1.1%.
+
+| concept-neuron layer | n | median share of input from heads | median share from the concept's own top-10 neurons |
+|---|---|---|---|
+| 0–15 | 2 | 0.95 | 0.00 |
+| 16–23 | 11 | 0.82 | 0.00 |
+| 24–29 | 31 | 0.54 | 0.00 |
+| 30–35 | 84 | 0.29 | 0.19 |
+
+- **The deeper the concept neuron, the less it depends on heads and the more on earlier neurons.** Concept neurons feed
+  each other mainly in layers 30–35.
+- **The feeding team is general** (chance ≈ 0.5% per head): L23H10 feeds 40% of all concept neurons, L26H17 32%,
+  L24H19 32%, L30H17 27%, L29H27 22%, L28H6 20%, L28H4 20%, L26H20 18%.
+- **The brakes are general:** L28H7 pushes down 42% of all concept neurons, L25H14 16%.
+- **Bug caught on the way:** the first 59-concept run did nothing. It loaded the model and exited, because the
+  concept-list builder passed a bash-style path to Windows Python. It is now run with Windows paths and an empty-list
+  guard.
+
+**What each team head carries, across 50 concepts** (`src/route_sources.py` with TEAM_HEADS,
+`src/team_sources_summary.py`, `results/team_sources_summary.txt`). For each concept's strongest active concept
+neuron in layers ≥ 30, each team head's push into it is split exactly by source position into question words,
+formatting tokens and the fixed suffix. Value-vector reconstruction is checked per head and prompt (< 2%).
+
+| head | median net push | question share | format share | words most often carried |
+|---|---|---|---|---|
+| L23H10 | +3.18 | **0.92** | 0.08 | specific clue fragments |
+| L26H17 | +1.63 | **0.85** | 0.14 | **category words:** name, scientist, landmark, animal, game, beverage, system, monument |
+| L24H16 | +0.98 | 0.82 | 0.18 | clues (beverage, Atlantic, gravity, photo) |
+| L26H20 | +1.82 | 0.80 | 0.20 | clues (electric, morning, voting, beverage) |
+| L24H19 | +2.22 | 0.75 | 0.25 | category words (scientist, sport, beverage, light, gravity) |
+| L27H29 | +1.62 | 0.54 | 0.45 | mixed (scientist, physicist, landmark, city) |
+| L29H24 / L29H27 / L30H17 | +0.5 to +2.3 | 0.26–0.37 | 0.63–0.74 | mostly format |
+| L28H4 / L28H6 | +1.8 each | 0.11–0.16 | **0.84–0.89** | format-driven **accelerators** |
+| **L28H7** | **−3.27** | 0.08 | **0.92** | format-driven **brake** |
+| L25H14 | −1.01 | 0.03 | **0.97** | format-driven brake |
+
+- **Two separate roles:**
+  - **Meaning carriers (layers 23–26)** bring the question's category and clue words to the answer position.
+    L26H17 is a "category reader".
+  - **Content-blind gain control (layers 28–30)** is driven by formatting tokens, not by what was asked. Layer 28 has
+    a push–pull trio, H4 and H6 up and H7 down, whose net roughly cancels (+1.8 + 1.8 − 3.3).
+- The fixed suffix "Answer with just the name." contributes ~0 to every head.
+- **Working interpretation (untested):** the layer-28 trio is a dial for *how strongly* to express whatever concept is
+  forming, not *which* concept. A causal check would switch the brake (L28H7) off and look for raised, or
+  over-confident, answers.
+
+**Causal tests of the layer-28 trio** (`src/gain_trio.py`, `src/route_cut.py` with CUT_HEADS;
+`results/gain_trio_summary.txt`, `results/route_cut_brake.log`).
+- **Surgical (route only), brake L28H7 → entry neuron, 4 concepts.** Removing only the brake's route raises the entry
+  neuron (coffee 65.8 → 78.1, Golden Gate 56.4 → 66.2, the Moon 119.2 → 130.7, Mozart 48.3 → 49.2) and raises recall
+  slightly (+0.12 / +0.06 / +0.13 / +0.04 log-odds). Random routes do nothing (|Δ| ≤ 0.06). Eiffel was skipped: the
+  brake is above its layer-26 entry neuron. **The brake on concept neurons is confirmed.**
+- **Whole-head knockout, 59 concepts.** Answer log-odds change:
+
+| switched off | up | down | ~0 | mean \|Δ\| | entropy change |
+|---|---|---|---|---|---|
+| brake L28H7 | 21 | 30 | 8 | 0.199 | ≈ 0 |
+| accelerators L28H4 + H6 | 22 | 27 | 10 | 0.210 | ≈ 0 |
+| random layer-28 head | 4 | 14 | 41 | 0.043 | ≈ 0 |
+
+- The trio matters (~5× a random head), but with mixed, concept-dependent direction and no change in output sharpness.
+  **The "global gain dial" reading is rejected.** The trio acts on concept neurons as predicted (surgical tests), but
+  whole-head removal touches many neurons, triggers normalisation compensation, and has mixed net effects on answers.
+- This is consistent with the earlier finding that whole-head knockouts can mislead about a head's role, while route
+  cuts don't.
+
+**Causal test of concept-neuron chains** (`src/chain_cut.py`, `results/concepts_v3/chain_cut_v3.json`). For a link
+S → T at the answer position, we removed only S's contribution to T's inputs (S still writes everywhere else).
+- **Control:** the largest feeder of T that is not one of the concept's top-10 neurons (a size-matched generic input).
+- **Also measured:** S switched off entirely.
+- **Measures:** T's activation and the answer's first-token log-odds.
+
+| link | T: base → chain cut | recall drop: chain cut | matched control (feeder) | S fully off: recall drop |
+|---|---|---|---|---|
+| the Moon L31:9683 → L32:6316 | 38.9 → **−6.2** | **0.59** | 0.07 (L29:3948) | 3.05 |
+| the Moon L31:9683 → L33:2482 | 38.2 → **5.5** | **0.43** | −0.06 (L32:3953) | 3.05 |
+| the Moon L31:9683 → L32:5142 | 30.2 → 18.7 | **0.61** | 0.18 (L29:3458) | 3.05 |
+| Golden Gate L28:6711 → L31:9611 | 73.7 → **35.9** | **0.68** | 0.16 (L29:4289) | 1.20 |
+| Eiffel L26:11492 → L29:12094 | 30.8 → 20.0 | 0.18 | −0.06 (L27:12062) | 0.64 |
+| Golden Gate L26:11492 → L28:6711 | 56.4 → 48.6 | 0.08 | 0.09 (L26:752) | 0.42 |
+
+- **[Corrected in the evening entry: at scale (35 informative links) a chain link is NOT reliably more important than
+  a size-matched non-concept input - 21/35, sign test p = 0.16. These 6 were hand-picked.]**
+- **Chain links are causal for recall** in 5 of 6 valid links: cutting a single concept-neuron → concept-neuron route
+  lowers the downstream neuron (up to silencing it) and recall, more than a size-matched non-concept input.
+- **The Moon neuron L31:9683 is a hub** feeding three downstream Moon neurons; one cut silences L32:6316.
+- The Golden Gate landmark part → entry neuron link is weak (≈ control), consistent with the entry neuron being mainly
+  head-fed.
+- **Excluded row (my error):** the Mozart link L28:10728 → L30:8885 was invalid, because L28:10728 is not among Mozart's
+  top-10 neurons. The matched-control selection then picked the same neuron, so the row compared it with itself.
+- **Each link carries part of the source's effect, not all of it:** the Moon hub fully off drops recall 3.05, versus
+  ~0.5 per link, because it feeds several neurons and other routes.
+
+**Head ↔ neuron picture after all causal tests (exploratory; Qwen3-8B; 59 concepts for the decompositions, 4–6 for
+the causal cuts):**
+1. Meaning-carrying heads (layers 23–26; category reader L26H17, clue readers L23H10 / L24H26 and others) deliver the
+   question's content to the answer position.
+2. Entry concept neurons (mostly layers 24–29) combine it. This link is causal (head route cuts).
+3. Content-blind layer-28 heads push entry neurons up (H4, H6) or down (H7, brake confirmed by route cut). Not a global
+   dial.
+4. Concept neurons amplify through chains in layers 30–35. These links are causal (chain cuts); hubs such as the Moon's
+   L31:9683 drive several downstream concept neurons. **[Corrected in the evening entry: not above a matched
+   control at scale.]**
+5. Late layers produce the answer word. Not yet traced. **[Traced in the evening entry.]**
+
+Open: generality of the causal cuts beyond 4–6 concepts; the final step to the answer token; whether the "category
+reader" and the "brake" are general mechanisms or artefacts of chat-format recall prompts.
+
+## 16 Oct 2026 (evening): ATTENTION study steps 3-4 at scale - who writes the answer, causal sweeps, circuit maps (EXPLORATORY; research branch)
+Same 59 concepts (CR-2 + wave 2), same prompts and answers. No API calls. Every number below is in `results/` with the
+script named. Several of my own setup errors were caught on the way; they are listed at the end.
+
+**1. Who writes the answer word** (`answer_readout.py`, `answer_readout_summary.py` -> `results/answer_readout_summary.txt`).
+At the answer position the final residual stream is exactly the sum of the embedding, every head's output and every
+neuron's output, so the answer's score splits exactly into their contributions (final normalisation scale held fixed;
+reconstruction error <= 1.6%, score error <= 0.4%; rerun bit-identical). Two scores:
+
+| | heads | neurons | concept's own top-10 neurons, directly |
+|---|---|---|---|
+| answer vs the average word (median 41) | 22% | 78% | 17% |
+| answer vs its likely rivals (log-odds direction; median 5.5) | 35% | 65% | **88%** (quartiles 0.31 / 0.88 / 1.64) |
+
+- Almost everything comes from layers 24-35 (neurons in layers 30-35: 58% of the vs-average score).
+- Writing is spread out: half the vs-average score needs ~14 neurons (range 1-33), 90% needs ~68.
+- **Reading:** the crowd of writers mostly writes "an answer-shaped word" (a capitalised name-like start); the part that
+  makes it THIS answer rather than a rival is written mostly by the concept's own few neurons, directly. In 38/59 they
+  write more than half the margin, in 26/59 more than all of it (other parts push back); in 13/59 less than a quarter.
+- **Content vs format writers** (`writer_specificity.py`, static weights): of 590 top-writer slots, 48% content writers
+  (push their own answer >= 3 sd above same-shape answers), 14% format writers (push >= 75% of the other answers up),
+  37% mixed. 121 of the 161 concept neurons that are also top writers are content writers (the explainer pilot's
+  "name-start" neuron is this kind). Format writers are shared: **L33:7759** (19 concepts) pushes every bare capital
+  letter; L33:10933 and L34:9002 push spaces / digits / punctuation down. Labels v2 were set after v1 showed a sign bug
+  and a token-shape confound (see errors).
+- **Late heads** (`writer_sources.py`, value-weighted, reconstruction <= 0.2%): L35H25, L35H27, L34H29, L35H24 take
+  75-83% of what they write from the answer position itself (they re-read and adjust); **L34H28 and L35H22 copy mostly
+  from the `<|im_start|>` that opens the assistant turn**. Almost nothing comes from the question words or the "?".
+
+**2. The answer is staged at the turn boundary** (`staging.py` -> `results/staging_summary.txt`; logit lens, ranks only).
+At the newline after the user's turn and at `<|im_start|>`, the answer is top-10 from layers 28-29 in 70-77% of prompts
+(rank 3-6 at layer 33), 6-8 tokens before it is spoken. Not at `assistant` / `<think>` / `</think>`; weakly at "?" (rank
+~1,000). A random other concept's answer: rank 50k-100k everywhere. This is where the turn-start heads copy from.
+
+**3. Causal sweeps** (`causal_sweep_args.py`, `route_cut.py`, `chain_cut.py`, `causal_sweep_summary.py` ->
+`results/causal_sweep_summary.txt`). One entry neuron and one chain link per concept, picked by a fixed rule.
+- **Head -> neuron routes: causal at scale.** 49 of 53 informative tests (4 uninformative: the neuron itself doesn't
+  matter) pass (drop >= 0.1 and > 2x a random route). Median recall drop 0.73 vs random route 0.00; ~44% of switching
+  the whole neuron off.
+- **Neuron -> neuron chain links: not special at scale.** Median drop 0.35 vs 0.20 for the matched strongest
+  non-concept input; only 12/35 pass; the link beats its control in 21/35 (sign test p = 0.16). Late concept neurons
+  integrate many comparable inputs.
+
+**4. No bow-tie** (`bowtie.py`, `bowtie_summary.py` -> `results/bowtie_summary.txt`). Switching off a concept's top-5
+neurons at the answer position removes about what they write directly; the rest of the network partly makes up for it
+(42/59) rather than amplifying (8/59). ~63% of their recall effect is at the answer position; the rest happens at
+earlier positions (median log-odds drop 4.3 answer position only vs 6.5 every position; random neurons 0.0).
+
+**5. Late head teams** (`head_arms.py`, `norm_heads.py` -> `results/norm_heads_summary.txt`). Switching off L35H25+L34H28+
+L35H22 or L35H27+L34H29+L35H24 matters far more than random late heads (|d log-odds| > 0.5 in 50 and 44 of 59 vs 1)
+but not in one direction. Not via the final normalisation (removing any one changes the final rms by <= 1.3%). By
+direction against the rivals, **L35H27 is the one genuine suppressor** (removing it raises recall in 44/59); L34H29 and
+L35H24, grouped with it from the vs-average readout, actually help.
+
+**6. Circuit maps** (`circuit_maps.py` -> `results/circuit_maps_summary.txt`). Joining the above per concept:
+- **Heads are a shared skeleton:** 3 writer heads fill 70% of writer-head slots (L35H25 in 59/59); 13 reader heads
+  (L23H10 44, L24H19 38, L26H17 35, ...) fill 39% of reader slots; brakes L28H7 (36) and L25H14 (16).
+- **Concept neurons are almost all private:** 167 distinct among 177 top-3 slots; content writers 267 distinct of 284;
+  format writers shared (14 distinct over 82 slots).
+
+**Revised head <-> neuron picture (exploratory):** meaning-carrying heads (layers 19-26) bring the question's content
+to the answer position and the turn boundary; private concept neurons (mostly layers 24-33) are fed by those heads
+(causal); the answer is staged at the turn boundary by layers 28-29 and copied forward by turn-start heads; at the
+answer position a crowd of neurons writes "an answer-shaped word" (shared format writers among them) while the
+concept's own neurons write most of what separates the answer from its rivals; one late head (L35H27) damps it.
+
+**Caveats:** one prompt format (chat template, "answer with just the name"); first answer token only; 59 famous
+concepts; attention weight vs information moved handled by value-weighting, not full path patching; the logit lens is
+crude below the last layers (ranks only).
+
+**My errors caught on the way (all fixed before the numbers above):**
+- writer specificity v1 oriented neurons by contribution sign instead of activation sign, and confused "pushes single
+  capital letters" with content (token-shape confound);
+- writer_sources v1 classed the answer position as a template token ("self" read 0 everywhere);
+- the first rival readout used the full next-word distribution, whose gradient vanishes when p(answer) ~ 1;
+- the weight reader returned tensors backed by a closed file mapping (crash);
+- a GPU-queue waiter could have started a second model in the gap between jobs (replaced before it ran);
+- **a hidden cap:** log-odds computed as log(p/(1-p)) from a float32 softmax with p clamped to 1-1e-9 cap at 20.72.
+  `logodds_cap_audit.py`: 3 of 869 recall prompts hit it (true 16.5-16.8), 11 are off by > 0.1. Sign-based results
+  (flips) are unaffected; it is in the public pipeline too (wave_free.py, logodds_check.py and others) - fix on main
+  pending James's OK. New code uses the exact logit - logsumexp(others).
+
+## 16 Oct 2026 (late evening): how are concepts coded? Dedicated, compositional or barcode (EXPLORATORY; research branch)
+Prompted by James: if a concept is a COMBINATION of neurons, 442k neurons allow vastly more concepts than one-per-
+neuron. In the literature that is superposition seen from the concept side (Elhage et al. 2022): more concepts than
+neurons forces overlap, so each neuron serves several concepts. The question that matters is what KIND of overlap:
+dedicated neurons, compositional (meaningful shared parts, related concepts share), or barcode-like (arbitrary
+overlap, neurons look polysemantic). No API calls.
+
+**Step 1 - one neuron ranking for every recalled concept** (`rank_save.py`). The judge-free waves had kept only counts.
+Re-ranked all **178** recalled concepts (CR-2 19, wave 2 40, wave 3 39, wave 4 40, CR-3 40) exactly as wave_free.py
+does. Every concept with an original run reproduced its recall count and k_mean / k_flip exactly (**0 mismatches,
+119 concepts**). For CR-2 / wave 2 the older attention-study lists agree on the strongest neuron (old #1 in the new
+top-3 for 57/59; top-10 overlap median 6-7).
+
+**Step 2 - cross-activation** (`cross_activation.py`, `cross_activation_summary.py` -> `results/cross_activation_summary.txt`).
+Every concept's top-10 neurons measured on every other concept's recall prompts. 'Fires' = at least half its own-concept
+activation, answer position. Sanity: own-concept ratio median 1.000. Families fixed beforehand (`families.py`, 17).
+- Raw: same family 29.3% vs different family 22.4%.
+- **Post hoc (after the first look):** 35 neurons, almost all in layers 16-24, fire for >= 90% of concepts - "always
+  on" question-answering machinery, not codes. Set aside, the rest (1,074 neuron-owner pairs):
+  - **same family 12.7% vs different family 4.8% (2.6x)**; 504 fire for no other of the 177 concepts; 228 mainly
+    within their family; 95 broadly.
+  - Strongest for people (24.4% vs 1.4%), myth (21.8 vs 4.1), animals (16.0 vs 2.4), fiction (7.0 vs 1.3).
+- **Answer-type confound check:** people-owned neurons fire for other real people 26.8%, named characters (Harry
+  Potter, Sherlock Holmes, Mickey Mouse, Zeus, Thor, the Buddha, Medusa) 12.5%, places 6.1%, everything else 4.1%.
+  Part of the family effect is "a person-like name is coming"; part is specific to real people.
+- Layers 24-35: median activation on unrelated concepts ~0.
+
+**Step 3 - corpus profile** (`corpus_profile.py`, `corpus_profile_summary.py` -> `results/corpus_profile_summary.txt`).
+The atlas's 10M web tokens; 1,100 concept neurons (166 with own peak < 1 not profiled, listed in the log) plus a random
+same-layer neuron each at the same threshold. EVERY firing >= half the neuron's peak on its own concept was kept (101.9M).
+- Concept neurons' strong firings sit near their concept's name (+-64 tokens) **20x more often than chance** (median;
+  706/1,100 >= 5x; random neurons ~0). Most specific: Moon hub L31:9683 0.91, Bitcoin L9:2665 0.91, chocolate
+  L31:8429 0.87, cheese L32:1778 0.87, Eiffel/Paris L31:10160 0.85.
+- But the median share of firings near the name is **5%** (a lower bound: related words such as "lunar" don't count).
+- 'Near another of our concepts' (median 0.54) equals its chance rate (0.54): uninformative, dropped.
+- **Eyeballed random firings (4 typical neurons, 8 each):** democracy L32:8254 -> representatives, councils,
+  parliament (a broader ingredient: representative governance); Serena Williams L31:11800 -> Djokovic, Nadal,
+  Federer, Mayweather, an F1 crash (elite athletes); Titanic L31:5874 and hamburger L32:54 -> mixed, partly unrelated
+  (casino, stock index, sports drafts): polysemantic-looking.
+
+**Reading (exploratory):** the coding is neither one-neuron-one-concept nor a barcode. About half of the late concept
+neurons are dedicated within our 178 concepts; the rest are mostly shared within families, and in ordinary text many
+look like broader ingredients the concept is built from (a compositional code), with a minority that look
+polysemantic. A concept is a combination of a few dedicated neurons and several broader, reusable ingredient neurons.
+
+**Limits:** 178 hand-picked, mostly famous concepts; one prompt format; keyword matching is a lower bound and cannot
+tell 'related' from 'unrelated' contexts; the eyeballing is 4 neurons. Next: a judge reading firing samples
+(dedicated / ingredient / unrelated), and a random, fame-stratified concept sample.
+
+## 17 Oct 2026 (night): Luna reads the concept neurons' web-text firings - most are polysemantic in the wild (EXPLORATORY; research branch)
+`luna_firing_judge.py`, `luna_judge_summary.py`, `luna_judge_extras.py` -> `results/luna_judge_summary.txt`,
+`results/luna_judge_extras.txt`. Luna (~$0.53 at its real price). Turns the "ingredient" eyeballing of the previous
+entry into a measured number.
+- **Design:** every profiled concept neuron with >= 12 strong firings in the 10M web tokens (1,095), 12 RANDOM firings
+  each (>= half its peak activation on its own concept; +-20 tokens of context), labelled A = about the concept,
+  B = related (same topic, or a broader category / ingredient), C = unrelated. Leniency control: each neuron's paired
+  random same-layer neuron, judged against the SAME concept name (778 with >= 12 firings; 314 had fewer, skipped and
+  logged). Luna is not told which is which. Classes fixed beforehand: dedicated A >= 6/12; ingredient A < 6 and
+  A + B >= 9; unrelated C >= 6; else mixed.
+
+| | A (about it) | B (related) | C (unrelated) | dedicated | ingredient | mixed | unrelated |
+|---|---|---|---|---|---|---|---|
+| concept neurons (1,095) | 14.9% | 29.9% | 55.1% | 130 (12%) | 242 (22%) | 94 (9%) | 629 (57%) |
+| random controls (778) | 0.2% | 4.9% | 94.9% | 0 | 5 (1%) | 2 | 771 (99%) |
+
+- **Luna is not lenient** (controls ~95% unrelated), and it agrees with the keyword measure where both apply (median A
+  share 0.42 where >= 20% of firings are near the concept's name, 0.00 where < 2%).
+- By layer: early (0-15) neurons are the most concept-related (A 23%, B 42%); mid (16-23) almost all unrelated (the
+  'always on' machinery); late (30-35) 63% unrelated.
+- **The 'unrelated' ones are not token detectors:** like every class, their single most common firing token covers
+  only ~8% of firings (9/629 dominated by ' the' or '.'); Luna's themes for their unrelated firings are nearly all
+  "miscellaneous topics" - spread across many topics, not one second meaning, and rarely formatting (22/629).
+- **Not 'clean at the top':** the A share rises only from 13% (firings at 0.5-0.75x the neuron's own-concept peak) to
+  ~20% (>= 1x); about half are unrelated even at full strength.
+
+**Reading (exploratory):** neurons that are causally necessary for recalling a concept (and, within the 178 recall
+question sets, mostly dedicated or family-shared) spend most of their strong firings in ordinary text on unrelated,
+scattered material. That is the signature of superposition: the neuron is specific in the context that matters and
+polysemantic in general, with low interference in the recall setting. It qualifies "already clean" - clean in the
+task context, not in general - and argues that a neuron-by-neuron map of the whole model would need a different unit
+(sparse-autoencoder / transcoder features) on top of these causal tests.
+
+**Limits:** "related" is Luna's judgement from +-20 tokens; a non-topical feature (syntax, discourse position) would be
+labelled unrelated; random firings above a threshold, not a full activation distribution; one corpus (10M FineWeb tokens).
+
+## 17 Oct 2026 (night): hidden log-odds cap fixed on main (ISSUES #35; approved by James)
+See ISSUES #35 on main (commit 251140b; cherry-picked here as d692c66). log(p/(1-p)) on a float32 probability clamped
+to 1-1e-9 capped at 20.72 (3/869 recall prompts) and lost precision above ~10. `pipeline_fast.batch_logodds` is exact
+(float64, expm1). Tested by `logodds_exact_check.py` (1.5e-9 vs an independent formula; 0.001 vs the old values below
+10). End to end (`rank_save.py` with LOGODDS=exact, `cap_fix_compare.py` -> `results/cap_fix_compare.txt`): all 178
+concepts keep identical k_mean / k_flip; every published wave result reproduces; top-10 order changes in 10 (near-ties);
+no published number changes. Near saturation any log-odds carries ~0.1 (max 0.45) of bf16 batch-shape noise.
+
+## 17 Oct 2026 (night): does "a handful of neurons" hold for obscure concepts? Fame-stratified random sample (EXPLORATORY; research branch)
+`wiki_sitelinks.py` (sample), `wave_budget.py` (runs wave_free.py unchanged, round-robin over tiers, Luna-budgeted),
+`fame_summary.py` -> `results/fame_summary.txt`. Luna ~$0.42 at its real price.
+- **Sample:** 210 concepts drawn at random from ~12,600 English Wikipedia articles (2023 and 2025 monthly top-1000
+  lists plus 5,000 random articles), stratified by fame = number of Wikipedia language editions (Wikidata sitelinks),
+  7 tiers of 30 on a doubling scale (>= 128, 64-127, 32-63, 16-31, 8-15, 4-7, 1-3; fixed before looking). Filters:
+  article existing by 2023-06-30 (first revision), no 2024+ year in the title, no disambiguation pages, no
+  adult-industry categories; every rejection logged. Duplicates of earlier sets kept here (random-sample integrity)
+  and excluded from the coding analyses.
+- **How the sample was chosen (corrections on the way):** 2025 page views (v2) favoured topics that became notable after
+  the model's training data (2025 films, elections) - recency, not fame; 2023 page views (v3) needed one request per
+  title and Wikimedia throttled us (HTTP 429); language editions come 50 per request and are not tied to one year.
+
+| fame tier (editions) | recalled | knows it* | k_mean <= 5 | median k_mean | k_flip <= 5 | median baseline log-odds |
+|---|---|---|---|---|---|---|
+| >= 128 | 27/30 | 29/30 | 27/27 | 1 | 23/27 | 5.4 |
+| 64-127 | 24/30 | 27/30 | 23/24 | 2 | 19/24 | 3.0 |
+| 32-63 | 12/30 | 16/30 | 12/12 | 1.5 | 12/12 | 1.5 |
+| 16-31 | 3/30 | 8/30 | 3/3 | 2 | 3/3 | 3.5 |
+| 8-15 | 4/30 | 5/30 | 4/4 | 1 | 3/4 | 1.3 |
+| 4-7 | 1/30 | 1/30 | 1/1 | 1 | 1/1 | 1.6 |
+| 1-3 | 1/29 | 1/29 | 1/1 | 3 | 1/1 | 0.2 |
+
+*knows it = recalled, or the model's own free answers name the concept in >= 2 questions (answer discovery) - separates
+"does not know" from "names it differently from the article title" (e.g. "Russian invasion of Ukraine (2022-present)").
+
+- **Knowledge thins out fast with obscurity** (recall 90% -> 3%), **but wherever the model knows a concept, a handful
+  of neurons still carries it:** k_mean <= 5 in 71 of 72 recalled concepts, median 1-3 in every tier; no trend with
+  fame (Spearman -0.08 with log editions). k_flip rises slightly with fame (+0.27), tracking baseline confidence
+  (+0.52): near-certain facts are harder to flip (saturation, as documented before).
+- **Reading (exploratory):** obscure concepts do not show up as "more spread out" - they are simply not known (or known
+  weakly). The concentration finding generalises from the hand-picked famous sets to a random fame-stratified sample,
+  within the concepts the model can recall.
+- Steering on these Wikipedia titles is mostly near zero (median held-out 0.00-0.15; random 0.00); the keyword check
+  needs the exact name in the reply, which is strict for long titles. Not pursued.
+
+**Limits:** few recalled concepts in the obscure tiers (1-4 each); recall needs the answer's exact first tokens
+(awkward titles lose recall); Luna declined one ambiguous title ("A. L. Holt", recorded as prompts failed).
+
+## 17 Oct 2026 (early morning): coverage expansion - 157 more concepts from the tiers the model knows (EXPLORATORY; research branch)
+`wiki_extra.py` (a second draw, seed 8, from fame tiers >= 128 / 64-127 / 32-63 editions: 60 / 60 / 40, duplicates of
+earlier sets dropped: Cleopatra, Steve Jobs, Moon -> 157), run through the improved loop (wave_free.py via
+wave_budget.py -> neuron IDs saved by rank_save.py -> cross-activation over every set). Luna ~$0.29.
+- Recalled 111/157 (tiers: 56/57, 43/60, 12/40 - the same fall-off as the first fame draw).
+- **k_mean <= 5 in 108/111 (<= 2 in 82; median 2); k_flip <= 5 in 98/111; flips within 50 in 109/111.**
+- Steering on these titles: median held-out 0.00, mean 0.08 (random 0.003) - as in the first fame draw.
+- **Running total: 359 distinct recalled concepts mapped** (178 hand-picked + 70 fame sample + 111 coverage), every
+  one with saved top-30 neurons.
+
+## 17 Oct 2026 (morning): 'dedicated' is relative to the population - and keeps falling (EXPLORATORY; research branch)
+`dedication_curve.py` -> `results/dedication_curve.txt`. James's point: "fires for no other concept" is only as strong
+as the set of concepts it was tested against. From the 359-concept cross-activation (no new runs): for each concept's
+top-10 neurons (|own act| >= 1; the 34 'always on' neurons excluded once, on the full set), draw N other concepts at
+random (20 repeats) and count the neurons that fire (>= 0.5x own activation) for none of them.
+
+| N other concepts | 10 | 25 | 50 | 100 | 150 | 200 | 250 | 300 | 358 |
+|---|---|---|---|---|---|---|---|---|---|
+| dedicated, hand-picked owners | 78% | 71% | 63% | 54% | 48% | 44% | 41% | 39% | 36.5% |
+| dedicated, all owners | 78% | 68% | 59% | 49% | 43% | 38% | 35% | 32% | 30% |
+
+- **No flattening:** the dedicated share falls by ~9-10 points per doubling of N, steadily from 50 to 358. No sign of a
+  core of private neurons within this range; neurons serve 0 (724), 1 (332), 2-4 (461), 5-19 (434) or 20+ (470) of the
+  other 358 concepts - a heavy-tailed spread, as sparse superposed coding would give.
+- **Prediction, written before the data (coverage-3 run of 289 more concepts, started 08:15):** if the log-linear
+  trend holds, the hand-picked owners' dedicated share against ~648 other concepts will be **about 28-29%**
+  (36.5% - 9.3 x log2(648/358) = 28.5%); flattening would leave it above ~33%, steepening below ~25%.
+- Reading: "dedicated" earlier (47% vs 177 others) was mostly a small-population effect; with growing coverage almost
+  every concept neuron turns out to take part in some other concept's code.
+- **Clarification, added before the coverage-3 data exists:** not all 289 concepts will be recalled, so N will be below
+  648. The prediction is the formula, evaluated at the actual N: dedicated(N) = 36.5% - 9.3 x log2(N/358) (hand-picked
+  owners, same rules); 'holds' = observed within +-3 points of it.
+
+**Correction (17 Oct, after James's question):** the two entries above call these results "the signature of
+superposition". That overclaims. Neither test separates three different things: (a) the same meaning reused by several
+concepts (a "gold" neuron in Golden Gate Bridge and gold jewellery - composition, not superposition); (b) related facets
+of one broader meaning (Moon / month); (c) genuinely unrelated meanings packed into one neuron (superposition proper).
+Cross-activation and the dedication curve show that sharing grows with the population - which (a) alone would produce.
+The Luna judge asked whether firings relate to the OWNER concept; a gold neuron firing on jewellery counts as
+"unrelated to the Golden Gate Bridge" while keeping one meaning. Whether concept neurons carry several unrelated
+meanings has not been tested yet; a neuron-centred test (how many meanings, how far apart) is proposed.
+
+## 17 Oct 2026 (day): does the map tell us something real? Pre-registered predictions (research branch)
+James: first prove the loop yields meaningful findings, then scale. `PREREG_MAP.md` (frozen at 533f3f1 before any of
+the data below) states five predictions with pass/fail rules; results are appended under each there.
+
+| | prediction | result |
+|---|---|---|
+| P1 | a concept's top-5 neurons (found on Luna's questions) also break recall on independent prompts - Wikipedia opening sentences with the name blanked (cloze) | **holds**: median drop +5.59 log-odds vs random-5 -0.003; flips >= half the correct prompts in 66% (32 concepts tested) |
+| P2 | dedication curve out of sample: dedicated(N) = 36.5% - 9.3 x log2(N/358), +-3 points | **holds, narrowly**: 32.0% observed vs 29.4% predicted at N = 609 (+2.6) |
+| P3 | a neuron shared by two concepts' maps matters to both | **holds**: drop on the other concept +0.835 vs its non-shared neuron +0.002 and a random one +0.000 (150 pairs) |
+| P4 | a new concept's neurons can be predicted from its Wikidata family's neurons (predictions committed before coverage-4, 82fdb29) | **holds**: own-family neurons at 9.2x the other-family rate (needs 3x), 118/185, p = 0.0001 (191 new concepts); shuffled labels never reach it; holds without people (8.3x). Caveat: family ~ answer type |
+| P5 | a neuron's description in web text reproduces on new text | **holds**: firing-rate rho 0.986, on-concept share rho 0.883 (2M new tokens) |
+
+**Reading:** the map is about concepts, not prompt wording (P1); its sharing structure is causal (P3); its corpus
+descriptions are stable (P5); its population-level law extrapolates (P2); and its structure predicts the neurons of
+concepts it has not seen (P4). All five pre-registered predictions hold. These are tests the map could have failed.
+
+## 17 Oct 2026 (day): one meaning or several? Luna's view vs Qwen's own (EXPLORATORY; research branch)
+Prompted by James: a shared neuron that keeps one meaning (a 'gold' neuron in several concepts) is composition, not
+superposition; and are 'unrelated' meanings really different, or facets of one concept we can't see (an 'Ur concept')?
+- **Stage A** (`meaning_judge.py`, Luna blind, 30 random strong firings per neuron; calibrated on spliced two-neuron
+  units, which Luna separates 65% of the time - it undercounts mixtures): 196 concept neurons: one meaning 19%, two 31%,
+  three 28%, four+ 22%; an unrelated pair in 83 of 159 multi-meaning neurons (controls 75%, spliced 94%).
+- **Stage C** (`meaning_space.py`; group centroids in Qwen's own whitened MLP-input space, the neuron's read directions
+  removed): meanings Luna calls closely related sit close (cosine +0.312), unrelated ones near the known-unrelated
+  reference (+0.034 vs +0.010; same-meaning +0.124). Spearman(Luna, Qwen) -0.50. Only 6/278 'unrelated' pairs are close
+  in Qwen's space. **Mostly genuine packing, not hidden facets.** Ur-hubs (one meaning central to the others, beating a
+  permutation null) in 8/98 concept neurons (5% expected by chance; 0 in controls and spliced): Moon (lunar phases <-
+  space exploration, cultural moon), volcanoes <- mountains / craters, AI <- robots / autonomous vehicles, human evolution
+  <- archaeology / primate diet. Weak evidence (8 vs ~5).
+- **Stage D** (`meaning_jobs.py`; each firing context run with the neuron switched off): the pre-set Luna-free clustering
+  FAILED its own calibration (the silhouette rule called 40/52 known two-neuron mixtures 'one meaning'), so its
+  'one meaning' share is not reported as a finding. Second reading (`meaning_jobs_luna_groups.py`, Luna's groups, Qwen's
+  measured effects): across a concept neuron's meanings the downstream job barely differs - gap 0.18 of the way from
+  'same job' (random halves) to 'different neurons' (spliced) - even for meanings Luna calls unrelated (effect cosine
+  0.130 vs 0.173 for closely related); the next-tokens it pushes are the same (Jaccard gap ~0).
+- **Reading: packed triggers, one job.** Concept neurons are triggered by several, often unrelated contexts (input side)
+  but do essentially the same thing downstream whatever triggered them (output side). Open: harmless reuse or
+  interference; and whether the meaning count saturates with more firings (only 30 sampled - the same population
+  effect as the dedication curve; a meaning-count vs sample-size curve is the next test).
+
+## 17 Oct 2026 (day): the loop itself
+- `map_loop.py` replaces wave_free.py + rank_save.py for coverage: Luna and GPU as separate queues meeting through the
+  spec files, ranking once, no steering, everything saved (all 200 candidates, per-prompt drops, activation maps that
+  make cross-activation incremental, attention heads: attribution, answer-position outputs, attention patterns, top-50
+  single-head knockouts), per-step timing and cost. Validated: reproduces the old pipeline exactly on 12 concepts;
+  maps match cross-activation (64,836 values, max |diff| 0.125).
+- Coverage-3 remainder (186 concepts): 0.45 min per concept overall vs ~1.65 (recalled) / 0.64 (not) for the old loop;
+  GPU idle 12% (a judge-starvation bug at the start, fixed); Luna $0.0018 per concept.
+- Batched single-neuron/head knockouts v1 FAILED their gate (bf16 batch-shape noise vs a separately computed
+  baseline); v2 measures against an unablated copy in the same pass - to be re-gated.
+- Batched knockouts v2 ALSO FAILED (16:34): neuron order and curves identical to v1's failure (the baseline shift is common
+  to a pass, so it was never the cause; the noise is between rows of a large bf16 batch vs a small one), head drops off by
+  0.44-2.7. Decisive: the speed-up is only x1.1 (single knockouts 166 -> 149 s, heads 41 -> 37 s) - each knockout pass
+  already batches all of a concept's prompts, so the GPU is already full. Batching DROPPED; the loop stays unbatched.
+  Outputs kept in results/maploop_repro/failed_batched_v1 and _v2.
+- Running total: 610 recalled concepts mapped before coverage-4; coverage-4 (concepts_fame5, 376 drawn) finished 16:08,
+  unbatched loop, 0 failures.
+
+## 17 Oct 2026 (late afternoon): do a concept's key neurons sit on the same layer? (EXPLORATORY; research branch)
+James: is the combination spread one-per-layer, or can two concept neurons share a layer? (`same_layer.py`, 914 mapped
+concepts, ranked by knockout effect; chance = the same overall layer mix drawn independently.)
+- Sharing a layer is common: 46% of concepts have >= 2 of their top-5 on one layer (top-10: 94%; up to 5 on one layer).
+  Of the k neurons each concept actually needs (k_mean >= 2, median 2), 17% share a layer.
+- But slightly LESS than chance: top-3 15% vs 22%, top-5 46% vs 54% (~5 SD below with 914 concepts). The chance model
+  ignores concept-specific layer clustering (which would raise chance), so the spreading tendency is if anything stronger.
+- Layers are heavily skewed late (L28-35 hold ~70% of top-5 neurons) with a second cluster at L8-10.
+- Reading: no one-concept-neuron-per-layer rule; a mild preference for spreading across layers.
+
+## 17 Oct 2026 (late afternoon): is stage D's 'one job' an artefact of bf16 noise? No. (EXPLORATORY; research branch)
+The gpu-fan-out session measured the bf16 noise floor of single-neuron knockouts (8B, L18, 128-token windows): batch-shape
+noise alone gives KL median 3.2e-4 / p90 1.9e-3, and a typical single-token knockout is only ~2x that. Stage D's two
+passes were both batch-1 with the same shape (no batch-shape noise between them), but small effects can still depend on
+the kernel's rounding. Check (`meaning_jobs_above_noise.py`, no GPU): rerun the second reading keeping only contexts
+with knockout KL above thresholds (stage D KL median 2.1e-3 concept / 1.4e-3 control):
+| KL >= | concept contexts kept | spliced gap ('different neurons') | concept position (0 same job, 1 different) |
+|---|---|---|---|
+| 0 | 100% | +0.150 | 0.18 |
+| 1.9e-3 (noise p90) | 53% | +0.182 | 0.22 |
+| 3.2e-3 (10x noise median) | 43% | +0.217 | 0.21 |
+| 1e-2 | 26% | +0.250 | 0.18 |
+| 3e-2 | 14% | +0.277 | 0.22 |
+The calibration sharpens as noise is removed (spliced separation rises, absolute cosines rise) while concept neurons stay at
+~0.2: 'packed triggers, one job' holds on clearly above-noise knockouts. Not re-checked: the next-token Jaccard (top-20
+up/down lists are probably noise-dominated for small KL), and per-context reproducibility across kernels (a GPU check).
+
+## 17 Oct 2026 (evening): is a concept the intersection of its neurons' jobs? (EXPLORATORY; research branch)
+James: a neuron has a job, not a concept; a concept is what a few jobs add up to. Test from weights only
+(`job_overlap.py`, `job_overlap_z.py`; logit lens of each top-5 neuron's direct push = activation at the answer position
+x its down_proj column, through the final-norm weight and unembedding; late neurons = layers >= 20; 909 concepts with
+>= 2 late neurons). Answer = the first token of the recalled answer. Nulls: another concept's answer token; random
+same-layer neurons with the same activation (20 draws each). Criterion stated in the script before running.
+**Bug caught and fixed:** the first run took the first LETTER of the saved answer token (a string), so every concept was
+scored against e.g. 'N'; that output is kept aside (results/job_overlap_letterbug/, not committed) and is invalid.
+
+| | real | answer-shuffle | random neurons |
+|---|---|---|---|
+| dedicated: one late neuron alone has the answer in its top-10 (of 151,936) | 59.8% | 0.4% | 0.2% |
+| intersection: none alone, but the sum of the late pushes does | 6.8% | 0.0% | 0.0% |
+| neither | 33.3% | 99.6% | 99.8% |
+| >= 1 late neuron raises the answer (z >= 2 over the vocabulary) | 93% | 17% | 9% |
+| >= 2 late neurons raise it ('votes') | 71% | 2% | 0.8% |
+
+- Without a dedicated neuron, the sum reaches top-10 in 62/365 (17%) vs ~0.01% for the nulls (criterion met).
+- Summing does not usually sharpen the answer: the sum's z (median 8.4) is below the best single neuron's (16.4),
+  and the sum beats the best single in 17% ('voting').
+- **What the jobs look like** (each neuron's most-raised tokens), e.g. Jimmy Carter = first names (' Bill') + 1970s
+  (' disco', ' Sevent') + presidency (' administration', ' oval') + ' Georgia'/' Atlanta'; Golden State Warriors = Bay
+  Area (' SF', '湾区') + gold + ' Golden'; William Shakespeare = first names + European first names + ' Ham'/' Juliet';
+  Elizabeth I = 'el'-spelling + ' Renaissance'/' Tud'. There are also spelling jobs (push tokens starting with a
+  letter) for answers that begin with a fragment.
+- **Reading:** both pictures occur. Most concepts have one late neuron that is close to 'say this word' (60%), usually
+  alongside 1-3 attribute neurons (place, era, role, name type) that also raise the answer, much less strongly, among
+  related words. Where no single neuron says it, the overlap of attribute jobs alone points to the answer in about 1
+  in 6. Jobs are often legible attributes ('Georgia', 'Bay Area', '1970s', 'first name').
+- **Caveats:** direct path only (a layer-30 neuron also acts through layers 31-35); the first answer token only;
+  neurons were selected by their effect on the answer, which favours direct 'say it' neurons, so the 60% partly
+  reflects the selection; logit-lens readings of layer-20s neurons are rougher than of layer-30s.
+
+## 17 Oct 2026 (evening): are attribute jobs reusable parts? (EXPLORATORY; research branch)
+James chose this after job_overlap.py. Question: can a neuron's JOB, read from the weights, pick out which concepts
+USE it, according to the knockout maps? Those are two independent sources. (`attribute_sharing.py`; Luna as a blind
+judge, $0.47: Luna's hidden reasoning tokens made it ~10x my $0.05 estimate.)
+- Candidates: 1,645 late neurons (layer >= 20) in the top-30 maps of 3 to < 15% of the 914 concepts. Most are shared by
+  only 3-5 concepts; 90 by 20 or more. Job = the 30 tokens its direct push raises most.
+- 200 sampled at random. Luna saw only the job tokens and 10 concept names (k = up to 5 users + distractors), was told
+  k use it, and picked k. Control: the same lists with a different neuron's job tokens.
+
+| | hit rate |
+|---|---|
+| real job tokens | **74.6%** |
+| another neuron's job (control) | 55.4% |
+| chance (k/10) | 44.1% |
+
+- Per neuron, the real job beats the control 103 times, loses 21, ties 76 (sign test p = 2e-14). On users whose name
+  and answer don't appear among the job tokens: 71.7% vs 44.2% chance. Legible jobs (mostly English-word tokens) 76.1% vs
+  control 59.6%; less legible ones (often Chinese or fragments, which Luna can still read) 72.5% vs 49.6%.
+- **The pre-stated criterion was NOT MET, and it was badly set:** ">= 2x chance" is near-impossible when chance
+  averages 44% (k = 5 of 10 gives 50%, so the ceiling is 2x). Recorded as not met; I am not replacing it after the fact.
+  The two other parts, the sign test vs control and the non-lexical users, were met.
+- **The control beats chance (55% vs 44%), and that is a finding in itself.** With no relevant job tokens, Luna still
+  finds a neuron's users among random distractors more often than chance, because the concepts sharing a neuron are
+  themselves similar (e.g. Meloni, Sunak, Zelenskyy, Trudeau and Hitler share a 'minister/cabinet' neuron).
+- Examples of legible shared jobs: ' minister', ' cabinet' -> five heads of government; ' sky', ' par' -> Parkour,
+  surfing, the helicopter; given names (' Chloe', ' Dylan') -> Verstappen, Ohtani, Chalamet, Prince William;
+  ' psych', ' cardi', ' therm' (Greek roots) -> democracy, a doctor; spelling jobs ('H', 'W') -> honey, honeybee, wine.
+- **Reading:** attribute neurons are reused across concepts that share the attribute, and their weight-read job
+  says which ones, well above a matched control. Concepts are built partly from shared, nameable parts.
+- **Caveats:** Luna's one-line job names are partly inferred from the concept list, not just from the tokens (it named
+  a job 'recognizes country names' from unreadable tokens). The real-vs-control comparison is the valid test; the job
+  names are illustrations. One judge; one sample of 200; direct-push jobs only.
+
+## 17 Oct 2026 (evening): interference - when a concept neuron fires off-topic, does its push help or hurt? (EXPLORATORY; research branch)
+James: many triggers, one job - harmless reuse, a leak the network tolerates, or a push it uses everywhere?
+(`interference.py`, `interference_summary.py`; GPU 55 min, no API.) Contexts: the 12 random web-text firings per
+neuron that Luna labelled in the firing judge (rebuilt exactly from its seeds: 0 of 22,476 snippets differ), 1,093
+concept neurons + their paired random control neurons. Per firing, one batch of 3 identical sequences (document up to
+the firing token + the next 16 tokens): as is / the neuron zeroed at that token / a random same-layer neuron zeroed
+(null). delta = loss(zeroed) - loss(as is) in nats per token over the next 16 tokens: > 0 = the push HELPED predict the
+real text.
+**Noise (learned on the way, with the gpu-fan-out session):** the null is NOT exact. Any zeroing that changes anything
+flips bf16 roundings, and the runs drift apart by ~0.005 nats/token whatever the size of the change. So effects are
+read against the null, not against 0. (I first told the other session it was exact, from 6 trial contexts - corrected.)
+
+| firings | n | median abs(delta) vs null | delta minus null, mean +- 2SE | above the null's p90 |
+|---|---|---|---|---|
+| concept neuron, about its concept (A) | 1,961 | 0.0100 vs 0.0057 (1.8x) | **+0.0040 +- 0.0018** (helps) | 36% |
+| concept neuron, related (B) | 3,928 | 0.0086 vs 0.0055 (1.6x) | +0.0015 +- 0.0010 (helps, barely) | 31% |
+| concept neuron, unrelated (C) | 7,217 | 0.0056 vs 0.0039 (1.4x) | **+0.0003 +- 0.0005** (neither) | 18% |
+| random control neuron, unrelated (C) | 8,834 | 0.0058 vs 0.0044 (1.3x) | +0.0008 +- 0.0004 | 18% |
+
+- Next token alone: on-concept firings help by +0.058 nats on average (1,027 helped vs 874 hurt, p = 0.0005);
+  unrelated ones +0.009 (p = 0.07).
+- Within the 745 concept neurons that have both kinds of firing: on-concept/related +0.0022 vs unrelated -0.0005
+  (on > off in 404 vs 341, p = 0.02).
+- By depth: the on-concept benefit is in layers 24-35 (+0.004-0.005); early-layer firings show none.
+- **Reading: no interference detected.** When a concept neuron fires on unrelated text, switching it off neither helps
+  nor hurts on average. Its unrelated firings matter about as much as a random neuron's firings do (both just above
+  rounding noise), with no consistent direction. On its own topic its push helps, a little. So "packed triggers, one
+  job" looks like harmless reuse at the resolution of single firings: the off-topic push is tolerated or too small to
+  matter, not a harmful leak.
+- **Caveats:** single-firing effects are tiny overall (a few thousandths of a nat per token); a weak but systematic leak
+  below ~0.0005 nats/token would be missed; one firing at a time (a neuron that fires repeatedly through a passage could
+  add up); the 38 firings whose activation didn't reproduce the profile (0.17%) are excluded.
+- **Bug, recorded:** an edit swallowed the gate 2/3 counters into a comment, so the run printed 0 for both regardless.
+  Checked afterwards from the saved records (`results/interference_gate.txt`, correction appended): 38 activation
+  mismatches; zeroing changed the output in 98.8%, the rest being last-layer neurons below bf16 logit resolution. Raw
+  per-context data: results/interference.jsonl in the main checkout (16.5 MB, not committed).
+
+## 17 Oct 2026 (evening): the indirect path - attribute neurons feed the 'say it' neuron (EXPLORATORY; research branch)
+James asked what the neurons do beyond their direct push. (`indirect_path.py`, `indirect_path_summary.py`; GPU 15 min,
+no API.) The 555 concepts whose maps saved their recall prompts (the 359 older maps did not), 7,341 prompts. Each
+top-5 neuron is zeroed on its own at every position (as in the maps), in one batch with the as-is prompt and an
+ACTIVATION-MATCHED null for each: the same-layer neuron, outside the concept's top-30, whose activation at the answer
+position is closest. Measured at the answer position: the answer score (answer logit minus mean logit), split into
+DIRECT (the neuron's own write read through the final norm) and INDIRECT (the rest), plus how much every LATER top-5
+neuron's activation drops. Neuron types from job_overlap: 'say' (the answer in the top-10 of its direct push),
+'attribute' (raises the answer, z >= 2), 'late-other' (layer >= 20, doesn't raise it), 'early' (layer < 20).
+Predictions stated in the script before running.
+
+| type | neurons | score drop when zeroed | direct | indirect | direct share* | null |
+|---|---|---|---|---|---|---|
+| say | 408 | 2.24 | 2.87 | -0.20 | **1.05** | 0.00 |
+| attribute | 786 | 1.35 | 1.17 | +0.15 | 0.80 | -0.02 |
+| late-other | 1,065 | 0.89 | 0.05 | +0.76 | 0.05 | -0.01 |
+| early | 516 | 1.14 | 0.00 | +1.14 | 0.00 | 0.00 |
+*median over neurons with a drop > 0.5
+
+- **(a) holds:** 'say' neurons write the answer themselves; the rest of the network slightly makes up for losing
+  them (indirect -0.20, as in the bow-tie test). Attribute neurons are mostly direct too (0.80). 'Late-other' and
+  early neurons work almost entirely THROUGH later parts.
+- **(b) holds - composition:** zeroing an attribute neuron lowers a LATER 'say' neuron's activation by 12.7% (median per
+  pair) vs -0.3% for its activation-matched null (282 vs 64 pairs, p = 9e-34). It is general: every type feeds later
+  key neurons of the same concept (early -> say 11.7%, late-other -> say 11.6%, say -> later say 17.2%, early ->
+  attribute 7.1%; all p < 1e-5), with the nulls at ~0. The only flat pairs: early -> early, and say -> late-other.
+- **Reading:** a concept's key neurons form a small feed-forward assembly converging on the 'say it' neuron. Early
+  neurons (recognising) and mid/late 'other' neurons feed attribute and say neurons, attribute neurons feed the say
+  neuron, and each step also adds its own push to the answer. One upstream key neuron removed costs the say neuron
+  ~12% of its activation.
+- **Caveats:** answer position only (attention moves information between words, so some 'indirect' effect may run
+  through other positions); first answer token; direct effect read at fixed final rms; per-neuron types depend on
+  job_overlap's thresholds. Gate: zeroing verified in every prompt; 12 of 7,341 (0.16%) had first-token log-odds 0.5-1.0
+  below the saved whole-answer baseline (bf16 batch-size noise). Raw data: results/indirect_path.jsonl in the main
+  checkout (9.3 MB, not committed).
+
+## 17 Oct 2026 (evening): the cross-position path - which heads carry the assembly between words (EXPLORATORY; research branch)
+James: do upstream key neurons at EARLIER words feed the 'say it' neuron through specific heads? (`cross_position.py`,
+`cross_position_summary.py`; GPU 18 min, no API.) 312 concepts with a 'say' neuron S and an earlier-layer key neuron U:
+1,210 U -> S pairs, 16,111 pair-prompts. U was zeroed (a) at every word before the answer position, (b) at the answer
+word only, (c) an activation-matched null at every earlier word. Each head's share of S's change came from
+attribution patching (gradient of S x the head's output change at the answer word), checked by real patching of the
+top-3 heads vs 3 random heads, inside one batch. Gate: heads at or before U's layer never changed (0 of 16,111).
+Method change after the 3-concept trial, before the full run: S's bf16 activation (resolution 0.25 near 40) is as
+coarse as many earlier-word drops, so recovery is measured inside one batch and the attribution (not quantised) is
+also reported.
+- **(c1) holds: the earlier-word part is real but small.** S drops by a median of 1.05% (mean 4.8%) of its activation
+  when U is zeroed at earlier words, vs 4.4% (mean 11%) at the answer word only, and 0.0% (mean 0.1%) for the null.
+  Earlier > null in 832 pairs vs 375 (p = 3e-40). Where both are positive, earlier words carry a median 19% of the
+  combined drop. **Most of the assembly works within the answer word; about a fifth runs between words.**
+- **Attribution tracks the real drops:** Spearman 0.92 over 16,111 pair-prompts.
+- **(c2) holds: a few heads carry it.** Patching just the top-3 heads (by attribution) reproduces a median 56% of S's
+  earlier-word drop (3,682 pair-prompts with a drop >= 5%); 3 random heads from the same layers, 0%. The top-3 heads'
+  attribution is 1.3x the summed total (other heads partly push the other way).
+- **(c3) the carriers are a small shared set** (top-3 slots, vs the uniform expectation):
+
+| head | top-3 slots | x expected | concepts | known from the attention study (16 Oct) |
+|---|---|---|---|---|
+| L34H28 | 3,070 | 33x | 173 | copies the answer from `<|im_start|>`, the turn boundary where it is staged |
+| L31H3 | 1,175 | 23x | 136 | - |
+| L34H21 | 993 | 11x | 144 | - |
+| L34H31 | 808 | 9x | 102 | - |
+| L26H20 | 601 | 56x | 80 | meaning carrier: brings clue words to the answer position |
+| L29H24 | 594 | 30x | 98 | mostly format |
+| L35H22 | 526 | 15x | 71 | copies the answer from `<|im_start|>` |
+| L35H25 | 499 | 14x | 70 | late re-reader; part of a late head team |
+| L24H26 | 472 | 49x | 54 | - |
+| L23H10 | 326 | 37x | 55 | meaning carrier (92% question words) |
+
+  The 10 most frequent heads take 55% of all 16,737 top-3 slots; 254 distinct heads ever appear.
+- **Reading:** between words, the concept assembly runs through a small, shared set of heads that independent earlier
+  measurements had already flagged: mid-layer meaning carriers (L23H10, L26H20) and late heads that copy the answer
+  from the turn boundary (L34H28, L35H22). This adds a causal link: key neurons' writes at earlier words reach the
+  'say it' neuron through those same heads.
+- **Caveats:** 'earlier words' lumps the question words with the chat-template tokens (including the turn boundary
+  where the answer is staged), so how much comes from the question vs the staging position is not separated
+  (next: zero U per position group); answer-position measurement only; first-order attribution (validated by
+  patching); the top-3 slots double-count a head across a concept's prompts. Raw data: results/cross_position.jsonl
+  in the main checkout (50 MB, not committed).
+
+## 17 Oct 2026 (late evening): can we SEARCH for concept neurons instead of grinding? Feasibility (EXPLORATORY; research branch)
+Context: James and I stepped back from one-off questions to the loop itself. Our 914 maps touch 12,168 distinct
+neurons in any top-30 (2.8% of 442,368) and 2,663 in any top-5 (0.6%). Idea: if verified concept neurons look
+different on cheap, model-internal profiles, rank all 442k and verify the top candidates causally (search, then
+verify), rather than grinding every neuron. No labels imposed: only numbers measured from Qwen.
+(`concept_search_feasibility.py`, `concept_search_size_check.py`; outputs in D:/already-clean-data/concept_search/,
+summaries copied to results/concept_search/; GPU ~5 min.)
+- Profile per neuron, both signs: 30 features. From the atlas (top-40 / bottom-40 firings over 10M tokens): peak,
+  spikiness, decay, distinct tokens and documents, word-start / capitalised-word / gate-open shares, corpus max and
+  min. From the weights: max z of its push over the vocabulary; capitalised / word-start / Latin share of its 50
+  most-pushed tokens; gate / up / down norms; cos(gate, up).
+- Positives: every pre-coverage-4 top-5 neuron (1,986). Negatives: 5 per positive, same layer, in no top-30. Logistic
+  regression. Criteria stated before running.
+- **Result: criteria NOT MET, narrowly.** 5-fold CV AUC 0.842 (needed 0.85). Out of sample, the 414 NEW coverage-4
+  top-5 neurons rank at a median 90.1th percentile of all 12,288 neurons in their layer (needed 90; random 50.2);
+  half are in their layer's top 10%. The top 1% of all neurons by score holds 400 known concept neurons, vs 24 at
+  random (16.7x).
+- **Artefact check, size:** the strongest feature was the gate vector's norm, and attribution (how the maps found these
+  neurons) favours big neurons. With negatives matched on corpus peak: AUC 0.777, new neurons at the 87th percentile vs
+  55 for size-matched non-concept neurons. With the size features removed as well: AUC 0.760, 82.9th vs 48.8th.
+  **About a third of the signal is size; a real ~34-percentile-point signal survives**: concept neurons push towards
+  CAPITALISED words (names), and their strongest firings decay slowly (strong again and again, not one-off spikes).
+- **Reading:** cheap profiles work as a PRIORITISER, not a classifier. Ranking cuts the search ~10x at 50% recall
+  (half the new concept neurons are in their layer's top 10%). The capitalised-push feature also shows the bias of our
+  sample: we mapped named things, so the search will find more neurons for named things. The decisive test is the
+  next one: of top-ranked neurons in NO map, what fraction can be given a concept and VERIFIED causally (precision of
+  search-then-verify)?
+
+## 17 Oct 2026 (late evening): search-then-verify pilot - verification works, proposing from web text doesn't (EXPLORATORY; research branch)
+(`search_verify.py`; outputs in D:/already-clean-data/search_verify/, summary copied to results/search_verify/.) 350
+neurons, shuffled and unlabelled for Luna: 100 drawn from the top 1% by the feasibility score but in no map; 100
+layer-matched random; 100 size-matched; 50 known concept neurons (new in coverage-4) as positive controls. Luna read
+each neuron's 15 strongest positive and negative web firings and its 20 most-pushed tokens each way, and named one
+specific concept (with 8 questions) or none. Qwen then answered the questions; with >= 3 recalled, the neuron was
+zeroed everywhere and the drop in log-odds compared with 2 random same-layer neurons. Verified = drop >= 1.0 and above
+the pooled null's 99th percentile (0.17). Criteria stated before running.
+
+| group | n | Luna named a concept | verified |
+|---|---|---|---|
+| top-ranked, unmapped | 100 | 4 | 0 (best: JavaScript, +0.86) |
+| random, unmapped | 100 | 3 | 0 |
+| size-matched, unmapped | 100 | 3 | 1 (Talc, L10:11856, +2.02) |
+| known concept neurons | 50 | 9 | 4 |
+
+- **Criterion not met** (top 0 vs random 0), so the pilot can't judge the ranking.
+- **Verification works:** when Luna named a known neuron's OWN concept (4 times: Netherlands +7.43, The Hunger Games
+  +3.14, Guns N' Roses +2.12, Minecraft +1.86), all 4 verified, against nulls of at most 0.18. When it named a different
+  concept (5 times, e.g. 'the number three' for an F-35 neuron), none did.
+- **The proposal step fails:** Luna found the concept for only 4 of 50 known concept neurons (8%). This fits the
+  firing judge (concept neurons are mostly polysemantic in web text): what a concept neuron is FOR doesn't show in where
+  it fires in ordinary text, except for the few dedicated ones. One new concept neuron turned up outside all maps (Talc,
+  in layer 10).
+- **Reading:** search-then-verify needs a proposal step that asks Qwen in the context where concept neurons act, not
+  web text. Next design: a 'concept atlas' - run Qwen on cloze prompts for thousands of names (as in P1: the Wikipedia
+  opening with the name blanked) and record every neuron's activation at the answer position; each neuron's
+  top-activating names become its proposals; verify by zeroing on those cloze prompts.
+
+## 17 Oct 2026 (night): the concept atlas - asking Qwen which names its neurons serve finds new concept neurons (EXPLORATORY; research branch)
+(`concept_atlas.py` fetch / build / propose / verify_fast / verify_gate; all output in D:/already-clean-data/concept_atlas/,
+summaries copied to results/concept_atlas/.) Fixes the step that failed in search_verify.py (proposing from web text).
+- **Atlas:** 6,061 English Wikipedia names (known in >= 16 language editions, plus our Wikipedia-titled mapped
+  concepts; disambiguation / list / 2024+ / adult-intro pages excluded). Up to 4 cloze prompts per name from its intro,
+  as in P1. Qwen recalled 2,419 prompts for 1,514 names (P >= MIN_P), and every one of the 442,368 neurons was recorded
+  at the answer position (7 GB, fp16). Fetch 25 min, build 5 min.
+- **Proposals:** per neuron, the names that make it fire unusually strongly (z across names, either sign). Check on
+  2,125 known concept neurons (mapped top-5) whose concept is in the atlas: their own concept is their top-1 name in
+  **21.0%** (chance 0.13%) and in their top-5 in **43.2%** (chance 0.66%). From web firings, Luna had found 8%.
+- **Verification** on INDEPENDENT prompts (Luna-written quiz questions for the proposed name, not the cloze prompts);
+  zero the neuron everywhere; verified = recall drop >= 1.0 log-odds and above the null's 99th percentile (0.09; 2
+  random same-layer neurons each).
+
+| group | n | tested (recalled >= 3 questions) | verified |
+|---|---|---|---|
+| top: unmapped neurons with the most name-specific atlas profile (one per name) | 100 | 74 | **16** |
+| random unmapped neurons (layer-matched), their own top name | 100 | 68 | **0** |
+| known concept neurons, their top atlas name | 100 | 87 | 32 |
+
+- **Criterion NOT MET on its absolute bar** (top >= 20%: 16%), met on the ratio (top >= 3x random: 16 vs 0). Of the
+  top neurons that could be tested, 22% verified.
+- **16 new concept neurons, in no earlier map**, some very strong: Algebraic notation (chess) L33:3837 +14.2,
+  24 Hours of Le Mans L31:7680 +10.2, NGC 7319 L27:6441 +6.3, Hydrogeology L29:8015 +6.0, Selenium tetrachloride
+  L32:3220 +5.7, Accelerometer +2.8, Ottoman Empire (a second neuron) +2.4, CD-ROM +2.4, Ketamine +2.1, Sandra Day
+  O'Connor +2.0, Greek alphabet +2.0... These are concepts we never chose to ask about: the model pointed to them.
+- **Efficiency (James: take the loop's lessons):** the first verify ran Luna, then the GPU, one name at a time with tiny
+  batches (GPU flickering); stopped and rebuilt as verify_fast: Luna writes questions in 8 background threads while
+  the GPU takes names as they arrive (append-only saving), recall for all forms x questions of 8 names in one pass,
+  every knockout measured against an as-is copy in the same pass. 300 neurons in 4.7 min; GPU busy 19%, so this
+  stage is now Luna-bound (Luna's hidden reasoning: 197k output tokens for 228 calls, ~$0.10). With questions cached,
+  the GPU ran at 100%.
+- **Gate (batched vs unbatched path), recorded honestly:** the pre-set rule (Spearman >= 0.95 between the two paths'
+  drops, same verdict >= 95%) was NOT met as written. First run: Spearman 0.82, verdicts 29/30, max difference 0.91;
+  the difference came from which borderline questions each path counted as recalled (P near the 0.2 cut-off flips
+  with batch shape), so the recalled question indices are now saved per neuron. On identical question sets:
+  verdicts 30/30, max difference 0.15, Spearman 0.79 - the low rank agreement is among drops near 0, where order is
+  bf16 noise (null p99 0.09). Proceeded on the verdict agreement; the Spearman rule was a poor choice for drops that
+  are mostly ~0.
+- **Caveats:** one sample of 100 per group; Luna's questions can drift from the exact name (some untested names); the
+  'known' group verifies on its TOP atlas name, which is its own concept only ~21% of the time; layer-35 neurons
+  dominate some groups.
+
+## 18 Oct 2026 (overnight): loop v2 run 1 - 5,000 Vital Articles concepts (research branch)
+(LOOP_V2.md; frame / prepare / map / report scripts in src/loop_v2/; raw results 32 GB in
+D:/already-clean-data/loop_v2/run1/; summaries in results/loop_v2/run1/.)
+- **Run:** 5,000 concepts from Wikipedia Vital Articles Level 4 (section x fame, seed 71). Prepare 26 min (96 Luna
+  workers, 0 failures, Luna ~$9.40). Map through the gpu-fan-out runner: 250 batches on up to 8 rented 3090s + the local
+  5090, ~$12.30 of RunPod, 0 failed concepts; 3090 52 s and 5090 26 s per recalled concept.
+- **Coverage:** 4,194 mapped (84%); by fame 95% (128+ editions) -> 57% (<32); by section 70% (History) - 90%
+  (Geography); named 85%, common 83%.
+- **Small handful holds across knowledge:** k_mean <= 5 in 1,705/1,722 named and 2,448/2,472 common concepts
+  (median 2 named, 1 common).
+- **Null clean:** median |null drop| 0.028 (p95 0.077) vs median top-1 drop 3.29; no concept with null >= 20% of top-1.
+- **P1 replicates (self-check, 200 concepts, independent Wikipedia cloze prompts):** top-5 zeroed, median drop +7.42
+  vs random-5 +0.003; flips >= half the prompts in 164/200 (P1 on the earlier maps: +5.59, 66%); named +6.96,
+  common +7.80.
+- **P4 replicates (self-check, families = Wikidata P31, first half of batches -> second half):** median own/other
+  4.38 (pre-registered bar 3), 415 vs 251 (p = 2e-10) - weaker than the earlier 9.18. Strong for literary works,
+  chemical elements, cities, historical countries, languages; NOT for people (Q5: own median 0), unlike the earlier
+  people-heavy sample (historical figures here vs contemporary celebrities then - open). With Vital Articles SECTIONS
+  as families the check is weak (517 vs 473): sections are too broad.
+- **Named vs common:** a 'say' neuron (answer in its top-10 pushed tokens) in the top-5 for 62% named vs 73% common.
+  Not a tokenisation artefact (common multi-token answers 74%). Partly section composition (People 46%, all named),
+  but within sections common > named in 9 of 10 (+4 to +22 points). On the 230 concepts where Luna's blind label
+  agrees with ours it reverses (79% vs 73%, small sample). Reading: modest, probably real; historical people often lack
+  a single 'say' neuron.
+- **Tags:** frame.py's named/common tag agrees with Luna's blind label on 273/300 (91%); disagreements are borderline
+  (languages, peoples, fields, taxa).
+- **Sharing:** 39,494 distinct neurons in any top-30 (8.9% of all), 9,860 in any top-5; median 10% of a concept's top-10
+  in no other map's top-30 (a different metric from P2's, same direction: 'dedicated' shrinks as coverage grows);
+  16,492 neurons shared by >= 2 maps, 29% of them within one section.
+- **Heads:** most often among a concept's 5 most damaging single-head knockouts: L35H25 (1,337 concepts), L34H28
+  (1,098), L19H29 (951), L20H9, L23H10, L35H24 - the late re-reader / turn-boundary copier / meaning-carrier set again.
+
+## 18 Oct 2026: shared neurons across 4,194 maps - same job? same inputs? (run 1; research branch)
+James: neurons used by several concepts - same job each time, the same earlier neurons, or polysemantic?
+(`shared_neurons.py`, CPU; `feeders.py`, GPU ~25 min; outputs in D:/already-clean-data/loop_v2/run1/, summaries in
+results/loop_v2/run1/.)
+- **Census:** 3,010 neurons sit in the top-10 of >= 3 maps (median 4 users, max 874); mostly layers 30-35 (1,764) and
+  24-29 (741), with a cluster at 6-11 (357).
+- **Same job, mechanically:** a neuron's push direction is fixed by its weights x the sign of its activation. That
+  sign agrees across ALL its users for 79% of shared neurons (median agreement 100%). Roles: 1,709 are attribute /
+  late-other for every user, 629 'say' for some users, 227 'say' for all, 445 early.
+- **Three kinds (readable from the push tokens and users).** NOTE (James, 18 Oct): the names below ('rivers',
+  'happily ever after', 'Indonesia', ...) are my INFORMAL readings of two pieces of data - the tokens a neuron's weights
+  push and the concepts whose maps use it - not systematic labels; 'happily ever after' is shaky (Romeo and Juliet
+  doesn't end happily; 'fairy-tale / romance stories' fits better). The push tokens and users are the evidence (in
+  shared_neurons.json); any future labels need a stated method (e.g. blind labeller + agreement check).
+  Likewise 'packed unrelated meanings' (Czech + Xi'an) is untested: it may be a shared surface feature (sound or
+  spelling, cf. the cats/cars 'V shape' example) rather than two meanings.
+  - *topic jobs*, small coherent groups: rivers (7 rivers and a lake), Indonesia (Bali, Aceh, clove, the
+    language, the revolution), dance, refrigeration, 'happily ever after' (Cinderella, Aladdin, Romeo and Juliet),
+    genus endings (-opsis, -occus), Russian first names (Chekhov, Rachmaninoff, Pasternak);
+  - *spelling jobs*: 'v' (Village, Virus, Vegetarianism), 'm' (Maze, Molybdenum, Mackerel), 'New', 'Rock';
+  - *generic machinery* used by hundreds of unrelated concepts: a digits/punctuation writer (615 concepts) and
+    junk-token pushers (L34:1452, 847; L20:7473, 874) - answer-format machinery, not meaning.
+- **Related users:** they share a Vital Articles section 67% of the time vs 37% by chance (first Wikidata type: 33% vs
+  33% - too fine-grained a label). Some packed neurons serve unrelated meanings, e.g. L29:4682 pushes 'Czech' / 'Prague'
+  AND 'Xi'an' (users: Hussite Wars, Wends, Xi'an).
+- **Same earlier neurons? (feeders.py):** for 100 shared neurons x their users (497 pairs), each neuron's 20 strongest
+  earlier-layer feeders (activation x gradient of its activation, summed over positions) per concept. Jaccard overlap:
+
+| pair | median |
+|---|---|
+| same TOPIC neuron (3-10 users), two of its users | 0.111 (above chance for 80/80) |
+| same WIDELY shared neuron (>= 100 users), two users | **0.445** |
+| same concept, two different shared neurons | 0.111 |
+| chance (different neuron, different concept) | 0.000 (mean 0.011) |
+
+  Prediction half wrong: machinery neurons were predicted to vary their feeders by concept; instead they are fed by
+  the SAME upstream neurons whatever the concept (12 of 20 in common) - they respond to the question-answering
+  format, not to the concept. Topic neurons share a minority of feeders (2 of 20) far above chance; the shared ones are
+  themselves readable attribute neurons: the Fellini / Woody Allen / La Dolce Vita neuron <- 'Italy' + 'film /
+  director' neurons; the civil-rights neuron <- 'Martin' + 'strike / protest'; the Qing / Habsburg / Plantagenet
+  neuron (pushes family names) <- a 'families' neuron; the seas neuron <- a 'rivers' neuron.
+- **Reading:** shared neurons are mostly NOT polysemantic in this setting. Machinery neurons do one task-level job with
+  fixed inputs. Topic neurons do one output job, reached from partly shared attribute feeders plus concept-specific
+  ones - a visible hierarchy (Italy + film -> Italian cinema -> Fellini). A minority appear to pack unrelated meanings (untested: possibly shared surface features).
+- **Caveats:** top-20 feeders by first-order attribution (not knockouts); the same-concept baseline is small (27
+  pairs); 'topic' vs 'machinery' split by user count, not a test of meaning.
+
+## 18 Oct 2026: forcing one neuron - its most common expression, read with minimal bias (pilot; research branch)
+James: like the original "Eiff eiff eiff" when a say-it neuron was clamped hard - garbage is fine; what REPEATS across
+many backgrounds is the neuron's own expression. (`neuron_readout.py`; output D:/already-clean-data/neuron_readout/,
+summary in results/neuron_readout/pilot1.txt; GPU ~20 min.) The target is clamped at 1x / 4x / 16x its own web-text
+peak, at the last context position and every generated position, in three backgrounds: 200 random web snippets; a
+bare newline with 50 RANDOM unrelated neurons clamped to their peaks (a new random set per repeat, 200); a bare newline
+alone. Read: the mean next-token log-prob change vs the unforced background, and 8 greedy tokens. 10 targets + 3 random
+control neurons.
+| neuron | forced readout (x1-x4; [x16]) |
+|---|---|
+| Moon L31:9683 | moon, 月, lunar, full, "full-moon moon-moon-moon" [明明明 - 'bright', as in 明月 'bright moon'] |
+| Eiffel Tower L31:10160 | par, _par, -par (the start of 'Paris'?) [par-par-par] |
+| Eiffel Tower L26:11492 | tower, landmark, 塔, 地标, monument [leaning leaning leaning] |
+| Netherlands L33:5099 | Nether, ETHER, hol (Holland), Pays (Pays-Bas) [hol hol hol] |
+| 'rivers' L23:12257 | River, rivers, 河水, downstream, streams [River River River] |
+| 'happily/prince' L29:6647 | happy, happily, prince, 王子; generates "... ever after" at x4 [南瓜 pumpkin, 灰 ash (Cinderella), 王子] |
+| 'Indonesia' L29:9192 | Indonesian words (dalam, dengan, jumlah, ber-), Jakarta |
+| Czech/Xi'an L29:4682 | Xi'an's local geography (西安, 陕西, 鄠, 灞 and 浐 rivers, 潏, 咸阳 Xianyang, 兵马 Terracotta Army) AND Czech, Prague, Slovak |
+| 'v' L34:553 | v, )v, =v [_AV] |
+| digits L33:10933 | digits / spaces on web text; Russian fragments with no context |
+| random controls | 'thanks / 感谢'; '先进 / 优秀' ('advanced / excellent'); one noisy |
+- **Low bias (for these hand-picked strong neurons only - see the correction in the fast-readout entry below):** the
+  top next-token shifts are nearly the same across real text, random-neuron noise and no context. Strength matters: x1 is often drowned by context in generation, x4 reads best, x16
+  collapses to one repeated token - often a telling one ('leaning', 'pumpkin', 'bright').
+- The informal 'happily ever after' reading (marked shaky earlier) is supported: forced, it generates 'happy ... ever
+  after', 'prince', 'pumpkin'.
+- Czech/Xi'an: NO shared sound visible (no Ch-/Sh-/Xi- sound-alikes) - two detailed, separate clusters (very local Xi'an
+  places; Czech/Prague/Slovak). Looks like genuinely packed unrelated meanings; an unseen shared link is not ruled out.
+- Random control neurons also have readable expressions when forced: this is a candidate UNBIASED labelling method
+  (same procedure for every neuron, no labeller), to run over many neurons.
+
+## 18 Oct 2026: fast forced readout - validation against known answers and across layers (research branch)
+(`fast_readout.py`: 32 web + 16 empty backgrounds, target forced at the last position only, next token; weighted words
+= mean dlogp, consistency across backgrounds, mean forced probability; per-background top-20 with forced and unforced
+probabilities saved; output D:/already-clean-data/fast_readout/; ~110-125 ms per neuron on the 5090.)
+- **Known answers (2,577 neurons, run-1 concepts):** for 2,856 'say'-neuron/concept pairs, the concept's answer token is
+  in the forced readout's top-10 73% (top-50 87%, median rank 5); for all picked neurons 50% (top-50 64%). The
+  weights-only direct push does at least as well (top-10 68% for all picked; 100% for 'say' neurons, by definition)
+  - forcing does not identify late neurons' concepts better than the near-free weight reading.
+- **Layers (50 random neurons per layer):** the top word is consistent across backgrounds only late on: layers 28-35
+  91-100% (x4) / 97-100% (x16); 24-27 50% / 69%; 0-23 2-16% / 6-36%. A single early or mid neuron forced at one
+  position has no consistent expression even at 16x (its effect goes through later layers and other positions).
+- **Context dependence (James: do the words depend on what else is active?):** yes, substantially. Per-background
+  top-10 words overlap little across web backgrounds (1 - mean pairwise Jaccard: layers 32-35 0.59, 28-31 0.83, earlier
+  ~1.0): the top word is stable for late neurons, the rest of the list shifts with context.
+- **CORRECTION to the pilot's 'low bias' claim:** it held for hand-picked strong neurons; for random neurons the top-10
+  from web vs empty backgrounds overlap only 0.1-0.2 (Jaccard) even in late layers.
+- **Reading:** the cheap forcing readout gives a reliable job label for late neurons (roughly the top quarter of the
+  model), where the weight reading is about as good; early / mid neurons need a different readout - e.g. describe them
+  by which late neurons they drive (downstream fan-out), consistent with the composition seen in feeders.py.
+
+## 18 Oct 2026: fan-out readout for early / mid neurons - smoke test (research branch)
+James: describe early / mid neurons (no consistent forced word readout) by what they drive: hold the context fixed,
+vary only the target (dose series -4..8 x peak; last position or every position), read all layer-24..35 neurons and the
+next-token log-probs at the last position; 16 web texts (two halves) and, for concept-specific targets, the concept's own
+recall prompts. 29 targets: 11 concept-specific early neurons (e.g. Clovis I L12, Strawberry L4, Volleyball L8), 8 widely
+shared early neurons, 10 random (layers 4-23). (`fanout.py`; outputs D:/already-clean-data/fanout/ - smoke.jsonl = v1,
+smoke2.jsonl/.txt = v2; v1's text summary was overwritten by a naming bug, its full data is intact.)
+- **v1 (raw slopes):** fan-out exists and is partly repeatable - top driven neurons keep their sign in 75-94% of texts,
+  roughly linear in dose (R^2 ~0.5-0.7), split-half top-20 Jaccard 0.2-0.5 (shared early neurons most repeatable),
+  effects 5-20x larger on the concept's own prompts. But the ranking was swamped by a few generic last-layer hub
+  neurons (L35:9510, L35:8724, L35:11333, L35:9490 - junk pushes) that respond to ANY perturbation.
+- **v2 (each late neuron's slope in units of its natural spread, minus the random targets' mean):** the hubs drop out;
+  driven neurons are consistent (88-100% sign) but mostly in layers 24-27 and themselves unreadable by their pushed
+  words. Glimpses: Antigonus I Monophthalmus -> a 'Rome / 罗马' neuron plus 'mon' / 'mat' spelling neurons; widely shared
+  early neurons -> 'Title-Case term' neurons (Theory, Approach, Responsibility, '-Based', '-Level') - consistent with
+  answer-format machinery. Most concept-specific early neurons get no readable fan-out (Strawberry, Johann Strauss II,
+  Monopoly, Marathi).
+- **Reading (smoke test):** early neurons' downstream effects are repeatable but do not translate into a word-level
+  job one step later - the description problem moves up a layer. Options: restrict to READABLE late endpoints (layers
+  28-35) and follow chains; or describe early neurons by the concepts they matter for (from the maps).
+
+## 18 Oct 2026: question-side test + specificity gradient - 'say it' vs meaning, and how specific (research branch)
+(Queued after run 1, design and predictions in RESEARCH_STATE.md before running. `specificity.py`; outputs
+D:/already-clean-data/specificity/, summary + neighbours in results/specificity/; Luna ~$0.08, GPU ~15 min.)
+15 mapped landmarks. Neighbours from Wikidata, 3 per level: L1 notable physical places within 3 km (coordinates; first
+pass picked abstract items with Paris coordinates - UNESCO, the French language - so restricted to structures /
+mountains / islands / squares / parks via the type hierarchy); L2 same 'instance of' type > 500 km away (falling back to
+the source's other types when the first had no distant matches - broader, e.g. St. Peter's -> Eiffel Tower, Burj
+Khalifa); L3 same Vital Articles section, different type; L4 a different section. Luna wrote 8 FACT questions per source
+(the name in the question, short factual answer, e.g. "In which city is the Eiffel Tower?" -> Paris) and 8 naming
+questions per neighbour; only questions Qwen answers were used (P >= 0.2). Zeroed at every position, each against an
+as-is copy in the same pass. Median log-odds drop:
+
+| question set | k (breaks naming) | top-5 | top-5 late | top-5 early | random-5 (x2) | another landmark's top-5 |
+|---|---|---|---|---|---|---|
+| source NAMING (15) | **3.62** | **8.03** | 6.44 | 1.44 | -0.01 / -0.01 | 0.16 |
+| source FACTS (15) | **0.03** | 0.68 | 0.30 | 0.97 | -0.04 / -0.05 | 0.02 |
+| neighbours L1 same place (25) | 0.02 | 0.17 | 0.17 | -0.01 | 0.02 / 0.00 | 0.10 |
+| neighbours L2 same kind (30) | 0.01 | 0.10 | 0.07 | 0.03 | -0.01 / 0.00 | 0.05 |
+| neighbours L3 same section (36) | 0.00 | 0.00 | 0.01 | 0.02 | 0.01 / 0.00 | -0.01 |
+| neighbours L4 unrelated (37) | 0.00 | -0.02 | -0.02 | 0.00 | 0.00 / -0.01 | -0.03 |
+
+- **'Say it', not meaning (predictions held):** the neurons that break NAMING a landmark (k, median drop 3.62) leave
+  questions ABOUT it essentially intact (0.03). Late neurons hurt naming most (6.44) and facts little (0.30); early
+  neurons the reverse pattern (naming 1.44, facts 0.97) - the early cluster carries more of the meaning.
+- **Exceptions (facts damaged too):** Burj Khalifa (facts 8.10), St. Peter's Basilica (6.73), Machu Picchu (3.86) - to
+  check whether their fact answers share tokens with the name or depend on name-linked attributes.
+- **Specificity gradient (prediction held):** damage to neighbours falls with distance, L1 0.17 -> L2 0.10 -> L3 0.00 ->
+  L4 -0.02 (vs 8.03 on the source itself: neighbours lose ~1-2%). Large exceptions where neighbours share an attribute:
+  Sydney Opera House -> Sydney Harbour Bridge / Sydney Tower 5.40; Burj Khalifa -> other skyscrapers 5.98; Golden Gate
+  -> other bridges 4.74; St. Peter's -> Sistine Chapel 3.61; Statue of Liberty -> towers 2.22; Sagrada Família -> Park
+  Güell / Casa Batlló (Gaudí) 1.68; Machu Picchu -> Huayna Picchu 1.57. Another landmark's top-5 also touches L1/L2 a
+  little (0.10 / 0.05) - shared landmark-attribute neurons.
+- **Reading:** a concept's map is mostly a specific 'say it' mechanism (naming), not where the knowledge ABOUT it lives;
+  the meaning sits more in early neurons and elsewhere. Its spill-over follows shared attributes (place, kind, architect).
+- **Limits:** small n per level (many neighbours had < 2 recalled naming questions); Luna-written fact answers; one
+  forced 'answer in as few words as possible' format for facts; 15 sources, all landmarks.
+
+## 18 Oct 2026: job-finding for knowledge neurons - an entity x relation causal grid + position test (research branch)
+James: naming maps are 'say it' machinery; find mechanisms for the job of earlier neurons, where knowledge seems to live.
+(`facts.py`; outputs D:/already-clean-data/facts/, summary / entities / classes in results/facts/; Luna ~$0.01; GPU ~35 min.)
+Ground truth: 30 landmarks x 5 relations (city, country, designer, century built, main material), 3 FIXED phrasings per
+relation (same wording for every landmark), answers from Luna ('Unknown' excluded), kept where Qwen answers >= 2 of 3:
+111 facts (city 30, country 30, century 25, material 14, designer 12). Per fact: attribution of the answer -> top-100 ->
+each zeroed alone -> fact map. Grid: each fact's top-3 neurons (drop > 0.2) zeroed on EVERY fact -> mean drop on the same
+landmark's other facts / the same relation for other landmarks / neither -> class (threshold max(0.2, 25% of its own-fact
+drop), fixed before looking): entity, relation, entity+relation, fact-specific, generic. Position: each zeroed only at the
+landmark's name tokens vs only at the last position. Predictions stated before running.
+- **(a) 'fact neurons sit earlier than naming neurons': FAILED as stated.** Fact maps' top-5 have the same layer profile
+  as naming maps (median layer 30; 19% vs 16% below layer 20). Mapping by the answer's log-prob again finds late neurons
+  that SAY the answer ('Paris', '19th').
+- **(b) 'entity neurons are early and act at the subject tokens': HELD.**
+
+| fact neurons | n | zeroed everywhere | only at the name tokens | only at the last position | entity / relation / fact-specific / generic |
+|---|---|---|---|---|---|
+| layers 0-9 | 40 | 2.72 | **2.60** | 0.00 | 15 / 1 / 24 / 0 |
+| layers 10-19 | 19 | 1.58 | **1.46** | 0.01 | 8 (+1 both) / 0 / 10 / 0 |
+| layers 20-27 | 31 | 1.81 | 0.04 | **1.31** | 0 / 11 / 17 / 3 |
+| layers 28-35 | 243 | 2.64 | 0.00 | **1.60** | 16 (+8 both) / 50 / 158 / 11 |
+
+- **(c) 'relation neurons sit mid-to-late': HELD.** E.g. L30:8291 is a 'century built' neuron: zeroing it costs ~3.2
+  log-odds on the century fact of every landmark tested (Taj Mahal, Tokyo Tower, CN Tower, Blue Mosque, Versailles...)
+  and nothing on their other facts. Early entity examples: L8:9458 (Blue Mosque: its facts drop, other landmarks'
+  don't), L1:4818 (Sagrada Família), L1:3960 (Statue of Liberty).
+- **Entity neurons are mostly not naming neurons:** 6 of 32 appear in their landmark's naming top-5, essentially one
+  neuron - L29:5436, a 'Vatican' neuron (all Sistine Chapel / St. Peter's facts collapse without it, drops 15-28: city,
+  country, etc. route through 'Vatican').
+- **Reading:** a working job-finding mechanism for early neurons: place a neuron in an entity x relation grid causally
+  and find where it acts. Early (layers 0-19) knowledge neurons are ENTITY neurons acting at the entity's own name
+  tokens; mid/late ones extract RELATIONS (or say specific answers) at the answer position. This matches the published
+  picture of factual recall (subject enrichment in early MLPs at the subject token, attribute extraction late; Meng et al.
+  2022, Geva et al. 2023), now neuron by neuron in Qwen3-8B.
+- **Limits:** only 59 early neurons in the fact maps' top-3s (maps still favour late answer-sayers); 5 relations, all
+  landmarks; class thresholds arbitrary (stated); Luna's answers; fixed templates.
+
+## 18 Oct 2026: direct entity neurons, scaled to three kinds - and how shared / polysemantic they are (research branch)
+(`facts2.py` entity stage, `entity_sharing.py`; outputs D:/already-clean-data/facts2/, summary in results/facts2/.)
+90 entities (30 landmarks, 30 people, 30 works; two near-duplicate works - 'Odyssey' / 'The Odyssey', 'Divine Comedy' / 'The
+Divine Comedy' - kept as separate entries), 5 relations each with fixed phrasings; 333 facts kept (Qwen answers >= 2 of 3).
+- **Direct entity neurons:** per entity, attribution summed over ONLY its name-token positions and all its facts, across
+  all 36 layers -> top-100 -> each zeroed ONLY at the name tokens -> mean drop over the entity's facts. Top-3 per entity
+  with drop > 0.2 (218 neurons, 86 entities): **median layer 8; 89% below layer 20** (landmarks 8, people 8, works 8.5).
+  Predicted (median < 20): held.
+- **Specific in use:** zeroed at the name tokens of every fact: own entity's facts drop a median 0.58, other entities of
+  the same kind 0.015, other kinds 0.008; **209/218 (96%) >= 5x** more for their own entity (predicted: held). Strongest:
+  L8:9458 Blue Mosque 9.6; L7:8413 Ulysses 8.7; L0:1550 The Starry Night 6.7; L1:4818 Sagrada Família 6.3; L7:990 Genghis
+  Khan 4.7; L8:334 Sistine Chapel 4.1.
+- **But shared with a few others (James: towards polysemanticity):** 119/218 (55%) also matter for >= 1 other entity
+  (another entity's facts drop > max(0.2, 25% of own); 1 other: 51, 2-3: 46, 4-6: 22); only 36 of those 119 share only
+  with the same kind. Coherent groups at layers 7-13: Leonardo -> The Birth of Venus, The Night Watch, The Last Supper,
+  Mona Lisa, Van Gogh; War and Peace -> Ulysses, Odyssey, Moby-Dick, Faust; bridges / skyscrapers (L9:410, L12:10025).
+  Mixed groups at layers 21-23: L21:1310 -> Brooklyn Bridge, Statue of Liberty, The Scream, Sagrada Família, The
+  Brothers Karamazov, Eiffel Tower; L22:5427 -> Bach, the Blue Mosque, Beethoven, Jane Austen. Map overlap: 184 of 1,432
+  neurons in the entity maps' top-20 appear for >= 2 entities.
+- **Input side - broad:** in web text (atlas, 20 strongest firings) entity neurons are mostly NOT about their entity:
+  median 5% of firings mention it; 104/218 never. What they fire on: attributes ('Turkish' / 'Turkey' for the Blue Mosque
+  neuron; 'Vatican' / 'conclave' for the Sistine Chapel one), word parts or meanings of the name ('Sac[red]' for Sagrada
+  Família; ' night' for The Starry Night; 'Div[ine]'), a few on the name itself (Ulysses 100%).
+- **Not simple word detectors:** the Starry Night neuron (fires on ' night' everywhere) does nothing for The Night Watch
+  (0.01); the Divine Comedy neuron nothing for 'The Divine Comedy' (-0.02); the Sagrada Família ('sacred') neuron nothing for
+  other churches. Exceptions follow shared attributes: Sistine Chapel neuron -> St. Peter's 1.04 ('Vatican'); Blue Mosque
+  neuron -> Hagia Sophia 0.29 (Istanbul / 'Turkish').
+- **Reading:** early entity neurons are broad on the INPUT side (they respond to attributes and name-parts across web
+  text - polysemantic in the usual sense) but specific in USE (in this task each matters for its own entity, plus a few
+  sharing an attribute). The same pattern as concept neurons ('packed triggers, one job'), now for knowledge neurons;
+  what looks entity-specific is a combination: the right word-part / attribute neuron firing in the right context.
+
+## 18 Oct 2026: fact knowledge as shared machinery - answer-value and relation neurons (facts grid re-read; CPU)
+James: by 'knowledge' he meant the FACTS (location, height...), and whether those show up as shared machinery. Re-read of the
+landmark facts grid (each fact neuron zeroed on every fact): for each neuron, its mean drop on OTHER facts with the SAME
+answer vs same-relation facts with a DIFFERENT answer vs the rest (219 neurons whose fact shares its answer with others).
+- **Answer-value machinery (124/219):** neurons that matter for every fact with the same answer and not for the same
+  question with other answers (> 3x). A '19th century' neuron, L33:2629: zeroed, the century fact of every 19th-century
+  landmark drops (Arc de Triomphe 10.1, Sagrada Família 8.9, Brooklyn Bridge 8.5, Statue of Liberty 8.2) and other
+  centuries do not (-0.03). 'Vatican City' L29:5436 (St. Peter's and Sistine Chapel, city AND country, drops ~26); 'marble'
+  L31:6383 (Parthenon and another marble landmark, 7.8). Layers 29-33.
+- **Relation machinery (45/219):** neurons that matter for one question type whatever the answer - L30:8291 'century
+  built' (~3.2 on every landmark's century fact, 12th or 20th alike).
+- **Reading:** the fact itself is not one neuron but a factorised lookup: entity neurons early at the name (rows),
+  relation neurons mid-late (columns), answer-value neurons late (the values) - and the value neurons are shared by every
+  entity with that value. Not yet tested: the chain (does zeroing an entity neuron at the name lower the value neuron's
+  activation at the answer position?) and numeric facts (height).
+
+## 18 Oct 2026: scaled facts grid (landmarks, people, works) + the fact route, causally (research branch)
+(`facts2.py` map / grid / position; `chain.py`; outputs D:/already-clean-data/facts2/, summaries in results/facts2/.)
+**Scaled grid (333 facts, 11 relations, 3 kinds) replicates the landmark picture:**
+
+| fact neurons | n | zeroed only at the name tokens | only at the last position | job classes |
+|---|---|---|---|---|
+| layers 0-9 | 109 | 2.90 of 2.90 | 0.00 | entity 50, fact-specific 49, relation 9 |
+| layers 10-19 | 44 | 1.46 of 2.12 | 0.00 | fact-specific 31, entity 10 |
+| layers 20-27 | 139 | 0.01 | 1.84 | **relation 63 (45%)**, fact-specific 43, generic 22 |
+| layers 28-35 | 707 | 0.00 | 1.75 | fact-specific 457, relation 182 |
+
+- Fact maps' top-5 again have naming maps' layer profile (median 30; 18% vs 16% below layer 20): the 'fact neurons
+  earlier' prediction fails again as stated - answer-ranked maps find answer-writers.
+- By kind: landmarks and works match cleanly (early neurons act at the name: 2.21 of 2.30, 2.77 of 2.82); PEOPLE are
+  weaker - fewer early fact neurons (25, mostly fact-specific, 4 entity), only about half their effect at the name (1.55 of
+  2.90), and relation neurons dominate their mid layers (35 of 58) - another people anomaly (cf. no P4 family signal, fewer
+  'say' neurons for historical people).
+- Relation neurons by relation: century 124, country 64, medium 22, creator 13, language 10 - the 'century' neuron
+  L30:8291 again strongest (same-relation drop ~4.2).
+**Fact route (James: entity -> value):** for each shared answer-value neuron V (151, from the scaled grid) and every fact
+with V's answer, the entity's direct entity neuron(s) zeroed ONLY at its name; V's activation at the answer position
+measured (sign-aligned), vs a random same-layer neuron and another entity's neuron (controls).
+
+| zeroed at the name | V's relative activation drop (median) | answer log-odds drop | pairs where entity > both controls |
+|---|---|---|---|
+| entity's top-1 entity neuron | 2.2% | 0.59 | 430/647 (66%) |
+| entity's top-5 together (follow-up) | 7.3% | 1.78 | 465/657 (71%) |
+| random neurons / another entity's | 0.0% | 0.00 | - |
+
+- **Prediction (median V drop >= 20% for the top-1) FAILED.** The route is real and completely specific (controls exactly
+  0) but each early entity neuron supplies only a slice of what drives the shared value neuron; five give ~3x one. Large
+  cases: van Gogh -> 'painter' (> 100%), Symphony No. 9 -> '19th', Sistine Chapel / Columbus -> '15th', Sagrada Família ->
+  'Antoni Gaudí'.
+- **Reading:** entity -> value is a causal, specific route, but an entity's knowledge is distributed over many early
+  neurons (and the value neuron has other inputs: relation heads, other neurons). Consistent with the factorised-lookup
+  picture; not a single-wire one.
+
+
+## 18 Oct 2026 - Numeric facts: era neurons, few digit neurons, no magnitude coding shown (numeric.py)
+
+**Question (James: "Numeric facts"):** are numeric facts (years, heights) stored like other facts, and are the late
+neurons whole-number neurons, prefix / era neurons, or digit-position machinery? Is there graded magnitude coding?
+**Data:** the 90 facts2 entities; Luna gave year completed + height (m) for landmarks, birth year for people, year created
+for works; kept if Qwen's probability of the full number is >= 0.2 on >= 2 of 3 phrasings ("... Answer with just the
+number."): **86 facts** (landmark year 21, height 11, person year 29, work year 25). Qwen writes numbers one digit per token
+('1889' -> 1, 8, 8, 9), so each digit is scored teacher-forced.
+**Predictions (in the script before running):** (1) early entity neurons act at the name and late writers at the answer;
+(2) late writers are prefix / digit neurons shared across facts, not whole-number neurons; (3) some neurons code magnitude
+(zeroing and doubling shift the expected digit in opposite directions).
+
+**Setup bug caught first:** the first map measured log-probability drops and showed 0.000 for many top neurons. Qwen is
+> 0.9999 sure of 820 of 939 digit slots (median log-odds 15.8), so log-prob cannot move. Re-run with exact float64
+log-odds per digit (as ISSUES #35), attribution of summed log-odds over ALL positions (later digits are written at the
+answer positions). First run kept as maps_logprob.jsonl. **Noise floor:** 24 random neurons zeroed on every fact:
+|drop| median 0.135, 99th pct 0.65, max 1.33 -> threshold 1.0 throughout.
+
+| layers | n (top-5, drop > 1) | zeroed everywhere | only at the name | only at the answer positions | digits hurt per neuron |
+|---|---|---|---|---|---|
+| 0-19 | 95 (22%) | 16.83 | **16.55** | 0.10 | 50% |
+| 20-27 | 83 (19%) | 12.41 | 0.01 | **10.94** | 25% |
+| 28-35 | 252 (59%) | 10.52 | 0.00 | **9.64** | 25% |
+
+(position columns: top-3 per fact with drop > 1; n = 58 / 52 / 148)
+
+- **Prediction 1 HOLDS:** the same position split as word facts (M1 / S1), with larger effects in log-odds units.
+- **Prediction 2 mostly FAILS, with a clear exception.** Of 99 neurons hurting >= 3 facts, 5 are digit neurons (>= 80% of
+  the hurt facts share one digit at one position) and 0 are decade (3-digit prefix) neurons; the facts a neuron hurts
+  share a digit only a little more than random sets (33% vs 26%). The exception is **era neurons**:
+  - **L31:8930**: hurts 18 of 27 years 18xx (median 3.96; up to 36.9 for The Scream 1893), 0 of 5 17xx, 0 of 54 other
+    numbers. **It is the '19th century' answer-value neuron from facts2** (word answers; also the Symphony No. 9 -> '19th'
+    fact route). Found independently in a different experiment with different prompts and answer format.
+  - **L33:12258**: the 1700s - 4 of 5 years 17xx (median 27.7: Jane Austen 1775, Napoleon 1769, Magic Flute 1791,
+    Beethoven 1770), nothing on 18xx.
+  - L33:8721 / L31:9945: '1' as the first digit (16 and 13 facts; mostly small drops, 2-7).
+  - 16 broad neurons hurt >= 20 facts with low digit purity (L35:9490 hurts 82 of 86): generic number-answer machinery.
+- **Prediction 3 not shown (inconclusive, not refuted):** doubling a top neuron makes Qwen more sure of the same digit
+  (median +1.35 log-odds) but moves the expected digit in only 19 of 258 cases; the 37% 'opposite shift' rate is driven by
+  near-zero doubled shifts. Near-certain answers leave no room to see graded coding; a fair magnitude test needs uncertain
+  numbers (e.g. less-famous heights) or the full digit distribution after knockout (did 1889 become 1888 or 1239?).
+- **Reading:** numeric facts use the factorised route already seen (entity at the name early; writers at the answer late).
+  The shared late value neurons code eras (centuries), and the same neuron serves the era in words ('19th') and in digits
+  ('18xx') - a format-independent concept neuron for '1800s'. Most other late neurons are fact-specific or broad machinery,
+  not digit-value units.
+
+Files (D:/already-clean-data/numeric/): entities.json, facts.json, maps.jsonl (+ maps_logprob.jsonl, the saturated first
+run), share.jsonl (+ share_units.json, share_nulls.json), magnitude.jsonl, position.jsonl, summary.txt, summary_rows.json,
+*.log.
+
+
+## 18 Oct 2026 - Magnitude: no number-line neurons; the number line is in the output geometry (numeric_mag.py)
+
+**Question (James):** a fair test of whether numeric-fact neurons code magnitude, after numeric.py's zero-vs-double test
+was blind (Qwen near-certain). **Fixes:** a dose series (activation x -4, -2, -1, 0, 0.5, 1, 2, 4 at every position) with
+the full float64 distribution over the 10 digit tokens at every answer position; and 43 LESS-CERTAIN facts (80 prompts:
+landmark heights 20, construction start 10, years 10, death years 3) with Qwen's own greedy number as the target, kept where
+some digit has P(top) < 0.9. Neurons: top-3 per fact (drop > 1.0); controls: 3 random neurons from the same layers per fact.
+**Bug caught:** the first dose run rounded saved log-probs to 6 decimals, which zeroed near-certain digits' log-probs
+(drops showed 'nan'); kept as mag_dose_rounded.jsonl / mag_summary_rounded.txt, re-run at full precision.
+
+| | median drop at q* (zeroed) | lost probability to neighbouring digits (zeroed): median share / above uniform (22%) | graded dose response | of graded: moves towards ITS OWN digit |
+|---|---|---|---|---|
+| certain facts, top neurons (258) | 8.78 | 76% / 66% | **36%** | 93/93 |
+| certain facts, random neurons (258) | 0.08 | 81% / 83% | 0% | - |
+| uncertain facts, top neurons (129) | 6.63 | 49% / 59% | **51%** | 65/66 |
+| uncertain facts, random neurons (129) | 0.10 | 50% / 70% | 2% | 2/2 |
+
+(graded = Spearman |rho| >= 0.9 between dose and expected digit, range >= 0.3 digits. At dose -2 / -4 top neurons spread
+probability further - neighbour share 46% / 36% - than random neurons, 76% / 81%.)
+
+- **A1 FAILS as a neuron property:** lost probability does go to neighbouring digits (76% vs 22% uniform) - but equally when
+  a RANDOM neuron is zeroed (81%). The neighbour preference is a property of the output, not of the neuron. **Output
+  geometry:** the 10 digit tokens' unembedding vectors form a number line - cosine 0.780 at distance 1, falling steadily
+  to 0.667 at distance 9.
+- **A2 HOLDS numerically, but it is not magnitude coding:** 36% / 51% of top neurons give a graded response vs 0-2% of
+  random ones - yet in 158 of 159 graded cases raising the neuron moves the expected digit towards the neuron's own target
+  digit. They are dose-dependent supporters of one digit (push-pull between that digit and its competitors), not an
+  abstract 'bigger / smaller' direction.
+- **A3 HOLDS modestly:** Qwen's own uncertainty puts 36% of the non-top mass on neighbours (vs 22%; 62 of 99 slots above),
+  strongly for middle digits (positions 1 / 2: 54% / 40%), not for the first or last digit (14% / 6%); not on round
+  digits 0 / 5 either (0-8%).
+- **Reading:** single neurons choose digits as categories ('this digit here'); magnitude structure lives in the output
+  embedding of digits and shows up in the model's uncertainty over middle digits. With era neurons (era.py), a numeric fact
+  is: era concept (format-free) -> digit neurons (format-bound) -> digits on an output number line.
+
+Files (D:/already-clean-data/numeric/): mag_uncertain.json, mag_dose.jsonl (full float64 digit distributions per factor,
+prompt and position), mag_rows.json, mag_summary.txt, mag_dose_rounded.jsonl + mag_summary_rounded.txt (bugged first run).
+
+
+## 18 Oct 2026 - Era neurons across formats: era-concept neurons vs digit neurons (era.py)
+
+**Question (James):** is L31:8930 'the 1800s' whether the answer is written '19th', '18xx', '1880s' or 'Victorian'? And
+the other century neurons?
+**Neurons:** the 24 facts2 answer-value neurons whose answer is a century, + numeric.py's L33:12258 (17xx) and L33:12280
+(18xx); 12 random layer-28-33 controls. **Entities:** numeric.py's year facts + Luna lists per century (14th-21st), 307;
+**280 recalled** (Qwen's own year in Luna's century; 27-42 per century). Each asked in 4 formats (year / century / decade /
+historical period: 'In which ... was X completed / born / created?') + a control ('Tell me about X.'). Qwen answers in
+each format (Lincoln: '1809' / '19th century.' / '1800s' / 'Early 19th century.'; Alice in Wonderland period: 'Victorian
+era.'). Plain-text reading: sentences that mention a date ('She was born in 1889.' / 'in the 1880s.' / 'in the 19th
+century.' / 'in the nineteenth century.' / 'in the eighteen-hundreds.' / 'in the Victorian era.').
+**Selectivity** = AUC of activation, in-era vs other entities, with the sign fixed in the year format and reused for all
+other formats (out-of-sample).
+
+| | year | century | decade | period | 'Tell me about X' | text: digits | decade | ordinal | word | hundreds | named era |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| era neurons (median, n=21 with any in-era entity; the two 12th-century ones have only 1; 1st / 6th / 8th neurons have none) | 0.87 | 0.94 | 0.87 | 0.94 | 0.60 | 0.57 | 0.59 | 0.69 | 0.63 | 0.81 | 0.73 |
+| random controls (median, n=12) | 0.60 | 0.55 | 0.51 | 0.55 | 0.54 | 0.49 | 0.47 | 0.45 | 0.34 | 0.41 | 0.50 |
+| **L28:9936** (18th) | 0.99 | 0.99 | 0.98 | 0.98 | 0.78 | 0.98 | 1.00 | 0.90 | 1.00 | 1.00 | 0.94 |
+| **L31:8930** (19th) | 0.96 | 0.92 | 0.95 | 0.90 | 0.81 | 0.59 | 0.60 | 0.68 | 0.87 | 0.85 | 0.74 |
+| L30:822 (16th label; reads 17th) | 0.92 | 0.88 | 0.87 | 0.89 | 0.73 | 0.88 | 0.85 | 0.84 | 0.94 | 0.94 | 1.00 |
+| L33:12258 ('17xx', numeric.py) | 0.88 | **0.03** | 0.81 | 0.30 | 0.53 | 0.55 | 0.64 | 0.53 | 0.70 | 0.57 | 0.34 |
+| L33:12280 ('18xx', numeric.py) | 0.99 | **0.26** | 0.99 | 0.72 | 0.53 | 0.57 | 0.54 | 0.61 | 0.60 | 0.89 | 0.72 |
+
+(text 'hundreds' and 'named era' have few sentences - 21 and 36 - so single AUCs there are noisy; controls reach 1.00 on
+'hundreds'.)
+
+- **B1 HOLDS:** L31:8930 AUC 0.96 / 0.92 / 0.95 (year / century / decade), and 0.90 for 'historical period'.
+- **B3 HOLDS:** 12 of 17 facts2 century neurons reach AUC >= 0.8 in >= 2 of the 3 formats.
+- **B4 HOLDS:** reading dates in text is less selective than answering (median 0.67 vs 0.88), and the neurons are weak when
+  the entity is merely named ('Tell me about X': 0.60) - they carry the era of an answer being prepared. Exception:
+  L28:9936 and L30:822 are near-perfect in plain text too (format- and task-free).
+- **Two kinds of 'era' neuron.** Era-concept neurons (L28:9936, L31:8930, L30:822, L33:2629...) keep their sign and
+  selectivity in every format. The numeric.py 'era' neurons L33:12258 / L33:12280 FLIP in the century format: their
+  direct output is the digit '7' (and down '8') / down '8', and a 17xx answer in the century format is '18th' - so they
+  are digit neurons that look like era neurons only when the answer is a year.
+- **B2 FAILS (instructively):** zeroing L31:8930 costs the year answer 1.43 and the decade answer 2.52 log-odds (out-of-era
+  0.00; random-neuron 99th pct 0.48) but the '19th century' answer only 0.12 - although it is just as active there. L33:2629
+  (19th) is the mirror: century word 1.05, year ~0. L28:9936: year 5.09, decade 1.75, century 0.26. **The era is
+  represented in every format; which neurons are NEEDED depends on how the answer is written** (redundancy / different
+  writers per format).
+- **B5 HOLDS, more strongly than predicted (informal reading):** L31:8930's direct output is mid/late-19th-century
+  HISTORY, not digits: 'Victorian', 'Civil', 'Reconstruction', 太平 (Taiping), 咸 / 光 / 慈 (Xianfeng / Guangxu / Cixi), 晚
+  (late [Qing]), 普法 (Franco-Prussian). L28:9936 (negative side): 'Enlightenment', 启蒙, 'Revolutionary', 'Rousseau',
+  康熙 / 乾隆 (Kangxi / Qianlong). L28:8912 (20th): 'twentieth', 'Bolshevik', 'Lenin', 民国, 五四, 'radio', 飞机 (aeroplane).
+  L30:822: 康熙, 'Tories', 清朝 / down 'Renaissance', 'Tudor'. Digit neurons push number tokens across scripts: L33:3763
+  '7' / 'seven' / 七 / 'VII' / 'seventh'; L33:5538 '6' / 'six' / 六 / 'seis'.
+- **Reading:** Qwen has era-concept neurons that are cross-lingual (English and Chinese history) and cross-format (years,
+  centuries, decades, named periods, and - for the strongest - plain text), alongside format-bound digit neurons. A
+  1700s/1800s 'value' in a fact is therefore a concept, not a string.
+
+Files (D:/already-clean-data/era/): era_entities.json, era_build.json (all 4 answers per entity), era_acts.jsonl,
+era_text.jsonl, era_readout.json, era_causal.jsonl, era_rows.json, era_summary.txt, *.log.
+
+
+## 18 Oct 2026 - J-lens pilot on Qwen3-8B: early layers become readable; noisy at 32 windows (jlens.py)
+
+**Question (James):** does Anthropic's J-space work (Gurnee, Sofroniew, Pearce, Lindsey et al. 2026, 'Verbalizable
+Representations Form a Global Workspace in Language Models') overlap ours - and can its lens read our early neurons?
+**Method:** J_l = Jacobian of the final pre-norm residual w.r.t. the residual after layer l, averaged over source
+positions t >= 1, later positions t' >= t and 32 FineWeb windows of 128 tokens (one backward pass per output dimension
+gives every layer; 4,096 passes per window, 8 rows at a time: ~113 s/window, GPU busy 96%, peak 24.6 GB). Lens:
+softmax(W_U (g * J_l v)). Every neuron's output vector read through the J-lens of its layer and the plain logit lens
+(442,368 neurons -> ledger, experiment jlens_qwen3_8b). Speed lessons: 16 rows hit 31.8 GB and ran 4.6x slower (Windows
+memory spill); a silent 16 GB hub download from the research worktree (no .env) - both fixed and recorded in LOOP_V2.md.
+
+| | result | prediction |
+|---|---|---|
+| J1 validity: rank of the next 16 actual tokens (held-out text) | J-lens far better in layers 0-19 (e.g. L0 670 vs 17,042; L8 248 vs 1,503), WORSE in 21-30 (L22 187 vs 60); equal at the last layer | FAILS as stated (better in 12-30: 8/19) - the J-lens wins early, not mid |
+| split-half reliability (top-20 overlap, J from even vs odd windows) | L0 0.38, L5 0.35, L10 0.25, L15 0.50, L20 0.65, L25 0.80, L30 0.90, L35 1.00 | - (early readouts noisy at 32 windows) |
+| J2 entity neurons (facts2, 218): entity / fact word in top-30 + bottom-20 | J-lens 42%, logit lens 29%, random same-layer neuron 1%; strict (a word of the entity's own name): 16% vs 8% | FAILS as stated (logit lens <= 10% expected) - but both lenses see entity content |
+| J3 J vs logit top-15 overlap | layers 0-19: 0.00; 28-35: 0.60 | HOLDS |
+| J4 era neurons | L31:8930, L28:8912, L33:12258 read the same under both lenses (late layers) | HOLDS |
+
+- Examples (J-lens): L10:11509 (Karl Marx) 'marx', 'communist'; L10:6062 (Park Guell) 'barcelona', 'spain'; L10:7581
+  (Brothers Karamazov) 'russian'; L10:488 - shared by four bridges - 'bridge', 'harbour'. Some early readouts are noise
+  (L10:4185, Mozart: 'amazon'), consistent with the low early split-half reliability.
+- **Reading:** S2 ("early neurons do not write words") is too strong: early entity neurons' output directions carry their
+  entity's words (even under the logit lens, 29%; J-lens 42%; random 1%). They do not write the NEXT token, but what they
+  write is readable as concept / entity content. The J-lens is a useful readout for early layers, not causal evidence, and
+  needs more windows for confidence (gpu-fan-out smoke test with a cross-GPU reproduction check, James 18 Oct).
+
+## 18 Oct 2026 - Loop v3 pilots: the candidate search misses strong neurons; the subject pass finds a new layer of neurons
+
+**Ranking check (ranking_check.py; 50 random run-1 concepts).** Run 1 picks its 200 candidates by the log-PROB gradient but
+ranks them by exact log-ODDS knockout drop; log-prob down-weights prompts Qwen is sure of (weights differ ~226x).
+- Stage 1: the two rankings share a median 57% of their top-200 (min 22%). Prediction (>= 90%) FAILS - but stage 1 favours
+  log-prob (run 1's top 30 was chosen from its list), so a fair test followed.
+- Stage 2 (fair): every log-odds-only candidate (~86 per concept) zeroed alone with map_core's own procedure. **Median 4.5
+  per concept would enter run 1's top 30 (mean 11.7; 44 of 50 concepts have >= 1); 144 would enter a top 10 (29
+  concepts).** Prediction (<= 1; none in top 10 for 90%) FAILS. Example: Liechtenstein L9:516 drop 2.76 vs run 1's 30th
+  best 0.19. A third of the entering neurons are in layers < 20.
+- **Caveats:** a large log-odds drop on a near-certain prompt can be a small change in probability; L35:9346 enters for
+  3 of the 6 concepts inspected (generic machinery?). Both to check.
+- **Consequence:** the loop's search and its ranking disagree; v3 enrichment adds stage E0 (knock out each concept's
+  log-odds-only candidates, ~86 per concept, ~20 s) and run 1's top-30 lists will change for most concepts.
+
+**Subject pass (subject_pass.py; 12 gate concepts; Luna wrote 6 questions ABOUT each concept).** Attribution of exact
+log-odds at the concept's name tokens only, all layers; top 100 zeroed only at the name; 6 layer-matched nulls.
+- S1 HOLDS: 9 of 12 concepts get >= 3 recalled facts.
+- S2 HOLDS: median layer of the top-10 = 7.5, and 0% of the top-30 are in the concept's answer-side v2 top-30.
+- S3 HOLDS: top-5 drop median 0.50 vs |null| 0.05 (10x).
+- Strong single neurons: Kobe Bryant L7:11335 (5.35), Chandrayaan-1 L7:7682 (4.63), Noam Chomsky L6:5249 (3.94),
+  Schutzstaffel L8:2386 (2.86); very well-known concepts (Malaysia, BBC) have only weak single neurons (distributed?).
+- **Reading:** the answer-side loop has been blind to a whole early layer of concept knowledge; the subject pass (v3 E4)
+  finds it cheaply.
+
+Files: D:/already-clean-data/jlens/ (j_sums.pt, jlens_neurons_L*.npz, validate / tests txt + json, log),
+D:/already-clean-data/loop_v3/ (ranking_check*, ranking_disputed*, subject/).
+
+**J-lens reproduction check (18 Oct, James: "are we definite results will repro?").** Same windows (0-1) on the 5090 at 8
+vs 4 rows per pass: relative difference of the J sums grows with backward depth - 0% at L35, ~1% at L21, ~6% at L0-6
+(bf16 rounding accumulating through the backward pass); readout top-20 overlap 0.95-1.00 (vs 0.25-1.0 between different
+text). Pre-set rule (< 1% every layer AND overlap >= 0.95): FAILS on the sums. Per James's rule ("if not I'd include the
+first 32"): the scaled-up estimate computes all windows 0-255 in ONE configuration (same GPU type, same rows) on rented
+GPUs; the 5090 pilot is not merged in. Files: D:/already-clean-data/jlens/repro/, jlens_compare.txt.
+
+## 18 Oct 2026 - Loop v3 enrichment smoke test: 21 s per concept, all four stages add information (enrich.py)
+
+**Question (James):** enrich existing concepts to parity, skipping what we already have; "75 hours feels like a lot so
+let's smoke test it first ... and re-assess". 50 run-1 concepts (45 fresh + 5 whose E0 was already done), 5090.
+
+| stage | ran / skipped | median time | GPU busy | what it added |
+|---|---|---|---|---|
+| E0 missed candidates | 45 / 5 (skip logic worked) | 8.0 s | 79% | top 30 changes for 35/45 concepts (median 4 entrants) |
+| E2 formats | 50 / 0 | 8.9 s | 74% | short-answer format: activation drops below half for 8% of top-30 neurons, knockout effect for 38% (redundancy); sentence format: 57% below half activation (mostly 'say it now' neurons - the name is not the next token) |
+| E3 nulls (6, layer-matched) | 50 / 0 | 0.5 s | 92% | per-concept floor |
+| E4 subject pass | 50 / 0 | 3.7 s | 74% | 43/50 mapped (>= 3 facts); top-5 drop 0.36 vs null 0.05 |
+
+- **C1 (cost <= 60 s, GPU busy >= 80%):** cost HOLDS (median 21 s per fresh concept; peak 19.3 GB) - far below the 42-60 s
+  estimate; GPU busy FAILS narrowly (74-79%: single-prompt forward passes in E2 and sequential knockouts in E0 leave gaps).
+- **C2 (value):** E0 >= 70% HOLDS (78%); E4 >= 70% HOLDS (86%); E2 >= 20% format-bound HOLDS on knockouts (38% in the
+  like-for-like short format), but the sentence-format measures are not like-for-like (whole-sentence target; name not
+  the next token) and are reported with that caveat.
+- **Revised cost:** 5,028 concepts x 21 s = 29 GPU-hours on the 5090 (vs the 75 h estimate), before cheapening E2.
+Files: D:/already-clean-data/loop_v3/enrich_smoke/ (sample, questions, records.jsonl with every value, summary.txt, run.log).
+- Cross-GPU (18 Oct, gpu-fan-out smoke shard): RTX 3090 vs 5090, both 4 rows, windows 0-1: relative difference median
+  1.7%, max 7.5% (early layers), readout overlap 0.90-1.00 - the same size as the 8-vs-4-row effect. Decision unchanged:
+  all 256 windows in one configuration. 3090 speed: ~320 s/window at 99.7% busy, 20.2 GB peak; full 256 ~ 23 GPU-h, ~$5.2-5.5.
+
+## 18 Oct 2026 - Two-ended neurons, step 4: north <-> south and horizontal <-> vertical are causal scales (scales_steer.py)
+
+The map session's SCALES.md (written before data; steps 1-3 Luna / Jev on 1,567 neurons that matter for concepts on BOTH
+signs: 4 strict scales, 10 near-scales). Step 4 (here): for 24 candidates, one concept per end (the usage-check concepts),
+the neuron pushed towards each end by k x its web-text peak at the answer position; change in each concept's answer
+log-odds; a random same-layer neuron as the control.
+- **First run INVALID** (push at every position): the control moved the answers in 65/72 cases - the push wrecked the
+  model. Re-run with the push at the answer position only (SCALES.md fixes k, not the position; rule unchanged).
+- **P1 HOLDS (3/4 strict):** L32:11585 north <-> south (towards north: North Island +2.11, Southern Cone -5.07; towards
+  south: Southern Cone +2.60, North Island -6.69; control < 0.4), L34:10596 south <-> north, L26:10153 horizontal <->
+  vertical (Equator / Prime meridian). The female <-> male given-name neuron L30:9102 fails: the male push works (Jacob
+  +1.47, Theodora -3.20) but the female push does not raise Theodora (-0.29).
+- **P2 HOLDS (near 2/10 < strict):** breakfast <-> dinner (L32:3980), vegetarianism <-> Mars mythology (L27:10306).
+- **P3 HOLDS (1/10 'unrelated'):** L35:7324 (Bering Strait / Upanishads) shows the pattern.
+- **P4 FAILS:** controls are quiet at k = 1 (17/24) but not at k = 2 (4/24) or 4 (1/24): only k = 1 is a usable strength;
+  every pass above is at k = 1 with its own control quiet. Lowering effects are larger than raising effects.
+- Reading: some neurons are causal two-ended scales - one direction in the model, two opposite meanings - at least for
+  compass directions and orientation. Ledger: experiments scales, scales_steer, scales_steer_allpos_invalid.
+
+## 18-19 Oct 2026 - How much did run 1's candidate search miss? (enrich_run1, E0, first 982 concepts)
+
+Run 1 picked each concept's 200 candidates by the log-PROB gradient but ranked them by exact log-ODDS knockout drop
+(ranking_check.py). Loop v3's stage E0 knocks out every log-odds-only candidate for every concept. On the first 982
+concepts of the full enrichment run:
+- run 1's top 30 gains at least one stronger neuron for **80%** of concepts (median 3 entrants, mean 9.5); 410 missed
+  candidates drop the answer by > 1 log-odds (249 concepts); a third of entrants are in layers < 20.
+- **In probability terms the gap is much smaller:** the median entrant lowers P(answer) by 0.47 percentage points (90th
+  pct 3.8 points); 660 of 9,257 entrants (7%) lower it by >= 5 points and 55 by >= 20 points. **40% of concepts gain
+  at least one entrant that changes P(answer) by >= 5 points.** Most large log-odds drops come from prompts Qwen is
+  near-certain about (log-odds amplify tiny probability changes there).
+- **Consequences:** run 1's (and the 16 Oct pipeline's) top-k lists are incomplete; necessity claims ("a handful of
+  neurons is enough") are lower bounds and stand. Statistics computed over the lists (e.g. LAYERS_AND_JOBS S1's "68% of
+  top-5 neurons in layers 28-35") will shift and are recomputed after the enrichment run. Method change for v3: search
+  the union of both candidate rankings, and report a probability-space effect next to the log-odds drop.
+
+## 18 Oct 2026 (evening) - Loop v3 snapshot: 1,231 of 4,194 concepts enriched (E0 / E2 / E3)
+
+The full enrichment run (enrich_run1) is still going on the 5090; this is a frozen copy of its first 1,231 records
+(`D:/already-clean-data/loop_v3/enrich_run1/records_snapshot_2026-10-18.jsonl`, ledger experiment
+`loop_v3_enrich_run1`), so the figures can change as the rest arrives. Computed by `src/loop_v2/v3_snapshot_findings.py`
+(CPU, output `snapshot_findings.txt` next to the snapshot); 1,219 concepts have both a run-1 map and E0.
+- **The 'key neurons are late' finding survives the missed candidates.** Share of each concept's top-5 neurons in
+  layers 28-35: run 1 as published 68%; with E0's missed candidates added 66%; ranked by probability drop instead of
+  log-odds 67% / 65%. Layers < 20: 16% -> 17-19%.
+- **E0 (same picture as the first 982):** the top 30 changes for 81% of concepts (11,245 entrants), but the median
+  entrant moves P(answer) by 0.49 points; 7% of entrants move it by >= 5 points; 40% of concepts gain at least one
+  such entrant.
+- **E2 formats:** for 42% of top-30 neurons (15,645 / 36,904 with an original drop > 0.1) knocking them out in the short
+  answer format hurts less than half as much as in the original format - and for 94% of those the neuron is still
+  active (>= half its original activation) in the short format. So the general version of the era result holds:
+  **neurons stay switched on across formats, but whether the answer NEEDS them depends on the format.**
+- **E3 floor:** 7,386 layer-matched random neurons, |mean drop| median 0.017, p99 0.101 (run-1 pooled floor 0.100).
+- **Caveat - measurement resolution:** per-prompt knockout drops come from bf16 logits, which move in steps of 0.125-0.25
+  for the logit sizes here, so a single prompt cannot resolve drops below ~0.25 (many null per-prompt values are exactly
+  +-0.25). Means over 16 prompts are finer; the floors above are measured with the same resolution, so comparisons
+  against them stand, but small entrants (the top-30 bar is ~0.2) sit near the step size.
+
+## 18 Oct 2026 (night) - J-lens at 256 windows: in progress at this release
+
+The scaled-up J-lens estimate (256 FineWeb windows, 8x the pilot; one configuration on rented RTX 3090s, so the 5090
+pilot is not merged in - see the reproduction check above) was still running when the 18 Oct release was cut, so the
+J-lens results in this release are the 32-window pilot's. What happened so far:
+- 16 shards of 16 windows (64-80 split into four quarters). **3 shards came back entirely non-finite** (NaN in every
+  layer but the last, both split halves): 16-32, 48-64 and 192-208, all from ONE rented machine; every other machine's
+  shards are finite. That machine is blocked, and both `jlens.py estimate` (per window, per layer) and the cloud worker
+  (per shard) now refuse non-finite sums instead of storing them; `merge` refuses non-finite shards too.
+- Those 48 windows are being recomputed on other machines. The merged 256-window J-lens, its validation (J1-J4 re-run)
+  and per-neuron J-lens readings (ledger experiment `jlens_qwen3_8b_256w`, and J-lens words on the map for the layers
+  that pass a rule fixed in advance in `explainer/gen/map/push_words_jlens.py`) follow in the next update.

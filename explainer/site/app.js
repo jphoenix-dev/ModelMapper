@@ -224,6 +224,12 @@
       $("anyReply").innerHTML = s ? highlight(finish(txt), c.highlight) : esc(finish(txt));
       $("anyVal").textContent = fmtS(s);
     }
+    /* deep link from the map: #steer=<concept id> opens Figure 3 on that concept */
+    const steerLink = /^#steer=(.+)$/.exec(location.hash);
+    if (steerLink) {
+      const j = D.concepts.findIndex((c) => c.id === decodeURIComponent(steerLink[1]));
+      if (j >= 0) { ci = j; setTimeout(() => $("any").scrollIntoView(), 0); }
+    }
     pick.value = ci; load(ci);
 
     /* ---------- Figure 4: shared parts ---------- */

@@ -1,0 +1,10 @@
+# allowlist: only what the Dockerfile copies
+*
+!requirements-dist.txt
+!modelmapper/__init__.py
+!modelmapper/core/__init__.py
+!modelmapper/core/config.py
+!modelmapper/core/settings.py
+!modelmapper/core/neurons.py
+!modelmapper/dist/
+modelmapper/dist/__pycache__

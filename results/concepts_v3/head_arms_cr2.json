@@ -1,0 +1,401 @@
+{
+ "Albert Einstein": {
+  "random_heads": [
+   "L35H7",
+   "L34H4",
+   "L35H17"
+  ],
+  "base_logodds": 6.321,
+  "base_entropy": 0.171,
+  "writers": {
+   "d_logodds": -0.054,
+   "d_entropy": 0.026
+  },
+  "anti": {
+   "d_logodds": -1.319,
+   "d_entropy": 0.083
+  },
+  "random": {
+   "d_logodds": -0.067,
+   "d_entropy": 0.006
+  }
+ },
+ "chess": {
+  "random_heads": [
+   "L35H13",
+   "L34H30",
+   "L35H18"
+  ],
+  "base_logodds": 6.323,
+  "base_entropy": 0.26,
+  "writers": {
+   "d_logodds": -1.006,
+   "d_entropy": 0.064
+  },
+  "anti": {
+   "d_logodds": -0.642,
+   "d_entropy": 0.033
+  },
+  "random": {
+   "d_logodds": 0.001,
+   "d_entropy": 0.004
+  }
+ },
+ "coffee": {
+  "random_heads": [
+   "L35H0",
+   "L34H22",
+   "L35H15"
+  ],
+  "base_logodds": 3.576,
+  "base_entropy": 0.347,
+  "writers": {
+   "d_logodds": 0.126,
+   "d_entropy": -0.046
+  },
+  "anti": {
+   "d_logodds": -0.751,
+   "d_entropy": -0.011
+  },
+  "random": {
+   "d_logodds": -0.112,
+   "d_entropy": 0.02
+  }
+ },
+ "democracy": {
+  "random_heads": [
+   "L35H28",
+   "L34H24",
+   "L35H5"
+  ],
+  "base_logodds": 2.761,
+  "base_entropy": 0.464,
+  "writers": {
+   "d_logodds": -0.387,
+   "d_entropy": 0.028
+  },
+  "anti": {
+   "d_logodds": -0.129,
+   "d_entropy": 0.034
+  },
+  "random": {
+   "d_logodds": 0.279,
+   "d_entropy": -0.036
+  }
+ },
+ "Eiffel Tower": {
+  "random_heads": [
+   "L35H14",
+   "L34H11",
+   "L35H26"
+  ],
+  "base_logodds": 6.518,
+  "base_entropy": 0.151,
+  "writers": {
+   "d_logodds": -3.481,
+   "d_entropy": 0.255
+  },
+  "anti": {
+   "d_logodds": -0.121,
+   "d_entropy": -0.057
+  },
+  "random": {
+   "d_logodds": -0.39,
+   "d_entropy": 0.012
+  }
+ },
+ "Frida Kahlo": {
+  "random_heads": [
+   "L35H15",
+   "L34H24",
+   "L35H8"
+  ],
+  "base_logodds": 1.769,
+  "base_entropy": 0.645,
+  "writers": {
+   "d_logodds": -2.121,
+   "d_entropy": 0.723
+  },
+  "anti": {
+   "d_logodds": 2.542,
+   "d_entropy": -0.342
+  },
+  "random": {
+   "d_logodds": 0.06,
+   "d_entropy": -0.003
+  }
+ },
+ "Golden Gate Bridge": {
+  "random_heads": [
+   "L35H2",
+   "L34H22",
+   "L35H30"
+  ],
+  "base_logodds": 2.724,
+  "base_entropy": 0.46,
+  "writers": {
+   "d_logodds": -1.333,
+   "d_entropy": 0.419
+  },
+  "anti": {
+   "d_logodds": -0.934,
+   "d_entropy": 0.071
+  },
+  "random": {
+   "d_logodds": -0.45,
+   "d_entropy": 0.096
+  }
+ },
+ "Harry Potter": {
+  "random_heads": [
+   "L35H18",
+   "L34H16",
+   "L35H2"
+  ],
+  "base_logodds": 6.475,
+  "base_entropy": 0.136,
+  "writers": {
+   "d_logodds": 1.791,
+   "d_entropy": -0.009
+  },
+  "anti": {
+   "d_logodds": -2.123,
+   "d_entropy": 0.159
+  },
+  "random": {
+   "d_logodds": -0.056,
+   "d_entropy": 0.003
+  }
+ },
+ "Mount Everest": {
+  "random_heads": [
+   "L35H14",
+   "L34H9",
+   "L35H21"
+  ],
+  "base_logodds": 3.147,
+  "base_entropy": 0.363,
+  "writers": {
+   "d_logodds": 0.858,
+   "d_entropy": -0.074
+  },
+  "anti": {
+   "d_logodds": -0.599,
+   "d_entropy": 0.042
+  },
+  "random": {
+   "d_logodds": -0.207,
+   "d_entropy": 0.017
+  }
+ },
+ "Napoleon Bonaparte": {
+  "random_heads": [
+   "L35H1",
+   "L34H1",
+   "L35H13"
+  ],
+  "base_logodds": 10.134,
+  "base_entropy": 0.009,
+  "writers": {
+   "d_logodds": -4.14,
+   "d_entropy": 0.171
+  },
+  "anti": {
+   "d_logodds": 0.908,
+   "d_entropy": -0.007
+  },
+  "random": {
+   "d_logodds": -0.059,
+   "d_entropy": 0.0
+  }
+ },
+ "photosynthesis": {
+  "random_heads": [
+   "L35H11",
+   "L34H19",
+   "L35H18"
+  ],
+  "base_logodds": 7.759,
+  "base_entropy": 0.052,
+  "writers": {
+   "d_logodds": -0.923,
+   "d_entropy": 0.0
+  },
+  "anti": {
+   "d_logodds": -0.117,
+   "d_entropy": -0.002
+  },
+  "random": {
+   "d_logodds": -0.036,
+   "d_entropy": -0.001
+  }
+ },
+ "the French Revolution": {
+  "random_heads": [
+   "L35H10",
+   "L34H19",
+   "L35H15"
+  ],
+  "base_logodds": 6.512,
+  "base_entropy": 0.079,
+  "writers": {
+   "d_logodds": 1.306,
+   "d_entropy": -0.062
+  },
+  "anti": {
+   "d_logodds": -1.494,
+   "d_entropy": 0.102
+  },
+  "random": {
+   "d_logodds": -0.081,
+   "d_entropy": 0.002
+  }
+ },
+ "the Moon": {
+  "random_heads": [
+   "L35H20",
+   "L34H11",
+   "L35H5"
+  ],
+  "base_logodds": 9.468,
+  "base_entropy": 0.012,
+  "writers": {
+   "d_logodds": -0.811,
+   "d_entropy": -0.006
+  },
+  "anti": {
+   "d_logodds": -1.018,
+   "d_entropy": 0.052
+  },
+  "random": {
+   "d_logodds": 0.28,
+   "d_entropy": -0.003
+  }
+ },
+ "the Titanic": {
+  "random_heads": [
+   "L35H11",
+   "L34H23",
+   "L35H4"
+  ],
+  "base_logodds": 3.137,
+  "base_entropy": 0.436,
+  "writers": {
+   "d_logodds": 0.881,
+   "d_entropy": -0.127
+  },
+  "anti": {
+   "d_logodds": -1.569,
+   "d_entropy": 0.091
+  },
+  "random": {
+   "d_logodds": -0.059,
+   "d_entropy": 0.006
+  }
+ },
+ "the violin": {
+  "random_heads": [
+   "L35H21",
+   "L34H19",
+   "L35H31"
+  ],
+  "base_logodds": 1.634,
+  "base_entropy": 0.597,
+  "writers": {
+   "d_logodds": 0.508,
+   "d_entropy": -0.158
+  },
+  "anti": {
+   "d_logodds": -1.009,
+   "d_entropy": 0.136
+  },
+  "random": {
+   "d_logodds": 0.071,
+   "d_entropy": -0.005
+  }
+ },
+ "Venice": {
+  "random_heads": [
+   "L35H12",
+   "L34H5",
+   "L35H10"
+  ],
+  "base_logodds": 4.663,
+  "base_entropy": 0.222,
+  "writers": {
+   "d_logodds": 1.189,
+   "d_entropy": 0.023
+  },
+  "anti": {
+   "d_logodds": -2.057,
+   "d_entropy": 0.183
+  },
+  "random": {
+   "d_logodds": 0.032,
+   "d_entropy": -0.004
+  }
+ },
+ "William Shakespeare": {
+  "random_heads": [
+   "L35H21",
+   "L34H18",
+   "L35H12"
+  ],
+  "base_logodds": 4.473,
+  "base_entropy": 0.296,
+  "writers": {
+   "d_logodds": 0.893,
+   "d_entropy": -0.102
+  },
+  "anti": {
+   "d_logodds": -1.259,
+   "d_entropy": 0.027
+  },
+  "random": {
+   "d_logodds": -0.06,
+   "d_entropy": 0.004
+  }
+ },
+ "Wolfgang Amadeus Mozart": {
+  "random_heads": [
+   "L35H2",
+   "L34H16",
+   "L35H29"
+  ],
+  "base_logodds": 3.185,
+  "base_entropy": 0.567,
+  "writers": {
+   "d_logodds": -4.311,
+   "d_entropy": 1.004
+  },
+  "anti": {
+   "d_logodds": 1.103,
+   "d_entropy": -0.241
+  },
+  "random": {
+   "d_logodds": -0.155,
+   "d_entropy": 0.012
+  }
+ },
+ "Tokyo": {
+  "random_heads": [
+   "L35H13",
+   "L34H30",
+   "L35H18"
+  ],
+  "base_logodds": 11.373,
+  "base_entropy": 0.008,
+  "writers": {
+   "d_logodds": 0.973,
+   "d_entropy": 0.003
+  },
+  "anti": {
+   "d_logodds": -1.824,
+   "d_entropy": -0.001
+  },
+  "random": {
+   "d_logodds": 0.1,
+   "d_entropy": 0.001
+  }
+ }
+}

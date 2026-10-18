@@ -1,0 +1,73 @@
+Bow-tie test, 59 concepts: the concept's top-5 neurons switched off (answer position only, or every position); control = same number of random neurons from the same layers.
+
+ANSWER POSITION ONLY (answer score = answer logit minus mean logit):
+  total drop median 3.42; what the neurons wrote directly 5.55; indirect (total - direct) -0.96
+  indirect < 0 (the rest of the network partly makes up for the loss) in 42/59; indirect > direct (amplified through others: a bow-tie) in 8/59
+  of the indirect part: via heads median -1.01, via other neurons -0.59
+  random neurons: total drop median 0.0
+
+RECALL (answer first-token log-odds) drop:
+  answer position only: median 4.34   every position: median 6.46   random every position: -0.0
+  share of the every-position effect already there at the answer position alone: median 0.63 (concepts with every-position drop > 0.2: 59/59)
+  every-position drop > 2x the answer-position drop in 18/59
+
+per concept: answer-pos score drop = direct + indirect | log-odds drop answer pos / every pos | random every pos
+  vaccines                         +8.8 = +11.0  -2.3 | +10.17 / +17.73 | +0.06
+  the Olympic Games                +7.0 =  +5.5  +1.4 | +8.07 / +16.25 | -0.01
+  democracy                       +10.5 = +15.0  -4.5 | +11.09 / +15.04 | +0.01
+  football (soccer)                +9.2 =  +7.9  +1.3 | +12.21 / +14.79 | +0.08
+  insomnia                         +8.2 = +11.0  -2.7 | +10.41 / +13.63 | -0.03
+  the heart                        +3.4 =  +0.2  +3.1 | +9.75 / +11.24 | -0.02
+  haiku                            +3.6 =  +3.0  +0.6 | +4.62 / +10.54 | +0.06
+  jealousy                         +8.4 = +14.7  -6.2 | +7.30 / +10.48 | +0.03
+  ballet                           +5.6 =  +4.0  +1.6 | +7.57 / +10.25 | -0.00
+  the Mona Lisa                    +8.0 =  +7.1  +0.9 | +7.87 / +10.22 | +0.04
+  black holes                      +6.0 = +13.1  -7.1 | +5.87 / +10.22 | -0.01
+  wine                             +7.8 =  +9.5  -1.7 | +8.09 / +10.02 | -0.00
+  nostalgia                        +6.4 =  +5.1  +1.3 | +7.94 / +9.85 | -0.01
+  Mount Everest                    +7.2 = +17.1  -9.9 | +6.12 / +9.50 | -0.04
+  justice                          +6.0 =  +9.0  -3.0 | +5.68 / +9.26 | +0.01
+  evolution by natural selection   +6.6 =  +5.4  +1.2 | +5.64 / +8.83 | -0.02
+  Wolfgang Amadeus Mozart          +2.1 =  +1.1  +1.0 | +3.42 / +8.35 | -0.04
+  poker                            +6.3 =  +6.4  -0.1 | +5.61 / +8.01 | +0.00
+  the elephant                     +7.6 =  +7.9  -0.4 | +4.96 / +7.88 | -0.00
+  volcanoes                        +3.4 =  +8.8  -5.5 | +3.49 / +7.75 | -0.06
+  hurricanes                       +3.1 =  +4.6  -1.6 | +2.23 / +7.59 | +0.05
+  chocolate                        +2.9 =  +6.0  -3.0 | +2.90 / +7.30 | +0.07
+  Egypt's pyramids                 +5.7 =  +5.8  -0.1 | +5.03 / +7.10 | +0.00
+  Golden Gate Bridge               +4.6 =  +8.0  -3.4 | +4.59 / +7.08 | -0.03
+  William Shakespeare              +2.4 =  +2.8  -0.5 | +6.27 / +7.05 | -0.06
+  Albert Einstein                  +2.6 =  +2.9  -0.3 | +5.88 / +6.94 | -0.01
+  rainbows                         +5.6 =  +8.8  -3.2 | +4.87 / +6.77 | +0.06
+  the French Revolution            +4.3 =  +6.1  -1.7 | +3.81 / +6.71 | -0.02
+  the Moon                         +1.8 = +23.4 -21.6 | +4.63 / +6.57 | +0.06
+  Venice                           +0.6 =  +8.9  -8.3 | +0.31 / +6.46 | +0.11
+  sushi                            +2.1 =  +0.2  +1.9 | +2.73 / +6.46 | +0.13
+  jazz                             +4.6 =  +7.9  -3.3 | +4.34 / +6.46 | +0.06
+  infinity                         +0.4 =  -0.0  +0.4 | +0.34 / +6.36 | -0.06
+  Charles Darwin                   +3.9 =  +6.6  -2.8 | +3.61 / +6.36 | -0.04
+  Marie Curie                      +5.4 =  +4.7  +0.7 | +5.45 / +6.23 | -0.11
+  DNA                              +4.0 = +13.8  -9.8 | +1.51 / +5.97 | +0.03
+  the internet                     +5.2 = +10.9  -5.8 | +5.30 / +5.95 | -0.04
+  the Titanic                      +0.7 =  +1.3  -0.6 | +4.37 / +5.92 | +0.07
+  the brain                        +3.5 = +12.1  -8.6 | +2.99 / +5.86 | +0.09
+  the Great Wall of China          +5.2 =  +8.2  -3.0 | +4.41 / +5.72 | +0.00
+  Bitcoin                          -1.2 =  -1.1  -0.1 | +3.99 / +5.54 | +0.00
+  the penguin                      +2.2 =  +0.8  +1.4 | +2.22 / +5.39 | -0.01
+  Harry Potter                     -0.0 =  +0.0  -0.0 | +0.03 / +5.37 | -0.01
+  the violin                       +1.8 =  +2.8  -1.0 | +2.56 / +5.28 | -0.05
+  photosynthesis                   +6.8 = +17.0 -10.2 | +3.98 / +5.28 | -0.00
+  the honeybee                     +3.4 =  +3.8  -0.4 | +4.50 / +5.22 | -0.05
+  Eiffel Tower                     +2.9 =  +1.9  +1.0 | +2.95 / +4.89 | -0.00
+  the octopus                      +3.4 =  +4.3  -0.9 | +3.22 / +4.88 | +0.04
+  pizza                            +1.1 =  +1.2  -0.1 | +1.27 / +4.74 | -0.09
+  basketball                       +2.8 =  +8.5  -5.7 | +2.96 / +4.39 | +0.01
+  chess                            -0.1 =  +2.7  -2.8 | -0.04 / +4.35 | -0.06
+  Napoleon Bonaparte               +0.8 =  +1.8  -1.0 | +2.26 / +4.01 | +0.03
+  the steam engine                 +1.2 =  +4.3  -3.1 | +1.92 / +3.98 | +0.00
+  Frida Kahlo                      +2.0 =  +0.8  +1.2 | +2.37 / +3.83 | -0.07
+  the Amazon rainforest            +0.3 =  +3.1  -2.9 | +0.39 / +3.30 | -0.02
+  Tokyo                            +1.5 =  +2.3  -0.8 | +1.73 / +3.09 | -0.07
+  the periodic table               +0.1 =  +0.0  +0.1 | +1.35 / +3.02 | -0.02
+  coffee                           +1.2 =  +7.0  -5.8 | +1.66 / +2.72 | +0.03
+  the printing press               +1.1 =  -0.1  +1.2 | +0.75 / +0.84 | +0.06

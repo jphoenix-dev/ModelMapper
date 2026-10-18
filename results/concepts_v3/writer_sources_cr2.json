@@ -1,0 +1,3082 @@
+{
+ "Albert Einstein": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 19,
+   "”?": 1
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.062,
+    "template": 0.519,
+    "question": 0.051,
+    "qmark": 0.03,
+    "suffix": 0.005,
+    "self": 1.541
+   },
+   "attention": {
+    "sink": 0.43,
+    "template": 0.167,
+    "question": 0.055,
+    "qmark": 0.017,
+    "suffix": 0.014,
+    "self": 0.317
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.541,
+    "template[-7]'<|im_start|>'": 0.275,
+    "template[-8]'\\n'": 0.162,
+    "template[-3]'\\n\\n'": 0.084,
+    "template[-2]'</think>'": -0.001,
+    "template[-35]'user'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.002,
+    "template": 2.367,
+    "question": 0.103,
+    "qmark": 0.12,
+    "suffix": -0.0,
+    "self": 0.769
+   },
+   "attention": {
+    "sink": 0.302,
+    "template": 0.422,
+    "question": 0.081,
+    "qmark": 0.041,
+    "suffix": 0.001,
+    "self": 0.152
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 1.21,
+    "template[-8]'\\n'": 1.088,
+    "self[-1]'\\n\\n'": 0.769,
+    "template[-3]'\\n\\n'": 0.069,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.001,
+    "template": 0.341,
+    "question": 0.039,
+    "qmark": 0.007,
+    "suffix": -0.0,
+    "self": 0.194
+   },
+   "attention": {
+    "sink": 0.414,
+    "template": 0.328,
+    "question": 0.087,
+    "qmark": 0.042,
+    "suffix": 0.003,
+    "self": 0.126
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.24,
+    "self[-1]'\\n\\n'": 0.194,
+    "template[-8]'\\n'": 0.096,
+    "template[-3]'\\n\\n'": 0.005,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": -0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.035,
+    "template": -0.285,
+    "question": -0.033,
+    "qmark": -0.022,
+    "suffix": -0.002,
+    "self": -1.304
+   },
+   "attention": {
+    "sink": 0.413,
+    "template": 0.11,
+    "question": 0.053,
+    "qmark": 0.012,
+    "suffix": 0.006,
+    "self": 0.405
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.304,
+    "template[-7]'<|im_start|>'": -0.137,
+    "template[-8]'\\n'": -0.087,
+    "template[-3]'\\n\\n'": -0.061,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": -0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.002,
+    "template": -0.799,
+    "question": -0.085,
+    "qmark": -0.019,
+    "suffix": 0.001,
+    "self": -1.353
+   },
+   "attention": {
+    "sink": 0.461,
+    "template": 0.133,
+    "question": 0.076,
+    "qmark": 0.009,
+    "suffix": 0.005,
+    "self": 0.315
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.353,
+    "template[-8]'\\n'": -0.354,
+    "template[-7]'<|im_start|>'": -0.334,
+    "template[-3]'\\n\\n'": -0.108,
+    "template[-6]'assistant'": -0.001,
+    "template[-5]'\\n'": -0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.004,
+    "template": 0.039,
+    "question": -0.001,
+    "qmark": 0.003,
+    "suffix": 0.001,
+    "self": 0.011
+   },
+   "attention": {
+    "sink": 0.51,
+    "template": 0.121,
+    "question": 0.041,
+    "qmark": 0.013,
+    "suffix": 0.017,
+    "self": 0.299
+   },
+   "by_template_token": {
+    "template[-8]'\\n'": 0.015,
+    "template[-3]'\\n\\n'": 0.015,
+    "self[-1]'\\n\\n'": 0.011,
+    "template[-2]'</think>'": 0.004,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-7]'<|im_start|>'": 0.001
+   }
+  }
+ },
+ "chess": {
+  "max_value_recon_err": 0.0021,
+  "qmark_tokens": {
+   "?": 15
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.021,
+    "template": 0.549,
+    "question": 0.016,
+    "qmark": 0.054,
+    "suffix": 0.0,
+    "self": 1.801
+   },
+   "attention": {
+    "sink": 0.258,
+    "template": 0.201,
+    "question": 0.046,
+    "qmark": 0.023,
+    "suffix": 0.015,
+    "self": 0.457
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.801,
+    "template[-8]'\\n'": 0.242,
+    "template[-7]'<|im_start|>'": 0.242,
+    "template[-3]'\\n\\n'": 0.065,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.003,
+    "template": 2.085,
+    "question": -0.003,
+    "qmark": 0.109,
+    "suffix": 0.0,
+    "self": 0.204
+   },
+   "attention": {
+    "sink": 0.227,
+    "template": 0.598,
+    "question": 0.062,
+    "qmark": 0.046,
+    "suffix": 0.001,
+    "self": 0.066
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 1.113,
+    "template[-8]'\\n'": 0.97,
+    "self[-1]'\\n\\n'": 0.204,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-35]'user'": 0.0,
+    "template[-34]'\\n'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.008,
+    "template": 0.567,
+    "question": 0.054,
+    "qmark": 0.031,
+    "suffix": 0.005,
+    "self": 0.161
+   },
+   "attention": {
+    "sink": 0.401,
+    "template": 0.347,
+    "question": 0.117,
+    "qmark": 0.019,
+    "suffix": 0.008,
+    "self": 0.106
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.416,
+    "self[-1]'\\n\\n'": 0.161,
+    "template[-8]'\\n'": 0.145,
+    "template[-3]'\\n\\n'": 0.007,
+    "template[-6]'assistant'": -0.001,
+    "template[-35]'user'": -0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.006,
+    "template": -0.265,
+    "question": -0.01,
+    "qmark": -0.032,
+    "suffix": -0.001,
+    "self": -1.553
+   },
+   "attention": {
+    "sink": 0.394,
+    "template": 0.087,
+    "question": 0.045,
+    "qmark": 0.017,
+    "suffix": 0.007,
+    "self": 0.45
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.553,
+    "template[-8]'\\n'": -0.137,
+    "template[-3]'\\n\\n'": -0.073,
+    "template[-7]'<|im_start|>'": -0.055,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.011,
+    "template": -0.174,
+    "question": -0.003,
+    "qmark": -0.036,
+    "suffix": -0.0,
+    "self": -0.906
+   },
+   "attention": {
+    "sink": 0.533,
+    "template": 0.074,
+    "question": 0.037,
+    "qmark": 0.02,
+    "suffix": 0.005,
+    "self": 0.331
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.906,
+    "template[-7]'<|im_start|>'": -0.097,
+    "template[-8]'\\n'": -0.067,
+    "template[-3]'\\n\\n'": -0.01,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": 0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": 0.008,
+    "template": 0.01,
+    "question": -0.008,
+    "qmark": 0.001,
+    "suffix": -0.005,
+    "self": 0.118
+   },
+   "attention": {
+    "sink": 0.539,
+    "template": 0.064,
+    "question": 0.034,
+    "qmark": 0.011,
+    "suffix": 0.016,
+    "self": 0.335
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.118,
+    "template[-3]'\\n\\n'": 0.01,
+    "template[-8]'\\n'": 0.002,
+    "template[-6]'assistant'": -0.001,
+    "template[-2]'</think>'": -0.001,
+    "template[-35]'user'": -0.0
+   }
+  }
+ },
+ "coffee": {
+  "max_value_recon_err": 0.0021,
+  "qmark_tokens": {
+   "?": 15
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.003,
+    "template": 0.424,
+    "question": 0.009,
+    "qmark": 0.024,
+    "suffix": 0.001,
+    "self": 1.553
+   },
+   "attention": {
+    "sink": 0.185,
+    "template": 0.189,
+    "question": 0.025,
+    "qmark": 0.013,
+    "suffix": 0.008,
+    "self": 0.581
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.553,
+    "template[-8]'\\n'": 0.214,
+    "template[-7]'<|im_start|>'": 0.161,
+    "template[-3]'\\n\\n'": 0.049,
+    "template[-34]'user'": -0.0,
+    "template[-33]'\\n'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.005,
+    "template": 0.709,
+    "question": 0.024,
+    "qmark": 0.062,
+    "suffix": -0.0,
+    "self": 0.095
+   },
+   "attention": {
+    "sink": 0.239,
+    "template": 0.497,
+    "question": 0.091,
+    "qmark": 0.039,
+    "suffix": 0.002,
+    "self": 0.132
+   },
+   "by_template_token": {
+    "template[-8]'\\n'": 0.372,
+    "template[-7]'<|im_start|>'": 0.329,
+    "self[-1]'\\n\\n'": 0.095,
+    "template[-3]'\\n\\n'": 0.007,
+    "template[-34]'user'": 0.0,
+    "template[-33]'\\n'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.006,
+    "template": 1.332,
+    "question": 0.182,
+    "qmark": 0.072,
+    "suffix": 0.001,
+    "self": 0.738
+   },
+   "attention": {
+    "sink": 0.142,
+    "template": 0.412,
+    "question": 0.137,
+    "qmark": 0.028,
+    "suffix": 0.002,
+    "self": 0.279
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.914,
+    "self[-1]'\\n\\n'": 0.738,
+    "template[-8]'\\n'": 0.406,
+    "template[-3]'\\n\\n'": 0.012,
+    "template[-34]'user'": -0.0,
+    "template[-33]'\\n'": 0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.001,
+    "template": -0.158,
+    "question": -0.014,
+    "qmark": -0.015,
+    "suffix": -0.001,
+    "self": -0.989
+   },
+   "attention": {
+    "sink": 0.384,
+    "template": 0.084,
+    "question": 0.043,
+    "qmark": 0.011,
+    "suffix": 0.011,
+    "self": 0.467
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.989,
+    "template[-8]'\\n'": -0.082,
+    "template[-7]'<|im_start|>'": -0.039,
+    "template[-3]'\\n\\n'": -0.037,
+    "template[-34]'user'": -0.0,
+    "template[-33]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.006,
+    "template": -0.083,
+    "question": -0.011,
+    "qmark": -0.012,
+    "suffix": 0.0,
+    "self": -0.162
+   },
+   "attention": {
+    "sink": 0.62,
+    "template": 0.068,
+    "question": 0.065,
+    "qmark": 0.012,
+    "suffix": 0.006,
+    "self": 0.229
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.162,
+    "template[-8]'\\n'": -0.036,
+    "template[-7]'<|im_start|>'": -0.023,
+    "template[-3]'\\n\\n'": -0.021,
+    "template[-2]'</think>'": -0.002,
+    "template[-34]'user'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.001,
+    "template": 0.047,
+    "question": 0.004,
+    "qmark": 0.007,
+    "suffix": 0.006,
+    "self": 0.164
+   },
+   "attention": {
+    "sink": 0.657,
+    "template": 0.082,
+    "question": 0.036,
+    "qmark": 0.014,
+    "suffix": 0.04,
+    "self": 0.169
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.164,
+    "template[-8]'\\n'": 0.023,
+    "template[-3]'\\n\\n'": 0.018,
+    "template[-7]'<|im_start|>'": 0.009,
+    "template[-2]'</think>'": -0.002,
+    "template[-9]'<|im_end|>'": 0.001
+   }
+  }
+ },
+ "democracy": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 13
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.005,
+    "template": 0.434,
+    "question": 0.011,
+    "qmark": 0.005,
+    "suffix": -0.007,
+    "self": 1.768
+   },
+   "attention": {
+    "sink": 0.18,
+    "template": 0.163,
+    "question": 0.027,
+    "qmark": 0.009,
+    "suffix": 0.016,
+    "self": 0.604
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.768,
+    "template[-7]'<|im_start|>'": 0.258,
+    "template[-8]'\\n'": 0.159,
+    "template[-3]'\\n\\n'": 0.019,
+    "template[-2]'</think>'": -0.001,
+    "template[-35]'user'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.0,
+    "template": 0.578,
+    "question": -0.003,
+    "qmark": 0.026,
+    "suffix": -0.001,
+    "self": 0.083
+   },
+   "attention": {
+    "sink": 0.286,
+    "template": 0.454,
+    "question": 0.115,
+    "qmark": 0.052,
+    "suffix": 0.004,
+    "self": 0.088
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.37,
+    "template[-8]'\\n'": 0.207,
+    "self[-1]'\\n\\n'": 0.083,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-35]'user'": 0.0,
+    "template[-34]'\\n'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.0,
+    "template": 0.602,
+    "question": 0.048,
+    "qmark": 0.035,
+    "suffix": -0.0,
+    "self": 0.195
+   },
+   "attention": {
+    "sink": 0.12,
+    "template": 0.446,
+    "question": 0.17,
+    "qmark": 0.07,
+    "suffix": 0.005,
+    "self": 0.189
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.417,
+    "self[-1]'\\n\\n'": 0.195,
+    "template[-8]'\\n'": 0.182,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-35]'user'": 0.0,
+    "template[-34]'\\n'": 0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.03,
+    "template": -0.151,
+    "question": -0.011,
+    "qmark": -0.002,
+    "suffix": 0.001,
+    "self": -0.621
+   },
+   "attention": {
+    "sink": 0.553,
+    "template": 0.079,
+    "question": 0.056,
+    "qmark": 0.004,
+    "suffix": 0.009,
+    "self": 0.298
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.621,
+    "template[-8]'\\n'": -0.073,
+    "template[-7]'<|im_start|>'": -0.058,
+    "template[-3]'\\n\\n'": -0.022,
+    "template[-35]'user'": 0.0,
+    "template[-34]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.006,
+    "template": -0.042,
+    "question": 0.007,
+    "qmark": -0.004,
+    "suffix": 0.0,
+    "self": -0.207
+   },
+   "attention": {
+    "sink": 0.571,
+    "template": 0.053,
+    "question": 0.052,
+    "qmark": 0.012,
+    "suffix": 0.005,
+    "self": 0.307
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.207,
+    "template[-8]'\\n'": -0.022,
+    "template[-7]'<|im_start|>'": -0.012,
+    "template[-3]'\\n\\n'": -0.008,
+    "template[-2]'</think>'": 0.001,
+    "template[-35]'user'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.003,
+    "template": 0.007,
+    "question": 0.003,
+    "qmark": 0.002,
+    "suffix": 0.004,
+    "self": 0.02
+   },
+   "attention": {
+    "sink": 0.682,
+    "template": 0.068,
+    "question": 0.066,
+    "qmark": 0.013,
+    "suffix": 0.028,
+    "self": 0.143
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.02,
+    "template[-8]'\\n'": 0.003,
+    "template[-7]'<|im_start|>'": 0.003,
+    "template[-6]'assistant'": 0.001,
+    "template[-35]'user'": 0.0,
+    "template[-34]'\\n'": -0.0
+   }
+  }
+ },
+ "Eiffel Tower": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 16
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.034,
+    "template": 1.181,
+    "question": 0.03,
+    "qmark": 0.008,
+    "suffix": -0.012,
+    "self": 3.495
+   },
+   "attention": {
+    "sink": 0.437,
+    "template": 0.158,
+    "question": 0.043,
+    "qmark": 0.009,
+    "suffix": 0.011,
+    "self": 0.342
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 3.495,
+    "template[-7]'<|im_start|>'": 0.643,
+    "template[-8]'\\n'": 0.449,
+    "template[-3]'\\n\\n'": 0.096,
+    "template[-9]'<|im_end|>'": -0.002,
+    "template[-4]'<think>'": -0.002
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.008,
+    "template": 2.084,
+    "question": 0.055,
+    "qmark": 0.006,
+    "suffix": 0.0,
+    "self": 0.287
+   },
+   "attention": {
+    "sink": 0.332,
+    "template": 0.526,
+    "question": 0.054,
+    "qmark": 0.007,
+    "suffix": 0.0,
+    "self": 0.08
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 1.506,
+    "template[-8]'\\n'": 0.574,
+    "self[-1]'\\n\\n'": 0.287,
+    "template[-3]'\\n\\n'": 0.004,
+    "template[-43]'user'": 0.0,
+    "template[-42]'\\n'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.025,
+    "template": 0.128,
+    "question": 0.013,
+    "qmark": 0.002,
+    "suffix": 0.0,
+    "self": 0.019
+   },
+   "attention": {
+    "sink": 0.434,
+    "template": 0.394,
+    "question": 0.086,
+    "qmark": 0.011,
+    "suffix": 0.002,
+    "self": 0.073
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.08,
+    "template[-8]'\\n'": 0.046,
+    "self[-1]'\\n\\n'": 0.019,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-43]'user'": 0.0,
+    "template[-42]'\\n'": 0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.05,
+    "template": -0.281,
+    "question": -0.016,
+    "qmark": -0.002,
+    "suffix": 0.002,
+    "self": -1.259
+   },
+   "attention": {
+    "sink": 0.487,
+    "template": 0.11,
+    "question": 0.067,
+    "qmark": 0.009,
+    "suffix": 0.01,
+    "self": 0.317
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.259,
+    "template[-7]'<|im_start|>'": -0.1,
+    "template[-3]'\\n\\n'": -0.094,
+    "template[-8]'\\n'": -0.092,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-6]'assistant'": 0.001
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.05,
+    "template": -0.339,
+    "question": -0.02,
+    "qmark": -0.007,
+    "suffix": -0.0,
+    "self": -1.2
+   },
+   "attention": {
+    "sink": 0.602,
+    "template": 0.078,
+    "question": 0.05,
+    "qmark": 0.008,
+    "suffix": 0.002,
+    "self": 0.259
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.2,
+    "template[-7]'<|im_start|>'": -0.153,
+    "template[-8]'\\n'": -0.139,
+    "template[-3]'\\n\\n'": -0.048,
+    "template[-2]'</think>'": 0.001,
+    "template[-43]'user'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.044,
+    "template": -0.576,
+    "question": -0.017,
+    "qmark": -0.004,
+    "suffix": 0.013,
+    "self": -3.093
+   },
+   "attention": {
+    "sink": 0.39,
+    "template": 0.118,
+    "question": 0.039,
+    "qmark": 0.008,
+    "suffix": 0.017,
+    "self": 0.428
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -3.093,
+    "template[-7]'<|im_start|>'": -0.29,
+    "template[-8]'\\n'": -0.169,
+    "template[-3]'\\n\\n'": -0.122,
+    "template[-9]'<|im_end|>'": 0.003,
+    "template[-6]'assistant'": 0.001
+   }
+  }
+ },
+ "Frida Kahlo": {
+  "max_value_recon_err": 0.0022,
+  "qmark_tokens": {
+   "?": 11
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.021,
+    "template": 0.526,
+    "question": 0.008,
+    "qmark": 0.008,
+    "suffix": -0.003,
+    "self": 1.639
+   },
+   "attention": {
+    "sink": 0.407,
+    "template": 0.192,
+    "question": 0.018,
+    "qmark": 0.005,
+    "suffix": 0.006,
+    "self": 0.372
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.639,
+    "template[-8]'\\n'": 0.351,
+    "template[-7]'<|im_start|>'": 0.164,
+    "template[-3]'\\n\\n'": 0.014,
+    "template[-2]'</think>'": -0.001,
+    "template[-32]'user'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.003,
+    "template": 1.593,
+    "question": 0.045,
+    "qmark": 0.009,
+    "suffix": -0.0,
+    "self": 0.243
+   },
+   "attention": {
+    "sink": 0.269,
+    "template": 0.595,
+    "question": 0.029,
+    "qmark": 0.007,
+    "suffix": 0.001,
+    "self": 0.099
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.893,
+    "template[-8]'\\n'": 0.699,
+    "self[-1]'\\n\\n'": 0.243,
+    "template[-32]'user'": 0.0,
+    "template[-31]'\\n'": 0.0,
+    "template[-9]'<|im_end|>'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.016,
+    "template": 0.09,
+    "question": 0.006,
+    "qmark": 0.002,
+    "suffix": 0.0,
+    "self": 0.053
+   },
+   "attention": {
+    "sink": 0.386,
+    "template": 0.396,
+    "question": 0.025,
+    "qmark": 0.006,
+    "suffix": 0.001,
+    "self": 0.185
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.064,
+    "self[-1]'\\n\\n'": 0.053,
+    "template[-8]'\\n'": 0.025,
+    "template[-32]'user'": 0.0,
+    "template[-31]'\\n'": 0.0,
+    "template[-9]'<|im_end|>'": -0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.048,
+    "template": -0.131,
+    "question": -0.007,
+    "qmark": -0.005,
+    "suffix": 0.001,
+    "self": -0.747
+   },
+   "attention": {
+    "sink": 0.425,
+    "template": 0.099,
+    "question": 0.054,
+    "qmark": 0.008,
+    "suffix": 0.013,
+    "self": 0.402
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.747,
+    "template[-8]'\\n'": -0.088,
+    "template[-7]'<|im_start|>'": -0.04,
+    "template[-3]'\\n\\n'": -0.005,
+    "template[-32]'user'": 0.0,
+    "template[-31]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.041,
+    "template": -0.308,
+    "question": -0.021,
+    "qmark": -0.014,
+    "suffix": -0.001,
+    "self": -0.818
+   },
+   "attention": {
+    "sink": 0.493,
+    "template": 0.126,
+    "question": 0.063,
+    "qmark": 0.01,
+    "suffix": 0.006,
+    "self": 0.302
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.818,
+    "template[-8]'\\n'": -0.158,
+    "template[-7]'<|im_start|>'": -0.15,
+    "template[-3]'\\n\\n'": -0.004,
+    "template[-9]'<|im_end|>'": -0.001,
+    "template[-5]'\\n'": 0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.035,
+    "template": -0.12,
+    "question": 0.0,
+    "qmark": -0.004,
+    "suffix": 0.005,
+    "self": -0.873
+   },
+   "attention": {
+    "sink": 0.45,
+    "template": 0.102,
+    "question": 0.028,
+    "qmark": 0.007,
+    "suffix": 0.016,
+    "self": 0.397
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.873,
+    "template[-8]'\\n'": -0.085,
+    "template[-7]'<|im_start|>'": -0.028,
+    "template[-3]'\\n\\n'": -0.013,
+    "template[-6]'assistant'": 0.002,
+    "template[-2]'</think>'": 0.002
+   }
+  }
+ },
+ "Golden Gate Bridge": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 16
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.005,
+    "template": 0.406,
+    "question": 0.013,
+    "qmark": 0.012,
+    "suffix": -0.001,
+    "self": 1.162
+   },
+   "attention": {
+    "sink": 0.253,
+    "template": 0.217,
+    "question": 0.022,
+    "qmark": 0.009,
+    "suffix": 0.002,
+    "self": 0.498
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.162,
+    "template[-7]'<|im_start|>'": 0.222,
+    "template[-8]'\\n'": 0.178,
+    "template[-3]'\\n\\n'": 0.006,
+    "template[-33]'user'": -0.0,
+    "template[-32]'\\n'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.01,
+    "template": 0.477,
+    "question": 0.017,
+    "qmark": 0.013,
+    "suffix": 0.0,
+    "self": 0.144
+   },
+   "attention": {
+    "sink": 0.359,
+    "template": 0.435,
+    "question": 0.04,
+    "qmark": 0.012,
+    "suffix": 0.0,
+    "self": 0.153
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.302,
+    "template[-8]'\\n'": 0.173,
+    "self[-1]'\\n\\n'": 0.144,
+    "template[-21]' '": 0.002,
+    "template[-33]'user'": 0.0,
+    "template[-32]'\\n'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.001,
+    "template": 1.78,
+    "question": 0.031,
+    "qmark": 0.02,
+    "suffix": -0.0,
+    "self": 1.032
+   },
+   "attention": {
+    "sink": 0.286,
+    "template": 0.381,
+    "question": 0.047,
+    "qmark": 0.008,
+    "suffix": 0.001,
+    "self": 0.277
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 1.261,
+    "self[-1]'\\n\\n'": 1.032,
+    "template[-8]'\\n'": 0.513,
+    "template[-21]' '": 0.003,
+    "template[-6]'assistant'": 0.001,
+    "template[-3]'\\n\\n'": 0.001
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.02,
+    "template": -0.074,
+    "question": -0.007,
+    "qmark": -0.004,
+    "suffix": 0.0,
+    "self": -0.448
+   },
+   "attention": {
+    "sink": 0.417,
+    "template": 0.096,
+    "question": 0.054,
+    "qmark": 0.008,
+    "suffix": 0.003,
+    "self": 0.423
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.448,
+    "template[-8]'\\n'": -0.042,
+    "template[-7]'<|im_start|>'": -0.025,
+    "template[-3]'\\n\\n'": -0.007,
+    "template[-33]'user'": 0.0,
+    "template[-32]'\\n'": -0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.008,
+    "template": -0.078,
+    "question": -0.011,
+    "qmark": -0.004,
+    "suffix": -0.0,
+    "self": -0.145
+   },
+   "attention": {
+    "sink": 0.469,
+    "template": 0.138,
+    "question": 0.076,
+    "qmark": 0.011,
+    "suffix": 0.002,
+    "self": 0.304
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.145,
+    "template[-8]'\\n'": -0.038,
+    "template[-7]'<|im_start|>'": -0.035,
+    "template[-3]'\\n\\n'": -0.003,
+    "template[-21]' '": -0.001,
+    "template[-33]'user'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": 0.031,
+    "template": -0.039,
+    "question": -0.004,
+    "qmark": -0.001,
+    "suffix": 0.0,
+    "self": -0.21
+   },
+   "attention": {
+    "sink": 0.531,
+    "template": 0.075,
+    "question": 0.028,
+    "qmark": 0.004,
+    "suffix": 0.006,
+    "self": 0.355
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.21,
+    "template[-7]'<|im_start|>'": -0.023,
+    "template[-8]'\\n'": -0.015,
+    "template[-3]'\\n\\n'": -0.002,
+    "template[-33]'user'": 0.0,
+    "template[-32]'\\n'": -0.0
+   }
+  }
+ },
+ "Harry Potter": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 16
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.022,
+    "template": 0.433,
+    "question": 0.023,
+    "qmark": 0.023,
+    "suffix": 0.009,
+    "self": 1.448
+   },
+   "attention": {
+    "sink": 0.402,
+    "template": 0.164,
+    "question": 0.034,
+    "qmark": 0.013,
+    "suffix": 0.016,
+    "self": 0.372
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.448,
+    "template[-7]'<|im_start|>'": 0.239,
+    "template[-8]'\\n'": 0.157,
+    "template[-3]'\\n\\n'": 0.036,
+    "template[-2]'</think>'": 0.002,
+    "template[-9]'<|im_end|>'": -0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.01,
+    "template": 1.021,
+    "question": 0.027,
+    "qmark": 0.047,
+    "suffix": 0.0,
+    "self": 0.268
+   },
+   "attention": {
+    "sink": 0.246,
+    "template": 0.512,
+    "question": 0.046,
+    "qmark": 0.029,
+    "suffix": 0.001,
+    "self": 0.166
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.512,
+    "template[-8]'\\n'": 0.509,
+    "self[-1]'\\n\\n'": 0.268,
+    "template[-38]'user'": 0.0,
+    "template[-37]'\\n'": 0.0,
+    "template[-9]'<|im_end|>'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.006,
+    "template": 0.583,
+    "question": 0.028,
+    "qmark": 0.026,
+    "suffix": 0.001,
+    "self": 0.34
+   },
+   "attention": {
+    "sink": 0.364,
+    "template": 0.311,
+    "question": 0.095,
+    "qmark": 0.026,
+    "suffix": 0.003,
+    "self": 0.201
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.407,
+    "self[-1]'\\n\\n'": 0.34,
+    "template[-8]'\\n'": 0.175,
+    "template[-6]'assistant'": -0.001,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-38]'user'": 0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.02,
+    "template": -0.185,
+    "question": -0.017,
+    "qmark": -0.009,
+    "suffix": -0.01,
+    "self": -0.832
+   },
+   "attention": {
+    "sink": 0.492,
+    "template": 0.083,
+    "question": 0.04,
+    "qmark": 0.007,
+    "suffix": 0.018,
+    "self": 0.361
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.832,
+    "template[-8]'\\n'": -0.114,
+    "template[-7]'<|im_start|>'": -0.047,
+    "template[-3]'\\n\\n'": -0.026,
+    "template[-38]'user'": 0.0,
+    "template[-37]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.018,
+    "template": -0.128,
+    "question": -0.027,
+    "qmark": -0.019,
+    "suffix": -0.004,
+    "self": -0.249
+   },
+   "attention": {
+    "sink": 0.669,
+    "template": 0.08,
+    "question": 0.075,
+    "qmark": 0.016,
+    "suffix": 0.008,
+    "self": 0.151
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.249,
+    "template[-7]'<|im_start|>'": -0.067,
+    "template[-8]'\\n'": -0.061,
+    "template[-2]'</think>'": 0.002,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-5]'\\n'": -0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": 0.017,
+    "template": -0.021,
+    "question": 0.01,
+    "qmark": 0.001,
+    "suffix": 0.008,
+    "self": 0.005
+   },
+   "attention": {
+    "sink": 0.477,
+    "template": 0.091,
+    "question": 0.052,
+    "qmark": 0.013,
+    "suffix": 0.029,
+    "self": 0.338
+   },
+   "by_template_token": {
+    "template[-8]'\\n'": -0.007,
+    "template[-7]'<|im_start|>'": -0.007,
+    "template[-3]'\\n\\n'": -0.006,
+    "self[-1]'\\n\\n'": 0.005,
+    "template[-2]'</think>'": -0.002,
+    "template[-6]'assistant'": 0.001
+   }
+  }
+ },
+ "Mount Everest": {
+  "max_value_recon_err": 0.0019,
+  "qmark_tokens": {
+   "?": 16
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.015,
+    "template": 0.324,
+    "question": 0.047,
+    "qmark": 0.002,
+    "suffix": -0.0,
+    "self": 0.828
+   },
+   "attention": {
+    "sink": 0.365,
+    "template": 0.193,
+    "question": 0.065,
+    "qmark": 0.004,
+    "suffix": 0.004,
+    "self": 0.369
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.828,
+    "template[-7]'<|im_start|>'": 0.221,
+    "template[-8]'\\n'": 0.099,
+    "template[-3]'\\n\\n'": 0.006,
+    "template[-2]'</think>'": -0.002,
+    "template[-32]'user'": 0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.001,
+    "template": 0.657,
+    "question": 0.045,
+    "qmark": 0.002,
+    "suffix": 0.0,
+    "self": 0.151
+   },
+   "attention": {
+    "sink": 0.226,
+    "template": 0.555,
+    "question": 0.075,
+    "qmark": 0.005,
+    "suffix": 0.0,
+    "self": 0.139
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.453,
+    "template[-8]'\\n'": 0.202,
+    "self[-1]'\\n\\n'": 0.151,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-35]' '": 0.001,
+    "template[-32]'user'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.01,
+    "template": 0.774,
+    "question": 0.117,
+    "qmark": 0.021,
+    "suffix": 0.002,
+    "self": 0.446
+   },
+   "attention": {
+    "sink": 0.444,
+    "template": 0.268,
+    "question": 0.128,
+    "qmark": 0.013,
+    "suffix": 0.003,
+    "self": 0.144
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.501,
+    "self[-1]'\\n\\n'": 0.446,
+    "template[-8]'\\n'": 0.261,
+    "template[-3]'\\n\\n'": 0.007,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-2]'</think>'": 0.001
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.025,
+    "template": -0.058,
+    "question": -0.021,
+    "qmark": -0.003,
+    "suffix": -0.001,
+    "self": -0.864
+   },
+   "attention": {
+    "sink": 0.474,
+    "template": 0.057,
+    "question": 0.049,
+    "qmark": 0.007,
+    "suffix": 0.008,
+    "self": 0.403
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.864,
+    "template[-7]'<|im_start|>'": -0.03,
+    "template[-8]'\\n'": -0.025,
+    "template[-3]'\\n\\n'": -0.005,
+    "template[-2]'</think>'": 0.002,
+    "template[-32]'user'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.008,
+    "template": -0.038,
+    "question": -0.013,
+    "qmark": -0.002,
+    "suffix": -0.0,
+    "self": -0.192
+   },
+   "attention": {
+    "sink": 0.689,
+    "template": 0.061,
+    "question": 0.054,
+    "qmark": 0.007,
+    "suffix": 0.003,
+    "self": 0.186
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.192,
+    "template[-7]'<|im_start|>'": -0.018,
+    "template[-8]'\\n'": -0.014,
+    "template[-3]'\\n\\n'": -0.006,
+    "template[-2]'</think>'": 0.001,
+    "template[-32]'user'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": 0.011,
+    "template": -0.011,
+    "question": 0.0,
+    "qmark": 0.001,
+    "suffix": 0.001,
+    "self": 0.007
+   },
+   "attention": {
+    "sink": 0.728,
+    "template": 0.05,
+    "question": 0.063,
+    "qmark": 0.006,
+    "suffix": 0.018,
+    "self": 0.135
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.007,
+    "template[-8]'\\n'": -0.005,
+    "template[-7]'<|im_start|>'": -0.003,
+    "template[-2]'</think>'": -0.002,
+    "template[-3]'\\n\\n'": -0.001,
+    "template[-32]'user'": 0.0
+   }
+  }
+ },
+ "Napoleon Bonaparte": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 16
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.034,
+    "template": 1.263,
+    "question": 0.081,
+    "qmark": 0.091,
+    "suffix": 0.007,
+    "self": 4.253
+   },
+   "attention": {
+    "sink": 0.419,
+    "template": 0.17,
+    "question": 0.052,
+    "qmark": 0.017,
+    "suffix": 0.015,
+    "self": 0.327
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 4.253,
+    "template[-8]'\\n'": 0.589,
+    "template[-7]'<|im_start|>'": 0.479,
+    "template[-3]'\\n\\n'": 0.205,
+    "template[-2]'</think>'": 0.003,
+    "template[-9]'<|im_end|>'": -0.002
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.0,
+    "template": 3.109,
+    "question": 0.366,
+    "qmark": 0.152,
+    "suffix": 0.0,
+    "self": 0.915
+   },
+   "attention": {
+    "sink": 0.212,
+    "template": 0.484,
+    "question": 0.11,
+    "qmark": 0.033,
+    "suffix": 0.0,
+    "self": 0.16
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 1.889,
+    "template[-8]'\\n'": 1.217,
+    "self[-1]'\\n\\n'": 0.915,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-21]' '": 0.001,
+    "template[-35]'user'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.016,
+    "template": 0.102,
+    "question": 0.011,
+    "qmark": 0.011,
+    "suffix": 0.001,
+    "self": 0.044
+   },
+   "attention": {
+    "sink": 0.365,
+    "template": 0.345,
+    "question": 0.096,
+    "qmark": 0.036,
+    "suffix": 0.004,
+    "self": 0.154
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.065,
+    "self[-1]'\\n\\n'": 0.044,
+    "template[-8]'\\n'": 0.036,
+    "template[-35]'user'": -0.0,
+    "template[-34]'\\n'": 0.0,
+    "template[-9]'<|im_end|>'": 0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.043,
+    "template": -0.417,
+    "question": -0.039,
+    "qmark": -0.042,
+    "suffix": -0.001,
+    "self": -2.092
+   },
+   "attention": {
+    "sink": 0.377,
+    "template": 0.127,
+    "question": 0.066,
+    "qmark": 0.022,
+    "suffix": 0.014,
+    "self": 0.394
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -2.092,
+    "template[-8]'\\n'": -0.198,
+    "template[-3]'\\n\\n'": -0.136,
+    "template[-7]'<|im_start|>'": -0.09,
+    "template[-6]'assistant'": 0.002,
+    "template[-5]'\\n'": 0.001
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.056,
+    "template": -0.602,
+    "question": -0.127,
+    "qmark": -0.083,
+    "suffix": -0.001,
+    "self": -1.689
+   },
+   "attention": {
+    "sink": 0.519,
+    "template": 0.085,
+    "question": 0.092,
+    "qmark": 0.022,
+    "suffix": 0.003,
+    "self": 0.28
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.689,
+    "template[-8]'\\n'": -0.301,
+    "template[-7]'<|im_start|>'": -0.285,
+    "template[-3]'\\n\\n'": -0.018,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-6]'assistant'": 0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.045,
+    "template": -0.596,
+    "question": -0.032,
+    "qmark": -0.053,
+    "suffix": -0.02,
+    "self": -2.672
+   },
+   "attention": {
+    "sink": 0.492,
+    "template": 0.124,
+    "question": 0.056,
+    "qmark": 0.015,
+    "suffix": 0.031,
+    "self": 0.282
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -2.672,
+    "template[-8]'\\n'": -0.271,
+    "template[-3]'\\n\\n'": -0.195,
+    "template[-7]'<|im_start|>'": -0.141,
+    "template[-6]'assistant'": 0.005,
+    "template[-2]'</think>'": -0.005
+   }
+  }
+ },
+ "photosynthesis": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 20
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.025,
+    "template": 0.352,
+    "question": 0.014,
+    "qmark": 0.01,
+    "suffix": 0.0,
+    "self": 1.19
+   },
+   "attention": {
+    "sink": 0.33,
+    "template": 0.213,
+    "question": 0.036,
+    "qmark": 0.013,
+    "suffix": 0.011,
+    "self": 0.397
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.19,
+    "template[-7]'<|im_start|>'": 0.19,
+    "template[-3]'\\n\\n'": 0.094,
+    "template[-8]'\\n'": 0.067,
+    "template[-4]'<think>'": -0.001,
+    "template[-2]'</think>'": 0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.016,
+    "template": 0.902,
+    "question": 0.02,
+    "qmark": 0.049,
+    "suffix": 0.0,
+    "self": 0.177
+   },
+   "attention": {
+    "sink": 0.352,
+    "template": 0.4,
+    "question": 0.113,
+    "qmark": 0.048,
+    "suffix": 0.002,
+    "self": 0.084
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.592,
+    "template[-8]'\\n'": 0.301,
+    "self[-1]'\\n\\n'": 0.177,
+    "template[-3]'\\n\\n'": 0.01,
+    "template[-34]'user'": 0.0,
+    "template[-33]'\\n'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.008,
+    "template": 0.779,
+    "question": 0.149,
+    "qmark": 0.041,
+    "suffix": 0.001,
+    "self": 0.239
+   },
+   "attention": {
+    "sink": 0.402,
+    "template": 0.279,
+    "question": 0.201,
+    "qmark": 0.023,
+    "suffix": 0.006,
+    "self": 0.089
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.589,
+    "self[-1]'\\n\\n'": 0.239,
+    "template[-8]'\\n'": 0.168,
+    "template[-3]'\\n\\n'": 0.023,
+    "template[-6]'assistant'": 0.001,
+    "template[-34]'user'": -0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.013,
+    "template": -0.104,
+    "question": -0.016,
+    "qmark": -0.003,
+    "suffix": -0.002,
+    "self": -0.995
+   },
+   "attention": {
+    "sink": 0.519,
+    "template": 0.067,
+    "question": 0.056,
+    "qmark": 0.005,
+    "suffix": 0.007,
+    "self": 0.346
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.995,
+    "template[-7]'<|im_start|>'": -0.045,
+    "template[-3]'\\n\\n'": -0.039,
+    "template[-8]'\\n'": -0.02,
+    "template[-34]'user'": -0.0,
+    "template[-33]'\\n'": -0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.006,
+    "template": -0.104,
+    "question": -0.01,
+    "qmark": -0.011,
+    "suffix": -0.0,
+    "self": -0.547
+   },
+   "attention": {
+    "sink": 0.512,
+    "template": 0.065,
+    "question": 0.061,
+    "qmark": 0.012,
+    "suffix": 0.004,
+    "self": 0.347
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.547,
+    "template[-8]'\\n'": -0.041,
+    "template[-3]'\\n\\n'": -0.038,
+    "template[-7]'<|im_start|>'": -0.025,
+    "template[-34]'user'": 0.0,
+    "template[-33]'\\n'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": 0.021,
+    "template": 0.008,
+    "question": -0.0,
+    "qmark": 0.0,
+    "suffix": -0.001,
+    "self": 0.09
+   },
+   "attention": {
+    "sink": 0.679,
+    "template": 0.061,
+    "question": 0.043,
+    "qmark": 0.008,
+    "suffix": 0.02,
+    "self": 0.19
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.09,
+    "template[-3]'\\n\\n'": 0.007,
+    "template[-7]'<|im_start|>'": 0.004,
+    "template[-2]'</think>'": -0.001,
+    "template[-34]'user'": -0.0,
+    "template[-33]'\\n'": -0.0
+   }
+  }
+ },
+ "the French Revolution": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 20
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.001,
+    "template": 0.563,
+    "question": 0.013,
+    "qmark": 0.003,
+    "suffix": 0.003,
+    "self": 1.0
+   },
+   "attention": {
+    "sink": 0.2,
+    "template": 0.296,
+    "question": 0.029,
+    "qmark": 0.004,
+    "suffix": 0.006,
+    "self": 0.466
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.0,
+    "template[-7]'<|im_start|>'": 0.333,
+    "template[-8]'\\n'": 0.215,
+    "template[-3]'\\n\\n'": 0.015,
+    "template[-25]' '": 0.001,
+    "template[-39]'user'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.006,
+    "template": 0.512,
+    "question": 0.004,
+    "qmark": 0.001,
+    "suffix": 0.0,
+    "self": 0.065
+   },
+   "attention": {
+    "sink": 0.304,
+    "template": 0.536,
+    "question": 0.048,
+    "qmark": 0.005,
+    "suffix": 0.0,
+    "self": 0.107
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.345,
+    "template[-8]'\\n'": 0.165,
+    "self[-1]'\\n\\n'": 0.065,
+    "template[-25]' '": 0.002,
+    "template[-39]'user'": -0.0,
+    "template[-38]'\\n'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.01,
+    "template": 0.319,
+    "question": 0.016,
+    "qmark": 0.002,
+    "suffix": 0.0,
+    "self": 0.035
+   },
+   "attention": {
+    "sink": 0.649,
+    "template": 0.226,
+    "question": 0.089,
+    "qmark": 0.008,
+    "suffix": 0.003,
+    "self": 0.026
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.213,
+    "template[-8]'\\n'": 0.104,
+    "self[-1]'\\n\\n'": 0.035,
+    "template[-25]' '": 0.001,
+    "template[-39]'user'": 0.0,
+    "template[-38]'\\n'": 0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.008,
+    "template": -0.093,
+    "question": -0.01,
+    "qmark": -0.002,
+    "suffix": -0.001,
+    "self": -0.503
+   },
+   "attention": {
+    "sink": 0.398,
+    "template": 0.09,
+    "question": 0.048,
+    "qmark": 0.004,
+    "suffix": 0.006,
+    "self": 0.453
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.503,
+    "template[-7]'<|im_start|>'": -0.04,
+    "template[-8]'\\n'": -0.029,
+    "template[-3]'\\n\\n'": -0.024,
+    "template[-2]'</think>'": 0.001,
+    "template[-39]'user'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.008,
+    "template": -0.028,
+    "question": -0.003,
+    "qmark": -0.001,
+    "suffix": -0.0,
+    "self": -0.173
+   },
+   "attention": {
+    "sink": 0.429,
+    "template": 0.051,
+    "question": 0.05,
+    "qmark": 0.003,
+    "suffix": 0.001,
+    "self": 0.465
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.173,
+    "template[-7]'<|im_start|>'": -0.018,
+    "template[-8]'\\n'": -0.01,
+    "template[-39]'user'": 0.0,
+    "template[-38]'\\n'": -0.0,
+    "template[-31]' '": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.017,
+    "template": -0.01,
+    "question": -0.005,
+    "qmark": -0.002,
+    "suffix": -0.005,
+    "self": -0.014
+   },
+   "attention": {
+    "sink": 0.646,
+    "template": 0.115,
+    "question": 0.047,
+    "qmark": 0.009,
+    "suffix": 0.022,
+    "self": 0.16
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.014,
+    "template[-7]'<|im_start|>'": -0.006,
+    "template[-8]'\\n'": -0.002,
+    "template[-3]'\\n\\n'": -0.001,
+    "template[-2]'</think>'": -0.001,
+    "template[-39]'user'": -0.0
+   }
+  }
+ },
+ "the Moon": {
+  "max_value_recon_err": 0.0019,
+  "qmark_tokens": {
+   "?": 19
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.016,
+    "template": 0.398,
+    "question": 0.026,
+    "qmark": 0.036,
+    "suffix": 0.002,
+    "self": 2.35
+   },
+   "attention": {
+    "sink": 0.199,
+    "template": 0.205,
+    "question": 0.033,
+    "qmark": 0.024,
+    "suffix": 0.01,
+    "self": 0.528
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 2.35,
+    "template[-8]'\\n'": 0.202,
+    "template[-7]'<|im_start|>'": 0.161,
+    "template[-3]'\\n\\n'": 0.042,
+    "template[-2]'</think>'": -0.004,
+    "template[-9]'<|im_end|>'": -0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.016,
+    "template": 1.076,
+    "question": 0.039,
+    "qmark": 0.053,
+    "suffix": -0.0,
+    "self": 0.174
+   },
+   "attention": {
+    "sink": 0.501,
+    "template": 0.329,
+    "question": 0.07,
+    "qmark": 0.035,
+    "suffix": 0.004,
+    "self": 0.061
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.642,
+    "template[-8]'\\n'": 0.431,
+    "self[-1]'\\n\\n'": 0.174,
+    "template[-3]'\\n\\n'": 0.004,
+    "template[-6]'assistant'": 0.001,
+    "template[-2]'</think>'": -0.001
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.01,
+    "template": 0.861,
+    "question": 0.155,
+    "qmark": 0.045,
+    "suffix": 0.001,
+    "self": 0.279
+   },
+   "attention": {
+    "sink": 0.37,
+    "template": 0.31,
+    "question": 0.179,
+    "qmark": 0.036,
+    "suffix": 0.009,
+    "self": 0.096
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.594,
+    "self[-1]'\\n\\n'": 0.279,
+    "template[-8]'\\n'": 0.261,
+    "template[-3]'\\n\\n'": 0.01,
+    "template[-2]'</think>'": -0.003,
+    "template[-9]'<|im_end|>'": 0.001
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.017,
+    "template": -0.143,
+    "question": -0.024,
+    "qmark": -0.011,
+    "suffix": -0.0,
+    "self": -1.462
+   },
+   "attention": {
+    "sink": 0.468,
+    "template": 0.078,
+    "question": 0.042,
+    "qmark": 0.009,
+    "suffix": 0.01,
+    "self": 0.393
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.462,
+    "template[-8]'\\n'": -0.078,
+    "template[-7]'<|im_start|>'": -0.049,
+    "template[-3]'\\n\\n'": -0.018,
+    "template[-2]'</think>'": 0.001,
+    "template[-26]'user'": -0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.002,
+    "template": -0.175,
+    "question": -0.017,
+    "qmark": -0.008,
+    "suffix": -0.0,
+    "self": -1.38
+   },
+   "attention": {
+    "sink": 0.361,
+    "template": 0.066,
+    "question": 0.034,
+    "qmark": 0.007,
+    "suffix": 0.003,
+    "self": 0.529
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.38,
+    "template[-8]'\\n'": -0.088,
+    "template[-7]'<|im_start|>'": -0.082,
+    "template[-3]'\\n\\n'": -0.005,
+    "template[-26]'user'": -0.0,
+    "template[-25]'\\n'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": 0.009,
+    "template": 0.015,
+    "question": 0.002,
+    "qmark": 0.002,
+    "suffix": 0.001,
+    "self": 0.088
+   },
+   "attention": {
+    "sink": 0.709,
+    "template": 0.059,
+    "question": 0.03,
+    "qmark": 0.009,
+    "suffix": 0.015,
+    "self": 0.178
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.088,
+    "template[-8]'\\n'": 0.01,
+    "template[-7]'<|im_start|>'": 0.005,
+    "template[-26]'user'": 0.0,
+    "template[-25]'\\n'": 0.0,
+    "template[-9]'<|im_end|>'": 0.0
+   }
+  }
+ },
+ "the Titanic": {
+  "max_value_recon_err": 0.0019,
+  "qmark_tokens": {
+   "?": 18
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.025,
+    "template": 0.581,
+    "question": 0.065,
+    "qmark": 0.003,
+    "suffix": -0.002,
+    "self": 1.937
+   },
+   "attention": {
+    "sink": 0.308,
+    "template": 0.183,
+    "question": 0.054,
+    "qmark": 0.008,
+    "suffix": 0.005,
+    "self": 0.441
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.937,
+    "template[-8]'\\n'": 0.323,
+    "template[-7]'<|im_start|>'": 0.196,
+    "template[-3]'\\n\\n'": 0.062,
+    "template[-26]' '": 0.001,
+    "template[-39]'user'": -0.0
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.003,
+    "template": 0.517,
+    "question": 0.043,
+    "qmark": 0.001,
+    "suffix": 0.0,
+    "self": 0.245
+   },
+   "attention": {
+    "sink": 0.168,
+    "template": 0.515,
+    "question": 0.082,
+    "qmark": 0.005,
+    "suffix": 0.0,
+    "self": 0.23
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.264,
+    "self[-1]'\\n\\n'": 0.245,
+    "template[-8]'\\n'": 0.241,
+    "template[-21]' '": 0.009,
+    "template[-26]' '": 0.002,
+    "template[-3]'\\n\\n'": 0.001
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.002,
+    "template": 0.34,
+    "question": 0.03,
+    "qmark": 0.002,
+    "suffix": -0.0,
+    "self": 0.13
+   },
+   "attention": {
+    "sink": 0.418,
+    "template": 0.36,
+    "question": 0.081,
+    "qmark": 0.007,
+    "suffix": 0.002,
+    "self": 0.133
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.172,
+    "template[-8]'\\n'": 0.163,
+    "self[-1]'\\n\\n'": 0.13,
+    "template[-21]' '": 0.002,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-2]'</think>'": 0.001
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.005,
+    "template": -0.326,
+    "question": -0.021,
+    "qmark": -0.002,
+    "suffix": 0.002,
+    "self": -1.386
+   },
+   "attention": {
+    "sink": 0.389,
+    "template": 0.134,
+    "question": 0.065,
+    "qmark": 0.006,
+    "suffix": 0.008,
+    "self": 0.397
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.386,
+    "template[-8]'\\n'": -0.192,
+    "template[-3]'\\n\\n'": -0.091,
+    "template[-7]'<|im_start|>'": -0.045,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-6]'assistant'": 0.001
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.005,
+    "template": -0.089,
+    "question": -0.014,
+    "qmark": -0.001,
+    "suffix": -0.0,
+    "self": -0.328
+   },
+   "attention": {
+    "sink": 0.609,
+    "template": 0.085,
+    "question": 0.057,
+    "qmark": 0.008,
+    "suffix": 0.002,
+    "self": 0.238
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.328,
+    "template[-7]'<|im_start|>'": -0.037,
+    "template[-8]'\\n'": -0.036,
+    "template[-3]'\\n\\n'": -0.012,
+    "template[-21]' '": -0.002,
+    "template[-2]'</think>'": -0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.026,
+    "template": -0.02,
+    "question": -0.008,
+    "qmark": 0.001,
+    "suffix": 0.002,
+    "self": -0.069
+   },
+   "attention": {
+    "sink": 0.567,
+    "template": 0.095,
+    "question": 0.054,
+    "qmark": 0.011,
+    "suffix": 0.018,
+    "self": 0.254
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.069,
+    "template[-3]'\\n\\n'": -0.009,
+    "template[-8]'\\n'": -0.005,
+    "template[-7]'<|im_start|>'": -0.005,
+    "template[-2]'</think>'": -0.001,
+    "template[-39]'user'": -0.0
+   }
+  }
+ },
+ "the violin": {
+  "max_value_recon_err": 0.002,
+  "qmark_tokens": {
+   "?": 14
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.009,
+    "template": 0.375,
+    "question": 0.018,
+    "qmark": 0.003,
+    "suffix": -0.001,
+    "self": 1.483
+   },
+   "attention": {
+    "sink": 0.247,
+    "template": 0.198,
+    "question": 0.038,
+    "qmark": 0.007,
+    "suffix": 0.006,
+    "self": 0.504
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 1.483,
+    "template[-8]'\\n'": 0.145,
+    "template[-7]'<|im_start|>'": 0.139,
+    "template[-3]'\\n\\n'": 0.093,
+    "template[-2]'</think>'": -0.002,
+    "template[-4]'<think>'": -0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.002,
+    "template": 0.555,
+    "question": 0.024,
+    "qmark": 0.004,
+    "suffix": -0.0,
+    "self": 0.087
+   },
+   "attention": {
+    "sink": 0.14,
+    "template": 0.632,
+    "question": 0.103,
+    "qmark": 0.009,
+    "suffix": 0.001,
+    "self": 0.116
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.309,
+    "template[-8]'\\n'": 0.242,
+    "self[-1]'\\n\\n'": 0.087,
+    "template[-3]'\\n\\n'": 0.004,
+    "template[-36]'user'": 0.0,
+    "template[-35]'\\n'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.003,
+    "template": 0.826,
+    "question": 0.039,
+    "qmark": 0.002,
+    "suffix": 0.0,
+    "self": 0.33
+   },
+   "attention": {
+    "sink": 0.103,
+    "template": 0.578,
+    "question": 0.095,
+    "qmark": 0.003,
+    "suffix": 0.0,
+    "self": 0.221
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.589,
+    "self[-1]'\\n\\n'": 0.33,
+    "template[-8]'\\n'": 0.235,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-36]'user'": -0.0,
+    "template[-35]'\\n'": -0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.009,
+    "template": -0.084,
+    "question": -0.017,
+    "qmark": -0.001,
+    "suffix": 0.002,
+    "self": -1.063
+   },
+   "attention": {
+    "sink": 0.338,
+    "template": 0.047,
+    "question": 0.063,
+    "qmark": 0.005,
+    "suffix": 0.011,
+    "self": 0.535
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.063,
+    "template[-3]'\\n\\n'": -0.037,
+    "template[-8]'\\n'": -0.034,
+    "template[-7]'<|im_start|>'": -0.014,
+    "template[-36]'user'": 0.0,
+    "template[-35]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.001,
+    "template": -0.035,
+    "question": -0.012,
+    "qmark": -0.002,
+    "suffix": 0.001,
+    "self": -0.234
+   },
+   "attention": {
+    "sink": 0.632,
+    "template": 0.049,
+    "question": 0.077,
+    "qmark": 0.007,
+    "suffix": 0.006,
+    "self": 0.229
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.234,
+    "template[-8]'\\n'": -0.016,
+    "template[-7]'<|im_start|>'": -0.011,
+    "template[-3]'\\n\\n'": -0.007,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-36]'user'": -0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.013,
+    "template": 0.01,
+    "question": 0.004,
+    "qmark": -0.001,
+    "suffix": 0.0,
+    "self": -0.008
+   },
+   "attention": {
+    "sink": 0.655,
+    "template": 0.055,
+    "question": 0.062,
+    "qmark": 0.005,
+    "suffix": 0.016,
+    "self": 0.206
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.008,
+    "template[-3]'\\n\\n'": 0.006,
+    "template[-8]'\\n'": 0.005,
+    "template[-7]'<|im_start|>'": -0.001,
+    "template[-2]'</think>'": 0.001,
+    "template[-36]'user'": 0.0
+   }
+  }
+ },
+ "Venice": {
+  "max_value_recon_err": 0.0021,
+  "qmark_tokens": {
+   "?": 19
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.023,
+    "template": 0.738,
+    "question": 0.053,
+    "qmark": 0.07,
+    "suffix": -0.002,
+    "self": 2.371
+   },
+   "attention": {
+    "sink": 0.35,
+    "template": 0.194,
+    "question": 0.049,
+    "qmark": 0.021,
+    "suffix": 0.016,
+    "self": 0.37
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 2.371,
+    "template[-8]'\\n'": 0.315,
+    "template[-7]'<|im_start|>'": 0.309,
+    "template[-3]'\\n\\n'": 0.118,
+    "template[-9]'<|im_end|>'": -0.001,
+    "template[-4]'<think>'": -0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.007,
+    "template": 1.312,
+    "question": 0.031,
+    "qmark": 0.158,
+    "suffix": 0.0,
+    "self": 0.335
+   },
+   "attention": {
+    "sink": 0.193,
+    "template": 0.505,
+    "question": 0.086,
+    "qmark": 0.074,
+    "suffix": 0.001,
+    "self": 0.139
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.717,
+    "template[-8]'\\n'": 0.596,
+    "self[-1]'\\n\\n'": 0.335,
+    "template[-21]' '": -0.004,
+    "template[-3]'\\n\\n'": 0.003,
+    "template[-38]'user'": 0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.003,
+    "template": 0.437,
+    "question": 0.061,
+    "qmark": 0.037,
+    "suffix": 0.003,
+    "self": 0.137
+   },
+   "attention": {
+    "sink": 0.33,
+    "template": 0.337,
+    "question": 0.165,
+    "qmark": 0.044,
+    "suffix": 0.011,
+    "self": 0.113
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.285,
+    "template[-8]'\\n'": 0.14,
+    "self[-1]'\\n\\n'": 0.137,
+    "template[-3]'\\n\\n'": 0.004,
+    "template[-2]'</think>'": 0.003,
+    "template[-4]'<think>'": 0.002
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.01,
+    "template": -0.708,
+    "question": -0.018,
+    "qmark": -0.07,
+    "suffix": 0.001,
+    "self": -2.939
+   },
+   "attention": {
+    "sink": 0.236,
+    "template": 0.13,
+    "question": 0.03,
+    "qmark": 0.02,
+    "suffix": 0.006,
+    "self": 0.577
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -2.939,
+    "template[-8]'\\n'": -0.503,
+    "template[-7]'<|im_start|>'": -0.151,
+    "template[-3]'\\n\\n'": -0.054,
+    "template[-38]'user'": 0.0,
+    "template[-37]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.019,
+    "template": -0.161,
+    "question": -0.028,
+    "qmark": -0.04,
+    "suffix": 0.001,
+    "self": -0.472
+   },
+   "attention": {
+    "sink": 0.575,
+    "template": 0.096,
+    "question": 0.084,
+    "qmark": 0.023,
+    "suffix": 0.007,
+    "self": 0.216
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.472,
+    "template[-8]'\\n'": -0.082,
+    "template[-7]'<|im_start|>'": -0.067,
+    "template[-3]'\\n\\n'": -0.014,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-5]'\\n'": -0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.012,
+    "template": 0.025,
+    "question": -0.003,
+    "qmark": -0.0,
+    "suffix": -0.001,
+    "self": 0.015
+   },
+   "attention": {
+    "sink": 0.416,
+    "template": 0.14,
+    "question": 0.046,
+    "qmark": 0.019,
+    "suffix": 0.023,
+    "self": 0.355
+   },
+   "by_template_token": {
+    "template[-8]'\\n'": 0.021,
+    "self[-1]'\\n\\n'": 0.015,
+    "template[-7]'<|im_start|>'": 0.004,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-6]'assistant'": -0.001,
+    "template[-4]'<think>'": 0.001
+   }
+  }
+ },
+ "William Shakespeare": {
+  "max_value_recon_err": 0.0021,
+  "qmark_tokens": {
+   "?": 16,
+   "?”": 1
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.039,
+    "template": 0.65,
+    "question": 0.055,
+    "qmark": 0.041,
+    "suffix": 0.014,
+    "self": 3.022
+   },
+   "attention": {
+    "sink": 0.288,
+    "template": 0.184,
+    "question": 0.035,
+    "qmark": 0.014,
+    "suffix": 0.015,
+    "self": 0.464
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 3.022,
+    "template[-7]'<|im_start|>'": 0.349,
+    "template[-8]'\\n'": 0.233,
+    "template[-3]'\\n\\n'": 0.074,
+    "template[-6]'assistant'": -0.002,
+    "template[-4]'<think>'": -0.002
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.001,
+    "template": 1.821,
+    "question": 0.091,
+    "qmark": 0.139,
+    "suffix": -0.002,
+    "self": 0.72
+   },
+   "attention": {
+    "sink": 0.224,
+    "template": 0.456,
+    "question": 0.055,
+    "qmark": 0.06,
+    "suffix": 0.004,
+    "self": 0.2
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.934,
+    "template[-8]'\\n'": 0.887,
+    "self[-1]'\\n\\n'": 0.72,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-6]'assistant'": -0.001,
+    "template[-39]'user'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.006,
+    "template": 0.139,
+    "question": 0.011,
+    "qmark": 0.018,
+    "suffix": 0.0,
+    "self": 0.194
+   },
+   "attention": {
+    "sink": 0.319,
+    "template": 0.201,
+    "question": 0.062,
+    "qmark": 0.05,
+    "suffix": 0.013,
+    "self": 0.355
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 0.194,
+    "template[-7]'<|im_start|>'": 0.078,
+    "template[-8]'\\n'": 0.059,
+    "template[-6]'assistant'": 0.001,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-2]'</think>'": 0.001
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.027,
+    "template": -0.281,
+    "question": -0.036,
+    "qmark": -0.024,
+    "suffix": -0.003,
+    "self": -2.038
+   },
+   "attention": {
+    "sink": 0.368,
+    "template": 0.092,
+    "question": 0.043,
+    "qmark": 0.012,
+    "suffix": 0.006,
+    "self": 0.48
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -2.038,
+    "template[-7]'<|im_start|>'": -0.172,
+    "template[-8]'\\n'": -0.07,
+    "template[-3]'\\n\\n'": -0.039,
+    "template[-6]'assistant'": 0.001,
+    "template[-39]'user'": -0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.005,
+    "template": -0.346,
+    "question": -0.039,
+    "qmark": -0.027,
+    "suffix": 0.003,
+    "self": -0.621
+   },
+   "attention": {
+    "sink": 0.585,
+    "template": 0.122,
+    "question": 0.06,
+    "qmark": 0.019,
+    "suffix": 0.008,
+    "self": 0.206
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.621,
+    "template[-7]'<|im_start|>'": -0.183,
+    "template[-8]'\\n'": -0.165,
+    "template[-3]'\\n\\n'": -0.003,
+    "template[-6]'assistant'": 0.002,
+    "template[-21]' '": -0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.012,
+    "template": -0.019,
+    "question": -0.002,
+    "qmark": -0.002,
+    "suffix": -0.001,
+    "self": -0.117
+   },
+   "attention": {
+    "sink": 0.431,
+    "template": 0.123,
+    "question": 0.044,
+    "qmark": 0.016,
+    "suffix": 0.019,
+    "self": 0.367
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.117,
+    "template[-7]'<|im_start|>'": -0.011,
+    "template[-8]'\\n'": -0.009,
+    "template[-39]'user'": 0.0,
+    "template[-38]'\\n'": 0.0,
+    "template[-21]' '": -0.0
+   }
+  }
+ },
+ "Wolfgang Amadeus Mozart": {
+  "max_value_recon_err": 0.0019,
+  "qmark_tokens": {
+   "?": 13
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.019,
+    "template": 2.079,
+    "question": 0.037,
+    "qmark": 0.015,
+    "suffix": -0.01,
+    "self": 3.799
+   },
+   "attention": {
+    "sink": 0.271,
+    "template": 0.245,
+    "question": 0.034,
+    "qmark": 0.012,
+    "suffix": 0.01,
+    "self": 0.43
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 3.799,
+    "template[-7]'<|im_start|>'": 0.989,
+    "template[-8]'\\n'": 0.909,
+    "template[-3]'\\n\\n'": 0.185,
+    "template[-6]'assistant'": -0.002,
+    "template[-9]'<|im_end|>'": -0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": -0.008,
+    "template": 2.208,
+    "question": 0.038,
+    "qmark": 0.027,
+    "suffix": -0.0,
+    "self": 0.576
+   },
+   "attention": {
+    "sink": 0.15,
+    "template": 0.598,
+    "question": 0.039,
+    "qmark": 0.033,
+    "suffix": 0.001,
+    "self": 0.18
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 1.163,
+    "template[-8]'\\n'": 1.044,
+    "self[-1]'\\n\\n'": 0.576,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-43]'user'": -0.0,
+    "template[-42]'\\n'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": -0.009,
+    "template": 0.119,
+    "question": 0.006,
+    "qmark": 0.008,
+    "suffix": 0.0,
+    "self": 0.056
+   },
+   "attention": {
+    "sink": 0.241,
+    "template": 0.414,
+    "question": 0.05,
+    "qmark": 0.044,
+    "suffix": 0.005,
+    "self": 0.246
+   },
+   "by_template_token": {
+    "template[-8]'\\n'": 0.066,
+    "self[-1]'\\n\\n'": 0.056,
+    "template[-7]'<|im_start|>'": 0.052,
+    "template[-3]'\\n\\n'": 0.001,
+    "template[-43]'user'": 0.0,
+    "template[-42]'\\n'": -0.0
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.015,
+    "template": -0.414,
+    "question": -0.009,
+    "qmark": -0.003,
+    "suffix": 0.001,
+    "self": -2.305
+   },
+   "attention": {
+    "sink": 0.244,
+    "template": 0.098,
+    "question": 0.031,
+    "qmark": 0.004,
+    "suffix": 0.005,
+    "self": 0.619
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -2.305,
+    "template[-7]'<|im_start|>'": -0.204,
+    "template[-8]'\\n'": -0.192,
+    "template[-3]'\\n\\n'": -0.018,
+    "template[-43]'user'": -0.0,
+    "template[-42]'\\n'": 0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": -0.021,
+    "template": -0.254,
+    "question": -0.016,
+    "qmark": -0.006,
+    "suffix": 0.003,
+    "self": -0.691
+   },
+   "attention": {
+    "sink": 0.627,
+    "template": 0.084,
+    "question": 0.069,
+    "qmark": 0.011,
+    "suffix": 0.005,
+    "self": 0.204
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.691,
+    "template[-7]'<|im_start|>'": -0.148,
+    "template[-8]'\\n'": -0.116,
+    "template[-3]'\\n\\n'": 0.003,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-6]'assistant'": 0.001
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.049,
+    "template": -0.375,
+    "question": -0.014,
+    "qmark": -0.004,
+    "suffix": 0.009,
+    "self": -1.244
+   },
+   "attention": {
+    "sink": 0.535,
+    "template": 0.107,
+    "question": 0.044,
+    "qmark": 0.009,
+    "suffix": 0.018,
+    "self": 0.286
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -1.244,
+    "template[-7]'<|im_start|>'": -0.187,
+    "template[-8]'\\n'": -0.153,
+    "template[-3]'\\n\\n'": -0.04,
+    "template[-6]'assistant'": 0.003,
+    "template[-4]'<think>'": 0.001
+   }
+  }
+ },
+ "Tokyo": {
+  "max_value_recon_err": 0.0021,
+  "qmark_tokens": {
+   "?": 19
+  },
+  "L35H25": {
+   "write": {
+    "sink": 0.02,
+    "template": 0.787,
+    "question": 0.051,
+    "qmark": 0.035,
+    "suffix": 0.0,
+    "self": 3.571
+   },
+   "attention": {
+    "sink": 0.253,
+    "template": 0.183,
+    "question": 0.041,
+    "qmark": 0.012,
+    "suffix": 0.012,
+    "self": 0.499
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": 3.571,
+    "template[-7]'<|im_start|>'": 0.365,
+    "template[-8]'\\n'": 0.296,
+    "template[-3]'\\n\\n'": 0.12,
+    "template[-2]'</think>'": 0.003,
+    "template[-4]'<think>'": 0.001
+   }
+  },
+  "L34H28": {
+   "write": {
+    "sink": 0.003,
+    "template": 1.72,
+    "question": 0.034,
+    "qmark": 0.093,
+    "suffix": -0.0,
+    "self": 0.55
+   },
+   "attention": {
+    "sink": 0.232,
+    "template": 0.466,
+    "question": 0.089,
+    "qmark": 0.038,
+    "suffix": 0.002,
+    "self": 0.172
+   },
+   "by_template_token": {
+    "template[-7]'<|im_start|>'": 0.907,
+    "template[-8]'\\n'": 0.81,
+    "self[-1]'\\n\\n'": 0.55,
+    "template[-3]'\\n\\n'": 0.002,
+    "template[-26]'user'": 0.0,
+    "template[-25]'\\n'": -0.0
+   }
+  },
+  "L35H22": {
+   "write": {
+    "sink": 0.007,
+    "template": 0.286,
+    "question": -0.007,
+    "qmark": 0.035,
+    "suffix": 0.003,
+    "self": 0.083
+   },
+   "attention": {
+    "sink": 0.295,
+    "template": 0.397,
+    "question": 0.138,
+    "qmark": 0.037,
+    "suffix": 0.007,
+    "self": 0.126
+   },
+   "by_template_token": {
+    "template[-8]'\\n'": 0.16,
+    "template[-7]'<|im_start|>'": 0.113,
+    "self[-1]'\\n\\n'": 0.083,
+    "template[-3]'\\n\\n'": 0.009,
+    "template[-9]'<|im_end|>'": 0.001,
+    "template[-4]'<think>'": 0.001
+   }
+  },
+  "L35H27": {
+   "write": {
+    "sink": -0.017,
+    "template": -0.311,
+    "question": -0.033,
+    "qmark": -0.035,
+    "suffix": 0.001,
+    "self": -2.341
+   },
+   "attention": {
+    "sink": 0.353,
+    "template": 0.089,
+    "question": 0.065,
+    "qmark": 0.014,
+    "suffix": 0.01,
+    "self": 0.469
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -2.341,
+    "template[-8]'\\n'": -0.16,
+    "template[-3]'\\n\\n'": -0.105,
+    "template[-7]'<|im_start|>'": -0.045,
+    "template[-26]'user'": 0.0,
+    "template[-25]'\\n'": -0.0
+   }
+  },
+  "L34H29": {
+   "write": {
+    "sink": 0.007,
+    "template": -0.143,
+    "question": -0.002,
+    "qmark": -0.009,
+    "suffix": 0.002,
+    "self": -0.998
+   },
+   "attention": {
+    "sink": 0.441,
+    "template": 0.056,
+    "question": 0.069,
+    "qmark": 0.011,
+    "suffix": 0.006,
+    "self": 0.417
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.998,
+    "template[-8]'\\n'": -0.079,
+    "template[-7]'<|im_start|>'": -0.055,
+    "template[-3]'\\n\\n'": -0.007,
+    "template[-2]'</think>'": -0.001,
+    "template[-26]'user'": 0.0
+   }
+  },
+  "L35H24": {
+   "write": {
+    "sink": -0.009,
+    "template": -0.014,
+    "question": -0.003,
+    "qmark": -0.001,
+    "suffix": 0.006,
+    "self": -0.11
+   },
+   "attention": {
+    "sink": 0.573,
+    "template": 0.093,
+    "question": 0.039,
+    "qmark": 0.012,
+    "suffix": 0.022,
+    "self": 0.261
+   },
+   "by_template_token": {
+    "self[-1]'\\n\\n'": -0.11,
+    "template[-8]'\\n'": -0.006,
+    "template[-3]'\\n\\n'": -0.006,
+    "template[-7]'<|im_start|>'": -0.003,
+    "template[-2]'</think>'": -0.002,
+    "template[-6]'assistant'": -0.001
+   }
+  }
+ }
+}

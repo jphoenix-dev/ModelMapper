@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software or its findings, please cite it as below."
+title: "Model Mapper: what the neurons of Qwen3-8B do - a test of 'Neural Networks Are Already Clean' and a queryable neuron/concept ledger"
+abstract: >-
+  Model Mapper maps what the individual MLP neurons (and attention heads) of an open-weights language model do. Its
+  first use was an independent test of Nick Cammarata's essay "Neural Networks Are Already Clean" on Qwen3-8B (with a
+  Qwen3-0.6B comparison): concept recall depends on a handful of neurons, concepts share readable parts, and about half
+  of neurons verifiably do one job. Later work (17-18 Oct 2026, exploratory) mapped 5,000 Wikipedia Vital Articles
+  concepts, graded what each layer band's neurons do, and built a lossless, queryable ledger of every measurement with a
+  format for third-party contributions. Several runs were still in progress at this snapshot.
+type: software
+authors:
+  - family-names: Phoenix
+    given-names: James
+version: "2026.10.18"
+date-released: "2026-10-18"
+license: MIT
+repository-code: "https://github.com/jphoenix-dev/ModelMapper"
+url: "https://eiffel-tower-qwen.vercel.app/"
+keywords:
+  - interpretability
+  - mechanistic interpretability
+  - neurons
+  - language models
+  - Qwen3
+  - causal ablation
+references:
+  - type: article
+    title: "Neural Networks Are Already Clean"
+    authors:
+      - family-names: Cammarata
+        given-names: Nick
+    url: "https://already-clean.goodfire.com/"
+    year: 2026

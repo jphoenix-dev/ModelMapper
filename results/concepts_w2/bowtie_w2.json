@@ -1,0 +1,1322 @@
+{
+ "the elephant": {
+  "k": 5,
+  "neurons": [
+   "L30:6266",
+   "L33:9621",
+   "L9:3877",
+   "L34:1452",
+   "L8:7708"
+  ],
+  "random": {
+   "total_drop": -0.0,
+   "direct": -0.0,
+   "indirect": -0.0,
+   "via_heads": -0.0,
+   "via_other_neurons": 0.03,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.025,
+   "allpos_total_drop": 0.01,
+   "allpos_logodds_drop": -0.002
+  },
+  "base_score": 37.56,
+  "own": {
+   "total_drop": 7.57,
+   "direct": 7.93,
+   "indirect": -0.36,
+   "via_heads": 0.58,
+   "via_other_neurons": -0.95,
+   "rms_ratio": 1.099,
+   "logodds_drop": 4.956,
+   "allpos_total_drop": 10.69,
+   "allpos_logodds_drop": 7.883
+  }
+ },
+ "the octopus": {
+  "k": 5,
+  "neurons": [
+   "L35:9587",
+   "L30:263",
+   "L11:3129",
+   "L34:10173",
+   "L9:676"
+  ],
+  "random": {
+   "total_drop": -0.0,
+   "direct": -0.0,
+   "indirect": -0.0,
+   "via_heads": 0.01,
+   "via_other_neurons": -0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.016,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": 0.036
+  },
+  "base_score": 33.45,
+  "own": {
+   "total_drop": 3.4,
+   "direct": 4.33,
+   "indirect": -0.93,
+   "via_heads": -0.1,
+   "via_other_neurons": -0.82,
+   "rms_ratio": 0.972,
+   "logodds_drop": 3.216,
+   "allpos_total_drop": 5.71,
+   "allpos_logodds_drop": 4.875
+  }
+ },
+ "the honeybee": {
+  "k": 5,
+  "neurons": [
+   "L33:8749",
+   "L32:7156",
+   "L32:5486",
+   "L31:7578",
+   "L29:379"
+  ],
+  "random": {
+   "total_drop": 0.0,
+   "direct": -0.0,
+   "indirect": 0.0,
+   "via_heads": 0.01,
+   "via_other_neurons": 0.02,
+   "rms_ratio": 1.001,
+   "logodds_drop": -0.079,
+   "allpos_total_drop": 0.04,
+   "allpos_logodds_drop": -0.049
+  },
+  "base_score": 40.6,
+  "own": {
+   "total_drop": 3.42,
+   "direct": 3.82,
+   "indirect": -0.4,
+   "via_heads": -0.73,
+   "via_other_neurons": 0.35,
+   "rms_ratio": 0.951,
+   "logodds_drop": 4.499,
+   "allpos_total_drop": 4.27,
+   "allpos_logodds_drop": 5.216
+  }
+ },
+ "the penguin": {
+  "k": 5,
+  "neurons": [
+   "L30:2346",
+   "L31:11976",
+   "L10:11862",
+   "L26:10647",
+   "L29:10812"
+  ],
+  "random": {
+   "total_drop": -0.05,
+   "direct": 0.0,
+   "indirect": -0.05,
+   "via_heads": -0.01,
+   "via_other_neurons": -0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.04,
+   "allpos_total_drop": -0.01,
+   "allpos_logodds_drop": -0.013
+  },
+  "base_score": 34.28,
+  "own": {
+   "total_drop": 2.22,
+   "direct": 0.84,
+   "indirect": 1.38,
+   "via_heads": -0.37,
+   "via_other_neurons": 1.78,
+   "rms_ratio": 0.919,
+   "logodds_drop": 2.224,
+   "allpos_total_drop": 5.32,
+   "allpos_logodds_drop": 5.395
+  }
+ },
+ "sushi": {
+  "k": 5,
+  "neurons": [
+   "L30:8155",
+   "L9:7249",
+   "L8:3474",
+   "L9:4960",
+   "L29:5803"
+  ],
+  "random": {
+   "total_drop": 0.05,
+   "direct": 0.0,
+   "indirect": 0.04,
+   "via_heads": 0.02,
+   "via_other_neurons": 0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.051,
+   "allpos_total_drop": 0.08,
+   "allpos_logodds_drop": 0.126
+  },
+  "base_score": 34.59,
+  "own": {
+   "total_drop": 2.08,
+   "direct": 0.23,
+   "indirect": 1.85,
+   "via_heads": 0.1,
+   "via_other_neurons": 1.75,
+   "rms_ratio": 0.97,
+   "logodds_drop": 2.731,
+   "allpos_total_drop": 6.84,
+   "allpos_logodds_drop": 6.462
+  }
+ },
+ "chocolate": {
+  "k": 5,
+  "neurons": [
+   "L31:8429",
+   "L10:6540",
+   "L9:1457",
+   "L35:8545",
+   "L35:3093"
+  ],
+  "random": {
+   "total_drop": 0.05,
+   "direct": 0.0,
+   "indirect": 0.05,
+   "via_heads": -0.0,
+   "via_other_neurons": 0.01,
+   "rms_ratio": 0.999,
+   "logodds_drop": 0.046,
+   "allpos_total_drop": 0.06,
+   "allpos_logodds_drop": 0.067
+  },
+  "base_score": 35.32,
+  "own": {
+   "total_drop": 2.9,
+   "direct": 5.95,
+   "indirect": -3.05,
+   "via_heads": -1.39,
+   "via_other_neurons": -1.69,
+   "rms_ratio": 0.93,
+   "logodds_drop": 2.901,
+   "allpos_total_drop": 6.86,
+   "allpos_logodds_drop": 7.303
+  }
+ },
+ "pizza": {
+  "k": 5,
+  "neurons": [
+   "L11:526",
+   "L9:7619",
+   "L10:4202",
+   "L35:1261",
+   "L35:9896"
+  ],
+  "random": {
+   "total_drop": -0.04,
+   "direct": -0.04,
+   "indirect": -0.0,
+   "via_heads": 0.0,
+   "via_other_neurons": -0.01,
+   "rms_ratio": 0.999,
+   "logodds_drop": -0.059,
+   "allpos_total_drop": -0.12,
+   "allpos_logodds_drop": -0.094
+  },
+  "base_score": 37.0,
+  "own": {
+   "total_drop": 1.1,
+   "direct": 1.16,
+   "indirect": -0.06,
+   "via_heads": -0.01,
+   "via_other_neurons": -0.03,
+   "rms_ratio": 0.997,
+   "logodds_drop": 1.274,
+   "allpos_total_drop": 7.05,
+   "allpos_logodds_drop": 4.739
+  }
+ },
+ "wine": {
+  "k": 5,
+  "neurons": [
+   "L33:3926",
+   "L33:479",
+   "L35:1446",
+   "L28:3801",
+   "L34:410"
+  ],
+  "random": {
+   "total_drop": -0.01,
+   "direct": 0.0,
+   "indirect": -0.01,
+   "via_heads": -0.0,
+   "via_other_neurons": 0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.024,
+   "allpos_total_drop": -0.01,
+   "allpos_logodds_drop": -0.0
+  },
+  "base_score": 43.93,
+  "own": {
+   "total_drop": 7.75,
+   "direct": 9.48,
+   "indirect": -1.73,
+   "via_heads": -0.41,
+   "via_other_neurons": -1.29,
+   "rms_ratio": 0.979,
+   "logodds_drop": 8.086,
+   "allpos_total_drop": 9.69,
+   "allpos_logodds_drop": 10.024
+  }
+ },
+ "football (soccer)": {
+  "k": 5,
+  "neurons": [
+   "L35:4115",
+   "L34:8772",
+   "L29:2595",
+   "L33:10826",
+   "L33:9269"
+  ],
+  "random": {
+   "total_drop": 0.02,
+   "direct": -0.0,
+   "indirect": 0.02,
+   "via_heads": -0.0,
+   "via_other_neurons": -0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.035,
+   "allpos_total_drop": 0.04,
+   "allpos_logodds_drop": 0.079
+  },
+  "base_score": 46.27,
+  "own": {
+   "total_drop": 9.17,
+   "direct": 7.9,
+   "indirect": 1.28,
+   "via_heads": 0.29,
+   "via_other_neurons": 1.02,
+   "rms_ratio": 0.961,
+   "logodds_drop": 12.21,
+   "allpos_total_drop": 11.16,
+   "allpos_logodds_drop": 14.791
+  }
+ },
+ "the Olympic Games": {
+  "k": 5,
+  "neurons": [
+   "L29:624",
+   "L32:1435",
+   "L30:9196",
+   "L31:3739",
+   "L32:10360"
+  ],
+  "random": {
+   "total_drop": 0.01,
+   "direct": -0.0,
+   "indirect": 0.01,
+   "via_heads": 0.01,
+   "via_other_neurons": 0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.006,
+   "allpos_total_drop": 0.0,
+   "allpos_logodds_drop": -0.011
+  },
+  "base_score": 43.28,
+  "own": {
+   "total_drop": 6.99,
+   "direct": 5.55,
+   "indirect": 1.45,
+   "via_heads": -3.58,
+   "via_other_neurons": 5.03,
+   "rms_ratio": 0.848,
+   "logodds_drop": 8.069,
+   "allpos_total_drop": 14.13,
+   "allpos_logodds_drop": 16.249
+  }
+ },
+ "basketball": {
+  "k": 5,
+  "neurons": [
+   "L30:6776",
+   "L7:10436",
+   "L4:10946",
+   "L35:8545",
+   "L7:3916"
+  ],
+  "random": {
+   "total_drop": 0.06,
+   "direct": 0.0,
+   "indirect": 0.06,
+   "via_heads": 0.02,
+   "via_other_neurons": 0.03,
+   "rms_ratio": 1.001,
+   "logodds_drop": 0.031,
+   "allpos_total_drop": 0.03,
+   "allpos_logodds_drop": 0.015
+  },
+  "base_score": 43.15,
+  "own": {
+   "total_drop": 2.82,
+   "direct": 8.54,
+   "indirect": -5.72,
+   "via_heads": -2.44,
+   "via_other_neurons": -3.28,
+   "rms_ratio": 0.903,
+   "logodds_drop": 2.955,
+   "allpos_total_drop": 5.65,
+   "allpos_logodds_drop": 4.393
+  }
+ },
+ "poker": {
+  "k": 5,
+  "neurons": [
+   "L34:11711",
+   "L34:9271",
+   "L29:1567",
+   "L32:6265",
+   "L35:7180"
+  ],
+  "random": {
+   "total_drop": 0.03,
+   "direct": 0.0,
+   "indirect": 0.03,
+   "via_heads": -0.01,
+   "via_other_neurons": 0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.015,
+   "allpos_total_drop": 0.01,
+   "allpos_logodds_drop": 0.002
+  },
+  "base_score": 43.59,
+  "own": {
+   "total_drop": 6.27,
+   "direct": 6.36,
+   "indirect": -0.1,
+   "via_heads": -0.82,
+   "via_other_neurons": 0.73,
+   "rms_ratio": 0.917,
+   "logodds_drop": 5.608,
+   "allpos_total_drop": 9.61,
+   "allpos_logodds_drop": 8.011
+  }
+ },
+ "DNA": {
+  "k": 5,
+  "neurons": [
+   "L31:1235",
+   "L28:997",
+   "L10:5877",
+   "L5:12066",
+   "L9:3302"
+  ],
+  "random": {
+   "total_drop": -0.03,
+   "direct": 0.0,
+   "indirect": -0.04,
+   "via_heads": -0.03,
+   "via_other_neurons": -0.03,
+   "rms_ratio": 0.998,
+   "logodds_drop": -0.014,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": 0.034
+  },
+  "base_score": 52.92,
+  "own": {
+   "total_drop": 4.02,
+   "direct": 13.79,
+   "indirect": -9.76,
+   "via_heads": -2.37,
+   "via_other_neurons": -7.42,
+   "rms_ratio": 0.913,
+   "logodds_drop": 1.509,
+   "allpos_total_drop": 8.31,
+   "allpos_logodds_drop": 5.972
+  }
+ },
+ "black holes": {
+  "k": 5,
+  "neurons": [
+   "L29:8862",
+   "L32:7014",
+   "L11:11132",
+   "L34:10326",
+   "L20:2258"
+  ],
+  "random": {
+   "total_drop": -0.03,
+   "direct": 0.0,
+   "indirect": -0.03,
+   "via_heads": -0.01,
+   "via_other_neurons": 0.04,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.007,
+   "allpos_total_drop": 0.03,
+   "allpos_logodds_drop": -0.015
+  },
+  "base_score": 43.94,
+  "own": {
+   "total_drop": 6.05,
+   "direct": 13.14,
+   "indirect": -7.09,
+   "via_heads": -2.13,
+   "via_other_neurons": -4.97,
+   "rms_ratio": 0.917,
+   "logodds_drop": 5.867,
+   "allpos_total_drop": 12.64,
+   "allpos_logodds_drop": 10.22
+  }
+ },
+ "evolution by natural selection": {
+  "k": 5,
+  "neurons": [
+   "L20:7473",
+   "L28:4964",
+   "L24:2417",
+   "L34:7917",
+   "L25:8642"
+  ],
+  "random": {
+   "total_drop": 0.09,
+   "direct": -0.0,
+   "indirect": 0.09,
+   "via_heads": 0.0,
+   "via_other_neurons": 0.05,
+   "rms_ratio": 1.001,
+   "logodds_drop": 0.076,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": -0.023
+  },
+  "base_score": 48.09,
+  "own": {
+   "total_drop": 6.59,
+   "direct": 5.39,
+   "indirect": 1.2,
+   "via_heads": -1.18,
+   "via_other_neurons": 2.37,
+   "rms_ratio": 0.913,
+   "logodds_drop": 5.64,
+   "allpos_total_drop": 10.44,
+   "allpos_logodds_drop": 8.826
+  }
+ },
+ "the periodic table": {
+  "k": 5,
+  "neurons": [
+   "L20:7473",
+   "L24:7487",
+   "L9:3301",
+   "L10:4640",
+   "L30:7932"
+  ],
+  "random": {
+   "total_drop": 0.01,
+   "direct": -0.0,
+   "indirect": 0.01,
+   "via_heads": 0.0,
+   "via_other_neurons": 0.03,
+   "rms_ratio": 1.001,
+   "logodds_drop": -0.066,
+   "allpos_total_drop": -0.0,
+   "allpos_logodds_drop": -0.023
+  },
+  "base_score": 48.46,
+  "own": {
+   "total_drop": 0.11,
+   "direct": 0.03,
+   "indirect": 0.08,
+   "via_heads": 0.17,
+   "via_other_neurons": -0.07,
+   "rms_ratio": 1.001,
+   "logodds_drop": 1.348,
+   "allpos_total_drop": 3.36,
+   "allpos_logodds_drop": 3.024
+  }
+ },
+ "the internet": {
+  "k": 5,
+  "neurons": [
+   "L32:1190",
+   "L20:2258",
+   "L28:9874",
+   "L23:12108",
+   "L28:10118"
+  ],
+  "random": {
+   "total_drop": 0.05,
+   "direct": 0.0,
+   "indirect": 0.05,
+   "via_heads": 0.01,
+   "via_other_neurons": 0.03,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.003,
+   "allpos_total_drop": -0.02,
+   "allpos_logodds_drop": -0.045
+  },
+  "base_score": 47.79,
+  "own": {
+   "total_drop": 5.19,
+   "direct": 10.95,
+   "indirect": -5.76,
+   "via_heads": -2.08,
+   "via_other_neurons": -3.7,
+   "rms_ratio": 0.961,
+   "logodds_drop": 5.302,
+   "allpos_total_drop": 6.07,
+   "allpos_logodds_drop": 5.953
+  }
+ },
+ "the steam engine": {
+  "k": 5,
+  "neurons": [
+   "L32:2089",
+   "L19:9651",
+   "L30:3401",
+   "L21:6351",
+   "L10:12046"
+  ],
+  "random": {
+   "total_drop": -0.01,
+   "direct": -0.0,
+   "indirect": -0.01,
+   "via_heads": 0.01,
+   "via_other_neurons": -0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.023,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": 0.001
+  },
+  "base_score": 41.33,
+  "own": {
+   "total_drop": 1.23,
+   "direct": 4.35,
+   "indirect": -3.12,
+   "via_heads": -1.24,
+   "via_other_neurons": -1.87,
+   "rms_ratio": 0.961,
+   "logodds_drop": 1.916,
+   "allpos_total_drop": 3.16,
+   "allpos_logodds_drop": 3.981
+  }
+ },
+ "the printing press": {
+  "k": 5,
+  "neurons": [
+   "L20:301",
+   "L19:9651",
+   "L31:5473",
+   "L33:1043",
+   "L33:10933"
+  ],
+  "random": {
+   "total_drop": 0.02,
+   "direct": -0.0,
+   "indirect": 0.03,
+   "via_heads": -0.01,
+   "via_other_neurons": 0.02,
+   "rms_ratio": 1.001,
+   "logodds_drop": 0.034,
+   "allpos_total_drop": 0.03,
+   "allpos_logodds_drop": 0.055
+  },
+  "base_score": 38.17,
+  "own": {
+   "total_drop": 1.15,
+   "direct": -0.08,
+   "indirect": 1.23,
+   "via_heads": 1.05,
+   "via_other_neurons": 0.18,
+   "rms_ratio": 1.2,
+   "logodds_drop": 0.747,
+   "allpos_total_drop": 1.44,
+   "allpos_logodds_drop": 0.836
+  }
+ },
+ "Bitcoin": {
+  "k": 5,
+  "neurons": [
+   "L35:1110",
+   "L9:2665",
+   "L8:7385",
+   "L35:8545",
+   "L24:5139"
+  ],
+  "random": {
+   "total_drop": 0.02,
+   "direct": -0.0,
+   "indirect": 0.02,
+   "via_heads": 0.02,
+   "via_other_neurons": -0.01,
+   "rms_ratio": 1.001,
+   "logodds_drop": 0.015,
+   "allpos_total_drop": -0.0,
+   "allpos_logodds_drop": 0.003
+  },
+  "base_score": 53.59,
+  "own": {
+   "total_drop": -1.16,
+   "direct": -1.1,
+   "indirect": -0.06,
+   "via_heads": -0.17,
+   "via_other_neurons": 0.1,
+   "rms_ratio": 0.996,
+   "logodds_drop": 3.986,
+   "allpos_total_drop": 1.59,
+   "allpos_logodds_drop": 5.54
+  }
+ },
+ "jealousy": {
+  "k": 5,
+  "neurons": [
+   "L30:1455",
+   "L13:6269",
+   "L34:1159",
+   "L35:7351",
+   "L30:2963"
+  ],
+  "random": {
+   "total_drop": -0.13,
+   "direct": 0.05,
+   "indirect": -0.19,
+   "via_heads": 0.01,
+   "via_other_neurons": -0.24,
+   "rms_ratio": 1.003,
+   "logodds_drop": -0.005,
+   "allpos_total_drop": -0.17,
+   "allpos_logodds_drop": 0.027
+  },
+  "base_score": 39.0,
+  "own": {
+   "total_drop": 8.41,
+   "direct": 14.66,
+   "indirect": -6.24,
+   "via_heads": -1.01,
+   "via_other_neurons": -5.25,
+   "rms_ratio": 0.918,
+   "logodds_drop": 7.298,
+   "allpos_total_drop": 11.51,
+   "allpos_logodds_drop": 10.481
+  }
+ },
+ "nostalgia": {
+  "k": 5,
+  "neurons": [
+   "L20:7473",
+   "L34:6428",
+   "L25:7166",
+   "L29:10286",
+   "L35:2719"
+  ],
+  "random": {
+   "total_drop": -0.03,
+   "direct": -0.0,
+   "indirect": -0.03,
+   "via_heads": 0.0,
+   "via_other_neurons": 0.0,
+   "rms_ratio": 1.001,
+   "logodds_drop": -0.032,
+   "allpos_total_drop": -0.0,
+   "allpos_logodds_drop": -0.013
+  },
+  "base_score": 39.59,
+  "own": {
+   "total_drop": 6.39,
+   "direct": 5.12,
+   "indirect": 1.27,
+   "via_heads": -0.91,
+   "via_other_neurons": 2.19,
+   "rms_ratio": 0.896,
+   "logodds_drop": 7.939,
+   "allpos_total_drop": 8.91,
+   "allpos_logodds_drop": 9.846
+  }
+ },
+ "justice": {
+  "k": 5,
+  "neurons": [
+   "L30:11794",
+   "L20:7473",
+   "L26:1460",
+   "L23:12108",
+   "L28:5504"
+  ],
+  "random": {
+   "total_drop": -0.01,
+   "direct": -0.0,
+   "indirect": -0.01,
+   "via_heads": 0.0,
+   "via_other_neurons": -0.03,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.025,
+   "allpos_total_drop": -0.01,
+   "allpos_logodds_drop": 0.012
+  },
+  "base_score": 42.47,
+  "own": {
+   "total_drop": 5.97,
+   "direct": 9.01,
+   "indirect": -3.05,
+   "via_heads": -1.57,
+   "via_other_neurons": -1.5,
+   "rms_ratio": 0.959,
+   "logodds_drop": 5.685,
+   "allpos_total_drop": 9.99,
+   "allpos_logodds_drop": 9.259
+  }
+ },
+ "infinity": {
+  "k": 5,
+  "neurons": [
+   "L10:6159",
+   "L14:4060",
+   "L16:9697",
+   "L5:7572",
+   "L13:7436"
+  ],
+  "random": {
+   "total_drop": 0.07,
+   "direct": 0.0,
+   "indirect": 0.07,
+   "via_heads": -0.03,
+   "via_other_neurons": 0.14,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.057,
+   "allpos_total_drop": -0.09,
+   "allpos_logodds_drop": -0.064
+  },
+  "base_score": 46.37,
+  "own": {
+   "total_drop": 0.42,
+   "direct": -0.0,
+   "indirect": 0.42,
+   "via_heads": -0.08,
+   "via_other_neurons": 0.59,
+   "rms_ratio": 0.993,
+   "logodds_drop": 0.34,
+   "allpos_total_drop": 5.84,
+   "allpos_logodds_drop": 6.364
+  }
+ },
+ "the heart": {
+  "k": 5,
+  "neurons": [
+   "L20:7473",
+   "L23:2192",
+   "L22:2516",
+   "L30:4056",
+   "L16:8622"
+  ],
+  "random": {
+   "total_drop": -0.07,
+   "direct": 0.01,
+   "indirect": -0.08,
+   "via_heads": -0.02,
+   "via_other_neurons": -0.02,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.035,
+   "allpos_total_drop": -0.05,
+   "allpos_logodds_drop": -0.022
+  },
+  "base_score": 51.16,
+  "own": {
+   "total_drop": 3.36,
+   "direct": 0.22,
+   "indirect": 3.14,
+   "via_heads": 1.15,
+   "via_other_neurons": 2.0,
+   "rms_ratio": 1.011,
+   "logodds_drop": 9.746,
+   "allpos_total_drop": 4.22,
+   "allpos_logodds_drop": 11.243
+  }
+ },
+ "vaccines": {
+  "k": 5,
+  "neurons": [
+   "L31:7865",
+   "L25:1661",
+   "L32:6298",
+   "L29:1825",
+   "L34:8612"
+  ],
+  "random": {
+   "total_drop": 0.02,
+   "direct": 0.0,
+   "indirect": 0.02,
+   "via_heads": 0.03,
+   "via_other_neurons": -0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.024,
+   "allpos_total_drop": 0.06,
+   "allpos_logodds_drop": 0.059
+  },
+  "base_score": 42.19,
+  "own": {
+   "total_drop": 8.76,
+   "direct": 11.04,
+   "indirect": -2.28,
+   "via_heads": -1.7,
+   "via_other_neurons": -0.62,
+   "rms_ratio": 0.914,
+   "logodds_drop": 10.166,
+   "allpos_total_drop": 15.72,
+   "allpos_logodds_drop": 17.732
+  }
+ },
+ "insomnia": {
+  "k": 5,
+  "neurons": [
+   "L29:2857",
+   "L29:5246",
+   "L33:11564",
+   "L29:9084",
+   "L33:11418"
+  ],
+  "random": {
+   "total_drop": 0.03,
+   "direct": 0.0,
+   "indirect": 0.03,
+   "via_heads": -0.0,
+   "via_other_neurons": 0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.06,
+   "allpos_total_drop": -0.02,
+   "allpos_logodds_drop": -0.025
+  },
+  "base_score": 40.85,
+  "own": {
+   "total_drop": 8.23,
+   "direct": 10.96,
+   "indirect": -2.73,
+   "via_heads": -0.97,
+   "via_other_neurons": -1.77,
+   "rms_ratio": 0.921,
+   "logodds_drop": 10.407,
+   "allpos_total_drop": 10.85,
+   "allpos_logodds_drop": 13.635
+  }
+ },
+ "the brain": {
+  "k": 5,
+  "neurons": [
+   "L31:11102",
+   "L1:12144",
+   "L10:1165",
+   "L9:6454",
+   "L30:9314"
+  ],
+  "random": {
+   "total_drop": 0.0,
+   "direct": 0.0,
+   "indirect": 0.0,
+   "via_heads": 0.01,
+   "via_other_neurons": 0.03,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.005,
+   "allpos_total_drop": 0.07,
+   "allpos_logodds_drop": 0.092
+  },
+  "base_score": 51.72,
+  "own": {
+   "total_drop": 3.52,
+   "direct": 12.13,
+   "indirect": -8.6,
+   "via_heads": -2.25,
+   "via_other_neurons": -6.33,
+   "rms_ratio": 0.935,
+   "logodds_drop": 2.993,
+   "allpos_total_drop": 7.11,
+   "allpos_logodds_drop": 5.864
+  }
+ },
+ "jazz": {
+  "k": 5,
+  "neurons": [
+   "L34:2449",
+   "L30:3901",
+   "L32:2101",
+   "L33:9269",
+   "L33:11026"
+  ],
+  "random": {
+   "total_drop": 0.03,
+   "direct": 0.01,
+   "indirect": 0.02,
+   "via_heads": -0.01,
+   "via_other_neurons": -0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.055,
+   "allpos_total_drop": 0.05,
+   "allpos_logodds_drop": 0.063
+  },
+  "base_score": 36.26,
+  "own": {
+   "total_drop": 4.6,
+   "direct": 7.94,
+   "indirect": -3.34,
+   "via_heads": -1.84,
+   "via_other_neurons": -1.53,
+   "rms_ratio": 0.917,
+   "logodds_drop": 4.337,
+   "allpos_total_drop": 6.9,
+   "allpos_logodds_drop": 6.459
+  }
+ },
+ "the Mona Lisa": {
+  "k": 5,
+  "neurons": [
+   "L28:4830",
+   "L33:2546",
+   "L29:6566",
+   "L34:335",
+   "L29:3591"
+  ],
+  "random": {
+   "total_drop": -0.03,
+   "direct": -0.0,
+   "indirect": -0.02,
+   "via_heads": -0.01,
+   "via_other_neurons": -0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.02,
+   "allpos_total_drop": 0.0,
+   "allpos_logodds_drop": 0.035
+  },
+  "base_score": 40.8,
+  "own": {
+   "total_drop": 8.01,
+   "direct": 7.14,
+   "indirect": 0.87,
+   "via_heads": -1.33,
+   "via_other_neurons": 2.22,
+   "rms_ratio": 0.92,
+   "logodds_drop": 7.874,
+   "allpos_total_drop": 10.65,
+   "allpos_logodds_drop": 10.224
+  }
+ },
+ "ballet": {
+  "k": 5,
+  "neurons": [
+   "L30:5787",
+   "L31:11732",
+   "L31:5133",
+   "L29:11943",
+   "L34:934"
+  ],
+  "random": {
+   "total_drop": -0.02,
+   "direct": -0.0,
+   "indirect": -0.01,
+   "via_heads": -0.0,
+   "via_other_neurons": 0.02,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.044,
+   "allpos_total_drop": -0.01,
+   "allpos_logodds_drop": -0.001
+  },
+  "base_score": 38.94,
+  "own": {
+   "total_drop": 5.56,
+   "direct": 3.97,
+   "indirect": 1.59,
+   "via_heads": -0.46,
+   "via_other_neurons": 2.04,
+   "rms_ratio": 0.874,
+   "logodds_drop": 7.57,
+   "allpos_total_drop": 8.0,
+   "allpos_logodds_drop": 10.254
+  }
+ },
+ "haiku": {
+  "k": 5,
+  "neurons": [
+   "L30:12178",
+   "L10:5318",
+   "L31:3785",
+   "L31:5473",
+   "L28:5150"
+  ],
+  "random": {
+   "total_drop": 0.06,
+   "direct": 0.0,
+   "indirect": 0.06,
+   "via_heads": 0.01,
+   "via_other_neurons": 0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.041,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": 0.056
+  },
+  "base_score": 36.8,
+  "own": {
+   "total_drop": 3.63,
+   "direct": 2.99,
+   "indirect": 0.64,
+   "via_heads": -0.55,
+   "via_other_neurons": 1.18,
+   "rms_ratio": 0.969,
+   "logodds_drop": 4.624,
+   "allpos_total_drop": 12.17,
+   "allpos_logodds_drop": 10.542
+  }
+ },
+ "volcanoes": {
+  "k": 5,
+  "neurons": [
+   "L30:2860",
+   "L10:7191",
+   "L9:719",
+   "L9:196",
+   "L33:10223"
+  ],
+  "random": {
+   "total_drop": -0.05,
+   "direct": -0.0,
+   "indirect": -0.04,
+   "via_heads": 0.01,
+   "via_other_neurons": -0.02,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.037,
+   "allpos_total_drop": -0.07,
+   "allpos_logodds_drop": -0.059
+  },
+  "base_score": 43.86,
+  "own": {
+   "total_drop": 3.36,
+   "direct": 8.84,
+   "indirect": -5.48,
+   "via_heads": -1.6,
+   "via_other_neurons": -3.88,
+   "rms_ratio": 0.935,
+   "logodds_drop": 3.491,
+   "allpos_total_drop": 9.08,
+   "allpos_logodds_drop": 7.752
+  }
+ },
+ "rainbows": {
+  "k": 5,
+  "neurons": [
+   "L30:537",
+   "L26:1881",
+   "L30:5101",
+   "L31:5473",
+   "L33:10933"
+  ],
+  "random": {
+   "total_drop": -0.01,
+   "direct": 0.0,
+   "indirect": -0.01,
+   "via_heads": 0.01,
+   "via_other_neurons": 0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.007,
+   "allpos_total_drop": 0.05,
+   "allpos_logodds_drop": 0.056
+  },
+  "base_score": 39.7,
+  "own": {
+   "total_drop": 5.57,
+   "direct": 8.77,
+   "indirect": -3.2,
+   "via_heads": -0.26,
+   "via_other_neurons": -2.93,
+   "rms_ratio": 1.069,
+   "logodds_drop": 4.872,
+   "allpos_total_drop": 7.45,
+   "allpos_logodds_drop": 6.769
+  }
+ },
+ "hurricanes": {
+  "k": 5,
+  "neurons": [
+   "L26:5530",
+   "L30:9073",
+   "L33:6296",
+   "L30:7812",
+   "L9:8819"
+  ],
+  "random": {
+   "total_drop": 0.07,
+   "direct": 0.0,
+   "indirect": 0.06,
+   "via_heads": 0.0,
+   "via_other_neurons": 0.06,
+   "rms_ratio": 1.001,
+   "logodds_drop": 0.117,
+   "allpos_total_drop": -0.01,
+   "allpos_logodds_drop": 0.052
+  },
+  "base_score": 47.78,
+  "own": {
+   "total_drop": 3.06,
+   "direct": 4.62,
+   "indirect": -1.56,
+   "via_heads": -1.49,
+   "via_other_neurons": -0.04,
+   "rms_ratio": 0.954,
+   "logodds_drop": 2.228,
+   "allpos_total_drop": 12.24,
+   "allpos_logodds_drop": 7.589
+  }
+ },
+ "the Amazon rainforest": {
+  "k": 5,
+  "neurons": [
+   "L9:2304",
+   "L33:11019",
+   "L28:8738",
+   "L29:6583",
+   "L15:3800"
+  ],
+  "random": {
+   "total_drop": -0.01,
+   "direct": -0.0,
+   "indirect": -0.01,
+   "via_heads": 0.02,
+   "via_other_neurons": -0.03,
+   "rms_ratio": 0.999,
+   "logodds_drop": 0.006,
+   "allpos_total_drop": -0.04,
+   "allpos_logodds_drop": -0.024
+  },
+  "base_score": 38.21,
+  "own": {
+   "total_drop": 0.28,
+   "direct": 3.14,
+   "indirect": -2.86,
+   "via_heads": -0.94,
+   "via_other_neurons": -1.89,
+   "rms_ratio": 0.948,
+   "logodds_drop": 0.391,
+   "allpos_total_drop": 3.36,
+   "allpos_logodds_drop": 3.297
+  }
+ },
+ "the Great Wall of China": {
+  "k": 5,
+  "neurons": [
+   "L33:11783",
+   "L29:5548",
+   "L30:6488",
+   "L27:8049",
+   "L30:4167"
+  ],
+  "random": {
+   "total_drop": 0.04,
+   "direct": 0.0,
+   "indirect": 0.03,
+   "via_heads": -0.0,
+   "via_other_neurons": -0.01,
+   "rms_ratio": 1.0,
+   "logodds_drop": 0.044,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": 0.004
+  },
+  "base_score": 36.67,
+  "own": {
+   "total_drop": 5.2,
+   "direct": 8.2,
+   "indirect": -3.0,
+   "via_heads": -1.05,
+   "via_other_neurons": -1.96,
+   "rms_ratio": 0.927,
+   "logodds_drop": 4.406,
+   "allpos_total_drop": 7.04,
+   "allpos_logodds_drop": 5.716
+  }
+ },
+ "Egypt's pyramids": {
+  "k": 5,
+  "neurons": [
+   "L35:9981",
+   "L28:4830",
+   "L30:12259",
+   "L32:4472",
+   "L9:6667"
+  ],
+  "random": {
+   "total_drop": 0.04,
+   "direct": -0.0,
+   "indirect": 0.04,
+   "via_heads": 0.01,
+   "via_other_neurons": -0.03,
+   "rms_ratio": 0.999,
+   "logodds_drop": 0.028,
+   "allpos_total_drop": 0.03,
+   "allpos_logodds_drop": 0.003
+  },
+  "base_score": 36.59,
+  "own": {
+   "total_drop": 5.72,
+   "direct": 5.85,
+   "indirect": -0.13,
+   "via_heads": -0.73,
+   "via_other_neurons": 0.57,
+   "rms_ratio": 0.953,
+   "logodds_drop": 5.029,
+   "allpos_total_drop": 7.45,
+   "allpos_logodds_drop": 7.099
+  }
+ },
+ "Marie Curie": {
+  "k": 5,
+  "neurons": [
+   "L35:6816",
+   "L30:7379",
+   "L33:7027",
+   "L25:8981",
+   "L28:5740"
+  ],
+  "random": {
+   "total_drop": -0.04,
+   "direct": -0.03,
+   "indirect": -0.01,
+   "via_heads": -0.01,
+   "via_other_neurons": 0.0,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.049,
+   "allpos_total_drop": -0.07,
+   "allpos_logodds_drop": -0.111
+  },
+  "base_score": 34.91,
+  "own": {
+   "total_drop": 5.39,
+   "direct": 4.74,
+   "indirect": 0.65,
+   "via_heads": -0.29,
+   "via_other_neurons": 0.96,
+   "rms_ratio": 0.951,
+   "logodds_drop": 5.446,
+   "allpos_total_drop": 6.38,
+   "allpos_logodds_drop": 6.229
+  }
+ },
+ "Charles Darwin": {
+  "k": 5,
+  "neurons": [
+   "L32:3704",
+   "L29:692",
+   "L31:5473",
+   "L1:10766",
+   "L4:9828"
+  ],
+  "random": {
+   "total_drop": -0.0,
+   "direct": -0.0,
+   "indirect": -0.0,
+   "via_heads": 0.03,
+   "via_other_neurons": -0.02,
+   "rms_ratio": 1.0,
+   "logodds_drop": -0.041,
+   "allpos_total_drop": 0.02,
+   "allpos_logodds_drop": -0.037
+  },
+  "base_score": 44.7,
+  "own": {
+   "total_drop": 3.85,
+   "direct": 6.6,
+   "indirect": -2.75,
+   "via_heads": -1.45,
+   "via_other_neurons": -1.3,
+   "rms_ratio": 0.957,
+   "logodds_drop": 3.614,
+   "allpos_total_drop": 6.58,
+   "allpos_logodds_drop": 6.364
+  }
+ }
+}

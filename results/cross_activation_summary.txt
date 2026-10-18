@@ -1,0 +1,70 @@
+Cross-activation: 359 concepts, 2401 distinct top-10 neurons. 'fires' = >= 0.5 of its own-concept activation (answer position). Families: 17; concepts without a family (excluded from family comparisons only): 181
+
+sanity: own-concept ratio median 1.000 (should be ~1) over 2738 neuron-owner pairs; excluded (|own act| < 1.0): 852
+
+[answer position] P(fires for another concept): same family 29.270% (4810/16433) vs different family 22.447% (49551/220747); ratio 1.3x
+
+[strongest position] P(fires for another concept): same family 33.920% (5574/16433) vs different family 25.887% (57144/220747); ratio 1.3x
+
+per neuron-owner pair (answer position): fires for 0 other concepts in 724/2738; 1-2 in 557; 3-9 in 486; >= 10 in 971 (of 358 others)
+classes: (owner unlabelled) fires for others 1094, dedicated (no other concept) 420, broad (>= 10% of other-family concepts) 361, family-shared (others mostly same family) 312, (owner unlabelled) dedicated 304, a few unrelated 247
+
+POST HOC split: 'always on' = fires for >= 90% of the other concepts: 34 neurons (408 neuron-owner pairs): ['L13:3213', 'L16:10639', 'L16:9154', 'L16:9959', 'L18:10192', 'L18:10867', 'L18:11671', 'L20:129', 'L20:2258', 'L20:7473', 'L21:2951', 'L21:5172', 'L21:646', 'L22:2516', 'L23:2096', 'L23:7701', 'L23:8552', 'L27:8686', 'L31:5473', 'L33:10933', 'L33:9269', 'L34:10173', 'L34:1452', 'L35:11333', 'L35:132', 'L35:6412', 'L35:6721', 'L35:8034', 'L35:8545', 'L35:9014', 'L35:9346', 'L35:9490', 'L35:9896', 'L4:419']
+  the rest (2330 pairs): P(fires for another concept) same family 15.42% (2106/13654) vs different family 7.67% (14083/183524); ratio 2.0x
+  the rest: fires for 0 others 724/2330; 1-2 557; 3-9 486; >= 10 563
+  the rest, classes: (owner unlabelled) fires for others 912, dedicated 420, family-shared 312, (owner unlabelled) dedicated 304, a few unrelated 247, broad 135
+  the rest, per family: pairs | P(fires) same family | different family
+    abstract       94 |  20.4% (n=1128) |  12.8%
+    animals        81 |  18.1% (n=891) |   4.7%
+    arts           83 |  10.9% (n=996) |   4.9%
+    body           25 |  22.7% (n=75) |  18.0%
+    colours        24 |  20.8% (n=72) |  13.3%
+    fiction        25 |   7.0% (n=100) |   1.3%
+    food           93 |  10.3% (n=1302) |   6.2%
+    history        80 |   9.7% (n=720) |   2.6%
+    myth           24 |  15.3% (n=72) |   1.2%
+    nature         67 |   7.6% (n=603) |   5.4%
+    objects        24 |  34.7% (n=72) |  25.3%
+    people         93 |  24.0% (n=1302) |   2.6%
+    places        151 |  13.6% (n=3322) |   6.1%
+    professions    26 |  15.4% (n=78) |   7.3%
+    science        63 |  20.1% (n=819) |  15.4%
+    sport          76 |  10.0% (n=912) |   3.8%
+    tech           85 |  20.8% (n=1190) |  15.8%
+
+by layer band (answer position): pairs | fires for 0 others | median ratio on different-family (or unlabelled) concepts
+  L0-15:    3 | 0% | +0.988
+  L16-23:  162 | 2% | +0.837
+  L24-29:  779 | 29% | -0.000
+  L30-35: 1794 | 27% | +0.001
+
+top-10 lists sharing >= 1 neuron: same family 346/1089 (31.8%) vs different 9712/63172 (15.4%)
+neurons in >= 3 concepts' top-10: L34:1452 x99 (?, abstract, animals, arts, colours, fiction, food, history, myth, nature, objects, people, places, professions, science, tech), L33:9269 x54 (?, animals, arts, fiction, food, history, myth, objects, people, places, professions, sport), L20:7473 x42 (?, abstract, animals, arts, body, colours, food, history, nature, objects, science, sport, tech), L33:10933 x35 (?, abstract, animals, arts, fiction, myth, nature, people, places, science, sport, tech), L20:2258 x27 (?, abstract, body, colours, food, objects, people, professions, science, tech), L35:9346 x25 (?, myth, people, places), L34:10173 x24 (?, animals, colours, people, places, science, sport), L23:12108 x23 (?, abstract, animals, arts, body, food, objects, professions, science, tech), L31:2311 x21 (?, animals, food, people, places, sport, tech), L31:5473 x19 (?, abstract, arts, food, myth, people, places, science, sport, tech), L26:4584 x17 (?, myth, people), L35:8545 x16 (?, abstract, animals, food, nature, places, professions, sport, tech), L16:9959 x15 (?, arts, fiction, nature, people, places, tech), L25:9578 x15 (?), L15:3800 x14 (?, fiction, nature, people, places, science), L28:2809 x14 (?), L28:5852 x13 (?, fiction, people), L25:7166 x12 (?, abstract, animals, body, objects, tech), L28:1669 x12 (abstract, body, food, objects, tech), L16:9154 x12 (?, abstract, colours, food, professions, science), L19:9651 x11 (?, food, nature, science, tech), L35:11333 x11 (?, colours, nature, places, sport), L13:7436 x11 (?, abstract, fiction, people, places, sport, tech), L22:2516 x9 (?, abstract, arts, body, objects, tech), L26:900 x9 (?, arts), L27:2168 x9 (?, people), L24:9069 x8 (?, colours, history, places, science, tech), L30:4167 x8 (?, history, places), L35:9896 x8 (?, abstract, food, objects, sport), L33:1339 x8 (?, abstract, people, places), L34:934 x8 (?, arts, food, myth, nature), L33:5981 x7 (?, food, myth), L35:1440 x7 (?, arts, food, myth, nature), L20:301 x7 (?, food, science, tech), L32:6503 x7 (abstract, body, colours, nature, science, sport), L30:8643 x7 (?, people), L30:9102 x7 (?, people), L29:5589 x7 (?), L24:10498 x7 (?), L28:8742 x7 (?), L34:374 x6 (?, animals, history, science, sport), L30:4736 x6 (?, places), L35:2540 x6 (?, colours, objects, science, tech), L23:2192 x6 (abstract, arts, body, objects, tech), L28:10728 x6 (?, people), L33:1290 x6 (?, food, professions, sport), L29:6366 x6 (?), L29:891 x5 (animals), L30:9956 x5 (?, places, tech), L24:7406 x5 (abstract, arts, body, tech), L34:11441 x5 (?, history, places, science, tech), L33:7121 x5 (?, people), L29:163 x5 (?, colours, tech), L34:310 x5 (?, places, tech), L33:12129 x5 (?, animals, fiction), L34:10848 x5 (?, arts), L28:5867 x5 (?, history), L28:709 x5 (?), L23:2303 x5 (?), L27:8805 x5 (?), L28:11810 x5 (?), L34:1317 x4 (?, animals, sport), L34:11836 x4 (?, animals, arts), L28:2560 x4 (?, food, places), L33:8300 x4 (?, food, nature), L27:10855 x4 (places), L10:6159 x4 (abstract, people, places, science), L23:4795 x4 (?, arts), L28:11323 x4 (?, arts), L30:6776 x4 (sport), L35:6782 x4 (?, people), L23:7701 x4 (?, people), L30:8885 x4 (?, people), L24:823 x4 (?, people), L30:6488 x4 (places), L33:8590 x4 (?, animals, sport), L33:9282 x4 (?, arts), L34:335 x4 (?, arts, fiction), L33:2159 x4 (?, food), L29:7034 x4 (?, fiction), L26:11095 x4 (?, people), L30:10027 x4 (?, people), L30:1407 x4 (?, people), L29:10019 x4 (?), L32:3551 x3 (?, animals), L29:11878 x3 (animals), L27:3162 x3 (animals), L30:6266 x3 (?, animals), L34:11619 x3 (animals, arts, sport), L35:2654 x3 (?, animals, myth), L34:11711 x3 (?, food, sport), L9:3280 x3 (?, food), L27:9459 x3 (?, places), L28:8535 x3 (places), L34:10900 x3 (history, places, sport), L33:8422 x3 (?, places), L23:11704 x3 (?, history, science), L34:3294 x3 (food, science, tech), L35:9880 x3 (food, tech), L32:10408 x3 (?, tech), L30:4056 x3 (abstract, body, tech), L26:10926 x3 (?, arts), L33:309 x3 (?, arts), L31:1080 x3 (arts), L8:10339 x3 (arts, history), L35:1782 x3 (?, places, sport), L30:11085 x3 (?, sport), L34:11739 x3 (abstract, places, science), L34:9848 x3 (abstract, arts, colours), L30:5534 x3 (?, history), L8:7010 x3 (people, places), L29:9 x3 (people), L28:3801 x3 (food), L28:4830 x3 (arts, places), L32:4741 x3 (?, people), L34:7830 x3 (?, science, tech), L27:3130 x3 (arts, professions, tech), L34:410 x3 (?, food, people), L31:4587 x3 (places), L30:1992 x3 (animals), L35:1261 x3 (?, arts, food), L35:4115 x3 (?, sport), L34:10326 x3 (colours, science), L18:11671 x3 (objects, tech), L35:9490 x3 (?, colours, tech), L35:7532 x3 (?, tech), L34:2449 x3 (?, arts), L33:2546 x3 (?, arts), L12:8700 x3 (?, nature, places), L35:6816 x3 (people, sport, tech), L35:4109 x3 (?, places), L35:8298 x3 (?, places), L28:8149 x3 (?, abstract), L24:4454 x3 (?, people), L29:642 x3 (?, people, sport), L33:11650 x3 (?, nature), L10:4619 x3 (?, history, professions), L30:5834 x3 (?, professions), L34:8582 x3 (?, history), L35:2816 x3 (?, places), L34:5688 x3 (?, places), L27:3972 x3 (?), L34:8271 x3 (?), L29:5709 x3 (?), L33:1335 x3 (?), L29:5313 x3 (?), L27:11353 x3 (?), L31:11444 x3 (?), L30:9912 x3 (?), L32:6310 x3 (?), L30:11639 x3 (?), L31:11273 x3 (?), L10:410 x3 (?), L28:6962 x3 (?), L28:11557 x3 (?), L30:5203 x3 (?), L31:3099 x3 (?), L30:7204 x3 (?), L30:10286 x3 (?), L29:12004 x3 (?), L28:11860 x3 (?)
+
+most broadly firing neurons (answer position; other concepts it fires for, by family):
+  L31:5473   (owner French fries, act +36.8) fires for 358: {'fame-sample': 181, 'places': 23, 'tech': 15, 'people': 15, 'food': 14}
+  L34:1452   (owner Rome, act +82.5) fires for 358: {'fame-sample': 181, 'places': 22, 'food': 15, 'tech': 15, 'people': 15}
+  L35:11333  (owner Los Angeles, act +184.5) fires for 358: {'fame-sample': 181, 'places': 22, 'food': 15, 'tech': 15, 'people': 15}
+  L31:5473   (owner Los Angeles, act +33.5) fires for 358: {'fame-sample': 181, 'places': 22, 'food': 15, 'tech': 15, 'people': 15}
+  L34:1452   (owner the Big Bang, act +79.8) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'tech': 15, 'people': 15}
+  L20:7473   (owner the water cycle, act -1.8) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'tech': 15, 'people': 15}
+  L33:10933  (owner the greenhouse effect, act -48.2) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'tech': 15, 'people': 15}
+  L4:419     (owner the greenhouse effect, act -1.9) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'tech': 15, 'people': 15}
+  L20:7473   (owner plate tectonics, act -2.1) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'tech': 15, 'people': 15}
+  L20:7473   (owner radio, act -1.8) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'people': 15, 'tech': 14}
+  L20:2258   (owner radio, act -5.1) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'people': 15, 'tech': 14}
+  L20:7473   (owner television, act -1.8) fires for 358: {'fame-sample': 181, 'places': 23, 'food': 15, 'people': 15, 'tech': 14}
+
+examples of family-shared firing (owner -> other same-family concepts it fires for):
+  L34:1452   Rome -> ['London', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge', 'Mount Everest']
+  L35:11333  Los Angeles -> ['London', 'Rome', 'Sydney', 'Eiffel Tower', 'Golden Gate Bridge', 'Mount Everest']
+  L31:5473   Los Angeles -> ['London', 'Rome', 'Sydney', 'Eiffel Tower', 'Golden Gate Bridge', 'Mount Everest']
+  L34:10173  Eiffel Tower -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Golden Gate Bridge', 'Mount Everest']
+  L34:1452   Mount Everest -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L34:1452   Venice -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L33:10933  Venice -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L31:5473   the Great Wall of China -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L34:1452   Brazil -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L33:10933  Brazil -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L34:1452   New York City -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']
+  L16:9959   New York City -> ['London', 'Rome', 'Sydney', 'Los Angeles', 'Eiffel Tower', 'Golden Gate Bridge']

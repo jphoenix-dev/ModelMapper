@@ -2,7 +2,7 @@
  "t01": "A worked experiment and explainer of <a href=\"https://already-clean.goodfire.com/\">Neural Networks Are Already Clean</a> by Nick Cammarata (Goodfire)",
  "t02": "[Eiffel Tower] [Qwen]",
  "t03": "<span>&quot;Neural Networks Are Already Clean&quot; is a potentially ground-breaking AI interpretability paper by Nick Cammarata. <br><br>It claims that AI interpretability is potentially simpler than many in the field believed. <br><br>With Claude Opus 5.5 I tested key claims from the paper by building &quot;Eiffel Tower Qwen&quot;, an homage to Golden Gate Claude, directly from the neurons of Qwen3-8B running on a prosumer graphics card.<br><br>This page seeks to explain, for lay readers, why this paper is so significant.</span>",
- "t04": "James Phoenix &amp; Claude Opus 5.5 <span>· October 2026 · tested on Qwen3-8B, an open model from Alibaba · <a href=\"https://github.com/jphoenix-dev/ModelMapper\">code on GitHub</a></span>",
+ "t04": "James Phoenix &amp; Claude Opus 5.5 <span>· 16 October 2026 · updated 18 October 2026 · tested on Qwen3-8B, an open model from Alibaba · <a href=\"https://github.com/jphoenix-dev/ModelMapper\">code on GitHub</a></span>",
  "t62": "Skip the reading: play with Eiffel Tower Qwen ↓",
  "t05": "The paper",
  "t06": "In <a href=\"https://already-clean.goodfire.com/\">Neural Networks Are Already Clean</a>, Nick Cammarata of Goodfire looks at the individual &quot;neurons&quot; inside AI models. A neuron is a small unit inside the model: for every token the model reads or writes, each neuron produces one number, how strongly it is firing. Qwen3-8B has 442,368 of them.",

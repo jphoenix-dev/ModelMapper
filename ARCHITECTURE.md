@@ -4,6 +4,10 @@ This file explains how the experiments are put together: the pipeline stages, wh
 data goes, and which scripts are superseded or exploratory. For the results, see [REPORT.md](REPORT.md) and
 [RESULTS.md](RESULTS.md). For terms, see [GLOSSARY.md](GLOSSARY.md).
 
+Script names below are module names. Since 18 Oct 2026 they live in the `modelmapper` package (`core/`, `loop/`,
+`experiments/`, `ledger/`, `dist/`, `archive/`) and run through the `modelmapper` command. [SCRIPTS.md](SCRIPTS.md)
+lists each one's old `src/` path, new file and command.
+
 ## The approach in one paragraph
 
 **A "neuron"** is one entry of the input to an MLP layer's `down_proj` in Qwen3: `SiLU(gate_proj(x)) * up_proj(x)`.
@@ -181,7 +185,7 @@ free local check (mean log-prob, repetition, non-ASCII share), validated against
 | Lexical checks | word-form detectors posing as concepts | `lexical_check.py`, `shared_parts_lexical.py` |
 
 ### 8. Answer keys (self-check)
-- `src/markers.py` runs a marker concept: V3 recall, attribution, and single knockouts of the top 20, with no
+- `modelmapper/core/markers.py` runs a marker concept: V3 recall, attribution, and single knockouts of the top 20, with no
   steering. It also labels units blind from this install's atlas, and does the keyword matching.
 - `scripts/make_answer_key.py` builds a key. It picks one marker per concept that holds in every independent prompt
   set: rank ≤ 5, knockout drop ≥ 0.1, and a label that names the concept (`answer_keys/keywords.json`). It works
@@ -258,7 +262,8 @@ versions).
 
 ## Known rough edges
 - **Script style.** Many experiment scripts run their work at import time (there is no `main()`), and they read
-  `sys.argv` directly. Run them as `python src/<script>.py …` from the repo root.
+  `sys.argv` directly. Run them through the CLI from the repo root (`modelmapper experiment <name> …`, SCRIPTS.md),
+  which hands them their arguments unchanged; don't import them.
 - **Hand-written prompt sets.** The neutral, held-out and person-friendly prompts and the concept lists in
   `prompts/` were written for this study (in English). They are not tied to Qwen.
 - **Golden Gate scripts.** The Experiment GG scripts (`gg_search.py`, `make_units.py`, `merge_scans.py`,

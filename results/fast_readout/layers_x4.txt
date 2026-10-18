@@ -1,0 +1,25 @@
+fast readout (layers): 1800 neurons in 226 s (126 ms per neuron); x4 peak, 32 web + 16 empty backgrounds, last position, next token
+  context dependence (1 - mean pairwise Jaccard of per-web-background top-10; 0 = same words in every context): median 1.00
+  by layer (bins of 4): web-vs-empty top-10 agreement | top word's mean dlogp | top word's consistency (web)
+    L 0-3  n=200   agreement 0.00 | strength  0.07 | consistency 0.03 | context dependence 1.00
+    L 4-7  n=200   agreement 0.00 | strength  0.63 | consistency 0.03 | context dependence 1.00
+    L 8-11 n=200   agreement 0.00 | strength  0.76 | consistency 0.03 | context dependence 1.00
+    L12-15 n=200   agreement 0.00 | strength  0.45 | consistency 0.02 | context dependence 1.00
+    L16-19 n=200   agreement 0.00 | strength  0.43 | consistency 0.03 | context dependence 1.00
+    L20-23 n=200   agreement 0.00 | strength  1.05 | consistency 0.16 | context dependence 1.00
+    L24-27 n=200   agreement 0.05 | strength  2.82 | consistency 0.50 | context dependence 0.98
+    L28-31 n=200   agreement 0.11 | strength  7.07 | consistency 0.91 | context dependence 0.83
+    L32-35 n=200   agreement 0.18 | strength  5.99 | consistency 1.00 | context dependence 0.59
+  examples (neuron: top web words with mean dlogp, consistency):
+    L25:11929  ' because' +8.6 (94%), '因为' +8.2 (94%), '因为在' +7.8 (97%), '因為' +7.4 (91%), ' Because' +7.3 (88%), 'because' +7.2 (91%)
+    L10:182    ' modem' +3.5 (22%), '电缆' +3.1 (3%), ' ISPs' +3.1 (3%), 'bps' +3.1 (9%), ' broadband' +3.1 (6%), 'gateway' +3.0 (0%)
+    L30:11809  ' Crowd' +1.9 (44%), '《' +1.7 (28%), ' Pregn' +1.6 (34%), '一向' +1.6 (22%), 'Ữ' +1.6 (22%), '-mm' +1.5 (31%)
+    L14:6539   'PIX' +0.6 (3%), ' specialization' +0.6 (0%), 'IID' +0.6 (0%), 'EIF' +0.5 (0%), ' прим' +0.5 (0%), ' voucher' +0.5 (3%)
+    L32:4450   ' song' +6.8 (69%), '濠' +6.7 (66%), '/cop' +6.6 (66%), '特朗' +6.5 (59%), '.Op' +6.4 (59%), 'poly' +6.4 (50%)
+    L28:7503   ' industry' +12.3 (100%), '行业' +11.7 (100%), 'industry' +11.1 (100%), '行业的' +10.2 (97%), ' trade' +10.2 (91%), '行业中' +9.6 (100%)
+    L34:2686   ' se' +7.5 (100%), ' Sec' +7.2 (100%), ' trans' +6.7 (100%), 'trans' +6.5 (100%), 'Trans' +6.0 (100%), ' op' +5.9 (91%)
+    L30:4174   ' sixteen' +9.1 (94%), '十八' +9.0 (91%), '八' +8.5 (94%), ' Thirty' +8.3 (94%), '十六' +8.2 (84%), ' eighty' +8.1 (78%)
+    L26:9540   '都将' +1.9 (9%), '都能' +1.8 (9%), '以外' +1.8 (16%), '之外' +1.8 (16%), '采' +1.7 (25%), '都有' +1.7 (9%)
+    L21:12159  '一体' +2.7 (6%), ' thereby' +2.7 (9%), '��' +2.6 (3%), '才能' +2.6 (3%), ' perhaps' +2.6 (16%), 'ฐาน' +2.6 (6%)
+    L1:10143   'ató' +0.0 (0%), 'elloworld' +0.0 (0%), 'Ms' +0.0 (0%), '血液' +0.0 (0%), 'utherland' +0.0 (0%), 'teams' +0.0 (0%)
+    L34:392    'stad' +9.9 (91%), 'imore' +9.7 (97%), 'isci' +9.3 (94%), ' VIC' +9.2 (97%), 'oples' +9.1 (91%), 'гал' +9.0 (94%)

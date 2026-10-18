@@ -24,6 +24,25 @@ model builds concepts out of such neurons. We tested this on **Qwen3-8B** (36 la
 > Qwen3-32B. No other model families or sizes were tested. Most results are exploratory. The pre-registered
 > experiments are CR, CEN, H-DEPTH and the confirmatory CR-3 ([PREREG.md](PREREG.md)).
 
+> **Since the first release (17-18 Oct 2026; exploratory, work in progress).** The project moved from testing the
+> essay to building a reusable map of what Qwen3-8B's neurons and heads do. None of this changes the headline results
+> below; each item says how strongly it is supported.
+> - **Mapping loop v2, run 1:** 5,000 Wikipedia Vital Articles concepts mapped to neurons and heads, with controls
+>   ([LOOP_V2.md](LOOP_V2.md), [PREREG_MAP.md](PREREG_MAP.md)).
+> - **Layers and jobs:** what can and cannot be said about the job of each layer band, graded by evidence
+>   ([LAYERS_AND_JOBS.md](LAYERS_AND_JOBS.md)).
+> - **The ledger:** every measurement about every neuron / head / concept in one queryable store, with a format for
+>   third-party contributions ([LEDGER.md](LEDGER.md), [modelmapper/ledger/](modelmapper/ledger/)).
+> - **Loop v3 (in progress):** an enrichment pass over every mapped concept, adding knowledge neurons acting at the
+>   concept's name, answer formats, missed candidates and stronger nulls ([LOOP_V3.md](LOOP_V3.md)).
+> - **Details and caveats:** the dated entries in [RESULTS.md](RESULTS.md); the current picture in
+>   [RESEARCH_STATE.md](RESEARCH_STATE.md).
+>
+> Several runs were still going at the time of this snapshot (links between key neurons, a larger J-lens estimate,
+> attribution graphs, loop v3). Their results will follow. Research scripts read their data from `AC_DATA_DIR` (default
+> `D:/already-clean-data`), `LEDGER_DIR`, `AC_REPO_RESULTS` and `MODEL_MAPPER_MODELS`; the bulk data (tens of GB) is not
+> in this repository.
+
 ## Headline results (Qwen3-8B)
 
 The full account is in [REPORT.md](REPORT.md) (the write-up) and [RESULTS.md](RESULTS.md) (chronological log).
@@ -151,6 +170,7 @@ python -m venv .venv
 source .venv/bin/activate          # Windows (Git Bash): source .venv/Scripts/activate
 pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128   # pick the wheel for your CUDA
 pip install -r requirements.txt
+pip install -e . --no-deps        # the `modelmapper` command (runs this checkout's code)
 cp .env.example .env               # then fill in what you need
 bash scripts/download_models.sh    # Qwen3-0.6B and Qwen3-8B into $MODEL_MAPPER_MODELS (default ./models)
 bash scripts/download_corpus.sh    # one FineWeb shard (2.1 GB) into $MODEL_MAPPER_CORPUS (default ./data)
@@ -245,42 +265,64 @@ Each variable is read from the environment first, then from a gitignored `.env` 
 | `MODEL_MAPPER_DEVICE` | `cuda`, `cuda:1`, `mps` or `cpu` | CUDA, else Apple MPS, else CPU |
 | `MODEL_MAPPER_DTYPE` | `bfloat16`, `float16` or `float32` (fastest on CPU) | `bfloat16` |
 | `MODEL_MAPPER_ATLAS_BATCH`, `MODEL_MAPPER_GEN_BATCH` | Atlas tokens per pass; steering replies per batch | `6144`, `100` (`2048`, `25` on GPUs under 12 GB) |
-| `OPENAI_BASE_URL`, `OAI_MODEL`, `OPENAI_API_KEY` | Labeller endpoint (`src/oai.py`) | OpenAI, `gpt-6-luna` |
-| `JUDGE_BACKEND` | Judge: `jev` or `llm` (`src/jev.py`) | `jev` |
+| `OPENAI_BASE_URL`, `OAI_MODEL`, `OPENAI_API_KEY` | Labeller endpoint (`modelmapper/core/oai.py`) | OpenAI, `gpt-6-luna` |
+| `JUDGE_BACKEND` | Judge: `jev` or `llm` (`modelmapper/core/jev.py`) | `jev` |
 | `JEV_API_KEY` | Jev judge key (`TYPESAFE_API_KEY` also works) | – |
 | `JUDGE_BASE_URL`, `JUDGE_MODEL`, `JUDGE_API_KEY`, `JUDGE_EXTRA_BODY` | Judge endpoint when `JUDGE_BACKEND=llm` | OpenAI |
 
 ### Main pipelines
-All scripts run from the repo root. Large derived data (the atlas, neuron ranges) goes to the gitignored `data/`
-folder; results go to `results/`. Model names below can be any model you have configured.
+Every pipeline, loop stage, experiment and ledger tool runs through one command, `modelmapper` (installed by
+`pip install -e .`; without installing, `python -m modelmapper` works the same from the repo root). Run it from the
+repo root. Large derived data (the atlas, neuron ranges) goes to the gitignored `data/` folder; results go to
+`results/`. Model names below can be any model you have configured.
 
 ```bash
 # 1. Neuron ranges and the activation atlas (GPU; ~7 min and ~45 min for 8B)
-python src/neuron_stats.py Qwen/Qwen3-8B                # -> data/stats_Qwen3-8B.pt
-python src/build_atlas.py Qwen/Qwen3-8B 10e6 40         # -> data/atlas_Qwen3-8B.pt (+ _docs.npz)
+modelmapper stats Qwen/Qwen3-8B                # -> data/stats_Qwen3-8B.pt
+modelmapper atlas Qwen/Qwen3-8B 10e6 40        # -> data/atlas_Qwen3-8B.pt (+ _docs.npz)
 
 # 2. Census of random neurons (labeller labels, judge grades), then calibrate the "clean" bar on spliced two-job dossiers
-python src/label_batch.py Qwen/Qwen3-8B random:1000 results/census_Qwen3-8B.json
-python src/regrade.py results/census_Qwen3-8B.json results/census_regrade_rubric.json
-python src/spliced_control.py results/census_Qwen3-8B.json spliced 100       # -> results/spliced_scan.json
-python src/label_batch.py Qwen/Qwen3-8B scan results/spliced_labels.json --scan results/spliced_scan.json
-python src/regrade.py results/spliced_labels.json results/spliced_regrade.json --scan results/spliced_scan.json
-python src/calibrate_clean.py results/census_regrade_rubric.json results/spliced_regrade.json
+modelmapper label Qwen/Qwen3-8B random:1000 results/census_Qwen3-8B.json
+modelmapper regrade results/census_Qwen3-8B.json results/census_regrade_rubric.json
+modelmapper core spliced_control results/census_Qwen3-8B.json spliced 100       # -> results/spliced_scan.json
+modelmapper label Qwen/Qwen3-8B scan results/spliced_labels.json --scan results/spliced_scan.json
+modelmapper regrade results/spliced_labels.json results/spliced_regrade.json --scan results/spliced_scan.json
+modelmapper core calibrate_clean results/census_regrade_rubric.json results/spliced_regrade.json
 
 # 3. Concept pipeline: recall prompts -> attribution -> ablation -> steering grid (question format, reply-only)
 RECALL_VARIANT=V3 CONCEPT_OUT_DIR=results/concepts_v3 \
-  python src/pipeline_fast.py Qwen/Qwen3-8B --reply-only "coffee" "Eiffel Tower"
+  modelmapper concept Qwen/Qwen3-8B --reply-only "coffee" "Eiffel Tower"
 RECALL_VARIANT=V3 CONCEPT_OUT_DIR=results/concepts_v3 \
-  python src/logodds_check.py my_tag "coffee" "Eiffel Tower"        # log-odds concentration (k_mean, k_flip)
+  modelmapper experiment logodds_check my_tag "coffee" "Eiffel Tower"   # log-odds concentration (k_mean, k_flip)
 
 # 4. Judge-free wave: recall + concentration + auto-selected steering, no judge API
-CONCEPT_OUT_DIR=results/concepts_w3 python src/wave_free.py prompts/concepts_wave3.json
+CONCEPT_OUT_DIR=results/concepts_w3 modelmapper wave prompts/concepts_wave3.json
 
 # 5. Interactive steering "dial" (~20 s to load)
-python src/dial.py
+modelmapper dial
 ```
+In PowerShell, set the variables first (`$env:RECALL_VARIANT="V3"`), or pass them to the command:
+`modelmapper concept --set-env RECALL_VARIANT=V3 --set-env CONCEPT_OUT_DIR=results/concepts_v3 Qwen/Qwen3-8B ...`.
 
-The exact commands behind each result are in RESULTS.md. Generation is greedy, so steering
+The exact commands behind each result are in RESULTS.md. They use the old script paths (`python src/...`), from
+before the code became a package on 18 Oct 2026: [SCRIPTS.md](SCRIPTS.md) gives the new command for each, and
+`modelmapper run src/<old path> <same arguments>` runs any of them as written.
+
+### The `modelmapper` command
+```bash
+modelmapper --help                          # every command
+modelmapper settings                        # where each data path and model setting points, and why
+modelmapper experiment list                 # every study, with its stages
+modelmapper experiment era build            # one stage of one study (was: python src/loop_v2/era.py build)
+modelmapper enrich --stages E0,E2 run       # the loop v3 enrichment pass (LOOP_V3.md)
+modelmapper ledger query unit L31:8930      # everything the ledger knows about a neuron (LEDGER.md)
+modelmapper dist make-run --help            # the rented-GPU runner (RUNBOOK.md)
+modelmapper archive list                    # the 16-17 Oct one-off analyses, unchanged
+```
+`--help` after any command prints that script's documentation and never starts a run. The code lives in
+`modelmapper/`: `core/` (model, neurons, steering, labeller and judge clients, the main pipelines, and `settings.py`,
+the one place every data path and environment variable is resolved), `loop/`, `experiments/` (one module per study,
+listed in `experiments/registry.py`), `ledger/`, `dist/` and `archive/`. Generation is greedy, so steering
 re-runs reproduce (mean difference 0.013).
 
 ## Use it on another model or endpoint

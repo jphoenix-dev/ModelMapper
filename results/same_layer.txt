@@ -1,0 +1,15 @@
+concepts with ranked neurons: 914; with k_mean: 856
+top-2: 35/914 concepts (4%) have >=2 neurons on the same layer; chance 8% (same layer mix, random draw); max neurons on one layer: {1: 879, 2: 35}
+top-3: 138/914 concepts (15%) have >=2 neurons on the same layer; chance 22% (same layer mix, random draw); max neurons on one layer: {1: 776, 2: 136, 3: 2}
+top-5: 420/914 concepts (46%) have >=2 neurons on the same layer; chance 54% (same layer mix, random draw); max neurons on one layer: {1: 494, 2: 396, 3: 24}
+top-10: 863/914 concepts (94%) have >=2 neurons on the same layer; chance 96% (same layer mix, random draw); max neurons on one layer: {1: 51, 2: 597, 3: 220, 4: 40, 5: 6}
+
+the k neurons each concept actually needs (k_mean, k>=2; 463 concepts, median k 2): 81 (17%) have >=2 on one layer; max per layer {1: 382, 2: 71, 3: 9, 4: 1}
+
+layers of top-5 neurons: L0:19 L1:11 L2:11 L3:31 L4:35 L5:19 L6:10 L7:7 L8:117 L9:246 L10:177 L11:65 L12:28 L13:15 L15:17 L16:10 L17:1 L18:5 L19:14 L20:63 L21:10 L22:14 L23:44 L24:50 L25:103 L26:118 L27:143 L28:256 L29:417 L30:494 L31:388 L32:294 L33:461 L34:565 L35:312
+  Rome ['L34:5641', 'L33:9269', 'L34:1452', 'L29:8289', 'L34:10900']
+  World Athletics Championships ['L30:87', 'L32:10286', 'L30:4733', 'L30:9460', 'L28:8014']
+  Eminem ['L34:2780', 'L34:335', 'L33:9269', 'L30:4955', 'L34:10173']
+  Boeing B-52 Stratofortress ['L33:12131', 'L11:2800', 'L35:7324', 'L33:2684', 'L33:1568']
+  Maryland ['L31:587', 'L10:2168', 'L31:2311', 'L27:5561', 'L31:4441']
+  Wikimedia Foundation ['L32:9149', 'L30:7437', 'L35:8545', 'L35:9510', 'L35:5230']

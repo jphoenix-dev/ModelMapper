@@ -1,0 +1,40 @@
+the elephant                 prompts 13 | exact max 5.50 | >16: 0 | clamped differs: 0
+the octopus                  prompts 15 | exact max 8.95 | >16: 0 | clamped differs: 0
+the honeybee                 prompts 7 | exact max 6.20 | >16: 0 | clamped differs: 0
+the penguin                  prompts 8 | exact max 4.19 | >16: 0 | clamped differs: 0
+sushi                        prompts 10 | exact max 7.84 | >16: 0 | clamped differs: 0
+chocolate                    prompts 10 | exact max 5.67 | >16: 0 | clamped differs: 0
+pizza                        prompts 11 | exact max 8.15 | >16: 0 | clamped differs: 0
+wine                         prompts 16 | exact max 13.42 | >16: 0 | clamped differs: 2
+football (soccer)            prompts 14 | exact max 10.99 | >16: 0 | clamped differs: 0
+the Olympic Games            prompts 14 | exact max 16.54 | >16: 1 | clamped differs: 1
+basketball                   prompts 15 | exact max 10.25 | >16: 0 | clamped differs: 0
+poker                        prompts 15 | exact max 10.36 | >16: 0 | clamped differs: 0
+DNA                          prompts 17 | exact max 14.79 | >16: 0 | clamped differs: 3
+black holes                  prompts 10 | exact max 10.47 | >16: 0 | clamped differs: 0
+evolution by natural selection prompts 12 | exact max 9.48 | >16: 0 | clamped differs: 0
+the periodic table           prompts 18 | exact max 15.53 | >16: 0 | clamped differs: 4
+the internet                 prompts 16 | exact max 7.43 | >16: 0 | clamped differs: 0
+the steam engine             prompts 14 | exact max 8.91 | >16: 0 | clamped differs: 0
+the printing press           prompts 14 | exact max 6.23 | >16: 0 | clamped differs: 0
+Bitcoin                      prompts 19 | exact max 16.80 | >16: 2 | clamped differs: 12
+jealousy                     prompts 17 | exact max 8.06 | >16: 0 | clamped differs: 0
+nostalgia                    prompts 19 | exact max 10.10 | >16: 0 | clamped differs: 0
+justice                      prompts 13 | exact max 12.43 | >16: 0 | clamped differs: 0
+infinity                     prompts 8 | exact max 6.86 | >16: 0 | clamped differs: 0
+the heart                    prompts 17 | exact max 14.71 | >16: 0 | clamped differs: 2
+vaccines                     prompts 9 | exact max 10.53 | >16: 0 | clamped differs: 0
+insomnia                     prompts 18 | exact max 11.21 | >16: 0 | clamped differs: 0
+the brain                    prompts 16 | exact max 12.23 | >16: 0 | clamped differs: 1
+jazz                         prompts 15 | exact max 6.61 | >16: 0 | clamped differs: 0
+the Mona Lisa                prompts 13 | exact max 15.96 | >16: 0 | clamped differs: 3
+ballet                       prompts 17 | exact max 9.20 | >16: 0 | clamped differs: 0
+haiku                        prompts 15 | exact max 6.99 | >16: 0 | clamped differs: 0
+volcanoes                    prompts 12 | exact max 10.50 | >16: 0 | clamped differs: 0
+rainbows                     prompts 14 | exact max 13.62 | >16: 0 | clamped differs: 1
+hurricanes                   prompts 6 | exact max 10.93 | >16: 0 | clamped differs: 0
+the Amazon rainforest        prompts 17 | exact max 7.98 | >16: 0 | clamped differs: 0
+the Great Wall of China      prompts 12 | exact max 7.31 | >16: 0 | clamped differs: 0
+Egypt's pyramids             prompts 13 | exact max 6.05 | >16: 0 | clamped differs: 0
+Marie Curie                  prompts 15 | exact max 6.34 | >16: 0 | clamped differs: 0
+Charles Darwin               prompts 20 | exact max 15.86 | >16: 0 | clamped differs: 8

@@ -10,7 +10,7 @@ the answer-key check (step 8) passes, and you have the short report from step 9.
 ## Rules for an agent following this file
 - Run the steps in order and stop at the first failed **Check**. Report the exact command and the last ~30 lines of
   output; don't paraphrase them.
-- Don't edit code under `src/` or `scripts/` to make a test pass. A failure is the result to report.
+- Don't edit code under `modelmapper/` or `scripts/` to make a test pass. A failure is the result to report.
 - Don't commit, push or open pull requests.
 - Never type, paste or store a password or token yourself. Where a step needs one (Hugging Face login), ask the
   human to run that command.
@@ -40,7 +40,7 @@ cd ModelMapper
 ```
 If you were given a `.bundle` file instead, run `git clone -b release <path>/model-mapper.bundle model-mapper`.
 
-**Check:** `README.md`, `src/` and `scripts/smoke_e2e.py` exist.
+**Check:** `README.md`, `modelmapper/`, `pyproject.toml` and `scripts/smoke_e2e.py` exist.
 
 ## 3. Create a virtual environment
 Windows (PowerShell):
@@ -71,13 +71,21 @@ build of torch.
 | No NVIDIA GPU (Windows / Linux) | `pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu` |
 | Mac (Apple Silicon) | `pip install torch==2.11.0` |
 
-Then install the rest:
+Then install the rest, and the `modelmapper` command:
 ```bash
 pip install -r requirements.txt
+pip install -e . --no-deps
 python -c "import torch; print(torch.__version__, '| cuda:', torch.cuda.is_available(), '| mps:', torch.backends.mps.is_available())"
+modelmapper settings
 ```
+`pip install -e .` is an editable install: the command runs the code in this folder, which also holds the prompts
+and results the code reads. Use `-e`; a plain `pip install .` would copy the code elsewhere. (Without installing,
+`python -m modelmapper ...` from this folder does the same.)
+
 **Check:** on an NVIDIA machine `cuda: True`; on a Mac `mps: True`. On CPU-only machines both are `False`, which is
-expected.
+expected. `modelmapper settings` prints this folder as the repo root, then a table of settings; the paths that
+start `D:/` or `C:/dev` are the original research machine's, used only by the research scripts, not by the steps
+below.
 
 ## 5. Smoke test, same model family (no API keys)
 ```bash
@@ -154,7 +162,7 @@ match to about ±0.02.
   ideally from text we never used:
   ```bash
   SHARD=001_00000 bash scripts/download_corpus.sh
-  MODEL_MAPPER_CORPUS=data/fineweb_001_00000.parquet python src/build_atlas.py Qwen/Qwen3-0.6B 2e6 40
+  MODEL_MAPPER_CORPUS=data/fineweb_001_00000.parquet modelmapper atlas Qwen/Qwen3-0.6B 2e6 40
   ```
   That takes a few minutes on a GPU. Close other programs using the GPU first (a local LLM server, for example): on a
   6 GB card they push the atlas into shared memory and make it several times slower.
