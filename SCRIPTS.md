@@ -296,8 +296,8 @@ accepts; the CLI checks a stage is valid before anything runs.
 | `src/single_neuron_steer.py` | `modelmapper/experiments/single_neuron_steer.py` | experiments | `modelmapper experiment single_neuron_steer` |  |
 | `src/smoke_test.py` | `modelmapper/core/smoke_test.py` | core | `modelmapper core smoke_test` |  |
 | `src/spliced_control.py` | `modelmapper/core/spliced_control.py` | core | `modelmapper core spliced_control` |  |
-| `src/spotcheck_build.py` | `modelmapper/experiments/spotcheck_build.py` | experiments | `modelmapper experiment spotcheck_build` |  |
-| `src/spotcheck_score.py` | `modelmapper/experiments/spotcheck_score.py` | experiments | `modelmapper experiment spotcheck_score` |  |
+| `src/spotcheck_build.py` | `modelmapper/experiments/spotcheck_build.py` | experiments | `modelmapper experiment spotcheck_build` | not in the public release |
+| `src/spotcheck_score.py` | `modelmapper/experiments/spotcheck_score.py` | experiments | `modelmapper experiment spotcheck_score` | not in the public release |
 | `src/staging.py` | `modelmapper/archive/staging.py` | archive | `modelmapper archive staging` |  |
 | `src/staging_summary.py` | `modelmapper/archive/staging_summary.py` | archive | `modelmapper archive staging_summary` |  |
 | `src/steer_retest.py` | `modelmapper/experiments/steer_retest.py` | experiments | `modelmapper experiment steer_retest` |  |

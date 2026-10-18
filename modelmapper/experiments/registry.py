@@ -108,5 +108,11 @@ EXPERIMENTS = {
     "mechanisms.build_pack": _e(G_MECH),
 }
 
+# The public release leaves out a few studies (scripts/export_release.sh EXCLUDE, e.g. the unfinished spot-check
+# tooling): list only the ones whose module is present, so the CLI never offers a command it can't run.
+from pathlib import Path as _Path  # noqa: E402
+
+EXPERIMENTS = {k: v for k, v in EXPERIMENTS.items() if (_Path(__file__).parent / (k.replace(".", "/") + ".py")).exists()}
+
 for _name, _ent in EXPERIMENTS.items():
     _ent["module"] = f"modelmapper.experiments.{_name}"
