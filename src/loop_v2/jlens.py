@@ -171,6 +171,32 @@ def merge(paths):
     torch.save(m, OUT / "j_sums.pt"); print(f"merged {len(paths)} files: {len(wins)} windows")
 
 
+def compare(pa, pb):
+    """Reproduction check: the same windows computed on two machines / row counts (James, 18 Oct: 'are we definite results
+    will repro?'). Pass rule (fixed before any comparison): per layer relative Frobenius difference < 1% AND median top-20
+    token overlap >= 0.95 for 256 random neurons per sampled layer (split-half across DIFFERENT text gave 0.25-1.0).
+    If it fails, rented results are not merged with the 5090 pilot; windows 0-31 are recomputed on the rented GPUs too."""
+    a, b = torch.load(pa, weights_only=False), torch.load(pb, weights_only=False)
+    if a["windows"] != b["windows"]:
+        raise SystemExit(f"different windows: {a['windows'][:4]} vs {b['windows'][:4]}")
+    JA = a["A"] + a["B"]; JB = b["A"] + b["B"]; L = JA.shape[0]
+    rel = [float((JA[l] - JB[l]).norm() / JB[l].norm()) for l in range(L)]
+    model, tok = setup(); dev = next(model.parameters()).device
+    g = model.model.norm.weight.float(); WU = model.lm_head.weight.float(); rng = random.Random(5); ov = {}
+    for l in range(0, L, 5):
+        Wd = model.model.layers[l].mlp.down_proj.weight.float(); V = Wd[:, rng.sample(range(Wd.shape[1]), 256)]
+        ta = (WU @ (g[:, None] * (JA[l].to(dev) @ V))).topk(20, dim=0).indices
+        tb = (WU @ (g[:, None] * (JB[l].to(dev) @ V))).topk(20, dim=0).indices
+        ov[l] = stx.median(len(set(ta[:, i].tolist()) & set(tb[:, i].tolist())) / 20 for i in range(V.shape[1]))
+    ok = max(rel) < 0.01 and min(ov.values()) >= 0.95
+    txt = (f"compare {Path(pa).name} vs {Path(pb).name} ({len(a['windows'])} windows): relative difference per layer max {max(rel):.4%} "
+           f"(median {stx.median(rel):.4%}); top-20 readout overlap " + ", ".join(f"L{l} {v:.2f}" for l, v in ov.items()) +
+           f"\n  REPRODUCES (rel < 1% in every layer, overlap >= 0.95): {'YES' if ok else 'NO'}")
+    with open(OUT / "jlens_compare.txt", "a", encoding="utf-8") as f:
+        f.write(txt + "\n")
+    print(txt)
+
+
 def load_J(which="all"):
     st = torch.load(OUT / "j_sums.pt", weights_only=False)
     if which == "A":
