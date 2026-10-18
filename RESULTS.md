@@ -2477,3 +2477,19 @@ Divine Comedy' - kept as separate entries), 5 relations each with fixed phrasing
   text - polysemantic in the usual sense) but specific in USE (in this task each matters for its own entity, plus a few
   sharing an attribute). The same pattern as concept neurons ('packed triggers, one job'), now for knowledge neurons;
   what looks entity-specific is a combination: the right word-part / attribute neuron firing in the right context.
+
+## 18 Oct 2026: fact knowledge as shared machinery - answer-value and relation neurons (facts grid re-read; CPU)
+James: by 'knowledge' he meant the FACTS (location, height...), and whether those show up as shared machinery. Re-read of the
+landmark facts grid (each fact neuron zeroed on every fact): for each neuron, its mean drop on OTHER facts with the SAME
+answer vs same-relation facts with a DIFFERENT answer vs the rest (219 neurons whose fact shares its answer with others).
+- **Answer-value machinery (124/219):** neurons that matter for every fact with the same answer and not for the same
+  question with other answers (> 3x). A '19th century' neuron, L33:2629: zeroed, the century fact of every 19th-century
+  landmark drops (Arc de Triomphe 10.1, Sagrada Família 8.9, Brooklyn Bridge 8.5, Statue of Liberty 8.2) and other
+  centuries do not (-0.03). 'Vatican City' L29:5436 (St. Peter's and Sistine Chapel, city AND country, drops ~26); 'marble'
+  L31:6383 (Parthenon and another marble landmark, 7.8). Layers 29-33.
+- **Relation machinery (45/219):** neurons that matter for one question type whatever the answer - L30:8291 'century
+  built' (~3.2 on every landmark's century fact, 12th or 20th alike).
+- **Reading:** the fact itself is not one neuron but a factorised lookup: entity neurons early at the name (rows),
+  relation neurons mid-late (columns), answer-value neurons late (the values) - and the value neurons are shared by every
+  entity with that value. Not yet tested: the chain (does zeroing an entity neuron at the name lower the value neuron's
+  activation at the answer position?) and numeric facts (height).

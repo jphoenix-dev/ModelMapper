@@ -85,6 +85,12 @@ L30:8291 ('century built'), costs ~3.2 log-odds on the century fact of every lan
 facts; 61 relation-class neurons, 11 of them in 20-27 and 50 in 28-35 (facts grid). *Why only moderate:* 5 relations,
 one entity type, one strong example dominating.
 
+**M2b. Fact knowledge appears as shared late machinery of two kinds** (facts grid re-read): answer-value neurons shared by
+every fact with the same answer (124/219; e.g. a '19th century' neuron across four 19th-century landmarks, 'Vatican City',
+'marble'; layers 29-33) and relation neurons shared by question type (45/219; 'century built'). The fact itself is a
+factorised lookup - entity (early, rows) x relation (mid-late, columns) -> value (late, shared by all entities with that
+value). Moderate: landmarks, 5 relations; the entity -> value chain is not yet tested causally.
+
 **M3. Layers ~16-24 host shared answer-format machinery.** 35 neurons in 16-24 fire for every concept (cross-activation,
 16 Oct); the most widely shared neurons (hundreds of concepts, e.g. L20:7473) are fed by the same upstream neurons
 whatever the concept (feeder Jaccard 0.45 vs 0.11 for topic neurons; feeders) and drive 'Title-Case term' neurons at
