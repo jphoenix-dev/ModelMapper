@@ -138,9 +138,12 @@ def main():
             time.sleep(IDLE_POLL); continue
         idle_since = None
         if os.environ.get("DIST_QUOTA", "1") != "0":
-            c = ctx.model.config
-            need = quota.task_output_bytes(ctx.cfg, pick, c.num_hidden_layers, c.intermediate_size, c.num_attention_heads,
-                                           c.hidden_size, store.get_json(f"promptsets/{pick.split(':')[-1]}.json") if pick.startswith("ablate:") else None)
+            if ctx.cfg.get("kind") == "jlens":            # never touch ctx.model here: the subprocess needs the whole GPU
+                need = quota.task_output_bytes(ctx.cfg, pick)
+            else:
+                c = ctx.model.config
+                need = quota.task_output_bytes(ctx.cfg, pick, c.num_hidden_layers, c.intermediate_size, c.num_attention_heads,
+                                               c.hidden_size, store.get_json(f"promptsets/{pick.split(':')[-1]}.json") if pick.startswith("ablate:") else None)
             try:
                 q = quota.check(store, extra_bytes=need, extra_a=200, extra_b=200)
             except quota.QuotaExceeded as e:
