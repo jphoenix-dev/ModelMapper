@@ -10,6 +10,10 @@ labeller and the judge are all configurable ([Use it on another model](#use-it-o
 > **See it in action:** [**Eiffel Tower Qwen**](https://eiffel-tower-qwen.vercel.app/) is an interactive explainer for
 > lay readers. Turn a handful of the model's Eiffel Tower neurons up and watch the tower take over its answers,
 > switch them off and watch it forget, then try any of the 138 concepts we tested. Source: [explainer/](explainer/).
+>
+> **The [Qwen Neuron Map](https://eiffel-tower-qwen.vercel.app/map/)** shows every Qwen3-8B neuron we have tied to a
+> job so far, by layer and subject. Pick a concept and watch its neurons light up layer by layer, or pick a kind of
+> job to see every neuron found doing it. Source: [explainer/site/map/](explainer/site/map/).
 
 > **Installing it?** Follow [SETUP.md](SETUP.md). It is a step-by-step install and self-check that a person or a
 > coding agent can follow ("clone this repo and follow SETUP.md"). It ends with a short report of what passed.
@@ -29,19 +33,27 @@ model builds concepts out of such neurons. We tested this on **Qwen3-8B** (36 la
 > **Since the first release (17-18 Oct 2026; exploratory, work in progress).** The project moved from testing the
 > essay to building a reusable map of what Qwen3-8B's neurons and heads do. None of this changes the headline results
 > below; each item says how strongly it is supported.
-> - **Mapping loop v2, run 1:** 5,000 Wikipedia Vital Articles concepts mapped to neurons and heads, with controls
->   ([LOOP_V2.md](LOOP_V2.md), [PREREG_MAP.md](PREREG_MAP.md)).
+> - **Mapping loop v2, run 1:** 5,000 Wikipedia Vital Articles concepts, 4,194 of them mapped to neurons and heads,
+>   with random-neuron controls ([LOOP_V2.md](LOOP_V2.md), [PREREG_MAP.md](PREREG_MAP.md)). About 44,000 neurons
+>   (~10%) are connected to at least one concept; 21,510 clearly lower a concept's answer when switched off, and 1,827
+>   have a short name that passed a blind check. Names are reading aids, not proof of what a neuron does.
 > - **Layers and jobs:** what can and cannot be said about the job of each layer band, graded by evidence
 >   ([LAYERS_AND_JOBS.md](LAYERS_AND_JOBS.md)).
 > - **The ledger:** every measurement about every neuron / head / concept in one queryable store, with a format for
 >   third-party contributions ([LEDGER.md](LEDGER.md), [modelmapper/ledger/](modelmapper/ledger/)).
 > - **Loop v3 (in progress):** an enrichment pass over every mapped concept, adding knowledge neurons acting at the
->   concept's name, answer formats, missed candidates and stronger nulls ([LOOP_V3.md](LOOP_V3.md)).
+>   concept's name, answer formats, missed candidates and stronger nulls ([LOOP_V3.md](LOOP_V3.md)). A snapshot of
+>   the first 1,231 concepts is in this release; the main layer finding holds with the missed candidates added.
+> - **Links, lenses and new jobs:** measured links between each concept's key neurons (333,394 pass, of 1.7 million
+>   pairs), a J-lens pilot, attribution graphs, two-ended "scale" neurons and new job categories
+>   ([MECHANISMS.md](MECHANISMS.md)).
+> - **The `modelmapper` package and command:** the code is now one package with one command
+>   ([The `modelmapper` command](#the-modelmapper-command)); [SCRIPTS.md](SCRIPTS.md) maps every old script path.
 > - **Details and caveats:** the dated entries in [RESULTS.md](RESULTS.md); the current picture in
 >   [RESEARCH_STATE.md](RESEARCH_STATE.md).
 >
-> Several runs were still going at the time of this snapshot (links between key neurons, a larger J-lens estimate,
-> attribution graphs, loop v3). Their results will follow. Research scripts read their data from `AC_DATA_DIR` (default
+> Still running at the time of this snapshot: the full loop v3 enrichment and a J-lens estimated from 8× more text.
+> Their results will follow in the next release. Research scripts read their data from `AC_DATA_DIR` (default
 > `D:/already-clean-data`), `LEDGER_DIR`, `AC_REPO_RESULTS` and `MODEL_MAPPER_MODELS`; the bulk data (tens of GB) is not
 > in this repository.
 
@@ -149,6 +161,13 @@ The full account is in [REPORT.md](REPORT.md) (the write-up) and [RESULTS.md](RE
 | [SETUP.md](SETUP.md) | Install and self-check, step by step (for people and coding agents) |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | How the pipeline and code are organised |
 | [LABELLING.md](LABELLING.md) | The blind-labelling protocol |
+| [LAYERS_AND_JOBS.md](LAYERS_AND_JOBS.md) | What each layer band's neurons do, each claim graded by its evidence (17-18 Oct) |
+| [LEDGER.md](LEDGER.md) | The neuron/concept ledger: what it stores, how to query it, how to contribute |
+| [LOOP_V2.md](LOOP_V2.md), [LOOP_V3.md](LOOP_V3.md) | The mapping loop at scale, and its enrichment pass |
+| [MECHANISMS.md](MECHANISMS.md) | Hypotheses for new kinds of neuron job, each with its test and result |
+| [RESEARCH_STATE.md](RESEARCH_STATE.md) | The current picture: what is established, what is open |
+| [SCRIPTS.md](SCRIPTS.md) | Every pre-package script path and its `modelmapper` command |
+| [CITATION.cff](CITATION.cff) | How to cite this work (Zenodo DOI) |
 
 ## Hardware and cost
 
@@ -356,9 +375,17 @@ re-runs reproduce (mean difference 0.013).
   - the blind labelling dossiers (`results/**/dossiers_*/`; `make_dossiers.py`, `Atlas.write_dossiers`);
   - the middle-of-range samples (`results/strata_Qwen3-8B.json`; `strata_scan.py`);
   - the spliced-dossier texts (`results/spliced_scan.json`; `spliced_control.py`);
+  - the web-text snippets an AI judged for concept neurons (`results/luna_firing_judge.json`).
 - **What is in it.** Labels, judge scores, ablation curves, steering replies, logs and all numbers are included.
   Short excerpts quoted in the documents and logs are FineWeb text, under its licence.
 - **Large derived data.** The atlas and neuron ranges (~270 MB for Qwen3-8B) are not included; rebuild them with step 1.
+
+## Cite
+
+Please cite the Zenodo archive: James Phoenix, *Model Mapper*, Zenodo,
+[doi:10.5281/zenodo.23459925](https://doi.org/10.5281/zenodo.23459925) (all versions; this release, v2026.10.18, is
+[10.5281/zenodo.23459926](https://doi.org/10.5281/zenodo.23459926)). GitHub's "Cite this repository" button reads
+[CITATION.cff](CITATION.cff).
 
 ## Credit
 
