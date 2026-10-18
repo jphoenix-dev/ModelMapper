@@ -1,9 +1,15 @@
 """Export the ledger for the map visualiser (interface agreed 18 Oct; LEDGER.md "Interface").
 
-  python src/ledger/export.py        -> <LEDGER_DIR>/export/ (written to export.tmp, then swapped in atomically)
+  modelmapper ledger export        -> <LEDGER_DIR>/export/ (written to export.tmp, then swapped in atomically)
+                                     (was: python src/ledger/export.py)
 
 Files: manifest.json, experiments.jsonl, concepts.jsonl, units.jsonl, evidence/<experiment_id>/part-NNNN.jsonl.gz, claims.jsonl,
-artifacts.jsonl, views/{unit_summary,concept_summary,layer_summary,head_summary}.jsonl.
+artifacts.jsonl, views/{unit_summary,concept_summary,layer_summary,head_summary}.jsonl, scripts.jsonl.
+The ledger's experiment rows name their scripts by the paths used before the 18 Oct 2026 package refactor (`script`,
+`reproduce`); the packs are left as they are, so their ids stay valid. The export adds, per experiment, `script_files`
+(the new file of each script named), `command` (the `modelmapper` command for `script`) and `reproduce_command`
+(`reproduce` with each old `python src/...` call replaced by its command), and scripts.jsonl holds the whole
+old path -> module -> command table (SCRIPTS.md).
 """
 import gzip
 import hashlib
@@ -18,6 +24,7 @@ from pathlib import Path
 import duckdb
 import yaml
 
+from modelmapper.cli import new_command, new_files, rewrite_commands, scripts_rows
 from modelmapper.ledger.core import LEDGER_DIR, SCHEMA_VERSION  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -85,7 +92,10 @@ def export():
     J = lambda s: json.loads(s) if isinstance(s, str) and s[:1] in "[{" else s
     status = dict(con.execute("SELECT experiment_id, status FROM experiments").fetchall())
     table("experiments.jsonl", "SELECT * FROM experiments ORDER BY date, experiment_id",
-          lambda r: {**r, **{k: J(r[k]) for k in ("data_files", "caveats", "docs", "params")}})
+          lambda r: {**r, **{k: J(r[k]) for k in ("data_files", "caveats", "docs", "params")},
+                     "script_files": new_files(r["script"]),
+                     "command": rewrite_commands(r["script"]) if r["script"] and " " in r["script"].strip() else new_command(r["script"]),
+                     "reproduce_command": rewrite_commands(r["reproduce"])})
     names = dict(con.execute("SELECT concept_id, label FROM concepts").fetchall())
     table("concepts.jsonl", "SELECT * FROM concepts ORDER BY concept_id",
           lambda r: {"concept_id": r["concept_id"], "name": r["label"], "slug": r["slug"], "qid": r["qid"], "kind": r["kind"],
@@ -122,6 +132,11 @@ def export():
             f.close()
     table("claims.jsonl", "SELECT * FROM claims ORDER BY claim_id", lambda r: {**r, **{k: J(r[k]) for k in ("metric", "evidence_ids", "docs")}})
     table("artifacts.jsonl", "SELECT * FROM artifacts ORDER BY path", lambda r: {**r, "keys": J(r["keys"])})
+    with open(tmp / "scripts.jsonl", "w", encoding="utf-8") as f:
+        rows = scripts_rows()
+        for old, new, kind, cmd in rows:
+            jdump(f, {"old_path": old, "new_file": new, "kind": kind, "command": cmd})
+        counts["scripts.jsonl"] = len(rows)
     for v in ("unit_summary", "concept_summary", "layer_summary", "head_summary"):
         table(f"views/{v}.jsonl", f"SELECT * FROM {v}", lambda r: {k: (dict(x) if hasattr(x, "items") else x) for k, x in r.items()})
     files = {}

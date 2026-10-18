@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import ast
 import os
+import re
 import sys
 import textwrap
 from pathlib import Path
@@ -51,7 +52,8 @@ LEDGER = {
     "verify": ("modelmapper.ledger.verify", "check the built ledger against its sources", None, {}, ()),
     "export": ("modelmapper.ledger.export", "write the public export (Parquet + JSON)", None, {}, ()),
     "query": ("modelmapper.ledger.query", "look things up, e.g. `query unit L31:8930`", None, {}, ()),
-    "pack": ("modelmapper.ledger.pack", "third-party packs: `pack validate <dir>` / `pack import <dir>`", ["validate", "import"], {}, ()),
+    "pack": ("modelmapper.ledger.pack", "third-party packs: `pack validate <dir>`, `pack from-jsonl <dir> [--force]`",
+             ["validate", "from-jsonl"], {}, ()),
 }
 DIST = {
     "launch": ("modelmapper.dist.launcher", "rent pods and run a store's tasks: run | status | terminate | billing",
@@ -119,6 +121,44 @@ def command_for(mod, kind):
     if kind == "ledger" and ".importers." in mod and name != "importers":
         return f"modelmapper ledger importer {name}"
     return None
+
+
+_OLD_CMD = re.compile(r"python3?\s+(?:-u\s+)?(src/[A-Za-z0-9_/]+\.py)")
+
+
+def new_command(old: str | None) -> str | None:
+    """'src/loop_v2/era.py' -> 'modelmapper experiment era'; None for a library module or an unknown path."""
+    if not old:
+        return None
+    try:
+        mod, kind, _ = legacy.resolve(old)
+    except KeyError:
+        return None
+    return command_for(mod, kind)
+
+
+def new_files(text: str | None) -> list[str]:
+    """Every old script path named in `text` -> its new file (repo-relative)."""
+    out = []
+    for o in re.findall(r"src/[A-Za-z0-9_/]+\.py", text or ""):
+        try:
+            out.append(legacy.module_file(legacy.resolve(o)[0]).relative_to(legacy.REPO_ROOT).as_posix())
+        except KeyError:
+            pass
+    return out
+
+
+def rewrite_commands(text: str | None) -> str | None:
+    """Old commands in free text ('python src/loop_v2/jlens.py estimate ...') -> the CLI ('modelmapper experiment jlens
+    estimate ...'); everything else is kept. Script paths named without `python` ('src/a.py + src/b.py') become the
+    commands joined with ' ; '."""
+    if not text:
+        return text
+    if "python" not in text:
+        olds = re.findall(r"src/[A-Za-z0-9_/]+\.py", text)
+        cmds = [c for c in (new_command(o) for o in olds) if c]
+        return " ; ".join(cmds) if cmds else None
+    return _OLD_CMD.sub(lambda m: new_command(m.group(1)) or m.group(0), text)
 
 
 def stages_text(stages, optional=False):
@@ -323,6 +363,18 @@ def cmd_run(args):
     return dispatch(f"modelmapper run {args[0]}", mod, args[1:], kind=kind)
 
 
+def stages_for(mod):
+    """The stages (first argument choices) the CLI knows for a module, else None."""
+    for table in (CORE, LOOP, *GROUPS.values()):
+        for ent in table.values():
+            if ent[0] == mod:
+                return ent[2]
+    name = mod.rsplit(".", 1)[-1]
+    if mod == f"modelmapper.experiments.{name}" and name in EXPERIMENTS:
+        return EXPERIMENTS[name]["stages"]
+    return None
+
+
 def scripts_rows():
     rows = []
     for old, (mod, kind) in sorted(legacy.TABLE.items()):
@@ -338,11 +390,12 @@ def cmd_scripts(args):
     a = ap.parse_args(args)
     rows = [r for r in scripts_rows() if not a.filter or any(a.filter in (x or "") for x in r)]
     if a.markdown:
-        print("| old path | new file | kind | command |")
-        print("|---|---|---|---|")
+        print("| old path | new file | kind | command | stages |")
+        print("|---|---|---|---|---|")
         for old, new, kind, cmd in rows:
             c = f"`{cmd}`" if cmd else "(library: imported by other modules)"
-            print(f"| `{old}` | `{new}` | {kind} | {c} |")
+            st = stages_for(legacy.TABLE[old][0])
+            print(f"| `{old}` | `{new}` | {kind} | {c} | {' &#124; '.join(st) if st else ''} |")
         return 0
     for old, new, kind, cmd in rows:
         print(f"{old:<45} {new:<52} {cmd or '(library)'}")

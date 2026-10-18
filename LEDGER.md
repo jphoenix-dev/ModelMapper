@@ -22,7 +22,7 @@ packs/<pack_id>/                 immutable, append-only contributions (one per i
     artifacts.parquet            pointers to raw / dense files (optional)
     claims.parquet               curated statements built on evidence (optional)
 ledger.duckdb                    BUILT from all packs: views over the Parquet + derived summary tables. Never hand-edited;
-                                 delete and rebuild any time (python src/ledger/build.py).
+                                 delete and rebuild any time (modelmapper ledger build).
 views/                           exports for the front end (derived; see "Front end")
 ```
 
@@ -34,9 +34,9 @@ views/                           exports for the front end (derived; see "Front 
 - **Row keys** include the source record (`file#locator`), so two source spellings of one concept (e.g. 'Odyssey' and
   'The Odyssey') keep separate rows under one concept id.
 - **Third parties** contribute a pack as JSON lines (`evidence.jsonl`, ...) plus `pack.json`;
-  `python src/ledger/pack.py from-jsonl <dir>` validates and converts it to Parquet (see `src/ledger/pack.py` for the
-  format; `src/ledger/contrib/research_claims/` is a working example - our own curated claims enter this way).
-- Location: `D:/already-clean-data/ledger/` (override with `LEDGER_DIR`). Code: `src/ledger/`.
+  `modelmapper ledger pack from-jsonl <dir>` validates and converts it to Parquet (see `modelmapper/ledger/pack.py` for the
+  format; `modelmapper/ledger/contrib/research_claims/` is a working example - our own curated claims enter this way).
+- Location: `D:/already-clean-data/ledger/` (override with `LEDGER_DIR`). Code: `modelmapper/ledger/`.
 
 ## Identifiers
 
@@ -48,7 +48,7 @@ views/                           exports for the front end (derived; see "Front 
 | experiment | `<pack-local name>` unique within the ledger | `loop_v2_run1`, `era_formats` |
 | evidence | sha256 of (pack_id, row key), 16 hex | |
 
-Unit kinds and concept kinds are a controlled but extensible vocabulary (`src/ledger/vocab.yaml`). Concepts merge
+Unit kinds and concept kinds are a controlled but extensible vocabulary (`modelmapper/ledger/vocab.yaml`). Concepts merge
 across packs by id; `aliases` (other labels, e.g. the answer form 'Xinhai Revolution' for `thing:1911-revolution`) help
 matching.
 
@@ -96,7 +96,7 @@ per-concept attribution / activation / residual / attention arrays, 32 GB) is re
 moderate | not established | failed), status, metric (JSON), evidence_sql (a query over evidence returning the supporting
 rows), evidence_ids, docs, pack_id`. This is where statements like "L31:8930 carries the 1800s across formats" live, linked to their evidence.
 
-## Derived views (in ledger.duckdb; rebuilt; versioned in `src/ledger/salience.sql`)
+## Derived views (in ledger.duckdb; rebuilt; versioned in `modelmapper/ledger/salience.sql`)
 
 - `units` - every unit with any evidence: layer, kind, # concepts with passing evidence, evidence types present.
 - `unit_concept` - one row per (unit, concept): the strongest passing evidence per evidence type, an overall strength
@@ -130,15 +130,15 @@ Rules: (1) one row per measured fact, never pre-aggregated away (aggregates may 
 
 | command | what |
 |---|---|
-| `python src/ledger/import_all.py` | run every importer (no-op when unchanged), build, verify, export |
-| `python src/ledger/importers/<name>.py [--force]` | one importer -> one pack |
-| `python src/ledger/pack.py validate|from-jsonl <dir>` | third-party JSON-lines contribution -> pack |
-| `python src/ledger/build.py [--check]` | rebuild ledger.duckdb from the current packs (+ vocabulary / id checks) |
-| `python src/ledger/verify.py` | lossless check: recount source records and compare values with the ledger |
-| `python src/ledger/export.py` | the map visualiser's export (below) |
-| `python src/ledger/query.py unit L31:8930` | everything known about a unit; also `concept`, `find`, `shared`, `experiments`, `sql` |
+| `modelmapper ledger import [--force] [--no-export]` | run every importer (no-op when unchanged), build, verify, export |
+| `modelmapper ledger importer <name> [--force]` | one importer -> one pack |
+| `modelmapper ledger pack validate\|from-jsonl <dir>` | third-party JSON-lines contribution -> pack |
+| `modelmapper ledger build [--check]` | rebuild ledger.duckdb from the current packs (+ vocabulary / id checks) |
+| `modelmapper ledger verify` | lossless check: recount source records and compare values with the ledger |
+| `modelmapper ledger export` | the map visualiser's export (below) |
+| `modelmapper ledger query unit L31:8930` | everything known about a unit; also `concept`, `find`, `shared`, `experiments`, `sql` |
 
-Importers (src/ledger/importers/): run1, earlier_maps, facts (facts + facts2: grid, classes, position, entity maps,
+Importers (modelmapper/ledger/importers/): run1, earlier_maps, facts (facts + facts2: grid, classes, position, entity maps,
 specificity, entity sharing, chains), era, numeric (+ magnitude), shared_neurons (+ feeders), forced_readout (pilot + fast),
 fanout, specificity, concept_search, search_verify, concept_atlas, labels (census + H-DEPTH), web_firings, curated_claims
 (the map's findings/*.jsonl). Dense data (run 1 npz arrays, atlas activations, concept-search scores for all 442,368
@@ -159,7 +159,7 @@ neurons) are artifacts, not rows.
 
 Agreed with the map visualiser session (see "Interface" below, filled in once agreed). The ledger provides: the DuckDB
 file + Parquet packs (queryable directly, including from the browser via DuckDB-wasm), a Python query API
-(`src/ledger/query.py`), and exports of the derived views per zoom level under `views/`.
+(`modelmapper/ledger/query.py`), and exports of the derived views per zoom level under `views/`.
 
 ## Interface (agreed with the map visualiser, 18 Oct)
 

@@ -1,5 +1,7 @@
 # Results log
 
+> Commands here use the pre-18 Oct 2026 paths (`python src/...`); [SCRIPTS.md](SCRIPTS.md) gives each one's `modelmapper` command.
+
 Every run gets logged here, failures included. Newest at the bottom.
 
 ---

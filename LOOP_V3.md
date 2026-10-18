@@ -44,7 +44,7 @@ rented RTX 3090s (+ boot overhead), or ~3 days on the 5090; Luna for E4 ~ 6 shor
 1. J-lens pilot: DONE - useful early, noisy at 32 windows -> larger estimate via gpu-fan-out (with a cross-GPU repro check); E5 on hold.
 2. Ranking check: DONE - the log-prob search misses strong neurons (median 4.5 per concept would enter the top 30) -> E0, and v3 searches the union of both top-200 lists.
 3. Subject-pass pilot: DONE - S1-S3 hold (median layer 7.5, 0% overlap with answer-side maps, 10x null) -> E4 go.
-4. Build `enrich` as a src/dist task kind reading the ledger for what is missing. **Skip anything we already have**
+4. Build `enrich` as a dist task kind (modelmapper/dist) reading the ledger for what is missing. **Skip anything we already have**
    (James, 18 Oct): no stage re-runs for a concept that has it, and within a stage existing measurements are reused (e.g.
    run 1's 200 candidates and recall prompts are inputs, never recomputed). Gate on the 12 gate concepts (v2 numbers
    reproduce exactly; new stages timed; peak memory ~25 GB; GPU busy %).
