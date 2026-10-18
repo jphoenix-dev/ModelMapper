@@ -2299,3 +2299,34 @@ results/loop_v2/run1/.)
   ones - a visible hierarchy (Italy + film -> Italian cinema -> Fellini). A minority appear to pack unrelated meanings (untested: possibly shared surface features).
 - **Caveats:** top-20 feeders by first-order attribution (not knockouts); the same-concept baseline is small (27
   pairs); 'topic' vs 'machinery' split by user count, not a test of meaning.
+
+## 18 Oct 2026: forcing one neuron - its most common expression, read with minimal bias (pilot; research branch)
+James: like the original "Eiff eiff eiff" when a say-it neuron was clamped hard - garbage is fine; what REPEATS across
+many backgrounds is the neuron's own expression. (`neuron_readout.py`; output D:/already-clean-data/neuron_readout/,
+summary in results/neuron_readout/pilot1.txt; GPU ~20 min.) The target is clamped at 1x / 4x / 16x its own web-text
+peak, at the last context position and every generated position, in three backgrounds: 200 random web snippets; a
+bare newline with 50 RANDOM unrelated neurons clamped to their peaks (a new random set per repeat, 200); a bare newline
+alone. Read: the mean next-token log-prob change vs the unforced background, and 8 greedy tokens. 10 targets + 3 random
+control neurons.
+| neuron | forced readout (x1-x4; [x16]) |
+|---|---|
+| Moon L31:9683 | moon, 月, lunar, full, "full-moon moon-moon-moon" [明明明 - 'bright', as in 明月 'bright moon'] |
+| Eiffel Tower L31:10160 | par, _par, -par (the start of 'Paris'?) [par-par-par] |
+| Eiffel Tower L26:11492 | tower, landmark, 塔, 地标, monument [leaning leaning leaning] |
+| Netherlands L33:5099 | Nether, ETHER, hol (Holland), Pays (Pays-Bas) [hol hol hol] |
+| 'rivers' L23:12257 | River, rivers, 河水, downstream, streams [River River River] |
+| 'happily/prince' L29:6647 | happy, happily, prince, 王子; generates "... ever after" at x4 [南瓜 pumpkin, 灰 ash (Cinderella), 王子] |
+| 'Indonesia' L29:9192 | Indonesian words (dalam, dengan, jumlah, ber-), Jakarta |
+| Czech/Xi'an L29:4682 | Xi'an's local geography (西安, 陕西, 鄠, 灞 and 浐 rivers, 潏, 咸阳 Xianyang, 兵马 Terracotta Army) AND Czech, Prague, Slovak |
+| 'v' L34:553 | v, )v, =v [_AV] |
+| digits L33:10933 | digits / spaces on web text; Russian fragments with no context |
+| random controls | 'thanks / 感谢'; '先进 / 优秀' ('advanced / excellent'); one noisy |
+- **Low bias:** the top next-token shifts are nearly the same across real text, random-neuron noise and no context -
+  they belong to the neuron. Strength matters: x1 is often drowned by context in generation, x4 reads best, x16
+  collapses to one repeated token - often a telling one ('leaning', 'pumpkin', 'bright').
+- The informal 'happily ever after' reading (marked shaky earlier) is supported: forced, it generates 'happy ... ever
+  after', 'prince', 'pumpkin'.
+- Czech/Xi'an: NO shared sound visible (no Ch-/Sh-/Xi- sound-alikes) - two detailed, separate clusters (very local Xi'an
+  places; Czech/Prague/Slovak). Looks like genuinely packed unrelated meanings; an unseen shared link is not ruled out.
+- Random control neurons also have readable expressions when forced: this is a candidate UNBIASED labelling method
+  (same procedure for every neuron, no labeller), to run over many neurons.

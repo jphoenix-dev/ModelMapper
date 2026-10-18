@@ -116,6 +116,11 @@ split by the zeroed neurons' roles (say / attribute / early). Prediction (stated
 distance; 'say' neurons stay specific; attribute neurons partly damage neighbours that share the attribute (cf. the
 attribute-sharing result). Measures how specific a concept's neuron combination is, and why.
 
+**Forced-neuron readout (18 Oct pilot):** clamping one neuron hard across many backgrounds (real text / random-neuron
+noise / nothing) gives a consistent, readable expression (Moon -> moon/月/lunar; tower neuron -> tower/landmark,
+'leaning'; Netherlands -> Nether/hol/Pays; 'happily' -> prince, 'ever after', pumpkin). Low background bias: a candidate
+unbiased labelling method for every neuron. Czech/Xi'an shows two separate clusters, no shared sound.
+
 ## Later: common-neuron analysis (James, 18 Oct)
 Test whether 'unrelated' users of a shared neuron share a surface feature (sound, spelling, script) rather than a
 meaning - e.g. does the Czech / Xi'an neuron (L29:4682) also respond to other Ch- / Xi- / Sh- names (Chechnya,
