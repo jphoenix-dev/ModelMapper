@@ -35,7 +35,7 @@ def neurons_page(out):
             f"<style>\n{css}\n{own}\n</style>\n{body}\n<script>window.MAP_LINKS = false;</script>\n<script>\n{js}\n</script>\n")
     out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(page, encoding="utf-8")
-    graphs = [f"graphs/{p.name}" for p in sorted((src / "data" / "graphs").glob("*.json"))] if (src / "data" / "graphs").exists() else []
+    graphs = ["cgraph.json"] if (src / "data" / "cgraph.json").exists() else []
     for p in ["neuronmap.json", "concepts.json"] + [f"n/L{L}.json" for L in range(36)] + [f"push/L{L}.json" for L in range(36)] + graphs:
         (out / "data" / p).parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src / "data" / p, out / "data" / p)
