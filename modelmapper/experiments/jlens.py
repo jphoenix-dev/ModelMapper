@@ -147,6 +147,9 @@ def estimate(n_windows, start=0, end=None):
                    "peak_mem_gb": round(torch.cuda.max_memory_allocated() / 2**30, 1), "gpu_busy_pct": gb.take()}, flush=True)
             return
         half = "A" if w % 2 == 0 else "B"
+        if not torch.isfinite(cur).all():                          # 18 Oct: 3 rented shards came back all-NaN; stop, don't poison the sum
+            log.write(json.dumps({"window": w, "doc": W[w][0], "nonfinite": True, "gpu": torch.cuda.get_device_name()}) + "\n"); log.flush()
+            raise SystemExit(f"window {w}: non-finite J (GPU {torch.cuda.get_device_name()}); shard stopped, checkpoint kept at window {done}")
         (JA if half == "A" else JB).add_(cur.cpu()); pairs[half] += (T - 1) * T // 2
         done = w + 1
         rec = {"window": w, "doc": W[w][0], "half": half, "s": round(time.time() - t0, 1), "gpu_busy_pct": gb.take(),
@@ -163,11 +166,16 @@ def merge(paths):
     """Sum shard files (and/or the pilot j_sums.pt) into OUT/j_sums.pt; the previous j_sums.pt is kept as j_sums_pilot.pt."""
     m = None                                                          # one shard in memory at a time (each is 4.8 GB)
     for p in paths:
-        st = torch.load(p, weights_only=False)
-        if st.get("next", st["done"]) != st["end"] or len(st["windows"]) != st["end"] - st["start"]:
+        st = torch.load(p, weights_only=False, mmap=True)          # mapped, not read: only the running sum is in RAM
+        if "merged_from" in st:                                    # an earlier merge's output (e.g. a re-run's shards merged in the cloud)
+            if st["done"] != len(st["windows"]):
+                raise SystemExit(f"{p}: merged file with done {st['done']} != {len(st['windows'])} windows")
+        elif st.get("next", st["done"]) != st["end"] or len(st["windows"]) != st["end"] - st["start"]:
             raise SystemExit(f"{p}: incomplete shard ({len(st['windows'])} of {st['start']}-{st['end']})")
+        if not all(torch.isfinite(st[h][l]).all() for h in "AB" for l in range(st[h].shape[0])):
+            raise SystemExit(f"{p}: non-finite values (excluded shards are listed in RESULTS.md)")
         if m is None:
-            m = {"A": st["A"], "B": st["B"], "pairs": dict(st["pairs"]), "T": st["T"], "windows": list(st["windows"])}
+            m = {"A": st["A"].clone(), "B": st["B"].clone(), "pairs": dict(st["pairs"]), "T": st["T"], "windows": list(st["windows"])}
         else:
             if st["T"] != m["T"]:
                 raise SystemExit(f"{p}: T {st['T']} != {m['T']}")
