@@ -2749,13 +2749,13 @@ let's smoke test it first ... and re-assess". 50 run-1 concepts (45 fresh + 5 wh
 | stage | ran / skipped | median time | GPU busy | what it added |
 |---|---|---|---|---|
 | E0 missed candidates | 45 / 5 (skip logic worked) | 8.0 s | 79% | top 30 changes for 35/45 concepts (median 4 entrants) |
-| E2 formats | 50 / 0 | 8.9 s | 74% | short-answer format: activation drops below half for 8% of top-30 neurons, knockout effect for 38% (redundancy); sentence format: 57% below half activation (mostly 'say it now' neurons - the name is not the next token) |
+| E2 formats | 50 / 0 | 8.9 s | 74% | short-answer format: activation drops below half for 8% of top-30 neurons, knockout effect for 38% (redundancy) **[WITHDRAWN 19 Oct 2026: scored a different answer in each format - see Corrections, 19 Oct, at the end.]**; sentence format: 57% below half activation (mostly 'say it now' neurons - the name is not the next token) |
 | E3 nulls (6, layer-matched) | 50 / 0 | 0.5 s | 92% | per-concept floor |
 | E4 subject pass | 50 / 0 | 3.7 s | 74% | 43/50 mapped (>= 3 facts); top-5 drop 0.36 vs null 0.05 |
 
 - **C1 (cost <= 60 s, GPU busy >= 80%):** cost HOLDS (median 21 s per fresh concept; peak 19.3 GB) - far below the 42-60 s
   estimate; GPU busy FAILS narrowly (74-79%: single-prompt forward passes in E2 and sequential knockouts in E0 leave gaps).
-- **C2 (value):** E0 >= 70% HOLDS (78%); E4 >= 70% HOLDS (86%); E2 >= 20% format-bound HOLDS on knockouts (38% in the
+- **C2 (value):** E0 >= 70% HOLDS (78%); E4 >= 70% HOLDS (86%); E2 >= 20% format-bound HOLDS on knockouts **[WITHDRAWN 19 Oct 2026: scored a different answer in each format - see Corrections, 19 Oct, at the end.]** (38% in the
   like-for-like short format), but the sentence-format measures are not like-for-like (whole-sentence target; name not
   the next token) and are reported with that caveat.
 - **Revised cost:** 5,028 concepts x 21 s = 29 GPU-hours on the 5090 (vs the 75 h estimate), before cheapening E2.
@@ -2788,7 +2788,7 @@ log-odds; a random same-layer neuron as the control.
 Run 1 picked each concept's 200 candidates by the log-PROB gradient but ranked them by exact log-ODDS knockout drop
 (ranking_check.py). Loop v3's stage E0 knocks out every log-odds-only candidate for every concept. On the first 982
 concepts of the full enrichment run:
-- run 1's top 30 gains at least one stronger neuron for **80%** of concepts (median 3 entrants, mean 9.5); 410 missed
+- run 1's top 30 gains at least one stronger neuron for **80%** of concepts **[QUALIFIED 19 Oct 2026: many of these calls are borderline and were judged against a bar measured on a different GPU - see Corrections, 19 Oct, at the end.]** (median 3 entrants, mean 9.5); 410 missed
   candidates drop the answer by > 1 log-odds (249 concepts); a third of entrants are in layers < 20.
 - **In probability terms the gap is much smaller:** the median entrant lowers P(answer) by 0.47 percentage points (90th
   pct 3.8 points); 660 of 9,257 entrants (7%) lower it by >= 5 points and 55 by >= 20 points. **40% of concepts gain
@@ -2808,10 +2808,10 @@ The full enrichment run (enrich_run1) is still going on the 5090; this is a froz
 - **The 'key neurons are late' finding survives the missed candidates.** Share of each concept's top-5 neurons in
   layers 28-35: run 1 as published 68%; with E0's missed candidates added 66%; ranked by probability drop instead of
   log-odds 67% / 65%. Layers < 20: 16% -> 17-19%.
-- **E0 (same picture as the first 982):** the top 30 changes for 81% of concepts (11,245 entrants), but the median
+- **E0 (same picture as the first 982):** **[QUALIFIED 19 Oct 2026: many of these calls are borderline and were judged against a bar measured on a different GPU - see Corrections, 19 Oct, at the end.]** the top 30 changes for 81% of concepts (11,245 entrants), but the median
   entrant moves P(answer) by 0.49 points; 7% of entrants move it by >= 5 points; 40% of concepts gain at least one
   such entrant.
-- **E2 formats:** for 42% of top-30 neurons (15,645 / 36,904 with an original drop > 0.1) knocking them out in the short
+- **E2 formats:** **[WITHDRAWN 19 Oct 2026: scored a different answer in each format - see Corrections, 19 Oct, at the end.]** for 42% of top-30 neurons (15,645 / 36,904 with an original drop > 0.1) knocking them out in the short
   answer format hurts less than half as much as in the original format - and for 94% of those the neuron is still
   active (>= half its original activation) in the short format. So the general version of the era result holds:
   **neurons stay switched on across formats, but whether the answer NEEDS them depends on the format.**
@@ -2833,3 +2833,28 @@ J-lens results in this release are the 32-window pilot's. What happened so far:
 - Those 48 windows are being recomputed on other machines. The merged 256-window J-lens, its validation (J1-J4 re-run)
   and per-neuron J-lens readings (ledger experiment `jlens_qwen3_8b_256w`, and J-lens words on the map for the layers
   that pass a rule fixed in advance in `explainer/gen/map/push_words_jlens.py`) follow in the next update.
+
+## 19 Oct 2026 - Corrections
+
+An independent review of the code (three reviewers: package, measurement code, cloud runner) found two problems that
+change statements above. Both were re-verified with separate code on the same data. The neuron map is not affected.
+
+**1. The E2 "format-bound" figures are withdrawn** (smoke test 38%; snapshot 42%). E2 compared the effect of switching a
+neuron off in the original answer format, scored on run 1's answer, with the effect in a short-answer format, scored on
+*Qwen's own short answer* (often 'Drainage.' instead of 'Drainage', or a different word). A less likely target makes the
+same change look smaller in log-odds, so a change of target looked like a change of format. Re-measured on the same
+answer in both formats (E2 v2, ~3,100 concepts so far): **13%** of top-30 neurons matter less than half as much in the
+short format, not 42%. What stands: 95% of top-30 neurons stay at least half as active in the short format.
+
+**2. E0 (missed candidates) is qualified.** Run 1 mapped 3,262 concepts on RTX 3090s and 932 on an RTX 5090 (this log
+said "3090s" in places); E0 ran on the 5090 and judged each new candidate against run 1's 30th neuron as measured in run
+1. Re-measuring that bar on the same card shows it is reproduced exactly when the card and software match, but moves by
+up to 0.2 log-odds across cards - about the size of the bar. Many E0 calls sit within that margin. E0 is being re-scored
+against a bar measured in the same pass, with calls within the measured hardware band (0.13 log-odds) labelled
+uncertain. Preliminary (202 concepts): **68%** of concepts gain at least one neuron that clearly beats run 1's 30th
+(another 23% only borderline ones); those clear entrants change P(answer) by a median of 0.84 points. The layer finding
+(about two thirds of each concept's top five neurons in layers 28-35) does not depend on these calls and stands.
+
+This repository is being rebuilt as a smaller, tested package; the full record of this release is the Zenodo snapshot
+(doi:10.5281/zenodo.23459926).
+
