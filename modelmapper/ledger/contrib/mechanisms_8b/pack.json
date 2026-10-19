@@ -1,6 +1,0 @@
-{
- "importer": "mechanisms_8b",
- "contributor": "already-clean research (James + Claude)",
- "model": "qwen3-8b",
- "note": "MECHANISMS.md: Qwen3-8B checks from weights and existing ledger rows (no forward pass), 18 Oct 2026."
-}

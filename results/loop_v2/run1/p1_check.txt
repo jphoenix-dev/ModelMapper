@@ -1,6 +1,0 @@
-P1-style check on run 1: 200 concepts tested (385 tried; needs >= 2 recalled cloze prompts)
-  top-5 zeroed: median drop +7.42 log-odds; random-5: +0.003
-  concepts where top-5 flips >= half the recalled cloze prompts: 164/200
-  (P1 on the earlier maps: +5.59 vs -0.003; flips in 66%)
-  named   n=80: median drop +6.96 vs random +0.000; flips >= half in 68/80
-  common  n=120: median drop +7.80 vs random +0.022; flips >= half in 96/120

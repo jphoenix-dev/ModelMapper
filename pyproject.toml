@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "modelmapper"
-version = "2026.10.18"
-description = "Map what each MLP neuron and attention head of a language model does (Qwen3-8B)."
+version = "0.1.0"
+description = "Find which MLP neurons of a language model a concept depends on, measured by switching them off."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "James Phoenix" }]
 requires-python = ">=3.10"
-# The same pins as requirements.txt. Install torch first from the index for your hardware (SETUP.md); a CUDA build
-# such as 2.11.0+cu128 satisfies torch==2.11.0.
+# The versions every published result used (requirements.txt). Install torch first from the index for your hardware
+# (SETUP.md); a CUDA build such as 2.11.0+cu128 satisfies torch==2.11.0.
 dependencies = [
     "torch==2.11.0",
     "transformers==5.20.0",
@@ -24,19 +24,20 @@ dependencies = [
     "pyarrow==26.0.0; python_version >= '3.11'",
     "pyarrow==25.0.1; python_version < '3.11'",
     "httpx==0.28.1",
-    "duckdb==1.4.1",
-    "PyYAML==6.0.3",
 ]
 
 [project.optional-dependencies]
-dist = ["boto3==1.43.100"]
+test = ["pytest>=8"]
 
 [project.scripts]
 modelmapper = "modelmapper.cli:main"
 
-# Use an editable install (`pip install -e .`): results/, prompts/, data/ and answer_keys/ are read from the checkout.
 [tool.setuptools.packages.find]
 include = ["modelmapper*"]
 
 [tool.setuptools.package-data]
-"modelmapper.ledger" = ["vocab.yaml", "salience.sql", "contrib/*/*"]
+modelmapper = ["answer_keys/*.json", "data/ranges/*.pt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: loads Qwen/Qwen3-0.6B (a few minutes on a CPU); deselect with -m 'not model'"]

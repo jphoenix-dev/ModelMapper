@@ -1,30 +1,26 @@
 cff-version: 1.2.0
-message: "If you use this software or its findings, please cite it as below."
-title: "Model Mapper: what the neurons of Qwen3-8B do - a test of 'Neural Networks Are Already Clean' and a queryable neuron/concept ledger"
+message: "If you use this software, please cite it as below."
+title: "Model Mapper: find which neurons of a language model a concept depends on"
 abstract: >-
-  Model Mapper maps what the individual MLP neurons (and attention heads) of an open-weights language model do. Its
-  first use was an independent test of Nick Cammarata's essay "Neural Networks Are Already Clean" on Qwen3-8B (with a
-  Qwen3-0.6B comparison): concept recall depends on a handful of neurons, concepts share readable parts, and about half
-  of neurons verifiably do one job. Later work (17-18 Oct 2026, exploratory) mapped 5,000 Wikipedia Vital Articles
-  concepts, graded what each layer band's neurons do, and built a lossless, queryable ledger of every measurement with a
-  format for third-party contributions. Several runs were still in progress at this snapshot.
+  Model Mapper maps a concept to the MLP neurons of an open-weights language model that its recall depends on. A
+  labeller LLM writes questions whose answer is the concept; the questions the model answers correctly are kept; the
+  200 most-attributed neurons are each switched off and the drop in the answer's exact log-odds is measured, next to
+  random same-layer neurons, a k curve and attention-head knockouts. It is the method behind the Qwen Neuron Map
+  (Qwen3-8B), and its records use the map's format. Tested on Qwen3-0.6B and Qwen3-8B.
 type: software
 authors:
   - family-names: Phoenix
     given-names: James
-version: "2026.10.18"
-date-released: "2026-10-18"
+version: "0.1.0"
+date-released: "2026-10-19"
 license: MIT
 repository-code: "https://github.com/jphoenix-dev/ModelMapper"
-url: "https://eiffel-tower-qwen.vercel.app/"
+url: "https://eiffel-tower-qwen.vercel.app/map/"
 doi: "10.5281/zenodo.23459925"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23459925"
     description: "All versions (resolves to the latest release)"
-  - type: doi
-    value: "10.5281/zenodo.23459926"
-    description: "Release v2026.10.18"
 keywords:
   - interpretability
   - mechanistic interpretability

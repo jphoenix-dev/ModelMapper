@@ -1,6 +1,0 @@
-Jobs measured in Qwen, contexts grouped by Luna's meanings (indirect-effect cosine gap: within - between).
-calibration: same job (random halves) -0.002; different neurons (spliced sources) +0.150
-concept: n=159 units with >= 2 Luna groups; gap +0.026 (position 0.18 between same-job 0 and different-neurons 1); next-token Jaccard gap +0.001
-  mean indirect-effect cosine between contexts of different Luna groups, by Luna's rating: 1: +0.173 (n=9401), 2: +0.132 (n=8425), 3: +0.130 (n=6013)
-control: n=52 units with >= 2 Luna groups; gap +0.028 (position 0.19 between same-job 0 and different-neurons 1); next-token Jaccard gap +0.005
-  mean indirect-effect cosine between contexts of different Luna groups, by Luna's rating: 1: +0.235 (n=1668), 2: +0.130 (n=2263), 3: +0.108 (n=4010)

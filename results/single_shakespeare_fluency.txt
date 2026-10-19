@@ -1,4 +1,0 @@
-single_shakespeare.json: 158 distinct replies, 0 not judged (excluded)
-person                   cl name-best / fluent-joint-best (setting) | ad name-best / fluent-joint-best (setting)
-William Shakespeare      0.85 / 0.45 (1, 2.0) | 0.85 / 0.50 (1, 2.0)
-Jev {'calls': 151, 'input_tokens': 51447}, ~$0.002

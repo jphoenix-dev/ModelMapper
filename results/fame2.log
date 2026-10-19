@@ -1,161 +1,0 @@
-W1017 04:23:38.724000 28604 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/399 [00:00<00:06, 59.35it/s]Loading weights:   4%|▍         | 16/399 [00:00<00:09, 41.96it/s]Loading weights:   5%|▌         | 21/399 [00:00<00:10, 34.67it/s]Loading weights:   7%|▋         | 27/399 [00:00<00:10, 35.12it/s]Loading weights:   8%|▊         | 32/399 [00:00<00:11, 33.09it/s]Loading weights:  10%|▉         | 38/399 [00:01<00:10, 34.33it/s]Loading weights:  11%|█▏        | 45/399 [00:01<00:09, 38.01it/s]Loading weights:  12%|█▏        | 49/399 [00:01<00:09, 38.32it/s]Loading weights:  14%|█▎        | 54/399 [00:01<00:09, 37.90it/s]Loading weights:  15%|█▍        | 58/399 [00:01<00:10, 33.05it/s]Loading weights:  16%|█▋        | 65/399 [00:01<00:11, 28.42it/s]Loading weights:  19%|█▉        | 75/399 [00:02<00:07, 41.32it/s]Loading weights:  20%|██        | 81/399 [00:02<00:09, 34.00it/s]Loading weights:  22%|██▏       | 88/399 [00:02<00:10, 29.86it/s]Loading weights:  24%|██▍       | 96/399 [00:02<00:08, 37.78it/s]Loading weights:  25%|██▌       | 101/399 [00:02<00:09, 32.64it/s]Loading weights:  28%|██▊       | 110/399 [00:03<00:07, 37.25it/s]Loading weights:  29%|██▉       | 115/399 [00:03<00:08, 32.96it/s]Loading weights:  30%|███       | 120/399 [00:03<00:07, 35.54it/s]Loading weights:  31%|███▏      | 125/399 [00:03<00:07, 34.29it/s]Loading weights:  33%|███▎      | 132/399 [00:03<00:08, 33.25it/s]Loading weights:  34%|███▍      | 136/399 [00:03<00:08, 32.64it/s]Loading weights:  35%|███▌      | 141/399 [00:04<00:08, 30.77it/s]Loading weights:  37%|███▋      | 147/399 [00:04<00:07, 34.86it/s]Loading weights:  39%|███▊      | 154/399 [00:04<00:06, 38.78it/s]Loading weights:  40%|███▉      | 159/399 [00:04<00:07, 33.30it/s]Loading weights:  41%|████      | 163/399 [00:04<00:06, 34.04it/s]Loading weights:  42%|████▏     | 167/399 [00:04<00:07, 32.01it/s]Loading weights:  44%|████▎     | 174/399 [00:04<00:06, 34.94it/s]Loading weights:  45%|████▍     | 178/399 [00:05<00:06, 31.98it/s]Loading weights:  47%|████▋     | 187/399 [00:05<00:07, 29.48it/s]Loading weights:  48%|████▊     | 193/399 [00:05<00:06, 33.41it/s]Loading weights:  50%|████▉     | 199/399 [00:05<00:06, 31.29it/s]Loading weights:  52%|█████▏    | 207/399 [00:05<00:04, 39.99it/s]Loading weights:  53%|█████▎    | 212/399 [00:06<00:05, 33.51it/s]Loading weights:  54%|█████▍    | 216/399 [00:06<00:05, 34.67it/s]Loading weights:  55%|█████▌    | 220/399 [00:06<00:06, 28.39it/s]Loading weights:  57%|█████▋    | 228/399 [00:06<00:04, 37.63it/s]Loading weights:  58%|█████▊    | 233/399 [00:06<00:05, 31.79it/s]Loading weights:  60%|██████    | 241/399 [00:06<00:04, 36.25it/s]Loading weights:  62%|██████▏   | 246/399 [00:07<00:04, 34.25it/s]Loading weights:  63%|██████▎   | 252/399 [00:07<00:04, 35.23it/s]Loading weights:  64%|██████▍   | 256/399 [00:07<00:04, 33.46it/s]Loading weights:  65%|██████▌   | 261/399 [00:07<00:03, 36.74it/s]Loading weights:  66%|██████▋   | 265/399 [00:07<00:03, 34.62it/s]Loading weights:  67%|██████▋   | 269/399 [00:07<00:03, 34.98it/s]Loading weights:  69%|██████▉   | 275/399 [00:08<00:04, 28.26it/s]Loading weights:  71%|███████▏  | 285/399 [00:08<00:03, 37.88it/s]Loading weights:  73%|███████▎  | 290/399 [00:08<00:03, 35.42it/s]Loading weights:  74%|███████▍  | 296/399 [00:08<00:02, 35.95it/s]Loading weights:  75%|███████▌  | 300/399 [00:08<00:02, 33.02it/s]Loading weights:  76%|███████▌  | 304/399 [00:08<00:02, 32.05it/s]Loading weights:  77%|███████▋  | 308/399 [00:09<00:03, 26.15it/s]Loading weights:  80%|███████▉  | 318/399 [00:09<00:02, 29.01it/s]Loading weights:  82%|████████▏ | 329/399 [00:09<00:02, 30.65it/s]Loading weights:  85%|████████▌ | 340/399 [00:09<00:01, 38.45it/s]Loading weights:  86%|████████▋ | 345/399 [00:10<00:01, 35.34it/s]Loading weights:  88%|████████▊ | 352/399 [00:10<00:01, 39.43it/s]Loading weights:  89%|████████▉ | 357/399 [00:10<00:01, 33.27it/s]Loading weights:  91%|█████████ | 362/399 [00:10<00:01, 29.74it/s]Loading weights:  93%|█████████▎| 372/399 [00:10<00:00, 41.54it/s]Loading weights:  95%|█████████▍| 378/399 [00:11<00:00, 35.47it/s]Loading weights:  96%|█████████▌| 384/399 [00:11<00:00, 29.41it/s]Loading weights:  97%|█████████▋| 389/399 [00:11<00:00, 32.49it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 34.88it/s]
-steering: add, reply_only=True; out C:\dev\already-clean\results\concepts_fame2
-Malaysia                 recall 17/20 | k_mean 1 k_flip 3 (base LO 6.71) | steer R1 n=4 x1.0: held-out 0.10 (default 0.10, random 0.00)
-Kobe Bryant              recall 14/20 | k_mean 2 k_flip 1 (base LO 2.23) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Alien: Romulus           not recalled (0/20); discovered []
-Noam Chomsky             recall 17/20 | k_mean 1 k_flip 1 (base LO 5.4) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Jean-Marie Le Pen        recall 13/20 | k_mean 3 k_flip 3 (base LO 3.17) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Black Sabbath (album)    not recalled (3/20); discovered ['Black Sabbath']
-BBC                      recall 17/20 | k_mean 5 k_flip 10 (base LO 4.34) | steer R4 n=4 x1.0: held-out 0.20 (default 0.00, random 0.00)
-Schutzstaffel            recall 16/20 | k_mean 2 k_flip 1 (base LO 1.5) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Chandrayaan-1            recall 16/20 | k_mean 2 k_flip 2 (base LO 3.4) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Robert Francis Prevost   not recalled (0/20); discovered []
-Anna Faris               not recalled (0/20); discovered []
-Mukbang                  not recalled (0/20); discovered []
-Narendra Modi            recall 19/20 | k_mean 2 k_flip 2 (base LO 4.71) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Michael Owen             not recalled (3/20); discovered ['Michael Owen']
-Aquaman (film)           recall 10/20 | k_mean 5 k_flip 10 (base LO 1.86) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Website                  recall 10/20 | k_mean 2 k_flip 5 (base LO 4.27) | steer R4 n=4 x0.5: held-out 0.35 (default 0.35, random 0.00)
-Telegram (software)      recall 10/20 | k_mean 10 k_flip 10 (base LO 2.14) | steer R4 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Barry Manilow            not recalled (0/20); discovered []
-Taiwan                   recall 10/20 | k_mean 5 k_flip 5 (base LO 2.41) | steer R1 n=4 x1.5: held-out 0.45 (default 0.05, random 0.00)
-Ku Klux Klan             recall 19/20 | k_mean 3 k_flip 2 (base LO 2.3) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Cole Hauser              not recalled (0/20); discovered []
-Croatia                  recall 13/20 | k_mean 1 k_flip 1 (base LO 3.67) | steer R1 n=4 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Owen Wilson              recall 6/20 | k_mean 2 k_flip 1 (base LO 0.21) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-HoYeon Jung              not recalled (0/20); discovered []
-Enrico Fermi             recall 17/20 | k_mean 2 k_flip 5 (base LO 5.3) | steer R1 n=2 x2.0: held-out 0.00 (default 0.00, random 0.00)
-Helena Bonham Carter     not recalled (0/20); discovered []
-Major religious groups   recall 15/20 | k_mean 1 k_flip 2 (base LO 6.34) | steer R4 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Namibia                  recall 17/20 | k_mean 5 k_flip 20 (base LO 8.0) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Michelle Yeoh            recall 6/20 | k_mean 3 k_flip 2 (base LO 0.56) | steer R4 n=4 x2.0: held-out 0.15 (default 0.00, random 0.00)
-The Conjuring: The Devil Made Me Do It not recalled (1/20); discovered ['The Conjuring: The Devil Made Me Do It']
-ChatGPT                  recall 9/20 | k_mean 1 k_flip 1 (base LO 1.86) | steer R4 n=2 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Charles Leclerc          recall 11/20 | k_mean 1 k_flip 3 (base LO 4.27) | steer R4 n=4 x2.0: held-out 0.10 (default 0.00, random 0.00)
-Guadalupe County, New Mexico not recalled (0/20); discovered []
-Sudan                    recall 19/20 | k_mean 1 k_flip 2 (base LO 6.07) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Elizabeth Olsen          recall 6/20 | k_mean 1 k_flip 1 (base LO 0.67) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-PinkPantheress           not recalled (0/20); discovered []
-Czech Republic           recall 15/20 | k_mean 1 k_flip 1 (base LO 1.69) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-William Shatner          not recalled (3/20); discovered ['William Shatner']
-Maya Rudolph             not recalled (1/20); discovered []
-Israel                   recall 18/20 | k_mean 3 k_flip 20 (base LO 9.22) | steer R1 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Russo-Ukrainian war      recall 7/20 | k_mean 1 k_flip 1 (base LO 0.0) | steer R1 n=2 x1.5: held-out 0.20 (default 0.05, random 0.00)
-I Know What You Did Last Summer not recalled (0/20); discovered []
-John F. Kennedy          recall 18/20 | k_mean 1 k_flip 2 (base LO 6.94) | steer R4 n=2 x1.5: held-out 0.00 (default 0.05, random 0.00)
-1948 Palestine war       recall 11/20 | k_mean 1 k_flip 1 (base LO 1.41) | steer R2 n=4 x1.0: held-out 0.15 (default 0.00, random 0.00)
-Bob Geldof               recall 14/20 | k_mean 2 k_flip 2 (base LO 2.72) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Abraham                  recall 18/20 | k_mean 1 k_flip 1 (base LO 5.09) | steer R1 n=2 x2.0: held-out 0.05 (default 0.00, random 0.00)
-Hanukkah                 recall 16/20 | k_mean 1 k_flip 1 (base LO 1.95) | steer R2 n=4 x1.0: held-out 0.15 (default 0.00, random 0.00)
-Alycia Debnam-Carey      not recalled (0/20); discovered []
-Germany                  recall 17/20 | k_mean 3 k_flip None (base LO 11.04) | steer R4 n=4 x2.0: held-out 0.00 (default 0.00, random 0.00)
-Jennifer Garner          recall 7/20 | k_mean 2 k_flip 3 (base LO 0.21) | steer R4 n=4 x2.0: held-out 0.00 (default 0.00, random 0.00)
-Shohei Ohtani            recall 10/20 | k_mean 10 k_flip 2 (base LO 0.36) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Mark Zuckerberg          recall 17/20 | k_mean 2 k_flip 5 (base LO 6.93) | steer R2 n=2 x2.0: held-out 0.80 (default 0.20, random 0.05)
-Mother's Day             recall 15/20 | k_mean 3 k_flip None (base LO 8.1) | steer R4 n=2 x1.0: held-out 0.25 (default 0.35, random 0.00)
-Auld Lang Syne           recall 17/20 | k_mean 3 k_flip 5 (base LO 2.71) | steer R1 n=2 x1.0: held-out 0.05 (default 0.00, random 0.00)
-Judaism                  recall 17/20 | k_mean 1 k_flip 1 (base LO 7.63) | steer R1 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Tim Curry                recall 8/20 | k_mean 2 k_flip 2 (base LO 0.91) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Kirstie Alley            not recalled (0/20); discovered []
-Albania                  recall 17/20 | k_mean 1 k_flip 3 (base LO 6.62) | steer R1 n=2 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Illuminati               recall 7/20 | k_mean 1 k_flip 1 (base LO 1.38) | steer R1 n=4 x1.5: held-out 0.10 (default 0.10, random 0.00)
-Mia Goth                 not recalled (0/20); discovered []
-Alabama                  recall 15/20 | k_mean 2 k_flip 5 (base LO 6.89) | steer R4 n=4 x1.0: held-out 0.10 (default 0.00, random 0.00)
-G7                       recall 10/20 | k_mean 1 k_flip 1 (base LO 1.04) | steer R2 n=4 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Amanda Bynes             not recalled (1/20); discovered []
-Celine Dion              recall 14/20 | k_mean 3 k_flip 2 (base LO 2.66) | steer R1 n=4 x1.5: held-out 0.15 (default 0.00, random 0.00)
-Drake (musician)         recall 15/20 | k_mean 2 k_flip 2 (base LO 2.42) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Elemental (2023 film)    not recalled (0/20); discovered []
-Osama bin Laden          recall 19/20 | k_mean 2 k_flip 3 (base LO 3.39) | steer R1 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Nobel Peace Prize        recall 13/20 | k_mean 1 k_flip 1 (base LO 2.26) | steer R1 n=2 x1.0: held-out 0.50 (default 0.50, random 0.05)
-Insidious: Chapter 2     not recalled (0/20); discovered []
-Selena Gomez             recall 5/20 | k_mean 5 k_flip 1 (base LO 0.35) | steer R1 n=4 x1.5: held-out 0.15 (default 0.05, random 0.00)
-David Lynch              recall 12/20 | k_mean 1 k_flip 10 (base LO 4.2) | steer R4 n=4 x1.5: held-out 0.35 (default 0.00, random 0.00)
-Kraven the Hunter (film) not recalled (1/20); discovered []
-World War I              recall 18/20 | k_mean 1 k_flip 2 (base LO 8.07) | steer R1 n=2 x1.0: held-out 0.45 (default 0.35, random 0.05)
-Interstellar (film)      recall 17/20 | k_mean 1 k_flip 1 (base LO 5.27) | steer R1 n=2 x2.0: held-out 0.10 (default 0.05, random 0.00)
-Jim Brown                not recalled (4/20); discovered ['Jim Brown']
-Agatha Christie          recall 19/20 | k_mean 1 k_flip 2 (base LO 7.27) | steer R1 n=4 x0.5: held-out 0.05 (default 0.00, random 0.00)
-Marilyn Manson           not recalled (1/20); discovered []
-Megyn Kelly              not recalled (0/20); discovered []
-english wikipedia        recall 10/20 | k_mean 1 k_flip 2 (base LO 3.72) | steer R1 n=2 x2.0: held-out 0.30 (default 0.00, random 0.00)
-Naomi Osaka              not recalled (0/20); discovered []
-Aaron Taylor-Johnson     recall 8/20 | k_mean 2 k_flip 1 (base LO 0.25) | steer R4 n=4 x1.5: held-out 0.00 (default 0.05, random 0.00)
-Eid al-Adha              recall 14/20 | k_mean 1 k_flip 1 (base LO 1.71) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Paul Rudd                recall 5/20 | k_mean 2 k_flip 1 (base LO 1.61) | steer R1 n=4 x1.5: held-out 0.00 (default 0.00, random 0.00)
-John Wick: Chapter 3 – Parabellum not recalled (2/20); discovered []
-United Kingdom           recall 19/20 | k_mean 1 k_flip 2 (base LO 7.67) | steer R1 n=4 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Lily Collins             not recalled (2/20); discovered ['Lily Collins']
-Kemi Badenoch            recall 8/20 | k_mean 1 k_flip 1 (base LO 0.1) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Robin Williams           recall 10/20 | k_mean 5 k_flip 1 (base LO 2.82) | steer R1 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Ivanka Trump             not recalled (2/20); discovered []
-Ryan O'Neal              recall 8/20 | k_mean 3 k_flip 2 (base LO 1.19) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Lionel Messi             recall 15/20 | k_mean 3 k_flip 3 (base LO 2.26) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Brazil national football team recall 14/20 | k_mean 2 k_flip 2 (base LO 4.19) | steer R4 n=4 x1.5: held-out 0.45 (default 0.00, random 0.00)
-CONCACAF Gold Cup        recall 6/20 | k_mean 2 k_flip 1 (base LO 0.7) | steer R1 n=2 x0.5: held-out 0.00 (default 0.05, random 0.00)
-Beyoncé                  recall 17/20 | k_mean 2 k_flip 3 (base LO 4.32) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-László Krasznahorkai     not recalled (4/20); discovered ['László Krasznahorkai', 'Krasznahorkai László']
-World Athletics Championships recall 5/20 | k_mean 2 k_flip 1 (base LO 0.23) | steer R1 n=2 x1.0: held-out 0.45 (default 0.60, random 0.05)
-Thailand                 recall 17/20 | k_mean 1 k_flip 3 (base LO 10.09) | steer R1 n=4 x1.0: held-out 0.15 (default 0.15, random 0.00)
-Mary, Queen of Scots     recall 13/20 | k_mean 2 k_flip 3 (base LO 3.8) | steer R4 n=4 x2.0: held-out 0.05 (default 0.00, random 0.00)
-Tommy Lee                recall 5/20 | k_mean 1 k_flip 1 (base LO 0.01) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Eminem                   recall 12/20 | k_mean 5 k_flip 2 (base LO 2.68) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Roblox                   recall 13/20 | k_mean 1 k_flip 2 (base LO 3.54) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Alabama Barker           not recalled (0/20); discovered []
-Muhammad                 recall 17/20 | k_mean 2 k_flip 5 (base LO 2.88) | steer R4 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Jordan Peterson          not recalled (0/20); discovered []
-Mason Mount              not recalled (0/20); discovered []
-World Wide Web           recall 15/20 | k_mean 1 k_flip 1 (base LO 5.13) | steer R1 n=4 x0.5: held-out 0.45 (default 0.00, random 0.10)
-N'Golo Kanté             not recalled (3/20); discovered []
-2023 Turkish presidential election not recalled (3/20); discovered []
-NATO                     recall 12/20 | k_mean 2 k_flip 3 (base LO 3.37) | steer R1 n=4 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Kirsten Dunst            recall 6/20 | k_mean 3 k_flip 2 (base LO 1.4) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Tobin Bell               not recalled (1/20); discovered []
-Italy                    recall 19/20 | k_mean 1 k_flip 20 (base LO 13.22) | steer R4 n=4 x1.5: held-out 0.35 (default 0.15, random 0.00)
-Boston Celtics           recall 17/20 | k_mean 3 k_flip 3 (base LO 3.37) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
-Candace Owens            not recalled (0/20); discovered []
-Coca-Cola                recall 12/20 | k_mean 2 k_flip 1 (base LO 1.26) | steer R1 n=4 x1.0: held-out 0.10 (default 0.10, random 0.00)
-Lionel Richie            not recalled (1/20); discovered []
-2023 AFC Asian Cup       not recalled (0/20); discovered []
-Kosovo                   recall 12/20 | k_mean 1 k_flip 1 (base LO 2.95) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Caroline Wozniacki       recall 6/20 | k_mean 1 k_flip 1 (base LO 0.81) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Batman v Superman: Dawn of Justice not recalled (3/20); discovered ['Batman v Superman: Dawn of Justice']
-Angelina Jolie           recall 6/20 | k_mean 2 k_flip 1 (base LO 1.98) | steer R2 n=4 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Peter III of Russia      recall 5/20 | k_mean 1 k_flip 2 (base LO 3.82) | steer R2 n=4 x2.0: held-out 0.05 (default 0.00, random 0.00)
-Bill Gates               recall 17/20 | k_mean 2 k_flip 3 (base LO 5.69) | steer R2 n=4 x2.0: held-out 0.10 (default 0.00, random 0.00)
-Eva Longoria             not recalled (0/20); discovered []
-United Nations           recall 16/20 | k_mean 1 k_flip 1 (base LO 9.15) | steer R1 n=2 x0.5: held-out 0.30 (default 0.00, random 0.00)
-Babe Ruth                recall 11/20 | k_mean 3 k_flip 5 (base LO 3.24) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Somalia                  recall 13/20 | k_mean 2 k_flip 1 (base LO 2.44) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Harold Godwinson         recall 9/20 | k_mean 1 k_flip 1 (base LO 1.62) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Philippines              recall 19/20 | k_mean 2 k_flip 5 (base LO 5.29) | steer R1 n=4 x1.5: held-out 0.10 (default 0.05, random 0.00)
-Pierre Trudeau           recall 17/20 | k_mean 1 k_flip 1 (base LO 1.77) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Che Guevara              recall 13/20 | k_mean 2 k_flip 2 (base LO 2.36) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Kim Kardashian           not recalled (4/20); discovered ['Kim Kardashian']
-Mumbai                   recall 17/20 | k_mean 1 k_flip 5 (base LO 9.6) | steer R1 n=2 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Petr Pavel               recall 8/20 | k_mean 1 k_flip 1 (base LO 1.26) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Wiki                     recall 18/20 | k_mean 10 k_flip 5 (base LO 2.32) | steer R4 n=4 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Grammy Awards            recall 15/20 | k_mean 1 k_flip 5 (base LO 4.19) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Julius Caesar            recall 16/20 | k_mean 1 k_flip 5 (base LO 4.69) | steer R4 n=4 x1.5: held-out 0.10 (default 0.05, random 0.00)
-Antony Blinken           recall 8/20 | k_mean 1 k_flip 1 (base LO 4.0) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Harry S. Truman          recall 15/20 | k_mean 3 k_flip 5 (base LO 4.25) | steer R4 n=2 x2.0: held-out 0.15 (default 0.00, random 0.00)
-Samuel L. Jackson        recall 5/20 | k_mean 1 k_flip 1 (base LO 1.77) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Islam                    recall 18/20 | k_mean 3 k_flip 20 (base LO 8.81) | steer R4 n=4 x1.0: held-out 0.30 (default 0.05, random 0.00)
-Zootopia                 recall 11/20 | k_mean 2 k_flip 2 (base LO 3.12) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
-Nazi Germany             recall 13/20 | k_mean 1 k_flip 1 (base LO 3.73) | steer R1 n=4 x1.0: held-out 0.15 (default 0.15, random 0.00)
-Oscar Pistorius          recall 10/20 | k_mean 3 k_flip 1 (base LO 0.71) | steer R1 n=2 x0.5: held-out 0.00 (default 0.05, random 0.00)
-Pakistan                 recall 15/20 | k_mean 2 k_flip 10 (base LO 8.07) | steer R1 n=2 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Magic Johnson            recall 13/20 | k_mean 3 k_flip 3 (base LO 2.42) | steer R4 n=4 x1.0: held-out 0.35 (default 0.05, random 0.00)
-ASEAN                    recall 11/20 | k_mean 3 k_flip 3 (base LO 2.26) | steer R1 n=4 x1.5: held-out 0.10 (default 0.05, random 0.00)
-Scientology              not recalled (2/20); discovered ['Scientology']
-Shinzo Abe               recall 12/20 | k_mean 2 k_flip 2 (base LO 2.01) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Sun bear                 recall 8/20 | k_mean 1 k_flip 1 (base LO 0.72) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Saddam Hussein           recall 20/20 | k_mean 1 k_flip 3 (base LO 7.64) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Frank Gehry              recall 11/20 | k_mean 2 k_flip 1 (base LO 1.56) | steer R4 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Gabon                    recall 15/20 | k_mean 1 k_flip 3 (base LO 6.75) | steer R4 n=4 x2.0: held-out 0.00 (default 0.00, random 0.00)
-Tilda Swinton            recall 9/20 | k_mean 3 k_flip 10 (base LO 1.29) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Kendall Jenner           not recalled (1/20); discovered ['Kendall Jenner']
-Joseph Smith             recall 16/20 | k_mean 2 k_flip 10 (base LO 5.1) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-İlkay Gündoğan           not recalled (0/20); discovered []
-wave finished; estimated Luna spend $0.291

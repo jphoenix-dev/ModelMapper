@@ -1,26 +1,21 @@
-# Caps audit (16 Oct 2026)
+# Caps and thresholds
 
-Every truncation or limit in the pipeline: what it is, who sees what, and whether it can distort a score.
-Trigger: James spotted that I set caps "as a precaution" without agreeing them, and that they can create scoring
-issues. Confirmed at once: I judged Jev "lenient" from the first 160 characters I chose to print, while Jev had
-judged the whole reply (it was right; see ISSUES #12).
+Every number in the package that limits what is measured, or decides a call. None is applied silently: each is in
+the code as a named constant, and the ones a user can change are recorded in every record that used them.
 
-| # | Cap | Value | Where | Who sees it | Risk to scores | Action |
-|---|---|---|---|---|---|---|
-| 1 | Steered reply length | **60 new tokens** (58–317 chars) | `steer_test.generate`, `pipeline_fast.GEN_TOKENS` | Jev judge, logs | **Understates on-topic** (less room to bring the topic up); **may understate fluency** (replies cut mid-sentence) | Raise to 150–200; judge with "the reply may be cut off at the end" in the fluency instruction; compare |
-| 2 | Random-token snippets for the specificity check | **320 chars** of left context | `intruder_test.random_snippets` (reused by `label.py` / `label_batch.py`) | Jev | **Asymmetry:** graded examples get 500–600 chars, random snippets only 320, so explanations get less context to "fit" random text. That **flatters specificity** (random fit too low) | Same length as the graded examples |
-| 3 | Coverage-grading context | 600 chars (`label.py`), 500 (`label_batch.py`, `strata_grade.py`) | `clip()` | Jev | Long-context / summary-motif neurons look like misfits, which **pushes "clean" down** (ISSUES #15). The two labellers also differ from each other | One shared value; sweep 500 / 1,500 / 3,000 on a census subsample |
-| 4 | Luna's dossier context per example | 900 chars (`make_dossiers`, `atlas.write_dossiers`); **400 chars** (`label_batch`) | dossiers | Luna | The census labeller (400) sees much less than the replication labeller (900); shorter context means vaguer or wrong explanations | One shared value; test 400 vs 1,500 |
-| 5 | Luna explanation length | **≤ 35 words** in `label_batch` (vs "1–2 sentences" in `label.py`) | system prompt | Luna, then Jev | Forced brevity can drop the second facet of a neuron, so **coverage falls and "clean" falls** (census) | Remove the cap; compare |
-| 6 | Examples shown vs graded | Luna sees 15 (`label_batch`) or 20; Jev grades 10 or 20 | `--examples`, `--grade` | Luna, Jev | Grading 10 makes coverage noisier (one example = 10 points of coverage) | Grade 20 |
-| 7 | Document length | **first 1,024 tokens** of every web document | `scan.docs`, atlas, strata | the model being scanned | Neurons needing longer context never show their real top firings (the essay warns about this explicitly) | Test 4,096 on a subsample |
-| 8 | Atlas depth | top 40 per pole, 10M tokens | `build_atlas` | everything downstream | Rare concepts under-represented (Golden Gate: 5 mentions in 10M) | Known; enriched scans where needed |
-| 9 | Jev blind-verdict context | 400 chars × 20 examples | `label.jev_verdict` | Jev | Unused metric; fine | – |
-| 10 | Intruder test context | 320 chars | `intruder_test` | Jev | Same as #2/#3 | Align |
-| 11 | Concept pipeline selections | label top 10; steer top 2/4/6 late (≥ L/2); positions and single-ablation for top 20; head looks for top 5 heads × 8 prompts | `concept_pipeline` | everything | Layer cut-off is ISSUES #11; the rest are logging limits | Sweep (planned) |
-| 12 | Recall prompts / controls | 20 / 8 per concept; bar P ≥ 0.2 | `PROMPT_SYSTEM`, `MIN_P` | model | Template problem (ISSUES #9/#10) dominates | Fix template first |
-| 13 | **My display truncation when reporting to James** | 140–230 chars per reply | ad-hoc prints | James (and me) | **Created a false "lenient judge" alarm**; can hide evidence either way | Show full text by default, or say explicitly when truncating |
-
-**Rule from now on:** no silent caps. Any limit gets a named constant, a comment saying why, an entry here, and
-James's agreement if it can touch a score. Graders and labellers see the same context as each other, and controls
-(random snippets) match the examples they're compared against.
+| # | What | Value | Where | Can change | Effect |
+|---|---|---|---|---|---|
+| 1 | A question counts as answered correctly | P(answer) ≥ 0.2 | `measure.MIN_P` | `CONCEPT_MIN_P` | Fewer or more kept questions |
+| 2 | Questions needed to map a concept | 5 | `mapping.map_concept` | no | Below it: `not_recalled`, nothing mapped |
+| 3 | Candidates knocked out one at a time | 200 (by attribution) | `mapping.NCAND` | no | A neuron outside the 200 is never tested |
+| 4 | The concept's map | top 30 by drop | `mapping.TOPN` | no | The rest stay in `candidates_all200` |
+| 5 | Random same-layer controls | 2 | `mapping.map_concept` | no | The per-concept noise floor |
+| 6 | k curve sizes | 1, 2, 3, 5, 10, 20, 50 | `mapping.KS` | no | k_mean / k_flip are null above 50 |
+| 7 | k_mean / k_flip bars | mean drop ≥ 3; half the right answers below P = 0.5 | `mapping.map_concept` | no | |
+| 8 | Attention heads knocked out | 50 (by attribution) | `mapping.NHEADS` | no | |
+| 9 | `early` role | first 20/36 of the layers | `mapping.LATE_FRAC` | no | A reading, not a measurement |
+| 10 | **Hardware band for the calls, per model** | **Qwen3-8B: 0.13 log-odds** (3090 vs 5090, 10 concepts, p99, 19 Oct 2026). Other models: none, calls `uncalibrated` | `guards.BANDS` | `--band`, `MODEL_MAPPER_BAND` (recorded in `guards.band`) | Decides in / uncertain / out; changes no drop or rank |
+| 11 | Labeller spend per concept | $0.50 at Luna's prices | `map-concept --budget` | yes | The labeller step stops with an error past it |
+| 12 | Error text kept in check reports | 300 characters | `selfcheck.TAIL` | no | Endpoint error bodies are left out entirely |
+| 13 | `check` map step | marker L23:2392 in the top 5 | `selfcheck.MAP_PASS_RANK` | no | METHOD.md, "How check is calibrated" |
+| 14 | `check` live step | 2 of 3 markers in their top 20 | `selfcheck.LIVE_PASS_*` | no | Else WARN: fresh questions vary |

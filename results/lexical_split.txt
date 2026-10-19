@@ -1,3 +1,0 @@
-concepts_v3/Wolfgang Amadeus Mozart L11_N1120   opera              with-word  5 prompts mean 0.4695 | without  8 mean 0.0039 | share of attribution from with-word prompts 99% (expected if no clue-reading 38%)
-
-2/42 flagged neurons get >= 90% of their attribution from the prompts containing the word (while those are <= 60% of prompts): likely clue-readers

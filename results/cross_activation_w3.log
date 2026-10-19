@@ -1,41 +1,0 @@
-W1017 12:32:11.453000 10380 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   2%|▏         | 8/399 [00:00<00:05, 68.97it/s]Loading weights:   4%|▍         | 15/399 [00:00<00:12, 29.91it/s]Loading weights:   5%|▌         | 21/399 [00:00<00:11, 31.91it/s]Loading weights:   6%|▋         | 25/399 [00:00<00:13, 27.80it/s]Loading weights:   7%|▋         | 29/399 [00:00<00:12, 30.37it/s]Loading weights:   9%|▊         | 34/399 [00:01<00:13, 26.31it/s]Loading weights:  11%|█         | 43/399 [00:01<00:11, 31.01it/s]Loading weights:  12%|█▏        | 49/399 [00:01<00:09, 36.20it/s]Loading weights:  14%|█▎        | 54/399 [00:01<00:12, 28.63it/s]Loading weights:  16%|█▌        | 64/399 [00:02<00:11, 29.84it/s]Loading weights:  19%|█▉        | 75/399 [00:02<00:07, 42.11it/s]Loading weights:  20%|██        | 81/399 [00:02<00:08, 36.14it/s]Loading weights:  22%|██▏       | 86/399 [00:02<00:08, 36.43it/s]Loading weights:  23%|██▎       | 91/399 [00:02<00:08, 35.51it/s]Loading weights:  25%|██▍       | 98/399 [00:03<00:10, 29.76it/s]Loading weights:  27%|██▋       | 109/399 [00:03<00:09, 31.58it/s]Loading weights:  30%|██▉       | 118/399 [00:03<00:06, 40.17it/s]Loading weights:  31%|███       | 124/399 [00:03<00:07, 35.78it/s]Loading weights:  33%|███▎      | 131/399 [00:03<00:07, 38.06it/s]Loading weights:  34%|███▍      | 136/399 [00:03<00:07, 36.01it/s]Loading weights:  36%|███▌      | 143/399 [00:04<00:08, 30.46it/s]Loading weights:  38%|███▊      | 151/399 [00:04<00:06, 38.42it/s]Loading weights:  39%|███▉      | 156/399 [00:04<00:07, 32.73it/s]Loading weights:  40%|████      | 161/399 [00:04<00:06, 35.77it/s]Loading weights:  42%|████▏     | 166/399 [00:04<00:07, 30.87it/s]Loading weights:  44%|████▎     | 174/399 [00:05<00:05, 39.71it/s]Loading weights:  45%|████▍     | 179/399 [00:05<00:06, 33.45it/s]Loading weights:  46%|████▌     | 184/399 [00:05<00:06, 34.23it/s]Loading weights:  47%|████▋     | 188/399 [00:05<00:07, 26.98it/s]Loading weights:  49%|████▉     | 197/399 [00:05<00:07, 27.66it/s]Loading weights:  51%|█████▏    | 205/399 [00:06<00:05, 35.86it/s]Loading weights:  53%|█████▎    | 210/399 [00:06<00:06, 30.95it/s]Loading weights:  55%|█████▍    | 218/399 [00:06<00:04, 39.37it/s]Loading weights:  56%|█████▌    | 224/399 [00:06<00:05, 33.51it/s]Loading weights:  58%|█████▊    | 230/399 [00:06<00:05, 31.43it/s]Loading weights:  59%|█████▉    | 236/399 [00:07<00:04, 35.36it/s]Loading weights:  60%|██████    | 241/399 [00:07<00:04, 36.40it/s]Loading weights:  62%|██████▏   | 246/399 [00:07<00:04, 31.98it/s]Loading weights:  63%|██████▎   | 252/399 [00:07<00:03, 37.00it/s]Loading weights:  64%|██████▍   | 257/399 [00:07<00:04, 32.85it/s]Loading weights:  65%|██████▌   | 261/399 [00:07<00:04, 32.11it/s]Loading weights:  66%|██████▋   | 265/399 [00:07<00:04, 30.10it/s]Loading weights:  68%|██████▊   | 272/399 [00:08<00:03, 38.43it/s]Loading weights:  69%|██████▉   | 277/399 [00:08<00:03, 32.46it/s]Loading weights:  71%|███████▏  | 285/399 [00:08<00:03, 33.07it/s]Loading weights:  73%|███████▎  | 290/399 [00:08<00:03, 34.77it/s]Loading weights:  74%|███████▍  | 297/399 [00:08<00:02, 38.55it/s]Loading weights:  76%|███████▌  | 302/399 [00:08<00:03, 31.45it/s]Loading weights:  77%|███████▋  | 309/399 [00:09<00:02, 35.17it/s]Loading weights:  78%|███████▊  | 313/399 [00:09<00:02, 32.80it/s]Loading weights:  80%|███████▉  | 319/399 [00:09<00:02, 38.09it/s]Loading weights:  81%|████████  | 324/399 [00:09<00:02, 33.67it/s]Loading weights:  83%|████████▎ | 330/399 [00:09<00:02, 28.02it/s]Loading weights:  85%|████████▍ | 339/399 [00:09<00:01, 38.89it/s]Loading weights:  86%|████████▌ | 344/399 [00:10<00:01, 33.27it/s]Loading weights:  88%|████████▊ | 351/399 [00:10<00:01, 35.53it/s]Loading weights:  89%|████████▉ | 356/399 [00:10<00:01, 31.68it/s]Loading weights:  91%|█████████ | 362/399 [00:10<00:01, 28.77it/s]Loading weights:  93%|█████████▎| 373/399 [00:10<00:00, 38.56it/s]Loading weights:  95%|█████████▍| 378/399 [00:11<00:00, 33.44it/s]Loading weights:  96%|█████████▌| 384/399 [00:11<00:00, 28.46it/s]Loading weights:  98%|█████████▊| 392/399 [00:11<00:00, 36.41it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 34.30it/s]
-Zeus                           done (13 prompts)
-Thor                           done (12 prompts)
-the Buddha                     done (11 prompts)
-Medusa                         done (12 prompts)
-Brazil                         done (18 prompts)
-Iceland                        done (14 prompts)
-Istanbul                       done (17 prompts)
-New York City                  done (19 prompts)
-the bicycle                    done (14 prompts)
-the submarine                  done (16 prompts)
-the helicopter                 done (14 prompts)
-bamboo                         done (15 prompts)
-honey                          done (15 prompts)
-the tomato                     done (16 prompts)
-Sherlock Holmes                done (17 prompts)
-Star Wars                      done (18 prompts)
-Pokémon                        done (11 prompts)
-Mickey Mouse                   done (9 prompts)
-friendship                     done (7 prompts)
-capitalism                     done (13 prompts)
-loneliness                     done (14 prompts)
-courage                        done (11 prompts)
-gravity                        done (17 prompts)
-the speed of light             done (13 prompts)
-pi                             done (18 prompts)
-electricity                    done (12 prompts)
-the guitar                     done (14 prompts)
-origami                        done (17 prompts)
-opera                          done (17 prompts)
-graffiti                       done (10 prompts)
-the Colosseum                  done (20 prompts)
-Stonehenge                     done (19 prompts)
-the Acropolis                  done (18 prompts)
-Mount Fuji                     done (17 prompts)
-Steve Jobs                     done (19 prompts)
-Taylor Swift                   done (7 prompts)
-Nelson Mandela                 done (20 prompts)
-Serena Williams                done (13 prompts)
-the oak tree                   done (17 prompts)

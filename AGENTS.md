@@ -1,11 +1,11 @@
 # Notes for coding agents
 
-- **Setting up or checking an install:** follow [SETUP.md](SETUP.md) step by step, including its "Rules for an agent"
-  section, and finish with the report from its step 9.
-- **Running experiments:** see README.md ("Main pipelines" and "The `modelmapper` command") and ARCHITECTURE.md.
-  Run everything from the repo root through the CLI: `modelmapper <command>` (after `pip install -e .`) or
-  `python -m modelmapper <command>`. Old `python src/...` commands (RESULTS.md, ledger rows) map to new ones in
-  SCRIPTS.md; `modelmapper run src/<old path> ...` runs them as written. `scripts/check_imports.py` and
-  `scripts/smoke_cli.py` check the package without running any experiment. Settings come from environment
-  variables or `.env` (see `.env.example`); `modelmapper settings` shows what they resolve to.
+- **Setting up or checking an install:** follow [SETUP.md](SETUP.md), including its "Rules for an agent", and finish
+  with the report from its step 7.
+- **Layout:** one package, `modelmapper/`. `api.py` is the public API (`map_concept`, `map_batch`, `steer`, `lookup`,
+  `check`), `cli.py` the command. The measuring code (`model.py`, `measure.py`, `mapping.py`, `questions.py`) is the
+  code the published maps used, copied unchanged: change it only to change the method, and say so in METHOD.md.
+- **Tests:** `pytest -m "not model"` runs in seconds with no model; `pytest` also loads Qwen3-0.6B (about 10 minutes on
+  a CPU). `modelmapper check` is the end-to-end test.
+- Settings come from environment variables or `.env` in the working folder (`.env.example`).
 - Never print or commit API keys. `.env`, `OAI.env` and `jevkey.env` are gitignored.

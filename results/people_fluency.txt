@@ -1,8 +1,0 @@
-people_rules.json: 4084 distinct replies, 0 not judged (excluded)
-person                   R1 name-best / fluent-joint-best (setting) | R2 name-best / fluent-joint-best (setting) | R3 name-best / fluent-joint-best (setting) | R4 name-best / fluent-joint-best (setting)
-William Shakespeare      0.00 / 0.00 None | 0.00 / 0.00 None | 0.10 / 0.10 (4, 1.0) | 0.00 / 0.00 None
-Wolfgang Amadeus Mozart  0.00 / 0.00 None | 0.75 / 0.50 (6, 1.0) | 0.50 / 0.40 (2, 1.5) | 0.00 / 0.00 None
-Harry Potter             0.05 / 0.00 None | 0.15 / 0.15 (2, 1.5) | 0.15 / 0.15 (2, 1.5) | 0.85 / 0.25 (2, 2.0)
-Albert Einstein          0.35 / 0.30 (2, 2.0) | 0.35 / 0.30 (2, 2.0) | 0.35 / 0.30 (4, 1.5) | 0.65 / 0.35 (2, 1.5)
-Frida Kahlo              0.20 / 0.20 (6, 1.0) | 0.20 / 0.20 (6, 1.0) | 0.00 / 0.00 None | 0.30 / 0.20 (2, 1.0)
-Jev {'calls': 3784, 'input_tokens': 1288124}, ~$0.054

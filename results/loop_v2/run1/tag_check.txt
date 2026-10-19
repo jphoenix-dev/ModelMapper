@@ -1,8 +1,0 @@
-tag check: 300 of 300 labelled by Luna; agreement with frame.py 273/300 (91%); Luna {'calls': 300, 'input_tokens': 30917, 'output_tokens': 13782}
-  ours named  / Luna named : 111
-  ours named  / Luna common: 17
-  ours common / Luna named : 10
-  ours common / Luna common: 162
-disagreements: Oarfish (ours named, Luna common); Algebraic number theory (ours named, Luna common); Tour de France (ours common, Luna named); Freethought (ours named, Luna common); Ruminant (ours named, Luna common); Plesiosaur (ours named, Luna common); Vikings (ours named, Luna common); Tag (game) (ours named, Luna common); Punjabi language (ours common, Luna named); Aboriginal Australians (ours common, Luna named); West Africa (ours common, Luna named); Hornwort (ours named, Luna common); Homological algebra (ours named, Luna common); Del (ours named, Luna common); Slate (ours common, Luna named); Empiricism (ours named, Luna common); Dacians (ours common, Luna named); History of the Mediterranean region (ours named, Luna common); Assamese language (ours common, Luna named); Romanticism (ours named, Luna common); Mollusca (ours common, Luna named); Haitian Vodou (ours common, Luna named); Standard deviation (ours named, Luna common); Ordinary least squares (ours named, Luna common); Jewish literature (ours named, Luna common); Yoruba people (ours common, Luna named); Numerical analysis (ours named, Luna common)
-agreed named: mapped 95; 'say' neuron in top-5 79%
-agreed common: mapped 135; 'say' neuron in top-5 73%

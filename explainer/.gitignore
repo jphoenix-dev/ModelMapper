@@ -1,3 +1,0 @@
-# the repo-wide "data/" ignore is for model stats; the explainer's data folders are part of the site
-!data/
-build/

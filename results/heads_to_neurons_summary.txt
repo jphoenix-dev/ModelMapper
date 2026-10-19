@@ -1,6 +1,0 @@
-58 concepts | downstream concept-neuron activation, top-5 heads off: median 0.93x | random 5 heads off: median 0.99x
-top heads cut activation below 0.8x in 12/58; random heads in 0/58
-top heads lower activation more than random in 48/58
-people (n=8): median 0.97x [0.35, 0.45, 0.87, 0.9, 0.97, 0.97, 0.99, 1.05] | non-people (n=50): median 0.93x
-most head-dependent: [('Wolfgang Amadeus Mozart', 0.35), ('Albert Einstein', 0.45), ('the internet', 0.53), ('the periodic table', 0.59), ('the Moon', 0.64), ('the brain', 0.71), ('the heart', 0.72), ('Mount Everest', 0.75), ('the Amazon rainforest', 0.77), ('wine', 0.78)]
-least head-dependent: [('Bitcoin', 1.07), ('Napoleon Bonaparte', 1.05), ('coffee', 1.03), ('volcanoes', 1.02), ('sushi', 1.02), ('the printing press', 1.02)]

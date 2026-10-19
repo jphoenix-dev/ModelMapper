@@ -1,7 +1,0 @@
-Q-format runs: 79 k_mean<=5: 79 <=2: 71 flip<=5: 66
-CR k_mean<=5: 8 / 11 all<=20: True
-wave2 recalled: 40 / 40
-distinct recalled: 60
-Jev lenient joint, held-out, 59 concepts: auto 0.161 vs default 0.087 | auto better 31, worse 7, tie 21
-same rule chosen: 13/19 (chance ~1/3 -> ~6.3); same rule+n: 9
-top-10 exact overlap: mean 4.8/10 (range 1-9); top-10 found in other's top-50: mean 6.9/10

@@ -1,7 +1,0 @@
-P1 independent prompts: 100 concepts sampled, 32 tested (>= 3 cloze prompts the model answers)
-  median drop top-5 +5.59 vs random-5 -0.003; top-5 flip >= half the correct prompts in 66% of concepts
-  PREDICTION HOLDS (needs median >= 1.0, >= 5x random, flips in >= 40%)
-
-P3 shared neurons: 150 pairs (from 251 concepts with saved prompts)
-  median drop on B: shared +0.835, control 1 (A's non-shared) +0.002, control 2 (random) +0.000; on A +0.894
-  PREDICTION HOLDS (needs >= 0.3 and >= 3x each control)

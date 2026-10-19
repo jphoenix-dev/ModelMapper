@@ -1,8 +1,0 @@
-Normalisation-head test, 59 concepts (direct effects at the answer position; exact log-odds)
-L35H25   n=59  cos +0.12  |c|/|r| 0.07  rms if removed x0.987  d log-odds if removed: via scale +0.08, via direction -0.66 (raises recall in 17/59)
-L34H28   n=59  cos +0.13  |c|/|r| 0.09  rms if removed x0.987  d log-odds if removed: via scale +0.07, via direction -0.15 (raises recall in 22/59)
-L35H22   n=59  cos +0.13  |c|/|r| 0.05  rms if removed x0.990  d log-odds if removed: via scale +0.05, via direction -0.24 (raises recall in 19/59)
-L35H27   n=59  cos +0.03  |c|/|r| 0.04  rms if removed x1.009  d log-odds if removed: via scale -0.05, via direction +0.30 (raises recall in 44/59)
-L34H29   n=59  cos -0.09  |c|/|r| 0.04  rms if removed x1.007  d log-odds if removed: via scale -0.04, via direction -0.06 (raises recall in 27/59)
-L35H24   n=59  cos +0.05  |c|/|r| 0.02  rms if removed x1.003  d log-odds if removed: via scale -0.02, via direction -0.18 (raises recall in 18/59)
-random*  n=177 cos +0.08  |c|/|r| 0.01  rms if removed x1.000  d log-odds if removed: via scale +0.00, via direction +0.01 (raises recall in 109/177)

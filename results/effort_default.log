@@ -1,8 +1,0 @@
-200 units
-Luna: 200/200 explained | {'calls': 200, 'input_tokens': 679849, 'output_tokens': 216417}
-coverage: 0/0 graded | Jev {'calls': 0, 'input_tokens': 0}
-random check done | Jev {'calls': 80, 'input_tokens': 667616}, ~$0.028
-pos: clean 0/0 = 0% (excluded for API failures: 200)
-neg: clean 0/0 = 0% (excluded for API failures: 200)
-Jev ~$0.028 | Luna {'calls': 200, 'input_tokens': 679849, 'output_tokens': 216417}
-200 units regraded | Jev {'calls': 4119, 'input_tokens': 3311466}, ~$0.139

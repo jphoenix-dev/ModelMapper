@@ -1,3 +1,0 @@
-1. REPRODUCTION (12 concepts): PASS - identical
-
-2. MAPS vs CROSS-ACTIVATION: 43218 values compared; outside bf16 tolerance: 0; largest |diff| 0.1250 -> PASS

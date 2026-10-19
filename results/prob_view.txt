@@ -1,8 +1,0 @@
-CR completion    top-1 ablated: mean P(answer) 0.567 -> 0.348 (relative drop 39%) | random 1: 0.566 | mean share of correct prompts flipped 46% | n concepts 11
-CR completion    top-5 ablated: mean P(answer) 0.567 -> 0.104 (relative drop 82%) | random 5: 0.566 | mean share of correct prompts flipped 78% | n concepts 11
-CR-2 question    top-1 ablated: mean P(answer) 0.890 -> 0.638 (relative drop 28%) | random 1: 0.891 | mean share of correct prompts flipped 32% | n concepts 19
-CR-2 question    top-5 ablated: mean P(answer) 0.890 -> 0.340 (relative drop 62%) | random 5: 0.891 | mean share of correct prompts flipped 67% | n concepts 19
-CR-2b question   top-1 ablated: mean P(answer) 0.904 -> 0.655 (relative drop 28%) | random 1: 0.904 | mean share of correct prompts flipped 35% | n concepts 20
-CR-2b question   top-5 ablated: mean P(answer) 0.904 -> 0.352 (relative drop 61%) | random 5: 0.903 | mean share of correct prompts flipped 70% | n concepts 20
-wave 2 question  top-1 ablated: mean P(answer) 0.845 -> 0.508 (relative drop 40%) | random 1: 0.845 | mean share of correct prompts flipped 41% | n concepts 40
-wave 2 question  top-5 ablated: mean P(answer) 0.845 -> 0.183 (relative drop 78%) | random 5: 0.844 | mean share of correct prompts flipped 84% | n concepts 40

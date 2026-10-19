@@ -1,232 +1,0 @@
-W1017 00:38:54.021000 11632 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/399 [00:00<00:12, 30.46it/s]Loading weights:   5%|▌         | 20/399 [00:00<00:06, 56.38it/s]Loading weights:   7%|▋         | 28/399 [00:00<00:10, 34.96it/s]Loading weights:   9%|▊         | 34/399 [00:00<00:10, 34.75it/s]Loading weights:  10%|▉         | 39/399 [00:01<00:10, 32.83it/s]Loading weights:  11%|█         | 44/399 [00:01<00:11, 29.59it/s]Loading weights:  12%|█▏        | 49/399 [00:01<00:11, 29.88it/s]Loading weights:  14%|█▍        | 56/399 [00:01<00:09, 34.39it/s]Loading weights:  16%|█▌        | 64/399 [00:01<00:08, 38.74it/s]Loading weights:  17%|█▋        | 69/399 [00:01<00:08, 37.10it/s]Loading weights:  19%|█▉        | 75/399 [00:02<00:10, 30.45it/s]Loading weights:  22%|██▏       | 87/399 [00:02<00:09, 33.19it/s]Loading weights:  24%|██▍       | 97/399 [00:02<00:06, 43.43it/s]Loading weights:  26%|██▌       | 103/399 [00:02<00:07, 37.02it/s]Loading weights:  28%|██▊       | 110/399 [00:03<00:07, 38.41it/s]Loading weights:  29%|██▉       | 115/399 [00:03<00:08, 33.44it/s]Loading weights:  30%|██▉       | 119/399 [00:03<00:08, 34.40it/s]Loading weights:  31%|███       | 123/399 [00:03<00:08, 31.76it/s]Loading weights:  33%|███▎      | 132/399 [00:03<00:08, 31.02it/s]Loading weights:  34%|███▍      | 137/399 [00:03<00:07, 33.80it/s]Loading weights:  36%|███▌      | 143/399 [00:04<00:08, 31.22it/s]Loading weights:  38%|███▊      | 150/399 [00:04<00:06, 38.14it/s]Loading weights:  39%|███▉      | 155/399 [00:04<00:07, 32.28it/s]Loading weights:  41%|████      | 163/399 [00:04<00:05, 41.28it/s]Loading weights:  42%|████▏     | 169/399 [00:04<00:06, 35.48it/s]Loading weights:  44%|████▍     | 175/399 [00:05<00:06, 32.16it/s]Loading weights:  45%|████▌     | 181/399 [00:05<00:06, 35.48it/s]Loading weights:  47%|████▋     | 186/399 [00:05<00:05, 37.42it/s]Loading weights:  48%|████▊     | 191/399 [00:05<00:06, 33.82it/s]Loading weights:  49%|████▉     | 197/399 [00:05<00:07, 27.97it/s]Loading weights:  52%|█████▏    | 208/399 [00:05<00:05, 37.82it/s]Loading weights:  53%|█████▎    | 213/399 [00:06<00:05, 32.89it/s]Loading weights:  55%|█████▌    | 220/399 [00:06<00:05, 30.99it/s]Loading weights:  57%|█████▋    | 226/399 [00:06<00:05, 34.47it/s]Loading weights:  58%|█████▊    | 232/399 [00:06<00:04, 36.13it/s]Loading weights:  59%|█████▉    | 236/399 [00:06<00:04, 34.46it/s]Loading weights:  60%|██████    | 241/399 [00:06<00:04, 32.52it/s]Loading weights:  62%|██████▏   | 247/399 [00:07<00:04, 36.73it/s]Loading weights:  63%|██████▎   | 252/399 [00:07<00:04, 32.03it/s]Loading weights:  64%|██████▍   | 257/399 [00:07<00:03, 35.62it/s]Loading weights:  66%|██████▌   | 264/399 [00:07<00:03, 39.47it/s]Loading weights:  67%|██████▋   | 269/399 [00:07<00:03, 35.28it/s]Loading weights:  69%|██████▉   | 275/399 [00:07<00:03, 39.50it/s]Loading weights:  70%|███████   | 280/399 [00:08<00:03, 35.59it/s]Loading weights:  72%|███████▏  | 286/399 [00:08<00:02, 38.26it/s]Loading weights:  73%|███████▎  | 291/399 [00:08<00:03, 32.35it/s]Loading weights:  74%|███████▍  | 296/399 [00:08<00:03, 30.16it/s]Loading weights:  76%|███████▌  | 302/399 [00:08<00:03, 32.05it/s]Loading weights:  77%|███████▋  | 309/399 [00:08<00:02, 31.59it/s]Loading weights:  79%|███████▉  | 316/399 [00:09<00:02, 36.69it/s]Loading weights:  80%|████████  | 320/399 [00:09<00:02, 30.06it/s]Loading weights:  82%|████████▏ | 329/399 [00:09<00:02, 29.48it/s]Loading weights:  85%|████████▍ | 339/399 [00:09<00:01, 37.04it/s]Loading weights:  86%|████████▌ | 344/399 [00:09<00:01, 34.91it/s]Loading weights:  88%|████████▊ | 352/399 [00:10<00:01, 36.08it/s]Loading weights:  89%|████████▉ | 357/399 [00:10<00:01, 35.18it/s]Loading weights:  91%|█████████ | 362/399 [00:10<00:01, 30.56it/s]Loading weights:  93%|█████████▎| 372/399 [00:10<00:00, 38.42it/s]Loading weights:  94%|█████████▍| 377/399 [00:10<00:00, 36.21it/s]Loading weights:  96%|█████████▌| 384/399 [00:11<00:00, 30.80it/s]Loading weights:  99%|█████████▊| 394/399 [00:11<00:00, 42.02it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 35.28it/s]
-steering: add, reply_only=True; out C:\dev\already-clean\results\concepts_fame
-California               recall 18/20 | k_mean 2 k_flip None (base LO 11.37) | steer R4 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Gwyneth Paltrow          recall 8/20 | k_mean 2 k_flip 2 (base LO 1.26) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Judith Barsi             not recalled (0/20); discovered []
-Chris Eubank             not recalled (0/20); discovered []
-Painkiller (TV series)   not recalled (0/20); discovered []
-Ibora                    not recalled (0/20); discovered []
-Tribute to Caesar (del Sarto and Allori) recall 9/20 | k_mean 3 k_flip 2 (base LO 0.16) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Philosophy               recall 13/20 | k_mean 1 k_flip 5 (base LO 8.35) | steer R1 n=4 x1.0: held-out 0.40 (default 0.40, random 0.00)
-Christoph Waltz          not recalled (2/20); discovered ['Christoph Waltz']
-Losacino                 not recalled (0/20); discovered []
-Lena Waithe              not recalled (1/20); discovered []
-2023 AFC U-20 Asian Cup  not recalled (0/20); discovered []
-Josh Naylor              not recalled (0/20); discovered []
-Douglas XNO-2            not recalled (0/20); discovered []
-Alaska                   recall 19/20 | k_mean 1 k_flip 1 (base LO 9.32) | steer R1 n=2 x1.0: held-out 0.25 (default 0.40, random 0.00)
-Josh Hutcherson          not recalled (0/20); discovered []
-Cailee Spaeny            not recalled (0/20); discovered []
-Alex Rodriguez           not recalled (2/20); discovered ['Alex Rodriguez']
-Len Goodman              not recalled (0/20); discovered []
-Filisovo, Ust-Kubinsky District, Vologda Oblast not recalled (0/20); discovered []
-First Comes the Night    not recalled (0/20); discovered []
-Neil Armstrong           recall 20/20 | k_mean 2 k_flip 5 (base LO 6.39) | steer R1 n=2 x1.5: held-out 0.00 (default 0.05, random 0.00)
-Electric battery         recall 14/20 | k_mean 2 k_flip 2 (base LO 3.7) | steer R4 n=2 x0.5: held-out 0.70 (default 0.25, random 0.00)
-Delroy Lindo             not recalled (1/20); discovered []
-Jeffrey Goldberg         not recalled (0/20); discovered []
-Gustavo Bartelt          not recalled (0/20); discovered []
-Characters of The Last of Us (TV series) not recalled (0/20); discovered []
-Richard Bradstreet       not recalled (0/20); discovered []
-Russian invasion of Ukraine (2022–present) not recalled (2/20); discovered ['Invasion of Ukraine', 'Ukraine War']
-Timothée Chalamet        recall 11/20 | k_mean 1 k_flip 2 (base LO 3.56) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Bernouville              not recalled (0/20); discovered []
-2023 Writers Guild of America strike not recalled (4/20); discovered ['Writers Guild of America strike']
-Disappearance of Amy Lynn Bradley not recalled (0/20); discovered []
-Kayode Ajulo             not recalled (0/20); discovered []
-Palam B Ground           not recalled (0/20); discovered []
-Kamala Harris            recall 11/20 | k_mean 3 k_flip 5 (base LO 3.82) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Palestine Liberation Organization recall 11/20 | k_mean 1 k_flip 1 (base LO 0.85) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Fargo (TV series)        recall 5/20 | k_mean 2 k_flip 2 (base LO 3.27) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Travis Kalanick          recall 13/20 | k_mean 3 k_flip 5 (base LO 3.49) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Arjun Tendulkar          not recalled (0/20); discovered []
-Alexandre Tremblay       not recalled (0/20); discovered []
-Bigg Boss (Tamil season 7) not recalled (0/20); discovered []
-Woman                    recall 8/20 | k_mean 2 k_flip 1 (base LO 1.96) | steer R1 n=2 x2.0: held-out 0.15 (default 0.15, random 0.00)
-Queen Elizabeth The Queen Mother not recalled (0/20); discovered []
-Joseph Quinn             not recalled (0/20); discovered []
-Billy Milligan           not recalled (2/20); discovered ['Billy Milligan']
-Naum Shtarkman           not recalled (0/20); discovered []
-Yesubai Bhonsale         not recalled (0/20); discovered []
-Traceback (most recent call last):
-  File "C:\dev\already-clean\src\wave_budget.py", line 57, in <module>
-    main()
-  File "C:\dev\already-clean\src\wave_budget.py", line 52, in main
-    wave_free.main()
-  File "C:\dev\already-clean\src\wave_free.py", line 77, in main
-    spec, tid, recall, _ = pipe.make_prompts(concept)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\src\pipeline_fast.py", line 68, in make_prompts
-    spec, tid, recall, controls = super().make_prompts(concept)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\dev\already-clean\src\concept_pipeline.py", line 118, in make_prompts
-    tid = self.answer_ids(spec["answer"])
-                          ~~~~^^^^^^^^^^
-KeyError: 'answer'
-W1017 01:24:14.584000 34264 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 10/399 [00:00<00:09, 40.99it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:08, 42.65it/s]Loading weights:   6%|▌         | 23/399 [00:00<00:11, 31.77it/s]Loading weights:   7%|▋         | 28/399 [00:00<00:10, 35.70it/s]Loading weights:   8%|▊         | 32/399 [00:00<00:11, 31.96it/s]Loading weights:   9%|▉         | 36/399 [00:01<00:12, 29.18it/s]Loading weights:  11%|█         | 43/399 [00:01<00:11, 30.46it/s]Loading weights:  14%|█▍        | 55/399 [00:01<00:08, 42.53it/s]Loading weights:  15%|█▌        | 60/399 [00:01<00:09, 37.18it/s]Loading weights:  16%|█▋        | 65/399 [00:01<00:09, 34.70it/s]Loading weights:  18%|█▊        | 70/399 [00:01<00:08, 37.19it/s]Loading weights:  19%|█▉        | 77/399 [00:02<00:09, 35.43it/s]Loading weights:  20%|██        | 81/399 [00:02<00:09, 34.53it/s]Loading weights:  21%|██▏       | 85/399 [00:02<00:08, 35.65it/s]Loading weights:  22%|██▏       | 89/399 [00:02<00:10, 30.82it/s]Loading weights:  25%|██▍       | 98/399 [00:02<00:07, 40.59it/s]Loading weights:  26%|██▌       | 103/399 [00:02<00:08, 34.43it/s]Loading weights:  28%|██▊       | 110/399 [00:03<00:08, 34.40it/s]Loading weights:  29%|██▉       | 115/399 [00:03<00:08, 35.02it/s]Loading weights:  30%|██▉       | 119/399 [00:03<00:08, 31.37it/s]Loading weights:  31%|███       | 124/399 [00:03<00:08, 32.80it/s]Loading weights:  33%|███▎      | 130/399 [00:03<00:07, 37.74it/s]Loading weights:  34%|███▎      | 134/399 [00:03<00:08, 31.64it/s]Loading weights:  36%|███▌      | 142/399 [00:04<00:06, 38.42it/s]Loading weights:  37%|███▋      | 147/399 [00:04<00:06, 36.31it/s]Loading weights:  38%|███▊      | 153/399 [00:04<00:06, 37.25it/s]Loading weights:  39%|███▉      | 157/399 [00:04<00:07, 34.00it/s]Loading weights:  41%|████      | 163/399 [00:04<00:05, 39.42it/s]Loading weights:  42%|████▏     | 168/399 [00:04<00:07, 32.62it/s]Loading weights:  43%|████▎     | 173/399 [00:04<00:06, 36.16it/s]Loading weights:  45%|████▍     | 178/399 [00:05<00:07, 30.07it/s]Loading weights:  46%|████▌     | 182/399 [00:05<00:07, 29.52it/s]Loading weights:  47%|████▋     | 188/399 [00:05<00:06, 31.68it/s]Loading weights:  49%|████▉     | 196/399 [00:05<00:05, 37.31it/s]Loading weights:  50%|█████     | 200/399 [00:05<00:05, 34.02it/s]Loading weights:  51%|█████     | 204/399 [00:05<00:05, 34.66it/s]Loading weights:  52%|█████▏    | 209/399 [00:06<00:06, 29.33it/s]Loading weights:  54%|█████▍    | 216/399 [00:06<00:04, 36.96it/s]Loading weights:  55%|█████▌    | 221/399 [00:06<00:05, 31.58it/s]Loading weights:  57%|█████▋    | 226/399 [00:06<00:06, 27.21it/s]Loading weights:  59%|█████▉    | 235/399 [00:06<00:04, 36.35it/s]Loading weights:  61%|██████    | 242/399 [00:06<00:03, 42.73it/s]Loading weights:  62%|██████▏   | 247/399 [00:07<00:04, 35.81it/s]Loading weights:  63%|██████▎   | 252/399 [00:07<00:03, 38.66it/s]Loading weights:  64%|██████▍   | 257/399 [00:07<00:03, 36.05it/s]Loading weights:  66%|██████▌   | 263/399 [00:07<00:03, 36.18it/s]Loading weights:  67%|██████▋   | 267/399 [00:07<00:03, 33.03it/s]Loading weights:  69%|██████▊   | 274/399 [00:07<00:03, 36.54it/s]Loading weights:  70%|██████▉   | 278/399 [00:08<00:03, 33.83it/s]Loading weights:  71%|███████   | 283/399 [00:08<00:03, 35.53it/s]Loading weights:  72%|███████▏  | 287/399 [00:08<00:03, 32.44it/s]Loading weights:  73%|███████▎  | 291/399 [00:08<00:03, 30.94it/s]Loading weights:  74%|███████▍  | 295/399 [00:08<00:04, 23.50it/s]Loading weights:  77%|███████▋  | 307/399 [00:08<00:02, 36.41it/s]Loading weights:  78%|███████▊  | 311/399 [00:09<00:02, 33.53it/s]Loading weights:  80%|███████▉  | 319/399 [00:09<00:02, 38.40it/s]Loading weights:  81%|████████  | 323/399 [00:09<00:02, 34.20it/s]Loading weights:  83%|████████▎ | 330/399 [00:09<00:01, 37.51it/s]Loading weights:  84%|████████▎ | 334/399 [00:09<00:01, 33.11it/s]Loading weights:  85%|████████▌ | 340/399 [00:09<00:02, 27.21it/s]Loading weights:  88%|████████▊ | 351/399 [00:10<00:01, 34.45it/s]Loading weights:  89%|████████▉ | 356/399 [00:10<00:01, 36.19it/s]Loading weights:  91%|█████████ | 362/399 [00:10<00:00, 37.91it/s]Loading weights:  92%|█████████▏| 366/399 [00:10<00:00, 34.81it/s]Loading weights:  93%|█████████▎| 373/399 [00:10<00:00, 28.93it/s]Loading weights:  96%|█████████▌| 384/399 [00:11<00:00, 38.40it/s]Loading weights:  97%|█████████▋| 389/399 [00:11<00:00, 35.60it/s]Loading weights: 100%|██████████| 399/399 [00:11<00:00, 35.16it/s]
-steering: add, reply_only=True; out C:\dev\already-clean\results\concepts_fame
-A. L. Holt               prompts failed: Luna returned no answer for this concept (declined, e.g. as ambiguous)
-Democratic Republic of the Congo recall 8/20 | k_mean 1 k_flip 1 (base LO 0.83) | steer R1 n=2 x1.0: held-out 0.10 (default 0.05, random 0.00)
-Malaysia Airlines Flight 17 recall 11/20 | k_mean 5 k_flip 2 (base LO 0.99) | steer R4 n=2 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Lisa Marie Presley       not recalled (3/20); discovered ['Lisa Marie Presley']
-Mosab Hassan Yousef      not recalled (0/20); discovered []
-2008 Indian Premier League not recalled (0/20); discovered []
-Gille Críst, Earl of Mar not recalled (0/20); discovered []
-Jawahar Prasad           not recalled (0/20); discovered []
-Gulf of Mexico           recall 14/20 | k_mean 1 k_flip 2 (base LO 5.43) | steer R1 n=2 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Die Hard                 recall 13/20 | k_mean 1 k_flip 2 (base LO 4.8) | steer R1 n=2 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Andrea Riseborough       not recalled (4/20); discovered []
-Joey Fatone              not recalled (0/20); discovered []
-2023 NBA All-Star Game   not recalled (1/20); discovered []
-Matthew Dowd             not recalled (0/20); discovered []
-Onnuria melanotoma       not recalled (0/20); discovered []
-Benedict XVI             recall 16/20 | k_mean 1 k_flip 5 (base LO 3.98) | steer R1 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Val Kilmer               recall 6/20 | k_mean 1 k_flip 1 (base LO 2.82) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-The Yardbirds            recall 7/20 | k_mean 3 k_flip 1 (base LO 0.09) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Park Sung-hoon           not recalled (0/20); discovered []
-Vineland                 recall 8/20 | k_mean 1 k_flip 1 (base LO 0.09) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Robin Lässer             not recalled (0/20); discovered []
-Martin Garner (actor)    not recalled (0/20); discovered []
-Switzerland              recall 20/20 | k_mean 1 k_flip 1 (base LO 9.73) | steer R2 n=4 x1.5: held-out 0.20 (default 0.00, random 0.00)
-Renée Zellweger          recall 5/20 | k_mean 1 k_flip 1 (base LO -0.01) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Marla Maples             not recalled (4/20); discovered ['Marla Maples']
-Mikaela Hoover           not recalled (0/20); discovered []
-Joseph Baena             not recalled (0/20); discovered []
-Borenius                 not recalled (0/20); discovered []
-Dominikonų Street, Vilnius not recalled (0/20); discovered []
-John Lennon              recall 17/20 | k_mean 2 k_flip 5 (base LO 7.2) | steer R1 n=4 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Viola Davis              recall 6/20 | k_mean 10 k_flip 5 (base LO 1.88) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Eickeloh                 not recalled (0/20); discovered []
-Humphrey Gilbert         not recalled (0/20); discovered []
-Olivia Chow              recall 9/20 | k_mean 1 k_flip 1 (base LO 0.42) | steer R1 n=2 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Isabel Oakeshott         not recalled (0/20); discovered []
-J. Nort Atkinson         not recalled (0/20); discovered []
-Roman Empire             recall 15/20 | k_mean 2 k_flip 3 (base LO 4.11) | steer R2 n=4 x1.0: held-out 0.50 (default 0.40, random 0.00)
-Michael Keaton           recall 8/20 | k_mean 1 k_flip 1 (base LO 4.11) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
-Top Gun                  recall 14/20 | k_mean 1 k_flip 2 (base LO 5.36) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Addison Timlin           not recalled (0/20); discovered []
-Mayra Dias               not recalled (0/20); discovered []
-Judi Dutcher             not recalled (0/20); discovered []
-Brown Arts Institute     not recalled (0/20); discovered []
-Albert Einstein          recall 17/20 | k_mean 1 k_flip 3 (base LO 6.39) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Jamal Khashoggi          recall 13/20 | k_mean 5 k_flip 5 (base LO 1.86) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Assassination of John F. Kennedy recall 12/20 | k_mean 1 k_flip 1 (base LO 0.66) | steer R1 n=4 x1.0: held-out 0.15 (default 0.15, random 0.00)
-Mrunal Thakur            not recalled (0/20); discovered []
-Backlash (2023)          not recalled (0/20); discovered []
-The Odd Family: Zombie on Sale not recalled (0/20); discovered []
-Trinidad State Beach     not recalled (0/20); discovered []
-Vietnam War              recall 19/20 | k_mean 2 k_flip 20 (base LO 9.43) | steer R4 n=4 x1.5: held-out 0.35 (default 0.00, random 0.00)
-Oracle Corporation       recall 15/20 | k_mean 3 k_flip 10 (base LO 6.79) | steer R1 n=4 x2.0: held-out 0.05 (default 0.00, random 0.00)
-James Marsden            recall 5/20 | k_mean 1 k_flip 1 (base LO -0.17) | steer R1 n=4 x1.0: held-out 0.20 (default 0.20, random 0.00)
-Alfred Hitchcock filmography recall 7/20 | k_mean 2 k_flip 3 (base LO 3.58) | steer R1 n=2 x0.5: held-out 0.00 (default 0.05, random 0.00)
-Canton of La Possession  not recalled (0/20); discovered []
-Andy Rymarczuk           not recalled (0/20); discovered []
-Sir Francis Knowles, 5th Baronet not recalled (0/20); discovered []
-Russian invasion of Ukraine not recalled (3/20); discovered ['Russian invasion of Ukraine', 'Russian Invasion of Ukraine']
-Jungkook                 not recalled (0/20); discovered []
-Luke Perry               not recalled (2/20); discovered []
-Mae Muller               not recalled (0/20); discovered []
-Commotio cordis          recall 13/20 | k_mean 1 k_flip 1 (base LO 2.09) | steer R1 n=4 x1.5: held-out 0.05 (default 0.05, random 0.00)
-6-millimeter band        not recalled (0/20); discovered []
-Daniel Abbot             not recalled (0/20); discovered []
-Elon Musk                recall 15/20 | k_mean 1 k_flip 3 (base LO 6.78) | steer R1 n=4 x1.5: held-out 0.20 (default 0.15, random 0.00)
-SpaceX                   recall 16/20 | k_mean 2 k_flip 20 (base LO 7.46) | steer R2 n=4 x1.0: held-out 0.00 (default 0.00, random 0.00)
-Dexter (TV series)       recall 11/20 | k_mean 2 k_flip 1 (base LO 2.83) | steer R1 n=2 x2.0: held-out 0.20 (default 0.15, random 0.00)
-Tony Ferguson            not recalled (1/20); discovered []
-Will Smith (catcher)     not recalled (0/20); discovered []
-Jonathan H. Green        not recalled (0/20); discovered []
-Copenhagen Amber Museum  not recalled (0/20); discovered []
-Valentine's Day          recall 15/20 | k_mean 2 k_flip 3 (base LO 6.21) | steer R1 n=2 x1.0: held-out 0.15 (default 0.30, random 0.00)
-Rutherford B. Hayes      recall 9/20 | k_mean 2 k_flip 2 (base LO 3.43) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Simla Agreement          recall 12/20 | k_mean 1 k_flip 1 (base LO 0.01) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
-Anyone but You           not recalled (0/20); discovered []
-Mitford family           not recalled (0/20); discovered []
-Sando (official)         not recalled (0/20); discovered []
-Alphaea turatii          not recalled (0/20); discovered []
-North Macedonia          recall 12/20 | k_mean 1 k_flip 1 (base LO 3.79) | steer R1 n=4 x1.0: held-out 0.35 (default 0.35, random 0.00)
-Mary Shelley             recall 9/20 | k_mean 2 k_flip 10 (base LO 6.03) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Aquaman and the Lost Kingdom not recalled (4/20); discovered ['Aquaman and the Lost Kingdom']
-Baldur's Gate            not recalled (4/20); discovered ["Baldur's Gate"]
-Cocooning (behaviour)    not recalled (0/20); discovered []
-Annabel Giles            not recalled (0/20); discovered []
-First Love (Emmy the Great song) not recalled (0/20); discovered []
-C (programming language) recall 19/20 | k_mean 1 k_flip 10 (base LO 13.67) | steer R2 n=4 x1.5: held-out 0.00 (default 0.00, random 0.05)
-Kai Havertz              not recalled (3/20); discovered ['Kai Havertz']
-Andre Braugher           not recalled (2/20); discovered []
-Northern March           not recalled (0/20); discovered []
-Heidi Fleiss             not recalled (0/20); discovered []
-Napapa Tantrakul         not recalled (0/20); discovered []
-Andrew Madoff            not recalled (0/20); discovered []
-Leo XIV                  not recalled (0/20); discovered []
-James VI and I           recall 9/20 | k_mean 2 k_flip 2 (base LO 4.54) | steer R4 n=2 x2.0: held-out 0.05 (default 0.00, random 0.00)
-Lena Dunham              recall 5/20 | k_mean 2 k_flip 2 (base LO 1.78) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Gil Gerard               not recalled (0/20); discovered []
-History of YouTube       recall 16/20 | k_mean 3 k_flip 20 (base LO 7.4) | steer R1 n=2 x1.0: held-out 0.05 (default 0.05, random 0.00)
-Souris, Manitoba         not recalled (0/20); discovered []
-Echo State Park          not recalled (0/20); discovered []
-Russia                   recall 20/20 | k_mean 5 k_flip None (base LO 10.5) | steer R4 n=4 x1.5: held-out 0.60 (default 0.00, random 0.00)
-Passover                 recall 20/20 | k_mean 2 k_flip 20 (base LO 8.23) | steer R4 n=4 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Nosferatu                recall 8/20 | k_mean 1 k_flip 1 (base LO 0.48) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Shin Godzilla            not recalled (1/20); discovered []
-Christine Tremarco       not recalled (0/20); discovered []
-Elkhart Township, Bates County, Missouri not recalled (0/20); discovered []
-Stengöl                  not recalled (0/20); discovered []
-The Holocaust            recall 20/20 | k_mean 2 k_flip 5 (base LO 5.38) | steer R1 n=2 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Shah Rukh Khan           recall 12/20 | k_mean 5 k_flip 3 (base LO 1.14) | steer R2 n=4 x1.5: held-out 0.00 (default 0.00, random 0.00)
-The Color Purple (1985 film) recall 13/20 | k_mean 2 k_flip 1 (base LO 1.22) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Naomi (wrestler)         not recalled (0/20); discovered []
-George John II, Count Palatine of Lützelstein-Guttenberg not recalled (0/20); discovered []
-Bad Boy (Hadise song)    not recalled (0/20); discovered []
-Merodontini              not recalled (0/20); discovered []
-Richard Nixon            recall 15/20 | k_mean 1 k_flip 2 (base LO 2.72) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Jessica Biel             recall 6/20 | k_mean 5 k_flip 10 (base LO -0.37) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Ruth Handler             not recalled (0/20); discovered []
-Marlo Thomas             not recalled (1/20); discovered []
-Miloševići, Višegrad     not recalled (0/20); discovered []
-Arthur Guinness II       recall 8/20 | k_mean 1 k_flip 1 (base LO 1.64) | steer R4 n=4 x1.5: held-out 0.15 (default 0.00, random 0.00)
-Municipal Buildings, Stirling not recalled (0/20); discovered []
-Greek alphabet           recall 11/20 | k_mean 1 k_flip 1 (base LO 2.1) | steer R4 n=4 x1.0: held-out 0.25 (default 0.20, random 0.00)
-Mick Jagger              recall 5/20 | k_mean 2 k_flip 2 (base LO 1.98) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Akshata Murty            not recalled (1/20); discovered []
-Amsterdam (2022 film)    not recalled (0/20); discovered []
-Furman University        not recalled (0/20); discovered []
-Nikephoros the Monk      not recalled (0/20); discovered []
-Alejandro Alagón Cano    not recalled (0/20); discovered []
-Email                    recall 13/20 | k_mean 2 k_flip 5 (base LO 5.32) | steer R1 n=4 x1.0: held-out 0.15 (default 0.15, random 0.00)
-Tiger Woods              recall 16/20 | k_mean 1 k_flip 1 (base LO 1.38) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.05)
-GPT-4                    recall 10/20 | k_mean 1 k_flip 1 (base LO 3.28) | steer R4 n=4 x2.0: held-out 0.05 (default 0.00, random 0.00)
-For All Mankind (TV series) recall 6/20 | k_mean 1 k_flip 1 (base LO 1.22) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Sawyer Sweeten           not recalled (0/20); discovered []
-Perry Mattfeld           not recalled (0/20); discovered []
-Still Life (play)        not recalled (0/20); discovered []
-Pope Benedict XVI        recall 11/20 | k_mean 2 k_flip 5 (base LO 4.21) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Tupac Shakur             recall 6/20 | k_mean 2 k_flip 1 (base LO 3.09) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Ranbir Kapoor            not recalled (1/20); discovered []
-Maithili Thakur          not recalled (0/20); discovered []
-Jason Ralph              not recalled (2/20); discovered ['Jason Ralph']
-Fukrey 3                 not recalled (0/20); discovered []
-Sam Tolchard             not recalled (0/20); discovered []
-Cristiano Ronaldo        recall 15/20 | k_mean 1 k_flip 2 (base LO 3.1) | steer R1 n=4 x1.5: held-out 0.10 (default 0.05, random 0.00)
-One Hundred Years of Solitude recall 14/20 | k_mean 1 k_flip 1 (base LO 2.63) | steer R1 n=2 x0.5: held-out 0.05 (default 0.00, random 0.10)
-Keith Urban              not recalled (2/20); discovered ['Keith Urban']
-Guancheng, Zhengzhou     not recalled (0/20); discovered []
-The Mighty Nein          not recalled (0/20); discovered []
-Ronaldo Valdez           not recalled (0/20); discovered []
-Clay French              not recalled (0/20); discovered []
-Volodymyr Zelenskyy      recall 16/20 | k_mean 1 k_flip 1 (base LO 3.14) | steer R1 n=2 x0.5: held-out 0.00 (default 0.00, random 0.00)
-Reddit                   recall 18/20 | k_mean 2 k_flip 3 (base LO 6.66) | steer R1 n=2 x1.5: held-out 0.05 (default 0.20, random 0.00)
-Drake Bell               not recalled (0/20); discovered []
-Juror No. 2              not recalled (0/20); discovered []
-Millet butterflyfish     not recalled (0/20); discovered []
-Edward Guinness, 1st Earl of Iveagh not recalled (0/20); discovered []
-Rajpur, Kanpur Dehat     not recalled (0/20); discovered []
-Abraham Lincoln          recall 19/20 | k_mean 1 k_flip 5 (base LO 6.63) | steer R1 n=4 x1.0: held-out 0.05 (default 0.05, random 0.00)
-Ashton Kutcher           not recalled (2/20); discovered ['Ashton Kutcher']
-Prince Albert of Saxe-Coburg and Gotha recall 9/20 | k_mean 2 k_flip 5 (base LO 4.92) | steer R4 n=2 x1.5: held-out 0.00 (default 0.00, random 0.00)
-Radical 28               not recalled (4/20); discovered ['2√7']
-Lafon County             not recalled (0/20); discovered []
-William Bludworth        not recalled (0/20); discovered []
-Neolepetopsis densata    not recalled (0/20); discovered []
-wave finished; estimated Luna spend $0.423

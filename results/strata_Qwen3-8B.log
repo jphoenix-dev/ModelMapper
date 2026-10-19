@@ -1,22 +1,0 @@
-W1015 23:50:14.536000 924 Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   3%|▎         | 11/399 [00:00<00:05, 72.37it/s]Loading weights:   5%|▍         | 19/399 [00:00<00:05, 66.84it/s]Loading weights:   7%|▋         | 26/399 [00:00<00:05, 62.37it/s]Loading weights:   9%|▊         | 34/399 [00:00<00:06, 60.41it/s]Loading weights:  11%|█▏        | 45/399 [00:00<00:05, 69.51it/s]Loading weights:  14%|█▎        | 54/399 [00:00<00:04, 73.81it/s]Loading weights:  16%|█▌        | 62/399 [00:00<00:04, 71.52it/s]Loading weights:  18%|█▊        | 70/399 [00:01<00:04, 67.44it/s]Loading weights:  19%|█▉        | 77/399 [00:01<00:04, 67.49it/s]Loading weights:  22%|██▏       | 88/399 [00:01<00:04, 69.68it/s]Loading weights:  25%|██▌       | 100/399 [00:01<00:04, 71.48it/s]Loading weights:  27%|██▋       | 108/399 [00:01<00:04, 66.65it/s]Loading weights:  31%|███       | 122/399 [00:01<00:03, 79.61it/s]Loading weights:  33%|███▎      | 131/399 [00:01<00:03, 77.70it/s]Loading weights:  35%|███▍      | 139/399 [00:01<00:03, 74.32it/s]Loading weights:  37%|███▋      | 148/399 [00:02<00:03, 71.93it/s]Loading weights:  39%|███▉      | 156/399 [00:02<00:03, 73.75it/s]Loading weights:  42%|████▏     | 166/399 [00:02<00:03, 73.16it/s]Loading weights:  44%|████▎     | 174/399 [00:02<00:03, 70.94it/s]Loading weights:  47%|████▋     | 186/399 [00:02<00:03, 68.73it/s]Loading weights:  50%|████▉     | 199/399 [00:02<00:02, 72.79it/s]Loading weights:  52%|█████▏    | 208/399 [00:02<00:02, 74.89it/s]Loading weights:  55%|█████▍    | 219/399 [00:03<00:02, 79.75it/s]Loading weights:  57%|█████▋    | 228/399 [00:03<00:02, 79.06it/s]Loading weights:  59%|█████▉    | 236/399 [00:03<00:02, 74.06it/s]Loading weights:  61%|██████    | 244/399 [00:03<00:02, 75.56it/s]Loading weights:  63%|██████▎   | 252/399 [00:03<00:02, 68.73it/s]Loading weights:  66%|██████▌   | 263/399 [00:03<00:01, 71.81it/s]Loading weights:  69%|██████▉   | 276/399 [00:03<00:01, 75.38it/s]Loading weights:  72%|███████▏  | 287/399 [00:03<00:01, 79.43it/s]Loading weights:  74%|███████▍  | 297/399 [00:04<00:01, 75.20it/s]Loading weights:  76%|███████▋  | 305/399 [00:04<00:01, 74.15it/s]Loading weights:  78%|███████▊  | 313/399 [00:04<00:01, 75.22it/s]Loading weights:  80%|████████  | 321/399 [00:04<00:01, 72.51it/s]Loading weights:  82%|████████▏ | 329/399 [00:04<00:00, 72.66it/s]Loading weights:  85%|████████▍ | 339/399 [00:04<00:00, 76.77it/s]Loading weights:  87%|████████▋ | 347/399 [00:04<00:00, 74.16it/s]Loading weights:  89%|████████▉ | 356/399 [00:04<00:00, 76.46it/s]Loading weights:  91%|█████████▏| 365/399 [00:05<00:00, 74.19it/s]Loading weights:  93%|█████████▎| 373/399 [00:05<00:00, 73.40it/s]Loading weights:  96%|█████████▋| 385/399 [00:05<00:00, 79.69it/s]Loading weights:  98%|█████████▊| 393/399 [00:05<00:00, 75.05it/s]Loading weights: 100%|██████████| 399/399 [00:05<00:00, 74.22it/s]
-0.5M tokens, 4,350 tok/s, eta 36 min
-1.0M tokens, 4,244 tok/s, eta 35 min
-1.5M tokens, 4,286 tok/s, eta 33 min
-2.0M tokens, 4,208 tok/s, eta 32 min
-2.5M tokens, 4,232 tok/s, eta 29 min
-3.0M tokens, 4,212 tok/s, eta 28 min
-3.5M tokens, 4,189 tok/s, eta 26 min
-4.0M tokens, 4,232 tok/s, eta 24 min
-4.5M tokens, 4,269 tok/s, eta 21 min
-5.0M tokens, 4,302 tok/s, eta 19 min
-5.5M tokens, 4,350 tok/s, eta 17 min
-6.0M tokens, 4,370 tok/s, eta 15 min
-6.5M tokens, 4,410 tok/s, eta 13 min
-7.0M tokens, 4,438 tok/s, eta 11 min
-7.5M tokens, 4,467 tok/s, eta 9 min
-8.1M tokens, 4,497 tok/s, eta 7 min
-8.6M tokens, 4,519 tok/s, eta 5 min
-9.1M tokens, 4,532 tok/s, eta 3 min
-9.6M tokens, 4,551 tok/s, eta 2 min
-done: 10,005,329 tokens, 60 mixtures, 100 strata neurons, 37.1 min -> results/strata_Qwen3-8B.json

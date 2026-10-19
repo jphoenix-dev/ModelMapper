@@ -1,6 +1,0 @@
-Feeder overlap (Jaccard of top-20 earlier-layer feeders), 497 (neuron, concept) pairs:
-  same neuron, two of its users - topic neurons (n=80): median 0.111, mean 0.134
-  same neuron, two of its users - widely shared (n=20): median 0.445, mean 0.434
-  same concept, two different shared neurons (n=27): median 0.111
-  chance (different neuron, different concept; n=2000): median 0.000, mean 0.011
-  topic neurons above the chance median: 80/80

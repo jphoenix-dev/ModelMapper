@@ -1,6 +1,0 @@
-verify_fast: 300 neurons; wall 4.7 min, GPU busy 0.9 min (19%); Luna {'calls': 228, 'input_tokens': 14509, 'output_tokens': 196817}
-null 99th percentile 0.093 (n=458); verified = drop >= 1.000
-  top     n=100 tested 74 verified 16 (16%): Algebraic notation (chess) (L33:3837, +14.2), 24 Hours of Le Mans (L31:7680, +10.2), NGC 7319 (L27:6441, +6.3), Hydrogeology (L29:8015, +6.0), Selenium tetrachloride (L32:3220, +5.7), Accelerometer (L29:5865, +2.8), Ottoman Empire (L35:8466, +2.4), CD-ROM (L30:675, +2.4), Ketamine (L28:8690, +2.1), Sandra Day O'Connor (L29:8438, +2.0), Greek alphabet (L29:10912, +2.0), Augustinians (L31:5978, +1.6), James Watson (L30:7321, +1.6), Adani Group (L35:11600, +1.6), California (L35:6094, +1.2)
-  random  n=100 tested 68 verified 0 (0%): 
-  known   n=100 tested 87 verified 32 (32%): United Nations (L32:2879, +17.1), Nowruz (L34:10700, +8.7), Yom Kippur War (L30:11639, +4.9), Vacuum (L32:6796, +4.6), Switzerland (L31:8174, +4.3), WWE (L33:479, +4.3), Europe (L34:5318, +3.9), Pervez Musharraf (L35:10238, +3.9), Ottoman Empire (L31:1287, +3.8), Bob Marley (L29:5146, +3.8), Ringo Starr (L34:10900, +2.9), Greenland (L30:8147, +2.6), Yemen (L33:7870, +2.5), New Year's Eve (L23:2088, +2.4), Vatican City (L8:334, +2.3)
-CRITERION NOT MET (top >= 3x random and >= 20%)

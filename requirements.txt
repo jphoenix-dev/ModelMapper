@@ -1,6 +1,6 @@
-# Versions installed in the environment the experiments ran in (Python 3.11.9, Windows 10, CUDA 12.8).
+# The versions every published result used (Python 3.11.9, Windows 10, CUDA 12.8); the same pins as pyproject.toml.
 # Python 3.10 is also supported: numpy and pyarrow fall back to their newest 3.10 releases (markers below).
-# Install torch first, from the index for your hardware (see SETUP.md), e.g.
+# Install torch first, from the index for your hardware (SETUP.md), e.g.
 #   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 torch==2.11.0
 transformers==5.20.0
@@ -13,6 +13,3 @@ numpy==2.2.6; python_version < "3.11"
 pyarrow==26.0.0; python_version >= "3.11"
 pyarrow==25.0.1; python_version < "3.11"
 httpx==0.28.1
-# The neuron/concept ledger (modelmapper/ledger, LEDGER.md)
-duckdb==1.4.1
-PyYAML==6.0.3

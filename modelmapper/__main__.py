@@ -1,4 +1,4 @@
-"""python -m modelmapper ... == the `modelmapper` command (works from the repo root without installing)."""
+"""python -m modelmapper ... == the `modelmapper` command."""
 from modelmapper.cli import main
 
 raise SystemExit(main())
