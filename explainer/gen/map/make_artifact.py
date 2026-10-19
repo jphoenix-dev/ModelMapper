@@ -36,7 +36,9 @@ def neurons_page(out):
     out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(page, encoding="utf-8")
     graphs = ["cgraph.json"] if (src / "data" / "cgraph.json").exists() else []
-    for p in ["neuronmap.json", "concepts.json"] + [f"n/L{L}.json" for L in range(36)] + [f"push/L{L}.json" for L in range(36)] + graphs:
+    pj = src / "data" / "push_j"                                             # J-lens readings, once published
+    jlens = [f"push_j/{p.name}" for p in sorted(pj.glob("*.json"))] if pj.exists() else []
+    for p in ["neuronmap.json", "concepts.json"] + [f"n/L{L}.json" for L in range(36)] + [f"push/L{L}.json" for L in range(36)] + graphs + jlens:
         (out / "data" / p).parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src / "data" / p, out / "data" / p)
     print(f"{out / 'index.html'}: {len(page) / 1e3:.0f} kB")

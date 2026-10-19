@@ -89,17 +89,17 @@ svg.graph .gbox:focus { outline: none; }
 <article class="col">
   <p>In <a href="../">Eiffel Tower Qwen</a> we showed that a handful of neurons carry each concept the model knows: switch them off and it can't name the concept; turn them up and it talks about it.</p>
   <p>Since then we have run the same test on over 5,000 concepts, which we've connected to about 44,000 of the model's 442,368 neurons. This page maps those neurons to concepts.</p>
-  <p>The code is available on GitHub <a href="https://github.com/jphoenix-dev/ModelMapper">here</a>.</p>
+  <p>The code will follow on GitHub.</p>
   <section class="how">
   <p><b>How it works:</b></p>
   <p>Our first and main approach is the following process:</p>
   <ul class="pts">
     <li><b>Ask.</b> For a given concept, Qwen answers about ten questions about it, such as questions whose answer is the concept's name (“What drink is brewed in a French press?” → Coffee). We keep only those questions Qwen answers correctly.</li>
-    <li><b>Observe.</b> For every neuron we measure how strongly it fires and how sensitive the answer is to it. Together these estimate how much Qwen's likelihood of replying with the concept as its answer (its “concept-specific certainty”) would drop if that neuron were switched off.</li>
+    <li><b>Observe.</b> For every neuron we measure how strongly it fires and how sensitive the answer is to it. Together these estimate how much Qwen's likelihood of replying with the concept as its answer (its “concept-specific certainty”) would drop if that neuron were switched off. For about 1,400 neurons so far, we also record where in ordinary web text they fire most strongly, for contrast.</li>
     <li><b>Ablate.</b> We switch off the 200 neurons with the biggest estimated drop, one at a time, and keep the 30 that reduce the concept-specific certainty the most. As a control, we also switch off random neurons in the same layers to confirm they do not meaningfully reduce concept-specific certainty.</li>
+    <li><b>Label.</b> We name neurons for convenience when we are confident in our reading of them, based on the concepts that need them, the words they push the model towards and the web text they fire most on.</li>
   </ul>
   <p>This approach finds concept-linked neurons well, but tells us only a limited amount about what those neurons do, and little about neurons that respond less strongly. So we are exploring other ways of identifying neurons' “jobs”, explained further below.</p>
-  <p>We name neurons for convenience when we are confident in our reading of them, based on the concepts that need them, the words they push the model towards and the web text they fire most on.</p>
   <p>All findings are work in progress, and not every process has been run for every neuron yet.</p>
   </section>
 </article>
@@ -152,7 +152,7 @@ svg.graph .gbox:focus { outline: none; }
   <p>We use three kinds of evidence. A neuron's job is clearest when they agree; for many neurons we only have one or two so far.</p>
   <ol class="pts">
     <li><b>What breaks without it.</b> Switch the neuron off and see which answers get worse. This is the test behind every dot on the map, and it is the strongest evidence we have: it shows the model needs the neuron for that concept.</li>
-    <li><b>What it pushes.</b> When a neuron fires it nudges the model towards some tokens and away from others. We can read those tokens straight from the model's weights. This works well for neurons in the last third of the model, which write the answer, and poorly for earlier ones, which work through later neurons.</li>
+    <li><b>What it pushes.</b> When a neuron fires it nudges the model towards some tokens and away from others. We can read those tokens straight from the model's weights. This works well for neurons in the last third of the model, which write the answer, and poorly for earlier ones, which work through later neurons. So for earlier neurons we also show a second reading, the J-lens (from Anthropic's <a href="https://transformer-circuits.pub/2026/workspace">Jacobian lens</a>): the average effect that a nudge at the neuron's layer has on the model's final choice of word, across many texts. Because it follows the push through all the later layers, it is far more reliable for early neurons than the weights alone. We show it only in the layers where it passed a reliability check we set in advance: layers 0–20, 31 and 32. It is still a reading of the neuron, not a label.</li>
     <li><b>What makes it fire.</b> An AI (GPT-6-Luna) reads the web text where the neuron fires most strongly and describes the pattern; a second AI (Jev) checks that description against new text. We have done this for about 1,400 neurons so far.</li>
   </ol>
   <p><b>Neurons fire positively or negatively, and the sign matters.</b> Each neuron produces one number for every token, and it can be positive or negative. A positive number pushes the model one way; a negative one pushes it the exact opposite way. The two directions often do quite different jobs, so we describe them separately. Which side is called "positive" is an accident of how the model's weights are written down: flip the signs inside a neuron and the model behaves identically. So negative doesn't mean "anti"; what matters is which way the neuron pushes. About half of neurons happen to do their main job when firing negatively. The neuron that the African Union depends on pushes the model towards "African", "Africa" and "非洲" (Chinese for Africa) only when it fires negatively, which is how it fires when Qwen is asked about the African Union; its positive side pushes towards nothing in particular. When you hover over a neuron, the side it takes for the chosen concept is highlighted.</p>

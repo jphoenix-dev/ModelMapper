@@ -56,6 +56,10 @@
 
   let D, N, byLayer, cur = null, depth = 35, hover = -1, pinned = -1, showHeads = false, zoom = -1, CUT = 20, onlyLit = false, peek = -1;
   const layerCache = {}, pushCache = {};
+  let jLayerSet = null;                              // layers whose J-lens readings are shown (empty until published)
+  const jLayers = () => (jLayerSet = jLayerSet || fetch("data/push_j/layers.json").then((r) => (r.ok ? r.json() : []))
+    .then((a) => new Set((Array.isArray(a) ? a : a.layers || []).map((x) => (typeof x === "number" ? x : x.show ? x.layer : -1))))
+    .catch(() => new Set()));
   const cv = $("map"), ctx = cv.getContext("2d");
   let G = {};
 
@@ -272,33 +276,41 @@
     if (ROLE_TEXT[N.role[k]]) h += ROLE_TEXT[N.role[k]] + "<br>";
     // A neuron's activity can be positive or negative, and the two push the model in opposite directions, often with
     // different jobs. For each side: the blind web-text description (if any) and the words it pushes towards (weights).
-    const push = (await (pushCache[L] = pushCache[L] || fetch(`data/push/L${L}.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({}))))[String(i)];
+    const getJson = (cache, url) => (cache[url] = cache[url] || fetch(url).then((r) => (r.ok ? r.json() : {})).catch(() => ({})));
+    const push = (await getJson(pushCache, `data/push/L${L}.json`))[String(i)];
+    // the J-lens reading (what a nudge here does to the final layer, through the later layers), in layers where it
+    // passed its reliability check (data/push_j/layers.json, fixed before the results)
+    const jl = (await jLayers()).has(L) ? (await getJson(pushCache, `data/push_j/L${L}.json`))[String(i)] : null;
     if (hover !== k && pinned !== k) return;
     // The sign we have is the neuron's sign at one moment: as Qwen starts its answer (the last token of the question).
     // Answers are often several tokens ("A" + "est" + "hetics"), and a neuron can matter at a later one, firing the
     // other way. So we tag the side it takes at the start, and separately flag a side whose pushed words are part of
     // the answer itself.
     const side = mine && !cur[14] && mine.length > 2 ? mine[2] : 0;
-    const cleanW = (ws) => ws.map((w) => w.trim()).filter((w, j, a) => w && a.findIndex((x) => x.toLowerCase() === w.toLowerCase()) === j).slice(0, 8);
+    const cleanW = (ws) => ws.map((w) => w.trim()).filter((w, j, a) => w && !/^<\|.*\|>$/.test(w) && a.findIndex((x) => x.toLowerCase() === w.toLowerCase()) === j).slice(0, 8);
     const ans = cur && !cur[14] ? String(cur[2] || cur[1]).toLowerCase().replace(/[^a-zÀ-ɏ㐀-鿿]+/g, "") : "";
     const inAnswer = (ws) => ws.filter((w) => { const x = w.toLowerCase().replace(/[^a-zÀ-ɏ㐀-鿿]+/g, ""); return x.length >= 3 && ans.includes(x); });
     [["pos", 1, "positively"], ["neg", -1, "negatively"]].forEach(([pole, s, word], j) => {
       const lab = f.find((x) => x.kind === "label" && x.metric && x.metric.pole === pole);
-      const ws = push ? cleanW(push[j]) : [];
-      if (!lab && !ws.length) return;
-      const atStart = side === s, part = ans ? inAnswer(ws) : [];
+      const ws = push ? cleanW(push[j]) : [], wj = jl ? cleanW(jl[j]) : [];
+      if (!lab && !ws.length && !wj.length) return;
+      const atStart = side === s, part = ans ? [...new Set(inAnswer(ws).concat(inAnswer(wj)))] : [];
+      const words = (a) => a.map((w) => `<code>${esc(w)}</code>`).join("");
       const tags = (atStart ? ` <span class="tag-on">· how it fires as Qwen starts answering “${esc(cur[1])}”</span>` : "") +
         (part.length ? ` <span class="tag-on">· pushes part of the answer (“${part.slice(0, 3).map(esc).join("”, “")}”)</span>` : "");
       h += `<div class="side${atStart || part.length ? " on" : ""}"><b>When it fires ${word}</b>${tags}: ` +
         (lab ? `in web text, “${esc(lab.title)}”${lab.metric.clean ? " (checked: one clear job)" : ""}. ` : "") +
-        (ws.length ? `<span class="words">It pushes the model towards ${ws.map((w) => `<code>${esc(w)}</code>`).join("")}</span>` : "") + `</div>`;
+        (wj.length ? (ws.length ? `<span class="words">Directly, it pushes the model towards ${words(ws)}</span><br>` : "") +
+          `<span class="words">Through the later layers, it pushes towards ${words(wj)} <span class="muted">(J-lens)</span></span>`
+          : ws.length ? `<span class="words">It pushes the model towards ${words(ws)}</span>` : "") + `</div>`;
     });
     if (side && push && ans) {
       const startW = cleanW(push[side === 1 ? 0 : 1]), otherW = cleanW(push[side === 1 ? 1 : 0]);
       if (!inAnswer(startW).length && inAnswer(otherW).length)
         h += `<span class="muted">The answer is written in several pieces, so this neuron probably does its part later in the answer, firing the other way.</span><br>`;
     }
-    if (push && L < 20) h += `<span class="muted">(Pushed words are read from its weights; that reading is much less reliable this early in the model.)</span><br>`;
+    if (push && L < 20) h += jl ? `<span class="muted">(The direct words are read from its weights, which is much less reliable this early in the model; the J-lens words follow its push through the later layers.)</span><br>`
+      : `<span class="muted">(Pushed words are read from its weights; that reading is much less reliable this early in the model.)</span><br>`;
     // its jobs in the facts test, in one plain sentence (job classes; the raw knockout summaries live on the neuron page)
     const jc = {};
     f.forEach((x) => {
