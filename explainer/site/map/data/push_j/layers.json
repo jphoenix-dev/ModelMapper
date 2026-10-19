@@ -1,0 +1,295 @@
+{
+ "source": "D:\\already-clean-data\\jlens256\\jlens",
+ "windows": 256,
+ "rule": "fixed before the 256-window results were\nseen (18 Oct): a layer qualifies if, in jlens_validate.json, the J-lens's median held-out next-16-token rank is better\n(lower) than the logit lens's, AND the split-half top-20 overlap (sampled every 5 layers; nearest sampled layer) is\n>= 0.5.",
+ "layers": [
+  {
+   "layer": 0,
+   "j_rank": 353.0,
+   "logit_rank": 18148.5,
+   "split_half": 0.675,
+   "split_half_from": 0,
+   "show": true
+  },
+  {
+   "layer": 1,
+   "j_rank": 473.5,
+   "logit_rank": 19648.5,
+   "split_half": 0.675,
+   "split_half_from": 0,
+   "show": true
+  },
+  {
+   "layer": 2,
+   "j_rank": 1020.5,
+   "logit_rank": 16316.0,
+   "split_half": 0.675,
+   "split_half_from": 0,
+   "show": true
+  },
+  {
+   "layer": 3,
+   "j_rank": 252.5,
+   "logit_rank": 11201.0,
+   "split_half": 0.75,
+   "split_half_from": 5,
+   "show": true
+  },
+  {
+   "layer": 4,
+   "j_rank": 371.5,
+   "logit_rank": 3266.5,
+   "split_half": 0.75,
+   "split_half_from": 5,
+   "show": true
+  },
+  {
+   "layer": 5,
+   "j_rank": 305.0,
+   "logit_rank": 1644.0,
+   "split_half": 0.75,
+   "split_half_from": 5,
+   "show": true
+  },
+  {
+   "layer": 6,
+   "j_rank": 272.5,
+   "logit_rank": 1450.0,
+   "split_half": 0.75,
+   "split_half_from": 5,
+   "show": true
+  },
+  {
+   "layer": 7,
+   "j_rank": 142.5,
+   "logit_rank": 1308.0,
+   "split_half": 0.75,
+   "split_half_from": 5,
+   "show": true
+  },
+  {
+   "layer": 8,
+   "j_rank": 190.0,
+   "logit_rank": 1865.5,
+   "split_half": 0.725,
+   "split_half_from": 10,
+   "show": true
+  },
+  {
+   "layer": 9,
+   "j_rank": 117.0,
+   "logit_rank": 1559.5,
+   "split_half": 0.725,
+   "split_half_from": 10,
+   "show": true
+  },
+  {
+   "layer": 10,
+   "j_rank": 115.5,
+   "logit_rank": 998.0,
+   "split_half": 0.725,
+   "split_half_from": 10,
+   "show": true
+  },
+  {
+   "layer": 11,
+   "j_rank": 122.0,
+   "logit_rank": 878.0,
+   "split_half": 0.725,
+   "split_half_from": 10,
+   "show": true
+  },
+  {
+   "layer": 12,
+   "j_rank": 132.5,
+   "logit_rank": 542.0,
+   "split_half": 0.725,
+   "split_half_from": 10,
+   "show": true
+  },
+  {
+   "layer": 13,
+   "j_rank": 143.5,
+   "logit_rank": 510.5,
+   "split_half": 0.8,
+   "split_half_from": 15,
+   "show": true
+  },
+  {
+   "layer": 14,
+   "j_rank": 171.0,
+   "logit_rank": 616.0,
+   "split_half": 0.8,
+   "split_half_from": 15,
+   "show": true
+  },
+  {
+   "layer": 15,
+   "j_rank": 140.5,
+   "logit_rank": 641.5,
+   "split_half": 0.8,
+   "split_half_from": 15,
+   "show": true
+  },
+  {
+   "layer": 16,
+   "j_rank": 148.0,
+   "logit_rank": 561.5,
+   "split_half": 0.8,
+   "split_half_from": 15,
+   "show": true
+  },
+  {
+   "layer": 17,
+   "j_rank": 186.5,
+   "logit_rank": 509.0,
+   "split_half": 0.8,
+   "split_half_from": 15,
+   "show": true
+  },
+  {
+   "layer": 18,
+   "j_rank": 179.0,
+   "logit_rank": 371.0,
+   "split_half": 0.85,
+   "split_half_from": 20,
+   "show": true
+  },
+  {
+   "layer": 19,
+   "j_rank": 157.5,
+   "logit_rank": 308.5,
+   "split_half": 0.85,
+   "split_half_from": 20,
+   "show": true
+  },
+  {
+   "layer": 20,
+   "j_rank": 175.0,
+   "logit_rank": 246.0,
+   "split_half": 0.85,
+   "split_half_from": 20,
+   "show": true
+  },
+  {
+   "layer": 21,
+   "j_rank": 240.5,
+   "logit_rank": 215.5,
+   "split_half": 0.85,
+   "split_half_from": 20,
+   "show": false
+  },
+  {
+   "layer": 22,
+   "j_rank": 153.0,
+   "logit_rank": 88.0,
+   "split_half": 0.85,
+   "split_half_from": 20,
+   "show": false
+  },
+  {
+   "layer": 23,
+   "j_rank": 79.5,
+   "logit_rank": 62.5,
+   "split_half": 0.95,
+   "split_half_from": 25,
+   "show": false
+  },
+  {
+   "layer": 24,
+   "j_rank": 60.0,
+   "logit_rank": 41.5,
+   "split_half": 0.95,
+   "split_half_from": 25,
+   "show": false
+  },
+  {
+   "layer": 25,
+   "j_rank": 40.0,
+   "logit_rank": 25.0,
+   "split_half": 0.95,
+   "split_half_from": 25,
+   "show": false
+  },
+  {
+   "layer": 26,
+   "j_rank": 38.0,
+   "logit_rank": 21.5,
+   "split_half": 0.95,
+   "split_half_from": 25,
+   "show": false
+  },
+  {
+   "layer": 27,
+   "j_rank": 22.5,
+   "logit_rank": 17.0,
+   "split_half": 0.95,
+   "split_half_from": 25,
+   "show": false
+  },
+  {
+   "layer": 28,
+   "j_rank": 17.0,
+   "logit_rank": 13.0,
+   "split_half": 0.95,
+   "split_half_from": 30,
+   "show": false
+  },
+  {
+   "layer": 29,
+   "j_rank": 10.0,
+   "logit_rank": 8.0,
+   "split_half": 0.95,
+   "split_half_from": 30,
+   "show": false
+  },
+  {
+   "layer": 30,
+   "j_rank": 7.0,
+   "logit_rank": 7.0,
+   "split_half": 0.95,
+   "split_half_from": 30,
+   "show": false
+  },
+  {
+   "layer": 31,
+   "j_rank": 4.0,
+   "logit_rank": 5.0,
+   "split_half": 0.95,
+   "split_half_from": 30,
+   "show": true
+  },
+  {
+   "layer": 32,
+   "j_rank": 2.0,
+   "logit_rank": 3.0,
+   "split_half": 0.95,
+   "split_half_from": 30,
+   "show": true
+  },
+  {
+   "layer": 33,
+   "j_rank": 1.0,
+   "logit_rank": 1.0,
+   "split_half": 1.0,
+   "split_half_from": 35,
+   "show": false
+  },
+  {
+   "layer": 34,
+   "j_rank": 1.0,
+   "logit_rank": 1.0,
+   "split_half": 1.0,
+   "split_half_from": 35,
+   "show": false
+  },
+  {
+   "layer": 35,
+   "j_rank": 0.0,
+   "logit_rank": 0.0,
+   "split_half": 1.0,
+   "split_half_from": 35,
+   "show": false
+  }
+ ]
+}
