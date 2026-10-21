@@ -16,6 +16,17 @@ from modelmapper.settings import DEFAULT_MODEL, short_name
 DEFAULT_OUT = Path.cwd() / "maps"
 
 
+def check_prompt_format(model, measurer=None):
+    """Fail before any labeller call (which costs money) if the model cannot be asked the questions: no chat template
+    and MODEL_MAPPER_PROMPT is not 'plain'. Loads only the tokenizer when no measurer is given."""
+    from modelmapper.measure import prompt_format
+    if measurer is not None:
+        return prompt_format(measurer.tok)
+    from transformers import AutoTokenizer
+    from modelmapper.settings import model_path
+    return prompt_format(AutoTokenizer.from_pretrained(model_path(model)))
+
+
 class LabellerError(RuntimeError):
     """The labeller step failed (no key, the spend cap, an endpoint error or an unusable reply); the message says which."""
 
@@ -59,6 +70,7 @@ def map_concept(concept, model=None, out=None, budget=0.5, spec=None, measurer=N
     model = (measurer.model_name if measurer else None) or model or DEFAULT_MODEL
     folder = Path(out or DEFAULT_OUT) / short_name(model)
     cache = folder / "spec_cache"; timing, notes = {}, []
+    check_prompt_format(model, measurer)              # raises PromptFormatError before the labeller is paid for anything
     if spec is None:
         log(f"[1/4] asking: the labeller writes questions about {concept!r}")
         try:
@@ -96,6 +108,7 @@ def map_batch(concepts, model=None, out=None, budget=0.5, resume=True, band=None
     model = model or DEFAULT_MODEL
     folder = Path(out or DEFAULT_OUT) / short_name(model); folder.mkdir(parents=True, exist_ok=True)
     measurer, results = None, []
+    check_prompt_format(model)                        # once, before any concept (and any labeller call)
     for i, c in enumerate(dict.fromkeys(x.strip() for x in concepts if x.strip()), 1):
         path = folder / f"{slug(c)}.json"
         if resume and path.exists():

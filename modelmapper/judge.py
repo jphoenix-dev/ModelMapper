@@ -212,6 +212,45 @@ def choice(state, instructions, options: dict) -> dict[str, float]:
     return ask(state, {"q": q})["q"]["probabilities"]
 
 
+# ---- token exams (the v3 label exam, modelmapper/exam.py) ------------------------------------------------
+# One state per description (or per shown token list), one yes/no question per candidate token. The framing,
+# notation and rubric live in the state, which Jev bills once per call, so each question is only the token
+# (about 12 tokens instead of about 68). Questions are answered independently, so any number of candidates can
+# share one call (the exam merges up to 1,000 per call). Same prompts as the research run (judge_jev_iterate
+# "terse" and judge_jev_examples).
+WS = "Whitespace is shown as ⏎ newline, ⇥ tab, ␍ carriage return, ␣ leading space."
+RATE_FRAME = ("A unit (neuron) inside a language model is described below. For each token you are asked about, judge from the "
+              f"description alone whether the unit would switch on strongly for that token. {WS} A token qualifies if the "
+              "description names it or clearly covers the kind of token it is (same topic, category, form or script); a token "
+              "the description does not cover, or covers only vaguely, does not.")
+EXAMPLES_FRAME = ("Below are the tokens (words or word pieces) that most strongly switch on one unit (neuron) inside a language "
+                  f"model, strongest first. {WS} For each token you are asked about, judge whether it is likely to switch on the "
+                  "same unit strongly too: it qualifies if it is one of these tokens or clearly the same kind of token (same "
+                  "topic, category, form, script or function); otherwise it does not.")
+
+
+def visible(t: str) -> str:
+    """A token as shown to the labeller and judge: leading space as ␣, newline ⏎, tab ⇥, carriage return ␍."""
+    return (("␣" + t[1:]) if t.startswith(" ") else t).replace("\n", "⏎").replace("\t", "⇥").replace("\r", "␍")
+
+
+def _token_questions(tokens: list[str]) -> dict:
+    return {f"t{i}": {"type": "noul", "instructions": f"Would the unit switch on strongly for the token «{visible(c)}»?"}
+            for i, c in enumerate(tokens)}
+
+
+def rate(description: str, tokens: list[str]) -> list[float]:
+    """0-100 per token: how likely a unit with this description switches on strongly for it (100 x P(yes))."""
+    ans = ask(f"{RATE_FRAME}\n\nUnit description: {description}", _token_questions(tokens))
+    return [100.0 * float(ans[f"t{i}"]["noul"]) for i in range(len(tokens))]
+
+
+def rate_examples(shown: list[str], tokens: list[str]) -> list[float]:
+    """0-100 per token: the description-free version; the state is the unit's shown favourites (already visible())."""
+    ans = ask(f"{EXAMPLES_FRAME}\n\nTokens that switch on the unit: " + "  ".join(shown), _token_questions(tokens))
+    return [100.0 * float(ans[f"t{i}"]["noul"]) for i in range(len(tokens))]
+
+
 INTRUDER_INSTRUCTIONS = ("All but one of these numbered text snippets share a common theme or "
                          "feature. Which snippet is the odd one out?")
 

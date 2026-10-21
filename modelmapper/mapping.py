@@ -20,7 +20,7 @@ import numpy as np
 import torch
 
 from modelmapper import guards
-from modelmapper.measure import MIN_P, leaks
+from modelmapper.measure import MIN_P, as_prompt, leaks
 from modelmapper.model import DEVICE, mlps, steer
 
 SCHEMA = "loop_v2.0"
@@ -49,25 +49,44 @@ def provenance(pipe, code_commit):
     return {**_run1_provenance(pipe, code_commit), **guards.provenance_extra(pipe)}
 
 
+def head_dim(config):
+    """config.head_dim, or hidden_size // num_attention_heads when the config has none (OLMo-2), as transformers does."""
+    return getattr(config, "head_dim", None) or config.hidden_size // config.num_attention_heads
+
+
+def norm_gain(norm):
+    """An RMSNorm's per-dimension gain: its weight, or 1 + weight for Gemma-style norms (they scale by 1 + w)."""
+    w = norm.weight.detach().float()
+    return 1 + w if type(norm).__name__.startswith("Gemma") else w
+
+
 def roles(pipe, units, acts, answer_id):
-    """Weights-only reading of each unit's direct push (in the sign it takes at the answer position)."""
-    m = pipe.model; WU = m.lm_head.weight.detach(); g = m.model.norm.weight.detach().float(); L = m.config.num_hidden_layers
+    """Weights-only reading of each unit's direct push (in the sign it takes at the answer position).
+    0.1.1: models that normalise the MLP output before the residual (OLMo-2, Gemma 2/3: post_feedforward_layernorm)
+    get that norm's gain in the product too. Its RMS scale depends on the input, so there the reading is approximate,
+    and each entry says so ("approximate": true). Qwen3 has no such norm: its readings are unchanged."""
+    m = pipe.model; WU = m.lm_head.weight.detach(); g = norm_gain(m.model.norm); L = m.config.num_hidden_layers
+    post = [getattr(layer, "post_feedforward_layernorm", None) for layer in m.model.layers]
     out = []
     for (l, n), a in zip(units, acts):
-        v = (a * mlps(m)[l].down_proj.weight[:, n].detach().float() * g).to(WU.dtype)
+        col = mlps(m)[l].down_proj.weight[:, n].detach().float()
+        if post[l] is not None:
+            col = col * norm_gain(post[l])
+        v = (a * col * g).to(WU.dtype)
         lg = (WU @ v).float()
         rank = int((lg > lg[answer_id]).sum()) + 1; z = float((lg[answer_id] - lg.mean()) / (lg.std() + 1e-6))
         role = "early" if l < round(LATE_FRAC * L) else "say" if rank <= 10 else "attribute" if z >= 2 else "late-other"
         out.append({"neuron": f"L{l}:{n}", "answer_rank": rank, "answer_z": round(z, 3), "role": role,
                     "job_tokens": [pipe.tok.decode([i]) for i in lg.topk(30).indices.tolist()]})
+        if post[l] is not None:
+            out[-1]["approximate"] = True
     return out
 
 
 def map_concept(pipe, concept, spec, arrays_path, code_commit="unknown"):
     """Returns {"concept", "row" (map_loop row), "rank" (rank_save row, None unless recalled), "v2": {...}}."""
     m = pipe.model; T = {}; prov = provenance(pipe, code_commit); t = time.time()
-    chat = [pipe.tok.apply_chat_template([{"role": "user", "content": q + " Answer with just the name."}],
-                                         tokenize=False, add_generation_prompt=True, enable_thinking=False) for q in spec["recall_v3"]]
+    chat = [as_prompt(pipe.tok, q + " Answer with just the name.") for q in spec["recall_v3"]]   # 0.1.1: as_prompt
     a = spec["answer"].strip(); base_ = a[4:].strip() if a.lower().startswith("the ") else a
     forms = list(dict.fromkeys([a, a[:1].upper() + a[1:], a.title(), base_, base_[:1].upper() + base_[1:]] + spec.get("answer_forms_extra", [])))
     best = None; form_scores = {}
@@ -119,7 +138,7 @@ def map_concept(pipe, concept, spec, arrays_path, code_commit="unknown"):
     t = time.time(); _, _, _, rdrops = kvals([(l, rng.randrange(pipe.W)) for l, _ in top]); T["G2_random_curve"] = round(time.time() - t, 2)
     t = time.time(); L_, W_ = pipe.L, pipe.W
     pmax = torch.zeros(L_, W_, device=DEVICE); pmin = torch.zeros(L_, W_, device=DEVICE)
-    zmean = torch.zeros(L_, m.config.num_attention_heads * m.config.head_dim, device=DEVICE); att_rows = {}
+    zmean = torch.zeros(L_, m.config.num_attention_heads * head_dim(m.config), device=DEVICE); att_rows = {}   # 0.1.1
     ans = torch.zeros(L_, W_, device=DEVICE); resid = []
     for qi, q in enumerate(rp):                      # default (sdpa) kernel, prompt only - exactly as cross_activation.py
         ids = pipe.tok(q, return_tensors="pt").to(DEVICE).input_ids; st = {}; zs = {}

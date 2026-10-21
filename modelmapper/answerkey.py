@@ -28,9 +28,9 @@ def uid(layer, neuron) -> str:
 
 
 def chat_prompt(tok, question: str) -> str:
-    """The V3 recall format, exactly as pipeline_fast builds it."""
-    return tok.apply_chat_template([{"role": "user", "content": question + " Answer with just the name."}],
-                                   tokenize=False, add_generation_prompt=True, enable_thinking=False)
+    """The V3 recall format, exactly as pipeline_fast builds it (through measure.as_prompt since 0.1.1)."""
+    from modelmapper.measure import as_prompt
+    return as_prompt(tok, question + " Answer with just the name.")
 
 
 def run_pinned(pipe, concept: str, pinned: dict, top_k: int = 20) -> dict:

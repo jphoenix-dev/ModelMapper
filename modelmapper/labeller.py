@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import random
+import threading
 import time
 from pathlib import Path
 
@@ -117,3 +118,42 @@ def chat(prompt: str, system: str | None = None, model: str = MODEL, json_mode: 
 
 def chat_json(prompt: str, system: str | None = None, **kw) -> dict:
     return json.loads(chat(prompt, system, json_mode=True, **kw))
+
+
+def chat_json_n(prompt: str, system: str | None = None, n: int = 1, model: str = MODEL, **kw) -> list[dict]:
+    """n independent JSON replies to the same prompt from ONE request (the prompt is billed once). A reply that does not
+    parse is {"error": ...}; fewer than n choices can come back. Raises OAIError if the request fails."""
+    data = chat_n_raw(prompt, system, n, model, **kw)
+    tally(data)
+    return parse_n(data, n)
+
+
+_tally_lock = threading.Lock()
+
+
+def chat_n_raw(prompt: str, system: str | None = None, n: int = 1, model: str = MODEL, **kw) -> dict:
+    """The raw response of chat_json_n's request, NOT added to `usage` (call tally() for a reply you pay for and use;
+    the exam's hedged requests tally a duplicate only once it has finished)."""
+    msgs = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": prompt}]
+    return _request("POST", "/chat/completions", {"model": model, "messages": msgs, "response_format": {"type": "json_object"},
+                                                  "n": n, **kw})
+
+
+def tally(data: dict) -> None:
+    """add one response's tokens to `usage` (thread-safe)"""
+    u = data.get("usage") or {}
+    with _tally_lock:
+        usage["calls"] += 1
+        usage["input_tokens"] += u.get("prompt_tokens", 0)
+        usage["output_tokens"] += u.get("completion_tokens", 0)
+
+
+def parse_n(data: dict, n: int) -> list[dict]:
+    """the first n choices as JSON; a choice that does not parse is {"error": ...}"""
+    out = []
+    for ch in data["choices"][:n]:
+        try:
+            out.append(json.loads(ch["message"]["content"]))
+        except Exception as e:  # noqa: BLE001
+            out.append({"error": repr(e)})
+    return out

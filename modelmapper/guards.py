@@ -100,7 +100,13 @@ def provenance_extra(pipe=None) -> dict:
         "numpy": numpy.__version__, "os": os_name(), "machine": platform.machine(),
         "gpu_memory_gb": _try(lambda: round(torch.cuda.get_device_properties(idx).total_memory / 2**30, 1) if cuda else None),
         "model_revision": _try(lambda: getattr(cfg, "_commit_hash", None), UNKNOWN),
+        "prompt_format": _try(lambda: _prompt_format(pipe), UNKNOWN),   # "chat" (every published map) or "plain"
     }
+
+
+def _prompt_format(pipe):
+    from modelmapper.measure import prompt_format
+    return prompt_format(pipe.tok)
 
 
 def call(margin: float, band_value: float | None) -> str:

@@ -17,6 +17,7 @@ class NeuronEffect:
     activation: float        # its mean activation at the answer position
     role: str | None = None  # read from its weights: 'say', 'attribute', 'late-other' or 'early' (METHOD.md); top 30 only
     pushes: list[str] = field(default_factory=list)   # the 30 words it pushes most, from its weights (top 30 only)
+    role_approximate: bool = False  # True when the model normalises the MLP output (OLMo-2, Gemma): METHOD.md
     margin: float | None = None  # its drop minus the 30th neuron's drop, in this run (guards.py)
     call: str | None = None      # 'in' / 'uncertain' / 'out' of the top 30, allowing for the hardware band (guards.py)
 
@@ -61,7 +62,7 @@ class MapResult:
             l, n = c["neuron"][1:].split(":")
             r = roles.get(c["neuron"], {})
             return NeuronEffect(c["neuron"], int(l), int(n), c["single_drop"], c["attr_rank"], c["act_answer_pos"],
-                                r.get("role"), list(r.get("job_tokens", [])), c.get("margin"), c.get("call"))
+                                r.get("role"), list(r.get("job_tokens", [])), bool(r.get("approximate")), c.get("margin"), c.get("call"))
         cands = [eff(c) for c in rank.get("candidates_all200", [])]
         from modelmapper.mapping import KS
         heads = sorted((HeadEffect(h, d) for h, d in (rank.get("head_knockout_mean") or {}).items()), key=lambda h: -h.drop)

@@ -8,7 +8,7 @@ Functions: map_concept, map_batch, steer, lookup, load_model, check. Results: Ma
 README.md says what the numbers mean, METHOD.md how they are measured, FORMAT.md what a record holds.
 Importing this package is light; torch and the model load only when a function needs them.
 """
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from modelmapper.api import LabellerError, check, load_model, lookup, map_batch, map_concept, steer  # noqa: E402
 from modelmapper.records import HeadEffect, MapResult, NeuronEffect  # noqa: E402

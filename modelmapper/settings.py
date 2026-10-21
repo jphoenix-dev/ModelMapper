@@ -9,6 +9,7 @@ imports torch. `modelmapper settings` prints what each setting resolves to and w
     MODEL_MAPPER_DTYPE    bfloat16, float16 or float32 (float32 is faster on CPU)   default bfloat16
     MODEL_MAPPER_CORPUS   web-text parquet, only for `modelmapper ranges`          default ./data/fineweb_000_00000.parquet
     MODEL_MAPPER_MAP_URL  the published map (for `modelmapper lookup`)              default the Qwen Neuron Map
+    MODEL_MAPPER_PROMPT   chat, or plain for base models without a chat template   default chat
     OPENAI_BASE_URL, OAI_MODEL, OPENAI_API_KEY, OAI_KEY_FILE      the labeller (modelmapper/labeller.py)
     JUDGE_BACKEND, JUDGE_BASE_URL, JUDGE_MODEL, JUDGE_API_KEY, JEV_API_KEY, JEV_KEY_FILE   the optional judge (judge.py)
 Keys are read only by the client that needs them and are never printed.
@@ -80,6 +81,6 @@ def describe() -> list[tuple[str, str, str]]:
     """(env var, value, source) for every setting except keys."""
     rows = [("MODEL_MAPPER_MODEL", DEFAULT_MODEL), ("MODEL_MAPPER_MODELS", MODELS_DIR or "(none: the Hugging Face cache)"),
             ("MODEL_MAPPER_CORPUS", CORPUS), ("MODEL_MAPPER_MAP_URL", MAP_URL), ("MODEL_MAPPER_CACHE", str(CACHE_DIR))]
-    for var in ("MODEL_MAPPER_DEVICE", "MODEL_MAPPER_DTYPE", "OPENAI_BASE_URL", "OAI_MODEL", "JUDGE_BACKEND", "JUDGE_MODEL"):
+    for var in ("MODEL_MAPPER_DEVICE", "MODEL_MAPPER_DTYPE", "MODEL_MAPPER_PROMPT", "OPENAI_BASE_URL", "OAI_MODEL", "JUDGE_BACKEND", "JUDGE_MODEL"):
         rows.append((var, env(var) or "(unset: default)"))
     return [(var, value, source(var)) for var, value in rows]

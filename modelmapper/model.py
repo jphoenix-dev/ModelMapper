@@ -47,7 +47,7 @@ DTYPE = getattr(torch, env("MODEL_MAPPER_DTYPE", "bfloat16"))
 def load(name: str = "Qwen/Qwen3-0.6B", dtype=None):
     path = model_path(name)
     if path == name and not os.path.isdir(name):
-        print(f"[neurons] no local copy of {name} in {LOCAL_MODELS}; loading it from the Hugging Face hub "
+        print(f"[neurons] no local copy of {name} " + (f"in {LOCAL_MODELS}" if LOCAL_MODELS else "(MODEL_MAPPER_MODELS is not set)") + "; loading it from the Hugging Face hub "
               "(set MODEL_MAPPER_MODELS to use a local folder)", file=sys.stderr)
     name = path
     tok = AutoTokenizer.from_pretrained(name)

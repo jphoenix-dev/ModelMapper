@@ -1,9 +1,11 @@
 """modelmapper check: does this install work, and does it measure what ours measured? Writes a report to send back.
 
     modelmapper check                 # environment + offline checks on Qwen3-0.6B   (no API calls; ~5-15 min on a CPU)
-    modelmapper check --apis          # also live map-concept for the answer key's 3 concepts (labeller calls; under a cent)
+    modelmapper check --apis          # also live map-concept for the answer key's 3 concepts (labeller calls; about $0.005)
     modelmapper check --quick         # environment only (seconds)
     modelmapper check --only map      # just these steps: key1, map, steer, live, judge
+    modelmapper check --labels        # labelling self-calibration instead: sweep1, exam1, falsifier (~15 min on a CPU, ~$0.55)
+    modelmapper check --labels --model Qwen/Qwen3-8B    # ... on another model (sweep1 and falsifier load it)
 
 Every item is PASS, FAIL, WARN (works, but differs from ours or varies run to run) or SKIPPED (with the reason), next
 to the value our machine got (CALIBRATION below). The report is written as text and JSON to
@@ -17,6 +19,14 @@ Steps, all on Qwen3-0.6B (it needs the model files: the Hugging Face hub, or MOD
   steer   steering smoke test: L23:2392 held at 8x its peak on two prompts changes the replies, deterministically
   live    --apis: map-concept for Bitcoin, YouTube and photosynthesis with fresh labeller questions
   judge   --apis, if a judge is set up (Jev key or JUDGE_BACKEND=llm): one judged steering reply
+Labelling steps (--labels, or by name in --only; modelmapper/labelcheck.py has the rules), on --model (default
+Qwen3-0.6B):
+  sweep1     a fixed 512-token slice of the vocabulary sweep for 6 marker neurons against our stored profiles (no API)
+  exam1      20 neurons' gate exams re-judged from our shipped descriptions and decoys (judge only, ~$0.03)
+  falsifier  20 random real and 20 fake neurons labelled for real on a quick sweep (labeller + judge, ~$0.50): fakes
+             must fail, control descriptions must score at chance
+  A step whose key is missing is SKIPPED with the reason; sweep1 and exam1 are SKIPPED for a model we ship no
+  reference for (Qwen3-8B and Qwen3-0.6B have one): labelling is then uncalibrated, internal controls only.
 If nothing sets MODEL_MAPPER_DTYPE (environment or .env) and there is no GPU, float32 is used (much faster on a CPU).
 """
 from __future__ import annotations
@@ -38,6 +48,7 @@ from modelmapper import guards, settings as S
 
 MODEL = "Qwen/Qwen3-0.6B"
 STEPS = ("key1", "map", "steer", "live", "judge")
+LABEL_STEPS = ("sweep1", "exam1", "falsifier")
 TAIL = 300            # characters of an error kept in the report (METHOD.md, "Limits")
 LIVE_PASS_RANK = 20   # live step: a marker counts as found in its concept's top 20 (the key's tier-2 bar)
 LIVE_PASS_FOUND = 2   # ... and the step passes with 2 of the 3 markers found (else WARN: fresh questions vary)
@@ -51,9 +62,27 @@ OURS = {
     "steer": "value 692.0 (8 x its peak); 2/2 replies changed; repeat run identical; first steered reply 'Fun fact: among "
              "the address999 address mapping mapping ...' (CPU, float32)",
     "live": "3/3 in 2 runs: Bitcoin L23:2392 at 2 and 2, YouTube L23:2069 at 2 and 3, photosynthesis L23:487 at 4 and 4 "
-            "(CPU, ~22 min, under a cent of labeller calls)",
+            "(CPU, ~22 min, about $0.005 of labeller calls)",
     "judge": "a probability in [0, 1] for each reply",
 }
+# The labelling steps, per model (CALIBRATION.md, "Labelling"). sweep1's references: Qwen3-0.6B, our CPU in float32;
+# Qwen3-8B, the research run's sweep on the GPU in bfloat16.
+OURS_LABELS = {
+    "Qwen/Qwen3-0.6B": {
+        "sweep1": "the reference is our CPU in float32 (batch 64 or 1024: identical); bfloat16 on the same CPU: max abs "
+                  "difference 0.694 (0.25 sd), min correlation 0.9992",
+        "exam1": "20/20 the same (21 Oct 2026, Jev $0.020); our bins: 2 intelligible, 3 list-only, 15 no-generalisation",
+        "falsifier": "fakes verified + generative: gate 0/20, apos 1/20, aneg 0/20; control AUC median 0.488; real neurons "
+                     "gate 10%, apos 10%, aneg 0% (CPU, float32, 3,000 tokens; ~12 min; labeller $0.24, judge $0.26)",
+    },
+    "Qwen/Qwen3-8B": {
+        "sweep1": "the reference is the research sweep (RTX 5090, bfloat16); not yet re-run on Qwen3-8B by this check",
+        "exam1": "19/20 the same (21 Oct 2026, Jev $0.032; L11:289 came out intelligible, ours decoys-too-easy (intelligible))",
+        "falsifier": "not run by this check yet; the v3 run (100 fakes per part, full sweep): fakes verified + generative "
+                     "1% / 0% / 1%, control AUC median 0.50",
+    },
+}
+UNCALIBRATED = "labelling uncalibrated for this model: internal controls only"
 PINS = {"torch": "2.11.0", "transformers": "5.20.0", "accelerate": "1.15.0", "tokenizers": "0.23.3", "safetensors": "0.8.0",
         "huggingface_hub": "2.2.0", "numpy": "2.4.6" if sys.version_info >= (3, 11) else "2.2.6",
         "pyarrow": "26.0.0" if sys.version_info >= (3, 11) else "25.0.1", "httpx": "0.28.1"}
@@ -155,7 +184,7 @@ def environment(rep, apis):
     rep.add("python", "Python", "PASS" if ok else "WARN", f"{v} ({guards.os_name()}, {platform.machine()})",
             OURS["python"], "" if ok else "untested Python version")
     import modelmapper
-    rep.add("install", "modelmapper", "PASS", f"{modelmapper.__version__}", "0.1.0")
+    rep.add("install", "modelmapper", "PASS", f"{modelmapper.__version__}", ".".join(modelmapper.__version__.split(".")[:2]) + ".x")
     got = {mod: _version(mod) for mod in PINS}
     missing = [m for m, x in got.items() if x.startswith("MISSING")]
     other = [f"{m} {x} (tested {PINS[m]})" for m, x in got.items() if m not in missing and x.split("+")[0] != PINS[m]]
@@ -205,10 +234,10 @@ def environment(rep, apis):
     src = _key_source(["OPENAI_API_KEY"], labeller.KEY_FILE)
     custom = labeller.BASE != labeller.DEFAULT_BASE
     host = "custom endpoint" if custom else "api.openai.com"     # never the host itself: it can name the provider and region
-    rep.add("labeller", "labeller key", "PASS" if (src or custom) else ("FAIL" if apis else "WARN"),
+    rep.add("labeller", "labeller key", "PASS" if src else ("FAIL" if apis and not custom else "WARN"),
             f"{'found (' + src + ')' if src else 'not found'}; endpoint {host}, model {labeller.MODEL}",
             "found; endpoint api.openai.com, model gpt-6-luna",
-            "" if src else ("custom endpoint: a key may not be needed" if custom else
+            "" if src else ("custom endpoint and no key found: fine for a local server; Azure and other hosted endpoints need one (SETUP.md, 'Labeller key')" if custom else
                             "needed for map-concept, map-batch and --apis: SETUP.md, 'Labeller key' (the human sets it up)"))
     jsrc = _key_source(["JEV_API_KEY", "TYPESAFE_API_KEY"], judge.KEY_FILE)
     llm = judge.BACKEND == "llm"
@@ -216,7 +245,7 @@ def environment(rep, apis):
     rep.add("judge", "judge (optional)", "PASS" if jsrc or llm else "SKIPPED",
             f"backend {judge.BACKEND}; " + ("key found (" + jsrc + ")" if jsrc else
                                            f"model {S.env('JUDGE_MODEL')}, endpoint {jhost}" if llm else "no key"),
-            "Jev (the published results' judge)", "" if jsrc or llm else "only `steer --judge` uses it")
+            "Jev (the published results' judge)", "" if jsrc or llm else "only `steer --judge` and `check --labels` use it")
     for label, path in (("disk free", Path.cwd()),):
         try:
             free = shutil.disk_usage(path).free / 2**30
@@ -227,7 +256,7 @@ def environment(rep, apis):
 
 
 # ------------------------------------------------------------------------------------------------ steps
-def _step(rep, id_, name, fn):
+def _step(rep, id_, name, fn, expected=None):
     """Run one step; an exception is that step's FAIL (with its last line), never a crash of the whole check."""
     t0 = time.time()
     try:
@@ -235,7 +264,7 @@ def _step(rep, id_, name, fn):
     except Exception as e:  # noqa: BLE001
         tb = traceback.format_exc()
         (rep.out / f"{id_}_error.log").write_text(tb, encoding="utf-8")
-        rep.add(id_, name, "FAIL", f"did not finish: {type(e).__name__}: {e}"[:TAIL], OURS.get(id_, ""),
+        rep.add(id_, name, "FAIL", f"did not finish: {type(e).__name__}: {e}"[:TAIL], OURS.get(id_, "") if expected is None else expected,
                 f"traceback in {id_}_error.log", round(time.time() - t0))
 
 
@@ -318,21 +347,113 @@ def step_judge(rep, m):
     _step(rep, "judge", "judge call (steer --judge)", run)
 
 
-def run(apis=False, out=None, quick=False, only=None, budget=0.5) -> dict:
-    steps = [s for s in STEPS if (apis or s not in ("live", "judge")) and (not only or s in only)]
+# ------------------------------------------------------------------------------------------------ labelling steps
+LABEL_NAMES = {"sweep1": "sweep slice vs ours (sweep1)", "exam1": "exam re-judged (exam1)", "falsifier": "fake neurons (falsifier)"}
+
+
+def ours_label(id_, model):
+    return OURS_LABELS.get(model, {}).get(id_, "no bar for this model: fakes must fail, controls at chance" if id_ == "falsifier"
+                                                else "no reference for this model")
+
+
+def step_sweep1(rep, model_name, get_model):
+    from modelmapper import labelcheck as LC
+    ref = LC.load_sweep_ref(model_name)
+    if ref is None:
+        rep.add("sweep1", LABEL_NAMES["sweep1"], "SKIPPED", f"no reference for {model_name}", "", UNCALIBRATED)
+        return
+
+    def run(t0):
+        model, tok = get_model()
+        got = LC.sweep_slice(model, tok, rep.out / "sweep1", ref["sample"], log=lambda *_: None)
+        cmp = LC.compare_profiles(ref, got)
+        (rep.out / "sweep1.json").write_text(json.dumps({"reference": ref["meta"], **cmp}, indent=1), encoding="utf-8")
+        m = ref["meta"]
+        rep.add("sweep1", LABEL_NAMES["sweep1"], LC.sweep1_status(cmp), LC.sweep1_value(cmp), ours_label("sweep1", model_name),
+                f"PASS: correlation >= {LC.SWEEP1_CORR} and difference <= {LC.SWEEP1_SD} sd on every profile; WARN: "
+                f"correlation >= {LC.SWEEP1_WARN_CORR}. Reference: {m['device']}, {m['dtype']}", round(time.time() - t0))
+    _step(rep, "sweep1", LABEL_NAMES["sweep1"], run, ours_label("sweep1", model_name))
+
+
+def step_exam1(rep, model_name):
+    from modelmapper import labelcheck as LC
+    ref = LC.load_exam_ref(model_name)
+    if ref is None:
+        rep.add("exam1", LABEL_NAMES["exam1"], "SKIPPED", f"no reference for {model_name}", "", UNCALIBRATED)
+        return
+
+    def run(t0):
+        from modelmapper import exam
+        res = exam.rejudge(ref, log=lambda s: print("    exam1 | " + s, flush=True))
+        (rep.out / "exam1.json").write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+        same, n, rows = LC.exam1_compare(ref, res)
+        s = res["_summary"]
+        rep.add("exam1", LABEL_NAMES["exam1"], LC.exam1_status(same, n),
+                f"{same}/{n} final bins the same as ours; judge ${s['jev_usd']:.3f}" + (f"; {s['judge_errors']} failed judge calls" if s["judge_errors"] else ""),
+                ours_label("exam1", model_name), f"PASS with >= {LC.EXAM1_SAME}/20, else WARN (the judge varies a little "
+                "between runs)" + ("; differ: " + "; ".join(rows) if rows else ""), round(time.time() - t0))
+    _step(rep, "exam1", LABEL_NAMES["exam1"], run, ours_label("exam1", model_name))
+
+
+def step_falsifier(rep, model_name, get_model):
+    from modelmapper import labelcheck as LC
+
+    def run(t0):
+        model, tok = get_model()
+        s = LC.falsifier_run(model, tok, model_name, rep.out / "falsifier", log=lambda m: print("    falsifier | " + str(m), flush=True))
+        rep.add("falsifier", LABEL_NAMES["falsifier"], LC.falsifier_status(s), LC.falsifier_value(s), ours_label("falsifier", model_name),
+                f"PASS: at most {LC.FAKE_MAX} of {s['n']} fakes verified + generative on each part, and the control AUC median in "
+                f"{LC.CTRL_BAND[0]:.2f}-{LC.CTRL_BAND[1]:.2f}; FAIL from {LC.FAKE_FAIL} fakes or outside "
+                f"{LC.CTRL_FAIL[0]:.2f}-{LC.CTRL_FAIL[1]:.2f}; WARN in between", round(time.time() - t0))
+    _step(rep, "falsifier", LABEL_NAMES["falsifier"], run, ours_label("falsifier", model_name))
+
+
+def label_steps(rep, steps, model_name, get_model, labeller_ok, judge_ok):
+    from modelmapper import judge, labeller
+    from modelmapper import labelcheck as LC
+    ok, txt = LC.combination(model_name, labeller.MODEL, judge.BACKEND)
+    calibrated = LC.load_sweep_ref(model_name) is not None or LC.load_exam_ref(model_name) is not None
+    rep.add("labelsetup", "labelling setup", "PASS" if ok else "WARN", txt,
+            "labeller gpt-6-luna, judge Jev, model Qwen3-8B or Qwen3-0.6B", "" if calibrated else UNCALIBRATED)
+    for s in steps:
+        if s == "sweep1":
+            step_sweep1(rep, model_name, get_model)
+        elif s == "exam1":
+            if not judge_ok and LC.load_exam_ref(model_name) is not None:      # no reference: step_exam1 says so
+                rep.add("exam1", LABEL_NAMES["exam1"], "SKIPPED", "no judge set up (Jev key or JUDGE_BACKEND=llm)",
+                        ours_label("exam1", model_name))
+            else:
+                step_exam1(rep, model_name)
+        elif s == "falsifier":
+            if not (labeller_ok and judge_ok):
+                rep.add("falsifier", LABEL_NAMES["falsifier"], "SKIPPED", "no " + " or ".join(
+                    x for x, k in (("labeller key", labeller_ok), ("judge", judge_ok)) if not k) + " set up",
+                    ours_label("falsifier", model_name))
+            else:
+                step_falsifier(rep, model_name, get_model)
+
+
+def run(apis=False, out=None, quick=False, only=None, budget=0.5, labels=False, model=None) -> dict:
+    """labels: the labelling steps instead of the install steps (or name either kind in only); model: the model they
+    label (default Qwen3-0.6B; the install steps always use Qwen3-0.6B)."""
+    steps = [s for s in STEPS if (apis or s not in ("live", "judge")) and (s in only if only else not labels)]
+    lsteps = [s for s in LABEL_STEPS if (s in only if only else labels)]
     if quick:
-        steps = []
+        steps, lsteps = [], []
+    from modelmapper.labelcheck import full_name
+    label_model = full_name(model or MODEL)
     sys.stdout.reconfigure(encoding="utf-8", errors="replace") if hasattr(sys.stdout, "reconfigure") else None
     when = time.strftime("%Y-%m-%d %H:%M %Z")
     out = Path(out) if out else Path.cwd() / "check_reports" / f"{machine_id()}_{time.strftime('%Y%m%d_%H%M%S')}"
     rep = Report(out); out.mkdir(parents=True, exist_ok=True)
-    plan = "environment" + "".join(", " + s for s in steps)
+    plan = "environment" + "".join(", " + s for s in steps + lsteps) + (f" (labelling on {label_model})" if lsteps else "")
     print(f"Model Mapper install check -> {private(out)}\n{plan}\n", flush=True)
     environment(rep, apis)
-    if steps and not any(i["status"] == "FAIL" and i["id"] in ("gpu", "packages") for i in rep.items):
-        no_key = next(i for i in rep.items if i["id"] == "labeller")["status"] == "FAIL"
-        judge_ok = next(i for i in rep.items if i["id"] == "judge")["status"] == "PASS"
-        m = None
+    env_ok = not any(i["status"] == "FAIL" and i["id"] in ("gpu", "packages") for i in rep.items)
+    no_key = next(i for i in rep.items if i["id"] == "labeller")["status"] in ("FAIL", "WARN")
+    judge_ok = next(i for i in rep.items if i["id"] == "judge")["status"] == "PASS"
+    m = None
+    if steps and env_ok:
         try:
             from modelmapper.measure import Measurer
             print(f"loading {MODEL} ...", flush=True)
@@ -357,11 +478,26 @@ def run(apis=False, out=None, quick=False, only=None, budget=0.5) -> dict:
                         rep.add("judge", "judge call (steer --judge)", "SKIPPED", "no judge set up (optional)", OURS["judge"])
                     else:
                         step_judge(rep, m)
-    elif steps:
+    if lsteps and env_ok:
+        loaded = {}
+
+        def get_model():
+            """the labelled model, loaded once (the install steps' copy when it is the same model)"""
+            if "m" not in loaded:
+                if m is not None and label_model == MODEL:
+                    loaded["m"] = (m.model, m.tok)
+                else:
+                    from modelmapper.model import load
+                    print(f"loading {label_model} ...", flush=True)
+                    loaded["m"] = load(label_model)
+            return loaded["m"]
+        label_steps(rep, lsteps, label_model, get_model, not no_key, judge_ok)
+    if (steps or lsteps) and not env_ok:
         rep.add("steps", "model steps", "SKIPPED", "the environment has a FAIL above; fix it first")
     import modelmapper
     data, txt = rep.write({"when": when, "machine": f"{machine_id()} ({guards.os_name()})",
-                           "version": modelmapper.__version__, "apis": apis, "quick": quick, "steps": plan})
+                           "version": modelmapper.__version__, "apis": apis, "quick": quick, "steps": plan,
+                           **({"labels_model": label_model} if lsteps else {})})
     print("\n" + txt + f"\n\nReport: {private(out / 'report.txt')} (and report.json)")
     return data
 
@@ -371,17 +507,20 @@ def main(argv=None):
                                  description=__doc__.split("\n\n", 1)[0], epilog=__doc__.split("\n\n", 1)[1])
     ap.add_argument("--apis", action="store_true", help="also the live map-concept step (and the judge, if set up)")
     ap.add_argument("--quick", action="store_true", help="environment only (seconds)")
-    ap.add_argument("--only", help=f"only these steps, comma-separated: {', '.join(STEPS)}")
+    ap.add_argument("--only", help=f"only these steps, comma-separated: {', '.join(STEPS + LABEL_STEPS)}")
+    ap.add_argument("--labels", action="store_true", help="the labelling steps (sweep1, exam1, falsifier) instead of the install steps; "
+                    "exam1 and falsifier run when the judge (and labeller) keys are set up, about $0.55 in all")
+    ap.add_argument("--model", help="the model the labelling steps use (default Qwen/Qwen3-0.6B)")
     ap.add_argument("--out", help="report folder (default check_reports/<machine id>_<time>)")
     ap.add_argument("--budget", type=float, default=0.5, help="labeller spend cap per concept for the live step (USD, Luna prices)")
     a = ap.parse_args(argv)
     only = None
     if a.only:
         only = [x.strip() for x in a.only.split(",") if x.strip()]
-        bad = [x for x in only if x not in STEPS]
+        bad = [x for x in only if x not in STEPS + LABEL_STEPS]
         if bad:
-            ap.error(f"--only: unknown step(s) {', '.join(bad)}; steps: {', '.join(STEPS)}")
+            ap.error(f"--only: unknown step(s) {', '.join(bad)}; steps: {', '.join(STEPS + LABEL_STEPS)}")
         if any(x in ("live", "judge") for x in only) and not a.apis:
             ap.error("--only live / judge need --apis (they call the labeller or the judge)")
-    data = run(apis=a.apis, out=a.out, quick=a.quick, only=only, budget=a.budget)
+    data = run(apis=a.apis, out=a.out, quick=a.quick, only=only, budget=a.budget, labels=a.labels, model=a.model)
     return 1 if data["overall"] == "FAIL" else 0

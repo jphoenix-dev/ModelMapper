@@ -15,3 +15,6 @@ build/
 dist/
 check_reports/
 .pytest_cache/
+!modelmapper/data/check/*.npz
+/labels/
+/pack/

@@ -22,6 +22,38 @@ from modelmapper.settings import env
 MIN_P = float(env("CONCEPT_MIN_P", "0.2"))   # a question counts as recalled when P(answer) >= MIN_P (METHOD.md)
 SLUG_MAX = 60
 
+# How a question is put to the model. "chat" (default; every published map): one user turn through the tokenizer's chat
+# template, thinking off. "plain" (MODEL_MAPPER_PROMPT=plain; experimental, uncalibrated): PLAIN below, for base models
+# without a chat template. The format used is recorded in every record's provenance.
+PROMPT_FORMAT = (env("MODEL_MAPPER_PROMPT", "chat") or "chat").strip().lower()
+PLAIN = "Question: {text}\nAnswer:\n"
+
+
+class PromptFormatError(ValueError):
+    """The model cannot be asked questions in the chosen format (e.g. a base model with no chat template)."""
+
+
+def prompt_format(tok) -> str:
+    """'chat' or 'plain' for this tokenizer; raises PromptFormatError (before any labeller call) if neither applies."""
+    if PROMPT_FORMAT == "plain":
+        return "plain"
+    if PROMPT_FORMAT != "chat":
+        raise PromptFormatError(f"MODEL_MAPPER_PROMPT={PROMPT_FORMAT!r}: use 'chat' (the default) or 'plain'")
+    if getattr(tok, "chat_template", None):
+        return "chat"
+    raise PromptFormatError(
+        "this model's tokenizer has no chat template (a base model?). map-concept asks each question as a chat turn, "
+        "as every published map did. Use the model's instruct / chat version, or set MODEL_MAPPER_PROMPT=plain to ask "
+        "'Question: ...' / 'Answer:' instead (experimental and uncalibrated; recorded in each record).")
+
+
+def as_prompt(tok, text: str) -> str:
+    """`text` as the model sees it: a chat user turn (thinking off), or PLAIN with MODEL_MAPPER_PROMPT=plain."""
+    if prompt_format(tok) == "chat":
+        return tok.apply_chat_template([{"role": "user", "content": text}], tokenize=False, add_generation_prompt=True,
+                                       enable_thinking=False)
+    return PLAIN.format(text=text)
+
 
 def slug(s):
     """File-name stem for a concept. Names longer than SLUG_MAX (the made-up controls are whole descriptions) are cut

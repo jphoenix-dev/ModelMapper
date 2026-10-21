@@ -11,7 +11,10 @@ bottom. Each step ends with a **Check**; don't go on until it passes.
 - Don't edit the code to make a check pass. A failure is the result to report.
 - Don't commit, push or open pull requests.
 - Never type, paste or store a password or key yourself. Step 5 is for the human.
-- Run `modelmapper check --apis` only if the human allows API use (under a cent of labeller calls with the default labeller).
+- Run `modelmapper check --apis` only if the human allows API use (about $0.005 of labeller calls with the default labeller).
+- Labelling (step 7) spends money and can take hours. Always run `modelmapper label ... --plan` first and show the human
+  the plan (its cost, time and disk). Pass `--yes`, `--all` or a larger `--budget` only after the human agrees to that
+  plan. Never raise a budget on your own. A run that stops at its budget (exit code 3) is a result to report.
 
 ## 1. Check the machine
 ```bash
@@ -49,7 +52,7 @@ Then the package (add `-e` for an editable install, and `[test]` for the unit te
 ```bash
 pip install .
 ```
-**Check:** `modelmapper --version` prints `modelmapper 0.1.0`.
+**Check:** `modelmapper --version` prints `modelmapper 0.2.0`.
 
 ## 4. Quick check (seconds)
 ```bash
@@ -70,24 +73,55 @@ Put the key in one of these places, in the folder you run `modelmapper` from (al
 
 For another OpenAI-compatible endpoint (including a local one), also set `OPENAI_BASE_URL` and `OAI_MODEL`. It must
 support JSON mode. For Azure OpenAI, use its OpenAI-compatible endpoint:
-`OPENAI_BASE_URL=https://<resource>.openai.azure.com/openai/v1`, `OAI_MODEL=<your deployment name>`, and the Azure
-key as `OPENAI_API_KEY`. The judge for `steer --judge` is optional and set up the same way (`.env.example`, "Judge").
+`OPENAI_BASE_URL=https://<resource>.openai.azure.com/openai/v1` (a regional endpoint such as
+`https://<region>.api.cognitive.microsoft.com/openai/v1` works too), `OAI_MODEL=<your deployment name>`, and the
+Azure key as `OPENAI_API_KEY` or in `OAI.env`. With a custom endpoint and no key, the check WARNs: fine for a local
+server, but Azure and other hosted endpoints need the key. The judge for `steer --judge` is optional and set up the same way (`.env.example`, "Judge").
 
 If the model is already on disk (for example `models/Qwen3-0.6B/config.json` in an earlier clone), set
 `MODEL_MAPPER_MODELS` to the folder that holds `Qwen3-0.6B/` instead of downloading it again.
 
 **Check:** `modelmapper check --quick` shows `labeller key  found`.
 
-## 6. The full check (about 10 minutes on a CPU; `--apis` adds about 25)
+## 6. The full check (about 10 minutes on a CPU, 1-2 on a GPU; `--apis` adds about 25)
 ```bash
 modelmapper check            # or, if the human allows API use:  modelmapper check --apis
 ```
-It downloads Qwen3-0.6B (1.5 GB) the first time. It runs the answer key, an offline map of Bitcoin, and a steering
+It downloads Qwen3-0.6B (1.5 GB) the first time. If the download fails (a proxy that blocks huggingface.co), copy the
+model folder from another machine and set `MODEL_MAPPER_MODELS` (step 5). It runs the answer key, an offline map of Bitcoin, and a steering
 test, and compares each with our numbers (METHOD.md, "How check is calibrated").
 
 **Check:** the last line says `PASS` (a WARN or SKIPPED inside is fine; the report says why).
 
-## 7. Report
+## 7. Labelling (optional)
+Labelling needs a labeller key (step 5) and a **judge** key, which the human puts in the same way: `JEV_API_KEY=...`
+in `.env`, or a file `jevkey.env` holding the key alone or a line `JEV_API_KEY=...` or `TYPESAFE_API_KEY=...`. For another judge, set `JUDGE_BACKEND=llm` with `JUDGE_BASE_URL` and
+`JUDGE_MODEL` (`.env.example`, "Judge"). What has been tested: the labeller `gpt-6-luna` with the judge Jev,
+labelling Qwen3-8B and Qwen3-0.6B. Any other labeller, judge or model is untested, and results from them say so.
+
+```bash
+modelmapper check --labels       # does labelling behave here as it did for us? (about $0.55 of API calls, a few minutes)
+modelmapper label L20:100 L27:3000 --model Qwen/Qwen3-0.6B --quick --with-fakes 10 --plan
+```
+`check --labels` compares a small sweep and a re-judged exam with our values. It also labels fake neurons, which
+must fail (LABELLING.md).
+
+`label --plan` prints what a run would do and cost without starting it: the cost as a range (measured on Qwen3-8B
+and on Qwen3-0.6B, where the judge cost about 4 times more per neuron), the sweep's time on a 32 GB and on a 6 GB GPU,
+and the disk. `--with-fakes` adds a second sweep for the fake neurons; the plan includes it. Without `--budget`, spend
+stops at twice the plan's upper estimate. When the human agrees, run the same command without `--plan` (an agent adds
+`--yes`). Re-running a stopped run resumes it.
+
+At the end the run gives the falsifier's verdict per part, by the same rule as `check --labels`. It exits with code 4
+when fake neurons pass too often (FAIL): the labels are kept, but report that verdict with them. With 20 fakes or fewer
+this can be chance.
+
+`modelmapper export-pack <labels folder> --out pack --contributor "<name>"` writes the run as a ledger pack; the model
+comes from the run's results (`--model` only for files that don't record it).
+
+**Check:** `check --labels` ends with `PASS` (or SKIPPED steps with a reason), and the plan prints.
+
+## 8. Report
 Send `check_reports/<machine>_<time>/report.txt`. It holds no keys, user names, host names or home-folder paths.
 
 ## Troubleshooting

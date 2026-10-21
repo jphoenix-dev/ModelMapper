@@ -13,7 +13,10 @@ Qwen3-0.6B has 28 × 3,072). "Switching it off" means setting that input to 0 at
 1. The labeller (default `gpt-6-luna`) writes 20 sentence fragments whose natural next words are the concept's
    name, plus 8 control fragments with other answers. It is told never to include the answer's words.
 2. It rewrites each fragment as a question: "What is the name of ...?". Each is asked as a chat turn ending
-   "Answer with just the name.", with thinking switched off.
+   "Answer with just the name.", with thinking switched off. A model whose tokenizer has no chat template (a base
+   model) is refused before any labeller call, so nothing is spent. `MODEL_MAPPER_PROMPT=plain` asks it
+   "Question: ... Answer with just the name." then "Answer:" on the next line instead. That is experimental and
+   uncalibrated, and every record says which format it used (`prompt_format` in its provenance).
 3. The model under study answers each question (greedy, 16 tokens). The labeller judges which of those answers name
    the concept. The ones that do become extra answer forms ("BTC", "the Bitcoin network").
 
@@ -40,6 +43,12 @@ Qwen3-0.6B has 28 × 3,072). "Switching it off" means setting that input to 0 at
    is in its top 10. `attribute`: the answer's z-score among all tokens is 2 or more. `early`: the neuron is in the
    first 20/36 of the layers (its effect on the output is mostly indirect, so this reading says little). Otherwise
    `late-other`. These are readings, not measurements of behaviour.
+
+   Some models normalise the MLP's output before adding it to the residual (OLMo-2, Gemma 2 and 3:
+   `post_feedforward_layernorm`). There the reading also multiplies by that norm's gain. The norm's overall scale
+   depends on the input, so the reading is approximate: each such entry is marked `"approximate": true`, and the
+   command shows `[roles approximate]`. Qwen3 has no such norm, and its readings are unchanged. The knockout drops
+   (steps 5-8) are measured on the model's real output, so they are exact for every model.
 
 Per-concept arrays (all 442,368 attribution scores, activations, residuals at the answer position, attention rows)
 go to `arrays/<concept>.npz` next to the record.
@@ -114,6 +123,13 @@ runs). Each step is PASS, FAIL, WARN (works, but differs from ours or varies fro
   Bitcoin marker came 2nd, 2nd, 3rd, 2nd and 2nd in five runs with fresh questions).
 - Only the 200 most-attributed neurons are knocked out. A neuron that matters but has low attribution is missed.
 - Knockouts set activations to 0. That is not the same as the neuron's typical value; mean-ablation can differ.
-- Tested on Qwen3-0.6B and Qwen3-8B. The code expects gated MLPs at `model.model.layers[i].mlp.down_proj`.
+- Tested on Qwen3-0.6B and Qwen3-8B. The code expects gated MLPs at `model.model.layers[i].mlp.down_proj`. OLMo-2 runs
+  (0.1.1 handles its missing `head_dim` and its post-MLP norm), but no other family has been calibrated.
+- Recall is scored on the answer's tokens straight after the prompt. Small chat models often answer in a sentence
+  ("The mathematician is Fibonacci"), which this doesn't credit: on OLMo-2-1B-Instruct, 22 of 36 concepts came out
+  `not_recalled`. *Proposed, not implemented:* take each question's greedy reply, and when it starts with a lead-in
+  before the answer, score the answer after that lead-in (prompt + lead-in), rejecting lead-ins that contain the
+  answer's words. That would be recorded per question, and it would stay off by default, because it changes what a
+  recalled question means.
 - Error messages kept in reports are cut to 300 characters, and endpoint error bodies are left out, so a report never
   carries a key or a private URL.

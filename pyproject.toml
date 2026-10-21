@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "modelmapper"
-version = "0.1.0"
-description = "Find which MLP neurons of a language model a concept depends on, measured by switching them off."
+version = "0.2.0"
+description = "Map and label the MLP neurons of a language model: which concepts need them (knockouts), and what each part of each neuron does (self-checked labels)."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "James Phoenix" }]
@@ -28,6 +28,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
+ledger = ["duckdb>=1.1"]          # only for scorecard.knockout_from_ledger
 
 [project.scripts]
 modelmapper = "modelmapper.cli:main"
@@ -36,8 +37,12 @@ modelmapper = "modelmapper.cli:main"
 include = ["modelmapper*"]
 
 [tool.setuptools.package-data]
-modelmapper = ["answer_keys/*.json", "data/ranges/*.pt"]
+modelmapper = ["answer_keys/*.json", "data/ranges/*.pt", "data/labels/*.json.gz", "data/check/*.npz", "data/check/*.json.gz"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-markers = ["model: loads Qwen/Qwen3-0.6B (a few minutes on a CPU); deselect with -m 'not model'"]
+addopts = "-rs"     # always list skipped tests with the reason (e.g. which model to download)
+markers = [
+    "model: loads a real model (Qwen3-0.6B; a few minutes on a CPU); deselect with -m 'not model'",
+    "repro: compares a ported v3 stage with the research run's files (Qwen3-8B weights + MODEL_MAPPER_V3_REF)",
+]

@@ -18,6 +18,7 @@ import re
 
 import torch
 
+from modelmapper.measure import as_prompt
 from modelmapper.model import DEVICE
 
 PROMPTS = [
@@ -45,8 +46,7 @@ PROMPTS = [
 
 
 def generate(model, tok, prompts, max_new):
-    texts = [tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False,
-                                     add_generation_prompt=True, enable_thinking=False) for p in prompts]
+    texts = [as_prompt(tok, p) for p in prompts]                  # 0.1.1: as_prompt (the chat turn, or plain)
     tok.padding_side = "left"
     ids = tok(texts, return_tensors="pt", padding=True).to(DEVICE)
     with torch.no_grad():

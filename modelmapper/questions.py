@@ -20,7 +20,7 @@ from pathlib import Path
 import torch
 
 from modelmapper import labeller as oai
-from modelmapper.measure import leaks, slug
+from modelmapper.measure import as_prompt, leaks, slug
 from modelmapper.model import DEVICE
 
 PROMPT_SYSTEM = """You write test prompts for probing whether a language model knows a concept.
@@ -163,8 +163,7 @@ def model_answers(measurer, spec, concept, cache):
     if "discovery_replies" in spec:
         return spec
     tok = measurer.tok
-    chats = [tok.apply_chat_template([{"role": "user", "content": q + " Answer with just the name."}], tokenize=False,
-                                     add_generation_prompt=True, enable_thinking=False) for q in spec["recall_v3"]]
+    chats = [as_prompt(tok, q + " Answer with just the name.") for q in spec["recall_v3"]]   # 0.1.1: as_prompt
     side = tok.padding_side; tok.padding_side = "left"
     try:
         ids = tok(chats, return_tensors="pt", padding=True).to(DEVICE)

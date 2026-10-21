@@ -49,6 +49,7 @@ def test_answer_key_tier1(m, key):
 def test_map_concept_pinned(m, key, tmp_path):
     """The whole map_concept on the key's pinned Bitcoin questions, offline: the marker near the top, the controls
     near 0, and a record in the published format with provenance and the guards block."""
+    import modelmapper
     from modelmapper import map_concept
     mk = next(x for x in key["markers"] if x["concept"] == "Bitcoin")
     r = map_concept("Bitcoin", spec=json.loads(json.dumps(mk["spec"])), measurer=m, out=tmp_path, log=lambda s: None)
@@ -61,7 +62,7 @@ def test_map_concept_pinned(m, key, tmp_path):
     p = r.record["v2"]["provenance"]
     for f in ("schema", "model", "dtype", "torch", "transformers", "gpu", "package", "device", "cuda", "numpy", "os"):
         assert f in p
-    assert p["schema"] == "loop_v2.0" and p["package"] == "modelmapper 0.1.0"
+    assert p["schema"] == "loop_v2.0" and p["package"] == f"modelmapper {modelmapper.__version__}"
     assert r.record["guards"]["bar"] == r.candidates[29].drop
     assert (tmp_path / "Qwen3-0.6B" / "bitcoin.json").exists() and (tmp_path / "Qwen3-0.6B" / "arrays" / "bitcoin.npz").exists()
 

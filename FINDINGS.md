@@ -26,6 +26,14 @@ neurons in 157/158 runs, and a pre-registered replication on 40 new concepts pas
 **What this does and doesn't show.** The neurons are *necessary* for the answer, not proven to *store* the
 knowledge; the network partly compensates when neurons are removed. And each concept's list is incomplete (section 3).
 
+**Are the links specific?** The map links each neuron to the concepts it was found to matter for, but the search only
+tested a neuron where a fast estimate flagged it. So 100 mapped neurons were also switched off on the questions of 200
+random concepts, flagged or not (one GPU configuration, 20 random neurons per concept as the floor). Their own known
+concepts still broke in 99.9% of 3,132 pairs; never-flagged concepts broke in 1.25% of 19,585 pairs, against 1% for
+random neurons by construction. Specific neurons (needed by 1-3 concepts) behave like random neurons off their map
+(0.76%); shared neurons are broader (4.0%). One never-flagged pair dropped the answer by more than 1 log-odds (a shared
+neuron on Polar vortex).
+
 ## 2. Most of a concept's key neurons are late
 
 About **two thirds** of each concept's top-5 neurons are in the last eight layers (28-35): 68% as mapped, 66% with the

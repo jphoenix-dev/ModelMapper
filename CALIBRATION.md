@@ -11,7 +11,8 @@ Qwen3-0.6B. Dates are 19 Oct 2026.
 the 200 candidates and their drops, attribution ranks and activations, per-question drops, the random controls, both
 k curves, the 50 heads, the roles and the answer-form scores. **0 differences** (provenance, timings and the new
 guards fields aside). L23:2392 came 2nd with a drop of 0.849, recall 9, in both. That run used the same torch build
-as the original (2.11.0+cu128, running on the CPU).
+as the original (2.11.0+cu128, running on the CPU). Re-run with 0.1.1 (the prompt helper, the head_dim fallback and the
+post-MLP-norm reading of roles): 0 differences again.
 
 The same comparison from a fresh clone with a normal `pip install .` and the CPU build of torch (2.11.0+cpu), through
 the command (`modelmapper map-concept Bitcoin --questions <that question set>`), is not bit-identical: the two torch
@@ -63,6 +64,73 @@ in 309 s. It is the first GPU bfloat16 run of this check and the first on a seco
 The key's own drops (0.155 / 0.146 / 0.208) came from an RTX 5090 in bfloat16; the laptop's key1 drops were the same
 on its earlier runs of the previous code. Its drops differ from ours by up to 0.006 and from the key's by up to 0.008; no
 rank differs.
+
+## Labelling: `check --labels` (21 Oct 2026)
+
+The values the labelling steps compare with, and how their bands were set. Rules: `modelmapper/labelcheck.py`. Our
+runs: the same Windows 10 desktop, CPU only (16 logical cores; torch 2.11.0+cpu), float32, Python 3.11.9; labeller
+gpt-6-luna, judge Jev. Shipped references (`modelmapper/data/check/`, 126 KB in all):
+
+| File | What | Size |
+|---|---|---|
+| `sweep1_Qwen3-0.6B.npz` | our profiles: this package's sweep on that CPU in float32 | 25 KB |
+| `sweep1_Qwen3-8B.npz` | the research sweep's stored profiles (`vocab_sweep_v2_c0/c1`, RTX 5090, bfloat16) for the same tokens | 22 KB |
+| `exam1_Qwen3-0.6B.json.gz` | our gate exam of the falsifier's 20 real neurons (below): descriptions, test lists, controls, bins | 23 KB |
+| `exam1_Qwen3-8B.json.gz` | 20 neurons of the research v3 gate exam (`default_rng(2026)` over its 950 records) | 55 KB |
+
+**sweep1.** The slice is the 512 tokens `sweep.allowed_tokens` draws with its seed (2026); Qwen3-0.6B and Qwen3-8B share
+the tokenizer, so it is the same slice for both. Contexts 0 and 1, slot reading, gate and up profiles of 6 markers:
+Qwen3-0.6B L4:2581, L9:1456, L23:487, L23:2069, L23:2392, L27:81 (the answer key's markers and three neurons of its
+Bitcoin map); Qwen3-8B the v3 check rows L0:1951, L7:11335, L25:7850, L31:10454, plus L16:11480 and L35:8545 (the
+sample's first neurons in layers 16 and 35). The band, measured on Qwen3-0.6B on our CPU:
+
+| Comparison | Max abs difference | Largest, in profile sd | Min correlation |
+|---|---|---|---|
+| float32, batch 64 vs batch 1024 | 0.000 | 0.00 | 1.0000 |
+| bfloat16 vs float32 | 0.694 | 0.25 | 0.9992 |
+
+PASS needs every profile within 0.5 sd and correlated at 0.995 or more (twice the bfloat16 difference); WARN down to a
+correlation of 0.98; below that, or a different token slice, FAIL. `check --labels` on this machine (which picked
+bfloat16 on the CPU, as a GPU is present) gave the bfloat16 row: PASS, the slice in about 10 s plus the model load. GPU against CPU was not measured (the GPU is kept for research); on Qwen3-8B the only
+measurement is inside the research sweep: its four check rows, the same neurons read through the pseudo path, agree
+with the sample profiles to 0.07 sd (correlation 0.999995). The Qwen3-8B step itself was not run here (it needs the
+8B weights on a GPU).
+
+**exam1.** Re-judging the shipped inputs with `exam.rejudge` (the exam's own judge prompts, merged calls, scoring and
+adaptive draws; tested against `run_exam` on a synthetic sweep, where it gives identical results):
+
+| Model | Same final bin | Our bins | Judge cost | Time |
+|---|---|---|---|---|
+| Qwen3-0.6B | 20/20 | 2 intelligible, 3 list-only, 15 no-generalisation | $0.020 | 8 s |
+| Qwen3-8B | 19/20 | 11 intelligible, 3 list-only, 5 no-generalisation, 1 decoys-too-easy | $0.032 | 11 s |
+
+The one Qwen3-8B difference: L11:289 came out `intelligible`, ours `decoys-too-easy (intelligible)` (its control
+AUC sits at the 0.65 line). Jev's ratings vary a little between runs (AUCs within about 0.03 here), so the step
+passes at 18 of 20 and otherwise WARNs.
+
+**falsifier** on Qwen3-0.6B (CPU, float32): 20 random real neurons (`default_rng(2026)`) and 20 fake ones (pseudo.py's up
+set, seeds 2026 / 2027) labelled by `label.label_run` on a 3,000-token sweep:
+
+| | Gate | + side | − side |
+|---|---|---|---|
+| Fakes verified (exam) | 0/20 | 1/20 | 0/20 |
+| Fakes verified + generative check | 0/20 | 1/20 | 0/20 |
+| Real neurons verified (reported only) | 10% | 10% | 0% |
+| Control AUC median, real neurons | 0.478 | 0.506 | 0.485 |
+
+PASS (at most 1/20 fakes per part, control median 0.488 in 0.40-0.60). Spend: labeller $0.24, judge $0.26. Time:
+about 12 minutes: the sweep 517 s (8 torch threads, nothing else running), the labelling 175 s (API calls, then scoring the generative check's words on the model), the fake-neuron set and model load under 20 s. The real neurons' rates are far below Qwen3-8B's (44% / 30% / 31%): a small model and a 3,000-token
+sweep; no bar is set for them. For Qwen3-8B the falsifier was not run by this check; the v3 run's own falsifier
+(100 fakes per part, the full sweep) gave 1% / 0% / 1% verified + generative and a control median of 0.50.
+
+**Second machine** (laptop trial, 21 Oct 2026): a fresh clone on James's work laptop (Windows 11 Enterprise, Python
+3.10.11, RTX 1000 Ada 6 GB, CUDA 12.8, behind a corporate proxy that blocks huggingface.co, so the model came from a
+local folder via `MODEL_MAPPER_MODELS`). `check --labels --model Qwen/Qwen3-0.6B`: PASS in 245 s. sweep1 min
+correlation 0.9990, largest difference 0.17 sd (GPU, bfloat16, against our CPU float32); exam1 20/20; falsifier 0/20 on
+every part, control median 0.486. Spend $0.55. A 30-neuron `label` run with 20 fakes then took 44 minutes (the two
+sweeps 1,427 s and 870 s; API about 6 minutes) and $1.32; its fakes passed verified + generative 2/20 (gate), 0/20
+(+ side) and 3/20 (− side). That is why `label --with-fakes` now gives the same PASS / WARN / FAIL verdict as this
+check, and why the plan's cost is a range (this run's judge cost was about 4 times v3's per neuron).
 
 ## Not calibrated here
 

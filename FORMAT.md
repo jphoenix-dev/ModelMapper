@@ -43,11 +43,13 @@ reads one, and `r.record` is the dict below.
  "v2": {
    "provenance": {"schema": "loop_v2.0", "model", "dtype", "torch", "transformers", "python", "gpu", "code_commit",
                   "started_utc", "finished_utc",
-                  "package", "device", "cuda", "cudnn", "numpy", "os", "machine", "gpu_memory_gb", "model_revision"},
+                  "package", "device", "cuda", "cudnn", "numpy", "os", "machine", "gpu_memory_gb", "model_revision",
+                  "prompt_format"},       # "chat" (every published map) or "plain" (0.1.1)
                                             # "unknown" when a field can't be found; "none" when it doesn't apply
    "timing_s": {step: seconds}, "prepare_timing_s": {labeller step: seconds},
    "null_single_drops": {random neuron: [drop per question]},   # 2 random same-layer neurons
-   "roles_top30": [{"neuron", "answer_rank", "answer_z", "role", "job_tokens": [30 words it pushes]}],
+   "roles_top30": [{"neuron", "answer_rank", "answer_z", "role", "job_tokens": [30 words it pushes],
+                    "approximate": true}],   # only on models with a post-MLP norm (0.1.1; METHOD.md step 9)
    "arrays": "bitcoin.npz",                 # in arrays/ next to the record
    "map_one_notes": [...]                   # only if something was worth noting
  },
@@ -64,7 +66,7 @@ A call is "in", "uncertain", "out", or "uncalibrated" (the model has no band).
 }
 ```
 
-New in 0.1.0: the provenance fields after `started_utc`, each candidate's `margin` and `call`, and the `guards`
+New in 0.1.0: the provenance fields after `started_utc` (`prompt_format` in 0.1.1), each candidate's `margin` and `call`, and the `guards`
 block (METHOD.md, "In, uncertain or out"). Everything else is exactly as run 1 wrote it.
 
 `arrays/<slug>.npz` (float16): `attr` and `last_act` [layers, neurons], `pmax` / `pmin` (mean of each neuron's max /

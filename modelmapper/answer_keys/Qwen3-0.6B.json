@@ -7,8 +7,8 @@
   "max_rank": 5,
   "min_drop": 0.1,
   "sources": [
-   "set1: fresh prompt set (C:\\dev\\already-clean\\.claude\\worktrees\\upbeat-shirley-42bead\\results\\answer_key_build\\Qwen3-0.6B\\set1)",
-   "set2: fresh prompt set (C:\\dev\\already-clean\\.claude\\worktrees\\upbeat-shirley-42bead\\results\\answer_key_build\\Qwen3-0.6B\\set2)"
+   "set1: fresh prompt set (results/answer_key_build/Qwen3-0.6B/set1)",
+   "set2: fresh prompt set (results/answer_key_build/Qwen3-0.6B/set2)"
   ],
   "rule": "in every prompt set: attribution rank <= max_rank, single-knockout P(answer) drop >= min_drop; label names the concept (keywords.json); best worst-case drop per concept"
  },

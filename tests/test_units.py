@@ -234,7 +234,7 @@ def test_lookup_concept(published):
     r = lookup.lookup("eiffel tower")
     assert r["kind"] == "concept" and [x["neuron"] for x in r["neurons"]] == ["L31:8930", "L4:7"]
     with pytest.raises(KeyError, match="did you mean: Eiffel Tower"):
-        lookup.lookup("Eiffel")
+        lookup.lookup("Eiffel Towe")               # no label mentions it, so the near miss is reported
 
 
 def test_lookup_records(records_dir):
@@ -287,7 +287,7 @@ def test_cli_help_and_version(capsys):
     code, out = run_cli([], capsys)
     assert code == 0 and "map-concept" in out and "lookup" in out
     code, out = run_cli(["--version"], capsys)
-    assert code == 0 and modelmapper.__version__ == "0.1.0" and "modelmapper 0.1.0" in out
+    assert code == 0 and f"modelmapper {modelmapper.__version__}" in out
     code, out = run_cli(["steer", "--help"], capsys)
     assert code == 0 and out.startswith("usage: modelmapper steer")
 
@@ -363,3 +363,55 @@ def test_check_report_hides_endpoint_hosts(tmp_path):
     assert r.returncode in (0, 1), r.stderr[-2000:]
     txt = (tmp_path / "rep" / "report.txt").read_text(encoding="utf-8") + (tmp_path / "rep" / "report.json").read_text(encoding="utf-8")
     assert "custom endpoint" in txt and "example.net" not in txt and "example.org" not in txt and "secret-region" not in txt
+
+
+# ---------------------------------------------------------------- 0.1.1 portability (no model needed)
+def test_head_dim_fallback():
+    from types import SimpleNamespace
+    from modelmapper.mapping import head_dim
+    assert head_dim(SimpleNamespace(head_dim=128, hidden_size=4096, num_attention_heads=32)) == 128   # Qwen3: its own
+    assert head_dim(SimpleNamespace(hidden_size=2048, num_attention_heads=16)) == 128                 # OLMo-2: none
+    assert head_dim(SimpleNamespace(head_dim=None, hidden_size=64, num_attention_heads=4)) == 16
+
+
+def test_prompt_format(monkeypatch):
+    from types import SimpleNamespace
+    from modelmapper import measure
+    monkeypatch.setattr(measure, "PROMPT_FORMAT", "chat")
+    with pytest.raises(measure.PromptFormatError, match="no chat template"):
+        measure.prompt_format(SimpleNamespace(chat_template=None))
+    assert measure.prompt_format(SimpleNamespace(chat_template="{{ messages }}")) == "chat"
+    monkeypatch.setattr(measure, "PROMPT_FORMAT", "plain")
+    assert measure.as_prompt(SimpleNamespace(chat_template=None), "What is X?") == "Question: What is X?\nAnswer:\n"
+    monkeypatch.setattr(measure, "PROMPT_FORMAT", "chatty")
+    with pytest.raises(measure.PromptFormatError, match="'chat'"):
+        measure.prompt_format(SimpleNamespace(chat_template="t"))
+
+
+def test_map_concept_checks_the_format_before_the_labeller(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+    from modelmapper import api, measure, questions
+    monkeypatch.setattr(measure, "PROMPT_FORMAT", "chat")
+
+    def labeller_called(*a, **k):
+        raise AssertionError("the labeller was called (and would have been paid) before the format check")
+    monkeypatch.setattr(questions, "write_questions", labeller_called)
+    no_template = SimpleNamespace(model_name="some/base-model", tok=SimpleNamespace(chat_template=None))
+    with pytest.raises(measure.PromptFormatError):
+        api.map_concept("Paris", measurer=no_template, out=tmp_path, log=lambda s: None)
+    assert not list(tmp_path.rglob("*.json"))
+
+
+def test_norm_gain():
+    import torch
+    from modelmapper.mapping import norm_gain
+
+    class RMSNorm(torch.nn.Module):
+        def __init__(self):
+            super().__init__()
+            self.weight = torch.nn.Parameter(torch.tensor([0.5, 2.0]))
+
+    class GemmaRMSNorm(RMSNorm):                                        # Gemma norms scale by 1 + weight
+        pass
+    assert norm_gain(RMSNorm()).tolist() == [0.5, 2.0]
+    assert norm_gain(GemmaRMSNorm()).tolist() == [1.5, 3.0]
